@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSnmpProtocolInnterWorkings
 description: "Describe the DataMiner connector development topic Protocol inner workings, including its purpose, behavior, implementation guidance, and relevant constra."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Protocol inner workings

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-TypePortNumber
 description: "Reference the DataMiner connector protocol schema entry for TypePortNumber simple type, including its documented structure, attributes, values, and constr."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TypePortNumber simple type

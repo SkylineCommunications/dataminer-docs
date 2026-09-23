@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSnmpBitRateCalculations
 description: "Describe the DataMiner connector development topic Bit rate calculations, including its purpose, behavior, implementation guidance, and relevant constrain."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Bit rate calculations

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Commands.Command.WebSocketMessageType
 description: "Reference the DataMiner connector protocol schema entry for WebSocketMessageType element, including its documented structure, attributes, values, and cons."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # WebSocketMessageType element

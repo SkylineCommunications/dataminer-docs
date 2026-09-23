@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionSetNext
 description: "Describe the DataMiner connector development topic set next, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # set next

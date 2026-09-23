@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.MiH
 description: "Reference the DataMiner connector protocol schema entry for MiH element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # MiH element

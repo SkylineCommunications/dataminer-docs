@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change-coversMajorChanges
 description: "Reference the DataMiner connector protocol schema entry for coversMajorChanges attribute, including its documented structure, attributes, values, and cons."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # coversMajorChanges attribute

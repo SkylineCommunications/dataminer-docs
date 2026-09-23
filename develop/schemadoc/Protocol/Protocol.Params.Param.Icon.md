@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Icon
 description: "Reference the DataMiner connector protocol schema entry for Icon element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Icon element

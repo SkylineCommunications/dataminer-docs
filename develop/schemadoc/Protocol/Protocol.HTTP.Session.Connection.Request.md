@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request
 description: "Reference the DataMiner connector protocol schema entry for Request element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Request element

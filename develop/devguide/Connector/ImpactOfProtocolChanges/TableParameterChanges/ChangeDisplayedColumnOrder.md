@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeDisplayedColumnOrder
 description: "Describe the DataMiner connector development topic Change displayed column order, including its purpose, behavior, implementation guidance, and relevant c."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change displayed column order

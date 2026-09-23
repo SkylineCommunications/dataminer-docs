@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsLabel
 description: "Describe the DataMiner connector development topic Label, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Label

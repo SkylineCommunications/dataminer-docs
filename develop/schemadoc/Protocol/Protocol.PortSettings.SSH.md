@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.PortSettings.SSH
 description: "Reference the DataMiner connector protocol schema entry for SSH element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # SSH element

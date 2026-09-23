@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDcfInterfacesAndConnections
 description: "Describe the DataMiner connector development topic Interfaces and connections, including its purpose, behavior, implementation guidance, and relevant cons."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Interfaces and connections

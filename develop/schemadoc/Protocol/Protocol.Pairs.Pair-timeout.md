@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Pairs.Pair-timeout
 description: "Reference the DataMiner connector protocol schema entry for timeout attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # timeout attribute

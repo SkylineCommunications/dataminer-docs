@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedMultiThreadedTimers
 description: "Describe the DataMiner connector development topic Multithreaded timers, including its purpose, behavior, implementation guidance, and relevant constraint."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Multithreaded timers

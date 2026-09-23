@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-value
 description: "Reference the DataMiner connector protocol schema entry for value attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # value attribute

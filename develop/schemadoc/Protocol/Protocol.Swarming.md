@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Swarming
 description: "Reference the DataMiner connector protocol schema entry for Swarming element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Swarming element

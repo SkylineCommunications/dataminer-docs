@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDcfTables
 description: "Describe the DataMiner connector development topic DataMiner DCF tables, including its purpose, behavior, implementation guidance, and relevant constraint."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # DataMiner DCF tables

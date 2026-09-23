@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsHttpParsingHtml
 description: "Describe the DataMiner connector development topic Parsing HTML, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Parsing HTML

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-reschedule
 description: "Reference the DataMiner connector protocol schema entry for reschedule attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # reschedule attribute

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationActionIf
 description: "Describe the DataMiner Automation development topic If, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # If

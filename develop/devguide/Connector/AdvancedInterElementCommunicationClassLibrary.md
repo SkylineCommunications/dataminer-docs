@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedInterElementCommunicationClassLibrary
 description: "Describe the DataMiner connector development topic DataMinerSystem Library, including its purpose, behavior, implementation guidance, and relevant constra."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # DataMinerSystem Library

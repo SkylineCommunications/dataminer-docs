@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-TypePingInterval
 description: "Reference the DataMiner connector protocol schema entry for TypePingInterval simple type, including its documented structure, attributes, values, and cons."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TypePingInterval simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-verificationDeviation
 description: "Reference the DataMiner connector protocol schema entry for verificationDeviation attribute, including its documented structure, attributes, values, and c."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # verificationDeviation attribute

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationActionUploadReportToSharedFolder
 description: "Use the report action to upload a generated report to a shared network folder and validate the share path, credentials, and permissions."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Upload report to shared folder

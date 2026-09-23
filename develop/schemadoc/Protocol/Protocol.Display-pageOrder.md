@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Display-pageOrder
 description: "Reference the DataMiner connector protocol schema entry for pageOrder attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # pageOrder attribute

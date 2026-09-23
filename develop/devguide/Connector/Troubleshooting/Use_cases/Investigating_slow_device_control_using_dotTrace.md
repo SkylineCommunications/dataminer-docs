@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Investigating_slow_device_control_using_dotTrace
 description: "Describe the DataMiner connector development topic Investigating slow device control using dotTrace, including its purpose, behavior, implementation guida."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Investigating slow device control using dotTrace

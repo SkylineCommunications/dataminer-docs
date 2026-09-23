@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Automation-EnumTrueFalse
 description: "Reference the DataMiner Automation script schema entry for EnumTrueFalse simple type, including its documented structure, attributes, values, and constrai."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumTrueFalse simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: DMSScript.Credentials.Credential
 description: "Reference the DataMiner Automation script schema entry for Credential element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Credential element

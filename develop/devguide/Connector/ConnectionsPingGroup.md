@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsPingGroup
 description: "Describe the DataMiner connector development topic Slow poll mode ping group, including its purpose, behavior, implementation guidance, and relevant const."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Slow poll mode ping group

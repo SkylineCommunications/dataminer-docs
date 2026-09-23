@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsWebSocketsUseCase3
 description: "Describe the DataMiner connector development topic WebSocket connection with custom handshake, including its purpose, behavior, implementation guidance, a."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # WebSocket connection with custom handshake

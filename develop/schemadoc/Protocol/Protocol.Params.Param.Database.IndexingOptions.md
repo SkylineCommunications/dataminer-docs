@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Database.IndexingOptions
 description: "Reference the DataMiner connector protocol schema entry for IndexingOptions element, including its documented structure, attributes, values, and constrain."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # IndexingOptions element

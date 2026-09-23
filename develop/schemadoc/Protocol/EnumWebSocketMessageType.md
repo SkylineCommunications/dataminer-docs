@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumWebSocketMessageType
 description: "Reference the DataMiner connector protocol schema entry for EnumWebSocketMessageType simple type, including its documented structure, attributes, values."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumWebSocketMessageType simple type

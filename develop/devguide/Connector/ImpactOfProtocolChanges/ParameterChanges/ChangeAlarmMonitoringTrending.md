@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeAlarmMonitoringTrending
 description: "Describe the DataMiner connector development topic Change alarm monitoring and/or trending, including its purpose, behavior, implementation guidance, and."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change alarm monitoring and/or trending

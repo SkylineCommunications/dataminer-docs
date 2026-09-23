@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions-displayColumn
 description: "Reference the DataMiner connector protocol schema entry for displayColumn attribute, including its documented structure, attributes, values, and constrain."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # displayColumn attribute

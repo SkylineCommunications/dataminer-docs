@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Advanced-ignoreEqualResponse
 description: "Reference the DataMiner connector protocol schema entry for ignoreEqualResponse attribute, including its documented structure, attributes, values, and con."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # ignoreEqualResponse attribute

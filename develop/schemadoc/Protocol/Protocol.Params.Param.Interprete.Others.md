@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Others
 description: "Reference the DataMiner connector protocol schema entry for Others element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Others element

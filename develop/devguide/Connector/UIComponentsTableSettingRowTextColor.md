@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsTableSettingRowTextColor
 description: "Describe the DataMiner connector development topic Setting row text color, including its purpose, behavior, implementation guidance, and relevant constrai."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Setting row text color

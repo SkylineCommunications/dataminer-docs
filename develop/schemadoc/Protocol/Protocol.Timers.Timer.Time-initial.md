@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Timers.Timer.Time-initial
 description: "Reference the DataMiner connector protocol schema entry for initial attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # initial attribute

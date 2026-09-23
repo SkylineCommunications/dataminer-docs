@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: System_StackOverflowException
 description: "Use this connector troubleshooting entry point when recursive QAction code causes a System.StackOverflowException in SLScripting."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # System.StackOverflowException

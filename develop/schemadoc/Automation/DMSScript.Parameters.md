@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: DMSScript.Parameters
 description: "Reference the DataMiner Automation script schema entry for Parameters element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Parameters element

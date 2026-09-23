@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Ownership.Elements.Element.TrendTemplate
 description: "Reference the DataMiner connector protocol schema entry for TrendTemplate element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TrendTemplate element

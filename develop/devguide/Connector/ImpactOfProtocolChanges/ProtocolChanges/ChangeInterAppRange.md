@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeInterAppRange
 description: "Describe the DataMiner connector development topic Change InterApp range, including its purpose, behavior, implementation guidance, and relevant constrain."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change InterApp range

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.NbrOfBits
 description: "Reference the DataMiner connector protocol schema entry for NbrOfBits element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # NbrOfBits element

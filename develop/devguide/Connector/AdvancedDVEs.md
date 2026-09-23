@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDVEs
 description: "Describe the DataMiner connector development topic Dynamic Virtual Elements, including its purpose, behavior, implementation guidance, and relevant constr."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Dynamic Virtual Elements

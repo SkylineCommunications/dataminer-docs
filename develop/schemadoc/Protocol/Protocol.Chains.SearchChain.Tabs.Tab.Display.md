@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Display
 description: "Reference the DataMiner connector protocol schema entry for Display element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Display element

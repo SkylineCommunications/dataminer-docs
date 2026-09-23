@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-TypeDllImport
 description: "Reference the DataMiner connector protocol schema entry for TypeDllImport simple type, including its documented structure, attributes, values, and constra."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TypeDllImport simple type

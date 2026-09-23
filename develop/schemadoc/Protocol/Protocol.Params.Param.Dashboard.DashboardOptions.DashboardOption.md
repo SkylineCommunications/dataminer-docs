@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Dashboard.DashboardOptions.DashboardOption
 description: "Reference the DataMiner connector protocol schema entry for DashboardOption element, including its documented structure, attributes, values, and constrain."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # DashboardOption element

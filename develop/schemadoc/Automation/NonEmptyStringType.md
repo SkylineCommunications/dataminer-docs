@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Automation-NonEmptyStringType
 description: "Reference the DataMiner Automation script schema entry for NonEmptyStringType simple type, including its documented structure, attributes, values, and con."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # NonEmptyStringType simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Validation
 description: "Reference the DataMiner connector protocol schema entry for Validation element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Validation element

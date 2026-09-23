@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: DMSScript.Interactivity
 description: "Declare whether an automation script is interactive so DataMiner can use deterministic interactivity handling at runtime."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Interactivity element

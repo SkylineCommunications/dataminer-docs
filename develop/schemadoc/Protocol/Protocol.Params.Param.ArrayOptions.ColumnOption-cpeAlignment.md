@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-cpeAlignment
 description: "Reference the DataMiner connector protocol schema entry for cpeAlignment attribute, including its documented structure, attributes, values, and constraint."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # cpeAlignment attribute

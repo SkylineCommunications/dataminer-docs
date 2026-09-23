@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsDurationPicker
 description: "Describe the DataMiner connector development topic Duration picker, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Duration picker

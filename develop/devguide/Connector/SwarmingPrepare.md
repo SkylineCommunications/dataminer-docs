@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: SwarmingPrepare
 description: "Describe the DataMiner connector development topic Preparing scripts and connectors for Swarming, including its purpose, behavior, implementation guidance."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Preparing scripts and connectors for Swarming

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation-remote
 description: "Reference the DataMiner connector protocol schema entry for remote attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # remote attribute

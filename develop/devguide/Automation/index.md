@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationDevGuideIndex
 description: "Find the development concepts, actions, and procedures you need to design, test, and troubleshoot DataMiner automation scripts."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Automation script development guide

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSnmpRetrievingMultipleVariables
 description: "Describe the DataMiner connector development topic Retrieving multiple variables, including its purpose, behavior, implementation guidance, and relevant c."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Retrieving multiple variables

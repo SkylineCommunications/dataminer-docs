@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.DeviceOID
 description: "Reference the DataMiner connector protocol schema entry for DeviceOID element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # DeviceOID element

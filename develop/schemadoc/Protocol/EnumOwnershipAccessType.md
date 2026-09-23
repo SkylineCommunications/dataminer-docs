@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumOwnershipAccessType
 description: "Reference the DataMiner connector protocol schema entry for EnumOwnershipAccessType simple type, including its documented structure, attributes, values, a."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumOwnershipAccessType simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ReservedIDsSpectrumAnalyzer
 description: "Describe the DataMiner connector development topic Spectrum analyzer, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Spectrum analyzer

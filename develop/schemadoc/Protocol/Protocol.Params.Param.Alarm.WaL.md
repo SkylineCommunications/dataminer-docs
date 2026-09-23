@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.WaL
 description: "Reference the DataMiner connector protocol schema entry for WaL element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # WaL element

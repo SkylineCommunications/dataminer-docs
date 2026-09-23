@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Triggers.Trigger.Content.Id-else
 description: "Reference the DataMiner connector protocol schema entry for else attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # else attribute

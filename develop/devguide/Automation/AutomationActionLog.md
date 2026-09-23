@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationActionLog
 description: "Describe the DataMiner Automation development topic Log, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Log

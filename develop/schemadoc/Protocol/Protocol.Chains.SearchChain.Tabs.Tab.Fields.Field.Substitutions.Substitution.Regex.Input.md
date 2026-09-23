@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Substitutions.Substitution.Regex.Input
 description: "Reference the DataMiner connector protocol schema entry for Input element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Input element

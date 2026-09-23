@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: How_to_use_history_sets_on_a_protocol_parameter
 description: "Describe the DataMiner connector development topic How to use history sets on a protocol parameter, including its purpose, behavior, implementation guidan."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # How to use history sets on a protocol parameter

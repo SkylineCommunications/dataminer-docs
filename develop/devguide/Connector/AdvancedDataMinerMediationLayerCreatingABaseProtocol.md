@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerCreatingABaseProtocol
 description: "Describe the DataMiner connector development topic Creating a base protocol, including its purpose, behavior, implementation guidance, and relevant constr."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Creating a base protocol

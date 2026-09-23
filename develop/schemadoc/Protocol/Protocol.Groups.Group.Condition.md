@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Groups.Group.Condition
 description: "Reference the DataMiner connector protocol schema entry for Condition element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Condition element

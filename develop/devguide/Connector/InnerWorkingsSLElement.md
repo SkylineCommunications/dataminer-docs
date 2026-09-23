@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: InnerWorkingsSLElement
 description: "Describe the DataMiner connector development topic SLElement, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # SLElement

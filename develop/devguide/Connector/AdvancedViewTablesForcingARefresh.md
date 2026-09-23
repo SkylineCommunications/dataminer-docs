@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedViewTablesForcingARefresh
 description: "Describe the DataMiner connector development topic Forcing a (direct) view table refresh from within a protocol, including its purpose, behavior, implemen."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Forcing a (direct) view table refresh from within a protocol

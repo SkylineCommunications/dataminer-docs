@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-scientificNotation
 description: "Reference the DataMiner connector protocol schema entry for scientificNotation attribute, including its documented structure, attributes, values, and cons."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # scientificNotation attribute

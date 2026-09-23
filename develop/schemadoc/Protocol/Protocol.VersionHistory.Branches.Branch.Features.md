@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.Features
 description: "Reference the DataMiner connector protocol schema entry for Features element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Features element

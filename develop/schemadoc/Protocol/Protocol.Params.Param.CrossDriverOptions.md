@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.CrossDriverOptions
 description: "Reference the DataMiner connector protocol schema entry for CrossDriverOptions element, including its documented structure, attributes, values, and constr."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # CrossDriverOptions element

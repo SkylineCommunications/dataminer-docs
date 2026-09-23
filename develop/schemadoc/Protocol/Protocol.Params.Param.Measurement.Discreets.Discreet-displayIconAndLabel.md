@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-displayIconAndLabel
 description: "Reference the DataMiner connector protocol schema entry for displayIconAndLabel attribute, including its documented structure, attributes, values, and con."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # displayIconAndLabel attribute

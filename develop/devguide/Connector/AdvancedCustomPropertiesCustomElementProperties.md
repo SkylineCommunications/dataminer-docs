@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedCustomPropertiesCustomElementProperties
 description: "Describe the DataMiner connector development topic Custom element properties, including its purpose, behavior, implementation guidance, and relevant const."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Custom element properties

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: How_to_configure_multi_threaded_timers
 description: "Describe the DataMiner connector development topic How to configure multithreaded timers, including its purpose, behavior, implementation guidance, and re."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # How to configure multithreaded timers

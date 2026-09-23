@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerSyntaxOfMediationLinkToTags
 description: "Describe the DataMiner connector development topic Syntax of Mediation.LinkTo tags, including its purpose, behavior, implementation guidance, and relevant."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Syntax of Mediation.LinkTo tags

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumPortSettingsStopBits
 description: "Reference the DataMiner connector protocol schema entry for EnumPortSettingsStopBits simple type, including its documented structure, attributes, values."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumPortSettingsStopBits simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsWebSocketsUseCase1
 description: "Describe the DataMiner connector development topic Normal WebSocket connection, including its purpose, behavior, implementation guidance, and relevant con."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Normal WebSocket connection

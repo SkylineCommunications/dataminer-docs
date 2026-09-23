@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Display.Visibility-default
 description: "Reference the DataMiner connector protocol schema entry for default attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # default attribute

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumParamInterpretAlignment
 description: "Reference the DataMiner connector protocol schema entry for EnumParamInterpretAlignment simple type, including its documented structure, attributes, value."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumParamInterpretAlignment simple type

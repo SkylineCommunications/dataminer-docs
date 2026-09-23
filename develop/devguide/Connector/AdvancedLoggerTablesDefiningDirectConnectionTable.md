@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedLoggerTablesDefiningDirectConnectionTable
 description: "Describe the DataMiner connector development topic Defining a logger table of type DirectConnection with a primary key, including its purpose, behavior, i."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Defining a logger table of type DirectConnection with a primary key

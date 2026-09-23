@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationActionEmail
 description: "Describe the DataMiner Automation development topic Email, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Email

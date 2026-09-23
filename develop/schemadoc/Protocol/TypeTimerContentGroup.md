@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-TypeTimerContentGroup
 description: "Reference the DataMiner connector protocol schema entry for TypeTimerContentGroup simple type, including its documented structure, attributes, values, and."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TypeTimerContentGroup simple type

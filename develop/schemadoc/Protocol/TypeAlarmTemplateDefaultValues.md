@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-TypeAlarmTemplateDefaultValues
 description: "Reference the DataMiner connector protocol schema entry for TypeAlarmTemplateDefaultValues simple type, including its documented structure, attributes, va."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TypeAlarmTemplateDefaultValues simple type

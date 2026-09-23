@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
 description: "Describe the DataMiner connector development topic How to create an HTTP connector (CoinMarketCap use case), including its purpose, behavior, implementati."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # How to create an HTTP connector (CoinMarketCap use case)

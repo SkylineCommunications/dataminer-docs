@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsWebSocketsUseCase4
 description: "Describe the DataMiner connector development topic WebSocket Connection with custom handshake and dynamic IP, including its purpose, behavior, implementat."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # WebSocket Connection with custom handshake and dynamic IP

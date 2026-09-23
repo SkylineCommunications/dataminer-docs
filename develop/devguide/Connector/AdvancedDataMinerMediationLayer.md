@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayer
 description: "Describe the DataMiner connector development topic DataMiner Mediation Layer, including its purpose, behavior, implementation guidance, and relevant const."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # DataMiner Mediation Layer

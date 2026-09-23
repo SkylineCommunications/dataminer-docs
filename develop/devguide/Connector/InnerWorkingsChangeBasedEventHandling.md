@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: InnerWorkingsChangeBasedEventHandling
 description: "Describe the DataMiner connector development topic Change-based event handling, including its purpose, behavior, implementation guidance, and relevant con."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change-based event handling

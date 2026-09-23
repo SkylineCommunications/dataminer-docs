@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: How_to_use_on_each_in_a_protocol_trigger
 description: "Describe the DataMiner connector development topic How to use 'on each' in a protocol trigger, including its purpose, behavior, implementation guidance, a."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # How to use 'on each' in a protocol trigger

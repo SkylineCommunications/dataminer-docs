@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Debugging_connectors_serial_communication_returning_command_echoes
 description: "Describe the DataMiner connector development topic Debugging connectors: Serial communication returning command echoes, including its purpose, behavior, i."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Debugging connectors: Serial communication returning command echoes

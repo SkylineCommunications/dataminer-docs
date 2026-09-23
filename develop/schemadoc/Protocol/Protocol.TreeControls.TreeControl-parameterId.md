@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl-parameterId
 description: "Reference the DataMiner connector protocol schema entry for parameterId attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # parameterId attribute

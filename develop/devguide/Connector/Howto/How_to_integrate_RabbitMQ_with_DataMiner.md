@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: How_to_integrate_RabbitMQ_with_DataMiner
 description: "Describe the DataMiner connector development topic How to integrate RabbitMQ with DataMiner, including its purpose, behavior, implementation guidance, and."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # How to integrate RabbitMQ with DataMiner

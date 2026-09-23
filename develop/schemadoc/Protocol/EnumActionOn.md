@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumActionOn
 description: "Reference the DataMiner connector protocol schema entry for EnumActionOn simple type, including its documented structure, attributes, values, and constrai."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumActionOn simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Topology.Cell.Link-dest
 description: "Reference the DataMiner connector protocol schema entry for dest attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # dest attribute

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab-tablePid
 description: "Reference the DataMiner connector protocol schema entry for tablePid attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # tablePid attribute

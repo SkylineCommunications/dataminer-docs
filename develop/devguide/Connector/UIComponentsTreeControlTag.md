@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsTreeControlTag
 description: "Describe the DataMiner connector development topic TreeControl tag, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # TreeControl tag

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Type-databaseOptions
 description: "Reference the DataMiner connector protocol schema entry for databaseOptions attribute, including its documented structure, attributes, values, and constra."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # databaseOptions attribute

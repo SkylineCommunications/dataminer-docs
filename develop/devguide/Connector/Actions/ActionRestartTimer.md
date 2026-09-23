@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionRestartTimer
 description: "Describe the DataMiner connector development topic restart timer, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # restart timer

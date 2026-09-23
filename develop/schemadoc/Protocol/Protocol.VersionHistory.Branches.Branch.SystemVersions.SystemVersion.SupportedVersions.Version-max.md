@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version-max
 description: "Reference the DataMiner connector protocol schema entry for max attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # max attribute

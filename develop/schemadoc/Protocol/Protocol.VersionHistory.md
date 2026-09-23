@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.VersionHistory
 description: "Reference the DataMiner connector protocol schema entry for VersionHistory element, including its documented structure, attributes, values, and constraint."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # VersionHistory element

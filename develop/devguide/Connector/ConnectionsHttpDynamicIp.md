@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsHttpDynamicIp
 description: "Describe the DataMiner connector development topic Dynamically changing the IP address and port number, including its purpose, behavior, implementation gu."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Dynamically changing the IP address and port number

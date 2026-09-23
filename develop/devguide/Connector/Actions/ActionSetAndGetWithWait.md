@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionSetAndGetWithWait
 description: "Describe the DataMiner connector development topic set and get with wait, including its purpose, behavior, implementation guidance, and relevant constrain."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # set and get with wait

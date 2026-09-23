@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionClearOnDisplay
 description: "Describe the DataMiner connector development topic clear on display, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # clear on display

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Identifying_the_source_of_an_exception
 description: "Describe the DataMiner connector development topic Identifying the source of an exception, including its purpose, behavior, implementation guidance, and r."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Identifying the source of an exception

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Type-distribution
 description: "Reference the DataMiner connector protocol schema entry for distribution attribute, including its documented structure, attributes, values, and constraint."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # distribution attribute

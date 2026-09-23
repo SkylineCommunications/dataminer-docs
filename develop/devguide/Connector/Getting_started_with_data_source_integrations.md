@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Getting_started_with_data_source_integrations
 description: "DataMiner connectors (or 'protocols'/'drivers') are XML files containing the information needed for DataMiner to communicate with a data source."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Getting started

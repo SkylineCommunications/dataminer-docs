@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsMatrixChangeConfiguration
 description: "Describe the DataMiner connector development topic Dynamically changing matrix configuration, including its purpose, behavior, implementation guidance, an."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Dynamically changing matrix configuration

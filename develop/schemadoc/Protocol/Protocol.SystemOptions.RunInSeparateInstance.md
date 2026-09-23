@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.SystemOptions.RunInSeparateInstance
 description: "Reference the DataMiner connector protocol schema entry for RunInSeparateInstance element, including its documented structure, attributes, values, and con."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # RunInSeparateInstance element

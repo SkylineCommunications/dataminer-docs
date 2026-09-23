@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Debugging_connectors_tracing_the_stack
 description: "Describe the DataMiner connector development topic Debugging connectors: Tracing the stack, including its purpose, behavior, implementation guidance, and."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Debugging connectors: Tracing the stack

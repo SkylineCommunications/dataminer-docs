@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Ownership.RedundancyGroups.RedundancyGroup
 description: "Reference the DataMiner connector protocol schema entry for RedundancyGroup element, including its documented structure, attributes, values, and constrain."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # RedundancyGroup element

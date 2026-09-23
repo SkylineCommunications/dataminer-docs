@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.AlarmLevelLinks.AlarmLevelLink
 description: "Reference the DataMiner connector protocol schema entry for AlarmLevelLink element, including its documented structure, attributes, values, and constraint."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # AlarmLevelLink element

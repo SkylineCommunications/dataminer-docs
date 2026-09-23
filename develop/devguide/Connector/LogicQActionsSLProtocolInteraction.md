@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicQActionsSLProtocolInteraction
 description: "Describe the DataMiner connector development topic QActions SLProtocol interaction, including its purpose, behavior, implementation guidance, and relevant."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # QActions SLProtocol interaction

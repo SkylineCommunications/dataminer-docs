@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.OverrideIconColumns
 description: "Reference the DataMiner connector protocol schema entry for OverrideIconColumns element, including its documented structure, attributes, values, and const."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # OverrideIconColumns element

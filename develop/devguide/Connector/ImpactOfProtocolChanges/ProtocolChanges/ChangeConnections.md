@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeConnections
 description: "Describe the DataMiner connector development topic Change connection(s), including its purpose, behavior, implementation guidance, and relevant constraint."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change connection(s)

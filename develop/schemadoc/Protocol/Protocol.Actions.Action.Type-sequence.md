@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-sequence
 description: "Reference the DataMiner connector protocol schema entry for sequence attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # sequence attribute

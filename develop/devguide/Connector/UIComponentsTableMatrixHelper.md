@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsTableMatrixHelper
 description: "Describe the DataMiner connector development topic Matrix Helper, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Matrix Helper

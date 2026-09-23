@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionRunActions
 description: "Describe the DataMiner connector development topic run actions, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # run actions

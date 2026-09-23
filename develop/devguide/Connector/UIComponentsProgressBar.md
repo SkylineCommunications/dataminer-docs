@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsProgressBar
 description: "Describe the DataMiner connector development topic Progress bar, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Progress bar

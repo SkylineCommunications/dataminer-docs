@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Chains.Chain-groupingName
 description: "Reference the DataMiner connector protocol schema entry for groupingName attribute, including its documented structure, attributes, values, and constraint."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # groupingName attribute

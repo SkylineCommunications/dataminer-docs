@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedViewTablesOtherElement
 description: "Describe the DataMiner connector development topic View tables from other elements, including its purpose, behavior, implementation guidance, and relevant."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # View tables from other elements

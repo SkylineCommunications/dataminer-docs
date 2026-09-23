@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Positions.Position
 description: "Reference the DataMiner connector protocol schema entry for Position element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Position element

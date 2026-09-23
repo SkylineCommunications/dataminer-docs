@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSnmpAlteringATableCell
 description: "Describe the DataMiner connector development topic Altering a table cell, including its purpose, behavior, implementation guidance, and relevant constrain."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Altering a table cell

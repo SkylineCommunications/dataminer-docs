@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.HTTP.Session-proxyServer
 description: "Reference the DataMiner connector protocol schema entry for proxyServer attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # proxyServer attribute

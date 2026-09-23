@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumTriggerTime
 description: "Reference the DataMiner connector protocol schema entry for EnumTriggerTime simple type, including its documented structure, attributes, values, and const."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumTriggerTime simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.PortSettings.BusAddress.Value
 description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Value element

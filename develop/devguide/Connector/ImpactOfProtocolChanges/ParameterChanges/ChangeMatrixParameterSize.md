@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeMatrixParameterSize
 description: "Describe the DataMiner connector development topic Change matrix parameter size, including its purpose, behavior, implementation guidance, and relevant co."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change matrix parameter size

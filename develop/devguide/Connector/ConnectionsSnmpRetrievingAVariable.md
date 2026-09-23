@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSnmpRetrievingAVariable
 description: "Describe the DataMiner connector development topic Retrieving a variable, including its purpose, behavior, implementation guidance, and relevant constrain."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Retrieving a variable

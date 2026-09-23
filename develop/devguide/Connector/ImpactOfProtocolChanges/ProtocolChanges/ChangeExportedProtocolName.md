@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeExportedProtocolName
 description: "Describe the DataMiner connector development topic Change exported protocol name, including its purpose, behavior, implementation guidance, and relevant c."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change exported protocol name

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumTrueFalse
 description: "Reference the DataMiner connector protocol schema entry for EnumTrueFalse simple type, including its documented structure, attributes, values, and constra."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumTrueFalse simple type

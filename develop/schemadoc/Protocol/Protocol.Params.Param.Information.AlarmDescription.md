@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Information.AlarmDescription
 description: "Reference the DataMiner connector protocol schema entry for AlarmDescription element, including its documented structure, attributes, values, and constrai."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # AlarmDescription element

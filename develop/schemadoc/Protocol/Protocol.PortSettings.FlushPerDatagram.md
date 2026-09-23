@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.PortSettings.FlushPerDatagram
 description: "Reference the DataMiner connector protocol schema entry for FlushPerDatagram element, including its documented structure, attributes, values, and constrai."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # FlushPerDatagram element

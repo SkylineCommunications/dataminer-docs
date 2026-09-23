@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: SwarmingScriptElement
 description: "Describe the DataMiner connector development topic Configuring a script to swarm elements, including its purpose, behavior, implementation guidance, and r."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Configuring a script to swarm elements

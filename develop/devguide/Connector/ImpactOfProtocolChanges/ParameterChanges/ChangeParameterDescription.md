@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeParameterDescription
 description: "Describe the DataMiner connector development topic Change parameter description, including its purpose, behavior, implementation guidance, and relevant co."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change parameter description

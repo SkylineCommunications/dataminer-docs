@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.Monitored
 description: "Reference the DataMiner connector protocol schema entry for Monitored element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Monitored element

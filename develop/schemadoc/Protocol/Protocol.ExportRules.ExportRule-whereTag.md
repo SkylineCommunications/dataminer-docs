@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-whereTag
 description: "Reference the DataMiner connector protocol schema entry for whereTag attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # whereTag attribute

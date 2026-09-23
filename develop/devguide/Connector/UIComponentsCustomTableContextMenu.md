@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsCustomTableContextMenu
 description: "Describe the DataMiner connector development topic Custom table context menu, including its purpose, behavior, implementation guidance, and relevant const."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Custom table context menu

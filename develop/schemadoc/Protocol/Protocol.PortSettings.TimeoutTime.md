@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.PortSettings.TimeoutTime
 description: "Reference the DataMiner connector protocol schema entry for TimeoutTime element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TimeoutTime element

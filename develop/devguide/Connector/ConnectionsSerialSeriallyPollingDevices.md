@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSerialSeriallyPollingDevices
 description: "Describe the DataMiner connector development topic Serially polling different devices from a single element, including its purpose, behavior, implementati."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Serially polling different devices from a single element

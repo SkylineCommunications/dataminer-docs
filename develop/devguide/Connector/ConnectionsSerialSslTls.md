@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSerialSslTls
 description: "Describe the DataMiner connector development topic SSL/TLS encryption, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # SSL/TLS encryption

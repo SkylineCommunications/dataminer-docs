@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionExecuteNext
 description: "Describe the DataMiner connector development topic execute next, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # execute next

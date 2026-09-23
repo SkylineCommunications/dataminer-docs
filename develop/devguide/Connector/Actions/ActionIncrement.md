@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionIncrement
 description: "Describe the DataMiner connector development topic increment, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # increment

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumQActionEncoding
 description: "Reference the DataMiner connector protocol schema entry for EnumQActionEncoding simple type, including its documented structure, attributes, values, and c."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumQActionEncoding simple type

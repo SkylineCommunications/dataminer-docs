@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumPortSettingsFlowControl
 description: "Reference the DataMiner connector protocol schema entry for EnumPortSettingsFlowControl simple type, including its documented structure, attributes, value."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumPortSettingsFlowControl simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.QActions.QAction-encoding
 description: "Reference the DataMiner connector protocol schema entry for encoding attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # encoding attribute

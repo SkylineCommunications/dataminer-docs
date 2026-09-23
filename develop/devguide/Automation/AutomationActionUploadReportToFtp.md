@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationActionUploadReportToFtp
 description: "Use the report action to upload a generated report to an FTP destination, and validate the template, destination, and credentials."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Upload report to FTP

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: System_OutOfMemoryException
 description: "Use this connector troubleshooting entry point when SLScripting reports System.OutOfMemoryException while executing QAction code."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # System.OutOfMemoryException

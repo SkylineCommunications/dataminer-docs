@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionPriorityLockUnlock
 description: "Describe the DataMiner connector development topic priority lock/priority unlock, including its purpose, behavior, implementation guidance, and relevant c."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # priority lock/priority unlock

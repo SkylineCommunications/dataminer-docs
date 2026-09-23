@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeParameterRange
 description: "Describe the DataMiner connector development topic Change parameter range, including its purpose, behavior, implementation guidance, and relevant constrai."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change parameter range

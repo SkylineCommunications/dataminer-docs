@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-TypeObjectId
 description: "Reference the DataMiner connector protocol schema entry for TypeObjectId simple type, including its documented structure, attributes, values, and constrai."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TypeObjectId simple type

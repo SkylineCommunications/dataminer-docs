@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsWebSocketsImplementation
 description: "Describe the DataMiner connector development topic Implementing a WebSocket, including its purpose, behavior, implementation guidance, and relevant constr."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Implementing a WebSocket

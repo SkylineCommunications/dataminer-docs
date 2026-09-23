@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSerialCreatingCommandsAndResponses
 description: "A serial communication protocol specification implemented by a device typically defines a number of commands and responses."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Creating commands and responses

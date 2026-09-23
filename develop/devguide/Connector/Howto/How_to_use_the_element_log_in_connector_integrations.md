@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: How_to_use_the_element_log_in_connector_integrations
 description: "Describe the DataMiner connector development topic How to use the element log in connector integrations, including its purpose, behavior, implementation g."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # How to use the element log in connector integrations

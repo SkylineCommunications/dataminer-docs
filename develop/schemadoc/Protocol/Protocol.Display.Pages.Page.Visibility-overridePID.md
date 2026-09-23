@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Display.Pages.Page.Visibility-overridePID
 description: "Reference the DataMiner connector protocol schema entry for overridePID attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # overridePID attribute

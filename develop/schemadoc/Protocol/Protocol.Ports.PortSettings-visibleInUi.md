@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Ports.PortSettings-visibleInUi
 description: "Reference the DataMiner connector protocol schema entry for visibleInUi attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # visibleInUi attribute

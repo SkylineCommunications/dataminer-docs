@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Ownership
 description: "Reference the DataMiner connector protocol schema entry for Ownership element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Ownership element

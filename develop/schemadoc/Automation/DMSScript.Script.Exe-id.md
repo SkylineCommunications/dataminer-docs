@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: DMSScript.Script.Exe-id
 description: "Reference the DataMiner Automation script schema entry for id attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # id attribute

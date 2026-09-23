@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Information.Subtext
 description: "Reference the DataMiner connector protocol schema entry for Subtext element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Subtext element

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.OID
 description: "Reference the DataMiner connector protocol schema entry for OID element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # OID element

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Commands.Command
 description: "Reference the DataMiner connector protocol schema entry for Command element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Command element

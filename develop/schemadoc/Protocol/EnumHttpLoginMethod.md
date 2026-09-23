@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumHttpLoginMethod
 description: "Reference the DataMiner connector protocol schema entry for EnumHttpLoginMethod simple type, including its documented structure, attributes, values, and c."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumHttpLoginMethod simple type

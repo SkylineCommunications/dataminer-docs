@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.PortSettings.SSH.Credentials
 description: "Reference the DataMiner connector protocol schema entry for Credentials element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Credentials element

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: SwarmingSmartSerialServerMode
 description: "Describe the DataMiner connector development topic Enabling Swarming for elements with smart-serial connection in server mo, including its purpose, behavi."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Enabling Swarming for elements with smart-serial connection in server mode

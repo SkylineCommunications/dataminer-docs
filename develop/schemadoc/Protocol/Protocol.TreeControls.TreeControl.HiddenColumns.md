@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.HiddenColumns
 description: "Reference the DataMiner connector protocol schema entry for HiddenColumns element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # HiddenColumns element

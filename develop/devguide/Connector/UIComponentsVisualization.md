@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsVisualization
 description: "Describe the DataMiner connector development topic Visualizing UI components, including its purpose, behavior, implementation guidance, and relevant const."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Visualizing UI components

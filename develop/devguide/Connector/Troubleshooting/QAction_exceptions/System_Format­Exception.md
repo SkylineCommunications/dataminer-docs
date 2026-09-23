@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: System_FormatException
 description: "Describe the DataMiner connector development topic System.FormatException, including its purpose, behavior, implementation guidance, and relevant constrai."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # System.FormatException

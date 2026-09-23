@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.CRC.Type-byteoffset
 description: "Reference the DataMiner connector protocol schema entry for byteoffset attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # byteoffset attribute

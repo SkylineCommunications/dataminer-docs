@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionCrc
 description: "Describe the DataMiner connector development topic crc, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # crc

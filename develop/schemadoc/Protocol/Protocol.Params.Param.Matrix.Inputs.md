@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Matrix.Inputs
 description: "Reference the DataMiner connector protocol schema entry for Inputs element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Inputs element

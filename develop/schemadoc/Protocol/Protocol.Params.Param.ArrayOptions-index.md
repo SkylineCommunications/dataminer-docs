@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions-index
 description: "Reference the DataMiner connector protocol schema entry for index attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # index attribute

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistenceNoSqlCassandra
 description: "Describe the DataMiner connector development topic DataMiner general database - NoSQL Database - Cassandra, including its purpose, behavior, implementatio."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # DataMiner general database - NoSQL Database - Cassandra

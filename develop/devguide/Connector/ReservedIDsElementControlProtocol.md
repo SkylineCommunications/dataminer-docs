@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ReservedIDsElementControlProtocol
 description: "Describe the DataMiner connector development topic DataMiner element control protocol, including its purpose, behavior, implementation guidance, and relev."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # DataMiner element control protocol

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumPortSettingsParity
 description: "Reference the DataMiner connector protocol schema entry for EnumPortSettingsParity simple type, including its documented structure, attributes, values, an."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumPortSettingsParity simple type

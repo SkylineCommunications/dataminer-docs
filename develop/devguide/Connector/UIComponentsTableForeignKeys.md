@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsTableForeignKeys
 description: "Describe the DataMiner connector development topic Foreign keys, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Foreign keys

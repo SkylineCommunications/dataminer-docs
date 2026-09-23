@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.RCA.Protocol.Link-path
 description: "Reference the DataMiner connector protocol schema entry for path attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # path attribute

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationActionCSharpCode
 description: "Describe the DataMiner Automation development topic C# code, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # C# code

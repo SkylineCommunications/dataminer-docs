@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDVEsImplementation
 description: "Describe the DataMiner connector development topic Implementing DVE functionality, including its purpose, behavior, implementation guidance, and relevant."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Implementing DVE functionality

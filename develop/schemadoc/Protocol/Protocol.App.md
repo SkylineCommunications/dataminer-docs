@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.App
 description: "Reference the DataMiner connector protocol schema entry for App element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # App element

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Information.Includes
 description: "Reference the DataMiner connector protocol schema entry for Includes element [obsolete], including its documented structure, attributes, values, and const."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Includes element [obsolete]

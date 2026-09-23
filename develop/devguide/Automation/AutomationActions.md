@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationActions
 description: "Describe the DataMiner Automation development topic Automation script actions, including its purpose, behavior, implementation guidance, and relevant cons."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Automation script actions

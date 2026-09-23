@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistenceStandaloneParameters
 description: "Describe the DataMiner connector development topic Standalone parameters, including its purpose, behavior, implementation guidance, and relevant constrain."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Standalone parameters

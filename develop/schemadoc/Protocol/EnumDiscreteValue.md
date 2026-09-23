@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumDiscreteValue
 description: "Reference the DataMiner connector protocol schema entry for EnumDiscreteValue simple type, including its documented structure, attributes, values, and con."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumDiscreteValue simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-TimerTime
 description: "Reference the DataMiner connector protocol schema entry for TimerTime simple type, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TimerTime simple type

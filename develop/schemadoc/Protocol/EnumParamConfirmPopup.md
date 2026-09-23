@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumParamConfirmPopup
 description: "Reference the DataMiner connector protocol schema entry for EnumParamConfirmPopup simple type, including its documented structure, attributes, values, and."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumParamConfirmPopup simple type

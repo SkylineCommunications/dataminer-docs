@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Compliancies.MinimumRequiredVersion
 description: "Reference the DataMiner connector protocol schema entry for MinimumRequiredVersion element, including its documented structure, attributes, values, and co."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # MinimumRequiredVersion element

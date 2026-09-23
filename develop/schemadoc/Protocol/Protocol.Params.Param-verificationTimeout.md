@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param-verificationTimeout
 description: "Reference the DataMiner connector protocol schema entry for verificationTimeout attribute, including its documented structure, attributes, values, and con."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # verificationTimeout attribute

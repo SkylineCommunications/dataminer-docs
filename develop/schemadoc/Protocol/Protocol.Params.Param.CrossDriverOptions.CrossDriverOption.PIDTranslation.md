@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation
 description: "Reference the DataMiner connector protocol schema entry for PIDTranslation element, including its documented structure, attributes, values, and constraint."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # PIDTranslation element

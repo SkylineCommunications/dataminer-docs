@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistence
 description: "Describe the DataMiner connector development topic DataMiner data persistence, including its purpose, behavior, implementation guidance, and relevant cons."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # DataMiner data persistence

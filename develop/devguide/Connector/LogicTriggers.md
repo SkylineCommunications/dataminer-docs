@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicTriggers
 description: "Describe the DataMiner connector development topic Triggers, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Triggers

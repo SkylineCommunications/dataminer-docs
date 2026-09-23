@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-TypeTriggerOnId
 description: "Reference the DataMiner connector protocol schema entry for TypeTriggerOnId simple type, including its documented structure, attributes, values, and const."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # TypeTriggerOnId simple type

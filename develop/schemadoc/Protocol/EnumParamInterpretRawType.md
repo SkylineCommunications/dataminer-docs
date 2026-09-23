@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumParamInterpretRawType
 description: "Reference the DataMiner connector protocol schema entry for EnumParamInterpretRawType simple type, including its documented structure, attributes, values."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumParamInterpretRawType simple type

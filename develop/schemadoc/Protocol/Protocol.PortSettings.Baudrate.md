@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.PortSettings.Baudrate
 description: "Reference the DataMiner connector protocol schema entry for Baudrate element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Baudrate element

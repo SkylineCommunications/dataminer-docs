@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Display-pageOptions
 description: "Reference the DataMiner connector protocol schema entry for pageOptions attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # pageOptions attribute

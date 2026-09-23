@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: DMSScript.Script.Exe.Message
 description: "Reference the DataMiner Automation script schema entry for Message element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Message element

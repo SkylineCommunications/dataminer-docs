@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ChangeDCF
 description: "Describe the DataMiner connector development topic Change DCF, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Change DCF

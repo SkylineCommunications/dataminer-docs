@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsMatrixDis
 description: "Describe the DataMiner connector development topic Matrix development using DIS, including its purpose, behavior, implementation guidance, and relevant co."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Matrix development using DIS

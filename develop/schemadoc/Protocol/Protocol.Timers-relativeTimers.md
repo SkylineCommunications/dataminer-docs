@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Timers-relativeTimers
 description: "Reference the DataMiner connector protocol schema entry for relativeTimers attribute, including its documented structure, attributes, values, and constrai."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # relativeTimers attribute

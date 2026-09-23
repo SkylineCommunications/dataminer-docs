@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionReadFile
 description: "Describe the DataMiner connector development topic read file, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # read file

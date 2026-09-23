@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Type-advanced
 description: "Reference the DataMiner connector protocol schema entry for advanced attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # advanced attribute

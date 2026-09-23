@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionSetWithWait
 description: "Describe the DataMiner connector development topic set with wait, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # set with wait

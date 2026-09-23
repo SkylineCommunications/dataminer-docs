@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicQActionsEntryPointMethods
 description: "Describe the DataMiner connector development topic Entry point methods, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Entry point methods

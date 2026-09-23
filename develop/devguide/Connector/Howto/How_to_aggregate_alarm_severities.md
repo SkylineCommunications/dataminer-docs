@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: How_to_aggregate_alarm_severities
 description: "Describe the DataMiner connector development topic How to aggregate alarm severities, including its purpose, behavior, implementation guidance, and releva."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # How to aggregate alarm severities

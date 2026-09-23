@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Getting_Started_with_the_IAS_Toolkit
 description: "Describe the DataMiner Automation development topic Getting started with the IAS Toolkit, including its purpose, behavior, implementation guidance, and re."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Getting started with the IAS Toolkit

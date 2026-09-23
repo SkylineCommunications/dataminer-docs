@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicParameters
 description: "A parameter can represent a table, a table column, an internal placeholder to hold a value, a UI component, etc."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Parameters

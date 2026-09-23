@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Connector_help_pages
 description: "For every connector that is developed for DataMiner, two or more documentation pages should be made."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Connector documentation

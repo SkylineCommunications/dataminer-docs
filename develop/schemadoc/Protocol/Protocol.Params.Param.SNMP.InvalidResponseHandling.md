@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.InvalidResponseHandling
 description: "Reference the DataMiner connector protocol schema entry for InvalidResponseHandling element, including its documented structure, attributes, values, and c."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # InvalidResponseHandling element

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSerialDisplayingBytesAsNumbers
 description: "Describe the DataMiner connector development topic Displaying bytes as numbers, including its purpose, behavior, implementation guidance, and relevant con."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Displaying bytes as numbers

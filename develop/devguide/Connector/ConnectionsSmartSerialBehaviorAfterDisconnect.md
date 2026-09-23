@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSmartSerialBehaviorAfterDisconnect
 description: "Describe the DataMiner connector development topic Smart-Serial behavior after a physical device disconnect, including its purpose, behavior, implementati."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Smart-Serial behavior after a physical device disconnect

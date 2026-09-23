@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: How_to_make_your_automation_scripts_debug_ready
 description: "Describe the DataMiner Automation development topic Making your automation scripts debug-ready, including its purpose, behavior, implementation guidance."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Making your automation scripts debug-ready

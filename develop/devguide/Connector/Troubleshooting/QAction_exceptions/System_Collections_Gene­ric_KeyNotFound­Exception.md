@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: System_Collections_Generic_KeyNotFoundException
 description: "Describe the DataMiner connector development topic System.Collections.Generic.KeyNotFoundException, including its purpose, behavior, implementation guidan."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # System.Collections.Generic.KeyNotFoundException

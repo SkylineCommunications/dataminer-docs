@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Automation_best_practices_information_events
 description: "Describe the DataMiner Automation development topic Generating information events, including its purpose, behavior, implementation guidance, and relevant."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Generating information events

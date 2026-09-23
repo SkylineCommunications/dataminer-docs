@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: UIComponentsMatrixDiscreetInfo
 description: "Describe the DataMiner connector development topic Discreet info, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Discreet info

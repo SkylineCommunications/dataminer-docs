@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsWebSocketsCommunication
 description: "Describe the DataMiner connector development topic Communication, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Communication

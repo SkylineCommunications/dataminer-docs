@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ConnectionsSnmpRetrievingTables
 description: "An overview of the different methods that are available for retrieving tables via SNMP in a protocol."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Retrieving tables

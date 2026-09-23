@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: SwarmingScriptScheduledTask
 description: "Describe the DataMiner connector development topic Configuring a script to swarm scheduled tasks, including its purpose, behavior, implementation guidance."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Configuring a script to swarm scheduled tasks

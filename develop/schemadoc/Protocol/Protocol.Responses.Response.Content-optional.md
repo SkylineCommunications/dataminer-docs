@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Responses.Response.Content-optional
 description: "Reference the DataMiner connector protocol schema entry for optional attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # optional attribute

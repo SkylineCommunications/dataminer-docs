@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumParamCRCType
 description: "Reference the DataMiner connector protocol schema entry for EnumParamCRCType simple type, including its documented structure, attributes, values, and cons."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumParamCRCType simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: LogicActionSleep
 description: "Describe the DataMiner connector development topic sleep, including its purpose, behavior, implementation guidance, and relevant constraints."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # sleep

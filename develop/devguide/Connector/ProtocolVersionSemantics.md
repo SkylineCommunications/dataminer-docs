@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: ProtocolVersionSemantics
 description: "Describe the DataMiner connector development topic Protocol version semantics, including its purpose, behavior, implementation guidance, and relevant cons."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Protocol version semantics

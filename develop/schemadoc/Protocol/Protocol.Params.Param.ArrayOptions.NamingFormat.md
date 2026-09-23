@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions.NamingFormat
 description: "Reference the DataMiner connector protocol schema entry for NamingFormat element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # NamingFormat element

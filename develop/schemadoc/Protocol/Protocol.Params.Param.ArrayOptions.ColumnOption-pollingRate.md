@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-pollingRate
 description: "Reference the DataMiner connector protocol schema entry for pollingRate attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # pollingRate attribute

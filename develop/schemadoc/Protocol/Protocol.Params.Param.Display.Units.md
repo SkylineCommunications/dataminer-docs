@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Units
 description: "Reference the DataMiner connector protocol schema entry for Units element, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # Units element

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Params.Param-snapshot
 description: "Reference the DataMiner connector protocol schema entry for snapshot attribute, including its documented structure, attributes, values, and constraints."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # snapshot attribute

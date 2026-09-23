@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol-EnumMatrixMatrixOptionNameType
 description: "Reference the DataMiner connector protocol schema entry for EnumMatrixMatrixOptionNameType simple type, including its documented structure, attributes, va."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # EnumMatrixMatrixOptionNameType simple type

@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AdvancedViewTablesSameElement
 description: "Describe the DataMiner connector development topic View tables in the same element, including its purpose, behavior, implementation guidance, and relevant."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # View tables in the same element

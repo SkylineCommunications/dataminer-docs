@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: Protocol.Type-communicationOptions
 description: "Reference the DataMiner connector protocol schema entry for communicationOptions attribute, including its documented structure, attributes, values, and co."
-content_type: schema
-applies_to:
-  - DataMiner
 ---
 
 # communicationOptions attribute

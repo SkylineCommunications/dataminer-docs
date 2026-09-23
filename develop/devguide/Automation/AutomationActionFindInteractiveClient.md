@@ -2,9 +2,6 @@
 metadata_version: 1
 uid: AutomationActionFindInteractiveClient
 description: "Describe the DataMiner Automation development topic Find interactive client, including its purpose, behavior, implementation guidance, and relevant constr."
-content_type: conceptual
-applies_to:
-  - DataMiner
 ---
 
 # Find interactive client
