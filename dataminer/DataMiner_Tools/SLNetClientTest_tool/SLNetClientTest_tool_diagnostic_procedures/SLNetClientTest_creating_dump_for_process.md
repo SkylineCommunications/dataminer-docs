@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_creating_dump_for_process
+description: "Use SLNetClientTest to create a .dmp snapshot of a selected DataMiner process, choose the dump level, and find the file in the CrashDump folder."
 ---
 
 # Creating a dump file for a particular process
