@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-export
-description: "Reference the DataMiner connector protocol schema entry for export attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the export attribute selects the exported protocol tables that receive a discreet parameter value in a DataMiner connector protocol."
 ---
 
 # export attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Mediation.LinkTo.ValueMapping
-description: "Reference the DataMiner connector protocol schema entry for ValueMapping element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ValueMapping element converts a device protocol value to its corresponding base protocol value in a DataMiner connector protocol."
 ---
 
 # ValueMapping element

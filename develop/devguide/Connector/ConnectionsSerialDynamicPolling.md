@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerialDynamicPolling
-description: "Describe the DataMiner connector development topic Dynamic polling, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Change a serial connection's polling IP address and port at runtime with a dynamic ip parameter while avoiding unintended changes to shared sockets."
 ---
 
 # Dynamic polling

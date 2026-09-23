@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumParamInterpretType
-description: "Reference the DataMiner connector protocol schema entry for EnumParamInterpretType simple type, including its documented structure, attributes, values, an."
+description: "Review the allowed values for the EnumParamInterpretType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumParamInterpretType simple type

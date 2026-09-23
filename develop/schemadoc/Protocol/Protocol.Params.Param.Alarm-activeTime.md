@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm-activeTime
-description: "Reference the DataMiner connector protocol schema entry for activeTime attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the activeTime attribute to automatically clear a constant alarm after a configured duration in a DataMiner connector protocol."
 ---
 
 # activeTime attribute

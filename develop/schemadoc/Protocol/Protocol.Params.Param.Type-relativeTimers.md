@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Type-relativeTimers
-description: "Reference the DataMiner connector protocol schema entry for relativeTimers attribute, including its documented structure, attributes, values, and constrai."
+description: "Learn how the relativeTimers attribute controls whether a changed timer interval completes or fires immediately."
 ---
 
 # relativeTimers attribute

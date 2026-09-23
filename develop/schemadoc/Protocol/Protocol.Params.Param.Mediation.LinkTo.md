@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Mediation.LinkTo
-description: "Reference the DataMiner connector protocol schema entry for LinkTo element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the LinkTo element connects base and device protocol parameters with optional conversions and value mappings in a DataMiner connector protocol."
 ---
 
 # LinkTo element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Mib
-description: "Reference the DataMiner connector protocol schema entry for Mib element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Mib element to add SMI-compliant content to the connector's generated MIB in a DataMiner connector protocol."
 ---
 
 # Mib element

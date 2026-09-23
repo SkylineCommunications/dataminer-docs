@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Scale-high
-description: "Reference the DataMiner connector protocol schema entry for high attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the high attribute sets the converted value corresponding to the highest device value in a scale mapping in a DataMiner connector protocol."
 ---
 
 # high attribute

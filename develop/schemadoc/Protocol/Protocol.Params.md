@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params
-description: "Reference the DataMiner connector protocol schema entry for Params element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Params element contains a connector's parameter definitions and enforces unique parameter IDs and type-name combinations."
 ---
 
 # Params element

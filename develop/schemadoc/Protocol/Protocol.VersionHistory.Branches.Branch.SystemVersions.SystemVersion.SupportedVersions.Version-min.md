@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version-min
-description: "Reference the DataMiner connector protocol schema entry for min attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the min attribute, which sets the minimum system version included in a supported range."
 ---
 
 # min attribute

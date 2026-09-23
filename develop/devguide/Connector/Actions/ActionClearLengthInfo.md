@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionClearLengthInfo
-description: "Describe the DataMiner connector development topic clear length info, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the clear length info action on a response when updated header, trailer, or length parameter data requires length information to be recalculated."
 ---
 
 # clear length info

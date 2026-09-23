@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionClearOnDisplay
-description: "Describe the DataMiner connector development topic clear on display, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the clear on display action to reset a parameter's displayed value to Not initialized, typically together with a clear action."
 ---
 
 # clear on display

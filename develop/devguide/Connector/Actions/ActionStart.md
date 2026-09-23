@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionStart
-description: "Describe the DataMiner connector development topic start, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the start action to start one or more timers identified by their IDs in a DataMiner connector definition."
 ---
 
 # start

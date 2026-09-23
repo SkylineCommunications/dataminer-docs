@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.PortTypeUDP
-description: "Reference the DataMiner connector protocol schema entry for PortTypeUDP element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the PortTypeUDP element configures whether UDP/IP is available as a selectable port type for an element connection."
 ---
 
 # PortTypeUDP element

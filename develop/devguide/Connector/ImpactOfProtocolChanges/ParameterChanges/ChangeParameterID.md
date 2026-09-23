@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeParameterID
-description: "Describe the DataMiner connector development topic Change parameter ID, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Assess the effects of changing a parameter ID on saved data, alarms, trending, integrations, and references before assigning a new ID."
 ---
 
 # Change parameter ID

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTableMatrixInputsTableParameter
-description: "Describe the DataMiner connector development topic Inputs Table, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the inputs table for a table-based matrix with required index, label, state, and lock columns plus an optional page column."
 ---
 
 # Inputs Table

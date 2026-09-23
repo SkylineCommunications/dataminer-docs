@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsWebSocketsUseCase1
-description: "Describe the DataMiner connector development topic Normal WebSocket connection, including its purpose, behavior, implementation guidance, and relevant con."
+description: "Understand why a normal WebSocket connection configured during element creation cannot reconnect after a disconnect without restarting the element."
 ---
 
 # Normal WebSocket connection

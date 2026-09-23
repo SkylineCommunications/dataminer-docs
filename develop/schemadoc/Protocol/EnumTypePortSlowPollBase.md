@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumTypePortSlowPollBase
-description: "Reference the DataMiner connector protocol schema entry for EnumTypePortSlowPollBase simple type, including its documented structure, attributes, values."
+description: "Review the allowed values for the EnumTypePortSlowPollBase simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumTypePortSlowPollBase simple type

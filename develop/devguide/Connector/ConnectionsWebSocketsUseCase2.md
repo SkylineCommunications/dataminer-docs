@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsWebSocketsUseCase2
-description: "Describe the DataMiner connector development topic WebSocket connection with dynamic IP, including its purpose, behavior, implementation guidance, and rel."
+description: "Configure a WebSocket connection with dynamic IP so DataMiner can replace or re-establish it after a disconnect without restarting the element."
 ---
 
 # WebSocket connection with dynamic IP

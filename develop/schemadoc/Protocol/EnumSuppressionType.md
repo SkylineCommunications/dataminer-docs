@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumSuppressionType
-description: "Reference the DataMiner connector protocol schema entry for EnumSuppressionType simple type, including its documented structure, attributes, values, and c."
+description: "Review the allowed values for the EnumSuppressionType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumSuppressionType simple type

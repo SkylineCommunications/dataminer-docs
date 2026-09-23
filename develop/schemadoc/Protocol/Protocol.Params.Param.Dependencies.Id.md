@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Dependencies.Id
-description: "Reference the DataMiner connector protocol schema entry for Id element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Id element to link a dependency parameter that must be set or verified with another parameter in a DataMiner connector protocol."
 ---
 
 # Id element

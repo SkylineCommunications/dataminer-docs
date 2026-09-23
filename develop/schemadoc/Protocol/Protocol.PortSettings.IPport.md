@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.IPport
-description: "Reference the DataMiner connector protocol schema entry for IPport element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the IPport element configures the default IP port number and whether users can change it for an element connection."
 ---
 
 # IPport element

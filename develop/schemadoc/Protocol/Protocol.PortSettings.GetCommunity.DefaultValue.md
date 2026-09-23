@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.GetCommunity.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DefaultValue element under GetCommunity sets the initial SNMP get community string or SNMPv3 authentication password."
 ---
 
 # DefaultValue element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActions
-description: "Describe the DataMiner Automation development topic Automation script actions, including its purpose, behavior, implementation guidance, and relevant cons."
+description: "Browse the available automation script actions and learn what each action does before configuring its XML elements and attributes."
 ---
 
 # Automation script actions

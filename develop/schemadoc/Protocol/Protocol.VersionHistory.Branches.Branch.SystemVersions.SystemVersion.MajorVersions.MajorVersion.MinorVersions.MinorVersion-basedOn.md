@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion-basedOn
-description: "Reference the DataMiner connector protocol schema entry for basedOn attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the basedOn attribute, which identifies the source protocol version for a minor version."
 ---
 
 # basedOn attribute

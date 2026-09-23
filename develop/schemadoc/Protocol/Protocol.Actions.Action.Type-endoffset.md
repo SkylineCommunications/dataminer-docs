@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-endoffset
-description: "Reference the DataMiner connector protocol schema entry for endoffset attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Type endoffset attribute with stuffing actions to set the fixed end position of the data block section to process."
 ---
 
 # endoffset attribute

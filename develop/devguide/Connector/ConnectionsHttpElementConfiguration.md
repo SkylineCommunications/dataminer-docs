@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsHttpElementConfiguration
-description: "Describe the DataMiner connector development topic Element configuration, including its purpose, behavior, implementation guidance, and relevant constrain."
+description: "Configure an HTTP element's server address and proxy behavior with the ByPassProxy bus setting and a proxyServer parameter."
 ---
 
 # Element configuration

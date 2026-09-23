@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedLoggerTablesQuerying
-description: "Describe the DataMiner connector development topic Querying logger tables, including its purpose, behavior, implementation guidance, and relevant constrai."
+description: "Query logger table data through database-compatible queries or GetPartialTableMessage instead of SLProtocol table access methods."
 ---
 
 # Querying logger tables

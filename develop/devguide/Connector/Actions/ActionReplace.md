@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionReplace
-description: "Describe the DataMiner connector development topic replace, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the replace action to substitute a command or response parameter at a specified zero-based position using a dynamically supplied parameter ID."
 ---
 
 # replace

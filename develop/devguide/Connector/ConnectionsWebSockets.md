@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsWebSockets
-description: "Describe the DataMiner connector development topic WebSockets, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how the WebSocket protocol establishes full-duplex communication over one TCP connection through an HTTP Upgrade handshake."
 ---
 
 # WebSockets

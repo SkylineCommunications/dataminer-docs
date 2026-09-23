@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumSNMP
-description: "Reference the DataMiner connector protocol schema entry for EnumSNMP simple type, including its documented structure, attributes, values, and constraints."
+description: "Review the allowed values for the EnumSNMP simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumSNMP simple type

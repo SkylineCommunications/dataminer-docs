@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTreeControl
-description: "Describe the DataMiner connector development topic Tree control, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Learn how DataMiner Cube tree controls represent hierarchical data and review their configuration, relations, icons, and limitations."
 ---
 
 # Tree control

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Exceptions
-description: "Reference the DataMiner connector protocol schema entry for Exceptions element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Exceptions element groups parameter exceptions that map incoming values to display and stored values in a DataMiner connector protocol."
 ---
 
 # Exceptions element

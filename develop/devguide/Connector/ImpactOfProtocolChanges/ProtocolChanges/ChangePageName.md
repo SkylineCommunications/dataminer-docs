@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangePageName
-description: "Describe the DataMiner connector development topic Change page name, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Assess how renaming a Data Display page affects saved views, visualizations, scripts, page buttons, and other references to that page."
 ---
 
 # Change page name

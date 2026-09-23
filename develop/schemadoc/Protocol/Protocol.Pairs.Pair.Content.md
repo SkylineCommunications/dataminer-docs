@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Pairs.Pair.Content
-description: "Reference the DataMiner connector protocol schema entry for Content element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Content element to associate one command with its expected normal and error responses in a DataMiner connector protocol."
 ---
 
 # Content element

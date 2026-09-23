@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionChangeLength
-description: "Describe the DataMiner connector development topic change length, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the change length action to set a fixed-length parameter's byte length from another parameter, within the maximum supported size."
 ---
 
 # change length

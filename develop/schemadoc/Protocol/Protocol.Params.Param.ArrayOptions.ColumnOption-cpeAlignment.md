@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-cpeAlignment
-description: "Reference the DataMiner connector protocol schema entry for cpeAlignment attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how to use the cpeAlignment attribute to align KPI values in EPM table columns to the left, center, or right in a DataMiner connector protocol."
 ---
 
 # cpeAlignment attribute

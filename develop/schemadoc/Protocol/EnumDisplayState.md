@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumDisplayState
-description: "Reference the DataMiner connector protocol schema entry for EnumDisplayState simple type, including its documented structure, attributes, values, and cons."
+description: "Review the allowed values for the EnumDisplayState simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumDisplayState simple type

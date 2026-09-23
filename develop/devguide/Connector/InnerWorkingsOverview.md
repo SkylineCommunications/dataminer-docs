@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: InnerWorkingsOverview
-description: "Describe the DataMiner connector development topic Overview, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Follow how groups, parameters, pairs, sessions, actions, and triggers move through SLProtocol and interact with communication processes."
 ---
 
 # Overview

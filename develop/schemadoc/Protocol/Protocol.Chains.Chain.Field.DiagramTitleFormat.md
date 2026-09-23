@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Field.DiagramTitleFormat
-description: "Reference the DataMiner connector protocol schema entry for DiagramTitleFormat element, including its documented structure, attributes, values, and constr."
+description: "Learn how the DiagramTitleFormat element sets a custom EPM diagram box title with parameter and display-key placeholders in a DataMiner connector protocol."
 ---
 
 # DiagramTitleFormat element

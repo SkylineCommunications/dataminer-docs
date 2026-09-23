@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionExecuteNext
-description: "Describe the DataMiner connector development topic execute next, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the execute next action to place a group at the start of the execution queue, immediately after the group currently running."
 ---
 
 # execute next

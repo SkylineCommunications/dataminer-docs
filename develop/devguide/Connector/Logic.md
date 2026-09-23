@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Logic
-description: "Describe the DataMiner connector development topic Logic, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Explore the parameters, groups, timers, triggers, actions, QActions, and conditions used to define connector logic in a DataMiner protocol."
 ---
 
 # Logic

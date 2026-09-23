@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypePingInterval
-description: "Reference the DataMiner connector protocol schema entry for TypePingInterval simple type, including its documented structure, attributes, values, and cons."
+description: "Use the TypePingInterval simple type to validate ping intervals from 1000 to 300000 milliseconds in the DataMiner connector protocol schema."
 ---
 
 # TypePingInterval simple type

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsVisualization
-description: "Describe the DataMiner connector development topic Visualizing UI components, including its purpose, behavior, implementation guidance, and relevant const."
+description: "Configure protocol page order, default and wide pages, RTDisplay, and component positions to visualize UI components in DataMiner."
 ---
 
 # Visualizing UI components

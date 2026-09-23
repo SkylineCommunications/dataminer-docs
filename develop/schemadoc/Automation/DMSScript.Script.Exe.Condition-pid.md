@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-pid
-description: "Reference the DataMiner Automation script schema entry for pid attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Condition pid attribute to identify the parameter whose value forms the left operand of an automation script Boolean expression."
 ---
 
 # pid attribute

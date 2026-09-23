@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Display.Pages.Page.Visibility
-description: "Reference the DataMiner connector protocol schema entry for Visibility element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Visibility element configures default and parameter-controlled visibility for a Data Display page in a DataMiner connector protocol."
 ---
 
 # Visibility element

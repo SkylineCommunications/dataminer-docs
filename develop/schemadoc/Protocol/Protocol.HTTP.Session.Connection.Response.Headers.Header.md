@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Response.Headers.Header
-description: "Reference the DataMiner connector protocol schema entry for Header element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Header element to map one HTTP response header to the parameter that stores its value in a DataMiner connector protocol."
 ---
 
 # Header element

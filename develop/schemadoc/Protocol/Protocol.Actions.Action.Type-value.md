@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-value
-description: "Reference the DataMiner connector protocol schema entry for value attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Type value attribute with stuffing actions to specify the byte that DataMiner repeats in the data block."
 ---
 
 # value attribute

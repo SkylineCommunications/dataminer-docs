@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Mediation.LinkTo-description
-description: "Reference the DataMiner connector protocol schema entry for description attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the description attribute adds explanatory text to a parameter link in the DataMiner Mediation Layer in a DataMiner connector protocol."
 ---
 
 # description attribute

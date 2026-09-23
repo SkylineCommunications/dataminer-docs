@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsHttp
-description: "Describe the DataMiner connector development topic HTTP, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how DataMiner connectors use HTTP connections and SLPort to exchange request and response payloads with networked devices."
 ---
 
 # HTTP

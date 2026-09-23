@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsService
-description: "Describe the DataMiner connector development topic Service, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Create a service definition protocol from Skyline Service Definition Basic and preserve the parameters that DataMiner fills to expose service status."
 ---
 
 # Service

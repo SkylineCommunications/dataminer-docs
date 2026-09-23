@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.RCA.Protocol.Link
-description: "Reference the DataMiner connector protocol schema entry for Link element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Link element defines an RCA chain with an ordered parameter path and optional value filters between related tables."
 ---
 
 # Link element

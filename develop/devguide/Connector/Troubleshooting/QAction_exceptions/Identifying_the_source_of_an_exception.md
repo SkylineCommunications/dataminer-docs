@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Identifying_the_source_of_an_exception
-description: "Describe the DataMiner connector development topic Identifying the source of an exception, including its purpose, behavior, implementation guidance, and r."
+description: "Trace a QAction exception to its source by reading the stack trace, reproducing with DIS inject, adding focused logging, and validating object state."
 ---
 
 # Identifying the source of an exception

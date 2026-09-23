@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Positions.Position.Page
-description: "Reference the DataMiner connector protocol schema entry for Page element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Page element selects the Data Display page where a parameter appears and can override its measurement type in a DataMiner connector protocol."
 ---
 
 # Page element

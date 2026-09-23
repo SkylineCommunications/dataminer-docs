@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Length
-description: "Reference the DataMiner connector protocol schema entry for Length element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Length element sets the exact byte length when a parameter uses a fixed length type in a DataMiner connector protocol."
 ---
 
 # Length element

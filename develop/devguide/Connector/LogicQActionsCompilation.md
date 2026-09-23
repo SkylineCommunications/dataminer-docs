@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicQActionsCompilation
-description: "Describe the DataMiner connector development topic QAction Compilation, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand when DataMiner compiles C# QActions, where DLLs are stored, how to reference assemblies or other QActions, and which compiler features apply."
 ---
 
 # QAction Compilation

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.On-id
-description: "Reference the DataMiner connector protocol schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action On id attribute to identify the parameters, commands, responses, or other items targeted by a connector protocol action."
 ---
 
 # id attribute

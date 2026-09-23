@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistenceRdbms
-description: "Describe the DataMiner connector development topic DataMiner general database – RDBMS, including its purpose, behavior, implementation guidance, and relev."
+description: "Review the legacy MySQL general database tables that store element values, information events, alarms, trend data, and DVE information."
 ---
 
 # DataMiner general database – RDBMS

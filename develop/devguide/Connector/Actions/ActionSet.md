@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionSet
-description: "Describe the DataMiner connector development topic set, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the set action on parameters or groups to perform single or multiple SNMP set operations through a selected connector connection."
 ---
 
 # set

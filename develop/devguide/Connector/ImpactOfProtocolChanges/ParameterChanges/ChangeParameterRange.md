@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeParameterRange
-description: "Describe the DataMiner connector development topic Change parameter range, including its purpose, behavior, implementation guidance, and relevant constrai."
+description: "Assess how changing a parameter range affects displayed values, controls, alarming, trending, and existing automation or visualizations."
 ---
 
 # Change parameter range

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Compliancies.MaximumSupportedVersion
-description: "Reference the DataMiner connector protocol schema entry for MaximumSupportedVersion element, including its documented structure, attributes, values, and c."
+description: "Learn how the MaximumSupportedVersion element sets the latest DataMiner version compatible with a connector in a DataMiner connector protocol."
 ---
 
 # MaximumSupportedVersion element

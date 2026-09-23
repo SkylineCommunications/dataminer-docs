@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.IPport.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DefaultValue element under IPport sets the default IP port number for a new element connection."
 ---
 
 # DefaultValue element

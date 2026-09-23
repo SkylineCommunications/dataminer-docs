@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Stopbits.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DefaultValue element under Stopbits sets the initial stop bit count or SNMPv3 security level and protocol."
 ---
 
 # DefaultValue element

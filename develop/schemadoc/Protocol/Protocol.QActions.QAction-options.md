@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.QActions.QAction-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the QAction options attribute configures binary input, debugging, compilation, queuing, grouping, and DLL naming."
 ---
 
 # options attribute

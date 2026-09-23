@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Field.Display.Selection
-description: "Reference the DataMiner connector protocol schema entry for Selection element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Selection element configures visibility settings for an EPM chain field selection control in a DataMiner connector protocol."
 ---
 
 # Selection element

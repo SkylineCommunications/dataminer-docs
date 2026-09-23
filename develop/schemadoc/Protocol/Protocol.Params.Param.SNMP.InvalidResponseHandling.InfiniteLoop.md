@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop
-description: "Reference the DataMiner connector protocol schema entry for InfiniteLoop element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the InfiniteLoop element sets SNMP table response handling when polling detects an infinite loop in a DataMiner connector protocol."
 ---
 
 # InfiniteLoop element

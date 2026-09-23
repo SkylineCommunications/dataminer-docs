@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-type
-description: "Reference the DataMiner Automation script schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Condition type attribute to specify whether a Boolean expression's left operand is a parameter value or script variable."
 ---
 
 # type attribute

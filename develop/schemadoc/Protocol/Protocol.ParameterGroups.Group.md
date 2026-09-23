@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ParameterGroups.Group
-description: "Reference the DataMiner connector protocol schema entry for Group element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Group element to define a DCF interface, its parameters, and dynamic table mapping in a DataMiner connector protocol."
 ---
 
 # Group element

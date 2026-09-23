@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.LengthType-id
-description: "Reference the DataMiner connector protocol schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the id attribute references the parameter that provides a variable length or marks the next response parameter in a DataMiner connector protocol."
 ---
 
 # id attribute

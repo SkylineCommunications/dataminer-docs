@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.ByteOffset
-description: "Reference the DataMiner connector protocol schema entry for ByteOffset element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ByteOffset element subtracts an offset from incoming bytes and adds it to outgoing bytes in a group in a DataMiner connector protocol."
 ---
 
 # ByteOffset element

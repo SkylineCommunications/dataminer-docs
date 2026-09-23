@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets-dependencyId
-description: "Reference the DataMiner connector protocol schema entry for dependencyId attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how the dependencyId attribute references the parameter whose state determines which discreet values are available in a DataMiner connector protocol."
 ---
 
 # dependencyId attribute

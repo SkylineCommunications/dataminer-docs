@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionReplaceData
-description: "Describe the DataMiner connector development topic replace data, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the replace data action to substitute specified byte sequences in parameters, commands, or responses within optional start and end offsets."
 ---
 
 # replace data

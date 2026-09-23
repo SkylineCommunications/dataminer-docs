@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpAlteringMultipleVariables
-description: "Describe the DataMiner connector development topic Altering multiple variables, including its purpose, behavior, implementation guidance, and relevant con."
+description: "Set multiple SNMP variables in one request by applying a set action to a group of write parameters, with all bindings validated together."
 ---
 
 # Altering multiple variables

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Stopbits
-description: "Reference the DataMiner connector protocol schema entry for Stopbits element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Stopbits element defines the default and selectable stop bit counts for an element connection."
 ---
 
 # Stopbits element

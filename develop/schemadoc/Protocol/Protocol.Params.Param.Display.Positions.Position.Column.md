@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Positions.Position.Column
-description: "Reference the DataMiner connector protocol schema entry for Column element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Column element sets the horizontal column where a parameter appears on a Data Display page in a DataMiner connector protocol."
 ---
 
 # Column element

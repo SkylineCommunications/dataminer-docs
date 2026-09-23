@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Range
-description: "Reference the DataMiner connector protocol schema entry for Range element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Range element rejects communication parameter values outside a defined minimum and maximum in a DataMiner connector protocol."
 ---
 
 # Range element

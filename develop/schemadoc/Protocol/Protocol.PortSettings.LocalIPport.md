@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.LocalIPport
-description: "Reference the DataMiner connector protocol schema entry for LocalIPport element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the LocalIPport element configures the local client port for DataMiner serial connections over TCP/IP or UDP/IP."
 ---
 
 # LocalIPport element

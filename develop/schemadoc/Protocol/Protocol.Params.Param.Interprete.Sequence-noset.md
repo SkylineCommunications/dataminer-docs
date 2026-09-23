@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Sequence-noset
-description: "Reference the DataMiner connector protocol schema entry for noset attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the noset attribute must be set to true whenever a Sequence element is used in a DataMiner connector protocol."
 ---
 
 # noset attribute

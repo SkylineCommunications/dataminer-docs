@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsMatrixDis
-description: "Describe the DataMiner connector development topic Matrix development using DIS, including its purpose, behavior, implementation guidance, and relevant co."
+description: "Use DIS matrix macros and the DataMiner Class Library Matrix class to generate, synchronize, and efficiently control matrix parameters and tables."
 ---
 
 # Matrix development using DIS

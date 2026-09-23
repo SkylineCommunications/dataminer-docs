@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsComboBox
-description: "Describe the DataMiner connector development topic Combo box, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define a combo box that lets users type or select a string by linking a read/write parameter pair to a dynamic list of discrete values."
 ---
 
 # Combo box

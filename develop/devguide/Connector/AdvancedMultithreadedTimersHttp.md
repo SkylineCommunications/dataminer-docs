@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedMultiThreadedTimersHttp
-description: "Describe the DataMiner connector development topic HTTP, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Implement multithreaded HTTP requests by building request objects in one QAction and processing responses and post-response logic in subsequent QActions."
 ---
 
 # HTTP

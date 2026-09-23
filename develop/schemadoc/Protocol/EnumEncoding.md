@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumEncoding
-description: "Reference the DataMiner connector protocol schema entry for EnumEncoding simple type, including its documented structure, attributes, values, and constrai."
+description: "Review the allowed values for the EnumEncoding simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumEncoding simple type

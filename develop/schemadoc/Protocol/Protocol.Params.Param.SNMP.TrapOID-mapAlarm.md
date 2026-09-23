@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapOID-mapAlarm
-description: "Reference the DataMiner connector protocol schema entry for mapAlarm attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the mapAlarm attribute maps SNMP trap bindings to alarm severities, values, links, and single-clear behavior."
 ---
 
 # mapAlarm attribute

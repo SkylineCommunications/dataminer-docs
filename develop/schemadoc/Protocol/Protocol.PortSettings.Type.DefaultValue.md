@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Type.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DefaultValue element under PortSettings Type selects UDP/IP, TCP/IP, or Serial as the default port type."
 ---
 
 # DefaultValue element

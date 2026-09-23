@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Field-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the options attribute configures EPM field filters, diagrams, details, tabs, sorting, and related behavior in a DataMiner connector protocol."
 ---
 
 # options attribute

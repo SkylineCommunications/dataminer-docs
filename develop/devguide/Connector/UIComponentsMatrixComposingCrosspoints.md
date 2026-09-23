@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsMatrixComposingCrosspoints
-description: "Describe the DataMiner connector development topic Composing crosspoints on matrix parameters, including its purpose, behavior, implementation guidance, a."
+description: "Update standard matrix crosspoints from a QAction, maintain a buffer to remove stale connections, and minimize costly SendToDisplay calls."
 ---
 
 # Composing crosspoints on matrix parameters

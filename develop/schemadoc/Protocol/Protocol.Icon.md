@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Icon
-description: "Reference the DataMiner connector protocol schema entry for Icon element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Icon element to provide XAML for an app icon in DataMiner Cube Surveyor and visual overviews in a DataMiner connector protocol."
 ---
 
 # Icon element

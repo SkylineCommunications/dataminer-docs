@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ExportRules.ExportRule
-description: "Reference the DataMiner connector protocol schema entry for ExportRule element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ExportRule element changes selected XML content in protocols exported for Dynamic Virtual Elements in a DataMiner connector protocol."
 ---
 
 # ExportRule element

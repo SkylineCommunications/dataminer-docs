@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionAddToExecute
-description: "Describe the DataMiner connector development topic add to execute, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the add to execute action to place a group at the end of the execution queue, after any groups scheduled by a timer."
 ---
 
 # add to execute

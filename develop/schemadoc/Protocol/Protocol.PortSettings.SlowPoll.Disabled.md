@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.SlowPoll.Disabled
-description: "Reference the DataMiner connector protocol schema entry for Disabled element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Disabled element under SlowPoll controls whether users can change slow poll settings for the main connection."
 ---
 
 # Disabled element

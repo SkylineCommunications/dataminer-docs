@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Type
-description: "Reference the DataMiner Automation script schema entry for Type element, including its documented structure, attributes, values, and constraints."
+description: "Use the Exe Type element to select template, memory, condition, or dummy-state handling for applicable automation script actions."
 ---
 
 # Type element

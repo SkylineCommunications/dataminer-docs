@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedCustomProperties
-description: "Describe the DataMiner connector development topic Custom properties, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Learn how connector-defined custom properties add details to DataMiner elements, services, views, and alarms, and find related references."
 ---
 
 # Custom properties

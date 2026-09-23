@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param-historySet
-description: "Reference the DataMiner connector protocol schema entry for historySet attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the historySet attribute to enable history sets so historical parameter values are stored accurately in a DataMiner connector protocol."
 ---
 
 # historySet attribute

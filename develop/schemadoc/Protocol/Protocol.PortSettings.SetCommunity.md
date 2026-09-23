@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.SetCommunity
-description: "Reference the DataMiner connector protocol schema entry for SetCommunity element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the SetCommunity element configures the default SNMP set community string or SNMPv3 encryption password and whether users can edit it."
 ---
 
 # SetCommunity element

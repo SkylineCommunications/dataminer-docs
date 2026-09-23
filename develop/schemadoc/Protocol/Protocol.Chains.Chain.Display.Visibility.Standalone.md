@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Display.Visibility.Standalone
-description: "Reference the DataMiner connector protocol schema entry for Standalone element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Standalone element maps parameter values to the opposite of the configured default chain visibility in a DataMiner connector protocol."
 ---
 
 # Standalone element

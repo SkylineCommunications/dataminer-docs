@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails
-description: "Reference the DataMiner connector protocol schema entry for LinkedDetails element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the LinkedDetails element, which shows details for tree items matching a discrete value."
 ---
 
 # LinkedDetails element

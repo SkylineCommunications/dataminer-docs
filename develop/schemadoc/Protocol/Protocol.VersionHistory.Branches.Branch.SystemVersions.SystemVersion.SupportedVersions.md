@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions
-description: "Reference the DataMiner connector protocol schema entry for SupportedVersions element, including its documented structure, attributes, values, and constra."
+description: "Consult the DataMiner connector protocol schema reference for the SupportedVersions element, which lists supported version ranges for related systems."
 ---
 
 # SupportedVersions element

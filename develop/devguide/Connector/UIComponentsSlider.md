@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsSlider
-description: "Describe the DataMiner connector development topic Slider, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define a slider with numeric read and write parameters, a Display range, optional step size, and matching units for user-controlled values."
 ---
 
 # Slider

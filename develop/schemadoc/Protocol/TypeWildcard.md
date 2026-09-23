@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeWildcard
-description: "Reference the DataMiner connector protocol schema entry for TypeWildcard simple type, including its documented structure, attributes, values, and constrai."
+description: "Use the TypeWildcard simple type to restrict a schema value to the asterisk wildcard in the DataMiner connector protocol schema."
 ---
 
 # TypeWildcard simple type

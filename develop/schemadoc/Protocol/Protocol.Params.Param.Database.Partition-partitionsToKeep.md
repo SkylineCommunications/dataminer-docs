@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Database.Partition-partitionsToKeep
-description: "Reference the DataMiner connector protocol schema entry for partitionsToKeep attribute, including its documented structure, attributes, values, and constr."
+description: "Learn how to use the partitionsToKeep attribute to set how many historical database partitions a logger table retains in a DataMiner connector protocol."
 ---
 
 # partitionsToKeep attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Value
-description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Value element maps an incoming exception to the internal value stored for alarms and trending in a DataMiner connector protocol."
 ---
 
 # Value element

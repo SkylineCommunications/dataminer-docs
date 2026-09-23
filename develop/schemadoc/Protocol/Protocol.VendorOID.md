@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VendorOID
-description: "Reference the DataMiner connector protocol schema entry for VendorOID element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the VendorOID element, which sets the unique vendor OID used to define MIB objects."
 ---
 
 # VendorOID element

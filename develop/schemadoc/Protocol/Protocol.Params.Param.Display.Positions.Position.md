@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Positions.Position
-description: "Reference the DataMiner connector protocol schema entry for Position element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Position element defines a parameter location by Data Display page, row, and column in a DataMiner connector protocol."
 ---
 
 # Position element

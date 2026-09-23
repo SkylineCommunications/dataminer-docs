@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: System_IndexOutOfRangeException
-description: "Describe the DataMiner connector development topic System.IndexOutOfRangeException, including its purpose, behavior, implementation guidance, and relevant."
+description: "Prevent IndexOutOfRangeException in QAction array access by using correct loop bounds and validating returned arrays before reading expected positions."
 ---
 
 # System.IndexOutOfRangeException

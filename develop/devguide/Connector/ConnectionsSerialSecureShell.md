@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerialSecureShell
-description: "Describe the DataMiner connector development topic Secure Shell, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure Secure Shell connections with password or public key authentication, account for SSH-specific behavior, and review supported algorithms."
 ---
 
 # Secure Shell

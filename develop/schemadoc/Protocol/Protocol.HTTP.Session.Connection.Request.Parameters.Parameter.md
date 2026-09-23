@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request.Parameters.Parameter
-description: "Reference the DataMiner connector protocol schema entry for Parameter element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Parameter element to add a fixed or parameter-sourced key-value pair to an HTTP request in a DataMiner connector protocol."
 ---
 
 # Parameter element

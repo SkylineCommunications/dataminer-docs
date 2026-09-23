@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Connections
-description: "Describe the DataMiner connector development topic Connections, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define multiple connector connections, assign their IDs, associate groups and actions with a connection, and configure connection-specific port settings."
 ---
 
 # Connections

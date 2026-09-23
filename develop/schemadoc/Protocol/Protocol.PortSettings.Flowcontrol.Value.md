@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol.Value
-description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
+description: "Learn how each Value element under Flowcontrol specifies a flow control mode users can select, including SNMPv3 encryption algorithms."
 ---
 
 # Value element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionClose
-description: "Describe the DataMiner connector development topic close, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the close action to close a serial connector port by connection number or disconnect a smart-serial client identified by IP address and port."
 ---
 
 # close

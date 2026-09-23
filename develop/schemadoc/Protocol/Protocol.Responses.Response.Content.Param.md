@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Responses.Response.Content.Param
-description: "Reference the DataMiner connector protocol schema entry for Param element, including its documented structure, attributes, values, and constraints."
+description: "Learn how each Param element under Response Content identifies a parameter included in the expected device response."
 ---
 
 # Param element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Commands.Command.Content.Param
-description: "Reference the DataMiner connector protocol schema entry for Param element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Param element identifies a parameter to include in a command payload in a DataMiner connector protocol."
 ---
 
 # Param element

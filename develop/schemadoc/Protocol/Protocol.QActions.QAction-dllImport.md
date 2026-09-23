@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.QActions.QAction-dllImport
-description: "Reference the DataMiner connector protocol schema entry for dllImport attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the dllImport attribute adds external DLL references and assembly resolver hint paths when DataMiner compiles a QAction."
 ---
 
 # dllImport attribute

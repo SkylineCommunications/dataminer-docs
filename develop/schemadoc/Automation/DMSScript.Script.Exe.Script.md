@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Script
-description: "Reference the DataMiner Automation script schema entry for Script element, including its documented structure, attributes, values, and constraints."
+description: "Use the Exe Script element to name the automation script invoked by a script action within another DataMiner automation script."
 ---
 
 # Script element

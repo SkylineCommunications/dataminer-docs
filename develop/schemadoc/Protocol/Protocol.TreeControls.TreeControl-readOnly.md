@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl-readOnly
-description: "Reference the DataMiner connector protocol schema entry for readOnly attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the readOnly attribute, which disables every write parameter in the tree control when true."
 ---
 
 # readOnly attribute

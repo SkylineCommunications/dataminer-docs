@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session-timeout
-description: "Reference the DataMiner connector protocol schema entry for timeout attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the timeout attribute overrides the default timeout in milliseconds for an HTTP session in a DataMiner connector protocol."
 ---
 
 # timeout attribute

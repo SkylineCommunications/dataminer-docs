@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeDllImport
-description: "Reference the DataMiner connector protocol schema entry for TypeDllImport simple type, including its documented structure, attributes, values, and constra."
+description: "Use the TypeDllImport simple type to validate one or more semicolon-separated DLL file names in the DataMiner connector protocol schema."
 ---
 
 # TypeDllImport simple type

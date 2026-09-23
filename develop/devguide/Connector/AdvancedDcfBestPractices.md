@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDcfBestPractices
-description: "Describe the DataMiner connector development topic DCF best practices, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Apply DCF best practices to keep interface tables stable, avoid duplicate or excessive updates, manage alarm calculations, and create connections safely."
 ---
 
 # DCF best practices

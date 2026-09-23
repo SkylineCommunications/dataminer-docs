@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Database.IndexingOptions-enabled
-description: "Reference the DataMiner connector protocol schema entry for enabled attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the enabled attribute to store logger table data in the indexing database instead of Cassandra in a DataMiner connector protocol."
 ---
 
 # enabled attribute

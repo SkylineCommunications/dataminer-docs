@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpSnmpv3
-description: "Describe the DataMiner connector development topic SNMPv3, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand SNMPv3 security in DataMiner, including USM settings, supported authentication and encryption protocols, and SNMP engine IDs and timeliness."
 ---
 
 # SNMPv3

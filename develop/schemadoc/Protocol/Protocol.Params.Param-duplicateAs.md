@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param-duplicateAs
-description: "Reference the DataMiner connector protocol schema entry for duplicateAs attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the duplicateAs attribute to show another parameter's value in one or more view table columns in a DataMiner connector protocol."
 ---
 
 # duplicateAs attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Database.IndexingOptions
-description: "Reference the DataMiner connector protocol schema entry for IndexingOptions element, including its documented structure, attributes, values, and constrain."
+description: "Learn how to use the IndexingOptions element to configure OpenSearch or Elasticsearch storage for logger table data in a DataMiner connector protocol."
 ---
 
 # IndexingOptions element

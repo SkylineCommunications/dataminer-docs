@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-combination
-description: "Reference the combination attribute on an automation condition to join conditions with a logical and or or operator."
+description: "Use the combination attribute to join conditions in an automation script if action with either the lowercase and operator or the lowercase or operator."
 ---
 
 # combination attribute

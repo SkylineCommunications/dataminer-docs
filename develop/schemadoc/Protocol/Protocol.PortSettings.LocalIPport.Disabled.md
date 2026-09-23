@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.LocalIPport.Disabled
-description: "Reference the DataMiner connector protocol schema entry for Disabled element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Disabled element under LocalIPport controls whether users can configure the local client port in the user interface."
 ---
 
 # Disabled element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsExportRules
-description: "Describe the DataMiner connector development topic Export rules, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure DVE export rules to override exported parameter properties by table, XML tag, attribute, value, or regular expression."
 ---
 
 # Export rules

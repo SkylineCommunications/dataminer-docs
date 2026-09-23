@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicGroups
-description: "Describe the DataMiner connector development topic Groups, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how groups execute same-type protocol items sequentially and how poll, action, and trigger group types use timer threads or the queue."
 ---
 
 # Groups

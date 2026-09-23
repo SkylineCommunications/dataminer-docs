@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.NoTimeouts.NoTimeout
-description: "Reference the DataMiner connector protocol schema entry for NoTimeout element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the NoTimeout element to identify a response value that should not cause a communication timeout in a DataMiner connector protocol."
 ---
 
 # NoTimeout element

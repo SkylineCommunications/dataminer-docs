@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumInterpretTypeTrim
-description: "Reference the DataMiner connector protocol schema entry for EnumInterpretTypeTrim simple type, including its documented structure, attributes, values, and."
+description: "Review the allowed values for the EnumInterpretTypeTrim simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumInterpretTypeTrim simple type

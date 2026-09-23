@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-verificationDeviation
-description: "Reference the DataMiner connector protocol schema entry for verificationDeviation attribute, including its documented structure, attributes, values, and c."
+description: "Learn how the verificationDeviation attribute sets allowed analog deviation during command execution verification in a DataMiner connector protocol."
 ---
 
 # verificationDeviation attribute

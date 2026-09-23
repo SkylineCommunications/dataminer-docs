@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Baudrate.Range.To
-description: "Reference the DataMiner connector protocol schema entry for To element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the To element under Baudrate Range sets the last baud rate available in the allowed range."
 ---
 
 # To element

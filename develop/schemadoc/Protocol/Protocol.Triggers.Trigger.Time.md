@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Triggers.Trigger.Time
-description: "Reference the DataMiner connector protocol schema entry for Time element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the Time element, which defines when a trigger goes off in combination with its On element."
 ---
 
 # Time element

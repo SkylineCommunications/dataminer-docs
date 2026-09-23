@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.BusAddress.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DefaultValue element under BusAddress sets the initial bus address or disables bus address entry."
 ---
 
 # DefaultValue element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session-userName
-description: "Reference the DataMiner connector protocol schema entry for userName attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the userName attribute supplies a fixed username or parameter ID for credential-based HTTP authentication in a DataMiner connector protocol."
 ---
 
 # userName attribute

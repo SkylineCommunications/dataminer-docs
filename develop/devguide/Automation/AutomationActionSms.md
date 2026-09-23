@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionSms
-description: "Describe the DataMiner Automation development topic SMS, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the SMS action to send a Short Message Service notification from an automation script to a specified destination."
 ---
 
 # SMS

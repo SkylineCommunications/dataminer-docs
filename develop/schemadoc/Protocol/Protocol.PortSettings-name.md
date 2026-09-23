@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings-name
-description: "Reference the DataMiner connector protocol schema entry for name attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the PortSettings name attribute identifies the additional protocol type defined by the Protocol Type advanced attribute."
 ---
 
 # name attribute

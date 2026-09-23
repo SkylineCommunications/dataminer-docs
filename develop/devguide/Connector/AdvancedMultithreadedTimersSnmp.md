@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedMultiThreadedTimersSnmp
-description: "Describe the DataMiner connector development topic SNMP, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Implement multithreaded SNMP polling with the required timer, group suffixes, parameter options, and response-processing QAction."
 ---
 
 # SNMP

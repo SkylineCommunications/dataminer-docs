@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSmartSerialLogging
-description: "Describe the DataMiner connector development topic Logging incoming data, including its purpose, behavior, implementation guidance, and relevant constrain."
+description: "Log unmatched incoming data from a smart-serial client by enabling its connection in PortLog.txt and setting SLPort debug level 4 or higher."
 ---
 
 # Logging incoming data

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param-setter
-description: "Reference the DataMiner connector protocol schema entry for setter attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the setter attribute to copy a write parameter value to its corresponding read parameter automatically in a DataMiner connector protocol."
 ---
 
 # setter attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Investigating_a_protocol_thread_RTE
-description: "Describe the DataMiner connector development topic Investigating a protocol thread RTE, including its purpose, behavior, implementation guidance, and rele."
+description: "Investigate a protocol thread RTE by checking Watchdog logs and pending calls, locating the blocking group, and breaking up long logic chains."
 ---
 
 # Investigating a protocol thread RTE

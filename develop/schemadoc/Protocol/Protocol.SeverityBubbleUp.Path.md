@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.SeverityBubbleUp.Path
-description: "Reference the DataMiner connector protocol schema entry for Path element, including its documented structure, attributes, values, and constraints."
+description: "Learn how each SeverityBubbleUp Path element orders the table IDs followed when alarm severity passes between linked tables."
 ---
 
 # Path element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Type-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Type options attribute configures parameter behavior such as connections, dimensions, dynamic polling, and alarm linking."
 ---
 
 # options attribute

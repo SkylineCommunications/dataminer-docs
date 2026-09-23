@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.SSH.Credentials.Password-pid
-description: "Reference the DataMiner connector protocol schema entry for pid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Password pid attribute identifies the parameter that supplies the password for SSH password-based authentication."
 ---
 
 # pid attribute

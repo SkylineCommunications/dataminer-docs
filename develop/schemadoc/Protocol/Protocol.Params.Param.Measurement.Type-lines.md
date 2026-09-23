@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-lines
-description: "Reference the DataMiner connector protocol schema entry for lines attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the lines attribute sets the displayed line count for a string parameter, including in EPM element details in a DataMiner connector protocol."
 ---
 
 # lines attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ReadonlyColumns
-description: "Reference the DataMiner connector protocol schema entry for ReadonlyColumns element, including its documented structure, attributes, values, and constrain."
+description: "Consult the DataMiner connector protocol schema reference for the ReadonlyColumns element, which hides write controls for selected table columns."
 ---
 
 # ReadonlyColumns element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ReservedIDs
-description: "Describe the DataMiner connector development topic Reserved IDs, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Find reserved ID ranges for connector parameters and other protocol constructs, including ranges assigned to specialized DataMiner protocol types."
 ---
 
 # Reserved IDs

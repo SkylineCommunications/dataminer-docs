@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.SeverityBubbleUp
-description: "Reference the DataMiner connector protocol schema entry for SeverityBubbleUp element, including its documented structure, attributes, values, and constrai."
+description: "Learn how the SeverityBubbleUp element passes alarm severities through configured paths between linked protocol tables."
 ---
 
 # SeverityBubbleUp element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Display-defaultPage
-description: "Reference the DataMiner connector protocol schema entry for defaultPage attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the defaultPage attribute names the Data Display page shown first for an element in a DataMiner connector protocol."
 ---
 
 # defaultPage attribute

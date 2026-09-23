@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionPow
-description: "Describe the DataMiner connector development topic pow, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the pow action to raise one or more parameter values to a configured exponent, which defaults to one."
 ---
 
 # pow

@@ -1,5 +1,6 @@
 ---
 uid: Interactive_Automation_Script_Toolkit
+description: "Explore the Interactive Automation Script Toolkit, its NuGet package and namespace, version compatibility, features, and controller lifecycle."
 ---
 
 # Interactive Automation Script Toolkit

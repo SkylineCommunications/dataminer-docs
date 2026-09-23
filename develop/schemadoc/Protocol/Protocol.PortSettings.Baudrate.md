@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Baudrate
-description: "Reference the DataMiner connector protocol schema entry for Baudrate element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Baudrate element defines the default, allowed range, and selectable baud rates for an element connection."
 ---
 
 # Baudrate element

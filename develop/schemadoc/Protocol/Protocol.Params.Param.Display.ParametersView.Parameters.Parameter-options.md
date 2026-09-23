@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.ParametersView.Parameters.Parameter-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the options attribute is a string field on a ParametersView Parameter element but is not yet implemented in a DataMiner connector protocol."
 ---
 
 # options attribute

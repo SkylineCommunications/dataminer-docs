@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Dashboard.DashboardOptions
-description: "Reference the DataMiner connector protocol schema entry for DashboardOptions element, including its documented structure, attributes, values, and constrai."
+description: "Learn how to use the DashboardOptions element to group the options that control how a button panel is displayed in a DataMiner connector protocol."
 ---
 
 # DashboardOptions element

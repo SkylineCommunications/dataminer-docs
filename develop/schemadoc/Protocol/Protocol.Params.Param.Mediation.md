@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Mediation
-description: "Reference the DataMiner connector protocol schema entry for Mediation element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Mediation element groups links between parameters in a base protocol and parameters in a device protocol in a DataMiner connector protocol."
 ---
 
 # Mediation element

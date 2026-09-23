@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.TimeoutTimeElement.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the TimeoutTimeElement DefaultValue sets the initial element timeout in milliseconds, using whole-second increments."
 ---
 
 # DefaultValue element

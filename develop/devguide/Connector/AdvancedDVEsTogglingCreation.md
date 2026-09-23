@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsTogglingCreation
-description: "Describe the DataMiner connector development topic Toggling DVE creation, including its purpose, behavior, implementation guidance, and relevant constrain."
+description: "Enable or disable DVE child element creation through Element.xml, database-backed Swarming configuration, DataMiner Cube, or a NotifyDataMiner call."
 ---
 
 # Toggling DVE creation

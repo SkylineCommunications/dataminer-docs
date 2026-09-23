@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsViews
-description: "Describe the DataMiner connector development topic Views, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the view column of a DVE table to place each generated DVE in one or more specified DataMiner views."
 ---
 
 # Views

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpDynamicallyRetrievingAVariable
-description: "Describe the DataMiner connector development topic Dynamically retrieving a variable, including its purpose, behavior, implementation guidance, and releva."
+description: "Dynamically retrieve an SNMP parameter or table data from an OID, and control what DataMiner gets and where it queues the request."
 ---
 
 # Dynamically retrieving a variable

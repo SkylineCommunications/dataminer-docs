@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionMultiply
-description: "Describe the DataMiner connector development topic multiply, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the multiply action to multiply one or more parameter values by a configured factor, which defaults to one."
 ---
 
 # multiply

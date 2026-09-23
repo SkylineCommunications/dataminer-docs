@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsRedundantPolling
-description: "Describe the DataMiner connector development topic Redundant polling, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure redundant polling across exactly two matching connections and understand which timeout and SNMP scenarios trigger an interface switch."
 ---
 
 # Redundant polling

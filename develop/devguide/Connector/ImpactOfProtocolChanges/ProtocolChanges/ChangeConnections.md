@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeConnections
-description: "Describe the DataMiner connector development topic Change connection(s), including its purpose, behavior, implementation guidance, and relevant constraint."
+description: "Assess how adding, removing, reordering, or changing protocol connections affects element configuration, communication, and existing integrations."
 ---
 
 # Change connection(s)

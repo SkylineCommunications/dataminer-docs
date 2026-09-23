@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Compliancies.CassandraRequired
-description: "Reference the DataMiner connector protocol schema entry for CassandraRequired element, including its documented structure, attributes, values, and constra."
+description: "Learn how the CassandraRequired element indicates whether a protocol requires a DataMiner Agent that uses Cassandra in a DataMiner connector protocol."
 ---
 
 # CassandraRequired element

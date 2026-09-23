@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicUseCase2
-description: "Describe the DataMiner connector development topic Use case: Internal flow – element startup, including its purpose, behavior, implementation guidance, an."
+description: "Follow an element's startup flow through saved parameter loading, initial timer groups, after-startup triggers, and the transition to operation."
 ---
 
 # Use case: Internal flow – element startup

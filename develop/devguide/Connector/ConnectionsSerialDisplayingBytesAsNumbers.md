@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerialDisplayingBytesAsNumbers
-description: "Describe the DataMiner connector development topic Displaying bytes as numbers, including its purpose, behavior, implementation guidance, and relevant con."
+description: "Display numeric values received as byte sequences by configuring big-endian interpretation and isolating read-bit source parameters when needed."
 ---
 
 # Displaying bytes as numbers

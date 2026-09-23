@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicUseCase3
-description: "Describe the DataMiner connector development topic Use case: Internal flow – QActions, including its purpose, behavior, implementation guidance, and relev."
+description: "Follow how connector flows enter SLScripting, execute QActions, call shared code, return to SLProtocol, and avoid unnecessary cross-process calls."
 ---
 
 # Use case: Internal flow – QActions

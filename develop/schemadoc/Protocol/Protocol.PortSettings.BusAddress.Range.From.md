@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.BusAddress.Range.From
-description: "Reference the DataMiner connector protocol schema entry for From element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the From element under BusAddress Range sets the first bus address available in the allowed range."
 ---
 
 # From element

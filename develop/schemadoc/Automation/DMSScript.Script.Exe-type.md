@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe-type
-description: "Reference the DataMiner Automation script schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Exe type attribute to select the action an automation script performs, from assignments and C# code to notifications and waits."
 ---
 
 # type attribute

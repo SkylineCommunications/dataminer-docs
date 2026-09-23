@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet
-description: "Reference the DataMiner connector protocol schema entry for Discreet element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Discreet element maps a parameter value to displayed text, an optional icon, and related behavior in a DataMiner connector protocol."
 ---
 
 # Discreet element

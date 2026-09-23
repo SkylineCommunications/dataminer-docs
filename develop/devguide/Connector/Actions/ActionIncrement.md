@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionIncrement
-description: "Describe the DataMiner connector development topic increment, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the increment action to increase one or more parameter values by the configured amount, with an increment of one by default."
 ---
 
 # increment

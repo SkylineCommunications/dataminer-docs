@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.LengthType-times
-description: "Reference the DataMiner connector protocol schema entry for times attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the times attribute sets how many occurrences identify the next parameter when parsing a serial response in a DataMiner connector protocol."
 ---
 
 # times attribute

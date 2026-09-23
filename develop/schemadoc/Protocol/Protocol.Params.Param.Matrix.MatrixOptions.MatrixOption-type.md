@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-type
-description: "Reference the DataMiner connector protocol schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the type attribute specifies the value type used for a matrix appearance or behavior option in a DataMiner connector protocol."
 ---
 
 # type attribute

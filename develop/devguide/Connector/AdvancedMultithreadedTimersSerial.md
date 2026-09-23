@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedMultiThreadedTimersSerial
-description: "Describe the DataMiner connector development topic Serial, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Implement multithreaded serial requests by building command arrays in one QAction and processing each command response and post-response logic."
 ---
 
 # Serial

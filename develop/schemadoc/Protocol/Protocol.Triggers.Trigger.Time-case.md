@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Triggers.Trigger.Time-case
-description: "Reference the DataMiner connector protocol schema entry for case attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the case attribute, which selects the comparison operator for a trigger condition."
 ---
 
 # case attribute

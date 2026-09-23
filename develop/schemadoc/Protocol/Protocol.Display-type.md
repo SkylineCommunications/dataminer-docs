@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Display-type
-description: "Reference the DataMiner connector protocol schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the type attribute selects the protocol display type used by DataMiner in a DataMiner connector protocol."
 ---
 
 # type attribute

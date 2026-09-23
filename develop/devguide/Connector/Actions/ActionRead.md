@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionRead
-description: "Describe the DataMiner connector development topic read, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the read action to process a parameter or response, including responses with parameters whose length is defined by the next parameter."
 ---
 
 # read

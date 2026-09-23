@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: System_FormatException
-description: "Describe the DataMiner connector development topic System.FormatException, including its purpose, behavior, implementation guidance, and relevant constrai."
+description: "Prevent FormatException during QAction type conversion by validating input and using TryParse to handle incompatible values without throwing."
 ---
 
 # System.FormatException

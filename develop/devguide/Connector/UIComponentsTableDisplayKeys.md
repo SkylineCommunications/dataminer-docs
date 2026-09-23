@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTableDisplayKeys
-description: "Describe the DataMiner connector development topic Display keys, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define unique, user-friendly display keys for table rows with naming or NamingFormat, and understand their effects on alarms, filters, and trend data."
 ---
 
 # Display keys

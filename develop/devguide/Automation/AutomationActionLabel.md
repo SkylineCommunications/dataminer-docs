@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionLabel
-description: "Describe the DataMiner Automation development topic Label, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the Label action to identify a statement in an automation script so a Go to action can transfer execution directly to it."
 ---
 
 # Label

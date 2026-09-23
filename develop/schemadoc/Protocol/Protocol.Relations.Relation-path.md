@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Relations.Relation-path
-description: "Reference the DataMiner connector protocol schema entry for path attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Relation path attribute lists the table IDs linked through foreign keys in a table relation."
 ---
 
 # path attribute

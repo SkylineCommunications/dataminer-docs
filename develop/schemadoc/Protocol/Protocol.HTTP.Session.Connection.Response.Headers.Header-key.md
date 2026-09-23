@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Response.Headers.Header-key
-description: "Reference the DataMiner connector protocol schema entry for key attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the key attribute to select the HTTP response header whose value will be stored in a DataMiner connector protocol."
 ---
 
 # key attribute

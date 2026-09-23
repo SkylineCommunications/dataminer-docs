@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedInterElementCommunication
-description: "Describe the DataMiner connector development topic Inter-element communication, including its purpose, behavior, implementation guidance, and relevant con."
+description: "Compare ways to exchange parameter data between DataMiner elements using element connections, data distribution, replication, or InterApp calls."
 ---
 
 # Inter-element communication

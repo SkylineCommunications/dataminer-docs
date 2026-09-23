@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Timers.Timer.Content.Group
-description: "Reference the DataMiner connector protocol schema entry for Group element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the Group element, which identifies a group to include when the timer runs."
 ---
 
 # Group element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Responses.Response.Name
-description: "Reference the DataMiner connector protocol schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Response Name element assigns the response name, which often matches its associated command."
 ---
 
 # Name element

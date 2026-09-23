@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Parameters.ScriptParameter-values
-description: "Reference the DataMiner Automation script schema entry for values attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the ScriptParameter values attribute to name the memory file that supplies selectable values for an automation script parameter."
 ---
 
 # values attribute

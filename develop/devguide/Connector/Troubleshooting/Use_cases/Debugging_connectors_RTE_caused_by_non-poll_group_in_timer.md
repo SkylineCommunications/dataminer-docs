@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
-description: "Describe the DataMiner connector development topic Debugging connectors: RTE caused by non-poll group in timer, including its purpose, behavior, implement."
+description: "Diagnose an RTE caused by a non-poll group at the end of a timer, and prevent the timer from repeatedly adding poll groups to the queue."
 ---
 
 # Debugging connectors: RTE caused by non-poll group in timer

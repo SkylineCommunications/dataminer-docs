@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the options attribute to configure SNMP set and get behavior for a parameter in a DataMiner connector protocol."
 ---
 
 # options attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Type
-description: "Reference the DataMiner Automation script schema entry for Type element, including its documented structure, attributes, values, and constraints."
+description: "Use the DMSScript Type element to identify the script type with a nonempty string; for DataMiner automation scripts, use Automation."
 ---
 
 # Type element

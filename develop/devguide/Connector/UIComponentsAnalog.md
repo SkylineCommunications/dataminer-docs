@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsAnalog
-description: "Describe the DataMiner connector development topic Analog, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define an analog UI component for a numeric connector parameter by setting its measurement type and configuring display units and range."
 ---
 
 # Analog

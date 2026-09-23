@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change.ActionsToTake
-description: "Reference the DataMiner connector protocol schema entry for ActionsToTake element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the ActionsToTake element, which lists the actions required for a major protocol change."
 ---
 
 # ActionsToTake element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption-protocol
-description: "Reference the DataMiner connector protocol schema entry for protocol attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the protocol attribute to name the remote protocol that supplies columns to a direct view table in a DataMiner connector protocol."
 ---
 
 # protocol attribute

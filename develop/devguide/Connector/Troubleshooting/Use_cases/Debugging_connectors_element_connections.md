@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Debugging_connectors_Element_connections
-description: "Describe the DataMiner connector development topic Debugging connectors: Element connections, including its purpose, behavior, implementation guidance, an."
+description: "Debug missing or misordered element-connection data by tracing exceptions, validating parameter mappings, and accounting for asynchronous updates."
 ---
 
 # Debugging connectors: Element connections

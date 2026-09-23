@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Condition
-description: "Reference the DataMiner connector protocol schema entry for Condition element, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Condition element to define the expression that must evaluate as true before a connector protocol action executes."
 ---
 
 # Condition element

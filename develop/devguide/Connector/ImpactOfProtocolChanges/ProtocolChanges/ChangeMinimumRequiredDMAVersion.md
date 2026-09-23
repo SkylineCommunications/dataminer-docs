@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeMinimumRequiredDMAVersion
-description: "Describe the DataMiner connector development topic Change minimum required DataMiner version, including its purpose, behavior, implementation guidance, an."
+description: "Assess the compatibility impact of increasing a connector's minimum required DataMiner version and document the dependency before release."
 ---
 
 # Change minimum required DataMiner version

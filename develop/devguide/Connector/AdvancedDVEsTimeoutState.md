@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsTimeoutState
-description: "Describe the DataMiner connector development topic Timeout state, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure DVE timeout behavior so child elements enter timeout with their parent, or set communication state from a QAction."
 ---
 
 # Timeout state

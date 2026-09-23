@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Type
-description: "Reference the DataMiner connector protocol schema entry for Type element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Type element selects a parameter type and how each supported type behaves in a DataMiner connector."
 ---
 
 # Type element

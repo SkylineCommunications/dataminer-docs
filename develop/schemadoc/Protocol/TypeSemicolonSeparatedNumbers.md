@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeSemicolonSeparatedNumbers
-description: "Reference the DataMiner connector protocol schema entry for TypeSemicolonSeparatedNumbers simple type, including its documented structure, attributes, val."
+description: "Use the TypeSemicolonSeparatedNumbers simple type to validate semicolon-separated lists of numbers in the DataMiner connector protocol schema."
 ---
 
 # TypeSemicolonSeparatedNumbers simple type

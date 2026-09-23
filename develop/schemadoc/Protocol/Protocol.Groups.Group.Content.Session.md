@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group.Content.Session
-description: "Reference the DataMiner connector protocol schema entry for Session element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Session element identifies an HTTP session included for consecutive execution within a group in a DataMiner connector protocol."
 ---
 
 # Session element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Triggers.Trigger.Time-value
-description: "Reference the DataMiner connector protocol schema entry for value attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the value attribute, which sets the operand used to evaluate a trigger condition."
 ---
 
 # value attribute

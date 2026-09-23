@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Ownership.Views
-description: "Reference the DataMiner connector protocol schema entry for Views element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Views element to group ownership declarations for properties of DataMiner views in a DataMiner connector protocol."
 ---
 
 # Views element

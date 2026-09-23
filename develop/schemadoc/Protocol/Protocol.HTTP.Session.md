@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session
-description: "Reference the DataMiner connector protocol schema entry for Session element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Session element to configure HTTP connections, authentication, proxy access, and timeouts in a DataMiner connector protocol."
 ---
 
 # Session element

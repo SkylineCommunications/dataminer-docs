@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapMappings.TrapMapping-severity
-description: "Reference the DataMiner connector protocol schema entry for severity attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the severity attribute assigns a DataMiner alarm severity to a matched SNMP trap or suppresses the alarm in a DataMiner connector protocol."
 ---
 
 # severity attribute

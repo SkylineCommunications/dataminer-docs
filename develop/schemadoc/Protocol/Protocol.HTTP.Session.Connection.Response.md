@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Response
-description: "Reference the DataMiner connector protocol schema entry for Response element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Response element to configure where to store an HTTP response status, headers, and body in a DataMiner connector protocol."
 ---
 
 # Response element

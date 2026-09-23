@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Icon
-description: "Reference the DataMiner connector protocol schema entry for Icon element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Icon element shows a predefined or custom XAML icon for a parameter in a tree control in a DataMiner connector protocol."
 ---
 
 # Icon element

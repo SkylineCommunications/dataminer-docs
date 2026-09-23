@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsHttpImplementing
-description: "To periodically request information from a device via HTTP, the approach is very similar to serial communication."
+description: "Implement periodic HTTP polling in a DataMiner connector with sessions, requests, responses, groups, and timers."
 ---
 
 # Implementing HTTP communication

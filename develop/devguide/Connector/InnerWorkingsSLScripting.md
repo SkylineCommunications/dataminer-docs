@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: InnerWorkingsSLScripting
-description: "Describe the DataMiner connector development topic SLScripting, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how SLScripting executes QActions and how synchronous sets, triggers, queued groups, and the queued option affect execution order."
 ---
 
 # SLScripting

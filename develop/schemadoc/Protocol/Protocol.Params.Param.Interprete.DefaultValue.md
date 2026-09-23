@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DefaultValue element assigns a startup value to an empty standalone parameter, but not to table columns in a DataMiner connector protocol."
 ---
 
 # DefaultValue element

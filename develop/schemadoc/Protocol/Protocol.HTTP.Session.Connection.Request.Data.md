@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request.Data
-description: "Reference the DataMiner connector protocol schema entry for Data element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Data element provides literal or parameter-based data for an HTTP request without encoding in a DataMiner connector protocol."
 ---
 
 # Data element

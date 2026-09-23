@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionAggregate
-description: "Describe the DataMiner connector development topic aggregate, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the aggregate action to group and calculate table data, including filters, defaults, joins, weighting, status, and return options."
 ---
 
 # aggregate

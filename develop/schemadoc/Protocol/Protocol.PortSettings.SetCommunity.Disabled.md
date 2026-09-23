@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.SetCommunity.Disabled
-description: "Reference the DataMiner connector protocol schema entry for Disabled element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Disabled element under SetCommunity controls whether users can change the SNMP set community string in the user interface."
 ---
 
 # Disabled element

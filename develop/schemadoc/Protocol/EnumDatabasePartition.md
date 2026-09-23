@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumDatabasePartition
-description: "Reference the DataMiner connector protocol schema entry for EnumDatabasePartition simple type, including its documented structure, attributes, values, and."
+description: "Review the allowed values for the EnumDatabasePartition simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumDatabasePartition simple type

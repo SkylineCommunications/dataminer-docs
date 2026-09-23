@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Field.DiagramPids
-description: "Reference the DataMiner connector protocol schema entry for DiagramPids element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DiagramPids element lists the read parameter IDs shown inside an EPM diagram box in a DataMiner connector protocol."
 ---
 
 # DiagramPids element

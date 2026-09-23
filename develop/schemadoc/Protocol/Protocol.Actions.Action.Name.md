@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Name
-description: "Reference the DataMiner connector protocol schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Name element to assign a nonempty name to an action defined in a DataMiner connector protocol."
 ---
 
 # Name element

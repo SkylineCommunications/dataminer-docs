@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerialSslTls
-description: "Describe the DataMiner connector development topic SSL/TLS encryption, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure SSL/TLS encryption and certificate verification for TCP/IP serial connections, and account for supported TLS versions and IPv4 requirements."
 ---
 
 # SSL/TLS encryption

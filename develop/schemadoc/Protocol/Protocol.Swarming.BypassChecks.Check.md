@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Swarming.BypassChecks.Check
-description: "Reference the DataMiner connector protocol schema entry for Check element, including its documented structure, attributes, values, and constraints."
+description: "Learn how each Swarming BypassChecks Check disables an eligibility check, such as the smart-serial server restriction."
 ---
 
 # Check element

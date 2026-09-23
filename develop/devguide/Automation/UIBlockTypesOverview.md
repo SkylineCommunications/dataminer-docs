@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIBlockTypesOverview
-description: "Describe the DataMiner Automation development topic UIBlockType overview, including its purpose, behavior, implementation guidance, and relevant constrain."
+description: "Configure UIBlockType components for interactive automation scripts and understand the behavior and compatibility of the V1 and V2 UIs."
 ---
 
 # UIBlockType overview

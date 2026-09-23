@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.Hierarchy.Table
-description: "Reference the DataMiner connector protocol schema entry for Table element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the Table element, which defines table links for an advanced tree control hierarchy."
 ---
 
 # Table element

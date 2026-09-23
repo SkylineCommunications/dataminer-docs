@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.SystemOptions
-description: "Reference the DataMiner connector protocol schema entry for SystemOptions element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the SystemOptions element groups system-level connector settings, including process isolation for memory-intensive protocols."
 ---
 
 # SystemOptions element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Mediation.LinkTo-protocol
-description: "Reference the DataMiner connector protocol schema entry for protocol attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the protocol attribute names the protocol containing the remote parameter for a mediation link in a DataMiner connector protocol."
 ---
 
 # protocol attribute

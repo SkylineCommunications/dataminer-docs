@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-arguments
-description: "Reference the DataMiner connector protocol schema entry for arguments attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Type arguments attribute with WMI actions to list, separated by semicolons, the names of columns to return."
 ---
 
 # arguments attribute

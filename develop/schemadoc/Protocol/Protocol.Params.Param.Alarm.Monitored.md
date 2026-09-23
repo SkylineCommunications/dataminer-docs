@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.Monitored
-description: "Reference the DataMiner connector protocol schema entry for Monitored element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Monitored element to enable or disable the alarm configuration assigned to a parameter in a DataMiner connector protocol."
 ---
 
 # Monitored element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionSetAndGetWithWait
-description: "Describe the DataMiner connector development topic set and get with wait, including its purpose, behavior, implementation guidance, and relevant constrain."
+description: "Use the set and get with wait action to perform an SNMP set followed by a get and wait until the device completes the operation."
 ---
 
 # set and get with wait

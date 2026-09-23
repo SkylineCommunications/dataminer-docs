@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionLockUnlock
-description: "Describe the DataMiner connector development topic lock/unlock, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use lock and unlock actions to protect an atomic sequence of connector operations from interference by other elements sharing a connection."
 ---
 
 # lock/unlock

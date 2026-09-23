@@ -1,5 +1,6 @@
 ---
 uid: Developing_Automation_scripts_as_Visual_Studio_solutions
+description: "Use this legacy reference to create, import, package, and upload DIS automation script solutions in Visual Studio, and understand their structure."
 ---
 
 # Developing automation scripts as Visual Studio solutions

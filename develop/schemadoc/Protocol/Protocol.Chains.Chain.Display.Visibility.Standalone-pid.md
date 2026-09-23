@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Display.Visibility.Standalone-pid
-description: "Reference the DataMiner connector protocol schema entry for pid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the pid attribute identifies the parameter whose values can reverse default chain visibility in a DataMiner connector protocol."
 ---
 
 # pid attribute

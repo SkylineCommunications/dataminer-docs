@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain
-description: "Reference the DataMiner connector protocol schema entry for Chain element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Chain element defines a topology view and its fields for an EPM or Service Overview Manager element in a DataMiner connector protocol."
 ---
 
 # Chain element

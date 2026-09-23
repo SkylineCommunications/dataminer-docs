@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsVirtual
-description: "Describe the DataMiner connector development topic Virtual, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Learn when to define a virtual DataMiner protocol without a device connection, such as for monitoring elements or interacting with a database."
 ---
 
 # Virtual

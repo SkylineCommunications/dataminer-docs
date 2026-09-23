@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumHttpRequestHeader
-description: "Reference the DataMiner connector protocol schema entry for EnumHttpRequestHeader simple type, including its documented structure, attributes, values, and."
+description: "Review the allowed values for the EnumHttpRequestHeader simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumHttpRequestHeader simple type

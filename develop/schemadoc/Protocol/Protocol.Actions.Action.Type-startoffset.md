@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-startoffset
-description: "Reference the DataMiner connector protocol schema entry for startoffset attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Type startoffset attribute to set the file read offset or fixed start position for stuffing a section of a data block."
 ---
 
 # startoffset attribute

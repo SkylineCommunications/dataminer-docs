@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-protocol
-description: "Reference the DataMiner Automation script schema entry for protocol attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Condition protocol attribute to identify the dummy script variable referenced by a parameter condition in an automation script."
 ---
 
 # protocol attribute

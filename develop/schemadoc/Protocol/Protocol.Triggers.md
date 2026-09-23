@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Triggers
-description: "Reference the DataMiner connector protocol schema entry for Triggers element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the Triggers element, which contains the uniquely identified triggers defined in a protocol."
 ---
 
 # Triggers element

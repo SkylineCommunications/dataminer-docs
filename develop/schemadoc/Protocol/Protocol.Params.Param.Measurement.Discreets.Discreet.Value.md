@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Value
-description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Value element defines a value that triggers a discreet label or button action when it matches a parameter in a DataMiner connector protocol."
 ---
 
 # Value element

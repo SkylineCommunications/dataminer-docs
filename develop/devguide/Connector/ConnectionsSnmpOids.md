@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpOids
-description: "Describe the DataMiner connector development topic OIDs, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Learn how SNMP OIDs identify scalar and tabular variables, and how table indexes use single, external, composite, or typed keys."
 ---
 
 # OIDs

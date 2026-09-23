@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-compare
-description: "Reference the DataMiner Automation script schema entry for compare attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the compare attribute to select the equality or ordering operator for a Boolean Condition expression in a DataMiner automation script."
 ---
 
 # compare attribute

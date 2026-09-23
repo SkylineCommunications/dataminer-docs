@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group.Content.Session-connection
-description: "Reference the DataMiner connector protocol schema entry for connection attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the connection attribute selects the connection to execute within an HTTP session included in a group in a DataMiner connector protocol."
 ---
 
 # connection attribute

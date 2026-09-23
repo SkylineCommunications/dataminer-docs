@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.Info
-description: "Reference the DataMiner connector protocol schema entry for Info element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Info element to set a default value that generates an information event for a parameter in a DataMiner connector protocol."
 ---
 
 # Info element

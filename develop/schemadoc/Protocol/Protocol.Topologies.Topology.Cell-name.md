@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Topologies.Topology.Cell-name
-description: "Reference the DataMiner connector protocol schema entry for name attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the name attribute, which sets the name used to identify a topology cell."
 ---
 
 # name attribute

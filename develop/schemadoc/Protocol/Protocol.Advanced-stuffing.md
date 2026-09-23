@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Advanced-stuffing
-description: "Reference the DataMiner connector protocol schema entry for stuffing attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the stuffing attribute configures byte stuffing sequences and offsets for smart-serial or GPIB communication in a DataMiner connector protocol."
 ---
 
 # stuffing attribute

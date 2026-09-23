@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: MonitoringAlarming
-description: "Describe the DataMiner connector development topic Alarming, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure which connector parameters support alarming, provide default alarm thresholds, and understand how monitoring settings affect alarm templates."
 ---
 
 # Alarming

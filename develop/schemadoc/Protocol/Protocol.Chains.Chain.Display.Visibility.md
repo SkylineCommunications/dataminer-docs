@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Display.Visibility
-description: "Reference the DataMiner connector protocol schema entry for Visibility element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Visibility element combines a default setting with parameter-based conditions for chain visibility in a DataMiner connector protocol."
 ---
 
 # Visibility element

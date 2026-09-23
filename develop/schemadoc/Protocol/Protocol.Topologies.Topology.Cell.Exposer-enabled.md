@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Topologies.Topology.Cell.Exposer-enabled
-description: "Reference the DataMiner connector protocol schema entry for enabled attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the enabled attribute, which controls whether a topology cell is exposed to the EPM crawler."
 ---
 
 # enabled attribute

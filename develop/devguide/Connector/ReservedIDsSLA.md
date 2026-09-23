@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ReservedIDsSLA
-description: "Describe the DataMiner connector development topic SLA, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Consult the parameter IDs reserved for SLA connectors, including service status, breach, violation, outage, availability, and compliance data."
 ---
 
 # SLA

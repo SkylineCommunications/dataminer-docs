@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Pairs.Pair.Content.Command
-description: "Reference the DataMiner connector protocol schema entry for Command element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Command element to identify the command sent when a command and response pair executes in a DataMiner connector protocol."
 ---
 
 # Command element

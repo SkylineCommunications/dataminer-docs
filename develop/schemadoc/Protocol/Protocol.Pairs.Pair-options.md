@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Pairs.Pair-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the options attribute to set port, retry, timeout, and byte transmission options for a pair in a DataMiner connector protocol."
 ---
 
 # options attribute

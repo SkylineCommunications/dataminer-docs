@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.RawType
-description: "Reference the DataMiner connector protocol schema entry for RawType element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the RawType element filters incoming parameter content by expected binary, numeric, text, or other data type in a DataMiner connector protocol."
 ---
 
 # RawType element

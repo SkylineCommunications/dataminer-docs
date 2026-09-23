@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.PingInterval
-description: "Reference the DataMiner connector protocol schema entry for PingInterval element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the PingInterval element configures the default ping interval and whether users can modify it for an element connection."
 ---
 
 # PingInterval element

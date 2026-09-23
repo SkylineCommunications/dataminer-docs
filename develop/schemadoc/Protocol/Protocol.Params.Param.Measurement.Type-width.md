@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-width
-description: "Reference the DataMiner connector protocol schema entry for width attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the width attribute sets the displayed width of a button or page button parameter in a DataMiner connector protocol."
 ---
 
 # width attribute

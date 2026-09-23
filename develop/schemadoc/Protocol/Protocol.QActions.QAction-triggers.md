@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.QActions.QAction-triggers
-description: "Reference the DataMiner connector protocol schema entry for triggers attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the triggers attribute identifies parameters whose value changes cause a QAction to execute."
 ---
 
 # triggers attribute

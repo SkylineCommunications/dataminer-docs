@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeDisplayKey
-description: "Describe the DataMiner connector development topic Change display key, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Assess how changing a table display key affects alarms, trends, filters, visualizations, and references while preserving access to historical data."
 ---
 
 # Change display key

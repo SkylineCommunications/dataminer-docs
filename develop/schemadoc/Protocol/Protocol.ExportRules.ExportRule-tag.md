@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-tag
-description: "Reference the DataMiner connector protocol schema entry for tag attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the tag attribute identifies the XML element changed by an export rule in a DataMiner connector protocol."
 ---
 
 # tag attribute

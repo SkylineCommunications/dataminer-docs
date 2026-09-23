@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix
-description: "Reference the DataMiner connector protocol schema entry for Fix element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the Fix element, which documents a minor-version fix and the bug version it addresses."
 ---
 
 # Fix element

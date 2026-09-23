@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionRunActions
-description: "Describe the DataMiner connector development topic run actions, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the run actions action to execute every QAction that is triggered by an update to one or more specified parameters."
 ---
 
 # run actions

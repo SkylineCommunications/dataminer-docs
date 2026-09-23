@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedMultiThreadedTimersSsh
-description: "Describe the DataMiner connector development topic SSH, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Implement multithreaded SSH requests by building SSH settings and command arrays in a QAction, processing responses, and running post-response logic."
 ---
 
 # SSH

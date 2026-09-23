@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request.Parameters.Parameter-pid
-description: "Reference the DataMiner connector protocol schema entry for pid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the pid attribute to source an HTTP request value from the specified parameter ID in a DataMiner connector protocol."
 ---
 
 # pid attribute

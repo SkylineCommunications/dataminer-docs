@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: BP_Implementing_IAS_in_Regression_Tests
-description: "Describe the DataMiner Automation development topic Best practices: Implementing interactive automation scripts in regressio, including its purpose, behav."
+description: "Design interactive automation scripts for regression testing by separating presentation logic, passing decisions as JSON, and reusing code."
 ---
 
 # Best practices: Implementing interactive automation scripts in regression tests

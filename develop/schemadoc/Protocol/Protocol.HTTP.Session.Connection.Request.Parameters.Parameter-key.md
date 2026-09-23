@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request.Parameters.Parameter-key
-description: "Reference the DataMiner connector protocol schema entry for key attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the key attribute sets the key of an HTTP request parameter key-value pair in a DataMiner connector protocol."
 ---
 
 # key attribute

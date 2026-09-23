@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Bits
-description: "Reference the DataMiner connector protocol schema entry for Bits element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Bits element selects how many bits DataMiner reads from each byte in a multibyte group in a DataMiner connector protocol."
 ---
 
 # Bits element

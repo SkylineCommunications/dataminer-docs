@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Compliancies.CassandraReady
-description: "Reference the DataMiner connector protocol schema entry for CassandraReady element, including its documented structure, attributes, values, and constraint."
+description: "Learn how the CassandraReady element indicates whether a protocol is compatible with a Cassandra database in a DataMiner connector protocol."
 ---
 
 # CassandraReady element

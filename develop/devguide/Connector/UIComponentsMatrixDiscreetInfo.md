@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsMatrixDiscreetInfo
-description: "Describe the DataMiner connector development topic Discreet info, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Capture user changes to standard matrix labels, allowed crosspoints, pages, and locks with one discreet info parameter and a QAction."
 ---
 
 # Discreet info

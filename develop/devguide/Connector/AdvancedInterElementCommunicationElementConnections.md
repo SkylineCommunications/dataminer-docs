@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedInterElementCommunicationElementConnections
-description: "Describe the DataMiner connector development topic Element connections, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure protocol parameters as sources or destinations for links between elements in the Element Connections app, independently of DCF connections."
 ---
 
 # Element connections

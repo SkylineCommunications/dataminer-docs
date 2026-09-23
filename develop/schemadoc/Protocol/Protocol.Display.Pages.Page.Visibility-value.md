@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Display.Pages.Page.Visibility-value
-description: "Reference the DataMiner connector protocol schema entry for value attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the value attribute sets the parameter value that reverses a Data Display page's visibility in a DataMiner connector protocol."
 ---
 
 # value attribute

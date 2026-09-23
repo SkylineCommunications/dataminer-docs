@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.BusAddress
-description: "Reference the DataMiner connector protocol schema entry for BusAddress element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the BusAddress element defines default, allowed, and selectable bus addresses for a connection or GPIB device."
 ---
 
 # BusAddress element

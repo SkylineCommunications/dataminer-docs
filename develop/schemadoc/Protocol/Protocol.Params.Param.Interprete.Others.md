@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Others
-description: "Reference the DataMiner connector protocol schema entry for Others element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Others element groups mappings for rare incoming symbols that do not match a parameter raw type in a DataMiner connector protocol."
 ---
 
 # Others element

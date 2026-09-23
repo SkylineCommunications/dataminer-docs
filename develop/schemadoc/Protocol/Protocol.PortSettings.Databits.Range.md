@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Databits.Range
-description: "Reference the DataMiner connector protocol schema entry for Range element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Range element under Databits defines the minimum and maximum numbers of data bits users can select."
 ---
 
 # Range element

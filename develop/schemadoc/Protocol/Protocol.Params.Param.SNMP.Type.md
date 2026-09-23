@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.Type
-description: "Reference the DataMiner connector protocol schema entry for Type element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the SNMP Type element selects the SNMP data type for a parameter, including integer, string, OID, and time types."
 ---
 
 # Type element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Timeout
-description: "Reference the DataMiner Automation script schema entry for Timeout element, including its documented structure, attributes, values, and constraints."
+description: "Use the Timeout element to set seconds for findinteractiveclient actions or milliseconds for sleep actions in an automation script."
 ---
 
 # Timeout element

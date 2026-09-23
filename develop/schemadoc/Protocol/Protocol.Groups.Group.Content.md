@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group.Content
-description: "Reference the DataMiner connector protocol schema entry for Content element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Content element orders same-type actions, pairs, parameters, sessions, or triggers for group execution in a DataMiner connector protocol."
 ---
 
 # Content element

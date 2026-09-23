@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Parity.Value
-description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
+description: "Learn how each Value element under Parity specifies a supported parity or SNMPv3 authentication algorithm users can select."
 ---
 
 # Value element

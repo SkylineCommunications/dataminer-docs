@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionComment
-description: "Describe the DataMiner Automation development topic Comment, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the Comment action and special comment flags to add script notes, enable debug mode, skip element checks, or suppress information events."
 ---
 
 # Comment

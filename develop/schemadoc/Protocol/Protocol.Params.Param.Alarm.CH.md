@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.CH
-description: "Reference the DataMiner connector protocol schema entry for CH element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the CH element to set the default critical-high threshold in a parameter alarm template in a DataMiner connector protocol."
 ---
 
 # CH element

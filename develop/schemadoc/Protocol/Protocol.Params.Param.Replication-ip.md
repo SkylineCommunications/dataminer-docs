@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Replication-ip
-description: "Reference the DataMiner connector protocol schema entry for ip attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ip attribute sets the IP address of the DataMiner Agent hosting an element used for parameter replication in a DataMiner connector protocol."
 ---
 
 # ip attribute

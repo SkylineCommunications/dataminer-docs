@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Triggers.Trigger.Time-id
-description: "Reference the DataMiner connector protocol schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the id attribute, which identifies the item whose value a trigger condition checks."
 ---
 
 # id attribute

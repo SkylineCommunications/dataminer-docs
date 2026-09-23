@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption
-description: "Reference the DataMiner connector protocol schema entry for ColumnOption element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the ColumnOption element to define a table column's parameter, position, type, polling, and options in a DataMiner connector protocol."
 ---
 
 # ColumnOption element

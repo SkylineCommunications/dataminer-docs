@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: MonitoringTrending
-description: "Describe the DataMiner connector development topic Trending, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure parameter trend support and storage, understand real-time and average trend calculations, and choose aggregation or change-based trending."
 ---
 
 # Trending

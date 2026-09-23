@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Database.CQLOptions
-description: "Reference the DataMiner connector protocol schema entry for CQLOptions element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the CQLOptions element to configure Cassandra keys, table properties, and a post-creation query in a DataMiner connector protocol."
 ---
 
 # CQLOptions element

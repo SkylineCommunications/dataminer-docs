@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript-options
-description: "Reference the DataMiner Automation script schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Review the DMSScript options bit flags that control debugging, undefined values, interactivity, element checks, and information events."
 ---
 
 # options attribute

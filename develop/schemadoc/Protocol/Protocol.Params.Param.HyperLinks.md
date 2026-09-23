@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.HyperLinks
-description: "Reference the DataMiner connector protocol schema entry for HyperLinks element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the HyperLinks element groups custom alarm shortcut commands that open webpages or run automation scripts in a DataMiner connector protocol."
 ---
 
 # HyperLinks element

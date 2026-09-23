@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeQActionOptions
-description: "Reference the DataMiner connector protocol schema entry for TypeQActionOptions simple type, including its documented structure, attributes, values, and co."
+description: "Use the TypeQActionOptions simple type to validate supported QAction option strings and DLL names in the DataMiner connector protocol schema."
 ---
 
 # TypeQActionOptions simple type

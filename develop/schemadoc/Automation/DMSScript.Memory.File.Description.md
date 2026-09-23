@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Memory.File.Description
-description: "Reference the DataMiner Automation script schema entry for Description element, including its documented structure, attributes, values, and constraints."
+description: "Use the memory File Description element to specify the nonempty name of a memory file in a DataMiner automation script."
 ---
 
 # Description element

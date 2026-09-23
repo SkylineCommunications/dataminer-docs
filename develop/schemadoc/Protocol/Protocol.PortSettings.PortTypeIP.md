@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.PortTypeIP
-description: "Reference the DataMiner connector protocol schema entry for PortTypeIP element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the PortTypeIP element configures whether TCP/IP is available as a selectable port type for an element connection."
 ---
 
 # PortTypeIP element

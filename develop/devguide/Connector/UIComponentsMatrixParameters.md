@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsMatrixParameters
-description: "Describe the DataMiner connector development topic Matrix parameters, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define the read, write, and column parameters for a standard matrix, including required types, dimensions, column types, and UI options."
 ---
 
 # Matrix parameters

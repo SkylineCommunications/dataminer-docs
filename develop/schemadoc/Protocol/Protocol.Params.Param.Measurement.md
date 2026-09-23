@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement
-description: "Reference the DataMiner connector protocol schema entry for Measurement element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Measurement element defines a parameter display type and its optional discreet values or digital threshold in a DataMiner connector protocol."
 ---
 
 # Measurement element

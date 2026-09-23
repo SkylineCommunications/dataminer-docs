@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.QActions.QAction-inputParameters
-description: "Reference the DataMiner connector protocol schema entry for inputParameters attribute, including its documented structure, attributes, values, and constra."
+description: "Learn how the inputParameters attribute passes specified parameter values to functions inside a QAction script."
 ---
 
 # inputParameters attribute

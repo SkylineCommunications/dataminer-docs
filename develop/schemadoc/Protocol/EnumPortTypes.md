@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumPortTypes
-description: "Reference the DataMiner connector protocol schema entry for EnumPortTypes simple type, including its documented structure, attributes, values, and constra."
+description: "Review the allowed values for the EnumPortTypes simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumPortTypes simple type

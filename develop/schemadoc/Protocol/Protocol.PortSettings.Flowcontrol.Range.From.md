@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol.Range.From
-description: "Reference the DataMiner connector protocol schema entry for From element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the From element under Flowcontrol Range sets the first flow control value available in the allowed range."
 ---
 
 # From element

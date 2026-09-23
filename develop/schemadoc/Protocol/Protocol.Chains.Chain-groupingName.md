@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain-groupingName
-description: "Reference the DataMiner connector protocol schema entry for groupingName attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how the groupingName attribute assigns an EPM chain to a named group in DataMiner Cube in a DataMiner connector protocol."
 ---
 
 # groupingName attribute

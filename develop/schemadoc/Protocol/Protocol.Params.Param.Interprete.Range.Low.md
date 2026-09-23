@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Range.Low
-description: "Reference the DataMiner connector protocol schema entry for Low element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Low element sets the minimum accepted value for a communication or simulated parameter in a DataMiner connector protocol."
 ---
 
 # Low element

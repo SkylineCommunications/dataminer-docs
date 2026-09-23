@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ParameterGroups.Group-id
-description: "Reference the DataMiner connector protocol schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the id attribute to assign a unique parameter group ID below the range reserved for dynamic interfaces in a DataMiner connector protocol."
 ---
 
 # id attribute

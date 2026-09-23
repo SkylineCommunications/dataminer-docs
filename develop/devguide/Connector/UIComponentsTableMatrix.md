@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTableMatrix
-description: "Describe the DataMiner connector development topic Table-based matrix, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure a table-based matrix with input and output tables plus a mapped dummy parameter, and understand its alarm-color and Router Control limitations."
 ---
 
 # Table-based matrix

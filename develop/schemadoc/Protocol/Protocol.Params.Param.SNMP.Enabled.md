@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.Enabled
-description: "Reference the DataMiner connector protocol schema entry for Enabled element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Enabled element controls whether DataMiner may query the configured SNMP Agent in a DataMiner connector protocol."
 ---
 
 # Enabled element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP
-description: "Reference the DataMiner connector protocol schema entry for SNMP element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the SNMP element configures parameter polling, trap capture, response handling, value scaling, and SNMP data types."
 ---
 
 # SNMP element

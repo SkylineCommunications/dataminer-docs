@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions
-description: "Reference the DataMiner connector protocol schema entry for Actions element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Actions element contains uniquely identified and named actions in a DataMiner connector protocol."
 ---
 
 # Actions element

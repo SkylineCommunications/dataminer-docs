@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsMatrix
-description: "Describe the DataMiner connector development topic Standard matrix, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Explore standard matrix parameters for representing routers and switches, including crosspoints, dynamic configuration, names, and discreet info."
 ---
 
 # Standard matrix

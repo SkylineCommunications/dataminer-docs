@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Handling_Async_Code
-description: "Describe the DataMiner Automation development topic Handling async code, including its purpose, behavior, implementation guidance, and relevant constraint."
+description: "Handle async-only library calls in a synchronous automation script while keeping the IEngine object and related objects on the entry-point thread."
 ---
 
 # Handling async code

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.RCA.Protocol.Link-valueFilter
-description: "Reference the DataMiner connector protocol schema entry for valueFilter attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the valueFilter attribute matches related table rows when an RCA chain links tables without a direct foreign key relationship."
 ---
 
 # valueFilter attribute

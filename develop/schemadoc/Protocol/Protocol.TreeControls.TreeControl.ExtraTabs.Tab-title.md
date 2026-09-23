@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab-title
-description: "Reference the DataMiner connector protocol schema entry for title attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the title attribute, which sets the displayed title of an additional tree control tab."
 ---
 
 # title attribute

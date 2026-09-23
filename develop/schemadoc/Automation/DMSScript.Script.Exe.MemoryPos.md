@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.MemoryPos
-description: "Reference the DataMiner Automation script schema entry for MemoryPos element, including its documented structure, attributes, values, and constraints."
+description: "Use the MemoryPos element to identify the memory file and item position that a get or set action accesses in an automation script."
 ---
 
 # MemoryPos element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Display-state
-description: "Reference the DataMiner connector protocol schema entry for state attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the state attribute mirrors an exception display state on the corresponding write parameter in a DataMiner connector protocol."
 ---
 
 # state attribute

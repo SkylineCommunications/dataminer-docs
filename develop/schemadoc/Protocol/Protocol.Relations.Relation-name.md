@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Relations.Relation-name
-description: "Reference the DataMiner connector protocol schema entry for name attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Relation name attribute assigns a name to a table relation defined in a DataMiner connector."
 ---
 
 # name attribute

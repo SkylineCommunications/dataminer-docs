@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerialExercise
-description: "Describe the DataMiner connector development topic Exercise, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Practice building a serial simulation for a Xicom Technology XTRD-750C and implementing temperature, current, and status commands."
 ---
 
 # Exercise

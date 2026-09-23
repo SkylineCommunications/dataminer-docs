@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicQActionsExecution
-description: "Describe the DataMiner connector development topic QAction execution, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand what triggers QAction execution, retrieve triggering row data, and choose queued or group execution based on ordering and concurrency needs."
 ---
 
 # QAction execution

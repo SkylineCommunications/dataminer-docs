@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Dependencies
-description: "Reference the DataMiner connector protocol schema entry for Dependencies element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Dependencies element links parameters and requires valid dependent values before command execution in a DataMiner connector protocol."
 ---
 
 # Dependencies element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.QActions.QAction-entryPoint
-description: "Reference the DataMiner connector protocol schema entry for entryPoint attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the entryPoint attribute maps QAction trigger parameters to specific entry point methods and classes."
 ---
 
 # entryPoint attribute

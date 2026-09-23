@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTreeControlTag
-description: "Describe the DataMiner connector development topic TreeControl tag, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure a DataMiner tree control's source parameter, table hierarchy, display columns, hidden columns, and extra tabs."
 ---
 
 # TreeControl tag

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsPageButton
-description: "Describe the DataMiner connector development topic Page button, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define page buttons that open pop-up Data Display pages, use ellipses in their labels, and follow sizing, nesting, and page-order guidance."
 ---
 
 # Page button

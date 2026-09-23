@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumParamMeasurementTypeCase
-description: "Reference the DataMiner connector protocol schema entry for EnumParamMeasurementTypeCase simple type, including its documented structure, attributes, valu."
+description: "Review the allowed values for the EnumParamMeasurementTypeCase simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumParamMeasurementTypeCase simple type

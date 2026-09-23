@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeSemicolonSeparatedValidatorIds
-description: "Reference the DataMiner connector protocol schema entry for TypeSemicolonSeparatedValidatorIds simple type, including its documented structure, attributes."
+description: "Use the TypeSemicolonSeparatedValidatorIds simple type to validate semicolon-separated validator IDs in the DataMiner connector protocol schema."
 ---
 
 # TypeSemicolonSeparatedValidatorIds simple type

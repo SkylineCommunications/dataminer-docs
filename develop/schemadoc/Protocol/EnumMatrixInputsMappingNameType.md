@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumMatrixInputsMappingNameType
-description: "Reference the DataMiner connector protocol schema entry for EnumMatrixInputsMappingNameType simple type, including its documented structure, attributes, v."
+description: "Review the allowed values for the EnumMatrixInputsMappingNameType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumMatrixInputsMappingNameType simple type

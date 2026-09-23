@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Monitoring
-description: "Describe the DataMiner connector development topic Monitoring, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how connector parameters support alarm monitoring and trending, and where to find the related protocol markup and best practices."
 ---
 
 # Monitoring

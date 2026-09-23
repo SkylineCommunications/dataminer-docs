@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Credentials.Credential-id
-description: "Reference the DataMiner Automation script schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Credential id attribute as the unique positive integer passed to GetCredential when an automation script retrieves credentials."
 ---
 
 # id attribute

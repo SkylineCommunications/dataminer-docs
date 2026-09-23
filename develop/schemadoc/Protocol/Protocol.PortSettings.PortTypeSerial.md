@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.PortTypeSerial
-description: "Reference the DataMiner connector protocol schema entry for PortTypeSerial element, including its documented structure, attributes, values, and constraint."
+description: "Learn how the PortTypeSerial element configures whether Serial is available as a selectable port type for an element connection."
 ---
 
 # PortTypeSerial element

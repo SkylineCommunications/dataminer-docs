@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSmartSerialCommonPitfalls
-description: "Describe the DataMiner connector development topic Common pitfalls, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Avoid smart-serial connection pitfalls when combining serial traffic or handling unsolicited messages with command-response pairs."
 ---
 
 # Common pitfalls

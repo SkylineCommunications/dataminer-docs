@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTreeControlAdvancedHierarchy
-description: "Describe the DataMiner connector development topic Advanced hierarchy, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure conditional branches in a DataMiner tree control so the hierarchy path changes based on a parent row's cell value."
 ---
 
 # Advanced hierarchy

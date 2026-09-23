@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.OffSet
-description: "Reference the DataMiner connector protocol schema entry for OffSet element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the OffSet element provides the value added by an OffSet operation in an Interprete sequence in a DataMiner connector protocol."
 ---
 
 # OffSet element

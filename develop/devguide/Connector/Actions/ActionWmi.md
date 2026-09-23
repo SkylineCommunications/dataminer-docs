@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionWmi
-description: "Describe the DataMiner connector development topic wmi, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the WMI action to run a WMI query against a selected server and return specified columns to standalone or table parameters."
 ---
 
 # wmi

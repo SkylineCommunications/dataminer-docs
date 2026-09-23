@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionSetInfo
-description: "Describe the DataMiner connector development topic set info, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the set info action to change parameter scale and sequence settings dynamically, with independent controls for each setting."
 ---
 
 # set info

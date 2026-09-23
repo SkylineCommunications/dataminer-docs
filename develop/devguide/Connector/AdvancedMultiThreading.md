@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedMultiThreading
-description: "Describe the DataMiner connector development topic Multithreading, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure additional connector execution threads for selected physical or virtual connections, each with its own group queue and RTE registration."
 ---
 
 # Multithreading

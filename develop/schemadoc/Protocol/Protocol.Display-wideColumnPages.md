@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Display-wideColumnPages
-description: "Reference the DataMiner connector protocol schema entry for wideColumnPages attribute, including its documented structure, attributes, values, and constra."
+description: "Learn how the wideColumnPages attribute lists Data Display pages that should use a single wide column in a DataMiner connector protocol."
 ---
 
 # wideColumnPages attribute

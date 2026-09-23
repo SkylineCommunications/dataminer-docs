@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDcfDataMinerClassLibrary
-description: "Describe the DataMiner connector development topic DCF in the DataMiner class library, including its purpose, behavior, implementation guidance, and relev."
+description: "Find the DataMiner class library types that support DCF operations in connector QActions and automation scripts."
 ---
 
 # DCF in the DataMiner class library

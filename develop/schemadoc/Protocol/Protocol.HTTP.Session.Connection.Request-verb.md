@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request-verb
-description: "Reference the DataMiner connector protocol schema entry for verb attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the verb attribute selects the alphabetic HTTP method used for a request in a DataMiner connector protocol."
 ---
 
 # verb attribute

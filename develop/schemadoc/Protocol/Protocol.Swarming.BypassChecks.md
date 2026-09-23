@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Swarming.BypassChecks
-description: "Reference the DataMiner connector protocol schema entry for BypassChecks element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the BypassChecks element lists checks that DataMiner ignores when determining whether an element can swarm."
 ---
 
 # BypassChecks element

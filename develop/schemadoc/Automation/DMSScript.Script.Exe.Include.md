@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Include
-description: "Reference the DataMiner Automation script schema entry for Include element, including its documented structure, attributes, values, and constraints."
+description: "Use the Include element and its params attribute to specify an item and parameters included in a DataMiner automation script action."
 ---
 
 # Include element

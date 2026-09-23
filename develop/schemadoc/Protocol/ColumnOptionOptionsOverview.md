@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ColumnOptionOptionsOverview
-description: "Reference the DataMiner connector protocol schema entry for Options overview, including its documented structure, attributes, values, and constraints."
+description: "Review the connector options available for dynamic table columns and how they control values, alarms, icons, headers, filtering, and display."
 ---
 
 # Options overview

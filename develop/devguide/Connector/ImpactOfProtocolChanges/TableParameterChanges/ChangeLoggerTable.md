@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeLoggerTable
-description: "Describe the DataMiner connector development topic Change logger table, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Assess the impact of converting a regular table to or from a logger table, including data migration, history, storage, and compatibility concerns."
 ---
 
 # Change logger table

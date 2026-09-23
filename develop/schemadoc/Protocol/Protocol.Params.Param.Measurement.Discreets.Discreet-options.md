@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the options attribute sets actions, access, appearance, severity, and table selection for a discreet entry in a DataMiner connector protocol."
 ---
 
 # options attribute

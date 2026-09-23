@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Replication
-description: "Reference the DataMiner connector protocol schema entry for Replication element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Replication element copies one parameter from another element and identifies the replication source in a DataMiner connector protocol."
 ---
 
 # Replication element

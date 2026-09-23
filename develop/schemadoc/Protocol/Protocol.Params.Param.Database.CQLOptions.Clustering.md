@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Database.CQLOptions.Clustering
-description: "Reference the DataMiner connector protocol schema entry for Clustering element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Clustering element to define Cassandra partition and clustering keys from table column indexes in a DataMiner connector protocol."
 ---
 
 # Clustering element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Pairs.Pair-id
-description: "Reference the DataMiner connector protocol schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the id attribute to assign the unique ID of a command and response pair in a DataMiner connector protocol."
 ---
 
 # id attribute

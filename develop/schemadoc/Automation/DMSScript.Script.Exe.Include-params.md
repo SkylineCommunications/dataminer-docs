@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Include-params
-description: "Reference the DataMiner Automation script schema entry for params attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Include params attribute to list the parameters included by an Include element in a DataMiner automation script action."
 ---
 
 # params attribute

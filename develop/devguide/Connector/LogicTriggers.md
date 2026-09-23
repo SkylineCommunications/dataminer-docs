@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicTriggers
-description: "Describe the DataMiner connector development topic Triggers, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define protocol triggers that activate on component events or through logic, then execute actions or other triggers when their conditions are met."
 ---
 
 # Triggers

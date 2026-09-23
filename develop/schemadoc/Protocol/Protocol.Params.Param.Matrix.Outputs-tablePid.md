@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Matrix.Outputs-tablePid
-description: "Reference the DataMiner connector protocol schema entry for tablePid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the tablePid attribute identifies the outputs table linked to a matrix control in a DataMiner connector protocol."
 ---
 
 # tablePid attribute

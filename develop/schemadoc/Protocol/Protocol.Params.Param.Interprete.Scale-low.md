@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Scale-low
-description: "Reference the DataMiner connector protocol schema entry for low attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the low attribute sets the converted value corresponding to the lowest device value in a scale mapping in a DataMiner connector protocol."
 ---
 
 # low attribute

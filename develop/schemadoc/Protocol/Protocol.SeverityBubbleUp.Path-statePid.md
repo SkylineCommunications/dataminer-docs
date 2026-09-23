@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.SeverityBubbleUp.Path-statePid
-description: "Reference the DataMiner connector protocol schema entry for statePid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the statePid attribute references a binary parameter that enables or disables a SeverityBubbleUp path at runtime."
 ---
 
 # statePid attribute

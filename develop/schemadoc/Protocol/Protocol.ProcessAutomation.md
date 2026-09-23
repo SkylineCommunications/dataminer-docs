@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ProcessAutomation
-description: "Reference the DataMiner connector protocol schema entry for ProcessAutomation element, including its documented structure, attributes, values, and constra."
+description: "Learn how the ProcessAutomation element configures additional queue options for the Process Automation queue connector."
 ---
 
 # ProcessAutomation element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Ownership.Elements.Element.AlarmTemplate
-description: "Reference the DataMiner connector protocol schema entry for AlarmTemplate element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the AlarmTemplate element to declare ownership and access settings for an element's alarm template in a DataMiner connector protocol."
 ---
 
 # AlarmTemplate element

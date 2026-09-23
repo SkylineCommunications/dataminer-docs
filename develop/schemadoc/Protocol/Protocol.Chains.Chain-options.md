@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the options attribute configures chain security, filtering, grouping, navigation, and Visio behavior in a DataMiner connector protocol."
 ---
 
 # options attribute

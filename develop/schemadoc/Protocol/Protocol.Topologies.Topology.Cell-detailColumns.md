@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Topologies.Topology.Cell-detailColumns
-description: "Reference the DataMiner connector protocol schema entry for detailColumns attribute, including its documented structure, attributes, values, and constrain."
+description: "Consult the DataMiner connector protocol schema reference for the detailColumns attribute, its string type, and Cell parent."
 ---
 
 # detailColumns attribute

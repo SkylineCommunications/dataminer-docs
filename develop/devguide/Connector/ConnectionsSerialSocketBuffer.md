@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerialSocketBuffer
-description: "Describe the DataMiner connector development topic Socket buffer, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how late serial responses can remain in the socket buffer and why DataMiner flushes buffered data before sending each new command."
 ---
 
 # Socket buffer

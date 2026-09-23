@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistencePersistingTables
-description: "Describe the DataMiner connector development topic Persisting tables, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure connector table columns to persist in the database, understand the non-partial table row limit, and mark tables or columns as volatile."
 keywords: "volatile"
 ---
 
