@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_activating_verbose_correlation_logging
+description: "Use SLNetClientTest to activate verbose Correlation logging by setting CorrelationLogVerbose to true for an Agent, and check MaintenanceSettings.xml."
 ---
 
 # Activating verbose Correlation logging
