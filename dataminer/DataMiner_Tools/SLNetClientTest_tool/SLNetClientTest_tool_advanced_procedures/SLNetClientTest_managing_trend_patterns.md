@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_managing_trend_patterns
+description: "Use SLNetClientTest to view details about DataMiner Analytics trend patterns or delete selected patterns from the Pattern Matching window."
 ---
 
 # Managing trend patterns
