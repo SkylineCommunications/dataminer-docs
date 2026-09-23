@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_finetuning_CPECollectorHelper
+description: "Use SLNetClientTest to fine-tune the CPECollectorHelper API timeout by setting EPMAsyncTimeout and EPMBulkCount, then verify EPM data loads correctly."
 ---
 
 # Fine-tuning the CPECollectorHelper API timeout

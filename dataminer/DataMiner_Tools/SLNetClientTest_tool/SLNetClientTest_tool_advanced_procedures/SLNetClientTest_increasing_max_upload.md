@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_increasing_max_upload
+description: "Use SLNetClientTest to increase the MaxUploadSize setting for upgrade packages beyond its 4000 MB default, then apply the new value to your DMS."
 ---
 
 # Increasing the maximum upload size for upgrade packages in a DMS
