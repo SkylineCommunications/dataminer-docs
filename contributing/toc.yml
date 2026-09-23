@@ -25,16 +25,6 @@ items:
       topicUid: CTB_Markdown_Syntax
     - name: Reviewing a contribution
       topicUid: CTB_Reviewing_Contribution
-    - name: Documentation ownership and review routing
-      topicUid: CTB_Documentation_Ownership
-    - name: Documentation governance and review cadence
-      topicUid: CTB_Documentation_Governance
-    - name: Documentation dependency mapping and coupling
-      topicUid: CTB_Documentation_Coupling
-    - name: Documentation corpus and distribution policy
-      topicUid: CTB_Documentation_Corpus_Policy
-    - name: Documentation metadata
-      topicUid: CTB_Documentation_Metadata
     - name: Tips for writing documentation
       topicUid: CTB_Tips
     - name: House style

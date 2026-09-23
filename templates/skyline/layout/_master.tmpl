@@ -19,18 +19,6 @@
       <meta name="keywords" content="{{keywords}}">
       <meta name="description" content="{{description}}">
       {{#_description}}<meta name="description" content="{{_description}}">{{/_description}}
-      {{#canonicalUrl}}<link rel="canonical" href="{{canonicalUrl}}">{{/canonicalUrl}}
-      {{#_sourceDateYear}}<meta name="dateModified" content="{{_sourceDateYear}}-{{_sourceDateMonth}}-{{_sourceDateDay}}"><meta property="article:modified_time" content="{{_sourceDateYear}}-{{_sourceDateMonth}}-{{_sourceDateDay}}">{{/_sourceDateYear}}
-      {{#sourceCommit}}<meta name="dm:source-commit" content="{{sourceCommit}}">{{/sourceCommit}}
-      {{#content_type}}<meta name="dm:content-type" content="{{content_type}}">{{/content_type}}
-      {{#authority}}<meta name="dm:authority" content="{{authority}}">{{/authority}}
-      {{#version}}<meta name="dm:version" content="{{version}}">{{/version}}
-      {{#owner}}<meta name="dm:owner" content="{{owner}}">{{/owner}}
-      {{#applies_to}}<meta name="dm:applies-to" content="{{#applies_to}}{{.}}; {{/applies_to}}">{{/applies_to}}
-      {{#sourceBlob}}<link rel="source" href="{{sourceBlob}}">{{/sourceBlob}}
-      <meta name="dm:license" content="CC BY-NC-ND 4.0">
-      <meta name="dm:attribution" content="Skyline Communications">
-      <link rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/">
       <link rel="icon" href="{{_rel}}{{{_appFaviconPath}}}{{^_appFaviconPath}}favicon.ico{{/_appFaviconPath}}">
       <link rel="stylesheet" href="{{_rel}}public/docfx.min.css">
       <link rel="stylesheet" href="{{_rel}}public/main.css">
@@ -146,9 +134,6 @@
           {{^sourceurl}}{{#docurl}}
           <a href="{{docurl}}" class="edit-link">{{__global.improveThisDoc}}</a>
           {{/docurl}}{{/sourceurl}}
-          {{#sourceBlob}}
-          <a href="{{sourceBlob}}" class="source-link">View source at this commit</a>
-          {{/sourceBlob}}
         </div>
         {{/_disableContribution}}
         <nav id="affix"></nav>

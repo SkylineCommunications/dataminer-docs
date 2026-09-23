@@ -4,17 +4,10 @@ on:
   push:
     branches:
       - main
-  schedule:
-    - cron: '17 2 * * 1'
-  workflow_dispatch:
   pull_request:
-    types: [opened, synchronize, reopened]
+    types: [opened, synchronize, reopened, closed]
     branches:
       - main
-
-permissions:
-  contents: read
-  actions: read
 
 jobs:
   build_job:
@@ -24,218 +17,30 @@ jobs:
       - uses: actions/checkout@v7
         with:
           submodules: true
-          fetch-depth: 0
       - name: Install DocFX
         run: dotnet tool update -g docfx
         env:
           CI: true
-      - name: Install Markdownlint
-        run: npm install --global markdownlint-cli@0.45.0 --no-fund --no-audit
       - name: Restore NuGet
         run: dotnet restore "src/NuGetPackages"
-      - name: Test documentation metadata validator
-        run: .\scripts\test-validate-documentation-metadata.ps1
-        shell: powershell
-      - name: Test documentation metadata migration
-        run: .\scripts\test-migrate-documentation-metadata.ps1
-        shell: powershell
-      - name: Test documentation anchor validator
-        run: .\scripts\test-validate-documentation-anchors.ps1
-        shell: powershell
-      - name: Validate documentation anchors
-        run: .\scripts\validate-documentation-anchors.ps1 -RepositoryRoot .
-        shell: powershell
-      - name: Validate documentation metadata
-        run: |
-          $base = $env:GITHUB_BASE_SHA
-          if ([string]::IsNullOrWhiteSpace($base) -or $base -match '^0+$') {
-            $base = $env:GITHUB_BEFORE
-          }
-          if ([string]::IsNullOrWhiteSpace($base) -or $base -match '^0+$') {
-            $base = 'HEAD^'
-          }
-          $added = @(git diff --name-only --diff-filter=A $base HEAD | Where-Object {
-            $_ -match '^[^/]+\.md$' -or $_ -match '^(contributing|dataminer|develop|release-notes|solutions|tutorials)/.+\.md$'
-          })
-          if ($added.Count -gt 0) {
-            .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot . -Path $added -RequireVersion1
-          }
-          .\scripts\validate-documentation-metadata.ps1 -RepositoryRoot .
-        env:
-          GITHUB_BASE_SHA: ${{ github.event.pull_request.base.sha }}
-          GITHUB_BEFORE: ${{ github.event.before }}
-        shell: powershell
-      - name: Test documentation governance
-        run: .\scripts\test-documentation-governance.ps1
-        shell: powershell
-      - name: Validate documentation governance
-        run: .\scripts\validate-documentation-governance.ps1 -RepositoryRoot . -ReportPath .\_artifacts\documentation-governance.json
-        shell: powershell
-      - name: Test documentation dependency map
-        run: .\scripts\test-documentation-dependency-map.ps1
-        shell: powershell
-      - name: Validate documentation dependency map
-        run: .\scripts\validate-documentation-dependency-map.ps1 -RepositoryRoot . -ReportPath .\_artifacts\documentation-dependency-map.json
-        shell: powershell
-      - name: Resolve documentation coupling
-        env:
-          COUPLING_BASE_REVISION: ${{ github.event.pull_request.base.sha }}
-          COUPLING_HEAD_REVISION: ${{ github.sha }}
-        run: |
-          $baseRevision = $env:COUPLING_BASE_REVISION
-          $headRevision = $env:COUPLING_HEAD_REVISION
-          if ([string]::IsNullOrWhiteSpace($headRevision)) {
-            $headRevision = (git rev-parse HEAD).Trim()
-          }
-          if ([string]::IsNullOrWhiteSpace($baseRevision) -or $baseRevision -match '^0+$') {
-            $baseRevision = ""
-          }
-          .\scripts\resolve-documentation-coupling.ps1 -RepositoryRoot . -BaseRevision $baseRevision -HeadRevision $headRevision -OutputPath .\_artifacts\documentation-coupling.json
-        shell: powershell
-      - name: Validate D2.2 target metadata
-        run: .\scripts\migrate-documentation-metadata.ps1 -RepositoryRoot . -CheckOnly -ReportPath .\d2-2-metadata-migration-report.json
-        shell: powershell
-      - name: Test documentation corpus audit
-        run: .\scripts\test-audit-docs-baseline.ps1
-        shell: powershell
-      - name: Test generated metadata provenance
-        run: .\scripts\test-generated-metadata-provenance.ps1
-        shell: powershell
-      - name: Test AI content manifest
-        run: .\scripts\test-ai-content-manifest.ps1
-        shell: powershell
-      - name: Test HTML source metadata
-        run: .\scripts\test-html-source-metadata.ps1
-        shell: powershell
-      - name: Test LLM discovery
-        run: .\scripts\test-llms-discovery.ps1
-        shell: powershell
-      - name: Test public manifest sanitization
-        run: .\scripts\test-public-manifest.ps1
-        shell: powershell
-      - name: Test internal topic packs
-        run: .\scripts\test-internal-topic-packs.ps1
-        shell: powershell
-      - name: Test segmented sitemaps
-        run: .\scripts\test-segmented-sitemaps.ps1
-        shell: powershell
-      - name: Test deployment delta
-        run: .\scripts\test-deployment-delta.ps1
-        shell: powershell
-      - name: Retrieve previous AI content manifest
-        if: (github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs') || (github.event_name == 'schedule' && github.repository == 'SkylineCommunications/dataminer-docs')
-        env:
-          GH_TOKEN: ${{ github.token }}
-          REPOSITORY: ${{ github.repository }}
-          CURRENT_RUN_ID: ${{ github.run_id }}
-        run: .\scripts\retrieve-previous-ai-content-manifest.ps1 -Repository $env:REPOSITORY -CurrentRunId $env:CURRENT_RUN_ID -OutputPath .\_artifacts\previous-ai-content-manifest.json
-        shell: powershell
       - name: Build
         run: dotnet build "src/NuGetPackages" --configuration Release
       - name: Build Documentation
         id: build-documentation
         run: |
           docfx metadata
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          .\scripts\generate-generated-metadata-provenance.ps1 -RepositoryRoot . -OutputPath .\_artifacts\generated-metadata-provenance.json -SourceRevision $env:GITHUB_SHA -RequireGeneratedOutputs
-          .\scripts\validate-generated-metadata-provenance.ps1 -RepositoryRoot . -Path .\_artifacts\generated-metadata-provenance.json
-          .\scripts\generate-ai-content-manifest.ps1 -RepositoryRoot . -OutputPath .\_artifacts\ai-content-manifest.json -SourceRevision $env:GITHUB_SHA
-          .\scripts\validate-ai-content-manifest.ps1 -RepositoryRoot . -Path .\_artifacts\ai-content-manifest.json
-          .\scripts\generate-html-source-metadata.ps1 -RepositoryRoot . -DocFxConfigPath .\docfx.json -OutputPath .\_artifacts\html-source-metadata.json -SourceRevision $env:GITHUB_SHA -EditBranch main
-          .\scripts\validate-html-source-metadata.ps1 -RepositoryRoot . -Path .\_artifacts\html-source-metadata.json
-          .\scripts\generate-internal-topic-packs.ps1 -RepositoryRoot . -ManifestPath .\_artifacts\ai-content-manifest.json -OutputPath .\_artifacts\internal-only-topic-packs -SourceRevision $env:GITHUB_SHA
-          .\scripts\validate-internal-topic-packs.ps1 -RepositoryRoot . -Path .\_artifacts\internal-only-topic-packs\internal-only-topic-pack-manifest.json
-          $previousManifest = ""
-          if (Test-Path -LiteralPath .\_artifacts\previous-ai-content-manifest.json -PathType Leaf) {
-            $previousManifest = ".\_artifacts\previous-ai-content-manifest.json"
-          }
-          .\scripts\generate-deployment-delta.ps1 -RepositoryRoot . -CurrentManifestPath .\_artifacts\ai-content-manifest.json -PreviousManifestPath $previousManifest -OutputPath .\_artifacts\deployment-delta.json -SourceRevision $env:GITHUB_SHA
-          .\scripts\validate-deployment-delta.ps1 -RepositoryRoot . -Path .\_artifacts\deployment-delta.json
-          Copy-Item .\_artifacts\ai-content-manifest.json .\ai-content-manifest.json -Force
           docfx build --warningsAsErrors
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          .\scripts\sanitize-public-manifest.ps1 -Path .\_site\manifest.json
-          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-          .\scripts\generate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -GeneratedProvenancePath .\_artifacts\generated-metadata-provenance.json -OutputPath .\_artifacts\segmented-sitemap-report.json -SourceRevision $env:GITHUB_SHA
-          .\scripts\validate-segmented-sitemaps.ps1 -RepositoryRoot . -SitePath .\_site -ReportPath .\_artifacts\segmented-sitemap-report.json
         shell: powershell
-      - name: Retain generated metadata provenance
-        uses: actions/upload-artifact@v7
-        with:
-          name: generated-metadata-provenance-${{ github.sha }}
-          path: _artifacts/generated-metadata-provenance.json
-          retention-days: 14
-      - name: Retain documentation governance report
-        uses: actions/upload-artifact@v7
-        with:
-          name: documentation-governance-${{ github.sha }}
-          path: _artifacts/documentation-governance.json
-          retention-days: 14
-      - name: Retain documentation dependency map report
-        uses: actions/upload-artifact@v7
-        with:
-          name: documentation-dependency-map-${{ github.sha }}
-          path: _artifacts/documentation-dependency-map.json
-          retention-days: 14
-      - name: Retain documentation coupling report
-        uses: actions/upload-artifact@v7
-        with:
-          name: documentation-coupling-${{ github.sha }}
-          path: _artifacts/documentation-coupling.json
-          retention-days: 14
-      - name: Retain commit-addressed AI content manifest
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
-        uses: actions/upload-artifact@v7
-        with:
-          name: ai-content-manifest-${{ github.sha }}
-          path: _artifacts/ai-content-manifest.json
-          retention-days: 90
-      - name: Retain commit-addressed deployment delta
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
-        uses: actions/upload-artifact@v7
-        with:
-          name: deployment-delta-${{ github.sha }}
-          path: _artifacts/deployment-delta.json
-          retention-days: 90
-      - name: Retain segmented sitemap report
-        uses: actions/upload-artifact@v7
-        with:
-          name: segmented-sitemap-report-${{ github.sha }}
-          path: _artifacts/segmented-sitemap-report.json
-          retention-days: 90
-      - name: Retain internal-only topic packs
-        if: github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs' && (github.repository_visibility == 'private' || github.repository_visibility == 'internal') && vars.D3_2_INTERNAL_ARTIFACTS_ENABLED == 'true'
-        uses: actions/upload-artifact@v7
-        with:
-          name: internal-only-topic-packs-${{ github.sha }}
-          path: _artifacts/internal-only-topic-packs
-          retention-days: 14
-      - name: Verify internal-only packs are excluded from the public site
-        run: |
-          if (Test-Path .\_site\internal-only-topic-packs) { throw "Internal-only topic packs entered the public site output." }
-          if (Test-Path .\_site\internal-only-topic-pack-manifest.json) { throw "Internal-only topic pack metadata entered the public site output." }
-        shell: powershell
-      - name: Audit documentation corpus
-        run: .\scripts\audit-docs-baseline.ps1 -RepositoryRoot . -SitePath _site -OutputPath .\_artifacts\docs-corpus-baseline.generated.json -SourceRevision $env:GITHUB_SHA
-        shell: powershell
-      - name: Retain commit-addressed documentation corpus baseline
-        if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
-        uses: actions/upload-artifact@v7
-        with:
-          name: docs-corpus-baseline-${{ github.sha }}
-          path: _artifacts/docs-corpus-baseline.generated.json
-          retention-days: 90
       - name: Zip artifact for deployment
         run: Compress-Archive -Path _site/* -DestinationPath .\_site.zip
-      - name: Retain site validation artifact
+      - name: Publish results
         uses: actions/upload-artifact@v7
         with:
           name: release
           path: _site.zip
-          retention-days: 14
   
   deploy_job_Storage_Account:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
+    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
     needs: build_job
     name: Deploy Job to Storage account
@@ -275,7 +80,7 @@ jobs:
       #     sync: 'true'
   
   deploy_job_SA_SWA:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
+    if: (github.event_name == 'push' && github.repository == 'SkylineCommunications/dataminer-docs')
     runs-on: ubuntu-latest
     needs: build_job
     name: Deploy Job to SA with SWA and FD
@@ -308,7 +113,6 @@ jobs:
       #     sync: 'true'
           
   reindex_azure_search:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main' && github.repository == 'SkylineCommunications/dataminer-docs'
     runs-on: ubuntu-latest
     needs: deploy_job_Storage_Account
     name: Re-index azure search

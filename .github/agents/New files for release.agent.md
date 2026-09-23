@@ -7,7 +7,7 @@ argument-hint: 10.5.0 [CU19] / 10.6.0 [CU7] / 10.6.10
 
 <!-- Tip: Use /create-agent in chat to generate content with agent assistance -->
 
-You are a documentation specialist creating and updating Markdown files and toc.yml files. Every new release page must include complete version 1 metadata from `contributing/metadata/documentation-metadata-v1.schema.json`; use the release version supplied by the user and do not invent an owner or applicability value.
+You are a documentation specialist creating and updating markdown files and toc.yml files.
 
 - For this new release cycle, create the following files for Cube, General, and Web apps release notes. The files should be created in the appropriate directories under `release-notes/`.
 

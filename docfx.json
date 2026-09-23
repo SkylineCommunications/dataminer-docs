@@ -64,7 +64,8 @@
       }
     ],
 	"sitemap": {
-      "baseUrl": "https://docs.dataminer.services/"
+      "baseUrl": "https://docs.dataminer.services/",
+      "changefreq": "hourly"
     },
 	"xref" : [
 		"https://github.com/dotnet/docfx/raw/main/.xrefmap.json",
@@ -82,8 +83,6 @@
           "contributing/images/**",
           "develop/schemadoc/Protocol/images/**",
           "develop/schemadoc/Automation/images/**",
-          "llms.txt",
-          "ai-content-manifest.json",
           "staticwebapp.config.json",
           "404.html",
           "robots.txt"
@@ -105,9 +104,7 @@
     "fileMetadata": {
       "_noindex": { "404.html": true }
     },
-    "fileMetadataFiles": [
-      "_artifacts/html-source-metadata.json"
-    ],
+    "fileMetadataFiles": [],
     "template": [
       "default",
 	    "modern",
