@@ -11,7 +11,9 @@ The dataminer.services platform gets updated continuously. This change log can h
 
 ### 22 September 2026 - Enhancement - Admin - Create support tickets for managed organizations
 
-You can now create support tickets on behalf of the organizations you manage. After a ticket is created, a confirmation notification shows the ticket number, and the description limit has been increased from 2,000 to 5,000 characters.
+You can now create support tickets on behalf of the organizations you manage. After a ticket is created, a confirmation notification will show the ticket number.
+
+The description limit for tickets has also been increased from 2,000 to 5,000 characters.
 
 ### 22 September 2026 - Fix - Connection Management - DMS not registered for STaaS after cloud connection
 
