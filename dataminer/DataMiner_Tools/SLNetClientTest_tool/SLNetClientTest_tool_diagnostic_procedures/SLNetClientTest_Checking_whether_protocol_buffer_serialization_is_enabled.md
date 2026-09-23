@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Checking_whether_protocol_buffer_serialization_is_enabled
+description: "Use SLNetClientTest to check whether a client connection uses protocol buffer serialization by reviewing its ProtoBuf status in Connection Details."
 ---
 
 # Checking whether protocol buffer serialization is enabled

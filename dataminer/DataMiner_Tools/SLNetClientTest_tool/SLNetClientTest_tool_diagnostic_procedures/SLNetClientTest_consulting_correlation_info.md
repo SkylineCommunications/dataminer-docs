@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_consulting_correlation_info
+description: "Use SLNetClientTest to inspect Correlation information, including engine statistics, remote rules, subscriptions, event counters, and bucket status."
 ---
 
 # Consulting Correlation information
