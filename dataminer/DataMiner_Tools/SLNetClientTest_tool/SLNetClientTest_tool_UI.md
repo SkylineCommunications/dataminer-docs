@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_tool_UI
+description: "Explore the SLNetClientTest tool UI to use the Properties, Output, and Build Message tabs for diagnostics and DataMiner Agent messages."
 ---
 
 # Overview of the SLNetClientTest tool UI
