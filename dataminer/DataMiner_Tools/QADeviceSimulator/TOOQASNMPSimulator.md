@@ -1,5 +1,6 @@
 ---
 uid: TOOQASNMPSimulator
+description: "Use Skyline Device Simulator to poll SNMP and HTTP devices, send and receive traps, and reply to inform messages on DataMiner 10.1.5 and later."
 ---
 
 # Skyline Device Simulator
