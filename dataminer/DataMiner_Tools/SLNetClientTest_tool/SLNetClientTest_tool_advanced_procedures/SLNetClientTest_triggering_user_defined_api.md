@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_triggering_api
+description: "Test user-defined APIs directly in SLNetClientTest without HTTP requests, and manage API tokens and definitions from DataMiner 10.3.6/10.4.0."
 ---
 
 # Triggering and managing user-defined APIs

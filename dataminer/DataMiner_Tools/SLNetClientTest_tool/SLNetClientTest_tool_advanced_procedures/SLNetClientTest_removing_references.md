@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_removing_references
+description: "Use SLNetClientTest to find and remove stale Views.xml references to deleted elements, services, or redundancy groups from your DataMiner System."
 ---
 
 # Removing references to items that no longer exist
