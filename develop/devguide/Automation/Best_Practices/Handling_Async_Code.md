@@ -27,7 +27,7 @@ public class Script
   {
     string url = "https://jsonplaceholder.typicode.com/todos/1"; // Example API
     string result = GetDataSync(url);
-    engine.Log(result);
+    engine.GenerateInformation(result);
   }
 
   public static string GetDataSync(string url)

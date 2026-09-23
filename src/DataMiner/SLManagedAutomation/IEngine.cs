@@ -537,11 +537,11 @@ namespace Skyline.DataMiner.Automation
 		/// bool ok = engine.FindInteractiveClient("Hello world", 100 , allowedGroups, AutomationScriptAttachOptions.None);
 		/// if (!ok)
 		/// {
-		///		engine.Log("Could not attach");
+		///		engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.Log("Attached! As " + engine.UserDisplayName);
+		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
 		///		engine.ShowProgress("A message");
 		///		engine.ShowUI("Another message", true);
 		/// }
@@ -573,11 +573,11 @@ namespace Skyline.DataMiner.Automation
 		/// bool ok = engine.FindInteractiveClient("Hello world", 100 , allowedGroups, AutomationScriptAttachOptions.None);
 		/// if (!ok)
 		/// {
-		///		engine.Log("Could not attach");
+		///		engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.Log("Attached! As " + engine.UserDisplayName);
+		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
 		///		engine.ShowProgress("A message");
 		///		engine.ShowUI("Another message", true);
 		/// }
@@ -609,11 +609,11 @@ namespace Skyline.DataMiner.Automation
 		/// 
 		/// if(!ok)
 		/// {
-		///		engine.Log("Could not attach");
+		///		engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.Log("Attached! As " + engine.UserDisplayName);
+		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
 		///		engine.ShowProgress("A message");
 		///		engine.ShowUI("Another message", true);
 		/// }

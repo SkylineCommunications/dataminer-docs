@@ -31,7 +31,7 @@ class Script
     }
     private void LogStringValue(IEngine engine, CustomClass customClass)
     {
-        engine.Log(customClass.StringValue);
+        engine.GenerateInformation(customClass.StringValue);
     }
     private CustomClass InitCustomClass()
     {
