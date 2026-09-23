@@ -483,3 +483,9 @@ This issue has been fixed. Repository queries now apply the specified limit and 
 Previously, text profile parameters were recognized as text configuration parameters only when their interpretation was set to *Undefined raw type* and *Undefined type*. Text parameters with other valid interpretations, such as *Other raw type* and *String type*, were not saved.
 
 This issue has now been fixed. Text profile parameters are now recognized and saved regardless of their interpretation setting.
+
+#### Resource Studio: Numeric capacities and configurations could use incorrect step size [ID 46593]
+
+When a numeric capacity or configuration defined decimal precision without an explicit step size, the Resource Studio dialogs incorrectly required values to use a step size of 1.
+
+This issue has now been fixed. The dialogs now derive the default step size from the configured decimal precision. For example, a parameter configured with three decimal places now uses a step size of 0.001. When no decimal precision is defined, the parameter continues to use zero decimals and a step size of 1.
