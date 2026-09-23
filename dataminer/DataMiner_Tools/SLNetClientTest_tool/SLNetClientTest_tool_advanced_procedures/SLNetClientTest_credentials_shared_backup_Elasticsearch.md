@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_credentials_shared_backup_Elasticsearch
+description: "Open the SLNetClientTest tool and use SetElasticBackupPath to configure a shared Elasticsearch backup path with a username and password."
 ---
 
 # Specifying credentials for a shared backup path for Elasticsearch
