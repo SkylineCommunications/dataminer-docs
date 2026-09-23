@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_configuring_frequency_smart_baseline
+description: "Use the SLNetClientTest tool to change SmartBaselineThreadTime and set the smart baseline calculation frequency, which defaults to 5 minutes."
 ---
 
 # Configuring the frequency of smart baseline calculations

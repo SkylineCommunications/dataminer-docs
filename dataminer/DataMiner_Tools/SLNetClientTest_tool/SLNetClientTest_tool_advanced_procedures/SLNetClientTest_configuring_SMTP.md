@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_configuring_SMTP
+description: "Open the SLNetClientTest tool and use the UpdateSmtpConfigMessage to configure SMTP settings for each DMA without restarting DataMiner."
 ---
 
 # Configuring SMTP

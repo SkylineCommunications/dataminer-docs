@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_configuring_how_long_alarm_statistics
+description: "Use SLNetClientTest to configure alarm statistics retention with ActiveAlarmStatsTimeToKeep at 2 days and ActiveAlarmStatsExpirationTime at 10 minutes."
 ---
 
 # Configuring how long alarm statistics are kept in memory

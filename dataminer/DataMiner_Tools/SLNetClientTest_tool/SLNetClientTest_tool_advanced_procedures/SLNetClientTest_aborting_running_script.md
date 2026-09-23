@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_aborting_running_script
+description: "Use the SLNetClientTest tool to connect to a DMA and abort a running automation script from the Maintain Automation window."
 ---
 
 # Aborting a running automation script
