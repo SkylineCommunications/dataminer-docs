@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_Agents
+description: "Configure the Agents element in an SNMP simulation file, define its one supported agent, or copy the file for different agents."
 ---
 
 # Agents element
