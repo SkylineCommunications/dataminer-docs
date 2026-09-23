@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: UIComponentsTableRowButtons
 description: "Describe the DataMiner connector development topic Configuring buttons to open DataMiner objects from table cells, including its purpose, behavior, implem."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Configuring buttons to open DataMiner objects from table cells

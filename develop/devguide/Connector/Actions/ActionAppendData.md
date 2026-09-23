@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: LogicActionAppendData
 description: "Describe the DataMiner connector development topic append data, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # append data

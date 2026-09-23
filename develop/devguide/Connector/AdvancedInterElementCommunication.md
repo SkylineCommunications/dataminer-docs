@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedInterElementCommunication
 description: "Describe the DataMiner connector development topic Inter-element communication, including its purpose, behavior, implementation guidance, and relevant con."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Inter-element communication

@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AutomationActionAssignDummy
 description: "Describe the DataMiner Automation development topic Assign dummy, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Assign dummy

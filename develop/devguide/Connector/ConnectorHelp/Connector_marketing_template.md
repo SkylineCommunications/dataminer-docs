@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Connector_marketing_template
 description: Use this template to describe a DataMiner connector's data source, key features, use cases, prerequisites, and technical references.
-area: develop
 content_type: example
-authority: illustrative
-authority_source: not_applicable
 applies_to:
   - DataMiner
-version: unversioned
-owner: unknown
 ---
 
 # Connector marketing documentation template
@@ -21,14 +16,9 @@ Below you can find the template for the marketing page for connectors. When you 
 metadata_version: 1
 uid: Connector_marketing_page
 description: Describe the connector's data source, key features, use cases, prerequisites, and technical references in 100 to 155 characters.
-area: develop
 content_type: example
-authority: illustrative
-authority_source: not_applicable
 applies_to:
   - DataMiner
-version: unversioned
-owner: unknown
 ---
 
 # Connector name

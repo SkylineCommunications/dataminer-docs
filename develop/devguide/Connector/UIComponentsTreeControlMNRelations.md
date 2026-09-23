@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: UIComponentsTreeControlMNRelations
 description: "Describe the DataMiner connector development topic M:N relations, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # M:N relations

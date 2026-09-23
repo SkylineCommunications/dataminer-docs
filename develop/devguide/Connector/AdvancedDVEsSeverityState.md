@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedDVEsSeverityState
 description: "Configure the DVE severity column so the parent element can display the overall severity of a DVE element."
-area: develop
 content_type: conceptual
-authority: reference
-authority_source: AdvancedDVEs
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Severity state column

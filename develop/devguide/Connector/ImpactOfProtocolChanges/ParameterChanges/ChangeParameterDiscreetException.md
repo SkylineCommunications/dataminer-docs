@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ChangeParameterDiscreetException
 description: "Describe the DataMiner connector development topic Change parameter discreet and/or exception, including its purpose, behavior, implementation guidance, a."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Change parameter discreet and/or exception

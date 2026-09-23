@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedFunctionality
 description: "Describe the DataMiner connector development topic Advanced functionality, including its purpose, behavior, implementation guidance, and relevant constrai."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Advanced functionality

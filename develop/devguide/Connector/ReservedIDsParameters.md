@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ReservedIDsParameters
 description: "Describe the DataMiner connector development topic Reserved parameter IDs, including its purpose, behavior, implementation guidance, and relevant constrai."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: 10.4.0
-owner: unknown
 ---
 
 # Reserved parameter IDs

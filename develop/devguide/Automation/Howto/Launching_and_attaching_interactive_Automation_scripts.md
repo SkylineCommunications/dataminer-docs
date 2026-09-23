@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Launching_and_attaching_interactive_Automation_scripts
 description: "Describe the DataMiner Automation development topic Launching and attaching interactive automation scripts, including its purpose, behavior, implementatio."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: 10.5.9
-owner: unknown
 ---
 
 # Launching and attaching interactive automation scripts

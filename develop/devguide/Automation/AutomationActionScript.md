@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AutomationActionScript
 description: "Use the Script action to run a named automation script, pass its supported parameters, and diagnose deployment or parameter errors."
-area: develop
 content_type: conceptual
-authority: reference
-authority_source: GettingStartedWithAutomationScriptDevelopment
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Script

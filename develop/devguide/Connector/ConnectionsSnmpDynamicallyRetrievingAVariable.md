@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ConnectionsSnmpDynamicallyRetrievingAVariable
 description: "Describe the DataMiner connector development topic Dynamically retrieving a variable, including its purpose, behavior, implementation guidance, and releva."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Dynamically retrieving a variable

@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: System_NullReferenceException
 description: "Describe the DataMiner connector development topic System.NullReferenceException, including its purpose, behavior, implementation guidance, and relevant c."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # System.NullReferenceException

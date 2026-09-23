@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Automation-InteractivityOptions
 description: "Reference the DataMiner Automation script schema entry for InteractivityOptions simple type, including its documented structure, attributes, values, and c."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaAutomationScript
 applies_to:
   - DataMiner
-version: 10.5.9
-owner: unknown
 ---
 
 # InteractivityOptions simple type

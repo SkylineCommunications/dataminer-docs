@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: How_to_integrate_the_HTTP_sessions_table_in_a_connector
 description: "Describe the DataMiner connector development topic How to integrate the HTTP Sessions Table in a connector, including its purpose, behavior, implementatio."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # How to integrate the HTTP Sessions Table in a connector

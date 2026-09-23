@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Finalizer_Exception
 description: "Use this connector troubleshooting entry point when an exception on a QAction finalizer thread causes SLScripting to crash."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Exception in Finalizer

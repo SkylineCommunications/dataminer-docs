@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Creating_a_cypress_test_for_an_interactive_automation_script
 description: "Describe the DataMiner Automation development topic Creating a Cypress test for an interactive automation script, including its purpose, behavior, impleme."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: 10.4.0.24
-owner: unknown
 ---
 
 # Creating a Cypress test for an interactive automation script

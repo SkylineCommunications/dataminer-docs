@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedDcfHelper
 description: "Use the DataMiner Connectivity Framework helper package when implementing DCF behavior in a connector."
-area: develop
 content_type: conceptual
-authority: reference
-authority_source: AdvancedDcf
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # DCF Helper Class

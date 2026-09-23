@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol-EnumSwarmingBypassCheck
 description: "Reference the DataMiner connector protocol schema entry for EnumSwarmingBypassCheck simple type, including its documented structure, attributes, values, a."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # EnumSwarmingBypassCheck simple type

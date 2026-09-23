@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol-EnumHttpResponseHeader
 description: "Reference the DataMiner connector protocol schema entry for EnumHttpResponseHeader simple type, including its documented structure, attributes, values, an."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # EnumHttpResponseHeader simple type

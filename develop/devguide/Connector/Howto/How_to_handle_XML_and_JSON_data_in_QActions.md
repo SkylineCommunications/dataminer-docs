@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: How_to_handle_XML_and_JSON_data_in_QActions
 description: "Describe the DataMiner connector development topic How to handle XML and JSON data in QActions, including its purpose, behavior, implementation guidance."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # How to handle XML and JSON data in QActions

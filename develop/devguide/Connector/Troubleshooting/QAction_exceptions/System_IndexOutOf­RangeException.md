@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: System_IndexOutOfRangeException
 description: "Describe the DataMiner connector development topic System.IndexOutOfRangeException, including its purpose, behavior, implementation guidance, and relevant."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # System.IndexOutOfRangeException

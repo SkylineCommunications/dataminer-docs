@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol-EnumParamInformationInclude
 description: "Reference the DataMiner connector protocol schema entry for EnumParamInformationInclude simple type, including its documented structure, attributes, value."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # EnumParamInformationInclude simple type

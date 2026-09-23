@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Debugging_connectors_Element_connections
 description: "Describe the DataMiner connector development topic Debugging connectors: Element connections, including its purpose, behavior, implementation guidance, an."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Debugging connectors: Element connections

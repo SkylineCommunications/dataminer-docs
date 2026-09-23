@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.OID-skipDynamicSNMPGet
 description: "Reference the DataMiner connector protocol schema entry for skipDynamicSNMPGet attribute, including its documented structure, attributes, values, and cons."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # skipDynamicSNMPGet attribute

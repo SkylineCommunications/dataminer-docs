@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: UIComponentsPageButton
 description: "Describe the DataMiner connector development topic Page button, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Page button

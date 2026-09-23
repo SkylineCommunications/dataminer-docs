@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AutomationActionInformation
 description: "Use the Information action to create a clear information event from an automation script and distinguish it from diagnostic logging."
-area: develop
 content_type: conceptual
-authority: reference
-authority_source: DMSScript.Script.Exe.Message
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Information

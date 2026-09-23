@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: UIComponentsMatrixSettingNames
 description: "Describe the DataMiner connector development topic Setting input/output names via a table, including its purpose, behavior, implementation guidance, and r."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Setting input/output names via a table

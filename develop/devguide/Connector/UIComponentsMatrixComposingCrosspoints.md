@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: UIComponentsMatrixComposingCrosspoints
 description: "Describe the DataMiner connector development topic Composing crosspoints on matrix parameters, including its purpose, behavior, implementation guidance, a."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Composing crosspoints on matrix parameters

@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ConnectionsHttpImplementing
 description: "To periodically request information from a device via HTTP, the approach is very similar to serial communication."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Implementing HTTP communication

@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol.Chains.Chain.Field.DiagramTitleFormat
 description: "Reference the DataMiner connector protocol schema entry for DiagramTitleFormat element, including its documented structure, attributes, values, and constr."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # DiagramTitleFormat element

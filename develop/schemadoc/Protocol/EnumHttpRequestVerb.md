@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol-EnumHttpRequestVerb
 description: "Reference the DataMiner connector protocol schema entry for EnumHttpRequestVerb simple type, including its documented structure, attributes, values, and c."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # EnumHttpRequestVerb simple type

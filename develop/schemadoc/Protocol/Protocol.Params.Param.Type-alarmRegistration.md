@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Type-alarmRegistration
 description: "Reference the DataMiner connector protocol schema entry for alarmRegistration attribute, including its documented structure, attributes, values, and const."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # alarmRegistration attribute

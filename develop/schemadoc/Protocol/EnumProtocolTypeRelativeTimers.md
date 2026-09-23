@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol-EnumProtocolTypeRelativeTimers
 description: "Reference the DataMiner connector protocol schema entry for EnumProtocolTypeRelativeTimers simple type, including its documented structure, attributes, va."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # EnumProtocolTypeRelativeTimers simple type

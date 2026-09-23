@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ConnectionsHttpUseCase
 description: "Describe the DataMiner connector development topic Use case: Internal flow – HTTP connection, including its purpose, behavior, implementation guidance, an."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Use case: Internal flow – HTTP connection

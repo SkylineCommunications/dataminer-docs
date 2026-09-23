@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Value
 description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Value element

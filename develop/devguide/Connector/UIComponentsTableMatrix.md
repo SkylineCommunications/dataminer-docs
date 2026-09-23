@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: UIComponentsTableMatrix
 description: "Describe the DataMiner connector development topic Table-based matrix, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: 10.3.1
-owner: unknown
 ---
 
 # Table-based matrix

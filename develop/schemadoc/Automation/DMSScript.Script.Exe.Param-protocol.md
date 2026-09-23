@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: DMSScript.Script.Exe.Param-protocol
 description: "Reference the DataMiner Automation script schema entry for protocol attribute, including its documented structure, attributes, values, and constraints."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaAutomationScript
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # protocol attribute

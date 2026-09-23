@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ChangeToPartialTable
 description: "Describe the DataMiner connector development topic Change to partial table, including its purpose, behavior, implementation guidance, and relevant constra."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Change to partial table

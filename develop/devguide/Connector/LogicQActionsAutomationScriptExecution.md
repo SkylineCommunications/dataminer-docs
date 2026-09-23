@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: LogicQActionsAutomationScriptExecution
 description: "Describe the DataMiner connector development topic Starting an automation script from a QAction, including its purpose, behavior, implementation guidance."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Starting an automation script from a QAction

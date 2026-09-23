@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: UIComponentsToggleButton
 description: "Learn how to configure a DataMiner connector toggle button with paired read and write parameters and two discrete values."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Toggle button

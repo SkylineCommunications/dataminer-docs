@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistenceRdbms
 description: "Describe the DataMiner connector development topic DataMiner general database – RDBMS, including its purpose, behavior, implementation guidance, and relev."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: 10.3.0
-owner: unknown
 ---
 
 # DataMiner general database – RDBMS

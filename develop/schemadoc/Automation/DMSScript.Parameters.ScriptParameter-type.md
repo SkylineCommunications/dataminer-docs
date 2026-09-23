@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: DMSScript.Parameters.ScriptParameter-type
 description: "Reference the type attribute for an automation script parameter and define the string value type expected by the script."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaAutomationScript
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # type attribute

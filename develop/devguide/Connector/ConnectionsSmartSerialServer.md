@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ConnectionsSmartSerialServer
 description: "Describe the DataMiner connector development topic Configuring a smart-serial connection as a server, including its purpose, behavior, implementation guid."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Configuring a smart-serial connection as a server

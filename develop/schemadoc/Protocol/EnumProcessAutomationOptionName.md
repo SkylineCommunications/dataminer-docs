@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol-EnumProcessAutomationOptionName
 description: "Reference the DataMiner connector protocol schema entry for EnumProcessAutomationOptionName simple type, including its documented structure, attributes, v."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # EnumProcessAutomationOptionName simple type

@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol-EnumTriggerOn
 description: "Reference the DataMiner connector protocol schema entry for EnumTriggerOn simple type, including its documented structure, attributes, values, and constra."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # EnumTriggerOn simple type

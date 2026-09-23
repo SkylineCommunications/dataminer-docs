@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol.PortSettings
 description: "Reference the DataMiner connector protocol schema entry for PortSettings element, including its documented structure, attributes, values, and constraints."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: 10.4.12
-owner: unknown
 ---
 
 # PortSettings element

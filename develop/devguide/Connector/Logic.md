@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Logic
 description: "Describe the DataMiner connector development topic Logic, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Logic

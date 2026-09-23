@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.Hierarchy-path
 description: "Reference the DataMiner connector protocol schema entry for path attribute, including its documented structure, attributes, values, and constraints."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # path attribute

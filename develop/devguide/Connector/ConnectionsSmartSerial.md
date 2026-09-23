@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ConnectionsSmartSerial
 description: "Smart-serial devices reply with a response upon receiving a command, just like serial devices, but they can also send unsolicited messages."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Smart-serial connections

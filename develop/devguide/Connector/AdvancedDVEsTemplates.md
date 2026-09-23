@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedDVEsTemplates
 description: "Describe the DataMiner connector development topic Assigning templates to DVE parent or child elements, including its purpose, behavior, implementation gu."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Assigning templates to DVE parent or child elements

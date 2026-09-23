@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedLoggerTablesExtending
 description: "Describe the DataMiner connector development topic Extending logger tables, including its purpose, behavior, implementation guidance, and relevant constra."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Extending logger tables

@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: How_to_retrieve_protocol_pending_calls
 description: "Describe the DataMiner connector development topic How to retrieve protocol pending calls, including its purpose, behavior, implementation guidance, and r."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # How to retrieve protocol pending calls

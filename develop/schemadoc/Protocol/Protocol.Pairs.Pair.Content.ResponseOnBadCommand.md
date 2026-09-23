@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol.Pairs.Pair.Content.ResponseOnBadCommand
 description: "Reference the DataMiner connector protocol schema entry for ResponseOnBadCommand element, including its documented structure, attributes, values, and cons."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # ResponseOnBadCommand element

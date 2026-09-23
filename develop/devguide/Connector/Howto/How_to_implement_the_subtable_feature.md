@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: How_to_implement_the_subtable_feature
 description: "Describe the DataMiner connector development topic How to implement the Subtable feature, including its purpose, behavior, implementation guidance, and re."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # How to implement the Subtable feature

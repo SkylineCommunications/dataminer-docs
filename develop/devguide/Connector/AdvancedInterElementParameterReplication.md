@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedInterElementCommunicationParameterReplication
 description: "Describe the DataMiner connector development topic Parameter replication, including its purpose, behavior, implementation guidance, and relevant constrain."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Parameter replication

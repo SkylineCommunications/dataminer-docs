@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedCustomPropertiesEditingCustomProperties
 description: "Describe the DataMiner connector development topic Editing custom properties, including its purpose, behavior, implementation guidance, and relevant const."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Editing custom properties

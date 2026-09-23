@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ConnectionsDynamicallyChangingGroupConnection
 description: "Describe the DataMiner connector development topic Dynamically changing a connection of a group, including its purpose, behavior, implementation guidance."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Dynamically changing a connection of a group

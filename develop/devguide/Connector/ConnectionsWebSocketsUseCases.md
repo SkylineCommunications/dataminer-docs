@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ConnectionsWebSocketsUseCases
 description: "Describe the DataMiner connector development topic WebSocket use cases, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # WebSocket use cases

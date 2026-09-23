@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistencePersistingTables
 description: "Describe the DataMiner connector development topic Persisting tables, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 keywords: "volatile"
 ---
 

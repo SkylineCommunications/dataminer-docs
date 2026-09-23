@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Protocol-EnumScientificNotation
 description: "Reference the DataMiner connector protocol schema entry for EnumScientificNotation simple type, including its documented structure, attributes, values, an."
-area: develop
 content_type: schema
-authority: reference
-authority_source: SchemaProtocol
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # EnumScientificNotation simple type

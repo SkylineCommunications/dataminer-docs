@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: Handling_Async_Code
 description: "Describe the DataMiner Automation development topic Handling async code, including its purpose, behavior, implementation guidance, and relevant constraint."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: unknown
-owner: unknown
 ---
 
 # Handling async code

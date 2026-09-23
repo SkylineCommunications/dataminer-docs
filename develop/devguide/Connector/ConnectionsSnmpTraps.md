@@ -2,14 +2,9 @@
 metadata_version: 1
 uid: ConnectionsSnmpTraps
 description: "Describe the DataMiner connector development topic Traps, including its purpose, behavior, implementation guidance, and relevant constraints."
-area: develop
 content_type: conceptual
-authority: unknown
-authority_source: unknown
 applies_to:
   - DataMiner
-version: 10.6.4
-owner: unknown
 ---
 
 # Traps
