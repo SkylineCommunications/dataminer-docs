@@ -15,7 +15,7 @@ description: "Learn how to expand a self-managed DataMiner cluster into a hybrid
 
 1. Make sure your self-managed nodes are [upgraded](xref:Upgrading_a_DataMiner_Agent) to a **supported DaaS DataMiner version**.
 
-   In general, all Feature Release versions starting from **10.5.11** and Main Release versions starting from **10.6.0** are supported. For more details on supported versions, contact <daas@dataminer.services>.
+   In general, all Feature Release versions starting from **10.5.11** and Main Release versions starting from **10.6.0 [CU7]** are supported. For more details on supported versions, contact <daas@dataminer.services>.
 
 1. Make sure [Swarming is enabled](xref:EnableSwarming) in the self-managed cluster.
 

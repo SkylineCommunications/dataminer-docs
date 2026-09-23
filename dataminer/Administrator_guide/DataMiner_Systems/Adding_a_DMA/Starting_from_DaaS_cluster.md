@@ -160,4 +160,14 @@ description: Learn how to extend a DaaS-only DataMiner System into a hybrid clus
 
    1. Set *IP* to the IP address of the self-managed node you want to add, and click *Send Message*.
 
-   1. Once the setup is fully functional, to improve security, update the connection string so it uses the `DataMinerAdmin` account instead of the `HybridAdmin` account, and then either remove the `HybridAdmin` user account or change its password.
+   1. Once the setup is fully functional, to improve security:
+
+      1. Log in to Cube with the `HybridAdmin` user account and ensure that the user account that was initially used to install DataMiner is added to the *Administrators* group again.
+
+         When the clustering process finished, that original account lost access, but the user will need it to be able to access their DataMiner System like before.
+
+      1. Update the connection string so it uses the `DataMinerAdmin` account instead of the `HybridAdmin` account
+
+         This `DataMinerAdmin` account is entirely managed by Skyline, and its password must never be shared outside the Skyline organization.
+
+      1. Either remove the `HybridAdmin` user account or change its password.
