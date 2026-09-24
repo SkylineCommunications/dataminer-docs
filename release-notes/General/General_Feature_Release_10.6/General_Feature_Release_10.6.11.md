@@ -42,7 +42,7 @@ Before you upgrade to this DataMiner version:
 
 ### DataMiner Installer now supports command-line installation [ID 45554]
 
-<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 You can now install DataMiner from the command line by running the following command:
 

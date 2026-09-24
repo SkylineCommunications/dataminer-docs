@@ -34,6 +34,18 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### DataMiner Installer now supports command-line installation [ID 45554]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+You can now install DataMiner from the command line by running the following command:
+
+```powershell
+DataMinerInstaller.exe Install <Path to firststartupchoiceconfig.json>
+```
+
+For more information about the configuration file, see [Unattended DataMiner installation](xref:Unattended_DM_installation).
+
 #### DataMiner Installer: Perpetual STaaS systems will retain their configured DMA ID and use a supplied license file [ID 46102]
 
 <!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
