@@ -25,7 +25,7 @@ The Linux machine must meet the following requirements:
 
 ## Installing the Edge Node
 
-1. Obtain the Linux DEB package for the Edge Node.
+1. Obtain the [Linux DEB package](https://community.dataminer.services/edge-node-installers/) for the Edge Node.
 
 1. Open a terminal.
 

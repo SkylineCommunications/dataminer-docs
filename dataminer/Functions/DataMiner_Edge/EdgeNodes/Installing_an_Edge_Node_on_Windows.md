@@ -24,7 +24,7 @@ The Windows machine must meet the following requirements:
 
 ## Installing the Edge Node
 
-1. Obtain the Windows MSI installer for the Edge Node.
+1. Obtain the [Windows MSI installer](https://community.dataminer.services/edge-node-installers/) for the Edge Node.
 
 1. Run the installer as an administrator.
 
