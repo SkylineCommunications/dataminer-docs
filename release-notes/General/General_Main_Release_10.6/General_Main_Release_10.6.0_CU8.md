@@ -50,6 +50,14 @@ The UserDefinableApiEndpoint DxM now reports its health status to dataminer.serv
 
 When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
 
+#### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
+
+In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
+
 #### DxMs upgraded [ID 46577]
 
 <!-- RN 46577: MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->

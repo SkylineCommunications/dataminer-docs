@@ -96,7 +96,7 @@ When it can validate or repair the IIS rewrite rule for user-defined APIs, it re
 
 #### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
 
-<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
 
