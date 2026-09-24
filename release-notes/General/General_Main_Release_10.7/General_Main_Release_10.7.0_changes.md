@@ -734,13 +734,11 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
-#### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
+#### SNMP: Empty community strings are now supported for SET operations [ID 46535]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
 
-As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
-
-In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
 
 ### Fixes
 
