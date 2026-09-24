@@ -55,7 +55,7 @@ description: A DataMiner System can have several additional modules or apps, e.g
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer/Functions/EdgeManager/EdgeManagerOverview.html" title="Edge Manager" target="_self"><img src="~/dataminer/images/Edge_Manager.svg" style="width:100%"></a>
+    <a href="/dataminer/Functions/DataMiner_Edge/DataMiner_Edge.html" title="DataMiner Edge" target="_self"><img src="~/dataminer/images/DataMiner_Edge.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Element_connections/Element_Connections_module.html" title="Element Connections" target="_self"><img src="~/dataminer/images/Element_Connections.svg" style="width:100%"></a>

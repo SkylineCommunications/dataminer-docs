@@ -66,10 +66,10 @@ When you hover over the warning icon, a tooltip will explain that the secret val
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven pages:
+When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven sections:
 
-- A *Settings* page where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
-- A *Run-on details* page for connectors with scripts, where you can select an Edge node and configure script intervals.
+- A *Settings* section where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
+- A *Run details* section for connectors with scripts, where you can select an Edge node and configure script intervals.
 
 In addition, CSV export/import support has been updated with the relevant headers for protocol settings and edge scripts.
 
