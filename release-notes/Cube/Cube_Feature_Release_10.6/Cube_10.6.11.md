@@ -75,6 +75,15 @@ The tokens overview now includes a *Rate Limit Notices* column indicating whethe
 > [!NOTE]
 > This feature requires a DataMiner System version that supports notice generation for User-Defined API token rate limits. On systems without this capability, the existing token configuration remains unchanged.
 
+#### SNMP: Empty SET community strings can now be specified in Cube [ID 46536]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, from now on, you can specify an empty SET community string in the element edit wizard and when creating a community credential.
+
+> [!NOTE]
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.11 or newer. See also: [SNMP: Empty community strings are now supported for SET operations [ID 46535]](xref:General_Feature_Release_10.6.11#snmp-empty-community-strings-are-now-supported-for-set-operations-id-46535).
+
 ### Fixes
 
 #### Alarm Console: Enabling the 'Severity duration' column could cause Cube to stop working [ID 46256]

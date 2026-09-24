@@ -734,6 +734,12 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
+#### SNMP: Empty community strings are now supported for SET operations [ID 46535]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

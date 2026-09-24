@@ -102,6 +102,12 @@ As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is in
 
 In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
 
+#### SNMP: Empty community strings are now supported for SET operations [ID 46535]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
+
 #### DxMs upgraded [ID 46565] [ID 46577]
 
 <!-- RN 46565: MR 10.7.0 - FR 10.6.11 -->
