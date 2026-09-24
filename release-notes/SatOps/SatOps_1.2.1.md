@@ -11,7 +11,7 @@ uid: SatOps_1.2.1
 > This version requires:
 >
 > - DataMiner 10.5.11/10.6.0 or higher, as well as DataMiner Web 10.6.2 or higher.
-> - [MediaOps Plan 1.6.0](xref:MediaOps_Plan_1.6.0) or higher.
+> - [MediaOps Plan 1.6.2](xref:MediaOps_Plan_1.6.2).
 
 ## Fixes
 
