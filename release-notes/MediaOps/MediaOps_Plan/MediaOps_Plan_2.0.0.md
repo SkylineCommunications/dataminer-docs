@@ -489,3 +489,9 @@ This issue has now been fixed. Text profile parameters are now recognized and sa
 When a numeric capacity or configuration defined decimal precision without an explicit step size, the Resource Studio dialogs incorrectly required values to use a step size of 1.
 
 This issue has now been fixed. The dialogs now derive the default step size from the configured decimal precision. For example, a parameter configured with three decimal places now uses a step size of 0.001. When no decimal precision is defined, the parameter continues to use zero decimals and a step size of 1.
+
+#### Scheduling: Duplicate error messages when adding a node to a confirmed job [ID 46605]
+
+When you added a node next to another node in a confirmed job, the operation incorrectly displayed two error messages instead of just one. The specific message "Changes are not allowed in current job state" was immediately followed by a generic message that the node could not be added.
+
+This issue has now been fixed. Only the specific error about the job state will now be displayed.
