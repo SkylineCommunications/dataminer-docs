@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_changing_service_template_child_limitations
-description: "Use the SLNetClientTest tool to change ServiceTemplateWarnCount and ServiceTemplateWarnElementCount limits for 50 services and 20 elements."
+description: "Use the SLNetClientTest tool to adjust service template limits to allow templates to generate more services or elements without a warning."
 ---
 
 # Changing the service template child element and child service limitations

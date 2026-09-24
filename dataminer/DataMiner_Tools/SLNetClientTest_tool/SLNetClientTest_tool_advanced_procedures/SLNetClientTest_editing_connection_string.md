@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_editing_connection_string
-description: "Use SLNetClientTest to edit DataMiner Agent connection strings, configure IP or gRPC URLs, and verify cluster connectivity with the BPA test."
+description: "Use the SLNetClientTest tool to edit connection strings between DataMiner Agents when their default network addresses cannot be used."
 ---
 
 # Editing the connection string between two DataMiner Agents

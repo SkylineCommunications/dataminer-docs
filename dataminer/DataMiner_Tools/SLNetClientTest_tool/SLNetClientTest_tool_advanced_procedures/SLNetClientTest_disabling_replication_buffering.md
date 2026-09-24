@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_disabling_replication_buffering
-description: "Use SLNetClientTest to disable replication buffering for a selected Agent, verify its status, and check that MaintenanceSettings.xml is not synchronized."
+description: "Use the SLNetClientTest tool to determine whether replication buffering is causing issues or to solve such issues by disabling it on an Agent."
 ---
 
 # Disabling replication buffering
