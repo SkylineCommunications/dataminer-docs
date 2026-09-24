@@ -72,7 +72,7 @@ In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clear
 
 #### DxMs upgraded [ID 46577]
 
-<!-- RN 46577: MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+<!-- RN 46577: MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 

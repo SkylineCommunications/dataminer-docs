@@ -111,7 +111,7 @@ When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can no
 #### DxMs upgraded [ID 46565] [ID 46577]
 
 <!-- RN 46565: MR 10.7.0 - FR 10.6.11 -->
-<!-- RN 46577: MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+<!-- RN 46577: MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
