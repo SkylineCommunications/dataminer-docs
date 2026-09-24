@@ -29,7 +29,7 @@ To allow DataMiner to access a data source in a remote location through an Edge 
    iex "& { $(iwr https://raw.githubusercontent.com/SkylineCommunications/dataminer-sitemanager-setup/main/Setup-DataMinerSiteManager.ps1 -UseBasicParsing) } -Command install -AccountToken '<AccountToken>' -SiteName '<SiteName>'"
    ```
 
-   - You can find the **account token** in the EdgeManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Site Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
+   - You can find the **account token** in the EdgeManager DxM logging in DataMiner Cube, via *Apps* > *System Center* > *Logging* > *Edge Manager (DxM)*. This log file should contain a line mentioning a token as follows: `Your account token is aWsTbeKpwARK. You can now get started configuring your site(s). Learn more at https://aka.dataminer.services/SiteManagerGettingStarted."`. Copy this token.
 
    - The **site name** should be a concise description of the location from which you are exposing data sources. When a connection is configured during the creation or editing of an element in DataMiner Cube, this description will be shown in the *Site* dropdown.
 
