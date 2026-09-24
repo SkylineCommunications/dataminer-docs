@@ -5,17 +5,19 @@ description: To make sure DaaS can also access private data sources, a site-to-s
 
 # Connecting to private data sources with DaaS
 
-If you are using a DaaS system, by default you will only be able to connect to data sources that can be accessed from dataminer.services over the internet. To make sure DaaS can also access private data sources, you can set up and use a **DataMiner Edge Gateway**.
+If you are using a DaaS system, by default you will only be able to connect to data sources that can be accessed from dataminer.services over the internet. To make sure DaaS can also access private data sources, you can use [DataMiner Edge](xref:DataMiner_Edge).
 
-**Prior to DataMiner 10.5.10/10.6.0**, or in some specific cases [not supported by Edge Gateways](xref:About_Edge_Gateways#supported-connection-types-and-limitations), a **site-to-site VPN connection** will need to be set up. This will establish a secured connection between your DaaS system and your self-hosted network (which can be on-premises or hosted by the cloud provider of your choice).
+**Prior to DataMiner 10.5.10/10.6.0**, or in some specific cases [not supported by Edge Gateways](xref:About_Edge_Gateways#supported-connection-types-and-limitations), a **site-to-site VPN connection** will need to be set up. This will establish a secure connection between your DaaS system and your self-hosted network (which can be on-premises or hosted by the cloud provider of your choice).
 
-## About Edge Gateways
+## About DataMiner Edge
 
-Edge Gateways offer a simple, fast path to connectivity where flexibility and ease of setup are key. They set up secure communication tunnels enabling communication with selected on-premises data sources from a DaaS system.
+DataMiner Edge extends DataMiner to remote and on-premises environments. You can use either of the following modes to connect a DaaS system to private data sources:
 
-From **DataMiner 10.5.10/10.6.0** onwards, Edge Gateways are available on DaaS systems by default. They require the installation of a zrok agent on premises to establish the secure communication tunnels.
+- [Edge Gateway mode](xref:About_Edge_Gateways) uses secure communication tunnels to connect integrations running centrally in DaaS to selected remote data sources. From **DataMiner 10.5.10/10.6.0** onwards, Edge Gateways are available on DaaS systems by default. They require the installation of a zrok agent on premises.
 
-For detailed information, refer to [About Edge Gateways](xref:About_Edge_Gateways).
+- [Edge Node mode](xref:About_Edge_Nodes) runs Python-based connector integrations locally, close to the data sources, and synchronizes the collected data with DataMiner. Edge Nodes are available in preview from **DataMiner 10.6.10/10.7.0** onwards.
+
+For detailed information, refer to [About DataMiner Edge](xref:DataMiner_Edge).
 
 ## About the site-to-site VPN connection
 
