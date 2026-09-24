@@ -997,6 +997,8 @@ items:
   - name: DataMiner Edge
     topicUid: DataMiner_Edge
     items:
+      - name: Installing the EdgeManager DxM
+        topicUid: Installing_EdgeManager_DxM
       - name: Edge Nodes
         items:
           - name: About Edge Nodes

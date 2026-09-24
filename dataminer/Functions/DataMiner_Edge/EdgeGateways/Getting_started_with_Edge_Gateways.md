@@ -8,13 +8,12 @@ description: Learn how to install the EdgeManager DxM and configure secure Edge 
 
 ## EdgeManager DxM installation
 
-Edge Gateways require the EdgeManager DxM, previously known as SiteManager DxM. This DxM is **by default included in the DaaS image of DataMiner 10.5.10**. If your DaaS system is using an older DataMiner version, you will need to [upgrade DataMiner](xref:Upgrading_a_DataMiner_Agent) and [deploy the EdgeManager DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
-
-For a **self-managed DataMiner System**, the EdgeManager DxM must run on the same machine as the DataMiner Agent from which you want to connect to remote data sources. The DxM requires DataMiner 10.5.10/10.6.0 or higher and Windows 10 or Windows Server 2019 (build 17134) or higher. You can [deploy it from the Admin app](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+Before you configure an Edge Gateway, [install the EdgeManager DxM](xref:Installing_EdgeManager_DxM).
 
 When the DxM has been installed, in the Windows services overview, you should see two services:
 
 - *DataMiner EdgeManager*: This is the EdgeManager DxM service that interacts with DataMiner and the *zrok-agent* process.
+
 - *zrok-agent*: This is the zrok Agent service with which the EdgeManager DxM communicates for creating the communication tunnels.
 
 ## On-premises setup
