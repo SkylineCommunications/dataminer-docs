@@ -108,7 +108,7 @@ For example, for an HTTP connection, UDP and Serial should be disabled:
 ```xml
 <PortSettings name="HTTP Connection">
    <BusAddress>
-      <DefaultValue>ByPassProxy</DefaultValue>
+      <DefaultValue>bypassProxy</DefaultValue>
       <Disabled>false</Disabled>
    </BusAddress>
    <IPport>
@@ -148,4 +148,4 @@ DataMiner Protocol Markup Language:
 Other:
 
 - [Connection names](xref:Connection_names)
-- [ByPassProxy](xref:ConnectionsHttpElementConfiguration)
+- [bypassProxy](xref:ConnectionsHttpElementConfiguration)

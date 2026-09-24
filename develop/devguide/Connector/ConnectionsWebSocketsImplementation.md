@@ -22,7 +22,7 @@ To create a WebSocket, define a new WebSocket connection in the protocol. The Co
       </CommunicationOptions>
       <UserSettings>
          <BusAddress>
-            <DefaultValue>ByPassProxy</DefaultValue>
+            <DefaultValue>bypassProxy</DefaultValue>
          </BusAddress>
          <IPport>
             <DefaultValue>80</DefaultValue>

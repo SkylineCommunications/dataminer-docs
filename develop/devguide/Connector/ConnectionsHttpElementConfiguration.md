@@ -1,27 +1,27 @@
 ---
 metadata_version: 1
 uid: ConnectionsHttpElementConfiguration
-description: "Configure an HTTP element's server address and proxy behavior with the ByPassProxy bus setting and a proxyServer parameter."
+description: "Configure an HTTP element's server address and proxy behavior with the bypassProxy bus setting and a proxyServer parameter."
 ---
 
 # Element configuration
 
 In the IP address field, you can enter the IP address or host name of the server.
 
-Specify `ByPassProxy` in the Bus address field if you need to bypass the proxy server in the network.
+Specify `bypassProxy` in the Bus address field if you need to bypass the proxy server in the network.
 
-## ByPassProxy and proxyServer attribute
+## bypassProxy and proxyServer attribute
 
 In a protocol, it is possible to specify a proxy to be used via the proxyServer attribute.
 
 Suppose the proxyServer attribute references parameter 1. The following behavior is observed:
 
-`ByPassProxy` is set in bus address port setting:
+`bypassProxy` is set in bus address port setting:
 
 - Parameter 1 denotes a proxy: requests will go through that proxy.
 - Parameter 1 is empty or Not Initialized: requests will bypass any proxy.
 
-`ByPassProxy` is not set in bus address port setting:
+`bypassProxy` is not set in bus address port setting:
 
 - Parameter 1 denotes a proxy: requests will go through that proxy.
 - Parameter 1 is empty or Not Initialized: requests will go through the default proxy (auto-discovery).

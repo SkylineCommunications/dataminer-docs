@@ -33,7 +33,7 @@ This should be configured in the *Connections.Connection.CommunicationOptions.We
    </CommunicationOptions>
    <UserSettings>
       <BusAddress>
-         <DefaultValue>byPassProxy</DefaultValue>
+         <DefaultValue>bypassProxy</DefaultValue>
       </BusAddress>
       <IPport>
          <DefaultValue>8050</DefaultValue>
