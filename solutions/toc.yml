@@ -32,10 +32,10 @@ items:
     - name: DocumentHub
       topicUid: DocumentHub
       items:
-      - name: DocumentHub app
-        topicUid: DH_Application
       - name: Installing DocumentHub
         topicUid: DH_Installation
+      - name: DocumentHub app
+        topicUid: DH_Application
       - name: DocumentHub DevPack
         topicUid: DH_Development
       - name: DocumentHub user-defined APIs
