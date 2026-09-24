@@ -1,5 +1,6 @@
 ---
 uid: Disconnecting_from_dataminer.services
+description: "Learn how to temporarily or permanently disconnect from dataminer.services and understand the impact on your DataMiner System."
 keywords: disconnect from the cloud
 reviewer: Alexander Verkest
 ---

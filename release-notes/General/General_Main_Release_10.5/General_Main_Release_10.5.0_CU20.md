@@ -45,6 +45,16 @@ The UserDefinableApiEndpoint DxM now reports its health status to dataminer.serv
 
 When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
 
+#### DxMs upgraded [ID 46577]
+
+<!-- RN 46577: MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner DataAPI 1.5.0
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
 ### Fixes
 
 #### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
@@ -77,6 +87,18 @@ After a Failover switch, SLASPConnection could fail to initialize correctly when
 - Incoming notifications could remain in memory without being processed, causing a memory leak.
 - The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
 
+#### SRM: Conflicting bookings incorrectly could be created during bulk creation [ID 46351]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, bulk creation of booking instances could incorrectly create instances identified as conflicting when the force quarantine flag was disabled.
+
+#### NATSReset.exe could throw an InvalidOperationException after the IP address of a DataMiner Agent had changed [ID 46360]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, after the IP address of a DataMiner Agent had changed, running *NATSReset.exe* could throw an `InvalidOperationException`.
+
 #### NATSMigration and NATSRepair could omit errors from the final error overview [ID 46362]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
@@ -88,3 +110,17 @@ Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* co
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 On systems using STaaS, up to now, ordering DOM entries by an optional field could throw a CRUD exception when one or more entries did not contain that field.
+
+#### SLSNMPManager could stop unexpectedly when testing a connection with SNMPv3 credentials [ID 46438]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
+
+#### SLScripting could stop working due to recursive assembly resolution logging [ID 46572]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+In some cases, when SLScripting tried to log that a different version of an assembly had been loaded than the requested version, the logging could trigger another resolution attempt for the same assembly. This could result in a recursive loop that caused SLScripting to stop working.
+
+A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.

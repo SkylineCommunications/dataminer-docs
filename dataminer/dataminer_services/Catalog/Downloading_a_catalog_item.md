@@ -1,6 +1,7 @@
 ---
 uid: Downloading_a_catalog_item
 reviewer: Alexander Verkest
+description: "Download a Catalog item version with the API by sending a GET request with an organization key that has Download Catalog versions permission."
 ---
 
 # Downloading a Catalog item with the API

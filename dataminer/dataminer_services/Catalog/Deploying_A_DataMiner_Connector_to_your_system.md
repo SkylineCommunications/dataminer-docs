@@ -1,6 +1,7 @@
 ---
 uid: Deploying_a_catalog_item
 reviewer: Alexander Verkest
+description: "Deploy a Catalog item to your DataMiner System through the Catalog UI or API after making sure connection and access requirements are met."
 ---
 
 # Deploying a Catalog item to your system

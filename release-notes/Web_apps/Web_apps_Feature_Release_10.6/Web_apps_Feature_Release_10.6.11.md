@@ -20,7 +20,21 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-*This release does not contain any new features yet.*
+### GQI extensions can now use username/password credentials from the Credentials Library [ID 46279]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+GQI extensions using version 1.5.0 or above of the `GQI.Extensions` API can now use the `ICredentialProvider` service to retrieve username/password credentials from the Credentials Library.
+
+To access a credential, the extension must include a reference to it. The credential must also grant the extension library access.
+
+### GQI extensions can now use token credentials from the Credentials Library [ID 46526]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+GQI extensions can now use the `ICredentialProvider.GetTokenCredential()` method to retrieve token credentials from the Credentials Library.
+
+The returned object contains a `Token` property with the stored token credential. GQI extensions can retrieve both username/password credentials and token credentials.
 
 ## Changes
 
@@ -98,6 +112,35 @@ To preserve backward compatibility, existing queries that already selected one o
 
 If you deselect such a hidden item, it remains available in that editing session. After you close and reopen the query builder, the hidden item is no longer offered as a selectable option.
 
+#### GQI service and child process CPU usage can now be limited [ID 46509]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+To prevent GQI from consuming all available CPU resources, you can now configure limits for the GQI service and its child processes in the `appsettings.custom.json` file.
+
+```json
+{
+  "GQIOptions": {
+    "CpuLimitPercent": 80,
+    "Extensions": {
+      "ChildProcessesCpuLimitPercent": 80
+    }
+  }
+}
+```
+
+- **CpuLimitPercent**: Maximum percentage of the total CPU capacity that all GQI processes can use, including both the GQI core process and all extension workers. The default is 80%.
+
+- **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all extension workers can use together. The default is 80%, which allows the extension workers to use up to 64% (i.e. 80% of 80%) of the total CPU capacity when the default values are used.
+
+Both settings accept integer values from 1 through 100. After changing either setting, the GQI service must be restarted for the change to take effect.
+
+#### Draggable links in web apps now show a custom preview [ID 46559]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you drag a link in a web app, a custom preview will now appear and follow the pointer. This provides clearer visual feedback during drag-and-drop operations.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Linked dropdown components feeding data to each other could cause a dashboard or app to become unresponsive [ID 46314]
@@ -111,3 +154,9 @@ Up to now, when two dropdown components were configured to feed data to each oth
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 When an application was deleted while the dashboards cache was being initialized, the web API could incorrectly log a `Failed adding folder` error with a `DirectoryNotFoundException`.
+
+#### Dashboards/Low-Code Apps: Timeline components could fail to restore their start and end dimensions after query columns were re-added [ID 46470]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When the start and end columns were removed from and then re-added to a *Timeline* component query, up to now, the *Timeline* component could fail to automatically restore its start and end dimensions.

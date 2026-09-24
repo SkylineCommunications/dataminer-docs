@@ -1,6 +1,6 @@
 ---
 uid: Connecting_your_DataMiner_System_to_the_cloud
-description: To connect a DataMiner Agent to dataminer.services (i.e., to the cloud), install a Cloud Gateway on that DMA and make sure port 443 is available.
+description: "Learn what you need to connect your DataMiner System to dataminer.services and explore the available connection options."
 keywords: cloud connection, connect to the cloud, connecting to the cloud
 reviewer: Alexander Verkest
 ---

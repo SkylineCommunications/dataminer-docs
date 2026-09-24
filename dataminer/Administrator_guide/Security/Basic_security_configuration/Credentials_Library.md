@@ -25,6 +25,9 @@ To configure a set of credentials in DataMiner Cube:
 
    - Specify a *Name* for the credentials.
 
+     > [!NOTE]
+     > Prior to DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10<!--RN 46083-->, the following characters are not allowed in the *Name* field:<br>`\ / : * ? < > | ° ;`.
+
    - Select the appropriate *Type*:
 
      - *Community credentials*

@@ -6,6 +6,10 @@ uid: SchemaProtocol
 
 DataMiner protocol XML schema.
 
+## Namespace
+
+`http://www.skyline.be/protocol`
+
 ## Root element
 
 [Protocol](xref:Protocol)

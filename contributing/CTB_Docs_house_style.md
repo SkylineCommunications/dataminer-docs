@@ -53,7 +53,7 @@ This page describes general rules for DataMiner documentation, including spellin
 
 - Avoid em dashes, except in marketing content such as connector marketing pages, where they can be used sparingly.
 
-- When referring to a UI menu option that ends with an ellipsis (`...`), omit the ellipsis.
+- When referring to a UI option that ends with an ellipsis (`...`), omit the ellipsis.
 
 ## Procedure formatting
 

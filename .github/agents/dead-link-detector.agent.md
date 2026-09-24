@@ -63,7 +63,6 @@ Treat these as **unverifiable** without marking them dead (record with reason in
 - `aka.dataminer.services` (`SHORTLINK-UNVERIFIED`)
 - `www.nuget.org/packages/*` (`BOT-PROTECTED`)
 - `*.b2clogin.com` (`AUTH-ENDPOINT`)
-- `catalogapi-prod.cca-prod.aks.westeurope.dataminer.services` (`AUTH-ENDPOINT`)
 - `api.dataminer.services/api/key-catalog/*` (`METHOD-SPECIFIC-ENDPOINT`)
 
 Treat these as placeholders/examples and do not check (or classify as dead):

@@ -2,10 +2,7 @@
 uid: Cube_Feature_Release_10.6.10
 ---
 
-# DataMiner Cube Feature Release 10.6.10 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.10
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU7].
 
@@ -15,10 +12,6 @@ This Feature Release of the DataMiner Cube client application contains the same 
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.10](xref:Web_apps_Feature_Release_10.6.10).
 
 ## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
 
 #### Automation: Credentials can now be added to automation scripts [ID 44282]
 
@@ -35,6 +28,8 @@ If you open a script that contains credentials you are not allowed to use, the n
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer. See [Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]](xref:General_Feature_Release_10.6.10#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282-id-46229)
+
+## New features
 
 #### System Center: Backup password can now be set for restoring credentials [ID 45704]
 

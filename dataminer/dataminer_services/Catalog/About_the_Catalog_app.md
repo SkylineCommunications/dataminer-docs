@@ -1,6 +1,7 @@
 ---
 uid: About_the_Catalog_app
 reviewer: Alexander Verkest
+description: "Explore the Catalog app, which allows you to browse and deploy DataMiner connectors, packages, dashboards, scripts, and other items on your system."
 ---
 
 # About the Catalog app

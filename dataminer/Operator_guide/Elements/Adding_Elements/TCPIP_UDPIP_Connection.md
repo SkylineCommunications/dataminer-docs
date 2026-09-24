@@ -10,6 +10,9 @@ For **TCP/IP** or **UDP/IP** connections, you can specify the following connecti
 
 - **IP address/host**: The polling IP or URL of the destination.
 
+  > [!IMPORTANT]
+  > IPv6 destinations are not yet supported when SSL/TLS is enabled or when using UDP/IP. Use IPv4 destinations for these connection types.
+
 - **IP port**: The IP port of the destination. This is not always required.
 
 - **Bus address**: The bus address of the device. This is not always required.
