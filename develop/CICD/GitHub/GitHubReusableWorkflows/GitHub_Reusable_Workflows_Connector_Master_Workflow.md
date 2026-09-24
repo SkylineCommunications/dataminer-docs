@@ -6,7 +6,7 @@ description: Learn how the Connector Master Workflow validates, packages, and up
 # Connector Master Workflow
 
 > [!IMPORTANT]
-> The legacy connector pipeline is deprecated and will be removed on 2 November 2026. Update any legacy projects in your connector solution to SDK-style projects. The Connector Master Workflow will continue to support SDK-style connector solutions.
+> The legacy connector pipeline is deprecated and no longer available as of 2 November 2026. Update any legacy projects in your connector solution to SDK-style projects. The Connector Master Workflow continues to support SDK-style connector solutions.
 
 The Connector Master Workflow should run on repositories containing a Connector Solution as provided by the DIS extension in Visual Studio.
 
