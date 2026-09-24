@@ -63,7 +63,7 @@ Expected duration: 10 minutes
    ```json
    {
      "Identifier": "",
-     "Name": "",
+     "Name": "TUTORIAL-EXAMPLE-BUCKET",
      "Description": "Created by UDAPI tutorial",
      "StorageType": "Local",
      "UploadPath": "documenthub/tutorial",
