@@ -117,6 +117,12 @@ On systems using STaaS, up to now, ordering DOM entries by an optional field cou
 
 Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
 
+#### SNMP: Community credentials could be lost when an automation script modified an element [ID 46537]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when an automation script modified an element that used community credentials from the Credential Library on its main connection, the element could lose those credentials if the script did not change them. From now on, the credentials will be retained.
+
 #### SLScripting could stop working due to recursive assembly resolution logging [ID 46572]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->

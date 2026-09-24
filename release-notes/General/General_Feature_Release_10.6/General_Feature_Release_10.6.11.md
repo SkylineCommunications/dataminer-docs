@@ -231,6 +231,12 @@ Up to now, retrieving change point history could cause performance to decrease b
 
 As a result, change points that were only ever written under the old v1 partition scheme will no longer be returned. This affects only pre-migration data; systems using the current change point storage format are unaffected.
 
+#### SNMP: Community credentials could be lost when an automation script modified an element [ID 46537]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when an automation script modified an element that used community credentials from the Credential Library on its main connection, the element could lose those credentials if the script did not change them. From now on, the credentials will be retained.
+
 #### STaaS: Failing aggregate count queries would incorrectly return 0 instead of throwing an exception [ID 46546]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
