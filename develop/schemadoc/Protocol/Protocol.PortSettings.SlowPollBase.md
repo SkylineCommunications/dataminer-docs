@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.SlowPollBase
-description: "Reference the DataMiner connector protocol schema entry for SlowPollBase element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the SlowPollBase element configures whether slow polling is based on a timeout count or time duration for the main connection."
 ---
 
 # SlowPollBase element

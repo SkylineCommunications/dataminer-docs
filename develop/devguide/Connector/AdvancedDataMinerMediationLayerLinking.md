@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerLinking
-description: "Describe the DataMiner connector development topic Linking a device protocol to a base protocol, including its purpose, behavior, implementation guidance."
+description: "Link a device protocol to a base protocol by matching its Protocol.ElementType value to the baseFor value of the Production base protocol."
 ---
 
 # Linking a device protocol to a base protocol

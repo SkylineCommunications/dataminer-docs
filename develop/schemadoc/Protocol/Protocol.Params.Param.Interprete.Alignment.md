@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Alignment
-description: "Reference the DataMiner connector protocol schema entry for Alignment element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Alignment element sets the starting alignment used to extract multibyte BCD values from an incoming stream in a DataMiner connector protocol."
 ---
 
 # Alignment element

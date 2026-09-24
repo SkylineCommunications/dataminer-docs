@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Protocols.Protocol.Name
-description: "Reference the DataMiner Automation script schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Use the Protocol Name element to specify the nonempty protocol name associated with a dummy variable in an automation script."
 ---
 
 # Name element

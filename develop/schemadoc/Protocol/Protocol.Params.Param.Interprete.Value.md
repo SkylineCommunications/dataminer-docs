@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Value
-description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Value element sets the fixed content of a parameter that uses a fixed length and value in a DataMiner connector protocol."
 ---
 
 # Value element

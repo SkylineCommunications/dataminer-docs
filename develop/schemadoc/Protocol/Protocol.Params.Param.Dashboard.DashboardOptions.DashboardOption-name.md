@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Dashboard.DashboardOptions.DashboardOption-name
-description: "Reference the DataMiner connector protocol schema entry for name attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the name attribute to select which button panel display setting a DashboardOption configures in a DataMiner connector protocol."
 ---
 
 # name attribute

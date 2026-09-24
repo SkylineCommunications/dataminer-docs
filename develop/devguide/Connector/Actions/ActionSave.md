@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionSave
-description: "Describe the DataMiner connector development topic save, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the save action to persist parameter values so DataMiner restores and displays their last known values after a restart."
 ---
 
 # save

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ParameterGroups.Group-isInternal
-description: "Reference the DataMiner connector protocol schema entry for isInternal attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the isInternal attribute to mark a DCF interface as internal instead of external in a DataMiner connector protocol."
 ---
 
 # isInternal attribute

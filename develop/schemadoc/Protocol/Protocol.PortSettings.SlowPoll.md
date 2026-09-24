@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.SlowPoll
-description: "Reference the DataMiner connector protocol schema entry for SlowPoll element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the SlowPoll element configures slow polling defaults and whether users can modify them for the main connection."
 ---
 
 # SlowPoll element

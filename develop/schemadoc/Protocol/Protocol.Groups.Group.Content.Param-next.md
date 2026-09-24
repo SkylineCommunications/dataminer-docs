@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group.Content.Param-next
-description: "Reference the DataMiner connector protocol schema entry for next attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the next attribute sets the delay before DataMiner reads the next parameter in a group in a DataMiner connector protocol."
 ---
 
 # next attribute

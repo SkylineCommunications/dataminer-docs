@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsDropDownList
-description: "Describe the DataMiner connector development topic Dropdown list, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define a dropdown list as a discreet write parameter so users can choose one value from a fixed or dynamically supplied list."
 ---
 
 # Dropdown list

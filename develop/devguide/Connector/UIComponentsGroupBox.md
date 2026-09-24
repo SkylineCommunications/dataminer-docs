@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsGroupBox
-description: "Describe the DataMiner connector development topic Group box, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Create a titled group box around related parameters by pairing fixed title parameters with begin and end measurement options on the same page."
 ---
 
 # Group box

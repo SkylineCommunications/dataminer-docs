@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionForceExecute
-description: "Describe the DataMiner connector development topic force execute, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the force execute action to run a group as soon as the current content item finishes, then resume the interrupted group."
 ---
 
 # force execute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTableMatrixParameter
-description: "Describe the DataMiner connector development topic Matrix, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Map table-based matrix input and output columns in a Matrix dummy parameter, then configure layout, paging, and connection-count options."
 ---
 
 # Matrix

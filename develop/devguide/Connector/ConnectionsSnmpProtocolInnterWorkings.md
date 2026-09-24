@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpProtocolInnterWorkings
-description: "Describe the DataMiner connector development topic Protocol inner workings, including its purpose, behavior, implementation guidance, and relevant constra."
+description: "Understand how SNMP Set requests are queued and processed, how SLProtocol handles table updates, and how to preserve display column values."
 ---
 
 # Protocol inner workings

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedLoggerTablesImplementation
-description: "Describe the DataMiner connector development topic Implementing logger tables, including its purpose, behavior, implementation guidance, and relevant cons."
+description: "Implement a logger table by configuring database storage, Cassandra clustering keys when applicable, column data types, indexing, TTL, and cleanup."
 ---
 
 # Implementing logger tables

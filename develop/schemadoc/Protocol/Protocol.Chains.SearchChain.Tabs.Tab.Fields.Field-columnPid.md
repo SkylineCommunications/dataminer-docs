@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field-columnPid
-description: "Reference the DataMiner connector protocol schema entry for columnPid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the columnPid attribute identifies a table column used as a search field, including linked tables in a DataMiner connector protocol."
 ---
 
 # columnPid attribute

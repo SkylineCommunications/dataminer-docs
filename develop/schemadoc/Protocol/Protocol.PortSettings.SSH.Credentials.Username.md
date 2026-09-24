@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.SSH.Credentials.Username
-description: "Reference the DataMiner connector protocol schema entry for Username element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Username element references the parameter containing the username for SSH password-based authentication."
 ---
 
 # Username element

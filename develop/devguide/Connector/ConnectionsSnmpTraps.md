@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpTraps
-description: "Describe the DataMiner connector development topic Traps, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure a DataMiner connector to capture and process SNMP traps, map bindings, generate alarms, and send traps from QActions."
 ---
 
 # Traps

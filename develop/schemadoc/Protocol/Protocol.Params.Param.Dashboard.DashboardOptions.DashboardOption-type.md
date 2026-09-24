@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Dashboard.DashboardOptions.DashboardOption-type
-description: "Reference the DataMiner connector protocol schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the type attribute to state whether a DashboardOption value is a column index or parameter ID in a DataMiner connector protocol."
 ---
 
 # type attribute

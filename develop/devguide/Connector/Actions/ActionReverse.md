@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionReverse
-description: "Describe the DataMiner connector development topic reverse, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the reverse action to reverse a parameter's bytes at a specific point in command or response processing."
 ---
 
 # reverse

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Topology.Cell-listColumns
-description: "Reference the DataMiner connector protocol schema entry for listColumns attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the listColumns attribute, its string type, and Cell parent."
 ---
 
 # listColumns attribute

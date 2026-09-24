@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain-defaultSelectionField
-description: "Reference the DataMiner connector protocol schema entry for defaultSelectionField attribute, including its documented structure, attributes, values, and c."
+description: "Learn how the defaultSelectionField attribute names the chain field to select automatically when it has one result in a DataMiner connector protocol."
 ---
 
 # defaultSelectionField attribute

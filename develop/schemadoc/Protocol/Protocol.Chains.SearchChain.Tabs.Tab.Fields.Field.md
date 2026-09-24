@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field
-description: "Reference the DataMiner connector protocol schema entry for Field element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Field element defines a search field, its table column, display rules, substitutions, and validation in a DataMiner connector protocol."
 ---
 
 # Field element

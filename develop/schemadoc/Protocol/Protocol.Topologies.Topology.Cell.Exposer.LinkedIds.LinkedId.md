@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId
-description: "Reference the DataMiner connector protocol schema entry for LinkedId element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the LinkedId element, which identifies a linked table and its optional linking column."
 ---
 
 # LinkedId element

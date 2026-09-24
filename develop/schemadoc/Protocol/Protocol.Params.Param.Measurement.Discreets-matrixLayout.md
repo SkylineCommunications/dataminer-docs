@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets-matrixLayout
-description: "Reference the DataMiner connector protocol schema entry for matrixLayout attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how the matrixLayout attribute places matrix inputs and outputs along the left or top edges of the control in a DataMiner connector protocol."
 ---
 
 # matrixLayout attribute

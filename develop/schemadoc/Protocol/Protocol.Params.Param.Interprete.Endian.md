@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Endian
-description: "Reference the DataMiner connector protocol schema entry for Endian element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Endian element controls byte-order reversal for unsigned numbers and defaults to little-endian processing in a DataMiner connector protocol."
 ---
 
 # Endian element

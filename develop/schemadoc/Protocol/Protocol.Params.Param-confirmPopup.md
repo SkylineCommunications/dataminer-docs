@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param-confirmPopup
-description: "Reference the DataMiner connector protocol schema entry for confirmPopup attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how to use the confirmPopup attribute to override DataMiner Cube confirmation settings for parameter changes in a DataMiner connector protocol."
 ---
 
 # confirmPopup attribute

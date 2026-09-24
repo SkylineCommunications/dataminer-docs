@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-case
-description: "Reference the DataMiner connector protocol schema entry for case attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the case attribute controls letter casing for a parameter with measurement type string in a DataMiner connector protocol."
 ---
 
 # case attribute

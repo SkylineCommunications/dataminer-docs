@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-whereAttribute
-description: "Reference the DataMiner connector protocol schema entry for whereAttribute attribute, including its documented structure, attributes, values, and constrai."
+description: "Learn how the whereAttribute attribute selects an XML attribute whose value must satisfy an export rule condition in a DataMiner connector protocol."
 ---
 
 # whereAttribute attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Destination-cc
-description: "Reference the DataMiner Automation script schema entry for cc attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Destination cc attribute to add carbon copy recipients to an email sent by an automation script notification or report action."
 ---
 
 # cc attribute

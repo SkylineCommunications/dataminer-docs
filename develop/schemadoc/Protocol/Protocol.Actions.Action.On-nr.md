@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.On-nr
-description: "Reference the DataMiner connector protocol schema entry for nr attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action On nr attribute to list parameter positions for reverse actions or pair positions for set next actions."
 ---
 
 # nr attribute

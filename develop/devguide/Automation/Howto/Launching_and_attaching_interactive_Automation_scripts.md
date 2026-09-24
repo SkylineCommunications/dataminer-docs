@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Launching_and_attaching_interactive_Automation_scripts
-description: "Describe the DataMiner Automation development topic Launching and attaching interactive automation scripts, including its purpose, behavior, implementatio."
+description: "Launch interactive automation scripts from Cube or non-UI contexts, attach them to eligible users, and run them under a specific user."
 ---
 
 # Launching and attaching interactive automation scripts

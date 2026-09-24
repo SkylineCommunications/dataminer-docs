@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session-keepAlive
-description: "Reference the DataMiner connector protocol schema entry for keepAlive attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the keepAlive attribute keeps an HTTP session open from its first request until the element stops in a DataMiner connector protocol."
 ---
 
 # keepAlive attribute

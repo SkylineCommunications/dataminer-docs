@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeParameterInterprete
-description: "Describe the DataMiner connector development topic Change parameter Interprete, including its purpose, behavior, implementation guidance, and relevant con."
+description: "Assess how changing a parameter's Interprete settings can alter stored values, alarming, trending, communication, and compatibility."
 ---
 
 # Change parameter Interprete

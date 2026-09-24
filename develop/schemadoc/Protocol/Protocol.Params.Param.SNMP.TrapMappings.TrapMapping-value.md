@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapMappings.TrapMapping-value
-description: "Reference the DataMiner connector protocol schema entry for value attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the value attribute defines the alarm value text for a TrapMapping, using the same syntax as the TrapOID mapAlarm attribute."
 ---
 
 # value attribute

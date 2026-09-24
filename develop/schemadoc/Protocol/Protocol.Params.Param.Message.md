@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Message
-description: "Reference the DataMiner connector protocol schema entry for Message element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Message element shows a confirmation message when a user changes a write parameter in the user interface in a DataMiner connector protocol."
 ---
 
 # Message element

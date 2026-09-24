@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.QActions.QAction-include
-description: "Reference the DataMiner connector protocol schema entry for include attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the QAction include attribute identifies legacy external JScript or VBScript files in ProtocolScripts for execution."
 ---
 
 # include attribute

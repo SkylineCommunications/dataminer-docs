@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Name
-description: "Reference the DataMiner connector protocol schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Name element sets the mandatory, unique technical name of a parameter in a DataMiner connector protocol."
 ---
 
 # Name element

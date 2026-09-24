@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Ownership.Elements.Element.Properties.Property.Name
-description: "Reference the DataMiner connector protocol schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Name element to select an element property for ownership settings, with wildcard support in a DataMiner connector protocol."
 ---
 
 # Name element

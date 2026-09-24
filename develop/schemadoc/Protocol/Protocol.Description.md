@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Description
-description: "Reference the DataMiner connector protocol schema entry for Description element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Description element stores general protocol information, including device firmware requirements in a DataMiner connector protocol."
 ---
 
 # Description element

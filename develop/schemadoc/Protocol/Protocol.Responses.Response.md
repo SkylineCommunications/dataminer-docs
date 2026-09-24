@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Responses.Response
-description: "Reference the DataMiner connector protocol schema entry for Response element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Response element defines the parameter sequence DataMiner expects from a device after sending a command."
 ---
 
 # Response element

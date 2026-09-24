@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTitle
-description: "Describe the DataMiner connector development topic Title, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define a title in the DataMiner UI with a fixed parameter, the title measurement type, and an optional line below it."
 ---
 
 # Title

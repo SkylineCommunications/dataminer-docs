@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions-index
-description: "Reference the DataMiner connector protocol schema entry for index attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the index attribute to select the string column containing each table row's immutable primary key in a DataMiner connector protocol."
 ---
 
 # index attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Commands.Command-ascii
-description: "Reference the DataMiner connector protocol schema entry for ascii attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ascii attribute selects command parameters to send as ASCII when the protocol uses Unicode in a DataMiner connector protocol."
 ---
 
 # ascii attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.ScriptSuccess
-description: "Reference the DataMiner Automation script schema entry for ScriptSuccess element, including its documented structure, attributes, values, and constraints."
+description: "Use the ScriptSuccess element in an exit action to indicate whether DataMiner should consider the automation script execution successful."
 ---
 
 # ScriptSuccess element

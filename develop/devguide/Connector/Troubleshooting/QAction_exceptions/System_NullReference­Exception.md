@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: System_NullReferenceException
-description: "Describe the DataMiner connector development topic System.NullReferenceException, including its purpose, behavior, implementation guidance, and relevant c."
+description: "Prevent NullReferenceException in QActions by initializing objects, checking nullable members, and using null-conditional and null-coalescing operators."
 ---
 
 # System.NullReferenceException

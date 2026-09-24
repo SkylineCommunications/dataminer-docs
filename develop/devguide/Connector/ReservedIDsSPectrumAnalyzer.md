@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ReservedIDsSpectrumAnalyzer
-description: "Describe the DataMiner connector development topic Spectrum analyzer, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Consult the parameter IDs reserved for Spectrum Analyzer connectors, including trace, frequency, amplitude, sweep, constellation, and control values."
 ---
 
 # Spectrum analyzer

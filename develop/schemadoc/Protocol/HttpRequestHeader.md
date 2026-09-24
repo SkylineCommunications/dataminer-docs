@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-HttpRequestHeader
-description: "Reference the DataMiner connector protocol schema entry for HttpRequestHeader simple type, including its documented structure, attributes, values, and con."
+description: "Review the HttpRequestHeader simple type, which accepts request-only headers, shared HTTP headers, or custom string values."
 ---
 
 # HttpRequestHeader simple type

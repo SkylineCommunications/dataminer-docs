@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.On
-description: "Reference the DataMiner connector protocol schema entry for On element, including its documented structure, attributes, values, and constraints."
+description: "Use the Action On element with Type to select the connector protocol item an action targets and the operation it performs."
 ---
 
 # On element

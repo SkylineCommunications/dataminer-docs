@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.SkipCertificateVerification
-description: "Reference the DataMiner connector protocol schema entry for SkipCertificateVerification element, including its documented structure, attributes, values, a."
+description: "Learn how the SkipCertificateVerification element configures default and user-selectable SSL/TLS certificate verification for HTTP connections."
 ---
 
 # SkipCertificateVerification element

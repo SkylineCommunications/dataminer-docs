@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionSetElementState
-description: "Describe the DataMiner Automation development topic Set element state, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the Set element state action to start, stop, restart, pause, mask, or unmask the element assigned to an automation script dummy."
 ---
 
 # Set element state

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.CRC.Content
-description: "Reference the DataMiner connector protocol schema entry for Content element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Content element to select the command or response parameters included in a CRC calculation in a DataMiner connector protocol."
 ---
 
 # Content element

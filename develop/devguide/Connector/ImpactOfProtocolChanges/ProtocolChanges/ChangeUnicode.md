@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeUnicode
-description: "Describe the DataMiner connector development topic Change Unicode, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Assess how enabling or disabling Unicode changes parameter storage and communication, and determine whether existing values or integrations are affected."
 ---
 
 # Change Unicode

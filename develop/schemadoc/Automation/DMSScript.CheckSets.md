@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.CheckSets
-description: "Reference the DataMiner Automation script schema entry for CheckSets element, including its documented structure, attributes, values, and constraints."
+description: "Use CheckSets to make an automation script wait for confirmation that parameter or property updates succeeded, accounting for its delay."
 ---
 
 # CheckSets element

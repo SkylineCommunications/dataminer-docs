@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsMatrixChangeConfiguration
-description: "Describe the DataMiner connector development topic Dynamically changing matrix configuration, including its purpose, behavior, implementation guidance, an."
+description: "Dynamically resize or reconfigure a standard matrix from a QAction with NT_UPDATE_PORTS_XML, then refresh the display and persist changes in XML."
 ---
 
 # Dynamically changing matrix configuration

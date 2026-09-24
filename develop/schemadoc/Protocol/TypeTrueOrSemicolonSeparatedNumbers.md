@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeTrueOrSemicolonSeparatedNumbers
-description: "Reference the DataMiner connector protocol schema entry for TypeTrueOrSemicolonSeparatedNumbers simple type, including its documented structure, attribute."
+description: "Use the TypeTrueOrSemicolonSeparatedNumbers simple type to accept true or a semicolon-separated number list in the DataMiner connector protocol schema."
 ---
 
 # TypeTrueOrSemicolonSeparatedNumbers simple type

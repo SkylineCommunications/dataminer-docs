@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsWebSocketsCommunication
-description: "Describe the DataMiner connector development topic Communication, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Implement WebSocket request-response and push communication with command, response, and pair constructs, including multiple connections."
 ---
 
 # Communication

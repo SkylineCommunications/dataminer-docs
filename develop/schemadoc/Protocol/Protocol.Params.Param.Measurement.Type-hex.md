@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-hex
-description: "Reference the DataMiner connector protocol schema entry for hex attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the hex attribute shows a parameter value as a hexadecimal number when enabled in a DataMiner connector protocol."
 ---
 
 # hex attribute

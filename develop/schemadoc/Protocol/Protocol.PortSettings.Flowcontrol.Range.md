@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol.Range
-description: "Reference the DataMiner connector protocol schema entry for Range element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Range element under Flowcontrol defines the first and last flow control values users can select."
 ---
 
 # Range element

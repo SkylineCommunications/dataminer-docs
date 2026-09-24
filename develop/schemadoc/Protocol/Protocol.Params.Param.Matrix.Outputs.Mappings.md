@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Matrix.Outputs.Mappings
-description: "Reference the DataMiner connector protocol schema entry for Mappings element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Mappings element links output table columns to their corresponding matrix control columns in a DataMiner connector protocol."
 ---
 
 # Mappings element

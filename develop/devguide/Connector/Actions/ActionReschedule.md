@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionReschedule
-description: "Describe the DataMiner connector development topic reschedule, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the reschedule action to change when a timer queues its groups, based on whether the timer is currently running."
 ---
 
 # reschedule

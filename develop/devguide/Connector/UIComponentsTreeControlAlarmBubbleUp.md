@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTreeControlAlarmBubbleUp
-description: "Describe the DataMiner connector development topic Alarm bubble-Up, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure includeInAlarms relations to bubble alarm states up a DataMiner tree control and understand behavior for normal and masked alarms."
 ---
 
 # Alarm bubble-Up

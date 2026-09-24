@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ReservedIDsOther
-description: "Describe the DataMiner connector development topic Other reserved IDs, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Check which ID ranges DataMiner reserves for triggers, commands, groups, timers, actions, QActions, and other non-parameter protocol constructs."
 ---
 
 # Other reserved IDs

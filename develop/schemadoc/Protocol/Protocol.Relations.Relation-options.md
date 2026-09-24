@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Relations.Relation-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Relation options attribute names relation chains and enables alarm bubble-up properties for tree controls."
 ---
 
 # options attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTable
-description: "Describe the DataMiner connector development topic Table, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Explore how to define DataMiner protocol tables and configure primary keys, display keys, foreign keys, relations, row controls, and styling."
 ---
 
 # Table

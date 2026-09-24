@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionGet
-description: "Describe the DataMiner Automation development topic Get, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the Get action to retrieve a parameter or automation script memory value, apply an offset, and store the result in a variable."
 ---
 
 # Get

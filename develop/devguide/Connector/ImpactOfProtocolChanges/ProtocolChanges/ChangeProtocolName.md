@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeProtocolName
-description: "Describe the DataMiner connector development topic Change protocol name, including its purpose, behavior, implementation guidance, and relevant constraint."
+description: "Assess how changing a protocol name affects existing elements, exported protocols, scripts, dashboards, and other integrations or references."
 ---
 
 # Change protocol name

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicExamples
-description: "Describe the DataMiner connector development topic Examples, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "See how timers, groups, parameters, triggers, and actions work together to poll an SNMP variable, increment a value, or run a startup QAction."
 ---
 
 # Examples

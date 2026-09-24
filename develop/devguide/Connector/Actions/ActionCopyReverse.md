@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionCopyReverse
-description: "Describe the DataMiner connector development topic copy reverse, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the copy reverse action to overwrite destination parameters with the source parameter's value in reverse byte order."
 ---
 
 # copy reverse

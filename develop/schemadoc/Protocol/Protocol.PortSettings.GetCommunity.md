@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.GetCommunity
-description: "Reference the DataMiner connector protocol schema entry for GetCommunity element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the GetCommunity element configures the default SNMP get community string or SNMPv3 authentication password and whether users can edit it."
 ---
 
 # GetCommunity element

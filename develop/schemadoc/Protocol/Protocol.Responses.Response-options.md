@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Responses.Response-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Response options attribute selects the connection used for a smart-serial or websocket response."
 ---
 
 # options attribute

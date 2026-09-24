@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Using_credentials_in_an_automation_script
-description: "Describe the DataMiner Automation development topic Using credentials in an automation script, including its purpose, behavior, implementation guidance, a."
+description: "Declare Credentials Library entries as automation script variables and retrieve current usernames, passwords, or tokens securely at runtime."
 ---
 
 # Using credentials in an automation script

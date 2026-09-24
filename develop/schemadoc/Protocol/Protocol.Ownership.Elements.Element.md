@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Ownership.Elements.Element
-description: "Reference the DataMiner connector protocol schema entry for Element element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Element element to declare ownership for elements matching a protocol and their configurable fields in a DataMiner connector protocol."
 ---
 
 # Element element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-var
-description: "Reference the DataMiner Automation script schema entry for var attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Condition var attribute to name the script variable used as the left operand of a Boolean expression in an automation script."
 ---
 
 # var attribute

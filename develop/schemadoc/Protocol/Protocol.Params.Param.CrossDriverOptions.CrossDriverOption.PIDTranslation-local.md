@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation-local
-description: "Reference the DataMiner connector protocol schema entry for local attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the local attribute to identify the local column parameter in a cross-driver mapping in a DataMiner connector protocol."
 ---
 
 # local attribute

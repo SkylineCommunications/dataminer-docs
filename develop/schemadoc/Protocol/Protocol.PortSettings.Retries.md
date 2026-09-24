@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Retries
-description: "Reference the DataMiner connector protocol schema entry for Retries element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Retries element configures the maximum request retry count and whether users can modify it for an element connection."
 ---
 
 # Retries element

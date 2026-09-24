@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpExercise
-description: "Describe the DataMiner connector development topic Exercise, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Practice creating an SNMP protocol that retrieves standard system OIDs, alters sysContact, and polls an interface table in different ways."
 ---
 
 # Exercise

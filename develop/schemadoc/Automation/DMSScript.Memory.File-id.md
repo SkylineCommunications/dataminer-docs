@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Memory.File-id
-description: "Reference the DataMiner Automation script schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the File id attribute as the unique positive integer that identifies a memory file within a DataMiner automation script."
 ---
 
 # id attribute

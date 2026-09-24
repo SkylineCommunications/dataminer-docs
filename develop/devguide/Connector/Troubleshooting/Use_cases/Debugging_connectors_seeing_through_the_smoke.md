@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Debugging_connectors_seeing_through_the_smoke
-description: "Describe the DataMiner connector development topic Debugging connectors: Seeing through the smoke, including its purpose, behavior, implementation guidanc."
+description: "Investigate persistent protocol thread RTEs by separating symptoms from causes, inspecting pending calls, and identifying deadlocks or livelocks."
 ---
 
 # Debugging connectors: Seeing through the smoke

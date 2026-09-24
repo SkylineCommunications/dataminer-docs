@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionExecuteOne
-description: "Describe the DataMiner connector development topic execute one, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the execute one action to queue a group after timer-scheduled groups only when that group is not already in the execution queue."
 ---
 
 # execute one

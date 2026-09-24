@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionReadStuffing
-description: "Describe the DataMiner connector development topic read stuffing, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the read stuffing action to remove redundant stuffing bytes from serial response data within configured offsets."
 ---
 
 # read stuffing

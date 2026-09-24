@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Response-statusCode
-description: "Reference the DataMiner connector protocol schema entry for statusCode attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the statusCode attribute to store the HTTP response status line in the specified parameter in a DataMiner connector protocol."
 ---
 
 # statusCode attribute

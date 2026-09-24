@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Threshold
-description: "Reference the DataMiner connector protocol schema entry for Threshold element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Threshold element sets the turnover point between two discreet states for a digital threshold parameter in a DataMiner connector protocol."
 ---
 
 # Threshold element

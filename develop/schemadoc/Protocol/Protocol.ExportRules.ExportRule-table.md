@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-table
-description: "Reference the DataMiner connector protocol schema entry for table attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the table attribute selects one DVE-generating table or all such tables for an export rule in a DataMiner connector protocol."
 ---
 
 # table attribute

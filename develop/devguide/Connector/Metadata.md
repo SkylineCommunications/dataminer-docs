@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Metadata
-description: "Describe the DataMiner connector development topic Metadata, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define protocol metadata such as name, version, vendor, OIDs, type, provider, and version history while using the required XML namespace."
 ---
 
 # Metadata

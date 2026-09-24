@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups
-description: "Reference the DataMiner connector protocol schema entry for Groups element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Groups element contains the uniquely identified and named groups defined for device polling in a DataMiner connector protocol."
 ---
 
 # Groups element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Scale
-description: "Reference the DataMiner connector protocol schema entry for Scale element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Scale element maps a device value range to a different range interpreted by DataMiner in a DataMiner connector protocol."
 ---
 
 # Scale element

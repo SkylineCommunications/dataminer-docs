@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Display-pageOptions
-description: "Reference the DataMiner connector protocol schema entry for pageOptions attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the pageOptions attribute can prevent users from opening an EPM element Data Display page in a DataMiner connector protocol."
 ---
 
 # pageOptions attribute

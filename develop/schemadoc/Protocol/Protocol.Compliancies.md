@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Compliancies
-description: "Reference the DataMiner connector protocol schema entry for Compliancies element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Compliancies element declares connector database compatibility and supported DataMiner version limits in a DataMiner connector protocol."
 ---
 
 # Compliancies element

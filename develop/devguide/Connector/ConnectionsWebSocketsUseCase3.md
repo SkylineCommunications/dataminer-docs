@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsWebSocketsUseCase3
-description: "Describe the DataMiner connector development topic WebSocket connection with custom handshake, including its purpose, behavior, implementation guidance, a."
+description: "Configure a WebSocket connection with a custom HTTP handshake and headers, while recognizing that it cannot reconnect after disconnection."
 ---
 
 # WebSocket connection with custom handshake

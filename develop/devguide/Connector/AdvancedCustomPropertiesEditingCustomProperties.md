@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedCustomPropertiesEditingCustomProperties
-description: "Describe the DataMiner connector development topic Editing custom properties, including its purpose, behavior, implementation guidance, and relevant const."
+description: "Edit a custom DataMiner property from connector logic by using the NT_EDIT_PROPERTY NotifyDataMiner call."
 ---
 
 # Editing custom properties

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: QuestionsAndAnswers
-description: "Describe the DataMiner connector development topic Questions & Answers, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Review answers to connector development questions about SNMP tables and instances, table searches, communication issues, and group execution actions."
 ---
 
 # Questions & Answers

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsHttpHttps
-description: "Describe the DataMiner connector development topic HTTPS, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure HTTPS connections on the default or a custom port and include the https:// prefix when required for element or dynamic IP addresses."
 ---
 
 # HTTPS

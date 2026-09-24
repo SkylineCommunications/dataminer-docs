@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression-taskId
-description: "Reference the DataMiner connector protocol schema entry for taskId attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the taskId attribute, which records the task ID associated with a validation suppression."
 ---
 
 # taskId attribute

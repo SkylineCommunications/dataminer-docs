@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Icon-ref
-description: "Reference the DataMiner connector protocol schema entry for ref attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ref attribute selects an Icons.xml icon for a table or table column shown in a tree control in a DataMiner connector protocol."
 ---
 
 # ref attribute

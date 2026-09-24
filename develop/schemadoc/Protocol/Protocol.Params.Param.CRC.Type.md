@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.CRC.Type
-description: "Reference the DataMiner connector protocol schema entry for Type element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the Type element to select a CRC algorithm and configure each stage of its calculation in a DataMiner connector protocol."
 ---
 
 # Type element

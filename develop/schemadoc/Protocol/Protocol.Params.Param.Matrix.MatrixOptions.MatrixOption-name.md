@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-name
-description: "Reference the DataMiner connector protocol schema entry for name attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the name attribute selects the matrix option that controls a specific appearance or behavior setting in a DataMiner connector protocol."
 ---
 
 # name attribute

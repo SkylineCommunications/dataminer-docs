@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.Hierarchy.Table-parent
-description: "Reference the DataMiner connector protocol schema entry for parent attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the parent attribute, which identifies the parent table in a tree control hierarchy."
 ---
 
 # parent attribute

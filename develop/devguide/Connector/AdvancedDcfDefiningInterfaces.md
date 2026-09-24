@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDcfDefiningInterfaces
-description: "Describe the DataMiner connector development topic Defining interfaces, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define standalone and dynamic DCF interfaces in a connector, configure direction and naming, and link interface alarm states to parameters."
 ---
 
 # Defining interfaces

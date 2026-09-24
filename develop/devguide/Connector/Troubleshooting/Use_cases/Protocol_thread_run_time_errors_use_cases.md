@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol_thread_run_time_errors_use_cases
-description: "Describe the DataMiner connector development topic Protocol thread runtime errors: use cases, including its purpose, behavior, implementation guidance, an."
+description: "Understand protocol thread RTE states and investigation tools through five use cases covering long QActions, blocked communication, and queue growth."
 ---
 
 # Protocol thread runtime errors: use cases

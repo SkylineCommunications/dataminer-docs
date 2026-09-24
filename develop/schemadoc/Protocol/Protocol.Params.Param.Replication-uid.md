@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Replication-uid
-description: "Reference the DataMiner connector protocol schema entry for uid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the uid attribute sets the username used to log on to the DataMiner Agent hosting a replicated element in a DataMiner connector protocol."
 ---
 
 # uid attribute

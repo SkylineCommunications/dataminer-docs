@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-link
-description: "Reference the DataMiner connector protocol schema entry for link attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the link attribute identifies the file containing input and output labels for a matrix parameter in a DataMiner connector protocol."
 ---
 
 # link attribute

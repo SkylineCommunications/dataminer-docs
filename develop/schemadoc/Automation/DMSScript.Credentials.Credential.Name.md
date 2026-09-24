@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Credentials.Credential.Name
-description: "Reference the DataMiner Automation script schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Use the Credential Name element as the unique script-level name passed to GetCredential when retrieving linked credentials."
 ---
 
 # Name element

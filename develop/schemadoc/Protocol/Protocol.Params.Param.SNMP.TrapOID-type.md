@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapOID-type
-description: "Reference the DataMiner connector protocol schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the TrapOID type attribute constructs trap OIDs in auto, complete, composed, or wildcard mode for SNMP capture."
 ---
 
 # type attribute

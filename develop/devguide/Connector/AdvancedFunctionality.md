@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedFunctionality
-description: "Describe the DataMiner connector development topic Advanced functionality, including its purpose, behavior, implementation guidance, and relevant constrai."
+description: "Explore advanced connector functionality for view and logger tables, DVEs, DCF, inter-element communication, multithreading, persistence, and mediation."
 ---
 
 # Advanced functionality

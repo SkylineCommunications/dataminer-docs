@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ParameterGroups.Group-dynamicUsePK
-description: "Reference the DataMiner connector protocol schema entry for dynamicUsePK attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how to use the dynamicUsePK attribute to select primary keys instead of display keys for dynamic interface names in a DataMiner connector protocol."
 ---
 
 # dynamicUsePK attribute

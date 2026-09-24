@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerial
-description: "Describe the DataMiner connector development topic Serial, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how DataMiner serial connections exchange commands and responses over TCP/IP, UDP, serial cables, or vendor-specific communication protocols."
 ---
 
 # Serial

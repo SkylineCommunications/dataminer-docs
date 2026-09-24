@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Database.ColumnDefinition-default
-description: "Reference the DataMiner connector protocol schema entry for default attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the default attribute to supply a database column value when a new row omits that value in a DataMiner connector protocol."
 ---
 
 # default attribute

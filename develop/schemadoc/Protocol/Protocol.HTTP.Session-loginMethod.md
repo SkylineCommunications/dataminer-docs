@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session-loginMethod
-description: "Reference the DataMiner connector protocol schema entry for loginMethod attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the loginMethod attribute selects credential-based or client-certificate authentication for an HTTP session in a DataMiner connector protocol."
 ---
 
 # loginMethod attribute

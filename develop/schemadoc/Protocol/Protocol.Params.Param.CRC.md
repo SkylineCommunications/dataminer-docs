@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.CRC
-description: "Reference the DataMiner connector protocol schema entry for CRC element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the CRC element to define the parameters and algorithm used to calculate a command or response CRC in a DataMiner connector protocol."
 ---
 
 # CRC element

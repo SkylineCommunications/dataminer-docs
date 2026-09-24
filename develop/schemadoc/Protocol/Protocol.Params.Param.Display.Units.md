@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Units
-description: "Reference the DataMiner connector protocol schema entry for Units element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Units element sets the unit of measurement shown with a parameter value throughout the user interface in a DataMiner connector protocol."
 ---
 
 # Units element

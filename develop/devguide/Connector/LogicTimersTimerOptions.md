@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicTimersTimerOptions
-description: "Describe the DataMiner connector development topic Timer options, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure timer options for dynamic thread pools, row distribution, conditional execution, SNMP instances, IP addresses, ping checks, and more."
 ---
 
 # Timer options

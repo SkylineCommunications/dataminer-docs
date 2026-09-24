@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Protocols
-description: "Reference the DataMiner Automation script schema entry for Protocols element, including its documented structure, attributes, values, and constraints."
+description: "Use the Protocols element to contain an automation script's dummy variables and ensure that each Protocol ID is unique."
 ---
 
 # Protocols element

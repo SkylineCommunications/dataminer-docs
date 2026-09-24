@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ReservedIDsAggregator
-description: "Describe the DataMiner connector development topic Aggregator, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Consult the parameter ID ranges reserved for DataMiner Aggregator connectors, including rule controls and data parameters."
 ---
 
 # Aggregator

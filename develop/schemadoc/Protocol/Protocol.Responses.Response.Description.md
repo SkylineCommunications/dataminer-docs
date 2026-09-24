@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Responses.Response.Description
-description: "Reference the DataMiner connector protocol schema entry for Description element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Response Description element provides explanatory text for a response defined in a connector protocol."
 ---
 
 # Description element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ReplaceDisplayColumnByNaming
-description: "Describe the DataMiner connector development topic Replace displayColumn by naming, including its purpose, behavior, implementation guidance, and relevant."
+description: "Replace a table's displayColumn definition with naming only when its trend history, compatibility, and migration impact have been evaluated."
 ---
 
 # Replace displayColumn by naming

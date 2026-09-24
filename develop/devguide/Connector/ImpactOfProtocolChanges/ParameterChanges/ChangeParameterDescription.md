@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeParameterDescription
-description: "Describe the DataMiner connector development topic Change parameter description, including its purpose, behavior, implementation guidance, and relevant co."
+description: "Assess how changing a parameter description affects alarm and trend templates, dashboards, scripts, and other references to that parameter."
 ---
 
 # Change parameter description

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Type-id
-description: "Reference the DataMiner connector protocol schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Type id attribute identifies the referenced parameter for read bit types or the referenced response for response types."
 ---
 
 # id attribute

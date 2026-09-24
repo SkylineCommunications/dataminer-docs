@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionLog
-description: "Describe the DataMiner Automation development topic Log, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the Log action to write either a predefined message or an automation script variable value to the SLAutomation.txt log file."
 ---
 
 # Log

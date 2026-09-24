@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDcf
-description: "Describe the DataMiner connector development topic DataMiner Connectivity Framework, including its purpose, behavior, implementation guidance, and relevan."
+description: "Understand how the DataMiner Connectivity Framework models and manages device interfaces and connections for path visualization and control."
 ---
 
 # DataMiner Connectivity Framework

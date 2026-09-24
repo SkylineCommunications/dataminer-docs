@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Display.Visibility
-description: "Reference the DataMiner connector protocol schema entry for Visibility element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Visibility element combines a default setting with trigger conditions for search field visibility in a DataMiner connector protocol."
 ---
 
 # Visibility element

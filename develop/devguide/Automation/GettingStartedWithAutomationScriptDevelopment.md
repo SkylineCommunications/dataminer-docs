@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: GettingStartedWithAutomationScriptDevelopment
-description: "Describe the DataMiner Automation development topic Getting started with automation script development, including its purpose, behavior, implementation gu."
+description: "Find resources for learning DataMiner Automation, executing automation scripts, developing scripts, and choosing the appropriate C# workflow."
 ---
 
 # Getting started with automation script development

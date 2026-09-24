@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group-threadId
-description: "Reference the DataMiner connector protocol schema entry for threadId attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the threadId attribute selects the protocol thread that executes a group in a DataMiner connector protocol."
 ---
 
 # threadId attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Description
-description: "Reference the DataMiner Automation script schema entry for Description element, including its documented structure, attributes, values, and constraints."
+description: "Use the DMSScript Description element to store the string description associated with a DataMiner automation script."
 ---
 
 # Description element

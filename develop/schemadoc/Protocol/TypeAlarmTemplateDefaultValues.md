@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeAlarmTemplateDefaultValues
-description: "Reference the DataMiner connector protocol schema entry for TypeAlarmTemplateDefaultValues simple type, including its documented structure, attributes, va."
+description: "Use the TypeAlarmTemplateDefaultValues simple type to validate comma-free default values in alarm templates in the DataMiner connector protocol schema."
 ---
 
 # TypeAlarmTemplateDefaultValues simple type

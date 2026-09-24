@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Value
-description: "Reference the DataMiner Automation script schema entry for Value element, including its documented structure, attributes, values, and constraints."
+description: "Use the Value element to provide code, labels, IDs, names, or values for applicable actions in a DataMiner automation script."
 ---
 
 # Value element

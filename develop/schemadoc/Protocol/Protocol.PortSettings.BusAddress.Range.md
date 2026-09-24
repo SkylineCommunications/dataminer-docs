@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.BusAddress.Range
-description: "Reference the DataMiner connector protocol schema entry for Range element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Range element under BusAddress defines the first and last bus addresses users can enter for an element."
 ---
 
 # Range element

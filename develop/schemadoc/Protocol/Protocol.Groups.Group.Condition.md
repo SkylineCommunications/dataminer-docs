@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group.Condition
-description: "Reference the DataMiner connector protocol schema entry for Condition element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Condition element defines a condition that must be true before a group executes in a DataMiner connector protocol."
 ---
 
 # Condition element

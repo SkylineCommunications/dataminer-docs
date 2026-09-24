@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumCpeAlignment
-description: "Reference the DataMiner connector protocol schema entry for EnumCpeAlignment simple type, including its documented structure, attributes, values, and cons."
+description: "Review the allowed values for the EnumCpeAlignment simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumCpeAlignment simple type

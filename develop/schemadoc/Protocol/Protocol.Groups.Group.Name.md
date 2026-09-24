@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group.Name
-description: "Reference the DataMiner connector protocol schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Name element stores the optional name assigned to a protocol group in a DataMiner connector protocol."
 ---
 
 # Name element

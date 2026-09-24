@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Positions.Position.Page-measType
-description: "Reference the DataMiner connector protocol schema entry for measType attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the measType attribute overrides how a parameter is displayed on one specified Data Display page in a DataMiner connector protocol."
 ---
 
 # measType attribute

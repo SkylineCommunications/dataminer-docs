@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionSleep
-description: "Describe the DataMiner Automation development topic Sleep, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the Sleep action to pause an automation script for a specified number of milliseconds before script execution continues."
 ---
 
 # Sleep

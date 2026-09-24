@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Trending.Type-operations
-description: "Reference the DataMiner connector protocol schema entry for operations attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the operations attribute applies log10 scaling to the vertical axis of a trend graph for positive values in a DataMiner connector protocol."
 ---
 
 # operations attribute

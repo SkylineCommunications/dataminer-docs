@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: InnerWorkingsChangeBasedEventHandling
-description: "Describe the DataMiner connector development topic Change-based event handling, including its purpose, behavior, implementation guidance, and relevant con."
+description: "Understand how SLProtocol detects parameter changes, schedules triggers and QActions, and handles events differently for scalar and table parameters."
 ---
 
 # Change-based event handling

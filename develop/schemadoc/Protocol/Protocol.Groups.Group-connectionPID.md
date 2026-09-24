@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group-connectionPID
-description: "Reference the DataMiner connector protocol schema entry for connectionPID attribute, including its documented structure, attributes, values, and constrain."
+description: "Learn how the connectionPID attribute identifies the parameter that dynamically selects an HTTP connection for a group in a DataMiner connector protocol."
 ---
 
 # connectionPID attribute

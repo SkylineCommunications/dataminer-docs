@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Ports
-description: "Reference the DataMiner connector protocol schema entry for Ports element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Ports element groups PortSettings definitions for additional connections in a multitype DataMiner connector."
 ---
 
 # Ports element

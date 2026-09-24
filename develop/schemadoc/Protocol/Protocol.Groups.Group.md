@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group
-description: "Reference the DataMiner connector protocol schema entry for Group element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Group element assembles parameters, command/response pairs, actions, sessions, or triggers for execution in a DataMiner connector protocol."
 ---
 
 # Group element

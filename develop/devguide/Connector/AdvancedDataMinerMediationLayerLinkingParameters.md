@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerLinkingParameters
-description: "Describe the DataMiner connector development topic Linking parameters, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Link base protocol parameters to device protocol parameters by ID, protocol, or description, or define the mapping from the device protocol."
 ---
 
 # Linking parameters

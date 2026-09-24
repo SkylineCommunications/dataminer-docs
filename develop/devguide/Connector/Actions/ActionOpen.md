@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionOpen
-description: "Describe the DataMiner connector development topic open, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the open action to open a serial connector port, selecting the target connection by its number when the main connection is not used."
 ---
 
 # open

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.SolutionId
-description: "Reference the DataMiner Automation script schema entry for SolutionId element, including its documented structure, attributes, values, and constraints."
+description: "Use SolutionId to group automation scripts in the same isolated script runner, or omit it to execute a script in the DataMiner Automation process."
 ---
 
 # SolutionId element

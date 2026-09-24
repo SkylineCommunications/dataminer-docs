@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeCommaSeparatedNumbers
-description: "Reference the DataMiner connector protocol schema entry for TypeCommaSeparatedNumbers simple type, including its documented structure, attributes, values."
+description: "Use the TypeCommaSeparatedNumbers simple type to validate comma-separated lists of numbers in the DataMiner connector protocol schema."
 ---
 
 # TypeCommaSeparatedNumbers simple type

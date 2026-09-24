@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Timers.Timer-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the options attribute, which defines timer options and links to their supported settings."
 ---
 
 # options attribute

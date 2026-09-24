@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: SwarmingScriptBooking
-description: "Describe the DataMiner connector development topic Configuring a script to swarm bookings, including its purpose, behavior, implementation guidance, and r."
+description: "Use an Automation script and SwarmingHelper to swarm bookings to another DataMiner Agent, validate every result, and handle partial failures."
 ---
 
 # Configuring a script to swarm bookings

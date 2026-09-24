@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedCodePages
-description: "Describe the DataMiner connector development topic Code pages, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how DataMiner connectors encode text with the Windows code page or Unicode and handle characters in parameters, commands, and responses."
 ---
 
 # Code pages

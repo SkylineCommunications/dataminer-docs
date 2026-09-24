@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumOnOff
-description: "Reference the DataMiner connector protocol schema entry for EnumOnOff simple type, including its documented structure, attributes, values, and constraints."
+description: "Review the allowed values for the EnumOnOff simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumOnOff simple type

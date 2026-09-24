@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeExportedProtocolName
-description: "Describe the DataMiner connector development topic Change exported protocol name, including its purpose, behavior, implementation guidance, and relevant c."
+description: "Assess how changing an exported DVE protocol name affects existing DVE elements, templates, scripts, dashboards, and other external references."
 ---
 
 # Change exported protocol name

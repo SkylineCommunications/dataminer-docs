@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTreeControlIcons
-description: "Describe the DataMiner connector development topic Icons, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure default and row-specific icons for DataMiner tree control nodes by using table parameters, icon references, and discrete values."
 ---
 
 # Icons

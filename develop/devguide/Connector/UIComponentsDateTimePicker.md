@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsDateTimePicker
-description: "Describe the DataMiner connector development topic DateTime picker, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define a date and time picker with read and write double parameters, eight decimals, and the datetime or date measurement option."
 ---
 
 # DateTime picker

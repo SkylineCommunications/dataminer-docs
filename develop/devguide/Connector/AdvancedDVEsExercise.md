@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsExercise
-description: "Describe the DataMiner connector development topic Exercise, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Practice creating DVE elements for specified Flashlink modules and exporting selected module and voltage table parameters for one chassis."
 ---
 
 # Exercise

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Protocols.Protocol-id
-description: "Reference the DataMiner Automation script schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Protocol id attribute as the unique positive integer that identifies a dummy script variable in an automation script."
 ---
 
 # id attribute

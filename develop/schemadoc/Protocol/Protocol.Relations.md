@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Relations
-description: "Reference the DataMiner connector protocol schema entry for Relations element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Relations element groups foreign-key links that define relationships between tables in a DataMiner connector."
 ---
 
 # Relations element

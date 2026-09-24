@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsHttpExamples
-description: "Describe the DataMiner connector development topic Examples, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Review XML examples for HTTP GET and POST sessions with request headers, authentication, form parameters, response codes, and content parameters."
 ---
 
 # Examples

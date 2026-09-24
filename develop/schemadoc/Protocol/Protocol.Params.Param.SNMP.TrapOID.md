@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapOID
-description: "Reference the DataMiner connector protocol schema entry for TrapOID element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the TrapOID element identifies SNMP traps to capture and configures binding filters, alarm mapping, and parameter updates."
 ---
 
 # TrapOID element

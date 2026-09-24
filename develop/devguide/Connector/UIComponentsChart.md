@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsChart
-description: "Describe the DataMiner connector development topic Chart, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Create pie, column, or row charts from numeric standalone or table parameters by configuring ParametersView and selecting the values to include."
 ---
 
 # Chart

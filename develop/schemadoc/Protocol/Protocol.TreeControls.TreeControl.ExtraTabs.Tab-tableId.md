@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab-tableId
-description: "Reference the DataMiner connector protocol schema entry for tableId attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the tableId attribute, which identifies the table for an additional tree control tab."
 ---
 
 # tableId attribute

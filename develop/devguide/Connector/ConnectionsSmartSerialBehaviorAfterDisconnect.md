@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSmartSerialBehaviorAfterDisconnect
-description: "Describe the DataMiner connector development topic Smart-Serial behavior after a physical device disconnect, including its purpose, behavior, implementati."
+description: "Learn how smart-serial TCP commands are buffered during a device disconnect and how heartbeat-based detection prevents delayed command bursts."
 ---
 
 # Smart-Serial behavior after a physical device disconnect

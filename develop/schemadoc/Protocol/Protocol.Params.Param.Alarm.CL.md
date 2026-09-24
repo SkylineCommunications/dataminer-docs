@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.CL
-description: "Reference the DataMiner connector protocol schema entry for CL element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the CL element to set the default critical-low threshold in a parameter alarm template in a DataMiner connector protocol."
 ---
 
 # CL element

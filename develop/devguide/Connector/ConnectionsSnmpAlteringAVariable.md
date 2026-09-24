@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpAlteringAVariable
-description: "Describe the DataMiner connector development topic Altering a variable, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Implement an SNMP Set request for a standalone variable with snmpSet or a trigger and action, then verify the value with an SNMP Get."
 ---
 
 # Altering a variable

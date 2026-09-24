@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP
-description: "Reference the DataMiner connector protocol schema entry for HTTP element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the HTTP element to define the connector's HTTP sessions and connections in a DataMiner connector protocol."
 ---
 
 # HTTP element

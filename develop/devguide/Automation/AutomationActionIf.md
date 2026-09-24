@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionIf
-description: "Describe the DataMiner Automation development topic If, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define conditional automation script logic with If, Else, and Endif action blocks and a condition that determines which branch executes."
 ---
 
 # If

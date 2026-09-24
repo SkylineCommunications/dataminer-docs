@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.WaH
-description: "Reference the DataMiner connector protocol schema entry for WaH element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the WaH element to set the default warning-high threshold in a parameter alarm template in a DataMiner connector protocol."
 ---
 
 # WaH element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-iconRef
-description: "Reference the DataMiner connector protocol schema entry for iconRef attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the iconRef attribute selects the Icons.xml icon shown for a discreet value in a table tree control in a DataMiner connector protocol."
 ---
 
 # iconRef attribute

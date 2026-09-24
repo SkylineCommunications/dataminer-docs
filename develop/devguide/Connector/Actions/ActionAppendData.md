@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionAppendData
-description: "Describe the DataMiner connector development topic append data, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the append data action to add a source parameter's raw in-memory value, rather than its displayed value, to destination parameters."
 ---
 
 # append data

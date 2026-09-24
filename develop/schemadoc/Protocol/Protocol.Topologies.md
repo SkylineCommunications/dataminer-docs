@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Topologies
-description: "Reference the DataMiner connector protocol schema entry for Topologies element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the Topologies element, which collects topology definitions for diagrams in an EPM element."
 ---
 
 # Topologies element

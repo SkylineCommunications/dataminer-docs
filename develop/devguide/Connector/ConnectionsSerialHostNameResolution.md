@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerialHostnameResolution
-description: "Describe the DataMiner connector development topic Hostname resolution, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand when DataMiner resolves hostnames for TCP-oriented and UDP-oriented serial connections and how this behavior changed from DataMiner 10.2.9."
 ---
 
 # Hostname resolution

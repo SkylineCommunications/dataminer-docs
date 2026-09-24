@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions-partial
-description: "Reference the DataMiner connector protocol schema entry for partial attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the partial attribute to paginate a table and optionally set the number of rows per page in a DataMiner connector protocol."
 ---
 
 # partial attribute

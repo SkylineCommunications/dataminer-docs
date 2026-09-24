@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Responses.Response.Content
-description: "Reference the DataMiner connector protocol schema entry for Content element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Response Content element orders the parameters that form an expected device response and marks optional entries."
 ---
 
 # Content element

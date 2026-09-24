@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Timers.Timer-fixedTimer
-description: "Reference the DataMiner connector protocol schema entry for fixedTimer attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the fixedTimer attribute prevents users from changing a timer interval within a relative timer protocol."
 ---
 
 # fixedTimer attribute

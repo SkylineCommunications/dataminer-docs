@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Threads
-description: "Reference the DataMiner connector protocol schema entry for Threads element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Threads element separates time-critical work from device polling by defining additional protocol execution threads."
 ---
 
 # Threads element

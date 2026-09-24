@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Parameters.ScriptParameter.Description
-description: "Reference the DataMiner Automation script schema entry for Description element, including its documented structure, attributes, values, and constraints."
+description: "Use the ScriptParameter Description element to define the nonempty name by which an automation script accesses a parameter variable."
 ---
 
 # Description element

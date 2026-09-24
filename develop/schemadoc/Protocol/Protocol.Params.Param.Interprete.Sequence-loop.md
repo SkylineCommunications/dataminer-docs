@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Sequence-loop
-description: "Reference the DataMiner connector protocol schema entry for loop attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the loop attribute defines an overflow value used when recalculating a sequence across counter resets in a DataMiner connector protocol."
 ---
 
 # loop attribute

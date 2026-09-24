@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSmartSerialDataForwarding
-description: "Describe the DataMiner connector development topic Data forwarding, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how SLPort forwards smart-serial data to SLProtocol and how stuffing, packetInfo, and headers or trailers affect processing."
 ---
 
 # Data forwarding

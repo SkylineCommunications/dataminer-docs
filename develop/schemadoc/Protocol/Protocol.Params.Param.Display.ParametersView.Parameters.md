@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.ParametersView.Parameters
-description: "Reference the DataMiner connector protocol schema entry for Parameters element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Parameters element groups the source parameters whose values are displayed in a ParametersView chart in a DataMiner connector protocol."
 ---
 
 # Parameters element

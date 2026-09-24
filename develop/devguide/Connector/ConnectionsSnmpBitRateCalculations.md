@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpBitRateCalculations
-description: "Describe the DataMiner connector development topic Bit rate calculations, including its purpose, behavior, implementation guidance, and relevant constrain."
+description: "Calculate accurate SNMP bit rates in QActions by using SLSNMPManager counters, group execution deltas, and raw communication cycle data."
 ---
 
 # Bit rate calculations

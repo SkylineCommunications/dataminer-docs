@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionSleep
-description: "Describe the DataMiner connector development topic sleep, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the sleep action to pause connector protocol execution for a configured number of milliseconds, subject to the minimum supported delay."
 ---
 
 # sleep

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Rounding
-description: "Reference the DataMiner connector protocol schema entry for Rounding element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Rounding element selects how DataMiner rounds a processed parameter value, with down as the default in a DataMiner connector protocol."
 ---
 
 # Rounding element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionStop
-description: "Describe the DataMiner connector development topic stop, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the stop action to stop one or more timers identified by their IDs in a DataMiner connector definition."
 ---
 
 # stop

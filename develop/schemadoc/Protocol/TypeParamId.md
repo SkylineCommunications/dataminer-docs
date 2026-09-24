@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeParamId
-description: "Reference the DataMiner connector protocol schema entry for TypeParamId simple type, including its documented structure, attributes, values, and constrain."
+description: "Use the TypeParamId simple type to validate parameter IDs against the permitted numeric ranges in the DataMiner connector protocol schema."
 ---
 
 # TypeParamId simple type

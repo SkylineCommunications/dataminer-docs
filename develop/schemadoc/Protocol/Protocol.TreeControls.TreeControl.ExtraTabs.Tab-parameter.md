@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab-parameter
-description: "Reference the DataMiner connector protocol schema entry for parameter attribute, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the parameter attribute, which sets the foreign key required for a relation tab."
 ---
 
 # parameter attribute

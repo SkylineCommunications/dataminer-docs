@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Display.Pages.Page.Name
-description: "Reference the DataMiner connector protocol schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Name element sets the name of a configured Data Display page in a DataMiner connector protocol."
 ---
 
 # Name element

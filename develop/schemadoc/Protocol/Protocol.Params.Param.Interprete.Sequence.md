@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Sequence
-description: "Reference the DataMiner connector protocol schema entry for Sequence element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Sequence element applies ordered mathematical operations to a communication parameter value in a DataMiner connector protocol."
 ---
 
 # Sequence element

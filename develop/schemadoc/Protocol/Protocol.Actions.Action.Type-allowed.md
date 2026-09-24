@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-allowed
-description: "Reference the DataMiner connector protocol schema entry for allowed attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Type allowed attribute with stuffing actions to list characters after which the stuffing byte is not repeated."
 ---
 
 # allowed attribute

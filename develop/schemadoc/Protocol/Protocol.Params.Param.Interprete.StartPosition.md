@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.StartPosition
-description: "Reference the DataMiner connector protocol schema entry for StartPosition element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the StartPosition element sets the first bit used by a read or write bits parameter within its group in a DataMiner connector protocol."
 ---
 
 # StartPosition element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.HyperLinks.HyperLink
-description: "Reference the DataMiner connector protocol schema entry for HyperLink element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the HyperLink element defines a deprecated custom alarm shortcut command that is unsupported by DataMiner Cube in a DataMiner connector protocol."
 ---
 
 # HyperLink element

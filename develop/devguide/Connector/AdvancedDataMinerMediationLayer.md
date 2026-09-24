@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayer
-description: "Describe the DataMiner connector development topic DataMiner Mediation Layer, including its purpose, behavior, implementation guidance, and relevant const."
+description: "Use the DataMiner Mediation Layer to give automation scripts and other solutions a consistent parameter view across similar devices from different vendors."
 ---
 
 # DataMiner Mediation Layer

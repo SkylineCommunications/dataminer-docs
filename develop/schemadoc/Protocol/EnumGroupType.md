@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumGroupType
-description: "Reference the DataMiner connector protocol schema entry for EnumGroupType simple type, including its documented structure, attributes, values, and constra."
+description: "Review the allowed values for the EnumGroupType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumGroupType simple type

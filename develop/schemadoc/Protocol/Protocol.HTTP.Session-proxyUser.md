@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session-proxyUser
-description: "Reference the DataMiner connector protocol schema entry for proxyUser attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the proxyUser attribute supplies a fixed proxy username or parameter ID for HTTP proxy authentication in a DataMiner connector protocol."
 ---
 
 # proxyUser attribute

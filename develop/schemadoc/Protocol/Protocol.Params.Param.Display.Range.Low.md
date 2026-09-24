@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Range.Low
-description: "Reference the DataMiner connector protocol schema entry for Low element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Low element sets the minimum display range value or the minimum string length for a write parameter in a DataMiner connector protocol."
 ---
 
 # Low element

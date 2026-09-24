@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraDetails
-description: "Reference the DataMiner connector protocol schema entry for ExtraDetails element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the ExtraDetails element, which groups definitions for additional tree item information."
 ---
 
 # ExtraDetails element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Substitutions.Substitution
-description: "Reference the DataMiner connector protocol schema entry for Substitution element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Substitution element defines a regular expression transformation applied to search field content in a DataMiner connector protocol."
 ---
 
 # Substitution element

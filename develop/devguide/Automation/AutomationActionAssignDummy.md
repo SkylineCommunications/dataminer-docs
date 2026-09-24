@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionAssignDummy
-description: "Describe the DataMiner Automation development topic Assign dummy, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the Assign dummy action to bind an automation script dummy to an element by name, element ID, or script variable."
 ---
 
 # Assign dummy

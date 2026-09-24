@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicConditions
-description: "Describe the DataMiner connector development topic Conditions, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define connector conditions with supported arithmetic, relational, equality, bitwise, and logical operators, operands, and placeholders."
 ---
 
 # Conditions

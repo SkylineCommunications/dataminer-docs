@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionGo
-description: "Describe the DataMiner connector development topic go, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the go action to re-enter a write parameter's last value automatically and trigger all connector logic linked to that parameter."
 ---
 
 # go

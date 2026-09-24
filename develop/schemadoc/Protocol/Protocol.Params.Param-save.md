@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param-save
-description: "Reference the DataMiner connector protocol schema entry for save attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the save attribute to persist a standalone parameter value whenever it changes in a DataMiner connector protocol."
 ---
 
 # save attribute

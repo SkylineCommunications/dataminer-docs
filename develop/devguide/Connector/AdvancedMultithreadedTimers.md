@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedMultiThreadedTimers
-description: "Describe the DataMiner connector development topic Multithreaded timers, including its purpose, behavior, implementation guidance, and relevant constraint."
+description: "Use multithreaded timers to process table rows at defined intervals through a thread pool for SNMP, serial, HTTP, ping, or QAction work."
 ---
 
 # Multithreaded timers

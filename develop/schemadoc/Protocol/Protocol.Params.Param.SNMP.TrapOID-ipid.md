@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapOID-ipid
-description: "Reference the DataMiner connector protocol schema entry for ipid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ipid attribute identifies parameters containing the IP addresses from which DataMiner captures SNMP traps."
 ---
 
 # ipid attribute

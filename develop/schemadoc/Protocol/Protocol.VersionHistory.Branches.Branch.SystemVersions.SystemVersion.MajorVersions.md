@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions
-description: "Reference the DataMiner connector protocol schema entry for MajorVersions element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the MajorVersions element, which lists major versions within a branch's system version."
 ---
 
 # MajorVersions element

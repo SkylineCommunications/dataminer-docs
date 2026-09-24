@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ParameterGroups.Group-calculateAlarmState
-description: "Reference the DataMiner connector protocol schema entry for calculateAlarmState attribute, including its documented structure, attributes, values, and con."
+description: "Learn how to use the calculateAlarmState attribute to control whether DataMiner calculates the interface alarm state in a DataMiner connector protocol."
 ---
 
 # calculateAlarmState attribute

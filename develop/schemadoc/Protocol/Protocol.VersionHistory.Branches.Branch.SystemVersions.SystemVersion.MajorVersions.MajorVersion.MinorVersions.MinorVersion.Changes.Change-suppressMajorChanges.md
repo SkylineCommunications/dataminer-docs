@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Change-suppressMajorChanges
-description: "Reference the DataMiner connector protocol schema entry for suppressMajorChanges attribute, including its documented structure, attributes, values, and co."
+description: "Consult the DataMiner connector protocol schema reference for the suppressMajorChanges attribute, which lists suppressed major-change validator IDs."
 ---
 
 # suppressMajorChanges attribute

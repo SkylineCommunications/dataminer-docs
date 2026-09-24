@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Alarm.MiL
-description: "Reference the DataMiner connector protocol schema entry for MiL element, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the MiL element to set the default minor-low threshold in a parameter alarm template in a DataMiner connector protocol."
 ---
 
 # MiL element

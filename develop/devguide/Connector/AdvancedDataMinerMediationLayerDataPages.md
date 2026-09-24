@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerDataPages
-description: "Describe the DataMiner connector development topic Data pages, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how a mediation protocol controls page order, the default page, wide-column display, and inclusion of device protocol webpages."
 ---
 
 # Data pages

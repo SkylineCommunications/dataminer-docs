@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Automation-EnumTrueFalseLowerCase
-description: "Reference the DataMiner Automation script schema entry for EnumTrueFalseLowerCase simple type, including its documented structure, attributes, values, and."
+description: "Review the allowed values for the EnumTrueFalseLowerCase simple type and what each value represents in DataMiner automation scripts."
 ---
 
 # EnumTrueFalseLowerCase simple type

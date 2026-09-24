@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsWebSocketsDynamicIp
-description: "Describe the DataMiner connector development topic Dynamically changing the IP address and port number, including its purpose, behavior, implementation gu."
+description: "Dynamically change a WebSocket URL, IP address, or port with a dynamic ip parameter that gracefully replaces the existing connection."
 ---
 
 # Dynamically changing the IP address and port number

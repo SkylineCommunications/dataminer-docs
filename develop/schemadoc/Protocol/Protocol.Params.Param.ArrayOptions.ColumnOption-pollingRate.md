@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-pollingRate
-description: "Reference the DataMiner connector protocol schema entry for pollingRate attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the pollingRate attribute to set a minimum polling interval for a specific SNMP table column in a DataMiner connector protocol."
 ---
 
 # pollingRate attribute

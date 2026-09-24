@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.QActions.QAction-row
-description: "Reference the DataMiner connector protocol schema entry for row attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the row attribute runs a QAction when a table row changes and exposes the updated row values to the script."
 ---
 
 # row attribute

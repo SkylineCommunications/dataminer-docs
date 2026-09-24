@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEs
-description: "Describe the DataMiner connector development topic Dynamic Virtual Elements, including its purpose, behavior, implementation guidance, and relevant constr."
+description: "Understand how Dynamic Virtual Elements represent device subcomponents through child elements whose data and communication are managed by a parent element."
 ---
 
 # Dynamic Virtual Elements

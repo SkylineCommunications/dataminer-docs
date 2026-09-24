@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Type-trim
-description: "Reference the DataMiner connector protocol schema entry for trim attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the trim attribute removes leading, trailing, or both types of whitespace from a processed parameter value in a DataMiner connector protocol."
 ---
 
 # trim attribute

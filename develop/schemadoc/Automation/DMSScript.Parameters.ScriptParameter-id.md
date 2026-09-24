@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Parameters.ScriptParameter-id
-description: "Reference the DataMiner Automation script schema entry for id attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the ScriptParameter id attribute as the unique unsigned integer that identifies a parameter script variable."
 ---
 
 # id attribute

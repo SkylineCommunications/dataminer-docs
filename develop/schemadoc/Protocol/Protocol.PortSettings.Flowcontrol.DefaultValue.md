@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DefaultValue element under Flowcontrol sets the initial flow control mode or SNMPv3 encryption algorithm."
 ---
 
 # DefaultValue element

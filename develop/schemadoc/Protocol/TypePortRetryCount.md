@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypePortRetryCount
-description: "Reference the DataMiner connector protocol schema entry for TypePortRetryCount simple type, including its documented structure, attributes, values, and co."
+description: "Use the TypePortRetryCount simple type to validate port retry counts from 0 through 10 in the DataMiner connector protocol schema."
 ---
 
 # TypePortRetryCount simple type

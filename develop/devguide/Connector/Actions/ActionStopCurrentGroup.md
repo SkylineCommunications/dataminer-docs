@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionStopCurrentGroup
-description: "Describe the DataMiner connector development topic stop current group, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the stop current group action to halt the running group when it contains pairs, except for SNMP groups with multipleGet enabled."
 ---
 
 # stop current group

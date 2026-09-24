@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Name
-description: "Reference the DataMiner Automation script schema entry for Name element, including its documented structure, attributes, values, and constraints."
+description: "Use the DMSScript Name element to assign a unique automation script name that excludes unsupported characters and determines its file name."
 ---
 
 # Name element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.HyperLinks.HyperLink-valueParsing
-description: "Reference the DataMiner connector protocol schema entry for valueParsing attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how the valueParsing attribute matches alarm values to control when a custom shortcut command appears in a DataMiner connector protocol."
 ---
 
 # valueParsing attribute

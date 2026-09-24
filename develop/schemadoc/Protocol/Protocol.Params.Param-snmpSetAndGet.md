@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param-snmpSetAndGet
-description: "Reference the DataMiner connector protocol schema entry for snmpSetAndGet attribute, including its documented structure, attributes, values, and constrain."
+description: "Learn how to use the snmpSetAndGet attribute to perform an SNMP set followed by a get for a write parameter in a DataMiner connector protocol."
 ---
 
 # snmpSetAndGet attribute

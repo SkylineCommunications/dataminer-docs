@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicQActions
-description: "Describe the DataMiner connector development topic QActions, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use C# QActions to implement custom connector logic, define triggers and entry points, and interact with protocol data through SLProtocol APIs."
 ---
 
 # QActions

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeDataMinerVersion
-description: "Reference the DataMiner connector protocol schema entry for TypeDataMinerVersion simple type, including its documented structure, attributes, values, and."
+description: "Use the TypeDataMinerVersion simple type to validate four-part DataMiner versions with a 5-digit build number in the DataMiner connector protocol schema."
 ---
 
 # TypeDataMinerVersion simple type

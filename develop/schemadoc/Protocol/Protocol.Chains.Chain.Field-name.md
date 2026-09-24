@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Field-name
-description: "Reference the DataMiner connector protocol schema entry for name attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the name attribute sets the name of a block in an EPM chain drill-down diagram in a DataMiner connector protocol."
 ---
 
 # name attribute

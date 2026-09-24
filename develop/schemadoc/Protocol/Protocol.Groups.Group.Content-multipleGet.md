@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group.Content-multipleGet
-description: "Reference the DataMiner connector protocol schema entry for multipleGet attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the multipleGet attribute combines all group parameters into one SNMP Get operation in a DataMiner connector protocol."
 ---
 
 # multipleGet attribute

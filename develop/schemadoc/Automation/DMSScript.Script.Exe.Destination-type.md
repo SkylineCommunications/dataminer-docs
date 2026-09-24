@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Destination-type
-description: "Reference the DataMiner Automation script schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Destination type attribute to select email or SMS delivery for an automation script notification or report action."
 ---
 
 # type attribute

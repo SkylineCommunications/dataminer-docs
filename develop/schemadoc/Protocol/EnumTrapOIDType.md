@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumTrapOIDType
-description: "Reference the DataMiner connector protocol schema entry for EnumTrapOIDType simple type, including its documented structure, attributes, values, and const."
+description: "Review the allowed values for the EnumTrapOIDType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumTrapOIDType simple type

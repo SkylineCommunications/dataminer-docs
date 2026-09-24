@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.DynamicUnits.Unit
-description: "Reference the DataMiner connector protocol schema entry for Unit element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Unit element defines one available dynamic unit and its optional number of displayed decimal places in a DataMiner connector protocol."
 ---
 
 # Unit element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.Comment
-description: "Reference the DataMiner connector protocol schema entry for Comment element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the Comment element, which stores descriptive information about a protocol branch."
 ---
 
 # Comment element

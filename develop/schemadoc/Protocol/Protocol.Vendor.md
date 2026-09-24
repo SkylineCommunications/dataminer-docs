@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Vendor
-description: "Reference the DataMiner connector protocol schema entry for Vendor element, including its documented structure, attributes, values, and constraints."
+description: "Consult the DataMiner connector protocol schema reference for the Vendor element, which records the vendor name for the monitored data source."
 ---
 
 # Vendor element

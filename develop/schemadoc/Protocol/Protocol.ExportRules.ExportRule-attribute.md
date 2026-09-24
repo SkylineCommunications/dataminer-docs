@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-attribute
-description: "Reference the DataMiner connector protocol schema entry for attribute attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ExportRule attribute named attribute selects an XML attribute to change in a DataMiner connector protocol."
 ---
 
 # attribute attribute

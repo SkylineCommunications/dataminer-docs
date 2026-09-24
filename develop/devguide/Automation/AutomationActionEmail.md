@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionEmail
-description: "Describe the DataMiner Automation development topic Email, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure an Email action to send a message with a subject and To, CC, and BCC recipients, including the plain-text message option."
 ---
 
 # Email

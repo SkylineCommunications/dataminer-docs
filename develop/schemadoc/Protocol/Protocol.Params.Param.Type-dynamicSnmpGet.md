@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Type-dynamicSnmpGet
-description: "Reference the DataMiner connector protocol schema entry for dynamicSnmpGet attribute, including its documented structure, attributes, values, and constrai."
+description: "Learn how the dynamicSnmpGet attribute dynamically polls an SNMP cell, row, column, or table and schedules the request."
 ---
 
 # dynamicSnmpGet attribute

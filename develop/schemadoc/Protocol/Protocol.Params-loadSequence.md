@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params-loadSequence
-description: "Reference the DataMiner connector protocol schema entry for loadSequence attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how to use the loadSequence attribute to load selected saved table data before other parameters at element startup in a DataMiner connector protocol."
 ---
 
 # loadSequence attribute

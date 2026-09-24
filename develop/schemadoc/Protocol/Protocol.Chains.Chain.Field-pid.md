@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Field-pid
-description: "Reference the DataMiner connector protocol schema entry for pid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the pid attribute identifies the parameter linked to a block in an EPM drill-down diagram in a DataMiner connector protocol."
 ---
 
 # pid attribute

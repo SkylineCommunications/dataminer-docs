@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.DynamicUnits.Unit-decimals
-description: "Reference the DataMiner connector protocol schema entry for decimals attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the decimals attribute sets the decimal places shown when a parameter uses a specific dynamic unit in a DataMiner connector protocol."
 ---
 
 # decimals attribute

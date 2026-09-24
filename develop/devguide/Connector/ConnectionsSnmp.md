@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmp
-description: "Describe the DataMiner connector development topic SNMP, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand how DataMiner connectors use SNMP to poll and set managed objects, receive traps, and communicate with SNMP agents."
 ---
 
 # SNMP

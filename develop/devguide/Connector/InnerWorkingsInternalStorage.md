@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: InnerWorkingsInternalStorage
-description: "Describe the DataMiner connector development topic Internal storage, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand where connector parameter values are stored across SLProtocol, SLElement, and SLScripting, and how RTDisplay affects availability."
 ---
 
 # Internal storage

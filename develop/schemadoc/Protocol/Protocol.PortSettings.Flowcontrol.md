@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol
-description: "Reference the DataMiner connector protocol schema entry for Flowcontrol element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Flowcontrol element defines default, allowed, and selectable flow control settings for an element connection."
 ---
 
 # Flowcontrol element

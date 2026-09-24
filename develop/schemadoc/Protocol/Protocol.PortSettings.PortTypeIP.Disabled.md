@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.PortTypeIP.Disabled
-description: "Reference the DataMiner connector protocol schema entry for Disabled element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Disabled element under PortTypeIP controls whether users can select TCP/IP as the port type in the DataMiner user interface."
 ---
 
 # Disabled element

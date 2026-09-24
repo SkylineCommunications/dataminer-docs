@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-continuous
-description: "Reference the DataMiner connector protocol schema entry for continuous attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the continuous attribute has undocumented behavior for measurement type string and accepts on or off in a DataMiner connector protocol."
 ---
 
 # continuous attribute

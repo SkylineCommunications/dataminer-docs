@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.App-type
-description: "Reference the DataMiner connector protocol schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the type attribute names the DataMiner app represented by elements based on the protocol in a DataMiner connector protocol."
 ---
 
 # type attribute

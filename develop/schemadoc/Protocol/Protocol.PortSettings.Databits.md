@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Databits
-description: "Reference the DataMiner connector protocol schema entry for Databits element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Databits element defines the default, allowed range, and selectable data bit counts for an element connection."
 ---
 
 # Databits element

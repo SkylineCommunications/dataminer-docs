@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Display
-description: "Reference the DataMiner connector protocol schema entry for Display element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Display element contains the visibility configuration for an EPM or Service Overview Manager chain in a DataMiner connector protocol."
 ---
 
 # Display element

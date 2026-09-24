@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsMatrixExercise
-description: "Describe the DataMiner connector development topic Exercise, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Practice building a 64-input, 128-output matrix from the ETL Systems VTR-10 MIB input and output tables with a dynamic displayed size."
 ---
 
 # Exercise

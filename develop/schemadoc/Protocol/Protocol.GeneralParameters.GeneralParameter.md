@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.GeneralParameters.GeneralParameter
-description: "Reference the DataMiner connector protocol schema entry for GeneralParameter element, including its documented structure, attributes, values, and constrai."
+description: "Learn how the GeneralParameter element enables or disables loading for a selected general parameter group in a DataMiner connector protocol."
 ---
 
 # GeneralParameter element

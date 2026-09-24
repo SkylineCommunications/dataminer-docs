@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.HTTP.Session-proxyPassword
-description: "Reference the DataMiner connector protocol schema entry for proxyPassword attribute, including its documented structure, attributes, values, and constrain."
+description: "Learn how the proxyPassword attribute supplies a fixed proxy password or parameter ID for HTTP proxy authentication in a DataMiner connector protocol."
 ---
 
 # proxyPassword attribute

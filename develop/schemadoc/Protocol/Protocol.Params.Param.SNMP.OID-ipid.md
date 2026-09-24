@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.OID-ipid
-description: "Reference the DataMiner connector protocol schema entry for ipid attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the ipid attribute references the parameter holding an alternative IP address for SNMP polling in a DataMiner connector protocol."
 ---
 
 # ipid attribute

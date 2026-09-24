@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Display-state
-description: "Reference the DataMiner connector protocol schema entry for state attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the state attribute shows an intercepted exception value in gray when its display state is disabled in a DataMiner connector protocol."
 ---
 
 # state attribute

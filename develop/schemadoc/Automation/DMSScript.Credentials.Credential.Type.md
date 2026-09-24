@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Credentials.Credential.Type
-description: "Reference the DataMiner Automation script schema entry for Type element, including its documented structure, attributes, values, and constraints."
+description: "Set the Credential Type element to UserNameAndPassword or Token so it matches the linked entry in the DataMiner Credentials Library."
 ---
 
 # Type element

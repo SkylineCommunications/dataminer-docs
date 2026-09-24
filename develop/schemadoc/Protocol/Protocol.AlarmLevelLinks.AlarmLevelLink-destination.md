@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.AlarmLevelLinks.AlarmLevelLink-destination
-description: "Reference the DataMiner connector protocol schema entry for destination attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the destination attribute identifies the column that receives the numeric alarm level from an alarm level link in a DataMiner connector protocol."
 ---
 
 # destination attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.InternalLicenses.InternalLicense-type
-description: "Reference the DataMiner connector protocol schema entry for type attribute, including its documented structure, attributes, values, and constraints."
+description: "Find the type attribute under the InternalLicense element in the DataMiner connector protocol schema hierarchy."
 ---
 
 # type attribute

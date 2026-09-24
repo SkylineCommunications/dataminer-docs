@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionStuffing
-description: "Describe the DataMiner connector development topic stuffing, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the stuffing action to insert redundant byte sequences into command or response data while respecting allowed bytes and configured offsets."
 ---
 
 # stuffing

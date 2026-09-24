@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicTimers
-description: "Describe the DataMiner connector development topic Timers, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure protocol timers to schedule groups at different intervals, while accounting for queue delays, execution duration, and added timer threads."
 ---
 
 # Timers

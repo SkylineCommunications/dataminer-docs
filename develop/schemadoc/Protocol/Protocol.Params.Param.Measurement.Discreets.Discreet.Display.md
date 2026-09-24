@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Display
-description: "Reference the DataMiner connector protocol schema entry for Display element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Display element sets the label shown when a parameter matches a defined discreet value in a DataMiner connector protocol."
 ---
 
 # Display element

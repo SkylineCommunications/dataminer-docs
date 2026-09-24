@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsPingGroup
-description: "Describe the DataMiner connector development topic Slow poll mode ping group, including its purpose, behavior, implementation guidance, and relevant const."
+description: "Configure the ping group DataMiner uses to test whether a timed-out serial or SNMP element can leave slow poll mode and resume normal polling."
 ---
 
 # Slow poll mode ping group

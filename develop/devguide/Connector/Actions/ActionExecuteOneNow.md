@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionExecuteOneNow
-description: "Describe the DataMiner connector development topic execute one now, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the execute one now action to queue a group ahead of timer-scheduled groups only when it is not already in the execution queue."
 ---
 
 # execute one now

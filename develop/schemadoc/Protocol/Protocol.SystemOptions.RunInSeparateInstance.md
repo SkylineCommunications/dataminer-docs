@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.SystemOptions.RunInSeparateInstance
-description: "Reference the DataMiner connector protocol schema entry for RunInSeparateInstance element, including its documented structure, attributes, values, and con."
+description: "Learn how RunInSeparateInstance flags every element using a protocol to run in separate SLProtocol and SLScripting instances."
 ---
 
 # RunInSeparateInstance element

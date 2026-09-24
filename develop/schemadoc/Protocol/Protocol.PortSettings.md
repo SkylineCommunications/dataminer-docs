@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings
-description: "Reference the DataMiner connector protocol schema entry for PortSettings element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the PortSettings element defines defaults and restrictions for the main device port, including serial and SNMP settings."
 ---
 
 # PortSettings element

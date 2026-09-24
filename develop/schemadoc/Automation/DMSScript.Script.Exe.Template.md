@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Template
-description: "Reference the DataMiner Automation script schema entry for Template element, including its documented structure, attributes, values, and constraints."
+description: "Use the Template element to specify the nonempty template name for a report action in a DataMiner automation script."
 ---
 
 # Template element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerBaseProtocolHierarchies
-description: "Describe the DataMiner connector development topic Base protocol hierarchies, including its purpose, behavior, implementation guidance, and relevant const."
+description: "Build base protocol hierarchies that combine parameters from multiple mediation levels while avoiding duplicate IDs and respecting override precedence."
 ---
 
 # Base protocol hierarchies

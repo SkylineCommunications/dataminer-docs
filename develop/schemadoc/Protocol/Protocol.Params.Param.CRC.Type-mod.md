@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.CRC.Type-mod
-description: "Reference the DataMiner connector protocol schema entry for mod attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the mod attribute to apply a modulo operation after DataMiner calculates a CRC in a DataMiner connector protocol."
 ---
 
 # mod attribute

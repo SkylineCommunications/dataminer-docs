@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-scale
-description: "Reference the DataMiner connector protocol schema entry for scale attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Type scale attribute with set info actions to define the lowdata, highdata, low, and high scale values for a parameter."
 ---
 
 # scale attribute

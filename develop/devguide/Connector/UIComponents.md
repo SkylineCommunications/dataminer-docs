@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponents
-description: "Describe the DataMiner connector development topic UI components, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Explore the labels, controls, charts, tables, matrices, and other UI components that connector parameters can display in DataMiner."
 ---
 
 # UI components

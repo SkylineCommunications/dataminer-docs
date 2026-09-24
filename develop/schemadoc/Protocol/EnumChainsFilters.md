@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumChainsFilters
-description: "Reference the DataMiner connector protocol schema entry for EnumChainsFilters simple type, including its documented structure, attributes, values, and con."
+description: "Review the allowed values for the EnumChainsFilters simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumChainsFilters simple type

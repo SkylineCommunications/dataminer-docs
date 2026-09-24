@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility.Standalone.Value
-description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Value element defines a trigger value that reverses default search tab visibility in a DataMiner connector protocol."
 ---
 
 # Value element

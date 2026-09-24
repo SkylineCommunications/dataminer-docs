@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Tooltip
-description: "Reference the DataMiner connector protocol schema entry for Tooltip element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Tooltip element defines hover text for the icon of a discreet value displayed in a table cell in a DataMiner connector protocol."
 ---
 
 # Tooltip element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ImpactOfProtocolVersionChanges
-description: "Describe the DataMiner connector development topic Impact of protocol version changes, including its purpose, behavior, implementation guidance, and relev."
+description: "Identify protocol changes that can affect upgrades, determine whether a version range change is required, and document mitigation steps."
 ---
 
 # Impact of protocol version changes

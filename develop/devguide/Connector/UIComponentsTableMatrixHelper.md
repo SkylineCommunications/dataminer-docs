@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTableMatrixHelper
-description: "Describe the DataMiner connector development topic Matrix Helper, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the DIS-generated TableMatrixHelper to manage table-based matrix inputs, outputs, crosspoints, labels, locks, pages, and device updates."
 ---
 
 # Matrix Helper

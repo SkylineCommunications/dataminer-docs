@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Type-virtual
-description: "Reference the DataMiner connector protocol schema entry for virtual attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the virtual attribute restricts virtual element connections by source or destination, protocol, and parameter description."
 ---
 
 # virtual attribute

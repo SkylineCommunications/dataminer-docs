@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionSwapColumn
-description: "Describe the DataMiner connector development topic swap column, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the swap column action to copy values from a source table column to a destination column and then clear the source column."
 ---
 
 # swap column

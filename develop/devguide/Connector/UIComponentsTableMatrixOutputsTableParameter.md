@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTableMatrixOutputsTableParameter
-description: "Describe the DataMiner connector development topic Outputs Table, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the outputs table for a table-based matrix with required connection columns and optional page, tooltip, and lock-override columns."
 ---
 
 # Outputs Table

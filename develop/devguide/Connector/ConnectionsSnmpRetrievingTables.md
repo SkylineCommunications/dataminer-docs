@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpRetrievingTables
-description: "An overview of the different methods that are available for retrieving tables via SNMP in a protocol."
+description: "Compare SNMP table retrieval methods, their performance and compatibility trade-offs, partial retrieval options, and index shift behavior."
 ---
 
 # Retrieving tables

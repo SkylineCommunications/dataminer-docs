@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: How_to_configure_multi_threaded_timers
-description: "Describe the DataMiner connector development topic How to configure multithreaded timers, including its purpose, behavior, implementation guidance, and re."
+description: "Configure multithreaded timers to poll table rows on schedule, size and monitor the thread pool, distribute load, and troubleshoot SLPortSplit."
 ---
 
 # How to configure multithreaded timers

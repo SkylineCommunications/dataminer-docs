@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeToPartialTable
-description: "Describe the DataMiner connector development topic Change to partial table, including its purpose, behavior, implementation guidance, and relevant constra."
+description: "Assess how converting a full table to a partial table affects polling, row lifecycle, stored data, QActions, and compatibility with existing logic."
 ---
 
 # Change to partial table

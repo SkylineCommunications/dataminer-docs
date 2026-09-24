@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.Parity.Range.From
-description: "Reference the DataMiner connector protocol schema entry for From element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the From element under Parity Range sets the first parity value available in the allowed range."
 ---
 
 # From element

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedLoggerTables
-description: "Describe the DataMiner connector development topic Logger tables, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use logger tables to persist large data volumes without loading all rows into SLProtocol, and understand their caching, display, and query constraints."
 ---
 
 # Logger tables

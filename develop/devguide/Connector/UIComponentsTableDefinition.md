@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTableDefinition
-description: "Describe the DataMiner connector development topic Defining a table, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define a protocol table as an array parameter, map its columns with ArrayOptions, and create a parameter with the correct type for each column."
 ---
 
 # Defining a table

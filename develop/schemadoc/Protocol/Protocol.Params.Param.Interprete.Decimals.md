@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Decimals
-description: "Reference the DataMiner connector protocol schema entry for Decimals element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Decimals element sets how many decimal places DataMiner stores in memory for a parameter value in a DataMiner connector protocol."
 ---
 
 # Decimals element

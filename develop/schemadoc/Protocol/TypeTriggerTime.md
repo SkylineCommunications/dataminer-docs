@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeTriggerTime
-description: "Reference the DataMiner connector protocol schema entry for TypeTriggerTime simple type, including its documented structure, attributes, values, and const."
+description: "Use the TypeTriggerTime simple type to accept defined trigger timing values or a custom string in the DataMiner connector protocol schema."
 ---
 
 # TypeTriggerTime simple type

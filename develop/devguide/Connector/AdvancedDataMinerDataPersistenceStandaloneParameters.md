@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistenceStandaloneParameters
-description: "Describe the DataMiner connector development topic Standalone parameters, including its purpose, behavior, implementation guidance, and relevant constrain."
+description: "Make a standalone connector parameter persist in the database by setting its Param save attribute to true."
 ---
 
 # Standalone parameters

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain-topology
-description: "Reference the DataMiner connector protocol schema entry for topology attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the topology attribute links a Service Overview Manager chain to a named protocol topology in a DataMiner connector protocol."
 ---
 
 # topology attribute

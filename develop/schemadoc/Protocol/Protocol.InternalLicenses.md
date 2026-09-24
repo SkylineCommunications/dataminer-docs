@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.InternalLicenses
-description: "Reference the DataMiner connector protocol schema entry for InternalLicenses element, including its documented structure, attributes, values, and constrai."
+description: "Learn how the InternalLicenses element groups settings that exclude elements based on the protocol from the element license count."
 ---
 
 # InternalLicenses element

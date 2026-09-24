@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.BusAddress.Range.To
-description: "Reference the DataMiner connector protocol schema entry for To element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the To element under BusAddress Range sets the last bus address available in the allowed range."
 ---
 
 # To element

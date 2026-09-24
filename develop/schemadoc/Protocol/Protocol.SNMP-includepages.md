@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.SNMP-includepages
-description: "Reference the DataMiner connector protocol schema entry for includepages attribute, including its documented structure, attributes, values, and constraint."
+description: "Learn how the includepages attribute controls automatic parameter OIDs and page-specific submaps in a generated protocol MIB."
 ---
 
 # includepages attribute

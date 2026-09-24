@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: InnerWorkingsSLProtocol
-description: "Describe the DataMiner connector development topic SLProtocol, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Understand SLProtocol processes, timer and protocol threads, group queue priorities, synchronous item execution, and separate connection threads."
 ---
 
 # SLProtocol

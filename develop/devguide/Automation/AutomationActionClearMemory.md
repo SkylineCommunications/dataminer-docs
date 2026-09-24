@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionClearMemory
-description: "Describe the DataMiner Automation development topic Clear memory, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Configure the Clear memory action to erase the contents of a selected automation script memory file by using its reference."
 ---
 
 # Clear memory

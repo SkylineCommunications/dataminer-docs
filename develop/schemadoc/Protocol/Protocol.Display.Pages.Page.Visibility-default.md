@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Display.Pages.Page.Visibility-default
-description: "Reference the DataMiner connector protocol schema entry for default attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the default attribute sets whether a Data Display page is visible by default in a DataMiner connector protocol."
 ---
 
 # default attribute

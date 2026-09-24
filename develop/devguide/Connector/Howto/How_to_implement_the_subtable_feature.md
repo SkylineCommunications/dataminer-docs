@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: How_to_implement_the_subtable_feature
-description: "Describe the DataMiner connector development topic How to implement the Subtable feature, including its purpose, behavior, implementation guidance, and re."
+description: "Implement the SNMP Subtable feature to poll only selected rows, using a hidden source table, filter table, and index parameters."
 ---
 
 # How to implement the Subtable feature

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Groups.Group.Content.Pair
-description: "Reference the DataMiner connector protocol schema entry for Pair element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Pair element identifies a command/response pair included for consecutive group execution in a DataMiner connector protocol."
 ---
 
 # Pair element

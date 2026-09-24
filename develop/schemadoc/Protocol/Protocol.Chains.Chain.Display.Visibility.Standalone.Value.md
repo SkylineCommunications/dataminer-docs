@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Display.Visibility.Standalone.Value
-description: "Reference the DataMiner connector protocol schema entry for Value element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Value element defines a parameter value that reverses the configured default chain visibility in a DataMiner connector protocol."
 ---
 
 # Value element

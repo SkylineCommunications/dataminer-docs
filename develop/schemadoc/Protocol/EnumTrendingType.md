@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-EnumTrendingType
-description: "Reference the DataMiner connector protocol schema entry for EnumTrendingType simple type, including its documented structure, attributes, values, and cons."
+description: "Review the allowed values for the EnumTrendingType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumTrendingType simple type

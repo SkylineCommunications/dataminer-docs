@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol-TypeTimerContentGroupCol
-description: "Reference the DataMiner connector protocol schema entry for TypeTimerContentGroupCol simple type, including its documented structure, attributes, values."
+description: "Use the TypeTimerContentGroupCol simple type to validate the col:number:number group selector format in the DataMiner connector protocol schema."
 ---
 
 # TypeTimerContentGroupCol simple type

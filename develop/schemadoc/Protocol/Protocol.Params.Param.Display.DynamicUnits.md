@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.DynamicUnits
-description: "Reference the DataMiner connector protocol schema entry for DynamicUnits element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DynamicUnits element defines dynamic units that DataMiner can use to convert displayed parameter values in a DataMiner connector protocol."
 ---
 
 # DynamicUnits element

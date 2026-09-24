@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.AlarmLevelLinks.AlarmLevelLink-remoteElement
-description: "Reference the DataMiner connector protocol schema entry for remoteElement attribute, including its documented structure, attributes, values, and constrain."
+description: "Learn how the remoteElement attribute identifies the remote element or table row whose alarm state is retrieved in a DataMiner connector protocol."
 ---
 
 # remoteElement attribute

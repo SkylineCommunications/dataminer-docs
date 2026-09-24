@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: DMSScript.Script.Exe.Destination-bcc
-description: "Reference the DataMiner Automation script schema entry for bcc attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Destination bcc attribute to add blind carbon copy recipients to an email sent by an automation script notification or report action."
 ---
 
 # bcc attribute

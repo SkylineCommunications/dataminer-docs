@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Type-times
-description: "Reference the DataMiner connector protocol schema entry for times attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the times attribute sets how many trailer occurrences are required before DataMiner recognizes the trailer."
 ---
 
 # times attribute

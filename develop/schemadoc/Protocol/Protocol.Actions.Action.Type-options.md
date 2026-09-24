@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Actions.Action.Type-options
-description: "Reference the DataMiner connector protocol schema entry for options attribute, including its documented structure, attributes, values, and constraints."
+description: "Use the Action Type options attribute to provide action-specific settings for an action in a DataMiner connector protocol."
 ---
 
 # options attribute

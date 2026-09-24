@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsImplementation
-description: "Describe the DataMiner connector development topic Implementing DVE functionality, including its purpose, behavior, implementation guidance, and relevant."
+description: "Implement DVE functionality by selecting source tables, defining element columns, exporting parameters and related tables, and ordering row data."
 ---
 
 # Implementing DVE functionality

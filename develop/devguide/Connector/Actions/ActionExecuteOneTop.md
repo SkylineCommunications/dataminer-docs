@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionExecuteOneTop
-description: "Describe the DataMiner connector development topic execute one top, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the execute one top action to queue a group immediately after the running group only when it is not already in the execution queue."
 ---
 
 # execute one top

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Display.Range.High
-description: "Reference the DataMiner connector protocol schema entry for High element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the High element sets the maximum display range value or the maximum string length for a write parameter in a DataMiner connector protocol."
 ---
 
 # High element

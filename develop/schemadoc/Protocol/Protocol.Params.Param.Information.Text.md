@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Information.Text
-description: "Reference the DataMiner connector protocol schema entry for Text element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Text element sets the title displayed in a parameter information tooltip in a DataMiner connector protocol."
 ---
 
 # Text element

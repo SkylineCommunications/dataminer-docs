@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.PortSettings.LocalIPport.DefaultValue
-description: "Reference the DataMiner connector protocol schema entry for DefaultValue element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the DefaultValue element under LocalIPport sets the local client port for a serial connection over TCP/IP or UDP/IP."
 ---
 
 # DefaultValue element

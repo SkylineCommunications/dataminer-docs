@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.QActions.QAction-id
-description: "Use the QAction ID to identify a QAction uniquely in a connector protocol and keep the declaration aligned with its triggers."
+description: "Learn how the id attribute uniquely identifies a QAction while remaining separate from parameter IDs in triggers and inputParameters."
 ---
 
 # id attribute

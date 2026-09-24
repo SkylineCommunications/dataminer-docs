@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.SearchChain
-description: "Reference the DataMiner connector protocol schema entry for SearchChain element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the SearchChain element defines CPE search fields and result tables, including suggestions and input handling in a DataMiner connector protocol."
 ---
 
 # SearchChain element

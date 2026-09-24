@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSnmpAlteringATableCell
-description: "Describe the DataMiner connector development topic Altering a table cell, including its purpose, behavior, implementation guidance, and relevant constrain."
+description: "Compare three ways to alter an SNMP table cell: snmpSetAndGet, a parameter holding the instance, or SLScripting logic."
 ---
 
 # Altering a table cell

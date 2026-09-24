@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionCrc
-description: "Describe the DataMiner connector development topic crc, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the CRC action to calculate command or response CRC values, validate device responses, and trigger errors and retries for mismatches."
 ---
 
 # crc

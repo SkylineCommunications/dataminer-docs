@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.ParameterGroups.Group-dynamicId
-description: "Reference the DataMiner connector protocol schema entry for dynamicId attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how to use the dynamicId attribute to identify the table parameter used to generate dynamic DCF interfaces in a DataMiner connector protocol."
 ---
 
 # dynamicId attribute

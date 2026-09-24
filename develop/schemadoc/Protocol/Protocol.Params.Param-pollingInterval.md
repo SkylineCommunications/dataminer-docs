@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param-pollingInterval
-description: "Reference the DataMiner connector protocol schema entry for pollingInterval attribute, including its documented structure, attributes, values, and constra."
+description: "Learn how to use the pollingInterval attribute to set an expected polling interval used to extend real-time trend graphs in a DataMiner connector protocol."
 ---
 
 # pollingInterval attribute

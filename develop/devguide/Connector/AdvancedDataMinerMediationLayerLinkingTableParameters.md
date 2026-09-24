@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerLinkingTableParameters
-description: "Describe the DataMiner connector development topic Linking table parameters, including its purpose, behavior, implementation guidance, and relevant constr."
+description: "Link table parameters across base and device protocols by defining matching table, primary key, display key, and optional data columns."
 ---
 
 # Linking table parameters

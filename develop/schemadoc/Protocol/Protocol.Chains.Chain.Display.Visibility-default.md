@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Display.Visibility-default
-description: "Reference the DataMiner connector protocol schema entry for default attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the default attribute sets chain visibility when none of its standalone conditions are met in a DataMiner connector protocol."
 ---
 
 # default attribute

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.Chain.Field.DiagramSorting
-description: "Reference the DataMiner connector protocol schema entry for DiagramSorting element, including its documented structure, attributes, values, and constraint."
+description: "Learn how the DiagramSorting element sets the field item sort criteria and direction for an EPM diagram in a DataMiner connector protocol."
 ---
 
 # DiagramSorting element

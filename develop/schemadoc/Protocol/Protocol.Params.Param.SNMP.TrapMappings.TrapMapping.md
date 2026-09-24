@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapMappings.TrapMapping
-description: "Reference the DataMiner connector protocol schema entry for TrapMapping element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the TrapMapping element matches SNMP trap bindings and determines the severity and value used to generate an alarm."
 ---
 
 # TrapMapping element

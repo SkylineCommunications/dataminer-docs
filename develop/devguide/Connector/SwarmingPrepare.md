@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: SwarmingPrepare
-description: "Describe the DataMiner connector development topic Preparing scripts and connectors for Swarming, including its purpose, behavior, implementation guidance."
+description: "Update scripts and connectors for Swarming by replacing legacy alarm references with globally unique AlarmTreeID-based references and current APIs."
 ---
 
 # Preparing scripts and connectors for Swarming

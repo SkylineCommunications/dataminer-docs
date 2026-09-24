@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedInterElementCommunicationDataDistribution
-description: "Describe the DataMiner connector development topic Data distribution, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Distribute standalone or table parameter values from one DataMiner element to matching elements, using fixed or dynamic protocol and connection criteria."
 ---
 
 # Data distribution

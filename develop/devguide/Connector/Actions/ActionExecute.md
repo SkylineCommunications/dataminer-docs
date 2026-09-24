@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionExecute
-description: "Describe the DataMiner connector development topic execute, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Use the execute action to place a group at the end of the execution queue, ahead of groups scheduled by a timer."
 ---
 
 # execute

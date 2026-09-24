@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: UIComponentsTextBox
-description: "Describe the DataMiner connector development topic Text box, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Define a DataMiner text box with a write parameter and optionally limit the number of characters accepted for string values."
 ---
 
 # Text box

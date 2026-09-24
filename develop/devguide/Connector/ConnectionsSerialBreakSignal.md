@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsSerialBreakSignal
-description: "Describe the DataMiner connector development topic Break signal, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Implement a serial break-signal flow with separate connections, open, lock, and unlock actions, break commands, and the commbreak pair option."
 ---
 
 # Break signal

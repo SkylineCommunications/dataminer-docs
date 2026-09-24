@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab
-description: "Reference the DataMiner connector protocol schema entry for Tab element, including its documented structure, attributes, values, and constraints."
+description: "Learn how the Tab element defines a search result tab for a table, with optional naming, display, and fields in a DataMiner connector protocol."
 ---
 
 # Tab element

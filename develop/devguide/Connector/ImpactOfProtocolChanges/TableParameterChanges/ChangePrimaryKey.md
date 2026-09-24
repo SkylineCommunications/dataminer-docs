@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangePrimaryKey
-description: "Describe the DataMiner connector development topic Change primary key, including its purpose, behavior, implementation guidance, and relevant constraints."
+description: "Assess how changing a table's primary key affects row identity, stored data, alarms, trending, relations, QActions, and external integrations."
 ---
 
 # Change primary key

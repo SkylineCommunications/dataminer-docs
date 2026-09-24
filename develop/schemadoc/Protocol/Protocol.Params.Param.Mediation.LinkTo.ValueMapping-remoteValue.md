@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Protocol.Params.Param.Mediation.LinkTo.ValueMapping-remoteValue
-description: "Reference the DataMiner connector protocol schema entry for remoteValue attribute, including its documented structure, attributes, values, and constraints."
+description: "Learn how the remoteValue attribute sets the value from the linked protocol in a mediation value mapping in a DataMiner connector protocol."
 ---
 
 # remoteValue attribute
