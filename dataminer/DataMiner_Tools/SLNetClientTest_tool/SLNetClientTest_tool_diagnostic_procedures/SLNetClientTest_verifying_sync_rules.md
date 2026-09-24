@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_verifying_sync_rules
+description: "Check active sync rules on a DMA in SLNetClientTest under Diagnostics > DMS > Config, then review cluster versions and extra known IP versions."
 ---
 
 # Verifying sync rules

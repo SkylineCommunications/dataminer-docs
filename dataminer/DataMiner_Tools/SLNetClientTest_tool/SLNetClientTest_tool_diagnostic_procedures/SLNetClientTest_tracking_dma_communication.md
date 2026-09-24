@@ -1,6 +1,7 @@
 ---
 uid: SLNetClientTest_tracking_dma_communication
 keywords: Cube follow
+description: "Track DMA communication with SLNetClientTest by following events, requests, responses, polling, or a DataMiner Cube session, then save a transcript."
 ---
 
 # Tracking DMA communication

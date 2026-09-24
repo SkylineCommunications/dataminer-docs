@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_retrieving_element_info
+description: "In SLNetClientTest, use GetLiteElementInfo to retrieve element data, filter by name or HostingAgentID, and include hidden aggregators."
 ---
 
 # Retrieving general information about elements

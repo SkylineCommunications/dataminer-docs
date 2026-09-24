@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_query_hint_paths
+description: "Query assembly resolution hint paths with SLNetClientTest for QAction dependencies from DataMiner 10.4.12/10.5.0, then inspect results by process."
 ---
 
 # Querying the assembly resolution hint paths
