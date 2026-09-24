@@ -1,5 +1,6 @@
 ---
 uid: Working_with_Alerter_pop-up_balloons
+description: "Use Alerter pop-up balloons to review alarm severity, element, parameter, and timestamp details, resize notifications, and take ownership of alarms."
 ---
 
 # Working with Alerter pop-up balloons

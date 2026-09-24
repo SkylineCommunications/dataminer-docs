@@ -1,5 +1,6 @@
 ---
 uid: Creating_SNMP_simulations
+description: "Create SNMP simulations by setting the device IP, port, and security, capturing data with Walk, and saving the file with Create File."
 ---
 
 # Creating SNMP simulations

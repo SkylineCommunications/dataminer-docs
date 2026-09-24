@@ -1,5 +1,6 @@
 ---
 uid: Setting_Alerter_startup_preferences
+description: "Configure Alerter startup preferences to launch with Windows and enable automatic login using your Windows account or custom credentials."
 ---
 
 # Setting your startup preferences for Alerter
