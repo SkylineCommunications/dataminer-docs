@@ -127,7 +127,7 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - **Run details**: Select a compatible [DataMiner Edge Node](xref:DataMiner_Edge) as the target, and configure the interval for each script.
 
-   - **Settings**: Configure the connector-defined values for the selected environment, such as a location, system environment, and authentication credentials. Authentication settings can use a token credential or a username and password credential from the Credentials Library. From DataMiner 10.6.11/10.7.0 onwards<!--RN 46371-->, they can also use community credentials or SNMPv3 credentials.
+   - **Settings**: Configure the connector-defined values for the element, such as a location, system environment, and authentication credentials. Authentication settings can use a token credential or a username and password credential from the Credentials Library. From DataMiner 10.6.11/10.7.0 onwards<!--RN 46371-->, they can also use community credentials or SNMPv3 credentials.
 
    > [!NOTE]
    > - If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
