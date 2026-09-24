@@ -21,7 +21,7 @@ This leads to erroneous indices such as `dms-alarms-2025-04-00001`, `dms-alarms-
 
 ## Fix
 
-A fix is being developed.<!-- RN 46168 --> We recommend waiting with any further Elasticsearch to OpenSearch migrations until the fix is available.
+Upgrade to DataMiner 10.6.0 [CU7]/10.6.10 before you migrate from Elasticsearch to OpenSearch.<!-- RN 46168 -->
 
 ## Workaround
 

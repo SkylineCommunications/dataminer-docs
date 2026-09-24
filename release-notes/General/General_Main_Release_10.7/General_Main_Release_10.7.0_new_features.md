@@ -98,11 +98,11 @@ A new `GetAvailableAutomationScriptsRequestMessage` now allows you to retrieve t
 > - *Modules > Automation > UI available*
 > - *Modules > Automation > Execute*
 
-#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
+#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
-Automation scripts now support adding credentials from the Credential Library directly in the script's XML code.
+Automation scripts now support adding credentials from the Credentials Library directly in the script's XML code.
 
 See the following example:
 
@@ -111,20 +111,22 @@ See the following example:
     <Credential id="1">
         <Name>MyCredential</Name>
         <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
+        <Type>Token</Type>
     </Credential>
 </Credentials>
 ```
 
 | Element | Attribute | Content |
 |---|---|---|
-| Credential | id | Any integer, unique per credential in the script |
-| Name | - | Unique user-defined string |
-| CredentialId | - | GUID of an existing credential from the Credential Library |
+| Credential | id | ID of the credential (integer, unique per script) |
+| Name | - | Name of the credential (string, unique per script) |
+| CredentialId | - | GUID of the linked credential from the Credentials Library |
+| Type | - | Type of credential: `UserNameAndPassword` or `Token` |
 
 > [!NOTE]
-> If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
-
-See also: [Automation: Credentials can now be added to automation scripts [ID 44282]](xref:Cube_Feature_Release_10.6.10#automation-credentials-can-now-be-added-to-automation-scripts-id-44282)
+>
+> - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
 #### SLNet subscription logging [ID 44361]
 
@@ -442,6 +444,18 @@ When an existing rate limit is changed, the updated limit is only applied after 
 
 If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
 
+#### DataMiner Installer now supports command-line installation [ID 45554]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+You can now install DataMiner from the command line by running the following command:
+
+```powershell
+DataMinerInstaller.exe Install <Path to firststartupchoiceconfig.json>
+```
+
+For more information about the configuration file, see [Unattended DataMiner installation](xref:Unattended_DM_installation).
+
 #### Automation: Added support for running scripts in separate SLAutomation.ScriptRunner processes by SolutionId [ID 45557]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->
@@ -501,3 +515,19 @@ Routes are validated more strictly before create and update:
 Route conflicts are also detected across all existing definitions. Any two templates that can match the same request path are rejected, including conflicts between literal and parameterized routes and between overlapping parameterized templates. If a route with `ticket/{id}` already exists, a new route like `ticket/{ticketId}` will be rejected.
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
+
+#### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In order to notify client applications when the measurement point cycle changes, a new spectrum parameter has been added: `SPA_SPARAM_MEASPOINT_CYCLE` (PID 64227).
+
+This will especially improve synchronization in shared sessions, keeping measurement point cycle updates aligned across connected clients.
+
+### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
+
+This request requires a CloudGateway version that supports it.

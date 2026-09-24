@@ -258,6 +258,10 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes
+            topicUid: KI_SLAutomation_ScriptRunner_missing_assemblies
+          - name: Swarmed scheduled task executes incorrect action after editing
+            topicUid: KI_Swarmed_scheduled_task_executes_incorrect_action
           - name: Data loss after Elasticsearch to OpenSearch migration
             topicUid: KI_Data_loss_after_ES_to_OS_migration
           - name: SLAutomation crash during DataMiner startup
@@ -300,6 +304,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Microsoft Platform 6.0.0.x elements remain in timeout
+            topicUid: KI_Microsoft_Platform_elements_in_timeout
           - name: Not possible to change Failover configuration after migration to BrokerGateway
             topicUid: KI_Failover_configuration_cannot_be_changed_with_BrokerGateway
           - name: SLSNMPAgent RTEs when SNMP manager is not responding

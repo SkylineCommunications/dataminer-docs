@@ -1,5 +1,6 @@
 ---
 uid: Frequently_asked_questions_about_user_group_settings
+description: "Find out the answers to a number of frequently asked questions about user group settings like 'Where can I find the clientsettings.dat files?'."
 ---
 
 # Frequently asked questions about user group settings

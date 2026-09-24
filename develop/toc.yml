@@ -956,6 +956,8 @@ items:
         topicUid: Launching_and_attaching_interactive_Automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
+      - name: Using credentials in an automation script
+        topicUid: Using_credentials_in_an_automation_script
   - name: GQI extensions
     topicUid: GQI_Extensions
     items:
@@ -1052,6 +1054,12 @@ items:
             topicUid: GQI_GQIServiceAttribute
           - name: GQISortDirection
             topicUid: GQI_GQISortDirection
+          - name: UsernamePasswordCredential
+            topicUid: GQI_UsernamePasswordCredential
+          - name: TokenCredential
+            topicUid: GQI_TokenCredential
+          - name: ICredentialProvider
+            topicUid: GQI_ICredentialProvider
           - name: GQIStaticColumnsAttribute
             topicUid: GQI_GQIStaticColumnsAttribute
           - name: GQIUserServiceAttribute
@@ -1134,6 +1142,8 @@ items:
             topicUid: GQI_TimeRangeMetadata
       - name: Extension API
         topicUid: GQI_Extension_API
+      - name: Using credentials
+        topicUid: GQI_Extensions_Credentials
       - name: Services
         topicUid: GQI_Extensions_Services
       - name: Retrieving data from DataMiner
@@ -1607,6 +1617,8 @@ items:
       topicUid: Skyline.DataMiner.Scripting
     - name: Skyline.DataMiner.Automation
       topicUid: Skyline.DataMiner.Automation
+    - name: Skyline.DataMiner.Automation.Credentials
+      topicUid: Skyline.DataMiner.Automation.Credentials
     - name: Skyline.DataMiner.Core.DataMinerSystem.Common
       topicUid: Skyline.DataMiner.Core.DataMinerSystem.Common
     - name: Skyline.DataMiner.Core.DataMinerSystem.Automation
@@ -1873,6 +1885,8 @@ items:
     - name: DMS notify types
       topicUid: SLDmsNotifyTypes
       items:
+      - name: DMS_GET_INFO
+        topicUid: DMS_GET_INFO
       - name: DMS_SET_PARAMETER
         topicUid: DMS_SET_PARAMETER
       - name: DMS_GET_ELEMENT_NAME
@@ -4109,6 +4123,20 @@ items:
         topicUid: DMSScript.Author
       - name: CheckSets
         topicUid: DMSScript.CheckSets
+      - name: Credentials
+        topicUid: DMSScript.Credentials
+        items:
+        - name: Credential
+          topicUid: DMSScript.Credentials.Credential
+          items:
+          - name: '@id'
+            topicUid: DMSScript.Credentials.Credential-id
+          - name: Name
+            topicUid: DMSScript.Credentials.Credential.Name
+          - name: CredentialId
+            topicUid: DMSScript.Credentials.Credential.CredentialId
+          - name: Type
+            topicUid: DMSScript.Credentials.Credential.Type
       - name: Interactivity
         topicUid: DMSScript.Interactivity
       - name: Description
@@ -4865,8 +4893,6 @@ items:
             topicUid: MaintenanceSettings.Logging.Element-slowActionWarnTime
         - name: MaxSize
           topicUid: MaintenanceSettings.Logging.MaxSize
-      - name: NATSForceManualConfig
-        topicUid: MaintenanceSettings.NATSForceManualConfig
       - name: Network
         topicUid: MaintenanceSettings.Network
         items:
@@ -5104,6 +5130,8 @@ items:
           topicUid: MaintenanceSettings.SLNet.MessageThrottlingPeriodicUpdate
         - name: MessageThrottlingThreshold
           topicUid: MaintenanceSettings.SLNet.MessageThrottlingThreshold
+        - name: NATSForceManualConfig
+          topicUid: MaintenanceSettings.SLNet.NATSForceManualConfig
         - name: NicsToCheckOnFailover
           topicUid: MaintenanceSettings.SLNet.NicsToCheckOnFailover
         - name: NonElementProtocol
@@ -7488,6 +7516,16 @@ items:
             items:
             - name: Creating a test package
               topicUid: QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages
+        - name: QAOps Operator
+          items:
+          - name: Creating a QAOps configuration
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration
+          - name: Updating a QAOps configuration
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Update_A_Configuration
+          - name: Adding self-hosted DataMiner servers
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers
+          - name: Creating and managing test suites
+            topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:

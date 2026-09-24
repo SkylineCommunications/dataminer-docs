@@ -2,10 +2,7 @@
 uid: General_Feature_Release_10.6.10
 ---
 
-# General Feature Release 10.6.10 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# General Feature Release 10.6.10
 
 > [!TIP]
 >
@@ -34,13 +31,10 @@ Before you upgrade to this DataMiner version:
 
 The following changes may have an impact on your system, so please make sure to check these before you upgrade:
 
+- [DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]](#dataminer-key-vault-id-44075-id-44349-id-44350-id-44351-id-44352-id-44353-id-44354-id-44701-id-44702-id-44911-id-46047-id-46061)
 - [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
 
 #### DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]
 
@@ -65,11 +59,11 @@ Key enhancements include:
 
 <!-- See also Cube RNs [ID 45704] [ID 45997] -->
 
-#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282]
+#### Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
-Automation scripts now support adding credentials from the Credential Library directly in the script's XML code.
+Automation scripts now support adding credentials from the Credentials Library directly in the script's XML code.
 
 See the following example:
 
@@ -78,20 +72,32 @@ See the following example:
     <Credential id="1">
         <Name>MyCredential</Name>
         <CredentialId>8d15e7d8-f8f6-41f6-985c-fddbd3ea94ae</CredentialId>
+        <Type>Token</Type>
     </Credential>
 </Credentials>
 ```
 
 | Element | Attribute | Content |
 |---|---|---|
-| Credential | id | Any integer, unique per credential in the script |
-| Name | - | Unique user-defined string |
-| CredentialId | - | GUID of an existing credential from the Credential Library |
+| Credential | id | ID of the credential (integer, unique per script) |
+| Name | - | Name of the credential (string, unique per script) |
+| CredentialId | - | GUID of the linked credential from the Credentials Library |
+| Type | - | Type of credential: `UserNameAndPassword` or `Token` |
 
 > [!NOTE]
-> If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+>
+> - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
-See also: [Automation: Credentials can now be added to automation scripts [ID 44282]](xref:Cube_Feature_Release_10.6.10#automation-credentials-can-now-be-added-to-automation-scripts-id-44282)
+## New features
+
+#### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+In order to notify client applications when the measurement point cycle changes, a new spectrum parameter has been added: `SPA_SPARAM_MEASPOINT_CYCLE` (PID 64227).
+
+This will especially improve synchronization in shared sessions, keeping measurement point cycle updates aligned across connected clients.
 
 ## Changes
 
@@ -102,6 +108,24 @@ See also: [Automation: Credentials can now be added to automation scripts [ID 44
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The Cassandra Cluster Migrator tool (`SLCCMigrator.exe`), which migrates data to Cassandra Cluster from MySQL or Cassandra Single, now also supports migrating credential types that inherit from `ACredentialConfig`, i.e., all credential types that can be created in the Credentials Library.
+
+#### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Because of a number of enhancements, overall performance has increased when upgrading the ModelHost DxM.
+
+#### ModelHost DxM has been upgraded to Microsoft .NET 10 [ID 45988]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The ModelHost DxM has been upgraded to Microsoft .NET 10.
+
+#### APIGateway: SLNet authentication [ID 46055]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
 
 #### UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10 [ID 46066]
 
@@ -144,6 +168,37 @@ The UserDefinableApiEndpoint DxM now owns the IIS rewrite rule that reroutes req
 
 If the rewrite rule is missing, disabled, or no longer matches the expected routing behavior, the DxM will restore it with the correct configuration. This ensures that user-defined API requests keep working even if the IIS configuration has been changed outside the installer.
 
+#### Scheduler: SkipStartedInformationEvent is now returned when retrieving scheduled tasks [ID 46161]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When you retrieve scheduled tasks using a `GetInfoMessage` with type set to "SchedulerTasks", the returned `AutomationScriptInstance` will now include the `SkipStartedInformationEvent` property.
+
+This will allow you to verify whether the property was enabled when the scheduled task was saved.
+
+#### CloudStorageMigrationFinalize script will now migrate all credentials stored in the Credentials Library [ID 46204]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The CloudStorageMigrationFinalize script, which should be run when [migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), will now migrate all credentials stored in the Credentials Library.
+
+#### User-Defined APIs: Optional notice generation when token rate limits are reached [ID 46244]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+On `ApiToken` objects, you can now enable notice generation when a token reaches its configured rate limit by setting `ApiTokenRateLimit.GenerateNotice` to `true`.
+
+When enabled, one notice can be generated per token when its rate limit is reached. Notices are not cleared automatically. If you clear a notice manually and the token hits its rate limit again, a new notice can be generated.
+
+#### Security enhancements [ID 46368] [ID 46411] [ID 46510] [ID 46515]
+
+<!-- 46368: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46411: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46510: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46515: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]
@@ -182,11 +237,10 @@ SLAutomation could deadlock when many subscripts were launched in a short time. 
 #### DataMiner upgrade: Legacy NAS and NATS services and files would not be removed [ID 46094]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
-<!-- Not added to MR 10.7.0 -->
 
-When you upgraded to DataMiner 10.6, up to now, the upgrade could leave behind the legacy NAS and NATS services, the `C:\Skyline DataMiner\NATS` folder, and the `NATSRepair.exe` tool.
+Up to now, a DataMiner upgrade could leave behind the legacy NAS and NATS services as well as the `C:\Skyline DataMiner\NATS` folder.
 
-From now on, a new upgrade action named `CleanupNatsServices` removes these legacy services and files after a DataMiner Agent has been upgraded to a 10.6 version. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
+From now on, on systems that have already been upgraded successfully to a DataMiner 10.6 version at some point in time, a new upgrade action named `CleanupNatsServices` will make sure these legacy services and that folder are removed. This ensures that the BrokerGateway-managed NATS solution can be used without the obsolete components.
 
 #### SLAutomation could hang during shutdown [ID 46123]
 
@@ -204,6 +258,14 @@ Up to now, the *DataMiner Agent Minimum Requirements* BPA test would incorrectly
 
 This issue has now been fixed. The test now checks logical CPU cores.
 
+#### Elasticsearch re-indexing tool did not preserve the correct name for the newest index [ID 46168]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+When the Elasticsearch re-indexing tool processed TTL rollover indices, up to now, it would not preserve the provided index name on the newest empty index. As a result, re-indexing could lead to data loss and the generation of erroneous indices.
+
+The re-indexing tool has been updated to Microsoft .NET 10 and now forces a rollover for TTL rollover indices when re-indexing is complete. This ensures that the newest empty index retains the correct provided name and is marked as the write index.
+
 #### Invalid cleared correlated alarms could be generated when DVE linking changed [ID 46174]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
@@ -219,3 +281,33 @@ Custom applications using the SLNet gRPC client could fail to establish a connec
 As a result, the connection could incorrectly be reported as `APIGateway is unavailable`.
 
 From now on, invalid User-Agent values are skipped, so the health check can continue and the gRPC connection can be established correctly.
+
+#### ManagerStore: Fixed limit logic when adding objects from the DatabaseCacheLayer [ID 46205]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+When DOM reads were executed, the result from the database could be enriched with objects that were still present in the `DatabaseCacheLayer`. This cache keeps recently written objects available before they are fully indexed in the database, but in some cases it did not correctly keep the configured query limit in mind when paged reads were carried out.
+
+This could cause more objects than expected to be returned in the result, especially when data was still available in the cache for a later page. The limit is now reapplied correctly when objects are added from the `DatabaseCacheLayer`, and the number of objects already returned on previous pages is tracked correctly.
+
+This fixes the issue for paged DOM reads with a configured limit, ensuring the returned result always respects the requested limit even when cached objects are added to the response.
+
+#### Spectrum preset update events did not work when the preset name contained a dot [ID 46241]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+Up to now, the spectrum preset update event on parameter `SPA_SPARAM_PRESET_UPDATE` (PID 64216) could fail when the preset name contained a dot (`.`).
+
+#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
+
+<!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
+
+When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
+
+From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
+
+#### Persistent element timeout caused by failed WMI actions [ID 46396]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+Up to now, a WMI action that was not included in a poll group could fail. For example, this could occur when a QAction updated a parameter, and a trigger on that parameter executed a WMI action. As a result, the element would go into timeout and be unable to recover from the timeout status. This issue has now been fixed.

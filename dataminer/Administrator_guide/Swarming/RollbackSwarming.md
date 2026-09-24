@@ -1,5 +1,6 @@
 ---
 uid: SwarmingRollback
+description: "Follow this guide to roll back Swarming by restoring element XML files from backup or reimporting exported elements."
 ---
 
 # Rolling back Swarming

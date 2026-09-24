@@ -14,7 +14,6 @@ dataminer.services is a cloud-based extension of the DataMiner System. Connectin
 - [Remote access](xref:About_Remote_Access) to the webpages.
 - [Sharing](xref:About_the_Sharing_app) of dashboards.
 - Connector deployments from the [Catalog](xref:About_the_Catalog_app)
-- [ChatOps](xref:About_ChatOps)
 - [Streamlined support services](xref:RemoteLogCollection)
 - ...
 

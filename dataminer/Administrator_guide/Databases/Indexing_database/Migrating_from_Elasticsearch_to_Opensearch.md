@@ -6,11 +6,14 @@ keywords: re-indexer
 
 # Migrating from Elasticsearch to OpenSearch
 
-From DataMiner 10.4.0 [CU2]/10.4.4 onwards<!-- RN 37994 -->, a tool is available that allows you to migrate from Elasticsearch 6.8.22 to OpenSearch 2.11.1.
+From DataMiner 10.6.0 [CU7]/10.6.10 onwards<!-- RN 46168 -->, a tool is available that allows you to migrate from Elasticsearch 6.8.22 to OpenSearch 2.11.1.
 
 To use this tool, follow the instructions below:
 
-1. Stop all Agents in the DMS.
+1. Stop all DataMiner Agents in the DMS.
+
+   > [!CAUTION]
+   > To prevent data loss, it is very important that you stop all Agents in the DMS before you continue with this procedure. They must not be started up again until the migration is completed.
 
 1. [Take a snapshot of the Elasticsearch 6.8.22 cluster](#take-a-snapshot-of-the-elasticsearch-6822-cluster).
 
@@ -24,18 +27,12 @@ To use this tool, follow the instructions below:
 
 1. Restart all DataMiner Agents in the DMS.
 
-> [!CAUTION]
-> To prevent data loss, all Agents of the DMS must be stopped during this procedure. They must not be started up again until the migration is completed.
-
-> [!NOTE]
-> As of DataMiner 10.3.0 [CU16], 10.4.0 [CU4], and 10.4.7 [CU0], an improved version of the tool is available, which among others features better logging, as well as the possibility to retry failed indexes (once the cause of the failure has been resolved) using the following command-line option: `ReIndexElasticSearchIndexes.exe [-R <path to failed indexes file>]`.<!-- RN 39614 -->
-
-> [!TIP]
-> See also: [Taking a snapshot of one Elasticsearch cluster and restoring it to another](xref:Taking_snapshot_Elasticsearch_cluster_and_restoring_to_different_cluster)
+> [!IMPORTANT]
+> Prior to DataMiner 10.6.0 [CU7]/10.6.10, a different version of the tool is available that should **not** be used, as it can introduce an issue in the indexing database. Consequently, to migrate to OpenSearch, you will first need to upgrade to DataMiner 10.6.0 [CU7]/10.6.10.
 
 ## Take a snapshot of the Elasticsearch 6.8.22 cluster
 
-Using Kibana, you can take a snapshot in the following way:
+Using [Kibana](https://www.elastic.co/kibana), you can take a snapshot in the following way:
 
 1. Check the *path.repo* configuration in *elasticsearch.yml*.
 
@@ -109,7 +106,15 @@ Using Kibana, you can take a snapshot in the following way:
 
 ## Restore the snapshot on an Elasticsearch 7.10.0 cluster
 
-Using Kibana, you can restore the snapshot in the following way:
+1. First remove all complexity and character limits on regular expressions used within Elasticsearch by adding the following line to your Elasticsearch 7.10 configuration:
+
+   ```txt
+   script.painless.regex.enabled: true
+   ```
+
+   This will ensure that the reindexing tool will work correctly.
+
+1. Open Kibana, as you will need to use it for the next steps of this procedure.
 
 1. Check the *path.repo* configuration in *elasticsearch.yml*.
 
@@ -194,7 +199,7 @@ Using Kibana, you can restore the snapshot in the following way:
    | -Password or -P | The user password |
    | -DBPrefix or -D | The database prefix, to be provided in case a custom database prefix is used instead of the default `dms-` prefix.<br>If you do not provide a prefix, the default `dms-` will be used. |
    | -TLSEnabled or -T | Whether or not TLS is enabled for this ElasticSearch database.<br>Values: true or false. Default: false |
-   | -RetryFile or -R &lt;path to failed indexes file&gt; | File path for a file containing failed indexes, to be provided in case the reindexer should retry reindexing previously failed indexes (supported from 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7 [CU0] onwards). |
+   | -RetryFile or -R &lt;path to failed indexes file&gt; | File path for a file containing failed indexes, to be provided in case the reindexer should retry reindexing previously failed indexes<!-- RN 39614 -->. |
 
    > [!NOTE]
    > In case the re-indexing fails, a file `<runId>_failed.json` will be created in the folder where the tool is located, listing all failed indexes. This file can be used with the `-R <path to failed indexes file>` option to retry the failed indexes. To find out why these indexes failed, check the log file created in the *logging* folder located in the folder where the tool is available. Before retrying the re-indexing, make sure the failures are resolved.

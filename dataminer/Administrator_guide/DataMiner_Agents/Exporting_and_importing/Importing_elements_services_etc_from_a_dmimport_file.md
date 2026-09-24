@@ -26,12 +26,14 @@ To import a .dmimport file:
 
 1. In the *Structure to be imported* section, clear the selection from any items you do not want to include in the import.
 
-   > [!NOTE]
-   > If you have selected to include a redundancy group, any elements within that group will automatically be included in the import. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included.
+   If you have selected to include a redundancy group or service, any elements within it will automatically be included in the import. Similarly, if you have selected an SLA, the SLA service and its service children will automatically be included. If you have selected a service template, all services generated from that template will automatically be included, along with any elements used by those services.
 
 1. Click *Import*.
 
 1. If necessary, resolve any conflicts concerning names and/or IDs.
+   
+   > [!IMPORTANT]
+   > A .dmimport package retains the DataMiner Agent ID and the object IDs of the system it was exported from. If you import the package into a DMS that uses the same DataMiner Agent IDs as the source system (for example, a staging system cloned from production), imported objects can take over the IDs of objects that already exist in the target system. If you delete the imported objects afterwards, this will remove the original objects as well.
 
 1. In the *Import* window, check the progress messages until the import is ready, and click *Finish*.
 

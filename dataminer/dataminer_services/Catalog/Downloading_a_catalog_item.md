@@ -1,6 +1,7 @@
 ---
 uid: Downloading_a_catalog_item
 reviewer: Alexander Verkest
+description: "Download a Catalog item version with the API by sending a GET request with an organization key that has Download Catalog versions permission."
 ---
 
 # Downloading a Catalog item with the API
@@ -24,7 +25,7 @@ This page also provides a quick way to execute the call: Expand the "/api/key-ca
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the download call on the production Catalog.
 
-The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://github.com/Azure/AutoRest) to generate client code.
 
 ## HTTP method
 

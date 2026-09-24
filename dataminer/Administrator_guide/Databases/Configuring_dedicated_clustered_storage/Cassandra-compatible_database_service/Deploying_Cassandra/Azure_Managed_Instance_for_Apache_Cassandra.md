@@ -20,10 +20,7 @@ You will first need to [create your Azure Managed Instance for Apache Cassandra]
 
 ## Supported Cassandra versions
 
-DataMiner supports the same Cassandra versions as for an on-premises cluster. However, only the following versions are available on Azure:
-
-- Cassandra 3.11
-- Cassandra 4.0
+DataMiner supports the same Cassandra versions as for an on-premises cluster.
 
 ## Creating your Azure Managed Instance for Apache Cassandra
 

@@ -5,7 +5,7 @@ description: Discover how to create DataMiner tickets directly from Cube alarms 
 
 # Manually creating a ticket in DataMiner Cube
 
-Tickets can be created directly from the DataMiner Cube Alarm Console. This allows operators to quickly create tickets linked to alarms without leaving the monitoring environment, based on an interactive Automation script that makes use of the Ticketing API Helper.
+Tickets can be created directly from the DataMiner Cube Alarm Console. This allows operators to quickly create tickets linked to alarms without leaving the monitoring environment, based on an interactive automation script that makes use of the Ticketing API Helper.
 
 The tickets will be **automatically linked** to the relevant alarms, elements, and/or services. If the [Asset Manager](xref:Asset_Manager) app is installed, they will also be linked to the relevant assets.
 
@@ -44,4 +44,4 @@ To manually create a ticket for an alarm in Cube:
    ![Ticketing app with new ticket based on the right-clicked alarm](~/solutions/images/Ticketing_Creation_result.png)
 
 > [!TIP]
-> Ensure that alarm properties are displayed in the Alarm Console so users can view the ticket ID and status for each alarm in DataMiner Cube.
+> Ensure that the related alarm properties (*Ticket ID* and *Incident Status*) are displayed in the Alarm Console so users can view this ticket-related information for each alarm in DataMiner Cube.

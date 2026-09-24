@@ -7,9 +7,9 @@ keywords: Cassandra Single
 # Separate Cassandra setup with indexing
 
 > [!IMPORTANT]
-> This architecture is currently still supported, but it is **not recommended**. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
+> Support for this architecture ends in DataMiner 10.8.x. We recommend using [Storage as a Service (STaaS)](xref:STaaS) instead. For details, see [Software support lifecycles](xref:Software_support_life_cycles).
 >
-> Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, we recommend using OpenSearch instead.
+> This setup cannot be used with an Elasticsearch version higher than 6.8. DataMiner support for this ends in DataMiner 10.7.x, so if you need to continue using self-hosted storage, we recommend using OpenSearch instead.
 
 With this architecture, **each DMA has its own Cassandra database** (which can be a cluster with several nodes). However, only one OpenSearch/Elasticsearch cluster is used for the entire DMS.
 

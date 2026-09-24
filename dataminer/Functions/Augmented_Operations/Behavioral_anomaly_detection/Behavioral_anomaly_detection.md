@@ -6,6 +6,14 @@ uid: Behavioral_anomaly_detection
 
 DataMiner Analytics can detect the changes in the behavior of a trend, also known as "change points", and it will identify whether such change points are anomalous. Operators are alerted to these change points with a [special indication in trend graphs](#change-points-in-trend-graphs) and with [suggestion events or alarms in the Alarm Console](#behavioral-anomaly-detection-in-the-alarm-console).
 
+Watch the short video below for a quick overview of behavioral anomaly detection, or continue reading for detailed documentation.
+
+<div style="width: 100%; max-width: 800px;">
+  <video style="width: 100%; aspect-ratio: 16 / 9; height: auto;" controls>
+    <source src="~/dataminer/images/BAD.mp4" type="video/mp4">
+  </video>
+</div>
+
 ## Types of change points
 
 The following kinds of change points can be detected:

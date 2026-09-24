@@ -10,8 +10,6 @@ items:
         topicUid: Business_intelligence_tutorials
       - name: Catalog tutorials
         topicUid: Catalog_Tutorials
-      - name: ChatOps Custom Command tutorials
-        topicUid: ChatOps_Tutorials
       - name: CI/CD tutorials
         topicUid: CICD_Tutorials
       - name: Connectivity Framework (DCF) tutorials

@@ -9,6 +9,63 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 22 September 2026 - Enhancement - Admin - Create support tickets for managed organizations
+
+You can now create support tickets on behalf of the organizations you manage. After a ticket is created, a confirmation notification will show the ticket number.
+
+The description limit for tickets has also been increased from 2,000 to 5,000 characters.
+
+### 22 September 2026 - Fix - Connection Management - DMS not registered for STaaS after cloud connection
+
+When you selected a STaaS region while connecting a DMS to dataminer.services in the Connection Management app, the DMS was connected to dataminer.services but was not registered for STaaS. This prevented the DMS from starting correctly. This issue has been resolved.
+
+### 22 September 2026 - Enhancement - Catalog - Improved clickability of versions
+
+The clickable area of a Catalog item version now covers the full version entry, making versions easier to select.
+
+### 22 September 2026 - Fix - Catalog - Double scrollbar on description tab
+
+On the description tab of a Catalog item, a second scrollbar could be displayed unnecessarily. This issue has been resolved.
+
+### 22 September 2026 - Fix - Admin - DMS upgrade events mixed up when switching between systems
+
+When switching between the DMS Overview pages of several DataMiner Systems in the Admin app during an upgrade, events from the previously selected systems could remain active and get mixed up with events from the newly selected system. This issue has been resolved.
+
+### 22 September 2026 - New feature - Catalog - Custom tags for individual versions
+
+Custom tags can now be added, updated, and removed for individual Catalog item versions. These tags are displayed alongside version range tags on recommended versions.
+
+### 22 September 2026 - Enhancement - Admin - Improved DxM version sorting
+
+DxM versions are now sorted according to semantic version precedence.
+
+### 27 August 2026 - New feature - Catalog - API calls authenticated by organization key
+
+It is now possible to update Catalog metadata for a specific version or version range using two new API calls authenticated by organization key. For detailed API documentation, refer to the [Swagger UI](https://global.dataminer.services/swagger/catalogapi-web/index.html).
+
+### 27 August 2026 - Enhancement - Admin - DMS API key permissions granularity
+
+From now on, API keys on DMS level will also have more permission granularity, similar to the organization API keys. All existing DMS API keys will keep working as before with the same permissions they already had. New permissions will not be assigned to existing DMS API keys. See [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
+
+### 27 August 2026 - New feature - Admin - Setting to toggle automatic login for remote access
+
+A new setting has been added in the Admin app that allows toggling automatic login for remote access. Toggling the automatic login off will require users to log in manually instead of using the linked DataMiner account by default. See [Controlling remote access](xref:Controlling_remote_access).
+
+### 27 August 2026 - Fix - Remote access - Logout from web apps not working correctly when using remote access
+
+When you logged out from the web apps while accessing them remotely, the automatic login could interfere and cause you to be logged in again. This issue has now been resolved.
+
+### 27 August 2026 - New feature - Catalog - Filter and search version history
+
+On the *Versions* tab of a Catalog item, it is now possible to filter and search the version history:
+
+- **Filter version history**: Filter ranges and versions by metadata, such as firmware version or version dependencies (e.g., minimum DataMiner version), with a search box and a *show more* option for long lists of options.
+- **Cleaner results**: Ranges, versions, and recommended versions that do not match the selected filters are hidden automatically.
+
+### 27 August 2026 - Fix - Admin - HTML-escaped characters shown in audit detail values
+
+In the audit detail view of the Admin app, values were HTML-escaped before being displayed, so for example a character such as `>` was shown as `&gt;` instead of `>`. Since these values are shown in input fields, which display their content as plain text, the escaping was not needed. This issue has been resolved.
+
 ### 12 August 2026 - New feature - Catalog - Catalog item range Markdown support
 
 Catalog item ranges now support Markdown.

@@ -1,19 +1,35 @@
 ---
 uid: Installing_the_DataMiner_PTP_app
-description: Deploy the PTP package from the DataMiner Catalog, set up the app, and configure all necessary settings.
+description: "Deploy the PTP package from the DataMiner Catalog, set up the app, and configure all necessary settings."
 ---
 
 # Installing the PTP app
+
+## Prerequisites
+
+Before deploying the PTP package:
+
+1. Ensure that the devices you plan to monitor are already created and configured as elements in DataMiner.
+
+   Note that configuring alarm templates for these elements is something you will need to take care of yourself, as DataMiner PTP does not manage or deploy alarm templates automatically.
+
+1. Verify that your devices are supported by the solution.
+
+   For the definitive list of supported vendor connectors, see [Skyline PTP Technical](https://docs.dataminer.services/connector/doc/Skyline_PTP_Technical.html).
+
+1. Make sure you have at least one **Grandmaster** clock and one additional device configured to act as the **PTP probe** before the solution can be functional.
+
+1. Check the release notes of the PTP version you want to deploy (e.g., [PTP 2.0.0](xref:PTP_2.0.0)) and make sure any mentioned prerequisites are met.
 
 ## Deploying the package
 
 To deploy or upgrade the PTP app:
 
-### [From DataMiner PTP 1.1.4 onwards](#tab/tabid-1)
+### [From DataMiner PTP 1.1.4 onwards](#tab/deploy-1-1-4)
 
 Deploy the [PTP package](https://catalog.dataminer.services/details/9c5eb0a1-43bc-42d2-bca2-de4982ee57d7) from the Catalog.
 
-### [Prior to DataMiner PTP 1.1.4](#tab/tabid-2)
+### [Prior to DataMiner PTP 1.1.4](#tab/deploy-legacy)
 
 In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and install the package in the same manner as a [DataMiner upgrade](xref:Upgrading_a_DataMiner_Agent_in_System_Center).
 
@@ -25,6 +41,41 @@ In DataMiner Cube, go to *Apps* > *System Center* > *Agents* > *Manage*, and ins
 ## Setup and configuration
 
 To set up and configure the DataMiner PTP app:
+
+### [From DataMiner PTP 2.0.0 onwards](#tab/setup-2-0)
+
+From version 2.0.0 onwards, all initial setup is performed directly within the PTP custom web app through built-in configuration wizards, without requiring the manual execution of automation scripts.
+
+To complete the first-time setup:
+
+1. In a web browser, navigate to `https://[Your DMA name]/public/ptp/`.
+
+   Because no domains exist yet, an onboarding overlay will be displayed prompting you to set up your first PTP domain.
+
+1. Specify a name for the PTP domain and select the corresponding DataMiner view.
+
+   The domain element and service will be placed in the selected view. Users who need to access the PTP Monitor web app must have read permissions for this view and its elements.
+
+1. Select the elements to include in the domain.
+
+   Only elements that are supported by the DataMiner PTP will be displayed.
+
+1. Assign a role to each device (*Grandmaster*, *Boundary Clock*, *Transparent Clock*, or *Follower Clock*).
+
+   A default role is automatically preselected based on the connector of the element.
+
+1. Select at least one preferred grandmaster clock.
+
+1. Select the device that will act as the PTP probe.
+
+   The PTP probe will identify the active grandmaster in the network.
+
+Once the initial setup is finished, the in-connector mediation layer in the *Skyline PTP* connector will immediately begin processing data for the configured devices.
+
+> [!NOTE]
+> To add additional PTP domains, manage existing domains, or adjust device roles at any time, use the *Admin* page in the app.
+
+### [Prior to DataMiner PTP 2.0.0](#tab/setup-legacy)
 
 1. In DataMiner Cube, go to *Apps* > *Automation*.
 
@@ -58,11 +109,11 @@ To set up and configure the DataMiner PTP app:
 
 1. On the following page, assign a role to each of the PTP elements you selected in the previous step, and click *Next*.
 
-   By default, all elements are assigned the “slave” role. Go through the entire list of elements using the *Next* and *Prev* buttons and, if necessary, change their role by selecting another checkbox.
+   By default, all elements are assigned the follower role (labeled "slave" in earlier versions). Go through the entire list of elements using the *Next* and *Prev* buttons and, if necessary, change their role by selecting another checkbox.
 
 1. On the following page, select at least one preferred grandmaster clock, and click *Next*.
 
-1. On the following page, optionally indicate which slave devices should act as PTP analyzers, and click *Next*.
+1. On the following page, optionally indicate which follower devices should act as PTP analyzers, and click *Next*.
 
 1. On the following page, select the device that will act as PTP probe, and click *Next*.
 
@@ -71,3 +122,5 @@ To set up and configure the DataMiner PTP app:
 1. On the last page of the wizard, check the overview, and click *Confirm*.
 
 1. When the configuration has finished, which may take some time, click *Finish*, and on the next page, click *Close*.
+
+***

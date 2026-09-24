@@ -116,12 +116,12 @@ You can follow the steps below or watch this short video, which shows you how to
      > [!NOTE]
      > Clearing the selection from this checkbox can for example be of use for an element with multiple connections. If a particular connection should not influence the timeout state of the element, then clear the checkbox for that connection. If the checkbox is selected for all connections, the element will be in timeout as soon as one of the connections fails.
 
-   - **The element goes into timeout state when it is not responding for (sec)**: When the element fails to respond to commands for longer than the number of seconds specified in this setting, the DMA will put the element in a timeout state. The specified number must be between 0 and 120.
+   - **The element goes into timeout state when it is not responding for (sec)**: When the connection fails to respond to commands for longer than the number of seconds specified in this setting, the DMA will put the element in a timeout state. The maximum value for this setting is 86400 (i.e., 24 hours).
 
      Note that this setting does not account for the number of retries. To ensure that the element has enough time to complete all retry attempts before declaring a timeout, you should therefore choose a value larger than **Timeout of a single command × (Number of retries + 1)**.
 
-     > [!NOTE]
-     > Prior to DataMiner 10.2.9/10.3.0, the maximum timeout value for this setting is 2 minutes (i.e., 120 seconds). From DataMiner 10.2.9/10.3.0 onwards, the maximum value is extended to 24 hours.
+     > [!IMPORTANT]
+     > When an element goes in timeout, it will remain in timeout until **all** its connections are responding again.
 
 1. Specify the following advanced element settings if necessary:
 
@@ -163,6 +163,16 @@ You can follow the steps below or watch this short video, which shows you how to
    - **Block Swarming**: Available from 10.5.5/10.6.0 onwards<!--RN 42535 + 42536-->. See [Blocking elements from being swarmed](xref:SwarmingElements#blocking-elements-from-being-swarmed).
 
    - **Element state**: Select the initial state of the element in this selection box. By default this will be set to “Active”.
+
+1. From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46287-->, configure the following additional pages, if necessary:
+
+   - On the *Settings* page, configure any connector-defined settings.
+
+     If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
+
+   - On the *Run-on details* page, select a compatible DataMiner Edge node for connectors that contain scripts, and configure the interval for each script.
+
+   These pages are available depending on the selected connector.
 
 1. Click *Next* and specify the view(s) to which you want to link the element.
 

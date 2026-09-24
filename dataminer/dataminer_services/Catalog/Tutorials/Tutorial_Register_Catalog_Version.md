@@ -1,6 +1,7 @@
 ---
 uid: Tutorial_Register_Catalog_Version
 reviewer: Alexander Verkest
+description: "Learn how to register a new connector version in the Catalog with a POST API request, organization key, and multipart .dmprotocol package."
 ---
 
 # Registering a new version of a connector in the Catalog

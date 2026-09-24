@@ -71,7 +71,12 @@ The offload rate for trend data and alarm data can be configured in System Cente
 
    - **Remote table name**: Allows you to customize the name of the table containing this data in the offload database. The default name is *DataAvg*.
 
-1. To offload **snapshots** (i.e., parameter information for parameters for which the snapshot option has been set in the protocol), select *Parameter value* and *Enable snapshot offload*. The snapshot offloads can then be further fine-tuned as follows:
+1. To offload **snapshots**, select *Parameter value* and *Enable snapshot offload*.
+
+   > [!IMPORTANT]
+   > Snapshot offloads only include parameters that have been explicitly flagged for snapshots. Enabling snapshot offload without flagging any parameters will result in no data being offloaded. You can flag parameters by enabling the *Part of snapshot* option in an information template assigned to your elements (see [Creating an information template](xref:Creating_an_information_template)) or by means of the snapshot option in the protocol. In this context, the *All parameter values* option refers to all flagged parameters, including those whose value has not changed, not to all parameters in the system.
+
+   The snapshot offloads can then be further fine-tuned as follows:
 
    - Select to offload *All parameter values* or only *All changed parameter values*.
 
@@ -84,9 +89,6 @@ The offload rate for trend data and alarm data can be configured in System Cente
    - If all previous values should be removed from the database each time a new snapshot is offloaded, make sure the option *Only keep the latest parameter value in the database* is selected. If this option is not selected, all values will be kept.
 
      This option corresponds with the `clean="true"` configuration in the *Offload* tag in *DB.xml*. If it is activated, DataMiner will truncate the data table in the offload database before new information is added. This way, the table always contains the latest snapshot information only.
-
-   > [!TIP]
-   > In an information template, you can configure specific parameters to be included in offload database snapshots. See [Creating an information template](xref:Creating_an_information_template).
 
 > [!NOTE]
 >

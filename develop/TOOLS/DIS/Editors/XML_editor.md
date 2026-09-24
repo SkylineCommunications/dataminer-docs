@@ -109,11 +109,12 @@ If you click *Publish* for an automation script that is part of a solution packa
 > [!NOTE]
 >
 > - You cannot click the *Publish* button when Visual Studio is running in debug mode.
+> - If you click *Publish* for a protocol that has a minimum required version mentioned in the [MinimumRequiredVersion](xref:Protocol.Compliancies.MinimumRequiredVersion) tag, DIS will verify that the DataMiner Agent to which the protocol will be published is running at least this version. If this is not the case, a message box will be shown and the publish will not be performed.
 > - DIS will refuse to publish a protocol
->   - when the *Protocol.Type* tag contain an incorrect value,
->   - when the *Protocol.Version* tag is empty, or
->   - when the *Protocol.Name* tag is empty.
-> - When *As Development* is selected, a `_DIS` suffix will be added to the *Protocol.Version* tag before compiling and publishing.
+>   - when the [Protocol.Type](xref:Protocol.Type) tag contain an incorrect value,
+>   - when the [Protocol.Version](xref:Protocol.Version) tag is empty, or
+>   - when the [Protocol.Name](xref:Protocol.Name) tag is empty.
+> - When *As Development* is selected, a `_DIS` suffix will be added to the [Protocol.Version](xref:Protocol.Version) tag before compiling and publishing.
 
 ### Search
 

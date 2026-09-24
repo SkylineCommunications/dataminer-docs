@@ -1,5 +1,6 @@
 ---
 uid: Sending
+description: "Send SNMP traps from the SNMP Trap Sender window, monitor the sending state, and stop packet delivery when necessary."
 ---
 
 # Sending

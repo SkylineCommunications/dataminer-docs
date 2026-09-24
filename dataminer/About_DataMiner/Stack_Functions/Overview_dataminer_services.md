@@ -24,7 +24,7 @@ Enabled [in just a few clicks](xref:Linking_your_DataMiner_and_dataminer_service
 > [!TIP]
 > Find out more:
 >
-> - [How to access dataminer.services](https://dataminer.services/make-an-account/access_dcp.html).
+> - [How to access dataminer.services](xref:Logging_on_to_dataminer_services).
 > - [How to work with dataminer.services](xref:about_dataminer_services).
 > - [The benefits of Support Services](xref:Proactive_Support).
 
@@ -117,6 +117,19 @@ In addition, when you connect your DataMiner Agents to dataminer.services, your 
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
 > - [Customer DataMiner Reporting (CDMR)](xref:CDMR)
 
+### DataMiner Assistant
+
+The **DataMiner Assistant** is an integrated AI assistant that helps users **interact with their DataMiner System more efficiently**. It can answer DataMiner-related questions, assist in interpreting system data, and help users quickly find relevant information.
+
+Combining knowledge of your DataMiner environment with DataMiner documentation, the Assistant makes it easier to troubleshoot issues, analyze data, and work more efficiently.
+
+> [!TIP]
+> See also:
+>
+> - [DataMiner Assistant DxM](xref:Assistant_DxM)
+> - [DataMiner Assistant app](xref:DataMinerAssistant)
+> - [DataMiner Assistant for Microsoft 365](xref:Assistant_M365)
+
 ### Storage as a Service (STaaS)
 
 Platform services prioritize convenience. The hassle of managing your own Cassandra and OpenSearch/Elasticsearch database clusters is a thing of the past. With the scaling and complexity taken care of, you and your team can focus on the core business of your company. Our Storage as a Service (STaaS) solution streamlines your core operations by utilizing Skyline’s hosting service for your storage cluster, resulting in a significant reduction of on-premises resources, configuration, and maintenance.
@@ -173,17 +186,3 @@ In a nutshell: **You operate the platform, we build and maintain the platform fo
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
 > - [Proactive Support](xref:Proactive_Support)
 > - [About Remote Access](xref:About_Remote_Access)
-
-### ChatOps
-
-**ChatOps** is a feature that enhances the value of **Microsoft Teams** as you collaborate more effectively using insights and controls from your DataMiner System directly in Microsoft Teams. Users can interact with DataMiner using generic or custom chat commands, and you can even use DataMiner Automation to manage teams and channels and interact with users in chats and channels. ChatOps is especially useful for teams that need to communicate and interact with one another frequently. In the future, we plan to offer support for ChatOps on **Slack** as well, as it is a widely used team messaging platform.
-
-> [!TIP]
-> See also:
->
-> - [Let us enhance your DataMiner ChatOps experience!](https://community.dataminer.services/let-us-enhance-your-dataminer-chatops-experience/)
-> - [About ChatOps](xref:About_ChatOps)
-> - [Example use case - Custom chat commands](https://community.dataminer.services/use-case/dataminer-chatops-custom-chat-commands/)
-> - [Examples - Custom chat commands](xref:DataMiner_Teams_bot)
-> - [Examples - Chat integration](xref:Microsoft_Teams_Chat_Integration)
-> - [Kata #6: Custom ChatOps operator](https://www.youtube.com/watch?v=qYOM6-55YYU) ![Video](~/dataminer/images/video_Duo.png)

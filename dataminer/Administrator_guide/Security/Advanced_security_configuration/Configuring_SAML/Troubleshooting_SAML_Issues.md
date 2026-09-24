@@ -1,5 +1,6 @@
 ---
 uid: Troubleshooting_SAML_Issues
+description: "Diagnose SAML issues by checking logs, validating metadata, comparing claims, and resolving common identity provider and DataMiner configuration errors."
 ---
 
 # Troubleshooting SAML issues

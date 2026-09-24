@@ -34,6 +34,19 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.2 -->
+
+In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
+
+From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+
+See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+
+> [!NOTE]
+> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
+
 #### SLLogCollector: Separate log file per instance [ID 44668]
 
 <!-- MR 10.5.0 [CU19]/10.6.0 [CU7] - FR 10.6.4 -->
@@ -47,21 +60,43 @@ From now on, each SLLogCollector instance will have its own dedicated log file n
 
 Up to 10 log files will be kept on disk, and the log file of the current instance will be added to the SLLogCollector package.
 
+#### APIGateway: SLNet authentication [ID 46055]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
+
 #### Enhanced performance when recalculating security keys [ID 46077]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 Because of a number of enhancements, overall performance has increased when recalculating security keys.
 
-#### DxM upgraded [ID 46124]
+#### DxM upgraded [ID 46124] [ID 46259]
 
-<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+<!-- RN 46124: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+<!-- RN 46259: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR TBD -->
 
-The following DataMiner Extension Module (DxM), which is included in the DataMiner upgrade package, has been upgraded to the indicated version:
+The following DataMiner Extension Modules (DxM), which are included in the DataMiner upgrade package, have been upgraded to the indicated version:
 
+- DataMiner ArtifactDeployer 1.10.0
+- DataMiner CloudFeed 1.4.9
+- DataMiner CloudGateway 3.3.2
+- DataMiner CoreGateway 2.14.17
+- DataMiner FieldControl 2.12.2
+- DataMiner Orchestrator 1.11.0
 - DataMiner SupportAssistant 1.9.3
 
-For detailed information about the changes included in this version, refer to the [DxM release notes](xref:DxM_RNs_index).
+For detailed information about the changes included in these versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### Security enhancements [ID 46368] [ID 46411] [ID 46510] [ID 46515]
+
+<!-- 46368: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46411: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46510: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46515: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -105,6 +140,14 @@ Up to now, the *DataMiner Agent Minimum Requirements* BPA test would incorrectly
 
 This issue has now been fixed. The test now checks logical CPU cores.
 
+#### Elasticsearch re-indexing tool did not preserve the correct name for the newest index [ID 46168]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.10 -->
+
+When the Elasticsearch re-indexing tool processed TTL rollover indices, up to now, it would not preserve the provided index name on the newest empty index. As a result, re-indexing could lead to data loss and the generation of erroneous indices.
+
+The re-indexing tool has been updated to Microsoft .NET 10 and now forces a rollover for TTL rollover indices when re-indexing is complete. This ensures that the newest empty index retains the correct provided name and is marked as the write index.
+
 #### Invalid cleared correlated alarms could be generated when DVE linking changed [ID 46174]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
@@ -120,3 +163,9 @@ Custom applications using the SLNet gRPC client could fail to establish a connec
 As a result, the connection could incorrectly be reported as `APIGateway is unavailable`.
 
 From now on, invalid User-Agent values are skipped, so the health check can continue and the gRPC connection can be established correctly.
+
+#### Persistent element timeout caused by failed WMI actions [ID 46396]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+Up to now, a WMI action that was not included in a poll group could fail. For example, this could occur when a QAction updated a parameter, and a trigger on that parameter executed a WMI action. As a result, the element would go into timeout and be unable to recover from the timeout status. This issue has now been fixed.

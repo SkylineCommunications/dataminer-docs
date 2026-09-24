@@ -8,6 +8,10 @@ DataMiner Hyperlinks XML schema.
 
 For more information about hyperlinks, refer to [Hyperlinks.xml](xref:Hyperlinks_xml).
 
+## Namespace
+
+`http://www.skyline.be/config/hyperlinks`
+
 ## Root element
 
 [HyperLinks](xref:HyperLinks)

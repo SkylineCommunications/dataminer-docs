@@ -233,7 +233,7 @@ QAOps Bridge extracts the files in two locations:
 | Location | Availability | Intended use |
 |--|--|--|
 | `<PathToTestPackageContent>\SupplementaryFiles` | Agent executing the test package pipeline | Numbered PowerShell pipeline scripts |
-| Directory specified by the machine-level `QAOPS_SUPPLEMENTARY_FILES` environment variable | Every Agent in the cluster | C# tests, Automation scripts, and other processes that can run on any Agent |
+| Directory specified by the machine-level `QAOPS_SUPPLEMENTARY_FILES` environment variable | Every Agent in the cluster | C# tests, automation scripts, and other processes that can run on any Agent |
 
 Do not hard-code the shared directory under `C:\ProgramData`. If files from a previous run are still locked, QAOps Bridge can use a different directory for the next run. The environment variable always points to the directory for the active run.
 

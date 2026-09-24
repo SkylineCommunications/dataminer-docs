@@ -30,6 +30,8 @@ Presets can be saved publicly (i.e., shared) or privately:
 
 - Private: Private presets are only available for the user account that created them. Other users will not be able to see or use these presets.
 
+From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46113-->, when a spectrum analyzer is configured to use [shared session mode](xref:Viewing_spectrum_analyzer_traces#enabling-shared-session-mode), its latest configuration is automatically saved in a shared last session preset when a user closes the card. When another user opens the spectrum analyzer, this preset is loaded automatically, so all users see the same configuration.
+
 ## Saving presets
 
 In order to save a configuration, a preset must already exist that you can save the configuration into.

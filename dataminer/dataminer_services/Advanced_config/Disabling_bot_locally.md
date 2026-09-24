@@ -1,11 +1,12 @@
 ---
 uid: Disabling_bot_locally
+description: "Disable DataMiner ChatOps on a specific server by updating the FieldControl app settings and restarting the service to apply the change."
 reviewer: Alexander Verkest
 ---
 
-# Disabling the bot feature locally
+# Disabling DataMiner ChatOps locally
 
-From version 2.10.6 of the [FieldControl](xref:DataMinerCoreModules#fieldcontrol) DxM onwards<!-- RN 39113 -->, it is possible to disable the [bot feature](xref:DataMiner_Teams_bot) for a particular server through the app settings of the DxM:
+From version 2.10.6 of the [FieldControl](xref:DataMinerCoreModules#fieldcontrol) DxM onwards<!-- RN 39113 -->, it is possible to disable [DataMiner ChatOps](xref:DataMiner_Teams_bot) for a particular server through the app settings of the DxM:
 
 1. On each server where you want to disable this feature, go to the folder `C:\Program Files\Skyline Communications\DataMiner FieldControl`.
 

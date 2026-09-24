@@ -2,10 +2,7 @@
 uid: Cube_Feature_Release_10.6.10
 ---
 
-# DataMiner Cube Feature Release 10.6.10 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.10
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU7].
 
@@ -15,10 +12,6 @@ This Feature Release of the DataMiner Cube client application contains the same 
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.10](xref:Web_apps_Feature_Release_10.6.10).
 
 ## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
 
 #### Automation: Credentials can now be added to automation scripts [ID 44282]
 
@@ -34,7 +27,9 @@ If you open a script that contains credentials you are not allowed to use, the n
 > - If you user permissions change while you are working in the Automation app, the changes will only take effect after you have re-opened the Automation app.
 
 > [!IMPORTANT]
-> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer. See [Automation: Credentials can now be added within the XML code of an automation script [ID 44282]](xref:General_Feature_Release_10.6.10#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282)
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer. See [Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]](xref:General_Feature_Release_10.6.10#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282-id-46229)
+
+## New features
 
 #### System Center: Backup password can now be set for restoring credentials [ID 45704]
 
@@ -50,24 +45,57 @@ When you restore a backup on the same DataMiner System, no password will be need
 > [!NOTE]
 > When you open the Credentials Library, a warning message will appear when this password has not yet been set.
 
-#### Credentials Library: Warning indicator will now displayed next to a credential that could not be decrypted [ID 45997]
+#### Visual Overview: Option to display Visio drawings in the light theme while Cube uses the dark theme [ID 45961]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+A new global setting is now available in *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
+
+The available options are *Follow Cube theme* (default) and *Light*. After changing the setting, click *Apply theme* and reopen any open Visio drawings to see the change.
+
+#### Credentials Library: Warning indicator next to credentials that could not be decrypted [ID 45997]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 <!-- Was reverted and later re-added to 10.6.10 -->
 
-When DataMiner Cube detects that a credential in the Credentials Library can no longer be decrypted, a warning icon will now be displayed next to the credential name, which is also shown in a warning color.
+When DataMiner Cube detects that a set of credentials in the Credentials Library can no longer be decrypted, a warning icon will now be displayed next to the name of the credentials, which will also be shown in a warning color.
 
-When you hover over the warning icon, a tooltip will explain that the credential's secret values can no longer be decrypted and that you need to re-enter and save the values to resolve the issue.
+When you hover over the warning icon, a tooltip will explain that the secret values of the credentials can no longer be decrypted and that you need to re-enter and save the values to resolve the issue.
+
+#### Element wizard: Connector settings and run-on details [ID 46287]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven pages:
+
+- A *Settings* page where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
+- A *Run-on details* page for connectors with scripts, where you can select an Edge node and configure script intervals.
+
+In addition, CSV export/import support has been updated with the relevant headers for protocol settings and edge scripts.
 
 ## Changes
 
 ### Enhancements
+
+#### Credentials Library: Credential names can now contain all characters [ID 46083]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you create a credential in the Credentials Library, its name can now contain all characters.
 
 #### Spectrum Analysis: Shared last preset is now available in shared session mode [ID 46113]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 If a spectrum analyzer is configured to work in shared session mode, a shared last session preset is now automatically kept. This means that when a user configures the spectrum analyzer and closes the card, the configuration is saved in a shared preset. When another user opens that spectrum analyzer, the same preset is loaded and all users will see the same configuration.
+
+#### Communication: Remote logging failures are now logged at debug level [ID 46285]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+Up to now, when Cube temporarily lost its connection and remote logging could not be sent, those expected failures were logged as errors.
+
+From now on, these remote logging failures are logged at debug level instead, so error logs can focus on more actionable issues.
 
 ### Fixes
 
@@ -96,3 +124,9 @@ When you opened a spectrum element in one spectrum analysis component and then o
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 The credentials library can contain a maximum of 1000 sets of credentials. When this limit is reached, users who want to add a new set of credentials will receive a warning. However, up to now, that warning would be partially hidden behind the *Add* and *Delete* buttons.
+
+#### Automation: Package name and version of automation scripts could no longer be displayed after restarting Cube or re-opening the Automation module [ID 46224]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When a Cube connected to a system using STaaS was restarted, or when, on a Cube connected to a system using STaaS, the Automation module was closed and re-opened, up to now, the package name and version of the automation scripts could no longer be displayed.

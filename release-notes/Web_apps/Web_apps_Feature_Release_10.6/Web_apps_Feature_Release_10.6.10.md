@@ -2,10 +2,7 @@
 uid: Web_apps_Feature_Release_10.6.10
 ---
 
-# DataMiner web apps Feature Release 10.6.10 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.10
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU7].
 
@@ -13,14 +10,6 @@ This Feature Release of the DataMiner web applications contains the same new fea
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.10](xref:General_Feature_Release_10.6.10).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.10](xref:Cube_Feature_Release_10.6.10).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*This release does not contain any new features yet.*
 
 ## Changes
 
@@ -79,6 +68,12 @@ The Parameter picker component now uses the new search and dropdown inputs for f
 Up to now, when GQI retrieved operator capabilities, internally, columns always had to be resolved twice. As, from now on, this is no longer necessary, overall performance will improve when building queries.
 
 Also, a parameter table query problem has been fixed. Up to now, columns that were only needed internally to execute the query would also by default be included in the query result. This has now been changed. The behavior of the *Get parameter table by ID* data source has now been made consistent with that of every other data source.
+
+#### Dashboards/Low-Code Apps: Query filter now shows units for numeric columns that define them [ID 46269]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In the Query filter component, numeric columns that define units (e.g., parameter columns) now show a unit indication. As a result, you will now be able to more easily identify the meaning of numeric values while configuring filters.
 
 ### Fixes
 
@@ -151,3 +146,28 @@ The required requests are now forwarded to the connected DMA instead.
 Up to now, SLNet pipe connections in the GQI extension worker could be closed unreliably, which could leave stale client state or delay disconnect handling during pipe shutdown.
 
 From now on, closed client connections will be cleaned up more deterministically, improving the reliability of extension worker shutdown and subsequent queries.
+
+#### Date/time inputs: Manual entry and in-progress edits could behave unreliably [ID 46248]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+In automation script UIs, date and time inputs could behave unexpectedly. In Firefox, when you manually entered values starting with `0` (e.g., `05` or `09`), the cursor could jump to another field too early. Also, if a live update arrived while you were editing a time input, your in-progress changes could be lost or focus could move unexpectedly.
+
+Manual typing now behaves consistently across Firefox and Chromium-based browsers, and in-progress edits are preserved while you are still working in the field.
+
+#### Memory leak in web API [ID 46348]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+In some cases, the web API could leak memory, causing the memory used by the w3wp process to increase slowly.
+
+#### Dashboards/Low-Code Apps: Query filter could show incorrect distinct values when filter assistance was enabled [ID 46352]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+In the Query filter component, several issues could occur in the checkbox list of distinct values when filter assistance was enabled:
+
+- Values from a previous query could still be shown, even though they no longer applied to the current query.
+- Discrete values that did not occur in the currently filtered query could incorrectly be hidden, even though they should still have been selectable.
+- Enabling a range filter did not disable the checkbox filters for numeric and date columns, even though only one of these filter types can be applied at a time.
+- Too many options could be shown in the checkbox list when filtering on a column while a filter was already active on a discrete numeric column.

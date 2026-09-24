@@ -1,12 +1,13 @@
 ---
 uid: Linking_your_DataMiner_and_dataminer_services_account
+description: "Link your DataMiner account to your dataminer.services account to make use of certain dataminer.services functionality."
 keywords: cloud account
 reviewer: Alexander Verkest
 ---
 
 # Linking your DataMiner account to your dataminer.services account
 
-To make use of some dataminer.services functionality, for example to interact with DataMiner using the Teams bot, your DataMiner account has to be linked to your dataminer.services account.
+To make use of some dataminer.services functionality, your DataMiner account has to be linked to your dataminer.services account.
 
 To link your accounts:
 
@@ -25,6 +26,3 @@ To link your accounts:
 
 > [!IMPORTANT]
 > It is not possible to link two different dataminer.services accounts to the same DataMiner user.
-
-> [!NOTE]
-> You can also link your account directly via the DataMiner Teams bot. See [DataMiner Teams bot](xref:DataMiner_Teams_bot)
