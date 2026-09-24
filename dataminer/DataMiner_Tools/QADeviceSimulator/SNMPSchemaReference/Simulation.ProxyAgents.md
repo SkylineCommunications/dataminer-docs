@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents
+description: "Configure the ProxyAgents element in an SNMP simulation file, define one proxy agent, and copy the simulation for different agents."
 ---
 
 # ProxyAgents element
