@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.PingInterval.DefaultValue
+description: "Learn how the DefaultValue element under PingInterval sets the initial ping interval in milliseconds for an element connection."
 ---
 
 # DefaultValue element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AutomationActionFindInteractiveClient
+description: "Configure the Find interactive client action to invite a user to attach to an automation script and set how long the script waits."
 ---
 
 # Find interactive client

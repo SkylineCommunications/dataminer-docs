@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActions
+description: "Learn how protocol actions combine On and Type to copy values, manage queues, control communication, or perform other predefined operations."
 ---
 
 # Actions

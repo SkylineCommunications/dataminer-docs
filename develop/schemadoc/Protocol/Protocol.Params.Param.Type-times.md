@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Type-times
+description: "Learn how the times attribute sets how many trailer occurrences are required before DataMiner recognizes the trailer."
 ---
 
 # times attribute

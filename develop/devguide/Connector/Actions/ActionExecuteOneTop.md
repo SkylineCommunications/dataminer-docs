@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionExecuteOneTop
+description: "Use the execute one top action to queue a group immediately after the running group only when it is not already in the execution queue."
 ---
 
 # execute one top

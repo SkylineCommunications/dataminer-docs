@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ParameterGroups.Group.Params
+description: "Learn how to use the Params element to list the parameters included in a parameter group without duplicate IDs in a DataMiner connector protocol."
 ---
 
 # Params element

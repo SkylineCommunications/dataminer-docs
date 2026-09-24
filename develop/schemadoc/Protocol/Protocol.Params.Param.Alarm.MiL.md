@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Alarm.MiL
+description: "Learn how to use the MiL element to set the default minor-low threshold in a parameter alarm template in a DataMiner connector protocol."
 ---
 
 # MiL element

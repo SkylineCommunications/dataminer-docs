@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display.ParametersView.Parameters
+description: "Learn how the Parameters element groups the source parameters whose values are displayed in a ParametersView chart in a DataMiner connector protocol."
 ---
 
 # Parameters element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: InnerWorkingsSLElement
+description: "Learn when connector parameters require RTDisplay, how SLElement processes table columns, and which APIs depend on values being available there."
 ---
 
 # SLElement

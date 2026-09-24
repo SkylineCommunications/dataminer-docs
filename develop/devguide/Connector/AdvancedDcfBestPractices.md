@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDcfBestPractices
+description: "Apply DCF best practices to keep interface tables stable, avoid duplicate or excessive updates, manage alarm calculations, and create connections safely."
 ---
 
 # DCF best practices

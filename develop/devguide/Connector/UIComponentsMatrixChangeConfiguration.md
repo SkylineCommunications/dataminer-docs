@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsMatrixChangeConfiguration
+description: "Dynamically resize or reconfigure a standard matrix from a QAction with NT_UPDATE_PORTS_XML, then refresh the display and persist changes in XML."
 ---
 
 # Dynamically changing matrix configuration

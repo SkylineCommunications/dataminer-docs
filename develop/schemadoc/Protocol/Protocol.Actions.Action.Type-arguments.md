@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Actions.Action.Type-arguments
+description: "Use the Action Type arguments attribute with WMI actions to list, separated by semicolons, the names of columns to return."
 ---
 
 # arguments attribute

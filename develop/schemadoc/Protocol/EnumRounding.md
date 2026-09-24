@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumRounding
+description: "Review the allowed values for the EnumRounding simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumRounding simple type

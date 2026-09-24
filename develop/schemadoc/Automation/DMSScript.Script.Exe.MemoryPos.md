@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.MemoryPos
+description: "Use the MemoryPos element to identify the memory file and item position that a get or set action accesses in an automation script."
 ---
 
 # MemoryPos element

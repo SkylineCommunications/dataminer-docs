@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.SystemOptions
+description: "Learn how the SystemOptions element groups system-level connector settings, including process isolation for memory-intensive protocols."
 ---
 
 # SystemOptions element

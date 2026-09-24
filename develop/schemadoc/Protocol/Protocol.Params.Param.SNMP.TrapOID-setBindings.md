@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapOID-setBindings
+description: "Learn how the setBindings attribute copies SNMP trap binding values or OIDs to parameters, including dynamic table cells."
 ---
 
 # setBindings attribute

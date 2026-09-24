@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param-setter
+description: "Learn how to use the setter attribute to copy a write parameter value to its corresponding read parameter automatically in a DataMiner connector protocol."
 ---
 
 # setter attribute

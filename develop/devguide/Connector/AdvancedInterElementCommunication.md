@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedInterElementCommunication
+description: "Compare ways to exchange parameter data between DataMiner elements using element connections, data distribution, replication, or InterApp calls."
 ---
 
 # Inter-element communication

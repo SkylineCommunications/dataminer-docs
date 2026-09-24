@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumTypePortSlowPollBase
+description: "Review the allowed values for the EnumTypePortSlowPollBase simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumTypePortSlowPollBase simple type

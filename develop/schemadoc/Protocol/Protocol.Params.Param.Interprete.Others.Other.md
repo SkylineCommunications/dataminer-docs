@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Others.Other
+description: "Learn how the Other element maps a symbol that violates one raw type by comparing it with another parameter in a DataMiner connector protocol."
 ---
 
 # Other element

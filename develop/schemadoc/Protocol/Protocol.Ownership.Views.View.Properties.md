@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.Views.View.Properties
+description: "Learn how to use the Properties element to group ownership declarations for selected properties of a view in a DataMiner connector protocol."
 ---
 
 # Properties element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Triggers.Trigger.Condition
+description: "Consult the DataMiner connector protocol schema reference for the Condition element, which sets the condition required for a trigger to go off."
 ---
 
 # Condition element

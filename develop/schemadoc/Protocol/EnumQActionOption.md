@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumQActionOption
+description: "Review the allowed values for the EnumQActionOption simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumQActionOption simple type

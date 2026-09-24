@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionCopyReverse
+description: "Use the copy reverse action to overwrite destination parameters with the source parameter's value in reverse byte order."
 ---
 
 # copy reverse

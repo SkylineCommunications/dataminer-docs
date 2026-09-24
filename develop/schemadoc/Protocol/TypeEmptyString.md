@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TypeEmptyString
+description: "Use the TypeEmptyString simple type to restrict a schema value to an empty string in the DataMiner connector protocol schema."
 ---
 
 # TypeEmptyString simple type

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Others.Other-id
+description: "Learn how the id attribute references the parameter used to match an incoming symbol with an Other definition in a DataMiner connector protocol."
 ---
 
 # id attribute

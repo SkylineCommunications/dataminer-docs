@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsMatrixSettingCrosspoints
+description: "Process standard matrix write values through a buffered, sequential flow so commands or SNMP sets update each crosspoint reliably and in order."
 ---
 
 # Setting crosspoints

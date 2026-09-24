@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ports.PortSettings-visibleInUi
+description: "Learn how the visibleInUi attribute controls whether users can view or edit settings for an additional protocol connection."
 ---
 
 # visibleInUi attribute

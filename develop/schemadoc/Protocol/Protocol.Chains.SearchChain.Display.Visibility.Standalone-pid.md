@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.SearchChain.Display.Visibility.Standalone-pid
+description: "Learn how the pid attribute identifies the trigger parameter that controls search chain visibility in a DataMiner connector protocol."
 ---
 
 # pid attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.SNMP.Factor
+description: "Learn how the Factor element divides SNMP values by a specified factor so DataMiner can represent decimals in a DataMiner connector protocol."
 ---
 
 # Factor element

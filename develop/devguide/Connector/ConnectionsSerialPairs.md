@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSerialPairs
+description: "Define command-response pairs, queue them through groups and timers, clear reused responses, and match one command against multiple possible responses."
 ---
 
 # Pairs

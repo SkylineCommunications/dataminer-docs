@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionClose
+description: "Use the close action to close a serial connector port by connection number or disconnect a smart-serial client identified by IP address and port."
 ---
 
 # close

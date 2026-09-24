@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Relations
+description: "Learn how the Relations element groups foreign-key links that define relationships between tables in a DataMiner connector."
 ---
 
 # Relations element

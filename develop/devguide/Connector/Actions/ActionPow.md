@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionPow
+description: "Use the pow action to raise one or more parameter values to a configured exponent, which defaults to one."
 ---
 
 # pow

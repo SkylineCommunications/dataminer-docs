@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumDisplayState
+description: "Review the allowed values for the EnumDisplayState simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumDisplayState simple type

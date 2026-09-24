@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains-filters
+description: "Learn how the filters attribute sets EPM chain filters to a horizontal or vertical layout in a DataMiner connector protocol."
 ---
 
 # filters attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption
+description: "Learn how to use the CrossDriverOption element to map remote table columns from one protocol to a direct view table in a DataMiner connector protocol."
 ---
 
 # CrossDriverOption element

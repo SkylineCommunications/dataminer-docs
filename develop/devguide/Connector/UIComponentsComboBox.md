@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsComboBox
+description: "Define a combo box that lets users type or select a string by linking a read/write parameter pair to a dynamic list of discrete values."
 ---
 
 # Combo box

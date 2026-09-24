@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: InnerWorkingsSLProtocol
+description: "Understand SLProtocol processes, timer and protocol threads, group queue priorities, synchronous item execution, and separate connection threads."
 ---
 
 # SLProtocol

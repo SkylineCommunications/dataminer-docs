@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Tooltip
+description: "Learn how the Tooltip element defines hover text for the icon of a discreet value displayed in a table cell in a DataMiner connector protocol."
 ---
 
 # Tooltip element

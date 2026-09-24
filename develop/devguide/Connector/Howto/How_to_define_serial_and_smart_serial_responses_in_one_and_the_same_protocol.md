@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
+description: "Define serial and smart-serial responses in one protocol, and assign every response a connection ID so DataMiner matches incoming data correctly."
 ---
 
 # How to define serial and smart-serial responses in one and the same protocol

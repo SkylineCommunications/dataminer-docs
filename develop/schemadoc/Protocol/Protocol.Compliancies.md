@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Compliancies
+description: "Learn how the Compliancies element declares connector database compatibility and supported DataMiner version limits in a DataMiner connector protocol."
 ---
 
 # Compliancies element

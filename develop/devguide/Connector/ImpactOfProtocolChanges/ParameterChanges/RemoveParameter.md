@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: RemoveParameter
+description: "Assess the impact of removing a parameter on stored data, templates, scripts, dashboards, element connections, and dependent protocol logic."
 ---
 
 # Remove parameter

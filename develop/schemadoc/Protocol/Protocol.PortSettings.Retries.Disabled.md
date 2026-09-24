@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Retries.Disabled
+description: "Learn how the Disabled element under Retries controls whether users can change the maximum retry count in the DataMiner user interface."
 ---
 
 # Disabled element

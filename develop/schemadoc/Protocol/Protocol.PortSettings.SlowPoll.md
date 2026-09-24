@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.SlowPoll
+description: "Learn how the SlowPoll element configures slow polling defaults and whether users can modify them for the main connection."
 ---
 
 # SlowPoll element

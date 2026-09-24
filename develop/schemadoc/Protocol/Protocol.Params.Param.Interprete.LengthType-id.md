@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.LengthType-id
+description: "Learn how the id attribute references the parameter that provides a variable length or marks the next response parameter in a DataMiner connector protocol."
 ---
 
 # id attribute

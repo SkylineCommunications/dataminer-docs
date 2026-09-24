@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Param-type
+description: "Use the Param type attribute to classify data for C# or nested-script actions, such as references, debugging, compilation, and options."
 ---
 
 # type attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.PortTypeSerial.Disabled
+description: "Learn how the Disabled element under PortTypeSerial controls whether users can select Serial as the port type in the DataMiner user interface."
 ---
 
 # Disabled element

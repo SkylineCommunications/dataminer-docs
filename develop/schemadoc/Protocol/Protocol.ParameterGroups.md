@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ParameterGroups
+description: "Learn how to use the ParameterGroups element to define the DCF interfaces exposed by the connector in a DataMiner connector protocol."
 ---
 
 # ParameterGroups element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions-snmpIndex
+description: "Learn how to use the snmpIndex attribute to select one or more columns used to retrieve a table through SNMP in a DataMiner connector protocol."
 ---
 
 # snmpIndex attribute

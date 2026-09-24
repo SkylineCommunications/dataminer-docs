@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions-options
+description: "Learn how to use the options attribute to configure storage, naming, filtering, and behavior options for a table in a DataMiner connector protocol."
 ---
 
 # options attribute

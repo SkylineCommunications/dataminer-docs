@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ParameterGroups.Group.Params.Param
+description: "Learn how to use the Param element to include a parameter and optional primary key column in a parameter group in a DataMiner connector protocol."
 ---
 
 # Param element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Destination
+description: "Define a Destination element for an automation script notification or report action, including delivery type, recipients, and an email title."
 ---
 
 # Destination element

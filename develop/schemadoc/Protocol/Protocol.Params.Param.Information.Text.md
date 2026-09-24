@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Information.Text
+description: "Learn how the Text element sets the title displayed in a parameter information tooltip in a DataMiner connector protocol."
 ---
 
 # Text element

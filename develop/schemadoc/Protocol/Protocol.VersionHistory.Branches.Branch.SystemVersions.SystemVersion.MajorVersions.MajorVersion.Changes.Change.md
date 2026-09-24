@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change
+description: "Consult the DataMiner connector protocol schema reference for the Change element, which documents a major protocol change, its impact, and actions."
 ---
 
 # Change element

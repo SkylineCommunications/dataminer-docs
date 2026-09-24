@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display.Decimals
+description: "Learn how the Decimals element controls how many decimal places are shown for a parameter value in a DataMiner connector protocol."
 ---
 
 # Decimals element

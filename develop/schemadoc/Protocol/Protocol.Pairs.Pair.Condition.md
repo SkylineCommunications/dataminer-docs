@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Pairs.Pair.Condition
+description: "Learn how to use the Condition element to define when DataMiner should execute a command and response pair in a DataMiner connector protocol."
 ---
 
 # Condition element

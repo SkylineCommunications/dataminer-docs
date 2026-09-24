@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display.RTDisplay-onAppLevel
+description: "Learn how the onAppLevel attribute flags externally accessible RTDisplay parameters for validation but is deprecated in a DataMiner connector protocol."
 ---
 
 # onAppLevel attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedFunctionality
+description: "Explore advanced connector functionality for view and logger tables, DVEs, DCF, inter-element communication, multithreading, persistence, and mediation."
 ---
 
 # Advanced functionality

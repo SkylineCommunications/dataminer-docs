@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Matrix.Outputs
+description: "Learn how the Outputs element connects an outputs table and its column mappings to a matrix control in a DataMiner connector protocol."
 ---
 
 # Outputs element

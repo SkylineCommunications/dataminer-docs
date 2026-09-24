@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version
+description: "Consult the DataMiner connector protocol schema reference for the Version element, which defines the supported system's minimum and maximum versions."
 ---
 
 # Version element

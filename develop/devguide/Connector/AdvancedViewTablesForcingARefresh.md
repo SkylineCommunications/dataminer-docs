@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedViewTablesForcingARefresh
+description: "Force a direct view table row to refresh in DataMiner Cube by setting a dedicated refresh parameter to the row key and a changing value."
 ---
 
 # Forcing a (direct) view table refresh from within a protocol

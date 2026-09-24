@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionReverse
+description: "Use the reverse action to reverse a parameter's bytes at a specific point in command or response processing."
 ---
 
 # reverse

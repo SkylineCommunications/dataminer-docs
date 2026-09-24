@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedLoggerTablesQuerying
+description: "Query logger table data through database-compatible queries or GetPartialTableMessage instead of SLProtocol table access methods."
 ---
 
 # Querying logger tables

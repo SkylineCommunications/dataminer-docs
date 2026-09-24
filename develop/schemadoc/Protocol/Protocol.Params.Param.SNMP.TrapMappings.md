@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapMappings
+description: "Learn how the TrapMappings element defines advanced SNMP trap alarm mappings when the TrapOID mapAlarm attribute is insufficient."
 ---
 
 # TrapMappings element

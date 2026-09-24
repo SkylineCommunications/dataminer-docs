@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumSwarmingBypassCheck
+description: "Review the allowed values for the EnumSwarmingBypassCheck simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumSwarmingBypassCheck simple type

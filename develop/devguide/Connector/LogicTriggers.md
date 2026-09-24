@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicTriggers
+description: "Define protocol triggers that activate on component events or through logic, then execute actions or other triggers when their conditions are met."
 ---
 
 # Triggers

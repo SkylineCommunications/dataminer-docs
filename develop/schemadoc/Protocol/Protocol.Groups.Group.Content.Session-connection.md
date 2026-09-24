@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups.Group.Content.Session-connection
+description: "Learn how the connection attribute selects the connection to execute within an HTTP session included in a group in a DataMiner connector protocol."
 ---
 
 # connection attribute

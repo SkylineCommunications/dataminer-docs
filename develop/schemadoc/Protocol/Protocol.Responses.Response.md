@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Responses.Response
+description: "Learn how the Response element defines the parameter sequence DataMiner expects from a device after sending a command."
 ---
 
 # Response element

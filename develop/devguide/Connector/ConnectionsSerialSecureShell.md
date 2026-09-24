@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSerialSecureShell
+description: "Configure Secure Shell connections with password or public key authentication, account for SSH-specific behavior, and review supported algorithms."
 ---
 
 # Secure Shell

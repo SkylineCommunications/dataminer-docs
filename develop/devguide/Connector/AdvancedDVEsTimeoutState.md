@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDVEsTimeoutState
+description: "Configure DVE timeout behavior so child elements enter timeout with their parent, or set communication state from a QAction."
 ---
 
 # Timeout state

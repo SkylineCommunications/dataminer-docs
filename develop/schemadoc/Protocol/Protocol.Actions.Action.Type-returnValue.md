@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Actions.Action.Type-returnValue
+description: "Use the Action Type returnValue attribute to identify where read file content or WMI results are stored."
 ---
 
 # returnValue attribute

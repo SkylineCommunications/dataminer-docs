@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTableRelations
+description: "Configure table relations and their order so DataMiner builds the intended EPM topology, including paths where tables can be skipped."
 ---
 
 # Relations

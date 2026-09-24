@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception
+description: "Learn how the Exception element matches an incoming exceptional value and maps it to display text and an internal value in a DataMiner connector protocol."
 ---
 
 # Exception element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions-partial
+description: "Learn how to use the partial attribute to paginate a table and optionally set the number of rows per page in a DataMiner connector protocol."
 ---
 
 # partial attribute

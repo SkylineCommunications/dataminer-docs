@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Alarm.WaL
+description: "Learn how to use the WaL element to set the default warning-low threshold in a parameter alarm template in a DataMiner connector protocol."
 ---
 
 # WaL element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Actions.Action.Type-nr
+description: "Use the Action Type nr attribute to set a byte count, item position, or connection ID, depending on the connector protocol action type."
 ---
 
 # nr attribute

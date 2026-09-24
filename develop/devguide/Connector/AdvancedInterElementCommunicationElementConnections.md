@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedInterElementCommunicationElementConnections
+description: "Configure protocol parameters as sources or destinations for links between elements in the Element Connections app, independently of DCF connections."
 ---
 
 # Element connections

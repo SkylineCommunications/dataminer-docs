@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet
+description: "Learn how the Discreet element maps a parameter value to displayed text, an optional icon, and related behavior in a DataMiner connector protocol."
 ---
 
 # Discreet element

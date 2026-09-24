@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.QActions.QAction
+description: "Learn how the QAction element defines C# code, triggers, inputs, conditions, and execution options for parameter or row changes."
 ---
 
 # QAction element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TypeWildcardOrNumber
+description: "Use the TypeWildcardOrNumber simple type to accept either an unsigned integer or the wildcard value in the DataMiner connector protocol schema."
 ---
 
 # TypeWildcardOrNumber simple type

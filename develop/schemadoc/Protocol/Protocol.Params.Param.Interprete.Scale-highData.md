@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Scale-highData
+description: "Learn how the highData attribute sets the highest device value used as the source endpoint of a scale mapping in a DataMiner connector protocol."
 ---
 
 # highData attribute

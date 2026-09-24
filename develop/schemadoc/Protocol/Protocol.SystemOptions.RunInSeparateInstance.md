@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.SystemOptions.RunInSeparateInstance
+description: "Learn how RunInSeparateInstance flags every element using a protocol to run in separate SLProtocol and SLScripting instances."
 ---
 
 # RunInSeparateInstance element

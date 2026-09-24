@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.TimeoutTimeElement.Disabled
+description: "Learn how the Disabled element under TimeoutTimeElement controls whether users can configure the element timeout in the DataMiner user interface."
 ---
 
 # Disabled element

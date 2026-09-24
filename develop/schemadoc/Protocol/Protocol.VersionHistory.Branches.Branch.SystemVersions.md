@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions
+description: "Consult the DataMiner connector protocol schema reference for the SystemVersions element, which lists unique system version entries for a protocol branch."
 ---
 
 # SystemVersions element

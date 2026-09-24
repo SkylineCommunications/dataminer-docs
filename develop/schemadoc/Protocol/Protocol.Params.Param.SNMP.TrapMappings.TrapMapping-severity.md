@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapMappings.TrapMapping-severity
+description: "Learn how the severity attribute assigns a DataMiner alarm severity to a matched SNMP trap or suppresses the alarm in a DataMiner connector protocol."
 ---
 
 # severity attribute

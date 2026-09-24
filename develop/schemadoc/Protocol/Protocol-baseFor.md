@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-baseFor
+description: "Use the Protocol baseFor attribute to mark a connector as a base protocol for an element type that another protocol can reference."
 ---
 
 # baseFor attribute

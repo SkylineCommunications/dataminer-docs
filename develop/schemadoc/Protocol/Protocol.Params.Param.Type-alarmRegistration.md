@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Type-alarmRegistration
+description: "Learn how the alarmRegistration attribute triggers a QAction when specified parameters enter an alarm state."
 ---
 
 # alarmRegistration attribute

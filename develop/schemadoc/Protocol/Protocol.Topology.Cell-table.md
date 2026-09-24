@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Topology.Cell-table
+description: "Consult the DataMiner connector protocol schema reference for the table attribute, which links a topology cell to its table parameter."
 ---
 
 # table attribute

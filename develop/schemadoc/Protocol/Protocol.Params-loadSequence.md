@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params-loadSequence
+description: "Learn how to use the loadSequence attribute to load selected saved table data before other parameters at element startup in a DataMiner connector protocol."
 ---
 
 # loadSequence attribute

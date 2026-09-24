@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups.Group-connection
+description: "Learn how the connection attribute selects the connection used by a group when a protocol defines multiple connections in a DataMiner connector protocol."
 ---
 
 # connection attribute

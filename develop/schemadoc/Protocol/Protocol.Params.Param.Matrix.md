@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Matrix
+description: "Learn how the Matrix element defines a matrix control by linking input and output tables and configuring its behavior in a DataMiner connector protocol."
 ---
 
 # Matrix element

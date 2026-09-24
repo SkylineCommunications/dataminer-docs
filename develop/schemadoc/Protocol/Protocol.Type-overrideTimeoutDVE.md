@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Type-overrideTimeoutDVE
+description: "Consult the DataMiner connector protocol schema reference for the overrideTimeoutDVE attribute, which makes DVEs inherit timeout from their main element."
 ---
 
 # overrideTimeoutDVE attribute

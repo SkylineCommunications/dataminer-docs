@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTablePrimaryKeys
+description: "Define stable, compact primary keys in the first string column of each table, and avoid whitespace or reserved filter characters."
 ---
 
 # Primary keys

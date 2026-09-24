@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Alarm.MiH
+description: "Learn how to use the MiH element to set the default minor-high threshold in a parameter alarm template in a DataMiner connector protocol."
 ---
 
 # MiH element

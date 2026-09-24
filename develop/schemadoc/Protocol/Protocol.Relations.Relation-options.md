@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Relations.Relation-options
+description: "Learn how the Relation options attribute names relation chains and enables alarm bubble-up properties for tree controls."
 ---
 
 # options attribute

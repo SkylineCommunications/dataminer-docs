@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Others.Other.Value
+description: "Learn how the Value element assigns a numeric value to a rare parameter condition so alarms can monitor it in a DataMiner connector protocol."
 ---
 
 # Value element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Triggers.Trigger.Content.Id
+description: "Consult the DataMiner connector protocol schema reference for the Id element, which identifies an action to execute or another trigger to activate."
 ---
 
 # Id element

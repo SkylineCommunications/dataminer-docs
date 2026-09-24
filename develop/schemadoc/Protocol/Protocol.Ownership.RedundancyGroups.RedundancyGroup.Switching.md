@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.RedundancyGroups.RedundancyGroup.Switching
+description: "Learn how to use the Switching element to declare ownership and access settings for redundancy group switching in a DataMiner connector protocol."
 ---
 
 # Switching element

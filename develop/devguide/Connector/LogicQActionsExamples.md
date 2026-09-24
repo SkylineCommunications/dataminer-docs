@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicQActionsExamples
+description: "Use C# QAction examples to read files and shared folders, process JSON, MIME, and gzip data, and create alarms from connector logic."
 ---
 
 # QAction examples

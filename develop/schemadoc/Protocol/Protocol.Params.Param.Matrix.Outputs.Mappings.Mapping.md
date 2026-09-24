@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping
+description: "Learn how the Mapping element links an output column to a matrix column and defines its mapping role and value type in a DataMiner connector protocol."
 ---
 
 # Mapping element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTableMatrixHelper
+description: "Use the DIS-generated TableMatrixHelper to manage table-based matrix inputs, outputs, crosspoints, labels, locks, pages, and device updates."
 ---
 
 # Matrix Helper

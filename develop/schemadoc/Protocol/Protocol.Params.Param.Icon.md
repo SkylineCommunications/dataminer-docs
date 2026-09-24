@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Icon
+description: "Learn how the Icon element shows a predefined or custom XAML icon for a parameter in a tree control in a DataMiner connector protocol."
 ---
 
 # Icon element

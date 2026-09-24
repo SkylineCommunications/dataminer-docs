@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.IPport.Disabled
+description: "Learn how the Disabled element under IPport controls whether users can configure the port number in the DataMiner user interface."
 ---
 
 # Disabled element

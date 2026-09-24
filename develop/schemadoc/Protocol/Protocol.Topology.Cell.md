@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Topology.Cell
+description: "Consult the DataMiner connector protocol schema reference for the Cell element, which defines an EPM topology cell, its table, and links to other cells."
 ---
 
 # Cell element

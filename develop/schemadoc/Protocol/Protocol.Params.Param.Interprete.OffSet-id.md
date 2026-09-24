@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.OffSet-id
+description: "Learn how the id attribute references the parameter that supplies the offset value for an OffSet operation in a DataMiner connector protocol."
 ---
 
 # id attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param-snmpSetAndGet
+description: "Learn how to use the snmpSetAndGet attribute to perform an SNMP set followed by a get for a write parameter in a DataMiner connector protocol."
 ---
 
 # snmpSetAndGet attribute

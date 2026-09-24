@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsWebSocketsConnectionStatus
+description: "Retrieve a WebSocket connection's status through a NotifyConnectionPID parameter that reports 0 when closed and 1 when open."
 ---
 
 # Connection Status

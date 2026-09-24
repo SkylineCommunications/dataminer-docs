@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Alarm.Monitored
+description: "Learn how to use the Monitored element to enable or disable the alarm configuration assigned to a parameter in a DataMiner connector protocol."
 ---
 
 # Monitored element

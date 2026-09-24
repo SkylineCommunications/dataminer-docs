@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumIcons
+description: "Review the allowed values for the EnumIcons simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumIcons simple type

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Version
+description: "Consult the DataMiner connector protocol schema reference for the Version element, which identifies the protocol version assigned to DataMiner elements."
 ---
 
 # Version element

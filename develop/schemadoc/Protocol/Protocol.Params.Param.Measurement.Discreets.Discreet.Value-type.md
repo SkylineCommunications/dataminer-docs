@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Value-type
+description: "Learn how the type attribute selects a discreet value action, such as opening a card or setting a variable in a DataMiner connector protocol."
 ---
 
 # type attribute

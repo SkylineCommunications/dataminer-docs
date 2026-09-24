@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedCustomPropertiesCustomElementProperties
+description: "Define custom element properties with linked virtual-element and property tables, load sequencing, column options, and protocol relations."
 ---
 
 # Custom element properties

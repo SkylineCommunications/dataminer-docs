@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Actions.Action.On-nr
+description: "Use the Action On nr attribute to list parameter positions for reverse actions or pair positions for set next actions."
 ---
 
 # nr attribute

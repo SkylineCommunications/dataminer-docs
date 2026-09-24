@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display.ParametersView-type
+description: "Learn how the type attribute selects the chart type used by ParametersView and documents chart-specific limitations in a DataMiner connector protocol."
 ---
 
 # type attribute

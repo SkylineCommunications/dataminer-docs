@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangePageName
+description: "Assess how renaming a Data Display page affects saved views, visualizations, scripts, page buttons, and other references to that page."
 ---
 
 # Change page name

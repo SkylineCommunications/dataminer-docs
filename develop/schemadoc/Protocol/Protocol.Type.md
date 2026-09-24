@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Type
+description: "Consult the DataMiner connector protocol schema reference for the Type element, which selects the main connection type and related protocol options."
 ---
 
 # Type element

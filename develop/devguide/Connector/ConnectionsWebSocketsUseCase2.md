@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsWebSocketsUseCase2
+description: "Configure a WebSocket connection with dynamic IP so DataMiner can replace or re-establish it after a disconnect without restarting the element."
 ---
 
 # WebSocket connection with dynamic IP

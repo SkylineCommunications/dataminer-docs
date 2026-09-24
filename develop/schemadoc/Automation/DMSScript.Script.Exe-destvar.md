@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe-destvar
+description: "Use the Exe destvar attribute to identify the destination variable for get and set actions in a DataMiner automation script."
 ---
 
 # destvar attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TypeNonLeadingZeroUnsignedInt
+description: "Use the TypeNonLeadingZeroUnsignedInt simple type to validate unsigned integers without leading zeros in the DataMiner connector protocol schema."
 ---
 
 # TypeNonLeadingZeroUnsignedInt simple type

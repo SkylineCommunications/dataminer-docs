@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Swarming.BypassChecks
+description: "Learn how the BypassChecks element lists checks that DataMiner ignores when determining whether an element can swarm."
 ---
 
 # BypassChecks element

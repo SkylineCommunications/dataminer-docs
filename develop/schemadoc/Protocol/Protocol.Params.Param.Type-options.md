@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Type-options
+description: "Learn how the Type options attribute configures parameter behavior such as connections, dimensions, dynamic polling, and alarm linking."
 ---
 
 # options attribute

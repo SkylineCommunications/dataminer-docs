@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Topologies.Topology.Cell.Exposer.LinkedIds
+description: "Consult the DataMiner connector protocol schema reference for the LinkedIds element, which lists the table parameter IDs linked through the exposer."
 ---
 
 # LinkedIds element

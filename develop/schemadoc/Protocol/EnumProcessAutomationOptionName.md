@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumProcessAutomationOptionName
+description: "Review the allowed values for the EnumProcessAutomationOptionName simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumProcessAutomationOptionName simple type

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumTriggerTime
+description: "Review the allowed values for the EnumTriggerTime simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumTriggerTime simple type

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Actions.Action.Type
+description: "Learn how the Type element works with On to determine how an action is executed in a DataMiner connector protocol."
 ---
 
 # Type element

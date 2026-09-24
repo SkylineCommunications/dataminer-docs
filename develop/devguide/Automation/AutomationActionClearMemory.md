@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AutomationActionClearMemory
+description: "Configure the Clear memory action to erase the contents of a selected automation script memory file by using its reference."
 ---
 
 # Clear memory

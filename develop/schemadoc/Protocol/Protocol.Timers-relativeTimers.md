@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Timers-relativeTimers
+description: "Learn how the Timers relativeTimers attribute makes all contained timers relative unless a timer overrides it with fixedTimer."
 ---
 
 # relativeTimers attribute

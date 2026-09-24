@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumParamInterpretRawType
+description: "Review the allowed values for the EnumParamInterpretRawType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumParamInterpretRawType simple type

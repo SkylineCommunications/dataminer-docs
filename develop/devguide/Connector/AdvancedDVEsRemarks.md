@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDVEsRemarks
+description: "Review key DVE behavior for exported tables, views, names, parameter positions, alarms, templates, display keys, and foreign-key relations."
 ---
 
 # Remarks

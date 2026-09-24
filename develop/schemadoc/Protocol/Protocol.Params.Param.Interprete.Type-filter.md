@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Type-filter
+description: "Learn how the filter attribute limits a processed parameter value to printable characters when enabled in a DataMiner connector protocol."
 ---
 
 # filter attribute

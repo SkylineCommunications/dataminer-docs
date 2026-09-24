@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTableDisplayKeys
+description: "Define unique, user-friendly display keys for table rows with naming or NamingFormat, and understand their effects on alarms, filters, and trend data."
 ---
 
 # Display keys

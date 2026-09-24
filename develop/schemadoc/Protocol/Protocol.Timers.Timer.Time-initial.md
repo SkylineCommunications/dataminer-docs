@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Timers.Timer.Time-initial
+description: "Consult the DataMiner connector protocol schema reference for the initial attribute, which controls whether and when a timer starts with its element."
 ---
 
 # initial attribute

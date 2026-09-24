@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicGroups
+description: "Understand how groups execute same-type protocol items sequentially and how poll, action, and trigger group types use timer threads or the queue."
 ---
 
 # Groups

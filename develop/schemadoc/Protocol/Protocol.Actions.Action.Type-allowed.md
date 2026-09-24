@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Actions.Action.Type-allowed
+description: "Use the Action Type allowed attribute with stuffing actions to list characters after which the stuffing byte is not repeated."
 ---
 
 # allowed attribute

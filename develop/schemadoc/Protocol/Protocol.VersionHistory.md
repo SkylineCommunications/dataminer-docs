@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory
+description: "Consult the DataMiner connector protocol schema reference for the VersionHistory element, which contains the branch-based release history for a protocol."
 ---
 
 # VersionHistory element

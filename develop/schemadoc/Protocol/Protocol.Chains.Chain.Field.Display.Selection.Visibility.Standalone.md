@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.Chain.Field.Display.Selection.Visibility.Standalone
+description: "Learn how the Standalone element maps trigger values to the opposite of default field selection visibility in a DataMiner connector protocol."
 ---
 
 # Standalone element

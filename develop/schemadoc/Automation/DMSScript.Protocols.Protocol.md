@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Protocols.Protocol
+description: "Define a Protocol element for an automation script dummy, including its unique ID, variable name, protocol and version, and default element."
 ---
 
 # Protocol element

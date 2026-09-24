@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ReservedIDsOther
+description: "Check which ID ranges DataMiner reserves for triggers, commands, groups, timers, actions, QActions, and other non-parameter protocol constructs."
 ---
 
 # Other reserved IDs

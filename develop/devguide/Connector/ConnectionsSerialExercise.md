@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSerialExercise
+description: "Practice building a serial simulation for a Xicom Technology XTRD-750C and implementing temperature, current, and status commands."
 ---
 
 # Exercise

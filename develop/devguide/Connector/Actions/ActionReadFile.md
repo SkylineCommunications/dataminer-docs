@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionReadFile
+description: "Use the read file action to retrieve all or part of a file from a configured directory and store its contents in a parameter."
 ---
 
 # read file

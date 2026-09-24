@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol.Value
+description: "Learn how each Value element under Flowcontrol specifies a flow control mode users can select, including SNMPv3 encryption algorithms."
 ---
 
 # Value element

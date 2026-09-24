@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Matrix.Inputs
+description: "Learn how the Inputs element connects an inputs table and its column mappings to a matrix control in a DataMiner connector protocol."
 ---
 
 # Inputs element

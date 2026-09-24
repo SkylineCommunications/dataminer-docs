@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.SNMP.Type
+description: "Learn how the SNMP Type element selects the SNMP data type for a parameter, including integer, string, OID, and time types."
 ---
 
 # Type element

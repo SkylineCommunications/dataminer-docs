@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: How_to_use_the_element_log_in_connector_integrations
+description: "Use the element log to investigate connector behavior, adjust log levels, add actionable QAction entries, and prepare integrations for debugging."
 ---
 
 # How to use the element log in connector integrations

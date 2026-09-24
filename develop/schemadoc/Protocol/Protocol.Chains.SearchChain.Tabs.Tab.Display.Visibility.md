@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility
+description: "Learn how the Visibility element combines a default setting with trigger conditions for search tab visibility in a DataMiner connector protocol."
 ---
 
 # Visibility element

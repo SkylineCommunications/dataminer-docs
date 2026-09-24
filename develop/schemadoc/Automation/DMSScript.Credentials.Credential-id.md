@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Credentials.Credential-id
+description: "Use the Credential id attribute as the unique positive integer passed to GetCredential when an automation script retrieves credentials."
 ---
 
 # id attribute

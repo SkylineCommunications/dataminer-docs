@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Logic
+description: "Explore the parameters, groups, timers, triggers, actions, QActions, and conditions used to define connector logic in a DataMiner protocol."
 ---
 
 # Logic

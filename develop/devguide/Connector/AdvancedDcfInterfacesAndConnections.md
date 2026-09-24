@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDcfInterfacesAndConnections
+description: "Understand DCF interfaces, internal and external connections, connection directions, and properties used for path selection and visualization."
 ---
 
 # Interfaces and connections

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.SNMP-includepages
+description: "Learn how the includepages attribute controls automatic parameter OIDs and page-specific submaps in a generated protocol MIB."
 ---
 
 # includepages attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AutomationActionEmail
+description: "Configure an Email action to send a message with a subject and To, CC, and BCC recipients, including the plain-text message option."
 ---
 
 # Email

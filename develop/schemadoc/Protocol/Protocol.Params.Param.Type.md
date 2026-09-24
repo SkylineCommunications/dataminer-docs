@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Type
+description: "Learn how the Type element selects a parameter type and how each supported type behaves in a DataMiner connector."
 ---
 
 # Type element

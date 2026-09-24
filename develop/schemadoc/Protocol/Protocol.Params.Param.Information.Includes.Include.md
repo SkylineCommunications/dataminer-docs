@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Information.Includes.Include
+description: "Learn how the Include element adds parameter range, unit, step size, or timestamp details to an information tooltip in a DataMiner connector protocol."
 ---
 
 # Include element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session.Connection
+description: "Learn how to use the Connection element to pair an HTTP request with response storage settings and connection options in a DataMiner connector protocol."
 ---
 
 # Connection element

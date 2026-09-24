@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.LocalIPport.DefaultValue
+description: "Learn how the DefaultValue element under LocalIPport sets the local client port for a serial connection over TCP/IP or UDP/IP."
 ---
 
 # DefaultValue element

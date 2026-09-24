@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-whereValue
+description: "Learn how the whereValue attribute sets the value that whereTag must match before an export rule applies in a DataMiner connector protocol."
 ---
 
 # whereValue attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TimerTime
+description: "Use the TimerTime simple type to represent loop execution or a positive timer interval in the DataMiner connector protocol schema."
 ---
 
 # TimerTime simple type

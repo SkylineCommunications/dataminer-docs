@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Database.Connection.Type
+description: "Learn how to use the Type element to choose direct database writes or SLProtocol access for a logger table in a DataMiner connector protocol."
 ---
 
 # Type element

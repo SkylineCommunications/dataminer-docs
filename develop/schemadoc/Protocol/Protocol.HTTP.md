@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP
+description: "Learn how to use the HTTP element to define the connector's HTTP sessions and connections in a DataMiner connector protocol."
 ---
 
 # HTTP element

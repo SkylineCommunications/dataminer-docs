@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.DeviceOID
+description: "Learn how the DeviceOID element assigns a device OID that combines with the vendor OID to identify a device uniquely in a DataMiner connector protocol."
 ---
 
 # DeviceOID element

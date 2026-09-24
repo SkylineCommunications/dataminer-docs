@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-lines
+description: "Learn how the lines attribute sets the displayed line count for a string parameter, including in EPM element details in a DataMiner connector protocol."
 ---
 
 # lines attribute

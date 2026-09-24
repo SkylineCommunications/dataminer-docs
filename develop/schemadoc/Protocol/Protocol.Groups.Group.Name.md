@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups.Group.Name
+description: "Learn how the Name element stores the optional name assigned to a protocol group in a DataMiner connector protocol."
 ---
 
 # Name element

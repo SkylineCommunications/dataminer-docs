@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsWebSocketsUseCases
+description: "Compare four WebSocket connection patterns and implement the shared protocol logic for normal, dynamic IP, and custom-handshake use cases."
 ---
 
 # WebSocket use cases

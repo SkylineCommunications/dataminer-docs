@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display
+description: "Learn how the Display element controls how a parameter appears, including its position, units, range, and trending in a DataMiner connector protocol."
 ---
 
 # Display element

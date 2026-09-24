@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Databits.Disabled
+description: "Learn how the Disabled element under Databits controls whether users can change the data bits in the DataMiner user interface."
 ---
 
 # Disabled element

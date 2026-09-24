@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Pairs.Pair.Content.ResponseOnBadCommand
+description: "Learn how to use the ResponseOnBadCommand element to match a known error response and avoid retrying the command in a DataMiner connector protocol."
 ---
 
 # ResponseOnBadCommand element
