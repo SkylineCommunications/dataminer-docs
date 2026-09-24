@@ -14,7 +14,7 @@ For a **self-managed DataMiner System**, the EdgeManager DxM must run on the sam
 
 When the DxM has been installed, in the Windows services overview, you should see two services:
 
-- *DataMiner SiteManager*: This is the EdgeManager DxM service that interacts with DataMiner and the *zrok-agent* process.
+- *DataMiner EdgeManager*: This is the EdgeManager DxM service that interacts with DataMiner and the *zrok-agent* process.
 - *zrok-agent*: This is the zrok Agent service with which the EdgeManager DxM communicates for creating the communication tunnels.
 
 ## On-premises setup
