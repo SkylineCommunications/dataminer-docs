@@ -9,7 +9,7 @@ With DataMiner, you build your data-driven operation on a rock-solid, standardiz
 
 ## Any domain
 
-DataMiner is designed to integrate your entire operation end to end, across any imaginable domain, so it can operate as one intelligence fabric. It is the only solution in the industry that is guaranteed to do that, with proven deployments in countless areas:
+DataMiner is designed to integrate your entire operation end to end, across any imaginable domain, so it can operate as one intelligence fabric. It is the only platform in the industry that is guaranteed to do that, with proven deployments in countless areas:
 
 - All-IP networks
 - Legacy ASI/SDI infrastructure

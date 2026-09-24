@@ -13,7 +13,9 @@ Confidently and efficiently integrate any type of data and controls from any ven
 
 - Vendor-agnostic.
 - Real-time availability of all your data sources and products.
-- Apply standard alarm templates.
+- End-to-end integration of even the most complex technical ecosystems.
+
+![Pillars_NMS](~/dataminer/images/DA_pillars_NMS.jpg)<br>*Various data monitored from the DataMiner Cube client app*
 
 ## Open architecture
 
