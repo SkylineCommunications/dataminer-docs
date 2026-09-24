@@ -6,7 +6,7 @@ description: Learn how the deprecated Automation Master Workflow validates, pack
 # Automation Master Workflow
 
 > [!IMPORTANT]
-> The Automation Master Workflow is deprecated and will be removed on 2 November 2026. Update your solution to use `Skyline.DataMiner.Sdk` projects and the [Master Workflow](xref:github_reusable_workflows_master_workflow).
+> The Automation Master Workflow is deprecated and no longer available as of 2 November 2026. Update your solution to use `Skyline.DataMiner.Sdk` projects and the [Master Workflow](xref:github_reusable_workflows_master_workflow).
 
 The Automation Master Workflow should run on repositories containing an [automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
 
