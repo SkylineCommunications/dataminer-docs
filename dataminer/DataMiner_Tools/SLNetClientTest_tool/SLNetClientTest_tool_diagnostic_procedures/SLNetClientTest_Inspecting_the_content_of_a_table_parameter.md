@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
+description: "Use SLNetClientTest to inspect a table parameter by entering the DataMiner, element, and parameter IDs, then view or export its contents."
 ---
 
 # Inspecting the contents of a table parameter
