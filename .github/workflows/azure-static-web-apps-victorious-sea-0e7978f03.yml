@@ -18,7 +18,7 @@ jobs:
         with:
           submodules: true
       - name: Install DocFX
-        run: dotnet tool update -g docfx
+        run: dotnet tool update -g docfx --version 2.80.1
         env:
           CI: true
       - name: Restore NuGet
