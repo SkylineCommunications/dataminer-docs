@@ -12,8 +12,6 @@ Configures a dialog box asking for a user response.
 
 Use this action in an automation script that needs input from an interactive operator. Before configuring it, determine the dialog definition and the response handling required by the script.
 
-<a id="automation-action-ui-scope"></a>
-
 ## Scope
 
 The `Value` element contains the definition of the dialog shown to the operator. The action is for interactive input; it does not replace an `if` action or provide a general-purpose branching expression.
@@ -21,8 +19,6 @@ The `Value` element contains the definition of the dialog shown to the operator.
 ## Expected result
 
 When the action executes, DataMiner presents the configured dialog and the script can continue with the response defined by that dialog.
-
-<a id="automation-action-ui-failure-and-edge-cases"></a>
 
 ## Failure and edge cases
 

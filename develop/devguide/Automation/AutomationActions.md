@@ -6,8 +6,6 @@ description: "Browse the available automation script actions and learn what each
 
 # Automation script actions
 
-<a id="automation-actions-catalog"></a>
-
 |Name|Description|
 |--- |--- |
 |[Assign dummy](xref:AutomationActionAssignDummy)|Assigns an automation script's dummy to a specific element by using a variable or a value.|
