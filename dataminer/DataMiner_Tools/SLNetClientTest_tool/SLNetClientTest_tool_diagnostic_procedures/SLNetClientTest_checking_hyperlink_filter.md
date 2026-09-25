@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_checking_hyperlink_filter
+description: "Test a hyperlink filter with SLNetClientTest's FilterElementChecker by entering the filterElement and target object, then check whether they match."
 ---
 
 # Checking a hyperlink filter

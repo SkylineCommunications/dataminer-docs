@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Inspecting_the_parameter_notification_queue
+description: "Inspect the SLNet parameter notification queue to review queued events and Total Queued values, then identify problematic elements from per-element queues."
 ---
 
 # Inspecting the parameter notification queue

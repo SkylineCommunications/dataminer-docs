@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_consulting_license_info
+description: "Use SLNetClientTest to check DMA license information, licensed applications, verification method, expiration date, and activated license counters."
 ---
 
 # Consulting license information for a DMA

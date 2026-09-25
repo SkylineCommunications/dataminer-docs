@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Checking_the_hosting_Agent_cache
+description: "Use SLNetClientTest to inspect the hosting Agent cache from DataMiner 10.5.0 CU10 or 10.6.1 onward and verify which Agent hosts an element."
 ---
 
 # Checking the hosting Agent cache

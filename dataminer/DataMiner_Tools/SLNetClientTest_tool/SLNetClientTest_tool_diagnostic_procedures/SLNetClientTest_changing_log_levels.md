@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_changing_log_levels
+description: "Use SLNetClientTest to change log levels for files missing from DataMiner Cube with UpdateLogFileSettingsMessage, a file name, and level settings."
 ---
 
 # Changing the log levels for a log file

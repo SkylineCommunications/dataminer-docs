@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_trend_data_inspector
+description: "Open the Trend Data Inspector in SLNetClientTest to request a parameter's trend data, inspect raw database records, and investigate gaps in trend graphs."
 ---
 
 # Consulting the trend data inspector

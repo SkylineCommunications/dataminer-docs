@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
+description: "Inspect SLNet stack sizes in SLNetClientTest to assess delays, check the 250,000 default peak, and learn when a DMA restart is required."
 ---
 
 # Inspecting the stack sizes in SLNet

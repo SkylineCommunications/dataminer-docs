@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_retrieving_mapping_info
+description: "View live element-to-process mappings in DataMiner 10.5.4/10.6.0 and later to monitor SLProtocol and SLScripting PIDs in Element Process ID Info."
 ---
 
 # Retrieving live information about the mapping between elements and the processes they use
