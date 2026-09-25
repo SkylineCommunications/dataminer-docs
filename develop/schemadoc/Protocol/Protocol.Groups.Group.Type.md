@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups.Group.Type
+description: "Learn how the Type element selects whether a group contains actions, triggers, parameters, or pairs in a DataMiner connector protocol."
 ---
 
 # Type element

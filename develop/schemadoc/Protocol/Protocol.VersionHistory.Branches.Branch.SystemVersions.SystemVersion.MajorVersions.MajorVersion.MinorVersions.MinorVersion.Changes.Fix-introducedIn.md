@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-introducedIn
+description: "Consult the DataMiner connector protocol schema reference for the introducedIn attribute, which identifies the version where the fixed bug originated."
 ---
 
 # introducedIn attribute

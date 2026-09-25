@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Type
+description: "Use the Exe Type element to select template, memory, condition, or dummy-state handling for applicable automation script actions."
 ---
 
 # Type element

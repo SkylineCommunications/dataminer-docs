@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-hex
+description: "Learn how the hex attribute shows a parameter value as a hexadecimal number when enabled in a DataMiner connector protocol."
 ---
 
 # hex attribute

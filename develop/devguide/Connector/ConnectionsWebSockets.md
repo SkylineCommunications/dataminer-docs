@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsWebSockets
+description: "Understand how the WebSocket protocol establishes full-duplex communication over one TCP connection through an HTTP Upgrade handshake."
 ---
 
 # WebSockets

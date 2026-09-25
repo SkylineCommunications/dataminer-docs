@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.RCA.Protocol.Link-distribute
+description: "Reference the RCA Link distribute attribute and its string type; behavioral documentation is not yet available on this page."
 ---
 
 # distribute attribute

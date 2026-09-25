@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Dependencies.Id
+description: "Learn how to use the Id element to link a dependency parameter that must be set or verified with another parameter in a DataMiner connector protocol."
 ---
 
 # Id element

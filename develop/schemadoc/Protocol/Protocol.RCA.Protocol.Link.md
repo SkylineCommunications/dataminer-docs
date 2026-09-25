@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.RCA.Protocol.Link
+description: "Learn how the Link element defines an RCA chain with an ordered parameter path and optional value filters between related tables."
 ---
 
 # Link element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param
+description: "Learn how the Param element defines a connector parameter, including its identity, behavior, measurement, display, and communication settings."
 ---
 
 # Param element

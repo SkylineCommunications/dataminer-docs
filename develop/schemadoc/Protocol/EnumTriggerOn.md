@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumTriggerOn
+description: "Review the allowed values for the EnumTriggerOn simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumTriggerOn simple type

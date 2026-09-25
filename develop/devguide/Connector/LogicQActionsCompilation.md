@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicQActionsCompilation
+description: "Understand when DataMiner compiles C# QActions, where DLLs are stored, how to reference assemblies or other QActions, and which compiler features apply."
 ---
 
 # QAction Compilation

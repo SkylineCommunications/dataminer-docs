@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsHttpDynamicIp
+description: "Change an HTTP connection's polling IP address, port, and protocol dynamically with a dynamic ip parameter while preserving proxy behavior."
 ---
 
 # Dynamically changing the IP address and port number
@@ -31,4 +33,4 @@ For example, if you specify "10.12.0.63:4000", then all communication will be do
 > [!NOTE]
 >
 > - To dynamically poll using the HTTPS protocol, make sure the IP is prefixed with "https://". For example, specifying `https://10.12.0.63` will poll using HTTPS, while `10.12.0.63` will poll using HTTP. This happens regardless of the IP and the port configured in the element editor.
-> - "bypassProxy" will be taken from the connection settings from the element wizard.
+> - `bypassProxy` will be taken from the connection settings from the element wizard.

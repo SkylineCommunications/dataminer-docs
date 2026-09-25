@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.OffSet
+description: "Learn how the OffSet element provides the value added by an OffSet operation in an Interprete sequence in a DataMiner connector protocol."
 ---
 
 # OffSet element

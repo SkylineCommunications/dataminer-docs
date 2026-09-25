@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Parity.Value
+description: "Learn how each Value element under Parity specifies a supported parity or SNMPv3 authentication algorithm users can select."
 ---
 
 # Value element

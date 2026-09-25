@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol.Disabled
+description: "Learn how the Disabled element under Flowcontrol controls whether users can change flow control in the DataMiner user interface."
 ---
 
 # Disabled element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSnmpRetrievingAVariable
+description: "Implement periodic SNMP polling for a scalar variable by defining its parameter and OID, adding it to a group, and scheduling that group."
 ---
 
 # Retrieving a variable

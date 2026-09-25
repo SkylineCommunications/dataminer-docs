@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.BusAddress.Disabled
+description: "Learn how the Disabled element under BusAddress controls whether users can change the bus address in the DataMiner user interface."
 ---
 
 # Disabled element

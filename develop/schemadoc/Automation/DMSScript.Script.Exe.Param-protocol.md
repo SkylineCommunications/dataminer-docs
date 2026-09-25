@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Param-protocol
+description: "Use the Param protocol attribute to identify the dummy script variable targeted by assigndummy, get, and set actions in an automation script."
 ---
 
 # protocol attribute

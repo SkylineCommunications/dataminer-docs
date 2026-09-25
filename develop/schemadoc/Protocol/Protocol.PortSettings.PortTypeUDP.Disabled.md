@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.PortTypeUDP.Disabled
+description: "Learn how the Disabled element under PortTypeUDP controls whether users can select UDP/IP as the port type in the DataMiner user interface."
 ---
 
 # Disabled element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTable
+description: "Explore how to define DataMiner protocol tables and configure primary keys, display keys, foreign keys, relations, row controls, and styling."
 ---
 
 # Table

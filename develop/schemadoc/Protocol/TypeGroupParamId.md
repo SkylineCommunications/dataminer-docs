@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TypeGroupParamId
+description: "Use the TypeGroupParamId simple type to validate group parameter IDs and optional execution suffixes in the DataMiner connector protocol schema."
 ---
 
 # TypeGroupParamId simple type

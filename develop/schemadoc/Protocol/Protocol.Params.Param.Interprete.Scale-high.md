@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Scale-high
+description: "Learn how the high attribute sets the converted value corresponding to the highest device value in a scale mapping in a DataMiner connector protocol."
 ---
 
 # high attribute

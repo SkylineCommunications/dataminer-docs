@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.QActions
+description: "Learn how the QActions element contains uniquely identified C# scripts that run when protocol parameters or table rows change."
 ---
 
 # QActions element

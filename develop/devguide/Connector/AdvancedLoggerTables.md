@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedLoggerTables
+description: "Use logger tables to persist large data volumes without loading all rows into SLProtocol, and understand their caching, display, and query constraints."
 ---
 
 # Logger tables

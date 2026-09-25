@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AutomationActionAssignTemplate
+description: "Configure the Assign template action to apply an alarm or trend template to an automation script dummy by fixed value or script parameter."
 ---
 
 # Assign template

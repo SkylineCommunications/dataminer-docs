@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSerialSerialSingle
+description: "Use the serial single connector type when each element connecting to the same device address needs its own dedicated SLPort socket."
 ---
 
 # Serial single

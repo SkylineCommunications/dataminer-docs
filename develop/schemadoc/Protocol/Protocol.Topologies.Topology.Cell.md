@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Topologies.Topology.Cell
+description: "Consult the DataMiner connector protocol schema reference for the Cell element, which defines a cell in a CPE topology and its table mapping."
 ---
 
 # Cell element

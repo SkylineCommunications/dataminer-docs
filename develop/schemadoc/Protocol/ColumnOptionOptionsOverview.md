@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ColumnOptionOptionsOverview
+description: "Review the connector options available for dynamic table columns and how they control values, alarms, icons, headers, filtering, and display."
 ---
 
 # Options overview

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Responses.Response.Content
+description: "Learn how the Response Content element orders the parameters that form an expected device response and marks optional entries."
 ---
 
 # Content element

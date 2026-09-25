@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTableMatrixInputsTableParameter
+description: "Configure the inputs table for a table-based matrix with required index, label, state, and lock columns plus an optional page column."
 ---
 
 # Inputs Table

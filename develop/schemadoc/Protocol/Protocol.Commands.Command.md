@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Commands.Command
+description: "Learn how the Command element defines a request or setting change sent to a data source and its expected response in a DataMiner connector protocol."
 ---
 
 # Command element

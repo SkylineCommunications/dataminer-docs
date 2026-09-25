@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.QActions.QAction-dllImport
+description: "Learn how the dllImport attribute adds external DLL references and assembly resolver hint paths when DataMiner compiles a QAction."
 ---
 
 # dllImport attribute

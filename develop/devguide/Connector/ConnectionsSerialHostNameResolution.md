@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSerialHostnameResolution
+description: "Understand when DataMiner resolves hostnames for TCP-oriented and UDP-oriented serial connections and how this behavior changed from DataMiner 10.2.9."
 ---
 
 # Hostname resolution

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session-keepAlive
+description: "Learn how the keepAlive attribute keeps an HTTP session open from its first request until the element stops in a DataMiner connector protocol."
 ---
 
 # keepAlive attribute

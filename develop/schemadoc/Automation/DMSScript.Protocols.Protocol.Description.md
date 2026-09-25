@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Protocols.Protocol.Description
+description: "Use the Protocol Description element to assign the nonempty dummy variable name used by a DataMiner automation script."
 ---
 
 # Description element

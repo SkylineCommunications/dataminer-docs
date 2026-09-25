@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedMultiThreading
+description: "Configure additional connector execution threads for selected physical or virtual connections, each with its own group queue and RTE registration."
 ---
 
 # Multithreading

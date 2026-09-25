@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Parity
+description: "Learn how the Parity element defines default, allowed, and selectable parity settings for a serial or SNMPv3 connection."
 ---
 
 # Parity element

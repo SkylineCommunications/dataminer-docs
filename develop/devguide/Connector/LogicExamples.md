@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicExamples
+description: "See how timers, groups, parameters, triggers, and actions work together to poll an SNMP variable, increment a value, or run a startup QAction."
 ---
 
 # Examples
@@ -128,7 +130,7 @@ flowchart LR
 ```
 
 ```xml
-<Protocol>
+<Protocol xmlns="http://www.skyline.be/protocol">
   <Params>
 	<Param id="2">
 		<Name>AfterStartup</Name>

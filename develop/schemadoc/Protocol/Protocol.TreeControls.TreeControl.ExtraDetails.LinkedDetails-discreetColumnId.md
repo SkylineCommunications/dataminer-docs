@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails-discreetColumnId
+description: "Consult the DataMiner connector protocol schema reference for the discreetColumnId attribute, which sets the Discreet column that controls extra details."
 ---
 
 # discreetColumnId attribute

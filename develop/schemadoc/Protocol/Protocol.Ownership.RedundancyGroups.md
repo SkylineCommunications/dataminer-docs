@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.RedundancyGroups
+description: "Learn how to use the RedundancyGroups element to group ownership declarations for protocol-created redundancy groups in a DataMiner connector protocol."
 ---
 
 # RedundancyGroups element

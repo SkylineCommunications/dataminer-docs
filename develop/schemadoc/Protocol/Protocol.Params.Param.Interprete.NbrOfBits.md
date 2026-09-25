@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.NbrOfBits
+description: "Learn how the NbrOfBits element sets the bit count used to process a parameter and supports big-endian reversal in a DataMiner connector protocol."
 ---
 
 # NbrOfBits element

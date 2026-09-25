@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSnmpAlteringATableCell
+description: "Compare three ways to alter an SNMP table cell: snmpSetAndGet, a parameter holding the instance, or SLScripting logic."
 ---
 
 # Altering a table cell

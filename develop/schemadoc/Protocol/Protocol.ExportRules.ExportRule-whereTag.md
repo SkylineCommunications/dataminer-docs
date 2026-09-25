@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-whereTag
+description: "Learn how the whereTag attribute identifies the XML element tested with whereValue before an export rule applies in a DataMiner connector protocol."
 ---
 
 # whereTag attribute

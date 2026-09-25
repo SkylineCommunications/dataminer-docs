@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.SNMP.OID-skipDynamicSNMPGet
+description: "Learn how the skipDynamicSNMPGet attribute skips evaluation of a parameter that would require a dynamic SNMP Get in a DataMiner connector protocol."
 ---
 
 # skipDynamicSNMPGet attribute

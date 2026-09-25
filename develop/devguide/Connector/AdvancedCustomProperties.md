@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedCustomProperties
+description: "Learn how connector-defined custom properties add details to DataMiner elements, services, views, and alarms, and find related references."
 ---
 
 # Custom properties

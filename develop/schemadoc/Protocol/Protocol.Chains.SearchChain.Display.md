@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.SearchChain.Display
+description: "Learn how the Display element configures display and visibility settings for a search chain in a DataMiner connector protocol."
 ---
 
 # Display element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionExecute
+description: "Use the execute action to place a group at the end of the execution queue, ahead of groups scheduled by a timer."
 ---
 
 # execute

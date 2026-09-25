@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSerialBreakSignal
+description: "Implement a serial break-signal flow with separate connections, open, lock, and unlock actions, break commands, and the commbreak pair option."
 ---
 
 # Break signal

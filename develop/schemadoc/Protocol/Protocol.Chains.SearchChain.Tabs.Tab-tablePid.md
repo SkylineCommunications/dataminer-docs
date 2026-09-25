@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab-tablePid
+description: "Learn how the tablePid attribute identifies the table for which a search chain tab is defined in a DataMiner connector protocol."
 ---
 
 # tablePid attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Dependencies.Id-postSet
+description: "Learn how to use the postSet attribute to choose whether a dependency parameter acts as a preset or a post-set in a DataMiner connector protocol."
 ---
 
 # postSet attribute

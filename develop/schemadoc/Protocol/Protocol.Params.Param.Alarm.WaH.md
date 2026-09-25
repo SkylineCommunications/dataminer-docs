@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Alarm.WaH
+description: "Learn how to use the WaH element to set the default warning-high threshold in a parameter alarm template in a DataMiner connector protocol."
 ---
 
 # WaH element

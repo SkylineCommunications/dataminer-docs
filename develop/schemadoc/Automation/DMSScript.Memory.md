@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Memory
+description: "Use the Memory element to contain an automation script's memory files and ensure that every file ID is unique within the collection."
 ---
 
 # Memory element

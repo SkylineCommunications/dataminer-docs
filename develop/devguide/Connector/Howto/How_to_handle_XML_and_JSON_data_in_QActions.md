@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: How_to_handle_XML_and_JSON_data_in_QActions
+description: "Serialize and deserialize XML and JSON data in QActions using generated C# classes, DataMiner-compatible libraries, and recommended settings."
 ---
 
 # How to handle XML and JSON data in QActions

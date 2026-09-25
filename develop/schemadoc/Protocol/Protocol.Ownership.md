@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership
+description: "Learn how to use the Ownership element to configure access to elements, views, services, and redundancy groups in a DataMiner connector protocol."
 ---
 
 # Ownership element

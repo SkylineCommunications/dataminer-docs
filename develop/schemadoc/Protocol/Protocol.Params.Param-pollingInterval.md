@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param-pollingInterval
+description: "Learn how to use the pollingInterval attribute to set an expected polling interval used to extend real-time trend graphs in a DataMiner connector protocol."
 ---
 
 # pollingInterval attribute

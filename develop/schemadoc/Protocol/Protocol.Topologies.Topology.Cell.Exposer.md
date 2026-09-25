@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Topologies.Topology.Cell.Exposer
+description: "Consult the DataMiner connector protocol schema reference for the Exposer element, which exposes a topology cell and its linked tables to the EPM crawler."
 ---
 
 # Exposer element

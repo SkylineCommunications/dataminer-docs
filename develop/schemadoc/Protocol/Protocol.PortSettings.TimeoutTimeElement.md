@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.TimeoutTimeElement
+description: "Learn how the TimeoutTimeElement element configures the overall element timeout and whether users can modify it for the main connection."
 ---
 
 # TimeoutTimeElement element

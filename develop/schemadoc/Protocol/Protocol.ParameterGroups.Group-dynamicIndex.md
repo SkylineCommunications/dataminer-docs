@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ParameterGroups.Group-dynamicIndex
+description: "Learn how to use the dynamicIndex attribute to filter dynamically generated interfaces by a table row's display key in a DataMiner connector protocol."
 ---
 
 # dynamicIndex attribute

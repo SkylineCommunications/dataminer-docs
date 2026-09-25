@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-link
+description: "Learn how the link attribute identifies the file containing input and output labels for a matrix parameter in a DataMiner connector protocol."
 ---
 
 # link attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTitle
+description: "Define a title in the DataMiner UI with a fixed parameter, the title measurement type, and an optional line below it."
 ---
 
 # Title

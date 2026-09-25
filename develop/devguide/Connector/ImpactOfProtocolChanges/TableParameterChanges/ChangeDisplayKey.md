@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangeDisplayKey
+description: "Assess how changing a table display key affects alarms, trends, filters, visualizations, and references while preserving access to historical data."
 ---
 
 # Change display key

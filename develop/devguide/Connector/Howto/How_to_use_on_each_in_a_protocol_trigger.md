@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: How_to_use_on_each_in_a_protocol_trigger
+description: "Use an on each trigger as a fallback flow that runs only when no dedicated trigger matches the same source and activation condition."
 ---
 
 # How to use 'on each' in a protocol trigger

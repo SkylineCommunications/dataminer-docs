@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Information.Subtext
+description: "Learn how the Subtext element provides the expandable body text displayed below a parameter tooltip title in a DataMiner connector protocol."
 ---
 
 # Subtext element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type
+description: "Learn how the Type element selects how a parameter appears in the user interface and provides type-specific settings in a DataMiner connector protocol."
 ---
 
 # Type element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumParamInterpretLengthType
+description: "Review the allowed values for the EnumParamInterpretLengthType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumParamInterpretLengthType simple type

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Memory.File-volatile
+description: "Set the File volatile attribute to indicate whether an automation script creates a temporary memory file or references a permanent one."
 ---
 
 # volatile attribute

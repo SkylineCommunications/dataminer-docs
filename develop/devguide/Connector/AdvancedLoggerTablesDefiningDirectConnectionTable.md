@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedLoggerTablesDefiningDirectConnectionTable
+description: "Configure a legacy DirectConnection logger table with a primary key, indexing, and an infinite TTL, while planning for the end of support."
 ---
 
 # Defining a logger table of type DirectConnection with a primary key

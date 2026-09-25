@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Base
+description: "Learn how the Base element selects the numeral system used to interpret parameter values, from base 2 through base 36 in a DataMiner connector protocol."
 ---
 
 # Base element

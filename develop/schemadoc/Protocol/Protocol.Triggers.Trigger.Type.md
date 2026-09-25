@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Triggers.Trigger.Type
+description: "Consult the DataMiner connector protocol schema reference for the Type element, which selects whether to execute actions or activate triggers."
 ---
 
 # Type element

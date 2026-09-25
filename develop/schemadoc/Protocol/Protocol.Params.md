@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params
+description: "Learn how the Params element contains a connector's parameter definitions and enforces unique parameter IDs and type-name combinations."
 ---
 
 # Params element

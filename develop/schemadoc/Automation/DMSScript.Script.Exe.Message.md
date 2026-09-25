@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Message
+description: "Use the Message element to supply text for C# code, comments, notifications, exits, information events, log messages, or reports."
 ---
 
 # Message element

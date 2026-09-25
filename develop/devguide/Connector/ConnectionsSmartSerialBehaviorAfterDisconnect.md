@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSmartSerialBehaviorAfterDisconnect
+description: "Learn how smart-serial TCP commands are buffered during a device disconnect and how heartbeat-based detection prevents delayed command bursts."
 ---
 
 # Smart-Serial behavior after a physical device disconnect

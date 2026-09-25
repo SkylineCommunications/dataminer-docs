@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Replication.Element
+description: "Learn how the Element element identifies the DataMiner Agent and element from which a parameter is replicated in a DataMiner connector protocol."
 ---
 
 # Element element

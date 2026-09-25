@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsAnalog
+description: "Define an analog UI component for a numeric connector parameter by setting its measurement type and configuring display units and range."
 ---
 
 # Analog

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.Hierarchy.Table-id
+description: "Consult the DataMiner connector protocol schema reference for the id attribute, which identifies a table required in the tree control hierarchy."
 ---
 
 # id attribute

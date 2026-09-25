@@ -1,17 +1,19 @@
 ---
+metadata_version: 1
 uid: Handling_Async_Code
+description: "Handle async-only library calls in a synchronous automation script while keeping the IEngine object and related objects on the entry point thread."
 ---
 
 # Handling async code
 
-In automation scripts, async methods **should not be used**, and all code should execute on the same thread. If an external library contains async methods, they must be executed synchronously to maintain script stability.
+The automation script entry point is synchronous: use `void Run(IEngine engine)`. Do not make the entry point `async`, and do not move Engine work to a background thread.
 
 > [!IMPORTANT]
-> The `Engine` object, and every object you obtain through it (such as `Element` objects returned by `engine.FindElement`, dummies, and their parameters), is **not thread-safe**. It may only be used from the single thread on which `Run(Engine engine)` executes.
+> The `IEngine` object, and every object you obtain through it (such as `Element` objects returned by `engine.FindElement`, dummies, and their parameters), is **not thread-safe**. It may only be used from the single thread on which `Run(IEngine engine)` executes.
 >
-> This applies even when the work you offload is fully synchronous. Dispatching Engine calls to other threads (for example with `Task.Run`, `Parallel.For`, or a manually started `Thread`) and using the Engine or its objects from more than one thread at a time can corrupt the Automation subsystem's internal state and crash the process (`SLAutomation`). Keep all interaction with the Engine and its objects on the script's main thread.
+> This applies even when the work you offload is fully synchronous. Dispatching Engine calls to other threads (for example with `Task.Run`, `Parallel.For`, or a manually started `Thread`) and using the Engine or its objects from more than one thread at a time can corrupt the Automation subsystem's internal state and crash the process (`SLAutomation`). Keep all interaction with the Engine and its objects on the script's entry point thread.
 
-To properly call an async method from an external library, use the following approach:
+If an external library only exposes an async method, call it synchronously from the entry point thread. Do not pass the Engine object or objects obtained from it into the asynchronous operation.
 
 ```cs
 using System;
@@ -21,7 +23,7 @@ using Skyline.DataMiner.Automation;
 
 public class Script
 {
-  public void Run(Engine engine)
+  public void Run(IEngine engine)
   {
     string url = "https://jsonplaceholder.typicode.com/todos/1"; // Example API
     string result = GetDataSync(url);

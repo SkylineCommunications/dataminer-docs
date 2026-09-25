@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl
+description: "Consult the DataMiner connector protocol schema reference for the TreeControl element, which defines a hierarchical table view with extra details and tabs."
 ---
 
 # TreeControl element

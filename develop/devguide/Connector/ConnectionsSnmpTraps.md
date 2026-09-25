@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSnmpTraps
+description: "Configure a DataMiner connector to capture and process SNMP traps, map bindings, generate alarms, and send traps from QActions."
 ---
 
 # Traps

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDataMinerDataPersistenceStandaloneParameters
+description: "Make a standalone connector parameter persist in the database by setting its Param save attribute to true."
 ---
 
 # Standalone parameters

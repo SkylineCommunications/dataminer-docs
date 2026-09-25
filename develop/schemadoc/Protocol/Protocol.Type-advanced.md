@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Type-advanced
+description: "Consult the DataMiner connector protocol schema reference for the advanced attribute, which adds secondary connection types with optional names."
 ---
 
 # advanced attribute

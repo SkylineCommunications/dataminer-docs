@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionAggregate
+description: "Configure the aggregate action to group and calculate table data, including filters, defaults, joins, weighting, status, and return options."
 ---
 
 # aggregate

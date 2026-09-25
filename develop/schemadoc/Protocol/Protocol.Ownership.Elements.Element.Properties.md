@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.Elements.Element.Properties
+description: "Learn how to use the Properties element to group ownership declarations for selected properties of an element in a DataMiner connector protocol."
 ---
 
 # Properties element

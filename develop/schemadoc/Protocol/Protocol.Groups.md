@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups
+description: "Learn how the Groups element contains the uniquely identified and named groups defined for device polling in a DataMiner connector protocol."
 ---
 
 # Groups element

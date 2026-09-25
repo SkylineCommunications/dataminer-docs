@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request.Parameters
+description: "Learn how to use the Parameters element to define the parameter values to include as key-value pairs in an HTTP request in a DataMiner connector protocol."
 ---
 
 # Parameters element

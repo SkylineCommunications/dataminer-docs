@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.SlowPoll.DefaultValue
+description: "Learn how the DefaultValue element under SlowPoll sets the timeout count or duration used for slow polling on the main connection."
 ---
 
 # DefaultValue element

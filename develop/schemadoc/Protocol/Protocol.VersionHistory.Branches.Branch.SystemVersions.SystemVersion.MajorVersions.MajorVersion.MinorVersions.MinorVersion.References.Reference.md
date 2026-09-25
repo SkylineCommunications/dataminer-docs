@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference
+description: "Consult the DataMiner connector protocol schema reference for the Reference element, which records a typed reference to a registration or tracking system."
 ---
 
 # Reference element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Name
+description: "Learn how the Name element sets the mandatory, unique technical name of a parameter in a DataMiner connector protocol."
 ---
 
 # Name element

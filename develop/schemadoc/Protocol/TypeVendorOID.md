@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TypeVendorOID
+description: "Use the TypeVendorOID simple type to validate Skyline vendor OIDs and optional numeric suffixes in the DataMiner connector protocol schema."
 ---
 
 # TypeVendorOID simple type

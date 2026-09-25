@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.AlarmLevelLinks
+description: "Learn how the AlarmLevelLinks element contains unique links that aggregate alarms from elements or table rows in a DataMiner connector protocol."
 ---
 
 # AlarmLevelLinks element

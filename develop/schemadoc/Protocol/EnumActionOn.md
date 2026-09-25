@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumActionOn
+description: "Review the allowed values for the EnumActionOn simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumActionOn simple type

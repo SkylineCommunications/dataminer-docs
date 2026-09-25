@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups.Group.Condition
+description: "Learn how the Condition element defines a condition that must be true before a group executes in a DataMiner connector protocol."
 ---
 
 # Condition element

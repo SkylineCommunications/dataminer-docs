@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Alarm-type
+description: "Learn how to use the type attribute to calculate alarm limits from a nominal value using absolute or relative thresholds in a DataMiner connector protocol."
 ---
 
 # type attribute

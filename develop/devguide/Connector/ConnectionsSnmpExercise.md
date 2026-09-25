@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSnmpExercise
+description: "Practice creating an SNMP protocol that retrieves standard system OIDs, alters sysContact, and polls an interface table in different ways."
 ---
 
 # Exercise

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicTimers
+description: "Configure protocol timers to schedule groups at different intervals, while accounting for queue delays, execution duration, and added timer threads."
 ---
 
 # Timers

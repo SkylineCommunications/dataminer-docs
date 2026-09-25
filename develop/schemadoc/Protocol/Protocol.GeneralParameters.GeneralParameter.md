@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.GeneralParameters.GeneralParameter
+description: "Learn how the GeneralParameter element enables or disables loading for a selected general parameter group in a DataMiner connector protocol."
 ---
 
 # GeneralParameter element

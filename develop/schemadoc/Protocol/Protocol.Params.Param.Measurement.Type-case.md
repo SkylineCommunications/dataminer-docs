@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-case
+description: "Learn how the case attribute controls letter casing for a parameter with measurement type string in a DataMiner connector protocol."
 ---
 
 # case attribute

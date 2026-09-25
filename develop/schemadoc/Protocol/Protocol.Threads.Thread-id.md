@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Threads.Thread-id
+description: "Learn how the Thread id attribute assigns a unique target ID that groups can use for execution on a specific thread."
 ---
 # id attribute
 

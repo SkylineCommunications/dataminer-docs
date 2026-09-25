@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Mediation.LinkTo-ops
+description: "Learn how the ops attribute applies semicolon-separated conversion operations between linked protocol parameters in a DataMiner connector protocol."
 ---
 
 # ops attribute

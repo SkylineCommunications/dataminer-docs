@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Param
+description: "Use the Param element to supply parameter data and identify a dummy script variable for applicable actions in a DataMiner automation script."
 ---
 
 # Param element

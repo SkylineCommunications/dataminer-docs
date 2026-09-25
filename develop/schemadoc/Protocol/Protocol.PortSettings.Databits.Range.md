@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Databits.Range
+description: "Learn how the Range element under Databits defines the minimum and maximum numbers of data bits users can select."
 ---
 
 # Range element

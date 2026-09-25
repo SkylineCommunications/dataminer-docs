@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTreeControlAlarmBubbleUp
+description: "Configure includeInAlarms relations to bubble alarm states up a DataMiner tree control and understand behavior for normal and masked alarms."
 ---
 
 # Alarm bubble-Up

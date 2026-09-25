@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedViewTablesSameElement
+description: "Define a volatile view table that combines columns from a base table and related tables in the same DataMiner element by following foreign keys."
 ---
 
 # View tables in the same element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Display.Pages.Page.Visibility-default
+description: "Learn how the default attribute sets whether a Data Display page is visible by default in a DataMiner connector protocol."
 ---
 
 # default attribute

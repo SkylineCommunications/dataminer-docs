@@ -25,7 +25,7 @@ namespace Skyline.DataMiner.Automation
 	/// <para>Defining a custom entry point:</para>
 	/// <code>
 	/// [AutomationEntryPoint(AutomationEntryPointType.Types.Default)]
-	/// public void Default(Engine engine)
+	/// public void Default(IEngine engine)
 	/// {
 	///	 engine.GenerateInformation(""Default"");
 	/// }
@@ -33,7 +33,7 @@ namespace Skyline.DataMiner.Automation
 	/// <para>For testing purposes, you can use <see cref="AutomationEntryPointType.Types.AutomationEntryPointTest"/>:</para>
 	/// <code>
 	/// [AutomationEntryPoint(AutomationEntryPointType.Types.AutomationEntryPointTest)]
-	/// public void AutomationEntryPointTest(Engine engine, string testMessage, List&lt;int&gt; testIntList)
+	/// public void AutomationEntryPointTest(IEngine engine, string testMessage, List&lt;int&gt; testIntList)
 	/// {
 	/// 	engine.GenerateInformation(""AutomationEntryPointTest: "" + testMessage + "" "" + string.Join("", "", testIntList.ToArray()));
 	/// }

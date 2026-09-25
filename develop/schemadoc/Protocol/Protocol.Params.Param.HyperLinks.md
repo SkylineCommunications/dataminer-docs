@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.HyperLinks
+description: "Learn how the HyperLinks element groups custom alarm shortcut commands that open webpages or run automation scripts in a DataMiner connector protocol."
 ---
 
 # HyperLinks element

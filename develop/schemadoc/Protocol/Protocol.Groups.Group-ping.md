@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups.Group-ping
+description: "Learn how the ping attribute marks the group used to test an element's main connection in a DataMiner connector protocol."
 ---
 
 # ping attribute

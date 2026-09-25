@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains
+description: "Learn how the Chains element contains topology and search chains shown as tabs for EPM or SOM elements in a DataMiner connector protocol."
 ---
 
 # Chains element

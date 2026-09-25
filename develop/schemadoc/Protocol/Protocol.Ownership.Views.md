@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.Views
+description: "Learn how to use the Views element to group ownership declarations for properties of DataMiner views in a DataMiner connector protocol."
 ---
 
 # Views element

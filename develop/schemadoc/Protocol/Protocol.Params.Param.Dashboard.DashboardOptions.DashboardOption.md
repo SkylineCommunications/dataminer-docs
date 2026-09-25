@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Dashboard.DashboardOptions.DashboardOption
+description: "Learn how to use the DashboardOption element to map a column index or parameter ID to a button panel display option in a DataMiner connector protocol."
 ---
 
 # DashboardOption element

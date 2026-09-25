@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangeLayout
+description: "Assess how moving, adding, or removing pages and parameters affects saved layouts, visualizations, user workflows, and connector usability."
 ---
 
 # Change layout

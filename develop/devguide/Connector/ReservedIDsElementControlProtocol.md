@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ReservedIDsElementControlProtocol
+description: "Consult the general parameter IDs reserved for DataMiner element control, including communication, DCF, replication, verification, and debug parameters."
 ---
 
 # DataMiner element control protocol

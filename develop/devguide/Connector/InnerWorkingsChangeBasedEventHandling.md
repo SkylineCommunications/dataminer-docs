@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: InnerWorkingsChangeBasedEventHandling
+description: "Understand how SLProtocol detects parameter changes, schedules triggers and QActions, and handles events differently for scalar and table parameters."
 ---
 
 # Change-based event handling

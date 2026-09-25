@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.Chain.Field-pid
+description: "Learn how the pid attribute identifies the parameter linked to a block in an EPM drill-down diagram in a DataMiner connector protocol."
 ---
 
 # pid attribute

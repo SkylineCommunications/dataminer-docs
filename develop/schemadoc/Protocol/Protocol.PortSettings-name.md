@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings-name
+description: "Learn how the PortSettings name attribute identifies the additional protocol type defined by the Protocol Type advanced attribute."
 ---
 
 # name attribute

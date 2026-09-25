@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangeUnicode
+description: "Assess how enabling or disabling Unicode changes parameter storage and communication, and determine whether existing values or integrations are affected."
 ---
 
 # Change Unicode

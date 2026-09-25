@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsWebSocketsUseCase1
+description: "Understand why a normal WebSocket connection configured during element creation cannot reconnect after a disconnect without restarting the element."
 ---
 
 # Normal WebSocket connection

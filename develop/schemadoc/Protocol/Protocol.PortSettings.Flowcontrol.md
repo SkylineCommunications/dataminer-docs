@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol
+description: "Learn how the Flowcontrol element defines default, allowed, and selectable flow control settings for an element connection."
 ---
 
 # Flowcontrol element

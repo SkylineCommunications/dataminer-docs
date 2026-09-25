@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.ScriptSuccess
+description: "Use the ScriptSuccess element in an exit action to indicate whether DataMiner should consider the automation script execution successful."
 ---
 
 # ScriptSuccess element

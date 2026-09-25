@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe-type
+description: "Use the Exe type attribute to select the action an automation script performs, from assignments and C# code to notifications and waits."
 ---
 
 # type attribute

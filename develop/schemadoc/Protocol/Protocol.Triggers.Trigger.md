@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Triggers.Trigger
+description: "Consult the DataMiner connector protocol schema reference for the Trigger element, which defines when specified actions run or other triggers activate."
 ---
 
 # Trigger element

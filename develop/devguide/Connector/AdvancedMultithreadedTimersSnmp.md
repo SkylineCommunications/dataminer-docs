@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedMultiThreadedTimersSnmp
+description: "Implement multithreaded SNMP polling with the required timer, group suffixes, parameter options, and response-processing QAction."
 ---
 
 # SNMP

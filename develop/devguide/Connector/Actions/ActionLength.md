@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionLength
+description: "Use the length action to calculate command lengths or validate response length fields against the lengths defined in the connector."
 ---
 
 # length

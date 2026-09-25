@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.SNMP.TrapOID-ipid
+description: "Learn how the ipid attribute identifies parameters containing the IP addresses from which DataMiner captures SNMP traps."
 ---
 
 # ipid attribute

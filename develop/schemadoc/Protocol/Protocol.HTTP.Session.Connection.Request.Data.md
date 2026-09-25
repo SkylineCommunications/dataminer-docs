@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request.Data
+description: "Learn how the Data element provides literal or parameter-based data for an HTTP request without encoding in a DataMiner connector protocol."
 ---
 
 # Data element

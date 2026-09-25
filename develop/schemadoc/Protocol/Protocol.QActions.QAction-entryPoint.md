@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.QActions.QAction-entryPoint
+description: "Learn how the entryPoint attribute maps QAction trigger parameters to specific entry point methods and classes."
 ---
 
 # entryPoint attribute

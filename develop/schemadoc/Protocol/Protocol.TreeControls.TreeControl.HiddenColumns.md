@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.HiddenColumns
+description: "Consult the DataMiner connector protocol schema reference for the HiddenColumns element, which lists the table columns that the tree control hides."
 ---
 
 # HiddenColumns element

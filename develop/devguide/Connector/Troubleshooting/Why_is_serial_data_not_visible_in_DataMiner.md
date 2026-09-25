@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Why_is_serial_data_not_visible_in_DataMiner
+description: "Troubleshoot serial parameter values that remain Not Initialized by checking Stream Viewer traffic, timeouts, response formats, and parsing errors."
 ---
 
 # Why is serial data not visible in DataMiner?

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTableRowButtons
+description: "Configure table-cell buttons that open DataMiner elements, services, redundancy groups, or views in a new card."
 ---
 
 # Configuring buttons to open DataMiner objects from table cells

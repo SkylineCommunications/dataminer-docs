@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TypeCamelCaseName
+description: "Use the TypeCamelCaseName simple type to validate camel-cased names from 2 to 160 characters in the DataMiner connector protocol schema."
 ---
 
 # TypeCamelCaseName simple type

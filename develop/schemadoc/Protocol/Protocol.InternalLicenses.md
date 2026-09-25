@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.InternalLicenses
+description: "Learn how the InternalLicenses element groups settings that exclude elements based on the protocol from the element license count."
 ---
 
 # InternalLicenses element

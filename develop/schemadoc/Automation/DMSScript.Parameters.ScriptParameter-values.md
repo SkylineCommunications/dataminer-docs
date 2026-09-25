@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Parameters.ScriptParameter-values
+description: "Use the ScriptParameter values attribute to name the memory file that supplies selectable values for an automation script parameter."
 ---
 
 # values attribute

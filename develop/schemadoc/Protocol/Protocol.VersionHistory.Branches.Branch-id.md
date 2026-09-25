@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch-id
+description: "Consult the DataMiner connector protocol schema reference for the id attribute, which assigns the unique ID of a branch version component."
 ---
 
 # id attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsDynamicallyChangingGroupConnection
+description: "Select a connector group's connection dynamically by storing its zero-based connection index in the parameter referenced by connectionPID."
 ---
 
 # Dynamically changing a connection of a group

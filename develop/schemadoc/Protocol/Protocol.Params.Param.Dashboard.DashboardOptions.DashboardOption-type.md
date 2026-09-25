@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Dashboard.DashboardOptions.DashboardOption-type
+description: "Learn how to use the type attribute to state whether a DashboardOption value is a column index or parameter ID in a DataMiner connector protocol."
 ---
 
 # type attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Database.Connection
+description: "Learn how to use the Connection element to configure how DataMiner writes to or interacts with a logger table in a DataMiner connector protocol."
 ---
 
 # Connection element

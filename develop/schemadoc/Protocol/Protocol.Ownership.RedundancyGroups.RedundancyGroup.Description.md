@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.RedundancyGroups.RedundancyGroup.Description
+description: "Learn how to use the Description element to declare ownership and access settings for a redundancy group description in a DataMiner connector protocol."
 ---
 
 # Description element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Type.DefaultValue
+description: "Learn how the DefaultValue element under PortSettings Type selects UDP/IP, TCP/IP, or Serial as the default port type."
 ---
 
 # DefaultValue element

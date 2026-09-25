@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Type-relativeTimers
+description: "Learn how the relativeTimers attribute controls whether a changed timer interval completes or fires immediately."
 ---
 
 # relativeTimers attribute

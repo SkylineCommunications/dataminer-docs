@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsSlider
+description: "Define a slider with numeric read and write parameters, a Display range, optional step size, and matching units for user-controlled values."
 ---
 
 # Slider

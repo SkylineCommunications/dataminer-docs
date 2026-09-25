@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.CRC.Type-byteoffset
+description: "Learn how to use the byteoffset attribute to add an offset to every byte before DataMiner calculates a CRC in a DataMiner connector protocol."
 ---
 
 # byteoffset attribute

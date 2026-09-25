@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Debugging_connectors_seeing_through_the_smoke
+description: "Investigate persistent protocol thread RTEs by separating symptoms from causes, inspecting pending calls, and identifying deadlocks or livelocks."
 ---
 
 # Debugging connectors: Seeing through the smoke

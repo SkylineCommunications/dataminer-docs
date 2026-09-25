@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Connector_technical_template
+description: Use this template to document a DataMiner connector's configuration, operation, connectivity, and optional integrations for users.
 ---
 
 # Connector technical documentation template
@@ -11,7 +13,9 @@ Below you can find the template for the technical page for connectors. When you 
 
 ```md
 ---
-uid: Connector_technical_template
+metadata_version: 1
+uid: Connector_technical_page
+description: Document the connector's configuration, operation, connectivity, and optional integrations in 100 to 155 characters.
 ---
 
 # Connector technical documentation template
@@ -67,7 +71,7 @@ HTTP CONNECTION:
 
 - IP address/host: [The polling IP or URL of the destination.]
 - IP port: [The IP port of the destination.]
-- Bus address: [If the proxy server has to be bypassed, specify *bypassproxy*.]
+- Bus address: [If the proxy server has to be bypassed, specify `bypassProxy`.]
 
 #### Virtual Connection
 
@@ -169,3 +173,5 @@ Physical dynamic interfaces:
 
 [In this section, you can provide additional information about the connector that does not fit in the other sections. Remove this section if it does not contain any info.]
 ```
+
+**Recommendation:** Use the canonical HTTP bus-address token `bypassProxy` in connector documentation. See [HTTP element configuration](xref:ConnectionsHttpElementConfiguration).

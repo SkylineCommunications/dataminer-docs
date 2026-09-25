@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicQActions
+description: "Use C# QActions to implement custom connector logic, define triggers and entry points, and interact with protocol data through SLProtocol APIs."
 ---
 
 # QActions
@@ -9,6 +11,8 @@ Quick Actions (often referred to as "QActions") are used to implement custom fun
 In the past, QActions were written in C#, JScript, or VBScript. However, recent protocols are written exclusively in C# (and VBScript is [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)), so this section only considers C# QActions.
 
 A QAction is defined in a connector using the [QAction](xref:Protocol.QActions.QAction) tag.
+
+**API ownership:** The stable connector API is the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface in the `Skyline.DataMiner.Scripting` namespace. `SLProtocolExt` is a generated, protocol-specific interface that extends `SLProtocol` and is delivered with the protocol's `QAction.Helper` assembly. Use `SLProtocol` for members that are independent of a specific protocol and `SLProtocolExt` for generated parameter and table members.
 
 For example, the following QAction runs when a button (with parameter ID 100) is clicked, and it counts the number of times the button was clicked for the element:
 

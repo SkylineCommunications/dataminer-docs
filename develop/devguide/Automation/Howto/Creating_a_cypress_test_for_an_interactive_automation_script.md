@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Creating_a_cypress_test_for_an_interactive_automation_script
+description: "Set up Cypress and create an end-to-end test that validates an interactive automation script and its UI interactions in a web environment."
 ---
 
 # Creating a Cypress test for an interactive automation script
@@ -56,7 +58,7 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
 
 ## Creating the interactive automation script
 
-1. Create an automation script as a Visual Studio solution, as explained under [automation scripts as a Visual Studio solution](xref:Automation_scripts_as_a_Visual_Studio_solution).
+1. Create an automation script in a project-based Visual Studio solution, as explained under [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction).
 
 1. Add the NuGet package [Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit](https://www.nuget.org/packages/Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit/9.0.2) to your project.
 
@@ -122,7 +124,8 @@ uid: Creating_a_cypress_test_for_an_interactive_automation_script
           }
           catch (Exception e)
           {
-             engine.ExitFail($"Run|Something went wrong: {e}");
+             engine.Log(e.ToString());
+             engine.ExitFail("The interactive script failed. See the Automation log for details.");
           }
        }
    }

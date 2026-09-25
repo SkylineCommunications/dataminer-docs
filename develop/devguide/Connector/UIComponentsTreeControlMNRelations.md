@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTreeControlMNRelations
+description: "Model many-to-many relations in a DataMiner tree control by linking service, audio, and video tables through dedicated link tables."
 ---
 
 # M:N relations

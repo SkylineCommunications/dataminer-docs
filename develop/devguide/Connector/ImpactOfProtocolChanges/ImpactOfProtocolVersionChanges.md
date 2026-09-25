@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ImpactOfProtocolVersionChanges
+description: "Identify protocol changes that can affect upgrades, determine whether a version range change is required, and document mitigation steps."
 ---
 
 # Impact of protocol version changes

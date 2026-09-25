@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Protocols
+description: "Use the Protocols element to contain an automation script's dummy variables and ensure that each Protocol ID is unique."
 ---
 
 # Protocols element

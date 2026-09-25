@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TypePortSlowPoll
+description: "Use the TypePortSlowPoll simple type to validate slow-poll values from 1 through 300000 in the DataMiner connector protocol schema."
 ---
 
 # TypePortSlowPoll simple type

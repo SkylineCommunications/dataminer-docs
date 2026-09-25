@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.TimeoutTime.DefaultValue
+description: "Learn how the DefaultValue element under TimeoutTime sets the initial command or request timeout in milliseconds."
 ---
 
 # DefaultValue element

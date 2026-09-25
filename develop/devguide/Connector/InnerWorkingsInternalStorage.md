@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: InnerWorkingsInternalStorage
+description: "Understand where connector parameter values are stored across SLProtocol, SLElement, and SLScripting, and how RTDisplay affects availability."
 ---
 
 # Internal storage

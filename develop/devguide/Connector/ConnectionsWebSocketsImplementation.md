@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsWebSocketsImplementation
+description: "Implement a WebSocket connection and handshake in a DataMiner protocol, and understand its URL handling, timeout behavior, and data frames."
 ---
 
 # Implementing a WebSocket

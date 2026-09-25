@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Replication-domain
+description: "Learn how the domain attribute identifies the domain of the DataMiner Agent hosting a replicated element in a DataMiner connector protocol."
 ---
 
 # domain attribute
