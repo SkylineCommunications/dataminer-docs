@@ -36,6 +36,7 @@ The procedures below can be used to retrieve data from a DataMiner System. Howev
 - [Retrieving information on the available automation scripts](xref:SLNetClientTest_info_on_available_automation_scripts)
 - [Retrieving information on open GQI sessions](xref:SLNetClientTest_info_on_open_gqi_sessions)
 - [Retrieving live information about the mapping between elements and the processes they use](xref:SLNetClientTest_retrieving_mapping_info)
+- [Retrieving scheduled task information](xref:SLNetClientTest_retrieving_scheduled_task_info)
 - [Tracking DMA communication](xref:SLNetClientTest_tracking_dma_communication)
 - [Verifying sync rules](xref:SLNetClientTest_verifying_sync_rules)
 - [Viewing SLNet calls being sent](xref:SLNetClientTest_Viewing_SLNet_calls_being_sent)
