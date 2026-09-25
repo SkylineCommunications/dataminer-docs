@@ -1,66 +1,49 @@
 ---
 uid: Overview_Principal_Advantages
-description: Explore DataMiner's key advantages — vendor independence, technology agnosticism, open-source connectors, and agility.
+description: "Explore DataMiner's principal advantages, including unified data, open architecture, out-of-the-box solutions, community support, and secure automation."
 ---
 
 # DataMiner principal advantages
 
-DataMiner converts flexible new technologies into one consolidated operational platform and gives you the agility to continuously evolve in a fast-changing world with many unknowns.
+DataMiner features a system architecture geared towards converting data and controls from across an entire organization into value towards that organization's goals. With DataMiner, you will get a **unified and fully standardized digital representation of your entire organization** at your disposal. This game-changing **digital twin** seamlessly combines business processes and operational flows, as well as live technology assets including hardware, software, and cloud services.
 
-![Advantages](~/dataminer/images/DA_advantages.png)
+## Unsurpassed data acquisition and control
 
-DataMiner is a solution that unconditionally ensures a powerful end-to-end perspective on your complete operation, cutting right through any vendor and technology domains, from service origin to destination.
+Confidently and efficiently integrate any type of data and controls from any vendor, including real-time technology data and controls from hardware, software, and cloud services, as well as any business, operational, and organizational data. As a truly agnostic platform, DataMiner integrates with every type of interface, data, or API out there and supports every possible category of integration.
 
-## Independent
+- Vendor-agnostic.
+- Real-time availability of all your data sources and products.
+- End-to-end integration of even the most complex technical ecosystems.
 
-With Skyline Communications, conflicts of interest will not get in the way of your successful deployment and your being able to leverage your investments to the maximum extent.
+![Pillars_NMS](~/dataminer/images/DA_pillars_NMS.jpg)<br>*Various data monitored from the DataMiner Cube client app*
 
-- Fully independent corporation
-- Laser-focused on innovation
-- Zero conflicts of interest
+## Flexible and secure data and control consumption
 
-## Agnostic
+DataMiner empowers your entire organization with select data, comprehensive insights, and secure intuitive controls, leveraging the most optimal methods, including intuitive UIs, APIs, collaboration tools, AI agents, and much more.
 
-DataMiner cuts across every conceivable domain in the ICT, media, and broadband landscape, every conceivable product from every vendor, and every type of interface, data, or API out there. It supports every possible category of integration you will ever need.
+- Turn operational intent into governed action.
+- Integrate your automation and orchestration workflows.
+- Give intelligence the context and control to act.
 
-- Truly agnostic solution
-- Integrates with any possible parts of your operation
-- Now and any time in the future
+## Open architecture
 
-## Open
+As a transformational platform, DataMiner features a pronounced open architecture. With its open-source connectors, there is complete transparency as to how it handles data sources and third-party products. From data ingest and control, through digital twin modeling, workflows, and automation all the way up to data and control consumption, anyone can build it with DataMiner, at any time.
 
-DataMiner features open-source connectors, meaning that there is complete transparency as to how DataMiner handles data sources and third-party products.
+- Open-source format.
+- Anybody can create new interface adapters or integrate new data sources and products.
+- Modify and develop at any time.
 
-- Open-source format
-- Anybody can create new interface adapters or integrate new data sources and products
-- Modify and develop at any time
+## Out-of-the-box solutions
 
-> [!TIP]
-> See also: [About the Catalog app](xref:About_the_Catalog_app)
+With DataMiner, you can tap into an ever-growing abundance of standard out-of-the-box solutions to convert data and controls into value, ranging from basic monitoring to advanced intelligence, performance management, comprehensive fault management, hyper-automation, innovative process workflows, resource-aware orchestration, and much more. Benefit from out-of-the-box convenience, without compromising your freedom to innovate, to differentiate yourself, and to capitalize on every opportunity.
 
-## Unique concept
+- Highly customizable solutions designed for maximum agility.
+- Fully capitalize on your data and controls with ready-made solutions.
+- Accelerate time to value without compromising control.
 
-The DataMiner data acquisition & control layer is based on truly unique and innovative concepts. It is the only solution that combines both monitoring and control functionalities for your entire operation. It also provides a fully abstracted and standardized, real-time updated software model of all managed objects. You never have to worry about the specifics of the underlying technology that makes up your operation.
+## Community-driven
 
-- Real-time availability of all your data sources and products
-- Apply standard alarm templates
-- Integrate your automation and orchestration workflows
-- Forecasting and anomaly detection with integrated AI functionality
+With DataMiner, you are not just adopting a leading platform or enjoying the backing from Skyline as a long-term strategic partner; you are also joining a vibrant, global community of innovators, experts, and forward-thinkers. Whether you are looking for inspiration, collaboration, or proven blueprints for success, the DataMiner community provides an invaluable foundation for accelerating your innovation and maximizing your outcomes.
 
-## Technology
-
-Integrating new technologies, implementing strategic changes in your business models, launching new service offerings, dealing with unexpected competitors or new customer demands? DataMiner enables you to move quickly and in any direction, whenever you need to.
-
-- Designed for maximum agility
-- Featuring powerful versioning and live runtime evolutions
-- Supported by IDE toolset (DataMiner Integration Studio)
-- Collaborative CI/CD setting
-
-## Purpose-designed
-
-While DataMiner manages mainstream ICT infrastructure and resources like a champion, it really shines in a media and broadband context. It is purpose-designed by subject-matter experts to handle the specific demands of this kind of ecosystem.
-
-- Standard frameworks to manage RF signals and resources
-- Integration of signal routing solutions (L-band, ASI, SDI, or IP)
-- Button control panels
-- Media and broadband service endpoints (STBs, modems, OLTs, OTT software clients and apps, etc.)
+- Supported by IDE toolset (DataMiner Integration Studio).
+- Collaborative CI/CD setting.
