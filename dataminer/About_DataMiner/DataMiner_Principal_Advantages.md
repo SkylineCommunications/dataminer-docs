@@ -17,6 +17,14 @@ Confidently and efficiently integrate any type of data and controls from any ven
 
 ![Pillars_NMS](~/dataminer/images/DA_pillars_NMS.jpg)<br>*Various data monitored from the DataMiner Cube client app*
 
+## Flexible and secure data and control consumption
+
+DataMiner empowers your entire organization with select data, comprehensive insights, and secure intuitive controls, leveraging the most optimal methods, including intuitive UIs, APIs, collaboration tools, AI agents, and much more.
+
+- Turn operational intent into governed action.
+- Integrate your automation and orchestration workflows.
+- Give intelligence the context and control to act.
+
 ## Open architecture
 
 As a transformational platform, DataMiner features a pronounced open architecture. With its open-source connectors, there is complete transparency as to how it handles data sources and third-party products. From data ingest and control, through digital twin modeling, workflows, and automation all the way up to data and control consumption, anyone can build it with DataMiner, at any time.
@@ -39,11 +47,3 @@ With DataMiner, you are not just adopting a leading platform or enjoying the bac
 
 - Supported by IDE toolset (DataMiner Integration Studio).
 - Collaborative CI/CD setting.
-
-## Flexible and secure data and control consumption
-
-DataMiner empowers your entire organization with select data, comprehensive insights, and secure intuitive controls, leveraging the most optimal methods, including intuitive UIs, APIs, collaboration tools, AI agents, and much more.
-
-- Turn operational intent into governed action.
-- Integrate your automation and orchestration workflows.
-- Give intelligence the context and control to act.

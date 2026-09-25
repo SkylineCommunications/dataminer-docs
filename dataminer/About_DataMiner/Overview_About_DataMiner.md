@@ -26,7 +26,7 @@ DataMiner brings the foundation for intelligent operations together in one platf
 
 Intelligence is not a feature added on top of the platform. It emerges from the combination of data, control, context, knowledge, execution capabilities, and governance. The richer the operational digital twin, the more effectively people, workflows, and agents can act on it.
 
-> DataMiner connects live operational data, knowledge, topology, workflow,s and controls in one governed execution environment.
+> DataMiner connects live operational data, knowledge, topology, workflows, and controls in one governed execution environment.
 
 ## Platform convergence for complex operations
 
@@ -52,7 +52,7 @@ In converged enterprise architectures, multiple platforms often need to coexist.
 
 > Inventorying > Planning > Reserving > Scheduling > Designing > Deploying > Configuring > Validating > Controlling > Monitoring > Observing > Automating > Reporting > Analyzing > Optimizing > Forecasting
 
-These steps are not isolated tasks. They must form a continuous, interconnected flow by design. This is the aorta that carries the lifeblood of your organization; a strategic digital thread running through every part of your operation. It is vital to ensure that they do not remain fragmented across loosely coupled silos, tools, and workflows.
+These steps are not isolated tasks. They must form a continuous, interconnected flow by design. This is the aorta that carries the lifeblood of your organization: a strategic digital thread running through every part of your operation. It is vital to ensure that they do not remain fragmented across loosely coupled silos, tools, and workflows.
 
 DataMiner bridges the gaps. It creates a seamless flow of information and actions, ensuring every stage feeds into the next with precision and clarity. This results in fewer blind spots, better decisions, and a more agile organization — ready to adapt, optimize, and deliver results.
 

@@ -37,7 +37,7 @@ Not only the components that make up your operation need to be managed. DataMine
 
 ## Any interface
 
-DataMiner provides you with the peace of mind that whatever is needed and whatever comes next, it can be connected with your existing software stack and operational workflows with minimal effort.
+DataMiner provides you with the peace of mind that whatever is needed and whatever comes next can be connected with your existing software stack and operational workflows with minimal effort.
 
 - Proprietary legacy interfaces
 - Industry-standard protocols

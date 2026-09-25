@@ -28,7 +28,7 @@ With its global presence and offices in Belgium, Bosnia and Herzegovina, Portuga
 
 As a result of its continuous, far-reaching innovation, Skyline has been recognized for its leadership in shaping the future of end-to-end multivendor network management and OSS solutions.
 
-For a detailed overview of Skyline's awards, refer to [Awards & achievements](https://www.skyline.be/skyline/awards)
+For a detailed overview of Skyline's awards, refer to [Awards & achievements](https://www.skyline.be/skyline/awards).
 
 ## Successful track record of multiple decades
 
