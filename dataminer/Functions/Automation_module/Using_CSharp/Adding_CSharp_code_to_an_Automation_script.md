@@ -1,4 +1,5 @@
 ---
+metadata_version: 1
 uid: Adding_CSharp_code_to_an_Automation_script
 description: "Learn how to add inline C# code to an automation script in DataMiner Cube and configure references, entry points, timeouts, and IntelliSense."
 ---
@@ -6,7 +7,7 @@ description: "Learn how to add inline C# code to an automation script in DataMin
 # Adding C# code to an automation script
 
 > [!NOTE]
-> This page describes inline C# blocks authored in DataMiner Cube. For new automation scripts, prefer the project-based SDK-style workflow described in [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction). Existing XML that references a C# project with a `[Project:<project-name>]` value should keep its source in that project.
+> This page describes inline C# blocks authored in DataMiner Cube. If you create a new automation script using DIS, use the project-based SDK-style workflow described in [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) instead. Existing XML that references a C# project with a `[Project:<project-name>]` value should keep its source in that project.
 
 ## Adding C# code to a script in Cube
 
@@ -161,7 +162,7 @@ To prevent problems caused by faulty script statements, every C# code block has 
 
 Inside a code block, you can change the timeout delay for that particular code block by setting the Timeout property of the engine object.
 
-This C# code block timeout is separate from the `<Timeout>` element used by the `findinteractiveclient` and `sleep` script actions.
+This C# code block timeout is separate from the `<Timeout>` element used by the [Find interactive client](xref:Find_interactive_client) and [Sleep](xref:Sleep) script actions.
 
 Example:
 
