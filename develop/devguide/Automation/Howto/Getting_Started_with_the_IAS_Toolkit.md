@@ -15,16 +15,17 @@ The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a l
 >
 > See also: [Kata #10: Create a simple interactive script](https://community.dataminer.services/courses/kata-10/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
+## Choosing an IAS Toolkit version
+
 To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
 
-Just like for protocol and regular automation script development, our IDE of choice is Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
+## Setting up your development environment
 
-The package identifier and the C# namespace are different:
+Just like for protocol and regular automation script development, use Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, see [Installing and configuring the software](xref:Installing_and_configuring_the_software).
 
-- NuGet package: `Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit`
-- C# namespace: `Skyline.DataMiner.Utils.InteractiveAutomationScript`
+## Choosing a solution format
 
-For new scripts, a project-based SDK-style solution is preferred. Inline C# blocks and legacy DIS solution formats remain supported for existing scripts. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the distinction between SDK-style and legacy-style projects.
+For new scripts, prefer a project-based SDK-style solution. Inline C# blocks and legacy DIS solution formats remain supported for existing scripts. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the distinction between SDK-style and legacy-style projects.
 
 ## Creating a new script
 
@@ -51,6 +52,11 @@ To start creating your script:
 1. Select a [version](xref:Interactive_Automation_Script_Toolkit#versions) that is compatible with your DataMiner version.
 
 1. Click *Install*.
+
+The NuGet package identifier and the C# namespace are different:
+
+- NuGet package: `Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit`
+- C# namespace: `Skyline.DataMiner.Utils.InteractiveAutomationScript`
 
 > [!TIP]
 > For more information on using NuGet packages, see [Consuming NuGet packages](xref:Consuming_NuGet).
