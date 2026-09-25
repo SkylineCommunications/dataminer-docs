@@ -37,7 +37,6 @@ Swarming can be enabled from DataMiner 10.5.1/10.6.0 onwards.<!-- RN 41490 --> N
 
 We are working on adding the following functionality soon:
 
-- Support for swarming services.
 - Support for swarming of special elements: SLA elements, enhanced services, spectrum elements, redundancy group elements, EPM elements, and elements with element connections.
 
 > [!TIP]
