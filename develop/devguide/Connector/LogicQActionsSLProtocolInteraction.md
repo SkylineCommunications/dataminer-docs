@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicQActionsSLProtocolInteraction
+description: "Retrieve and update protocol parameters from QActions efficiently by choosing inputParameters, SLProtocol, or SLProtocolExt for each data access."
 ---
 
 # QActions SLProtocol interaction
@@ -20,6 +22,8 @@ Which approach should be used to retrieve data from the SLProtocol process depen
 - In all other cases, retrieve the value via the SLProtocol(Ext) instance.
 
    See [Via SLProtocol(Ext) interface](xref:LogicQActionsSLProtocolInteraction#via-slprotocolext-interface).
+
+**API behavior:** The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API authority defines its methods as blocking, except for `NotifyDataMinerQueued`. Each call can therefore add an inter-process communication boundary between SLScripting and SLProtocol. The generated [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface provides protocol-specific names and table helpers; it does not change the ownership or blocking behavior of the underlying SLProtocol API.
 
 ## Via inputParameters Attribute
 
@@ -105,7 +109,7 @@ public static class QAction
 
 When data is retrieved via the SLProtocol interface, the load is spread over the SLScripting and SLProtocol processes.
 
-It is important to realize that almost every method invoked on the protocol object results in inter-process communication between the SLScripting process and the SLProtocol process, which is a costly operation. Therefore, the number of method invocations on the SLProtocol interface should always be reduced to an absolute minimum. The example above could be improved by using the GetParameters method to obtain the parameter values in one call:
+It is important to realize that almost every method invoked on the protocol object results in inter-process communication between the SLScripting process and the SLProtocol process, which is a costly operation. Therefore, the number of method invocations on the SLProtocol interface should always be reduced to an absolute minimum. **Recommendation:** Batch reads and writes where an API overload supports it. The example above could be improved by using the GetParameters method to obtain the parameter values in one call:
 
 ```csharp
 public static void Run(SLProtocol protocol)

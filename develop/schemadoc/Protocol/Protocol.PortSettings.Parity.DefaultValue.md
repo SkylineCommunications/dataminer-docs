@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Parity.DefaultValue
+description: "Learn how the DefaultValue element under Parity sets the initial parity or SNMPv3 authentication algorithm for a new element."
 ---
 
 # DefaultValue element

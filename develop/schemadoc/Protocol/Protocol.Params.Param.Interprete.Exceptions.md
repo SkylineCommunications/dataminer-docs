@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Exceptions
+description: "Learn how the Exceptions element groups parameter exceptions that map incoming values to display and stored values in a DataMiner connector protocol."
 ---
 
 # Exceptions element

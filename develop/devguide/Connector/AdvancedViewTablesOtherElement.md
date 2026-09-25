@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedViewTablesOtherElement
+description: "Build direct view tables that aggregate filtered data from tables on other DataMiner elements, including sources that use different protocols."
 ---
 
 # View tables from other elements

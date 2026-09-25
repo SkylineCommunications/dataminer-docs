@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab
+description: "Consult the DataMiner connector protocol schema reference for the Tab element, which defines an additional tree control tab and its content type."
 ---
 
 # Tab element

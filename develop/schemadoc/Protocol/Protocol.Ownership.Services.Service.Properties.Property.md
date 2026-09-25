@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.Services.Service.Properties.Property
+description: "Learn how to use the Property element to declare ownership and access settings for a selected service property in a DataMiner connector protocol."
 ---
 
 # Property element

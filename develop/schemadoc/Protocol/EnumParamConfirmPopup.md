@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumParamConfirmPopup
+description: "Review the allowed values for the EnumParamConfirmPopup simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumParamConfirmPopup simple type

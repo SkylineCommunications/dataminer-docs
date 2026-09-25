@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Database.CQLOptions.Finalizer
+description: "Learn how to use the Finalizer element to run a CQL query after logger table creation to preload data or create indexes in a DataMiner connector protocol."
 ---
 
 # Finalizer element

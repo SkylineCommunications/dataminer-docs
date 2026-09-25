@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.SearchChain
+description: "Learn how the SearchChain element defines CPE search fields and result tables, including suggestions and input handling in a DataMiner connector protocol."
 ---
 
 # SearchChain element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.SSH.Credentials.Password
+description: "Learn how the Password element references the parameter containing the password for SSH password-based authentication."
 ---
 
 # Password element

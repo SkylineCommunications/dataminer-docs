@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Alarm-options
+description: "Learn how to use the options attribute to configure threshold and property behavior for alarms on linked tables in a DataMiner connector protocol."
 ---
 
 # options attribute

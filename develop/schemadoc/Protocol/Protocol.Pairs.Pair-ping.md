@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Pairs.Pair-ping
+description: "Learn how to use the ping attribute to run a pair during device timeout when slow polling is active in a DataMiner connector protocol."
 ---
 
 # ping attribute

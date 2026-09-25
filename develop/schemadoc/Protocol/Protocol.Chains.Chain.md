@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.Chain
+description: "Learn how the Chain element defines a topology view and its fields for an EPM or Service Overview Manager element in a DataMiner connector protocol."
 ---
 
 # Chain element

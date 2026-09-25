@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes
+description: "Consult the DataMiner connector protocol schema reference for the Changes element, which lists fixes, changes, and features in a minor protocol version."
 ---
 
 # Changes element

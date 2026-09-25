@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.SlowPoll.Disabled
+description: "Learn how the Disabled element under SlowPoll controls whether users can change slow poll settings for the main connection."
 ---
 
 # Disabled element

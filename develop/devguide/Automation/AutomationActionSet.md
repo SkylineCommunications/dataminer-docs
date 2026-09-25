@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AutomationActionSet
+description: "Configure the Set action to assign fixed or variable values to parameters, memory positions, or variables in an automation script."
 ---
 
 # Set

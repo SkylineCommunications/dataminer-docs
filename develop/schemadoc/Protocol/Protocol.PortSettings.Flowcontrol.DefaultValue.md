@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol.DefaultValue
+description: "Learn how the DefaultValue element under Flowcontrol sets the initial flow control mode or SNMPv3 encryption algorithm."
 ---
 
 # DefaultValue element

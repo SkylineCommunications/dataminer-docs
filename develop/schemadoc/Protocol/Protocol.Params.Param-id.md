@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param-id
+description: "Learn how to use the id attribute to assign a stable parameter ID within the supported normal or spectrum range in a DataMiner connector protocol."
 ---
 
 # id attribute

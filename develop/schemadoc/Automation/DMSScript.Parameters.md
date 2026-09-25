@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Parameters
+description: "Use the Parameters element to contain an automation script's parameter variables and ensure that each ScriptParameter ID is unique."
 ---
 
 # Parameters element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Retries
+description: "Learn how the Retries element configures the maximum request retry count and whether users can modify it for an element connection."
 ---
 
 # Retries element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Type-options
+description: "Learn how the options attribute sets type-specific behavior for parameter displays, controls, dates, and tables in a DataMiner connector protocol."
 ---
 
 # options attribute

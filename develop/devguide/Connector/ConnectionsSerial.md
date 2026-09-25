@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSerial
+description: "Understand how DataMiner serial connections exchange commands and responses over TCP/IP, UDP, serial cables, or vendor-specific communication protocols."
 ---
 
 # Serial

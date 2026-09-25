@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions
+description: "Consult the DataMiner connector protocol schema reference for the Suppressions element, which lists all suppressions for a minor protocol version."
 ---
 
 # Suppressions element

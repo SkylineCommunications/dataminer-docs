@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSerialSocketBuffer
+description: "Understand how late serial responses can remain in the socket buffer and why DataMiner flushes buffered data before sending each new command."
 ---
 
 # Socket buffer

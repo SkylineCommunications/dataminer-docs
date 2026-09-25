@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Factor
+description: "Learn how the Factor element multiplies a parameter value by a specified factor before further processing in a DataMiner connector protocol."
 ---
 
 # Factor element

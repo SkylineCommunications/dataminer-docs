@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Type
+description: "Learn how the Type element controls how DataMiner processes and stores a parameter value, with filtering and trimming in a DataMiner connector protocol."
 ---
 
 # Type element

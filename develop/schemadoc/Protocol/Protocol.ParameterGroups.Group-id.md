@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ParameterGroups.Group-id
+description: "Learn how to use the id attribute to assign a unique parameter group ID below the range reserved for dynamic interfaces in a DataMiner connector protocol."
 ---
 
 # id attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangeParameterDescription
+description: "Assess how changing a parameter description affects alarm and trend templates, dashboards, scripts, and other references to that parameter."
 ---
 
 # Change parameter description

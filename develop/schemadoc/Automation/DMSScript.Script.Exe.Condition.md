@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Condition
+description: "Define a Condition element for an automation script if action, including its operands, comparison operator, logical combination, and referenced IDs."
 ---
 
 # Condition element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: How_to_integrate_RabbitMQ_with_DataMiner
+description: "Learn how RabbitMQ routes messages through exchanges and queues, how DataMiner monitors it over HTTP, and how to act as a producer or consumer."
 ---
 
 # How to integrate RabbitMQ with DataMiner

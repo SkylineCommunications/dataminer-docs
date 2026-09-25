@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Responses.Response-options
+description: "Learn how the Response options attribute selects the connection used for a smart-serial or websocket response."
 ---
 
 # options attribute

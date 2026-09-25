@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Replication.Element-dynamic
+description: "Learn how the dynamic attribute references the parameter holding the DataMiner Agent and element IDs in a DataMiner connector protocol."
 ---
 
 # dynamic attribute

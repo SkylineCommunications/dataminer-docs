@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Description
+description: "Learn how the Description element stores general protocol information, including device firmware requirements in a DataMiner connector protocol."
 ---
 
 # Description element

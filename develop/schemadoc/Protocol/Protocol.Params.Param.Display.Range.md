@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display.Range
+description: "Learn how the Range element defines parameter limits used for controls, tooltips, trending, alarms, and analytics in a DataMiner connector protocol."
 ---
 
 # Range element

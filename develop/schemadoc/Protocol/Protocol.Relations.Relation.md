@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Relations.Relation
+description: "Learn how each Relation element links tables by foreign keys and optionally configures chain names or alarm bubble-up."
 ---
 
 # Relation element

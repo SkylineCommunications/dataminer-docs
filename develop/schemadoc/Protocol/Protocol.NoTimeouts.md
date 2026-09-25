@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.NoTimeouts
+description: "Learn how to use the NoTimeouts element to group response values that should not cause communication timeouts in a DataMiner connector protocol."
 ---
 
 # NoTimeouts element

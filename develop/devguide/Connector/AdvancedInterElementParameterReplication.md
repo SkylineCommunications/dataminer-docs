@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedInterElementCommunicationParameterReplication
+description: "Replicate selected parameters from another DataMiner element by configuring fixed or dynamic source element and parameter references."
 ---
 
 # Parameter replication

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Folder
+description: "Use the Folder element to place an automation script in a DataMiner Cube folder while respecting the supported name characters and refresh behavior."
 ---
 
 # Folder element

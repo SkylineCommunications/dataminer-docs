@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionSetAndGetWithWait
+description: "Use the set and get with wait action to perform an SNMP set followed by a get and wait until the device completes the operation."
 ---
 
 # set and get with wait

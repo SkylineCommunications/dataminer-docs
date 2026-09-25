@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Actions.Action.Type-endoffset
+description: "Use the Action Type endoffset attribute with stuffing actions to set the fixed end position of the data block section to process."
 ---
 
 # endoffset attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Length
+description: "Learn how the Length element defines a command or response length from a selected set of parameters in a DataMiner connector protocol."
 ---
 
 # Length element

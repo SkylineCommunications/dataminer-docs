@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session-loginMethod
+description: "Learn how the loginMethod attribute selects credential-based or client-certificate authentication for an HTTP session in a DataMiner connector protocol."
 ---
 
 # loginMethod attribute

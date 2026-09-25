@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTableForeignKeys
+description: "Link protocol tables with foreign-key columns and relations, including multiple and recursive links, while following key-format restrictions."
 ---
 
 # Foreign keys

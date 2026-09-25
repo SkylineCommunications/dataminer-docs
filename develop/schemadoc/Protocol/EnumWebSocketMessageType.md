@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumWebSocketMessageType
+description: "Review the allowed values for the EnumWebSocketMessageType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumWebSocketMessageType simple type

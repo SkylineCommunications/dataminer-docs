@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Database.Partition
+description: "Learn how to use the Partition element to set a logger table's partition interval, retention, and rollover behavior in a DataMiner connector protocol."
 ---
 
 # Partition element

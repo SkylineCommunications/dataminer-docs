@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Investigating_slow_device_control_using_dotTrace
+description: "Investigate slow device control in a live system by correlating Automation script and Wireshark timing with dotTrace profiles of SLScripting."
 ---
 
 # Investigating slow device control using dotTrace

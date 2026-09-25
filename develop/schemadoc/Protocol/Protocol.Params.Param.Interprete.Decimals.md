@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Decimals
+description: "Learn how the Decimals element sets how many decimal places DataMiner stores in memory for a parameter value in a DataMiner connector protocol."
 ---
 
 # Decimals element

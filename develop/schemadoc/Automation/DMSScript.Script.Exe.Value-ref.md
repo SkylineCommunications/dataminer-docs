@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Value-ref
+description: "Use the Value ref attribute to reference the script variable, memory file, or other item required by an automation script action."
 ---
 
 # ref attribute

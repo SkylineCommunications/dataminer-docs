@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.CRC.Type
+description: "Learn how to use the Type element to select a CRC algorithm and configure each stage of its calculation in a DataMiner connector protocol."
 ---
 
 # Type element

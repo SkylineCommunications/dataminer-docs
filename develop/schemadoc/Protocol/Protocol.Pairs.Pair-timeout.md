@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Pairs.Pair-timeout
+description: "Learn how to use the timeout attribute to override the default response timeout for a command and response pair in a DataMiner connector protocol."
 ---
 
 # timeout attribute

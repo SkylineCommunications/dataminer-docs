@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Protocol
+description: "Use the Exe Protocol element to identify the dummy script variable targeted by settemplate and changestate actions."
 ---
 
 # Protocol element

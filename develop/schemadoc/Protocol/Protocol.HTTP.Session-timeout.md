@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session-timeout
+description: "Learn how the timeout attribute overrides the default timeout in milliseconds for an HTTP session in a DataMiner connector protocol."
 ---
 
 # timeout attribute

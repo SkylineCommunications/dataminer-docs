@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedCodePages
+description: "Understand how DataMiner connectors encode text with the Windows code page or Unicode and handle characters in parameters, commands, and responses."
 ---
 
 # Code pages

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Commands.Command.Content
+description: "Learn how the Content element orders the parameters that form a command sent to a data source in a DataMiner connector protocol."
 ---
 
 # Content element

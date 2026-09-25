@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDVEsExportRules
+description: "Configure DVE export rules to override exported parameter properties by table, XML tag, attribute, value, or regular expression."
 ---
 
 # Export rules

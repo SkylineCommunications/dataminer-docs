@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-TypeNonEmptyString
+description: "Use the TypeNonEmptyString simple type to require a string containing at least one character in the DataMiner connector protocol schema."
 ---
 
 # TypeNonEmptyString simple type

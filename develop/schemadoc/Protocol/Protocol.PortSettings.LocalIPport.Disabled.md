@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.LocalIPport.Disabled
+description: "Learn how the Disabled element under LocalIPport controls whether users can configure the local client port in the user interface."
 ---
 
 # Disabled element

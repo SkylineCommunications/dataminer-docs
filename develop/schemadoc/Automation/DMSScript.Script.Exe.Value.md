@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Value
+description: "Use the Value element to provide code, labels, IDs, names, or values for applicable actions in a DataMiner automation script."
 ---
 
 # Value element

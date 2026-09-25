@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.TimeoutTime
+description: "Learn how the TimeoutTime element configures the default command or request timeout and whether users can modify it."
 ---
 
 # TimeoutTime element

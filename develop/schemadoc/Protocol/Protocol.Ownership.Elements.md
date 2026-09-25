@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.Elements
+description: "Learn how to use the Elements element to group ownership declarations for DataMiner elements created by the protocol in a DataMiner connector protocol."
 ---
 
 # Elements element

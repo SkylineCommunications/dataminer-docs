@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Stopbits.DefaultValue
+description: "Learn how the DefaultValue element under Stopbits sets the initial stop bit count or SNMPv3 security level and protocol."
 ---
 
 # DefaultValue element

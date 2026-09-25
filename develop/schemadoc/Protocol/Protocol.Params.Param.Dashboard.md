@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Dashboard
+description: "Learn how to use the Dashboard element to configure a parameter for use as a dashboard button panel in a DataMiner connector protocol."
 ---
 
 # Dashboard element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: SwarmingScriptBooking
+description: "Use an Automation script and SwarmingHelper to swarm bookings to another DataMiner Agent, validate every result, and handle partial failures."
 ---
 
 # Configuring a script to swarm bookings

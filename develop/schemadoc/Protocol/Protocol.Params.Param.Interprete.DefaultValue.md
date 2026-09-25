@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.DefaultValue
+description: "Learn how the DefaultValue element assigns a startup value to an empty standalone parameter, but not to table columns in a DataMiner connector protocol."
 ---
 
 # DefaultValue element

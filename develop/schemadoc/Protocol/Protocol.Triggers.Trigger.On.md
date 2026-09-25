@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Triggers.Trigger.On
+description: "Consult the DataMiner connector protocol schema reference for the On element, which defines the item or event that sets off a trigger."
 ---
 
 # On element

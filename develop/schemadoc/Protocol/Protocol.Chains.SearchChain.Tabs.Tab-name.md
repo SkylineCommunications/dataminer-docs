@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab-name
+description: "Learn how the name attribute sets a search tab name or allows its table description to be used in a DataMiner connector protocol."
 ---
 
 # name attribute

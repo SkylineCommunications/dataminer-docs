@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ProcessAutomation.ProcessAutomationOptions
+description: "Learn how the ProcessAutomationOptions element groups additional options for the Process Automation queue connector."
 ---
 
 # ProcessAutomationOptions element

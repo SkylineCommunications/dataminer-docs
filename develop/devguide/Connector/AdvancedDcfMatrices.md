@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDcfMatrices
+description: "Expose matrix inputs and outputs as DCF interfaces by referencing a matrix parameter and filtering the indexes selected for each interface group."
 ---
 
 # DCF and matrices

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Advanced
+description: "Learn how the Advanced element sets advanced command and response settings for equal-response handling and byte stuffing in a DataMiner connector protocol."
 ---
 
 # Advanced element

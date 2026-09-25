@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.GeneralParameters.GeneralParameter-enabled
+description: "Learn how the enabled attribute controls whether a specified general parameter group is loaded in a DataMiner connector protocol."
 ---
 
 # enabled attribute

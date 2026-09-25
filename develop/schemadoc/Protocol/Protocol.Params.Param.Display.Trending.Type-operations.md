@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display.Trending.Type-operations
+description: "Learn how the operations attribute applies log10 scaling to the vertical axis of a trend graph for positive values in a DataMiner connector protocol."
 ---
 
 # operations attribute

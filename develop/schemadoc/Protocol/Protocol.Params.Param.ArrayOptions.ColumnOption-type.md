@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
+description: "Learn how to use the type attribute to choose how DataMiner populates and handles a table column in a DataMiner connector protocol."
 ---
 
 # type attribute

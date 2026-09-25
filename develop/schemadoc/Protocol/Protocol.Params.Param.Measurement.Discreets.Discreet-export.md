@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-export
+description: "Learn how the export attribute selects the exported protocol tables that receive a discreet parameter value in a DataMiner connector protocol."
 ---
 
 # export attribute

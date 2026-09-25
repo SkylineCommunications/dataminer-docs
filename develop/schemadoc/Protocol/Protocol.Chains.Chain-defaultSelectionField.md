@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.Chain-defaultSelectionField
+description: "Learn how the defaultSelectionField attribute names the chain field to select automatically when it has one result in a DataMiner connector protocol."
 ---
 
 # defaultSelectionField attribute

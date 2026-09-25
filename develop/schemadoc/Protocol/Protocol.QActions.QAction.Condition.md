@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.QActions.QAction.Condition
+description: "Learn how the Condition element restricts QAction execution to cases where a specified parameter expression evaluates as true."
 ---
 
 # Condition element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsWebSocketsUseCases
+description: "Compare four WebSocket connection patterns and implement the shared protocol logic for normal, dynamic IP, and custom-handshake use cases."
 ---
 
 # WebSocket use cases
@@ -35,7 +37,7 @@ To create a WebSocket, define a new WebSocket connection in the protocol. The *C
    </CommunicationOptions>
    <UserSettings>
       <BusAddress>
-         <DefaultValue>byPassProxy</DefaultValue>
+         <DefaultValue>bypassProxy</DefaultValue>
       </BusAddress>
       <IPport>
          <DefaultValue>8050</DefaultValue>

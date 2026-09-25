@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.QActions.QAction-encoding
+description: "Learn how the QAction encoding attribute specifies the programming language used to write the script."
 ---
 
 # encoding attribute

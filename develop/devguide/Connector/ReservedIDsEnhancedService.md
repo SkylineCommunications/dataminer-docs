@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ReservedIDsEnhancedService
+description: "Consult the low parameter IDs reserved for enhanced service protocols and learn what service, severity, alarm, and history data each one carries."
 ---
 
 # Enhanced service

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Display
+description: "Learn how the Display element sets the text shown when an incoming parameter value matches an exception definition in a DataMiner connector protocol."
 ---
 
 # Display element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.PingInterval
+description: "Learn how the PingInterval element configures the default ping interval and whether users can modify it for an element connection."
 ---
 
 # PingInterval element

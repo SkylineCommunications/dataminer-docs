@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Commands.Command-ascii
+description: "Learn how the ascii attribute selects command parameters to send as ASCII when the protocol uses Unicode in a DataMiner connector protocol."
 ---
 
 # ascii attribute

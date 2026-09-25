@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionCopy
+description: "Use the copy action to overwrite destination parameters with a source parameter's value and understand when parameter change events are raised."
 ---
 
 # copy

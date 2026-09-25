@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.Hierarchy
+description: "Consult the DataMiner connector protocol schema reference for the Hierarchy element, which defines relationships between visible tables in a tree control."
 ---
 
 # Hierarchy element

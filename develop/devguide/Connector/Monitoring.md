@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Monitoring
+description: "Understand how connector parameters support alarm monitoring and trending, and where to find the related protocol markup and best practices."
 ---
 
 # Monitoring

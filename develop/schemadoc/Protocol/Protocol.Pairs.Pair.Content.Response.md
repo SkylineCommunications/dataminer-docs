@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Pairs.Pair.Content.Response
+description: "Learn how to use the Response element to identify an expected response for a command and response pair in a DataMiner connector protocol."
 ---
 
 # Response element

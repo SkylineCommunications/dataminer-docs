@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.SearchChain.Display.Visibility-default
+description: "Learn how the default attribute sets search chain visibility when no standalone condition is met in a DataMiner connector protocol."
 ---
 
 # default attribute

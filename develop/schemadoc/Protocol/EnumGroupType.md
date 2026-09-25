@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumGroupType
+description: "Review the allowed values for the EnumGroupType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumGroupType simple type

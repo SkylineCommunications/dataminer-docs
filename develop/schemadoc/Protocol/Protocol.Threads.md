@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Threads
+description: "Learn how the Threads element separates time-critical work from device polling by defining additional protocol execution threads."
 ---
 
 # Threads element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display.Positions.Position.Row
+description: "Learn how the Row element sets the vertical row where a parameter appears on a Data Display page in a DataMiner connector protocol."
 ---
 
 # Row element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsPingGroup
+description: "Configure the ping group DataMiner uses to test whether a timed-out serial or SNMP element can leave slow poll mode and resume normal polling."
 ---
 
 # Slow poll mode ping group

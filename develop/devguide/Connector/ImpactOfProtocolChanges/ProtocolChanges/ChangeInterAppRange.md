@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangeInterAppRange
+description: "Assess how changing an InterApp parameter range affects message compatibility between connector versions and coordinate updates to sending applications."
 ---
 
 # Change InterApp range

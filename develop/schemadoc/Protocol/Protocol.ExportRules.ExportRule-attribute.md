@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.ExportRules.ExportRule-attribute
+description: "Learn how the ExportRule attribute named attribute selects an XML attribute to change in a DataMiner connector protocol."
 ---
 
 # attribute attribute

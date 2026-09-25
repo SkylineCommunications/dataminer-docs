@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.SolutionId
+description: "Use SolutionId to group automation scripts in the same isolated script runner, or omit it to execute a script in the DataMiner Automation process."
 ---
 
 # SolutionId element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AutomationActionLabel
+description: "Configure the 'Label' action to identify a statement in an automation script so a 'Go to' action can transfer execution directly to it."
 ---
 
 # Label

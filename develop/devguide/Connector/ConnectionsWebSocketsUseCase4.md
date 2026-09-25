@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsWebSocketsUseCase4
+description: "Configure a WebSocket connection with both a custom HTTP handshake and dynamic IP so it can reconnect after a disconnect without an element restart."
 ---
 
 # WebSocket Connection with custom handshake and dynamic IP
@@ -31,7 +33,7 @@ This should be configured in the *Connections.Connection.CommunicationOptions.We
    </CommunicationOptions>
    <UserSettings>
       <BusAddress>
-         <DefaultValue>byPassProxy</DefaultValue>
+         <DefaultValue>bypassProxy</DefaultValue>
       </BusAddress>
       <IPport>
          <DefaultValue>8050</DefaultValue>

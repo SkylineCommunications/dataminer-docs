@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicQActionsMemberFields
+description: "Choose safe ways to share or persist QAction data across executions and elements, and avoid static-field assumptions with multiple SLScripting processes."
 ---
 
 # QAction member fields

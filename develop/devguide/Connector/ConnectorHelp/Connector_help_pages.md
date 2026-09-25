@@ -1,6 +1,7 @@
 ---
+metadata_version: 1
 uid: Connector_help_pages
-description: For every connector that is developed for DataMiner, two or more documentation pages should be made.
+description: "Create connector documentation with the required marketing page and, when needed, technical or child pages using the correct structure and files."
 ---
 
 # Connector documentation
@@ -119,9 +120,11 @@ This connector uses an HTTP connection and requires the following input during e
 HTTP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
-- **IP port**: The IP port of the destination (default: *443*).
-- **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify *BypassProxy*.
+- **IP port**: The IP port of the destination. For HTTPS connections, the default is *443*.
+- **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify `bypassProxy`.
 ```
+
+**Recommendation:** Use the canonical HTTP bus-address token `bypassProxy` in connector help pages and templates.
 
 ```md
 #### Virtual Connection - Main

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.GetCommunity.DefaultValue
+description: "Learn how the DefaultValue element under GetCommunity sets the initial SNMP get community string or SNMPv3 authentication password."
 ---
 
 # DefaultValue element

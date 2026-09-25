@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumParamType
+description: "Review the allowed values for the EnumParamType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumParamType simple type

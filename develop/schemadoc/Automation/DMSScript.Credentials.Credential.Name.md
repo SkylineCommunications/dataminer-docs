@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Credentials.Credential.Name
+description: "Use the Credential Name element as the unique script-level name passed to GetCredential when retrieving linked credentials."
 ---
 
 # Name element

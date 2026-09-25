@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab-type
+description: "Consult the DataMiner connector protocol schema reference for the type attribute, which selects the behavior and content of an additional tree control tab."
 ---
 
 # type attribute

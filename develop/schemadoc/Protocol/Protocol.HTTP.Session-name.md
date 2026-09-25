@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session-name
+description: "Learn how the name attribute sets the descriptive name assigned to an HTTP session in a DataMiner connector protocol."
 ---
 
 # name attribute

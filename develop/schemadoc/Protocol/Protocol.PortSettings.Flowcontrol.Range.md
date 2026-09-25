@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Flowcontrol.Range
+description: "Learn how the Range element under Flowcontrol defines the first and last flow control values users can select."
 ---
 
 # Range element

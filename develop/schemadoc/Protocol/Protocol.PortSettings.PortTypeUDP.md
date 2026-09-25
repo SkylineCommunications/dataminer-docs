@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.PortTypeUDP
+description: "Learn how the PortTypeUDP element configures whether UDP/IP is available as a selectable port type for an element connection."
 ---
 
 # PortTypeUDP element

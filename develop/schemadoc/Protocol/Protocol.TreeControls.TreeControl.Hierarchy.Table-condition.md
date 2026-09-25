@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.Hierarchy.Table-condition
+description: "Consult the DataMiner connector protocol schema reference for the condition attribute, which limits a hierarchy table link to rows matching a value."
 ---
 
 # condition attribute

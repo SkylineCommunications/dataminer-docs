@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Swarming
+description: "Learn how the Swarming element overrides default swarming eligibility by grouping checks that DataMiner should ignore."
 ---
 
 # Swarming element

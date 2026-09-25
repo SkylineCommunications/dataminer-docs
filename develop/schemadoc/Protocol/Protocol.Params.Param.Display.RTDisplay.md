@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Display.RTDisplay
+description: "Learn how the RTDisplay element controls whether DataMiner pushes a parameter to SLElement for display and external use in a DataMiner connector protocol."
 ---
 
 # RTDisplay element

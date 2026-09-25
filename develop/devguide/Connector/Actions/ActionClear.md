@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionClear
+description: "Use the clear action on a parameter or response to erase its stored previous value so identical incoming data can trigger processing again."
 ---
 
 # clear

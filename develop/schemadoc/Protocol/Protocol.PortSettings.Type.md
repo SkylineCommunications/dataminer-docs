@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.Type
+description: "Learn how the PortSettings Type element configures the default port type used when users create an element connection."
 ---
 
 # Type element

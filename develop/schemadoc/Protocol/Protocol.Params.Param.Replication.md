@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Replication
+description: "Learn how the Replication element copies one parameter from another element and identifies the replication source in a DataMiner connector protocol."
 ---
 
 # Replication element

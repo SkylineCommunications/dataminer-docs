@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.CRC.Type-totaloffset
+description: "Learn how to use the totaloffset attribute to add an offset after the modulo stage of a CRC calculation in a DataMiner connector protocol."
 ---
 
 # totaloffset attribute

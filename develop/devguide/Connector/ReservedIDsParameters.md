@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ReservedIDsParameters
+description: "Check which parameter ID ranges connector developers may use, which ranges DataMiner reserves, and what restrictions apply to specialized protocols."
 ---
 
 # Reserved parameter IDs

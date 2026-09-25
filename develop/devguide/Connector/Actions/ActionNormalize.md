@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionNormalize
+description: "Use the normalize action to set a parameter's normal value from its last received value or the current value of another parameter."
 ---
 
 # normalize

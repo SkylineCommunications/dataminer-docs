@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedViewTables
+description: "Use view tables to display data from one or more base tables without enabling alarm monitoring or trending on the view table itself."
 ---
 
 # View tables

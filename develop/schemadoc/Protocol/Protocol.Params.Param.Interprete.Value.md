@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Interprete.Value
+description: "Learn how the Value element sets the fixed content of a parameter that uses a fixed length and value in a DataMiner connector protocol."
 ---
 
 # Value element

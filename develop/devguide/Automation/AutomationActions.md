@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AutomationActions
+description: "Browse the available automation script actions and learn what each action does before configuring its XML elements and attributes."
 ---
 
 # Automation script actions

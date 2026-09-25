@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumScientificNotation
+description: "Review the allowed values for the EnumScientificNotation simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumScientificNotation simple type

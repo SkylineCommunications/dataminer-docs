@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedLoggerTablesExtending
+description: "Understand which logger table schema changes are supported, including adding columns and broadening data types, and which changes are not supported."
 ---
 
 # Extending logger tables

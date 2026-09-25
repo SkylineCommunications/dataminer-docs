@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails-detailsTableId
+description: "Consult the DataMiner connector protocol schema reference for the detailsTableId attribute, which identifies the table providing extra tree item details."
 ---
 
 # detailsTableId attribute

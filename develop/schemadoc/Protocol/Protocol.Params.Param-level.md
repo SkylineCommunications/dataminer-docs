@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param-level
+description: "Learn how to use the level attribute to set the security level that controls which users can access a parameter in a DataMiner connector protocol."
 ---
 
 # level attribute

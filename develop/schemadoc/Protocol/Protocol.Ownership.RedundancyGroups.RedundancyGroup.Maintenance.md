@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Ownership.RedundancyGroups.RedundancyGroup.Maintenance
+description: "Learn how to use the Maintenance element to declare ownership and access settings for redundancy group maintenance in a DataMiner connector protocol."
 ---
 
 # Maintenance element

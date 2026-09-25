@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.SNMP.OID-id
+description: "Learn how the id attribute references a parameter that supplies a partial OID or a subtable instance filter in a DataMiner connector protocol."
 ---
 
 # id attribute

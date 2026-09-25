@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.Chain.Field.DiagramPids
+description: "Learn how the DiagramPids element lists the read parameter IDs shown inside an EPM diagram box in a DataMiner connector protocol."
 ---
 
 # DiagramPids element

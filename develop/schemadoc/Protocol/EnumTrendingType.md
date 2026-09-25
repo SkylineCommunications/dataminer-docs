@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumTrendingType
+description: "Review the allowed values for the EnumTrendingType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumTrendingType simple type

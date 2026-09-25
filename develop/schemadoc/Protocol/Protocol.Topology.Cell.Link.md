@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Topology.Cell.Link
+description: "Consult the DataMiner connector protocol schema reference for the Link element, which maps one EPM topology cell to another through foreign key relations."
 ---
 
 # Link element

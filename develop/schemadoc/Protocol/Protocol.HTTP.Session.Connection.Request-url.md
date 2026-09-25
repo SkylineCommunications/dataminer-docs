@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Request-url
+description: "Learn how the url attribute sets an absolute or relative URL for an HTTP request in a DataMiner connector protocol."
 ---
 
 # url attribute

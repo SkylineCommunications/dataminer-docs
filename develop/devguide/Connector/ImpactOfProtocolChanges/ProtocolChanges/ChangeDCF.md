@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangeDCF
+description: "Assess how changing DataMiner Connectivity Framework interfaces or connections affects existing DCF links, visualizations, and dependent integrations."
 ---
 
 # Change DCF

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTableExercise
+description: "Practice selecting and implementing a user-friendly display key for rows in an SNMP interface table by using naming or NamingFormat."
 ---
 
 # Exercise

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Database.CQLOptions.Clustering
+description: "Learn how to use the Clustering element to define Cassandra partition and clustering keys from table column indexes in a DataMiner connector protocol."
 ---
 
 # Clustering element

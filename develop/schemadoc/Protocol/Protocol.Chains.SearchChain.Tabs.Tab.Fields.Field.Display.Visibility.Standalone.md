@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Display.Visibility.Standalone
+description: "Learn how the Standalone element maps trigger values to the opposite of default search field visibility in a DataMiner connector protocol."
 ---
 
 # Standalone element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ConnectionsSmartSerialCommonPitfalls
+description: "Avoid smart-serial connection pitfalls when combining serial traffic or handling unsolicited messages with command-response pairs."
 ---
 
 # Common pitfalls

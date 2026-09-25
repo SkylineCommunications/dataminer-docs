@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol-EnumDiscreteValue
+description: "Review the allowed values for the EnumDiscreteValue simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumDiscreteValue simple type

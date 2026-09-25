@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Response.Content
+description: "Learn how to use the Content element to store the HTTP response body in a selected protocol parameter in a DataMiner connector protocol."
 ---
 
 # Content element

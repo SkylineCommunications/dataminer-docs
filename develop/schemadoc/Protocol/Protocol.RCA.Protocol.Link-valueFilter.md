@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.RCA.Protocol.Link-valueFilter
+description: "Learn how the valueFilter attribute matches related table rows when an RCA chain links tables without a direct foreign key relationship."
 ---
 
 # valueFilter attribute

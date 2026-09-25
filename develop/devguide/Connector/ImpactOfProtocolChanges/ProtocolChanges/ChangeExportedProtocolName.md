@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangeExportedProtocolName
+description: "Assess how changing an exported DVE protocol name affects existing DVE elements, templates, scripts, dashboards, and other external references."
 ---
 
 # Change exported protocol name

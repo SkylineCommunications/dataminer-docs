@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Triggers.Trigger.Time-nr
+description: "Consult the DataMiner connector protocol schema reference for the nr attribute, which treats the Time value as a parameter ID instead of a literal value."
 ---
 
 # nr attribute

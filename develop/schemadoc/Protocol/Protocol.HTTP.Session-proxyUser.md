@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session-proxyUser
+description: "Learn how the proxyUser attribute supplies a fixed proxy username or parameter ID for HTTP proxy authentication in a DataMiner connector protocol."
 ---
 
 # proxyUser attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: ChangeLoggerTable
+description: "Assess the impact of converting a regular table to or from a logger table, including data migration, history, storage, and compatibility concerns."
 ---
 
 # Change logger table

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param-saveInterval
+description: "Learn how the saveInterval attribute is intended to limit parameter saves, noting its interval is not yet functional."
 ---
 
 # saveInterval attribute

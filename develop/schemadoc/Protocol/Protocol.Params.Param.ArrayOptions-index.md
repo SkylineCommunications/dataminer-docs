@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.ArrayOptions-index
+description: "Learn how to use the index attribute to select the string column containing each table row's immutable primary key in a DataMiner connector protocol."
 ---
 
 # index attribute

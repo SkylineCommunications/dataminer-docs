@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails-value
+description: "Consult the DataMiner connector protocol schema reference for the value attribute, which matches a discrete value to determine which extra details appear."
 ---
 
 # value attribute

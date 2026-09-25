@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session-userName
+description: "Learn how the userName attribute supplies a fixed username or parameter ID for credential-based HTTP authentication in a DataMiner connector protocol."
 ---
 
 # userName attribute

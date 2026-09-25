@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: MonitoringAlarming
+description: "Configure which connector parameters support alarming, provide default alarm thresholds, and understand how monitoring settings affect alarm templates."
 ---
 
 # Alarming
@@ -21,6 +23,10 @@ By default, a parameter will not support alarming (and therefore will not be sho
 > - A parameter that supports alarming should be visualized to the user (i.e., have a position on a page).
 > - Monitoring must never be applied on parameters of type "write".
 
+**Schema behavior:** `Monitored` defaults to `false`. The `Alarm` element defines default alarm-template values, but those defaults do not enable monitoring for the parameter in a new alarm template. An `Info` default is the exception: it enables information-event generation by default in a new alarm template.
+
+**Recommendation:** Set `Monitored` to `true` only for parameters that should be available for alarm monitoring, and keep internal or write parameters out of the monitored set.
+
 In an alarm template, a user can specify values for different alarm severity levels. In order to avoid users having to spend too much time specifying these values, default values can be provided in a protocol (which can then be overridden by a user in DataMiner if desired).
 
 It is possible to define default values for the following alarm levels:
@@ -38,7 +44,7 @@ It is possible to define default values for the following alarm levels:
 |Major high|MaH|
 |Critical high|CH|
 
-For example, for a numeric parameter you can define that a value of 40 is normal and 80 results in a warning (WaH). This will result in an alarm with severity "warning high" when the value of the parameter is at least 80. Values below 80 will have severity "Normal". Once the value of the parameter has dropped below 80 again, the alarm will be cleared.
+**Example:** For a numeric parameter, you can document a nominal value of 40 with `Normal` and define 80 as the warning-high (`WaH`) threshold. A value that does not meet an alarm threshold is not in an alarm state. The `Normal` tag is optional and is not required to clear an alarm; when a previously alarmed value returns to a non-alarmed state, DataMiner drops the alarm.
 
 ```xml
 <Param id="22" trending="false" save="true">

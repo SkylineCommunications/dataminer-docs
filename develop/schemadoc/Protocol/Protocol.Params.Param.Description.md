@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Description
+description: "Learn how the Description element provides a common parameter label distinct from its technical name in a DataMiner connector protocol."
 ---
 
 # Description element

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Response.Content-pid
+description: "Learn how to use the pid attribute to select the parameter that stores the HTTP response body in a DataMiner connector protocol."
 ---
 
 # pid attribute

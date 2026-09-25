@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Debugging_connectors_serial_communication_returning_command_echoes
+description: "Diagnose slow serial matrix control when a device returns command echoes by using Stream Viewer to inspect retries, responses, and polling timing."
 ---
 
 # Debugging connectors: Serial communication returning command echoes

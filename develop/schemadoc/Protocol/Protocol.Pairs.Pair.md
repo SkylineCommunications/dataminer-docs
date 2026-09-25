@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Pairs.Pair
+description: "Learn how to use the Pair element to define a command, its expected responses, execution condition, and pair options in a DataMiner connector protocol."
 ---
 
 # Pair element

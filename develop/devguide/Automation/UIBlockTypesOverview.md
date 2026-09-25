@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIBlockTypesOverview
+description: "Configure UIBlockType components for interactive automation scripts and understand the behavior and compatibility of the V1 and V2 UIs."
 ---
 
 # UIBlockType overview

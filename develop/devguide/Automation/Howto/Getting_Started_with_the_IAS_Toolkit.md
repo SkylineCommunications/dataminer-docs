@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Getting_Started_with_the_IAS_Toolkit
+description: "Create an interactive automation script with the IAS Toolkit by installing the library, building dialogs, displaying them, and handling events."
 ---
 
 # Getting started with the IAS Toolkit
@@ -13,9 +15,17 @@ The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a l
 >
 > See also: [Kata #10: Create a simple interactive script](https://community.dataminer.services/courses/kata-10/) on DataMiner Dojo ![Video](~/dataminer/images/video_Duo.png)
 
+## Choosing an IAS Toolkit version
+
 To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
 
-Just like for protocol and regular automation script development, our IDE of choice is Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, you can find more information on how to do so under [Installing and configuring the software](xref:Installing_and_configuring_the_software).
+## Setting up your development environment
+
+Just like for protocol and regular automation script development, use Visual Studio with the latest version of [DIS](xref:Overall_concept_of_the_DataMiner_Integration_Studio). If you do not have DIS installed, see [Installing and configuring the software](xref:Installing_and_configuring_the_software).
+
+## Choosing a solution format
+
+For new scripts, prefer a project-based SDK-style solution. Inline C# blocks and legacy DIS solution formats remain supported for existing scripts. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the distinction between SDK-style and legacy-style projects.
 
 ## Creating a new script
 
@@ -43,6 +53,11 @@ To start creating your script:
 
 1. Click *Install*.
 
+The NuGet package identifier and the C# namespace are different:
+
+- NuGet package: `Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit`
+- C# namespace: `Skyline.DataMiner.Utils.InteractiveAutomationScript`
+
 > [!TIP]
 > For more information on using NuGet packages, see [Consuming NuGet packages](xref:Consuming_NuGet).
 
@@ -68,22 +83,15 @@ public class Script
     /// The Script entry point.
     /// </summary>
     /// <param name="engine">Link with SLAutomation process.</param>
-    public void Run(Engine engine)
+    public void Run(IEngine engine)
     {
-        try
-        {
-            controller = new InteractiveController(engine);
-        }
-        catch(Exception e)
-        {
-            engine.ExitFail("Something went wrong: " + e);
-        }
+        controller = new InteractiveController(engine);
     }
 }
 ```
 
 > [!NOTE]
-> Prior to DataMiner 10.5.9/10.6.0<!--RN 42954-->, a comment containing the string `.FindInteractiveClient(` is required to mark the script as interactive. See [How auto-detection determines interactivity](xref:Automation-InteractivityOptions#how-auto-detection-determines-interactivity) for more details.
+> From DataMiner 10.5.9/10.6.0<!--RN 42954--> onwards, set the [Interactivity](xref:DMSScript.Interactivity) element to *Always* or *Optional* instead of relying on automatic detection. Prior to those versions, a comment containing the string `.FindInteractiveClient(` is required to mark the script as interactive. See [How auto-detection determines interactivity](xref:Automation-InteractivityOptions#how-auto-detection-determines-interactivity) for more details.
 >
 > ```csharp
 > // DO NOT REMOVE THIS COMMENT OR THE SCRIPT WON'T RUN!
@@ -106,7 +114,7 @@ To create a dialog, you need to create a class that inherits the *Dialog* class.
 ```csharp
 public class HelloWorldDialog : Dialog
 {
-    public HelloWorldDialog(Engine engine) : base(engine)
+    public HelloWorldDialog(IEngine engine) : base(engine)
     {
     }
 }
@@ -121,7 +129,7 @@ Next, set the title of the dialog using the *Title* property, and define the dif
 public class HelloWorldDialog : Dialog
 {
     private Label label;
-    public HelloWorldDialog(Engine engine) : base(engine)
+    public HelloWorldDialog(IEngine engine) : base(engine)
     {
         // Set title
         Title = "Hello World";
@@ -169,7 +177,17 @@ Once you have added the widgets, the dialog is done.
 
 ## Displaying the dialog
 
-Now it is time to do a test run of the script. Create a new instance of your HelloWorldDialog and use the *InteractiveController.Run* method to display it.
+Now it is time to do a test run of the script. Create a new instance of your HelloWorldDialog and use the *InteractiveController.ShowDialog* method to display it.
+
+The initial-dialog method depends on the Toolkit version. The established compatibility behavior is:
+
+| Toolkit version | Initial-dialog method |
+|---|---|
+| Up to 9.0.1 | `Run(initialDialog)` |
+| 9.0.2–9.0.11 | `ShowDialog(initialDialog)` is preferred; `Run(initialDialog)` is obsolete |
+| 10.0.1 and later | `ShowDialog(initialDialog)` |
+
+Do not infer the method for a version that is not listed in this table. Verify the API exposed by the package version selected for the target DataMiner System.
 
 ```csharp
 /// <summary>
@@ -182,17 +200,34 @@ public class Script
     /// The Script entry point.
     /// </summary>
     /// <param name="engine">Link with SLAutomation process.</param>
-    public void Run(Engine engine)
+    public void Run(IEngine engine)
     {
         try
         {
             controller = new InteractiveController(engine);
             HelloWorldDialog dialog = new HelloWorldDialog(engine);
-            controller.Run(dialog);
+            controller.ShowDialog(dialog);
         }
-        catch(Exception e)
+        catch (ScriptAbortException)
         {
-            engine.ExitFail("Something went wrong: " + e);
+            throw;
+        }
+        catch (ScriptForceAbortException)
+        {
+            throw;
+        }
+        catch (ScriptTimeoutException)
+        {
+            throw;
+        }
+        catch (InteractiveUserDetachedException)
+        {
+            throw;
+        }
+        catch (Exception ex)
+        {
+            engine.Log(ex.ToString());
+            engine.ExitFail("The interactive script failed. See the Automation log for details.");
         }
     }
 }
@@ -228,18 +263,35 @@ public class Script
     /// The Script entry point.
     /// </summary>
     /// <param name="engine">Link with SLAutomation process.</param>
-    public void Run(Engine engine)
+    public void Run(IEngine engine)
     {
         try
         {
             controller = new InteractiveController(engine);
             HelloWorldDialog dialog = new HelloWorldDialog(engine);
             dialog.Button.Pressed += (sender, args) => dialog.TextBox.Text = engine.UserLoginName;
-            controller.Run(dialog);
+            controller.ShowDialog(dialog);
         }
-        catch(Exception e)
+        catch (ScriptAbortException)
         {
-            engine.ExitFail("Something went wrong: " + e);
+            throw;
+        }
+        catch (ScriptForceAbortException)
+        {
+            throw;
+        }
+        catch (ScriptTimeoutException)
+        {
+            throw;
+        }
+        catch (InteractiveUserDetachedException)
+        {
+            throw;
+        }
+        catch (Exception ex)
+        {
+            engine.Log(ex.ToString());
+            engine.ExitFail("The interactive script failed. See the Automation log for details.");
         }
     }
 }

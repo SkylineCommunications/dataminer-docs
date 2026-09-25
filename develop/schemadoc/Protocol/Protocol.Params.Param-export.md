@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param-export
+description: "Learn how the export attribute exports a parameter to all protocols used by a DVE or only those associated with specified table IDs."
 ---
 
 # export attribute

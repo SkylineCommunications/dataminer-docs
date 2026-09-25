@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Memory.File
+description: "Define a File element for an automation script memory file, including its unique ID, volatility setting, and nonempty name."
 ---
 
 # File element

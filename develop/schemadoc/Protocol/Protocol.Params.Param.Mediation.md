@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Mediation
+description: "Learn how the Mediation element groups links between parameters in a base protocol and parameters in a device protocol in a DataMiner connector protocol."
 ---
 
 # Mediation element

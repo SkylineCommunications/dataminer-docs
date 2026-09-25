@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDataMinerMediationLayerSyntaxOfMediationLinkToTags
+description: "Configure Mediation.LinkTo tags to match parameters by protocol and ID or description, apply wildcards, and convert values with supported operations."
 ---
 
 # Syntax of Mediation.LinkTo tags

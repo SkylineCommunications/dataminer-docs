@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionSetWithWait
+description: "Use the set with wait action from the protocol thread to perform an SNMP set on parameters or groups and wait for the device response."
 ---
 
 # set with wait

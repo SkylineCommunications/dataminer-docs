@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups.Group.Content.Param
+description: "Learn how the Param element identifies a parameter included for consecutive execution within a group in a DataMiner connector protocol."
 ---
 
 # Param element

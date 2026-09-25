@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Groups.Group.Content.Trigger-next
+description: "Learn how the next attribute sets the delay before DataMiner executes the next trigger in a group in a DataMiner connector protocol."
 ---
 
 # next attribute

@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.RCA.Protocol
+description: "Learn how the RCA Protocol element groups Link elements that define parameter relationships in Root Cause Analysis chains."
 ---
 
 # Protocol element

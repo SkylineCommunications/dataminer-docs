@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTableSettingRowTextColor
+description: "Configure a discreet table column and hexadecimal color values to control the text color of each Data Display row."
 ---
 
 # Setting row text color

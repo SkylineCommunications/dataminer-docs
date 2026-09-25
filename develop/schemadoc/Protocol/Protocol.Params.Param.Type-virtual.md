@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.Type-virtual
+description: "Learn how the virtual attribute restricts virtual element connections by source or destination, protocol, and parameter description."
 ---
 
 # virtual attribute

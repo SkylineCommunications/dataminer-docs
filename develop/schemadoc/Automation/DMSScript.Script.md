@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script
+description: "Use the Script element to contain an automation script's ordered Exe actions and ensure that every action ID is unique."
 ---
 
 # Script element

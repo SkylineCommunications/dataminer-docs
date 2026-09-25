@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Compliancies.MaximumSupportedVersion
+description: "Learn how the MaximumSupportedVersion element sets the latest DataMiner version compatible with a connector in a DataMiner connector protocol."
 ---
 
 # MaximumSupportedVersion element

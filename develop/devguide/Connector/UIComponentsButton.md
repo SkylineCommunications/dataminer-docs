@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsButton
+description: "Define a button as a write parameter with discreet labels, a minimum width, and a QAction or trigger flow that runs when a user clicks it."
 ---
 
 # Button

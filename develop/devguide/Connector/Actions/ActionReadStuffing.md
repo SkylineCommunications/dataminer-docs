@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: LogicActionReadStuffing
+description: "Use the read stuffing action to remove redundant stuffing bytes from serial response data within configured offsets."
 ---
 
 # read stuffing

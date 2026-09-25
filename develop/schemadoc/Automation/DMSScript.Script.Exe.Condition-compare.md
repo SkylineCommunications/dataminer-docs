@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-compare
+description: "Use the compare attribute to select the equality or ordering operator for a Boolean Condition expression in a DataMiner automation script."
 ---
 
 # compare attribute

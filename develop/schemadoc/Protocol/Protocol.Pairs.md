@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Pairs
+description: "Learn how to use the Pairs element to list uniquely identified command and response pairs in a DataMiner connector protocol."
 ---
 
 # Pairs element

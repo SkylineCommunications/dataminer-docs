@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Actions.Action.Type-sequence
+description: "Use the Action Type sequence attribute with set info actions to specify the sequence assigned to a connector protocol parameter."
 ---
 
 # sequence attribute

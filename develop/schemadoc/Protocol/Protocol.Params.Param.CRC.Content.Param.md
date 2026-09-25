@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.Params.Param.CRC.Content.Param
+description: "Learn how to use the Param element to include a command or response parameter in a CRC calculation in a DataMiner connector protocol."
 ---
 
 # Param element

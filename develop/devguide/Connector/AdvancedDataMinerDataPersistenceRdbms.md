@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: AdvancedDataMinerDataPersistenceRdbms
+description: "Review the legacy MySQL general database tables that store element values, information events, alarms, trend data, and DVE information."
 ---
 
 # DataMiner general database – RDBMS

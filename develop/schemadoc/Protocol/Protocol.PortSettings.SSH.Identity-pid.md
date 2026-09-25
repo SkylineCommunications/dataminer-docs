@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: Protocol.PortSettings.SSH.Identity-pid
+description: "Learn how the Identity pid attribute identifies the parameter that holds the private key path for SSH public key authentication."
 ---
 
 # pid attribute

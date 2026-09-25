@@ -461,9 +461,9 @@ In some rare cases, an error could occur in SLDataMiner when an alarm template o
 
 #### bypassProxy option would incorrectly not be taken into account in case of a websocket connection \[ID 31584\]
 
-When the bypassproxy option had been set in a bus address field, this setting would incorrectly not be taken into account in case of a websocket connection.
+When the bypassProxy option had been set in a bus address field, this setting would incorrectly not be taken into account in case of a websocket connection.
 
-From now on, when the bypassproxy option is specified for a websocket connection, the HTTP handshake to set up the websocket connection will not go through the configured proxy server.
+From now on, when the bypassProxy option is specified for a websocket connection, the HTTP handshake to set up the websocket connection will not go through the configured proxy server.
 
 #### Jobs app: Preset field values would not be filled in when a newly created job template was applied \[ID 31585\]
 

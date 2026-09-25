@@ -1,5 +1,7 @@
 ---
+metadata_version: 1
 uid: UIComponentsTextBox
+description: "Define a DataMiner text box with a write parameter and optionally limit the number of characters accepted for string values."
 ---
 
 # Text box
