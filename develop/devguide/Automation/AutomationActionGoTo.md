@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AutomationActionGoTo
-description: "Configure the Go to action to transfer automation script execution directly to the statement identified by a specified label."
+description: "Configure the 'Go to' action to transfer automation script execution directly to the statement identified by a specified label."
 ---
 
 # Go to
