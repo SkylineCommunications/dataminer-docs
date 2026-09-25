@@ -42,7 +42,7 @@ Before you upgrade to this DataMiner version:
 
 ### DataMiner Installer now supports command-line installation [ID 45554]
 
-<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 You can now install DataMiner from the command line by running the following command:
 
@@ -96,16 +96,22 @@ When it can validate or repair the IIS rewrite rule for user-defined APIs, it re
 
 #### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
 
-<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
 
 In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
 
+#### SNMP: Empty community strings are now supported for SET operations [ID 46535]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
+
 #### DxMs upgraded [ID 46565] [ID 46577]
 
 <!-- RN 46565: MR 10.7.0 - FR 10.6.11 -->
-<!-- RN 46577: MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+<!-- RN 46577: MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
@@ -224,6 +230,12 @@ Up to now, testing a connection that used SNMPv3 credentials from the Credential
 Up to now, retrieving change point history could cause performance to decrease because change points stored under the deprecated (v1) change point custom data type were fetched and merged with data from the current store. DataMiner will now read change points exclusively from the current data store.
 
 As a result, change points that were only ever written under the old v1 partition scheme will no longer be returned. This affects only pre-migration data; systems using the current change point storage format are unaffected.
+
+#### SNMP: Community credentials could be lost when an automation script modified an element [ID 46537]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when an automation script modified an element that used community credentials from the Credential Library on its main connection, the element could lose those credentials if the script did not change them. From now on, the credentials will be retained.
 
 #### STaaS: Failing aggregate count queries would incorrectly return 0 instead of throwing an exception [ID 46546]
 

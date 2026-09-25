@@ -141,6 +141,12 @@ Both settings accept integer values from 1 through 100. After changing either se
 
 When you drag a link in a web app, a custom preview will now appear and follow the pointer. This provides clearer visual feedback during drag-and-drop operations.
 
+#### Security enhancements [ID 46567]
+
+<!-- 46567: MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Dashboards/Low-Code Apps: Linked dropdown components feeding data to each other could cause a dashboard or app to become unresponsive [ID 46314]
