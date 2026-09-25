@@ -24,7 +24,7 @@ The package identifier and the C# namespace are different:
 - NuGet package: `Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit`
 - C# namespace: `Skyline.DataMiner.Utils.InteractiveAutomationScript`
 
-For new scripts, prefer a project-based SDK-style solution. Inline C# blocks and legacy DIS solution formats remain supported for existing scripts. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the distinction between SDK-style and legacy-style projects.
+For new scripts, a project-based SDK-style solution is preferred. Inline C# blocks and legacy DIS solution formats remain supported for existing scripts. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the distinction between SDK-style and legacy-style projects.
 
 ## Creating a new script
 
