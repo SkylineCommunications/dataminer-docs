@@ -17,7 +17,9 @@ The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a l
 
 ## Choosing an IAS Toolkit version
 
-To choose your version of the IAS Toolkit, the first thing you need to know is the [version of DataMiner](xref:Interactive_Automation_Script_Toolkit#versions) where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
+To choose your version of the IAS Toolkit, you will need to know the version of DataMiner where you want your script to run. As DataMiner keeps improving, so does its support for newer, more advanced IAS components.
+
+For recent DataMiner versions, you can use the most recent version of the toolkit. For older DataMiner versions, refer to the [IAS Toolkit versions list](xref:Interactive_Automation_Script_Toolkit#versions).
 
 ## Setting up your development environment
 
@@ -25,7 +27,7 @@ Just like for protocol and regular automation script development, use Visual Stu
 
 ## Choosing a solution format
 
-For new scripts, prefer a project-based SDK-style solution. Inline C# blocks and legacy DIS solution formats remain supported for existing scripts. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the distinction between SDK-style and legacy-style projects.
+For new scripts, a project-based SDK-style solution is preferred. Inline C# blocks and legacy DIS solution formats remain supported for existing scripts. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the distinction between SDK-style and legacy-style projects.
 
 ## Creating a new script
 
@@ -53,10 +55,11 @@ To start creating your script:
 
 1. Click *Install*.
 
-The NuGet package identifier and the C# namespace are different:
-
-- NuGet package: `Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit`
-- C# namespace: `Skyline.DataMiner.Utils.InteractiveAutomationScript`
+> [!NOTE]
+> The NuGet package identifier and the C# namespace are different:
+>
+> - NuGet package: `Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit`
+> - C# namespace: `Skyline.DataMiner.Utils.InteractiveAutomationScript`
 
 > [!TIP]
 > For more information on using NuGet packages, see [Consuming NuGet packages](xref:Consuming_NuGet).
