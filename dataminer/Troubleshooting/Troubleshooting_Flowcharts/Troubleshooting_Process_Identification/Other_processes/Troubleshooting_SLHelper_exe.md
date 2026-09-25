@@ -109,10 +109,10 @@ PdfSave --- EndReportIssue
 %% Define hyperlinks %%
 click LinkRootCause "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Flowchart"
 click LinkProcessList "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Go to process identification page"
-click VisioKnown "#known-limitations-of-visual-overview-in-web-apps" "Known limitations"
+click VisioKnown "/dataminer/Functions/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Visual_Overview_component.html#unsupported-capabilities" "Known limitations"
 click VisioLogs "#logging" "More on logging"
-click GqiDevConsole "#using-the-developer-console-in-a-browser" "Using Developer Console"
-click GqiSave "#recording-a-gqi-session" "How to record a GQI session"
+click GqiDevConsole "/dataminer/Troubleshooting/Procedures/Investigating_Web_Issues.html" "Using Developer Console"
+click GqiSave "/dataminer/Troubleshooting/Procedures/Investigating_Web_Issues.html#record-gqi-session" "How to record a GQI session"
 click PdfLogs "#logging" "More on logging"
 click PdfReportsIssue "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Other_processes/Troubleshooting_SLASPConnection_exe.html" "Go to Reporter flowchart"
 click BpaLogs "#logging" "More on logging"
