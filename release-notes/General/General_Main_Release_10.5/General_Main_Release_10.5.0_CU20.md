@@ -26,6 +26,12 @@ uid: General_Main_Release_10.5.0_CU20
 
 ### Enhancements
 
+#### MessageBroker has been upgraded to Microsoft .NET 10 [ID 44205]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+MessageBroker has been upgraded to Microsoft .NET 10.
+
 #### NATSMigration: Prerequisite checks added [ID 45668] [ID 46125]
 
 <!-- MR 10.5.0 [CU20] - FR TBD -->
