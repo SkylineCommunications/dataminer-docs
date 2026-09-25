@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_managing_base_subscriptions
+description: "Configure base subscriptions with SLNetClientTest to keep frequently used element data cached in SLNet and speed up element card loading."
 ---
 
 # Managing base subscriptions

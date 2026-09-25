@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_protocol_buffer_serialization
+description: "Use SLNetClientTest to enable, disable, or check protocol buffer serialization, enabled by default in supported DataMiner versions."
 ---
 
 # Enabling or disabling protocol buffer serialization

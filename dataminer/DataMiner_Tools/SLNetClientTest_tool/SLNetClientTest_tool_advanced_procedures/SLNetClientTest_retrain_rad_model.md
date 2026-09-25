@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_retrain_rad_model
+description: "Retrain a RAD parameter group with SLNetClientTest by specifying its name and the start and end times of a period of expected behavior."
 ---
 
 # Retraining the internal model used by RAD

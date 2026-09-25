@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_including_all_custom_properties
+description: "Learn how, in the SLNetClientTest tool, you can configure server-side search to include all custom properties."
 ---
 
 # Configuring server-side search to include all custom properties

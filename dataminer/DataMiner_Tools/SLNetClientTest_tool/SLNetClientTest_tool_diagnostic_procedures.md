@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_tool_diagnostic_procedures
+description: "Use these SLNetClientTest diagnostic procedures to retrieve DataMiner data, inspect logs and connections, and troubleshoot processes and elements."
 ---
 
 # SLNetClientTest tool diagnostic procedures

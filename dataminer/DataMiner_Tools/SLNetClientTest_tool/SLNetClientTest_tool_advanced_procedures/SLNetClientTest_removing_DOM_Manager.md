@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_removing_DOM_Manager
+description: "Remove a DOM manager with SLNetClientTest from DataMiner 10.3.5/10.4.0 onward; over 100,000 instances block deletion, and Elasticsearch indices remain."
 ---
 
 # Removing a DOM manager

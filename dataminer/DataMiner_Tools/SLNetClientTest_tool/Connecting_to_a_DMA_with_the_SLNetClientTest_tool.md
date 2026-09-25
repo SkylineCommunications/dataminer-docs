@@ -1,5 +1,6 @@
 ---
 uid: Connecting_to_a_DMA_with_the_SLNetClientTest_tool
+description: "Follow these steps to connect the SLNetClientTest tool to a DMA with autodetect, gRPC on port 443, remoting on port 8004, or IPC."
 ---
 
 # Connecting to a DMA with the SLNetClientTest tool

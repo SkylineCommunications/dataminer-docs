@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_configuring_frequency_smart_baseline
+description: "Use the SLNetClientTest tool to adjust how often smart baselines are calculated to match your system's data processing needs."
 ---
 
 # Configuring the frequency of smart baseline calculations

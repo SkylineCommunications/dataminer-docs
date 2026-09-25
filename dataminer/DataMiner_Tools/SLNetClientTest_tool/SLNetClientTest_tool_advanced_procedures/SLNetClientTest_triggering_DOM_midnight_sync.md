@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_triggering_DOM_midnight_sync
+description: "Trigger a midnight sync for a DOM manager with SLNetClientTest to reload enabled DOM caches from the database, available from DataMiner 10.3.9/10.4.0."
 ---
 
 # Triggering a midnight sync for a DOM manager

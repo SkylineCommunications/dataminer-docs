@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_refused_dma_state
+description: "Use SLNetClientTest to diagnose a Refused DMA state, adjust MaxAgentConnectsPerHour or QueuedStackOverflow, and clear refusal after resolving its cause."
 ---
 
 # Checking or modifying the settings related to a Refused DMA state

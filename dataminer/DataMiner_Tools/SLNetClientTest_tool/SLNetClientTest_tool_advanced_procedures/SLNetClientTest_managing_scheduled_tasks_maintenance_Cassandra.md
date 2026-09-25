@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
+description: "Manage scheduled Cassandra maintenance tasks with SLNetClientTest to create, update, delete, or run tasks in Windows Task Scheduler on one or all DMAs."
 ---
 
 # Managing scheduled tasks for maintenance of a Cassandra database

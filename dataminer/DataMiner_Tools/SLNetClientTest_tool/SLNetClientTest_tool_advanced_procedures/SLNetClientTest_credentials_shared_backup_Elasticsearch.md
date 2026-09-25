@@ -1,12 +1,11 @@
 ---
 uid: SLNetClientTest_credentials_shared_backup_Elasticsearch
+description: "Use the SLNetClientTest tool to configure DataMiner to save Elasticsearch backups to a shared network location using the required credentials."
 ---
 
 # Specifying credentials for a shared backup path for Elasticsearch
 
-From DataMiner 10.2.0/10.1.8 onwards, it is possible to configure specific credentials for the network location that is used for Elasticsearch backups.
-
-To do so:
+To configure specific credentials for the network location that is used for Elasticsearch backups:
 
 1. [Connect to the DMA using the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 

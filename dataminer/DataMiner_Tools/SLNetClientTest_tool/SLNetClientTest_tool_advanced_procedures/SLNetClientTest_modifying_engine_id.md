@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_modifying_engine_id
+description: "Use SLNetClientTest to change a DMA's northbound SNMP engine ID for SNMPv3 traps, choosing an IPv4, IPv6, MAC, text, or octet value."
 ---
 
 # Modifying the engine ID of a DMA

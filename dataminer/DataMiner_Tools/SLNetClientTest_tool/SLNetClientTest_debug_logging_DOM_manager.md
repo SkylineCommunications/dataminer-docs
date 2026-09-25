@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_debug_logging_DOM_manager
+description: "Follow these steps to use the SLNetClientTest tool to enable or reset level 6 debug logging for a DOM manager from DataMiner 10.5.0 CU2 or 10.5.5 onwards."
 ---
 
 # Enabling or disabling debug logging for a DOM manager

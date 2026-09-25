@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_accessing_script_execution_metrics
+description: "Use the SLNetClientTest tool to view automation script execution metrics such as counts, failures, duration, users, and results."
 ---
 
 # Accessing script execution metrics
