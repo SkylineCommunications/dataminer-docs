@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Handling_Async_Code
-description: "Handle async-only library calls in a synchronous automation script while keeping the IEngine object and related objects on the entry-point thread."
+description: "Handle async-only library calls in a synchronous automation script while keeping the IEngine object and related objects on the entry point thread."
 ---
 
 # Handling async code
@@ -11,9 +11,9 @@ The automation script entry point is synchronous: use `void Run(IEngine engine)`
 > [!IMPORTANT]
 > The `IEngine` object, and every object you obtain through it (such as `Element` objects returned by `engine.FindElement`, dummies, and their parameters), is **not thread-safe**. It may only be used from the single thread on which `Run(IEngine engine)` executes.
 >
-> This applies even when the work you offload is fully synchronous. Dispatching Engine calls to other threads (for example with `Task.Run`, `Parallel.For`, or a manually started `Thread`) and using the Engine or its objects from more than one thread at a time can corrupt the Automation subsystem's internal state and crash the process (`SLAutomation`). Keep all interaction with the Engine and its objects on the script's entry-point thread.
+> This applies even when the work you offload is fully synchronous. Dispatching Engine calls to other threads (for example with `Task.Run`, `Parallel.For`, or a manually started `Thread`) and using the Engine or its objects from more than one thread at a time can corrupt the Automation subsystem's internal state and crash the process (`SLAutomation`). Keep all interaction with the Engine and its objects on the script's entry point thread.
 
-If an external library only exposes an async method, call it synchronously from the entry-point thread. Do not pass the Engine object or objects obtained from it into the asynchronous operation.
+If an external library only exposes an async method, call it synchronously from the entry point thread. Do not pass the Engine object or objects obtained from it into the asynchronous operation.
 
 ```cs
 using System;
