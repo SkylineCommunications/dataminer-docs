@@ -6,25 +6,7 @@ description: "Use this connector troubleshooting entry point when an exception o
 
 # Exception in Finalizer
 
-Use this entry point when a connector QAction throws an exception on the .NET Finalizer thread and the SLScripting process crashes.
+If a connector QAction throws an exception on the .NET Finalizer thread and SLScripting crashes, collect its logs and crash dump. Follow [Investigating exception occurrence on Finalizer thread](xref:TroubleshootingSLScriptingFinalizerException) to identify the failing finalizer and trace it back to the connector code.
 
-## Audience and prerequisites
-
-This page is for connector developers investigating a process crash. Collect the relevant SLScripting logs and crash dump before starting the linked investigation procedure.
-
-## Scope and expected result
-
-The linked procedure explains how to inspect the dump, identify the finalizer that failed, and trace it back to the connector code. This page does not replace that procedure.
-
-## Failure and edge cases
-
-An exception on the Finalizer thread can terminate the SLScripting process. If the dump does not show a finalizer exception, use the broader [SLScripting troubleshooting procedures](xref:Troubleshooting_SLScripting) to select a different investigation path.
-
-## Authoritative procedure
-
-Refer to [Investigating exception occurrence on Finalizer thread](xref:TroubleshootingSLScriptingFinalizerException).
-
-## Related concepts
-
-- [QActions](xref:LogicQActions)
-- [SLScripting troubleshooting](xref:Troubleshooting_SLScripting)
+> [!NOTE]
+> If the dump does not show a finalizer exception, choose a different investigation path from [SLScripting troubleshooting](xref:Troubleshooting_SLScripting).

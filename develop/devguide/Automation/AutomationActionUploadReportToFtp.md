@@ -6,23 +6,7 @@ description: "Use the report action to upload a generated report to an FTP desti
 
 # Upload report to FTP
 
-Uploads a report to an FTP server.
-
-## Audience and prerequisites
-
-Use this action when an automation script must deliver a report to an FTP server. Before configuring it, make sure the report template exists and that the target FTP server and credentials are available to the DataMiner system.
-
-## Scope
-
-The `Template` element selects the report, `Destination` describes the FTP target, and `Include` elements identify the content to include. The action does not define or modify the report template itself.
-
-## Expected result
-
-When the action executes, DataMiner generates the selected report and attempts to upload it to the configured FTP destination.
-
-## Failure and edge cases
-
-An invalid template, destination format, network route, or credential set prevents a successful upload. Replace all sample host, path, and credential values before deploying the script, and verify that the FTP server accepts the configured connection.
+Uploads a generated report to an FTP server. The [`Template` element](xref:DMSScript.Script.Exe.Template) selects an existing report template, the [`Destination` element](xref:DMSScript.Script.Exe.Destination) specifies the FTP target, and [`Include` elements](xref:DMSScript.Script.Exe.Include) select the content.
 
 ```xml
 <Exe id="2" type="report">
@@ -35,14 +19,5 @@ An invalid template, destination format, network route, or credential set preven
 </Exe>
 ```
 
-## Related concepts
-
-- [Automation script actions](xref:AutomationActions)
-- [Template element](xref:DMSScript.Script.Exe.Template)
-- [Destination element](xref:DMSScript.Script.Exe.Destination)
-- [Include element](xref:DMSScript.Script.Exe.Include)
-
-## Authoritative references
-
-- [Exe element](xref:DMSScript.Script.Exe)
-- [Report template action schema](xref:DMSScript.Script.Exe.Template)
+> [!IMPORTANT]
+> Replace the sample FTP host, path, and credentials before using this example. The report template must exist, and the DataMiner System must be able to reach and authenticate with the server.

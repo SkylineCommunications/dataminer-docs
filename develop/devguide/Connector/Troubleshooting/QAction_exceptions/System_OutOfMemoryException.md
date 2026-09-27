@@ -6,25 +6,7 @@ description: "Use this connector troubleshooting entry point when SLScripting re
 
 # System.OutOfMemoryException
 
-Use this entry point when the SLScripting process runs out of memory while executing connector QAction code or when a memory leak is suspected.
+If SLScripting reports `System.OutOfMemoryException` during connector QAction execution, or you suspect memory growth in that process, collect its logs and, if possible, a full-memory dump. Follow [Investigating OutOfMemoryException occurrences](xref:TroubleshootingSLScriptingOutOfMemoryException) to confirm the exception and identify the allocation or connector code involved.
 
-## Audience and prerequisites
-
-This page is for connector developers and support engineers investigating a process crash or sustained memory growth. Collect the SLScripting logs and, when possible, a full-memory process dump.
-
-## Scope and expected result
-
-The linked procedure explains how to confirm the exception and analyze the dump for the allocation or connector code responsible. This page does not diagnose a specific connector.
-
-## Failure and edge cases
-
-An apparent memory problem can also come from another process or from a dump that does not contain full memory. Confirm that the exception is reported by SLScripting before following this path.
-
-## Authoritative procedure
-
-Refer to [Investigating OutOfMemoryException occurrences](xref:TroubleshootingSLScriptingOutOfMemoryException).
-
-## Related concepts
-
-- [QActions](xref:LogicQActions)
-- [SLScripting troubleshooting](xref:Troubleshooting_SLScripting)
+> [!NOTE]
+> Confirm that SLScripting is the affected process. Memory growth in another process or a dump without full memory can make the analysis inconclusive.

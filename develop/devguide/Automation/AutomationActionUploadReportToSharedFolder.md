@@ -6,23 +6,7 @@ description: "Use the report action to upload a generated report to a shared net
 
 # Upload report to shared folder
 
-Uploads a report to a shared network folder.
-
-## Audience and prerequisites
-
-Use this action when an automation script must deliver a report to a network share. Before configuring it, make sure the report template exists and that the DataMiner system can reach the share with the required credentials.
-
-## Scope
-
-The `Template` element selects the report, `Destination` describes the shared-folder target, and `Include` elements identify the content to include. The action does not create the share or change its permissions.
-
-## Expected result
-
-When the action executes, DataMiner generates the selected report and attempts to copy it to the configured shared folder.
-
-## Failure and edge cases
-
-An invalid template, share path, credential set, or folder permission prevents a successful upload. Replace all sample host, path, and credential values before deploying the script, and verify access from the DataMiner system.
+Uploads a generated report to a shared network folder. The [`Template` element](xref:DMSScript.Script.Exe.Template) selects an existing report template, the [`Destination` element](xref:DMSScript.Script.Exe.Destination) specifies the share, and [`Include` elements](xref:DMSScript.Script.Exe.Include) select the content.
 
 ```xml
 <Exe id="2" type="report">
@@ -33,14 +17,5 @@ An invalid template, share path, credential set, or folder permission prevents a
 </Exe>
 ```
 
-## Related concepts
-
-- [Automation script actions](xref:AutomationActions)
-- [Template element](xref:DMSScript.Script.Exe.Template)
-- [Destination element](xref:DMSScript.Script.Exe.Destination)
-- [Include element](xref:DMSScript.Script.Exe.Include)
-
-## Authoritative references
-
-- [Exe element](xref:DMSScript.Script.Exe)
-- [Report template action schema](xref:DMSScript.Script.Exe.Template)
+> [!IMPORTANT]
+> Replace the sample share path and credentials before using this example. The report template must exist, and the DataMiner System must be able to access and write to the share.
