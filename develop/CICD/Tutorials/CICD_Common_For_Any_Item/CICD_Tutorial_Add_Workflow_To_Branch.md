@@ -5,9 +5,20 @@ description: Learn how to add a GitHub Actions workflow to a specific repository
 
 # Setting up a workflow on a specific branch via GitHub
 
-You can add a GitHub Actions workflow directly to a specific branch from your repository on GitHub.
+In this tutorial, you will learn how to add a GitHub Actions workflow directly to a specific branch in your repository on GitHub.
 
-## Add the workflow
+Expected duration: 5 minutes.
+
+## Prerequisites
+
+- A [GitHub](https://github.com/) account with write access to the repository where you want to add the workflow.
+
+## Overview
+
+- [Step 1: Select the workflow](#step-1-select-the-workflow)
+- [Step 2: Select the branch and commit the workflow](#step-2-select-the-branch-and-commit-the-workflow)
+
+## Step 1: Select the workflow
 
 1. Go to your repository on [GitHub](https://github.com/).
 
@@ -16,6 +27,8 @@ You can add a GitHub Actions workflow directly to a specific branch from your re
 1. Click the green *Add workflow* button.
 
 1. Find the workflow you want to add, and click *Configure*.
+
+## Step 2: Select the branch and commit the workflow
 
 1. At the top of the workflow editor, open the branch dropdown.
 
@@ -29,8 +42,6 @@ You can add a GitHub Actions workflow directly to a specific branch from your re
 
    The workflow file will be committed and pushed to the selected branch.
 
-## Example
+   The following example shows how to add the DataMiner connector workflow to a specific branch:
 
-The following example shows how to add the DataMiner connector workflow to a specific branch:
-
-![Adding the DataMiner connector workflow to a specific GitHub branch](~/develop/images/AddWorkflowToBranch.gif)
+   ![Adding the DataMiner connector workflow to a specific GitHub branch](~/develop/images/AddWorkflowToBranch.gif)
