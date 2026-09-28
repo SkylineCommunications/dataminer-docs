@@ -109,7 +109,7 @@ PdfSave --- EndReportIssue
 %% Define hyperlinks %%
 click LinkRootCause "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Root Cause Flowchart"
 click LinkProcessList "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html" "Go to process identification page"
-click VisioKnown "/dataminer/Functions/Dashboards_and_Low_Code_Apps/Visualizations/Available_visualizations/Other/Visual_Overview_component.html#unsupported-capabilities" "Known limitations"
+click VisioKnown "/dataminer/Troubleshooting/Procedures/Investigating_Web_Issues.html#visual-overview-in-web-apps" "Known limitations"
 click VisioLogs "#logging" "More on logging"
 click GqiDevConsole "/dataminer/Troubleshooting/Procedures/Investigating_Web_Issues.html" "Using Developer Console"
 click GqiSave "/dataminer/Troubleshooting/Procedures/Investigating_Web_Issues.html#record-gqi-session" "How to record a GQI session"
