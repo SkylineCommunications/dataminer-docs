@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeToPartialTable
-description: "Assess how converting a full table to a partial table affects polling, row lifecycle, stored data, QActions, and compatibility with existing logic."
+description: "Review how converting a table to a partial table affects custom reports, automation scripts, and dynamic alarm thresholds."
 ---
 
 # Change to partial table

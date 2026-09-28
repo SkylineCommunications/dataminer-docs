@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ReplaceDisplayColumnByNaming
-description: "Replace a table's displayColumn definition with naming only when its trend history, compatibility, and migration impact have been evaluated."
+description: "Assess the impact of replacing displayColumn with naming on protocol compatibility and access to trend and alarm history."
 ---
 
 # Replace displayColumn by naming
