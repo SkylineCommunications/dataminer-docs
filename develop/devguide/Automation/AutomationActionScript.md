@@ -19,14 +19,3 @@ The `Script` element identifies the automation script to run. Each `Param` eleme
 
 > [!TIP]
 > If the target script is missing, its name does not match, or a supplied parameter is invalid, the action cannot run the intended script. Keep the target script deployed and validate parameter values when the calling script changes.
-
-## Related concepts
-
-- [Automation script actions](xref:AutomationActions)
-- [Script element](xref:DMSScript.Script.Exe.Script)
-- [Param element](xref:DMSScript.Script.Exe.Param)
-
-## Authoritative references
-
-- [Getting started with automation script development](xref:GettingStartedWithAutomationScriptDevelopment)
-- [Exe element](xref:DMSScript.Script.Exe)

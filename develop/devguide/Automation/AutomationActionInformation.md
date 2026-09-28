@@ -6,7 +6,7 @@ description: "Use the Information action to create a clear information event fro
 
 # Information
 
-The action creates an information event with the text in the `Message` element. It is intended for operator-facing information, not for diagnostic details written to the automation log.
+Creates an information event with the text in the `Message` element.
 
 ```xml
 <Exe id="2" type="information">
@@ -15,15 +15,4 @@ The action creates an information event with the text in the `Message` element. 
 ```
 
 > [!TIP]
-> Keep the message concise and meaningful. If the script must write diagnostic details instead of an operator-facing event, use the [Log action](xref:AutomationActionLog).
-
-## Related concepts
-
-- [Automation script actions](xref:AutomationActions)
-- [Log action](xref:AutomationActionLog)
-- [Exe element](xref:DMSScript.Script.Exe)
-
-## Authoritative references
-
-- [Message element](xref:DMSScript.Script.Exe.Message)
-- [Automation XML schema](xref:SchemaAutomationScript)
+> Keep operator-facing messages concise. For diagnostic details, use the [Log action](xref:AutomationActionLog).
