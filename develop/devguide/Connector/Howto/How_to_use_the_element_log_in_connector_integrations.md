@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: How_to_use_the_element_log_in_connector_integrations
-description: "Use the element log to investigate connector behavior, adjust log levels, add actionable QAction entries, and prepare integrations for debugging."
+description: "Learn how to use the element log to investigate connector behavior and how you can configure a connector for easier debugging via the element log."
 ---
 
 # How to use the element log in connector integrations
@@ -19,14 +19,12 @@ Below, you can lear how to use the element log to help with development or inves
 
 You can either open the element log in DataMiner Cube or open it directly in the File Explorer on the DataMiner Agent.
 
-- DataMiner Cube:
+- In **DataMiner Cube**:
 
-    - Go to *Apps > System Center > Logging > Element*, and select the element in question.
-    - Alternatively, on the element card, click the hamburger button to open the card menu and select *View > Log*.
+  - Go to *Apps > System Center > Logging > Element*, and select the element in question.
+  - Alternatively, on the element card, click the hamburger button to open the card menu and select *View > Log*.
 
-- File Explorer:
-
-    - Go to `C:\Skyline DataMiner\Logging` and select the text file with the name of the element.
+- In **File Explorer**, go to `C:\Skyline DataMiner\Logging` and select the text file with the name of the element.
 
 ### Changing the log settings
 

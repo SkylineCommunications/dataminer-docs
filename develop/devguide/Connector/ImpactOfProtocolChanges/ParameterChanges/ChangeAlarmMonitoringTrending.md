@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeAlarmMonitoringTrending
-description: "Assess when changes to alarm monitoring, trending, trend types, or normalization require a major connector version and how to avoid impact."
+description: "Learn which changes to alarming, trending, or normalization require a major connector version and how to preserve normalization base values."
 ---
 
 # Change alarm monitoring and/or trending
