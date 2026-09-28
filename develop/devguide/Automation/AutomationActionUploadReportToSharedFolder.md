@@ -1,12 +1,12 @@
 ---
 metadata_version: 1
 uid: AutomationActionUploadReportToSharedFolder
-description: "Use the report action to upload a generated report to a shared network folder and validate the share path, credentials, and permissions."
+description: "Use the report action to upload a generated report to a shared network folder by specifying a template, the share path, and credentials."
 ---
 
 # Upload report to shared folder
 
-Uploads a generated report to a shared network folder. The `Template` element selects an existing report template, the `Destination` element specifies the share, and `Include` elements select the content.
+Uploads a generated report to a shared network folder. The `Template` element selects an existing report template, the `Destination` element specifies the share, and the `Include` elements select the content.
 
 ```xml
 <Exe id="2" type="report">
