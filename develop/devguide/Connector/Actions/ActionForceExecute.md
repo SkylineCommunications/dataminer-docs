@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionForceExecute
-description: "Use the force execute action to run a group as soon as the current content item finishes, then resume the interrupted group."
+description: "Use the 'force execute' action to run a group as soon as the current content item finishes, after which the interrupted group resumes execution."
 ---
 
 # force execute
@@ -10,9 +10,7 @@ This action can only be executed on a group.
 
 This action will execute the specified group as soon as possible.
 
-The ongoing content item (Action, Pair, Param, Session, or Trigger) of the ongoing group, if any, will finish.
-Then the group you want to "force execute" will be executed in its entirety.
-When done, the remaining items of the originally ongoing group will resume their execution.
+The ongoing content item (Action, Pair, Param, Session, or Trigger) of the ongoing group, if any, will finish. Then the group you want to "force execute" will be executed in its entirety. When done, the remaining items of the originally ongoing group will resume their execution.
 
 Note that if some "force execute" actions were previously called and not yet executed, those will still have priority over potential new "force execute" action executions.
 

@@ -1,14 +1,14 @@
 ---
 metadata_version: 1
 uid: LogicActionExecuteOneNow
-description: "Use the 'execute one now' action to queue a group ahead of timer-scheduled groups in case it is not already in the execution queue."
+description: "Use the 'execute one now' action to queue a group ahead of timer-scheduled groups in case it is not in the execution queue yet."
 ---
 
 # execute one now
 
 This action can only be executed on a group.
 
-This action first checks if the specified group is already in the queue. If it is, nothing will happen. If it is not already in the queue, this action will add the specified group to the end of the group execution queue, but before groups scheduled by a timer.
+This action first checks if the specified group is already in the queue. If it is, nothing will happen. If it is not in the queue yet, this action will add the specified group to the end of the group execution queue, but before groups scheduled by a timer.
 
 ## Attributes
 
