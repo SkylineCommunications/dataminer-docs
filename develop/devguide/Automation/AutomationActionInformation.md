@@ -6,7 +6,7 @@ description: "Use the Information action to create a clear information event fro
 
 # Information
 
-Creates an information event with the text in the [`Message` element](xref:DMSScript.Script.Exe.Message).
+Creates an information event with the text in the `Message` element.
 
 ```xml
 <Exe id="2" type="information">

@@ -6,7 +6,7 @@ description: "Use the UI action to present a response dialog from an automation 
 
 # UI
 
-Displays a dialog to collect input from an interactive user. The [`Value` element](xref:DMSScript.Script.Exe.Value) contains the dialog definition. To branch based on a condition instead, use the [If action](xref:AutomationActionIf).
+Displays a dialog to collect input from an interactive user. The `Value` element contains the dialog definition. To branch based on a condition instead, use the [If action](xref:AutomationActionIf).
 
 ```xml
 <Exe id="2" type="ui">

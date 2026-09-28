@@ -6,7 +6,7 @@ description: "Use the report action to upload a generated report to an FTP desti
 
 # Upload report to FTP
 
-Uploads a generated report to an FTP server. The [`Template` element](xref:DMSScript.Script.Exe.Template) selects an existing report template, the [`Destination` element](xref:DMSScript.Script.Exe.Destination) specifies the FTP target, and [`Include` elements](xref:DMSScript.Script.Exe.Include) select the content.
+Uploads a generated report to an FTP server. The `Template` element selects an existing report template, the `Destination` element specifies the FTP target, and `Include` elements select the content.
 
 ```xml
 <Exe id="2" type="report">

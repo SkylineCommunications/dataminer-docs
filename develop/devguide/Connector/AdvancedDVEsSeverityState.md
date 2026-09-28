@@ -6,7 +6,7 @@ description: "Configure the DVE severity column so the parent element can displa
 
 # Severity state column
 
-To display the overall severity of a Dynamic Virtual Element (DVE) in its parent element's DVE table, add `;severity` to the `options` attribute of a retrieved [`ColumnOption` element](xref:Protocol.Params.Param.ArrayOptions.ColumnOption). This displays the severity without changing the DVE element's alarm state.
+To display the overall severity of a Dynamic Virtual Element (DVE) in its parent element's DVE table, add `;severity` to the `options` attribute of a retrieved `ColumnOption` element. This displays the severity without changing the DVE element's alarm state.
 
 ```xml
 <ColumnOption idx="13" pid="520" type="custom" value="" options="" />
