@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Debugging_connectors_Element_connections
-description: "Debug missing or misordered element-connection data by tracing exceptions, validating parameter mappings, and accounting for asynchronous updates."
+description: "Troubleshoot missing or out-of-order element connection data by checking logs and connection configuration, and handling data regardless of arrival order."
 ---
 
 # Debugging connectors: Element connections

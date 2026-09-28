@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Debugging_connectors_RTE_caused_by_non-poll_group_in_timer
-description: "Diagnose an RTE caused by a non-poll group at the end of a timer, and prevent the timer from repeatedly adding poll groups to the queue."
+description: "Diagnose an RTE caused by poll groups accumulating when a timer's last group is a non-poll group, and learn how changing its type prevents queue buildup."
 ---
 
 # Debugging connectors: RTE caused by non-poll group in timer
