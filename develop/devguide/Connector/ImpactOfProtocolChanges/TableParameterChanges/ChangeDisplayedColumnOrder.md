@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeDisplayedColumnOrder
-description: "Assess how changing the displayed order of table columns affects users, dashboards, visualizations, and workflows without changing stored column data."
+description: "Review the guidance on table column reordering: its major-change classification, undetermined impact, and lack of a workaround."
 ---
 
 # Change displayed column order

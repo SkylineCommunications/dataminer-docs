@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeUnicode
-description: "Assess how enabling or disabling Unicode changes parameter storage and communication, and determine whether existing values or integrations are affected."
+description: "Assess the impact of changing the Unicode option in a protocol, which depends on the deployed DataMiner version."
 ---
 
 # Change Unicode
