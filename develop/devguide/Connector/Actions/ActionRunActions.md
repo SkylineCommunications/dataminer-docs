@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionRunActions
-description: "Use the run actions action to execute every QAction that is triggered by an update to one or more specified parameters."
+description: "Use the 'run actions' action to execute every QAction that is triggered by an update to one or more specified parameters."
 ---
 
 # run actions

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionSetInfo
-description: "Use the set info action to change parameter scale and sequence settings dynamically, with independent controls for each setting."
+description: "Use the 'set info' action to change parameter scale and sequence settings dynamically, with independent controls for each setting."
 ---
 
 # set info
