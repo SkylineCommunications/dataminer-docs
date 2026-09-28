@@ -6,7 +6,7 @@ description: "Use the report action to upload a generated report to an FTP desti
 
 # Upload report to FTP
 
-Uploads a generated report to an FTP server. The `Template` element selects an existing report template, the `Destination` element specifies the FTP target, and the `Include` elements select the content.
+Uploads a generated report to an FTP server. The `Template` element selects an existing report template, the `Destination` element specifies the FTP target, and the `Include` element selects the content.
 
 ```xml
 <Exe id="2" type="report">

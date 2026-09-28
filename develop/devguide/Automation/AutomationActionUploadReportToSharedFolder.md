@@ -6,7 +6,7 @@ description: "Use the report action to upload a generated report to a shared net
 
 # Upload report to shared folder
 
-Uploads a generated report to a shared network folder. The `Template` element selects an existing report template, the `Destination` element specifies the share, and the `Include` elements select the content.
+Uploads a generated report to a shared network folder. The `Template` element selects an existing report template, the `Destination` element specifies the share, and the `Include` element selects the content.
 
 ```xml
 <Exe id="2" type="report">
