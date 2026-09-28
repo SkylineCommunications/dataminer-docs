@@ -6,6 +6,8 @@ description: "Use the Script action to run a named automation script, pass its s
 
 # Script
 
+Use the Script action to run a named automation script, pass its supported parameters, and diagnose deployment or parameter errors.
+
 The `Script` element identifies the automation script to run. Each `Param` element supplies a value or execution option supported by that script. The action does not copy the target script into the calling script.
 
 ```xml
@@ -17,5 +19,5 @@ The `Script` element identifies the automation script to run. Each `Param` eleme
 </Exe>
 ```
 
-> [!TIP]
+> [!NOTE]
 > If the target script is missing, its name does not match, or a supplied parameter is invalid, the action cannot run the intended script. Keep the target script deployed and validate parameter values when the calling script changes.
