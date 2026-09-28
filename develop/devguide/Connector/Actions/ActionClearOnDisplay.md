@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: LogicActionClearOnDisplay
-description: "Use the clear on display action to reset a parameter's displayed value to 'Not initialized'. Pair it with the clear action to clear the value from memory."
+description: "Use the 'clear on display' action to reset a parameter's displayed value to 'Not initialized'. Pair it with the clear action to clear the value from memory."
 ---
 
 # clear on display
