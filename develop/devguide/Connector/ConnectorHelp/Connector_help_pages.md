@@ -124,8 +124,6 @@ HTTP CONNECTION:
 - **Device address**: The bus address of the device. If the proxy server has to be bypassed, specify `bypassProxy`.
 ```
 
-**Recommendation:** Use the canonical HTTP bus-address token `bypassProxy` in connector help pages and templates.
-
 ```md
 #### Virtual Connection - Main
 

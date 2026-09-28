@@ -173,5 +173,3 @@ Physical dynamic interfaces:
 
 [In this section, you can provide additional information about the connector that does not fit in the other sections. Remove this section if it does not contain any info.]
 ```
-
-**Recommendation:** Use the canonical HTTP bus-address token `bypassProxy` in connector documentation. See [HTTP element configuration](xref:ConnectionsHttpElementConfiguration).
