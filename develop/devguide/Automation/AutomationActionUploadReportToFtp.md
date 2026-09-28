@@ -1,12 +1,12 @@
 ---
 metadata_version: 1
 uid: AutomationActionUploadReportToFtp
-description: "Use the report action to upload a generated report to an FTP destination, and validate the template, destination, and credentials."
+description: "Use the report action to upload a generated report to an FTP destination, by specifying a template, destination, and credentials."
 ---
 
 # Upload report to FTP
 
-Uploads a generated report to an FTP server. The `Template` element selects an existing report template, the `Destination` element specifies the FTP target, and `Include` elements select the content.
+Uploads a generated report to an FTP server. The `Template` element selects an existing report template, the `Destination` element specifies the FTP target, and the `Include` elements select the content.
 
 ```xml
 <Exe id="2" type="report">
