@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangePrimaryKey
-description: "Assess how changing a table's primary key affects row identity, stored data, alarms, trending, relations, QActions, and external integrations."
+description: "Learn when a table primary key may be changed, how this affects saved data and dependent functionality, and whether a workaround is available."
 ---
 
 # Change primary key

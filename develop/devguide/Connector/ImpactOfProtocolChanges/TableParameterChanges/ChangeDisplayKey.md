@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ChangeDisplayKey
-description: "Assess how changing a table display key affects alarms, trends, filters, visualizations, and references while preserving access to historical data."
+description: "Review the effects of changing a table display key, including affected DataMiner features, available workarounds, and common use cases."
 ---
 
 # Change display key
