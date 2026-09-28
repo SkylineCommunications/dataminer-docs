@@ -27,10 +27,6 @@ The `IsSslTlsEnabled` property has been removed from `IUdp` because SSL/TLS is n
 
 When you updated a service property value through the DataMinerSystem library, the property's access type was changed to read-write. This could cause DataMiner to reject the update with an "Invalid data" error. The library now preserves the property's existing access type when you update its value.
 
-#### Fix - Daily scheduler task repetition intervals could be cleared when updating tasks [ID 46561]
-
-When you updated a daily scheduler task that uses XML storage, its repetition interval in minutes could be cleared. The library now retains this interval when it retrieves and updates the task.
-
 ### 1.2.0.3
 
 #### New feature - Editing elements and services included in a service [ID 46034]
