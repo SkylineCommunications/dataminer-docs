@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Identifying_the_source_of_an_exception
-description: "Trace a QAction exception to its source by reading the stack trace, reproducing with DIS inject, adding focused logging, and validating object state."
+description: "Investigate QAction exceptions with DIS Inject, stack traces, logging, and coding practices that help identify their source."
 ---
 
 # Identifying the source of an exception

@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: System_NullReferenceException
-description: "Prevent NullReferenceException in QActions by initializing objects, checking nullable members, and using null-conditional and null-coalescing operators."
+description: "Prevent null reference exceptions in QActions by initializing objects, checking nullable members, and using null-conditional and null-coalescing operators."
 ---
 
 # System.NullReferenceException

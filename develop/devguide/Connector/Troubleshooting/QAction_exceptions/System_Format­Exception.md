@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: System_FormatException
-description: "Prevent FormatException during QAction type conversion by validating input and using TryParse to handle incompatible values without throwing."
+description: "Learn to avoid System.FormatException during type conversion by using TryParse and checking whether parsing succeeds."
 ---
 
 # System.FormatException
