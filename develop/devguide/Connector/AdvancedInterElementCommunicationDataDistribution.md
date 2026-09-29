@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedInterElementCommunicationDataDistribution
-description: "Distribute standalone or table parameter values from one DataMiner element to matching elements, using fixed or dynamic protocol and connection criteria."
+description: "Learn how to distribute standalone and table parameter values between elements, in a fixed or dynamic way."
 ---
 
 # Data distribution

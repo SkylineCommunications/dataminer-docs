@@ -1,12 +1,12 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsTimeoutState
-description: "Configure DVE timeout behavior so child elements enter timeout with their parent, or set communication state from a QAction."
+description: "To adjust the DVE timeout behavior so child elements enter timeout with their parent, use the overrideTimeoutDVE attribute or a QAction."
 ---
 
 # Timeout state
 
-DVEs are by default not set into timeout when the main element is set into timeout. If you want an automatic timeout on the DVE when the main element is in timeout, you have to specify the following in the protocol:
+DVEs are by default not set into timeout when the main element is set into timeout. If you want an automatic timeout on the DVE when the main element is in timeout, set the [overrideTimeoutDVE](xref:Protocol.Type-overrideTimeoutDVE) attribute to true in the protocol:
 
 ```xml
 <Type overrideTimeoutDVE="true" >

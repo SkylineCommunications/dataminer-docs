@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedInterElementCommunicationClassLibrary
-description: "Use the DataMinerSystem library from connector logic to retrieve values and perform operations on other DataMiner elements."
+description: "Use the DataMinerSystem library from connector logic to perform operations on elements from another element."
 ---
 
 # DataMinerSystem Library

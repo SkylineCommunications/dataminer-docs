@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsTogglingCreation
-description: "Enable or disable DVE child element creation through Element.xml, database-backed Swarming configuration, DataMiner Cube, or a NotifyDataMiner call."
+description: "Learn how to toggle DVE child creation in Element.xml, using a NotifyDataMiner call, or in DataMiner Cube; Swarming changes where the setting is stored."
 ---
 
 # Toggling DVE creation
