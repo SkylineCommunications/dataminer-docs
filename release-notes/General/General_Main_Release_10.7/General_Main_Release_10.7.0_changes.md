@@ -750,6 +750,29 @@ Property updates will continue to be validated and applied in the same way, and 
 
 When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
 
+#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
+
+Microsoft .NET 10 remains required.
+
+#### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+SLLogCollector now collects additional diagnostic information from configured Elasticsearch and OpenSearch clusters, including aliases, shard health and placement, disk allocation, cluster settings, ongoing recoveries, and pending cluster tasks.
+
+The generated package now includes the following files in the `Elastic` folder for the configured database cluster:
+
+- `_cat.aliases.txt`
+- `_cat.shards.txt`
+- `_cat.allocation.txt`
+- `_cluster.settings.json`
+- `_cat.recovery.txt`
+- `_cat.pending_tasks.txt`
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
