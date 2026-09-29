@@ -34,11 +34,11 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-#### MessageBroker has been upgraded to Microsoft .NET 10 [ID 44205]
+#### MessageBroker library has been upgraded to Microsoft .NET 10 [ID 44205]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
-MessageBroker has been upgraded to Microsoft .NET 10.
+The MessageBroker library has been upgraded to Microsoft .NET 10.
 
 #### DataMiner Installer now supports command-line installation [ID 45554]
 
