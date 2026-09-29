@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: Debugging_connectors_tracing_the_stack
-description: "Trace a QAction conversion failure from the element log through the stack trace and Protocol.xml to identify the parameter containing invalid data."
+description: "Trace a QAction conversion exception from the element log and stack trace to the Protocol.xml, then investigate the parameter's type and initialization."
 ---
 
 # Debugging connectors: Tracing the stack
