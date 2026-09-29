@@ -1,10 +1,11 @@
 ---
 uid: SLNetClientTest_retrieving_scheduled_task_info
+keywords: swarming scheduled tasks, SchedulerTasks, swarming troubleshooting
 ---
 
 # Retrieving scheduled task information
 
-You can retrieve information about the scheduled tasks configured in a DataMiner System.
+You can retrieve information about the scheduled tasks configured in a DataMiner System. This can for instance be useful to troubleshoot issues that occur when swarming a scheduled task.
 
 To retrieve this information:
 

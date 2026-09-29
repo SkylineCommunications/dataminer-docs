@@ -12,7 +12,7 @@ Scheduled tasks can be stored in either XML or database storage. Database storag
 Storing scheduled tasks in the database instead of XML allows the tasks to be swarmed between Agents in the cluster (see [Swarming scheduled tasks](xref:SwarmingScheduledTasks)).
 
 > [!TIP]
-> For an overview of the scheduled task configuration, see [Scheduler UI overview](xref:Scheduler_UI_overview). For advanced scheduled task information, see [Retrieving scheduled task information](xref:SLNetClientTest_retrieving_scheduled_task_info).
+> If you need to troubleshoot scheduled task configuration or swarming, use the *SLNetClientTest* tool to retrieve information about the configured tasks, including their execution details and the DataMiner Agent responsible for hosting or executing each task. For more information, see [Retrieving scheduled task information](xref:SLNetClientTest_retrieving_scheduled_task_info).
 
 ## Checking the current storage type
 
