@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDVEsRemarks
-description: "Review key DVE behavior for exported tables, views, names, parameter positions, alarms, templates, display keys, and foreign-key relations."
+description: "Review what to watch for when configuring DVEs, including element placement and naming, alarm and trend behavior, and table-export requirements."
 ---
 
 # Remarks

@@ -18,4 +18,5 @@ To display the overall severity of a Dynamic Virtual Element (DVE) in its parent
 > [!NOTE]
 > The column must belong to the parent element's DVE table. Without `;severity` on the correct column, the table will not show the intended severity. Keep the column ID and table definition aligned when updating the protocol.
 
-For DVE table setup, see [Implementing DVEs](xref:AdvancedDVEsImplementation).
+> [!TIP]
+> For DVE table setup, see [Implementing DVEs](xref:AdvancedDVEsImplementation).

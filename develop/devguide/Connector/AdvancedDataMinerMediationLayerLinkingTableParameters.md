@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerLinkingTableParameters
-description: "Link table parameters across base and device protocols by defining matching table, primary key, display key, and optional data columns."
+description: "Link table parameters by defining the base table and its primary and display key columns, linking them to device protocol columns."
 ---
 
 # Linking table parameters
