@@ -1,8 +1,8 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerDataPersistencePersistingTables
-description: "Configure connector table columns to persist in the database, understand the non-partial table row limit, and mark tables or columns as volatile."
-keywords: "volatile"
+description: "Configure connector table columns to be stored in the database, understand the non-partial table row limit, and mark tables or columns as volatile."
+keywords: volatile
 ---
 
 # Persisting tables

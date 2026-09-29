@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedDataMinerMediationLayerCreatingABaseProtocol
-description: "Create a base protocol by defining its baseFor element type and parameters in the mediation range, then assign a Production version."
+description: "Create a base protocol by setting its baseFor element type and defining mapped parameters in the 70000-79999 range; only Production versions are used."
 ---
 
 # Creating a base protocol

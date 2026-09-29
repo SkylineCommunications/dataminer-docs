@@ -6,7 +6,7 @@ description: "Review the legacy MySQL general database tables that store element
 
 # DataMiner general database – RDBMS
 
-DataMiner legacy setups use either MySQL Server or Microsoft SQL Server (MSSQL Server) as local RDBMS. However, note that such legacy setups do not have access to all DataMiner features. In addition, MSSQL is no longer supported from DataMiner 10.3.0 onwards.
+DataMiner legacy setups can use MySQL Server as local RDBMS. However, note that such legacy setups are no longer supported and do not have access to all DataMiner features (see [Software support lifecycles](xref:Software_support_life_cycles)).
 
 The sections below provide an overview of different tables that can be found in the MySQL general database (called "sldmadb") of a DataMiner Agent.
 
