@@ -45,7 +45,20 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+SLLogCollector now collects additional diagnostic information from configured Elasticsearch and OpenSearch clusters, including aliases, shard health and placement, disk allocation, cluster settings, ongoing recoveries, and pending cluster tasks.
+
+The generated package now includes the following files in the `Elastic` folder for the configured database cluster:
+
+- `_cat.aliases.txt`
+- `_cat.shards.txt`
+- `_cat.allocation.txt`
+- `_cluster.settings.json`
+- `_cat.recovery.txt`
+- `_cat.pending_tasks.txt`
 
 ### Fixes
 
