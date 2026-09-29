@@ -19,9 +19,9 @@ For serial connections, only TCP and UDP are fully supported. For physical seria
 
 OPC connections are identified as `IOpcConnection`, but you cannot read or configure OPC-specific settings because DataMiner no longer supports this connection type.
 
-#### Breaking change - `IUdp.IsSslTlsEnabled` property removed [ID 46400]
+#### Breaking change - IUdp.IsSslTlsEnabled property removed [ID 46400]
 
-The `IsSslTlsEnabled` property has been removed from `IUdp` because SSL/TLS is not supported for UDP connections. Update any code that accesses this property.
+The `IsSslTlsEnabled` property has been removed from `IUdp` because SSL/TLS is not supported for UDP connections. Any code that accesses this property will need to be updated.
 
 #### Fix - Updating service property values changed their access type [ID 46488]
 
