@@ -75,6 +75,24 @@ The tokens overview now includes a *Rate Limit Notices* column indicating whethe
 > [!NOTE]
 > This feature requires a DataMiner System version that supports notice generation for User-Defined API token rate limits. On systems without this capability, the existing token configuration remains unchanged.
 
+#### Cluster upgrade status is now shown in the Cube header [ID 46504]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+From now on, the status of a cluster upgrade will now be displayed next to the cluster name in the Cube header.
+
+Possible statuses:
+
+- *Upgrading...* while the upgrade is in progress.
+- *Upgrade done* when the upgrade was successful.
+- *Upgrade failed* when the upgrade was not successful.
+
+The *Upgrade failed* status is only shown to users who have permission to view and launch upgrades.
+
+> [!NOTE]
+> This feature will only work in conjunction with DataMiner server version 10.5.0 CU20/10.6.0 CU8/10.6.11 or newer.
+> If no status is available, Cube will continue to show the cluster name as before, ensuring compatibility with older DataMiner Systems.
+
 #### SNMP: Empty SET community strings can now be specified in Cube [ID 46536]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
