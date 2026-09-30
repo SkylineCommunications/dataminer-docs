@@ -937,3 +937,9 @@ As a result, change points that were only ever written under the old v1 partitio
 <!-- MR 10.7.0 - FR 10.6.11 -->
 
 On systems using STaaS, up to now, a failing aggregate count query could incorrectly return `0` instead of throwing an exception. From now on, the query will throw an exception when it fails.
+
+#### Problem when APIGateway when shut down [ID 46619]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.
