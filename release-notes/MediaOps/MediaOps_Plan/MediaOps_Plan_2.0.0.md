@@ -396,9 +396,6 @@ Up to now, when you linked a parameter value, a dropdown parameter could only be
 
 From now on, the type of a parameter no longer limits what you can link it to. Whether a link is valid is decided when it is resolved, instead of when you configure it.
 
-> [!NOTE]
-> A range parameter is the one exception. Because it needs both a minimum and a maximum, it can still only be linked to another numeric parameter.
-
 ##### Dropdown parameters
 
 Any dropdown parameter, whether it is a capability, a configuration, or a profile parameter of an orchestration script, can be linked to any text value:
