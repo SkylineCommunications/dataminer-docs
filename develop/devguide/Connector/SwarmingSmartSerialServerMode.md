@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: SwarmingSmartSerialServerMode
 description: "Enable Swarming for eligible smart-serial server-mode elements by adding the exact bypass check and ensuring startup can redirect the data source."
 ---

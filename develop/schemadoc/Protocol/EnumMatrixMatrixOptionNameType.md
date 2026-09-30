@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol-EnumMatrixMatrixOptionNameType
 description: "Review the allowed values for the EnumMatrixMatrixOptionNameType simple type and what each value represents in DataMiner connector protocols."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsHttp
 description: "Understand how DataMiner connectors use HTTP connections and SLPort to exchange request and response payloads with networked devices."
 ---

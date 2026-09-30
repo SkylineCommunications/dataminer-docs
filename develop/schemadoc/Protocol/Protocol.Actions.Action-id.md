@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.Actions.Action-id
 description: "Use the action ID to identify an action uniquely in a connector protocol and keep its references stable when the protocol changes."
 ---

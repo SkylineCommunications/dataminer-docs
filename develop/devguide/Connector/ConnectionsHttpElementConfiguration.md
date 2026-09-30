@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsHttpElementConfiguration
 description: "Configure an HTTP element's server address and proxy behavior with the bypassProxy bus setting and a proxyServer parameter."
 ---

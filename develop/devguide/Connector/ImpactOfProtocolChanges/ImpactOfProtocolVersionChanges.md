@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ImpactOfProtocolVersionChanges
 description: "Assess the impact of protocol version changes, review specific change scenarios and workarounds, and learn when to request a new protocol version."
 ---

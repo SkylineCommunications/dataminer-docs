@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionExecuteOne
 description: "Use the 'execute one' action to queue a group after timer-scheduled groups in case that group is not in the execution queue yet."
 ---

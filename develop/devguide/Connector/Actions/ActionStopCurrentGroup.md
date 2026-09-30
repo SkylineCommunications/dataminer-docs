@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionStopCurrentGroup
 description: "Use the 'stop current group' action to halt a running group that contains pairs. This cannot be used for SNMP groups with multipleGet enabled."
 ---

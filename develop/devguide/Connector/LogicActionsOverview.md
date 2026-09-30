@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionsOverview
 description: "Browse the available protocol action types, what each action does, which component it targets, and related queue execution actions."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsVirtual
 description: "Learn when to define a virtual DataMiner protocol without a device connection, such as for monitoring elements or interacting with a database."
 ---

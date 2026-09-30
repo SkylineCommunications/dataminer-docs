@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Identifying_the_source_of_an_exception
 description: "Investigate QAction exceptions with DIS Inject, stack traces, logging, and coding practices that help identify their source."
 ---

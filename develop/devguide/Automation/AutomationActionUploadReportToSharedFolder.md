@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AutomationActionUploadReportToSharedFolder
 description: "Use the report action to upload a generated report to a shared network folder by specifying a template, the share path, and credentials."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Connector_technical_template
 description: Use this template to document a DataMiner connector's configuration, operation, connectivity, and optional integrations for users.
 ---
@@ -13,7 +12,6 @@ Below you can find the template for the technical page for connectors. When you 
 
 ```md
 ---
-metadata_version: 1
 uid: Connector_technical_page
 description: Document the connector's configuration, operation, connectivity, and optional integrations in 100 to 155 characters.
 ---

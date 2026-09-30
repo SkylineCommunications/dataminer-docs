@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDVEsSeverityState
 description: "Configure the DVE severity column so the parent element can display the overall severity of a DVE element."
 ---

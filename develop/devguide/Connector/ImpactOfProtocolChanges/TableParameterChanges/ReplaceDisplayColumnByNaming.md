@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ReplaceDisplayColumnByNaming
 description: "Assess the impact of replacing displayColumn with naming on protocol compatibility and access to trend and alarm history."
 ---

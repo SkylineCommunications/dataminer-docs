@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Investigating_a_protocol_thread_RTE
 description: "Investigate a protocol thread RTE by checking Watchdog logs and pending calls, locating the blocking group, and breaking up long logic chains."
 ---

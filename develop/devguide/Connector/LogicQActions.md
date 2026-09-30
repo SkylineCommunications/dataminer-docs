@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicQActions
 description: "Use C# QActions to implement custom connector logic, define triggers and entry points, and interact with protocol data through SLProtocol APIs."
 ---

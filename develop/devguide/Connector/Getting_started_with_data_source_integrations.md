@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Getting_started_with_data_source_integrations
 description: "Learn what DataMiner connectors are, how they communicate with data sources, and where to explore core concepts, advanced features, and deployment."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript-options
 description: "Review the DMSScript options bit flags that control debugging, undefined values, interactivity, element checks, and information events."
 ---

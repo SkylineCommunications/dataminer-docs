@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicExamples
 description: "See how timers, groups, parameters, triggers, and actions work together to poll an SNMP variable, increment a value, or run a startup QAction."
 ---

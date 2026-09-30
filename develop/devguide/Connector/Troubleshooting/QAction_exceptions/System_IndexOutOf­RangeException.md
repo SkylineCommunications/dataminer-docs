@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: System_IndexOutOfRangeException
 description: "Prevent System.IndexOutOfRangeException by checking loop bounds and verifying GetParameters results are non-null and correctly sized."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedMultiThreadedTimersSerial
 description: "Build multithreaded serial requests with qactionBefore, process responses in a group-triggered QAction, and run post-response logic with qactionAfter."
 ---

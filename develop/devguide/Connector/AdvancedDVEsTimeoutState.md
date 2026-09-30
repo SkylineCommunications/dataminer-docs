@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDVEsTimeoutState
 description: "To adjust the DVE timeout behavior so child elements enter timeout with their parent, use the overrideTimeoutDVE attribute or a QAction."
 ---

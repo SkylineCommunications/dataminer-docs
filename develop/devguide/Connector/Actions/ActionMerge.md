@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionMerge
 description: "Configure the merge action to aggregate data from tables across protocols into a destination table, with options such as filters and default values."
 ---

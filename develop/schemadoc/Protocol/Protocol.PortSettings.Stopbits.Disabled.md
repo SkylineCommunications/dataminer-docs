@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.PortSettings.Stopbits.Disabled
 description: "Learn how the Disabled element under Stopbits controls whether users can change the number of stop bits in the DataMiner user interface."
 ---

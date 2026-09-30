@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: UIComponentsDurationPicker
 description: "Define a duration picker as a numeric write parameter by setting the measurement type to number and enabling the time option."
 ---

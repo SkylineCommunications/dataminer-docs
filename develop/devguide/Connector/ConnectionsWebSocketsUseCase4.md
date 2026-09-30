@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsWebSocketsUseCase4
 description: "Configure a WebSocket connection with both a custom HTTP handshake and dynamic IP so it can reconnect after a disconnect without an element restart."
 ---

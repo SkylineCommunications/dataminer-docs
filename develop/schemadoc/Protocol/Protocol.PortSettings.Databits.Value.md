@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.PortSettings.Databits.Value
 description: "Learn how each Value element under Databits specifies a supported number of data bits that users can select."
 ---

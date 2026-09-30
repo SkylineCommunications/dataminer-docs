@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionStart
 description: "Use the start action to start one or more timers identified by their IDs in a DataMiner connector definition."
 ---

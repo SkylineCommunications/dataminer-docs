@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeDisplayedColumnOrder
 description: "Review the guidance on table column reordering: its major-change classification, undetermined impact, and lack of a workaround."
 ---

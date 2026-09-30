@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeInterAppRange
 description: "Assess how changing an InterApp NuGet range affects compatibility and ensure all components using the connector reference the same range."
 ---

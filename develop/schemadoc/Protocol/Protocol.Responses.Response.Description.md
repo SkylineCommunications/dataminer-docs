@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.Responses.Response.Description
 description: "Learn how the Response Description element provides explanatory text for a response defined in a connector protocol."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.PortSettings.SSH.Credentials
 description: "Learn how the Credentials element supplies parameter-based usernames and passwords for SSH password-based authentication."
 ---

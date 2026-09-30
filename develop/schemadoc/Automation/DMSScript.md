@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript
 description: "Review the DMSScript root element, namespace, options, child elements, and unique ID constraint for a DataMiner automation script."
 ---

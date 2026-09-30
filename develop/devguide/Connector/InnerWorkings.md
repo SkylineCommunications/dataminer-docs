@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: InnerWorkings
 description: "Understand how SLDataMiner, SLProtocol, SLScripting, SLElement, SLPort, and other DataMiner processes cooperate to execute connector logic."
 ---

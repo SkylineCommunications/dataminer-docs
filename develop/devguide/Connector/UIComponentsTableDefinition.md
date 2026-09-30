@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: UIComponentsTableDefinition
 description: "Define a protocol table as an array parameter, map its columns with ArrayOptions, and create a parameter with the correct type for each column."
 ---

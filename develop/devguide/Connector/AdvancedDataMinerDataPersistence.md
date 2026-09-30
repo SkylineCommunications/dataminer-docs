@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDataMinerDataPersistence
 description: "Understand which DataMiner data is stored automatically and how to configure standalone parameters and tables for storage in supported databases."
 ---

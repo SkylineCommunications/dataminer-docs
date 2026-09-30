@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol-TypeParamId
 description: "Use the TypeParamId simple type to validate parameter IDs against the permitted numeric ranges in the DataMiner connector protocol schema."
 ---

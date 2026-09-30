@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.Display-wideColumnPages
 description: "Learn how the wideColumnPages attribute lists Data Display pages that should use a single wide column in a DataMiner connector protocol."
 ---

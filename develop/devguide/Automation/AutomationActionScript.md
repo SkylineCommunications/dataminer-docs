@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AutomationActionScript
 description: "Use the Script action to run a named automation script, pass its supported parameters, and diagnose deployment or parameter errors."
 ---

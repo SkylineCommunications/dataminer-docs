@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Finalizer_Exception
 description: "When a connector throws an exception on the Finalizer thread, collect the SLScripting logs and crash dump and trace the finalizer to its connector code."
 ---

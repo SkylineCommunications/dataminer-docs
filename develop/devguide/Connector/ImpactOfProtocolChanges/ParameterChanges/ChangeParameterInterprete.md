@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeParameterInterprete
 description: "Assess how changing a parameter's Interprete settings can alter stored values, alarming, trending, communication, and compatibility."
 ---

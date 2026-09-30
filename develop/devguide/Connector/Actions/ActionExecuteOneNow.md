@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionExecuteOneNow
 description: "Use the 'execute one now' action to queue a group ahead of timer-scheduled groups in case it is not in the execution queue yet."
 ---

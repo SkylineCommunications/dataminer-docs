@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AutomationActionUploadReportToFtp
 description: "Use the report action to upload a generated report to an FTP destination, by specifying a template, destination, and credentials."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.PortSettings.Baudrate
 description: "Learn how the Baudrate element defines the default, allowed range, and selectable baud rates for an element connection."
 ---

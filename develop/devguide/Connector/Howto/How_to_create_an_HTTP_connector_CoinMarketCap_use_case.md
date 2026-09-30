@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
 description: "Learn how to build HTTP DataMiner connectors based on an example, from defining parameters and sessions to creating an element and processing responses."
 ---

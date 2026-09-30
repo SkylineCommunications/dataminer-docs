@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol-EnumQActionEncoding
 description: "Review the allowed values for the EnumQActionEncoding simple type and what each value represents in DataMiner connector protocols."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsSmartSerialServer
 description: "Configure a smart-serial connection as a server, manage connected clients and allowed IP addresses, and understand message queue limits."
 ---

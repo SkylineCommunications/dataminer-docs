@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.Actions.Action.On
 description: "Use the Action On element with Type to select the connector protocol item an action targets and the operation it performs."
 ---

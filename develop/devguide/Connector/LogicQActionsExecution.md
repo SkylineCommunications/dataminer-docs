@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicQActionsExecution
 description: "Understand what triggers QAction execution, retrieve triggering row data, and choose queued or group execution based on ordering and concurrency needs."
 ---

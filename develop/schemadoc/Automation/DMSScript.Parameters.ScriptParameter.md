@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript.Parameters.ScriptParameter
 description: "Define a ScriptParameter element for external input to an automation script, including its ID, string type, values source, and variable name."
 ---

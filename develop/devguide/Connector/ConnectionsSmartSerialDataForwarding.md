@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsSmartSerialDataForwarding
 description: "Understand how SLPort forwards smart-serial data to SLProtocol and how stuffing, packetInfo, and headers or trailers affect processing."
 ---

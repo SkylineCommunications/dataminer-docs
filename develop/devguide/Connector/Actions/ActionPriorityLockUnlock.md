@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionPriorityLockUnlock
 description: "Use priority lock and priority unlock actions to reserve or release a connection ahead of other waiting actions without displacing an existing lock."
 ---

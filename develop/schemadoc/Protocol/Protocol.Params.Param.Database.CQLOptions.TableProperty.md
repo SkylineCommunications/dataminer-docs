@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.Params.Param.Database.CQLOptions.TableProperty
 description: "Learn how to use the TableProperty element to set the CQL WITH clause used to configure Cassandra table properties in a DataMiner connector protocol."
 ---

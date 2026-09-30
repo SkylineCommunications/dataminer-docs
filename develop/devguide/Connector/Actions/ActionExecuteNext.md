@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionExecuteNext
 description: "Use the 'execute next' action to place a group at the start of the execution queue, immediately after the group that is currently running."
 ---

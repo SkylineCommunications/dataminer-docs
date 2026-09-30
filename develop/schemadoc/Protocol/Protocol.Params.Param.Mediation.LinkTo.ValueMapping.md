@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.Params.Param.Mediation.LinkTo.ValueMapping
 description: "Learn how the ValueMapping element converts a device protocol value to its corresponding base protocol value in a DataMiner connector protocol."
 ---

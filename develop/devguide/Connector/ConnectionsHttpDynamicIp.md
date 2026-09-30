@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsHttpDynamicIp
 description: "Use the dynamic IP option to dynamically change the polling IP and optionally also the port used by an HTTP connection."
 ---

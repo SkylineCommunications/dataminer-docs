@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsSnmpRetrievingMultipleVariables
 description: "Retrieve multiple SNMP variables in one Get request by enabling multipleGet, and understand how unavailable variables affect each SNMP version."
 ---

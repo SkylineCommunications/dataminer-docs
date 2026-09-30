@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicQActionsEntryPointMethods
 description: "Define static, instance, or multiple QAction entry point methods, understand their lifecycle, and map triggering parameters to custom methods."
 ---

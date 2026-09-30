@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
 description: "Learn how to deal with incoming data when one protocol combines serial and smart-serial connections, making sure each response specifies the connection ID."
 ---

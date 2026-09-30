@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedViewTablesOtherElement
 description: "Build direct view tables to aggregate data from other elements, with options for filtered results and columns from different protocols."
 ---

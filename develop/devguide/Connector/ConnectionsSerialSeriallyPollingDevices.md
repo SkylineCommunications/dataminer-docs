@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsSerialSeriallyPollingDevices
 description: "Poll multiple serial devices from one element by storing device addresses in a table, changing a dedicated connection dynamically, and coordinating sets."
 ---

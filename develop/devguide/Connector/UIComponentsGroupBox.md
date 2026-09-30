@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: UIComponentsGroupBox
 description: "Create a titled group box around related parameters by pairing fixed title parameters with begin and end measurement options on the same page."
 ---

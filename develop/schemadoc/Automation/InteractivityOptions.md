@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Automation-InteractivityOptions
 description: "Review the allowed values for the InteractivityOptions simple type and what each value represents in DataMiner automation scripts."
 ---

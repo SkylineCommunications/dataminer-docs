@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDVEsImplementation
 description: "Implement DVE functionality by choosing tables to generate DVEs, defining element columns, and exporting parameters and linked tables."
 ---

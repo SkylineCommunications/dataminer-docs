@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AutomationActionUi
 description: "Use the UI action to present a response dialog from an automation script and distinguish dialog input from script control flow."
 ---

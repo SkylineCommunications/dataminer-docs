@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Adding_CSharp_code_to_an_Automation_script
 description: "Learn how to add inline C# code to an automation script in DataMiner Cube and configure references, entry points, timeouts, and IntelliSense."
 ---

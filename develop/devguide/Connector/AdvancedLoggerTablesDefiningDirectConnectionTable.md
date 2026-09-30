@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedLoggerTablesDefiningDirectConnectionTable
 description: "Learn about the legacy DirectConnection logger table setup defined with a primary key, indexing, and infinite TTL."
 ---

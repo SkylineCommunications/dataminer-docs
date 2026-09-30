@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: BP_Implementing_IAS_in_Regression_Tests
 description: "Design interactive automation scripts for regression testing by separating presentation logic, passing decisions as JSON, and reusing code."
 ---

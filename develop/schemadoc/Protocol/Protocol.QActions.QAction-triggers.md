@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.QActions.QAction-triggers
 description: "Learn how the triggers attribute identifies parameters whose value changes cause a QAction to execute."
 ---

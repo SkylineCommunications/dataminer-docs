@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsHttpImplementing
 description: "Implement periodic HTTP polling in a DataMiner connector with sessions, requests, responses, groups, and timers."
 ---

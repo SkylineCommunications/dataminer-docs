@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.ParameterGroups.Group
 description: "Learn how to use the Group element to define a DCF interface, its parameters, and dynamic table mapping in a DataMiner connector protocol."
 ---

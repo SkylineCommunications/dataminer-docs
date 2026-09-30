@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDataMinerMediationLayerBaseProtocolHierarchies
 description: "Build base protocol hierarchies that combine parameters from multiple mediation levels while avoiding duplicate IDs and respecting override precedence."
 ---

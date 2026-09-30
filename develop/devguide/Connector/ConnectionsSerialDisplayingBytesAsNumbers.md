@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsSerialDisplayingBytesAsNumbers
 description: "Display numeric values received as byte sequences by configuring big-endian interpretation and isolating read-bit source parameters when needed."
 ---

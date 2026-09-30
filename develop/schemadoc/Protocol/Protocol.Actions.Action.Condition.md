@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.Actions.Action.Condition
 description: "Use the Action Condition element to define the expression that must evaluate as true before a connector protocol action executes."
 ---

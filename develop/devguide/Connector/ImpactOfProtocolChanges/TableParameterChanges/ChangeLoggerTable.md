@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeLoggerTable
 description: "Review how logger table changes are classified, their undetermined impact, and whether there is a workaround."
 ---

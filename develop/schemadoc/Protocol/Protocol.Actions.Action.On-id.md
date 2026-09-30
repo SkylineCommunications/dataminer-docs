@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.Actions.Action.On-id
 description: "Use the Action On id attribute to identify the parameters, commands, responses, or other items targeted by a connector protocol action."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsSnmpRetrievingTables
 description: "Compare SNMP table retrieval methods, their performance and compatibility trade-offs, partial retrieval options, and index shift behavior."
 ---

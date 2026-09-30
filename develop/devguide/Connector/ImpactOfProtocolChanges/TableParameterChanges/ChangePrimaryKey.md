@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangePrimaryKey
 description: "Learn when a table primary key may be changed, how this affects saved data and dependent functionality, and whether a workaround is available."
 ---

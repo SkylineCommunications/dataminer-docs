@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript.Script.Exe.Condition-combination
 description: "Use the combination attribute to join conditions in an automation script if action with either the lowercase and operator or the lowercase or operator."
 ---

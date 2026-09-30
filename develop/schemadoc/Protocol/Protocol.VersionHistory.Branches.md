@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.VersionHistory.Branches
 description: "Consult the DataMiner connector protocol schema reference for the Branches element, which lists uniquely identified branches in a protocol version history."
 ---

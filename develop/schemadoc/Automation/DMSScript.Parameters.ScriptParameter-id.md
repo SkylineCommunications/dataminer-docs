@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript.Parameters.ScriptParameter-id
 description: "Use the ScriptParameter id attribute as the unique unsigned integer that identifies a parameter script variable."
 ---

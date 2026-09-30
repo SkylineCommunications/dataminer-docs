@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.RCA.Protocol.Link-path
 description: "Learn how the RCA Link path attribute orders parameter IDs from the most probable root cause through the resulting RCA chain."
 ---

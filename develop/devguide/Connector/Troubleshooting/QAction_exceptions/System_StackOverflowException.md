@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: System_StackOverflowException
 description: "Investigate QAction stack overflows in SLScripting by collecting a crash dump, noting the connector version, and checking for unbounded recursion."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: How_to_make_your_automation_scripts_debug_ready
 description: "Make automation scripts easier to debug by preserving expected abort exceptions and logging full stack traces for unexpected failures."
 ---

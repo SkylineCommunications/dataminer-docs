@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: UIComponentsMatrixDis
 description: "Use DIS matrix macros and the DataMiner Class Library Matrix class to generate, synchronize, and efficiently control matrix parameters and tables."
 ---

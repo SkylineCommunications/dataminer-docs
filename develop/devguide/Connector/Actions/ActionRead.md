@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionRead
 description: "Use the read action to process a parameter or response, including responses with parameters whose length is defined by the next parameter."
 ---

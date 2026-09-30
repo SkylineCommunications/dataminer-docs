@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: System_OutOfMemoryException
 description: "Investigate SLScripting OutOfMemoryExceptions by collecting logs and, if possible, a full-memory dump to trace the source."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Creating_a_cypress_test_for_an_interactive_automation_script
 description: "Set up Cypress and create an end-to-end test that validates an interactive automation script and its UI interactions in a web environment."
 ---

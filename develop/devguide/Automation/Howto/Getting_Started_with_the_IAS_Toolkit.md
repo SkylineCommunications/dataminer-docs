@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Getting_Started_with_the_IAS_Toolkit
 description: "Create an interactive automation script with the IAS Toolkit by installing the library, building dialogs, displaying them, and handling events."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript.Script.Exe.Timeout
 description: "Use the Timeout element to set seconds for findinteractiveclient actions or milliseconds for sleep actions in an automation script."
 ---

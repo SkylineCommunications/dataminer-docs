@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeAlarmMonitoringTrending
 description: "Learn which changes to alarming, trending, or normalization require a major connector version and how to preserve normalization base values."
 ---

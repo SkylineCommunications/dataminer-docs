@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.QActions.QAction-id
 description: "Learn how the id attribute uniquely identifies a QAction while remaining separate from parameter IDs in triggers and inputParameters."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: UIComponentsDropDownList
 description: "Define a dropdown list as a discreet write parameter so users can choose one value from a fixed or dynamically supplied list."
 ---

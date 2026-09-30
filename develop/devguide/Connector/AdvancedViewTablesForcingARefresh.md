@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedViewTablesForcingARefresh
 description: "Learn how to force a refresh of a direct view table in Cube by setting the refresh parameter to the row's primary key followed by a parameter value."
 ---

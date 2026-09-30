@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript.Parameters.ScriptParameter-type
 description: "Reference the type attribute for an automation script parameter and define the string value type expected by the script."
 ---

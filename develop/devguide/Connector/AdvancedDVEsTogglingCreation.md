@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDVEsTogglingCreation
 description: "Learn how to toggle DVE child creation in Element.xml, using a NotifyDataMiner call, or in DataMiner Cube; Swarming changes where the setting is stored."
 ---

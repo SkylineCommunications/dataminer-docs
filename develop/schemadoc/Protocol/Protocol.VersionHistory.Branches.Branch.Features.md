@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.VersionHistory.Branches.Branch.Features
 description: "Consult the DataMiner connector protocol schema reference for the Features element, which lists the features supported by a protocol branch."
 ---

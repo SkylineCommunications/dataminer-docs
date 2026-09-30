@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedLoggerTablesImplementation
 description: "Learn how to configure a logger table in your protocol.xml, including the TTL configuration, design considerations for Cassandra, and best practices."
 ---

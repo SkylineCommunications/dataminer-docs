@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol-EnumOIDType
 description: "Review the allowed values for the EnumOIDType simple type and what each value represents in DataMiner connector protocols."
 ---

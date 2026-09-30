@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicQActionsSLProtocolInteraction
 description: "Retrieve and update protocol parameters from QActions efficiently by choosing inputParameters, SLProtocol, or SLProtocolExt for each data access."
 ---

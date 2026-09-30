@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: System_FormatException
 description: "Learn to avoid System.FormatException during type conversion by using TryParse and checking whether parsing succeeds."
 ---

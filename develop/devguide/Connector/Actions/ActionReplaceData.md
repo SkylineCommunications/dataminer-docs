@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionReplaceData
 description: "Use the 'replace data' action to substitute specified byte sequences in parameters, commands, or responses within optional start and end offsets."
 ---

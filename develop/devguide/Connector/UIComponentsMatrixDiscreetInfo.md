@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: UIComponentsMatrixDiscreetInfo
 description: "Capture user changes to standard matrix labels, allowed crosspoints, pages, and locks with one discreet info parameter and a QAction."
 ---

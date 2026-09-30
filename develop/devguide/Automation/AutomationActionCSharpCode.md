@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AutomationActionCSharpCode
 description: "Configure a C# code action with executable code, namespace, DLL, and script references, plus debug and precompilation options."
 ---

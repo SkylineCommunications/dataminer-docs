@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Connections
 description: "Define one or more protocol connections, associate groups and actions with connections, and configure port settings for each connection."
 ---

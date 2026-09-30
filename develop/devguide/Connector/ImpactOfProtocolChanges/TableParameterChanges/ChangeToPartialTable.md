@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeToPartialTable
 description: "Review how converting a table to a partial table affects custom reports, automation scripts, and dynamic alarm thresholds."
 ---

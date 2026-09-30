@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: GettingStartedWithAutomationScriptDevelopment
 description: "Find resources for learning about DataMiner Automation, executing automation scripts, developing scripts, and choosing the appropriate C# workflow."
 ---

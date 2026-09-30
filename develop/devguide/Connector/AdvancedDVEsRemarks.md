@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDVEsRemarks
 description: "Review what to watch for when configuring DVEs, including element placement and naming, alarm and trend behavior, and table-export requirements."
 ---

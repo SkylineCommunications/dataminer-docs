@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Implementing_OnRequestScriptInfo_Entry_Point
 description: "Implement and invoke the OnRequestScriptInfo automation entry point to exchange script metadata with other scripts or orchestration code."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: MonitoringAlarming
 description: "Configure which connector parameters support alarming, provide default alarm thresholds, and understand how monitoring settings affect alarm templates."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeConnections
 description: "Assess how adding, removing, reordering, or changing protocol connections affects element configuration, communication, and existing integrations."
 ---

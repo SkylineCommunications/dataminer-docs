@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: How_to_use_the_element_log_in_connector_integrations
 description: "Learn how to use the element log to investigate connector behavior and how you can configure a connector for easier debugging via the element log."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails
 description: "Consult the DataMiner connector protocol schema reference for the LinkedDetails element, which shows details for tree items matching a discrete value."
 ---

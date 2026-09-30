@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-pid
 description: "Learn how the pid attribute identifies the parameter that stores a Process Automation queue option value."
 ---

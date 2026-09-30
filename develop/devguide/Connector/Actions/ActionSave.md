@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionSave
 description: "Use the save action to save parameter values so DataMiner restores and displays the last known parameter values after a restart."
 ---

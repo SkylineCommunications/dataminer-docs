@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.PortSettings.Parity.Range.From
 description: "Learn how the From element under Parity Range sets the first parity value available in the allowed range."
 ---

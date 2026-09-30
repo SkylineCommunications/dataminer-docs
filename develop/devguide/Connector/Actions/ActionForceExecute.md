@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicActionForceExecute
 description: "Use the 'force execute' action to run a group as soon as the current content item finishes, after which the interrupted group resumes execution."
 ---

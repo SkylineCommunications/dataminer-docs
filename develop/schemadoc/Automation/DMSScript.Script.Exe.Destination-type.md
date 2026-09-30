@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript.Script.Exe.Destination-type
 description: "Use the Destination type attribute to select email or SMS delivery for an automation script notification or report action."
 ---

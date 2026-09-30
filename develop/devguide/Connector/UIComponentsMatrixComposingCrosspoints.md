@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: UIComponentsMatrixComposingCrosspoints
 description: "Update standard matrix crosspoints from a QAction, maintain a buffer to remove stale connections, and minimize costly SendToDisplay calls."
 ---

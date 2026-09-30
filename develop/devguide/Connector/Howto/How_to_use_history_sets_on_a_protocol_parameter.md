@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: How_to_use_history_sets_on_a_protocol_parameter
 description: "Configure history sets in a QAction to store past parameter values chronologically and preserve accurate real-time and average trend data."
 ---

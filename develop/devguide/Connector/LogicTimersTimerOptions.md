@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicTimersTimerOptions
 description: "Configure timer options for dynamic thread pools, row distribution, conditional execution, SNMP instances, IP addresses, ping checks, and more."
 ---

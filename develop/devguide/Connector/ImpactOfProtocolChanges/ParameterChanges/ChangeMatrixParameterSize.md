@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeMatrixParameterSize
 description: "Assess how changing a matrix parameter's configured size affects existing element data and when the change requires a new connector range."
 ---

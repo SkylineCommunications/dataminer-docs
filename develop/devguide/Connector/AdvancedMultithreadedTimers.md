@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedMultiThreadedTimers
 description: "Use multithreaded timers to process table rows periodically with a thread pool for SNMP, serial, HTTP, or QAction logic, with optional pre-request pings."
 ---

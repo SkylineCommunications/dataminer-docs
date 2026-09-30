@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.HTTP.Session.Connection.Response.Headers.Header
 description: "Learn how to use the Header element to map one HTTP response header to the parameter that stores its value in a DataMiner connector protocol."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.ElementType
 description: "Learn how the ElementType element names the device type represented by elements based on a connector in a DataMiner connector protocol."
 ---

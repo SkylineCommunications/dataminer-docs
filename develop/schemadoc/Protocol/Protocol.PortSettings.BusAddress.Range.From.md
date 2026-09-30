@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.PortSettings.BusAddress.Range.From
 description: "Learn how the From element under BusAddress Range sets the first bus address available in the allowed range."
 ---

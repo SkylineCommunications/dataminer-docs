@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Protocol.VendorOID
 description: "Consult the DataMiner connector protocol schema reference for the VendorOID element, which sets the unique vendor OID used to define MIB objects."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: LogicQActionsAutomationScriptExecution
 description: "Start an Automation script from a QAction by sending an ExecuteScriptMessage through SLProtocol, and handle the response and exceptions."
 ---

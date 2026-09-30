@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDcfDataMinerClassLibrary
 description: "Find the DataMiner class library types that support DCF operations in connector QActions and automation scripts."
 ---

@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: AdvancedDataMinerDataPersistenceNoSqlCassandra
 description: "Understand Cassandra architecture, data modeling, queries, request processing, and DataMiner table storage in self-hosted NoSQL deployments."
 ---

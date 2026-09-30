@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ConnectionsSerialCreatingCommandsAndResponses
 description: "Build serial commands and responses from fixed and variable-length parameters, then configure matching, length fields, and CRC validation."
 ---

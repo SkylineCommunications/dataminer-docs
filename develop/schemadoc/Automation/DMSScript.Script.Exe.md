@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: DMSScript.Script.Exe
 description: "Define an Exe element as an automation script action, including its unique ID, action type, destination variable, and applicable child elements."
 ---

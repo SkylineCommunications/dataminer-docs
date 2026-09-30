@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: ChangeDisplayKey
 description: "Review the effects of changing a table display key, including affected DataMiner features, available workarounds, and common use cases."
 ---

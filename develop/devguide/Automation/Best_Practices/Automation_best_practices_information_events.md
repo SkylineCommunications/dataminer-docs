@@ -1,5 +1,4 @@
 ---
-metadata_version: 1
 uid: Automation_best_practices_information_events
 description: "Apply best practices to create useful automation script audit trails while avoiding unnecessary information events and excessive logging."
 ---
