@@ -14,7 +14,7 @@ uid: UD_APIs_Viewing_in_Cube
 1. Use the buttons below the table to create an API or token, or to edit or delete the selected API or token.
 
 ![API module in DataMiner Cube](~/dataminer/images/UDAPIS_Client_API_Module.png)<br>
-*User-Defined APIs page in DataMiner 10.6.9*
+*User-Defined APIs page in DataMiner 10.6.11*
 
 > [!NOTE]
 >
@@ -48,7 +48,12 @@ From DataMiner 10.6.9/10.7.0 onwards<!--RN 45751-->, when creating or editing an
 
    - Window (2): Sliding time window during which the limit applies (from 1 second to 1 day).
 
-   ![*Create API token* pop-up window](~/dataminer/images/Create_API_Token.png)<br>*Create API token window in DataMiner 10.6.9*
+   - Notice generation (3): Available from DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!--RN 46336-->. Enables a notice when the token reaches its configured rate limit. This option is disabled by default.
+
+     > [!NOTE]
+     > In earlier versions, this setting is not available in the UI. Where supported, configure `GenerateNotice` through the C# API instead. See [RateLimit](xref:UD_APIs_Objects_ApiToken#ratelimit).
+
+   ![*Create API token* pop-up window](~/dataminer/images/Create_API_Token.png)<br>*Create API token window in DataMiner 10.6.11*
 
 1. Select *Generate token*.
 
@@ -68,7 +73,12 @@ From DataMiner 10.6.9/10.7.0 onwards<!--RN 45751-->, when creating or editing an
 
    - Window (2): Sliding time window during which the limit applies (from 1 second to 1 day).
 
-   ![*Edit API token* pop-up window](~/dataminer/images/Edit_API_Token.png)<br>*Edit API token window in DataMiner 10.6.9*
+   - Notice generation (3): Available from DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!--RN 46336-->. Enables a notice when the token reaches its configured rate limit. This option is disabled by default.
+
+     > [!NOTE]
+     > In earlier versions, this setting is not available in the UI. Where supported, configure `GenerateNotice` through the C# API instead. See [RateLimit](xref:UD_APIs_Objects_ApiToken#ratelimit).
+
+   ![*Edit API token* pop-up window](~/dataminer/images/Edit_API_Token.png)<br>*Edit API token window in DataMiner 10.6.11*
 
 1. Select *Save and close*.
 

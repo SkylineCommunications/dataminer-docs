@@ -2,10 +2,7 @@
 uid: SatOps_1.2.1
 ---
 
-# SatOps 1.2.1 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# SatOps 1.2.1
 
 > [!NOTE]
 > This version requires:

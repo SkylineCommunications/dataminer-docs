@@ -34,11 +34,11 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-#### MessageBroker has been upgraded to Microsoft .NET 10 [ID 44205]
+#### MessageBroker library has been upgraded to Microsoft .NET 10 [ID 44205]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
-MessageBroker has been upgraded to Microsoft .NET 10.
+The MessageBroker library has been upgraded to Microsoft .NET 10.
 
 #### DataMiner Installer now supports command-line installation [ID 45554]
 
@@ -85,6 +85,14 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner DataAPI 1.5.0
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
+
+Microsoft .NET 10 remains required.
 
 ### Fixes
 

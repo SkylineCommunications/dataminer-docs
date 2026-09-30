@@ -49,9 +49,11 @@ When you restore a backup on the same DataMiner System, no password will be need
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-A new global setting is now available in *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
+A new global setting is now available via *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
 
 The available options are *Follow Cube theme* (default) and *Light*. After changing the setting, click *Apply theme* and reopen any open Visio drawings to see the change.
+
+![Visio theming setting in DataMiner Cube](~/release-notes/images/VisioTheme.png)
 
 #### Credentials Library: Warning indicator next to credentials that could not be decrypted [ID 45997]
 
