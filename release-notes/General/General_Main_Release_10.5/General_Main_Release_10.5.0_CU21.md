@@ -27,13 +27,7 @@ description: "Release notes for General Main Release 10.5.0 CU21, including prer
 
 ### Enhancements
 
-#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
-
-<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.11 -->
-
-From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
-
-Microsoft .NET 10 remains required.
+*No enhancements have been added yet.*
 
 ### Fixes
 
