@@ -1,26 +1,37 @@
 ---
 metadata_version: 1
 uid: Connections
-description: "Define multiple connector connections, assign their IDs, associate groups and actions with a connection, and configure connection-specific port settings."
+description: "Define one or more protocol connections, associate groups and actions with connections, and configure port settings for each connection."
 ---
 
 # Connections
 
-A protocol typically defines one or more connections through which the element running the protocol communicates with the device (or multiple devices). DataMiner supports different types of connections, such as SNMP, serial, HTTP, etc. A protocol can define multiple connections of different types (e.g., an HTTP connection and two SNMP connections).
+A protocol typically defines one or more connections through which the element running the protocol communicates with the device (or multiple devices).
 
-With the [Type](xref:Protocol.Type) tag, the protocol connections can be defined. The main connection is specified as the value of the `Type` tag, e.g., `<Type relativeTimers="true">snmp</Type>`. In case multiple connections are used, the additional connections need to be defined in the [advanced](xref:Protocol.Type-advanced) attribute of the Type tag, indicating the type and name of each additional connection:
+## Connection types
+
+DataMiner supports different types of connections, such as SNMP, serial, HTTP, etc. A protocol can define multiple connections of different types (e.g., an HTTP connection and two SNMP connections).
+
+With the [Type](xref:Protocol.Type) tag, the protocol connections can be defined. The main connection is specified as the value of the `Type` tag, e.g., `<Type relativeTimers="true">snmp</Type>`.
+
+In case multiple connections are used, the additional connections need to be defined in the [advanced](xref:Protocol.Type-advanced) attribute of the `Type` tag, indicating the type and name of each additional connection:
 
 ```xml
 <Type relativeTimers="true" options="unicode" communicationOptions="smartIpHeader" advanced="smart-serial:IP Connection - POST Messages;http:HTTP Connection - Master">http</Type>
 ```
 
-**Schema requirement:** Use the [smartIpHeader](xref:Protocol.Type-communicationOptions#smartipheader) option with this exact casing. This option adds transport metadata to smart-serial packets; it is not an HTTP request or response header. In the example above, it is present because the protocol also defines a smart-serial connection. Do not use it for an HTTP-only connector.
+> [!NOTE]
+> The [smartIpHeader](xref:Protocol.Type-communicationOptions#smartipheader) option in the example above adds transport metadata to smart-serial packets; it is not an HTTP request or response header. It is present in the example because the protocol also defines a smart-serial connection. Do not use it for an HTTP-only connector.
+
+## Connection IDs
 
 In the connector logic, it is sometimes necessary to specify to which connection particular functionality relates. This is done using an integer value denoting the connection ID. The main connection has ID 0, and every additional connection defined in the protocol corresponds to an incremented ID. (For the example above, this means that the main HTTP connection has ID 0, the smart-serial connection has ID 1, and the second HTTP connection has ID 2.)
 
 By default, groups and actions that involve a connection always use the main connection (connection ID 0). In case another connection should be used, this must be specified in the protocol.
 
-**Connection ownership:** In a protocol with multiple serial or smart-serial connections, use the `connection=x` option on header and trailer parameters to associate each frame marker with its connection. Without this option, the marker can be considered for all connections. See [Data forwarding](xref:ConnectionsSmartSerialDataForwarding) for the forwarding rules.
+## Connection ownership
+
+In a protocol with multiple serial or smart-serial connections, use the `connection=x` option on header and trailer parameters to associate each frame marker with its connection. Without this option, the marker can be considered for all connections. See [Data forwarding](xref:ConnectionsSmartSerialDataForwarding) for the forwarding rules.
 
 You can specify a connection on group level by using the [connection](xref:Protocol.Groups.Group-connection) attribute in the Group tag.
 
@@ -61,12 +72,12 @@ The [PortSettings](xref:Protocol.PortSettings) tag allows the configuration of t
 
 ```xml
 <PortSettings>
-   <!- Port settings for main protocol type (serial). -->
+   <!-- Port settings for main protocol type (serial). -->
   ...
 </PortSettings>
 <Ports>
    <PortSettings name="ConnectionName">
-  <!- Port settings for additional protocol type (SNMP). -->
+  <!-- Port settings for additional protocol type (SNMP). -->
   ...
   </PortSettings>
 </Ports>

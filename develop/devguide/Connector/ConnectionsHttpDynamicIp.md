@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsHttpDynamicIp
-description: "Change an HTTP connection's polling IP address, port, and protocol dynamically with a dynamic ip parameter while preserving proxy behavior."
+description: "Use the dynamic IP option to dynamically change the polling IP and optionally also the port used by an HTTP connection."
 ---
 
 # Dynamically changing the IP address and port number

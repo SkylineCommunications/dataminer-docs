@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: ConnectionsHttpExamples
-description: "Review XML examples for HTTP GET and POST sessions with request headers, authentication, form parameters, response codes, and content parameters."
+description: "Review XML examples of HTTP GET and POST sessions with request headers, authentication, request bodies, and response status codes and bodies."
 ---
 
 # Examples
