@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_Definitions_Definition
+description: "Configure each Definition element with a unique OID, SNMP type, and return value, then set logging, weight, or repeated response behavior."
 ---
 
 # Definition element

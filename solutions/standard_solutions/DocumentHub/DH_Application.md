@@ -26,6 +26,8 @@ The following pages are available in the app:
 
   - ![DOM icon](~/solutions/images/DocumentHub_DOM.png) **DOM**: Explore files linked to DOM records, find content by filtering on name and bucket, and view the complete metadata context used in your workflows. See [DOM attachments with shared drive](#dom-attachments-with-shared-drive).
 
+- ![Search Filter Help icon](~/solutions/images/DocumentHub_SharePoint_KQL.png) **Search Filter Help**: Provides guidance for searching files across buckets, including SharePoint Keyword Query Language (KQL).
+
 - ![About icon](~/solutions/images/DocumentHub_About.png) **About**: Provides information on the **version** of the DocumentHub package.
 
 ## Viewing and filtering documents

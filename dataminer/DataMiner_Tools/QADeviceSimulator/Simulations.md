@@ -1,5 +1,6 @@
 ---
 uid: Simulations
+description: "Create and run SNMP or HTTP simulations with QA Device Simulator, store files in the required folder, and explore available simulation types."
 ---
 
 # Simulations

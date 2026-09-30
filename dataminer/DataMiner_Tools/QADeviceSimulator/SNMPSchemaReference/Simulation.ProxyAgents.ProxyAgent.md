@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_ProxyAgents_ProxyAgent
+description: "Configure the ProxyAgent element with a device IP and port, capture traffic, and limit files to 1024 MB and sessions to 1 hour."
 ---
 
 # ProxyAgent element

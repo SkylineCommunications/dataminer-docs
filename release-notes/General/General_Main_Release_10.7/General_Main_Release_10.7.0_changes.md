@@ -431,18 +431,19 @@ In order to protect DataMiner against a continuously growing queue of incoming s
 > - We strongly advise you to restart the element when the limit has been breached. When certain messages within a data stream get dropped because the maximum queue limit was breached, an incomplete data stream may get processed, which could then produce unexpected results.
 > - The alarm not only mentions the limit that was reached (in MB). It also mentions the number of messages that are present in the queue. This number of messages is not always equal to the number of responses to be processed. For example, in some cases, Windows can combine multiple received UDP packets into one when adding packets to the receive buffer, causing SLPort to then add a single message to the queue.
 
-#### DxMs upgraded [ID 45304] [ID 45347] [ID 45392] [ID 45506] [ID 45944] [ID 46119]
+#### DxMs upgraded [ID 45304] [ID 45347] [ID 45392] [ID 45506] [ID 45944] [ID 46119] [ID 46565]
 
 <!-- RN 45304: MR 10.7.0 - FR 10.6.6 -->
 <!-- RN 45347: MR 10.7.0 - FR 10.6.6 -->
 <!-- RN 45392: MR 10.7.0 - FR 10.6.7 -->
 <!-- RN 45506: MR 10.7.0 - FR 10.6.7 -->
 <!-- RN 45944/46119: MR 10.7.0 - FR 10.6.9 -->
+<!-- RN 46565: MR 10.7.0 - FR 10.6.11 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer 1.10.0
-- DataMiner CloudGateway 3.3.2
+- DataMiner CloudGateway 3.5.0
 - DataMiner CoreGateway 2.14.17
 - DataMiner DataAPI 1.4.6
 - DataMiner FieldControl 2.12.2
@@ -733,13 +734,44 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
-#### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
+#### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
 
-As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
+Previously, when a `ReservationInstance` (booking) property was updated, the SRM Master DMA performed the update regardless of which DMA received the request. On large or heavily loaded clusters, this could make the master a bottleneck.
 
-In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
+From now on, the DMA hosting the booking will perform the property update. Before the update, the SRM Master DMA grants a short-lived lock for the booking to coordinate concurrent updates. This reduces the processing load on the master and improves the performance and scalability of property updates, particularly on larger clusters.
+
+Property updates will continue to be validated and applied in the same way, and other DMAs and clients will still be notified. This change does not affect end-user or scripting behavior.
+
+#### SNMP: Empty community strings are now supported for SET operations [ID 46535]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
+
+#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
+
+Microsoft .NET 10 remains required.
+
+#### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+SLLogCollector now collects additional diagnostic information from configured Elasticsearch and OpenSearch clusters, including aliases, shard health and placement, disk allocation, cluster settings, ongoing recoveries, and pending cluster tasks.
+
+The generated package now includes the following files in the `Elastic` folder for the configured database cluster:
+
+- `_cat.aliases.txt`
+- `_cat.shards.txt`
+- `_cat.allocation.txt`
+- `_cluster.settings.json`
+- `_cat.recovery.txt`
+- `_cat.pending_tasks.txt`
 
 ### Fixes
 
@@ -891,3 +923,25 @@ From now on, a compatibility safeguard removes invalid read-write duplicates bef
 Up to now, when no exact DLL match was found in the hint paths while resolving assemblies for automation scripts or QActions, the first matching DLL was selected. This could result in an older, incompatible version being selected.
 
 From now on, the highest compatible DLL version in the requested range will be selected. If no version in that range is available, the highest available version will be selected.
+
+#### Automation: Script Runner could fail to load assemblies required by a script [ID 46443]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, Script Runner could fail to load a script when it depended on an assembly that was not copied to its dedicated assembly folder. This could happen for dependencies that were not anticipated, such as `Skyline.DataMiner.Storage.Types.dll`.
+
+From now on, if an assembly cannot be found in `C:\Skyline DataMiner\Files\SLAutomation.ScriptRunner`, Script Runner will also look for it in `C:\Skyline DataMiner\Files`.
+
+#### Change point history retrieval could cause overall performance to decrease [ID 46524]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, retrieving change point history could cause performance to decrease because change points stored under the deprecated (v1) change point custom data type were fetched and merged with data from the current store. DataMiner will now read change points exclusively from the current data store.
+
+As a result, change points that were only ever written under the old v1 partition scheme will no longer be returned. This affects only pre-migration data; systems using the current change point storage format are unaffected.
+
+#### STaaS: Failing aggregate count queries would incorrectly return 0 instead of throwing an exception [ID 46546]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+On systems using STaaS, up to now, a failing aggregate count query could incorrectly return `0` instead of throwing an exception. From now on, the query will throw an exception when it fails.

@@ -34,6 +34,24 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### MessageBroker library has been upgraded to Microsoft .NET 10 [ID 44205]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The MessageBroker library has been upgraded to Microsoft .NET 10.
+
+#### DataMiner Installer now supports command-line installation [ID 45554]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+You can now install DataMiner from the command line by running the following command:
+
+```powershell
+DataMinerInstaller.exe Install <Path to firststartupchoiceconfig.json>
+```
+
+For more information about the configuration file, see [Unattended DataMiner installation](xref:Unattended_DM_installation).
+
 #### DataMiner Installer: Perpetual STaaS systems will retain their configured DMA ID and use a supplied license file [ID 46102]
 
 <!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
@@ -49,6 +67,24 @@ Also, when the Installer is run in unattended mode, you will now be able to spec
 The UserDefinableApiEndpoint DxM now reports its health status to dataminer.services.
 
 When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
+
+#### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
+
+In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
+
+#### DxMs upgraded [ID 46577]
+
+<!-- RN 46577: MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner DataAPI 1.5.0
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
 ### Fixes
 
@@ -119,3 +155,17 @@ On systems using STaaS, up to now, ordering DOM entries by an optional field cou
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
+
+#### SNMP: Community credentials could be lost when an automation script modified an element [ID 46537]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when an automation script modified an element that used community credentials from the Credential Library on its main connection, the element could lose those credentials if the script did not change them. From now on, the credentials will be retained.
+
+#### SLScripting could stop working due to recursive assembly resolution logging [ID 46572]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+In some cases, when SLScripting tried to log that a different version of an assembly had been loaded than the requested version, the logging could trigger another resolution attempt for the same assembly. This could result in a recursive loop that caused SLScripting to stop working.
+
+A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.

@@ -7169,6 +7169,10 @@ items:
         topicUid: github_reusable_workflows_update_catalog_details
     - name: Tutorials
       items:
+      - name: For any item
+        items:
+        - name: Setting up a workflow on a specific branch via GitHub
+          topicUid: CICD_Tutorial_Add_Workflow_To_Branch
       - name: For connectors
         items:
         - name: Setting up basic CI/CD for connector deployment in GitHub

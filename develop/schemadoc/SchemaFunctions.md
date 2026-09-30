@@ -6,6 +6,10 @@ uid: SchemaFunctions
 
 DataMiner Functions XML schema.
 
+## Namespace
+
+`http://www.skyline.be/config/functions`
+
 ## Root element
 
 [Functions](xref:Functions)

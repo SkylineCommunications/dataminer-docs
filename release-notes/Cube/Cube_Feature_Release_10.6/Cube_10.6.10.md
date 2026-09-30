@@ -49,9 +49,11 @@ When you restore a backup on the same DataMiner System, no password will be need
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-A new global setting is now available in *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
+A new global setting is now available via *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
 
 The available options are *Follow Cube theme* (default) and *Light*. After changing the setting, click *Apply theme* and reopen any open Visio drawings to see the change.
+
+![Visio theming setting in DataMiner Cube](~/release-notes/images/VisioTheme.png)
 
 #### Credentials Library: Warning indicator next to credentials that could not be decrypted [ID 45997]
 
@@ -66,10 +68,10 @@ When you hover over the warning icon, a tooltip will explain that the secret val
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven pages:
+When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven sections:
 
-- A *Settings* page where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
-- A *Run-on details* page for connectors with scripts, where you can select an Edge node and configure script intervals.
+- A *Settings* section where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
+- A *Run details* section for connectors with scripts, where you can select an Edge node and configure script intervals.
 
 In addition, CSV export/import support has been updated with the relevant headers for protocol settings and edge scripts.
 

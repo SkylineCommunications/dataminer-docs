@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Alerter
+description: "Configure Alerter with personal startup, alarm filter, alarm storm prevention, notification, and pop-up balloon settings stored on the server."
 ---
 
 # Configuring Alerter
