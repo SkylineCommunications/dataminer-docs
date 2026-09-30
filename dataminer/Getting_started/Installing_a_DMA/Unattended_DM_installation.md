@@ -6,7 +6,7 @@ uid: Unattended_DM_installation
 
 ## Recent installers
 
-With the v10.5 Installer, you can configure DataMiner automatically by using a JSON configuration file instead of entering the settings manually.
+With recent installers, you can configure DataMiner automatically by using a JSON configuration file instead of entering the settings manually.
 
 To run an unattended configuration, configure a JSON file as indicated in the examples below, depending on the type of setup you want, and then execute the appropriate command below (after filling in the correct path):
 
