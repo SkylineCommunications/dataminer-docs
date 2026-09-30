@@ -138,7 +138,7 @@ For detailed information about the changes included in those versions, refer to 
 
 #### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
 
-<!-- MR 10.6.0 [CU9] - FR 10.6.11 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.11 -->
 
 From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
 

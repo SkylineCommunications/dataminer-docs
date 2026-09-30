@@ -27,7 +27,13 @@ description: "Release notes for General Main Release 10.5.0 CU21, including prer
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.11 -->
+
+From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
+
+Microsoft .NET 10 remains required.
 
 ### Fixes
 
@@ -38,3 +44,9 @@ description: "Release notes for General Main Release 10.5.0 CU21, including prer
 When multiple polling groups were executed concurrently, results from SNMP GET requests could be matched to the wrong group, potentially causing runtime errors.
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
+
+#### Problem when APIGateway when shut down [ID 46619]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.

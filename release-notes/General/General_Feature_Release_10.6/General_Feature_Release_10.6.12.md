@@ -72,6 +72,6 @@ The group ID is now passed along with each SNMP GET request so that the result i
 
 #### Problem when APIGateway when shut down [ID 46619]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.
