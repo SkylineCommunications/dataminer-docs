@@ -31,4 +31,10 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Spectrum: Average trace visibility would no longer be saved in presets [ID 46585]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Because of an issue, the visibility of the average trace in the Spectrum component would no longer be saved in presets. As a result, reopening a preset would not restore the visibility of the average trace.
+
+From now on, Cube will again save and restore this setting with the preset.
