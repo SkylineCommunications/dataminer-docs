@@ -4,7 +4,7 @@ uid: Unattended_DM_installation
 
 # Unattended DataMiner installation
 
-## v10.5 Installer
+## Recent installers
 
 With the v10.5 Installer, you can configure DataMiner automatically by using a JSON configuration file instead of entering the settings manually.
 
