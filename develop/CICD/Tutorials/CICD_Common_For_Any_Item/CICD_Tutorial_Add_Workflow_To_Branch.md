@@ -36,12 +36,12 @@ Expected duration: 5 minutes.
 
 1. Select the branch where you want to add the workflow.
 
-1. Click the green *Commit changes...* button.
+1. Click the green *Commit changes* button.
 
 1. Enter the commit details, and confirm the commit.
 
    The workflow file will be committed and pushed to the selected branch.
 
-   The following example shows how to add the DataMiner connector workflow to a specific branch:
+The following example shows how to add the DataMiner connector workflow to a specific branch:
 
-   ![Adding the DataMiner connector workflow to a specific GitHub branch](~/develop/images/AddWorkflowToBranch.gif)
+![Adding the DataMiner connector workflow to a specific GitHub branch](~/develop/images/AddWorkflowToBranch.gif)
