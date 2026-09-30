@@ -6,23 +6,21 @@ uid: Unattended_DM_installation
 
 ## v10.5 Installer
 
-With the v10.5 Installer, you can configure DataMiner automatically without entering the settings manually. Create a JSON configuration file with the desired settings, then run the appropriate command. The command reads the file and applies the configuration either to an existing installation or while installing a new one.
+With the v10.5 Installer, you can configure DataMiner automatically by using a JSON configuration file instead of entering the settings manually.
 
-Configure a JSON file as indicated in the examples below, depending on the type of setup you want. Then select the tab that matches your situation.
+To run an unattended configuration, configure a JSON file as indicated in the examples below, depending on the type of setup you want, and then execute the appropriate command below (after filling in the correct path):
 
-### [Install and configure a new installation](#tab/new-installation)
+### [From DataMiner 10.6.0 \[CU8\]/10.6.11 onwards](#tab/new-installation)
 
-From DataMiner 10.6.0 CU8/10.6.11 onwards<!--RN 45554-->, the DataMiner Installer itself also supports command-line installation. Use this method to install DataMiner and apply the configuration in one operation.
+From DataMiner 10.6.0 CU8/10.6.11 onwards<!--RN 45554-->, use the DataMiner Installer command line to install DataMiner and apply the configuration in one operation.
 
 ```powershell
 DataMinerInstaller.exe Install <path to config file>
 ```
 
-The optional `--config-tool` subcommand can be used to specify a custom configurator.
+### [Previous versions](#tab/previous-versions)
 
-### [Configure an existing installation](#tab/existing-installation)
-
-Use this method when DataMiner is already installed. It applies the settings from the JSON configuration file to the existing installation.
+For versions prior to DataMiner 10.6.0 CU8/10.6.11, first install DataMiner using the Installer. Then run the following command to apply the settings from the JSON configuration file to that installation. This command does not install or replace DataMiner.
 
 ```powershell
 cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"

@@ -89,6 +89,8 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 > - If you intend to **restore a backup** coming from another machine, for example, because of a hardware migration or during disaster recovery, skip the configuration below and follow the steps under [Restoring a backup onto the new installed DataMiner Agent](xref:Restoring_backup_on_newly_installed_DMA).
 > - If you are installing a **Failover** Agent, skip the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
 
+#### Configuring DataMiner using the configuration window
+
 > [!NOTE]
 > If you accidentally close the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.exe`. Make sure to run it with administrator privileges.
 
@@ -140,6 +142,17 @@ Follow the steps below to configure your DataMiner Agent:
    DataMiner will automatically start up and connect to dataminer.services. DataMiner Cube will also be installed, so you can connect to DataMiner locally.
 
 1. [Log in to DataMiner Cube](xref:Logging_on_to_DataMiner_Cube) using the *DataMinerAdmin* account.
+
+#### Configuring DataMiner unattended
+
+To configure the pre-installed DataMiner automatically without using the configuration window, prepare a JSON configuration file as described in [Unattended DataMiner installation](xref:Unattended_DM_installation), and then run the following commands in an elevated PowerShell prompt:
+
+```powershell
+cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
+.\FirstStartupChoice.exe --silent-config <path to config file>
+```
+
+Because the DataMiner core software is already installed on the virtual hard disk, this command only applies the configuration. It does not install DataMiner or reset the virtual machine.
 
 ### [Installer v10.4](#tab/tabid-2)
 
