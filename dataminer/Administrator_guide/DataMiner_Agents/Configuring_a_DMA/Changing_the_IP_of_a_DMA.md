@@ -100,7 +100,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. If you are using the auto-generated SSL certificate from APIGateway, you can optionally generate a new one to contain the new IP address.
+1. If you are using the auto-generated SSL certificate from APIGateway, optionally generate a new one to contain the new IP address:
 
    1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
 
@@ -223,7 +223,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. If you are using the auto-generated SSL certificate from APIGateway, you can optionally generate a new one to contain the new IP address.
+1. If you are using the auto-generated SSL certificate from APIGateway, optionally generate a new one to contain the new IP address:
 
    1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
 
