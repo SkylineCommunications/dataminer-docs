@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsHttpHttps
-description: "Configure HTTPS connections on the default or a custom port and include the https:// prefix when required for element or dynamic IP addresses."
+description: "Learn about HTTPS connections in DataMiner connectors, including the default port and when to use the https:// prefix."
 ---
 
 # HTTPS
