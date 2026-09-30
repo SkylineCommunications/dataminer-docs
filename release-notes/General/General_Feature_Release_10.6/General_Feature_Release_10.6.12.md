@@ -62,4 +62,10 @@ The generated package now includes the following files in the `Elastic` folder f
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SNMP GET results could be matched to the wrong polling group [ID 46507]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When multiple polling groups were executed concurrently, results from SNMP GET requests could be matched to the wrong group, potentially causing runtime errors.
+
+The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
