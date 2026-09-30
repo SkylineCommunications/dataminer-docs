@@ -95,19 +95,6 @@ Profile definitions and their associated presets continue to be shown like befor
 
 ### Breaking changes
 
-#### Scheduling/Workflow Designer: Edit locks now specific to each session [ID 46489]
-
-Scheduling and Workflow Designer now validate edit locks using a session-specific lock ID instead of relying only on the user name. Previously, when you opened the same job or workflow for editing in two separate sessions, both sessions could edit it without warning, potentially causing changes to be overwritten.
-
-With this update, an edit is only allowed to proceed when the lock ID supplied by the current session matches the lock ID of the active lock.
-
-When you open an item that you are already editing in another session, a dedicated message now indicates that the item is locked in one of your other sessions. This is different from the existing message for items locked by another user.
-
-If the current lock state cannot be retrieved, the item will be available in read-only mode, ensuring that you can view it safely even in case of connectivity issues.
-
-> [!IMPORTANT]
-> All lock-aware automation scripts in Scheduling and Workflow Designer now require a `Lock ID` input. This includes scripts for creating, editing, and deleting jobs, managing contacts, and building or deleting workflows. If you call these scripts directly or use custom automation built on them, update these calls to provide the new mandatory parameter. Pass `/` when no lock is held.
-
 #### Plan API: Renamed public types [ID 46527]
 
 Several public types in the MediaOps Plan DevPack have been renamed. The namespaces, visibility, sealed or abstract status, and base classes remain unchanged.
@@ -168,6 +155,19 @@ The public static classes `EnumFilterExtensions` and `TypeFilterExtensions` have
 Because of this change, you will now need to install Standard Data Model Registration 2.1.3 or higher to use MediaOps Plan.
 
 ### Enhancements
+
+#### Scheduling/Workflow Designer: Edit locks now specific to each session [ID 46489]
+
+Scheduling and Workflow Designer now validate edit locks using a session-specific lock ID instead of relying only on the user name. Previously, when you opened the same job or workflow for editing in two separate sessions, both sessions could edit it without warning, potentially causing changes to be overwritten.
+
+With this update, an edit is only allowed to proceed when the lock ID supplied by the current session matches the lock ID of the active lock.
+
+When you open an item that you are already editing in another session, a dedicated message now indicates that the item is locked in one of your other sessions. This is different from the existing message for items locked by another user.
+
+If the current lock state cannot be retrieved, the item will be available in read-only mode, ensuring that you can view it safely even in case of connectivity issues.
+
+> [!IMPORTANT]
+> All lock-aware automation scripts in Scheduling and Workflow Designer now require a `Lock ID` input. This includes scripts for creating, editing, and deleting jobs, managing contacts, and building or deleting workflows. If you call these scripts directly or use custom automation built on them, update these calls to provide the new mandatory parameter. Pass `/` when no lock is held.
 
 #### DevPack: API enhancement to improve type-checking and casting for Capacity and Configuration classes [ID 45715]
 
