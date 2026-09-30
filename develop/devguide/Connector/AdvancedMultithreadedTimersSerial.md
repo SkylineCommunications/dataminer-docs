@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedMultiThreadedTimersSerial
-description: "Implement multithreaded serial requests by building command arrays in one QAction and processing each command response and post-response logic."
+description: "Build multithreaded serial requests with qactionBefore, process responses in a group-triggered QAction, and run post-response logic with qactionAfter."
 ---
 
 # Serial
@@ -28,7 +28,7 @@ Assume the following multithreaded timer is defined:
 </Timer>
 ```
 
-To build the request, create a QAction triggered by a multithreaded timer (using the qactionBefore option), which creates the request object and returns this.
+To build the request, create a QAction triggered by a multithreaded timer (using the `qactionBefore` option), which creates the request object and returns this.
 
 ```xml
 <QAction id="1010" name="Serial Before" encoding="csharp" row="true">
@@ -195,7 +195,7 @@ In this QAction, you will typically also update the state column of the correspo
 
 ## Step 3: Run the QAction after the response
 
-The last step runs the QAction specified in the *qactionAfter* option of the multithreaded timer.
+The last step runs the QAction specified in the `qactionAfter` option of the multithreaded timer.
 
 ```xml
 <QAction id="1012" name="Serial After" encoding="csharp" row="true">

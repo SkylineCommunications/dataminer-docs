@@ -1,7 +1,7 @@
 ---
 metadata_version: 1
 uid: AdvancedMultiThreadedTimers
-description: "Use multithreaded timers to process table rows at defined intervals through a thread pool for SNMP, serial, HTTP, ping, or QAction work."
+description: "Use multithreaded timers to process table rows periodically with a thread pool for SNMP, serial, HTTP, or QAction logic, with optional pre-request pings."
 ---
 
 # Multithreaded timers
@@ -88,20 +88,30 @@ The thread will perform the following steps to process a row:
    - The cell referred to in the "ignoreIf" option
    - The cell referred to in the "instance" option
    - If the Group uses the `col:<columnIdx>:<defaultGroupId>`, notation, the value of the referred column for the row is retrieved. (For more information about this notation, see [Timer.Content.Group](#timercontentgroup).)
+
 1. If the Group uses the `col:<columnIdx>:<defaultGroupId>`, notation and the cell refers to a group, this group is loaded.
+
 1. If the "qactionBefore" option is used, the referred QAction is executed.
+
    > [!NOTE]
    > As the relevant row data is already obtained in the first step, it is not useful to alter this data from the QAction that is referred to by the "qactionBefore" option, as the updated values will only be apparent the next time the row is being processed.
+
 1. If the "ignoreIf" option is used, and the ignore condition matches (i.e., the cell value matches the specified value in the "ignoreIf" option, or the cell is not initialized), no request will be performed and the QAction to process the response will also not be executed. Execution will jump to executing the QActions defined in the "qactionAfter" option.
+
 1. If the "ping" option is used, the ping is executed.
 
    If the ping succeeded, or the "continueSnmpOnTimeout" option is set to "true", the request will be executed in the next step. Otherwise, no request will be executed. However, the QAction to process the response result will be executed where the result will now mention "NO POLLING OCCURED" (sic) and the error will denote "PING FAILED". (For information on all configuration options, see [ping](xref:LogicTimersTimerOptions#ping)).
+
 1. Depending on the type of the connection that is defined for the group (this is either by default the main connection, or a connection defined in the Group@connection attribute):
+
    - For serial (single) or HTTP connections, the content returned by the QAction referred to by the "qactionBefore" option is used to perform a protocol notify call that will execute the request (via the SLPort process).
    - For SNMP connections, a raw SNMP get is performed using the contents of the group (via the SLSNMPManager process).
+
    > [!NOTE]
    > This is why a poll group always needs to be added to a multithreaded timer as this allows DataMiner to obtain the type of connection.
+
 1. The QAction to process the response is executed.
+
 1. If the "qactionAfter" option is used, the referred QAction is executed.
 
 For SNMP, the group defines the OIDs to request:
