@@ -51,6 +51,14 @@ The UserDefinableApiEndpoint DxM now reports its health status to dataminer.serv
 
 When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
 
+#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
+
+Microsoft .NET 10 remains required.
+
 ### Fixes
 
 #### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]

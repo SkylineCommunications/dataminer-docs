@@ -750,14 +750,6 @@ Property updates will continue to be validated and applied in the same way, and 
 
 When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
 
-#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
-
-<!-- MR 10.7.0 - FR 10.6.11 -->
-
-From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
-
-Microsoft .NET 10 remains required.
-
 #### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
