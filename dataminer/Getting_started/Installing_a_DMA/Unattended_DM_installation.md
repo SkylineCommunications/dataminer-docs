@@ -6,14 +6,30 @@ uid: Unattended_DM_installation
 
 ## v10.5 Installer
 
-With the v10.5 Installer, it is possible to pre-configure DataMiner, so that after you have completed the initial installation, you only need to execute a command to have the entire configuration taken care of automatically.
+With the v10.5 Installer, you can configure DataMiner automatically without entering the settings manually. Create a JSON configuration file with the desired settings, then run the appropriate command. The command reads the file and applies the configuration either to an existing installation or while installing a new one.
 
-To run an unattended configuration of a new DataMiner installation, configure a JSON file as indicated in the examples below, depending on the type of setup you want, and then execute the command below (after filling in the correct path):
+Configure a JSON file as indicated in the examples below, depending on the type of setup you want. Then select the tab that matches your situation.
+
+### [Install and configure a new installation](#tab/new-installation)
+
+From DataMiner 10.6.0 CU8/10.6.11 onwards<!--RN 45554-->, the DataMiner Installer itself also supports command-line installation. Use this method to install DataMiner and apply the configuration in one operation.
+
+```powershell
+DataMinerInstaller.exe Install <path to config file>
+```
+
+The optional `--config-tool` subcommand can be used to specify a custom configurator.
+
+### [Configure an existing installation](#tab/existing-installation)
+
+Use this method when DataMiner is already installed. It applies the settings from the JSON configuration file to the existing installation.
 
 ```powershell
 cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
 .\FirstStartupChoice.exe --silent-config <path to config file>
 ```
+
+***
 
 > [!TIP]
 > For details about the different fields that can be configured, refer to [Running the Installer](xref:Installing_DM_using_the_DM_installer#running-the-installer).
