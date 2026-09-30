@@ -369,7 +369,8 @@ When you attach a file to a job and the file exceeds the maximum size configured
 
 The *Scheduling_Edit Job Time* script has been removed from the MediaOps Plan package. This script was previously used to support moving jobs in the timeline component, but this functionality is no longer used.
 
-If you have custom code or a custom project that uses this script, you will need to update that code to no longer rely on it.
+> [!IMPORTANT]
+> If you have custom code or a custom project that uses this script, you will need to update that code to no longer rely on it.
 
 #### DevPack: Values and data references now mutually exclusive [ID 46483]
 
