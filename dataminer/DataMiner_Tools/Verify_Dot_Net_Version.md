@@ -12,7 +12,7 @@ It checks whether the following versions are installed:
 
 - **Microsoft .NET Framework 4.8**: Checked from DataMiner 10.6.6/10.7.0 onwards<!--RN 45196-->. If this check fails, install [Microsoft .NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) before continuing the upgrade.
 
-- **Microsoft ASP.NET 8.0**: Required for DataMiner versions prior to DataMiner 10.6.11/10.7.0. From DataMiner 10.6.11/10.7.0 onwards<!--RN 46579-->, this version is no longer checked by the prerequisite. For earlier DataMiner versions, if this check fails, install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) before continuing the upgrade.
+- **Microsoft ASP.NET 8.0**: Required for DataMiner versions prior to DataMiner 10.6.11/10.6.0 [CU9]. From DataMiner 10.6.11/10.6.0 [CU9] onwards<!--RN 46579-->, this version is no longer checked by the prerequisite. For earlier DataMiner versions, if this check fails, install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) before continuing the upgrade.
 
 You may have to **reboot the server** after installation to be able to pass this prerequisite check.
 
