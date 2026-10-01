@@ -46,6 +46,30 @@ The DevPack will launch the `ORC-AS-EventOrchestration` automation script as a d
 
 When you start an event scheduled for the future this way, its scheduled task will be removed to prevent duplicate execution. Failures during background execution will continue to be reported in the state of the associated job.
 
+### Support for orchestration scripts with dynamic inputs [ID 46654]
+
+Up to now, an orchestration script always asked for the same fixed list of input arguments, and every argument had to be a profile parameter. When the arguments a script needed depended on another choice, for example the number of destinations or the selected transport mode, the only option was to create a separate script, and therefore a separate resource pool, for each combination.
+
+Orchestration scripts can now define dynamic inputs: inputs that adapt to the values that have already been provided. This means that a single script can now cover use cases that previously required several scripts. For example:
+
+- Changing the number of destinations adds or removes destination inputs.
+- Selecting a mode can show additional settings that only apply to that mode.
+- Selecting a band can narrow the allowed frequency range, and selecting an antenna can limit the satellites you can choose from.
+
+Dynamic inputs belong to the script itself. Creating or maintaining profile parameters for them is not needed, and they are not used when resources are matched based on their capabilities or capacities.
+
+Inputs can be organized in groups, so settings that belong together are shown together and in a meaningful order. The following input types are supported: text, number, dropdown, date and time, and duration. Each input can have its own range, step size, unit, options, and default value, and can be marked as required. The script can also report a value as invalid with its own message, for example when two destinations use the same endpoint.
+
+The values configured for an orchestration event are stored with that event:
+
+- When an event is saved or confirmed, its values are validated. If a required value is missing or a value is not valid, the event is rejected with a message indicating which input needs attention.
+- When you run a script manually and a value is missing or not valid, you are asked to provide it.
+- The event information now shows the dynamic inputs of an event together with their values.
+
+Existing orchestration scripts continue to work without any changes.
+
+To get started, take a look at the *MediaOps_Live_Example_DynamicOrchestration* example script, which is included in the MediaOps Live demo package. For more information on how to create a script with dynamic inputs, refer to the [orchestration script documentation](xref:MediaOpsLive_OrchestrationScript).
+
 ## Fixes
 
 ### CSV import and export could handle special characters incorrectly [ID 46381]
