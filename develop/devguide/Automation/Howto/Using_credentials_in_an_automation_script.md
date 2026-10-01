@@ -4,7 +4,7 @@ uid: Using_credentials_in_an_automation_script
 
 # Using credentials in an automation script
 
-From DataMiner 10.7.0/10.6.11 onwards<!-- RN 44282 --><!-- RN 46229 --><!--RN 46251-->, an automation script can retrieve credentials from the [Credentials Library](xref:Credentials_Library) at runtime. This allows scripts to use usernames, passwords, and access tokens without storing the credentials directly in the script, helping to keep them secure.
+From DataMiner 10.7.0/10.6.10 onwards<!-- RN 44282 --><!-- RN 46229 -->, an automation script can retrieve credentials from the [Credentials Library](xref:Credentials_Library) at runtime. This allows scripts to use usernames, passwords, and access tokens without storing the credentials directly in the script, helping to keep them secure.
 
 Credentials of type *Username and password* and *Token* can be used in an automation script.
 

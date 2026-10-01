@@ -24,4 +24,4 @@ Contains the credentials defined in the script.
 |Unique |The name must be unique within the `Credentials` element. |Credentials |Name |
 
 > [!NOTE]
-> Available from DataMiner 10.7.0/10.6.11 onwards<!-- RN 44282 + 46229 + 46251 -->.
+> Available from DataMiner 10.7.0/10.6.10 onwards<!-- RN 44282 RN 46229 -->.
