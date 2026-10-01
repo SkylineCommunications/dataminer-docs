@@ -7,6 +7,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 > [!NOTE]
 > Range 1.2.x.x is supported as from **DataMiner 10.4.0**.
 
+### 1.2.1.1
+
+#### Fix - Daily scheduled task repetition intervals could be cleared when tasks were updated [ID 46561]
+
+When you updated a daily scheduled task that uses XML storage, its repetition interval in minutes could be cleared. The library now retains this interval when it retrieves and updates the task.
+
 ### 1.2.1.0
 
 #### New feature - Creating and updating elements with additional connection types [ID 46400]
