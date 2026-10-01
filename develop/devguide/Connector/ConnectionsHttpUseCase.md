@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsHttpUseCase
-description: "Trace the internal DataMiner flow from a button click through triggers, actions, groups, SLPort HTTP communication, response handling, and QActions."
+description: "Follow a button-triggered HTTP request through queues, SLPort, and WINHTTP, then see how its response reaches a parameter and can trigger a QAction."
 ---
 
 # Use case: Internal flow – HTTP connection
