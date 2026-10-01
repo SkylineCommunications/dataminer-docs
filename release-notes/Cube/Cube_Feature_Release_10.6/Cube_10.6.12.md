@@ -27,7 +27,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Spectrum: Automatic standby will no longer be applied in shared mode [ID 46574]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a Spectrum card is open, it automatically enters standby mode after the configured inactivity period. From now on, this will no longer happen when the Spectrum component is in shared mode. In addition, the standby options in the ribbon will now be disabled.
 
 ### Fixes
 
@@ -43,7 +47,7 @@ Cube now compares profile instances, parameters, and definitions independently o
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
-On DataMiner 10.6.0 and newer, when you added or removed an Agent in Cube on a system on which NATS had been configured manually, up to now, incorrect warning messages could be displayed because Cube would incorrectly still check the legacy `NATSForceManualConfig` and `BrokerGateway` soft-launch flags.
+On DataMiner 10.6.0 and newer, when you added or removed an Agent in Cube, up to now, incorrect warning messages could be displayed because Cube would incorrectly still check the legacy `NATSForceManualConfig` and `BrokerGateway` soft-launch flags.
 
 #### Spectrum: Average trace visibility would no longer be saved in presets [ID 46585]
 
@@ -52,3 +56,11 @@ On DataMiner 10.6.0 and newer, when you added or removed an Agent in Cube on a s
 Because of an issue, the visibility of the average trace in the Spectrum component would no longer be saved in presets. As a result, reopening a preset would not restore the visibility of the average trace.
 
 From now on, Cube will again save and restore this setting with the preset.
+
+#### Spectrum: Thresholds could be missing when loading a preset [ID 46622]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you loaded a preset containing a threshold in a Spectrum component, in some cases, the threshold could be missing.
+
+The threshold will now be displayed when the preset is loaded.
