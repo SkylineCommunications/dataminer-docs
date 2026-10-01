@@ -84,7 +84,7 @@ These files can be managed in DataMiner Cube, in the *memory files* tab of the A
    The available types are:
 
    - *Username and password*: Credentials consisting of a username and password.
-   - *Token*: Credentials consisting of a token only
+   - *Token*: Credentials consisting of a token only. Available from DataMiner 10.6.11/10.7.0 onwards<!--RN 46251-->
 
    > [!NOTE]
    > In the script XML, these types are stored as `UserNameAndPassword` and `Token`. See [Credential](xref:DMSScript.Credentials.Credential).
