@@ -218,17 +218,17 @@ Using the statusCode attribute, you can specify the ID of the parameter in which
 
 #### Status codes and retries
 
+DataMiner behaves as follows based on the received status code:<!-- RN 5132 -->
+
+- 2xx (Success): No additional action is performed.
+- 3xx (Redirection): In case the location response header is present, automatically redirect (301 ""Moved permanently"", 303 "See other", 307 "Temporary redirect", etc.). Note that in case this automatic redirection is not desired, this can be disabled by specifying the [customRedirect](xref:Protocol.Type-communicationOptions#customredirect) communication option. If `customRedirect` is specified, the protocol implements the redirection logic. In case nothing is done, the element will go into timeout. In case no location response header is returned (300: Multiple choices, 306: Unused), the element will go into timeout.
+- 4xx (Client error): The element will go into timeout.
+- 5xx (Server error): The element will go into timeout.
+
+A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e., upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e., upon reception of the ERROR_WINHTTP_CANNOT_CONNECT, ERROR_WINHTTP_SECURE_FAILURE, or SEC_E_BUFFER_TOO_SMALL error).<!-- RN 13111, RN 34888 --> Any other error does not trigger the retry mechanism and will typically cause the request to time out.
+
 > [!NOTE]
->
-> - DataMiner behaves as follows based on the received status code (RN 5132):
->
->   - 2xx (Success): No additional action is performed.
->   - 3xx (Redirection): In case the location response header is present, automatically redirect (301 ""Moved permanently"", 303 "See other", 307 "Temporary redirect", etc.). Note that in case this automatic redirection is not desired, this can be disabled by specifying the [customRedirect](xref:Protocol.Type-communicationOptions#customredirect) communication option. If customRedirect is specified, the protocol implements the redirection logic. In case nothing is done, the element will go into timeout. In case no location response header is returned (300: Multiple choices, 306: Unused), the element will go into timeout.
->   - 4xx (Client error): The element will go into timeout.
->   - 5xx (Server error): The element will go into timeout.
->
-> - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
-> - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e., upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e., upon reception of the ERROR_WINHTTP_CANNOT_CONNECT, ERROR_WINHTTP_SECURE_FAILURE, or SEC_E_BUFFER_TOO_SMALL error).<!-- RN 13111, RN 34888 --> Any other error does not trigger the retry mechanism and will typically cause the request to time out.
+> HTTP communication logging can be enabled by setting information logging to level 3.<!-- RN 14439 -->
 
 > [!TIP]
 > See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
