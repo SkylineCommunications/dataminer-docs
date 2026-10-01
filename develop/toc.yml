@@ -7306,6 +7306,8 @@ items:
 - name: DataMiner Development Tools
   topicUid: TOOLS
   items:
+    - name: AI Agent marketplace
+      topicUid: AIAgentMarketplace
     - name: DataMiner Integration Studio (DIS)
       items:
         - name: About DIS
