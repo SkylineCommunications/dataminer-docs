@@ -6,6 +6,10 @@ uid: SchemaDataMiner
 
 DataMiner XML schema.
 
+## Namespace
+
+`http://www.skyline.be/config/dataminer`
+
 ## Root element
 
 [DataMiner](xref:DataMiner)

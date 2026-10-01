@@ -1,6 +1,7 @@
 ---
 uid: Deleting_a_catalog_item
 reviewer: Alexander Verkest
+description: "Delete a Catalog item from your organization by selecting Delete, providing a reason, and confirming the deletion."
 ---
 
 # Deleting a Catalog item

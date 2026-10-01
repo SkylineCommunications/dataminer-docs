@@ -1,5 +1,6 @@
 ---
 uid: Static_simulations
+description: "Review static simulations to see how a single SNMP walk value per parameter produces flat trends when you run the simulation file."
 ---
 
 # Static simulations

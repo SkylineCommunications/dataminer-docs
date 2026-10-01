@@ -96,11 +96,11 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - For a **WebSocket** connection, see [WebSocket connection](xref:WebSocket_Connection).
 
-   - For a connection from a DaaS Agent to a private data source via [Edge Manager](xref:EdgeManagerOverview), see [Creating an element that communicates with a data source through a tunnel](xref:EdgeManagerGettingStarted#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
+   - For a connection from a DaaS Agent to a private data source through an [Edge Gateway](xref:About_Edge_Gateways), see [Creating an element that communicates with a data source through a tunnel](xref:Getting_started_with_Edge_Gateways#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
 
 1. If the protocol is [configured to allow you to test the connection](xref:Protocol.Groups.Group-ping), optionally click the button *Test connection* below the connection you want to test.
 
-   After you click the button, a message will display the results of the test. However, note that this button is not available for connections via [Edge Manager](xref:EdgeManagerOverview).
+   After you click the button, a message will display the results of the test. However, note that this button is not available for connections through an [Edge Gateway](xref:About_Edge_Gateways).
 
 1. Specify the timeout settings per connection:
 
@@ -116,12 +116,22 @@ You can follow the steps below or watch this short video, which shows you how to
      > [!NOTE]
      > Clearing the selection from this checkbox can for example be of use for an element with multiple connections. If a particular connection should not influence the timeout state of the element, then clear the checkbox for that connection. If the checkbox is selected for all connections, the element will be in timeout as soon as one of the connections fails.
 
-   - **The element goes into timeout state when it is not responding for (sec)**: When the element fails to respond to commands for longer than the number of seconds specified in this setting, the DMA will put the element in a timeout state. The specified number must be between 0 and 120.
+   - **The element goes into timeout state when it is not responding for (sec)**: When the connection fails to respond to commands for longer than the number of seconds specified in this setting, the DMA will put the element in a timeout state. The maximum value for this setting is 86400 (i.e., 24 hours).
 
      Note that this setting does not account for the number of retries. To ensure that the element has enough time to complete all retry attempts before declaring a timeout, you should therefore choose a value larger than **Timeout of a single command × (Number of retries + 1)**.
 
-     > [!NOTE]
-     > Prior to DataMiner 10.2.9/10.3.0, the maximum timeout value for this setting is 2 minutes (i.e., 120 seconds). From DataMiner 10.2.9/10.3.0 onwards, the maximum value is extended to 24 hours.
+     > [!IMPORTANT]
+     > When an element goes in timeout, it will remain in timeout until **all** its connections are responding again.
+
+1. From DataMiner 10.6.10/10.7.0 onwards<!--RN 46287 + 46037 + 46142-->, connectors that contain DataMiner Edge scripts will have the following additional sections. The exact scripts and settings depend on the connector.
+
+   - **Run details**: Select a compatible [DataMiner Edge Node](xref:DataMiner_Edge) as the target, and configure the interval for each script.
+
+   - **Settings**: Configure the connector-defined values for the element, such as a location, system environment, and authentication credentials. Authentication settings can use a token credential or a username and password credential from the Credentials Library. From DataMiner 10.6.11/10.7.0 onwards<!--RN 46371-->, they can also use community credentials or SNMPv3 credentials.
+
+   > [!NOTE]
+   > - If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
+   > - When you [export or import an element](xref:Importing_and_exporting_elements), its DataMiner Edge scripts and connector settings are included, including in CSV files.
 
 1. Specify the following advanced element settings if necessary:
 
@@ -163,16 +173,6 @@ You can follow the steps below or watch this short video, which shows you how to
    - **Block Swarming**: Available from 10.5.5/10.6.0 onwards<!--RN 42535 + 42536-->. See [Blocking elements from being swarmed](xref:SwarmingElements#blocking-elements-from-being-swarmed).
 
    - **Element state**: Select the initial state of the element in this selection box. By default this will be set to “Active”.
-
-1. From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46287-->, configure the following additional pages, if necessary:
-
-   - On the *Settings* page, configure any connector-defined settings.
-
-     If you edit an element with a saved credential that you cannot access, select a credential that you can access before saving the element.
-
-   - On the *Run-on details* page, select a compatible DataMiner Edge node for connectors that contain scripts, and configure the interval for each script.
-
-   These pages are available depending on the selected connector.
 
 1. Click *Next* and specify the view(s) to which you want to link the element.
 

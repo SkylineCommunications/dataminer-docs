@@ -2,10 +2,7 @@
 uid: Cube_Feature_Release_10.6.10
 ---
 
-# DataMiner Cube Feature Release 10.6.10 – Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.10
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU7].
 
@@ -15,10 +12,6 @@ This Feature Release of the DataMiner Cube client application contains the same 
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.10](xref:Web_apps_Feature_Release_10.6.10).
 
 ## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
 
 #### Automation: Credentials can now be added to automation scripts [ID 44282]
 
@@ -35,6 +28,8 @@ If you open a script that contains credentials you are not allowed to use, the n
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer. See [Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]](xref:General_Feature_Release_10.6.10#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282-id-46229)
+
+## New features
 
 #### System Center: Backup password can now be set for restoring credentials [ID 45704]
 
@@ -54,33 +49,41 @@ When you restore a backup on the same DataMiner System, no password will be need
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-A new global setting is now available in *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
+A new global setting is now available via *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
 
 The available options are *Follow Cube theme* (default) and *Light*. After changing the setting, click *Apply theme* and reopen any open Visio drawings to see the change.
 
-#### Credentials Library: Warning indicator will now displayed next to a credential that could not be decrypted [ID 45997]
+![Visio theming setting in DataMiner Cube](~/release-notes/images/VisioTheme.png)
+
+#### Credentials Library: Warning indicator next to credentials that could not be decrypted [ID 45997]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 <!-- Was reverted and later re-added to 10.6.10 -->
 
-When DataMiner Cube detects that a credential in the Credentials Library can no longer be decrypted, a warning icon will now be displayed next to the credential name, which is also shown in a warning color.
+When DataMiner Cube detects that a set of credentials in the Credentials Library can no longer be decrypted, a warning icon will now be displayed next to the name of the credentials, which will also be shown in a warning color.
 
-When you hover over the warning icon, a tooltip will explain that the credential's secret values can no longer be decrypted and that you need to re-enter and save the values to resolve the issue.
+When you hover over the warning icon, a tooltip will explain that the secret values of the credentials can no longer be decrypted and that you need to re-enter and save the values to resolve the issue.
 
 #### Element wizard: Connector settings and run-on details [ID 46287]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven pages:
+When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven sections:
 
-- A *Settings* page where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
-- A *Run-on details* page for connectors with scripts, where you can select an Edge node and configure script intervals.
+- A *Settings* section where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
+- A *Run details* section for connectors with scripts, where you can select an Edge node and configure script intervals.
 
 In addition, CSV export/import support has been updated with the relevant headers for protocol settings and edge scripts.
 
 ## Changes
 
 ### Enhancements
+
+#### Credentials Library: Credential names can now contain all characters [ID 46083]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
+
+When you create a credential in the Credentials Library, its name can now contain all characters.
 
 #### Spectrum Analysis: Shared last preset is now available in shared session mode [ID 46113]
 

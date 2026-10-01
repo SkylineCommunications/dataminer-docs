@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_DefaultDefinitionAttributes
+description: "Configure the DefaultDefinitionAttributes element with shared log output and weight defaults, then override values only for definitions that differ."
 ---
 
 # DefaultDefinitionAttributes element

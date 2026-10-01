@@ -68,6 +68,15 @@ The following DataMiner Extension Modules (DxM), which are included in the DataM
 
 For detailed information about the changes included in these versions, refer to the [DxM release notes](xref:DxM_RNs_index).
 
+#### Security enhancements [ID 46368] [ID 46411] [ID 46510] [ID 46515]
+
+<!-- 46368: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46411: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46510: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46515: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Agent element alarm and masking information could be out of sync after a Failover switch [ID 45601]
@@ -107,3 +116,9 @@ As a result, a DataMiner upgrade could be delayed unnecessarily by up to 5 minut
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 When a correlation rule with the *AutoClear* option disabled generated an alarm for base alarms on a linked DVE table, DataMiner could generate invalid cleared alarms if the linked row disappeared and reappeared or was unlinked and relinked.
+
+#### Persistent element timeout caused by failed WMI actions [ID 46396]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+Up to now, a WMI action that was not included in a poll group could fail. For example, this could occur when a QAction updated a parameter, and a trigger on that parameter executed a WMI action. As a result, the element would go into timeout and be unable to recover from the timeout status. This issue has now been fixed.

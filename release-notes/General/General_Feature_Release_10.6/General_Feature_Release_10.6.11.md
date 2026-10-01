@@ -40,11 +40,43 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*This release does not contain any new features yet.*
+### DataMiner Installer now supports command-line installation [ID 45554]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+You can now install DataMiner from the command line by running the following command:
+
+```powershell
+DataMinerInstaller.exe Install <Path to firststartupchoiceconfig.json>
+```
+
+For more information about the configuration file, see [Unattended DataMiner installation](xref:Unattended_DM_installation).
+
+### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
+
+This request requires a CloudGateway version that supports it.
 
 ## Changes
 
 ### Enhancements
+
+#### MessageBroker library has been upgraded to Microsoft .NET 10 [ID 44205]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The MessageBroker library has been upgraded to Microsoft .NET 10.
+
+#### DataMiner Installer: Perpetual STaaS systems will retain their configured DMA ID and use a supplied license file [ID 46102]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you configure a perpetual STaaS system using the DataMiner Installer, the configured DMA ID is now retained instead of being replaced with an ID returned by dataminer.services.
+
+Also, when the Installer is run in unattended mode, you will now be able to specify the optional `LicenseConfig.LicenseFilePath` setting in order to apply an existing *DataMiner.lic* file. The installer will then copy the license file to the DataMiner root folder and start DataMiner, without requiring you to generate and upload a *Request.lic* file.
 
 #### Jobs module: All server-side code has now been removed from the code base [ID 46163]
 
@@ -52,7 +84,80 @@ Before you upgrade to this DataMiner version:
 
 The Jobs module has been end-of-life since DataMiner 10.5.0. All server-side code related to this module has now been removed from the code base.
 
+#### Swarming: Alarm ID usage analysis can now be skipped when enabling swarming [ID 46340]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When enabling swarming using an `EnableSwarmingRequest`, you can now skip the analysis of alarm ID usage by setting `AnalyzeAlarmIDUsage` to `false`, similar to a `SwarmingPrerequisitesCheckRequest`.
+
+By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
+
+#### User-Defined APIs: UserDefinableApiEndpoint DxM health status is now reported to dataminer.services [ID 46356]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The UserDefinableApiEndpoint DxM now reports its health status to dataminer.services.
+
+When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
+
+#### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
+
+In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
+
+#### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Previously, when a `ReservationInstance` (booking) property was updated, the SRM Master DMA performed the update regardless of which DMA received the request. On large or heavily loaded clusters, this could make the master a bottleneck.
+
+From now on, the DMA hosting the booking will perform the property update. Before the update, the SRM Master DMA grants a short-lived lock for the booking to coordinate concurrent updates. This reduces the processing load on the master and improves the performance and scalability of property updates, particularly on larger clusters.
+
+Property updates will continue to be validated and applied in the same way, and other DMAs and clients will still be notified. This change does not affect end-user or scripting behavior.
+
+#### SNMP: Empty community strings are now supported for SET operations [ID 46535]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
+
+#### DxMs upgraded [ID 46565] [ID 46577]
+
+<!-- RN 46565: MR 10.7.0 - FR 10.6.11 -->
+<!-- RN 46577: MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner CloudGateway 3.5.0
+- DataMiner DataAPI 1.5.0
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
+
+Microsoft .NET 10 remains required.
+
 ### Fixes
+
+#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
+
+#### Saving a service template could be blocked on a system with swarming disabled [ID 46235]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- Not added to MR 10.7.0 because introduced by RN 45370 -->
+
+Up to now, saving a service template could be blocked on a system with swarming disabled when the service definition connector was not compatible with swarming.
 
 #### Existing behavioral change points could no longer be retrieved after a DataMiner Agent restart [ID 46271]
 
@@ -69,3 +174,111 @@ Change points are now also distinguished by creation time. As a result, previous
 <!-- MR 10.5.0 [CU20]/10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, in some rare cases, stopping an element with a logger table could cause the SLProtocol process hosting the element to stop unexpectedly.
+
+#### DIS: DIS Inject could not trigger QAction execution on parameters unknown to SLNet [ID 46304]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, DIS Inject could not trigger QAction execution through parameters that are only known in SLProtocol and not in SLNet, such as dummy parameters.
+
+From now on, DIS Inject will be able to trigger QActions through those parameters as well. Parameters that are known in SLNet will still be validated against the parameter security level.
+
+#### Automation scripts from app packages could leave stale database entries when removed on systems using STaaS [ID 46308]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+On systems using STaaS, up to now, after an app package was installed, removing included automation scripts could fail to remove the corresponding AppPackageContent database entries.
+
+This issue was caused by a case-sensitive mismatch in the script-type filter (`automationscript` instead of `AutomationScript`). From now on, the filter is case-insensitive, so stale automation script entries are removed correctly.
+
+#### Failover: NodeId in ClusterEndpoints.json could be cleared after an online agent restart [ID 46329]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
+
+From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
+
+#### Failover: SLASPConnection could fail to initialize after a Failover switch [ID 46350]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+After a Failover switch, SLASPConnection could fail to initialize correctly when the DataMiner Agent came back online. This could cause the following issues:
+
+- The legacy Reporter could be unavailable when the `LegacyReportsAndDashboards` soft-launch option was enabled.
+- Incoming notifications could remain in memory without being processed, causing a memory leak.
+- The reporter page in DataMiner Cube and the distribution, alarm count, and timeline components in the Dashboards app could show outdated information.
+
+#### SRM: Conflicting bookings incorrectly could be created during bulk creation [ID 46351]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, bulk creation of booking instances could incorrectly create instances identified as conflicting when the force quarantine flag was disabled.
+
+#### NATSReset.exe could throw an InvalidOperationException after the IP address of a DataMiner Agent had changed [ID 46360]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, after the IP address of a DataMiner Agent had changed, running *NATSReset.exe* could throw an `InvalidOperationException`.
+
+#### NATSMigration and NATSRepair could omit errors from the final error overview [ID 46362]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* could incorrectly be missing from the error overview at the end of the command-line output.
+
+#### STaaS: Ordering DOM entries by optional fields could throw a CRUD exception [ID 46377]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+On systems using STaaS, up to now, ordering DOM entries by an optional field could throw a CRUD exception when one or more entries did not contain that field.
+
+#### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when no exact DLL match was found in the hint paths while resolving assemblies for automation scripts or QActions, the first matching DLL was selected. This could result in an older, incompatible version being selected.
+
+From now on, the highest compatible DLL version in the requested range will be selected. If no version in that range is available, the highest available version will be selected.
+
+#### SLSNMPManager could stop unexpectedly when testing a connection with SNMPv3 credentials [ID 46438]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
+
+#### Automation: Script Runner could fail to load assemblies required by a script [ID 46443]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, Script Runner could fail to load a script when it depended on an assembly that was not copied to its dedicated assembly folder. This could happen for dependencies that were not anticipated, such as `Skyline.DataMiner.Storage.Types.dll`.
+
+From now on, if an assembly cannot be found in `C:\Skyline DataMiner\Files\SLAutomation.ScriptRunner`, Script Runner will also look for it in `C:\Skyline DataMiner\Files`.
+
+#### Change point history retrieval could cause overall performance to decrease [ID 46524]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, retrieving change point history could cause performance to decrease because change points stored under the deprecated (v1) change point custom data type were fetched and merged with data from the current store. DataMiner will now read change points exclusively from the current data store.
+
+As a result, change points that were only ever written under the old v1 partition scheme will no longer be returned. This affects only pre-migration data; systems using the current change point storage format are unaffected.
+
+#### SNMP: Community credentials could be lost when an automation script modified an element [ID 46537]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when an automation script modified an element that used community credentials from the Credential Library on its main connection, the element could lose those credentials if the script did not change them. From now on, the credentials will be retained.
+
+#### STaaS: Failing aggregate count queries would incorrectly return 0 instead of throwing an exception [ID 46546]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+On systems using STaaS, up to now, a failing aggregate count query could incorrectly return `0` instead of throwing an exception. From now on, the query will throw an exception when it fails.
+
+#### SLScripting could stop working due to recursive assembly resolution logging [ID 46572]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+In some cases, when SLScripting tried to log that a different version of an assembly had been loaded than the requested version, the logging could trigger another resolution attempt for the same assembly. This could result in a recursive loop that caused SLScripting to stop working.
+
+A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.

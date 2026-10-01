@@ -11,7 +11,7 @@ Specifies the type of the credentials.
 |Item|Facet value|Description|
 |--- |--- |--- |
 |***string restriction***|||
-|&nbsp;&nbsp;Enumeration|UserNamePassword|A set of credentials holding a user name and a password.|
+|&nbsp;&nbsp;Enumeration|UserNameAndPassword|A set of credentials holding a user name and a password.|
 |&nbsp;&nbsp;Enumeration|Token|A set of credentials holding a single access token.|
 
 ## Parent

@@ -1,6 +1,7 @@
 ---
 uid: Swarming_Tutorial_Enable
 keywords: swarming, swarming tutorial
+description: "Follow this tutorial to enable Swarming in your DataMiner System and swarm your first element step by step."
 ---
 
 # Enabling Swarming

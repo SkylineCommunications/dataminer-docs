@@ -1,5 +1,6 @@
 ---
 uid: Connect_to_cloud_with_DMZ
+description: "Set up a DMZ to connect your DataMiner System to dataminer.services using ports 80, 443, 4222, and 5100."
 keywords: cloud connection, cloud dmz
 reviewer: Alexander Verkest
 ---

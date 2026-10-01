@@ -35,7 +35,7 @@ Start --- DataNotUpdated
 Start --- MachineoutofResources
 %% Define hyperlinks %%
 click Home "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click SLLogCollector "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html"
+click SLLogCollector "/dataminer/DataMiner_Tools/SLLogCollector.html"
 click Investigation "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
 click DataNotUpdated "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Data_Not_Updated.html" "Data Not Updated"
 click Automaticrestart "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Automatic_Restart.html" "Automatic Restart"

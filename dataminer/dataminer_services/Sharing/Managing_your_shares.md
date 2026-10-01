@@ -1,5 +1,6 @@
 ---
 uid: Managing_your_shares
+description: "Manage your shares in the Sharing app by filtering items, opening dashboards, reviewing details, or removing access to shared content."
 reviewer: Alexander Verkest
 ---
 

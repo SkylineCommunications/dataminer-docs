@@ -176,7 +176,7 @@ uid: glossary_a_to_l
 | EIGRP | Enhanced Interior Gateway Routing Protocol. Advanced routing protocol used to automate routing decisions and configuration in a network. |
 | Elasticsearch | Open-source search and analytics engine, which is sometimes used as the DataMiner Indexing database in older DataMiner versions. See [Elasticsearch database](xref:Elasticsearch_database). |
 | Element | A DataMiner object that usually represents a device monitored by the DataMiner System. See [Elements](xref:About_elements). |
-| Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework. See [Configuring virtual elements with the Element Connections module](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module). |
+| Element Connections | DataMiner module used to configure virtual elements. Not to be confused with connections in the context of the DataMiner Connectivity Framework. See [Element Connections module](xref:Element_Connections_module). |
 | Element state | Indication of whether an element is currently active, paused or stopped. See [Element states](xref:Element_states). |
 | EMS | Element Management System. A system that manages network elements within a telecommunications network, and that typically communicates upward to higher-level network management systems. |
 | eMTA | embedded Multimedia Terminal Adapter. Cable modem with telephone capability. |

@@ -24,6 +24,7 @@ Below you can find an overview of the main features that have been added to Data
 | Augmented operations: [Relational anomalies in trend graphs](xref:Relational_anomaly_detection#relational-anomalies-in-trend-graphs) | DataMiner 10.4.0 [CU22]/10.5.0 [CU10]/10.6.0/10.6.1 <!-- [ID 43857] --> |
 | Augmented operations: [Relational anomaly detection](xref:Relational_anomaly_detection) | DataMiner 10.5.3/10.6.0<!-- [ID 42034] --> |
 | Augmented operations: [Time-scoped relations](xref:Adding_time_scoped_related_parameters_to_a_trend_graph) | DataMiner 10.3.8/10.4.0 <!-- [ID 36434] --> |
+| Automation: [Using Credentials Library credentials in automation scripts](xref:Using_credentials_in_an_automation_script) | DataMiner 10.7.0/10.6.10 <!-- [ID 44282] [ID 46229] --> |
 | Automation: [ExtendedErrorInfo](xref:Skyline.DataMiner.Automation.SubScriptOptions.ExtendedErrorInfo) property | DataMiner 10.2.7/10.3.0 <!-- [ID 33306] -->|
 | Automation: [HideUI](xref:Skyline.DataMiner.Automation.Engine.HideUI) method | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--  [ID 39451] [ID 39638] --> |
 | Automation: [Interactivity](xref:DMSScript.Interactivity) tag | DataMiner 10.5.9/10.6.0 <!-- [ID 42954]--> |
@@ -90,6 +91,7 @@ Below you can find an overview of the main features that have been added to Data
 | DataMiner processes: [SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process) |  DataMiner 10.3.9/10.4.0<br>DataMiner 10.1.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#slprotocolasx64) |
 | [DMS connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) | DataMiner 10.1.12/10.2.0 |
 | DataMiner Systems: [Generating BrokerGateway client secrets](xref:Generating_BrokerGateway_client_secrets) | DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 <!-- [ID 44757] [ID 44778] --> |
+| DataMiner Edge: [Edge Nodes](xref:About_Edge_Nodes) | DataMiner 10.6.10/10.7.0 <!-- [ID 46037] [ID 46072] [ID 46142] --> |
 | [DOM](xref:DOM) (DataMiner Object Models) | DataMiner 10.1.2/10.2.0 <!-- [ID 28460] --> |
 | DOM: [Actions](xref:DOM_actions) | DataMiner 10.1.11/10.2.0 <!-- [ID 30923] --> |
 | DOM: [Attachments](xref:DomHelper_class#attachments) | DataMiner 10.1.3/10.2.0 <!-- [ID 28739] --> |
@@ -115,6 +117,7 @@ Below you can find an overview of the main features that have been added to Data
 | GQI: [Custom sort order](xref:GQI_Redirect_Sort_Tutorial) | DataMiner 10.4.5/10.5.0 <!-- [ID 39136] -->|
 | GQI: [DCF connections data source](xref:Get_DCF_connections) | DataMiner 10.1.3/10.2.0 <!-- [ID 29703] -->|
 | GQI: [Defining a set of discrete values when creating a column](xref:GQI_Extensions_Discrete_Values) within GQI extensions | DataMiner 10.5.0 [CU17]/10.6.0 [CU5]/10.6.8 <!-- [ID 45380]--> |
+| GQI: [Static columns in ad hoc data sources](xref:GQI_GQIStaticColumnsAttribute) | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 <!-- [ID 46050] --> |
 | GQI: [Relational anomalies data source](xref:Get_relational_anomalies) | DataMiner 10.5.12/10.6.0 <!-- [ID 43820] --> |
 | GQI: [Importing queries](xref:Importing_a_query) | DataMiner 10.1.4/10.2.0 <!-- [ID 29022] --> |
 | GQI: [Logging](xref:GQI_Logging) | DataMiner 10.4.0/10.4.4 <!-- [ID 38870] --> |
@@ -147,10 +150,12 @@ Below you can find an overview of the main features that have been added to Data
 | Protocols: [Table-based matrix](xref:UIComponentsTableMatrix) | DataMiner 10.3.1/10.4.0 <!-- [ID 34645] -->|
 | Protocols: [Direct view table with table columns of different protocols](xref:Protocol.Params.Param.CrossDriverOptions) | DataMiner 10.2.9/10.3.0 <!-- [ID 33253] --> |
 | [User-defined APIs](xref:UD_APIs) | DataMiner 10.3.6/10.4.0<br>DataMiner 10.3.5 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#userdefinableapi) <!-- [ID 36273] --> |
+| User-defined APIs: [Notice generation when API token rate limits are reached](xref:UD_APIs_Objects_ApiToken#generating-a-notice-when-the-limit-is-exceeded) | DataMiner 10.6.10/10.7.0 <!-- [ID 46244] --> |
 | User-defined APIs: [Rate limit configuration for API tokens (via the C# API)](xref:UD_APIs_Objects_ApiToken#ratelimit) | DataMiner 10.6.7/10.7.0 <!-- [ID 45470] --> |
 | User-defined APIs: [Rate limit configuration for API tokens (directly in System Center)](xref:UD_APIs_Viewing_in_Cube#configuring-a-rate-limit-for-an-api-token) | DataMiner 10.6.9/10.7.0 onwards <!-- [ID 45751] --> |
 | User-defined APIs: [Using route parameters](xref:UD_APIs_API_script_examples#using-route-parameters) | DataMiner 10.6.8/10.7.0 <!-- [ID 45681]--> |
 | Security: [Custom user group rights presets](xref:Configuring_a_user_group#using-presets-to-assign-rights) | DataMiner Cube 10.4.0 [CU12]/10.5.0 [CU1]/10.5.3<!-- [ID 41656] --> |
+| Security: [Credential encryption at rest](xref:Encryption_in_DataMiner#credentials-at-rest) | DataMiner 10.6.10/10.7.0 <!-- [ID 46061] --> |
 | Security: [External user authentication using Azure B2C](xref:SAML_using_Azure_B2C) | DataMiner 10.2.6/10.3.0 <!-- [ID 32714] -->|
 | Security: [External user authentication using Entra ID (formerly Azure AD)](xref:SAML_using_Entra_ID) | DataMiner 10.1.5/10.2.0 <!-- [ID 28444] -->|
 | Security: [External user authentication using Okta](xref:SAML_using_Okta) | DataMiner 10.1.11/10.2.0 <!-- [ID 30749]-->|
@@ -176,6 +181,7 @@ Below you can find an overview of the main features that have been added to Data
 | Visual Overview: [[this reservationID] placeholder](xref:Placeholders_for_variables_in_shape_data_values#this-reservationid) | DataMiner 10.2.8/10.3.0 <!-- [ID 33669] -->|
 | Visual Overview: [Table control with Refresh and/or Sort button](xref:Turning_a_shape_into_a_parameter_control#adding-a-refresh-andor-sort-button-to-a-table-control) | DataMiner 10.2.6/10.3.0 <!-- [ID 33346]-->|
 | Visual Overview: [Text wrapping and trimming](xref:Configuring_text_wrapping_and_trimming) | DataMiner 10.2.3/10.3.0 <!-- [ID 32440] --> |
+| Visual Overview: [Configuring the Visio drawing theme](xref:Configuring_Visio_drawing_theme) | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 <!-- [ID 45961] --> |
 | Visual Overview (web): [Load balancing](xref:Investigating_Web_Issues#load-balancing) | DataMiner 10.5.2/10.6.0 <!-- [ID 41434] [ID 41728] --> |
 | [Web DcM](xref:DataMinerCoreModules#web) | DataMiner 10.5.0 [CU8]/10.5.11 <!-- [ID 43439] --> |
 | Web Services: [DMAAutomationScriptOptionClientTimeZone](xref:DMAAutomationScriptOptionClientTimeZone) custom data type | DataMiner 10.6.4/10.7.0 <!-- [ID 44742] [ID 44788] --> |

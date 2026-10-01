@@ -1,5 +1,6 @@
 ---
 uid: SwarmingScheduledTasks
+description: "On DataMiner 10.6.3/10.7.0 or higher, swarm scheduled tasks stored in a database to a different Agent."
 ---
 
 # Swarming scheduled tasks

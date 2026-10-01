@@ -1,5 +1,6 @@
 ---
 uid: General_config
+description: "Use the general configuration to resend all packets to a chosen IP address and port by enabling the section and entering both values."
 ---
 
 # General configuration

@@ -1,5 +1,6 @@
 ---
 uid: about_dataminer_services
+description: "Explore how you can augment your DataMiner System with a host of additional services by connecting it to dataminer.services."
 keywords: cloud connection
 reviewer: Alexander Verkest
 ---

@@ -117,7 +117,7 @@ classDef classAction fill:#dddddd,stroke:#dddddd,color:#1E5179,stroke-width:1px;
  click LackResources "#cpu-and-memory-resources"
  click VerifyCallback "#about-callback-timeouts"
  click DebugCallback "#how-to-debug-a-callback-timeout-error"
- click RefusedState "/dataminer/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_refused_dma_state.html"
+ click RefusedState "/dataminer/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_advanced_procedures/SLNetClientTest_refused_dma_state.html"
  click NoMoreConnections "#cannot-set-up-new-connections"
  click StartAgent "/dataminer/Administrator_guide/DataMiner_Systems/Starting_or_stopping_DMAs/Starting_or_stopping_a_DMA_in_DataMiner_Cube.html"
  click FixMobileGatewaySettings "/dataminer/Functions/Mobile_Gateway/Configuring_Mobile_Gateway/Configuring_a_serial_cell_phone_modem.html"

@@ -14,11 +14,11 @@ The tickets will be **automatically linked** to the relevant alarms, elements, a
 
    For example, you can [filter on alarms](xref:Adding_alarm_filters_to_Correlation_rules) with critical severity:
 
-   ![Example Correlation rule configuration with alarm filter to trigger on critical alarms](~/solutions/images/Ticketing_Correlation_rule_trigger.png)<br>*Example Correlation rule configuration in DataMiner 10.6.7*
+   ![Example correlation rule configuration with alarm filter to trigger on critical alarms](~/solutions/images/Ticketing_Correlation_rule_trigger.png)<br>*Example correlation rule configuration in DataMiner 10.6.7*
 
 1. Select the action *Run script* and select the script *SLC-AutoCreateTicket*, which is included in the Ticketing Solution for this purpose.
 
-   ![Example Correlation rule configuration with alarm filter to trigger on critical alarms](~/solutions/images/Ticketing_Correlation_rule_action.png)<br>*Example Correlation rule configuration in DataMiner 10.6.7*
+   ![Example correlation rule configuration with alarm filter to trigger on critical alarms](~/solutions/images/Ticketing_Correlation_rule_action.png)<br>*Example correlation rule configuration in DataMiner 10.6.7*
 
 1. Make sure your rule is enabled via the *Enable this rule* checkbox at the top.
 

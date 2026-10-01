@@ -185,19 +185,6 @@ The response to a `GetRADParameterGroupInfoMessage` will now also include the ID
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
 
-#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
-
-<!-- MR 10.7.0 - FR 10.6.2 -->
-
-In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
-
-From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
-
-See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
-
-> [!NOTE]
-> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
-
 #### Automation: Entrypoint ID added to the 'Finished executing script' log entry [ID 44382]
 
 <!-- MR 10.7.0 - FR 10.6.2 -->
@@ -444,18 +431,19 @@ In order to protect DataMiner against a continuously growing queue of incoming s
 > - We strongly advise you to restart the element when the limit has been breached. When certain messages within a data stream get dropped because the maximum queue limit was breached, an incomplete data stream may get processed, which could then produce unexpected results.
 > - The alarm not only mentions the limit that was reached (in MB). It also mentions the number of messages that are present in the queue. This number of messages is not always equal to the number of responses to be processed. For example, in some cases, Windows can combine multiple received UDP packets into one when adding packets to the receive buffer, causing SLPort to then add a single message to the queue.
 
-#### DxMs upgraded [ID 45304] [ID 45347] [ID 45392] [ID 45506] [ID 45944] [ID 46119]
+#### DxMs upgraded [ID 45304] [ID 45347] [ID 45392] [ID 45506] [ID 45944] [ID 46119] [ID 46565]
 
 <!-- RN 45304: MR 10.7.0 - FR 10.6.6 -->
 <!-- RN 45347: MR 10.7.0 - FR 10.6.6 -->
 <!-- RN 45392: MR 10.7.0 - FR 10.6.7 -->
 <!-- RN 45506: MR 10.7.0 - FR 10.6.7 -->
 <!-- RN 45944/46119: MR 10.7.0 - FR 10.6.9 -->
+<!-- RN 46565: MR 10.7.0 - FR 10.6.11 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
 - DataMiner ArtifactDeployer 1.10.0
-- DataMiner CloudGateway 3.3.2
+- DataMiner CloudGateway 3.5.0
 - DataMiner CoreGateway 2.14.17
 - DataMiner DataAPI 1.4.6
 - DataMiner FieldControl 2.12.2
@@ -738,6 +726,45 @@ On `ApiToken` objects, you can now enable notice generation when a token reaches
 
 When enabled, one notice can be generated per token when its rate limit is reached. Notices are not cleared automatically. If you clear a notice manually and the token hits its rate limit again, a new notice can be generated.
 
+#### Swarming: Alarm ID usage analysis can now be skipped when enabling swarming [ID 46340]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When enabling swarming using an `EnableSwarmingRequest`, you can now skip the analysis of alarm ID usage by setting `AnalyzeAlarmIDUsage` to `false`, similar to a `SwarmingPrerequisitesCheckRequest`.
+
+By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
+
+#### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Previously, when a `ReservationInstance` (booking) property was updated, the SRM Master DMA performed the update regardless of which DMA received the request. On large or heavily loaded clusters, this could make the master a bottleneck.
+
+From now on, the DMA hosting the booking will perform the property update. Before the update, the SRM Master DMA grants a short-lived lock for the booking to coordinate concurrent updates. This reduces the processing load on the master and improves the performance and scalability of property updates, particularly on larger clusters.
+
+Property updates will continue to be validated and applied in the same way, and other DMAs and clients will still be notified. This change does not affect end-user or scripting behavior.
+
+#### SNMP: Empty community strings are now supported for SET operations [ID 46535]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
+
+#### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+SLLogCollector now collects additional diagnostic information from configured Elasticsearch and OpenSearch clusters, including aliases, shard health and placement, disk allocation, cluster settings, ongoing recoveries, and pending cluster tasks.
+
+The generated package now includes the following files in the `Elastic` folder for the configured database cluster:
+
+- `_cat.aliases.txt`
+- `_cat.shards.txt`
+- `_cat.allocation.txt`
+- `_cluster.settings.json`
+- `_cat.recovery.txt`
+- `_cat.pending_tasks.txt`
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -864,3 +891,49 @@ In some cases, after SLAnalytics had restarted, an existing change point on a pa
 This was caused by an internal ID collision. Change point IDs restart from zero after a restart, and the retrieval logic could incorrectly treat a new change point with a reused ID as a duplicate.
 
 Change points are now also distinguished by creation time. As a result, previously detected change points remain retrievable after a restart.
+
+#### Failover: NodeId in ClusterEndpoints.json could be cleared after an online agent restart [ID 46329]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
+
+From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
+
+#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
+
+<!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
+
+When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
+
+From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
+
+#### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, when no exact DLL match was found in the hint paths while resolving assemblies for automation scripts or QActions, the first matching DLL was selected. This could result in an older, incompatible version being selected.
+
+From now on, the highest compatible DLL version in the requested range will be selected. If no version in that range is available, the highest available version will be selected.
+
+#### Automation: Script Runner could fail to load assemblies required by a script [ID 46443]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, Script Runner could fail to load a script when it depended on an assembly that was not copied to its dedicated assembly folder. This could happen for dependencies that were not anticipated, such as `Skyline.DataMiner.Storage.Types.dll`.
+
+From now on, if an assembly cannot be found in `C:\Skyline DataMiner\Files\SLAutomation.ScriptRunner`, Script Runner will also look for it in `C:\Skyline DataMiner\Files`.
+
+#### Change point history retrieval could cause overall performance to decrease [ID 46524]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, retrieving change point history could cause performance to decrease because change points stored under the deprecated (v1) change point custom data type were fetched and merged with data from the current store. DataMiner will now read change points exclusively from the current data store.
+
+As a result, change points that were only ever written under the old v1 partition scheme will no longer be returned. This affects only pre-migration data; systems using the current change point storage format are unaffected.
+
+#### STaaS: Failing aggregate count queries would incorrectly return 0 instead of throwing an exception [ID 46546]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+On systems using STaaS, up to now, a failing aggregate count query could incorrectly return `0` instead of throwing an exception. From now on, the query will throw an exception when it fails.

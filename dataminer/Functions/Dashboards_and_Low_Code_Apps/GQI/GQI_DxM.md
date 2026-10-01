@@ -1,5 +1,6 @@
 ---
 uid: GQI_DxM
+description: "Learn how to configure the DataMiner GQI DxM, including CPU usage limits, logging, message handling, and idle child process termination."
 ---
 
 # GQI DxM
@@ -59,7 +60,7 @@ From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify tha
 
 The GQI DxM can be configured via JSON configuration files. The default configuration can be found in `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.json`. Do **not** use this file to change settings, because it will be overwritten whenever a new version of the GQI DxM is installed.
 
-To change configuration settings, use the configuration file named `appsettings.custom.json` in `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.json`. If this file does not exist yet, create it in the mentioned location.
+To change configuration settings, use the configuration file named `appsettings.custom.json` in `C:\Program Files\Skyline Communications\DataMiner GQI\`. If this file does not exist yet, create it in the mentioned location.
 
 Below you can find an overview of the settings that can be configured in this file.
 
@@ -82,6 +83,28 @@ See the following example. Idle child processes will be terminated within the co
   }
 }
 ```
+
+### CPU usage limits
+
+Available starting from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11.<!-- RN 46509 -->
+
+To prevent GQI from consuming all available CPU resources, you can configure limits for the GQI service and its child processes in the *appsettings.custom.json* file.
+
+```json
+{
+  "GQIOptions": {
+    "CpuLimitPercent": 80,
+    "Extensions": {
+      "ChildProcessesCpuLimitPercent": 80
+    }
+  }
+}
+```
+
+- **CpuLimitPercent**: Maximum percentage of the total CPU capacity that all GQI processes can use, including both the GQI core process and all extension workers. The default is 80%.
+- **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all [extension workers](xref:GQI_Extensions_Architecture#extension-worker-processes) can use together. The default is 80%, which allows the extension workers to use up to 64% (i.e., 80% of 80%) of the total CPU capacity when the default values are used.
+
+Both settings accept integer values from 1 through 100. After changing either setting, restart the GQI service for the change to take effect.
 
 ### Message handler configuration
 

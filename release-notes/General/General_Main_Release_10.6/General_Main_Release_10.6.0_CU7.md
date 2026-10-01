@@ -34,6 +34,19 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
+
+<!-- MR 10.6.0 [CU7] - FR 10.6.2 -->
+
+In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
+
+From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+
+See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+
+> [!NOTE]
+> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
+
 #### SLLogCollector: Separate log file per instance [ID 44668]
 
 <!-- MR 10.5.0 [CU19]/10.6.0 [CU7] - FR 10.6.4 -->
@@ -75,6 +88,15 @@ The following DataMiner Extension Modules (DxM), which are included in the DataM
 - DataMiner SupportAssistant 1.9.3
 
 For detailed information about the changes included in these versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### Security enhancements [ID 46368] [ID 46411] [ID 46510] [ID 46515]
+
+<!-- 46368: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46411: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46510: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+<!-- 46515: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -141,3 +163,9 @@ Custom applications using the SLNet gRPC client could fail to establish a connec
 As a result, the connection could incorrectly be reported as `APIGateway is unavailable`.
 
 From now on, invalid User-Agent values are skipped, so the health check can continue and the gRPC connection can be established correctly.
+
+#### Persistent element timeout caused by failed WMI actions [ID 46396]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+Up to now, a WMI action that was not included in a poll group could fail. For example, this could occur when a QAction updated a parameter, and a trigger on that parameter executed a WMI action. As a result, the element would go into timeout and be unable to recover from the timeout status. This issue has now been fixed.
