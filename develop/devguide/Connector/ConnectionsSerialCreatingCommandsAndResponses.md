@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSerialCreatingCommandsAndResponses
-description: "Build serial commands and responses from fixed and variable-length parameters, then configure matching, length fields, and CRC validation."
+description: "Learn to build serial commands and responses from fixed and variable length parameters, including response matching, length fields, and CRC validation."
 ---
 
 # Creating commands and responses

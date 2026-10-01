@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSerialBreakSignal
-description: "Implement a serial break-signal flow with separate connections, open, lock, and unlock actions, break commands, and the commbreak pair option."
+description: "Configure serial break signals with separate connections, set and clear commands, the commbreak pair option, and port locking when elements share a device."
 ---
 
 # Break signal

@@ -1,13 +1,13 @@
 ---
 uid: ConnectionsSerialDisplayingBytesAsNumbers
-description: "Display numeric values received as byte sequences by configuring big-endian interpretation and isolating read-bit source parameters when needed."
+description: "Display received bytes as decimal numbers using big-endian interpretation. For group parameters used for read bits, display a copy."
 ---
 
 # Displaying bytes as numbers
 
 It can happen that you receive a number of bytes that represent a number. In case you want to display the decimal representation of those bytes, you need to take into account that decimal numbers are stored in memory in reverse order (little endian). So in order to display the correct number, you need to use Endian big in the Interprete tag of the parameter so that the bytes are reversed again.
 
-In case the number you want to display originates from a group parameter used for read bits, it is advised to copy the contents to another parameter and use that one for displaying, so that there is no influence on the read bits.
+In case the number you want to display originates from a group parameter used for read bits, we recommend copying the contents to another parameter and using that one for displaying, so that there is no influence on the read bits.
 
 ## See also
 

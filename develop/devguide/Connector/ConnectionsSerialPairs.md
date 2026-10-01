@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSerialPairs
-description: "Define command-response pairs, queue them through groups and timers, clear reused responses, and match one command against multiple possible responses."
+description: "Understand command-response pairs, their use with groups and timers, and response clearing when parameters are reused or a pair has multiple responses."
 ---
 
 # Pairs
