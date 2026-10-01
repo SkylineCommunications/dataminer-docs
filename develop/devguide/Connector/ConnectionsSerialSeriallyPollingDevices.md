@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSerialSeriallyPollingDevices
-description: "Poll multiple serial devices from one element by storing device addresses in a table, changing a dedicated connection dynamically, and coordinating sets."
+description: "Learn how one element can poll multiple devices from a table using dynamic IP changes, and what to take into account when configuring this."
 ---
 
 # Serially polling different devices from a single element

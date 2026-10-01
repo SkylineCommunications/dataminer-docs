@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSerialSerialSingle
-description: "Use the serial single connector type when each element connecting to the same device address needs its own dedicated SLPort socket."
+description: "Learn how the serial single connection type prevents DataMiner from combining multiple connections to the same device."
 ---
 
 # Serial single
