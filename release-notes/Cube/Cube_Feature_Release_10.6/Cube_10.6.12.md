@@ -39,6 +39,12 @@ In some cases, a profile instance, a profile parameter, or a profile definition 
 
 Cube now compares profile instances, parameters, and definitions independently of property order, so differences in ordering no longer cause them to be marked as modified.
 
+#### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+On DataMiner 10.6.0 and newer, when you added or removed an Agent in Cube on a system on which NATS had been configured manually, up to now, incorrect warning messages could be displayed because Cube would incorrectly still check the legacy `NATSForceManualConfig` and `BrokerGateway` soft-launch flags.
+
 #### Spectrum: Average trace visibility would no longer be saved in presets [ID 46585]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
