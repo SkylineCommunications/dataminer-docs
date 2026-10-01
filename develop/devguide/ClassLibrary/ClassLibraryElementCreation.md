@@ -64,7 +64,7 @@ DmsElementId id = agent.CreateElement(configuration);
 
 ## Creating an element with connections
 
-When creating an element, the connection details need to specified. The only exception is for elements running a protocol that only has a virtual connection. For each type of connection supported by DataMiner, a corresponding interface is defined in the DataMinerSystem library. The following diagram gives an overview of the provided interfaces:
+When an element is created, the connection details need to specified. The only exception is for elements running a protocol that only has a virtual connection. For each type of connection supported by DataMiner, a corresponding interface is defined in the DataMinerSystem library. The following diagram gives an overview of the provided interfaces:
 
 ```mermaid
 classDiagram
