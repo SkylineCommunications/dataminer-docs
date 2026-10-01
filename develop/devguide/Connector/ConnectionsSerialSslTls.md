@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSerialSslTls
-description: "Configure SSL/TLS encryption and certificate verification for TCP/IP serial connections, and account for supported TLS versions and IPv4 requirements."
+description: "Learn about SSL/TLS encryption for TCP/IP serial connections, supported TLS versions, current limitations, and certificate verification for HTTP elements."
 ---
 
 # SSL/TLS encryption

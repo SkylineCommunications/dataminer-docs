@@ -15,7 +15,7 @@ There are multiple configuration options for a smart-serial connection that infl
 1. Using headers/trailers with the headerTrailerLink option
 1. Using none of the above options
 
-**Observed behavior:** SLPort only considers the first applicable option when processing incoming data, in the order mentioned above. For example, if stuffing is configured, then SLPort will just perform unstuffing and then forward the data to SLProtocol. If no stuffing is configured, but the packetInfo option is used, SLPort will only consider this information.
+SLPort only considers the **first applicable option** when processing incoming data, in the order mentioned above. For example, if stuffing is configured, then SLPort will just perform unstuffing and then forward the data to SLProtocol. If no stuffing is configured, but the packetInfo option is used, SLPort will only consider this information.
 
 > [!NOTE]
 > Only in case none of the options above is used, prior to forwarding the data to SLProtocol, SLPort will check if the `smartIpHeader` option was used. In case it is used, it will prefix the data with the smart IP header information. This means that the `smartIpHeader` option cannot be used together with the packetInfo option, with stuffing or with headers and trailers.
