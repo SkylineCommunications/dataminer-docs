@@ -1,23 +1,4 @@
 items:
-  - name: Assistant
-    items:
-      - name: DataMiner Assistant DxM
-        topicUid: Assistant_DxM
-      - name: DataMiner Assistant app
-        topicUid: DataMinerAssistant
-        items:
-        - name: Context structure
-          topicUid: Assistant_Context
-        - name: Adding custom user context
-          topicUid: Assistant_UserContext
-        - name: DataMiner Assistant M365
-          topicUid: Assistant_M365
-        - name: Data privacy and security
-          topicUid: Assistant_DataPrivacySecurity
-      - name: Natural language to GQI
-        topicUid: NL2GQI
-      - name: Document Intelligence
-        topicUid: docintel
   - name: Augmented Operations
     topicUid: Overview_Augmented_Operations
     items:
@@ -1052,6 +1033,25 @@ items:
         items:
           - name: Getting started with EPM
             topicUid: EPM_Introduction_Tutorial
+  - name: Intelligence
+    items:
+      - name: DataMiner Assistant DxM
+        topicUid: Assistant_DxM
+      - name: DataMiner Assistant app
+        topicUid: DataMinerAssistant
+        items:
+        - name: Context structure
+          topicUid: Assistant_Context
+        - name: Adding custom user context
+          topicUid: Assistant_UserContext
+        - name: DataMiner Assistant M365
+          topicUid: Assistant_M365
+        - name: Data privacy and security
+          topicUid: Assistant_DataPrivacySecurity
+      - name: Natural language to GQI
+        topicUid: NL2GQI
+      - name: Document Intelligence
+        topicUid: docintel
   - name: Inventory & Asset Management
     items:
       - name: About DataMiner Inventory & Asset Management
