@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_finetuning_nats_settings
-description: "Use SLNetClientTest to tune NATSDisasterCheck, NATSResetWindow (minimum 60 seconds), and NATSRestartTimeout (default 10 seconds) for cluster recovery."
+description: "Use the SLNetClientTest tool to check and fine-tune the NATS settings NATSDisasterCheck, NATSResetWindow, and NATSRestartTimeout."
 ---
 
 # Fine-tuning NATS settings

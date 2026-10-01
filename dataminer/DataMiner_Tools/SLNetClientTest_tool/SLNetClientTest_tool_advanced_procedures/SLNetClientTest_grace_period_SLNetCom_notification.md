@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_grace_period_SLNetCom_notification
-description: "Set the SLNetCom notification thread grace period with SLNetClientTest to avoid reacting to brief threshold spikes; the default is 1 minute."
+description: "Learn how, using the SLNetClientTest tool, you can changing the grace period for the SLNetCom Notification thread."
 ---
 
 # Changing the grace period for the SLNetCom Notification thread

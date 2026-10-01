@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_making_Cube_ignore_view_updates
-description: "Set ClientSkipViewUpdates for an Agent in SLNetClientTest to make DataMiner Cube ignore view changes, then reconnect to reload them manually."
+description: "Learn how, using the SLNetClientTest tool, you can make DataMiner Cube clients stop handling view changes."
 ---
 
 # Making DataMiner Cube ignore view updates

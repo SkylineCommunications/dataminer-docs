@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_managing_RAD_parameter_groups
-description: "Manage RAD parameter groups with SLNetClientTest to add, inspect, list, or remove groups and retrieve anomaly scores from past 5-minute trend data."
+description: "Learn how, using the SLNetClientTest tool, you can manage Relational Anomaly Detection parameter groups."
 ---
 
 # Managing parameter groups for RAD

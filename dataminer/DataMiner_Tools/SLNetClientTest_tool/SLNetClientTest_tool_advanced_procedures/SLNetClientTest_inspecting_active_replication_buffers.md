@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_inspecting_active_replication_buffers
-description: "Use SLNetClientTest to inspect or drop active replication buffers, flush saved files, or trigger cleanup with a retention value from 14 to 30 days."
+description: "Learn how, using the SLNetClientTest tool, you can view and drop active replication buffers, as well as manage replication buffer files."
 ---
 
 # Inspecting the active replication buffers

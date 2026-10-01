@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_retrain_rad_model
-description: "Retrain a RAD parameter group with SLNetClientTest by specifying its name and the start and end times of a period of expected behavior."
+description: "Learn how, using the SLNetClientTest tool, you can retrain the internal model used by Relational Anomaly Detection."
 ---
 
 # Retraining the internal model used by RAD

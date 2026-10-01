@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_setting_TTL_database
-description: "Set database record TTLs with SLNetClientTest in seconds for a DMA or DMS, including defaults and overrides for local and indexing databases."
+description: "Learn how, using the SLNetClientTest tool, you can update the TTL (time to live) for database records."
 ---
 
 # Setting the TTL for database records

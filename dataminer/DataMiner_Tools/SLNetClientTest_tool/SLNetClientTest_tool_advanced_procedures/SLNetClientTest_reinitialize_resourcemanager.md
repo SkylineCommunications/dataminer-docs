@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_reinitialize_resourcemanager
-description: "Use SLNetClientTest to reinitialize Resource Manager on a DataMiner Agent without restarting DataMiner, available from 10.3.9/10.4.0."
+description: "Learn how, using the SLNetClientTest tool, you can reinitialize Resource Manager on a DataMiner Agent without restarting DataMiner."
 ---
 
 # Reinitializing ResourceManager

@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_forcing_file_sync
-description: "Use SLNetClientTest to force file synchronization for one DMA or the full DMS, verify size and CRC for same-timestamp files, and fix inconsistencies."
+description: "Learn how, using the SLNetClientTest tool, it is possible to force file synchronization between DataMiner Agents."
 ---
 
 # Forcing file synchronization between DMAs
