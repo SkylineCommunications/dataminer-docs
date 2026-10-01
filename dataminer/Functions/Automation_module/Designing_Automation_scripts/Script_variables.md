@@ -12,7 +12,7 @@ For most script actions, variables are required. There are several kinds of vari
 
 - **Memory files**: Containers of values, typically provided by the script itself.
 
-- **Credentials**: These allow a script to use credentials stored in the [Credentials Library](xref:Credentials_Library). Available from DataMiner 10.7.0/10.6.10 onwards<!--RN 44282--><!--RN 46229-->.
+- **Credentials**: These allow a script to use credentials stored in the [Credentials Library](xref:Credentials_Library). Available from DataMiner 10.7.0/10.6.11 onwards<!--RN 44282--><!--RN 46229--><!--RN 46251-->.
 
 When you add a script action that contains a variable, a line will automatically be added in the section in question. However, depending on the script, it can be more convenient to make the variables first, and then create the script actions.
 
