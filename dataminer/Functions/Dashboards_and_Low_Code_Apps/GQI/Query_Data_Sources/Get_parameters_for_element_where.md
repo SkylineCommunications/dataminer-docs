@@ -14,7 +14,11 @@ From DataMiner 10.5.0 [CU12]/10.6.3 onwards<!--RN 44553-->, this data source can
 
 Selecting a protocol and version retrieves parameters for all active elements that use the specified protocol version.
 
-You can select either a table parameter or standalone parameters during query creation. If you select a table parameter, all columns from that table become available for query operators and the first 10 visible table columns will be included in the query result. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45692-->, you can also choose to select a subset of table columns. In that case, only the selected columns will become available and they will automatically be included in the query result.
+You can select either a table parameter or standalone parameters during query creation. If you select a table parameter, all readable columns from that table become available for query operators and the first 10 visible table columns will be included in the query result. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45692-->, you can also choose to select a subset of table columns. In that case, only the selected columns will become available and they will automatically be included in the query result.
+
+From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!--RN 46033-->, write-only columns, such as button and action/configuration columns, are excluded from default selections and new query-builder capability choices. Existing queries that explicitly reference these columns will continue to resolve and execute. When explicitly selected, the columns will remain available for operators such as *Filter*, *Sort*, *Aggregate*, and *Join*.
+
+Items marked as hidden by GQI are excluded from the query-builder argument tree by default<!--RN 46246-->. Existing queries that already selected a hidden item can still be loaded and executed. If you deselect a hidden item, it will remain available until you close and reopen the query builder.
 
 It is not possible to select multiple table parameters, combine a table parameter with standalone parameters, or mix columns from different tables.
 
