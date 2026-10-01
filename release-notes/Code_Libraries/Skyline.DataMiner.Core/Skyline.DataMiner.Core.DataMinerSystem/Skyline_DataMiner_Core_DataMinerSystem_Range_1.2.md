@@ -9,9 +9,9 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 
 ### 1.2.1.1
 
-#### Fix - Daily scheduler task repetition intervals could be cleared when updating tasks [ID 46561]
+#### Fix - Daily scheduled task repetition intervals could be cleared when tasks were updated [ID 46561]
 
-When you updated a daily scheduler task that uses XML storage, its repetition interval in minutes could be cleared. The library now retains this interval when it retrieves and updates the task.
+When you updated a daily scheduled task that uses XML storage, its repetition interval in minutes could be cleared. The library now retains this interval when it retrieves and updates the task.
 
 ### 1.2.1.0
 
