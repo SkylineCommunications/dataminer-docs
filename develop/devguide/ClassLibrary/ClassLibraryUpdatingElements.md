@@ -1,12 +1,12 @@
 ---
 uid: ClassLibraryUpdatingElements
+description: "Learn how to update DataMiner elements with the class library by changing element properties and applying those changes with the Update method."
 keywords: class library 
 ---
 
 # Updating elements
 
-Once an element is retrieved, it can be updated.
-To update an element, set the desired properties to the new value and call the [Update](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IUpdateable.Update) method on the element.
+Once an element is retrieved, it can be updated. To update an element, set the desired properties to the new value and call the [Update](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IUpdateable.Update) method on the element.
 
 The following example performs a rename of an element and also sets a property.
 
