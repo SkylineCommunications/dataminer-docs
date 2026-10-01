@@ -7,8 +7,6 @@ items:
     topicUid: Overview_Standardized_Foundation
   - name: Digital transformation
     topicUid: Digital_transformation
-  - name: Open software platform
-    topicUid: Overview_Platform_Open_Platform
   - name: References and use cases
     topicUid: Overview_References_and_use_cases
   - name: Security
