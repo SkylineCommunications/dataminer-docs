@@ -91,6 +91,36 @@ The value fields and link buttons of these standalone profile parameters are ali
 
 Profile definitions and their associated presets continue to be shown like before when a profile definition is configured for the script.
 
+#### Support for orchestration scripts with dynamic inputs [ID 46655]
+
+MediaOps Plan now supports orchestration scripts with dynamic inputs (available from [MediaOps Live 1.2.0](xref:MediaOps_Live_1.2.0) onwards). The inputs of these scripts adapt to the values you provide. For example, changing the number of destinations adds or removes destination inputs, and selecting a band narrows the allowed frequency range.
+
+You can configure dynamic inputs wherever you configure an orchestration script:
+
+- In Resource Studio, as the default configuration of a resource pool.
+- In Workflow Designer, for workflows and workflow nodes.
+- In Scheduling, for jobs and job nodes.
+
+In the *Select Configuration* dialog and in the resource pool editor:
+
+- Inputs that belong together are shown in groups that you can expand or collapse.
+- Required inputs are marked with ✋, and units are shown next to the value.
+- When you change an input that affects other inputs, the dialog is updated immediately. Values for inputs that no longer apply are removed. If a value is no longer allowed, for example because an option was removed or a range changed, it is cleared, and the input shows why until you enter a new value.
+- Messages from the script, for example when two destinations use the same endpoint, are shown next to the related input.
+- If the inputs cannot be loaded, for example because the script failed, the previous inputs and values are kept, a message is shown, and you can try again.
+
+Like profile parameters, a dynamic input can be linked to a value that is only known when the job is scheduled. For example, you can link an input to the job name or a job property, to the name or a property of the assigned resource, or to a capability, capacity, or configuration parameter of a node. When a job is confirmed, every linked value is checked against what the input accepts. If a value is not accepted, you cannot confirm the job until this is resolved. Linking is not available for inputs that affect other inputs, nor for date/time and duration inputs.
+
+Dynamic input values are kept throughout the job lifecycle:
+
+- When you add a node from a resource pool, it gets the dynamic input values configured on that pool.
+- When you create a job from a workflow, duplicate a job or a workflow, or create recurring jobs, the dynamic input values are copied along.
+- When a job is confirmed, its dynamic input values, including the resolved linked values, are passed on to the orchestration events in MediaOps Live.
+
+If a required dynamic input has no value, the configuration is shown as incomplete.
+
+Using a single orchestration script with dynamic inputs can remove the need to create a separate script and resource pool for every variation of a setup.
+
 ## Changes
 
 ### Breaking changes
