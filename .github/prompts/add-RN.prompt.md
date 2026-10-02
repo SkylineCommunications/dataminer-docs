@@ -9,7 +9,7 @@ Can you do the following:
 
 1. Retrieve the release note from SkylineApi.
 
-1. Check if the release note is linked to one of the soft launch options listed on the following page: <https://docs.dataminer.services/dataminer/Reference/Soft-launch_options/Overview_of_Soft_Launch_Options.html>
+1. Check if the release note is linked to one of the soft-launch options listed on the page `/dataminer/Reference/Soft-launch_options/Overview_of_Soft_Launch_Options.md`.
 
 1. If it is linked to one of the soft launch options, return the soft launch option it is linked to in the chat using the following specified syntax, and abort the process. Do not continue to the next step.
 
