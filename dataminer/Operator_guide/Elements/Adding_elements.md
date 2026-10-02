@@ -127,7 +127,9 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - **Run details**: Select a compatible [DataMiner Edge Node](xref:DataMiner_Edge) as the target, and configure the interval for each script.
 
-   - **Settings**: Configure the connector-defined values for the element, such as a location, system environment, and authentication credentials. Authentication settings can use the following credential types from the Credentials Library:
+   - **Settings**: Configure the connector-defined values for the element, such as a location, system environment, IP address, IP port<!--RN 46390-->, authentication credentials, and more.
+
+     Authentication settings can use the following credential types from the Credentials Library:
 
      - Token credentials
 
