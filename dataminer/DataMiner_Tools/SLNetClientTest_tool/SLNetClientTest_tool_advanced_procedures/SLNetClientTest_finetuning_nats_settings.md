@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_finetuning_nats_settings
-description: "Use the SLNetClientTest tool to check and fine-tune the NATS settings NATSDisasterCheck, NATSResetWindow, and NATSRestartTimeout."
+description: "Use the SLNetClientTest tool to configure NATS cluster self-healing, limit reset frequency, and set the maximum time to wait for NATS to restart."
 ---
 
 # Fine-tuning NATS settings

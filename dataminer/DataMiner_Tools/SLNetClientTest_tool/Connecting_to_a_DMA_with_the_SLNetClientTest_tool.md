@@ -1,6 +1,6 @@
 ---
 uid: Connecting_to_a_DMA_with_the_SLNetClientTest_tool
-description: "Follow these steps to connect the SLNetClientTest tool to a DataMiner Agent. Only then will you be able to use any of its functions."
+description: "Connect the SLNetClientTest tool to a DataMiner Agent first before you start making use of the tool's functionality."
 ---
 
 # Connecting to a DMA with the SLNetClientTest tool

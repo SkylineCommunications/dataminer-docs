@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_triggering_api
-description: "Learn how, using the SLNetClientTest tool, you can test user-defined APIs, and manage API tokens and definitions."
+description: "Learn how, using the SLNetClientTest tool, you can test user-defined APIs and manage API tokens and definitions."
 ---
 
 # Triggering and managing user-defined APIs
