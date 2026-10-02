@@ -295,7 +295,7 @@ A number of fixes have been made to the *ReIndexElasticSearchIndexes* tool:
 
 - *ReIndexElasticSearchIndexes* now handles null responses and failed destination reads without stopping unexpectedly. It also reduces redundant `_cat/indices` requests for performance and normalizes the `-D`/`--DBPrefix` argument so it can be supplied without a trailing hyphen.
 
-#### Problem when APIGateway when shut down [ID 46619]
+#### Problem when APIGateway was shut down [ID 46619]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
 
