@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumPortSettingsFlowControl
+description: "Review the allowed values for the EnumPortSettingsFlowControl simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumPortSettingsFlowControl simple type

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Sequence-noset
+description: "Learn how the noset attribute must be set to true whenever a Sequence element is used in a DataMiner connector protocol."
 ---
 
 # noset attribute

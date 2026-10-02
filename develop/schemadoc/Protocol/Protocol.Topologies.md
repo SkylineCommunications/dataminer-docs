@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topologies
+description: "Consult the DataMiner connector protocol schema reference for the Topologies element, which collects topology definitions for diagrams in an EPM element."
 ---
 
 # Topologies element

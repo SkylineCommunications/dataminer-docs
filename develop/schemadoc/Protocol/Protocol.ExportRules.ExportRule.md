@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule
+description: "Learn how the ExportRule element changes selected XML content in protocols exported for Dynamic Virtual Elements in a DataMiner connector protocol."
 ---
 
 # ExportRule element

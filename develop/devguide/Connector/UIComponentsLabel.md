@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsLabel
+description: "Define text or numeric labels for standalone connector parameters, including descriptions, tooltip subtext, measurement types, and decimal precision."
 ---
 
 # Label

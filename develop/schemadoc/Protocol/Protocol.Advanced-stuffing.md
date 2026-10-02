@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Advanced-stuffing
+description: "Learn how the stuffing attribute configures byte stuffing sequences and offsets for smart-serial or GPIB communication in a DataMiner connector protocol."
 ---
 
 # stuffing attribute

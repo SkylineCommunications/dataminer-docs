@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-options
+description: "Learn how to use the options attribute to configure SNMP set and get behavior for a parameter in a DataMiner connector protocol."
 ---
 
 # options attribute

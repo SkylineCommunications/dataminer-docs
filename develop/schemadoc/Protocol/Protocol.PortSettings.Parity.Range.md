@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Parity.Range
+description: "Learn how the Range element under Parity defines the first and last parity values users can select for an element."
 ---
 
 # Range element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion-id
+description: "Consult the DataMiner connector protocol schema reference for the id attribute, which assigns the unique ID of a major version component."
 ---
 
 # id attribute

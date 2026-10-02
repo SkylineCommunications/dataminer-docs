@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption-name
+description: "Learn how the name attribute identifies a Process Automation queue option for clients, such as QueueSize or QueueSizeMax."
 ---
 
 # name attribute

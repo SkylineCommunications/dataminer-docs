@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsWebSocketsCommunication
+description: "Implement WebSocket request-response and push communication with command, response, and pair constructs, including multiple connections."
 ---
 
 # Communication

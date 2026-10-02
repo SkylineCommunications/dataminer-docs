@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Trending
+description: "Learn how the Trending element configures average trend aggregation and optional logarithmic scaling for a parameter in a DataMiner connector protocol."
 ---
 
 # Trending element

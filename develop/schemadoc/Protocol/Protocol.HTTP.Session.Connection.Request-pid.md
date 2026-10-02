@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request-pid
+description: "Learn how the pid attribute identifies the parameter whose value replaces the request URL in a DataMiner connector protocol."
 ---
 
 # pid attribute

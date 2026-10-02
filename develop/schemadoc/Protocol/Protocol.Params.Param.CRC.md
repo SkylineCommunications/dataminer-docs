@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CRC
+description: "Learn how to use the CRC element to define the parameters and algorithm used to calculate a command or response CRC in a DataMiner connector protocol."
 ---
 
 # CRC element

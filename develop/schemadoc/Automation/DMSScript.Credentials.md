@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Credentials
+description: "Use the Credentials element to list an automation script's linked credentials while keeping each credential ID and name unique."
 ---
 
 # Credentials element

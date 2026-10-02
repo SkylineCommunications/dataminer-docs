@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.IPport.DefaultValue
+description: "Learn how the DefaultValue element under IPport sets the default IP port number for a new element connection."
 ---
 
 # DefaultValue element

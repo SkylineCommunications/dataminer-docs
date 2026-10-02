@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.Hierarchy-path
+description: "Consult the DataMiner connector protocol schema reference for the path attribute, which defines simple table links for a tree control hierarchy."
 ---
 
 # path attribute

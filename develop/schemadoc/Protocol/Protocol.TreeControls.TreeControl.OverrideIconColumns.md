@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.OverrideIconColumns
+description: "Consult the DataMiner connector protocol schema reference for the OverrideIconColumns element, which sets custom row icons from Discreet column values."
 ---
 
 # OverrideIconColumns element

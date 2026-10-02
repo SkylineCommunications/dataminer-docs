@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumQActionEncoding
+description: "Review the allowed values for the EnumQActionEncoding simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumQActionEncoding simple type

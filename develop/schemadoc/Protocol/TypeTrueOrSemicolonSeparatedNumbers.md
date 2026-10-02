@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeTrueOrSemicolonSeparatedNumbers
+description: "Use the TypeTrueOrSemicolonSeparatedNumbers simple type to accept true or a semicolon-separated number list in the DataMiner connector protocol schema."
 ---
 
 # TypeTrueOrSemicolonSeparatedNumbers simple type

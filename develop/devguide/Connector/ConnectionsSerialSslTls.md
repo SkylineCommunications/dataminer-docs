@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSerialSslTls
+description: "Learn about SSL/TLS encryption for TCP/IP serial connections, supported TLS versions, current limitations, and certificate verification for HTTP elements."
 ---
 
 # SSL/TLS encryption

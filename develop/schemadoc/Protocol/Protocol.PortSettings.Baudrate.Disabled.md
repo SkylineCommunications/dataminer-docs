@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Baudrate.Disabled
+description: "Learn how the Disabled element under Baudrate controls whether users can change the baud rate in the DataMiner user interface."
 ---
 
 # Disabled element

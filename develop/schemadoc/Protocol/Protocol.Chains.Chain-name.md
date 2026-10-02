@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain-name
+description: "Learn how the name attribute sets the chain name used for its corresponding DataMiner tab in a DataMiner connector protocol."
 ---
 
 # name attribute

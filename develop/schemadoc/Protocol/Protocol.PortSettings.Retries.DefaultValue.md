@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Retries.DefaultValue
+description: "Learn how the DefaultValue element under Retries sets the maximum number of times DataMiner resends a failed request."
 ---
 
 # DefaultValue element

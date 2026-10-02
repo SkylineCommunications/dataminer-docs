@@ -1,5 +1,6 @@
 ---
 uid: LogicActionSetNext
+description: "Use the 'set next' action to change a pair's next value dynamically from a fixed value or parameter for serial, smart-serial, or GPIB communication."
 ---
 
 # set next

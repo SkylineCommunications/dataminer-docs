@@ -1,5 +1,6 @@
 ---
 uid: Protocol.GeneralParameters.GeneralParameter-group
+description: "Learn how the group attribute selects the general parameter group to configure in a DataMiner connector protocol."
 ---
 
 # group attribute

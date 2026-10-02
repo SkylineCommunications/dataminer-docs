@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeTimerContentGroup
+description: "Use the TypeTimerContentGroup simple type to accept a group ID or a column-based group selector in the DataMiner connector protocol schema."
 ---
 
 # TypeTimerContentGroup simple type

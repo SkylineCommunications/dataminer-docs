@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Responses.Response.Name
+description: "Learn how the Response Name element assigns the response name, which often matches its associated command."
 ---
 
 # Name element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Units
+description: "Learn how the Units element sets the unit of measurement shown with a parameter value throughout the user interface in a DataMiner connector protocol."
 ---
 
 # Units element

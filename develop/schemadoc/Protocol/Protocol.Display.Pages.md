@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display.Pages
+description: "Learn how the Pages element contains Data Display page definitions and their visibility settings in a DataMiner connector protocol."
 ---
 
 # Pages element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-regex
+description: "Learn how the regex attribute matches XML values that an export rule should replace in a DataMiner connector protocol."
 ---
 
 # regex attribute

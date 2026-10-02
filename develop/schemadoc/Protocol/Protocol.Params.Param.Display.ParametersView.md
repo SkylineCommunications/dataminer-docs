@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.ParametersView
+description: "Learn how the ParametersView element displays a parameter as a chart and defines its chart type, sources, and height in a DataMiner connector protocol."
 ---
 
 # ParametersView element

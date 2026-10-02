@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsOverview
+description: "Follow how groups, parameters, pairs, sessions, actions, and triggers move through SLProtocol and interact with communication processes."
 ---
 
 # Overview

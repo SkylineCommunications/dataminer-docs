@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeTimerContentGroupCol
+description: "Use the TypeTimerContentGroupCol simple type to validate the col:number:number group selector format in the DataMiner connector protocol schema."
 ---
 
 # TypeTimerContentGroupCol simple type

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.InternalLicenses.InternalLicense
+description: "Learn how the InternalLicense element excludes elements running the protocol from the DataMiner element license count."
 ---
 
 # InternalLicense element

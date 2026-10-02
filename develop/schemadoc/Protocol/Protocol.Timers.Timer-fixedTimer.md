@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer-fixedTimer
+description: "Learn how the fixedTimer attribute prevents users from changing a timer interval within a relative timer protocol."
 ---
 
 # fixedTimer attribute

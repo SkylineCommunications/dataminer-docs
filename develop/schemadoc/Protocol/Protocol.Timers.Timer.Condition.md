@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Condition
+description: "Consult the DataMiner connector protocol schema reference for the Condition element, which sets the condition required for a timer to execute."
 ---
 
 # Condition element

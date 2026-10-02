@@ -1,5 +1,6 @@
 ---
 uid: AutomationActionCSharpCode
+description: "Configure a C# code action with executable code, namespace, DLL, and script references, plus debug and precompilation options."
 ---
 
 # C# code

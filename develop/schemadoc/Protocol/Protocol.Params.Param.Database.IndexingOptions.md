@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.IndexingOptions
+description: "Learn how to use the IndexingOptions element to configure OpenSearch or Elasticsearch storage for logger table data in a DataMiner connector protocol."
 ---
 
 # IndexingOptions element

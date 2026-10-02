@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeTriggerTime
+description: "Use the TypeTriggerTime simple type to accept defined trigger timing values or a custom string in the DataMiner connector protocol schema."
 ---
 
 # TypeTriggerTime simple type

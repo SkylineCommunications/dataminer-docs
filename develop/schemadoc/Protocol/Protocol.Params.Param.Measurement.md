@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement
+description: "Learn how the Measurement element defines a parameter display type and its optional discreet values or digital threshold in a DataMiner connector protocol."
 ---
 
 # Measurement element

@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Script.Exe.Script
+description: "Use the Exe Script element to name the automation script invoked by a script action within another DataMiner automation script."
 ---
 
 # Script element

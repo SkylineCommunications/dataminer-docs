@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.OID
+description: "Learn how the OID element defines an SNMP object identifier, its construction, polling address, and retrieval options in a DataMiner connector protocol."
 ---
 
 # OID element

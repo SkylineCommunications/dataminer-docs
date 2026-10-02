@@ -1,5 +1,6 @@
 ---
 uid: Debugging_connectors_tracing_the_stack
+description: "Trace a QAction conversion exception from the element log and stack trace to the Protocol.xml, then investigate the parameter's type and initialization."
 ---
 
 # Debugging connectors: Tracing the stack

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Type-distribution
+description: "Learn how the distribution attribute shares parameter data between linked parent and child elements based on protocol and connection criteria."
 ---
 
 # distribution attribute

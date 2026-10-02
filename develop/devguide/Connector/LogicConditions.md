@@ -1,5 +1,6 @@
 ---
 uid: LogicConditions
+description: "Define connector conditions with supported arithmetic, relational, equality, bitwise, and logical operators, operands, and placeholders."
 ---
 
 # Conditions

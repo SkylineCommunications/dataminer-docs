@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Display-state
+description: "Learn how the state attribute shows an intercepted exception value in gray when its display state is disabled in a DataMiner connector protocol."
 ---
 
 # state attribute

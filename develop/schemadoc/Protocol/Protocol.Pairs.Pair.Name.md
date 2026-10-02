@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair.Name
+description: "Learn how to use the Name element to assign a name to a command and response pair in a DataMiner connector protocol."
 ---
 
 # Name element

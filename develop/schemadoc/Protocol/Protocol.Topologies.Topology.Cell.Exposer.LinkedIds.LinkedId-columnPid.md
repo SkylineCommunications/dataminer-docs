@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId-columnPid
+description: "Consult the DataMiner connector protocol schema reference for the columnPid attribute, which identifies the linking column when tables have no foreign key."
 ---
 
 # columnPid attribute

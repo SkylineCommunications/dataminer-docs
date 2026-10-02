@@ -1,5 +1,6 @@
 ---
 uid: Protocol.InternalLicenses.InternalLicense-type
+description: "Find the type attribute under the InternalLicense element in the DataMiner connector protocol schema hierarchy."
 ---
 
 # type attribute

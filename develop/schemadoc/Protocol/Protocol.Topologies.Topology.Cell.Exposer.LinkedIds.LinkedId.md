@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId
+description: "Consult the DataMiner connector protocol schema reference for the LinkedId element, which identifies a linked table and its optional linking column."
 ---
 
 # LinkedId element

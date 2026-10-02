@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion
+description: "Consult the DataMiner connector protocol schema reference for the MajorVersion element, which defines a major version with its changes and minor versions."
 ---
 
 # MajorVersion element

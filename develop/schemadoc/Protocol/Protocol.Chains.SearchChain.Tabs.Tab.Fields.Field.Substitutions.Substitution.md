@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Substitutions.Substitution
+description: "Learn how the Substitution element defines a regular expression transformation applied to search field content in a DataMiner connector protocol."
 ---
 
 # Substitution element

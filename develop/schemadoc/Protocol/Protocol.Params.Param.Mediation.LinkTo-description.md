@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation.LinkTo-description
+description: "Learn how the description attribute adds explanatory text to a parameter link in the DataMiner Mediation Layer in a DataMiner connector protocol."
 ---
 
 # description attribute

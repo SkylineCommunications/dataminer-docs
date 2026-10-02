@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.HyperLinks.HyperLink
+description: "Learn how the HyperLink element defines a deprecated custom alarm shortcut command that is unsupported by DataMiner Cube in a DataMiner connector protocol."
 ---
 
 # HyperLink element

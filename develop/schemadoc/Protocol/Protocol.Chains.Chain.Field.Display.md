@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.Display
+description: "Learn how the Display element configures field display and selection visibility settings for an EPM chain in a DataMiner connector protocol."
 ---
 
 # Display element

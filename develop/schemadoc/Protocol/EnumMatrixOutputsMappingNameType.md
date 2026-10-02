@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumMatrixOutputsMappingNameType
+description: "Review the allowed values for the EnumMatrixOutputsMappingNameType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumMatrixOutputsMappingNameType simple type

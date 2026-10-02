@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumParametersViewType
+description: "Review the allowed values for the EnumParametersViewType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumParametersViewType simple type

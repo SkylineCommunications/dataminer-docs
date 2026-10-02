@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Display
+description: "Learn how the Display element sets the label shown when a parameter matches a defined discreet value in a DataMiner connector protocol."
 ---
 
 # Display element

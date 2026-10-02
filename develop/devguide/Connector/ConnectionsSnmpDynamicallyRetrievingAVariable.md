@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpDynamicallyRetrievingAVariable
+description: "Dynamically retrieve an SNMP parameter or table data from an OID, and control what DataMiner gets and where it queues the request."
 ---
 
 # Dynamically retrieving a variable

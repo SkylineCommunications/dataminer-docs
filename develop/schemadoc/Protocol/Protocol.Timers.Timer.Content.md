@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Content
+description: "Consult the DataMiner connector protocol schema reference for the Content element, which lists the groups to execute when its timer is triggered."
 ---
 
 # Content element

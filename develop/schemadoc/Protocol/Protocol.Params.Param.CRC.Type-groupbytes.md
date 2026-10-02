@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CRC.Type-groupbytes
+description: "Learn how to use the groupbytes attribute to group bytes as hexadecimal or binary values for supported CRC operations in a DataMiner connector protocol."
 ---
 
 # groupbytes attribute

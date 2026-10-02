@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapMappings.TrapMapping
+description: "Learn how the TrapMapping element matches SNMP trap bindings and determines the severity and value used to generate an alarm."
 ---
 
 # TrapMapping element

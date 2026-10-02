@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Information
+description: "Learn how the Information element defines tooltip content and default alarm details that provide context for a parameter in a DataMiner connector protocol."
 ---
 
 # Information element

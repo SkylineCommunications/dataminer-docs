@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsRedundantPolling
+description: "Configure redundant polling across exactly two matching connections and understand which timeout and SNMP scenarios trigger an interface switch."
 ---
 
 # Redundant polling

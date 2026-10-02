@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsMatrixComposingCrosspoints
+description: "Update standard matrix crosspoints from a QAction, maintain a buffer to remove stale connections, and minimize costly SendToDisplay calls."
 ---
 
 # Composing crosspoints on matrix parameters

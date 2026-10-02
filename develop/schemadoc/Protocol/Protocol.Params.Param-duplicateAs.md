@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-duplicateAs
+description: "Learn how to use the duplicateAs attribute to show another parameter's value in one or more view table columns in a DataMiner connector protocol."
 ---
 
 # duplicateAs attribute

@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsChart
+description: "Create pie, column, or row charts from numeric standalone or table parameters by configuring ParametersView and selecting the values to include."
 ---
 
 # Chart

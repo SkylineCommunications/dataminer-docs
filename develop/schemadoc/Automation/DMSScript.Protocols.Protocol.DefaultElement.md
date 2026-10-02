@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Protocols.Protocol.DefaultElement
+description: "Use the DefaultElement element to identify an automation script dummy's default element in Agent ID and element ID format."
 ---
 
 # DefaultElement element

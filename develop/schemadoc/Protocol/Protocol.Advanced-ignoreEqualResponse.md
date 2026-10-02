@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Advanced-ignoreEqualResponse
+description: "Learn how the ignoreEqualResponse attribute ignores a repeated serial, smart-serial, or GPIB response and its trigger in a DataMiner connector protocol."
 ---
 
 # ignoreEqualResponse attribute

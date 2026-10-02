@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SetCommunity.Disabled
+description: "Learn how the Disabled element under SetCommunity controls whether users can change the SNMP set community string in the user interface."
 ---
 
 # Disabled element

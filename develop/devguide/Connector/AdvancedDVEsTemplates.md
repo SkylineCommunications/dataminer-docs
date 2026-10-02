@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDVEsTemplates
+description: "Understand how alarm and trend templates on DVE parent and child elements interact, including when a child template overrides parent configuration."
 ---
 
 # Assigning templates to DVE parent or child elements

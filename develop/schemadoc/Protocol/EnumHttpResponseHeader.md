@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumHttpResponseHeader
+description: "Review the allowed values for the EnumHttpResponseHeader simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumHttpResponseHeader simple type

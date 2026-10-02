@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeQActionOptions
+description: "Use the TypeQActionOptions simple type to validate supported QAction option strings and DLL names in the DataMiner connector protocol schema."
 ---
 
 # TypeQActionOptions simple type

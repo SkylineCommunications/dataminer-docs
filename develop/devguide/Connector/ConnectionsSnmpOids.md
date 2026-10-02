@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpOids
+description: "Learn how SNMP OIDs identify scalar and tabular variables, and how table indexes use single, external, composite, or typed keys."
 ---
 
 # OIDs

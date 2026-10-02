@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Type-scientificNotation
+description: "Learn how the scientificNotation attribute selects universal or scientific notation with culture-independent formatting in a DataMiner connector protocol."
 ---
 
 # scientificNotation attribute

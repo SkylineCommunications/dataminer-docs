@@ -1,5 +1,6 @@
 ---
 uid: LogicActionRestartTimer
+description: "Use the 'restart timer' action to finish the current group, remove that timer's remaining queued groups, and optionally reschedule it immediately."
 ---
 
 # restart timer

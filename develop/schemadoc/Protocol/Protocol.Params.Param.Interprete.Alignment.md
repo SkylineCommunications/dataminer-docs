@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Alignment
+description: "Learn how the Alignment element sets the starting alignment used to extract multibyte BCD values from an incoming stream in a DataMiner connector protocol."
 ---
 
 # Alignment element

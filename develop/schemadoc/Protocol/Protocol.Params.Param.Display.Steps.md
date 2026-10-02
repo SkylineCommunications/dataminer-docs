@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Steps
+description: "Learn how the Steps element sets the increment used by a write parameter control when users adjust its value in a DataMiner connector protocol."
 ---
 
 # Steps element
