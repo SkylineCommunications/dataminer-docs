@@ -27,6 +27,17 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
+#### Spectrum: Measurement point selections are now synced between clients in shared mode [ID 46513]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a Spectrum component is in shared mode, its measurement point cycle is shared with other users. However, up to now, selecting or deselecting a measurement point would not immediately update the other connected clients.
+
+From now on, changes to measurement point selections will immediately be pushed to the other clients.
+
+> [!NOTE]
+> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.12 or newer.
+
 #### Spectrum: Automatic standby will no longer be applied in shared mode [ID 46574]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
