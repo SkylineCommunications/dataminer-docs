@@ -135,7 +135,7 @@ In some cases, when SLScripting tried to log that a different version of an asse
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
 
-#### Problem when APIGateway when shut down [ID 46619]
+#### Problem when APIGateway was shut down [ID 46619]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
 
