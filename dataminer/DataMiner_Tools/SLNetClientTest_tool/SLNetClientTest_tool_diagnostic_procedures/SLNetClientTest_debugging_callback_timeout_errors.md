@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_debugging_callback_timeout_errors
+description: "Use SLNetClientTest to diagnose 30-second callback timeout errors, inspect hidden runtime messages, and dump packet data as .slnetdump files."
 ---
 
 # Debugging callback timeout errors

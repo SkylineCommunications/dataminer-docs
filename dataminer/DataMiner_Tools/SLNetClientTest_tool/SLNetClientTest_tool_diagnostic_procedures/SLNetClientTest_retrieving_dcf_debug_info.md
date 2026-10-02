@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_retrieving_dcf_debug_info
+description: "Retrieve DCF debug information by setting Debug to True on SLNet connectivity messages to inspect paths, service matches, and top 10 frequent connections."
 ---
 
 # Retrieving DCF debug information

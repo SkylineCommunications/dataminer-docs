@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Viewing_SLNet_calls_being_sent
+description: "Follow SLNet calls in SLNetClientTest by hooking into the active Cube, SLManagedScripting, or SLManagedAutomation session to inspect outgoing requests."
 ---
 
 # Viewing SLNet calls being sent

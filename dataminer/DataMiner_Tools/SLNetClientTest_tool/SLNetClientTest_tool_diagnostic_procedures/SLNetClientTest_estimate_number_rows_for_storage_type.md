@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_estimate_number_rows_for_storage_type
+description: "Use SLNetClientTest to estimate database rows for a storage type, optionally filter results, and avoid query timeouts on large tables."
 ---
 
 # Requesting an estimate of the number of rows for a storage type in the database

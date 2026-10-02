@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Checking_the_hosting_Agent_cache
+description: "Learn how to use the SLNetClientTest tool to inspect the SLDataMiner hosting cache and verify whether an element is hosted by the local Agent."
 ---
 
 # Checking the hosting Agent cache

@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_info_pending_incoming_events
+description: "Use SLNetClientTest to check the pending incoming event count between DMAs and view incoming packages waiting to be processed."
 ---
 
 # Requesting information about pending incoming events

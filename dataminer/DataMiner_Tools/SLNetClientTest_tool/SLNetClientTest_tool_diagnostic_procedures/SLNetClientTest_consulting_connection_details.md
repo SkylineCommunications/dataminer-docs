@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_consulting_connection_details
+description: "Review client or process connection details and active calls between DataMiner Agents in SLNetClientTest, including traffic counts and ProtoBuf status."
 ---
 
 # Consulting connection details

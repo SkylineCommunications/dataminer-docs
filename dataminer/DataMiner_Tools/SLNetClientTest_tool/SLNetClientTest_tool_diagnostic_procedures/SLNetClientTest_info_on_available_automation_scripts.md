@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_info_on_available_automation_scripts
+description: "Use SLNetClientTest to retrieve information on the available automation scripts, including folder, log support, and interactivity."
 ---
 
 # Retrieving information on the available automation scripts

@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element
+description: "Check an element's connection timeout states in SLNetClientTest under Diagnostics > DMA > Protocol Connection States using its name or DMA ID/Element ID."
 ---
 
 # Viewing the connection timeout states of an element

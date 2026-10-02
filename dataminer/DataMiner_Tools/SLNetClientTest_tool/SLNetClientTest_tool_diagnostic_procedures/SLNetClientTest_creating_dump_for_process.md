@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_creating_dump_for_process
+description: "Learn how to use the SLNetClientTest tool to create a dump file for a specific DataMiner process or PID to capture a snapshot for troubleshooting."
 ---
 
 # Creating a dump file for a particular process

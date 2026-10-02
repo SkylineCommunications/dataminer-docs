@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_active_merge_actions_protocols
+description: "Use SLNetClientTest to list active merge actions for a protocol by DMA and element ID or element name, and diagnose aggregated values that do not update."
 ---
 
 # Requesting a list of active merge actions for a protocol
