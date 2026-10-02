@@ -283,6 +283,14 @@ In some cases, when SLScripting tried to log that a different version of an asse
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
 
+#### Elasticsearch re-indexing tool: Rollover-managed indices could stop rolling over after migration to OpenSearch [ID 46587]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when the Elasticsearch re-indexing tool recreated rollover-managed indices during the migration from Elasticsearch to OpenSearch, the date-math expression in the `index.provided_name` field was not preserved. As a result, after the migration, the affected indices could get stuck on their last name with a string literal and stop rolling over on schedule.
+
+The tool now preserves the date-math expression in the `index.provided_name` field when recreating indices, so rollover-managed indices continue rolling over on schedule after the migration to OpenSearch.
+
 #### Problem when APIGateway when shut down [ID 46619]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
