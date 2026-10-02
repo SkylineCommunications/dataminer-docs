@@ -48,15 +48,15 @@ Watch this short video to learn how to create a new DataMiner System hosted on d
 
 1. Enter a username and password for your DataMiner account.
 
-  > [!NOTE]
-  > You cannot use any of the following usernames:
-  >
-  > - `Administrator`
-  > - `daasAdmin`
-  > - `DataMinerAdmin`
-  > - `DefaultAccount`
-  > - `Guest`
-  > - `WDAGUtilityAccount`
+   > [!NOTE]
+   > The following usernames cannot be used:
+   >
+   > - `Administrator`
+   > - `daasAdmin`
+   > - `DataMinerAdmin`
+   > - `DefaultAccount`
+   > - `Guest`
+   > - `WDAGUtilityAccount`
 
 1. Select the box next to *I agree to the License and Service Terms*.
 
