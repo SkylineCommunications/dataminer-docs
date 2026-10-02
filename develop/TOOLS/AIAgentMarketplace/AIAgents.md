@@ -1,13 +1,13 @@
 ---
 uid: AIAgents
-description: Learn what DataMiner AI agents are, why they can help with development, and when to use them alongside your existing tools.
+description: "Learn what DataMiner AI agents are, why they can help with development, and when to use them alongside your existing tools."
 ---
 
 # AI agents
 
 AI agents help you develop DataMiner solutions using task-specific instructions, reusable skills, and tools. You describe what you need, and the agents can inspect files, make changes, and run checks in your workspace.
 
-Skyline distributes them through use-case-specific plugins in the [AI Agent marketplace](xref:AIAgentMarketplace). They run in your AI client, such as GitHub Copilot or Claude Code, and are distinct from the DataMiner Agents that host your DataMiner System.
+Skyline distributes them through use-case-specific plugins in the [AI Agent marketplace](xref:AIAgentMarketplace). They run in your AI client, such as GitHub Copilot or Claude Code. They should not be confused with "DataMiner Agents", i.e., DataMiner nodes.
 
 ## Agents, skills, and plugins
 
@@ -19,7 +19,7 @@ A plugin can contain one agent or several cooperating agents. An orchestrator ca
 
 ## Why use an agent
 
-Agents bring DataMiner-specific guidance into your workspace, reduce repetitive work, and help you follow established development patterns. A plugin brings the relevant expertise together so you do not need to configure each agent and skill separately.
+AI agents bring DataMiner-specific guidance into your workspace, reduce repetitive work, and help you follow established development patterns. A plugin brings the relevant expertise together so you do not need to configure each agent and skill separately.
 
 ## When to use an agent
 
