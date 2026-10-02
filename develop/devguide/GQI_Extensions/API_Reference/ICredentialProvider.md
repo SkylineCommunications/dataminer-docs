@@ -12,7 +12,7 @@ description: "API reference for the ICredentialProvider interface, which retriev
 
 Provides access to credentials that have been granted to a GQI extension library.
 
-Available starting from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 and API version 1.5.0. <!-- RN 46279 -->
+Available starting from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 and API version 1.5.0. <!-- RN 46279 + RN 46526-->
 
 > [!TIP]
 > See [Using credentials in GQI extensions](xref:GQI_Extensions_Credentials) for information about granting and retrieving credentials.
