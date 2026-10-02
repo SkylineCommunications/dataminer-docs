@@ -765,6 +765,14 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
 
+#### Service & Resource Management: ReservationInstance property updates are now compatible with rolling upgrades [ID 46627]
+
+<!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
+
+In preparation of the upcoming rolling updates feature, Resource Manager will now use the lock-coordination path for `ReservationInstance` property updates when the minimum server version across the cluster is Feature Version 10.6.11 or later. When the cluster version is unknown or any DMA is running an older version, Resource Manager will continue to use the existing master-executed route. This prevents lock-coordination messages from being sent to SLNet versions that do not support them during a rolling upgrade.
+
+As DMAs are upgraded, Resource Manager will automatically enable the lock-coordination path once all DMAs are running a compatible version. No restart is required. Property updates remain unchanged during the transition, but do not benefit from the distributed path's performance and scalability improvements until all DMAs are compatible.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
