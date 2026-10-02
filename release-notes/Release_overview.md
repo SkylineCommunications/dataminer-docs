@@ -6,11 +6,13 @@ uid: Release_overview
 
 On this page, you can find an overview of the scheduled DataMiner updates.
 
-## Core DataMiner updates 2025-2026
+## Core DataMiner updates calendar
 
 In the calendar below, you can find the release date for every release, as well as the scheduled period leading up to it, when the development teams are making code changes for it. For more information on the release cycles shown in this calendar, refer to [Core update release cycles](#core-update-release-cycles) below.
 
 ![Roadmap 2025-2026](~/release-notes/images/DM_RoadMap2025-2026-1.svg)
+
+![Roadmap 2027-2028](~/release-notes/images/DM_RoadMap2027-2028.png)
 
 ## Core update release cycles
 

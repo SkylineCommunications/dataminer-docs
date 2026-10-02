@@ -23,3 +23,5 @@ uid: Exception_handling
 	```txt
 	protocol.Log("QA" + protocol.QActionID + "|Method Name|" + e.ToString(), LogType.Error, LogLevel.NoLogging);
 	```
+
+ - An unhandled exception in a thread that outlasts the QAction that initiated it causes the SLScripting process to crash. See [Multithreading](xref:Multithreading1) for more information. 
