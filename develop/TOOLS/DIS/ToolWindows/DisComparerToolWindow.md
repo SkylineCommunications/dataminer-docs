@@ -6,7 +6,7 @@ uid: DisComparerToolWindow
 
 If you click *Tool Windows > DIS Comparer*, the *DIS Comparer* window will appear.
 
-This tool window allows you to compare two *protocol.xml* files.
+This tool window allows you to compare two *protocol.xml* files. For a list of currently implemented checks, see [Validator checks](https://aka.dataminer.services/validator-checks).
 
 By default, the *DIS Comparer* window will open undocked. Dock it just as you would dock any other tool window in Visual Studio.
 
