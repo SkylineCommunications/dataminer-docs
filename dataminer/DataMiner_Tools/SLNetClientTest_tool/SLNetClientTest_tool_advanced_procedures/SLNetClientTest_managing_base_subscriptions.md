@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_managing_base_subscriptions
+description: "Learn how, using the SLNetClientTest tool, you can manage base subscriptions to increase performance when retrieving element and parameter information."
 ---
 
 # Managing base subscriptions
