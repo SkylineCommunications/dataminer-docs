@@ -38,6 +38,18 @@ From now on, changes to measurement point selections will immediately be pushed 
 > [!NOTE]
 > This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.12 or newer.
 
+#### Spectrum: Shared-mode users can now control how configuration changes are applied [ID 46514]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a user changed the configuration of a Spectrum component in shared mode, up to now, the changes were not immediately reflected in other clients. From now on, the user can right-click the *x clients* button and select *Push changes to other users*. Other users will then receive a banner where they can apply or ignore the changes. Closing the Spectrum card also triggers the banner.
+
+The *Spectrum card behavior upon last session preset modification in shared mode* setting, under *Settings* > *Card*, will control how other clients handle pushed changes:
+
+- *Notify* (default) will display the banner.
+- *Skip* will prevent notifications and updates.
+- *Update automatically* will apply pushed changes without displaying a warning.
+
 #### Spectrum: Automatic standby will no longer be applied in shared mode [ID 46574]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
