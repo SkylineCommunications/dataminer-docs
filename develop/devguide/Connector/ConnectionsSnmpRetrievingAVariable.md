@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSnmpRetrievingAVariable
-description: "Implement periodic SNMP polling for a scalar variable by defining its parameter and OID, adding it to a group, and scheduling that group."
+description: "Learn how to retrieve an SNMP variable in a DataMiner protocol by defining its parameter and OID, adding it to a group, and scheduling that group."
 ---
 
 # Retrieving a variable

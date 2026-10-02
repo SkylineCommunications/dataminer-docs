@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSnmpExercise
-description: "Practice creating an SNMP protocol that retrieves standard system OIDs, alters sysContact, and polls an interface table in different ways."
+description: "Practice creating an SNMP protocol that retrieves standard system OIDs, alters a variable, and polls an interface table in different ways."
 ---
 
 # Exercise
