@@ -35,6 +35,14 @@ When a Spectrum card is open, it automatically enters standby mode after the con
 
 ### Fixes
 
+#### Spectrum: Marker was shown on the first trace instead of the trace where it was added [ID 46290]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you selected several measurement points in a Spectrum component and added a marker to a trace other than the first one, the marker was shown on the first trace when you reopened the card or loaded a preset.
+
+The marker will now be shown on the trace where you added it.
+
 #### Profiles: Instances, parameters, or definitions could be incorrectly marked as modified [ID 46468]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
