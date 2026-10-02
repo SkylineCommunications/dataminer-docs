@@ -74,6 +74,12 @@ In some cases, a profile instance, a profile parameter, or a profile definition 
 
 Cube now compares profile instances, parameters, and definitions independently of property order, so differences in ordering no longer cause them to be marked as modified.
 
+#### Spectrum: Last Session Preset could not be saved after loading a custom preset in shared mode [ID 46516]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you opened a Spectrum component in shared mode and loaded a custom preset, up to now, it would no longer be possible to save the Last Session Preset. As a result, changes made to the custom preset could not be pushed to the other clients.
+
 #### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
