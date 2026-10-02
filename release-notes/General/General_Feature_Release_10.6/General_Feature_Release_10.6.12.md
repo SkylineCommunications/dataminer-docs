@@ -60,6 +60,12 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
 
+#### Security enhancements [ID 46665]
+
+<!-- 46665: MR 10.7.0 - FR 10.6.12 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### SNMP GET results could be matched to the wrong polling group [ID 46507]
