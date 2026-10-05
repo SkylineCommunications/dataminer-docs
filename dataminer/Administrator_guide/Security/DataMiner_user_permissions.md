@@ -559,6 +559,9 @@ Permission to generate a protocol for a virtual function. Available from DataMin
 
 ### Modules \> Jobs
 
+> [!IMPORTANT]
+> The Jobs app is obsolete ([end of life as of DataMiner 10.5.x](xref:Software_support_life_cycles)). Starting from DataMiner 10.5.0 [CU20]/10.5.0 [CU8]/10.6.11<!-- 46170 -->, any related user permissions are no longer available.
+
 > [!NOTE]
 > These user permissions are only displayed if the DMA uses STaaS or a self-managed indexing database.
 
