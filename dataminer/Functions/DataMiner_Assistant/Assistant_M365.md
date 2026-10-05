@@ -52,8 +52,8 @@ Below you can find a quick guide of typical ways to interact with the Assistant.
 | Get account info | Displays your signed-in account details and the currently selected system. |"who am I?", "show my account" |
 | System configuration | Guides you through selecting an organization and DataMiner System to work with. | "configure system", "switch system" |
 | Get active system info | Shows the currently selected DataMiner System, including a link to open it in your browser. | "which system is active?", "show current system" |
-| Configure agent | Configure the agent that is used for the conversation. A default agent can be selected for the current system. | "select agent", "change agent" |
-| Configure model | Select the model that is used by the agent. A default model can be selected for the current agent. | "select model", "change model" |
-| Agent info | Display the agent and model that are currently being used | "agent info", "active agent" |
+| Configure agent | Configure the AI agent that is used for the conversation. A default AI agent can be selected for the current system. | "select agent", "change agent" |
+| Configure model | Select the model that is used by the AI agent. A default model can be selected for the current AI agent. | "select model", "change model" |
+| Agent info | Display the AI agent and model that are currently being used | "agent info", "active agent" |
 | Live system queries | Sends queries to the DataMiner Assistant for real-time data (e.g., alarms, elements, services) and provides links to the monitoring UI. | "show active alarms", "what services are running?" |
 | Session reset | Prompts for confirmation, then clears the conversation history so you can start fresh while staying signed in. | "reset", "start over", "clear history" |
