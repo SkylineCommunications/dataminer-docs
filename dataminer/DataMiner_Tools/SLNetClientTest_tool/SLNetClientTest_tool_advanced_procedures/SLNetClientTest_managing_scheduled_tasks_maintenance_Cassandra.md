@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_managing_scheduled_tasks_maintenance_Cassandra
+description: "Learn how, using the SLNetClientTest tool, you can manage scheduled tasks to perform periodic Cassandra database maintenance."
 ---
 
 # Managing scheduled tasks for maintenance of a Cassandra database

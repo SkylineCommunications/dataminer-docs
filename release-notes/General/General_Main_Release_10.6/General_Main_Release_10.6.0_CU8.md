@@ -178,15 +178,19 @@ In some cases, when SLScripting tried to log that a different version of an asse
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
 
-#### Elasticsearch re-indexing tool: Rollover-managed indices could stop rolling over after migration to OpenSearch [ID 46587]
+#### Elasticsearch re-indexing tool: Various fixes [ID 46587]
 
 <!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
 
-Up to now, when the Elasticsearch re-indexing tool recreated rollover-managed indices during the migration from Elasticsearch to OpenSearch, the date-math expression in the `index.provided_name` field was not preserved. As a result, after the migration, the affected indices could get stuck on their last name with a string literal and stop rolling over on schedule.
+A number of fixes have been made to the Elasticsearch re-indexing tool (*ReIndexElasticSearchIndexes*):
 
-The tool now preserves the date-math expression in the `index.provided_name` field when recreating indices, so rollover-managed indices continue rolling over on schedule after the migration to OpenSearch.
+- Up to now, after migrating from Elasticsearch to OpenSearch, the Elasticsearch re-indexing tool could replace the date-math expression in the `index.provided_name` field with a literal index name. This could prevent rollover-managed indices from rolling over on schedule. The tool now preserves the expression when it recreates indices.
 
-#### Problem when APIGateway when shut down [ID 46619]
+- The tool now swaps aliases atomically, verifies that exactly one index has the write flag on the active alias, and compares alias sets without relying on their order. It also skips index families that should not roll over and finds the next available sequence number when the expected one is already in use. Before modifying indices, it checks whether the cluster has enough shard capacity and, if needed, provides the suggested `cluster.max_shards_per_node` setting. You can bypass this check with `--SkipShardPreflight` if the cluster has already been sized.
+
+- The tool now handles null responses and failed destination reads without stopping unexpectedly. It also reduces redundant `_cat/indices` requests for performance and normalizes the `-D`/`--DBPrefix` argument so it can be supplied without a trailing hyphen.
+
+#### Problem when APIGateway was shut down [ID 46619]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
 

@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_protocol_buffer_serialization
+description: "Learn how, using the SLNetClientTest tool, you can check, enable, or disable protocol buffer serialization."
 ---
 
 # Enabling or disabling protocol buffer serialization

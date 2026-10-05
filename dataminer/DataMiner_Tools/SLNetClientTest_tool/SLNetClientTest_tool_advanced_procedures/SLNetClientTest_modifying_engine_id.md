@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_modifying_engine_id
+description: "Learn how, using the SLNetClientTest tool, you can modify a DMA's engine ID, which is used for northbound SNMP traffic."
 ---
 
 # Modifying the engine ID of a DMA

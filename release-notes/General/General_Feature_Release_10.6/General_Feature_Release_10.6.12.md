@@ -60,6 +60,12 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
 
+#### Security enhancements [ID 46665]
+
+<!-- 46665: MR 10.7.0 - FR 10.6.12 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### SNMP GET results could be matched to the wrong polling group [ID 46507]
@@ -69,3 +75,9 @@ The generated package now includes the following files in the `Elastic` folder f
 When multiple polling groups were executed concurrently, results from SNMP GET requests could be matched to the wrong group, potentially causing runtime errors.
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
+
+#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.

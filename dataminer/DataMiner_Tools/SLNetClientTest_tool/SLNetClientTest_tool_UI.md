@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_tool_UI
+description: "Explore the SLNetClientTest tool UI, which allows you to perform a host of different diagnostic and troubleshooting commands."
 ---
 
 # Overview of the SLNetClientTest tool UI
