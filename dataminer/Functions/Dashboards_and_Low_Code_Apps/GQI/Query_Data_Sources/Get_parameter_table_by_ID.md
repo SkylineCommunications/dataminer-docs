@@ -10,9 +10,7 @@ From DataMiner 10.2.0/10.1.5 onwards, you can retrieve a parameter table from ex
 
 From DataMiner 10.2.0/10.2.1 onwards, an *Update data* option is available in the *Settings* pane if you use this data source. When you enable this, the component will automatically refresh the data when changes are detected.
 
-From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!--RN 46033-->, write-only columns, such as button and action/configuration columns, are excluded from default selections and new query-builder capability choices. Existing queries that explicitly reference these columns will continue to resolve and execute. When explicitly selected, the columns will remain available for operators such as *Filter*, *Sort*, *Aggregate*, and *Join*.
-
-Items marked as hidden by GQI are excluded from the query-builder argument tree by default<!--RN 46246-->. Existing queries that already selected a hidden item can still be loaded and executed. If you deselect a hidden item, it will remain available until you close and reopen the query builder.
+From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!--RN 46033-->, write-only columns, such as button and action/configuration columns, are excluded from default selections and new query builder capability choices. Existing queries that explicitly reference these columns will continue to resolve and execute. When explicitly selected, the columns will remain available for operators such as *Filter*, *Sort*, *Aggregate*, and *Join*.
 
 > [!TIP]
 > If you encounter problems with protocol changes not appearing in the query results, please refer to the following troubleshooting steps: [What should I do if I do not see my protocol changes applied in a GQI query result?](xref:Dashboards_and_Low_Code_Apps_FAQ#what-should-i-do-if-i-do-not-see-my-protocol-changes-applied-in-a-gqi-query-result)
