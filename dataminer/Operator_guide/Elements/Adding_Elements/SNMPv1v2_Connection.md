@@ -24,3 +24,5 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 - **Get community string**: The community string used when reading values from the device. The default value, unless overridden in the protocol, is *public*.
 
 - **Set community string**: The community string used when setting values on the device. The default value, unless overridden in the protocol, is *private*.
+
+  Note that setting an empty set community string is only possible from DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!-- 46535+46536 -->, and only if the [SnmpPollingSnmpPlusPlusOnly](xref:Overview_of_Soft_Launch_Options#snmppollingsnmpplusplusonly) soft-launch option is enabled.
