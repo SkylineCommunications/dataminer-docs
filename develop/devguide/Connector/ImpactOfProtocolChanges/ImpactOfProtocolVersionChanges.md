@@ -27,7 +27,7 @@ It is important to assess if a major change will be needed as soon as possible t
 
 There are many protocol changes that can cause impact.
 
-Some of them can automatically be detected by the [DIS Comparer](https://aka.dataminer.services/dis-comparer-tool-window). For a list of currently implemented checks, see [Validator checks](https://aka.dataminer.services/validator-checks)
+Some of them can automatically be detected by the [DIS Comparer](xref:DisComparerToolWindow). For a list of currently implemented checks, see [Validator checks](https://aka.dataminer.services/validator-checks)
 
 The nature and severity of the impact will be documented via the connector XML [VersionHistory](xref:Manifest.VersionHistory) subtags along with the actions that need to be taken to overcome the impact. This information will then be exposed both in the Catalog and in DataMiner Cube when a pre-existing element is updated.
 
