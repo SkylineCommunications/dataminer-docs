@@ -94,7 +94,7 @@ To enable Swarming using SLNetClientTest tool:
 
 1. In the *Message Type* dropdown list, select the message *Skyline.DataMiner.Net.Swarming.EnableSwarmingRequest*.
 
-1. Optionally, from DataMiner 10.6.11/10.7.0 onwards<!--RN 46340-->, set the *AnalyzeAlarmIDUsage* property to "false" to skip the analysis of legacy alarm ID usage in scripts.
+1. Optionally, from DataMiner 10.6.11/10.7.0 onwards<!--RN 46340-->, set the *AnalyzeAlarmIDUsage* property to "false" to skip the analysis of legacy alarm ID usage in scripts and protocols.
 
    By default, this analysis is performed. Skipping it can significantly reduce the execution time if you have already run a separate [*SwarmingPrerequisitesCheckRequest*](#running-a-prerequisites-check) and resolved all reported alarm ID issues.
 
@@ -107,7 +107,7 @@ To enable Swarming using SLNetClientTest tool:
 
    If a confirmation box appears, click *Yes*.
 
-   The prerequisites will be checked for all Agents in the system, which can take several minutes. Unless you disabled the *AnalyzeAlarmIDUsage* property, this includes checking the usage of legacy alarm IDs in scripts. If the prerequisites are met, Swarming will be enabled and all Agents in the DMS will be **restarted**.
+   The prerequisites will be checked for all Agents in the system, which can take several minutes. Unless you disabled the *AnalyzeAlarmIDUsage* property, this includes checking the usage of legacy alarm IDs in scripts and protocols. If the prerequisites are met, Swarming will be enabled and all Agents in the DMS will be **restarted**.
 
    If SLNetClientTest tool is unable to reach any of the Agents at the time of the check, for example because an Agent is stopped, Swarming will not be enabled.<!-- RN 41217 -->
 
