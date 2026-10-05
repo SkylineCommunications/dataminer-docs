@@ -123,11 +123,24 @@ You can follow the steps below or watch this short video, which shows you how to
      > [!IMPORTANT]
      > When an element goes in timeout, it will remain in timeout until **all** its connections are responding again.
 
-1. From DataMiner 10.6.10/10.7.0 onwards<!--RN 46287 + 46037 + 46142-->, connectors that contain DataMiner Edge scripts will have the following additional sections. The exact scripts and settings depend on the connector.
+1. If the connector contains [DataMiner Edge](xref:DataMiner_Edge) scripts, configure the necessary additional settings:<!--RN 46287 + 46037 + 46142-->
+
+   > [!NOTE]
+   > The exact scripts and settings depend on the connector.
 
    - **Run details**: Select a compatible [DataMiner Edge Node](xref:DataMiner_Edge) as the target, and configure the interval for each script.
 
-   - **Settings**: Configure the connector-defined values for the element, such as a location, system environment, and authentication credentials. Authentication settings can use a token credential or a username and password credential from the Credentials Library. From DataMiner 10.6.11/10.7.0 onwards<!--RN 46371-->, they can also use community credentials or SNMPv3 credentials.
+   - **Settings**: Configure the connector-defined values for the element, such as a location, system environment, IP address, IP port<!--RN 46390-->, authentication credentials, and more.
+
+     Authentication settings can use the following credential types from the Credentials Library:
+
+     - Token credentials
+
+     - Username and password credentials
+
+     - Community credentials<!--RN 46398-->
+
+     - SNMPv3 credentials<!--RN 46398-->
 
    > [!NOTE]
    > - If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
