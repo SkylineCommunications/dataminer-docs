@@ -960,3 +960,11 @@ On systems using STaaS, up to now, a failing aggregate count query could incorre
 When requesting eligible resources while ignoring a booking and its service definition node, a resource with a time-dependent capability could still be considered unavailable if it was used in that booking.
 
 From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
+
+#### STaaS: Feedback registrations could cause a memory leak [ID 46617]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
+
+From now on, these registrations will be cleared when they are no longer needed.
