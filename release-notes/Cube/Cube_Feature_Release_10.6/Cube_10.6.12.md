@@ -56,6 +56,12 @@ The *Spectrum card behavior upon last session preset modification in shared mode
 
 When a Spectrum card is open, it automatically enters standby mode after the configured inactivity period. From now on, this will no longer happen when the Spectrum component is in shared mode. In addition, the standby options in the ribbon will now be disabled.
 
+#### Spectrum: Preset section of Spectrum component has been adapted to the new theme [ID 46591]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+The *Preset* section on the right side of a Spectrum component has now been adapted to the new theme.
+
 ### Fixes
 
 #### Spectrum: Marker was shown on the first trace instead of the trace where it was added [ID 46290]
