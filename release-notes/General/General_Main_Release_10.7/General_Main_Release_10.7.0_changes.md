@@ -952,3 +952,11 @@ As a result, change points that were only ever written under the old v1 partitio
 <!-- MR 10.7.0 - FR 10.6.11 -->
 
 On systems using STaaS, up to now, a failing aggregate count query could incorrectly return `0` instead of throwing an exception. From now on, the query will throw an exception when it fails.
+
+#### Service & Resource Management: Resources with time-dependent capabilities could be ineligible when ignoring a booking [ID 46576]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When requesting eligible resources while ignoring a booking and its service definition node, a resource with a time-dependent capability could still be considered unavailable if it was used in that booking.
+
+From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.

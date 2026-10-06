@@ -105,3 +105,11 @@ Up to now, every time a connection to the DataMiner storage layer was opened, SL
 On systems where GQI queries repeatedly opened connections, for example through dashboards or low-code apps that refresh automatically, memory usage could keep increasing, potentially degrading performance or causing out-of-memory errors.
 
 From now on, the handlers will be removed when the connection closes.
+
+#### Service & Resource Management: Resources with time-dependent capabilities could be ineligible when ignoring a booking [ID 46576]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When requesting eligible resources while ignoring a booking and its service definition node, a resource with a time-dependent capability could still be considered unavailable if it was used in that booking.
+
+From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
