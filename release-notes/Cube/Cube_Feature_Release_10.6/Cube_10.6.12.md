@@ -104,6 +104,14 @@ When a Spectrum component was not in shared mode, up to now, the *Push changes t
 
 From now on, the button will be disabled when the Spectrum component is not in shared mode.
 
+#### Spectrum: Shared-mode banner could be too small in Visual Overview [ID 46520]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you viewed a Spectrum component in shared mode in Visual Overview, in some cases, the banner indicating that another user had pushed changes could be too small to use.
+
+The banner will now be displayed clearly, even when the component has limited space.
+
 #### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
