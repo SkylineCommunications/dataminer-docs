@@ -118,6 +118,14 @@ The banner will now be displayed clearly, even when the component has limited sp
 
 On DataMiner 10.6.0 and newer, when you added or removed an Agent in Cube, up to now, incorrect warning messages could be displayed because Cube would incorrectly still check the legacy `NATSForceManualConfig` and `BrokerGateway` soft-launch flags.
 
+#### Spectrum: Display settings would not always be applied when loading a new preset [ID 46555]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when you created a preset in a Spectrum session in shared mode and then loaded it in another session, in some cases, the display settings would not be applied, even when the option to load them was selected.
+
+From now on, display settings will be applied whenever the option to load them is selected.
+
 #### Spectrum: Average trace visibility would no longer be saved in presets [ID 46585]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
