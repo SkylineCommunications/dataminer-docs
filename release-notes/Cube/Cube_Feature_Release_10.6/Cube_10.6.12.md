@@ -88,6 +88,14 @@ When you loaded a preset in a Spectrum component, changing the preset loading fl
 
 From now on, changes to preset loading flags will only be applied to the current session.
 
+#### Spectrum: Banner would incorrectly also be shown to the user who pushed changes in shared mode [ID 46518]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when you pushed changes to other users from a Spectrum component in shared mode, you would incorrectly also receive a banner indicating that changes were available.
+
+From now on, only the other users will receive this banner.
+
 #### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
