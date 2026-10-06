@@ -147,3 +147,11 @@ From now on, Cube will again save and restore this setting with the preset.
 When you loaded a preset containing a threshold in a Spectrum component, in some cases, the threshold could be missing.
 
 The threshold will now be displayed when the preset is loaded.
+
+#### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When another session changed the Last Session Preset of a Spectrum analyzer in shared mode, the banner in Cube said, "This spectrum element has changes to its currently loaded preset." Because this wording referred to a preset rather than the session that made the change, it could be unclear.
+
+The banner now says, "Another session has made changes to this spectrum analyzer."
