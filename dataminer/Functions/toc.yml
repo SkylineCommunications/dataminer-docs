@@ -1040,14 +1040,35 @@ items:
       - name: DataMiner Assistant app
         topicUid: DataMinerAssistant
         items:
-        - name: Context structure
-          topicUid: Assistant_Context
-        - name: Adding custom user context
-          topicUid: Assistant_UserContext
-        - name: DataMiner Assistant M365
-          topicUid: Assistant_M365
+        - name: Assistant agents
+          topicUid: Assistant_Agents
+          items:
+          - name: Native agents
+            items:
+            - name: Insights agent
+              topicUid: Assistant_InsightsAgent
+            - name: Documentation agent
+              topicUid: Assistant_DocumentationAgent
+          - name: Specialized agents
+            topicUid: Assistant_Specialized_Agents
+        - name: Assistant skills
+          topicUid: Assistant_Skills
+        - name: Assistant tools
+          topicUid: Assistant_Tools
+          items:
+          - name: Data tools
+            topicUid: Assistant_DataTools
+            items:
+            - name: Native data tools
+              topicUid: Assistant_native_data_tools
+            - name: Custom data tools
+              topicUid: Assistant_custom_data_tools
+          - name: Script tools
+            topicUid: Assistant_ScriptTools
         - name: Data privacy and security
           topicUid: Assistant_DataPrivacySecurity
+      - name: DataMiner Assistant M365
+        topicUid: Assistant_M365
       - name: Natural language to GQI
         topicUid: NL2GQI
       - name: Document Intelligence
