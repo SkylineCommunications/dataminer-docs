@@ -80,6 +80,14 @@ Cube now compares profile instances, parameters, and definitions independently o
 
 When you opened a Spectrum component in shared mode and loaded a custom preset, up to now, it would no longer be possible to save the Last Session Preset. As a result, changes made to the custom preset could not be pushed to the other clients.
 
+#### Spectrum: Preset loading flags would incorrectly affect other sessions [ID 46517]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you loaded a preset in a Spectrum component, changing the preset loading flags would incorrectly affect all sessions instead of only the current session.
+
+From now on, changes to preset loading flags will only be applied to the current session.
+
 #### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
