@@ -751,6 +751,12 @@ Property updates will continue to be validated and applied in the same way, and 
 
 When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
 
+#### SLLogCollector now lists files in the Scripts folder [ID 46545]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
+
 #### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->

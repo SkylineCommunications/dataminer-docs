@@ -45,6 +45,12 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### SLLogCollector now lists files in the Scripts folder [ID 46545]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
+
 #### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
