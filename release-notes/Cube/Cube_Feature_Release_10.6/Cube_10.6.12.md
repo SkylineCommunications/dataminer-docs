@@ -88,13 +88,13 @@ When you loaded a preset in a Spectrum component, changing the preset loading fl
 
 From now on, changes to preset loading flags will only be applied to the current session.
 
-#### Spectrum: Banner would incorrectly also be shown to the user who pushed changes in shared mode [ID 46518]
+#### Spectrum: Banner would incorrectly always be shown to the user who pushed changes in shared mode [ID 46518]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
-Up to now, when you pushed changes to other users from a Spectrum component in shared mode, you would incorrectly also receive a banner indicating that changes were available.
+Up to now, when you pushed changes to other users from a Spectrum component in shared mode, you would incorrectly always receive a banner indicating that changes were available.
 
-From now on, only the other users will receive this banner.
+From now on, when you push changes to other users in shared mode, you will only receive a banner when multiple Spectrum components are open in your own session. Other users will always receive a banner.
 
 #### Spectrum: 'Push to other clients' button would incorrectly be enabled when not in shared mode [ID 46519]
 
