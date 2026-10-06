@@ -64,11 +64,14 @@ DmsElementId id = agent.CreateElement(configuration);
 
 ## Creating an element with connections
 
-When an element is created, the connection details need to specified. The only exception is for elements running a protocol that only has a virtual connection. For each type of connection supported by DataMiner, a corresponding interface is defined in the DataMinerSystem library. The following diagram gives an overview of the provided interfaces:
+When an element is created, the connection details need to specified. The only exception is for elements running a protocol that only has a virtual connection. For each type of connection supported by DataMiner, a corresponding interface is defined in the DataMinerSystem library. The diagrams below show the provided interfaces.
+
+All connection-related interfaces derive from `IElementConnection`. `IVirtualConnection` represents a virtual interface and `ISlaConnection` is used by SLAs.
+`IRealConnection` is the interface from which other connection interfaces derive that represent a real connection with a data source (e.g. an SNMP or a WebSocket connection).
 
 ```mermaid
 classDiagram
-    direction TB
+    direction LR
 
     class IElementConnection {
         <<interface>>
@@ -154,12 +157,12 @@ classDiagram
         +ISnmpV3SecurityConfig SecurityConfig
     }
 
+    IRealConnection <|-- ISnmpConnection
     IRealConnection <|-- ISerialConnection
     IRealConnection <|-- ISmartSerialConnection
     IRealConnection <|-- IHttpConnection
-    IRealConnection <|-- IGpibConnection
     IRealConnection <|-- IWebSocketConnection
-    IRealConnection <|-- ISnmpConnection
+    IRealConnection <|-- IGpibConnection
 
     ISnmpConnection <|-- ISnmpV1Connection
     ISnmpConnection <|-- ISnmpV2Connection

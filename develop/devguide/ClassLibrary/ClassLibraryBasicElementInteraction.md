@@ -1,5 +1,5 @@
 ---
-uid: ClassLibraryBasicInteraction
+uid: ClassLibraryBasicElementInteraction
 description: "Discover how to use the class library for basic interaction with DataMiner elements, such as retrieving elements or updating the element state."
 ---
 
