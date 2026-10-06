@@ -56,6 +56,12 @@ The *Spectrum card behavior upon last session preset modification in shared mode
 
 When a Spectrum card is open, it automatically enters standby mode after the configured inactivity period. From now on, this will no longer happen when the Spectrum component is in shared mode. In addition, the standby options in the ribbon will now be disabled.
 
+#### Spectrum: Preset section of Spectrum component has been adapted to the new theme [ID 46591]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+The *Preset* section on the right side of a Spectrum component has now been adapted to the new theme.
+
 ### Fixes
 
 #### Spectrum: Marker was shown on the first trace instead of the trace where it was added [ID 46290]
@@ -80,11 +86,51 @@ Cube now compares profile instances, parameters, and definitions independently o
 
 When you opened a Spectrum component in shared mode and loaded a custom preset, up to now, it would no longer be possible to save the Last Session Preset. As a result, changes made to the custom preset could not be pushed to the other clients.
 
+#### Spectrum: Preset loading flags would incorrectly affect other sessions [ID 46517]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you loaded a preset in a Spectrum component, changing the preset loading flags would incorrectly affect all sessions instead of only the current session.
+
+From now on, changes to preset loading flags will only be applied to the current session.
+
+#### Spectrum: Banner would incorrectly always be shown to the user who pushed changes in shared mode [ID 46518]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when you pushed changes to other users from a Spectrum component in shared mode, you would incorrectly always receive a banner indicating that changes were available.
+
+From now on, when you push changes to other users in shared mode, you will only receive a banner when multiple Spectrum components are open in your own session. Other users will always receive a banner.
+
+#### Spectrum: 'Push to other clients' button would incorrectly be enabled when not in shared mode [ID 46519]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a Spectrum component was not in shared mode, up to now, the *Push changes to other users* button would incorrectly be enabled, even though nothing happened when clicking it.
+
+From now on, the button will be disabled when the Spectrum component is not in shared mode.
+
+#### Spectrum: Shared-mode banner could be too small in Visual Overview [ID 46520]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you viewed a Spectrum component in shared mode in Visual Overview, in some cases, the banner indicating that another user had pushed changes could be too small to use.
+
+The banner will now be displayed clearly, even when the component has limited space.
+
 #### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 On DataMiner 10.6.0 and newer, when you added or removed an Agent in Cube, up to now, incorrect warning messages could be displayed because Cube would incorrectly still check the legacy `NATSForceManualConfig` and `BrokerGateway` soft-launch flags.
+
+#### Spectrum: Display settings would not always be applied when loading a new preset [ID 46555]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when you created a preset in a Spectrum session in shared mode and then loaded it in another session, in some cases, the display settings would not be applied, even when the option to load them was selected.
+
+From now on, display settings will be applied whenever the option to load them is selected.
 
 #### Spectrum: Average trace visibility would no longer be saved in presets [ID 46585]
 
@@ -101,3 +147,11 @@ From now on, Cube will again save and restore this setting with the preset.
 When you loaded a preset containing a threshold in a Spectrum component, in some cases, the threshold could be missing.
 
 The threshold will now be displayed when the preset is loaded.
+
+#### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When another session changed the Last Session Preset of a Spectrum analyzer in shared mode, the banner in Cube said, "This spectrum element has changes to its currently loaded preset." Because this wording referred to a preset rather than the session that made the change, it could be unclear.
+
+The banner now says, "Another session has made changes to this spectrum analyzer."
