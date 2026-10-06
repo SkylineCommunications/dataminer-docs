@@ -37,7 +37,7 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
   For specific endpoints or IPs to whitelist, contact <support@dataminer.services>. The configuration depends on the region you will register your system for.
 
   > [!NOTE]
-  > From DataMiner 10.6.12 onwards, you can allow STaaS traffic through your firewall by whitelisting a single IP address (or 2 IP addresses for a geo-replicated setup). See [IP addresses to whitelist](#ip-addresses-to-whitelist).
+  > From DataMiner 10.6.12 & 10.7.0 onwards, you can allow STaaS traffic through your firewall by whitelisting a single IP address (or 2 IP addresses for a geo-replicated setup). See [IP addresses to whitelist](#ip-addresses-to-whitelist).
 
   > [!NOTE]
   > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
@@ -46,7 +46,7 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 ## IP addresses to whitelist
 
-From DataMiner 10.6.12 onwards, you can allow STaaS traffic through your firewall by whitelisting a single IP address, determined by the region your system is registered for. For a **geo-replicated (GRS)** setup, you must whitelist **2 IP addresses**: the IP address of the primary region and the IP address of its geo-redundancy pair region.
+From DataMiner 10.6.12 & 10.7.0 onwards, you can allow STaaS traffic through your firewall by whitelisting a single IP address, determined by the region your system is registered for. For a **geo-replicated (GRS)** setup, you must whitelist **2 IP addresses**: the IP address of the primary region and the IP address of its geo-redundancy pair region.
 
 In the table below, find the region your system is registered for and whitelist the corresponding IP address(es).
 
