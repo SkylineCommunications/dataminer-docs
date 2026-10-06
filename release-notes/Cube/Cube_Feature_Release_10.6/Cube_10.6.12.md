@@ -96,6 +96,14 @@ Up to now, when you pushed changes to other users from a Spectrum component in s
 
 From now on, only the other users will receive this banner.
 
+#### Spectrum: 'Push to other clients' button would incorrectly be enabled when not in shared mode [ID 46519]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a Spectrum component was not in shared mode, up to now, the *Push changes to other users* button would incorrectly be enabled, even though nothing happened when clicking it.
+
+From now on, the button will be disabled when the Spectrum component is not in shared mode.
+
 #### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
