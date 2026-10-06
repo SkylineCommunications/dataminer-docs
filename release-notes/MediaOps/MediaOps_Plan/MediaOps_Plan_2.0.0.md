@@ -448,6 +448,20 @@ When no option matches, or when the value is not a number within the range, the 
 
 Two additional link types are now offered as well: a capability can be linked to a resource property, and a capacity can be linked to a job property or a resource property.
 
+#### Scheduling/Workflow Designer: Nodes with the same name are now numbered instead of showing their node ID [ID 46679]
+
+Previously, when a workflow or job contained multiple nodes with the same name, the node ID (GUID) was added to the name of these nodes to tell them apart. As these IDs are not meaningful for users, nodes with the same name are now numbered instead, e.g., "Encoder Pool (1)" and "Encoder Pool (2)".
+
+The numbers follow the order in which the nodes were added. When a node is removed, any nodes added after it are renumbered.
+
+This applies to:
+
+- The node graph in the Workflow Designer and Scheduling apps.
+- The node selection when configuring a parameter link.
+- The resource pool names shown for the nodes of a job in the Scheduling app.
+
+To give a node a fixed, recognizable name, you can set an alias for the node.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
