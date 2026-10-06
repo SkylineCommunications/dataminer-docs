@@ -757,6 +757,14 @@ When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can no
 
 Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
 
+#### STaaS traffic can now use a single IP address [ID 46570]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When a custom endpoint is configured in the dataminer.services, all STaaS traffic from DataGateway will now pass through the Application Gateway. This allows you to whitelist a single IP address for STaaS traffic.
+
+If no custom endpoint is configured, DataMiner will continue to use the existing endpoints.
+
 #### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
