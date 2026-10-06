@@ -55,9 +55,9 @@ Log Collector packages now include a `Scripts.txt` file listing the files in `C:
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-When a custom endpoint is configured in the dataminer.services, all STaaS traffic from DataGateway will now pass through the Application Gateway. This allows you to whitelist a single IP address for STaaS traffic.
+All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single IP address for STaaS traffic.
 
-If no custom endpoint is configured, DataMiner will continue to use the existing endpoints.
+If this single endpoint is not reachable, DataMiner will continue to use the existing endpoints.
 
 #### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
 
