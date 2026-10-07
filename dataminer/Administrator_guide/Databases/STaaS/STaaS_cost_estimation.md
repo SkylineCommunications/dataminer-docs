@@ -38,7 +38,7 @@ To request a cost estimation, follow the procedure below:
 
    > [!NOTE]
    > This 24-hour period is not mandatory, but we recommend this to be able to extrapolate the data from a daily consumption to a monthly consumption.
-   >
+   
    > [!NOTE]
    > On systems using a Cassandra Cluster database, DELT exports of elements can return unfiltered data after a cost estimation has been run, even after the test run has been stopped. If you need to export elements with their data, restart the Agent(s) first. See [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation).
 
