@@ -15,7 +15,7 @@ To create an SLA, click the *New SLA* button, and complete the wizard:
 
 1. Optionally select a configuration template to prefill the tracking window and violation budget settings.
 
-   For more information, see [Managing SLA templates](xref:Managing_SLA_Templates).
+   For more information, see [Templates](xref:Managing_SLA_Templates).
 
 1. Specify the service level tier, tracking window, admin state, and objective type.
 
