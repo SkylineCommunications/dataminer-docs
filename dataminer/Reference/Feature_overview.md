@@ -24,7 +24,7 @@ Below you can find an overview of the main features that have been added to Data
 | Augmented operations: [Relational anomalies in trend graphs](xref:Relational_anomaly_detection#relational-anomalies-in-trend-graphs) | DataMiner 10.4.0 [CU22]/10.5.0 [CU10]/10.6.0/10.6.1 <!-- [ID 43857] --> |
 | Augmented operations: [Relational anomaly detection](xref:Relational_anomaly_detection) | DataMiner 10.5.3/10.6.0<!-- [ID 42034] --> |
 | Augmented operations: [Time-scoped relations](xref:Adding_time_scoped_related_parameters_to_a_trend_graph) | DataMiner 10.3.8/10.4.0 <!-- [ID 36434] --> |
-| Automation: [Using Credentials Library credentials in automation scripts](xref:Using_credentials_in_an_automation_script) | DataMiner 10.7.0/10.6.10 <!-- [ID 44282] [ID 46229] --> |
+| Automation: [Using Credentials Library credentials in automation scripts](xref:Using_credentials_in_an_automation_script) | DataMiner 10.6.10/10.7.0 <!-- [ID 44282] [ID 46229] --><br>Minimum DataMiner Cube version 10.6.11/10.7.0 <!-- [ID 46251] --> |
 | Automation: [ExtendedErrorInfo](xref:Skyline.DataMiner.Automation.SubScriptOptions.ExtendedErrorInfo) property | DataMiner 10.2.7/10.3.0 <!-- [ID 33306] -->|
 | Automation: [HideUI](xref:Skyline.DataMiner.Automation.Engine.HideUI) method | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--  [ID 39451] [ID 39638] --> |
 | Automation: [Interactivity](xref:DMSScript.Interactivity) tag | DataMiner 10.5.9/10.6.0 <!-- [ID 42954]--> |

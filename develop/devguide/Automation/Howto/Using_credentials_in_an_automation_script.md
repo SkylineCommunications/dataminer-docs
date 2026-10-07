@@ -10,7 +10,7 @@ Credentials of type *Username and password* and *Token* can be used in an automa
 
 ## Declaring a set of credentials
 
-Before a *C# code* block can retrieve a set of credentials, the credentials must be declared as a script variable. In DataMiner Cube, you can do so in the *CREDENTIALS* section of the script. See [Creating a set of credentials](xref:Script_variables#creating-a-set-of-credentials).
+Before a *C# code* block can retrieve a set of credentials, the credentials must be declared as a script variable. From DataMiner Cube 10.7.0/10.6.11 onwards<!--RN 46251-->, you can do so in the *CREDENTIALS* section of the script. See [Creating a set of credentials](xref:Script_variables#creating-a-set-of-credentials).
 
 In the script XML, this results in a [Credentials](xref:DMSScript.Credentials) element:
 
