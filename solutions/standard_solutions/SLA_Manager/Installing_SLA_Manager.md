@@ -29,7 +29,20 @@ description: "Deploy the SLA Manager Standard Solution from the DataMiner Catalo
 
    The package will be pushed to the DataMiner System. Installation will automatically synchronize all SLA elements present on the DataMiner System into the SLA Manager inventory, so the solution is ready to use immediately after deployment.
 
-> [!NOTE]
-> After you upgrade the package, refresh the web app using Ctrl+F5. Otherwise your browser might keep using a previously cached version of the app.
+## Deploying another SLA Manager version
 
-For more information about accessing the app, see [Accessing the SLA Manager app](xref:Accessing_SLA_Manager).
+If SLA Manager is already installed, you can deploy another version of the package from the DataMiner Catalog on top of it. Depending on the version currently installed and the version selected, the deployment will install, upgrade, or downgrade SLA Manager.
+
+1. Look up the *SLA Manager* package in the DataMiner Catalog.
+
+1. Select the version you want to deploy.
+
+1. Click the *Deploy* button.
+
+1. Select the target DataMiner System, and confirm the deployment.
+
+   The Catalog will automatically determine whether the selected version needs to be installed, upgraded, or downgraded.
+
+1. Refresh the SLA Manager web app by pressing CTRL+F5.
+
+   This will ensure that the browser does not continue to use the previous version of the app that is still present in its cache.
