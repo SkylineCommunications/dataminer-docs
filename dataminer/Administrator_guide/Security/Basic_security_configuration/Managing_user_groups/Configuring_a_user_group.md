@@ -1,5 +1,6 @@
 ---
 uid: Configuring_a_user_group
+description: "Configure user groups in DataMiner to set access levels, permissions, views, and alerts for secure role-based access."
 ---
 
 # Configuring a user group

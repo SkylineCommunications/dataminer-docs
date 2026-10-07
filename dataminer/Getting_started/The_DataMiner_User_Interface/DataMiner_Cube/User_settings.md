@@ -77,6 +77,9 @@ On the *General* page, the following settings are available:
   > [!NOTE]
   > When you have modified this setting, reconnect your DataMiner Cube session to make sure the change is applied throughout the UI.
 
+  > [!TIP]
+  > From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 45961-->, the theme for Visual Overview can be set independently from this setting. See [Configuring the Visio drawing theme](xref:Configuring_Visio_drawing_theme).
+
 - **Show DMA status messages**: Select this setting to no longer be notified when a DMA in your system is not running, disconnected, starting, or switching over to another DMA in Failover.
 
 ### Alarm Console settings

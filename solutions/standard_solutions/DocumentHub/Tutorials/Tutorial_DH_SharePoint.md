@@ -78,7 +78,9 @@ Expected duration: 15 minutes
 1. Click **Grant admin consent** for your organization.
 
    > [!NOTE]
-   > You must have administrator privileges to grant consent.
+   >
+   > - You must have administrator privileges to grant consent.
+   > - Case permissions are very wide; consider **Sites.Selected**, restricted to specific admin-approved sites only. While **Sites.ReadWrite.All** and **Files.ReadWrite.All** trust the application with the keys to the entire tenant, **Sites.Selected** treats the application as untrusted until an administrator explicitly links it to a designated site.
 
 1. Confirm that the permissions show "Granted" status.
 
@@ -128,3 +130,4 @@ After configuring SharePoint, you can:
 - [Create document buckets](xref:DH_Application#organizing-with-buckets) that use this SharePoint backend.
 - [Upload documents](xref:DH_Application#uploading-documents) to SharePoint through the DocumentHub app.
 - Integrate SharePoint storage with other DataMiner applications via DocumentHub.
+- Search file names, content, and properties using Keyword Query Language (KQL).

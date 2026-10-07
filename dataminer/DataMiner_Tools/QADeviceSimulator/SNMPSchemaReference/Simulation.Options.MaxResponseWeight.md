@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_Options_MaxResponseWeight
+description: "Set MaxResponseWeight to limit combined SNMP response weight and simulate partial responses when values exceed the default maximum of 2147483647."
 ---
 
 # MaxResponseWeight element

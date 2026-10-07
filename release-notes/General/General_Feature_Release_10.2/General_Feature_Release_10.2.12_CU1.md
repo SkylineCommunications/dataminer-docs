@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Feature_Release_10.2.12_CU1
+status: archived
 ---
 
-# General Feature Release 10.2.12 CU1
+# General Feature Release 10.2.12 CU1 [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).

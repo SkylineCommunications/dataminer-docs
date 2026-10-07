@@ -1,6 +1,7 @@
 ---
 uid: Looking_up_an_item_in_the_catalog
 reviewer: Alexander Verkest
+description: "Look up a Catalog item by name or tag using the Catalog UI filters or GET API calls to retrieve item and version details."
 ---
 
 # Looking up an item in the Catalog
@@ -58,7 +59,7 @@ This page also provides a quick way to execute the call: Expand the "/api/key-ca
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the call on the production Catalog.
 
-The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://github.com/Azure/AutoRest) to generate client code.
 
 ### HTTP method
 
@@ -91,7 +92,7 @@ This page also provides a quick way to execute the call: Expand the "/api/key-ca
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the call on the production Catalog.
 
-The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://github.com/Azure/AutoRest) to generate client code.
 
 ### HTTP method
 

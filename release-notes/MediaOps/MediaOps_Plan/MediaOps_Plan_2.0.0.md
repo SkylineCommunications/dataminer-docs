@@ -10,12 +10,12 @@ uid: MediaOps_Plan_2.0.0
 > [!NOTE]
 > This version requires:
 >
-> - DataMiner 10.6.4/10.7.0 or higher.
-> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
+> - DataMiner 10.6.11/10.7.0 or higher.
+> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.1.3 or higher.
 > - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.3.0 or higher.
 
 > [!TIP]
-> Installing [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) alongside MediaOps Plan allows you to orchestrate jobs and workflows and fully automate the setup and teardown processes.
+> Installing [MediaOps Live](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) alongside MediaOps Plan allows you to orchestrate jobs and workflows and fully automate the setup and teardown processes. This requires MediaOps Live **1.2.0** or higher.
 
 ## New features
 
@@ -53,9 +53,151 @@ Job types are defined using the Categories app. From MediaOps 2.0.0 onwards, a n
 
 The icon defined for a job type in the Categories app will be used in the Scheduling app as a filter for the timeline view. Hovering over the icon will show the name of the job type. If no icon is defined for a job type, the default filter icon will be shown.
 
+#### Workflow Designer: Job type can now be defined for workflows [ID 46347]
+
+When you create, edit, or duplicate a workflow, you can now select a *Job Type* for that workflow.
+
+Every job created from the workflow is automatically assigned this job type, so you no longer need to select it manually for each job. If you explicitly select a job type when creating a job, that selection takes precedence over the job type defined for the workflow.
+
+The *Job Type* dropdown is only displayed when job types are available in the Categories app. If you select *- Not defined -*, the workflow does not define a job type, and jobs created from it keep their default job type.
+
+#### Scheduling: New button to automatically assign resources to a job [ID 46409]
+
+Previously, you could configure a workflow so that eligible resources were automatically assigned to specified nodes when you created a job from that workflow. Because this assignment took place only at job creation, it was suitable only when the workflow fully defined the nodes and their configuration. This is often not the case when you create a job.
+
+Now, you can use the new *Auto assign resources* button in the *Edit job* panel to automatically assign eligible resources to the nodes of a job. This allows you to trigger resource assignment whenever you need it, for example, after you have updated the job configuration.
+
+If a resource cannot be assigned to one or more nodes, a message will indicate the reason. For example, this can happen when a mandatory configuration field has no value or no eligible resources are available during the job time slot.
+
+You can use this option only while the job is in the *Draft* or *Tentative* state. When a job is confirmed, all its nodes must have a resource assigned.
+
+#### Scheduling: Job resource nodes can be returned to their pool [ID 46436]
+
+You can now return a job's resource node to its resource pool while the job is in the *Draft* or *Tentative* state. Previously, once a resource node was assigned in a job, it could only be swapped for another resource node. There was no way to release it back to its pool if the underlying selection logic no longer produced a valid resource.
+
+Now you can use the existing swap mechanism to replace the resource node with a resource pool node, matching the behavior already available for workflows and recurring jobs.
+
+When you return a resource node to its pool for a tentative job, its resource reservation is automatically released so the resource becomes available for other jobs again.
+
+This action is not available for jobs in the *Confirmed*, *Running*, *Completed*, or *Canceled* state. It is also not possible to confirm a tentative job that still has an unassigned pool node.
+
+Configuration settings of the original resource node, such as capabilities and capacities, are not automatically transferred to the pool node. Configure these settings again when they are required for a subsequent automatic resource selection.
+
+#### Scheduling/Workflow Designer: Standalone profile parameters are now shown when configuring orchestration events [ID 46447]
+
+When you configure an orchestration event, profile parameters that are directly linked to the orchestration script but that are not part of a profile definition are now also shown in the *Edit configuration* dialog. Previously, profile parameters were only shown if they were part of a profile definition.
+
+The value fields and link buttons of these standalone profile parameters are aligned with the other orchestration script input parameters.
+
+Profile definitions and their associated presets continue to be shown like before when a profile definition is configured for the script.
+
+#### Support for orchestration scripts with dynamic inputs [ID 46655]
+
+MediaOps Plan now supports orchestration scripts with dynamic inputs (available from [MediaOps Live 1.2.0](xref:MediaOps_Live_1.2.0) onwards). The inputs of these scripts adapt to the values you provide. For example, changing the number of destinations adds or removes destination inputs, and selecting a band narrows the allowed frequency range.
+
+You can configure dynamic inputs wherever you configure an orchestration script:
+
+- In Resource Studio, as the default configuration of a resource pool.
+- In Workflow Designer, for workflows and workflow nodes.
+- In Scheduling, for jobs and job nodes.
+
+In the *Select Configuration* dialog and in the resource pool editor:
+
+- Inputs that belong together are shown in groups that you can expand or collapse.
+- Required inputs are marked with ✋, and units are shown next to the value.
+- When you change an input that affects other inputs, the dialog is updated immediately. Values for inputs that no longer apply are removed. If a value is no longer allowed, for example because an option was removed or a range changed, it is cleared, and the input shows why until you enter a new value.
+- Messages from the script, for example when two destinations use the same endpoint, are shown next to the related input.
+- If the inputs cannot be loaded, for example because the script failed, the previous inputs and values are kept, a message is shown, and you can try again.
+
+Like profile parameters, a dynamic input can be linked to a value that is only known when the job is scheduled. For example, you can link an input to the job name or a job property, to the name or a property of the assigned resource, or to a capability, capacity, or configuration parameter of a node. When a job is confirmed, every linked value is checked against what the input accepts. If a value is not accepted, you cannot confirm the job until this is resolved. Linking is not available for inputs that affect other inputs, nor for date/time and duration inputs.
+
+Dynamic input values are kept throughout the job lifecycle:
+
+- When you add a node from a resource pool, it gets the dynamic input values configured on that pool.
+- When you create a job from a workflow, duplicate a job or a workflow, or create recurring jobs, the dynamic input values are copied along.
+- When a job is confirmed, its dynamic input values, including the resolved linked values, are passed on to the orchestration events in MediaOps Live.
+
+If a required dynamic input has no value, the configuration is shown as incomplete.
+
+Using a single orchestration script with dynamic inputs can remove the need to create a separate script and resource pool for every variation of a setup.
+
 ## Changes
 
+### Breaking changes
+
+#### Plan API: Renamed public types [ID 46527]
+
+Several public types in the MediaOps Plan DevPack have been renamed. The namespaces, visibility, sealed or abstract status, and base classes remain unchanged.
+
+The following types in the `Skyline.DataMiner.Solutions.MediaOps.Plan.Exceptions` namespace have been renamed:
+
+- Job timing errors:
+
+  - `JobTimingChangeNotAllowedError` to `JobTimingChangedNotAllowedError`
+  - `JobEndChangeNotAllowedError` to `JobEndChangedNotAllowedError`
+  - `JobStartChangeNotAllowedError` to `JobStartChangedNotAllowedError`
+  - `JobPreRollStartChangeNotAllowedError` to `JobPreRollStartChangedNotAllowedError`
+  - `JobPostRollEndChangeNotAllowedError` to `JobPostRollEndChangedNotAllowedError`
+
+- Node graph errors
+
+  - `JobNodeSwapNotAllowedError` to `JobNodeSwappedNotAllowedError`
+  - `WorkflowNodeSwapNotAllowedError` to `WorkflowNodeSwappedNotAllowedError`
+  - `JobNodeGraphConnectionWithInvalidNodeError` to `JobNodeGraphInvalidConnectionNodeError`
+  - `WorkflowNodeGraphConnectionWithInvalidNodeError` to `WorkflowNodeGraphInvalidConnectionNodeError`
+
+- Resource Studio errors:
+
+- `ConfigurationInvalidDefaultDiscreetError` to `ConfigurationInvalidDefaultDiscreteError`
+- `ResourcePoolNotFoundPoolLinkError` to `ResourcePoolPoolLinkNotFoundError`
+- `ResourcePoolInvalidStatePoolLinkError` to `ResourcePoolInvalidPoolLinkStateError`
+- `ResourcePoolSelfReferencePoolLinkError` to `ResourcePoolSelfReferencingPoolLinkError`
+
+The following model types in the `Skyline.DataMiner.Solutions.MediaOps.Plan.API` namespace have also been renamed:
+
+- `Discreet<T>` to `Discrete<T>`
+- `TextDiscreet` to `TextDiscrete`
+- `NumberDiscreet` to `NumberDiscrete`
+
+The `Discreet` to `Discrete` rename also affects the signatures of the following public members:
+
+- `DiscreteTextConfiguration.DefaultValue`: `TextDiscreet` changes to `TextDiscrete`
+- `DiscreteTextConfiguration.Discretes`: `IReadOnlyCollection<TextDiscreet>` changes to `IReadOnlyCollection<TextDiscrete>`
+- `DiscreteTextConfiguration.AddDiscrete(TextDiscreet)` changes to `AddDiscrete(TextDiscrete)`
+- `DiscreteTextConfiguration.RemoveDiscrete(TextDiscreet)` changes to `RemoveDiscrete(TextDiscrete)`
+- `DiscreteTextConfiguration.SetDiscretes(ICollection<TextDiscreet>)` changes to `SetDiscretes(ICollection<TextDiscrete>)`
+- `DiscreteNumberConfiguration.DefaultValue`: `NumberDiscreet` changes to `NumberDiscrete`
+- `DiscreteNumberConfiguration.Discretes`: `IReadOnlyCollection<NumberDiscreet>` changes to `IReadOnlyCollection<NumberDiscrete>`
+- `DiscreteNumberConfiguration.AddDiscrete(NumberDiscreet)` changes to `AddDiscrete(NumberDiscrete)`
+- `DiscreteNumberConfiguration.RemoveDiscrete(NumberDiscreet)` changes to `RemoveDiscrete(NumberDiscrete)`
+- `DiscreteNumberConfiguration.SetDiscretes(ICollection<NumberDiscreet>)` changes to `SetDiscretes(ICollection<NumberDiscrete>)`
+- `DiscreteTextConfigurationSetting.Value`: `TextDiscreet` changes to `TextDiscrete`
+- `DiscreteNumberConfigurationSetting.Value`: `NumberDiscreet` changes to `NumberDiscrete`
+- The `==`, `!=`, and `Equals(Discreet<T>)` operators on `Discreet<T>` change to `Discrete<T>` equivalents
+
+> [!IMPORTANT]
+> You will need to update consumer code that references the old names before upgrading to MediaOps Plan 2.0.0. The error renames can also affect runtime behavior for code that filters by type.  A call such as `OfType<JobEndChangeNotAllowedError>()` against a dynamically loaded assembly will not fail to compile, but it will no longer match.
+
+#### DevPack: EnumFilterExtensions and TypeFilterExtensions removed [ID 46575]
+
+The public static classes `EnumFilterExtensions` and `TypeFilterExtensions` have been removed from the `Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan` DevPack as of version 2.0.0 and from the `Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations` DevPack as of version 1.1.0, because this functionality is now available in Standard Data Model Abstractions 1.0.5.
+
+Because of this change, you will now need to install Standard Data Model Registration 2.1.3 or higher to use MediaOps Plan.
+
 ### Enhancements
+
+#### Scheduling/Workflow Designer: Edit locks now specific to each session [ID 46489]
+
+Scheduling and Workflow Designer now validate edit locks using a session-specific lock ID instead of relying only on the user name. Previously, when you opened the same job or workflow for editing in two separate sessions, both sessions could edit it without warning, potentially causing changes to be overwritten.
+
+With this update, an edit is only allowed to proceed when the lock ID supplied by the current session matches the lock ID of the active lock.
+
+When you open an item that you are already editing in another session, a dedicated message now indicates that the item is locked in one of your other sessions. This is different from the existing message for items locked by another user.
+
+If the current lock state cannot be retrieved, the item will be available in read-only mode, ensuring that you can view it safely even in case of connectivity issues.
+
+> [!IMPORTANT]
+> All lock-aware automation scripts in Scheduling and Workflow Designer now require a `Lock ID` input. This includes scripts for creating, editing, and deleting jobs, managing contacts, and building or deleting workflows. If you call these scripts directly or use custom automation built on them, update these calls to provide the new mandatory parameter. Pass `/` when no lock is held.
 
 #### DevPack: API enhancement to improve type-checking and casting for Capacity and Configuration classes [ID 45715]
 
@@ -190,6 +332,136 @@ When you enable *Show all details*, the full view is shown again, including all 
 
 When a workflow is locked by another user, editing actions are now blocked.
 
+#### Scheduling: No longer possible to select workflow when creating a job from Resource View page [ID 46293]
+
+In the Scheduling app, when you create a job from the *Resource View* page, it is no longer possible to select a workflow.
+
+Workflow selection remains available when you create a job from the *Job Overview* page.
+
+#### Resource Studio: Synchronization enhancements [ID 46325]
+
+The synchronization script in Resource Studio has been extended so you can now choose exactly which resources or resource pools to synchronize again. Previously, synchronization retries were all-or-nothing.
+
+In addition, the DevPack (NuGet) has been extended with synchronization methods on `IResourcePoolRepository`.
+
+#### Scheduling: Property enhancements [ID 46357]
+
+Several enhancements have been made to property management in the Scheduling app.
+
+When defining properties:
+
+- If an uploaded file exceeds the maximum document size configured on the DataMiner Agent, a clear message is now displayed instead of a raw SLNet exception. This also applies when the size limit configured for the property is higher than the Agent's limit.
+- Validation errors returned by the server are now displayed next to the property that caused them. If a widget cannot display a message inline, the property name is included in the dialog message.
+- If saving fails, the dialog now remains open so you can correct the problem without losing your input.
+- Error markers are now cleared before each save attempt, so properties that have been corrected are no longer marked as invalid.
+
+When assigning properties:
+
+- The property type can no longer be changed after a property has been created, as this would orphan its stored values. The *Type* dropdown remains available when you add a property but is disabled when you edit an existing property.
+- You can no longer delete a property that is still in use. This applies both when you delete a single property and when you remove an entire section.
+- Invalid property configurations, such as duplicate or invalid names, invalid section names, invalid string or file size limits, and missing or duplicate discrete values, now result in clear validation messages instead of script failures.
+- A file property with the default size limit now follows the maximum document size configured on the DataMiner Agent instead of storing the limit that applied when the property was created.
+
+#### Installer: Upgrades from versions older than 1.6.0 no longer supported [ID 46369] [ID 46401]
+
+Previously, MediaOps Plan could be upgraded to the latest version directly from any older version. Because several migration actions are only executed by the 1.6.x installers, this could leave existing data without the required migrations. Now you must first upgrade MediaOps Plan to the 1.6.x range before upgrading to MediaOps Plan 2.0.0 or higher.
+
+When you upgrade, MediaOps Plan will first verify the installed version. If a version older than 1.6.0 is detected, the installation is stopped with a message asking you to first upgrade to a 1.6.x version and then install version 2.0.0 or higher. This ensures that all migration actions are executed.
+
+With this change, the following legacy migration scripts are no longer needed and have been removed:
+
+- Lock manager element rename
+- Pre-/post-roll migration
+- Profile definition migration
+- Lite job migration
+
+#### Automation scripts now run in separate process [ID 46385]
+
+Automation scripts that are part of MediaOps Plan now run in their own process. This reduces the risk of code libraries from other solutions installed on the DataMiner Agent being loaded into SLAutomation.
+
+#### Resource Studio: Improved error when deleting an in-use capability [ID 46388]
+
+When you attempt to delete a capability that is still in use, the error message now identifies up to the first 10 affected resources instead of displaying resource pool details.
+
+#### Installer: MediaOps Live 1.2.0 or higher required [ID 46421]
+
+When MediaOps Live is installed alongside MediaOps Plan, the MediaOps Plan installation now verifies that MediaOps Live version 1.2.0 or higher is installed.
+
+If an earlier version is detected, the MediaOps Plan installation is stopped, and a message will indicate that you must first upgrade MediaOps Live to version 1.2.0 or higher.
+
+This check does not affect installations where MediaOps Live is not installed.
+
+#### Scheduling: Clear error shown when an uploaded file exceeds the DataMiner size limit [ID 46471]
+
+When you attach a file to a job and the file exceeds the maximum size configured in DataMiner, the MediaOps Plan DevPack now returns a `PropertySettingCollectionFileSizeExceededError` error with the property ID, file name, file size, and maximum allowed file size. In the MediaOps Plan user interface, a clear error message is displayed in this case.
+
+#### Scheduling: Legacy 'Scheduling_Edit Job Time' script removed [ID 46472]
+
+The *Scheduling_Edit Job Time* script has been removed from the MediaOps Plan package. This script was previously used to support moving jobs in the timeline component, but this functionality is no longer used.
+
+> [!IMPORTANT]
+> If you have custom code or a custom project that uses this script, you will need to update that code to no longer rely on it.
+
+#### DevPack: Values and data references now mutually exclusive [ID 46483]
+
+Settings that can contain either a direct value or a data reference now automatically keep these representations mutually exclusive. Assigning a direct value clears any existing data reference, while assigning a data reference clears any existing direct value. Previously, consumers had to explicitly clear the other representation when switching modes.
+
+This applies to capability, capacity, configuration, and script execution settings, including both bounds of range capacities, script parameters, and script elements. For script elements, assigning a data reference clears both the element ID and element name. Assigning `null` or an empty or default element ID continues to preserve an existing data reference.
+
+As a result, switching between value‑based and reference‑based configuration will now be simpler, more intuitive, and less error‑prone, with the objects themselves maintaining a clean and consistent state.
+
+#### Scheduling: Node parameters can now be linked from the Add Node panel [ID 46512]
+
+When you configure a job node from the *Add Node* panel, you can now link parameters to a value from another node that is already part of the job or from the node you are adding, which is listed as *This node*.
+
+#### Scheduling: Wider lookup window for upcoming booking validation and improved task setup [ID 46566]
+
+The *Scheduling - Validate upcoming bookings* scheduled task now checks for bookings up to 120 minutes ahead, doubling the previous 60-minute lookup window. The recurring interval of the task remains unchanged. This will give operators more advance notice of upcoming bookings that need validation.
+
+The logic that creates and updates this scheduled task now uses the DataMiner typed scheduler API instead of the older array-based configuration format, making the task setup more reliable and easier to maintain. When an existing validation task's description contains the word "custom", the task is left untouched during updates, so that manually customized task configurations are preserved. Tasks that are not marked as customized continue to be kept in sync with the latest validation settings.
+
+#### Scheduling/Workflow Designer: Parameter links now support more source types [ID 46573]
+
+Up to now, when you linked a parameter value, a dropdown parameter could only be linked to another dropdown parameter that used the exact same profile parameter. Properties could not be used to fill in a dropdown parameter at all. This made it impossible to, for example, define *Source Location* and *Destination Location* once on the job and use them to fill in the *Location* capability of the individual nodes.
+
+From now on, the type of a parameter no longer limits what you can link it to. Whether a link is valid is decided when it is resolved, instead of when you configure it.
+
+##### Dropdown parameters
+
+Any dropdown parameter, whether it is a capability, a configuration, or a profile parameter of an orchestration script, can be linked to any text value:
+
+- A capability or configuration of the job or of another node, regardless of whether this is a dropdown parameter or free text.
+- A property of the job or of a node.
+- A resource property of another node or of the node itself.
+
+The text value is matched against the display values of the dropdown options, and against the underlying values as a fallback. The comparison is case-sensitive. When a match is found, the dropdown parameter uses the underlying value of the matching option, not the display value. This also applies when two dropdown parameters are linked to each other: the display value of the source dropdown parameter determines the selected option in the target dropdown parameter, while each of them keeps its own underlying value.
+
+##### Free-form numeric parameters
+
+A parameter with free-form numeric input can now be linked to any of the sources listed above, as long as the value resolves to a number that lies within the range configured for the parameter. Numbers are read using the invariant notation, so `1.5` is a decimal value while `1,5` is not recognized as a number. A value outside the range is refused rather than adjusted to fit.
+
+##### Invalid links
+
+When no option matches, or when the value is not a number within the range, the dropdown parameter is considered to have no value. While you are configuring the link, the parameter shows *Invalid value* together with the value that was resolved. As long as this is the case, the job cannot be confirmed or updated, and the error message mentions both the value the link resolved to and the parameter that offers the available options.
+
+##### Additional link types
+
+Two additional link types are now offered as well: a capability can be linked to a resource property, and a capacity can be linked to a job property or a resource property.
+
+#### Scheduling/Workflow Designer: Nodes with the same name are now numbered instead of showing their node ID [ID 46679]
+
+Previously, when a workflow or job contained multiple nodes with the same name, the node ID (GUID) was added to the name of these nodes to tell them apart. As these IDs are not meaningful for users, nodes with the same name are now numbered instead, e.g., "Encoder Pool (1)" and "Encoder Pool (2)".
+
+The numbers follow the order in which the nodes were added. When a node is removed, any nodes added after it are renumbered.
+
+This applies to:
+
+- The node graph in the Workflow Designer and Scheduling apps.
+- The node selection when configuring a parameter link.
+- The resource pool names shown for the nodes of a job in the Scheduling app.
+
+To give a node a fixed, recognizable name, you can set an alias for the node.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
@@ -221,3 +493,101 @@ This behavior has now been changed. In downgrade scenarios where a newer compati
 Previously, MediaOps Plan could still be installed when an older, unsupported version of Categories was present on the system. This could lead to issues later.
 
 MediaOps Plan now verifies that Categories 1.3.0 or higher is installed before continuing. If the installed Categories version is too old, the installation is stopped with a clear message so you can update Categories first.
+
+#### Various resource deprecation issues [ID 46300]
+
+Several issues related to resource deprecation have been fixed for scenarios where the core resource no longer exists:
+
+- In Resource Studio, deprecating a single resource now shows a proper error message when the operation cannot be completed.
+- Deprecating multiple resources no longer causes an infinite loop in the DevPack when two or more selected resources have no core resource, preventing SLAutomation crashes.
+- Updating one or more resources without a core resource no longer recreates those resources with a new ID. This operation is now blocked with a proper error message.
+
+#### Job creation not possible for workflows with execution scripts [ID 46339]
+
+As of MediaOps Plan 2.0.0, execution scripts on workflow level are no longer supported. However, up to now, the installation did not verify whether workflows still used one. As a result, a system could be upgraded while workflows still referred to an execution script, after which it was no longer possible to create jobs for those workflows.
+
+MediaOps Plan now checks before anything is installed. If one or more workflows still have a workflow execution script, the installation is stopped with a message listing the workflows in question, so you can remove the execution script from those workflows first. The complete list is also available in the installation log.
+
+#### DevPack: Limit and sort settings ignored when querying Plan repositories [ID 46419]
+
+Previously, limit and sort settings specified when reading data from MediaOps Plan DevPack repositories were ignored. For example, this affected queries using `ResourcesRepository.Read(IQuery<Resource>)`.
+
+This issue has been fixed. Repository queries now apply the specified limit and sort settings.
+
+#### DevPack: Limit and sort settings ignored when querying People & Organizations repositories [ID 46420]
+
+Previously, limit and sort settings specified when reading data from MediaOps People & Organizations DevPack repositories were ignored. For example, this affected queries using `OrganizationsRepository.Read(IQuery<Organization>)`.
+
+This issue has been fixed. Repository queries now apply the specified limit and sort settings.
+
+#### DevPack: Text configuration parameters not saved unless interpretation was set to 'Undefined raw type' and 'Undefined type' [ID 46474]
+
+Previously, text profile parameters were recognized as text configuration parameters only when their interpretation was set to *Undefined raw type* and *Undefined type*. Text parameters with other valid interpretations, such as *Other raw type* and *String type*, were not saved.
+
+This issue has now been fixed. Text profile parameters are now recognized and saved regardless of their interpretation setting.
+
+#### Resource Studio: Numeric capacities and configurations could use incorrect step size [ID 46593]
+
+When a numeric capacity or configuration defined decimal precision without an explicit step size, the Resource Studio dialogs incorrectly required values to use a step size of 1.
+
+This issue has now been fixed. The dialogs now derive the default step size from the configured decimal precision. For example, a parameter configured with three decimal places now uses a step size of 0.001. When no decimal precision is defined, the parameter continues to use zero decimals and a step size of 1.
+
+#### Scheduling: Duplicate error messages when adding a node to a confirmed job [ID 46605]
+
+When you added a node next to another node in a confirmed job, the operation incorrectly displayed two error messages instead of just one. The specific message "Changes are not allowed in current job state" was immediately followed by a generic message that the node could not be added.
+
+This issue has now been fixed. Only the specific error about the job state will now be displayed.
+
+#### Resource Studio: Unhandled exception when editing resource pool parameters if automated action could not load script input parameters [ID 46682]
+
+When an automated action used an orchestration script whose input parameters could not be loaded (for example, when the script referred to a profile definition that did not exist), opening the *Edit Resource Pool Parameters* dialog in Resource Studio resulted in an unhandled exception, causing the dialog to stop working.
+
+The dialog now handles this situation gracefully, matching the behavior in the Scheduling app:
+
+- An error message is displayed below the selected script: *The input parameters for script '[script]' could not be loaded. Check the logging for details.* The full exception is logged.
+- The script is retried each time it is selected.
+- The *Update* button is disabled while an enabled automated action has a script that could not be loaded. Disabling the action allows you to save again.
+- The saved script settings of a resource pool are preserved and applied once the script can be loaded, preventing temporary issues from causing data loss.
+
+#### Capacity values not loaded from profile instance presets [ID 46688]
+
+Previously, when you selected a profile instance as a preset in an orchestration event configuration, capacity values were not loaded. While capability values were loaded correctly, capacity parameters remained empty, so you had to enter them manually or were left with an incomplete orchestration configuration.
+
+Selecting a profile instance now also fills in the requested capacity amount of each capacity parameter, ensuring that all values defined in the profile instance are loaded.
+
+This applies to both places where a profile instance can be applied to an orchestration event:
+
+- The node configuration of workflows and jobs.
+- Resource pool parameters where orchestration defaults are configured for a resource pool.
+
+#### Resource Studio: Profile parameters could not be linked to resource pool capabilities and capacities [ID 46689]
+
+In the *Edit Resource Pool Parameters* dialog in Resource Studio, a profile parameter of an automated action's orchestration script could previously only be linked to the resource name, a resource property, the resource linked object ID, or a configuration. It was not possible to link profile parameters to the capabilities and capacities assigned to the resource pool. Because the dialog suggested a configuration link by default, it often showed an empty list.
+
+Profile parameters can now also be linked to the resource pool's capabilities and capacities. In addition, the *Configure Link* dialog now preselects the link type that matches the profile parameter: *Capability* for a capability, *Capacity* for a capacity, and *Configuration* otherwise. This preselection also applies to automated actions in the Scheduling app and the Workflow Designer, where capability and capacity links were already supported.
+
+#### Scheduling: Additional contacts not displayed for recurring jobs [ID 46691]
+
+In the Scheduling app, it could occur that additional contacts defined for a recurring job were not displayed in the contacts panel. This issue has now been resolved.
+
+#### Scheduling: Only first selected node removed when removing multiple nodes from a job workflow [ID 46693]
+
+In the *Edit job* panel in the Scheduling app, when you selected multiple nodes in the workflow panel and clicked *Remove Node*, only the first selected node was removed, leaving the remaining selected nodes in place.
+
+You can now select multiple nodes at once and have all of them removed in a single action, matching the behavior already available in the Workflow Designer.
+
+In addition, the confirmation dialog now adapts to the selection:
+
+- When you remove a single node without linked nodes, the dialog behaves as before.
+- When you remove multiple nodes, the dialog indicates how many nodes were selected. If those nodes have linked child nodes, it shows the total number of nodes that will be removed along with their names.
+- Nodes that are already scheduled for removal because they were linked to another selected node are no longer processed twice.
+- If you click *Remove Node* without selecting any nodes, a clear message now indicates that you must select at least one node to remove, instead of displaying a misleading error.
+
+> [!NOTE]
+> This applies to standard job workflows in the *Edit job* panel. Removing nodes remains unsupported for recurring jobs.
+
+#### Job could not be confirmed when automated action parameter was linked to a resource property [ID 46695]
+
+When an orchestration script parameter for a node's automated action was linked to a property of the resource assigned to that node, it could occur that a job could not be confirmed. In this case, confirming the job failed with an error indicating that not all references could be resolved, for example: `Not all references could be resolved: "<parameter>" (linked to Resource Property) in <node>, event '<event>'`.
+
+This happened when the link did not store a node, which is the case for links configured on a resource pool. The link is now resolved against the node that owns the automated action, so the job can be confirmed.

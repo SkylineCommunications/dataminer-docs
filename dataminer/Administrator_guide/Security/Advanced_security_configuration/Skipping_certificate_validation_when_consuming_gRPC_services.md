@@ -1,5 +1,6 @@
 ---
 uid: Skipping_certificate_validation_when_consuming_gRPC_services
+description: "Configure SkipVerifyHosts for secure gRPC calls, validate trusted hosts carefully, and bypass certificate checks only when needed for controlled testing."
 ---
 
 # Skipping certificate validation when consuming gRPC services

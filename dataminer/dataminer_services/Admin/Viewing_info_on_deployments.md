@@ -1,5 +1,6 @@
 ---
 uid: Viewing_info_on_deployments
+description: "View deployments in the Admin app to check deployed items, timestamps, users, status, versions, and debugging events."
 keywords: cloud deployments
 reviewer: Alexander Verkest
 ---

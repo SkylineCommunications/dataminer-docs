@@ -18,11 +18,12 @@ If for some reason you cannot access the Support application and create a ticket
   - Portugal: +351 308 80 6270
   - United States: +1 754 218 2040
 
-- 24/7 support (only for critical issues with severe impact; additional charges will apply):
+- 24/7 support (for support outside of business hours, only for critical issues with severe impact; additional charges will apply):
   - All regions: +32 474 101 888
   - North America: +1 754 218 2045
 
-For our 24/7 support terms, refer to [Out-of-business hours support](xref:Overview_Out_Of_Business_Hours_Support).
+  > [!NOTE]
+  > Support outside of business hours is **only available via telephone**. Please refer to [Out-of-business hours support](xref:Overview_Out_Of_Business_Hours_Support) for the 24/7 support terms.
 
 For more information about our general support terms, refer to [Support services terms: on premises](xref:Support_Terms_On_Premises) or [Support terms: SaaS](xref:Support_Terms_SaaS), depending on your setup.
 

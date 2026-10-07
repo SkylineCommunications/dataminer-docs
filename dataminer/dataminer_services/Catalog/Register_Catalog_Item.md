@@ -2,6 +2,7 @@
 uid: Register_Catalog_Item
 keywords: catalog, registration, manifest, upload, publish
 reviewer: Alexander Verkest
+description: "Register a Catalog item or version with the API by uploading a multipart ZIP package that includes the required manifest.yml file."
 ---
 
 # Registering a Catalog item
@@ -45,7 +46,7 @@ This page also provides a quick way to execute the call: Expand the "catalog/reg
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the register call directly on the Catalog.
 
-The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://github.com/Azure/AutoRest) to generate client code.
 
 ### HTTP method
 
@@ -142,11 +143,12 @@ documentation_url: '<fill in documentation url here>'
 # [Optional]
 # People who are responsible for this Catalog item. Might be developers, but this is not required.
 #   The name is required; max 256 characters.
-#   The email and url are optional, and should be in valid email/URL formats.
+#   The email is optional, and should be in valid email format.
+#   The role is optional; max 64 characters.
 owners:
   - name: '<fill in name here>'
     email: '<fill in email here>'
-    url: '<fill in url here>'
+    role: '<fill in role here>'
 
 # [Optional]
 # Tags that allow you to categorize your Catalog items.
@@ -161,7 +163,8 @@ tags:
 # [Optional]
 # The ID of the vendor.
 # This vendor ID can be retrieved using the public Catalog API.
-# If the vendor ID does not exist, the registration or update will fail with HTTP status code 400. 
+# If the vendor ID does not exist, the registration or update will fail with HTTP status code 400.
+# If the vendor ID is not set for Catalog items with the type Connector, the registration or update will fail with HTTP status code 400.
 # If the vendor ID is '00000000-0000-0000-0000-000000000000', the vendor will be unset. 
 # If the vendor ID is not provided during the initial registration, the vendor will be unset.
 # If the vendor ID is not provided during an update, the vendor will be unchanged and keep the previously set value.
@@ -198,7 +201,7 @@ This page also provides a quick way to execute the call: Expand the "catalog/{ca
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the register call on the production Catalog.
 
-The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://github.com/Azure/AutoRest) to generate client code.
 
 ### HTTP method
 

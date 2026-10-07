@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_inspecting_active_replication_buffers
+description: "Learn how, using the SLNetClientTest tool, you can view and drop active replication buffers, as well as manage replication buffer files."
 ---
 
 # Inspecting the active replication buffers

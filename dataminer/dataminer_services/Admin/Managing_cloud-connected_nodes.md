@@ -1,5 +1,6 @@
 ---
 uid: Managing_cloud-connected_nodes
+description: "Learn how you can use the Admin app to deploy DxMs on DataMiner nodes or remove obsolete DataMiner nodes from your connected DataMiner System."
 keywords: cloud nodes
 reviewer: Alexander Verkest
 ---

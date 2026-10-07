@@ -3,12 +3,11 @@ uid: Viewing_element_connections
 description: "Learn how to view element connections in DataMiner Cube by using the Connectivity tab in the Properties window."
 ---
 
-# Viewing element connections
+# Viewing DataMiner Connectivity Framework connections
 
-> [!NOTE]
-> In DataMiner Cube, there is also an *Element Connections* module, which is in fact not related to the DataMiner Connectivity Framework functionality. For more information on this module, refer to [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections).
+Use the *Connectivity* tab in an element's *Properties* window to inspect connections defined with the DataMiner Connectivity Framework.
 
-## Viewing the element connections in the Properties window
+## Viewing connections in the Properties window
 
 To view the connections that have been set for an element:
 

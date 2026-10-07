@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_Options
+description: "Configure the Options element for simulation-wide settings outside agents and definitions, including the optional maximum response weight."
 ---
 
 # Options element

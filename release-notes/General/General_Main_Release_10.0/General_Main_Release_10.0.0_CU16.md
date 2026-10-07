@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.0.0_CU16
+status: archived
 ---
 
-# General Main Release 10.0.0 CU16
+# General Main Release 10.0.0 CU16 [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).

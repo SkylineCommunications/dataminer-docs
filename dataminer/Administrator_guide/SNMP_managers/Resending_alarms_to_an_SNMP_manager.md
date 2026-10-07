@@ -1,5 +1,6 @@
 ---
 uid: Resending_alarms_to_an_SNMP_manager
+description: "Resend alarms to an SNMP manager by selecting a time range and DMA in DataMiner Cube so matching history alarms are sent and tracked correctly."
 ---
 
 # Resending alarms to an SNMP manager

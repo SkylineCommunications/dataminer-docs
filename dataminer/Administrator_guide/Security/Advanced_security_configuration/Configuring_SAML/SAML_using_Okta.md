@@ -1,5 +1,6 @@
 ---
 uid: SAML_using_Okta
+description: "Configure SAML with Okta to set up identity claims, metadata files, and automatic user provisioning for secure DataMiner access."
 ---
 
 # Configuring SAML with Okta as the identity provider

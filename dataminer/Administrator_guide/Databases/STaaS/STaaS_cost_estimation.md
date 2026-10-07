@@ -39,15 +39,15 @@ To request a cost estimation, follow the procedure below:
    > [!NOTE]
    > This 24-hour period is not mandatory, but we recommend this to be able to extrapolate the data from a daily consumption to a monthly consumption.
 
-1. After this, at approximately 2 AM UTC, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Usage* for the relevant organization.
+1. After this, at approximately 6 AM UTC, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Billing* for the relevant organization.
 
    > [!NOTE]
-   > You will only be able to see the *Usage* module if you are an Owner or Admin of the organization.
+   > You will only be able to see the *Billing* module if you are an Owner or Admin of the organization.
 
 If you have any questions regarding this cost estimation, please contact <support@dataminer.services>.
 
 > [!IMPORTANT]
-> Cost estimations can currently only be performed for the West Europe, UK South, Southeast Asia, and Central US regions.
+> Cost estimations can currently only be performed in the [live STaaS regions](xref:STaaS_features).
 
 > [!TIP]
 > To optimize the cost efficiency of a STaaS solution, adhere to the best practices to prevent storing unnecessary data [with automation scripts](xref:Automation_best_practices_information_events) or [with connectors](xref:Saving_parameters).

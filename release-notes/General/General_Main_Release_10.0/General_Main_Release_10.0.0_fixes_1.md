@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.0.0_fixes_1
+status: archived
 ---
 
-# General Main Release 10.0.0 - Fixes (part 1)
+# General Main Release 10.0.0 - Fixes (part 1) [ARCHIVED]
 
 #### Not possible to assign Visio file to imported view or service \[ID 19280\]\[ID 20207\]
 

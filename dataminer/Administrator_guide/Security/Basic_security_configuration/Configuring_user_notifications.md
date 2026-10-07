@@ -1,5 +1,6 @@
 ---
 uid: Configuring_user_notifications
+description: "Configure user notifications in DataMiner to receive alarm alerts from filters in System Center and the Alarm Console."
 ---
 
 # Configuring user notifications

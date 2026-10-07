@@ -1,5 +1,6 @@
 ---
 uid: Board_view
+description: "Use the Board view to search, filter, create, and edit project tasks by status, then review task buckets and timelines."
 ---
 
 # Board view

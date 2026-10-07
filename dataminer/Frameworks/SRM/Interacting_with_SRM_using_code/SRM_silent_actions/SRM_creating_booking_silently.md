@@ -17,7 +17,7 @@ using Skyline.DataMiner.Core.SRM.Model.Events;
 using Skyline.DataMiner.Core.SRM.Model.Properties;
 
 /// <summary>
-/// Represents a DataMiner Automation script.
+/// Represents a DataMiner automation script.
 /// </summary>
 public class Script
 {

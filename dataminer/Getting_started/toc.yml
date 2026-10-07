@@ -40,6 +40,9 @@ items:
               topicUid: Using_older_installers
         - name: Deploying a pre-installed DataMiner Virtual Hard Disk
           topicUid: Using_a_pre_installed_DataMiner_Virtual_Hard_Disk
+          items:
+            - name: Automating the initial Windows setup of the pre-installed VHD
+              topicUid: Automating_Windows_setup_of_the_pre_installed_VHD
         - name: Deploying a DataMiner Agent using the AWS AMI
           topicUid: Using_aws_ami
         - name: Unattended DataMiner installation

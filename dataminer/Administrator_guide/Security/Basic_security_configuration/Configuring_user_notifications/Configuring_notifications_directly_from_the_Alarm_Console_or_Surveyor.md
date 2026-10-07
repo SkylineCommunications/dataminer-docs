@@ -1,5 +1,6 @@
 ---
 uid: Configuring_notifications_directly_from_the_Alarm_Console_or_Surveyor
+description: "Set up personal alarm notifications in DataMiner directly from the Alarm Console or Surveyor, with custom filters and delivery via Alerter, email, or SMS."
 ---
 
 # Configuring notifications directly from the Alarm Console or Surveyor

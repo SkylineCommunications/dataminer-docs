@@ -1,5 +1,6 @@
 ---
 uid: Security_NATS
+description: "On DataMiner Systems using a version older than 10.6.0/10.6.1, enable TLS encryption to secure communication within the NATS cluster."
 keywords: NATS security, NATS TLS
 ---
 

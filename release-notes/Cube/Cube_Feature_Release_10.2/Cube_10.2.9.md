@@ -1,8 +1,9 @@
----
+﻿---
 uid: Cube_Feature_Release_10.2.9
+status: archived
 ---
 
-# DataMiner Cube Feature Release 10.2.9
+# DataMiner Cube Feature Release 10.2.9 [ARCHIVED]
 
 > [!TIP]
 > For release notes for this release that are not related to DataMiner Cube, see [General Feature Release 10.2.9](xref:General_Feature_Release_10.2.9).

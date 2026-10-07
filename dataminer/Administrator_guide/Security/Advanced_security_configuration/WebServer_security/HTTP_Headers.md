@@ -1,5 +1,6 @@
 ---
 uid: HTTP_Headers
+description: "Configure HTTP security headers to reduce XSS, clickjacking, and information disclosure risks and tighten DataMiner web protections."
 ---
 
 # HTTP headers

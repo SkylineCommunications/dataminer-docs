@@ -1,8 +1,12 @@
 ---
 uid: Configuring_Atlassian_Crowd_settings
+description: "Learn about the deprecated Atlassian Crowd setup for user management in DataMiner, including user/group import, authentication, and autoproxy."
 ---
 
 # Configuring Atlassian Crowd settings
+
+> [!IMPORTANT]
+> This setup is deprecated. For details, see [Software support lifecycles](xref:Software_support_life_cycles).
 
 DataMiner can import users and groups from an Atlassian Crowd server and can also rely on this type of server for user authentication. However, note that the latter is no longer recommended (see [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
 

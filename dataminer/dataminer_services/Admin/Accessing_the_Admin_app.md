@@ -1,5 +1,6 @@
 ---
 uid: Accessing_the_Admin_app
+description: "Learn how you can access the Admin app directly and how you can go to it via dataminer.services or DataMiner Cube."
 keywords: cloud admin, cloud administration
 reviewer: Alexander Verkest
 ---

@@ -1,0 +1,32 @@
+---
+uid: DocumentHub_1.1.2
+---
+
+# DocumentHub 1.1.2
+
+## Prerequisites
+
+> [!NOTE]
+> This version requires:
+>
+> - DataMiner 10.6.0 [CU2], 10.6.5, or higher
+> - .NET Framework 4.8
+> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.x
+
+## New features
+
+### Support for downloading files via temporary folder workflow [ID 46386]
+
+The DocumentHub agent now supports downloading files via a temporary folder workflow, enabling safer and more reliable file retrieval while aligning with the existing user-defined API and capability-based architecture. This feature extends the agent’s file operation support and lays the foundation for consistent download handling in the 1.1.x revision line.
+
+For this purpose, a new *DownloadFile* automation script has also been introduced.
+
+Finally, a *DocumentHub - Cleanup Downloaded Files* scheduled task will now also be deployed when you install DocumentHub. By default, this task runs daily at midnight and removes temporary files.
+
+## Changes
+
+### Enhancements
+
+#### Improved integration between agent and backend operations [ID 46386]
+
+The integration between DocumentHub backend operations and agent-driven usage has been improved.

@@ -6,7 +6,7 @@ uid: BrokerGateway_Migration
 
 Before upgrading to 10.6.0/10.6.1, migrating to BrokerGateway is **mandatory**. This migration brings DataMiner from the SLNet-managed NATS solution (NAS and NATS services) to the BrokerGateway-managed NATS solution (nats-server service).
 
-The migration is done using the *NATSMigration* tool. In most cases, this should be used to run an automatic migration. A manual migration is also possible with this tool, but will only be required in very specific circumstances and after consultation with Skyline Communications.
+The migration is done using the *NATSMigration* tool. In most cases, this should be used to run an **automatic migration**. A **manual migration** is also possible with this tool, but will only be required in very specific circumstances and after consultation with Skyline Communications.
 
 The migration should be executed on **DataMiner Main Release 10.5.0 [CU11] or any later cumulative update of that Main Release, or on DataMiner Feature Release 10.5.12 [CU2]**. While it is possible to migrate earlier DataMiner versions starting from DataMiner 10.5.0 [CU4]/10.5.7 [CU1], this has several limitations.
 
@@ -15,22 +15,6 @@ The migration should be executed on **DataMiner Main Release 10.5.0 [CU11] or an
 > - Avoid migrating DataMiner Systems using a DataMiner version lower than 10.5.0 [CU11]/10.5.12 [CU2].
 > - Manual migration is discouraged. If the automated migration fails, please contact Skyline Communications for recommendations. Manual migration will then only be recommended in very specific circumstances.
 > - This migration is **mandatory to be able to upgrade to DataMiner 10.6.0/10.6.1** or higher. If you try to upgrade to such a DataMiner version when this migration has not yet been completed, the upgrade will be blocked. From DataMiner 10.6.0/10.6.1 onwards, the legacy SLNet‑managed NATS solution (NAS and NATS services) is no longer supported.<!-- RN 43861 -->
-
-## How to migrate
-
-1. Preferably, upgrade to DataMiner 10.5.0 [CU11] or 10.5.12 [CU2] first.
-
-1. Run the [prerequisite-only.dmupgrade package](#prerequisite-only-dmupgrade-package) and ensure that all [prerequisites](#prerequisites) are met.
-
-1. Make sure you are prepared to run the [post-migration actions](#preparing-post-migration-actions) after the migration is done.
-
-1. Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#automatic-migration-using-dmupgrade-package-recommended) or, only if recommended by Skyline, [run the migration manually](#manual-migration).
-
-> [!NOTE]
-> If you cannot upgrade first and you are on a lower supported 10.5.x version, download the latest [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package (which contains the latest BrokerGateway.exe and NATSMigration.exe), and then [run an **automatic** migration](#automatic-migration-using-dmupgrade-package-recommended). While manual migration may be possible in this case, it should only be done when recommended by Skyline for a specific situation.
-
-> [!IMPORTANT]
-> On DataMiner 10.5.12 [CU2], manual migration may fail because the latest BrokerGateway version is unable to install. If you need to execute a manual migration on that version, please contact Skyline Communications. <!--RN44311-->
 
 ## Prerequisites
 
@@ -60,14 +44,87 @@ Finally, ensure that no problems with "[Schannel](https://learn.microsoft.com/en
 
 - Make sure the [ClusterEndpointsManager](xref:Overview_of_Soft_Launch_Options#clusterendpointsmanager) soft‑launch option is **not disabled** on any DataMiner Agent in the cluster. In DataMiner 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->, this option can be disabled when no migration is planned.
 
-### Configuration consistency
+- On one of the DMAs in your DMS, verify whether the *NATSForceManualConfig* option is either absent from [MaintenanceSettings.xml](xref:MaintenanceSettings_xml) or set to false. If the *NATSForceManualConfig* option is set to true, follow the instructions under [Prerequisites for legacy NATS manual configuration](#prerequisites-for-legacy-nats-manual-configuration) before you start the BrokerGateway migration.
+
+### Prerequisites for legacy NATS manual configuration
+
+If you are running a [legacy forced manual NATS config](xref:Disabling_automatic_NATS_config#legacy-slnet-managed-nasnats), first verify the following, and then contact Skyline Communications for assistance during the migration:
+
+- The configuration must be consistent before migrating. See [Configuration consistency](#configuration-consistency).
+
+- There are no spaces in the NATS configuration. See [Spaces in the NATS config](#spaces-in-the-nats-config).
+
+> [!IMPORTANT]
+> This must be verified manually, as it is not yet checked by the [Prerequisite-only .dmupgrade package](#prerequisite-only-dmupgrade-package).
+
+#### Configuration consistency
 
 If you have disabled automatic NATS configuration via the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config) and manually configured NATS prior to the migration, make sure that the **same configuration** is applied consistently across the entire cluster.
 
 For example, applying manual configuration on only one DataMiner Agent in a 10‑Agent cluster will result in an inconsistent and incorrect setup. Applying the same manual configuration on all 10 Agents will correct this.
 
+#### Spaces in the NATS config
+
+In `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`, verify that the cluster name, gateway name, and server name do not contain spaces. For more information, see [NATS Documentation — System Errors](https://docs.nats.io/reference/system/errors#server-name-and-cluster-errors).
+
+For example, the following configuration fragments show valid names:
+
+```json
+"gateway": {
+   "name": "Gateway_Name"
+}
+```
+
+```json
+"server_name": "myservers_name"
+```
+
+```json
+"cluster": {
+   "name": "mycluster_name"
+}
+```
+
+The following configuration fragments are **not valid** because the names contain spaces:
+
+```json
+"gateway": {
+   "name": "Gateway Name"
+}
+```
+
+```json
+"server_name": "myservers name"
+```
+
+```json
+"cluster": {
+   "name": "mycluster name"
+}
+```
+
+## How to migrate
+
+1. Download the latest available version of the packages used for the migration:
+
+   - [Prerequisite-only.dmupgrade package](#prerequisite-only-dmupgrade-package)
+   - [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/)
+
+   These packages are updated periodically, so make sure to **always download the latest package**.
+
+1. Preferably, upgrade to DataMiner 10.5.0 [CU11] or 10.5.12 [CU2] first.
+
+1. Run the [prerequisite-only.dmupgrade package](#prerequisite-only-dmupgrade-package) and ensure that all [prerequisites](#prerequisites) are met.
+
+1. Make sure you are prepared to run the [post-migration actions](#preparing-post-migration-actions) after the migration is done.
+
+1. Once the [prerequisites](#prerequisites) are met, you can either [run an automatic migration](#automatic-migration-using-dmupgrade-package-recommended) or, only if recommended by Skyline, [run the migration manually](#manual-migration).
+
+> [!NOTE]
+> If you cannot upgrade first and you are on a lower supported 10.5.x version, download the latest [NATSMigration.dmupgrade](https://community.dataminer.services/download/natsmigration-dmupgrade/) package (which contains the latest BrokerGateway.exe and NATSMigration.exe), and then [run an **automatic** migration](#automatic-migration-using-dmupgrade-package-recommended). While manual migration may be possible in this case, it should only be done when recommended by Skyline for a specific situation.
+
 > [!IMPORTANT]
-> This prerequisite needs to be verified manually, as it is not yet included in the [Prerequisite-only .dmupgrade package](#prerequisite-only-dmupgrade-package).
+> On DataMiner 10.5.12 [CU2], manual migration may fail because the latest BrokerGateway version is unable to install. If you need to execute a manual migration on that version, please contact Skyline Communications. <!--RN44311-->
 
 ## Prerequisite-only .dmupgrade package
 
@@ -216,6 +273,9 @@ The key technical differences are:
 | **Credentials** | `.creds` files under `C:\Skyline DataMiner\NATS\nsc`. | Dynamic credentials via BrokerGateway API. Saved on disk in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\nats-server\.data\nats\nsc`. |
 | **Cluster formation** | NATSCustodian recalculates NAS/NATS configs. | BrokerGateway API builds cluster. |
 | **Repair tool** | [Manual reset / reinstall](xref:Investigating_Legacy_NATS_Issues#remaining-steps). | `C:\Skyline DataMiner\Tools\NATSRepair.exe` tool. |
+
+> [!NOTE]
+> Migrating to BrokerGateway does not immediately remove the legacy NAS and NATS services or the `C:\Skyline DataMiner\NATS` folder. These components are retained temporarily as a safeguard. From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46094 -->,the *CleanupNatsServices* upgrade action can remove these legacy components after the system has successfully been running on the BrokerGateway-managed NATS solution.
 
 ### Can I run a cluster with both SLNet-managed NATS and BrokerGateway-managed NATS at the same time?
 

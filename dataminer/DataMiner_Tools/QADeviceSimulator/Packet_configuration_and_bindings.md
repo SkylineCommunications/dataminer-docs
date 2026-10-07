@@ -1,5 +1,6 @@
 ---
 uid: Packet_configuration_and_bindings
+description: "Use packet configuration and bindings to set an IP address and port for any SNMP version, then review fields and OIDs with types and values."
 ---
 
 # Packet configuration and bindings

@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.1.0_enhancements
+status: archived
 ---
 
-# General Main Release 10.1.0 - Enhancements
+# General Main Release 10.1.0 - Enhancements [ARCHIVED]
 
 #### Web Services API: An exception will now be returned when retrieving alarms while the alarm cache is not initialized yet \[ID 19927\]
 

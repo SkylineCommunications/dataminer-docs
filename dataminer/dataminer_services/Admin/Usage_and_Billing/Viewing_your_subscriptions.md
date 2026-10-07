@@ -1,5 +1,6 @@
 ---
 uid: Viewing_your_subscriptions
+description: "Review your subscriptions in the Admin app to track status, costs, savings, reservations, and auto-renewal settings."
 keywords: subscriptions, billing, credits, data plane, automation, collaboration services
 ---
 

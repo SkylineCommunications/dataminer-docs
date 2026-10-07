@@ -47,7 +47,7 @@ column.StartValueMonitor(protocol, OnChange);
 
 #### New feature - Service alarm level and state monitors usable outside of protocols
 
-Service monitors can now be used **outside of protocol contexts** (e.g., in Automation scripts or other external integrations), allowing you to subscribe to changes without relying on *SLProtocol*.
+Service monitors can now be used **outside of protocol contexts** (e.g., in automation scripts or other external integrations), allowing you to subscribe to changes without relying on *SLProtocol*.
 
 > [!IMPORTANT]
 > These monitors create **stateful SLNet subscriptions** in the background. Subscriptions **must be explicitly stopped** using the corresponding *StopMonitor* methods. Failing to do so may result in **hanging subscriptions** that persist in the system and continue to consume resources.
@@ -535,7 +535,7 @@ When the *IDmsService.Update()* method is used, the service will no longer be mo
 
 *IDmsProperty* now has the *AsWritable()* method and *IsWritable* property. If the property is not writable, the method will throw an InvalidOperationException.
 
-For an example, see [Setting a property and renaming the element](xref:ClassLibraryExamples#setting-a-property-and-renaming-the-element)
+For an example, see [Setting a property and renaming the element](xref:ClassLibraryUpdatingElements#updating-elements)
 
 ### 1.1.1.7
 

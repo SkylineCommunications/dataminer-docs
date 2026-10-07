@@ -4,6 +4,66 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.25
+
+### New features
+
+#### Automatic update of MinimumRequiredDmWebVersion when importing low-code apps [ID 46014]
+
+When you import a low-code app into a package project, DIS now automatically adds or updates the `MinimumRequiredDmWebVersion` XML element in the `.csproj` file of the package project. The version is updated only if the currently specified version is lower than the version from which the low-code app was imported.
+
+#### DIS Inject now uploads debug files via a .dmapp package [ID 46098]
+
+The DIS Inject functionality has been reworked to simplify remote debugging setup:
+
+- For remote debugging, DLL files are now uploaded to the DataMiner Agent through a .dmapp package, removing the need to configure a shared folder on the remote Agent.
+
+  As a result, the *Publish path* and *Path on DataMiner* settings have been removed from the *Settings > DMA > Debugging* window. Only the *Debugger qualifier* setting remains. The default value of this setting has been updated to reference port 4026, which is the default port for remote debugging with VS2026.
+
+- The inject workflow has changed: when you click the inject icon (green "+" icon), the project is no longer built immediately. Instead, a *Pending (on attach)* status is shown in a new status column. All injected projects are built when you click *Attach*. At that point, DIS compiles the projects, creates a .dmapp package with all resulting DLL files, uploads the package, and sends inject requests to DataMiner.
+
+- You can eject a pending inject without any interaction with the remote Agent.
+
+- The *Attach* operation now shows progress for each step: compiling projects, uploading via .dmapp package, injecting, and attaching to the process.
+
+- The link to open an element in *Element Display* has been removed.
+
+- Before rebuilding a project, DIS now deletes any existing DLL file first, and after the build, it verifies that the build succeeded. If the build fails, a message is shown.
+
+#### Option to force local account login when external authentication is configured [ID 46104]
+
+A new *Force Authenticate Local User* checkbox has been added to the *General* tab of the *New DMA Connection* window (*Settings* > *DMA* > *Add*). This checkbox is available when login is configured to use a username and password.
+
+When the checkbox is selected, DIS will use local user authentication even if external or federated authentication is configured on the DataMiner Agent.
+
+#### Improved error information when the license check fails [ID 46132]
+
+When a failure occurs while signing in via *DIS Settings* > *Account* > *Sign In*, the error message now includes a link to the license troubleshooting section on DataMiner Docs and a contact email address for further assistance.
+
+#### Minimum required DMA version verified on protocol publish [ID 46135]
+
+When you publish a protocol to a DataMiner Agent via the publish button, DIS now first checks whether the Agent meets the minimum required version specified in the `MinimumRequiredVersion` tag in the protocol. If the Agent does not meet the minimum required version, a message box is displayed.
+
+#### Updated NuGet package dependencies
+
+- [Skyline.DataMiner.Core.ArtifactDownloader](https://www.nuget.org/packages/Skyline.DataMiner.Core.ArtifactDownloader) version 4.1.0
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 6.2.0
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 6.2.0
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 6.2.0
+- [Skyline.DataMiner.CICD.Validators.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Common) version 3.5.0
+- [Skyline.DataMiner.CICD.Validators.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Validators.Protocol) version 3.5.0
+- [Skyline.DataMiner.Dev.Common](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Common) version 10.6.9.1
+- [Skyline.DataMiner.Dev.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Automation) version 10.6.9.1
+- [Skyline.DataMiner.Dev.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Protocol) version 10.6.9.1
+
+### Fixes
+
+#### Package install script set incorrect package version [ID 46067]
+
+Previously, when an install script was published from a package solution, the version of the resulting package was always set to 1.0.1, regardless of what was configured in the `.csproj` file. This could cause installation failures when the install script included a downgrade check.
+
+Now, DIS will use the version and name as configured in the `.csproj` file when publishing an install script.
+
 ## DIS 3.1.24
 
 ### New features

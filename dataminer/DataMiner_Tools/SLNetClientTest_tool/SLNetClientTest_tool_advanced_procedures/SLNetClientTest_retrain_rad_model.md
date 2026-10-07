@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_retrain_rad_model
+description: "Learn how, using the SLNetClientTest tool, you can retrain the internal model used by Relational Anomaly Detection."
 ---
 
 # Retraining the internal model used by RAD

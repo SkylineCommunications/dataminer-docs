@@ -1,5 +1,6 @@
 ---
 uid: Creating_a_new_task_under_the_current_project
+description: "Create a new task under the current project by selecting a type, adding details, setting priority or SLA level, and saving it."
 ---
 
 # Creating a new task under the current project

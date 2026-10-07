@@ -108,9 +108,10 @@ Make sure your script logic is aware of the following:
 
 | Aspect | Local State Change | Global State Change |
 | ------ | ------------------ | ------------------- |
+| Required minimum number of Agents | 2 | 3 |
 | Script execution location | On every node that detects a change. | Only on the leader node. |
 | Perspective | Individual node's view of the cluster. | Cluster-wide consensus. |
 | Trigger frequency | Multiple times (once per observing node). | Once per global state change. |
 | Use case | Node-specific actions. | Centralized cluster management, rebalancing. |
-| Network splits | Can detect partial failures. | Only works within the partition having cluster majority (see [Network splits](xref:NodeRecovery_Detection#network-splits)). |
+| Network splits | A network partition can cause conflicting actions (see [Network splits](xref:NodeRecovery_Detection#network-splits)). | The leader can make decisions in the majority partition, if that exists. |
 | Broken links between nodes | Each node may have a different view. | The leader aggregates views to determine consensus. |

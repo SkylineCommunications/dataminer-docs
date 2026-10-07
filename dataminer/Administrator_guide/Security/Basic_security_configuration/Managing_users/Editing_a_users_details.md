@@ -1,7 +1,7 @@
 ---
 uid: Editing_a_users_details
 keywords: change password
-description: In DataMiner Cube, user details (such as the password of local users) can be edited via System Center > Users/Groups
+description: "Edit user details in DataMiner to update contact information, security settings, or local passwords."
 ---
 
 # Editing a user's details

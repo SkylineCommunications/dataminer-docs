@@ -1,5 +1,6 @@
 ---
 uid: Deleting_a_user
+description: "Learn how to quickly delete local and manually added domain users in DataMiner System Center, with clear confirmation steps and key domain-user guidance."
 ---
 
 # Deleting a user

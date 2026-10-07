@@ -1,5 +1,6 @@
 ---
 uid: Project-related_notifications
+description: "Review project-related notifications to track task assignments and contact your Skyline Project Manager for task updates."
 ---
 
 # Project-related notifications

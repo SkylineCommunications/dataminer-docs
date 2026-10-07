@@ -274,6 +274,8 @@ Enables SLProtocol as a 32-bit process. This option is not configured in *SoftLa
 
 Configures the DataMiner System to use SNMP++ for the polling of all three SNMP versions, instead of only for SNMPv3.<!-- RN 37778 -->
 
+From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!-- 46535+46536 -->, enabling this option also allows the use of empty set community strings in DataMiner element configuration and in the [Credentials Library](xref:Credentials_Library).
+
 - **Minimum version**: 10.4.2
 - **Release version**: To be determined.
 

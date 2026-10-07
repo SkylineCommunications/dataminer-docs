@@ -1,5 +1,6 @@
 ---
 uid: dataminer_services
+description: "Explore dataminer.services to connect your DMS and use Collaboration, Catalog, Sharing, Remote Access, Community, Admin, and ChatOps."
 keywords: cloud, dataminer cloud
 ---
 

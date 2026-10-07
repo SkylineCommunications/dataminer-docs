@@ -42,7 +42,7 @@ TrendDataInspector --- DataPresent
 DataPresent --- |Yes|ReadIssue
 DataPresent --- |No|WriteIssue
 %% Define hyperlinks %%
-click TrendDataInspector "/dataminer/Reference/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_diagnostic_procedures/SLNetClientTest_trend_data_inspector.html"
+click TrendDataInspector "/dataminer/DataMiner_Tools/SLNetClientTest_tool/SLNetClientTest_tool_diagnostic_procedures/SLNetClientTest_trend_data_inspector.html"
 click ReadIssue "#read-issue" "Trending"
 click WriteIssue "#write-issue" "Trending"
 %% Apply styles to blocks %%

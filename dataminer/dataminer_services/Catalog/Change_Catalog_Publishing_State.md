@@ -1,6 +1,7 @@
 ---
 uid: Change_Catalog_Publishing_State
 reviewer: Alexander Verkest
+description: "Change a Catalog item's publishing state using the UI or API to make it public for all users or private for your organization."
 ---
 
 # Change the publishing state of a Catalog item
@@ -40,7 +41,7 @@ This page also provides a quick way to execute the call: Expand the "publishing-
 > [!IMPORTANT]
 > Clicking the *Try it out* button will execute the publishing-state call on the Catalog.
 
-The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://azure.github.io/autorest/generate/) to generate client code.
+The [Swagger.json](https://global.dataminer.services/swagger/catalogapi-web/key-catalog_2.0/swagger.json) can be used by e.g., [Swagger CodeGen](https://swagger.io/docs/open-source-tools/swagger-codegen/) or [AutoRest](https://github.com/Azure/AutoRest) to generate client code.
 
 ### HTTP method
 

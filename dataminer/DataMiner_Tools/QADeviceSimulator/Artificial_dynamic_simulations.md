@@ -1,5 +1,6 @@
 ---
 uid: Artificial_dynamic_simulations
+description: "Configure artificial dynamic simulations with RandomInt and increment ReturnValue commands to generate ranged, patterned, and trend data."
 ---
 
 # Artificial dynamic simulations

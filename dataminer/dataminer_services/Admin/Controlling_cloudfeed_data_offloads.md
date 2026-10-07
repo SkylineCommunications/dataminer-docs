@@ -1,5 +1,6 @@
 ---
 uid: Controlling_cloudfeed_data_offloads
+description: "Use the Admin app to control performance and usage data offloading to dataminer.services for your organization or DataMiner System."
 keywords: offloading to the cloud
 reviewer: Alexander Verkest
 ---

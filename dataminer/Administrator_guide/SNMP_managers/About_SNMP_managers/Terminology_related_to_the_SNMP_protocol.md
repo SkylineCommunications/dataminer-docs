@@ -1,5 +1,6 @@
 ---
 uid: Terminology_related_to_the_SNMP_protocol
+description: "Learn key SNMP terminology, including SNMP agent, SNMP manager, SNMP MIB, SNMP Get, SNMP Set, and SNMP trap definitions."
 ---
 
 # Terminology related to the SNMP protocol

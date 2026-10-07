@@ -1,5 +1,6 @@
 ---
 uid: Configuring_LDAP_settings
+description: "Configure LDAP settings in DataMiner Cube or DataMiner.xml to import users and groups from OpenLDAP, Active Directory, or another directory."
 ---
 
 # Configuring LDAP settings

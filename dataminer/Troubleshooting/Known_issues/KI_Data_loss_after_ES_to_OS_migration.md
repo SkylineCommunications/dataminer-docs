@@ -7,7 +7,7 @@ description: "Learn how to recognize and work around data loss caused by index T
 
 ## Affected versions
 
-DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration.
+DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration prior to DataMiner 10.6.0 [CU8]/10.6.11.
 
 ## Cause
 
@@ -21,7 +21,7 @@ This leads to erroneous indices such as `dms-alarms-2025-04-00001`, `dms-alarms-
 
 ## Fix
 
-A fix is being developed.<!-- RN 46168 --> We recommend waiting with any further Elasticsearch to OpenSearch migrations until the fix is available.
+Upgrade to DataMiner 10.6.0 [CU8]/10.6.11 before you migrate from Elasticsearch to OpenSearch.<!-- RN 46168 -->
 
 ## Workaround
 

@@ -1,6 +1,7 @@
 ---
 uid: Configuring_notifications_in_System_Center
 keywords: Alerts
+description: "Configure notifications in System Center by adding alarm filters and delivery types for Alerter, email, and SMS."
 ---
 
 # Configuring notifications in System Center

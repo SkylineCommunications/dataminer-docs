@@ -76,6 +76,7 @@ In the table below, you can find which .NET (Framework) versions are required fo
 
 | DataMiner version       | Required .NET (Framework) versions        |
 |-------------------------|-------------------------------------------|
+| DataMiner Feature Release 10.6.11 and higher<br>DataMiner Main Release 10.6.0 [CU8] and higher<br>DataMiner Main Release 10.5.0 [CU20] and higher | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 10.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)) |
 | DataMiner Feature Release 10.6.1 and higher<br>DataMiner Main Release 10.6.0 and higher<br>DataMiner Main Release 10.5.0 [CU10] and higher<br><!--RN 44121--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)), and NET 10.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/10.0)) |
 | DataMiner Feature Release 10.4.10 to 10.5.12<br>DataMiner Main Release 10.5.0 to 10.5.0 [CU9]<br>DataMiner Main Release 10.4.0 [CU7] and higher<br>DataMiner Main Release 10.3.0 [CU19] and higher<!--RN 38015, RN 38710, RN 40498--> | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
 | DataMiner Feature Release 10.4.3 to 10.4.9<!--RN 37969--><br>DataMiner Main Release 10.4.0 to 10.4.0 [CU6]<br>DataMiner Main Release 10.3.0 [CU12] to 10.3.0 [CU18] | [Microsoft .NET Framework 4.8](https://go.microsoft.com/fwlink/?linkid=2088631), [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/runtime-aspnetcore-6.0.36-windows-hosting-bundle-installer) and .NET 8.0 (download the latest Hosting Bundle under ASP.NET Core Runtime from [dotnet.microsoft.com](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)) |
@@ -151,7 +152,7 @@ Cassandra nodes must be hosted on Linux. For small-scale setups, Cassandra can b
 
 #### Cassandra software
 
-The minimum supported Cassandra version is **3.11**. Cassandra 3.11 remains supported for existing DataMiner setups, as do intermediate versions including 4.0.x and 4.1.x. However, Cassandra **5.0** is the recommended version for all new setups.
+For all supported DataMiner versions, we support all Cassandra versions that Apache Cassandra currently supports. At the moment, Cassandra **5.0** is the recommended version.
 
 > [!IMPORTANT]
 >
@@ -200,12 +201,18 @@ For information on compatibility between specific Cassandra versions and operati
 
 If there is more than one Cassandra node, the time in the cluster must be synchronized (NTP).
 
-### OpenSearch/Elasticsearch requirements
+### OpenSearch requirements
 
-Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). Ideally, this should be an OpenSearch cluster. An Elasticsearch cluster can be used instead, but this is not recommended. For new installations, we recommend using OpenSearch 3.x.
+Several DataMiner features are only available if your data storage setup includes an [indexing database](xref:Indexing_Database). For any new DataMiner installations, this should be OpenSearch.
+
+While for past DataMiner versions Elasticsearch could be used as an alternative, this is no longer supported as of DataMiner 10.7.x.
 
 > [!IMPORTANT]
-> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any OpenSearch or Elasticsearch nodes.
+> Using a self-managed data storage architecture is not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS), so that you will not need to maintain any OpenSearch nodes.
+
+#### OpenSearch software
+
+For all supported DataMiner versions, we support all OpenSearch versions currently supported by the OpenSearch Software Foundation. At the moment, OpenSearch **3.0** is the recommended version.
 
 #### RAM
 
@@ -233,8 +240,6 @@ Gigabit Ethernet is required for throughput, and low latency is required for eas
 
 #### Operating System
 
-We recommend installing OpenSearch on Linux. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
+We recommend installing OpenSearch on Linux, preferably using the latest version of Ubuntu LTS. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
 
-Elasticsearch can be installed on the operating system of your choice, under the condition that it is supported by Elastic. A 64-bit OS is preferred.
-
-For information on compatibility between specific OpenSearch/Elasticsearch versions and operating system versions or builds, refer to the official database vendor documentation.
+For information on compatibility between specific OpenSearch versions and operating system versions or builds, refer to the official database vendor documentation.

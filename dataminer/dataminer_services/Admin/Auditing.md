@@ -1,5 +1,6 @@
 ---
 uid: Auditing
+description: "Consult dataminer.services audit logs in the Admin app to review security events, filter results, and export CSV records with 7-day download links."
 keywords: cloud audit log, cloud audit logs
 reviewer: Alexander Verkest
 ---

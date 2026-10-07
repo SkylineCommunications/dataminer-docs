@@ -4,6 +4,21 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
+#### 21 August 2026 - Enhancement - DataAggregator 3.3.0 - Update to .NET 10 [ID 44801]
+
+Data Aggregator has been updated to use .NET 10.
+
+#### 21 August 2026 - Enhancement - DataAggregator 3.3.0 - Enhanced script execution logic [ID 43719]
+
+The script execution logic used by Data Aggregator has been improved to make it more robust:
+
+- **Dynamic cancellation token**: The cancellation mechanism now uses a dynamic timestamp tied to the next scheduled execution time, ensuring more accurate and timely job termination.
+- **Improved logging**: Logging has been refined to clearly distinguish between cancellations due to timeouts and those triggered externally. This provides better traceability and debugging capabilities.
+
+#### 21 August 2026 - Fix - DataAggregator 3.3.0 - Script termination issue [ID 43719]
+
+It could occur that Python and PowerShell scripts continued running even after a cancellation request. These scripts are now properly terminated, preventing resource leaks and unintended side effects.
+
 #### 7 July 2025 - Enhancement - DataAggregator 3.2.0 - BrokerGateway support [ID 43238]
 
 The DataAggregator DxM now supports [BrokerGateway](xref:BrokerGateway_Migration). In case your Data Aggregator setup connects to multiple DataMiner Systems and BrokerGateway is enabled, you will need to configure the *BrokerOptions.Clusters* setting in *appsettings.custom.json* with the following fields:

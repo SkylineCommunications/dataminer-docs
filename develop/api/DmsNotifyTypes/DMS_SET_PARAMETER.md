@@ -4,7 +4,7 @@ uid: DMS_SET_PARAMETER
 
 # DMS_SET_PARAMETER (28)
 
-> [!WARNING]
+> [!IMPORTANT]
 > The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Sets the value of a specified parameter.

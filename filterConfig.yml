@@ -368,6 +368,9 @@ apiRules:
 - include:
     uidRegex: ^Skyline\.DataMiner\.Automation$
     type: Namespace
+- include:
+    uidRegex: ^Skyline\.DataMiner\.Automation\.Credentials$
+    type: Namespace
 - exclude:
     uidRegex: ^Skyline\.DataMiner\.Scripting\.ConcreteSLProtocol$
     type: Type
