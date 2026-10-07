@@ -1,6 +1,6 @@
 ---
 uid: SLA_Manager_Penalty_Box
-description: Learn about the Penalty Box page in SLA Manager, which gives you quick access to the SLAs you have pinned.
+description: "Learn about the Penalty Box page in SLA Manager, which gives you quick access to the SLAs you have pinned."
 ---
 
 # Penalty box

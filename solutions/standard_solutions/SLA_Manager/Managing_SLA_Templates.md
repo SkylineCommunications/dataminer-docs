@@ -1,6 +1,6 @@
 ---
 uid: Managing_SLA_Templates
-description: Learn how to create, edit, and delete reusable SLA configuration templates in the DataMiner SLA Manager app.
+description: "Learn how to create, edit, and delete reusable SLA configuration templates in the DataMiner SLA Manager app."
 ---
 
 # Templates

@@ -1,6 +1,6 @@
 ---
 uid: SLA_Manager
-description: Explore the DataMiner SLA Manager Standard Solution, which turns SLA data on your DataMiner System into a managed, actionable inventory.
+description: "Explore the DataMiner SLA Manager Standard Solution, which turns SLA data on your DataMiner System into a managed, actionable inventory."
 ---
 
 # SLA Manager

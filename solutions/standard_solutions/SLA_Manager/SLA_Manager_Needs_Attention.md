@@ -1,6 +1,6 @@
 ---
 uid: SLA_Manager_Needs_Attention
-description: Learn about the Needs Attention page in SLA Manager, which lists the SLAs that currently require your attention.
+description: "Learn about the Needs Attention page in SLA Manager, which lists the SLAs that currently require your attention."
 ---
 
 # Needs attention

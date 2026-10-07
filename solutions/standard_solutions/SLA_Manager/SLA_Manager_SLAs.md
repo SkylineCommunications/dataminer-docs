@@ -1,6 +1,6 @@
 ---
 uid: SLA_Manager_SLAs
-description: Explore the SLAs page in SLA Manager, which lists all registered SLAs with their live compliance state, availability, and target.
+description: "Explore the SLAs page in SLA Manager, which lists all registered SLAs with their live compliance state, availability, and target."
 ---
 
 # SLAs
@@ -18,11 +18,11 @@ At the top of the page, summary tiles show how many SLAs are currently *Complian
 You can switch between two views of the inventory:
 
 - **Table view**: Lists every SLA, with secondary SLAs nested under their primary SLA. Each row includes an inline sparkline trend.
-- **Grid view**: Shows primary and standalone SLAs as cards, each with a bar-chart trend.
+- **Grid view**: Shows primary and standalone SLAs as cards, each with a bar chart trend.
 
 ![SLA Manager SLAs page in grid view](~/solutions/images/SLAManager_SLAsGridView.png)
 
-In both views, you can:
+In both views, you can do the following:
 
 - Search the inventory by name.
 - Filter by service level tier and service category.

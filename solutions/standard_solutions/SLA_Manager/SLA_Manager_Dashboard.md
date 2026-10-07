@@ -1,6 +1,6 @@
 ---
 uid: SLA_Manager_Dashboard
-description: Explore the SLA Manager Dashboard, which gives you a fleet-level view of your SLA compliance, health, and recent outages.
+description: "Explore the SLA Manager Dashboard, which gives you a fleet-level view of your SLA compliance, health, and recent outages."
 ---
 
 # Dashboard
@@ -26,12 +26,18 @@ A chart shows the average availability across all SLAs over a configurable perio
 
 ## Needs attention
 
-A panel lists the SLAs that currently need attention, for example because they are breached. For more information, see [Needs attention](xref:SLA_Manager_Needs_Attention).
+A panel lists the SLAs that currently need attention, for example because they are breached.
+
+For more information, see [Needs attention](xref:SLA_Manager_Needs_Attention).
 
 ## Penalty box
 
-A panel shows the SLAs you have pinned. For more information, see [Penalty box](xref:SLA_Manager_Penalty_Box).
+A panel shows the SLAs you have pinned.
+
+For more information, see [Penalty box](xref:SLA_Manager_Penalty_Box).
 
 ## Recent outages
 
-A list shows the most recent outages across all SLAs. For more information, see [Outages](xref:Managing_Outages).
+A list shows the most recent outages across all SLAs.
+
+For more information, see [Outages](xref:Managing_Outages).
