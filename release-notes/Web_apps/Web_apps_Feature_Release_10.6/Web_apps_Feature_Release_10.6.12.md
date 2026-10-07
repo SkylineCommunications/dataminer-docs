@@ -47,3 +47,11 @@ The specifications describe supported HTTP operations, request and response sche
 Up to now, when the PaToken data source was queried using the GQI DxM, the DOM Instance ID column would incorrectly return the string representation of a `DomInstanceId` object instead of the GUID value. As a result, filtering on this column did not work correctly.
 
 From now on, the column will expose the correct GUID value and will support filtering for PaTokens both with and without a DOM Instance ID.
+
+#### Dashboards and low-code apps - Time range component: Time range could revert after a trigger refresh [ID 46685]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when you used a *Trigger* component to refresh a dashboard or low-code app containing a *Time range* component, that *Time range* component could revert to an older range after you selected a preset or quick pick. A manually entered range could also change.
+
+From now on, trigger refreshes will preserve the selected time range.
