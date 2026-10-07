@@ -36,7 +36,11 @@ The specifications describe supported HTTP operations, request and response sche
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID 45477]
+
+<!-- 45477: MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
