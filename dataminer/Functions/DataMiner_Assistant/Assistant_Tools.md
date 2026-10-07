@@ -31,7 +31,7 @@ From this page, you can:
 
 - **Edit a tool** by clicking the pencil button next to the tool in the list.
 
-- **Duplicate or delete a tool** by clicking the *Actions* (...) button next to a tool in the list. Selecting *Duplicate* creates a copy of the tool, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the tool entirely.
+- **Duplicate or delete a tool** by clicking the ... button next to a tool in the list. Selecting *Duplicate* creates a copy of the tool, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the tool entirely.
 
 > [!TIP]
 > For details about the tool editor, see [Creating or editing custom data tools](xref:Assistant_custom_data_tools#creating-or-editing-custom-data-tools-in-the-assistant-app) and [Creating or editing script tools](xref:Assistant_ScriptTools#creating-or-editing-script-tools-in-the-assistant-app).

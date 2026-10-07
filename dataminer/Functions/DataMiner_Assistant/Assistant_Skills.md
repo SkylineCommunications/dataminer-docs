@@ -28,9 +28,9 @@ This progressive loading model keeps context usage efficient, because only relev
 
 ### Using the Assistant app
 
-You can create and manage skills on the *Skills* page of the Assistant app. This page displays all available skills in searchable list.
+You can create and manage skills on the *Skills* page of the Assistant app. This page displays all available skills in a searchable list.
 
-![Skills overview page](~/dataminer/images/AssistantDxM_SkillsOverview.png)
+![Skills page in the Assistant app](~/dataminer/images/AssistantDxM_SkillsOverview.png)
 
 From this page, you can:
 
@@ -40,7 +40,7 @@ From this page, you can:
 
 - **Edit a skill** by clicking the pencil button next to the skill in the list.
 
-- **Duplicate or delete a skill** by clicking the *Actions* (...) button next to a skill in the list. Selecting *Duplicate* creates a copy of the skill, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the skill entirely.
+- **Duplicate or delete a skill** by clicking the ... button next to a skill in the list. Selecting *Duplicate* creates a copy of the skill, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the skill entirely.
 
 > [!NOTE]
 > While no specific permissions are required to view existing skills, creating or editing skills requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.

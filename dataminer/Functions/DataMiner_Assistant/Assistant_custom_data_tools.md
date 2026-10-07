@@ -53,7 +53,7 @@ When you create or edit a data tool, you will need to configure the following fi
 
 ## Configuring data tool files
 
-Instead of using the Assistant app, you can also add or edit data tools directly as markdown files in the following folders:
+Instead of using the Assistant app, you can also add or edit data tools directly as Markdown files in the following folders:
 
 - Ad hoc: `C:\ProgramData\Skyline Communications\DataMiner Assistant\Synced Documents\Context\Custom\Adhoc`
 - DOM: `C:\ProgramData\Skyline Communications\DataMiner Assistant\Synced Documents\Context\Custom\Dom`

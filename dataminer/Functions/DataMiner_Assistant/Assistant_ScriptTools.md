@@ -94,11 +94,11 @@ When you create or edit a script tool, you will need to configure the following 
 
 ## Configuring script tool files
 
-Instead of using the Assistant app, you can also add or edit script tools directly as markdown files in the following folder: `C:\ProgramData\Skyline Communications\DataMiner Assistant\Synced Documents\Context\Custom\Scripts`
+Instead of using the Assistant app, you can also add or edit script tools directly as Markdown files in the following folder: `C:\ProgramData\Skyline Communications\DataMiner Assistant\Synced Documents\Context\Custom\Scripts`
 
 These files are automatically discovered and synced across the cluster.
 
-The files must be markdown (`.md`) file that are configured as follows:
+The files must be markdown (`.md`) files that are configured as follows:
 
 - The files must have a [YAML front matter, configured as detailed below](#script-tool-file-yaml-front-matter).
 - The body of the files (maximum 8192 characters) must contain specific context about the script to help the Assistant understand its usage, expected behavior, and any important details. This includes when the script should and should not be used, its prerequisites and side effects, the expected result, and likely errors. Keep the instructions focused on one operational purpose.
