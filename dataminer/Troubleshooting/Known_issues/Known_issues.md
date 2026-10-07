@@ -8,6 +8,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | DataMiner 10.4.0 [CU17] and later | | October 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
@@ -39,6 +40,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | DataMiner 10.4.0 [CU17] and later | | October 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
@@ -97,6 +99,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | DataMiner 10.4.0 [CU17] and later | | October 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | | August 12, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
