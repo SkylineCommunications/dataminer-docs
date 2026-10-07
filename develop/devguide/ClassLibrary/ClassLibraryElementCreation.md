@@ -67,7 +67,7 @@ DmsElementId id = agent.CreateElement(configuration);
 When an element is created, the connection details need to specified. The only exception is for elements running a protocol that only has a virtual connection. For each type of connection supported by DataMiner, a corresponding interface is defined in the DataMinerSystem library. The diagrams below show the provided interfaces.
 
 All connection-related interfaces derive from `IElementConnection`. `IVirtualConnection` represents a virtual interface and `ISlaConnection` is used by SLAs.
-`IRealConnection` is the interface from which other connection interfaces derive that represent a real connection with a data source (e.g. an SNMP or a WebSocket connection).
+`IRealConnection` is the interface from which other connection interfaces derive that represent a real connection with a data source (e.g., an SNMP or a WebSocket connection).
 
 ```mermaid
 classDiagram
@@ -171,9 +171,9 @@ classDiagram
 
 The following examples show how to create an element for these connection types:
 
-# [SNMP](#tab/snmp)
+### [SNMP](#tab/snmp)
 
-## SNMPv1
+#### SNMPv1
 
 To create an element for a protocol with an SNMPv1 connection, provide an instance of the [SnmpV1Connection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.SnmpV1Connection) class (which implements [ISnmpV1Connection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ISnmpV1Connection)) in the connections of the element configuration:
 
@@ -195,7 +195,7 @@ ElementConfiguration configuration = new ElementConfiguration(
 DmsElementId id = agent.CreateElement(configuration);
 ```
 
-## SNMPv2c
+#### SNMPv2c
 
 To create an element for a protocol with an SNMPv2c connection, provide an instance of the [SnmpV2Connection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.SnmpV2Connection) class (which implements [ISnmpV2Connection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ISnmpV2Connection)) in the connections of the element configuration:
 
@@ -212,7 +212,7 @@ ElementConfiguration configuration = new ElementConfiguration(dms, "<ElementName
 DmsElementId id = agent.CreateElement(configuration);
 ```
 
-## SNMPv3
+#### SNMPv3
 
 To create an element for a protocol with an SNMPv3 connection, provide an instance of the [SnmpV3Connection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.SnmpV3Connection) class (which implements [ISnmpV3Connection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ISnmpV3Connection)) in the connections of the element configuration:
 
@@ -240,7 +240,7 @@ ElementConfiguration configuration = new ElementConfiguration(
 DmsElementId id = agent.CreateElement(configuration);
 ```
 
-# [HTTP](#tab/http)
+### [HTTP](#tab/http)
 
 To create an element for a protocol with an HTTP connection, provide an instance of the [HttpConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.HttpConnection) class (which implements [IHttpConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IHttpConnection)) in the connections of the element configuration:
 
@@ -265,11 +265,11 @@ private static void CreateElement(SLProtocol protocol)
 }
 ```
 
-# [Serial](#tab/serial)
+### [Serial](#tab/serial)
 
 To create an element for a protocol with a serial connection, provide an instance of the [SerialConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.SerialConnection) class (which implements [ISerialConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ISerialConnection)) in the connections of the element configuration:
 
-## Serial TCP connection
+#### Serial TCP connection
 
 ```csharp
 IDms dms = protocol.GetDms();
@@ -289,7 +289,7 @@ var configuration = new ElementConfiguration(
 agent.CreateElement(configuration);
 ```
 
-## Serial UDP connection
+#### Serial UDP connection
 
 ```csharp
 IDms dms = protocol.GetDms();
@@ -312,11 +312,11 @@ agent.CreateElement(configuration);
 > [!NOTE]
 > The DataMinerSystem library currently only supports creating serial connections that use either TCP or UDP.
 
-# [Smart serial](#tab/smartserial)
+### [Smart serial](#tab/smartserial)
 
-To create an element for a protocol with a smart serial connection, provide an instance of the [SmartSerialConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.SmartSerialConnection) class (which implements [ISmartSerialConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ISmartSerialConnection)) in the connections of the element configuration:
+To create an element for a protocol with a smart-serial connection, provide an instance of the [SmartSerialConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.SmartSerialConnection) class (which implements [ISmartSerialConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ISmartSerialConnection)) in the connections of the element configuration:
 
-## Smart serial TCP connection
+#### Smart-serial TCP connection
 
 ```csharp
 IDms dms = protocol.GetDms();
@@ -336,7 +336,7 @@ var configuration = new ElementConfiguration(
 agent.CreateElement(configuration);
 ```
 
-## Smart serial UDP connection
+#### Smart-serial UDP connection
 
 ```csharp
 IDms dms = protocol.GetDms();
@@ -356,7 +356,7 @@ var configuration = new ElementConfiguration(
 agent.CreateElement(configuration);
 ```
 
-# [WebSocket](#tab/websocket)
+### [WebSocket](#tab/websocket)
 
 To create an element for a protocol with a WebSocket connection, provide an instance of the [WebSocketConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.WebSocketConnection) class (which implements [IWebSocketConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IWebSocketConnection)) in the connections of the element configuration:
 
@@ -378,7 +378,7 @@ var configuration = new ElementConfiguration(
 agent.CreateElement(configuration);
 ```
 
-# [GPIB](#tab/gpib)
+### [GPIB](#tab/gpib)
 
 To create an element for a protocol with a GPIB connection, provide an instance of the [GpibConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.GpibConnection) class (which implements [IGpibConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IGpibConnection)) in the connections of the element configuration:
 
@@ -399,7 +399,7 @@ var configuration = new ElementConfiguration(
 agent.CreateElement(configuration);
 ```
 
-# [SLA](#tab/sla)
+### [SLA](#tab/sla)
 
 To create an element for an SLA protocol, provide an instance of the [SlaConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.SlaConnection) class (which implements [ISlaConnection](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.ISlaConnection)) in the connections of the element configuration:
 
@@ -422,4 +422,4 @@ var configuration = new ElementConfiguration(
 agent.CreateElement(configuration);
 ```
 
----
+***

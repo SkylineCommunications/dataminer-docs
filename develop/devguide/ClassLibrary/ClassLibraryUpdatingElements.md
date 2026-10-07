@@ -30,11 +30,11 @@ else
 element.Update(); // Apply the changes.
 ```
 
-The updates are only sent to DataMiner when the Update method is executed. This makes it possible to set multiple properties at once reducing the number of messages that needs to be sent to DataMiner to apply all changes.
+The updates are only sent to DataMiner when the `Update` method is executed. This makes it possible to set multiple properties at once, reducing the number of messages that needs to be sent to DataMiner to apply all changes.
 
 ## Updating element connections
 
-In case you need to update the connection settings of a specific connection of an element, e.g. an SNMP connection, cast the connection to the corresponding interface:
+In case you need to update the connection settings of a specific connection of an element, e.g., an SNMP connection, cast the connection to the corresponding interface:
 
 ```csharp
 IDms dms = protocol.GetDms();
