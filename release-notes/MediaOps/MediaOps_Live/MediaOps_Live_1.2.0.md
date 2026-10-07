@@ -77,3 +77,9 @@ To get started, take a look at the *MediaOps_Live_Example_DynamicOrchestration* 
 When importing endpoint or virtual signal group data from CSV files, special characters such as the degree symbol (°) could be parsed incorrectly, especially in files saved using the legacy Microsoft Excel CSV format.
 
 CSV imports now support both UTF-8 and Windows-1252 encoding, preserving special characters during import and provisioning. CSV exports now use UTF-8 encoding with a byte order mark (BOM), allowing Microsoft Excel to detect the encoding correctly when opening exported files.
+
+### Orchestration failed when script used profile definition with capability or capacity parameters [ID 46686]
+
+When an orchestration script used a profile definition containing capability or capacity parameters, every scheduled or manual orchestration of that script failed with an "Object reference not set to an instance of an object" null reference exception, even when the parameter values were linked to the node's capabilities and capacities.
+
+Orchestration scripts now run as expected for these profile definitions. In addition, values stored in profile instances for capability and capacity parameters are now also picked up: they appear as preset values and are used when a profile instance is passed to the script as input.
