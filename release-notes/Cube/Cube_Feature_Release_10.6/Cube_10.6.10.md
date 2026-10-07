@@ -6,6 +6,9 @@ uid: Cube_Feature_Release_10.6.10
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU7].
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.10](xref:General_Feature_Release_10.6.10).

@@ -33,7 +33,7 @@ items:
             topicUid: General_Main_Release_10.6.0_CU5
           - name: General Main Release 10.6.0 CU6
             topicUid: General_Main_Release_10.6.0_CU6
-          - name: General Main Release 10.6.0 CU7 - Preview
+          - name: General Main Release 10.6.0 CU7
             topicUid: General_Main_Release_10.6.0_CU7
           - name: General Main Release 10.6.0 CU8 - Preview
             topicUid: General_Main_Release_10.6.0_CU8
@@ -124,7 +124,7 @@ items:
             topicUid: General_Main_Release_10.5.0_CU17
           - name: General Main Release 10.5.0 CU18
             topicUid: General_Main_Release_10.5.0_CU18
-          - name: General Main Release 10.5.0 CU19 - Preview
+          - name: General Main Release 10.5.0 CU19
             topicUid: General_Main_Release_10.5.0_CU19
           - name: General Main Release 10.5.0 CU20 - Preview
             topicUid: General_Main_Release_10.5.0_CU20

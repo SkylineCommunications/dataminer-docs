@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_tool_advanced_procedures
+description: "Explore the list of advanced SLNetClientTest tool procedures you can use to troubleshoot DataMiner issues, configure system settings, etc."
 ---
 
 # SLNetClientTest tool advanced procedures

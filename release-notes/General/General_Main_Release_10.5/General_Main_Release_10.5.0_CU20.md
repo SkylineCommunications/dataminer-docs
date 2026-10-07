@@ -134,3 +134,9 @@ Up to now, when an automation script modified an element that used community cre
 In some cases, when SLScripting tried to log that a different version of an assembly had been loaded than the requested version, the logging could trigger another resolution attempt for the same assembly. This could result in a recursive loop that caused SLScripting to stop working.
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
+
+#### Problem when APIGateway was shut down [ID 46619]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
+
+Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.

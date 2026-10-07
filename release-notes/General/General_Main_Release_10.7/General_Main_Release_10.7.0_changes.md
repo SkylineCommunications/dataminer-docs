@@ -284,10 +284,11 @@ If information logging is set to Level 4, the log entries will also mention if a
 > - Log entries can also be added to *SLNetConnections.txt* and *SLCubeConnections.txt* for SLNet connections created elsewhere. To do so, provide a `LoggerProvider` to `SLNetTypesDiagnostics.AddLoggerProvider()`.
 > - When a Cube connected to a system without server-side `SLNetTypesDiagnostics` connects to a system with server-side `SLNetTypesDiagnostics`, the *SLCubeConnections.txt* log file will not be populated. Restart Cube if you want that log file to be populated.
 
-#### Security enhancements [ID 44804] [ID 45582]
+#### Security enhancements [ID 44804] [ID 45582] [ID 46665]
 
 <!-- 44804: MR 10.7.0 - FR 10.6.5 -->
 <!-- 45582: MR 10.7.0 - FR 10.6.9 -->
+<!-- 46665: MR 10.7.0 - FR 10.6.12 -->
 
 A number of security enhancements have been made.
 
@@ -750,6 +751,20 @@ Property updates will continue to be validated and applied in the same way, and 
 
 When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
 
+#### SLLogCollector now lists files in the Scripts folder [ID 46545]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
+
+#### STaaS traffic can now use a single IP address [ID 46570]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single IP address for STaaS traffic.
+
+If this single endpoint is not reachable, DataMiner will continue to use the existing endpoints.
+
 #### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
@@ -937,3 +952,19 @@ As a result, change points that were only ever written under the old v1 partitio
 <!-- MR 10.7.0 - FR 10.6.11 -->
 
 On systems using STaaS, up to now, a failing aggregate count query could incorrectly return `0` instead of throwing an exception. From now on, the query will throw an exception when it fails.
+
+#### Service & Resource Management: Resources with time-dependent capabilities could be ineligible when ignoring a booking [ID 46576]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When requesting eligible resources while ignoring a booking and its service definition node, a resource with a time-dependent capability could still be considered unavailable if it was used in that booking.
+
+From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
+
+#### STaaS: Feedback registrations could cause a memory leak [ID 46617]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
+
+From now on, these registrations will be cleared when they are no longer needed.

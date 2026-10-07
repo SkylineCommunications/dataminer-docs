@@ -47,8 +47,18 @@ When multiple polling groups were executed concurrently, results from SNMP GET r
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
 
-#### Problem when APIGateway when shut down [ID 46619]
+#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+
+#### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
-Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.
+Up to now, every time a connection to the DataMiner storage layer was opened, SLNet would register handlers for logging configuration changes and incoming messages. These handlers were not removed when the connection closed, leaving their associated objects in memory for the lifetime of the process.
+
+On systems where GQI queries repeatedly opened connections, for example through dashboards or low-code apps that refresh automatically, memory usage could keep increasing, potentially degrading performance or causing out-of-memory errors.
+
+From now on, the handlers will be removed when the connection closes.

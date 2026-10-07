@@ -29,4 +29,10 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### GQI DxM: PaToken DOM Instance IDs could not be filtered correctly [ID 46616]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when the PaToken data source was queried using the GQI DxM, the DOM Instance ID column would incorrectly return the string representation of a `DomInstanceId` object instead of the GUID value. As a result, filtering on this column did not work correctly.
+
+From now on, the column will expose the correct GUID value and will support filtering for PaTokens both with and without a DOM Instance ID.

@@ -4,6 +4,12 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
+#### 5 October 2026 - Fix - CloudGateway 4.0.0 - DataMiner Assistant for Microsoft 365 unable to communicate with CloudGateway
+
+Because of communication issues between the CloudGateway and the Assistant DxM included in DataMiner Web 10.6.10, the Microsoft 365 version of DataMiner Assistant could no longer be used. This issue has now been resolved.
+
+As a consequence of this fix, the Microsoft 365 version of DataMiner Assistant is now no longer supported on software versions prior to DataMiner Web 10.6.10 and CloudGateway 4.0.0.0.
+
 #### 21 September 2026 - Enhancement - CloudGateway 3.5.0 - Retrieve information using GetCloudDMSInformationRequest SLNET message
 
 From this CloudGateway version onward, you can retrieve information about your DMS connected to dataminer.services from within DataMiner using the `GetCloudDMSInformationRequest` SLNET message.

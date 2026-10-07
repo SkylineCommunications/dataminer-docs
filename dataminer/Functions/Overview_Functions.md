@@ -7,62 +7,62 @@ description: A DataMiner System can have several additional modules or apps, e.g
 
 <div class="row"> 
   <div class="column">
-    <a href="/dataminer/Functions/DataMiner_Assistant/Assistant_DxM.html" title="DataMiner Assistant" target="_self"><img src="~/dataminer/images/DataMiner_Assistant.svg" style="width:100%"></a>
-  </div>
-  <div class="column">
     <a href="/dataminer/Functions/Augmented_Operations/Overview_Augmented_Operations.html" title="Augmented operations" target="_self"><img src="~/dataminer/images/Augmented_Operations.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Automation_module/automation.html" title="Automation" target="_self"><img src="~/dataminer/images/Automation.svg" style="width:100%"></a>
   </div>
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/SRM/The_Bookings_module/The_Bookings_module.html" title="Bookings" target="_self"><img src="~/dataminer/images/Bookings.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/Business_Intelligence/Business_Intelligence.html" title="Business Intelligence" target="_self"><img src="~/dataminer/images/Business_Intelligence.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Correlation/About_DMS_Correlation.html" title="Correlation" target="_self"><img src="~/dataminer/images/Correlation.svg" style="width:100%"></a>
   </div>  
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/Dashboards_and_Low_Code_Apps/Dashboards_and_Low_Code_Apps.html" title="Dashboards and Low-Code Apps" target="_self"><img src="~/dataminer/images/Dashboards_Low_Code_Apps.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/Dashboards_legacy/Legacy_dashboards.html" title="DMS Dashboards" target="_self"><img src="~/dataminer/images/DMS_Dashboards.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/Data_Aggregator/Data_Aggregator_DxM.html" title="Data Aggregator" target="_self"><img src="~/dataminer/images/Data_Aggregator.svg" style="width:100%"></a>
   </div>  
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/Data_Sources/Data_Sources.html" title="Data Sources" target="_self"><img src="~/dataminer/images/Data_Sources.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/DOM/DOM.html" title="DOM" target="_self"><img src="~/dataminer/images/DOM.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Operator_guide/Documents/About_the_Documents_module.html" title="Documents" target="_self"><img src="~/dataminer/images/Documents.svg" style="width:100%"></a>
   </div>
-</div>
-
-<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/DataMiner_Edge/DataMiner_Edge.html" title="DataMiner Edge" target="_self"><img src="~/dataminer/images/DataMiner_Edge.svg" style="width:100%"></a>
   </div>
+</div>
+
+<div class="row"> 
   <div class="column">
     <a href="/dataminer/Functions/Element_connections/Element_Connections_module.html" title="Element Connections" target="_self"><img src="~/dataminer/images/Element_Connections.svg" style="width:100%"></a>
   </div>
   <div class="column">
     <a href="/dataminer/Functions/EPM/EPM.html" title="Experience and Performance Management" target="_self"><img src="~/dataminer/images/Experience_Performance_Management.svg" style="width:100%"></a>
   </div>  
+  <div class="column">
+    <a href="/dataminer/Functions/DataMiner_Assistant/Assistant_DxM.html" title="DataMiner Intelligence" target="_self"><img src="~/dataminer/images/DataMiner_Intelligence.svg" style="width:100%"></a>
+  </div>
 </div>
 
 <div class="row"> 

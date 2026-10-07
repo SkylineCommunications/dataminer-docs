@@ -12,8 +12,8 @@ The DataMiner Assistant for Microsoft 365 allows you to access all the features 
 
 - To interact with a DataMiner System via the DataMiner Assistant, the DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and the following [DxMs](xref:DataMinerExtensionModules) must be installed:
 
-  - Assistant (version 2.3.16.41785 or higher)
-  - CloudGateway (version 3.1.0.0 or higher)
+  - Assistant (version 3.11.2.51719 or higher)
+  - CloudGateway (version 4.0.0.0 or higher)
 
   > [!TIP]
   > See also: [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node)
@@ -47,10 +47,13 @@ Below you can find a quick guide of typical ways to interact with the Assistant.
 | Interaction | Result | Example user input |
 |--|--|--|
 | Ask for help | Displays a help card outlining everything the Assistant can do. | "help", "what can you do?" |
-| System configuration | Guides you through selecting an organization and DataMiner System to work with. | "configure system", "switch system" |
-| Get active system info | Shows the currently selected DataMiner System, including a link to open it in your browser. | "which system is active?", "show current system" |
-| Get account info | Displays your signed-in account details and the currently selected system. |"who am I?", "show my account" |
 | Authenticate | Starts the sign-in process to connect to your DataMiner account. | "sign in", "log in" |
 | Sign out | Signs you out and disconnects from the active system. | "sign out", "log out" |
+| Get account info | Displays your signed-in account details and the currently selected system. |"who am I?", "show my account" |
+| System configuration | Guides you through selecting an organization and DataMiner System to work with. | "configure system", "switch system" |
+| Get active system info | Shows the currently selected DataMiner System, including a link to open it in your browser. | "which system is active?", "show current system" |
+| Configure agent | Configure the AI agent that is used for the conversation. A default AI agent can be selected for the current system. | "select agent", "change agent" |
+| Configure model | Select the model that is used by the AI agent. A default model can be selected for the current AI agent. | "select model", "change model" |
+| Agent info | Display the AI agent and model that are currently being used | "agent info", "active agent" |
 | Live system queries | Sends queries to the DataMiner Assistant for real-time data (e.g., alarms, elements, services) and provides links to the monitoring UI. | "show active alarms", "what services are running?" |
 | Session reset | Prompts for confirmation, then clears the conversation history so you can start fresh while staying signed in. | "reset", "start over", "clear history" |

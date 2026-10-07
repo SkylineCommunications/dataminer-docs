@@ -24,7 +24,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
-When you create or edit an element in DataMiner Cube, the *Settings* page of the element wizard now supports number, IP address, and IP port settings defined by the connector.
+When you create or edit an element in DataMiner Cube, the *Settings* section of the element wizard now supports number, IP address, and IP port settings defined by the connector.
 
 - Number and IP port settings are displayed as numeric fields. Configured number ranges and decimal precision are applied, and IP port values must be whole numbers between 1 and 65535.
 - IP address settings are displayed as text fields.
@@ -35,7 +35,7 @@ All settings must contain valid values before you can save the element.
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
-When you create or edit an element in DataMiner Cube, the *Settings* page of the element wizard now supports SNMPv3 and SNMP community credential settings defined by the connector.
+When you create or edit an element in DataMiner Cube, the *Settings* section of the element wizard now supports SNMPv3 and SNMP community credential settings defined by the connector.
 
 These settings are displayed as drop-down lists containing matching credentials from the Credential Library, alongside the existing token and username/password credential settings. The credentials are sorted alphabetically by name.
 

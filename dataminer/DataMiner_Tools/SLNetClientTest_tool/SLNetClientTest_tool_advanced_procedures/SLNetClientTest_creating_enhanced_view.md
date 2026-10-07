@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_creating_enhanced_view
+description: "Use the SLNetClientTest tool to enhance a view with an element so its alarm level affects the view and its data pages appear on the card."
 ---
 
 # Creating an enhanced view

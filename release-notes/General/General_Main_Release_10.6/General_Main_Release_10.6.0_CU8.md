@@ -177,3 +177,21 @@ Up to now, when an automation script modified an element that used community cre
 In some cases, when SLScripting tried to log that a different version of an assembly had been loaded than the requested version, the logging could trigger another resolution attempt for the same assembly. This could result in a recursive loop that caused SLScripting to stop working.
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
+
+#### Elasticsearch re-indexing tool: Various fixes [ID 46587]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+A number of fixes have been made to the Elasticsearch re-indexing tool (*ReIndexElasticSearchIndexes*):
+
+- Up to now, after migrating from Elasticsearch to OpenSearch, the Elasticsearch re-indexing tool could replace the date-math expression in the `index.provided_name` field with a literal index name. This could prevent rollover-managed indices from rolling over on schedule. The tool now preserves the expression when it recreates indices.
+
+- The tool now swaps aliases atomically, verifies that exactly one index has the write flag on the active alias, and compares alias sets without relying on their order. It also skips index families that should not roll over and finds the next available sequence number when the expected one is already in use. Before modifying indices, it checks whether the cluster has enough shard capacity and, if needed, provides the suggested `cluster.max_shards_per_node` setting. You can bypass this check with `--SkipShardPreflight` if the cluster has already been sized.
+
+- The tool now handles null responses and failed destination reads without stopping unexpectedly. It also reduces redundant `_cat/indices` requests for performance and normalizes the `-D`/`--DBPrefix` argument so it can be supplied without a trailing hyphen.
+
+#### Problem when APIGateway was shut down [ID 46619]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
+
+Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.
