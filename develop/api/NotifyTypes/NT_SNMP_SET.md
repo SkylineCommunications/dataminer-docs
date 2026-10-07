@@ -89,6 +89,8 @@ object[] result = (object[])protocol.NotifyProtocol(292/*NT_SNMP_SET*/, elementI
     >
     > - Library credentials take precedence over plain-text credentials.
     > - If you pass an invalid GUID (either a non-existing GUID or a GUID of an incorrect type), the request will be considered invalid. There will be no fallback to plain-text credentials.
+  - elementInfo[12] (bool): Optional. Indicates whether the connection's community string should be used as a fallback if the specified value in elementInfo[5] is empty. Default: true. Note: Only supported when the [SnmpPollingSnmpPlusPlusOnly](xref:Overview_of_Soft_Launch_Options#snmppollingsnmpplusplusonly) soft-launch option is enabled<!-- RN 46535 -->
+
 
     - oidInfo (object[]): Array containing object arrays for all sets that need to be performed.
       - oidInfo[0…n] (object[]): SNMP set details
