@@ -39,7 +39,7 @@ To register an Edge Node that connects through dataminer.services, you need a Da
 
 1. In the [Admin app](https://admin.dataminer.services/), under *DataMiner Systems* in the sidebar on the left, select the DataMiner System you want to connect the Edge Node to and go to the *Keys* page.
 
-1. Copy an existing primary key or generate a new key.
+1. Copy an existing primary key or generate a new key that has the **Register Edge Nodes* permission.
 
    You will need this key when you install or configure the Edge Node.
 
