@@ -48,7 +48,7 @@ Up to now, when the PaToken data source was queried using the GQI DxM, the DOM I
 
 From now on, the column will expose the correct GUID value and will support filtering for PaTokens both with and without a DOM Instance ID.
 
-#### Dashboards and low-code apps - Time range component: Time range could revert after a trigger refresh [ID 46685]
+#### Dashboards/Low-Code Apps - Time range component: Time range could revert after a trigger refresh [ID 46685]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
