@@ -21,6 +21,17 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
+### Web API: OpenAPI and AsyncAPI specifications will now be available on each DataMiner Agent [ID 46653]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+On each DataMiner Agent, OpenAPI 3.1 and AsyncAPI 3.1 specifications will now be available in the following folders:
+
+- `C:\Skyline DataMiner\API\docs\http.json`
+- `C:\Skyline DataMiner\API\docs\ws.json`
+
+The specifications describe supported HTTP operations, request and response schemas, enum values, WebSocket messages, and subscriptions.
+
 ## Changes
 
 ### Enhancements
