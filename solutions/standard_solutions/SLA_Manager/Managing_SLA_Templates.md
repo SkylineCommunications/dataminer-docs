@@ -9,7 +9,7 @@ The *Templates* page gives you a card overview of all reusable SLA configuration
 
 ![SLA Manager Templates page](~/solutions/images/SLAManager_Templates.png)
 
-From this page, you can:
+From this page, you can do the following:
 
 - Create a new template.
 - Edit an existing template.

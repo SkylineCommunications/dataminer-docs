@@ -1,6 +1,6 @@
 ---
 uid: Managing_Outages
-description: Learn how to view, filter, and correct outages for the SLAs registered in the DataMiner SLA Manager app.
+description: "Learn how to view, filter, and correct outages for the SLAs registered in the DataMiner SLA Manager app."
 ---
 
 # Outages
@@ -15,15 +15,18 @@ At the top of the page, KPI cards summarize the number of ongoing outages, the t
 
 ## Filtering
 
-You can filter the outage list by SLA, by whether an outage is ongoing or resolved, and by whether an outage counts against the SLA.
+You can filter the outage list
+
+- by SLA,
+- by whether an outage is ongoing or resolved, and
+- by whether an outage counts against the SLA.
 
 ## Editing an outage
 
-For each outage, you can see whether it counted against the SLA or was excluded. You can also edit an outage inline to add or update its:
+For each outage, you can see whether it counted against the SLA or was excluded. You can also edit an outage inline to add or update
 
-- Correction, in minutes.
-- Motivation.
-- Ticket reference.
+- a correction (in minutes) and a motivation, and
+- a ticket reference.
 
 > [!IMPORTANT]
-> You must provide a motivation whenever you enter a correction. Otherwise, you cannot save your change.
+> Whenever you enter a correction, you must provide a motivation. Otherwise, you cannot save your change.
