@@ -126,6 +126,16 @@ When you viewed a Spectrum component in shared mode in Visual Overview, in some 
 
 The banner will now be displayed clearly, even when the component has limited space.
 
+#### Backup module was unavailable in mixed DaaS systems [ID 46528]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, the Backup module was unavailable whenever DaaS was enabled, including systems that also contained non-DaaS agents. As a result, it was not possible to configure or run backups for non-DaaS agents in these mixed environments.
+
+From now on, the Backup module will be available in mixed environments. It will only include non-DaaS agents, and backup settings and operations will be applied only to those agents.
+
+The module will remain unavailable when all agents in the system are DaaS agents.
+
 #### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
