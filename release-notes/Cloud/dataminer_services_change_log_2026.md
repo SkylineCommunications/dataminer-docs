@@ -15,7 +15,7 @@ When your browser could not reach the configured sign-in provider, for example b
 
 ### 8 October 2026 - Fix - Deployment - Reserved username accepted for DaaS deployments
 
-When deploying a DaaS, you could enter the reserved Windows username `DataMinerAdmin`. This caused the deployment to fail. This username is now disallowed regardless of capitalization.
+When deploying a DaaS system, it was possible to enter the reserved Windows username `DataMinerAdmin`. This caused the deployment to fail. This username is now no longer allowed, regardless of capitalization.
 
 ### 8 October 2026 - New feature - Catalog - Search version history
 
@@ -25,7 +25,7 @@ On the *Versions* tab of a Catalog item, you can now search the version history.
 
 Version history filters now require a version to match all active filters. Recommended versions are also filtered based on the search results.
 
-The version history is now divided into supported and unsupported sections. Deprecated ranges are classified as unsupported. Ranges without a supported version that matches the active search or filters are hidden.
+In addition, the version history is now divided into supported and unsupported sections. Deprecated ranges are classified as unsupported. Ranges without a supported version that matches the active search or filters are hidden.
 
 ### 8 October 2026 - Enhancement - Catalog - Version history state retained in the URL
 
@@ -33,7 +33,7 @@ The selected tab, search value, filters, and option to show unsupported versions
 
 ### 8 October 2026 - Enhancement - Catalog - Improved version history display
 
-The Catalog now keeps the selected version synchronized between version history sections and shows filter counts whether or not a filter is active. The search box, focus outlines, borders, and layout have also been improved. Catalog item ranges and versions now display more consistently on the details page.
+The Catalog now keeps the selected version synchronized between version history sections and shows filter counts whether or not a filter is active. The search box, focus outlines, borders, and layout have also been improved, and Catalog item ranges and versions are now displayed more consistently on the details page.
 
 ### 8 October 2026 - Fix - Catalog - Duplicate version custom tags could be added
 
