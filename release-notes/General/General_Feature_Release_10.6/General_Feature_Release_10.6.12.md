@@ -45,6 +45,14 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
+
+It remains in the enum for backward compatibility, but using it will produce a compiler warning, and it will no longer appear in IntelliSense suggestions. The warning will recommend `Maintenance` instead.
+
 #### ClusterEndpointsManager soft-launch option is now always enabled [ID 46538]
 
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->

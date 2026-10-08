@@ -735,6 +735,14 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
+#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
+
+It remains in the enum for backward compatibility, but using it will produce a compiler warning, and it will no longer appear in IntelliSense suggestions. The warning will recommend `Maintenance` instead.
+
 #### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
