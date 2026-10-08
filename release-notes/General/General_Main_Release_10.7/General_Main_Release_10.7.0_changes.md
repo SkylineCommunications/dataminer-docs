@@ -751,12 +751,6 @@ Property updates will continue to be validated and applied in the same way, and 
 
 When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
 
-#### ClusterEndpointsManager soft-launch option is now always enabled [ID 46538]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-From now on, the *ClusterEndpointsManager* soft-launch option will always be enabled, regardless of the soft-launch configuration.
-
 #### SLLogCollector now lists files in the Scripts folder [ID 46545]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->

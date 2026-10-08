@@ -47,7 +47,7 @@ Before you upgrade to this DataMiner version:
 
 #### ClusterEndpointsManager soft-launch option is now always enabled [ID 46538]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
 From now on, the *ClusterEndpointsManager* soft-launch option will always be enabled, regardless of the soft-launch configuration.
 
