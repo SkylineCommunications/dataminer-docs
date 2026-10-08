@@ -12,7 +12,7 @@ For most script actions, variables are required. There are several kinds of vari
 
 - **Memory files**: Containers of values, typically provided by the script itself.
 
-- **Credentials**: These allow a script to use credentials stored in the [Credentials Library](xref:Credentials_Library). Available from DataMiner 10.7.0/10.6.10 onwards (minimum DataMiner Cube version: 10.7.0/10.6.11)<!--RN 44282--><!--RN 46229--><!--RN 46251-->.
+- **Credentials**: These allow a script to use credentials stored in the [Credentials Library](xref:Credentials_Library). Available from DataMiner 10.6.10/10.7.0 onwards (with Cube 10.6.11/10.7.0 or higher)<!--RN 44282--><!--RN 46229--><!--RN 46251-->.
 
 When you add a script action that contains a variable, a line will automatically be added in the section in question. However, depending on the script, it can be more convenient to make the variables first, and then create the script actions.
 
@@ -75,7 +75,7 @@ These files can be managed in DataMiner Cube, in the *memory files* tab of the A
 
 ## Creating a set of credentials
 
-This feature is available from DataMiner 10.7.0/10.6.10 onwards (minimum DataMiner Cube version: DataMiner 10.7.0/10.6.11)<!--RN 44282--><!--RN 46229--><!--RN 46251-->.
+Starting from DataMiner 10.6.10/10.7.0 (with Cube 10.6.11/10.7.0 or higher), you can add credentials from the [Credentials Library](xref:Credentials_Library) to a script:<!--RN 44282--><!--RN 46229--><!--RN 46251-->.
 
 1. Click *Add* in the *CREDENTIALS* section to add a new line in this section.
 
