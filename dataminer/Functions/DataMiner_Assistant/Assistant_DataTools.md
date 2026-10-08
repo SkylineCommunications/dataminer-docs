@@ -1,8 +1,9 @@
 ---
 uid: Assistant_DataTools
+description: "Learn about native and custom data tools in DataMiner Assistant, which allow the Assistant to independently discover and query data sources."
 ---
 
-# Assistant data tools
+# Data tools
 
 The Assistant is able to independently discover and query data sources through data tools. Each data tool exposes a specific data source, together with a description, its input parameters, and its output columns, so that an agent can determine when and how to use it.
 

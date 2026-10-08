@@ -1,28 +1,48 @@
 ---
 uid: Assistant_Skills
+description: "Learn how to create and manage custom skills that provide DataMiner Assistant agents with domain-specific workflows, instructions, and companion files."
 ---
 
-# Assistant skills
+# Skills
 
-You can extend the Assistant's capabilities by adding custom skills. These are modular capabilities that package instructions, metadata, and optional resources (for example scripts, templates, and reference files). They let Assistant reuse domain-specific workflows and best practices across conversations instead of relying only on one-off prompt instructions.
+You can extend the Assistant's capabilities by adding custom skills. These are modular capabilities that package instructions, metadata, and optional resources (e.g., scripts, templates, and reference files). They let the Assistant reuse domain-specific workflows and best practices across conversations instead of relying only on one-off prompt instructions.
 
 ## Why use skills
 
 Skills are typically used for the following purposes:
 
-- Specialize the assistant for domain-specific tasks and internal processes.
+- Specialize the Assistant for domain-specific tasks and internal processes.
 - Reduce repetition by authoring guidance once and reusing it automatically.
 - Compose multiple skills to support more complex end-to-end workflows.
 
 ## How skills work
 
-Skills use a filesystem-based model. Each skill corresponds with a folder containing a `SKILL.md` file and optional resource files. The assistant loads this information progressively:
+Each skill corresponds with a folder containing a `SKILL.md` file and optional resource files. The assistant loads this information progressively:
 
 1. Metadata is always available for discovery.
 1. Instructions are loaded when a skill is triggered.
 1. Extra text-based resources are only read and passed along to the Assistant when needed.
 
 This progressive loading model keeps context usage efficient, because only relevant content is brought into the active context window.
+
+## Skill components
+
+A skill consists of the following components:
+
+- **Name**: A unique, human-readable name that identifies the skill. It must meet the following restrictions:
+
+  - Must be lowercase and may only contain letters, digits, and hyphens.
+  - Cannot start or end with a hyphen.
+  - Maximum 64 characters.
+
+- **Description**: A short summary of what the skill does and when it should be used. Maximum 1,024 characters.
+
+  > [!TIP]
+  > The *Description* field is critical for skill discovery. It should be written as a clear trigger condition so the agent knows exactly when to activate the skill. For example: "Use whenever questions arise around roadmap items, products, releases, teams, backlog, upcoming work, or completed work."
+
+- **Context**: The full skill instructions in Markdown format. This is the content that gets loaded into the agent's context window when the skill is triggered. It typically contains workflow steps, rules, constraints, and references to companion resources.
+
+- **Companion resource files**: Optional additional text-based resources that can be used by the skill, such as templates or playbooks. Adding or editing these resource files is not supported in the Assistant app and must be done directly [in the skill files](#using-skill-files).
 
 ## Creating and managing skills
 
@@ -36,22 +56,22 @@ From this page, you can:
 
 - **Search** for existing skills by name using the search bar.
 
-- **Create a new skill** by clicking the *+ New skill* button.
+- **Create a new skill** by clicking the *+ New skill* button. You will then have to configure the necessary [agent components](#skill-components).
 
 - **Edit a skill** by clicking the pencil button next to the skill in the list.
 
-- **Duplicate or delete a skill** by clicking the ... button next to a skill in the list. Selecting *Duplicate* creates a copy of the skill, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the skill entirely.
+- **Duplicate or delete a skill** by clicking the ellipsis button (...) next to a skill in the list. Selecting *Duplicate* creates a copy of the skill, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the skill entirely.
 
 > [!NOTE]
 > While no specific permissions are required to view existing skills, creating or editing skills requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.
 
-### Via skill files
+### Using skill files
 
 To define custom skills, you can add `SKILL.md` files in skill folders on the DataMiner server, within the following directory: `C:\ProgramData\Skyline Communications\DataMiner Assistant\Synced Documents\Context\Custom\Skills`. These folders are automatically discovered, validated, cached, and synchronized across clusters.
 
 #### Companion resource files
 
-Inside each skill folder, additional text-based resources can be added. They can be in the same folder or in nested subfolders. You can organize these resources in any way that makes sense for the skill (e.g. by topic, by type, etc.).
+Inside each skill folder, additional text-based resources can be added. They can be in the same folder or in nested subfolders. You can organize these resources in any way that makes sense for the skill (e.g., by topic or by type).
 
 Please note:
 
@@ -79,7 +99,7 @@ Skills/
 Each `SKILL.md` file must include:
 
 - YAML front matter with required fields: `name` and `description`.
-- Markdown body containing the skill instructions.
+- Markdown body containing the context of the skill.
 
 Validation rules:
 

@@ -1,5 +1,6 @@
 ---
 uid: NL2GQI
+description: "Learn how to use the natural language to GQI feature in DataMiner Assistant to generate ready-to-execute GQI queries from human-language requests."
 ---
 
 # Natural language to GQI

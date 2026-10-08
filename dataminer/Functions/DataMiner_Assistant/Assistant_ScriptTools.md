@@ -3,7 +3,7 @@ uid: Assistant_ScriptTools
 description: "Script tools let specialized agents run approved DataMiner Automation scripts with defined inputs, controlled execution, and user-visible results."
 ---
 
-# Assistant script tools
+# Script tools
 
 Script tools allow [specialized agents](xref:Assistant_Specialized_Agents) to execute automation scripts as part of a conversation. They are designed to actively operate or make changes in a DataMiner System instead of retrieving data only.
 
@@ -14,13 +14,13 @@ For example, a specialized agent can use a script tool to start maintenance, app
 Script tools are only available to an agent if both of the following conditions are met:
 
 - They have been correctly configured with an automation script, along with its usage and execution behavior.
-- They have been added as a reference to specialized agent.
+- They have been added as a reference to a specialized agent.
 
 During a conversation, the Assistant initially uses only the script tool name and description to determine whether the tool may be relevant. If it is relevant, the Assistant retrieves the remaining tool information, including the parameters and context. The agent then collects or confirms the required inputs, executes the script, and uses the result or error to continue the conversation.
 
 ## Execution flow
 
-### 1. The agent selects the tool
+### 1. The AI agent selects the tool
 
 The Assistant initially compares the user's request with the script tool name and description. It does not use the parameters or context at this stage. If the tool appears relevant, the Assistant retrieves that additional information, and the agent evaluates whether the requested action matches the script's purpose.
 
@@ -30,7 +30,7 @@ If the request does not provide a required value, or a value is ambiguous, the A
 
 If user confirmation is required, the Assistant asks the user to confirm the action before the script starts. This is recommended for scripts that make changes, restart services, delete data, or perform other irreversible operations.
 
-The chat confirmation shows the script name and the values that will be passed to the script. This allows the user to review exactly what they are allowing before selecting **Allow**. Selecting **Skip** prevents that invocation from running.
+The chat confirmation shows the script name and the values that will be passed to the script. This allows the user to review exactly what they are allowing before selecting *Allow*. Selecting *Skip* prevents that invocation from running.
 
 The script runs in the user's DataMiner context through an impersonated connection. The connection can be reused for subsequent script executions and remains open for at least 15 minutes after it is created. After a script finishes, it remains open for at least 15 minutes after the last script execution.
 
@@ -53,7 +53,7 @@ If a synchronous script does not finish within 30 minutes, it continues running 
 ## Interaction and resource limits
 
 - A maximum of 50 scripts can run in parallel for the same user.
-- Cancelling a chat or closing the Assistant stops the Assistant from waiting for an in-progress script. The automation script itself can continue running on the DataMiner System.
+- Canceling a chat or closing the Assistant stops the Assistant from waiting for an in-progress script. The automation script itself can continue running on the DataMiner System.
 - A timeout or cancellation does not roll back changes already made by the automation script, so if you design scripts that perform important changes, make sure these handle partial completion safely.
 
 ## Designing reliable script tools
@@ -78,17 +78,17 @@ When you create or edit a script tool, you will need to configure the following 
 
 - **Type**: *Script*. For information about the *Data* type, refer to [Data tools](xref:Assistant_DataTools).
 
-- **Description**: A brief description of when the script should be used. This helps the Assistant decide when to pick this tool. Maximum 1024 characters.
+- **Description**: A brief description of when the script should be used. This helps the Assistant decide when to pick this tool. Maximum 1,024 characters.
 
-- **Script**: The automation script to execute. Select the appropriate script from the dropdown.
+- **Script**: The automation script to execute. Select the appropriate script from the dropdown list.
 
 - **Parameters**: Input arguments for the script. For each parameter, the following fields are available:
 
   - **Name**: The parameter name. Must match a script parameter.
-  - **Example**: An example value that helps the Assistant determine the appropriate input. Maximum 1024 characters.
-  - **Description**: A description that helps the Assistant determine the appropriate input value. Maximum 1024 characters.
+  - **Example**: An example value that helps the Assistant determine the appropriate input. Maximum 1,024 characters.
+  - **Description**: A description that helps the Assistant determine the appropriate input value. Maximum 1,024 characters.
 
-- **Context**: Additional instructions or context about the script, such as the script's purpose, prerequisites, side effects, expected result, and likely errors. This will help the Assistant understand the usage, expected behavior, and any important details. Maximum 8192 characters.
+- **Context**: Additional instructions or context for the script, such as the script's purpose, prerequisites, side effects, expected result, and likely errors. This will help the Assistant understand the usage, expected behavior, and any important details. Maximum 8,192 characters.
 
 - **User confirmation**: Determines whether the user must confirm before the script runs. Select *Confirm* to require confirmation, or *None* to run without an additional confirmation.
 
@@ -100,8 +100,8 @@ These files are automatically discovered and synced across the cluster.
 
 The files must be markdown (`.md`) files that are configured as follows:
 
-- The files must have a [YAML front matter, configured as detailed below](#script-tool-file-yaml-front-matter).
-- The body of the files (maximum 8192 characters) must contain specific context about the script to help the Assistant understand its usage, expected behavior, and any important details. This includes when the script should and should not be used, its prerequisites and side effects, the expected result, and likely errors. Keep the instructions focused on one operational purpose.
+- The files must have [YAML front matter, configured as detailed below](#script-tool-file-yaml-front-matter).
+- The body of the files (maximum 8,192 characters) must contain specific context for the script to help the Assistant understand its usage, expected behavior, and any important details. This includes when the script should and should not be used, its prerequisites and side effects, the expected result, and likely errors. Keep the instructions focused on one operational purpose.
 - Each file must define one script tool.
 
 ### Script tool file YAML front matter
@@ -112,7 +112,7 @@ The front matter must include the following fields:
 
 - `description`: Required. A brief description of the script. This helps the Assistant decide when to pick this tool. Maximum 1,024 characters.
 
-- `scriptName`: Required. The Automation script to execute.
+- `scriptName`: Required. The automation script to execute.
 
 - `sync`: Optional. Controls execution behavior. Defaults to `true` when omitted.
 
@@ -124,8 +124,8 @@ The front matter must include the following fields:
 - `inputArguments`: Optional. A list of input arguments. Each argument should be described by the following fields:
 
   - `name`: The parameter name. Must match a script parameter.
-  - `example`: An example value that helps the Assistant determine the appropriate input. Maximum 1024 characters.
-  - `description`: A description that helps the Assistant determine the appropriate input value. Maximum 1024 characters.
+  - `example`: An example value that helps the Assistant determine the appropriate input. Maximum 1,024 characters.
+  - `description`: A description that helps the Assistant determine the appropriate input value. Maximum 1,024 characters.
 
 ## Example: script tool
 

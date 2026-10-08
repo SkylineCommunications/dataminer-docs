@@ -1040,7 +1040,7 @@ items:
       - name: DataMiner Assistant app
         topicUid: DataMinerAssistant
         items:
-        - name: Assistant agents
+        - name: Agents
           topicUid: Assistant_Agents
           items:
           - name: Native agents
@@ -1051,9 +1051,9 @@ items:
               topicUid: Assistant_DocumentationAgent
           - name: Specialized agents
             topicUid: Assistant_Specialized_Agents
-        - name: Assistant skills
+        - name: Skills
           topicUid: Assistant_Skills
-        - name: Assistant tools
+        - name: Tools
           topicUid: Assistant_Tools
           items:
           - name: Data tools
