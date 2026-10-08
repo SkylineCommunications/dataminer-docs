@@ -42,6 +42,12 @@ The specifications describe supported HTTP operations, request and response sche
 
 A number of security enhancements have been made.
 
+#### GQI DxM - Parameter table: Support added for OR filtering [ID 46606]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+For the *Parameter table by ID* data source and the *Get parameters for elements where* data source, GQI will now optimize filters using the `In` operator. Where supported, the filter values will be forwarded to the server instead of being processed by GQI.
+
 ### Fixes
 
 #### GQI DxM: PaToken DOM Instance IDs could not be filtered correctly [ID 46616]
