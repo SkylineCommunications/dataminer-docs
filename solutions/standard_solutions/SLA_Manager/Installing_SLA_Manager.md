@@ -7,9 +7,9 @@ description: "Deploy the SLA Manager Standard Solution from the DataMiner Catalo
 
 ## Prerequisites
 
-- DataMiner 10.5.9 or higher.
+- DataMiner 10.5.9/10.6.0 or higher.
 
-- Internet access to the DataMiner Catalog during deployment.
+- A DataMiner System that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 ## Deploying SLA Manager
 
