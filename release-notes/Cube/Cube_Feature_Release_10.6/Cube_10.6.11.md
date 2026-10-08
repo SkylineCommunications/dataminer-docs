@@ -62,7 +62,7 @@ After you select a type, Cube will only show credentials of that type that you a
 You cannot save the script until both a credentials type and a set of credentials have been selected.
 
 > [!IMPORTANT]
-> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer.
+> This feature will only work in conjunction with DataMiner server version 10.6.10/10.7.0 or higher.
 
 ### User-Defined APIs: Rate limit notices can now be enabled for API tokens [ID 46336]
 

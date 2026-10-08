@@ -115,4 +115,4 @@ You can change the name of a folder in the following ways:
 Note that **security restrictions** apply:
 
 - To import automation scripts, you need the user permission *Automation: Add*. To export automation scripts, you need the user permission *Automation: Edit*. See [DataMiner user permissions](xref:DataMiner_user_permissions).
-- From DataMiner 10.7.0/10.6.10 onwards<!--RN 44282--><!--RN 46229-->, if you import a script that uses [credentials](xref:Script_variables#creating-a-set-of-credentials) you do not have access to, those credentials are cleared. The script can then no longer be executed until you assign credentials you do have access to. See [Credentials Library](xref:Credentials_Library).
+- From DataMiner 10.6.10/10.7.0 onwards (with Cube 10.6.11/10.7.0 or higher)<!--RN 44282--><!--RN 46229--><!--RN 46251-->, if you import a script that uses [credentials](xref:Script_variables#creating-a-set-of-credentials) you do not have access to, those credentials are cleared. The script can then no longer be executed until you assign credentials you do have access to. See [Credentials Library](xref:Credentials_Library).
