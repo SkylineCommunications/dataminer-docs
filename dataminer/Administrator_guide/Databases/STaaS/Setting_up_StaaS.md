@@ -34,10 +34,9 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 - All Agents in your DataMiner System must have internet access, either directly or through a proxy.
 
-  For specific endpoints or IPs to whitelist, contact <support@dataminer.services>. The configuration depends on the region you will register your system for.
+  From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46570 -->, you can allow STaaS traffic through your firewall by whitelisting a single IP address (or two IP addresses for a geo-replicated setup). See [IP addresses to whitelist](#ip-addresses-to-whitelist).
 
-  > [!NOTE]
-  > From DataMiner 10.6.12 & 10.7.0 onwards, you can allow STaaS traffic through your firewall by whitelisting a single IP address (or 2 IP addresses for a geo-replicated setup). See [IP addresses to whitelist](#ip-addresses-to-whitelist).
+  For earlier DataMiner versions, contact <support@dataminer.services> for specific endpoints or IPs to whitelist. The configuration depends on the region you will register your system for.
 
   > [!NOTE]
   > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
@@ -46,9 +45,9 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 ## IP addresses to whitelist
 
-From DataMiner 10.6.12 & 10.7.0 onwards, you can allow STaaS traffic through your firewall by whitelisting a single IP address, determined by the region your system is registered for. For a **geo-replicated (GRS)** setup, you must whitelist **2 IP addresses**: the IP address of the primary region and the IP address of its geo-redundancy pair region.
+From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46570 -->, you can allow STaaS traffic through your firewall by whitelisting a single IP address, determined by the region your system is registered for. For a **geo-replicated (GRS)** setup, you must whitelist **two IP addresses**: the IP address of the primary region and the IP address of its geo-redundancy pair region.
 
-In the table below, find the region your system is registered for and whitelist the corresponding IP address(es).
+In the table below, you can find the IP addresses corresponding with each region:
 
 | Region         | Region IP address |
 |----------------|-------------------|
