@@ -9,6 +9,40 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 8 October 2026 - Fix - Authentication - Clearer error message when sign-in provider cannot be reached
+
+When your browser could not reach the configured sign-in provider, for example because a firewall, proxy, or browser extension blocked the connection, the sign-in page incorrectly reported that the sign-in attempt had timed out. It now identifies the sign-in provider that could not be reached and advises you to ask your network administrator to allow access to it.
+
+### 8 October 2026 - Fix - Deployment - Reserved username accepted for DaaS deployments
+
+When deploying a DaaS, you could enter the reserved Windows username `DataMinerAdmin`. This caused the deployment to fail. This username is now disallowed regardless of capitalization.
+
+### 8 October 2026 - New feature - Catalog - Search version history
+
+On the *Versions* tab of a Catalog item, you can now search the version history. The search is also available through the public and user APIs. When no versions match your search, the Catalog now displays this clearly. It also displays an error message if the search cannot be completed.
+
+### 8 October 2026 - Enhancement - Catalog - Improved filtering and organization of version history
+
+Version history filters now require a version to match all active filters. Recommended versions are also filtered based on the search results.
+
+The version history is now divided into supported and unsupported sections. Deprecated ranges are classified as unsupported. Ranges without a supported version that matches the active search or filters are hidden.
+
+### 8 October 2026 - Enhancement - Catalog - Version history state retained in the URL
+
+The selected tab, search value, filters, and option to show unsupported versions are now stored in the URL. This preserves your version history view when you use the browser back button or when authentication updates the URL. The Catalog resets this state when you open a different Catalog item.
+
+### 8 October 2026 - Enhancement - Catalog - Improved version history display
+
+The Catalog now keeps the selected version synchronized between version history sections and shows filter counts whether or not a filter is active. The search box, focus outlines, borders, and layout have also been improved. Catalog item ranges and versions now display more consistently on the details page.
+
+### 8 October 2026 - Fix - Catalog - Duplicate version custom tags could be added
+
+It was possible to add the same custom tag more than once to a version. This issue has been resolved.
+
+### 8 October 2026 - Fix - Catalog - Unwanted Markdown links and heading spacing in descriptions
+
+Embedded Catalog descriptions could display Markdown permalinks and incorrect spacing around headings. This issue has been resolved.
+
 ### 22 September 2026 - Enhancement - Admin - Create support tickets for managed organizations
 
 You can now create support tickets on behalf of the organizations you manage. After a ticket is created, a confirmation notification will show the ticket number.
