@@ -88,9 +88,6 @@ Up to now, when you created or edited a resource in the Resources module in Data
 
 The *Status* box will now only offer *Available* and *Maintenance*. If a resource is already set to *Unavailable*, its current status will still be displayed. Once you change it, you will only be able to select *Available* or *Maintenance*.
 
-> [!NOTE]
-> This will only work in conjunction with DataMiner server version 10.7.0/10.6.12 or newer.
-
 #### Spectrum: Last Session Preset could not be saved after loading a custom preset in shared mode [ID 46516]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
