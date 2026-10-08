@@ -6,7 +6,7 @@ uid: KI_DELT_export_unfiltered_after_STaaS_cost_estimation
 
 ## Affected versions
 
-DataMiner 10.4.0 [CU17] and later, including all 10.5.x and 10.6.x versions, on systems using a Cassandra Cluster database where the [STaaS cost estimation](xref:STaaS_cost_estimation) has been executed. Single-node Cassandra setups are likely also affected, but this has not been confirmed.
+DataMiner 10.4.0 [CU17], 10.5.0 [CU5], and 10.5.8 onwards, on systems using a Cassandra Cluster database where the [STaaS cost estimation](xref:STaaS_cost_estimation) has been executed. Single-node Cassandra setups are likely also affected, but this has not been confirmed.
 
 ## Cause
 
