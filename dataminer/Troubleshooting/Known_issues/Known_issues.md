@@ -8,7 +8,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner ... onwards | | October 8, 2026 |
+| [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 CU19/10.3.0 CU7/10.3.10 onwards | | October 8, 2026 |
 | [Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes](xref:KI_SLAutomation_ScriptRunner_missing_assemblies) | Feature Release versions from DataMiner 10.6.9 onwards | | September 16, 2026 |
 | [Swarmed scheduled task executes incorrect action after editing](xref:KI_Swarmed_scheduled_task_executes_incorrect_action) | Feature Release versions from DataMiner 10.6.3 onwards | | September 7, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
