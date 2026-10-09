@@ -80,6 +80,14 @@ In some cases, a profile instance, a profile parameter, or a profile definition 
 
 Cube now compares profile instances, parameters, and definitions independently of property order, so differences in ordering no longer cause them to be marked as modified.
 
+#### Service & Resource Management: Unavailable resource status could be selected manually [ID 46490]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when you created or edited a resource in the Resources module in DataMiner Cube, you could select *Unavailable* in the *Status* box. This allowed you to manually set a resource to an invalid status.
+
+The *Status* box will now only offer *Available* and *Maintenance*. If a resource is already set to *Unavailable*, its current status will still be displayed. Once you change it, you will only be able to select *Available* or *Maintenance*.
+
 #### Spectrum: Last Session Preset could not be saved after loading a custom preset in shared mode [ID 46516]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -117,6 +125,16 @@ From now on, the button will be disabled when the Spectrum component is not in s
 When you viewed a Spectrum component in shared mode in Visual Overview, in some cases, the banner indicating that another user had pushed changes could be too small to use.
 
 The banner will now be displayed clearly, even when the component has limited space.
+
+#### Backup module was unavailable in mixed DaaS systems [ID 46528]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, the Backup module was unavailable whenever DaaS was enabled, including systems that also contained non-DaaS agents. As a result, it was not possible to configure or run backups for non-DaaS agents in these mixed environments.
+
+From now on, the Backup module will be available in mixed environments. It will only include non-DaaS agents, and backup settings and operations will be applied only to those agents.
+
+The module will remain unavailable when all agents in the system are DaaS agents.
 
 #### System Center - Agents: Warning messages could be incorrect when adding or removing an Agent [ID 46550]
 

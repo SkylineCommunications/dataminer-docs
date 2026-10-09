@@ -735,6 +735,14 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
+#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
+
+It remains in the enum for backward compatibility, but using it will produce a compiler warning, and it will no longer appear in IntelliSense suggestions. The warning will recommend `Maintenance` instead.
+
 #### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
@@ -750,12 +758,6 @@ Property updates will continue to be validated and applied in the same way, and 
 <!-- MR 10.7.0 - FR 10.6.11 -->
 
 When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
-
-#### ClusterEndpointsManager soft-launch option is now always enabled [ID 46538]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-From now on, the *ClusterEndpointsManager* soft-launch option will always be enabled, regardless of the soft-launch configuration.
 
 #### SLLogCollector now lists files in the Scripts folder [ID 46545]
 
@@ -974,3 +976,11 @@ From now on, the Resource Manager will take ignored booking into account when de
 On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
 
 From now on, these registrations will be cleared when they are no longer needed.
+
+#### Spectrum: Measurement point cycle was not loaded when DONT_APPLY_SETTINGS was passed [ID 46630]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Up to now, when you loaded a preset with both the `SPA_PRESET_DONT_APPLY_SETTINGS` and `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flags, the measurement point cycle would not be loaded.
+
+From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will load the measurement point cycle regardless of whether the `SPA_PRESET_DONT_APPLY_SETTINGS` flag is also passed.
