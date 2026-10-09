@@ -36,6 +36,12 @@ DataMiner is a trailblazing transformational xOps platform that:
 
 Transform your organization quickly and effectively into an agile data-driven powerhouse with DataMiner, excel in the new xOps world, and achieve unparalleled value creation.
 
+## Intelligence fabric for a complex operational ecosystem
+
+DataMiner helps organizations simplify complex operations by connecting data, workflows, systems, and operational knowledge into a **single intelligence fabric**. It provides teams with the operational context they need to make faster, smarter decisions, reduce manual effort, and improve efficiency across the entire ecosystem.
+
+By breaking down silos and unifying fragmented tools and processes, DataMiner enables organizations to scale operations with confidence, improve service quality, and accelerate innovation. The result is a practical, proven path to **AI-native operations** that delivers measurable business value from the very first use case and continues to compound over time.
+
 ## What is DataMiner going to deliver to you?
 
 Better, faster, and cheaper. And this in countless different ways across your entire organization and all conceivable aspects of it, in a continuous cycle of improvement and innovation, ensuring ever-growing value creation over time. This makes DataMiner not only a highly strategic investment but also one with unrivaled returns.
