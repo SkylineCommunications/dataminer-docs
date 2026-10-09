@@ -1,6 +1,6 @@
 ---
 uid: InnerWorkingsInternalStorage
-description: "Understand where connector parameter values are stored across SLProtocol, SLElement, and SLScripting, and how RTDisplay affects availability."
+description: "Learn what uninitialized numeric parameters return in DataMiner for standalone parameters and table cells, and how to detect uninitialized values."
 ---
 
 # Internal storage

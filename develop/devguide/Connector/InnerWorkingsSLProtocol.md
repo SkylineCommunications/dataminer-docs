@@ -1,6 +1,6 @@
 ---
 uid: InnerWorkingsSLProtocol
-description: "Understand SLProtocol processes, timer and protocol threads, group queue priorities, synchronous item execution, and separate connection threads."
+description: "Explore the inner workings of SLProtocol, covering thread architecture, priority queues, group and item execution, and multithreading."
 ---
 
 # SLProtocol
