@@ -123,6 +123,8 @@ items:
             - name: Solutions
               topicUid: Pricing_sizing_guide_solutions
               items:
+                - name: Cost & Billing
+                  topicUid: Pricing_sizing_guide_solutions_Cost_Billing
                 - name: InfraOps
                   topicUid: Pricing_sizing_guide_solutions_InfraOps
                 - name: MediaOps Plan
