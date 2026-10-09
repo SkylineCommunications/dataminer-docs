@@ -942,6 +942,8 @@ items:
         topicUid: Automation_best_practices_information_events
       - name: Handling async code
         topicUid: Handling_Async_Code
+      - name: Using the security context of the user running an automation script
+        topicUid: Automation_best_practices_security_context
     - name: How-tos
       items:
       - name: Making your automation scripts debug-ready
