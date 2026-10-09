@@ -1,6 +1,6 @@
 ---
 uid: LogicParameters
-description: "A parameter can represent a table, a table column, an internal placeholder to hold a value, a UI component, etc."
+description: "Discover the different parameter types, including parameters representing tables, table columns, internal placeholders to hold a value, UI components, etc."
 ---
 
 # Parameters

@@ -1,6 +1,6 @@
 ---
 uid: LogicActionsOverview
-description: "Browse the available protocol action types, what each action does, which component it targets, and related queue execution actions."
+description: "Explore the complete reference of DataMiner protocol actions, including descriptions, target components, and related actions."
 ---
 
 # Actions overview
