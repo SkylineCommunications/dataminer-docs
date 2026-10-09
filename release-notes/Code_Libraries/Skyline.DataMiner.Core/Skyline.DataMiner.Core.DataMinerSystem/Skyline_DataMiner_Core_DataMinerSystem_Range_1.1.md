@@ -535,7 +535,7 @@ When the *IDmsService.Update()* method is used, the service will no longer be mo
 
 *IDmsProperty* now has the *AsWritable()* method and *IsWritable* property. If the property is not writable, the method will throw an InvalidOperationException.
 
-For an example, see [Setting a property and renaming the element](xref:ClassLibraryExamples#setting-a-property-and-renaming-the-element)
+For an example, see [Setting a property and renaming the element](xref:ClassLibraryUpdatingElements#updating-elements)
 
 ### 1.1.1.7
 

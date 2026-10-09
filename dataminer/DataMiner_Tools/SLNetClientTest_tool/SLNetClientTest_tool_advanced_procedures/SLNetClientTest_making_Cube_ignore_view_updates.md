@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_making_Cube_ignore_view_updates
+description: "Learn how, using the SLNetClientTest tool, you can make DataMiner Cube clients stop handling view changes."
 ---
 
 # Making DataMiner Cube ignore view updates

@@ -19,7 +19,7 @@ You can use GitHub to:
 
 ## Creating an account in GitHub's Skyline organization
 
-See [Creating a GitHub account](https://internaldocs.skyline.be/Corporate/OfficeConventions/OC_Corporate/IT/IT_GitHub.html).
+See [Creating a GitHub account](https://aka.dataminer.services/slc-create-github-account).
 
 ## Creating a repository in the Skyline organization
 

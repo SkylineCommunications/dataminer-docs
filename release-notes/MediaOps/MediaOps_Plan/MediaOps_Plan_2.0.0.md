@@ -448,6 +448,20 @@ When no option matches, or when the value is not a number within the range, the 
 
 Two additional link types are now offered as well: a capability can be linked to a resource property, and a capacity can be linked to a job property or a resource property.
 
+#### Scheduling/Workflow Designer: Nodes with the same name are now numbered instead of showing their node ID [ID 46679]
+
+Previously, when a workflow or job contained multiple nodes with the same name, the node ID (GUID) was added to the name of these nodes to tell them apart. As these IDs are not meaningful for users, nodes with the same name are now numbered instead, e.g., "Encoder Pool (1)" and "Encoder Pool (2)".
+
+The numbers follow the order in which the nodes were added. When a node is removed, any nodes added after it are renumbered.
+
+This applies to:
+
+- The node graph in the Workflow Designer and Scheduling apps.
+- The node selection when configuring a parameter link.
+- The resource pool names shown for the nodes of a job in the Scheduling app.
+
+To give a node a fixed, recognizable name, you can set an alias for the node.
+
 ### Fixes
 
 #### DevPack: Resource reservations could appear to start before job confirmation [ID 45889]
@@ -523,3 +537,57 @@ This issue has now been fixed. The dialogs now derive the default step size from
 When you added a node next to another node in a confirmed job, the operation incorrectly displayed two error messages instead of just one. The specific message "Changes are not allowed in current job state" was immediately followed by a generic message that the node could not be added.
 
 This issue has now been fixed. Only the specific error about the job state will now be displayed.
+
+#### Resource Studio: Unhandled exception when editing resource pool parameters if automated action could not load script input parameters [ID 46682]
+
+When an automated action used an orchestration script whose input parameters could not be loaded (for example, when the script referred to a profile definition that did not exist), opening the *Edit Resource Pool Parameters* dialog in Resource Studio resulted in an unhandled exception, causing the dialog to stop working.
+
+The dialog now handles this situation gracefully, matching the behavior in the Scheduling app:
+
+- An error message is displayed below the selected script: *The input parameters for script '[script]' could not be loaded. Check the logging for details.* The full exception is logged.
+- The script is retried each time it is selected.
+- The *Update* button is disabled while an enabled automated action has a script that could not be loaded. Disabling the action allows you to save again.
+- The saved script settings of a resource pool are preserved and applied once the script can be loaded, preventing temporary issues from causing data loss.
+
+#### Capacity values not loaded from profile instance presets [ID 46688]
+
+Previously, when you selected a profile instance as a preset in an orchestration event configuration, capacity values were not loaded. While capability values were loaded correctly, capacity parameters remained empty, so you had to enter them manually or were left with an incomplete orchestration configuration.
+
+Selecting a profile instance now also fills in the requested capacity amount of each capacity parameter, ensuring that all values defined in the profile instance are loaded.
+
+This applies to both places where a profile instance can be applied to an orchestration event:
+
+- The node configuration of workflows and jobs.
+- Resource pool parameters where orchestration defaults are configured for a resource pool.
+
+#### Resource Studio: Profile parameters could not be linked to resource pool capabilities and capacities [ID 46689]
+
+In the *Edit Resource Pool Parameters* dialog in Resource Studio, a profile parameter of an automated action's orchestration script could previously only be linked to the resource name, a resource property, the resource linked object ID, or a configuration. It was not possible to link profile parameters to the capabilities and capacities assigned to the resource pool. Because the dialog suggested a configuration link by default, it often showed an empty list.
+
+Profile parameters can now also be linked to the resource pool's capabilities and capacities. In addition, the *Configure Link* dialog now preselects the link type that matches the profile parameter: *Capability* for a capability, *Capacity* for a capacity, and *Configuration* otherwise. This preselection also applies to automated actions in the Scheduling app and the Workflow Designer, where capability and capacity links were already supported.
+
+#### Scheduling: Additional contacts not displayed for recurring jobs [ID 46691]
+
+In the Scheduling app, it could occur that additional contacts defined for a recurring job were not displayed in the contacts panel. This issue has now been resolved.
+
+#### Scheduling: Only first selected node removed when removing multiple nodes from a job workflow [ID 46693]
+
+In the *Edit job* panel in the Scheduling app, when you selected multiple nodes in the workflow panel and clicked *Remove Node*, only the first selected node was removed, leaving the remaining selected nodes in place.
+
+You can now select multiple nodes at once and have all of them removed in a single action, matching the behavior already available in the Workflow Designer.
+
+In addition, the confirmation dialog now adapts to the selection:
+
+- When you remove a single node without linked nodes, the dialog behaves as before.
+- When you remove multiple nodes, the dialog indicates how many nodes were selected. If those nodes have linked child nodes, it shows the total number of nodes that will be removed along with their names.
+- Nodes that are already scheduled for removal because they were linked to another selected node are no longer processed twice.
+- If you click *Remove Node* without selecting any nodes, a clear message now indicates that you must select at least one node to remove, instead of displaying a misleading error.
+
+> [!NOTE]
+> This applies to standard job workflows in the *Edit job* panel. Removing nodes remains unsupported for recurring jobs.
+
+#### Job could not be confirmed when automated action parameter was linked to a resource property [ID 46695]
+
+When an orchestration script parameter for a node's automated action was linked to a property of the resource assigned to that node, it could occur that a job could not be confirmed. In this case, confirming the job failed with an error indicating that not all references could be resolved, for example: `Not all references could be resolved: "<parameter>" (linked to Resource Property) in <node>, event '<event>'`.
+
+This happened when the link did not store a node, which is the case for links configured on a resource pool. The link is now resolved against the node that owns the automated action, so the job can be confirmed.

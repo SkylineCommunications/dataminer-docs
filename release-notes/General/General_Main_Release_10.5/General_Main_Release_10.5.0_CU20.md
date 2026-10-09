@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU20
 ---
 
-# General Main Release 10.5.0 CU20 - Preview
+# General Main Release 10.5.0 CU20
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version:
@@ -135,7 +135,7 @@ In some cases, when SLScripting tried to log that a different version of an asse
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
 
-#### Problem when APIGateway when shut down [ID 46619]
+#### Problem when APIGateway was shut down [ID 46619]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
 

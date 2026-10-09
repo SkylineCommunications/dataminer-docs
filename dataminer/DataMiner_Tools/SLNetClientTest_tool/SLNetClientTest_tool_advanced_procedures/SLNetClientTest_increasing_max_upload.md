@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_increasing_max_upload
+description: "Learn how, using the SLNetClientTest tool, you can increase the maximum upload size for upgrade packages in a DMS."
 ---
 
 # Increasing the maximum upload size for upgrade packages in a DMS

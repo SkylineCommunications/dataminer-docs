@@ -43,7 +43,9 @@ To configure a set of credentials in DataMiner Cube:
    The available options adapt automatically based on the chosen type.
 
    > [!NOTE]
-   > From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45670-->, all credential fields have a maximum length of 5120 bytes (5 KB), and the *Authentication password* field for credentials of type *Username and password* and *Access token* field for credentials of type *Token* can be left empty.
+   >
+   > - From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45670-->, all credential fields have a maximum length of 5120 bytes (5 KB), and the *Authentication password* field for credentials of type *Username and password* and *Access token* field for credentials of type *Token* can be left empty.
+   > - Setting an empty set community string in community credentials is only possible from DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!-- 46535+46536 -->, and only if the [SnmpPollingSnmpPlusPlusOnly](xref:Overview_of_Soft_Launch_Options#snmppollingsnmpplusplusonly) soft-launch option is enabled.
 
 1. In the *Groups* section, configure access control by adding or removing the relevant groups in the *Included in groups* box using the *ADD >>* and *<< REMOVE* buttons.
 

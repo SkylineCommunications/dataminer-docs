@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.6.0_CU8
 ---
 
-# General Main Release 10.6.0 CU8 - Preview
+# General Main Release 10.6.0 CU8
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -178,7 +178,19 @@ In some cases, when SLScripting tried to log that a different version of an asse
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
 
-#### Problem when APIGateway when shut down [ID 46619]
+#### Elasticsearch re-indexing tool: Various fixes [ID 46587]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+A number of fixes have been made to the Elasticsearch re-indexing tool (*ReIndexElasticSearchIndexes*):
+
+- Up to now, after migrating from Elasticsearch to OpenSearch, the Elasticsearch re-indexing tool could replace the date-math expression in the `index.provided_name` field with a literal index name. This could prevent rollover-managed indices from rolling over on schedule. The tool now preserves the expression when it recreates indices.
+
+- The tool now swaps aliases atomically, verifies that exactly one index has the write flag on the active alias, and compares alias sets without relying on their order. It also skips index families that should not roll over and finds the next available sequence number when the expected one is already in use. Before modifying indices, it checks whether the cluster has enough shard capacity and, if needed, provides the suggested `cluster.max_shards_per_node` setting. You can bypass this check with `--SkipShardPreflight` if the cluster has already been sized.
+
+- The tool now handles null responses and failed destination reads without stopping unexpectedly. It also reduces redundant `_cat/indices` requests for performance and normalizes the `-D`/`--DBPrefix` argument so it can be supplied without a trailing hyphen.
+
+#### Problem when APIGateway was shut down [ID 46619]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
 

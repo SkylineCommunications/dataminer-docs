@@ -2,21 +2,17 @@
 uid: Cube_Feature_Release_10.6.11
 ---
 
-# DataMiner Cube Feature Release 10.6.11 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.11
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU8].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.11](xref:General_Feature_Release_10.6.11).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.11](xref:Web_apps_Feature_Release_10.6.11).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -24,7 +20,7 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
-When you create or edit an element in DataMiner Cube, the *Settings* page of the element wizard now supports number, IP address, and IP port settings defined by the connector.
+When you create or edit an element in DataMiner Cube, the *Settings* section of the element wizard now supports number, IP address, and IP port settings defined by the connector.
 
 - Number and IP port settings are displayed as numeric fields. Configured number ranges and decimal precision are applied, and IP port values must be whole numbers between 1 and 65535.
 - IP address settings are displayed as text fields.
@@ -35,7 +31,7 @@ All settings must contain valid values before you can save the element.
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
-When you create or edit an element in DataMiner Cube, the *Settings* page of the element wizard now supports SNMPv3 and SNMP community credential settings defined by the connector.
+When you create or edit an element in DataMiner Cube, the *Settings* section of the element wizard now supports SNMPv3 and SNMP community credential settings defined by the connector.
 
 These settings are displayed as drop-down lists containing matching credentials from the Credential Library, alongside the existing token and username/password credential settings. The credentials are sorted alphabetically by name.
 
@@ -62,7 +58,7 @@ After you select a type, Cube will only show credentials of that type that you a
 You cannot save the script until both a credentials type and a set of credentials have been selected.
 
 > [!IMPORTANT]
-> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer.
+> This feature will only work in conjunction with DataMiner server version 10.6.10/10.7.0 or higher.
 
 ### User-Defined APIs: Rate limit notices can now be enabled for API tokens [ID 46336]
 

@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.11
 ---
 
-# General Feature Release 10.6.11 - Preview
+# General Feature Release 10.6.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -29,14 +29,6 @@ Before you upgrade to this DataMiner version:
   For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
-
-## Important changes
-
-*No important changes have been selected yet.*
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -283,8 +275,26 @@ In some cases, when SLScripting tried to log that a different version of an asse
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
 
-#### Problem when APIGateway when shut down [ID 46619]
+#### Elasticsearch re-indexing tool: Various fixes [ID 46587]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+A number of fixes have been made to the Elasticsearch re-indexing tool (*ReIndexElasticSearchIndexes*):
+
+- Up to now, after migrating from Elasticsearch to OpenSearch, the Elasticsearch re-indexing tool could replace the date-math expression in the `index.provided_name` field with a literal index name. This could prevent rollover-managed indices from rolling over on schedule. The tool now preserves the expression when it recreates indices.
+
+- The tool now swaps aliases atomically, verifies that exactly one index has the write flag on the active alias, and compares alias sets without relying on their order. It also skips index families that should not roll over and finds the next available sequence number when the expected one is already in use. Before modifying indices, it checks whether the cluster has enough shard capacity and, if needed, provides the suggested `cluster.max_shards_per_node` setting. You can bypass this check with `--SkipShardPreflight` if the cluster has already been sized.
+
+- The tool now handles null responses and failed destination reads without stopping unexpectedly. It also reduces redundant `_cat/indices` requests for performance and normalizes the `-D`/`--DBPrefix` argument so it can be supplied without a trailing hyphen.
+
+#### Problem when APIGateway was shut down [ID 46619]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
 
 Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.
+
+#### SLNet: Edge managers could fail to initialize when NATS was unavailable at startup [ID 46700]
+
+<!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
+
+Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConnectorManager` and `EdgeNodeLifecycleManager` could fail to initialize. From now on, both managers share a MessageBroker instance from `MessageBrokerCache`, created on the first request instead of during `OnInitialize`. This prevents a temporary NATS outage at startup from leaving the managers uninitialized.

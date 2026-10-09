@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.6.10
 
 # General Feature Release 10.6.10
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.10](xref:Cube_Feature_Release_10.6.10).

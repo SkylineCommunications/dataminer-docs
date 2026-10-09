@@ -18,7 +18,7 @@ A ServiceNow instance must be available to allow incident creation.
 
 ## Configuration
 
-To configure the integration, create a DataMiner element using the **ServiceNow Incident Manager connector**, and configure the following parameters in the element:
+To configure the integration, create a DataMiner element using the **ServiceNow Incident Manager connector** (version 1.1.0.1 or higher), and configure the following parameters in the element:
 
 - ServiceNow instance IP address or endpoint
 - User credentials (username and password)

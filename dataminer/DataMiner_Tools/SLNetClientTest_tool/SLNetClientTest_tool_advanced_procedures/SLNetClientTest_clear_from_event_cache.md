@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_clear_from_event_cache
+description: "Use the SLNetClientTest tool to clear RTE alarms from the SLNet event cache without restarting the DMA, using the alarm ID and cache key."
 ---
 
 # Clearing alarms from the SLNet event cache

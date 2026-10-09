@@ -35,7 +35,11 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### ClusterEndpointsManager soft-launch option is now always enabled [ID 46538]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+From now on, the *ClusterEndpointsManager* soft-launch option will always be enabled, regardless of the soft-launch configuration.
 
 ### Fixes
 
@@ -46,3 +50,19 @@ Before you upgrade to this DataMiner version:
 When multiple polling groups were executed concurrently, results from SNMP GET requests could be matched to the wrong group, potentially causing runtime errors.
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
+
+#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+
+#### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, every time a connection to the DataMiner storage layer was opened, SLNet would register handlers for logging configuration changes and incoming messages. These handlers were not removed when the connection closed, leaving their associated objects in memory for the lifetime of the process.
+
+On systems where GQI queries repeatedly opened connections, for example through dashboards or low-code apps that refresh automatically, memory usage could keep increasing, potentially degrading performance or causing out-of-memory errors.
+
+From now on, the handlers will be removed when the connection closes.

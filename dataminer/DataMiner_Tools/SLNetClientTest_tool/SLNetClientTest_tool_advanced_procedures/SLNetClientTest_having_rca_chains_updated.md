@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_having_rca_chains_updated
+description: "Learn how, using the SLNetClientTest tool, you can make the DataMiner Connectivity Framework Engine update RCA chains automatically."
 ---
 
 # Having RCA chains updated by the DCF engine

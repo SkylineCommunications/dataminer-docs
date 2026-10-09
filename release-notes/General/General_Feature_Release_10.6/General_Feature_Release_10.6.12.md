@@ -45,6 +45,42 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### DataMiner backup: A default description is now generated when no description is specified [ID 46206]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When you create a backup without specifying a description, DataMiner will now generates one automatically.
+
+The description will include the name of the predefined backup setting and the DataMiner ID, matching the behavior of the DataMiner Taskbar Utility.
+
+#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
+
+It remains in the enum for backward compatibility, but using it will produce a compiler warning, and it will no longer appear in IntelliSense suggestions. The warning will recommend `Maintenance` instead.
+
+#### ClusterEndpointsManager soft-launch option is now always enabled [ID 46538]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+From now on, the *ClusterEndpointsManager* soft-launch option will always be enabled, regardless of the soft-launch configuration.
+
+#### SLLogCollector now lists files in the Scripts folder [ID 46545]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
+
+#### STaaS traffic can now use a single IP address [ID 46570]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single IP address for STaaS traffic.
+
+If this single endpoint is not reachable, DataMiner will continue to use the existing endpoints.
+
 #### SLLogCollector now collects additional Elasticsearch and OpenSearch cluster information [ID 46618]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
@@ -60,6 +96,12 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
 
+#### Security enhancements [ID 46665]
+
+<!-- 46665: MR 10.7.0 - FR 10.6.12 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### SNMP GET results could be matched to the wrong polling group [ID 46507]
@@ -69,3 +111,43 @@ The generated package now includes the following files in the `Elastic` folder f
 When multiple polling groups were executed concurrently, results from SNMP GET requests could be matched to the wrong group, potentially causing runtime errors.
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
+
+#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+
+#### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, every time a connection to the DataMiner storage layer was opened, SLNet would register handlers for logging configuration changes and incoming messages. These handlers were not removed when the connection closed, leaving their associated objects in memory for the lifetime of the process.
+
+On systems where GQI queries repeatedly opened connections, for example through dashboards or low-code apps that refresh automatically, memory usage could keep increasing, potentially degrading performance or causing out-of-memory errors.
+
+From now on, the handlers will be removed when the connection closes.
+
+#### Service & Resource Management: Resources with time-dependent capabilities could be ineligible when ignoring a booking [ID 46576]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When requesting eligible resources while ignoring a booking and its service definition node, a resource with a time-dependent capability could still be considered unavailable if it was used in that booking.
+
+From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
+
+#### STaaS: Feedback registrations could cause a memory leak [ID 46617]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
+
+From now on, these registrations will be cleared when they are no longer needed.
+
+#### Spectrum: Measurement point cycle was not loaded when DONT_APPLY_SETTINGS was passed [ID 46630]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Up to now, when you loaded a preset with both the `SPA_PRESET_DONT_APPLY_SETTINGS` and `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flags, the measurement point cycle would not be loaded.
+
+From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will load the measurement point cycle regardless of whether the `SPA_PRESET_DONT_APPLY_SETTINGS` flag is also passed.

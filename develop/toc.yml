@@ -942,6 +942,8 @@ items:
         topicUid: Automation_best_practices_information_events
       - name: Handling async code
         topicUid: Handling_Async_Code
+      - name: Using the security context of the user running an automation script
+        topicUid: Automation_best_practices_security_context
     - name: How-tos
       items:
       - name: Making your automation scripts debug-ready
@@ -1492,14 +1494,19 @@ items:
     items:
     - name: About the DataMinerSystem library
       topicUid: ClassLibraryIntroduction
-    - name: DataMinerSystem library development
-      topicUid: ClassLibraryDevelopment
-    - name: DataMinerSystem library versioning
-      topicUid: ClassLibraryVersioning
-    - name: Lazy loading
-      topicUid: ClassLibraryLazyLoading
-    - name: Element creation
-      topicUid: ClassLibraryElementCreation
+      items:
+      - name: DataMinerSystem library versioning
+        topicUid: ClassLibraryVersioning
+      - name: Obsolete namespaces
+        topicUid: Obsolete_namespaces
+    - name: Working with elements
+      items:
+      - name: Basic interactions
+        topicUid: ClassLibraryBasicElementInteraction
+      - name: Element creation
+        topicUid: ClassLibraryElementCreation
+      - name: Updating elements
+        topicUid: ClassLibraryUpdatingElements
     - name: Monitors
       topicUid: ClassLibraryMonitors
       items:
@@ -1515,10 +1522,12 @@ items:
         topicUid: ClassLibraryMonitorsCurrentValues
     - name: Scheduler
       topicUid: Scheduler_NuGet_Package
-    - name: Obsolete namespaces
-      topicUid: Obsolete_namespaces
+    - name: Lazy loading
+      topicUid: ClassLibraryLazyLoading
     - name: Examples
       topicUid:  ClassLibraryExamples
+    - name: DataMinerSystem library development
+      topicUid: ClassLibraryDevelopment
   - name: InterApp framework
     items:
       - name: About the InterApp framework

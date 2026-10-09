@@ -258,12 +258,14 @@ items:
     items:
       - name: Current issues
         items:
+          - name: DELT export of elements returns unfiltered data after a STaaS cost estimation
+            topicUid: KI_DELT_export_unfiltered_after_STaaS_cost_estimation
+          - name: Engine location is mandatory when configuring a backup of an external database
+            topicUid: KI_Engine_location_mandatory_when_configuring_backup_of_external_database
           - name: Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes
             topicUid: KI_SLAutomation_ScriptRunner_missing_assemblies
           - name: Swarmed scheduled task executes incorrect action after editing
             topicUid: KI_Swarmed_scheduled_task_executes_incorrect_action
-          - name: Data loss after Elasticsearch to OpenSearch migration
-            topicUid: KI_Data_loss_after_ES_to_OS_migration
           - name: SLAutomation crash during DataMiner startup
             topicUid: KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient
           - name: Profile Manager fails to initialize after rollback to an earlier DataMiner version
@@ -304,6 +306,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Data loss after Elasticsearch to OpenSearch migration
+            topicUid: KI_Data_loss_after_ES_to_OS_migration
           - name: Microsoft Platform 6.0.0.x elements remain in timeout
             topicUid: KI_Microsoft_Platform_elements_in_timeout
           - name: Not possible to change Failover configuration after migration to BrokerGateway
