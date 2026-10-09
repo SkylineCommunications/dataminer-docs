@@ -1,5 +1,6 @@
 ---
 uid: Assistant_M365
+description: "Learn how to deploy and use DataMiner Assistant for Microsoft 365 to interact with your DataMiner System directly from Microsoft Teams or Copilot."
 ---
 
 # DataMiner Assistant for Microsoft 365

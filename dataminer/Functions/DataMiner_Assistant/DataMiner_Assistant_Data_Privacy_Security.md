@@ -1,5 +1,6 @@
 ---
 uid: Assistant_DataPrivacySecurity
+description: "Understand how DataMiner Assistant protects your data, including AI infrastructure, encryption, data retention, logging, and user permissions."
 ---
 
 # Data privacy and security

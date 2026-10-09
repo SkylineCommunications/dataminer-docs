@@ -1,5 +1,6 @@
 ---
 uid: docintel
+description: "Learn how the DataMiner Assistant DxM uses Document Intelligence to analyze documents and extract structured data in DataMiner automation scripts."
 ---
 
 # Document Intelligence
@@ -103,7 +104,7 @@ POSSIBLE VALUES:
 
 REQUIRED FORMATS:
 - Date values should be formatted as dd/mm/yyyy hh:mm:ss.
-- Frequency values should be formatted in MHz with 6 digits and 3 decimals places (e.g., 123.567 MHz). 
+- Frequency values should be formatted in MHz with 6 digits and 3 decimal places (e.g., 123.567 MHz). 
 - Symbol rate should be formatted in MSym/s with 3 decimals.
 
 ADDITIONAL INFORMATION:
@@ -175,7 +176,7 @@ Document Intelligence relies on external Azure AI services for both OCR and LLM 
 > - Ensure that all uploaded content complies with your organization's data handling policies, security requirements, and regulations (e.g., GDPR, CCPA).
 
 > [!TIP]
-> We highly recommended reviewing the [Azure Document Intelligence data privacy documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/document-intelligence/data-privacy-security) and the [Azure OpenAI data privacy and security documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy).
+> We highly recommend reviewing the [Azure Document Intelligence data privacy documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/document-intelligence/data-privacy-security) and the [Azure OpenAI data privacy and security documentation](https://learn.microsoft.com/en-us/legal/cognitive-services/openai/data-privacy).
 
 ## Pricing
 
