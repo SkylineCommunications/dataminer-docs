@@ -11,31 +11,27 @@ The cost of **Cost & Billing** is determined primarily by the number of **calcul
 
 | Parameter | Description |
 |-----------|-------------|
-| Calculations per month | Cost & Billing calculations executed each month, including recalculations |
-| Synchronizations per month | Synchronizations executed each month between the Cost & Billing and the third-party source|
-| Finalizations per month | Finalized calculations executed each month |
-| Financial records | Contracts, Rate Cards, Value Units, Groups, Items, and other configuration records |
-| Retention | How long Billable Events and calculation records are kept in the system (default: 12 months) |
-| SaaS | Whether the solution is Skyline-hosted (DaaS) |
+| Calculations per month | Cost & Billing calculations executed each month, including recalculations. |
+| Synchronizations per month | Synchronizations executed each month between Cost & Billing and the third-party source. |
+| Finalizations per month | Finalized calculations executed each month. |
+| Financial records | Contracts, rate cards, value units, groups, items, and other configuration records. |
+| Retention | How long billable events and calculation records are kept in the system (default: 12 months). |
+| SaaS | Whether the solution is Skyline-hosted (DaaS). |
 
 > [!NOTE]
-> Cost & Billing is sized on **calculations** rather than events, because a Billable Event may be recalculated multiple times during its lifecycle.
+> Cost & Billing is sized on **calculations** rather than events, because a billable event may be recalculated multiple times during its lifecycle.
 
 ## Service volumes
 
 | Category | Service | Units / month | Calculation method |
 |----------|---------|:-------------:|---------------------|
-| Data Plane | Unmanaged Objects | `(events × retention × records per event) + financial records` | Billable Events accumulate over the retention window. Configuration records are added separately. |
-| Automation | Actions | `calculations + finalizations + (synchronizations × 2)` | Each calculation executes the Calculation scripts. When a calculation needs to be finalized, a Finalization script is executed. Each synchronization executes an Event Synchronization script and an Item & Group Synchronization script. |
-| Storage as a Service | Information Events | `calculations × 3 + finalizations × 1 + synchronizations × 4` | Each calculation generates 3 information events and each finalization generates 1. Every synchronization process generates 4 information events, capturing both user actions and execution results. |
+| Data Plane | Unmanaged Objects | `(events × retention × records per event) + financial records` | Billable events accumulate over the retention window. Configuration records are added separately. |
+| Automation | Actions | `calculations + finalizations + (synchronizations × 2)` | Each calculation executes the calculation scripts. When a calculation needs to be finalized, a finalization script is executed. Each synchronization executes an event synchronization script and an item & group synchronization script. |
+| Storage as a Service | Information Events | `calculations × 3 + finalizations × 1 + synchronizations × 4` | Each calculation generates three information events and each finalization generates one information event. Every synchronization process generates four information events, capturing both user actions and execution results. |
 | DataMiner as a Service | Hosted Managed Objects | `1,000,000 metrics (min)` | Cost & Billing has negligible device metrics. The 1M metric DaaS minimum baseline always applies for hosted deployments. |
 
 > [!NOTE]
-> Billable Events, Nodes, and Billable Items are persisted as separate DOM entities. Contracts, Rate Cards, Value Units, Assignments, Items, and Groups are referenced and reused rather than created per event.
-
-## Configured examples
-
-## Configured examples
+> Billable events, nodes, and billable items are stored as separate DOM entities. Contracts, rate cards, value units, assignments, items, and groups are referenced and reused rather than created per event.
 
 ## Configured examples
 
@@ -53,23 +49,23 @@ The cost of **Cost & Billing** is determined primarily by the number of **calcul
 | **Information Events** *(calculations × 2) + finalizations + (synchronizations × 2)* | 6,062 | 30,062 | 60,062 |
 | **Hosted Managed Objects** | 1,000,000 | 1,000,000 | 1,000,000 |
 
-For sizing purposes, the following assumptions were used: 
+For sizing purposes, the following assumptions were used:
 
-- **32 Retained records per event**: 1 Billable Event + 10 Nodes + 1 Group + 10 Cost Billable Items + 10 Billing Billable Items.
-- **Calculations**: 2 calculations per event lifecycle.
+- **32 retained records per event**: 1 billable event + 10 nodes + 1 group + 10 cost billable items + 10 billing billable items.
+- **Calculations**: Two calculations per event lifecycle.
 - **Synchronization**: Default synchronization every 24 hours (31 per month).
 
-The values above are planning assumptions intended to represent a typical operational deployment.   
+The values above are planning assumptions intended to represent a typical operational deployment.
 
 > [!TIP]
 > Actual volumes may vary depending on event complexity, calculation frequency, and retention policy. [Run your own estimate in the Admin app](https://admin.dataminer.services).
 
 ## What does not affect this estimate
 
-- **Number of users**: DataMiner is not seat‑licensed. User count has no impact on usage or pricing.
+- **Number of users**: DataMiner is not seat-licensed. User count has no impact on usage or pricing.
 - **Calculated financial amount**: The cost or billing total has no impact on platform usage.
 - **MediaOps jobs**: If Cost & Billing is integrated with MediaOps, jobs are already accounted for in the [MediaOps sizing model](xref:Pricing_sizing_guide_solutions_MediaOps_Plan) and are not charged again in Cost & Billing.
-- **Standard configuration entities**: Contracts, Rate Cards, Value Units, Assignments, Items, and Groups typically contribute only a small fraction of the overall footprint.
+- **Standard configuration entities**: Contracts, rate cards, value units, assignments, items, and groups typically contribute only a small fraction of the overall footprint.
 
 > [!IMPORTANT]
-> This applies to the **standard Cost & Billing Solution** only, which includes synchronization, calculation, recalculation, and finalization workflows as part of normal operation. If the solution is extended  with custom automation, approval workflows, ERP or accounting integrations, invoice-generation workflows, or third-party financial platforms, those Automation Actions are charged in addition to this estimate. The same applies when integrating with external financial or operational systems: receiving, creating, updating, or deleting financial records from external platforms can generate additional Automation Actions.Also may require Connector Services, and additional Managed Objects. Size those separately using the [Data Plane](xref:Pricing_sizing_guide_services_data_plane), [Data Sources](xref:Pricing_sizing_guide_services_data_sources), and [Automation](xref:Pricing_sizing_guide_services_automation) sizing guides.
+> This applies to the **standard Cost & Billing Solution** only, which includes synchronization, calculation, recalculation, and finalization workflows as part of normal operation. If the solution is extended with custom automation, approval workflows, ERP or accounting integrations, invoice-generation workflows, or third-party financial platforms, those Automation Actions are charged in addition to this estimate. The same applies when integrating with external financial or operational systems: receiving, creating, updating, or deleting financial records from external platforms can generate additional Automation Actions. This may also require Connector Services and additional Managed Objects. Size those separately using the [Data Plane](xref:Pricing_sizing_guide_services_data_plane), [Data Sources](xref:Pricing_sizing_guide_services_data_sources), and [Automation](xref:Pricing_sizing_guide_services_automation) sizing guides.
