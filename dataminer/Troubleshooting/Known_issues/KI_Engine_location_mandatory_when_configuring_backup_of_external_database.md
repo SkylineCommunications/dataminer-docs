@@ -6,7 +6,7 @@ uid: KI_Engine_location_mandatory_when_configuring_backup_of_external_database
 
 ## Affected versions
 
-From DataMiner ... onwards.
+From DataMiner 10.2.0 CU19/10.3.0 CU7/10.3.10 onwards.
 
 ## Cause
 
