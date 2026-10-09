@@ -1,6 +1,6 @@
 ---
 uid: LogicQActionsExecution
-description: "Understand what triggers QAction execution, retrieve triggering row data, and choose queued or group execution based on ordering and concurrency needs."
+description: "Understand what triggers QAction execution, how to retrieve triggering row data, and how the queued option affects concurrency and ordering."
 ---
 
 # QAction execution
@@ -52,4 +52,5 @@ In a QAction, the following methods are available to retrieve information about 
 
 A QAction can be defined with the option [queued](xref:Protocol.QActions.QAction-options#queued). Using the option `queued`, the QAction will be executed asynchronously: the QAction is triggered and set in the background. This means that it will not wait until it is finished before another QAction can run.
 
-**Recommendation:** Use `queued` only when asynchronous execution is required. It changes completion and ordering behavior; it is not a guaranteed throughput increase. Protect shared state with appropriate locking.
+> [!NOTE]
+> We recommend only using `queued` when asynchronous execution is required. It changes completion and ordering behavior, but it is not a guaranteed throughput increase. Protect shared state with appropriate locking.

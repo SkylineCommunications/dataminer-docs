@@ -1,6 +1,6 @@
 ---
 uid: LogicQActionsSLProtocolInteraction
-description: "Retrieve and update protocol parameters from QActions efficiently by choosing inputParameters, SLProtocol, or SLProtocolExt for each data access."
+description: "Learn how to efficiently retrieve protocol parameters from QActions using the inputParameters attribute, SLProtocol, or the SLProtocolExt interface."
 ---
 
 # QActions SLProtocol interaction
@@ -108,7 +108,9 @@ public static class QAction
 
 When data is retrieved via the SLProtocol interface, the load is spread over the SLScripting and SLProtocol processes.
 
-It is important to realize that almost every method invoked on the protocol object results in inter-process communication between the SLScripting process and the SLProtocol process, which is a costly operation. Therefore, the number of method invocations on the SLProtocol interface should always be reduced to an absolute minimum. **Recommendation:** Batch reads and writes where an API overload supports it. The example above could be improved by using the GetParameters method to obtain the parameter values in one call:
+It is important to realize that almost every method invoked on the protocol object results in inter-process communication between the SLScripting process and the SLProtocol process, which is a costly operation. Therefore, the number of method invocations on the SLProtocol interface should always be reduced to an absolute minimum. We recommend batching reads and writes where an API overload supports it.
+
+The example above could be improved by using the `GetParameters` method to obtain the parameter values in one call:
 
 ```csharp
 public static void Run(SLProtocol protocol)
