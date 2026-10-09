@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Sequence
+description: "Learn how the Sequence element applies ordered mathematical operations to a communication parameter value in a DataMiner connector protocol."
 ---
 
 # Sequence element

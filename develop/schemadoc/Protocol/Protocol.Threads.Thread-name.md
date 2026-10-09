@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Threads.Thread-name
+description: "Learn how the Thread name attribute assigns an optional label used to identify the thread in DataMiner logs."
 ---
 # name attribute
 

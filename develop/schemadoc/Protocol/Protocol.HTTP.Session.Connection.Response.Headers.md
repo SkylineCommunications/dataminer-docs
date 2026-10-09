@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Response.Headers
+description: "Learn how to use the Headers element to list the HTTP response headers to store in protocol parameters in a DataMiner connector protocol."
 ---
 
 # Headers element

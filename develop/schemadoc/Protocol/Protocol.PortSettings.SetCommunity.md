@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SetCommunity
+description: "Learn how the SetCommunity element configures the default SNMP set community string or SNMPv3 encryption password and whether users can edit it."
 ---
 
 # SetCommunity element

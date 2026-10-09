@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Script.Exe.Template
+description: "Use the Template element to specify the nonempty template name for a report action in a DataMiner automation script."
 ---
 
 # Template element

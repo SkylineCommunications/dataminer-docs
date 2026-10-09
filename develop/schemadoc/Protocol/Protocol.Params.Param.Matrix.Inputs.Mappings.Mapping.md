@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping
+description: "Learn how the Mapping element links an input table column to a matrix column and defines its mapping role and value type in a DataMiner connector protocol."
 ---
 
 # Mapping element

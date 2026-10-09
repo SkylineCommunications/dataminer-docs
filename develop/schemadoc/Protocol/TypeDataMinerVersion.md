@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeDataMinerVersion
+description: "Use the TypeDataMinerVersion simple type to validate four-part DataMiner versions with a 5-digit build number in the DataMiner connector protocol schema."
 ---
 
 # TypeDataMinerVersion simple type

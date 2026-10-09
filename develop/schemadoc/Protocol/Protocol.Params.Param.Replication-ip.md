@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication-ip
+description: "Learn how the ip attribute sets the IP address of the DataMiner Agent hosting an element used for parameter replication in a DataMiner connector protocol."
 ---
 
 # ip attribute

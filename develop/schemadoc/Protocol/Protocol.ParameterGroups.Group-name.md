@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group-name
+description: "Learn how to use the name attribute to assign a name to a parameter group representing a DCF interface in a DataMiner connector protocol."
 ---
 
 # name attribute

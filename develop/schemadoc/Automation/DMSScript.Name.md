@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Name
+description: "Use the DMSScript Name element to assign a unique automation script name that excludes unsupported characters and determines its file name."
 ---
 
 # Name element

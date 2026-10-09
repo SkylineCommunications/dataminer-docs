@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm
+description: "Learn how to use the Alarm element to define default thresholds and monitoring behavior for parameter alarms in a DataMiner connector protocol."
 ---
 
 # Alarm element

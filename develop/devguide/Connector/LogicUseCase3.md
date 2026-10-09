@@ -1,5 +1,6 @@
 ---
 uid: LogicUseCase3
+description: "Follow how connector flows enter SLScripting, execute QActions, call shared code, return to SLProtocol, and avoid unnecessary cross-process calls."
 ---
 
 # Use case: Internal flow – QActions

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display.Pages.Page.Name
+description: "Learn how the Name element sets the name of a configured Data Display page in a DataMiner connector protocol."
 ---
 
 # Name element

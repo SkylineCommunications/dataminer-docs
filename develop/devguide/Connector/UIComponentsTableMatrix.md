@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsTableMatrix
+description: "Configure a table-based matrix with input and output tables plus a mapped dummy parameter, and understand its alarm-color and Router Control limitations."
 ---
 
 # Table-based matrix

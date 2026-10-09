@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Threshold
+description: "Learn how the Threshold element sets the turnover point between two discreet states for a digital threshold parameter in a DataMiner connector protocol."
 ---
 
 # Threshold element

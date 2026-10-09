@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.LengthType
+description: "Learn how the LengthType element defines whether parameter length is fixed or determined by another part of a response in a DataMiner connector protocol."
 ---
 
 # LengthType element

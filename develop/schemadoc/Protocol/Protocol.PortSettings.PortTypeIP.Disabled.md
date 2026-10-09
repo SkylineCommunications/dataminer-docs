@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.PortTypeIP.Disabled
+description: "Learn how the Disabled element under PortTypeIP controls whether users can select TCP/IP as the port type in the DataMiner user interface."
 ---
 
 # Disabled element

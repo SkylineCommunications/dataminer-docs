@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-value
+description: "Learn how the value attribute provides the replacement value set by an export rule in a DataMiner connector protocol."
 ---
 
 # value attribute

@@ -1,5 +1,6 @@
 ---
 uid: LogicActions
+description: "Learn how protocol actions combine On and Type to copy values, manage execution queues, read files, or perform other predefined operations."
 ---
 
 # Actions

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Provider
+description: "Consult the DataMiner connector protocol schema reference for the Provider element, which identifies the company and author of a minor protocol version."
 ---
 
 # Provider element

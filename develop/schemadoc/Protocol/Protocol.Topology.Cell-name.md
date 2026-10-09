@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topology.Cell-name
+description: "Consult the DataMiner connector protocol schema reference for the name attribute, which sets the name used to identify a topology cell."
 ---
 
 # name attribute

@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeWildcard
+description: "Use the TypeWildcard simple type to restrict a schema value to the asterisk wildcard in the DataMiner connector protocol schema."
 ---
 
 # TypeWildcard simple type

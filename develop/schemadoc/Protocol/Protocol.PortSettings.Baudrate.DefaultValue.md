@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Baudrate.DefaultValue
+description: "Learn how the DefaultValue element under Baudrate sets the baud rate initially shown when users add an element."
 ---
 
 # DefaultValue element

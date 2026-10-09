@@ -1,5 +1,6 @@
 ---
 uid: SwarmingPrepare
+description: "Update scripts and connectors for Swarming by replacing legacy alarm references with globally unique AlarmTreeID-based references and current APIs."
 ---
 
 # Preparing scripts and connectors for Swarming

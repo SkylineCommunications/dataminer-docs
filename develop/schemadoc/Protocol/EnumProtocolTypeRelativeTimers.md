@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumProtocolTypeRelativeTimers
+description: "Review the allowed values for the EnumProtocolTypeRelativeTimers simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumProtocolTypeRelativeTimers simple type

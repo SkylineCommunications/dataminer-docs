@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumParamInterpretType
+description: "Review the allowed values for the EnumParamInterpretType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumParamInterpretType simple type

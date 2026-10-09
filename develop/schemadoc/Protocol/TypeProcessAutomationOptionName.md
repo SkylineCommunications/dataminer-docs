@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeProcessAutomationOptionName
+description: "Use the ProcessAutomationOptionName simple type to accept Process Automation option names or custom strings in the DataMiner connector protocol schema."
 ---
 
 # ProcessAutomationOptionName simple type

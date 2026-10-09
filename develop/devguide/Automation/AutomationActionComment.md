@@ -1,5 +1,6 @@
 ---
 uid: AutomationActionComment
+description: "Configure the Comment action and special comment flags to add script notes, enable debug mode, skip element checks, or suppress information events."
 ---
 
 # Comment

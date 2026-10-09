@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumOnOff
+description: "Review the allowed values for the EnumOnOff simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumOnOff simple type

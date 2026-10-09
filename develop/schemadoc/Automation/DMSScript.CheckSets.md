@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.CheckSets
+description: "Use CheckSets to make an automation script wait for confirmation that parameter or property updates succeeded, accounting for its delay."
 ---
 
 # CheckSets element

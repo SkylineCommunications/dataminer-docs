@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Databits.DefaultValue
+description: "Learn how the DefaultValue element under Databits sets the initial data bit count or the default SNMPv3 username."
 ---
 
 # DefaultValue element

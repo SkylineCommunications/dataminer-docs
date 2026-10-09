@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Value
+description: "Learn how the Value element maps an incoming exception to the internal value stored for alarms and trending in a DataMiner connector protocol."
 ---
 
 # Value element

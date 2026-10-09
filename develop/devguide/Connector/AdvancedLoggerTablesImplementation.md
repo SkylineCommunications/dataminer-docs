@@ -1,202 +1,210 @@
 ---
 uid: AdvancedLoggerTablesImplementation
+description: "Learn how to configure a logger table in your protocol.xml, including the TTL configuration, design considerations for Cassandra, and best practices."
 ---
 
 # Implementing logger tables
 
 To implement a logger table, perform the following steps:
 
-1. Create a table parameter that uses the database option (optionally defining the number of rows to keep in the SLProtocol process). Note that once the database option is used, all columns of the table are saved in the database, so it is not required to use the save option explicitly.
+1. Create a table parameter that uses the database option, optionally defining the number of rows to keep in the SLProtocol process.
 
-    ```xml
-    <Param id="5200" trending="false">
-       <Name>TrapsLogger</Name>
-       <Description>Traps Logger</Description>
-       <Type>array</Type>
-       <ArrayOptions index="0" options="database">
-          <ColumnOption idx="0" pid="5201" type="retrieved" />
-          <ColumnOption idx="1" pid="5202" type="retrieved" />
-         ...
-       </ArrayOptions>
-      ...
-    </Param>
-    ```
+   Note that once the database option is used, all columns of the table are saved in the database, so it is not required to use the save option explicitly.
 
-    In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. If the [Param.Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag is used, the primary key (i.e., index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
-
-    ```xml
-    <Param id="5200" trending="false">
-       <Name>TrapsLogger</Name>
-       <Description>Traps Logger</Description>
-       <Type>array</Type>
-       <ArrayOptions index="0" options="database">
-          <ColumnOption idx="0" pid="5201" type="retrieved" />
-          <ColumnOption idx="1" pid="5202" type="retrieved" />
-         ...
-       </ArrayOptions>
-       <Database>
-          <CQLOptions>
-             <Clustering>25;2;0</Clustering>
-          </CQLOptions>
-       </Database>
-      ...
-    </Param>
-    ```
-
-    The Clustering tag contains a semicolon- or colon-separated list of column idx references.
-
-    In Cassandra, the primary key consists of two parts: the partitioning key and the clustering key. In the example above, the partitioning key is the column referred to by idx 25 (i.e., the first item in the semicolon-separated list) and the remaining columns form the clustering key (2;0).
-
-    To form composite partitioning keys, you can use parentheses.<!-- RN 12170 -->
-
-1. For every column parameter, define the database type to be used. This is done via the [Database.ColumnDefinition](xref:Protocol.Params.Param.Database.ColumnDefinition) tag.
-
-    ```xml
-    <Param id="5204" trending="false">
-       <Name>sip</Name>
-       <Description>Source IP (Traps Logger)</Description>
-       <Information>
-          <Subtext>The Source IP of the trap.</Subtext>
-       </Information>
-       <Type>read</Type>
-       <Interprete>
-          <RawType>other</RawType>
-          <Type>string</Type>
-          <LengthType>next param</LengthType>
-       </Interprete>
-       <Database>
-          <ColumnDefinition>VARCHAR(20)</ColumnDefinition>
-       </Database>
-       <Display>
-          <RTDisplay>true</RTDisplay>
-       </Display>
-       <Measurement>
-          <Type>string</Type>
-       </Measurement>
-    </Param>
-    ```
-
-    In the example above, this will result in a column with name "sip" of type VARCHAR(20) (in case of a MySQL database). The name of the parameter is used as the name of the corresponding column in the database (Note that it is therefore not allowed to change this name in an existing protocol).
-
-    In case the logger table persists in Cassandra, the specified data type will automatically be mapped to the corresponding Cassandra datatype.
-
-    Note the following restrictions:
-
-    - For RDBMS (MySQL), the following restrictions apply:
-      - Schema, table and column names have a maximum length of 64 characters (exceeding characters will be dropped).
-      - The following special characters are not allowed and will be replaced with underscores:
-        - ' ' (space)
-        - . (dot)
-        - , (comma)
-        - : (colon)
-        - ; (semicolon)
-        - \- (hyphen)
-        - / (slash)
-        - | (pipe)
-        - ` (grave accent)
-        - ' (single quote)
-        - \* (asterisk)
-        - ? (question mark)
-        - ! (exclamation mark)
-        - " (double quote)
-        - ^ (caret)
-        - ~ (tilde)
-        - % (percent)
-        - +(plus sign)
-        - \# (number sign)
-        - = (equal sign)
-        - @ (at symbol)
-        - & (ampersand)
-        - <> (less than and greater than sign)
-        - [] (opening and closing square brackets)
-        - {} (opening and closing curly braces)
-        - () (opening and closing parenthesis)
-      - \ (backslash) is forbidden.
-    - For Cassandra, the following restrictions apply:
-      - Keyspace, table and column names have a maximum length of 48 characters (exceeding characters will be dropped).
-      - Cassandra only supports alphanumerical characters and underscores in names.
-      - Leading underscores are not allowed and will be dropped.
-
-    The length of column names has a major influence on performance in Cassandra. Therefore, it is always advised to use very short names (preferably 1 or 2 characters). Also, it is advised to use lowercase characters only, no spaces and no 'special' characters.
-
-    In order to keep a protocol compatible with both SQL and Cassandra, it is advised to use names that are supported by both SQL and Cassandra.
-
-1. One column should be of type "DATETIME". This column also specifies the number of partitions to keep (defined using the Partition tag).
-
-    ```xml
-    <Param id="5202" trending="false">
-       <Name>ts</Name>
-       <Description>Database Timestamp (Traps Logger)</Description>
-       <Information>
-          <Subtext>This is the principal timestamp used in the database.</Subtext>
-       </Information>
-       <Type>read</Type>
-       <Interprete>
-          <RawType>other</RawType>
-          <Type>string</Type>
-          <LengthType>next param</LengthType>
-       </Interprete>
-       <Database>
-          <ColumnDefinition>DATETIME</ColumnDefinition>
-          <Partition partitionsToKeep="7">day</Partition>
-       </Database>
-       <Display>
-          <RTDisplay>true</RTDisplay>
-       </Display>
-       <Measurement>
-          <Type>string</Type>
-       </Measurement>
-    </Param>
-    ```
-
-    In the example above, this will generate a partition per day and the seven most recent partitions will be kept. This way, obsolete data will automatically be cleared from the logger table.
-
-    Note the following:
-
-    - The expected format is as follows: 'YYYY-MM-DD HH:MM:SS'. In a QAction, you can obtain this format for a given DateTime instance using the following code:
-
-      ```csharp
-      string datetime = DateTime.UtcNow.ToString("G", CultureInfo.CreateSpecificCulture("fr-CA"));
-      ```
-
-    - DateTime values should be inserted in UTC.
-    - It is not strictly necessary to include a column in a logger table used for partitioning. However, it is strongly advised to do so, as otherwise the table will not automatically remove old data.
-
-    - You can specify the [time to live](xref:AdvancedDataMinerDataPersistenceNoSqlCassandra#time-to-live) of a logger table column via the [Partition](xref:Protocol.Params.Param.Database.Partition) tag on any column. This is also supported for the indexing database.<!-- RN 12170 --><!-- RN 16738 -->
-
-      ```xml
-      <Param id="1003">
+   ```xml
+   <Param id="5200" trending="false">
+      <Name>TrapsLogger</Name>
+      <Description>Traps Logger</Description>
+      <Type>array</Type>
+      <ArrayOptions index="0" options="database">
+         <ColumnOption idx="0" pid="5201" type="retrieved" />
+         <ColumnOption idx="1" pid="5202" type="retrieved" />
         ...
-         <Database>
-            <ColumnDefinition>VARCHAR(200)</ColumnDefinition>
-            <Partition partitionsToKeep="2">hour</Partition>
-         </Database>
-      </Param>
-      ```
+      </ArrayOptions>
+     ...
+   </Param>
+   ```
 
-      However, in order to preserve compatibility with an RDBMS (SQL) database, we still recommend defining a column of type DATETIME that specifies the partitions to keep.
+   In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. If the [Param.Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag is used, the primary key (i.e., index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
 
-    - When an element with a logger table is deleted, the logger table will also be deleted if it is stored in the default keyspace. However, if the [customDatabaseName](xref:Protocol.Params.Param.ArrayOptions-options#customdatabasename) or [databaseNameProtocol](xref:Protocol.Params.Param.ArrayOptions-options#databasenameprotocol) option is used, the table will not be deleted.<!-- RN 42029 -->
+   ```xml
+   <Param id="5200" trending="false">
+      <Name>TrapsLogger</Name>
+      <Description>Traps Logger</Description>
+      <Type>array</Type>
+      <ArrayOptions index="0" options="database">
+         <ColumnOption idx="0" pid="5201" type="retrieved" />
+         <ColumnOption idx="1" pid="5202" type="retrieved" />
+        ...
+      </ArrayOptions>
+      <Database>
+         <CQLOptions>
+            <Clustering>25;2;0</Clustering>
+         </CQLOptions>
+      </Database>
+     ...
+   </Param>
+   ```
 
-    The logger table defined in the steps above will result in the creation of a table with name elementdata_[DMA ID]_[element ID]_[table parameter ID].
+   The Clustering tag contains a semicolon- or colon-separated list of column idx references.
 
-    In MySQL, in addition to the table, a stored procedure is generated for performing a so-called "upsert" operation: this routine first performs an UPDATE to update the specified row and then checks the number or updated rows. If this equals zero, this means the row did not yet exist. In that case, an INSERT statement is executed.
+   In Cassandra, the primary key consists of two parts: the partitioning key and the clustering key. In the example above, the partitioning key is the column referred to by idx 25 (i.e., the first item in the semicolon-separated list) and the remaining columns form the clustering key (2;0).
 
-    ```sql
-    CREATE DEFINER=`[user]`@`[host]` PROCEDURE `UPSERT_ELEMENTDATA_[DMA ID]_[Element ID]_[Table ID]`(IN in[Name column 1] [datatype column 1], ..., IN in[Name column N] [datatype column N])
-    
-    BEGIN DECLARE isExist int default -1;
-    
-    UPDATE ELEMENTDATA_[DMA ID]_[Element ID]_[Table ID] SET  [Name column 1] = in[Name column 1], ..., [Name column N] = in[Name column N] WHERE [Name PK column] = in[Name PK column];
-    
-    SELECT ROW_COUNT() INTO isExist;
-    
-    IF  isExist = 0 THEN INSERT INTO ELEMENTDATA_[DMA ID]_[Element ID]_[Table ID]([Name PK column], [Name column 1], ..., [Name column N]) VALUES(in[Name PK column], in[Name column 1], ..., in[Name column N]); END IF; END$$
-    ```
+   To form composite partitioning keys, you can use parentheses.<!-- RN 12170 -->
 
-    This stored procedure is executed whenever an AddRow (SLProtocol) method call is performed.
+1. For every column parameter, define the database type to be used via the [Database.ColumnDefinition](xref:Protocol.Params.Param.Database.ColumnDefinition) tag.
 
-    Also note that in the stored procedure, the names of the input parameters are defined as the column names prefixed with "in". Therefore, it is not allowed to define a column with name "t", as this would result in the reserved keyword "int".
+   For example:
+
+   ```xml
+   <Param id="5204" trending="false">
+      <Name>sip</Name>
+      <Description>Source IP (Traps Logger)</Description>
+      <Information>
+         <Subtext>The Source IP of the trap.</Subtext>
+      </Information>
+      <Type>read</Type>
+      <Interprete>
+         <RawType>other</RawType>
+         <Type>string</Type>
+         <LengthType>next param</LengthType>
+      </Interprete>
+      <Database>
+         <ColumnDefinition>VARCHAR(20)</ColumnDefinition>
+      </Database>
+      <Display>
+         <RTDisplay>true</RTDisplay>
+      </Display>
+      <Measurement>
+         <Type>string</Type>
+      </Measurement>
+   </Param>
+   ```
+
+   In the example above, this will result in a column with name "sip" of type VARCHAR(20) (in case of a MySQL database). The name of the parameter is used as the name of the corresponding column in the database (Note that it is therefore not allowed to change this name in an existing protocol).
+
+   In case the logger table persists in Cassandra, the specified data type will automatically be mapped to the corresponding Cassandra datatype.
+
+   Note the following restrictions:
+
+   - For RDBMS (MySQL), the following restrictions apply:
+     - Schema, table and column names have a maximum length of 64 characters (exceeding characters will be dropped).
+     - The following special characters are not allowed and will be replaced with underscores:
+       - ' ' (space)
+       - . (dot)
+       - , (comma)
+       - : (colon)
+       - ; (semicolon)
+       - \- (hyphen)
+       - / (slash)
+       - | (pipe)
+       - ` (grave accent)
+       - ' (single quote)
+       - \* (asterisk)
+       - ? (question mark)
+       - ! (exclamation mark)
+       - " (double quote)
+       - ^ (caret)
+       - ~ (tilde)
+       - % (percent)
+       - +(plus sign)
+       - \# (number sign)
+       - = (equal sign)
+       - @ (at symbol)
+       - & (ampersand)
+       - <> (less than and greater than sign)
+       - [] (opening and closing square brackets)
+       - {} (opening and closing curly braces)
+       - () (opening and closing parenthesis)
+     - \ (backslash) is forbidden.
+   - For Cassandra, the following restrictions apply:
+     - Keyspace, table and column names have a maximum length of 48 characters (exceeding characters will be dropped).
+     - Cassandra only supports alphanumerical characters and underscores in names.
+     - Leading underscores are not allowed and will be dropped.
+
+   The length of column names has a major influence on performance in Cassandra. Therefore, it is always advised to use very short names (preferably 1 or 2 characters). Also, it is advised to use lowercase characters only, no spaces and no 'special' characters.
+
+   In order to keep a protocol compatible with both SQL and Cassandra, it is advised to use names that are supported by both SQL and Cassandra.
+
+1. Make sure one column is of type "DATETIME" and specifies the number of partitions to keep (using the `Partition` tag).
+
+   For example:
+
+   ```xml
+   <Param id="5202" trending="false">
+      <Name>ts</Name>
+      <Description>Database Timestamp (Traps Logger)</Description>
+      <Information>
+         <Subtext>This is the principal timestamp used in the database.</Subtext>
+      </Information>
+      <Type>read</Type>
+      <Interprete>
+         <RawType>other</RawType>
+         <Type>string</Type>
+         <LengthType>next param</LengthType>
+      </Interprete>
+      <Database>
+         <ColumnDefinition>DATETIME</ColumnDefinition>
+         <Partition partitionsToKeep="7">day</Partition>
+      </Database>
+      <Display>
+         <RTDisplay>true</RTDisplay>
+      </Display>
+      <Measurement>
+         <Type>string</Type>
+      </Measurement>
+   </Param>
+   ```
+
+   In the example above, this will generate a partition per day and the seven most recent partitions will be kept. This way, obsolete data will automatically be cleared from the logger table.
+
+   Note the following:
+
+   - The expected format is as follows: 'YYYY-MM-DD HH:MM:SS'. In a QAction, you can obtain this format for a given DateTime instance using the following code:
+
+     ```csharp
+     string datetime = DateTime.UtcNow.ToString("G", CultureInfo.CreateSpecificCulture("fr-CA"));
+     ```
+
+   - DateTime values should be inserted in UTC.
+
+   - It is not strictly necessary to include a column in a logger table used for partitioning. However, it is strongly advised to do so, as otherwise the table will not automatically remove old data.
+
+   - You can specify the [time to live](xref:AdvancedDataMinerDataPersistenceNoSqlCassandra#time-to-live) of a logger table column via the [Partition](xref:Protocol.Params.Param.Database.Partition) tag on any column. This is also supported for the indexing database.<!-- RN 12170 --><!-- RN 16738 -->
+
+     ```xml
+     <Param id="1003">
+       ...
+        <Database>
+           <ColumnDefinition>VARCHAR(200)</ColumnDefinition>
+           <Partition partitionsToKeep="2">hour</Partition>
+        </Database>
+     </Param>
+     ```
+
+     However, in order to preserve compatibility with an RDBMS (SQL) database, we still recommend defining a column of type DATETIME that specifies the partitions to keep.
+
+   - When an element with a logger table is deleted, the logger table will also be deleted if it is stored in the default keyspace. However, if the [customDatabaseName](xref:Protocol.Params.Param.ArrayOptions-options#customdatabasename) or [databaseNameProtocol](xref:Protocol.Params.Param.ArrayOptions-options#databasenameprotocol) option is used, the table will not be deleted.<!-- RN 42029 -->
+
+   The logger table defined in the steps above will result in the creation of a table with name elementdata_[DMA ID]_[element ID]_[table parameter ID].
+
+   In MySQL, in addition to the table, a stored procedure is generated for performing a so-called "upsert" operation: this routine first performs an UPDATE to update the specified row and then checks the number or updated rows. If this equals zero, this means the row did not yet exist. In that case, an INSERT statement is executed.
+
+   ```sql
+   CREATE DEFINER=`[user]`@`[host]` PROCEDURE `UPSERT_ELEMENTDATA_[DMA ID]_[Element ID]_[Table ID]`(IN in[Name column 1] [datatype column 1], ..., IN in[Name column N] [datatype column N])
+
+   BEGIN DECLARE isExist int default -1;
+
+   UPDATE ELEMENTDATA_[DMA ID]_[Element ID]_[Table ID] SET  [Name column 1] = in[Name column 1], ..., [Name column N] = in[Name column N] WHERE [Name PK column] = in[Name PK column];
+
+   SELECT ROW_COUNT() INTO isExist;
+
+   IF  isExist = 0 THEN INSERT INTO ELEMENTDATA_[DMA ID]_[Element ID]_[Table ID]([Name PK column], [Name column 1], ..., [Name column N]) VALUES(in[Name PK column], in[Name column 1], ..., in[Name column N]); END IF; END$$
+   ```
+
+   This stored procedure is executed whenever an AddRow (SLProtocol) method call is performed.
+
+   Also note that in the stored procedure, the names of the input parameters are defined as the column names prefixed with "in". Therefore, it is not allowed to define a column with name "t", as this would result in the reserved keyword "int".
 
 > [!NOTE]
 > In regular tables, performing an AddRow specifying a key that already exists does not change the row data. This is not the case for logger tables, which will update the row.
@@ -255,7 +263,7 @@ In order to make a protocol compatible with both RDBMS (SQL) and Cassandra, and 
 - Avoid specifying a foreign key option on a parameter, unless this is on the partitioning key, because it would mean that a secondary index is created in Cassandra, which has a negative impact on performance.
 - If the rows in the logger table should only be added and never overwritten, use an auto-increment PK for the parameter table. If you do so, DataMiner does not need to scan the entire table first to check if a row already exists, which allows a higher insertion rate.
 - Do not choose the auto-increment PK in DataMiner as partition key. This would lead to a very high cardinality and would mean that you would have to know beforehand what this value is before being able to query the row.
-- AddRow calls are blocking calls, meaning there is no advantage to add rows multithreaded. It will even have the downside that threads will start to block each other and new threads are created to try to compensate. Therefore, it is better to have one thread running that gets items to be added from a ConcurrentQueue.
+- **API behavior:** `AddRow` calls are blocking calls, so there is no advantage to adding rows from multiple threads. Multiple producer threads can block each other and cause compensating threads to be created. **Recommendation:** Use one consumer thread that takes items from a `ConcurrentQueue`. This is performance guidance, not a universal rows-per-second limit.
 - DateTime values should be inserted in UTC.
 
 ## See also

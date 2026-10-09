@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.LocalIPport
+description: "Learn how the LocalIPport element configures the local client port for DataMiner serial connections over TCP/IP or UDP/IP."
 ---
 
 # LocalIPport element

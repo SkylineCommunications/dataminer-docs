@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.RawType
+description: "Learn how the RawType element filters incoming parameter content by expected binary, numeric, text, or other data type in a DataMiner connector protocol."
 ---
 
 # RawType element

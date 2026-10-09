@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.OID-type
+description: "Learn how the type attribute selects how DataMiner constructs an OID from vendor, device, parameter, and explicit values in a DataMiner connector protocol."
 ---
 
 # type attribute

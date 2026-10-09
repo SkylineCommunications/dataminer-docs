@@ -1,5 +1,6 @@
 ---
 uid: LogicActionTimeout
+description: "Use the timeout action to override the default timeout for selected pairs with a millisecond value stored in a parameter."
 ---
 
 # timeout

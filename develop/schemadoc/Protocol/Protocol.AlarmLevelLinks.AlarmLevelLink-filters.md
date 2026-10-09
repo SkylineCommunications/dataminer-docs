@@ -1,5 +1,6 @@
 ---
 uid: Protocol.AlarmLevelLinks.AlarmLevelLink-filters
+description: "Learn how the filters attribute limits an alarm level link to rows that meet a condition on another table column in a DataMiner connector protocol."
 ---
 
 # filters attribute

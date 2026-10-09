@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsHttpParsingJson
+description: "Parse JSON data in connector logic with Json.NET and choose a compatible Newtonsoft.Json NuGet package version for the target DataMiner version."
 ---
 
 # Parsing JSON

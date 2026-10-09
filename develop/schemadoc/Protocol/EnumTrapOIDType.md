@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumTrapOIDType
+description: "Review the allowed values for the EnumTrapOIDType simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumTrapOIDType simple type

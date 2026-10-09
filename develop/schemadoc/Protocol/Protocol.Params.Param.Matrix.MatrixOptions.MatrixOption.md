@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption
+description: "Learn how the MatrixOption element defines one matrix appearance or behavior setting and its value type in a DataMiner connector protocol."
 ---
 
 # MatrixOption element

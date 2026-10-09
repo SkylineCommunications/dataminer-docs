@@ -1,5 +1,6 @@
 ---
 uid: ChangeLoggerTable
+description: "Review how logger table changes are classified, their undetermined impact, and whether there is a workaround."
 ---
 
 # Change logger table

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Length
+description: "Learn how the Length element sets the exact byte length when a parameter uses a fixed length type in a DataMiner connector protocol."
 ---
 
 # Length element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol-EnumCpeAlignment
+description: "Review the allowed values for the EnumCpeAlignment simple type and what each value represents in DataMiner connector protocols."
 ---
 
 # EnumCpeAlignment simple type

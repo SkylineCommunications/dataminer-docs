@@ -1,5 +1,6 @@
 ---
 uid: SwarmingScriptElement
+description: "Build an automation script with SwarmingHelper to swarm elements using fixed values or input parameters to a target DataMiner Agent."
 ---
 
 # Configuring a script to swarm elements

@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDcfTables
+description: "Review the general parameter tables and IDs that DataMiner uses to store DCF interfaces, interface properties, connections, and connection properties."
 ---
 
 # DataMiner DCF tables

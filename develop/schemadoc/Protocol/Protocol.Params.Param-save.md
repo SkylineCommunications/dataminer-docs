@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-save
+description: "Learn how to use the save attribute to persist a standalone parameter value whenever it changes in a DataMiner connector protocol."
 ---
 
 # save attribute

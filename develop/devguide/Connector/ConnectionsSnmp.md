@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmp
+description: "Understand how DataMiner connectors use SNMP to poll and set managed objects, receive traps, and communicate with SNMP agents."
 ---
 
 # SNMP

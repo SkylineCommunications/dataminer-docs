@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SetCommunity.DefaultValue
+description: "Learn how the DefaultValue element under SetCommunity sets the initial SNMP set community string or SNMPv3 encryption password."
 ---
 
 # DefaultValue element

@@ -1,5 +1,6 @@
 ---
 uid: LogicActionMultiply
+description: "Use the multiply action to multiply one or more parameter values by a configured factor, which defaults to one."
 ---
 
 # multiply

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request.Headers
+description: "Learn how the Headers element contains additional key-value headers sent with an HTTP request in a DataMiner connector protocol."
 ---
 
 # Headers element

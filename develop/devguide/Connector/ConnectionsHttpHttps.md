@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsHttpHttps
+description: "Learn about HTTPS connections in DataMiner connectors, including the default port and when to use the https:// prefix."
 ---
 
 # HTTPS

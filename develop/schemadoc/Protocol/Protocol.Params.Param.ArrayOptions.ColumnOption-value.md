@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-value
+description: "Learn how to use the value attribute to set concatenation columns or an autoincrement offset based on column type in a DataMiner connector protocol."
 ---
 
 # value attribute

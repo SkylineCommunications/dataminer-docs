@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation.LinkTo
+description: "Learn how the LinkTo element connects base and device protocol parameters with optional conversions and value mappings in a DataMiner connector protocol."
 ---
 
 # LinkTo element

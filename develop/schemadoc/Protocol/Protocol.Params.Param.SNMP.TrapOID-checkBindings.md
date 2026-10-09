@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapOID-checkBindings
+description: "Learn how the checkBindings attribute filters SNMP traps by comparing bindings with fixed strings or values from other parameters."
 ---
 
 # checkBindings attribute

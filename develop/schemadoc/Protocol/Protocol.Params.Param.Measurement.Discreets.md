@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets
+description: "Learn how the Discreets element groups the discreet values, labels, and controls available for a parameter in a DataMiner connector protocol."
 ---
 
 # Discreets element

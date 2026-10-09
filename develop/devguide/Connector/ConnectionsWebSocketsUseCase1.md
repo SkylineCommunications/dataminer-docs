@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsWebSocketsUseCase1
+description: "Learn what a normal WebSocket connection is in DataMiner, how it is configured, and why it should be avoided."
 ---
 
 # Normal WebSocket connection

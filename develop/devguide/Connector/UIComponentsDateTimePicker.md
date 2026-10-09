@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsDateTimePicker
+description: "Define a date and time picker with read and write double parameters, eight decimals, and the datetime or date measurement option."
 ---
 
 # DateTime picker

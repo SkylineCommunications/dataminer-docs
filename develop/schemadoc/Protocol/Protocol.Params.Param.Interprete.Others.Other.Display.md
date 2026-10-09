@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Others.Other.Display
+description: "Learn how the Display element sets the text shown when an incoming symbol matches the referenced parameter value in a DataMiner connector protocol."
 ---
 
 # Display element

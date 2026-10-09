@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Actions.Action.Type-id
+description: "Use the Action Type id attribute to identify the related directory, parameter, or increment value required by specific action types."
 ---
 
 # id attribute

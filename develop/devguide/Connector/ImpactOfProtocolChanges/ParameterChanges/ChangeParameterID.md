@@ -1,5 +1,6 @@
 ---
 uid: ChangeParameterID
+description: "Assess the effects of changing a parameter ID on saved data, alarms, trending, integrations, and references before assigning a new ID."
 ---
 
 # Change parameter ID

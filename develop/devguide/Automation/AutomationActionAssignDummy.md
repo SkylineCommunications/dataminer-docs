@@ -1,5 +1,6 @@
 ---
 uid: AutomationActionAssignDummy
+description: "Configure the Assign dummy action to bind an automation script dummy to an element by name, element ID, or script variable."
 ---
 
 # Assign dummy

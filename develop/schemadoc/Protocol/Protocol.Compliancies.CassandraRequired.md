@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Compliancies.CassandraRequired
+description: "Learn how the CassandraRequired element indicates whether a protocol requires a DataMiner Agent that uses Cassandra in a DataMiner connector protocol."
 ---
 
 # CassandraRequired element

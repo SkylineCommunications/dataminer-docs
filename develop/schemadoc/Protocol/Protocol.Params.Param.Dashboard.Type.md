@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Dashboard.Type
+description: "Learn how to use the Type element to choose the button panel role of a dashboard parameter in a DataMiner connector protocol."
 ---
 
 # Type element

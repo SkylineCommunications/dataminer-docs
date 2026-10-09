@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Relations.Relation-path
+description: "Learn how the Relation path attribute lists the table IDs linked through foreign keys in a table relation."
 ---
 
 # path attribute

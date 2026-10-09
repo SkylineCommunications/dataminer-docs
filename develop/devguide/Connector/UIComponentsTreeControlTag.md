@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsTreeControlTag
+description: "Configure a DataMiner tree control's source parameter, table hierarchy, display columns, hidden columns, and extra tabs."
 ---
 
 # TreeControl tag

@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsChangeBasedEventHandling
+description: "Learn how change-based triggers and QActions handle duplicate parameter values, and how to use clear actions to force re-triggering."
 ---
 
 # Change-based event handling

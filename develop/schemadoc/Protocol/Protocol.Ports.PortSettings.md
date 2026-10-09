@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Ports.PortSettings
+description: "Learn how each PortSettings element under Ports configures an additional protocol connection in the order defined by Protocol Type advanced."
 ---
 
 # PortSettings element

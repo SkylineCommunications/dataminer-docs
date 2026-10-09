@@ -1,5 +1,6 @@
 ---
 uid: LogicActionSleep
+description: "Use the sleep action to pause connector protocol execution for a configured number of milliseconds, subject to the minimum supported delay."
 ---
 
 # sleep

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.AlarmLevelLinks.AlarmLevelLink-destination
+description: "Learn how the destination attribute identifies the column that receives the numeric alarm level from an alarm level link in a DataMiner connector protocol."
 ---
 
 # destination attribute

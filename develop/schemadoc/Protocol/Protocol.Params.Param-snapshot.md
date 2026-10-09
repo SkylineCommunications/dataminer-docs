@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-snapshot
+description: "Learn how to use the snapshot attribute to offload parameter snapshots to the configured offload database in a DataMiner connector protocol."
 ---
 
 # snapshot attribute

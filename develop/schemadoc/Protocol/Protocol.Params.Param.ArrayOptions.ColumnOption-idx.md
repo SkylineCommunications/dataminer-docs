@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-idx
+description: "Learn how to use the idx attribute to set a table column's zero-based position and definition order in a DataMiner connector protocol."
 ---
 
 # idx attribute

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Display.Visibility-default
+description: "Learn how the default attribute sets chain visibility when none of its standalone conditions are met in a DataMiner connector protocol."
 ---
 
 # default attribute

@@ -1,5 +1,6 @@
 ---
 uid: How_to_retrieve_protocol_pending_calls
+description: "Use SLNetClientTest to retrieve and inspect a running element's protocol pending calls so you can identify long-running connector logic."
 ---
 
 # How to retrieve protocol pending calls

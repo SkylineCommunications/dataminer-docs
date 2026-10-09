@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.PortTypeIP
+description: "Learn how the PortTypeIP element configures whether TCP/IP is available as a selectable port type for an element connection."
 ---
 
 # PortTypeIP element

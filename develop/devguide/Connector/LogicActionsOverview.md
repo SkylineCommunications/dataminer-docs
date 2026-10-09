@@ -1,5 +1,6 @@
 ---
 uid: LogicActionsOverview
+description: "Explore the complete reference of DataMiner protocol actions, including descriptions, target components, and related actions."
 ---
 
 # Actions overview

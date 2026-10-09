@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.Normal
+description: "Learn how to use the Normal element to define a normal parameter value that does not trigger an alarm in a DataMiner connector protocol."
 ---
 
 # Normal element

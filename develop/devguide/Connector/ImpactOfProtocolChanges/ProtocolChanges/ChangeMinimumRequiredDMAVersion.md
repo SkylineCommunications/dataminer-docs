@@ -1,5 +1,6 @@
 ---
 uid: ChangeMinimumRequiredDMAVersion
+description: "Create a new system version in your protocol when you change the minimum required DataMiner version of the protocol to a higher version."
 ---
 
 # Change minimum required DataMiner version

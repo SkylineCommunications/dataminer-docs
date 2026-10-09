@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Type-id
+description: "Learn how the Type id attribute identifies the referenced parameter for read bit types or the referenced response for response types."
 ---
 
 # id attribute

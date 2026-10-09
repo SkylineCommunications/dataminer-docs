@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Icon-ref
+description: "Learn how the ref attribute selects an Icons.xml icon for a table or table column shown in a tree control in a DataMiner connector protocol."
 ---
 
 # ref attribute

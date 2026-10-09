@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CRC.Content
+description: "Learn how to use the Content element to select the command or response parameters included in a CRC calculation in a DataMiner connector protocol."
 ---
 
 # Content element

@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDataMinerMediationLayerLinking
+description: "Link a device protocol to a base protocol by matching its Protocol.ElementType value to the baseFor value of the Production base protocol."
 ---
 
 # Linking a device protocol to a base protocol

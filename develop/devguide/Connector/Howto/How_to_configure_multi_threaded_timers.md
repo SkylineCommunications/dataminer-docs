@@ -1,5 +1,6 @@
 ---
 uid: How_to_configure_multi_threaded_timers
+description: "Discover how you should configure multithreaded timers, from basic configuration to using multiple multithreaded timers and investigating issues."
 ---
 
 # How to configure multithreaded timers

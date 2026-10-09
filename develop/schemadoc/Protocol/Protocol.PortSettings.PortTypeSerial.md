@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.PortTypeSerial
+description: "Learn how the PortTypeSerial element configures whether Serial is available as a selectable port type for an element connection."
 ---
 
 # PortTypeSerial element

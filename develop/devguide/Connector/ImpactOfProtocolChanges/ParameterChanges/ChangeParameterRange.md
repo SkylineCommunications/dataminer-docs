@@ -1,5 +1,6 @@
 ---
 uid: ChangeParameterRange
+description: "Assess how changing a parameter range affects displayed values, controls, alarming, trending, and existing automation or visualizations."
 ---
 
 # Change parameter range

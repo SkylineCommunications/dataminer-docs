@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Sequence-loop
+description: "Learn how the loop attribute defines an overflow value used when recalculating a sequence across counter resets in a DataMiner connector protocol."
 ---
 
 # loop attribute

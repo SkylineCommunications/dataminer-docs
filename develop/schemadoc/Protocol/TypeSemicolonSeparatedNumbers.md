@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeSemicolonSeparatedNumbers
+description: "Use the TypeSemicolonSeparatedNumbers simple type to validate semicolon-separated lists of numbers in the DataMiner connector protocol schema."
 ---
 
 # TypeSemicolonSeparatedNumbers simple type

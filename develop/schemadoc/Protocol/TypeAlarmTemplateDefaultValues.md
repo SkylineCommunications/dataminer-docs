@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypeAlarmTemplateDefaultValues
+description: "Use the TypeAlarmTemplateDefaultValues simple type to validate comma-free default values in alarm templates in the DataMiner connector protocol schema."
 ---
 
 # TypeAlarmTemplateDefaultValues simple type

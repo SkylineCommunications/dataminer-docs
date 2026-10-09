@@ -1,5 +1,6 @@
 ---
 uid: LogicActionMake
+description: "Use the make action to reassemble a command after changing its contents, before the connector sends the command to the device."
 ---
 
 # make

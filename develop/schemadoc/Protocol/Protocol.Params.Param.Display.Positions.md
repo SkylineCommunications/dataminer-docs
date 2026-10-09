@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Positions
+description: "Learn how the Positions element groups every user interface location where the same parameter should appear in a DataMiner connector protocol."
 ---
 
 # Positions element

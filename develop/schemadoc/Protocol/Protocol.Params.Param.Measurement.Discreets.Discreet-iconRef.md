@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-iconRef
+description: "Learn how the iconRef attribute selects the Icons.xml icon shown for a discreet value in a table tree control in a DataMiner connector protocol."
 ---
 
 # iconRef attribute

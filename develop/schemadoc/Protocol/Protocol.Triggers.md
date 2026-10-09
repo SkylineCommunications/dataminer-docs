@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers
+description: "Consult the DataMiner connector protocol schema reference for the Triggers element, which contains the uniquely identified triggers defined in a protocol."
 ---
 
 # Triggers element
