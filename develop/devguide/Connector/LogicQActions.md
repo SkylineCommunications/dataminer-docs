@@ -11,8 +11,6 @@ In the past, QActions were written in C#, JScript, or VBScript. However, recent 
 
 A QAction is defined in a connector using the [QAction](xref:Protocol.QActions.QAction) tag.
 
-**API ownership:** The stable connector API is the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface in the `Skyline.DataMiner.Scripting` namespace. `SLProtocolExt` is a generated, protocol-specific interface that extends `SLProtocol` and is delivered with the protocol's `QAction.Helper` assembly. Use `SLProtocol` for members that are independent of a specific protocol and `SLProtocolExt` for generated parameter and table members.
-
 For example, the following QAction runs when a button (with parameter ID 100) is clicked, and it counts the number of times the button was clicked for the element:
 
 ```xml
@@ -46,10 +44,18 @@ The default entry point of the QAction is the static Run method of the QAction c
 
 The Run method in the example above increments the execution count and writes the execution count to the log file of the element running this protocol using the Log method of the SLProtocol interface (see [SLProtocol.Log](xref:Skyline.DataMiner.Scripting.SLProtocol.Log(System.String,Skyline.DataMiner.Scripting.LogType,Skyline.DataMiner.Scripting.LogLevel)) method).
 
+## SLProtocol and SLProtocolExt interfaces
+
+To interact with the DataMiner element, QActions use the `SLProtocol` or `SLProtocolExt` interface:
+
+- **SLProtocol**: The standard interface in the `Skyline.DataMiner.Scripting` namespace. It provides protocol-independent methods to interact with the element, such as getting and setting parameter values, adding log entries, and triggering actions. For a complete overview, see the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface.
+- **SLProtocolExt**: A protocol-specific interface that extends `SLProtocol`. It is automatically generated and delivered as part of the protocol's `QAction.Helper` assembly. It provides strongly typed wrappers for the connector's parameters and tables, which makes the code cleaner and easier to maintain. For more information, see the [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface.
+
+`SLProtocol` is typically used for logic that is independent of a specific connector, whereas `SLProtocolExt` should be used when working with generated parameters and tables.
+
 > [!NOTE]
 >
 > - To access the log files of an element in DataMiner Cube, right-click the element in the Surveyor and select View > Log or click the apps button in the Cube navigation pane and select System Center > Logging > Elements and select the element.
-> - For a complete overview of the SLProtocol interface, see [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface. It is also possible to use the SLProtocolExt interface (see [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface). This is an extension of the SLProtocol interface, which makes it possible to write more readable code.
 > - The following example protocols are available in the [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/):
 >
 >   - SLC SDF QActions - Column Manipulation
