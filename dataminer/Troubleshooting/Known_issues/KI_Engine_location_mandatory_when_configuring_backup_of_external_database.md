@@ -1,5 +1,6 @@
 ---
 uid: KI_Engine_location_mandatory_when_configuring_backup_of_external_database
+description: "Learn what to do when the Indexing Engine Location backup path is incorrectly considered mandatory when you configure backups with an external database."
 ---
 
 # Engine location is mandatory when configuring a backup of an external database
