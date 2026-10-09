@@ -258,6 +258,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Engine location is mandatory when configuring a backup of an external database
+            topicUid: KI_Engine_location_mandatory_when_configuring_backup_of_external_database
           - name: Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes
             topicUid: KI_SLAutomation_ScriptRunner_missing_assemblies
           - name: Swarmed scheduled task executes incorrect action after editing
