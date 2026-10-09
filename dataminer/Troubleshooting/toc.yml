@@ -258,6 +258,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: DELT export of elements returns unfiltered data after a STaaS cost estimation
+            topicUid: KI_DELT_export_unfiltered_after_STaaS_cost_estimation
           - name: Engine location is mandatory when configuring a backup of an external database
             topicUid: KI_Engine_location_mandatory_when_configuring_backup_of_external_database
           - name: Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes
