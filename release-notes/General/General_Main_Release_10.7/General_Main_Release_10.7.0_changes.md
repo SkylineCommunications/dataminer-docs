@@ -719,6 +719,14 @@ The Jobs module has been end-of-life since DataMiner 10.5.0. All server-side cod
 
 The CloudStorageMigrationFinalize script, which should be run when [migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), will now migrate all credentials stored in the Credentials Library.
 
+#### DataMiner backup: A default description is now generated when no description is specified [ID 46206]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When you create a backup without specifying a description, DataMiner will now generates one automatically.
+
+The description will include the name of the predefined backup setting and the DataMiner ID, matching the behavior of the DataMiner Taskbar Utility.
+
 #### User-Defined APIs: Optional notice generation when token rate limits are reached [ID 46244]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
