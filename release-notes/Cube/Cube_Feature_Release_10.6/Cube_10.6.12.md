@@ -173,3 +173,11 @@ The threshold will now be displayed when the preset is loaded.
 When another session changed the Last Session Preset of a Spectrum analyzer in shared mode, the banner in Cube said, "This spectrum element has changes to its currently loaded preset." Because this wording referred to a preset rather than the session that made the change, it could be unclear.
 
 The banner now says, "Another session has made changes to this spectrum analyzer."
+
+#### Data Display: Full-screen button did not work in pop-up windows [ID 46742]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a table was displayed in a pop-up window before the Surveyor had been opened in the current workspace, up to now, the full-screen button would not work.
+
+From now on, the full-screen and exit-full-screen buttons will both work. You will be able to expand and restore tables in pop-up windows without first opening the Surveyor.
