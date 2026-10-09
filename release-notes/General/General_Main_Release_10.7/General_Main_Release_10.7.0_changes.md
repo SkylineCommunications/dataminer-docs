@@ -719,6 +719,14 @@ The Jobs module has been end-of-life since DataMiner 10.5.0. All server-side cod
 
 The CloudStorageMigrationFinalize script, which should be run when [migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), will now migrate all credentials stored in the Credentials Library.
 
+#### DataMiner backup: A default description is now generated when no description is specified [ID 46206]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When you create a backup without specifying a description, DataMiner will now generates one automatically.
+
+The description will include the name of the predefined backup setting and the DataMiner ID, matching the behavior of the DataMiner Taskbar Utility.
+
 #### User-Defined APIs: Optional notice generation when token rate limits are reached [ID 46244]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -984,3 +992,9 @@ From now on, these registrations will be cleared when they are no longer needed.
 Up to now, when you loaded a preset with both the `SPA_PRESET_DONT_APPLY_SETTINGS` and `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flags, the measurement point cycle would not be loaded.
 
 From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will load the measurement point cycle regardless of whether the `SPA_PRESET_DONT_APPLY_SETTINGS` flag is also passed.
+
+#### SLNet: Edge managers could fail to initialize when NATS was unavailable at startup [ID 46700]
+
+<!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
+
+Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConnectorManager` and `EdgeNodeLifecycleManager` could fail to initialize. From now on, both managers share a MessageBroker instance from `MessageBrokerCache`, created on the first request instead of during `OnInitialize`. This prevents a temporary NATS outage at startup from leaving the managers uninitialized.

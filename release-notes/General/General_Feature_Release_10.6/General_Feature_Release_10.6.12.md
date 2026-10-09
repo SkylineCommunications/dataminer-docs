@@ -45,6 +45,14 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### DataMiner backup: A default description is now generated when no description is specified [ID 46206]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When you create a backup without specifying a description, DataMiner will now generates one automatically.
+
+The description will include the name of the predefined backup setting and the DataMiner ID, matching the behavior of the DataMiner Taskbar Utility.
+
 #### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
