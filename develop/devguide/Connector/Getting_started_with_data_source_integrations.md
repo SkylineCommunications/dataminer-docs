@@ -1,6 +1,6 @@
 ---
 uid: Getting_started_with_data_source_integrations
-description: "Learn what DataMiner connectors are, how they communicate with data sources, and where to explore core concepts, advanced features, and deployment."
+description: "Learn what DataMiner connectors (a.k.a. drivers/protocols) are, how they communicate with data sources, and where to find information to get started."
 ---
 
 # Getting started

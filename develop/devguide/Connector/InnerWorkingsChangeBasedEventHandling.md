@@ -1,6 +1,6 @@
 ---
 uid: InnerWorkingsChangeBasedEventHandling
-description: "Understand how SLProtocol detects parameter changes, schedules triggers and QActions, and handles events differently for scalar and table parameters."
+description: "Learn how change-based triggers and QActions handle duplicate parameter values, and how to use clear actions to force re-triggering."
 ---
 
 # Change-based event handling

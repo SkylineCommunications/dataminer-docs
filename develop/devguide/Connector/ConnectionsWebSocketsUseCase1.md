@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsWebSocketsUseCase1
-description: "Understand why a normal WebSocket connection configured during element creation cannot reconnect after a disconnect without restarting the element."
+description: "Learn what a normal WebSocket connection is in DataMiner, how it is configured, and why it should be avoided."
 ---
 
 # Normal WebSocket connection
