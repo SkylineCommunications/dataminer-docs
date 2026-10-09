@@ -292,3 +292,9 @@ A number of fixes have been made to the Elasticsearch re-indexing tool (*ReIndex
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
 
 Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.
+
+#### SLNet: Edge managers could fail to initialize when NATS was unavailable at startup [ID 46700]
+
+<!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
+
+Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConnectorManager` and `EdgeNodeLifecycleManager` could fail to initialize. From now on, both managers share a MessageBroker instance from `MessageBrokerCache`, created on the first request instead of during `OnInitialize`. This prevents a temporary NATS outage at startup from leaving the managers uninitialized.
