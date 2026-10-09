@@ -181,3 +181,11 @@ The banner now says, "Another session has made changes to this spectrum analyzer
 When a table was displayed in a pop-up window before the Surveyor had been opened in the current workspace, up to now, the full-screen button would not work.
 
 From now on, the full-screen and exit-full-screen buttons will both work. You will be able to expand and restore tables in pop-up windows without first opening the Surveyor.
+
+#### Spectrum: Thresholds section could collapse unexpectedly [ID 46745]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you opened a spectrum analyzer or switched threshold edit mode, the *Thresholds* section in the info panel could collapse unexpectedly.
+
+From now on, the *Thresholds* section will be expanded by default and will no longer collapse automatically when you leave threshold edit mode. This makes its behavior consistent with the other sections in the info panel.
