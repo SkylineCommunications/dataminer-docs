@@ -48,6 +48,19 @@ A number of security enhancements have been made.
 
 For the *Parameter table by ID* data source and the *Get parameters for elements where* data source, GQI will now optimize filters using the `In` operator. Where supported, the filter values will be forwarded to the server instead of being processed by GQI.
 
+#### Web apps: 'Keep me signed in' option removed from the login page [ID 46714]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+The *Keep me signed in* checkbox has been removed from the authentication page.
+
+If you want to remain signed in after a client or server restart, we recommend that you use external authentication via SAML instead.
+
+> [!NOTE]
+>
+> - The legacy *Maps* app can no longer log in automatically. To prevent users from having to authenticate each time they navigate to a map, we recommend that you embed the maps in a dashboard or a low-code app instead.
+> - The `API/v1/Json.asmx/ReconnectAppAndInfo` call and the `DMAConnectAndInfo.Cookie` property are now obsolete.
+
 ### Fixes
 
 #### GQI DxM: PaToken DOM Instance IDs could not be filtered correctly [ID 46616]
