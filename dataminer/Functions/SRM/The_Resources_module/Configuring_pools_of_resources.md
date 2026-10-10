@@ -63,7 +63,7 @@ In order to define properties for all resources in a pool, and optionally limit 
 
    - *Name*: The name of the resource.
 
-   - *Status*: Determines whether the resource is currently available, unavailable or in maintenance. Note that this field is no longer used in recent SRM configurations.
+   - *Status*: Determines whether the resource is currently available or in maintenance. Setting the status to *Maintenance* makes the resource unavailable for new bookings and move bookings that already use it to quarantine (see [Quarantine](xref:SRM_Quarantine)).
 
    - *Concurrency*: The maximum number of times the resource can be reserved at the same time.
 
@@ -107,7 +107,7 @@ In order to define properties for all resources in a pool, and optionally limit 
 
 1. Optionally, the following fields can also be filled in:
 
-   - *Status*: Determines whether the resource is currently available, unavailable or in maintenance.
+   - *Status*: Determines whether the resource is currently available or in maintenance.
 
    - *Element*: Links the resource to an existing DataMiner element.
 
