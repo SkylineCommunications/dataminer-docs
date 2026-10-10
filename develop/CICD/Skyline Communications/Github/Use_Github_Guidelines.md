@@ -72,6 +72,7 @@ If the repository is private, the name should look like this (using "-" as separ
   | UDAPI | User-Defined APIs |
   | V | Visio files |
   | EXT | External tools - software  |
+  | APP | Application code (web/mobile/desktop/Vibe Coded Apps)  |
 
   > [!NOTE]
   > If you think an item type should be added, please contact us so we can add it before you create the repository.
