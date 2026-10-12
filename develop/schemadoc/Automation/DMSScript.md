@@ -1,23 +1,18 @@
 ---
 uid: DMSScript
-description: "Review the DMSScript root element, namespace, options, child elements, and unique ID constraint for a DataMiner automation script."
+description: "Review the DMSScript root element, options, child elements, and unique ID constraint for a DataMiner automation script."
 ---
 
 # DMSScript element
 
 The root element of a DataMiner automation script.
 
-## Namespace
-
-`http://www.skyline.be/automation`
-
-This reference is aligned with Automation XML schema package 1.1.10.
-
 ## Attributes
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[options](xref:DMSScript-options)|positiveInteger|Yes|Specifies different options.|
+|xmlns|string||Specifies the XML namespace of the automation script. This must be set to `http://www.skyline.be/automation`.|
 
 ## Children
 
