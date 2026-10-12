@@ -138,7 +138,7 @@ From now on, the Resource Manager will take ignored booking into account when de
 
 #### STaaS: Feedback registrations could cause a memory leak [ID 46617]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
 
