@@ -17,7 +17,7 @@ Specifies if the script requires user interaction.
 
 ## Remarks
 
-Available from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 -->
+Available from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 --> On older versions, keep the script compatible with the behavior available in that version.
 
 When this element is omitted, or when it is set to "Auto", DataMiner uses automatic detection. Setting an explicit value is recommended when the script's interactive behavior must be deterministic.
 
@@ -28,10 +28,6 @@ When this element is omitted, or when it is set to "Auto", DataMiner uses automa
    <Interactivity>Always</Interactivity>
 </DMSScript>
 ```
-
-## Failure and edge cases
-
-This element is available from DataMiner 10.5.9/10.6.0 onwards. On older versions, keep the script compatible with the behavior available in that version. Use `Auto` only when automatic detection is acceptable for the script.
 
 ## Related concepts
 

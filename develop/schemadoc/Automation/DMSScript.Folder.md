@@ -1,6 +1,6 @@
 ---
 uid: DMSScript.Folder
-description: "Use the Folder element to place an automation script in a DataMiner Cube folder while respecting the supported name characters and refresh behavior."
+description: "Organize automation scripts into DataMiner Cube folders using the Folder element, noting prohibited naming characters and script cache update behavior."
 ---
 
 # Folder element
@@ -23,8 +23,6 @@ Specifies the folder in which the automation script is included.
 
 ## Remarks
 
-> [!NOTE]
->
-> - The folders only exist in Cube. All automation scripts are present in the Scripts folder of DataMiner.
-> - The following characters are prohibited: : * ? " < > | ° ;
-> - When updating this value in the script itself, the update will only be shown after removing all *.txf files in the Scripts folder and restarting DataMiner.
+- The folders only exist in Cube. All automation scripts are present in the *Scripts* folder of DataMiner.
+- The following characters are prohibited: : * ? " < > | ° ;
+- When this value is updated in the script itself, the update will only be shown after all \*.txf files are removed in the *Scripts* folder and DataMiner is restarted.
