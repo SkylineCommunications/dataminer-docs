@@ -7,9 +7,13 @@ description: "Configure which connector parameters support alarming, provide def
 
 DataMiner provides the possibility to define alarm templates. An alarm template is an XML file containing all alarm thresholds for all parameters that support alarming in a DataMiner protocol. For more information about alarm templates in DataMiner, refer to [Alarm templates](xref:About_alarm_templates).
 
-Typically, only a subset of the parameters defined in a protocol should support alarming (and therefore be included in the alarm template overview). This is because many parameters in a protocol are defined to implement internal protocol logic.
+## Basic configuration
 
-By default, a parameter will not support alarming (and therefore will not be shown in alarm templates for the protocol). To configure a parameter so it supports alarming, the following must be included in the parameter definition:
+Only a subset of the parameters defined in a protocol should support alarming, to make sure the alarm template overview does not get cluttered with parameters for which monitoring makes no sense. This is because many parameters in a protocol are defined to implement internal protocol logic.
+
+Whether a parameter supports alarming (and therefore will be shown in alarm templates) is determined by the `Monitored` element in the parameter definition. This defaults to `false`, meaning that by default parameters do not support alarming.
+
+To configure a parameter so it supports alarming, set `Monitored` to `true` in the parameter definition:
 
 ```xml
 <Alarm>
@@ -17,16 +21,7 @@ By default, a parameter will not support alarming (and therefore will not be sho
 </Alarm>
 ```
 
-> [!NOTE]
->
-> - A parameter that supports alarming should be visualized to the user (i.e., have a position on a page).
-> - Monitoring must never be applied on parameters of type "write".
-
-**Schema behavior:** `Monitored` defaults to `false`. The `Alarm` element defines default alarm-template values, but those defaults do not enable monitoring for the parameter in a new alarm template. An `Info` default is the exception: it enables information-event generation by default in a new alarm template.
-
-**Recommendation:** Set `Monitored` to `true` only for parameters that should be available for alarm monitoring, and keep internal or write parameters out of the monitored set.
-
-In an alarm template, a user can specify values for different alarm severity levels. In order to avoid users having to spend too much time specifying these values, default values can be provided in a protocol (which can then be overridden by a user in DataMiner if desired).
+In an alarm template, a user can specify values for different alarm severity levels. In order to avoid users having to spend too much time specifying these values, default values can be provided using the `Alarm` element of the protocol (which can then be overridden by a user in DataMiner if desired).
 
 It is possible to define default values for the following alarm levels:
 
@@ -35,7 +30,7 @@ It is possible to define default values for the following alarm levels:
 |-|Info|
 |Critical low|CL|
 |Major low|MaL|
-|Minor Low|MiL|
+|Minor low|MiL|
 |Warning low|WaL|
 |Normal|Normal|
 |Warning high|WaH|
@@ -43,7 +38,26 @@ It is possible to define default values for the following alarm levels:
 |Major high|MaH|
 |Critical high|CH|
 
-**Example:** For a numeric parameter, you can document a nominal value of 40 with `Normal` and define 80 as the warning-high (`WaH`) threshold. A value that does not meet an alarm threshold is not in an alarm state. The `Normal` tag is optional and is not required to clear an alarm; when a previously alarmed value returns to a non-alarmed state, DataMiner drops the alarm.
+Keep in mind:
+
+- The `Normal` tag is optional and is not required to clear an alarm; when a previously alarmed value returns to a non-alarmed state, DataMiner drops the alarm.
+- Defining default alarm template values does not enable monitoring for the parameter in a new alarm template; it only allows the user to configure the alarm template more quickly by already providing default values. An `Info` default is the exception: it enables information event generation by default in a new alarm template.
+- For parameters with measurement type set to `discreet` or `string`, the low severity levels are not applicable (i.e., only the tags `Normal`, `WaH`, `MiH`, `MaH`, and `CH` can be used in this case).
+- For parameters holding discrete values, the discrete value can be used for setting default alarm values. In DataMiner, the corresponding display value (as indicated in the `Display` tag) will be displayed in the alarm template. (See [example](#examples) below.)
+- The principle mentioned above also applies to column parameters. In this case, DataMiner provides additional functionality. The alarm template allows you to define multiple entries for the same column parameter, but with a different filter. In case an alarm occurs for the column parameter, the parameter description is used in combination with the key in the alarm.
+
+> [!TIP]
+> For more information on how to implement alarming in a protocol, see <xref:Protocol.Params.Param.Alarm>.
+
+## Best practices
+
+- Set `Monitored` to `true` only for parameters that should be available for alarm monitoring, and keep internal or write parameters out of the monitored set.
+- A parameter that supports alarming **must be visualized** to the user (i.e., have a position on a page).
+- Monitoring must never be applied on parameters of type "write".
+
+## Examples
+
+The example below shows a numeric parameter, for which a nominal value of 40 is defined with `Normal`, and 80 is defined as the warning-high (`WaH`) threshold. The parameter will only be in alarm when its value crosses that threshold.
 
 ```xml
 <Param id="22" trending="false" save="true">
@@ -68,12 +82,7 @@ It is possible to define default values for the following alarm levels:
 </Param>
 ```
 
-For parameters holding discrete values, the discrete value can be used for setting default alarm values.
-
-> [!NOTE]
->
-> - In DataMiner, the corresponding display value (as indicated in the Display tag) will be displayed in the alarm template.
-> - For parameters with measurement type set to discreet or string, the low severity levels are not applicable (i.e., only the tags Normal, WaH, MiH, MaH and CH can be used in this case).
+The example below shows how the discrete value of a parameter can be used for setting default alarm values:
 
 ```xml
 <Param id="10" trending="true">
@@ -108,13 +117,9 @@ For parameters holding discrete values, the discrete value can be used for setti
 </Param>
 ```
 
-The principle mentioned above also applies to column parameters. In this case, DataMiner provides additional functionality. The alarm template allows you to define multiple entries for the same column parameter, but with a different filter. In case an alarm occurs for the column parameter, the parameter description is used in combination with the key in the alarm.
-
-For more information on how to implement alarming in a protocol, see <xref:Protocol.Params.Param.Alarm>.
-
 ## Exception values
 
-In case you want to define default alarm values for exception values, use the value mentioned in the value tag of the exception and use '$' as prefix.
+In case you want to define default alarm values for exception values, use the value mentioned in the `Value` tag of the exception and use `$` as prefix.
 
 ```xml
 <Interprete>
