@@ -5,7 +5,7 @@ description: "Configure a discreet table column and hexadecimal color values to 
 
 # Setting row text color
 
-It is possible to change the text color of table rows. To use this feature, the table must contain a column of type "discreet", and the discrete values of that column must specify a color in the *options* attribute. The value of that column will determine the text color for each row. The colors must be specified in hexadecimal format "#RRGGBB", e.g., "#EF71B2".
+It is possible to change the text color of table rows. To use this feature, the table must contain a column of type "discreet", and the discrete values of that column must specify a color in the `options` attribute. The value of that column will determine the text color for each row. The colors must be specified in hexadecimal format "#RRGGBB", e.g., "#EF71B2".
 
 ```xml
 <Param id="100" trending="false">

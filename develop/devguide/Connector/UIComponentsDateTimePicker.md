@@ -7,7 +7,7 @@ description: "Define a date and time picker with read and write double parameter
 
 Allows the user to select a date and time.
 
-To define a date time picker, create a write parameter of type "double" and set the number of decimals to 8. In the measurement tag, set Type to "number" and specify "datetime" on the options attribute.
+To define a date time picker, create a write parameter of type "double" and set the number of decimals to 8. In the `Measurement` tag, set `Type` to "number" and specify "datetime" on the `options` attribute.
 
 ```xml
 <Param id="240" trending="false">
@@ -53,7 +53,7 @@ To define a date time picker, create a write parameter of type "double" and set 
 > [!NOTE]
 >
 > - To limit the selection to dates, specify "date" in the options attribute.
-> - The number of decimals (Interprete.Decimals and Display.Decimals) must be set to 8.
+> - The number of decimals (`Interprete.Decimals` and `Display.Decimals`) must be set to 8.
 
 ## See also
 

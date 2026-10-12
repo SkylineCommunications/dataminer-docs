@@ -1,6 +1,6 @@
 ---
 uid: MonitoringTrending
-description: "Configure parameter trend support and storage, understand real-time and average trend calculations, and choose aggregation or change-based trending."
+description: "Configure parameter trending in DataMiner connectors, understand real-time and average calculations, manage history sets, and retrieve trend data."
 ---
 
 # Trending

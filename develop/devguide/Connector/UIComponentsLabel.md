@@ -7,7 +7,7 @@ description: "Define text or numeric labels for standalone connector parameters,
 
 ## Creating a label
 
-A label displays the current value of a standalone parameter. The text provided in the Description tag will be displayed to inform the user of the meaning of the value. The text provided in the Subtext tag is used as the tooltip text which is shown when the user hovers over the parameter.
+A label displays the current value of a standalone parameter. The text provided in the `Description` tag will be displayed to inform the user of the meaning of the value. The text provided in the `Subtext` tag is used as the tooltip text that is shown when the user hovers over the parameter.
 
 ```xml
 <Param id="102">
@@ -56,11 +56,11 @@ The following example displays a numeric parameter:
 </Param>
 ```
 
-By default, 6 decimals are stored. In case more decimals are required to avoid rounding errors, this can be specified via the Decimals tag. See [Protocol.Params.Param.Interprete.Decimals](xref:Protocol.Params.Param.Interprete.Decimals). (This is for example the case for the DateTime picker UI component, mentioned in the section Datetime picker.)
+By default, 6 decimals are stored. In case more decimals are required to avoid rounding errors, this can be specified via the `Decimals` tag. See [Protocol.Params.Param.Interprete.Decimals](xref:Protocol.Params.Param.Interprete.Decimals). (This is for example the case for the [DateTime picker UI component](xref:UIComponentsDateTimePicker).)
 
 > [!NOTE]
 >
-> - A unit can be specified using the Units tag. See [Protocol.Params.Param.Display.Units](xref:Protocol.Params.Param.Display.Units).
+> - A unit can be specified using the `Units` tag. See [Protocol.Params.Param.Display.Units](xref:Protocol.Params.Param.Display.Units).
 > - When the value of the parameter is a string starting with a "file", "ftp", "http", "https", or "mailto" URI scheme, the parameter value will be displayed as a clickable link.
 
 ## Creating an editable label
@@ -107,8 +107,8 @@ In order to make a label editable, create a parameter of type "write" that has t
 
 There are multiple ways to copy a value set in the write parameter to its read counterpart:
 
-- When using the setter="true" attribute on the write parameter, the value set on the write parameter will be copied to the corresponding read parameter.
-- Using a trigger and a "copy" action, the value set on the write parameter will be copied to the corresponding read parameter.
+- When the `setter="true"` attribute is used on the write parameter, the value set on the write parameter will be copied to the corresponding read parameter.
+- When a trigger and a "copy" action are used, the value set on the write parameter will be copied to the corresponding read parameter.
 - Trigger a QAction on the write parameter and then perform a set on the read parameter from this QAction. (This option should only be used in case additional logic is needed that can only be implemented via a QAction.)
 
 > [!NOTE]

@@ -1,6 +1,6 @@
 ---
 uid: Metadata
-description: "Define protocol metadata such as name, version, vendor, OIDs, type, provider, and version history for a DataMiner connector protocol definition."
+description: "Define protocol metadata such as name, version, vendor, OIDs, type, provider, and version history for a DataMiner protocol definition."
 ---
 
 # Metadata

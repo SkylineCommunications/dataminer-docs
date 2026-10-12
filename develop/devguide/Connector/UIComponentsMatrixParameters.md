@@ -5,7 +5,9 @@ description: "Define the read, write, and column parameters for a standard matri
 
 # Matrix parameters
 
-Creating a matrix requires a parameter of type "array" and measurement type "matrix". For the read parameter the child tags RawType, LengthType and Type of the Interprete tag must always be set to "other", "next param", and "double", respectively.
+Creating a matrix requires a parameter of type "array" and measurement type "matrix".
+
+For the **read parameter**, the child tags `RawType`, `LengthType`, and `Type` of the `Interprete` tag must always be set to "other", "next param", and "double", respectively.
 
 ```xml
 <Param id="4000">
@@ -32,7 +34,7 @@ Creating a matrix requires a parameter of type "array" and measurement type "mat
 </Param>
 ```
 
-For the write parameter, the child tags RawType, LengthType and Type of the Interprete tag must always be set to "other", "next param" and "string", respectively (because of the data format being sent by DataMiner).
+For the **write parameter**, the child tags `RawType`, `LengthType`, and `Type` of the `Interprete` tag must always be set to "other", "next param" and "string", respectively (because of the data format being sent by DataMiner).
 
 ```xml
 <Param id="4010">
@@ -54,7 +56,7 @@ For the write parameter, the child tags RawType, LengthType and Type of the Inte
 Two options are always specified:
 
 - "dimensions", specifying the matrix dimensions.
-- "columntypes", referring to another parameter and defining the type of the column. The child tag Type of the Interprete tag of the referred parameter must always be set to "double". The child tags RawType and LengthType of the Interprete tag of the referred parameter must be configured so this can hold a numeric value.
+- "columntypes", referring to another parameter and defining the type of the column. The child tag `Type` of the `Interprete` tag of the referred parameter must always be set to "double". The child tags `RawType` and `LengthType` of the `Interprete` tag of the referred parameter must be configured so this can hold a numeric value.
 
   For example:
 

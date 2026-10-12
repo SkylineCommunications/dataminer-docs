@@ -1,6 +1,6 @@
 ---
 uid: UIComponentsCustomTableContextMenu
-description: "Add a custom table context menu with QAction commands, dependencies, row selection, confirmation prompts, Automation scripts, and separators."
+description: "Add a custom table context menu with QAction commands, dependencies, row selection, confirmation prompts, automation scripts, and separators."
 ---
 
 # Custom table context menu

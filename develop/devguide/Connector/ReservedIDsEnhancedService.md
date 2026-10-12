@@ -1,6 +1,6 @@
 ---
 uid: ReservedIDsEnhancedService
-description: "Consult the low parameter IDs reserved for enhanced service protocols and learn what service, severity, alarm, and history data each one carries."
+description: "Consult the parameter IDs reserved (range 1–999) for enhanced service protocols to understand what service, severity, alarm, and history data they carry."
 ---
 
 # Enhanced service

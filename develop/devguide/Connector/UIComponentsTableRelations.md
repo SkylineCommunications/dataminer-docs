@@ -5,7 +5,7 @@ description: "Configure table relations and their order so DataMiner builds the 
 
 # Relations
 
-A foreign key needs to be described in the path attribute of the Relations.Relation tag. In the following example, the relation path can be read as "table 4000 has a foreign key to table 3000, table 3000 to table 2000."
+A foreign key needs to be described in the path attribute of the `Relations.Relation` tag. In the following example, the relation path can be read as "table 4000 has a foreign key to table 3000, table 3000 to table 2000."
 
 ```xml
 <Relation path="2000;3000;4000" />

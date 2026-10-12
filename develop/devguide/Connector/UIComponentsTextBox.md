@@ -14,4 +14,4 @@ To define a text box, define a parameter of type "write".
 > [!NOTE]
 >
 > - Typically, a corresponding read parameter will exist for a write parameter. Therefore, the use of a text box is atypical. Instead, an editable label is commonly used.
-> - For text boxes holding string values, the Range tag can also be used to limit the number of characters a user is allowed to enter.
+> - For text boxes holding string values, the `Range` tag can also be used to limit the number of characters a user is allowed to enter.

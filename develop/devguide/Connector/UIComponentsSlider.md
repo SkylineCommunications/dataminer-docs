@@ -1,6 +1,6 @@
 ---
 uid: UIComponentsSlider
-description: "Define a slider with numeric read and write parameters, a Display range, optional step size, and matching units for user-controlled values."
+description: "Define a slider with numeric parameters, range, and step size, and learn how to combine sliders with checkboxes or dropdown lists."
 ---
 
 # Slider
@@ -9,7 +9,7 @@ A slider allows the user to set a value by moving an indicator.
 
 ## Creating a slider
 
-To define a slider, provide a numeric range using the Range tag.
+To define a slider, provide a numeric range using the `Range` tag.
 
 ```xml
 <Param id="160">
