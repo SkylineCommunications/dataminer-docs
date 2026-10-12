@@ -48,3 +48,11 @@ Up to now, every time a connection to the DataMiner storage layer was opened, SL
 On systems where GQI queries repeatedly opened connections, for example through dashboards or low-code apps that refresh automatically, memory usage could keep increasing, potentially degrading performance or causing out-of-memory errors.
 
 From now on, the handlers will be removed when the connection closes.
+
+#### STaaS: Feedback registrations could cause a memory leak [ID 46617]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
+
+From now on, these registrations will be cleared when they are no longer needed.

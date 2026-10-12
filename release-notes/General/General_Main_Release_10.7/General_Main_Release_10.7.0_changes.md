@@ -977,14 +977,6 @@ When requesting eligible resources while ignoring a booking and its service defi
 
 From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
 
-#### STaaS: Feedback registrations could cause a memory leak [ID 46617]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
-
-From now on, these registrations will be cleared when they are no longer needed.
-
 #### Spectrum: Measurement point cycle was not loaded when DONT_APPLY_SETTINGS was passed [ID 46630]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
