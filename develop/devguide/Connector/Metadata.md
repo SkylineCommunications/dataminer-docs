@@ -1,17 +1,11 @@
 ---
 uid: Metadata
-description: "Define protocol metadata such as name, version, vendor, OIDs, type, provider, and version history while using the required XML namespace."
+description: "Define protocol metadata such as name, version, vendor, OIDs, type, provider, and version history for a DataMiner connector protocol definition."
 ---
 
 # Metadata
 
 Every protocol contains the following metadata:
-
-**Schema requirement:** The root element of a *Protocol.xml* file must use the exact namespace `http://www.skyline.be/protocol`.
-
-```xml
-<Protocol xmlns="http://www.skyline.be/protocol">
-```
 
 | Item                                           | Description                                                                                                                                   |
 |------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------|
