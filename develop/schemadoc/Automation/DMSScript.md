@@ -12,7 +12,6 @@ The root element of a DataMiner automation script.
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[options](xref:DMSScript-options)|positiveInteger|Yes|Specifies different options.|
-|xmlns|string||Specifies the XML namespace of the automation script. This must be set to `http://www.skyline.be/automation`.|
 
 ## Children
 
