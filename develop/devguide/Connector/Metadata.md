@@ -27,10 +27,6 @@ Every protocol contains the following metadata:
 | [IntegrationID](xref:Protocol.IntegrationID)   | The integration ID.                                                                                                                           |
 | [VersionHistory](xref:Protocol.VersionHistory) | The version history of the protocol.                                                                                                          |
 
-**Schema behavior:** The generated [VendorOID](xref:Protocol.VendorOID) documentation says that this value must be unique and is provided by the data-source vendor or, on request, by Skyline. It typically starts with `1.3.6.1.4.1`, the private-enterprise branch.
-
-**Unresolved question:** The current schema and Connector documentation do not establish whether every connector should use a product/vendor enterprise OID or a protocol-specific OID assigned by Skyline. Do not infer that decision from an example; confirm it with the vendor or Skyline before assigning the value.
-
 ## See also
 
 Best practices:

@@ -22,9 +22,9 @@ Which approach should be used to retrieve data from the SLProtocol process depen
 
    See [Via SLProtocol(Ext) interface](xref:LogicQActionsSLProtocolInteraction#via-slprotocolext-interface).
 
-**API behavior:** The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API authority defines its methods as blocking, except for `NotifyDataMinerQueued`. Each call can therefore add an inter-process communication boundary between SLScripting and SLProtocol. The generated [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface provides protocol-specific names and table helpers; it does not change the ownership or blocking behavior of the underlying SLProtocol API.
+Note that the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API authority defines its methods as blocking, except for `NotifyDataMinerQueued`. Each call can therefore add an inter-process communication boundary between SLScripting and SLProtocol. The generated [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface provides protocol-specific names and table helpers; it does not change the ownership or blocking behavior of the underlying SLProtocol API.
 
-## Via inputParameters Attribute
+## Via inputParameters attribute
 
 When the inputParameters attribute is used, the parameter values are cast to an object in the Run method of the QAction. This is done by the SLScripting process.
 

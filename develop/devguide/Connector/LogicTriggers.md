@@ -1,6 +1,6 @@
 ---
 uid: LogicTriggers
-description: "Define protocol triggers that activate on component events or through logic, then execute actions or other triggers when their conditions are met."
+description: "Learn how triggers work in DataMiner protocols, how they can be activated, and what they can be used for."
 ---
 
 # Triggers
