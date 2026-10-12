@@ -18,20 +18,6 @@ Specifies the parameter type.
 
 [ScriptParameter](xref:DMSScript.Parameters.ScriptParameter)
 
-## Usage and constraints
-
-The `type` attribute describes the value presented to the automation script for the parameter. The current schema facet lists `string` as the supported value. At runtime, the `ScriptParam` value is supplied as a string.
-
-Use the `values` attribute on the same `ScriptParameter` when the parameter gets its selectable values from a memory file. Keep the parameter ID and description aligned with the code that reads it.
-
-## Expected result
-
-DataMiner exposes the configured parameter to the script with the declared type and the value source defined by the parameter declaration.
-
-## Failure and edge cases
-
-Do not use a CLR type name in this attribute. If the script expects a parameter that is not declared, or if the referenced values file is unavailable, the script can receive an empty or unusable value.
-
 ## Example
 
 ```xml
@@ -41,6 +27,12 @@ Do not use a CLR type name in this attribute. If the script expects a parameter 
    </ScriptParameter>
 </Parameters>
 ```
+
+## Remarks
+
+- Do not use a CLR type name in this attribute. If the script expects a parameter that is not declared, or if the referenced values file is unavailable, the script can receive an empty or unusable value.
+
+- The `type` attribute describes the value presented to the automation script for the parameter. The current schema facet lists `string` as the supported value. At runtime, the `ScriptParam` value is supplied as a string. Use the [values](xref:DMSScript.Parameters.ScriptParameter-values) attribute on the same `ScriptParameter` when the parameter gets its selectable values from a memory file. Keep the parameter ID and description aligned with the code that reads it.
 
 ## Related concepts
 

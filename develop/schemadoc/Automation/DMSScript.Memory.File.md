@@ -1,6 +1,6 @@
 ---
 uid: DMSScript.Memory.File
-description: "Define a File element for an automation script memory file, including its unique ID, volatility setting, and nonempty name."
+description: "Define a File element for an automation script memory file, including its unique ID, volatility setting, and non-empty name."
 ---
 
 # File element

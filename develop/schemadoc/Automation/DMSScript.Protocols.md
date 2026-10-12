@@ -19,6 +19,6 @@ Contains the dummy script variables defined in the script.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
-|--- |--- |--- |--- |
-|Unique |The ID must be unique. |Protocol |@id |
+| Type | Description | Selector | Fields |
+|--|--|--|--|
+| Unique | The ID must be unique. | Protocol | @id |

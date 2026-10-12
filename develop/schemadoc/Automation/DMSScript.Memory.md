@@ -20,6 +20,6 @@ Contains the memory files.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
-|--- |--- |--- |--- |
-|Unique |The ID must be unique. |Memory |@id |
+| Type | Description | Selector | Fields |
+|--|--|--|--|
+| Unique | The ID must be unique. | Memory | @id |

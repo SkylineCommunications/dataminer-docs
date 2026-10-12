@@ -5,7 +5,7 @@ description: "Use the Condition type attribute to specify whether a Boolean expr
 
 # type attribute
 
-Specifies whether the left hand operand of the Boolean expression is a script variable or a parameter value.
+Specifies whether the left-hand operand of the Boolean expression is a script variable or a parameter value.
 
 ## Content Type
 

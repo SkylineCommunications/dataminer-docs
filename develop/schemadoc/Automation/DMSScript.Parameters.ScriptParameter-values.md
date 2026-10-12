@@ -17,4 +17,4 @@ string
 
 ## Remarks
 
- If you do not want to restrict the possible values to the entries of a memory file, leave this empty.
+If you do not want to restrict the possible values to the entries of a memory file, leave this empty.

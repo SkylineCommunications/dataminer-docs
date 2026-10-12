@@ -19,6 +19,6 @@ Contains the parameter script variables defined in the script.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
-|--- |--- |--- |--- |
-|Unique |The ID must be unique. |Parameters |@id |
+| Type | Description | Selector | Fields |
+|--|--|--|--|
+| Unique | The ID must be unique. | Parameters | @id |
