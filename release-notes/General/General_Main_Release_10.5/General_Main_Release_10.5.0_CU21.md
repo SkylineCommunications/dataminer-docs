@@ -31,6 +31,12 @@ description: "Release notes for General Main Release 10.5.0 CU21, including prer
 
 ### Fixes
 
+#### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When an element had unmasked alarms, its severity could be incorrect after it was restarted.
+
 #### SNMP GET results could be matched to the wrong polling group [ID 46507]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
