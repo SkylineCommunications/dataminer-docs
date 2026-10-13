@@ -27,7 +27,7 @@ Perform the following steps to release a connector version:
 
 1. Registering the connector on Catalog (note that for all non-connector items, registrations will happen automatically from the GitHub workflows. But for connectors, a pre-registration is required):
 
-   1. Register the connector using the [Connector Admin Tool](https://internaldocs.skyline.be/Corporate/PoliciesAndProcedures/EngineeringAndConsultancyServices/Scripts_and_connectors/Connector_Admin_Tool/Connector_Admin_Tool.html).
+   1. Register the connector using the [Connector Admin Tool](https://internaldocs.skyline.be/Corporate/PoliciesAndProcedures/EngineeringAndConsultancyServices/Scripts_and_connectors/Connector_Admin_Tool/Connector_Admin_Tool.html). If the new connector belongs to a new vendor, the "Add New Connector" page also allows to add a new vendor.
 
    1. Copy the [Integration ID](xref:Protocol.IntegrationID), the [Vendor OID](xref:Protocol.VendorOID) and the [Device OID](xref:Protocol.DeviceOID) received from previous step and paste it within the appropriate connector XML tags.
 
@@ -36,14 +36,14 @@ Perform the following steps to release a connector version:
    1. Make sure the root folder of the repository contains a catalog.yml file, add an `id` property to it and paste the catalog guid as value. Without this, the release flow will fail. Example:
 
       ```yaml
-      id: PASTE_YOUR_CATALOG_GUID_HERE
+      id: PASTE_CATALOG_GUID_HERE
       ```
 
 1. Add the 'DataMiner Connector' workflow to the repository.
 
-   1. The workflow will then run and a "auto-generated-catalog.yml" file will be created under the ".githubtocatalog" folder within the connector repository. This file should never be edited manually.
+   1. The workflow will then automatically run and a "auto-generated-catalog.yml" file will be created under the ".githubtocatalog" folder within the connector repository. This file should never be edited manually.
 
-   1. Optionally, use this file as an example on how to complete the "catalog.yml" you created during the registration step with extra properties. You may need to do so in following cases:
+   1. Optionally, use this file as an example on how to extend the "catalog.yml" you created during the registration step with extra properties. Here are a few examples where it would be desired:
 
       - The catalog item name should be different from the name within the protocol.xml file. This can, for example, happen when a special char, that is not allowed within the Protocol/Name XML tag of protocol.xml, is desired on the catalog item name.
 
@@ -53,7 +53,7 @@ Perform the following steps to release a connector version:
 
       - ...
 
-1. Release or pre-release using GitHub release feature
+1. Release or pre-release using GitHub release feature.
 
 ## Publishing DataMiner install packages
 
