@@ -39,14 +39,14 @@ The cost of **Cost & Billing** is determined primarily by the number of **calcul
 |-|-------|-------|-------|
 | Events / month | 1,000 | 5,000 | 10,000 |
 | Calculations / month | 2,000 | 10,000 | 20,000 |
-| Finalizations / month | 2,000 | 10,000 | 20,000 |
+| Finalizations / month | 1,000 | 5,000 | 10,000 |
 | Synchronizations / month | 31 | 31 | 31 |
 | Financial records *(assumption)* | 5,000 | 20,000 | 50,000 |
 | Retention | 12 mo | 12 mo | 12 mo |
 | SaaS | Yes | Yes | Yes |
 | **Unmanaged Objects** *(32 × events × retention) + financial records* | 389,000 | 1,940,000 | 3,890,000 |
-| **Actions** *calculations + finalizations + (synchronizations × 2)* | 4,062 | 20,062 | 40,062 |
-| **Information Events** *(calculations × 2) + finalizations + (synchronizations × 2)* | 6,062 | 30,062 | 60,062 |
+| **Actions** *calculations + finalizations + (synchronizations × 2)* | 3,062 | 15,062 | 30,062 |
+| **Information Events** *2 x (calculations x 3) + finalizations + (synchronizations × 2)* | 7,062 | 35,062 | 70,062 |
 | **Hosted Managed Objects** | 1,000,000 | 1,000,000 | 1,000,000 |
 
 For sizing purposes, the following assumptions were used:
