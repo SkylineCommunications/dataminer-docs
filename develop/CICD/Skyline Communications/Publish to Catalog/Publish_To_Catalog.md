@@ -11,9 +11,12 @@ This platform is constantly getting improved. At present, several workarounds ar
 > [!TIP]
 > See also: [About the Catalog app](xref:About_the_Catalog_app)
 
+> [!NOTE]
+> The procedures below are meant for Skyline employees and contain links that are only accessible to Skyline employees.
+
 ## Publishing connectors
 
-Connectors (also known as protocols) are XML files and assemblies that are packaged into .dmprotocol files. The source code of these is currently hosted on GitHub under the [Skyline Communications organization](https://github.com/SkylineCommunications). They use GitHub workflows to (pre-)release new versions on catalog.
+Connectors (also known as protocols) are XML files and assemblies that are packaged into .dmprotocol files. The source code of these is currently hosted on GitHub under the [Skyline Communications organization](https://github.com/SkylineCommunications). GitHub workflows are used to (pre-)release new versions in the Catalog.
 
 Perform the following steps to release a connector version:
 
@@ -25,35 +28,41 @@ Perform the following steps to release a connector version:
 
    - [DIS](xref:Installing_and_configuring_DataMiner_Integration_Studio)
 
-1. Registering the connector on Catalog (note that for all non-connector items, registrations will happen automatically from the GitHub workflows. But for connectors, a pre-registration is required):
+1. Register the connector in the Catalog (note that for all non-connector items, registration happens automatically from the GitHub workflows, but for connectors, a pre-registration is required):
 
-   1. Register the connector using the [Connector Admin Tool](https://internaldocs.skyline.be/Corporate/PoliciesAndProcedures/EngineeringAndConsultancyServices/Scripts_and_connectors/Connector_Admin_Tool/Connector_Admin_Tool.html). If the new connector belongs to a new vendor, the "Add New Connector" page also allows to add a new vendor.
+   1. Register the connector using the [Connector Admin Tool](https://aka.dataminer.services/Connector_Admin_Tool).
 
-   1. Copy the [Integration ID](xref:Protocol.IntegrationID), the [Vendor OID](xref:Protocol.VendorOID) and the [Device OID](xref:Protocol.DeviceOID) received from previous step and paste it within the appropriate connector XML tags.
+      If the new connector belongs to a new vendor, you can also add the vendor on the *Add New Connector* page.
 
-   1. Find back the newly registered connector on Catalog and copy the GUID from the URL. Registering a new connector will always register it as private so you need to log in to find it back. When applicable, the connector can be made public once a first release or pre-release is made.
+   1. Copy the [Integration ID](xref:Protocol.IntegrationID), the [Vendor OID](xref:Protocol.VendorOID), and the [Device OID](xref:Protocol.DeviceOID) received in the previous step and paste these within the appropriate connector XML tags.
 
-   1. Make sure the root folder of the repository contains a catalog.yml file, add an `id` property to it and paste the catalog guid as value. Without this, the release flow will fail. Example:
+   1. Look up the newly registered connector in the Catalog and copy the GUID from the URL.
+
+      A new connector will always initially be registered as private, so you need to log in to access it. When applicable, the connector can be [made public](xref:Change_Catalog_Publishing_State) once a first release or pre-release is made.
+
+   1. Make sure the root folder of the repository contains a *catalog.yml* file, add an `id` property to it, and paste the catalog GUID as its value, for example:
 
       ```yaml
       id: PASTE_CATALOG_GUID_HERE
       ```
 
-1. Add the 'DataMiner Connector' workflow to the repository.
+      This configuration is required to make sure the release flow succeeds.
 
-   1. The workflow will then automatically run and a "auto-generated-catalog.yml" file will be created under the ".githubtocatalog" folder within the connector repository. This file should never be edited manually.
+1. Add the *DataMiner Connector* workflow to the repository.
 
-   1. Optionally, use this file as an example on how to extend the "catalog.yml" you created during the registration step with extra properties. Here are a few examples where it would be desired:
+   The workflow will automatically run, and a *auto-generated-catalog.yml* file will be created in the *.githubtocatalog* folder within the connector repository. This file should never be edited manually.
 
-      - The catalog item name should be different from the name within the protocol.xml file. This can, for example, happen when a special char, that is not allowed within the Protocol/Name XML tag of protocol.xml, is desired on the catalog item name.
+   Optionally, you can use this file as an example to extend the *catalog.yml* you created during the registration step with extra properties. Here are a few examples where this could be useful:
 
-      - The connector has some owners.
+      - The Catalog item needs to have a different name than defined within the *protocol.xml* file. This can, for example, happen when a special character that is not allowed within the `Protocol.Name` tag of the *Protocol.xml* is needed as the Catalog item name.
 
-      - The catalog should associate some extra tags to the connector.
+      - Owners need to be specified for the connector.
+
+      - Extra tags need to be associated with the connector.
 
       - ...
 
-1. Release or pre-release using GitHub release feature.
+1. Release or pre-release using the GitHub release feature.
 
 ## Publishing DataMiner install packages
 
@@ -120,7 +129,7 @@ You can monitor the release pipeline:
 
 Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently hosted on GitHub under the [Skyline Communications organization](https://github.com/SkylineCommunications).
 
-The scripts will automatically be registered as private Catalog items via GitHub workflows once a release or pre-release is made. When applicable, you can make them made public directly within the catalog.
+The scripts will automatically be registered as private Catalog items via GitHub workflows once a release or pre-release is made. When applicable, you can make them made public directly within the Catalog.
 
 ## Publishing dashboards
 
