@@ -142,6 +142,14 @@ When requesting eligible resources while ignoring a booking and its service defi
 
 From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
 
+#### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
+
+From now on, configuration updates will be synchronized across the cluster, and new Agents will automatically inherit the existing cluster settings.
+
 #### STaaS: Feedback registrations could cause a memory leak [ID 46617]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
