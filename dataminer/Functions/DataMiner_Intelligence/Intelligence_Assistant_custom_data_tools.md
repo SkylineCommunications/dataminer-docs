@@ -1,5 +1,5 @@
 ---
-uid: Assistant_custom_data_tools
+uid: Intelligence_Assistant_custom_data_tools
 description: "Learn how to create and configure custom data tools for GQI ad hoc data sources and DOM definitions to extend DataMiner Assistant capabilities."
 ---
 
@@ -15,7 +15,7 @@ The following data sources are supported:
 
 ## Creating or editing custom data tools in the Assistant app
 
-You can create custom data tools on the *Tools* page of the Assistant app with the *+ New tool* button or edit them using the pencil button next to the tool on that page (see [Creating and managing tools](xref:Assistant_Tools)).
+You can create custom data tools on the *Tools* page of the Assistant app with the *+ New tool* button or edit them using the pencil button next to the tool on that page (see [Creating and managing tools](xref:Intelligence_Assistant_Tools)).
 
 When you create or edit a data tool, you will need to configure the following fields:
 
@@ -26,7 +26,7 @@ When you create or edit a data tool, you will need to configure the following fi
   - Cannot contain consecutive hyphens (`--`).
   - Maximum 128 characters.
 
-- **Type**: *Data*. For information about the *Script* type, refer to [Script tools](xref:Assistant_ScriptTools).
+- **Type**: *Data*. For information about the *Script* type, refer to [Script tools](xref:Intelligence_Assistant_ScriptTools).
 
 - **Description**: A brief description of when the data source should be used. This helps the Assistant decide when to pick this tool. Maximum 1,024 characters.
 
@@ -142,32 +142,42 @@ Use the input arguments to filter the results by date range, customer type, and 
 
 #### Input argument types
 
-Ad hoc data sources can accept different types of input arguments, each with specific validation behavior.
+Ad hoc data sources can accept many different types of input arguments. The most basic input argument type is a single string argument, for example:
 
-- **Single string** argument: The basic input argument type. The Assistant provides a single string value.
+```yaml
+inputArguments:
+  - name: "ElementName"
+    type: "String"
+    description: "Name of the element to query"
+    example: "MyDevice"
+```
 
-  Example in front matter:
+Many other types are possible, as shown below. For a list argument, multiple values must be specified in a comma-separated list.
 
-  ```yaml
-  inputArguments:
-    - name: "ElementName"
-      type: "String"
-      description: "Name of the element to query"
-      example: "MyDevice"
-  ```
-
-- **Dropdown** argument: The distinct possible values must be mentioned. The following validation behavior is applied:
-
-  - The selected option must exist in the dropdown list.
-  - The corresponding option value is used.
-  - Validation errors include the list of possible values.
-
-- **List** argument: The following validation behavior is applied:
-
-  - Comma-separated input is split into individual selections.
-  - Each selected option must exist in the list.
-  - At least one option must be selected (empty lists are rejected).
-  - Validation errors include the list of possible values.
+```yaml
+inputArguments:
+- name: "Resolve logic"
+  type: string
+  example: "TryGetArgumentValue"
+- name: "String-required"
+  type: string
+  example: "test"
+- name: "Double-required"
+  type: double
+  example: 1.1
+- name: Boolean-required
+  type: Boolean
+  example: true
+- name: "DateTime-required"
+  type: DateTime
+  example: 03/09/2026 05:50
+- name: "StringList-required"
+  type: string
+  example: "One,Default 1"
+- name: "StringDropdown-required"
+  type: string
+  example: "First"
+```
 
 ### DOM data source files
 

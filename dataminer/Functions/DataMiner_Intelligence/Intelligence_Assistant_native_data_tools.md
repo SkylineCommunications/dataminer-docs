@@ -1,5 +1,5 @@
 ---
-uid: Assistant_native_data_tools
+uid: Intelligence_Assistant_native_data_tools
 description: "Discover the built-in native data tools available in the DataMiner Assistant app, covering a fixed set of out-of-the-box GQI data sources."
 ---
 
@@ -26,4 +26,4 @@ Several native data tools are available in the Assistant app out of the box, wit
 - *trend-data-pattern*
 - *views*
 
-Native data tools cover a fixed set of GQI data sources. To query DOM instances of a specific DOM definition, a specific ad hoc GQI data source, or a fully customized ad hoc data source, define a custom data tool instead. See [Custom data tools](xref:Assistant_custom_data_tools).
+Native data tools cover a fixed set of GQI data sources. To query DOM instances of a specific DOM definition, a specific ad hoc GQI data source, or a fully customized ad hoc data source, define a custom data tool instead. See [Custom data tools](xref:Intelligence_Assistant_custom_data_tools).

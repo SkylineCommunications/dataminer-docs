@@ -1,11 +1,11 @@
 ---
-uid: Assistant_ScriptTools
+uid: Intelligence_Assistant_ScriptTools
 description: "Script tools let specialized agents run approved DataMiner Automation scripts with defined inputs, controlled execution, and user-visible results."
 ---
 
 # Script tools
 
-Script tools allow [specialized agents](xref:Assistant_Specialized_Agents) to execute automation scripts as part of a conversation. They are designed to actively operate or make changes in a DataMiner System instead of retrieving data only.
+Script tools allow [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) to execute automation scripts as part of a conversation. They are designed to actively operate or make changes in a DataMiner System instead of retrieving data only.
 
 For example, a specialized agent can use a script tool to start maintenance, apply a configuration, trigger a provisioning workflow, or perform another controlled automation action. The script itself remains an automation script; the script tool provides the description, inputs, usage rules, and execution behavior that make the script available to the agent.
 
@@ -65,7 +65,7 @@ If a synchronous script does not finish within 30 minutes, it continues running 
 
 ## Creating or editing script tools in the Assistant app
 
-You can create script tools on the *Tools* page of the Assistant app with the *+ New tool* button or edit them using the pencil button next to the tool on that page (see [Creating and managing tools](xref:Assistant_Tools)).
+You can create script tools on the *Tools* page of the Assistant app with the *+ New tool* button or edit them using the pencil button next to the tool on that page (see [Creating and managing tools](xref:Intelligence_Assistant_Tools)).
 
 When you create or edit a script tool, you will need to configure the following fields:
 
@@ -76,7 +76,7 @@ When you create or edit a script tool, you will need to configure the following 
   - Cannot contain consecutive hyphens (`--`).
   - Maximum 128 characters.
 
-- **Type**: *Script*. For information about the *Data* type, refer to [Data tools](xref:Assistant_DataTools).
+- **Type**: *Script*. For information about the *Data* type, refer to [Data tools](xref:Intelligence_Assistant_DataTools).
 
 - **Description**: A brief description of when the script should be used. This helps the Assistant decide when to pick this tool. Maximum 1,024 characters.
 

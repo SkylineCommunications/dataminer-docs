@@ -1,5 +1,5 @@
 ---
-uid: DataMinerAssistant
+uid: Intelligence_Assistant_app
 description: "Discover the DataMiner Assistant app, an integrated AI assistant with access to various sources of information within the DataMiner System."
 ---
 
@@ -16,10 +16,10 @@ When this preview feature has been enabled, you can access the Assistant app via
 
 ![Assistant app icon on the DataMiner landing page](~/dataminer/images/AssistantDxM_AssistantIcon.png)
 
-Alternatively, the app is also available from Microsoft Teams or Microsoft Copilot. See [DataMiner Assistant for Microsoft 365](xref:Assistant_M365).
+Alternatively, the app is also available from Microsoft Teams or Microsoft Copilot. See [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
 
 > [!NOTE]
-> To enable the Assistant app in preview in your DataMiner System, contact Skyline Communications.
+> To enable the Assistant app in preview in your DataMiner System, contact [ai@skyline.be](mailto:ai@skyline.be).
 
 ## Assistant app user interface
 
@@ -27,7 +27,7 @@ When you open the app, a welcome screen is displayed with the following elements
 
 ![Assistant app welcome screen, including suggestion cards, agent selector, model selector, and chat input box](~/dataminer/images/Assistant.png)
 
-- **Left sidebar**: Allows you to start a new session at any time by clicking *+ New session*. Below that, you can access your sessions, [agents](xref:Assistant_Agents), [skills](xref:Assistant_Skills), and [tools](xref:Assistant_Tools).
+- **Left sidebar**: Allows you to start a new session at any time by clicking *+ New session*. Below that, you can access your sessions, [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools).
 
 - **Header bar**: The header bar is similar to other native DataMiner apps, with a button to return to the landing page on the left, and a user icon on the right. Clicking the user icon opens a menu with the following options:
 
@@ -39,11 +39,11 @@ When you open the app, a welcome screen is displayed with the following elements
 
 - **Chat input box**: Located at the bottom of the screen, this is where you type your questions. While the Assistant is working, the chat displays the tools being invoked and the reasoning steps the model performs, giving you insight into how the response is being constructed.
 
-  When you start a chat, the app automatically shares your browser's detected time zone and language with the Assistant. This lets agents determine your current local time and preferred formatting for dates, times, and numbers without any manual configuration. See [Agent context](xref:Assistant_Agents#agent-context).
+  When you start a chat, the app automatically shares your browser's detected time zone and language with the Assistant. This lets agents determine your preferred formatting for dates, times, and numbers without any manual configuration. See [Agent context](xref:Intelligence_Assistant_Agents#agent-context).
 
   Within the chat input box, the following features are available:
 
-  - **Agent selector**: In the lower-left corner of the chat input, you can select which AI agent handles your conversation (e.g., [DataMiner Insights Agent](xref:Assistant_InsightsAgent)). The Assistant supports both native agents and [specialized agents](xref:Assistant_Specialized_Agents), allowing you to switch between general-purpose and purpose-built agents depending on your use case. The last selected agent is remembered and restored when you reopen the chat.
+  - **Agent selector**: In the lower-left corner of the chat input, you can select which AI agent handles your conversation (e.g., [DataMiner Insights Agent](xref:Intelligence_Assistant_InsightsAgent)). The Assistant supports both native agents and [specialized agents](xref:Intelligence_Assistant_Specialized_Agents), allowing you to switch between general-purpose and purpose-built agents depending on your use case. The last selected agent is remembered and restored when you reopen the chat.
 
   - **Reasoning level selector**: A speed option (e.g., *Fast*) that lets you choose between faster responses and deeper reasoning. The selected reasoning level is preserved across sessions for models that support reasoning.
 

@@ -1,11 +1,11 @@
 ---
-uid: NL2GQI
+uid: Intelligence_NL2GQI
 description: "Learn how to use the natural language to GQI feature in DataMiner Assistant to generate ready-to-execute GQI queries from human-language requests."
 ---
 
 # Natural language to GQI
 
-Starting from version 1.0.0, the [DataMiner Assistant](xref:Assistant_DxM) DxM will translate requests in human language into ready-to-execute GQI queries making use of an underlying Large Language Model (LLM).
+Starting from version 1.0.0, the [DataMiner Assistant](xref:Intelligence_Assistant_DxM) DxM will translate requests in human language into ready-to-execute GQI queries making use of an underlying Large Language Model (LLM).
 
 You can use this feature when [configuring queries in dashboards or low-code apps](xref:Letting_DataMiner_Assistant_create_a_query).
 

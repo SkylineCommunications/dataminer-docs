@@ -1036,41 +1036,41 @@ items:
   - name: Intelligence
     items:
       - name: DataMiner Assistant DxM
-        topicUid: Assistant_DxM
+        topicUid: Intelligence_Assistant_DxM
       - name: DataMiner Assistant app
-        topicUid: DataMinerAssistant
+        topicUid: Intelligence_Assistant_app
         items:
         - name: Agents
-          topicUid: Assistant_Agents
+          topicUid: Intelligence_Assistant_Agents
           items:
           - name: Native agents
             items:
             - name: Insights agent
-              topicUid: Assistant_InsightsAgent
+              topicUid: Intelligence_Assistant_InsightsAgent
             - name: Documentation agent
-              topicUid: Assistant_DocumentationAgent
+              topicUid: Intelligence_Assistant_DocumentationAgent
           - name: Specialized agents
-            topicUid: Assistant_Specialized_Agents
+            topicUid: Intelligence_Assistant_Specialized_Agents
         - name: Skills
-          topicUid: Assistant_Skills
+          topicUid: Intelligence_Assistant_Skills
         - name: Tools
-          topicUid: Assistant_Tools
+          topicUid: Intelligence_Assistant_Tools
           items:
           - name: Data tools
-            topicUid: Assistant_DataTools
+            topicUid: Intelligence_Assistant_DataTools
             items:
             - name: Native data tools
-              topicUid: Assistant_native_data_tools
+              topicUid: Intelligence_Assistant_native_data_tools
             - name: Custom data tools
-              topicUid: Assistant_custom_data_tools
+              topicUid: Intelligence_Assistant_custom_data_tools
           - name: Script tools
-            topicUid: Assistant_ScriptTools
+            topicUid: Intelligence_Assistant_ScriptTools
         - name: Data privacy and security
-          topicUid: Assistant_DataPrivacySecurity
+          topicUid: Intelligence_Data_Privacy_Security
       - name: DataMiner Assistant M365
-        topicUid: Assistant_M365
+        topicUid: Intelligence_Assistant_M365
       - name: Natural language to GQI
-        topicUid: NL2GQI
+        topicUid: Intelligence_NL2GQI
       - name: Document Intelligence
         topicUid: docintel
   - name: Inventory & Asset Management

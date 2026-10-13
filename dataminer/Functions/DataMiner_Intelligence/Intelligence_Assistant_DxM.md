@@ -1,5 +1,5 @@
 ---
-uid: Assistant_DxM
+uid: Intelligence_Assistant_DxM
 keywords: DataMiner Copilot
 description: "Learn about the DataMiner Assistant DxM, which provides conversational AI in DataMiner, for example in the Assistant app and the Document Intelligence API."
 ---
@@ -8,9 +8,9 @@ description: "Learn about the DataMiner Assistant DxM, which provides conversati
 
 DataMiner Intelligence makes use of the DataMiner Assistant DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)), which provides conversational AI in DataMiner.
 
-The initial 1.0.0 version only supports the [natural language to GQI](xref:NL2GQI) feature. Starting from version 2.0.7, the [Document Intelligence](xref:docintel) feature is also supported.
+The initial 1.0.0 version only supports the [natural language to GQI](xref:Intelligence_NL2GQI) feature. Starting from version 2.0.7, the [Document Intelligence](xref:docintel) feature is also supported.
 
-A [DataMiner Assistant app](xref:DataMinerAssistant) is also currently being developed. You can preview it in DataMiner upon request. In addition, a [DataMiner Assistant for Microsoft 365](xref:Assistant_M365) is available on the Microsoft Marketplace, which has features similar to the Assistant app but allows direct access from Microsoft Teams or Microsoft Copilot.
+A [DataMiner Assistant app](xref:Intelligence_Assistant_app) is also currently being developed. You can preview it in DataMiner upon request. In addition, a [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365) is available on the Microsoft Marketplace, which has features similar to the Assistant app but allows direct access from Microsoft Teams or Microsoft Copilot.
 
 ## Installation
 

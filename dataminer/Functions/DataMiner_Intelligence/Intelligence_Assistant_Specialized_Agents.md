@@ -1,5 +1,5 @@
 ---
-uid: Assistant_Specialized_Agents
+uid: Intelligence_Assistant_Specialized_Agents
 description: "Learn how to create, configure, and manage user-defined specialized agents in DataMiner Assistant using the Assistant app or agent context files."
 ---
 
@@ -10,7 +10,7 @@ description: "Learn how to create, configure, and manage user-defined specialize
 
 A specialized agent is a user-configured agent that bundles a name, description, instructions, and a curated set of references into a reusable entity. When invoked, the agent operates according to its instructions and has access only to the references assigned to it, making it focused and predictable.
 
-Unlike [native agents](xref:Assistant_Agents#native-agents), which are built-in, specialized agents are fully user-defined and tailored to specific use cases or workflows.
+Unlike [native agents](xref:Intelligence_Assistant_Agents#native-agents), which are built-in, specialized agents are fully user-defined and tailored to specific use cases or workflows.
 
 ## Why use specialized agents
 
@@ -46,9 +46,9 @@ A specialized agent consists of the following components:
 
 References define what a specialized agent can use during execution. Each reference points to an existing standalone capability within the Assistant:
 
-- **[Data tools](xref:Assistant_DataTools)**: Give the agent access to specific data sources, allowing it to query and retrieve information from your DataMiner System.
-- **[Script tools](xref:Assistant_ScriptTools)**: Give the agent access to specific automation scripts that are explicitly assigned to it.
-- **[Skills](xref:Assistant_Skills)**: Provide the agent with domain-specific workflows and best practices defined in skill files.
+- **[Data tools](xref:Intelligence_Assistant_DataTools)**: Give the agent access to specific data sources, allowing it to query and retrieve information from your DataMiner System.
+- **[Script tools](xref:Intelligence_Assistant_ScriptTools)**: Give the agent access to specific automation scripts that are explicitly assigned to it.
+- **[Skills](xref:Intelligence_Assistant_Skills)**: Provide the agent with domain-specific workflows and best practices defined in skill files.
 
 By assigning only the relevant references, you ensure that the agent stays focused on its intended purpose and does not access unrelated resources.
 
@@ -108,8 +108,8 @@ The files must be Markdown files named `agent.md` that are configured as follows
 
 - `name`: Required. A unique, human-readable name for the agent. Maximum 128 characters.
 - `description`: Required. A short summary of what the agent does. Maximum 1,024 characters.
-- `tools`: Optional. A list of tool names the agent can access. These must reference existing [data tools](xref:Assistant_DataTools) or [script tools](xref:Assistant_ScriptTools).
-- `skills`: Optional. A list of skill names the agent can use. These must reference existing [skills](xref:Assistant_Skills).
+- `tools`: Optional. A list of tool names the agent can access. These must reference existing [data tools](xref:Intelligence_Assistant_DataTools) or [script tools](xref:Intelligence_Assistant_ScriptTools).
+- `skills`: Optional. A list of skill names the agent can use. These must reference existing [skills](xref:Intelligence_Assistant_Skills).
 
 #### Example
 

@@ -1,5 +1,5 @@
 ---
-uid: Assistant_Agents
+uid: Intelligence_Assistant_Agents
 description: "Learn about DataMiner Assistant agents, including native and specialized agents, their tools and skills, and the user context passed to them during chats."
 ---
 
@@ -11,8 +11,8 @@ These AI agents are not to be confused with "DataMiner Agents", i.e., DataMiner 
 
 AI agents operate by combining:
 
-- **[Tools](xref:Assistant_Tools)**: These give the agents the ability to query data and execute actions.
-- **[Skills](xref:Assistant_Skills)**: These provide the agents with domain-specific workflows and instructions.
+- **[Tools](xref:Intelligence_Assistant_Tools)**: These give the agents the ability to query data and execute actions.
+- **[Skills](xref:Intelligence_Assistant_Skills)**: These provide the agents with domain-specific workflows and instructions.
 
 ## Types of agents
 
@@ -22,8 +22,8 @@ Native agents are built-in agents that ship with the DataMiner Assistant DxM. Th
 
 The following native agents are available:
 
-- **[DataMiner Insights](xref:Assistant_InsightsAgent)**: Investigates questions about your DataMiner System using data tools and skills.
-- **[DataMiner Docs](xref:Assistant_DocumentationAgent)**: Provides answers based on DataMiner documentation.
+- **[DataMiner Insights](xref:Intelligence_Assistant_InsightsAgent)**: Investigates questions about your DataMiner System using data tools and skills.
+- **[DataMiner Docs](xref:Intelligence_Assistant_DocumentationAgent)**: Provides answers based on DataMiner documentation.
 
 On the agents overview page, native agents are labeled with a "Native" tag. You can use the *Native only* toggle button to filter the list and show only native agents. Native agents open in read-only mode, so editing and deleting is not possible for them.
 
@@ -31,7 +31,7 @@ On the agents overview page, native agents are labeled with a "Native" tag. You 
 
 ### Specialized agents
 
-[Specialized agents](xref:Assistant_Specialized_Agents) are user-defined agents that bundle a name, description, instructions, and a curated set of references into a reusable, purpose-built entity. You can create them to have agents that are specifically tailored to certain operational workflows or domains.
+[Specialized agents](xref:Intelligence_Assistant_Specialized_Agents) are user-defined agents that bundle a name, description, instructions, and a curated set of references into a reusable, purpose-built entity. You can create them to have agents that are specifically tailored to certain operational workflows or domains.
 
 Specialized agents only have access to the specific tools and skills assigned to them.
 

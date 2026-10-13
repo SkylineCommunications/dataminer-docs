@@ -1,5 +1,5 @@
 ---
-uid: Assistant_Skills
+uid: Intelligence_Assistant_Skills
 description: "Learn how to create and manage custom skills that provide DataMiner Assistant agents with domain-specific workflows, instructions, and companion files."
 ---
 
@@ -77,7 +77,7 @@ Please note:
 
 - Resources are always **scoped to the skill they belong to**. There is no shared or global resource folder; each skill is self-contained.
 - Resource files are **not discovered automatically**. To make a resource available to the Assistant, reference its path explicitly in the skill's `SKILL.md` file. Write the path relative to the skill folder. For a resource in a nested subfolder, include every folder in the path, such as `templates/rollout-checklist.md` or `playbooks/risk-evaluation.md`.
-- Different [specialized agents](xref:Assistant_Specialized_Agents) can reference the same skill. This means an agent can indirectly reuse a skill's resources by using that skill.
+- Different [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) can reference the same skill. This means an agent can indirectly reuse a skill's resources by using that skill.
 
 Folder structure example:
 

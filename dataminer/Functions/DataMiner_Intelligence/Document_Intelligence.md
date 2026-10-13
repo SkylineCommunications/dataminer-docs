@@ -5,7 +5,7 @@ description: "Learn how the DataMiner Assistant DxM uses Document Intelligence t
 
 # Document Intelligence
 
-Starting from version 2.0.7, the [DataMiner Assistant DxM](xref:Assistant_DxM) can analyze documents based on instructions you provide. This functionality is available through the Document Intelligence API and can be used in DataMiner Automation.
+Starting from version 2.0.7, the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) can analyze documents based on instructions you provide. This functionality is available through the Document Intelligence API and can be used in DataMiner Automation.
 
 Typical use cases include:
 
