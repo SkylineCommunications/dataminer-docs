@@ -31,6 +31,12 @@ description: "Release notes for General Main Release 10.5.0 CU21, including prer
 
 ### Fixes
 
+#### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When an element had unmasked alarms, its severity could be incorrect after it was restarted.
+
 #### SNMP GET results could be matched to the wrong polling group [ID 46507]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -56,3 +62,11 @@ From now on, the handlers will be removed when the connection closes.
 On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
 
 From now on, these registrations will be cleared when they are no longer needed.
+
+#### SLAnalytics - Alarm Focus: Swarming notifications could be missed during startup [ID 46717]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, SLAnalytics subscribed to swarming notifications after startup prefetch, which could cause it to miss notifications while the cache was being initialized. From now on, it will subscribe before startup prefetch. History reads triggered during prefetch will wait for the cache lock; normal prefetched-cache lookup behavior will remain unchanged.
+
+If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.

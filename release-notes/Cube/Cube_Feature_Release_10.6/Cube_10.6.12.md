@@ -174,6 +174,14 @@ When another session changed the Last Session Preset of a Spectrum analyzer in s
 
 The banner now says, "Another session has made changes to this spectrum analyzer."
 
+#### Embedded web pages could appear over popups [ID 46740]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When another Cube overlay was opened or closed, embedded web page content could appear over a popup. This happened because overlays shared a focus key that controlled the visibility of embedded web browsers.
+
+Each overlay now has its own focus key, so closing one overlay no longer affects the visibility of other active overlays.
+
 #### Data Display: Full-screen button did not work in pop-up windows [ID 46742]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->

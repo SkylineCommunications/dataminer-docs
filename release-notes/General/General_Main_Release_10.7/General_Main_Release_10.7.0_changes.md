@@ -977,6 +977,14 @@ When requesting eligible resources while ignoring a booking and its service defi
 
 From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
 
+#### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
+
+From now on, configuration updates will be synchronized across the cluster, and new Agents will automatically inherit the existing cluster settings.
+
 #### Spectrum: Measurement point cycle was not loaded when DONT_APPLY_SETTINGS was passed [ID 46630]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
@@ -984,6 +992,12 @@ From now on, the Resource Manager will take ignored booking into account when de
 Up to now, when you loaded a preset with both the `SPA_PRESET_DONT_APPLY_SETTINGS` and `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flags, the measurement point cycle would not be loaded.
 
 From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will load the measurement point cycle regardless of whether the `SPA_PRESET_DONT_APPLY_SETTINGS` flag is also passed.
+
+#### STaaS: Certain exceptions were incorrectly wrapped [ID 46637]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
 
 #### SLNet: Edge managers could fail to initialize when NATS was unavailable at startup [ID 46700]
 
