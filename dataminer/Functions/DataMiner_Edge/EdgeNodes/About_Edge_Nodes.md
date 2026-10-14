@@ -40,3 +40,17 @@ Edge Node mode consists of the following main components:
 ## Security
 
 Each execution of a Python-based integration runs in a secure context and receives a unique secret. The integration must use this secret when returning data to DataMiner, ensuring that only authorized executions can submit data.
+
+## Creating a connector script
+
+Connector developers can build Python-based integrations in Visual Studio as part of an existing DataMiner connector solution. The **DataMiner Connector Script** project template provides a ready-to-use project structure for source code, metadata, dependencies, and tests.
+
+The generated entry point separates the integration into three clear steps:
+
+1. Parse the input supplied by the runtime.
+1. Retrieve and prepare the connector-specific data.
+1. Push the data to the Edge Node.
+
+This separation allows developers to focus on the logic that communicates with the data source, while the project structure remains compatible with the connector packaging and Edge Node runtime. Standard Visual Studio functionality is available for editing, debugging, testing, virtual environment management, and Git integration.
+
+For information on creating and developing a connector script, see [Developing connector scripts in Visual Studio](xref:DevelopingConnectorScriptsInVisualStudio).
