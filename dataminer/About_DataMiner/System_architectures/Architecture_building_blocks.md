@@ -72,6 +72,14 @@ With [Swarming](xref:Swarming), elements and other objects are no longer bound t
 
 With STaaS, storage redundancy is provided by the platform (ZRS or GRS). With dedicated clustered storage, you achieve redundancy by running multiple Cassandra nodes with an appropriate replication factor and an OpenSearch cluster with at least three nodes. See [Dedicated clustered storage](xref:Dedicated_clustered_storage).
 
+### Surviving the loss of a site
+
+To keep a system running when a complete site is lost, both the DataMiner nodes and the storage must be redundant across sites. Redundant storage on its own is not enough:
+
+- **Storage**: With STaaS, geo-redundant storage (GRS) keeps an additional copy of the data in a second cloud region. With self-managed storage, the database clusters must be spread over two sites with a tie-breaker at a third location. See [Geo-redundant on-premises system](xref:Architecture_geo_redundant).
+- **DataMiner nodes**: There must be DataMiner nodes at the remaining site that can take over the workload, for example a Failover pair with one DMA at each site, or nodes at both sites with Swarming and enough spare capacity.
+- **Network and devices**: The remaining site must still be able to reach the managed devices and the storage, and users must be able to reach the remaining nodes.
+
 ### Redundancy on element level
 
 Some types of redundancy are handled inside DataMiner itself rather than on infrastructure level, for example [redundancy groups](xref:About_redundancy_groups) that switch between primary and backup devices. These are independent of the system architecture, but they are often part of the overall resilience design.

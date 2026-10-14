@@ -9,7 +9,7 @@ keywords: architecture, geo-redundancy, disaster recovery, multiple data centers
 In this architecture, one DataMiner System is spread over two sites (for example two data centers), so that the system keeps running when one of the sites is lost completely. The storage is self-managed: Cassandra stores a full copy of the data at each site, and the OpenSearch cluster is spread over the two sites plus a tie-breaker node at a third location.
 
 > [!TIP]
-> If your DataMiner nodes can connect to the internet, [Storage as a Service](xref:STaaS) with geo-redundant storage (GRS) can provide geo-redundancy for the storage without the need to operate database clusters at two sites. In that case, see [Self-managed nodes with Storage as a Service](xref:Architecture_self_managed_staas).
+> If your DataMiner nodes can connect to the internet, [Storage as a Service](xref:STaaS) with geo-redundant storage (GRS) can provide geo-redundancy for the storage without the need to operate database clusters at two sites. You still need DataMiner nodes at both sites to take over the workload. See [Surviving the loss of a site](xref:Architecture_building_blocks#surviving-the-loss-of-a-site) and [Self-managed nodes with Storage as a Service](xref:Architecture_self_managed_staas).
 
 ## When to use this architecture
 
@@ -17,7 +17,7 @@ This architecture is a good fit when:
 
 - The system is mission-critical and must survive the loss of a complete site, for example because of a power outage, a fire, or a network failure.
 - The use of cloud services is not possible or not allowed.
-- A reliable, low-latency network connection is available between the sites.
+- A reliable, low-latency network connection is available between the sites. As a guideline, the latency between DataMiner nodes should stay within roughly 30 to 50 ms or lower, and the OpenSearch tie-breaker must be below 50 ms.
 - You have the expertise and resources to operate distributed database clusters.
 
 ## Architecture

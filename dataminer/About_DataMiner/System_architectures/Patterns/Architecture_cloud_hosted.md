@@ -58,7 +58,7 @@ A minimal system consists of a single DaaS node. You can add nodes as your syste
 | Pros | Cons |
 |--|--|
 | No hardware, operating system, or database to maintain | Requires internet connectivity |
-| Up and running in minutes | Reaching equipment in private networks requires DataMiner Edge or a VPN |
+| Quick to deploy, with no hardware to install | Reaching equipment in private networks requires DataMiner Edge or a VPN |
 | Easy to scale vertically and horizontally | Latency between users or devices and the cloud region can be noticeable when they are far away from it |
 | Built-in storage redundancy and backups | Not suitable for air-gapped networks |
 | Region can be chosen to meet data residency requirements | Devices that require a physical connection (for example serial) need a local component |

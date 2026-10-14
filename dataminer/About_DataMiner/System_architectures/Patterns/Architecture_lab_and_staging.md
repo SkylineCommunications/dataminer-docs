@@ -19,7 +19,9 @@ Besides a production system, most organizations use one or more additional DataM
 
 ## Proofs of concept and evaluations
 
-The fastest way to get started is a [cloud-hosted system](xref:Architecture_cloud_hosted) on DataMiner as a Service. You can create one in a few minutes and remove it again when you no longer need it. If the proof of concept needs access to equipment in a private network, use [DataMiner Edge](xref:DataMiner_Edge) or install a self-managed node with [STaaS](xref:STaaS) in that network.
+A [cloud-hosted system](xref:Architecture_cloud_hosted) on DataMiner as a Service requires no hardware and can be created and removed again quickly, which makes it convenient for short evaluations. If the proof of concept needs access to equipment in a private network, use [DataMiner Edge](xref:DataMiner_Edge), or install a self-managed node with [STaaS](xref:STaaS) in that network. A self-managed node lets you evaluate DataMiner in your own environment, but you need to provide and maintain a Windows server or virtual machine for it.
+
+To estimate the costs, see the [sizing guide for DataMiner as a Service](xref:Pricing_sizing_guide_services_DaaS) and [Commercial and deploy models summary](xref:Pricing_Commercial_Models).
 
 ## Development systems
 

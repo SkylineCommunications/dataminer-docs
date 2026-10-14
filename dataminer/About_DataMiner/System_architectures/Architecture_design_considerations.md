@@ -14,7 +14,7 @@ The guidelines on this page apply to all [DataMiner System architectures](xref:A
 - **Latency within self-managed database clusters**: OpenSearch nodes must not be spread over high-latency links. For geo-redundant setups, see [Geo-redundant on-premises system](xref:Architecture_geo_redundant#network-requirements).
 - **Reachability**: Every DataMiner node must be able to reach every other node in the cluster and all storage nodes it uses. With STaaS, every node needs outbound HTTPS access, directly or via a proxy. See [Setting up STaaS](xref:Setting_up_StaaS).
 - **Ports and firewalls**: Open the required ports between DataMiner nodes, clients, and storage nodes. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
-- **DMZ setups** are currently not supported with STaaS.
+- **DMZ setups**: Setups where DataMiner nodes are placed in a demilitarized zone (DMZ) are currently not supported with STaaS.
 - **Name resolution and time**: Make sure hostnames resolve correctly on all nodes and that all servers use the same time source. Recovery procedures often depend on DNS and hostnames.
 - **Unreliable WAN links**: Do not make critical functions depend on links that are known to be unreliable. Treat remote sites with poor connectivity as data collection points, for example with a local node or [DataMiner Edge](xref:DataMiner_Edge), rather than as an integral part of the central cluster.
 

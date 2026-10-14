@@ -6,7 +6,7 @@ keywords: architecture, market segments, broadcast, satellite, teleport, cable, 
 
 # Architectures by market segment
 
-The architecture of a DataMiner System depends more on the situation than on the industry. Still, organizations in the same market segment often face similar challenges, and certain architectures are therefore more common in some segments than in others. This page lists typical patterns per segment as a starting point. Always validate them against your own requirements using the [questions in the overview](xref:Architecture_overview#questions-to-ask-before-you-choose).
+The architecture of a DataMiner System depends more on the situation than on the industry. Still, organizations in the same market segment often face similar challenges, and certain architectures are therefore more common in some segments than in others. This page lists typical patterns per segment as a starting point. Always validate them against your own requirements using the [questions in the overview](xref:Architecture_overview#questions-to-ask-before-you-choose). For an explanation of terms such as Failover, Swarming, STaaS, and GRS, see [Key terms](xref:Architecture_overview#key-terms).
 
 ## Broadcast (TV and radio)
 
@@ -15,8 +15,9 @@ The architecture of a DataMiner System depends more on the situation than on the
 | Scenario | Common architectures |
 |--|--|
 | One main facility | [Self-managed nodes with STaaS](xref:Architecture_self_managed_staas) or an [on-premises system with self-managed storage](xref:Architecture_on_premises), with Failover or Swarming |
+| A few facilities in one region, such as studios and a playout center | One DMS with nodes in the facilities that need local access, and redundant storage. See the [example scenario](xref:Architecture_overview#a-broadcaster-with-a-few-facilities-in-one-region). |
 | Regional stations or transmitter sites | [Distributed multi-site system](xref:Architecture_distributed_sites), with a node at larger sites and central polling or DataMiner Edge for smaller sites |
-| Main and backup facility | [Geo-redundant on-premises system](xref:Architecture_geo_redundant), or STaaS with geo-redundant storage |
+| Main and backup facility | DataMiner nodes at both facilities, combined with STaaS with geo-redundant storage or a [geo-redundant on-premises system](xref:Architecture_geo_redundant). See [Surviving the loss of a site](xref:Architecture_building_blocks#surviving-the-loss-of-a-site). |
 | Cloud-based playout or production | [Cloud-hosted system](xref:Architecture_cloud_hosted) or [hybrid cluster](xref:Architecture_hybrid_cluster) |
 
 **Considerations**: Plan maintenance windows around the broadcast schedule, and use Failover or Swarming to keep monitoring the air chain during maintenance. A separate staging system is recommended for systems that include orchestration or automation.
@@ -53,10 +54,10 @@ The architecture of a DataMiner System depends more on the situation than on the
 |--|--|
 | One teleport | [Self-managed nodes with STaaS](xref:Architecture_self_managed_staas) or an [on-premises system with self-managed storage](xref:Architecture_on_premises) |
 | Multiple teleports or gateways managed centrally | [Distributed multi-site system](xref:Architecture_distributed_sites), with a DataMiner node at each teleport |
-| Primary and backup network operations center | [Geo-redundant on-premises system](xref:Architecture_geo_redundant), or STaaS with geo-redundant storage |
-| Teleports on different continents | [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems), one per region |
+| Primary and backup teleport or network operations center, with a reliable low-latency link | DataMiner nodes at both sites, combined with STaaS with geo-redundant storage or a [geo-redundant on-premises system](xref:Architecture_geo_redundant). See [Surviving the loss of a site](xref:Architecture_building_blocks#surviving-the-loss-of-a-site). |
+| Teleports far apart or connected via high-latency links | [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems), one per teleport or region, with a central view via element replication |
 
-**Considerations**: Place DataMiner nodes at the teleports where equipment requires local access. Avoid stretching one cluster over long-distance or satellite links with high latency.
+**Considerations**: Place DataMiner nodes at the teleports where equipment requires local access. Avoid stretching one cluster over long-distance or satellite links with high latency. To decide between one system and several, see [One system or several?](xref:Architecture_overview#one-system-or-several) and the [example scenario](xref:Architecture_overview#a-satellite-operator-with-a-main-and-a-backup-teleport-in-different-countries).
 
 ## Satellite and VSAT service providers
 

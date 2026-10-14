@@ -33,6 +33,8 @@ items:
     items:
       - name: Building blocks of a DataMiner System
         topicUid: Architecture_building_blocks
+      - name: Architectures by market segment
+        topicUid: Architecture_market_segments
       - name: Reference architectures
         items:
           - name: Cloud-hosted system
@@ -51,8 +53,6 @@ items:
             topicUid: Architecture_multiple_systems
           - name: Lab, staging, and proof-of-concept systems
             topicUid: Architecture_lab_and_staging
-      - name: Architectures by market segment
-        topicUid: Architecture_market_segments
       - name: Architecture design considerations
         topicUid: Architecture_design_considerations
   - name: Stack functions

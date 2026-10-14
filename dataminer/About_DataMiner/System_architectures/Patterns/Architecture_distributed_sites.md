@@ -14,7 +14,7 @@ This architecture is a good fit when:
 
 - You manage equipment spread over many sites, and you want to operate it from one or more central operations centers.
 - Sites are connected via a WAN or the internet, with varying quality.
-- Some sites must keep being monitored locally when the connection to the central location is lost.
+- Some sites must keep collecting data locally when the connection to the central location is lost.
 
 ## Architecture variants
 
@@ -67,6 +67,19 @@ An [Edge Node](xref:About_Edge_Nodes) runs integrations locally at the site and 
 - **Central functions**: Make the central DataMiner nodes and the storage redundant as described in the other architectures, for example with multiple nodes and Swarming or Failover, and with STaaS or clustered storage.
 - **Sites**: Decide per site whether local redundancy is required. Critical sites can have a Failover pair or multiple nodes. Less critical sites often have a single node or no node at all.
 - **WAN**: Do not cluster DataMiner nodes that depend on each other over unreliable WAN links. Design each site so that a WAN failure only affects the visibility of that site, not the rest of the system.
+
+### What happens when a site loses its connection
+
+The impact of a lost connection depends on how the site is connected:
+
+| Site setup | Data collection at the site | Central visibility of the site |
+|--|--|--|
+| DataMiner node at the site, with STaaS | The node keeps polling its equipment and evaluating alarms, as long as it can still reach STaaS via its own internet access. | Lost until the connection is restored. The loss of connection is reported centrally. |
+| DataMiner node at the site, with central self-managed storage | The node can no longer reach the storage, so it cannot keep functioning normally. | Lost until the connection is restored. |
+| Central polling, without a node at the site | Polling of the site stops. No data is collected during the outage. | The loss of connectivity is reported centrally. |
+| DataMiner Edge Node at the site | The Edge Node is designed to support operational continuity when connectivity is intermittent. | Restored when the connection returns. |
+
+If a site must remain fully operational during a WAN outage, give it a local DataMiner node with its own internet access for STaaS, or consider making it a separate DataMiner System. For the exact behavior in your situation, contact Skyline.
 
 ## Maintenance and backups
 
