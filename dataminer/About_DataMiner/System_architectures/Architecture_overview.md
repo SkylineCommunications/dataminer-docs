@@ -8,7 +8,7 @@ keywords: architecture, DMS architecture, topology, design, redundancy, isolatio
 
 The right DataMiner System (DMS) architecture starts with your situation: where your data sources are, which failures your operation must withstand, and which parts of the system must remain independent. These requirements determine the **system topology**, meaning how DataMiner Agents and systems are arranged.
 
-Hosting and storage are related but separate choices. A centralized cluster, for example, can run on DataMiner as a Service (DaaS) or on your own servers. Private data sources do not require an on-premises cluster: a cloud-hosted system can reach them through a site-to-site VPN or [DataMiner Edge](xref:DataMiner_Edge).
+Hosting and storage are related but separate choices. A centralized cluster, for example, can run on DataMiner as a Service (DaaS) or on your own servers. Private data sources do not require an on-premises cluster: a cloud-hosted system can reach them through a site-to-site VPN or [DataMiner Edge](xref:DataMiner_Edge). See [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources) for setup guidance.
 
 Use the architectures in this section as starting points, not as mutually exclusive categories. A distributed system can also be geo-redundant, and each independent system can use a different topology. **You do not need to match every suitability example on a page.** One or more may explain why that topology fits your situation; technical prerequisites, such as connectivity and supported storage, still apply.
 
@@ -22,7 +22,6 @@ If you prefer to start from your industry, see [Architectures by market segment]
 | DataMiner System (DMS) | One or more DMAs working together as one system, with shared system data storage. |
 | DataMiner as a Service (DaaS) | DataMiner nodes hosted and maintained by Skyline in the cloud. |
 | Storage as a Service (STaaS) | System data storage hosted and maintained by Skyline. |
-| Failover | An active/passive pair of DMAs, where the backup takes over the active node's workload. |
 | Swarming | Moving supported elements and other objects between DMAs in the same cluster. |
 | DataMiner Edge | Components that connect remote or private data sources to a DMS, through a gateway or local integrations on an Edge Node. |
 | ZRS and GRS | Zone-redundant storage within one cloud region, and geo-redundant storage with an additional copy in a second region. |
@@ -44,12 +43,12 @@ The following questions help identify a starting point. Review redundancy separa
 ```mermaid
 flowchart TD
     A([Start with data sources and operational requirements]) --> B{Must regions, teams, or<br/>security zones operate independently?}
-    B -- Yes --> C[Multiple independent systems]
+    B -- Yes --> C[Independent systems<br/>with optional federation]
     B -- No --> D{Should data collection run<br/>at several locations?}
     D -- Yes --> E[Distributed multi-site system]
     D -- No --> F{Does the load or availability<br/>require multiple DataMiner nodes?}
     F -- Yes --> G[Centralized cluster]
-    F -- No --> H[Single-agent system]
+    F -- No --> H[One-box DMS]
     C --> I{Must a system survive<br/>the loss of its hosting site?}
     E --> I
     G --> I
@@ -62,11 +61,11 @@ flowchart TD
 
 | Topology | Situation it addresses |
 |--|--|
-| [Single-agent system](xref:Architecture_single_agent) | A small footprint where the workload fits one DMA and compute downtime is acceptable. |
-| [Centralized cluster](xref:Architecture_centralized_cluster) | One operational system with centrally hosted compute, scaled or made redundant as needed. |
+| [One-box system](xref:Architecture_single_agent) | A complete DMS on one compute server or virtual machine, where the workload fits and compute downtime is acceptable. |
+| [Centralized cluster](xref:Architecture_centralized_cluster) | The most common multi-node deployment: one operational DMS with centrally hosted compute, scaled or made redundant as needed. |
 | [Distributed multi-site system](xref:Architecture_distributed_sites) | One operational view with integrations or DataMiner nodes placed close to data sources at several sites. |
 | [Geo-redundant system](xref:Architecture_geo_redundant) | Continuity when a complete compute location or site is lost, with storage and connectivity designed accordingly. |
-| [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems) | Separation between regions, teams, security zones, or failure domains, with optional information sharing. |
+| [Independent and federated DataMiner Systems](xref:Architecture_multiple_systems) | Separation between regions, teams, security zones, or failure domains, with an optional central DMS gathering selected data. |
 
 ## One system or several?
 
@@ -82,6 +81,8 @@ Once you understand the topology, choose how to run it:
 - **[Hybrid deployments and temporary capacity](xref:Architecture_hybrid_cluster)**: Combine DaaS and self-managed DMAs when you need full cluster nodes in both environments, for example for migration or additional capacity during events. Mixed cloud and private data sources alone do not require a hybrid cluster.
 - **[Lab, staging, and proof-of-concept environments](xref:Architecture_lab_and_staging)**: Apply a suitable topology to development, evaluation, training, or pre-production testing.
 
+Connect the DMS to [dataminer.services](xref:Architecture_hosting_and_storage#benefits-of-connecting-to-dataminerservices) for Catalog-based deployments, remote access, collaboration, and proactive support and health monitoring. DaaS systems already have this connection.
+
 ## Example scenarios
 
 ### A broadcaster with a few facilities in one region
@@ -94,7 +95,7 @@ Local interfaces and network reachability may call for integrations at each tele
 
 ### A small team with one site and about 50 devices
 
-A single-agent system is a starting point, subject to workload sizing. Use one DaaS node with STaaS, or one self-managed DMA with STaaS, according to who should operate the compute. For limited non-production use without STaaS, local Cassandra and OpenSearch on Windows Subsystem for Linux (WSL) provide another small-footprint option. See [Single-agent system](xref:Architecture_single_agent) for the scope and limitations. If monitoring becomes business-critical, revisit compute redundancy rather than relying on the device count alone.
+A [one-box DMS](xref:Architecture_single_agent) is a starting point, subject to workload sizing. Host its single compute machine through DaaS or as a self-managed DMS with STaaS, according to who should operate the infrastructure. For limited non-production use without STaaS, local Cassandra and OpenSearch on Linux through Windows Subsystem for Linux (WSL) provide another small-footprint option. If monitoring becomes business-critical, revisit compute redundancy rather than relying on the device count alone.
 
 ## Further reading
 

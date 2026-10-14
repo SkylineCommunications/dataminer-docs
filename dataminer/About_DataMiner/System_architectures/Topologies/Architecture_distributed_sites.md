@@ -69,7 +69,7 @@ An [Edge Node](xref:About_Edge_Nodes) runs compatible Python-based integrations 
 ## Redundancy
 
 - **Central functions**: Apply the [centralized cluster](xref:Architecture_centralized_cluster) redundancy guidance, and add a [geo-redundant design](xref:Architecture_geo_redundant) if the operation must withstand loss of the central hosting site.
-- **Sites**: Decide per site whether local redundancy is required. Critical sites can have a Failover pair or multiple nodes. Less critical sites often have a single node or no node at all.
+- **Sites**: Decide per site whether local redundancy is required. A DMS can have multiple compute nodes at critical sites and use Swarming for supported workloads, provided the recovery nodes can reach the equipment. Less critical sites may need only one compute node or an Edge component.
 - **WAN**: Do not cluster DataMiner nodes that depend on each other over unreliable WAN links. Design each site so that a WAN failure only affects the visibility of that site, not the rest of the system.
 
 ### What happens when a site loses its connection
@@ -86,8 +86,8 @@ If a site must remain fully operational in isolation, consider a separate DMS wi
 
 ## Maintenance and backups
 
-- All DataMiner nodes in one DMS run the same DataMiner version, so upgrades need to reach every site. Make sure there is enough bandwidth and a maintenance window for each site.
-- Use [DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube) on every node, stored at a location other than the node itself.
+- All compute nodes in one DMS run the same DataMiner version. For self-managed compute, plan enough bandwidth and maintenance windows to reach every site. Skyline manages DaaS platform maintenance.
+- For the self-managed parts of a DMS, configure [DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube) outside the compute hosts. Skyline manages [DaaS backups](xref:Creating_a_DaaS_system_FAQ#what-backup-policy-does-a-daas-system-have).
 - Keep an inventory of which elements run on which site, and use views and naming conventions per site to keep the system manageable.
 
 ## Commonly used in

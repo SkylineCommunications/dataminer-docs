@@ -31,7 +31,7 @@ flowchart LR
     DB --> E
 ```
 
-Place DataMiner nodes at both locations and choose [Failover or Swarming](xref:Architecture_building_blocks#redundancy-features) according to the objects and recovery behavior you need. Swarming requires spare capacity and reachable data sources; global outage detection in Node Recovery also has cluster-size and leader-election prerequisites. Geographical placement alone does not guarantee automatic recovery.
+Place DMS compute at both locations and use [Swarming](xref:Swarming) for supported workload movement and recovery. Swarming requires spare capacity and reachable data sources; global outage detection in Node Recovery also has cluster-size and leader-election prerequisites. Geographical placement alone does not guarantee automatic recovery.
 
 ### With STaaS
 
@@ -43,7 +43,7 @@ GRS does not provide a replacement DMA or reconnect managed equipment. Nodes at 
 
 For a geo-redundant on-premises deployment, configure Cassandra with a data center per site and an appropriate NetworkTopologyStrategy. OpenSearch uses data nodes at both sites and a non-data tie-breaker node at a third location, with shard allocation awareness. The tie-breaker provides an additional voting location so the cluster can retain a majority after losing a site.
 
-This arrangement gives control over data placement but makes database maintenance and network partitions part of your recovery design. See [Failover setups with geo-redundancy](xref:Dedicated_clustered_storage#failover-setups-with-geo-redundancy) for the detailed setup and minimum configuration.
+This arrangement gives control over data placement but makes database maintenance and network partitions part of your recovery design. See [Dedicated clustered storage](xref:Dedicated_clustered_storage) for the database placement and configuration guidance.
 
 ## Network requirements
 

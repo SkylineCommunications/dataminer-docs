@@ -1,7 +1,7 @@
 ---
 uid: Architecture_building_blocks
 description: Learn about the building blocks of every DataMiner System architecture, including Agents, storage, redundancy features, and remote connectivity.
-keywords: architecture, building blocks, DMA, DMS, storage, Failover, Swarming, replication, DataMiner Edge
+keywords: architecture, building blocks, DMA, DMS, storage, Swarming, replication, DataMiner Edge
 ---
 
 # Building blocks of a DataMiner System
@@ -18,7 +18,7 @@ DataMiner nodes can be deployed in two ways:
 
 - **DataMiner as a Service (DaaS)**: Skyline hosts and maintains the nodes in the cloud. You do not need to manage servers, operating systems, or virtual machines. See [DataMiner as a Service](xref:DaaS_hosting).
 
-- **Self-managed nodes**: You host the nodes yourself, on physical servers or virtual machines, on premises, in a private cloud, or in a public cloud. Self-managed DataMiner nodes run on Windows Server. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
+- **Self-managed DMS**: You host your system yourself, using physical servers or virtual machines, on premises, in a private cloud, or in a public cloud. Its compute nodes run on Windows Server. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
 You can also [combine both types of nodes in one cluster](xref:Hybrid_clusters) when full DMAs are needed in both environments. A cloud-hosted DMS can monitor private equipment via a VPN or DataMiner Edge without a self-managed DMA. See [Hosting and storage](xref:Architecture_hosting_and_storage) and [Hybrid deployments and temporary capacity](xref:Architecture_hybrid_cluster).
 
@@ -28,9 +28,9 @@ Each DMS needs its own system data storage. This storage holds configuration dat
 
 - **Storage as a Service (STaaS)**: A cloud-native storage platform managed by Skyline. Skyline takes care of scaling, patching, redundancy, and backups. Data is stored in a region of your choice, with zone-redundant storage (ZRS) by default and geo-redundant storage (GRS) as an option. Daily backups are kept for 30 days. Each DMS has its own isolated logical partition. STaaS is the storage option recommended by Skyline and is always used for DaaS systems. See [Storage as a Service (STaaS)](xref:STaaS) and [STaaS features](xref:STaaS_features).
 
-- **Dedicated clustered storage (self-managed)**: You install and maintain a [Cassandra cluster](xref:Cassandra_database) and an [OpenSearch cluster](xref:Indexing_Database) for the DMS yourself, typically on Linux machines. This option is supported, but it requires database administration expertise. See [Dedicated clustered storage](xref:Dedicated_clustered_storage).
+- **Dedicated clustered storage (self-managed)**: You install and maintain a [Cassandra cluster](xref:Cassandra_database) and an [OpenSearch cluster](xref:Indexing_Database) for the DMS yourself, on dedicated Linux machines. This option is supported, but it requires database administration expertise. See [Dedicated clustered storage](xref:Dedicated_clustered_storage).
 
-For the smallest compute topology, see [Single-agent system](xref:Architecture_single_agent). It covers DaaS or self-managed compute with STaaS, and local WSL databases for limited non-production use.
+For the smallest compute topology, see [One-box system](xref:Architecture_single_agent). It covers a DaaS or self-managed DMS with STaaS, and local Linux databases on WSL for limited non-production use.
 
 Older setups with a separate database per DMA, or with a MySQL or Microsoft SQL Server database, are deprecated or legacy. If you still use one of these, plan a migration to one of the options above. See [Storage options overview](xref:Supported_system_data_storage_architectures).
 
@@ -53,20 +53,13 @@ The table below compares the two main storage options:
 
 DataMiner offers several features that you can combine to make a system resilient. Keep in mind that **the system is only as redundant as its weakest component**: redundant DataMiner nodes still depend on the availability of the storage, the network, and the managed devices.
 
-### DMA Failover
-
-With [Failover](xref:failover), a DMA is paired with a dedicated backup DMA. The backup DMA is continuously synchronized and takes over, either automatically or manually, when the active DMA fails. Both DMAs share a virtual IP address or hostname.
-
-This provides a dedicated active/passive takeover for the protected workload. Each protected DMA needs a standby with enough capacity to run its full workload, even though that standby is not carrying the active load. Storage redundancy must be designed separately.
-
 ### Swarming
 
 With [Swarming](xref:Swarming), elements and other objects are no longer bound to a specific DMA. Their configuration is stored in the database, so you can move them between DMAs in the same cluster. Combined with [Node Recovery](xref:NodeRecovery_About), you can automate the redistribution of elements when a node fails.
 
 This lets you distribute supported workloads across active nodes and relocate them for maintenance or load balancing. The remaining nodes need enough capacity and device reachability to absorb relocated workloads. Not all object types can be swarmed. Global outage detection in Node Recovery requires at least three nodes and an elected leader; local detection can be used with two nodes but requires care to avoid conflicting actions during a network split. See [Enabling Swarming](xref:EnableSwarming) and [Node Recovery detection](xref:NodeRecovery_Detection) before choosing the recovery model.
 
-> [!IMPORTANT]
-> Failover and Swarming cannot be combined in the same DMS. Failover is not available when Swarming is enabled. Choose the model that best fits your redundancy requirements, the types of objects you use, and your available resources.
+Use Swarming for the new architectures described in this section. Validate supported object types, connectivity, and recovery capacity before enabling it.
 
 ### Storage redundancy
 
@@ -77,7 +70,7 @@ With STaaS, storage redundancy is provided by the platform (ZRS or GRS). With de
 To keep a system running when a complete site is lost, both the DataMiner nodes and the storage must be redundant across sites. Redundant storage on its own is not enough:
 
 - **Storage**: Choose STaaS redundancy or self-managed replication against the storage failures and recovery targets you need. STaaS GRS provides an additional copy in a second region; a self-managed geo-redundant arrangement uses database replicas at two sites and an OpenSearch tie-breaker at a third location. See [Geo-redundant system](xref:Architecture_geo_redundant).
-- **DataMiner nodes**: There must be DataMiner nodes at the remaining site that can take over the workload, for example a Failover pair with one DMA at each site, or nodes at both sites with Swarming and enough spare capacity.
+- **Compute**: The DMS must have nodes at the remaining site that can take over supported workloads through Swarming, with enough spare capacity and the required recovery configuration.
 - **Network and devices**: The remaining site must still be able to reach the managed devices and the storage, and users must be able to reach the remaining nodes.
 
 ### Redundancy on element level
@@ -107,7 +100,7 @@ With [element replication](xref:Replicated_elements), an element managed by one 
 
 ### dataminer.services
 
-When a DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), you can use cloud-based features such as remote access, sharing, and STaaS. DaaS systems are connected by default.
+When a DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), you gain access to [Catalog deployments](xref:About_the_Catalog_app), [Remote Access](xref:About_Remote_Access), [dashboard sharing](xref:Sharing_a_dashboard), and managed services. [Proactive Support](xref:Proactive_Support) adds remote assistance and diagnostic collection, while [CDMR](xref:CDMR) enables proactive system-health monitoring when its prerequisites are met. These benefits also apply to connected self-managed systems. DaaS systems are connected by default. See [Benefits of connecting to dataminer.services](xref:Architecture_hosting_and_storage#benefits-of-connecting-to-dataminerservices).
 
 ## Environments
 

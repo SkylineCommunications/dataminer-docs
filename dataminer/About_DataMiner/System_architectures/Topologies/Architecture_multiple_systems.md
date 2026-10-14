@@ -4,11 +4,15 @@ description: Find out when to use multiple independent DataMiner Systems instead
 keywords: architecture, multiple DMS, multi-DMS, element replication, regions, security zones
 ---
 
-# Multiple independent DataMiner Systems
+# Independent and federated DataMiner Systems
 
 Instead of one DataMiner System that covers everything, you can deploy several independent systems, for example one per region, business unit, or security zone. Each system has its own nodes and storage, and can be hosted on premises or in the cloud.
 
-This arrangement makes sense when independence is part of the requirement. Each system can have its own change process and failure domain, while a central view can share selected information. Unlike extending one cluster, it requires separate configuration, backups, and upgrades, so plan how to prevent configuration drift and which information should cross the boundaries.
+This arrangement makes sense when independence is part of the requirement. Each system can have its own change process and failure domain. When a central DMS gathers selected data from these systems, the overall arrangement can be described as **federated DataMiner Systems**: independently operated systems with a shared higher-level view. This is an architectural description, not a separate DataMiner feature.
+
+A central DMS collecting alarms or status from other management systems is also commonly called a **manager of managers**. Federation is the broader term here: it can use element replication, connectors, or APIs to gather information, while the source systems retain their own operations. Systems that deliberately share no data remain independent rather than federated.
+
+Unlike extending one cluster, this arrangement requires separate configuration, backups, and upgrades, so plan how to prevent configuration drift and which information should cross the boundaries.
 
 ## When to use this architecture
 
@@ -57,7 +61,7 @@ Each system has its own redundancy design. Separation limits direct dependencies
 
 ## Maintenance and backups
 
-- Each system needs its own maintenance, upgrades, backups, and monitoring.
+- Each system needs its own operations and monitoring. Skyline manages maintenance and backups for DaaS systems; arrange these for each self-managed DMS.
 - When you use element replication, keep the DataMiner versions of the systems aligned.
 - Keep configurations such as connectors, alarm templates, and Automation scripts consistent across systems, for example via the [Catalog](xref:About_the_Catalog_app) or a CI/CD process.
 

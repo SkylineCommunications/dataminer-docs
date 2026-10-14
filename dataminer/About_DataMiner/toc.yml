@@ -37,7 +37,7 @@ items:
         topicUid: Architecture_market_segments
       - name: System topologies
         items:
-          - name: Single-agent system
+          - name: One-box system
             topicUid: Architecture_single_agent
           - name: Centralized cluster
             topicUid: Architecture_centralized_cluster
@@ -45,7 +45,7 @@ items:
             topicUid: Architecture_geo_redundant
           - name: Distributed multi-site system
             topicUid: Architecture_distributed_sites
-          - name: Multiple independent DataMiner Systems
+          - name: Independent and federated DataMiner Systems
             topicUid: Architecture_multiple_systems
       - name: Operational choices
         items:

@@ -10,7 +10,7 @@ A [hybrid cluster](xref:Hybrid_clusters) combines full DaaS nodes and self-manag
 
 ## Start with the connectivity requirement
 
-If your goal is to reach private equipment from cloud-hosted compute, first consider a site-to-site VPN or [DataMiner Edge](xref:DataMiner_Edge). Neither requires a self-managed DMA to join the cluster.
+If your goal is to reach private equipment from cloud-hosted compute, first consider a site-to-site VPN or [DataMiner Edge](xref:DataMiner_Edge). Neither requires a self-managed DMA to join the cluster. See [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources) for connectivity options and VPN setup.
 
 An Edge Gateway lets centrally running integrations reach remote sources. An [Edge Node](xref:About_Edge_Nodes) executes compatible Python-based integrations locally and buffers collected data on disk during a connection interruption, synchronizing it when connectivity returns. Edge Nodes are currently in preview and do not replace every function of a full DMA.
 
@@ -46,7 +46,7 @@ Choose a cloud region close enough to meet the cluster's latency requirements. M
 
 ## Operating and retiring capacity
 
-Skyline maintains DaaS infrastructure and storage, while you maintain self-managed nodes and your VPN endpoints. Coordinate upgrades across both environments and configure DataMiner backups alongside STaaS backups.
+Skyline maintains DaaS infrastructure and storage, while you maintain the self-managed compute in your DMS and your VPN endpoints. Coordinate self-managed platform changes with Skyline's DaaS maintenance so the cluster remains version-compatible. Skyline manages [DaaS backups](xref:Creating_a_DaaS_system_FAQ#what-backup-policy-does-a-daas-system-have); configure DataMiner backups for the self-managed compute alongside the storage backup strategy.
 
 For temporary capacity, plan the end of the event as carefully as the start. Move or reassign workloads to the permanent nodes, confirm that they have enough capacity, and follow the supported node-removal procedure before retiring extra nodes. Validate which objects can move and whether the remaining cluster still satisfies the recovery model.
 
