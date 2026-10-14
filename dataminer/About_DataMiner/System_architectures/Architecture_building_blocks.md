@@ -6,7 +6,7 @@ keywords: architecture, building blocks, DMA, DMS, storage, Failover, Swarming, 
 
 # Building blocks of a DataMiner System
 
-Every DataMiner architecture is built from the same set of building blocks. Understanding these makes it easier to compare the [reference architectures](xref:Architecture_overview) and to combine them for your own scenario.
+Every DataMiner architecture is built from the same set of building blocks. Understanding these makes it easier to choose a [system topology](xref:Architecture_overview) and then select the hosting, storage, and operational arrangements that support it.
 
 ## DataMiner Agents and DataMiner Systems
 
@@ -20,7 +20,7 @@ DataMiner nodes can be deployed in two ways:
 
 - **Self-managed nodes**: You host the nodes yourself, on physical servers or virtual machines, on premises, in a private cloud, or in a public cloud. Self-managed DataMiner nodes run on Windows Server. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
-You can also [combine both types of nodes in one cluster](xref:Hybrid_clusters).
+You can also [combine both types of nodes in one cluster](xref:Hybrid_clusters) when full DMAs are needed in both environments. A cloud-hosted DMS can monitor private equipment via a VPN or DataMiner Edge without a self-managed DMA. See [Hosting and storage](xref:Architecture_hosting_and_storage) and [Hybrid deployments and temporary capacity](xref:Architecture_hybrid_cluster).
 
 ## Storage
 
@@ -29,6 +29,8 @@ Each DMS needs its own system data storage. This storage holds configuration dat
 - **Storage as a Service (STaaS)**: A cloud-native storage platform managed by Skyline. Skyline takes care of scaling, patching, redundancy, and backups. Data is stored in a region of your choice, with zone-redundant storage (ZRS) by default and geo-redundant storage (GRS) as an option. Daily backups are kept for 30 days. Each DMS has its own isolated logical partition. STaaS is the storage option recommended by Skyline and is always used for DaaS systems. See [Storage as a Service (STaaS)](xref:STaaS) and [STaaS features](xref:STaaS_features).
 
 - **Dedicated clustered storage (self-managed)**: You install and maintain a [Cassandra cluster](xref:Cassandra_database) and an [OpenSearch cluster](xref:Indexing_Database) for the DMS yourself, typically on Linux machines. This option is supported, but it requires database administration expertise. See [Dedicated clustered storage](xref:Dedicated_clustered_storage).
+
+For the smallest compute topology, see [Single-agent system](xref:Architecture_single_agent). It covers DaaS or self-managed compute with STaaS, and local WSL databases for limited non-production use.
 
 Older setups with a separate database per DMA, or with a MySQL or Microsoft SQL Server database, are deprecated or legacy. If you still use one of these, plan a migration to one of the options above. See [Storage options overview](xref:Supported_system_data_storage_architectures).
 
@@ -55,15 +57,13 @@ DataMiner offers several features that you can combine to make a system resilien
 
 With [Failover](xref:failover), a DMA is paired with a dedicated backup DMA. The backup DMA is continuously synchronized and takes over, either automatically or manually, when the active DMA fails. Both DMAs share a virtual IP address or hostname.
 
-- Pros: a well-known, predictable active/passive model, with a fast and automatic takeover of the full workload of a node.
-- Cons: every protected DMA needs a dedicated standby DMA, which doubles the compute resources for that DMA. The passive DMA does not carry any load. Failover does not make the storage redundant.
+This provides a dedicated active/passive takeover for the protected workload. Each protected DMA needs a standby with enough capacity to run its full workload, even though that standby is not carrying the active load. Storage redundancy must be designed separately.
 
 ### Swarming
 
 With [Swarming](xref:Swarming), elements and other objects are no longer bound to a specific DMA. Their configuration is stored in the database, so you can move them between DMAs in the same cluster. Combined with [Node Recovery](xref:NodeRecovery_About), you can automate the redistribution of elements when a node fails.
 
-- Pros: all nodes carry load (active/active), you can perform maintenance such as Windows updates node by node with minimal downtime, and you can rebalance load when you add nodes.
-- Cons: the cluster needs enough spare capacity to absorb the elements of a failed node. Not all object types can be swarmed yet. See [Enabling Swarming](xref:EnableSwarming) for the supported features and prerequisites.
+This lets you distribute supported workloads across active nodes and relocate them for maintenance or load balancing. The remaining nodes need enough capacity and device reachability to absorb relocated workloads. Not all object types can be swarmed. Global outage detection in Node Recovery requires at least three nodes and an elected leader; local detection can be used with two nodes but requires care to avoid conflicting actions during a network split. See [Enabling Swarming](xref:EnableSwarming) and [Node Recovery detection](xref:NodeRecovery_Detection) before choosing the recovery model.
 
 > [!IMPORTANT]
 > Failover and Swarming cannot be combined in the same DMS. Failover is not available when Swarming is enabled. Choose the model that best fits your redundancy requirements, the types of objects you use, and your available resources.
@@ -76,7 +76,7 @@ With STaaS, storage redundancy is provided by the platform (ZRS or GRS). With de
 
 To keep a system running when a complete site is lost, both the DataMiner nodes and the storage must be redundant across sites. Redundant storage on its own is not enough:
 
-- **Storage**: With STaaS, geo-redundant storage (GRS) keeps an additional copy of the data in a second cloud region. With self-managed storage, the database clusters must be spread over two sites with a tie-breaker at a third location. See [Geo-redundant on-premises system](xref:Architecture_geo_redundant).
+- **Storage**: Choose STaaS redundancy or self-managed replication against the storage failures and recovery targets you need. STaaS GRS provides an additional copy in a second region; a self-managed geo-redundant arrangement uses database replicas at two sites and an OpenSearch tie-breaker at a third location. See [Geo-redundant system](xref:Architecture_geo_redundant).
 - **DataMiner nodes**: There must be DataMiner nodes at the remaining site that can take over the workload, for example a Failover pair with one DMA at each site, or nodes at both sites with Swarming and enough spare capacity.
 - **Network and devices**: The remaining site must still be able to reach the managed devices and the storage, and users must be able to reach the remaining nodes.
 
@@ -92,14 +92,14 @@ A single DMS can contain DMAs at different locations. This gives you one system 
 
 ### Hybrid clusters
 
-A [hybrid cluster](xref:Hybrid_clusters) combines DaaS nodes and self-managed nodes in one DMS, connected via a site-to-site VPN. All nodes use STaaS.
+A [hybrid cluster](xref:Hybrid_clusters) combines DaaS nodes and self-managed nodes in one DMS, connected via a site-to-site VPN. All nodes use STaaS. Consider it for a specific full-node requirement, migration, or temporary capacity rather than simply for mixed public and private data sources. See [Hybrid deployments and temporary capacity](xref:Architecture_hybrid_cluster).
 
 ### DataMiner Edge
 
 [DataMiner Edge](xref:DataMiner_Edge) brings data from remote or on-premises locations to a central DataMiner System, for example on DaaS, without the need for a site-to-site VPN:
 
 - An [Edge Gateway](xref:About_Edge_Gateways) provides a secure tunnel so that integrations running centrally can reach remote data sources.
-- An [Edge Node](xref:About_Edge_Nodes) runs integrations locally, close to the data, which helps when connectivity is intermittent or bandwidth-constrained. This mode is currently available in preview.
+- An [Edge Node](xref:About_Edge_Nodes) runs compatible Python-based integrations close to the data. It buffers collected data on disk during interruptions and synchronizes it after reconnection. It is not an independent full DMS. This mode is currently available in preview.
 
 ### Element replication between systems
 
@@ -111,4 +111,4 @@ When a DMS is [connected to dataminer.services](xref:Connecting_your_DataMiner_S
 
 ## Environments
 
-Besides the production system, most organizations run one or more additional systems, such as a staging system to validate upgrades and new configurations, and development or lab systems. See [Lab, staging, and proof-of-concept systems](xref:Architecture_lab_and_staging).
+Production, staging, development, and evaluation describe an environment's purpose, not a separate topology. Apply the topology and operational choices needed for each purpose. See [Lab, staging, and proof-of-concept environments](xref:Architecture_lab_and_staging).

@@ -6,15 +6,19 @@ keywords: architecture, multi-site, distributed, remote sites, DataMiner Edge, W
 
 # Distributed multi-site system
 
-In this architecture, one DataMiner System manages equipment at many locations, such as regional TV stations, headends, teleports, transmitter sites, or train stations. Users get one central view of all sites, while the data collection happens as close as possible to the equipment.
+In this architecture, one DataMiner System manages equipment at several locations, such as regional TV stations, headends, teleports, transmitter sites, or train stations. You get one operational view while placing integrations or DataMiner nodes close to the equipment where needed. The system can use cloud-hosted or on-premises compute, with managed or self-managed storage according to its connectivity requirements.
+
+This arrangement keeps site data in one operational system and lets you add locations gradually. Its suitability depends on the links and the amount of processing needed at each site, not on a fixed minimum number of locations.
 
 ## When to use this architecture
 
-This architecture is a good fit when:
+One or more of the following may make this topology a good fit; you do not need to meet all of them:
 
 - You manage equipment spread over many sites, and you want to operate it from one or more central operations centers.
-- Sites are connected via a WAN or the internet, with varying quality.
-- Some sites must keep collecting data locally when the connection to the central location is lost.
+- Local interfaces or polling volumes make it useful to run integrations near the equipment.
+- Some sites need local data collection during interruptions, using a supported Edge integration or a deliberately independent system where required.
+
+Reliable cluster and storage connectivity remains a prerequisite for sites hosting full DMAs. For independently operational sites, see [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems).
 
 ## Architecture variants
 
@@ -22,7 +26,7 @@ There are several ways to collect data from remote sites. They can be combined w
 
 ### DataMiner nodes at the sites
 
-Each larger site has its own DataMiner node that polls the local equipment. All nodes are part of one DMS and share the same storage.
+A site can host a full DataMiner node when it needs local DataMiner functionality or workloads that are not covered by Edge. All nodes are part of one DMS and share the same storage. A full DMA is not required merely because the site is remote.
 
 ```mermaid
 flowchart TB
@@ -60,41 +64,31 @@ Smaller sites have no local DataMiner node. The equipment is polled directly fro
 
 ### DataMiner Edge Nodes
 
-An [Edge Node](xref:About_Edge_Nodes) runs integrations locally at the site and forwards the data to the central system. This combines local data collection with a light footprint at the site, and it supports operational continuity when connectivity is intermittent. Edge Nodes are currently available in preview.
+An [Edge Node](xref:About_Edge_Nodes) runs compatible Python-based integrations locally and forwards their data to elements in the central system. During a connection interruption, it buffers collected data on disk and synchronizes it when connectivity returns. This provides local execution with a smaller footprint than a full DMA, but does not provide an independent complete DataMiner System. Edge Nodes are currently available in preview.
 
 ## Redundancy
 
-- **Central functions**: Make the central DataMiner nodes and the storage redundant as described in the other architectures, for example with multiple nodes and Swarming or Failover, and with STaaS or clustered storage.
+- **Central functions**: Apply the [centralized cluster](xref:Architecture_centralized_cluster) redundancy guidance, and add a [geo-redundant design](xref:Architecture_geo_redundant) if the operation must withstand loss of the central hosting site.
 - **Sites**: Decide per site whether local redundancy is required. Critical sites can have a Failover pair or multiple nodes. Less critical sites often have a single node or no node at all.
 - **WAN**: Do not cluster DataMiner nodes that depend on each other over unreliable WAN links. Design each site so that a WAN failure only affects the visibility of that site, not the rest of the system.
 
 ### What happens when a site loses its connection
 
-The impact of a lost connection depends on how the site is connected:
+Distinguish the loss of the link to central compute from the loss of a site's storage connection. Neither a local DMA nor an Edge Node automatically guarantees all local alarms, control, and workflows during an outage.
 
 | Site setup | Data collection at the site | Central visibility of the site |
 |--|--|--|
-| DataMiner node at the site, with STaaS | The node keeps polling its equipment and evaluating alarms, as long as it can still reach STaaS via its own internet access. | Lost until the connection is restored. The loss of connection is reported centrally. |
-| DataMiner node at the site, with central self-managed storage | The node can no longer reach the storage, so it cannot keep functioning normally. | Lost until the connection is restored. |
-| Central polling, without a node at the site | Polling of the site stops. No data is collected during the outage. | The loss of connectivity is reported centrally. |
-| DataMiner Edge Node at the site | The Edge Node is designed to support operational continuity when connectivity is intermittent. | Restored when the connection returns. |
+| Full DMA at the site | Local equipment access does not remove the dependency on shared storage or other cluster functions. Test which operations remain available for the specific failed network path. | Updates from an unreachable site cannot be relied on until connectivity returns. |
+| Central polling, directly or through an Edge Gateway | Central polling cannot reach the equipment while its only connection is unavailable. | Live data from that path is unavailable during the interruption. |
+| Edge Node with compatible integrations | Collected data is buffered on disk and synchronized after reconnection. This is data-collection continuity, not independent central alarms or control. | New data reaches the DMS after connectivity returns. |
 
-If a site must remain fully operational during a WAN outage, give it a local DataMiner node with its own internet access for STaaS, or consider making it a separate DataMiner System. For the exact behavior in your situation, contact Skyline.
+If a site must remain fully operational in isolation, consider a separate DMS with a storage and connectivity design that supports that requirement. Validate polling, alarms, control, historical storage, and reconnection against the actual failure scenario rather than assuming a local node guarantees them.
 
 ## Maintenance and backups
 
 - All DataMiner nodes in one DMS run the same DataMiner version, so upgrades need to reach every site. Make sure there is enough bandwidth and a maintenance window for each site.
 - Use [DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube) on every node, stored at a location other than the node itself.
 - Keep an inventory of which elements run on which site, and use views and naming conventions per site to keep the system manageable.
-
-## Pros and cons
-
-| Pros | Cons |
-|--|--|
-| One central view and one configuration for all sites | Every node at a site adds maintenance effort |
-| Local data collection reduces WAN traffic and supports local interfaces | WAN quality directly affects the system |
-| Sites can be added gradually | Upgrades need to be rolled out to all sites |
-| Flexible: local nodes, central polling, and Edge can be combined | With self-managed storage, all sites depend on the central database clusters |
 
 ## Commonly used in
 

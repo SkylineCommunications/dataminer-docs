@@ -6,14 +6,13 @@ keywords: architecture, multiple DMS, multi-DMS, element replication, regions, s
 
 # Multiple independent DataMiner Systems
 
-Instead of one DataMiner System that covers everything, some organizations deploy several independent DataMiner Systems, for example one per region, per business unit, or per security zone. Each system has its own DataMiner nodes and its own storage.
+Instead of one DataMiner System that covers everything, you can deploy several independent systems, for example one per region, business unit, or security zone. Each system has its own nodes and storage, and can be hosted on premises or in the cloud.
 
-> [!NOTE]
-> In general, adding nodes to one DataMiner System is simpler than running several separate systems, because there is only one configuration, one storage, and one upgrade cycle to manage. Use multiple systems when there is a clear reason to keep them separate.
+This arrangement makes sense when independence is part of the requirement. Each system can have its own change process and failure domain, while a central view can share selected information. Unlike extending one cluster, it requires separate configuration, backups, and upgrades, so plan how to prevent configuration drift and which information should cross the boundaries.
 
 ## When to use this architecture
 
-Multiple independent systems are a good fit when:
+Any of the following can justify independent systems; they are alternatives, not requirements that must all apply:
 
 - **Distance**: Sites or users are spread over different continents. One cluster with storage in one region would lead to high latency for some of them, and a single self-managed OpenSearch cluster cannot be stretched over long distances.
 - **Organization**: Different business units or teams have their own operations, change processes, and upgrade schedules.
@@ -40,7 +39,7 @@ flowchart TB
     R2 -. Element replication .-> Central
 ```
 
-Each system can follow any of the other architectures in this section. For example, a region with mainly cloud resources can use a [cloud-hosted system](xref:Architecture_cloud_hosted), while an isolated operational network uses an [on-premises system with self-managed storage](xref:Architecture_on_premises).
+Each system can use a [single agent](xref:Architecture_single_agent), a [centralized cluster](xref:Architecture_centralized_cluster), or a [distributed topology](xref:Architecture_distributed_sites), and can add geo-redundancy as needed. Choose [hosting and storage](xref:Architecture_hosting_and_storage) per system: one region may use DaaS and STaaS, while an isolated operational network uses on-premises compute and databases.
 
 ## Sharing information between systems
 
@@ -54,22 +53,13 @@ Each of these options adds connections and dependencies between the systems. Kee
 
 ## Redundancy
 
-Each system has its own redundancy design. The failure of one system does not affect the others, except for the views that depend on replicated data.
+Each system has its own redundancy design. Separation limits direct dependencies, but shared infrastructure and cross-system integrations may still create common failure points. Central views depend on the availability and connectivity of the source systems.
 
 ## Maintenance and backups
 
 - Each system needs its own maintenance, upgrades, backups, and monitoring.
 - When you use element replication, keep the DataMiner versions of the systems aligned.
 - Keep configurations such as connectors, alarm templates, and Automation scripts consistent across systems, for example via the [Catalog](xref:About_the_Catalog_app) or a CI/CD process.
-
-## Pros and cons
-
-| Pros | Cons |
-|--|--|
-| Strong isolation between regions, teams, or security zones | More systems to maintain, upgrade, and back up |
-| Independent upgrade and change schedules | No single view across systems without additional integration |
-| Failures and changes are contained within one system | Configuration can drift between systems |
-| Each system can use the architecture that fits its location best | Element replication requires aligned DataMiner versions |
 
 ## Commonly used in
 

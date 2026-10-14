@@ -35,23 +35,25 @@ items:
         topicUid: Architecture_building_blocks
       - name: Architectures by market segment
         topicUid: Architecture_market_segments
-      - name: Reference architectures
+      - name: System topologies
         items:
-          - name: Cloud-hosted system
-            topicUid: Architecture_cloud_hosted
-          - name: Self-managed nodes with Storage as a Service
-            topicUid: Architecture_self_managed_staas
-          - name: Hybrid cluster
-            topicUid: Architecture_hybrid_cluster
-          - name: On-premises system with self-managed storage
-            topicUid: Architecture_on_premises
-          - name: Geo-redundant on-premises system
+          - name: Single-agent system
+            topicUid: Architecture_single_agent
+          - name: Centralized cluster
+            topicUid: Architecture_centralized_cluster
+          - name: Geo-redundant system
             topicUid: Architecture_geo_redundant
           - name: Distributed multi-site system
             topicUid: Architecture_distributed_sites
           - name: Multiple independent DataMiner Systems
             topicUid: Architecture_multiple_systems
-          - name: Lab, staging, and proof-of-concept systems
+      - name: Operational choices
+        items:
+          - name: Hosting and storage
+            topicUid: Architecture_hosting_and_storage
+          - name: Hybrid deployments and temporary capacity
+            topicUid: Architecture_hybrid_cluster
+          - name: Lab, staging, and proof-of-concept environments
             topicUid: Architecture_lab_and_staging
       - name: Architecture design considerations
         topicUid: Architecture_design_considerations

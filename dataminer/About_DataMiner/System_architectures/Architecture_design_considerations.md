@@ -11,12 +11,12 @@ The guidelines on this page apply to all [DataMiner System architectures](xref:A
 ## Network
 
 - **Latency between DataMiner nodes**: A latency between 30 ms and 50 ms or lower, and a throughput between 100 Mbps and 1 Gbps, is recommended. Higher latency does not prevent cluster synchronization, but it can become an issue when many values need to be exchanged between nodes. See the network requirements in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements#network).
-- **Latency within self-managed database clusters**: OpenSearch nodes must not be spread over high-latency links. For geo-redundant setups, see [Geo-redundant on-premises system](xref:Architecture_geo_redundant#network-requirements).
+- **Latency within self-managed database clusters**: OpenSearch nodes must not be spread over high-latency links. For geo-redundant setups, see [Geo-redundant system](xref:Architecture_geo_redundant#network-requirements).
 - **Reachability**: Every DataMiner node must be able to reach every other node in the cluster and all storage nodes it uses. With STaaS, every node needs outbound HTTPS access, directly or via a proxy. See [Setting up STaaS](xref:Setting_up_StaaS).
 - **Ports and firewalls**: Open the required ports between DataMiner nodes, clients, and storage nodes. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
 - **DMZ setups**: Setups where DataMiner nodes are placed in a demilitarized zone (DMZ) are currently not supported with STaaS.
 - **Name resolution and time**: Make sure hostnames resolve correctly on all nodes and that all servers use the same time source. Recovery procedures often depend on DNS and hostnames.
-- **Unreliable WAN links**: Do not make critical functions depend on links that are known to be unreliable. Treat remote sites with poor connectivity as data collection points, for example with a local node or [DataMiner Edge](xref:DataMiner_Edge), rather than as an integral part of the central cluster.
+- **Unreliable WAN links**: Do not make critical functions depend on unreliable links. Compatible [Edge Nodes](xref:About_Edge_Nodes) can collect and buffer data locally. If a site needs a complete independently operational system, consider a separate DMS rather than assuming a local DMA in the central cluster removes its storage dependencies.
 
 ## Platforms and virtualization
 
@@ -29,7 +29,7 @@ The guidelines on this page apply to all [DataMiner System architectures](xref:A
 ## Storage
 
 - **The storage is part of the critical path.** DataMiner cannot start if its storage is not available. When you design redundancy for DataMiner nodes, also design redundancy for the storage.
-- **Avoid two-node database clusters.** A cluster of two nodes cannot keep a majority when one node fails. Use at least three Cassandra nodes and an uneven number of OpenSearch nodes, at least three.
+- **Design database redundancy for the selected platform.** OpenSearch requires an uneven number of nodes, at least three for redundancy. Cassandra capacity and availability depend on replication and consistency settings, not the same voting model. Follow [Dedicated clustered storage](xref:Dedicated_clustered_storage) for the recommended hardware-redundant setup.
 - **Plan for growth**: Trending, alarms, and solutions such as EPM or MediaOps can generate large amounts of data. With self-managed storage, monitor disk usage and plan capacity ahead. STaaS scales automatically.
 - **Deprecated storage setups**: Setups with a separate database per DMA are deprecated. If your system still uses such a setup, plan a migration to [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
 
@@ -59,7 +59,7 @@ The guidelines on this page apply to all [DataMiner System architectures](xref:A
 | Pitfall | Why it is a problem |
 |--|--|
 | Redundant DataMiner nodes with a single database node | The database is a single point of failure, so the system is not redundant. |
-| Two-node database clusters | No majority is possible when one node fails. |
+| Two-node OpenSearch clusters | No voting majority is possible when one node fails. |
 | Stretching a database cluster over a high-latency link | The database cluster can become unstable or unavailable. |
 | Relying only on hypervisor high availability or virtual machine snapshots | These do not protect against application or database issues and do not guarantee consistent database backups. |
 | All redundant nodes on the same physical host or storage array | One hardware failure takes down all redundant nodes. |

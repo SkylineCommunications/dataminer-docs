@@ -1,107 +1,86 @@
 ---
 uid: Architecture_market_segments
-description: Find out which DataMiner System architectures are commonly used in broadcast, satellite, telecom, media, transport, utilities, and other segments.
-keywords: architecture, market segments, broadcast, satellite, teleport, cable, telecom, OTT, streaming, transport, utilities
+description: Relate DataMiner topologies to broadcast, satellite, telecom, media, and other scenarios, while choosing hosting and storage separately.
+keywords: architecture, market segments, broadcast, satellite, teleport, cable, telecom, OTT, transport, utilities
 ---
 
 # Architectures by market segment
 
-The architecture of a DataMiner System depends more on the situation than on the industry. Still, organizations in the same market segment often face similar challenges, and certain architectures are therefore more common in some segments than in others. This page lists typical patterns per segment as a starting point. Always validate them against your own requirements using the [questions in the overview](xref:Architecture_overview#questions-to-ask-before-you-choose). For an explanation of terms such as Failover, Swarming, STaaS, and GRS, see [Key terms](xref:Architecture_overview#key-terms).
+Your data sources, availability targets, and isolation requirements determine the topology more than your industry does. The examples below suggest starting points, not mandatory combinations of requirements. You can apply the same topology in the cloud or on premises; select [hosting and storage](xref:Architecture_hosting_and_storage) separately.
+
+For terminology and selection questions, see the [architecture overview](xref:Architecture_overview). Where both local and cloud data sources are involved, consider a VPN or DataMiner Edge before deciding that you need a hybrid cluster.
 
 ## Broadcast (TV and radio)
 
-**Typical situation**: Master control rooms, playout centers, studios, contribution and distribution networks, and often a network of regional stations or transmitter sites. Monitoring of the air chain is critical, so high availability is usually required.
+Air-chain monitoring often needs node redundancy, while studios and transmitter sites may need local integration execution. A centrally hosted cluster can serve several facilities if it can reach their equipment.
 
-| Scenario | Common architectures |
+| Scenario | Topology and operational choices |
 |--|--|
-| One main facility | [Self-managed nodes with STaaS](xref:Architecture_self_managed_staas) or an [on-premises system with self-managed storage](xref:Architecture_on_premises), with Failover or Swarming |
-| A few facilities in one region, such as studios and a playout center | One DMS with nodes in the facilities that need local access, and redundant storage. See the [example scenario](xref:Architecture_overview#a-broadcaster-with-a-few-facilities-in-one-region). |
-| Regional stations or transmitter sites | [Distributed multi-site system](xref:Architecture_distributed_sites), with a node at larger sites and central polling or DataMiner Edge for smaller sites |
-| Main and backup facility | DataMiner nodes at both facilities, combined with STaaS with geo-redundant storage or a [geo-redundant on-premises system](xref:Architecture_geo_redundant). See [Surviving the loss of a site](xref:Architecture_building_blocks#surviving-the-loss-of-a-site). |
-| Cloud-based playout or production | [Cloud-hosted system](xref:Architecture_cloud_hosted) or [hybrid cluster](xref:Architecture_hybrid_cluster) |
+| One facility, or a few studios and a playout center | A [centralized cluster](xref:Architecture_centralized_cluster) with node redundancy for critical monitoring. Reach private equipment directly, via VPN, or via Edge. |
+| Regional stations or transmitter sites | A [distributed multi-site system](xref:Architecture_distributed_sites), using Edge Nodes for compatible local integrations and full DMAs where required. |
+| Continuity after loss of the hosting facility | Apply a [geo-redundant design](xref:Architecture_geo_redundant), including compute, storage, and device reachability. |
+| Small non-critical installation | A [single-agent system](xref:Architecture_single_agent), if compute downtime is acceptable. |
 
-**Considerations**: Plan maintenance windows around the broadcast schedule, and use Failover or Swarming to keep monitoring the air chain during maintenance. A separate staging system is recommended for systems that include orchestration or automation.
+Plan maintenance around the broadcast schedule and validate automation and orchestration changes in a separate staging environment. See the [multi-facility example](xref:Architecture_overview#a-broadcaster-with-a-few-facilities-in-one-region).
 
 ## Media service providers, playout, and live production
 
-**Typical situation**: Shared facilities serving multiple channels or customers, often combined with booking, scheduling, and orchestration of resources (for example with [MediaOps](xref:Overview_DataMiner_Solutions)). Event-driven workloads can vary strongly over time.
+Booking and orchestration combine operational data with resource control. Their availability depends on both compute and storage, while event-driven processing can create temporary peaks.
 
-| Scenario | Common architectures |
+| Scenario | Topology and operational choices |
 |--|--|
-| On-premises facility with orchestration | [Self-managed nodes with STaaS](xref:Architecture_self_managed_staas) or an [on-premises system with self-managed storage](xref:Architecture_on_premises), with separate staging |
-| Facility combined with cloud workflows | [Hybrid cluster](xref:Architecture_hybrid_cluster) |
-| Fully cloud-based production or remote production | [Cloud-hosted system](xref:Architecture_cloud_hosted) with DataMiner Edge |
-| Separate environments per customer or business unit | [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems) |
+| Shared orchestration for local and cloud resources | A [centralized cluster](xref:Architecture_centralized_cluster), with VPN or Edge connectivity where required. |
+| Integrations executed at several production facilities | A [distributed multi-site system](xref:Architecture_distributed_sites). |
+| Independent operations per business unit or security boundary | [Multiple independent systems](xref:Architecture_multiple_systems), with selected information shared centrally. |
+| Additional compute during an event | Scale the chosen cluster. A [hybrid deployment](xref:Architecture_hybrid_cluster) can temporarily add DaaS capacity to self-managed compute if full cloud nodes are required. |
 
-**Considerations**: Orchestration and booking functionality relies on both DataMiner and the storage being available, so storage redundancy is as important as DataMiner node redundancy. Validate workflow changes on a [staging system](xref:Architecture_lab_and_staging) that uses the same storage architecture as production.
+Use [staging](xref:Architecture_lab_and_staging) with representative workflows, storage, and recovery behavior. Combining on-premises equipment with cloud workflows does not itself require a hybrid cluster.
 
 ## OTT, streaming, and cloud media
 
-**Typical situation**: Most of the infrastructure consists of cloud services, CDNs, encoders, packagers, and origin servers that expose APIs, often combined with a limited amount of on-premises equipment.
+Cloud services and APIs are often reachable from centrally hosted integrations. A [single-agent system](xref:Architecture_single_agent) can fit a small workload; a [centralized cluster](xref:Architecture_centralized_cluster) provides room for capacity growth and node redundancy.
 
-| Scenario | Common architectures |
-|--|--|
-| Mainly cloud services | [Cloud-hosted system](xref:Architecture_cloud_hosted) |
-| Cloud services plus on-premises headend or encoding | [Hybrid cluster](xref:Architecture_hybrid_cluster), or a cloud-hosted system with DataMiner Edge |
-
-**Considerations**: Choose a region close to the cloud services you monitor. API rate limits of cloud providers can be a bigger constraint than DataMiner capacity.
+DaaS is a hosting option for either topology. If you also monitor a private headend or encoding equipment, a VPN, Edge Gateway, or compatible Edge Node integrations can connect those sources without adding a full local DMA. Choose regions and polling rates with latency and provider API limits in mind.
 
 ## Satellite operators and teleports
 
-**Typical situation**: RF equipment, modems, antenna control units, and network management systems at one or more teleports, often with a network operations center that manages several sites. Many devices are only reachable in private networks, and some require local or serial interfaces.
+Teleports often contain RF equipment, modems, and antenna systems in private networks. Local interfaces can influence where integrations run, while main/backup operation adds reachability and recovery requirements.
 
-| Scenario | Common architectures |
+| Scenario | Topology and operational choices |
 |--|--|
-| One teleport | [Self-managed nodes with STaaS](xref:Architecture_self_managed_staas) or an [on-premises system with self-managed storage](xref:Architecture_on_premises) |
-| Multiple teleports or gateways managed centrally | [Distributed multi-site system](xref:Architecture_distributed_sites), with a DataMiner node at each teleport |
-| Primary and backup teleport or network operations center, with a reliable low-latency link | DataMiner nodes at both sites, combined with STaaS with geo-redundant storage or a [geo-redundant on-premises system](xref:Architecture_geo_redundant). See [Surviving the loss of a site](xref:Architecture_building_blocks#surviving-the-loss-of-a-site). |
-| Teleports far apart or connected via high-latency links | [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems), one per teleport or region, with a central view via element replication |
+| One teleport | A [single-agent system](xref:Architecture_single_agent) where downtime is acceptable, or a [centralized cluster](xref:Architecture_centralized_cluster) with redundancy. Hosting may be local or DaaS with suitable connectivity. |
+| Multiple teleports managed as one operation | A [distributed multi-site system](xref:Architecture_distributed_sites), selecting Edge or full DMAs according to integration requirements. |
+| Main and backup teleport in one operational system | Add a [geo-redundant design](xref:Architecture_geo_redundant) and verify that surviving nodes can reach the required equipment. |
+| Teleports requiring independent operation or unsuitable cluster links | [Multiple independent systems](xref:Architecture_multiple_systems), with a central view of selected data. |
 
-**Considerations**: Place DataMiner nodes at the teleports where equipment requires local access. Avoid stretching one cluster over long-distance or satellite links with high latency. To decide between one system and several, see [One system or several?](xref:Architecture_overview#one-system-or-several) and the [example scenario](xref:Architecture_overview#a-satellite-operator-with-a-main-and-a-backup-teleport-in-different-countries).
+Do not assume a node at each teleport guarantees site isolation or recovery. Measure connectivity and decide [whether to use one system or several](xref:Architecture_overview#one-system-or-several).
 
 ## Satellite and VSAT service providers
 
-**Typical situation**: Large numbers of remote terminals, often managed via the cloud APIs or network management systems of the satellite network or terminal vendor, combined with service provisioning and customer-facing monitoring.
+Vendor APIs may expose many terminals through a small set of centrally reachable interfaces. A [centralized cluster](xref:Architecture_centralized_cluster) can divide polling, aggregation, and user-facing workloads without placing a DMA at every terminal.
 
-| Scenario | Common architectures |
-|--|--|
-| Terminals managed via vendor cloud APIs | [Cloud-hosted system](xref:Architecture_cloud_hosted) |
-| Hub infrastructure on premises plus remote terminals | [Self-managed nodes with STaaS](xref:Architecture_self_managed_staas) or a [hybrid cluster](xref:Architecture_hybrid_cluster) |
-
-**Considerations**: Large numbers of terminals lead to large amounts of trend and alarm data, so storage scalability is important. Separate front-end nodes (for users and APIs) from back-end nodes (for polling) when the load is high.
+Where hub equipment needs local integrations, extend to a [distributed arrangement](xref:Architecture_distributed_sites) using Edge or full DMAs as appropriate. Separate systems are useful when regions or service operations require isolation. Plan capacity for terminal data, alarm rates, and trending, not just the number of interfaces.
 
 ## Cable and telecom operators
 
-**Typical situation**: Large access networks (for example DOCSIS, FTTH, or mobile), headends, hubs, and data centers, often with [EPM](xref:EPM) to aggregate data from millions of customer devices. Systems tend to be large and grow over time.
+Large access networks may use [Experience and Performance Management (EPM)](xref:EPM) to aggregate data from large device populations. This affects processing and storage requirements independently of hosting.
 
-| Scenario | Common architectures |
+| Scenario | Topology and operational choices |
 |--|--|
-| Large central system | Clustered system with many nodes, based on [self-managed nodes with STaaS](xref:Architecture_self_managed_staas) or an [on-premises system with self-managed storage](xref:Architecture_on_premises) |
-| Many headends or hubs | [Distributed multi-site system](xref:Architecture_distributed_sites) |
-| Separate networks or technology domains | [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems) |
+| Central aggregation and operations | A [centralized cluster](xref:Architecture_centralized_cluster), separating polling, aggregation, and user-facing roles as needed. |
+| Local processing at many headends or hubs | A [distributed multi-site system](xref:Architecture_distributed_sites). |
+| Independent networks, regions, or technology domains | [Multiple independent systems](xref:Architecture_multiple_systems). |
 
-**Considerations**: EPM and other aggregation-heavy solutions have higher [compute requirements](xref:DataMiner_Compute_Requirements) than average systems, for example in terms of RAM and CPU. Separating roles, such as user-facing nodes and polling nodes, helps to scale these systems. Plan the storage capacity for growth.
+Apply EPM-specific [compute requirements](xref:DataMiner_Compute_Requirements), keep recovery capacity, and select storage for the expected growth.
 
 ## Transport, rail, and utilities
 
-**Typical situation**: Operational networks that are often separated from the internet, with equipment at many stations, substations, or along the track, and strict requirements for availability and security.
+Many stations or substations can share a [distributed system](xref:Architecture_distributed_sites), while strictly separated operational domains may need [independent systems](xref:Architecture_multiple_systems). Add geo-redundancy where site-loss continuity is required.
 
-| Scenario | Common architectures |
-|--|--|
-| Isolated operational network | [On-premises system with self-managed storage](xref:Architecture_on_premises) |
-| Many stations or substations | [Distributed multi-site system](xref:Architecture_distributed_sites) |
-| Operational network with controlled internet access | [Self-managed nodes with STaaS](xref:Architecture_self_managed_staas) |
-
-**Considerations**: Network segmentation and security zones often determine the architecture. Check early whether outbound connectivity to cloud services is allowed.
+An isolated network changes the hosting and storage choices, not these topologies: use self-managed compute and databases where internet services cannot be reached. If controlled outbound access is allowed, self-managed compute with STaaS is another option. Verify security-zone boundaries before choosing connections between sites or to cloud services.
 
 ## Government, defense, and public safety
 
-**Typical situation**: Strict security and data residency requirements, often with separate classified and unclassified networks.
+Isolation, residency, and independent change processes may justify [multiple systems](xref:Architecture_multiple_systems). Each can use a centralized or distributed topology and a [geo-redundant design](xref:Architecture_geo_redundant) where required.
 
-| Scenario | Common architectures |
-|--|--|
-| Air-gapped networks | [On-premises system with self-managed storage](xref:Architecture_on_premises) |
-| Separated networks or agencies | [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems) |
-| Mission-critical, multi-site | [Geo-redundant on-premises system](xref:Architecture_geo_redundant) |
-
-**Considerations**: In air-gapped networks, plan how software updates and connectors will be transferred into the network, and make sure the team has the expertise to maintain the database clusters.
+For air-gapped deployments, choose self-managed compute and storage and plan update transfer, database maintenance, and recovery within the isolated network. Lab and staging remain separate environment purposes, not additional production architectures.
