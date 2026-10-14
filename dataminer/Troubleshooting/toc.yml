@@ -253,7 +253,7 @@ items:
             topicUid: Sharing_dashboard_window_does_not_disappear
           - name: Keeping a DMA from running out of disk space
             topicUid: Keeping_a_DMA_from_running_out_of_disk_space
-          - name: Troubleshooting DxM MSI installation or startup failures
+          - name: DxM MSI installation or startup failures
             topicUid: DxM_installation_or_startup_failures
   - name: Known issues
     topicUid: Known_issues

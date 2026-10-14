@@ -3,7 +3,7 @@ uid: DxM_installation_or_startup_failures
 description: "Troubleshoot DataMiner DxM MSI installation or startup failures caused by mismatched .NET runtime and ASP.NET Core runtime versions."
 ---
 
-# Troubleshooting DxM MSI installation or startup failures
+# DxM MSI installation or startup failures
 
 A DataMiner DxM MSI installation can fail when an application started during installation cannot find a .NET runtime version it requires. The same runtime mismatch can also prevent an affected DxM service from starting.
 
@@ -13,6 +13,9 @@ This issue can affect CloudGateway and BrokerGateway, and this can cause DataMin
 - If required DxMs are missing, DataMiner may not start correctly after installation.
 
 The issue can also block a [BrokerGateway NATS migration](xref:BrokerGateway_Migration).
+
+> [!TIP]
+> See also: [DataMiner compute requirements – Microsoft .NET](xref:DataMiner_Compute_Requirements#microsoft-net).
 
 ## Symptoms
 
@@ -71,7 +74,7 @@ A .NET 10 runtime does not replace a required .NET 8 runtime under the default r
 1. Read the event description, and note the requested framework and version, architecture, and frameworks listed as available.
 
 > [!TIP]
-> An installer may report a permissions-related error even when the underlying cause is a .NET runtime failure. Before changing permissions, check Event Viewer for a matching *.NET Runtime* event naming *CloudGateway*, Broker*Gateway, or another affected DxM. If you find one, investigate the requested framework and version first. If not, continue troubleshooting the permissions error.
+> An installer may report a permissions-related error even when the underlying cause is a .NET runtime failure. Before changing permissions, check Event Viewer for a matching *.NET Runtime* event naming *CloudGateway*, *BrokerGateway*, or another affected DxM. If you find one, investigate the requested framework and version first. If not, continue troubleshooting the permissions error.
 
 ### Check the installed runtimes
 
@@ -119,13 +122,16 @@ Installing the .NET 8.0.31 Hosting Bundle resolved this issue without removing e
 
 ### Option 2: Install the missing .NET runtime
 
-Install the missing `Microsoft.NETCore.App` runtime for the architecture shown in the event. In the example, install a supported .NET 8 runtime at version 8.0.26 or a later compatible 8.0.x version. Prefer the latest supported 8.0.x version.
+Install the missing `Microsoft.NETCore.App` runtime for the architecture shown in the event. Always give preference to the latest supported version.
+
+In the example, this means you need to install a supported .NET 8 runtime at version 8.0.26 or a later compatible 8.0.x version.
 
 ### Option 3: Remove the unmatched ASP.NET Core runtime
 
-If updating the runtimes is not possible, remove the unmatched ASP.NET Core runtime. In the example, removing `Microsoft.AspNetCore.App` 8.0.26 resolved the issue. Before removing a runtime, check whether other applications on the server depend on it.
+If updating the runtimes is not possible, uninstall the relevant ASP.NET Core runtime package through *Programs and Features*. Do not delete its files manually. In the example, removing `Microsoft.AspNetCore.App` 8.0.26 resolves the issue.
 
-Uninstall the relevant ASP.NET Core runtime package through *Programs and Features*. Do not delete its files manually.
+> [!CAUTION]
+> Before removing a runtime, check whether other applications on the server depend on it.
 
 ## Validation
 
@@ -138,7 +144,3 @@ After applying a resolution:
 1. Verify that the affected DxM service is running.
 
 1. If the service is not running, check Event Viewer and the DxM logs for startup errors.
-
-## Additional information
-
-For more information, see [DataMiner compute requirements – Microsoft .NET](xref:DataMiner_Compute_Requirements#microsoft-net).
