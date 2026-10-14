@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.11
 ---
 
-# General Feature Release 10.6.11 - Preview
+# General Feature Release 10.6.11
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -30,19 +30,11 @@ Before you upgrade to this DataMiner version:
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 
-## Important changes
-
-*No important changes have been selected yet.*
-
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
 ### DataMiner Installer now supports command-line installation [ID 45554]
 
-<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 You can now install DataMiner from the command line by running the following command:
 
@@ -63,6 +55,12 @@ This request requires a CloudGateway version that supports it.
 ## Changes
 
 ### Enhancements
+
+#### MessageBroker library has been upgraded to Microsoft .NET 10 [ID 44205]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The MessageBroker library has been upgraded to Microsoft .NET 10.
 
 #### DataMiner Installer: Perpetual STaaS systems will retain their configured DMA ID and use a supplied license file [ID 46102]
 
@@ -96,16 +94,32 @@ When it can validate or repair the IIS rewrite rule for user-defined APIs, it re
 
 #### BrokerGateway will now fall back to a local IP address and can reset its cluster configuration [ID 46382]
 
-<!-- MR 10.7.0 - FR 10.6.11 -->
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 As the *ClusterEndpoints.json* file is missing or empty when BrokerGateway is installed for the first time, from now on, it will fall back to a configuration with a single local agent. It will use a detected local IP address, preferring an IPv4 address, instead of the local host or container name.
 
 In addition, the new `POST api/clusteringapi/resetbrokergateway` operation clears stale cluster information and detects the local agent again.
 
+#### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Previously, when a `ReservationInstance` (booking) property was updated, the SRM Master DMA performed the update regardless of which DMA received the request. On large or heavily loaded clusters, this could make the master a bottleneck.
+
+From now on, the DMA hosting the booking will perform the property update. Before the update, the SRM Master DMA grants a short-lived lock for the booking to coordinate concurrent updates. This reduces the processing load on the master and improves the performance and scalability of property updates, particularly on larger clusters.
+
+Property updates will continue to be validated and applied in the same way, and other DMAs and clients will still be notified. This change does not affect end-user or scripting behavior.
+
+#### SNMP: Empty community strings are now supported for SET operations [ID 46535]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can now use an empty community string for SNMP SET operations.
+
 #### DxMs upgraded [ID 46565] [ID 46577]
 
 <!-- RN 46565: MR 10.7.0 - FR 10.6.11 -->
-<!-- RN 46577: MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+<!-- RN 46577: MR 10.6.0 [CU8] - FR 10.6.11 -->
 
 The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
 
@@ -113,6 +127,14 @@ The following DataMiner Extension Modules (DxMs), which are included in the Data
 - DataMiner DataAPI 1.5.0
 
 For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
+
+Microsoft .NET 10 remains required.
 
 ### Fixes
 
@@ -217,6 +239,14 @@ From now on, the highest compatible DLL version in the requested range will be s
 
 Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
 
+#### Automation: Script Runner could fail to load assemblies required by a script [ID 46443]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+Up to now, Script Runner could fail to load a script when it depended on an assembly that was not copied to its dedicated assembly folder. This could happen for dependencies that were not anticipated, such as `Skyline.DataMiner.Storage.Types.dll`.
+
+From now on, if an assembly cannot be found in `C:\Skyline DataMiner\Files\SLAutomation.ScriptRunner`, Script Runner will also look for it in `C:\Skyline DataMiner\Files`.
+
 #### Change point history retrieval could cause overall performance to decrease [ID 46524]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
@@ -225,8 +255,46 @@ Up to now, retrieving change point history could cause performance to decrease b
 
 As a result, change points that were only ever written under the old v1 partition scheme will no longer be returned. This affects only pre-migration data; systems using the current change point storage format are unaffected.
 
+#### SNMP: Community credentials could be lost when an automation script modified an element [ID 46537]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when an automation script modified an element that used community credentials from the Credential Library on its main connection, the element could lose those credentials if the script did not change them. From now on, the credentials will be retained.
+
 #### STaaS: Failing aggregate count queries would incorrectly return 0 instead of throwing an exception [ID 46546]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
 
 On systems using STaaS, up to now, a failing aggregate count query could incorrectly return `0` instead of throwing an exception. From now on, the query will throw an exception when it fails.
+
+#### SLScripting could stop working due to recursive assembly resolution logging [ID 46572]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+In some cases, when SLScripting tried to log that a different version of an assembly had been loaded than the requested version, the logging could trigger another resolution attempt for the same assembly. This could result in a recursive loop that caused SLScripting to stop working.
+
+A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
+
+#### Elasticsearch re-indexing tool: Various fixes [ID 46587]
+
+<!-- MR 10.6.0 [CU8] - FR 10.6.11 -->
+
+A number of fixes have been made to the Elasticsearch re-indexing tool (*ReIndexElasticSearchIndexes*):
+
+- Up to now, after migrating from Elasticsearch to OpenSearch, the Elasticsearch re-indexing tool could replace the date-math expression in the `index.provided_name` field with a literal index name. This could prevent rollover-managed indices from rolling over on schedule. The tool now preserves the expression when it recreates indices.
+
+- The tool now swaps aliases atomically, verifies that exactly one index has the write flag on the active alias, and compares alias sets without relying on their order. It also skips index families that should not roll over and finds the next available sequence number when the expected one is already in use. Before modifying indices, it checks whether the cluster has enough shard capacity and, if needed, provides the suggested `cluster.max_shards_per_node` setting. You can bypass this check with `--SkipShardPreflight` if the cluster has already been sized.
+
+- The tool now handles null responses and failed destination reads without stopping unexpectedly. It also reduces redundant `_cat/indices` requests for performance and normalizes the `-D`/`--DBPrefix` argument so it can be supplied without a trailing hyphen.
+
+#### Problem when APIGateway was shut down [ID 46619]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
+
+Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.
+
+#### SLNet: Edge managers could fail to initialize when NATS was unavailable at startup [ID 46700]
+
+<!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
+
+Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConnectorManager` and `EdgeNodeLifecycleManager` could fail to initialize. From now on, both managers share a MessageBroker instance from `MessageBrokerCache`, created on the first request instead of during `OnInitialize`. This prevents a temporary NATS outage at startup from leaving the managers uninitialized.

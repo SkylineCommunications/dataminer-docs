@@ -90,7 +90,9 @@ As soon as you log in to the VM, a window will be shown where you can configure 
 > - If you are installing a **Failover** Agent, skip the configuration below, and follow the steps under [Configuring the new DataMiner Agent as a new Agent in a Failover pair](xref:Configuring_a_new_DMA_in_Failover_pair). These steps are the same as for an installation using the DataMiner Installer.
 
 > [!NOTE]
-> If you accidentally close the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.exe`. Make sure to run it with administrator privileges.
+>
+> - If you accidentally close the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.exe`. Make sure to run it with administrator privileges.
+> - To configure DataMiner automatically without using the configuration window, see [Unattended DataMiner installation](xref:Unattended_DM_installation).
 
 Follow the steps below to configure your DataMiner Agent:
 

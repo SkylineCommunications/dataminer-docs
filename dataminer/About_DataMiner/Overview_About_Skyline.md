@@ -28,11 +28,11 @@ With its global presence and offices in Belgium, Bosnia and Herzegovina, Portuga
 
 As a result of its continuous, far-reaching innovation, Skyline has been recognized for its leadership in shaping the future of end-to-end multivendor network management and OSS solutions.
 
-For a detailed overview of Skyline's awards, refer to [Awards & achievements](https://www.skyline.be/skyline/awards)
+For a detailed overview of Skyline's awards, refer to [Awards & achievements](https://www.skyline.be/skyline/awards).
 
-## Successful track record of 25+ years
+## Successful track record of multiple decades
 
-Skyline Communications has a successful track record of over 25 years. The company started as a distributor and manufacturer of HFC solutions in 1985 but changed its direction in 2000 to focus on software development. Since then, it has rapidly grown to a global industry leader with over 10000 nodes deployed in over 125 countries, and more than 1500 customers worldwide.
+Skyline Communications has a successful track record that stretches several decades back. The company started as a distributor and manufacturer of HFC solutions in 1985 but changed its direction in 2000 to focus on software development. Since then, it has rapidly grown to a global industry leader with over 10000 nodes deployed in over 125 countries, and more than 1500 customers worldwide.
 
 For more detailed info, refer to the [timeline on skyline.be](https://www.skyline.be/skyline/about).
 
@@ -40,10 +40,10 @@ For more detailed info, refer to the [timeline on skyline.be](https://www.skylin
 
 Skyline Communications offers the following key ingredients for a solid long-term relationship:
 
-- **Independence**: Skyline is a fully independent NMS/OSS software publisher for the ICT media and broadband industry, eliminating any conflicts of interest, today or any time in the future.
-- **Expertise**: Skyline boasts unsurpassed combined expertise in the field of NMS, OSS, and orchestration for the ICT media and broadband industry.
-- **Leading technology**: With a track record of over two decades of consistent innovation, Skyline has a reputation for introducing disruptive paradigms.
-- **Proven track record**: Skyline has a strong proven track record of significant success with deployments for leading ICT media and broadband companies in over 125 countries.
+- **Independence**: Skyline is a fully independent NMS/OSS software publisher, eliminating any conflicts of interest, today or any time in the future.
+- **Expertise**: Skyline boasts unsurpassed combined expertise in the field of NMS, OSS, and orchestration across multiple industries.
+- **Leading technology**: With a track record of several decades of consistent innovation, Skyline has a reputation for introducing disruptive paradigms.
+- **Proven track record**: Skyline has a decades-long record of delivering successful DataMiner deployments for leading organizations in over 125 countries.
 - **Global leader**: Comprehensive global thought leadership, both from a technology and from a market share perspective.
 
 > **Your opportunity**
@@ -54,21 +54,17 @@ Skyline Communications offers the following key ingredients for a solid long-ter
 
 ### Core business
 
-Skyline, as an organization, sharply focuses on its mission, which revolves entirely around projects in the media and broadband industries. This has brought us great success and established us as a worldwide leader in terms of technology, market share and expertise. Our mission statement is to redefine how operators can manage and automate their entire operation end to end across any vendor and technology boundaries, more easily and more efficiently than ever before. This is what our continuously growing team of subject-matter experts is doing day in and day out all around the world.
+Skyline, as an organization, sharply focuses on its mission, which is to redefine how operators can manage and automate their entire operation end to end across any vendor and technology boundaries, more easily and more efficiently than ever before. This is what our continuously growing team of subject-matter experts around the world is working on every day, and it is what has brought us great success and established us as a worldwide leader in terms of technology and expertise.
 
 ### Independent
 
-It is important to also consider the unique nature of Skyline as a company and, more specifically, the fact that Skyline is a fully independent corporation, completely dedicated to developing and delivering the most sophisticated end-to-end network management and orchestration solutions. You can rest assured that you have a strong, well-established partner for the supply of this technology, entirely dedicated to further developing it. More importantly, Skyline is a partner that allows you to deploy and integrate new products easily at any time to further expand and leverage the platform without any conflicts of interest.
+Skyline is a fully independent corporation, dedicated to developing and delivering the most sophisticated end-to-end network management and orchestration solutions. You can rest assured that you have a strong, well-established partner for the supply of this technology, entirely dedicated to further developing it. More importantly, Skyline is a partner that allows you to deploy and integrate new products easily at any time to further expand and leverage the platform without any conflicts of interest.
 
 ### Skyline's vision
 
-Our relentless desire for continuous innovation lies at the heart of our mission statement, and Skyline has established this reputation since the very inception of DataMiner. Year after year, Skyline has led the industry with innovative new paradigms and capabilities. Today, Skyline continues to evaluate how the media and broadband industry is evolving, what kind of challenges this brings along for our customers, and how these can effectively be addressed with new innovative DataMiner capabilities.
+Our relentless desire for continuous innovation lies at the heart of our mission statement, and Skyline has established this reputation since the very inception of DataMiner. We continuously evaluate the new challenges today's rapidly evolving technology brings along for our customers, and how these challenges can be effectively addressed with new innovative DataMiner capabilities.
 
-With DataMiner in place, you will be equipped with the most advanced network management and orchestration technology available in the industry. For example, service and resource management has been a focal point of our R&D efforts over the past five years, which has resulted in cutting-edge technology. Furthermore, Skyline also invests heavily in new emerging technologies such as artificial intelligence and machine learning, heralding the new generation of solutions according to the principle of augmented and proactive operations.
-
-### Technology
-
-Skyline offers highly integrated solutions using the industry-standard DataMiner platform, resulting in tangible and considerable benefits and savings. Our solutions offer a wide range of exclusive features and capabilities that come standard with the platform.
+With DataMiner in place, you will be able to rapidly turn your ideas and investments into real, measurable operational impact, and continuously evolve your organization to keep pace with changing challenges and opportunities, regardless of its complexity.
 
 ### Expertise
 
@@ -80,7 +76,7 @@ Our system architects and engineers bring tremendous expertise to the table with
 
 A future-proof solution is extremely important for a strategic deployment, and this entails a wide range of considerations, such as:
 
-- Skyline is a well-established leader in this technology, with a sound track record going back 20 years, offering solid guarantees towards the future.
+- Skyline is a well-established leader in this technology, with a sound track record going back several decades, offering solid guarantees towards the future.
 - Skyline is an independent corporation, and all its employees are fully dedicated to the continued development, evolution, and deployment of our solutions.
 - Our solutions are proven technology, with currently thousands of deployments for leading operators around the world.
 - DataMiner has thousands of existing and proven integrations for products from hundreds of different vendors.

@@ -124,8 +124,7 @@ ReduceFeatures --- VerifyConfiguration
 VerifyConfiguration --- |Not a configuration issue|NotFixedCOPS
 CanSimulate --- |No|ExtraInfoNotFixed
 %% Define hyperlinks %%
-click ProtocolDebug "/dataminer/Reference/DataMiner_Tools/
-Protocol_Debug_Tools.html"
+click ProtocolDebug "/dataminer/DataMiner_Tools/Protocol_Debug_Tools.html"
 click ReduceFeatures "/dataminer/Operator_guide/Protocols_and_templates/Alarm_templates/Configuring_alarm_templates/About_the_alarm_template_editor.html"
 %% Apply styles to blocks %%
 class CreationIssue classTerminal;

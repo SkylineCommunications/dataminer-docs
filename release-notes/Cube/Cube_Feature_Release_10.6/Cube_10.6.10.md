@@ -6,6 +6,9 @@ uid: Cube_Feature_Release_10.6.10
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU7].
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.10](xref:General_Feature_Release_10.6.10).
@@ -27,7 +30,10 @@ If you open a script that contains credentials you are not allowed to use, the n
 > - If you user permissions change while you are working in the Automation app, the changes will only take effect after you have re-opened the Automation app.
 
 > [!IMPORTANT]
-> This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.10 or newer. See [Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]](xref:General_Feature_Release_10.6.10#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282-id-46229)
+> This feature will only work in conjunction with DataMiner server version 10.6.10/10.7.0 or higher. See [Automation: Credentials can now be added within the XML code of an automation script [ID 44282] [ID 46229]](xref:General_Feature_Release_10.6.10#automation-credentials-can-now-be-added-within-the-xml-code-of-an-automation-script-id-44282-id-46229).
+
+> [!CAUTION]
+> In this version of DataMiner Cube, saving an automation script that uses credentials from the Credentials Library can clear the selected credential references. This issue is resolved in DataMiner Cube 10.6.11/10.7.0 (see [Automation script editor: Enhanced way of selecting credentials [ID 46251]](xref:Cube_Feature_Release_10.6.11#automation-script-editor-enhanced-way-of-selecting-credentials-id-46251)).
 
 ## New features
 
@@ -49,9 +55,11 @@ When you restore a backup on the same DataMiner System, no password will be need
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-A new global setting is now available in *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
+A new global setting is now available via *System Center > System settings > Visio drawing* that allows you to force Visio drawings to use the light theme, even when Cube is using the dark theme.
 
 The available options are *Follow Cube theme* (default) and *Light*. After changing the setting, click *Apply theme* and reopen any open Visio drawings to see the change.
+
+![Visio theming setting in DataMiner Cube](~/release-notes/images/VisioTheme.png)
 
 #### Credentials Library: Warning indicator next to credentials that could not be decrypted [ID 45997]
 
@@ -66,10 +74,10 @@ When you hover over the warning icon, a tooltip will explain that the secret val
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
-When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven pages:
+When you create or edit an element in DataMiner Cube, the element wizard can now show new connector-driven sections:
 
-- A *Settings* page where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
-- A *Run-on details* page for connectors with scripts, where you can select an Edge node and configure script intervals.
+- A *Settings* section where you can configure connector settings (including text fields, dropdown values, and credentials), with validation for required values.
+- A *Run details* section for connectors with scripts, where you can select an Edge node and configure script intervals.
 
 In addition, CSV export/import support has been updated with the relevant headers for protocol settings and edge scripts.
 

@@ -4,19 +4,35 @@ uid: Unattended_DM_installation
 
 # Unattended DataMiner installation
 
-## v10.5 Installer
+## Recent installers
 
-With the v10.5 Installer, it is possible to pre-configure DataMiner, so that after you have completed the initial installation, you only need to execute a command to have the entire configuration taken care of automatically.
+With recent installers, you can configure DataMiner automatically by using a JSON configuration file instead of entering the settings manually.
 
-To run an unattended configuration of a new DataMiner installation, configure a JSON file as indicated in the examples below, depending on the type of setup you want, and then execute the command below (after filling in the correct path):
+> [!TIP]
+> For details about the different fields that can be configured, refer to [Running the Installer](xref:Installing_DM_using_the_DM_installer#running-the-installer).
+
+### Unattended installation
+
+From DataMiner 10.6.0 CU8/10.6.11 onwards<!--RN 45554-->, use the DataMiner Installer command line to install DataMiner and apply the configuration in one operation.
+
+Configure a JSON file with the settings for the type of setup you want, as indicated in the examples below. Then, replace `<path to config file>` with the path to this file and run the following command:
+
+```powershell
+DataMinerInstaller.exe Install <path to config file>
+```
+
+### Unattended configuration
+
+For versions prior to DataMiner 10.6.0 CU8/10.6.11, fully unattended installation is not supported. However, you can already execute an unattended configuration after DataMiner has been pre-installed.
+
+Configure a JSON file with the settings for the type of setup you want, as indicated in the examples below. Then, replace `<path to config file>` with the path to this file and run the following command:
 
 ```powershell
 cd "C:\Skyline DataMiner\Tools\FirstStartupChoice"
 .\FirstStartupChoice.exe --silent-config <path to config file>
 ```
 
-> [!TIP]
-> For details about the different fields that can be configured, refer to [Running the Installer](xref:Installing_DM_using_the_DM_installer#running-the-installer).
+This command applies the settings from the JSON configuration file to the existing DataMiner installation. It does not install or replace DataMiner.
 
 ### Example: STaaS with subscription licensing
 

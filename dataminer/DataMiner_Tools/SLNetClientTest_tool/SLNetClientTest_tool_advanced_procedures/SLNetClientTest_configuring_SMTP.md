@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_configuring_SMTP
+description: "Use the SLNetClientTest tool to configure DataMiner to send email notifications and reports without any need to restart DataMiner."
 ---
 
 # Configuring SMTP

@@ -444,18 +444,6 @@ When an existing rate limit is changed, the updated limit is only applied after 
 
 If a long window was configured and the limit has already been reached, the client may need to wait until the window has passed before another trigger can be executed and the updated limit can take effect.
 
-#### DataMiner Installer now supports command-line installation [ID 45554]
-
-<!-- MR 10.7.0 - FR 10.6.11 -->
-
-You can now install DataMiner from the command line by running the following command:
-
-```powershell
-DataMinerInstaller.exe Install <Path to firststartupchoiceconfig.json>
-```
-
-For more information about the configuration file, see [Unattended DataMiner installation](xref:Unattended_DM_installation).
-
 #### Automation: Added support for running scripts in separate SLAutomation.ScriptRunner processes by SolutionId [ID 45557]
 
 <!-- MR 10.7.0 - FR 10.6.9 -->

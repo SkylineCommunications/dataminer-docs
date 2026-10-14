@@ -5,11 +5,13 @@ description: Explore the DataMiner DevOps Professional Program, which is centere
 
 # DataMiner DevOps Professional Program
 
-Tomorrow revolves all around **building a powerful, agile, data-driven operation**. This to empower teams with actionable data and insights, and to leverage automation and orchestration across the business to drive efficiency and accelerate innovation. After all, every business needs and wants *better*, *faster*, and *cheaper*.
+Success today depends on building agile operations that can adapt quickly and apply intelligence to manage complexity. These capabilities help teams coordinate their operations and deliver measurable business outcomes through short, iterative cycles.
 
-While DataMiner is a key strategic technology that delivers exactly that, success is also very much conditional on succeeding at designing an agile organization that wraps around the actual technology stack and derives maximum value from it. In that context, DataMiner DevOps Professionals play a vital role.
+DataMiner provides the operational foundation for this, but realizing its full value also depends on an agile organization designed around the technology and focused on business outcomes. In that context, DataMiner DevOps Professionals play a vital role.
 
-The **DataMiner DevOps Professional Program** is centered around empowered people embedded in an operation: People knowledgeable about DataMiner and all its powerful modular functions, but also knowledgeable about the specifics of the overall operation and the goals and ambitions of the business. In other words, the program focuses on people that can iterate quickly and convert their finite time into tangible value for the business.
+The **DataMiner DevOps Professional Program** is centered on empowered people embedded in an operation. Participants understand DataMiner and its powerful modular functions, along with the specifics of the operation and the goals and ambitions of the business. They help teams work in short, agile cycles and convert their expertise into tangible value for the business.
+
+As organizations move toward AI-native operations, DevOps Professionals help translate business intent into governed workflows, decisions, and actions grounded in operational context. They help ensure intelligence is applied with the right human and system guardrails, enabling teams to create value from day one and build toward more capable operations over time.
 
 Ready to sign up? Go to [DataMiner Dojo](https://community.dataminer.services/dataminer-devops-professional-program-signup/).
 

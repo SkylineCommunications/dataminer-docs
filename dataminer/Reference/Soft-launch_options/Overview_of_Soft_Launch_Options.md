@@ -57,6 +57,9 @@ Allows you to disable the ClusterEndpointsManager. This can prevent possible iss
 - **Minimum version**: 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->
 - **Release version**: 10.5.0 [CU5]/10.5.8<!-- RN 43370 -->
 
+> [!IMPORTANT]
+> As the [BrokerGateway migration](xref:BrokerGateway_Migration) must be done before you can upgrade to a DataMiner 10.6.x version, this option **can only be used with 10.5.x DataMiner versions**. Make sure this option is no longer present before you upgrade to DataMiner 10.6.x or higher, and **do not add it in recent DataMiner versions**. Prior to DataMiner 10.6.0 [CU9]/10.6.12<!-- RN 46538 -->, adding it can cause problems with your BrokerGateway setup. In later versions, it will do nothing.
+
 ### CorrectedDisplayKeyOnNaming
 
 Takes exception values into account for display key generation. See [CorrectedDisplayKeyOnNaming soft-launch option](xref:UIComponentsTableDisplayKeys#correcteddisplaykeyonnaming-soft-launch-option)
@@ -273,6 +276,8 @@ Enables SLProtocol as a 32-bit process. This option is not configured in *SoftLa
 ### SnmpPollingSnmpPlusPlusOnly
 
 Configures the DataMiner System to use SNMP++ for the polling of all three SNMP versions, instead of only for SNMPv3.<!-- RN 37778 -->
+
+From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!-- 46535+46536 -->, enabling this option also allows the use of empty set community strings in DataMiner element configuration and in the [Credentials Library](xref:Credentials_Library).
 
 - **Minimum version**: 10.4.2
 - **Release version**: To be determined.

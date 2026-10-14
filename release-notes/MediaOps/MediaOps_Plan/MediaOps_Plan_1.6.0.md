@@ -204,7 +204,7 @@ Attempting to add and save a new property to a resource that had a concurrency o
 
 #### Aborting a script caused it to be logged as failed [ID 45590]
 
-Previously, closing an interactive script by clicking the X icon in the top-right corner resulted in the script being logged as failed. This behavior has been fixed, and such actions no longer mark the script as a failure.
+Previously, closing an interactive script by clicking the X icon in the upper-right corner resulted in the script being logged as failed. This behavior has been fixed, and such actions no longer mark the script as a failure.
 
 #### Scheduling: Node icon not updated after node swap [ID 45644]
 

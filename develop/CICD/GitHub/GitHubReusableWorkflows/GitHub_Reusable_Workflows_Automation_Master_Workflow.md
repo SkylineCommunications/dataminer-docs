@@ -1,11 +1,12 @@
 ---
 uid: github_reusable_workflows_automation_master_workflow
+description: Learn how the deprecated Automation Master Workflow validates, packages, and uploads legacy DataMiner automation script solutions.
 ---
 
 # Automation Master Workflow
 
 > [!IMPORTANT]
-> For **Skyline.DataMiner.SDK** projects, refer to the [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow).
+> The Automation Master Workflow is deprecated and no longer available as of 2 November 2026. Update your solution to use `Skyline.DataMiner.Sdk` projects and the [Master Workflow](xref:github_reusable_workflows_master_workflow).
 
 The Automation Master Workflow should run on repositories containing an [automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
 

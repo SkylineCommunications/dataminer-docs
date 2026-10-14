@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_removing_DOM_Manager
+description: "Learn how, using the SLNetClientTest tool, you can remove DOM managers with up to 100000 DOM instances from your DataMiner System."
 ---
 
 # Removing a DOM manager

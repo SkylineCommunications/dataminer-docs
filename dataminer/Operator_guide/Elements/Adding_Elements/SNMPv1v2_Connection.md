@@ -8,7 +8,7 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 
 - **SNMP version**: Allows you to select a different SNMP version than the version configured in the protocol. With an SNMPv1 type protocol, you can select SNMPv1, SNMPv2 or SNMPv3. With an SNMPv2 type protocol, you can select SNMPv2 or SNMPv3.
 
-- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote locations are configured. For more information, refer to [Edge Manager](xref:EdgeManagerOverview).
+- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the EdgeManager DxM is installed and remote locations are configured. For more information, refer to [Edge Gateways](xref:About_Edge_Gateways).
 
 - **IP address/host**: The polling IP or URL of the destination.
 
@@ -24,3 +24,5 @@ For SNMPv1/v2 connections, you can specify the following connection settings whi
 - **Get community string**: The community string used when reading values from the device. The default value, unless overridden in the protocol, is *public*.
 
 - **Set community string**: The community string used when setting values on the device. The default value, unless overridden in the protocol, is *private*.
+
+  Note that setting an empty set community string is only possible from DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!-- 46535+46536 -->, and only if the [SnmpPollingSnmpPlusPlusOnly](xref:Overview_of_Soft_Launch_Options#snmppollingsnmpplusplusonly) soft-launch option is enabled.
