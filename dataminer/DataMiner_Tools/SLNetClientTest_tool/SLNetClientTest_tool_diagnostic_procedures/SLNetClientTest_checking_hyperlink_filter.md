@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_checking_hyperlink_filter
-description: "Learn how to use the SLNetClientTest tool to verify whether a hyperlink filter is valid and check if it matches a specific DataMiner object."
+description: "Learn how, using the SLNetClientTest tool, you can verify whether a hyperlink filter is valid and whether it matches a specific DataMiner object."
 ---
 
 # Checking a hyperlink filter
