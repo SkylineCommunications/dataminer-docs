@@ -21,7 +21,7 @@ Any of the following can justify independent systems; they are alternatives, not
 - **Distance**: Sites or users are spread over different continents. One cluster with storage in one region would lead to high latency for some of them, and a single self-managed OpenSearch cluster cannot be stretched over long distances.
 - **Organization**: Different business units or teams have their own operations, change processes, and upgrade schedules.
 - **Security zones**: Networks are strictly separated, for example an operational technology network and a corporate network, or networks of different customers in a managed service.
-- **Data residency**: Data of different regions must be stored in different jurisdictions. As each DMS uses one storage region, separate systems allow you to keep each region's data in its own location.
+- **Data residency**: Data of different regions must be stored in different jurisdictions. Separate systems allow you to keep each region's data in its own location.
 - **Blast radius**: You want to limit the impact of a failure, an upgrade, or a configuration error to one part of the organization.
 
 ## Architecture
@@ -53,7 +53,7 @@ Solid lines show operational connections within each system or to its sources. D
 
 Each self-managed DMS can instead use self-managed storage with the required database connections; a DaaS DMS always uses STaaS. Each DMS selects connectivity for its own sources independently. Network boundaries must permit any selected federation mechanism; a truly air-gapped system cannot share live data across that boundary.
 
-Each system can use a [single agent](xref:Architecture_single_agent), a [centralized cluster](xref:Architecture_centralized_cluster), or a [distributed topology](xref:Architecture_distributed_sites), and can add geo-redundancy as needed. Choose [hosting and storage](xref:Architecture_hosting_and_storage) per system: one region may use DaaS and STaaS, while an isolated operational network uses on-premises compute and databases.
+Each system can use a [single agent](xref:Architecture_single_agent), a [centralized cluster](xref:Architecture_centralized_cluster), or a [distributed topology](xref:Architecture_distributed_sites), and can add geo-redundancy as needed. Choose the [deployment model](xref:Overview_hosting) per system: one region may use DaaS and STaaS, while an isolated operational network uses on-premises compute and databases.
 
 ## Sharing information between systems
 
@@ -82,4 +82,4 @@ Each system has its own redundancy design. Separation limits direct dependencies
 - Managed service providers that run separate systems for different customers.
 - Government and defense organizations with strictly separated networks.
 
-See also [Architectures by market segment](xref:Architecture_market_segments).
+See also [Typical starting points per industry](xref:Overview_Architecture_and_components#typical-starting-points-per-industry).

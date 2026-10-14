@@ -122,7 +122,7 @@ If a site must remain fully operational in isolation, consider a separate DMS wi
 - Satellite operators with multiple teleports and gateway sites.
 - Rail, transport, and utility networks with many stations or substations.
 
-See also [Architectures by market segment](xref:Architecture_market_segments).
+See also [Typical starting points per industry](xref:Overview_Architecture_and_components#typical-starting-points-per-industry).
 
 ## Sizing
 

@@ -96,4 +96,4 @@ Define how much downtime and recent data loss are acceptable, then test node los
 
 For self-managed storage, coordinate repairs and upgrades across sites and test loss of each voting location. For STaaS, understand the selected service's redundancy and recovery behavior rather than assuming a storage-region failure and a compute-site failure are identical.
 
-Size each surviving compute location for the workload it must absorb using the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). Store backups outside the failure domain they protect. See [Hosting and storage](xref:Architecture_hosting_and_storage#redundancy-and-backups) for responsibilities and backup guidance.
+Size each surviving compute location for the workload it must absorb using the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). Store backups outside the failure domain they protect. See [Backups and disaster recovery](xref:Architecture_design_considerations#backups-and-disaster-recovery).

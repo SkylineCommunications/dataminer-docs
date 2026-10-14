@@ -6,7 +6,7 @@ keywords: architecture, design, latency, network, virtualization, backup, disast
 
 # Architecture design considerations
 
-The guidelines on this page apply to all [DataMiner System architectures](xref:Architecture_overview). Taking them into account early in the design helps you avoid issues that are difficult to fix once the system is in production.
+The guidelines on this page apply to all [DataMiner System architectures](xref:Overview_Architecture_and_components). Taking them into account early in the design helps you avoid issues that are difficult to fix once the system is in production.
 
 ## Network
 
@@ -50,7 +50,30 @@ The guidelines on this page apply to all [DataMiner System architectures](xref:A
 
 - **Responsibilities**: Clearly define who is responsible for each part of the system: the DataMiner configuration, the servers and virtual machines, the operating systems, the databases, the network, and the backups.
 - **Monitoring the monitoring system**: [Connect to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) for [proactive support](xref:Proactive_Support) and [CDMR health monitoring](xref:CDMR), alongside monitoring of self-managed compute and databases.
-- **Upgrades**: All nodes in a DMS run the same DataMiner version. Skyline manages DaaS maintenance under the [planned maintenance policy](xref:DaaS_Planned_Maintenance_Policy). For a self-managed DMS, validate upgrades in [staging](xref:Architecture_lab_and_staging) and prepare recovery procedures.
+- **Upgrades**: All nodes in a DMS run the same DataMiner version. Skyline manages DaaS maintenance under the [planned maintenance policy](xref:DaaS_Planned_Maintenance_Policy). For a self-managed DMS, validate upgrades in [staging](#lab-and-staging-environments) and prepare recovery procedures.
+
+## Lab and staging environments
+
+Lab and staging environments are not separate architectures. They are additional DataMiner Systems, usually smaller, that you use alongside production:
+
+- A **lab** or development system is used to build and try out connectors, scripts, dashboards, and other solution items.
+- A **staging** system is used to validate changes and DataMiner upgrades before they go to production.
+- A **proof-of-concept** system is used to evaluate DataMiner for a specific use case. A [one-box system](xref:Architecture_single_agent), for example on DaaS, is often sufficient.
+
+The closer staging is to production, the more issues it catches. Use the same storage architecture, the same redundancy model, the same DataMiner version, and representative data and connectors.
+
+### Promoting changes to production
+
+The recommended approach is to manage your solution as code and to promote changes as versioned packages:
+
+1. Build and store your connectors, scripts, and other items in source control.
+1. Create versioned [application packages](xref:ApplicationPackages), ideally with a [CI/CD pipeline](xref:CICD). See [Creating a multi-artifact DataMiner package](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub).
+1. Deploy the package to staging via the [Catalog](xref:About_the_Catalog_app) and validate it.
+1. Deploy the same tested package version to production.
+
+This gives you a clear history of what was deployed where, and makes it easy to roll back to an earlier version.
+
+Alternatively, you can use the export and import functionality of DataMiner, for example by [exporting and importing packages](xref:Exporting_and_importing_packages_on_a_DMA) or [exporting elements and services to a .dmimport file](xref:Exporting_elements_services_etc_to_a_dmimport_file) and [importing them](xref:Importing_elements_services_etc_from_a_dmimport_file). This works without source control, but you lose the benefits of managing deployments as code and of clean package versioning.
 
 ## Common pitfalls
 

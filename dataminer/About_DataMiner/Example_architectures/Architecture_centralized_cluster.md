@@ -75,7 +75,7 @@ flowchart TB
 
 The Gateway is not a DMA. Self-managed DMAs can also use STaaS, with outbound HTTPS from every DMA. Each example uses one storage choice to keep the drawing clear.
 
-Choose [hosting and storage](xref:Architecture_hosting_and_storage) independently of this arrangement. DaaS uses STaaS. Self-managed nodes can use STaaS or dedicated clustered storage, on premises or in a cloud environment.
+Choose the [deployment model](xref:Overview_hosting) independently of this arrangement. DaaS uses STaaS. Self-managed nodes can use STaaS or dedicated clustered storage, on premises or in a cloud environment.
 
 As the system grows, you can separate user-facing functions from polling or aggregation workloads. All nodes remain part of one DMS, so configuration and upgrades stay coordinated. This reduces the need for cross-system integration, but means changes and shared dependencies can affect the whole system.
 
@@ -91,4 +91,4 @@ Central polling depends on the connection to each remote site. Edge Nodes can pl
 
 Size compute and any self-managed databases using the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). Keep capacity for the chosen recovery model, not just normal operation.
 
-For a self-managed DMS, coordinate platform upgrades across the cluster and configure DataMiner backups alongside the storage backup strategy. Skyline manages DaaS maintenance and backups; see [Hosting and storage](xref:Architecture_hosting_and_storage). Develop and validate solution changes in [lab and staging](xref:Architecture_lab_and_staging#promoting-changes-to-production), promoting the same tested package version to production.
+For a self-managed DMS, coordinate platform upgrades across the cluster and configure DataMiner backups alongside the storage backup strategy. Skyline manages DaaS maintenance and backups; see [DataMiner as a Service](xref:DaaS_hosting). Develop and validate solution changes in [lab and staging](xref:Architecture_design_considerations#lab-and-staging-environments), promoting the same tested package version to production.

@@ -17,6 +17,21 @@ items:
     topicUid: evolution_vs_optimization
   - name: Architecture and components
     topicUid: Overview_Architecture_and_components
+    items:
+      - name: Example architectures
+        items:
+          - name: One-box system
+            topicUid: Architecture_single_agent
+          - name: Centralized cluster
+            topicUid: Architecture_centralized_cluster
+          - name: Distributed multi-site system
+            topicUid: Architecture_distributed_sites
+          - name: Geo-redundant system
+            topicUid: Architecture_geo_redundant
+          - name: Independent and federated DataMiner Systems
+            topicUid: Architecture_multiple_systems
+      - name: Architecture design considerations
+        topicUid: Architecture_design_considerations
   - name: Deployment models
     topicUid: Overview_hosting
     items:
@@ -28,35 +43,6 @@ items:
         topicUid: DM_and_storage_selfhosted
       - name: Hybrid clusters
         topicUid: Hybrid_clusters
-  - name: System architectures
-    topicUid: Architecture_overview
-    items:
-      - name: Building blocks of a DataMiner System
-        topicUid: Architecture_building_blocks
-      - name: Architectures by market segment
-        topicUid: Architecture_market_segments
-      - name: System topologies
-        items:
-          - name: One-box system
-            topicUid: Architecture_single_agent
-          - name: Centralized cluster
-            topicUid: Architecture_centralized_cluster
-          - name: Geo-redundant system
-            topicUid: Architecture_geo_redundant
-          - name: Distributed multi-site system
-            topicUid: Architecture_distributed_sites
-          - name: Independent and federated DataMiner Systems
-            topicUid: Architecture_multiple_systems
-      - name: Operational choices
-        items:
-          - name: Hosting and storage
-            topicUid: Architecture_hosting_and_storage
-          - name: Hybrid deployments and temporary capacity
-            topicUid: Architecture_hybrid_cluster
-          - name: Lab, staging, and proof-of-concept environments
-            topicUid: Architecture_lab_and_staging
-      - name: Architecture design considerations
-        topicUid: Architecture_design_considerations
   - name: Stack functions
     topicUid: Overview_Stack_Functions
     items:

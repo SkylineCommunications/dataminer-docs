@@ -21,4 +21,4 @@ Other data storage solutions can be added optionally, for example to offload dat
 > If you would like to use a setup that is not described here, please contact [DataMiner Support](mailto:support@dataminer.services).
 
 > [!TIP]
-> To see how these storage options fit into complete system architectures, see [DataMiner System architectures](xref:Architecture_overview).
+> To see how these storage options fit into complete system architectures, see [DataMiner System architecture and components](xref:Overview_Architecture_and_components).

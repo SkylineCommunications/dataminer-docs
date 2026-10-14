@@ -62,6 +62,9 @@ For **Cassandra**, any number of nodes can be used, running on **Linux** machine
 
 ## Failover setups (without geo-redundancy)
 
+> [!NOTE]
+> [Failover](xref:failover) has reached End of Engineering and is being replaced by [Swarming](xref:Swarming). For new systems, use a cluster of multiple DataMiner nodes with Swarming and [Node Recovery](xref:NodeRecovery_About) instead of Failover pairs. The storage recommendations below, such as the minimum number of OpenSearch and Cassandra nodes for a hardware-redundant setup, apply in the same way.
+
 A Failover setup is similar to the previously mentioned setups. You can consider the Failover pair to be like one DMA in the DMS. This setup should at the very least consist of two DataMiner machines, one OpenSearch or Elasticsearch machine, and one Cassandra machine. However, if the Cassandra or OpenSearch/Elasticsearch machine are no longer available in this setup, you will no longer be able to start DataMiner, so this is not recommended for redundancy setups. Also, as Elasticsearch is only supported up to version 6.8, using Elasticsearch is not recommended.
 
 To be fully hardware-redundant, we recommend **at least three machines hosting OpenSearch** nodes, **two machines hosting the DataMiner Failover pair** and **three machines hosting Cassandra nodes**. More Cassandra and OpenSearch nodes can be needed depending on the load on your system. Check the [**node calculator**](https://community.dataminer.services/calculator/) for more information.
