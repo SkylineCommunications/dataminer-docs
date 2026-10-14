@@ -168,7 +168,7 @@ From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will loa
 
 #### STaaS: Certain exceptions were incorrectly wrapped [ID 46637]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
 

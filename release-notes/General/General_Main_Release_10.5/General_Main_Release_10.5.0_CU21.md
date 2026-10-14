@@ -63,6 +63,12 @@ On STaaS systems, waiting for feedback or queues to be flushed for certain data 
 
 From now on, these registrations will be cleared when they are no longer needed.
 
+#### STaaS: Certain exceptions were incorrectly wrapped [ID 46637]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
+
 #### SLAnalytics - Alarm Focus: Swarming notifications could be missed during startup [ID 46717]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->

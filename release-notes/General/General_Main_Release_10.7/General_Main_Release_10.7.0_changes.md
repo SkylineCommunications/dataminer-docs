@@ -993,12 +993,6 @@ Up to now, when you loaded a preset with both the `SPA_PRESET_DONT_APPLY_SETTING
 
 From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will load the measurement point cycle regardless of whether the `SPA_PRESET_DONT_APPLY_SETTINGS` flag is also passed.
 
-#### STaaS: Certain exceptions were incorrectly wrapped [ID 46637]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
-
 #### SLNet: Edge managers could fail to initialize when NATS was unavailable at startup [ID 46700]
 
 <!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
