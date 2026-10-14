@@ -1,6 +1,6 @@
 ---
 uid: Architecture_single_agent
-description: Explore the smallest DataMiner System footprint: one DaaS or self-managed Agent with STaaS, or local WSL databases for limited testing.
+description: "Explore the smallest DataMiner System footprint: one DaaS or self-managed Agent with STaaS, or local WSL databases for limited testing."
 keywords: architecture, single agent, small footprint, DaaS, STaaS, WSL
 ---
 

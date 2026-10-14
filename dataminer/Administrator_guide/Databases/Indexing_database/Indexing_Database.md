@@ -8,7 +8,7 @@ description: "Discover why you will need an indexing database if you set up Data
 > [!IMPORTANT]
 > Using a self-managed storage setup with indexing database is supported but not recommended. Instead, we recommend using [Storage as a Service (STaaS)](xref:STaaS).
 
-If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, you also need to set up an OpenSearch or Elasticsearch indexing database in your DMS.
+If you choose self-managed storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, use an OpenSearch indexing database on dedicated Linux machines. Elasticsearch is documented here only for existing deployments; its support ends in DataMiner 10.7.x. See [Software support lifecycles](xref:Software_support_life_cycles).
 
 An indexing database is required for many DataMiner features, including:
 
@@ -42,7 +42,7 @@ A [dedicated clustered storage setup](#dedicated-clustered-storage-setup) always
 
 In a dedicated clustered storage setup, an indexing database is **required**. Once you have set up Cassandra or a Cassandra-compatible database for the general system storage, you need to set up one of the following databases as the indexing database:
 
-- [OpenSearch](xref:OpenSearch_database) is supported from DataMiner 10.3.0/10.3.3 onwards. To install OpenSearch, first [install an OpenSearch database](xref:Installing_OpenSearch_database) (ideally on a separate Linux machine), then configure the OpenSearch settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
+- [OpenSearch](xref:OpenSearch_database) is supported from DataMiner 10.3.0/10.3.3 onwards. First [install OpenSearch on dedicated Linux machines](xref:Installing_OpenSearch_database), then configure the OpenSearch settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
 
 - [Elasticsearch](xref:Elasticsearch_database) is only supported up to Elasticsearch 6.8 and is therefore not recommended. To install Elasticsearch, first [install Elasticsearch on a separate Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine), then configure the Elasticsearch settings as detailed under [Cassandra database](xref:Configuring_the_database_settings_in_Cube#cassandra-database).
 
@@ -53,7 +53,7 @@ In a dedicated clustered storage setup, an indexing database is **required**. On
 
 While this is no longer recommended, it is still possible to use a self-managed storage setup with a Cassandra database per DataMiner Agent. In such a setup, you should also install an OpenSearch or Elasticsearch indexing database in order to get access to additional DataMiner features, including User-Defined APIs, DOM, and SRM.
 
-- [OpenSearch](xref:OpenSearch_database) is supported from DataMiner 10.3.0/10.3.3 onwards. To install OpenSearch, first [install an OpenSearch database](xref:Installing_OpenSearch_database) (ideally on a separate Linux server), and then [connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster).
+- [OpenSearch](xref:OpenSearch_database) is supported from DataMiner 10.3.0/10.3.3 onwards. First [install OpenSearch on dedicated Linux machines](xref:Installing_OpenSearch_database), then [connect your DMS to the OpenSearch database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster).
 
 - [Elasticsearch](xref:Elasticsearch_database) is only supported up to Elasticsearch 6.8 and is therefore not recommended. You can [install Elasticsearch from within DataMiner Cube](xref:Installing_Elasticsearch_via_DataMiner), or you can [install Elasticsearch on a separate Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine) like for a dedicated clustered storage setup and then [manually connect your DMA to the database](xref:Manually_Connecting_DMA_to_Elasticsearch_Cluster).
 

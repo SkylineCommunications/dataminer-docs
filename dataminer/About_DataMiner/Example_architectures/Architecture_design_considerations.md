@@ -28,7 +28,7 @@ The guidelines on this page apply to all [DataMiner System architectures](xref:O
 ## Storage
 
 - **The storage is part of the critical path.** DataMiner cannot start if its storage is not available. When you design redundancy for DataMiner nodes, also design redundancy for the storage.
-- **Design database redundancy for the selected platform.** OpenSearch requires an uneven number of nodes, at least three for redundancy. Cassandra capacity and availability depend on replication and consistency settings, not the same voting model. Follow [Dedicated clustered storage](xref:Dedicated_clustered_storage) for the recommended hardware-redundant setup.
+- **Design database redundancy for the selected platform.** Production OpenSearch clusters need at least three cluster-manager-eligible nodes and an odd number of voting nodes. Cassandra capacity and availability depend on replication and consistency settings, not the same voting model. Follow [Dedicated clustered storage](xref:Dedicated_clustered_storage) for a hardware-redundant starting point.
 - **Plan for growth**: Trending, alarms, and solutions such as EPM or MediaOps can generate large amounts of data. With self-managed storage, monitor disk usage and plan capacity ahead. STaaS scales automatically.
 - **Deprecated storage setups**: Setups with a separate database per DMA are deprecated. If your system still uses such a setup, plan a migration to [STaaS](xref:STaaS) or [dedicated clustered storage](xref:Dedicated_clustered_storage).
 
