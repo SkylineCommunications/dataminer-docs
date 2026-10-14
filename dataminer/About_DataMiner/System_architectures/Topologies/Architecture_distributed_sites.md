@@ -24,31 +24,45 @@ Reliable cluster and storage connectivity remains a prerequisite for sites hosti
 
 There are several ways to collect data from remote sites. They can be combined within one system.
 
-### DataMiner nodes at the sites
+### Example connections across sites
 
-A site can host a full DataMiner node when it needs local DataMiner functionality or workloads that are not covered by Edge. All nodes are part of one DMS and share the same storage. A full DMA is not required merely because the site is remote.
+This example combines a full DMS compute node at one site, an Edge Node at another, and a Gateway at a third. Only the full compute nodes belong to the DataMiner cluster and access shared system data storage. Edge components communicate with the DMS, not directly with its storage.
 
 ```mermaid
 flowchart TB
     subgraph Central["Central location or cloud"]
-        direction LR
-        DC[Central DataMiner nodes]
-        ST[(Shared storage:<br/>STaaS or clustered storage)]
-        DC --- ST
+        D["Central DMS compute"]
     end
-    subgraph S1["Site 1"]
-        N1[DataMiner node] --- E1[Equipment]
+    S[("Shared system data storage")]
+    P["Public APIs and cloud services"]
+    subgraph A["Site A: full DMS compute"]
+        DA["DMS compute node"]
+        EA["Local equipment"]
+        DA <-->|"Local network / interface"| EA
     end
-    subgraph S2["Site 2"]
-        N2[DataMiner node] --- E2[Equipment]
+    subgraph B["Site B: local integration execution"]
+        N["Edge Node<br/>Compatible integrations and buffering"]
+        EB["Local equipment"]
+        N <-->|"Local network / interface"| EB
     end
-    subgraph S3["Site 3"]
-        N3[DataMiner node] --- E3[Equipment]
+    subgraph C["Site C: centrally running integrations"]
+        G["Edge Gateway"]
+        EC["Local equipment"]
+        G <-->|"Local network"| EC
     end
-    S1 <-- WAN --> Central
-    S2 <-- WAN --> Central
-    S3 <-- WAN --> Central
+    D <-->|"Cluster communication over WAN / VPN"| DA
+    D <-->|"Storage connection"| S
+    DA <-->|"Storage connection from this site"| S
+    N <-->|"Integration management and collected data<br/>Direct connection or dataminer.services"| D
+    D <-->|"Edge tunnel"| G
+    D <-->|"HTTPS / API calls"| P
 ```
+
+For STaaS, both full compute locations need outbound HTTPS access, directly or via a supported proxy. For self-managed databases, both need the required database connections. A separate VPN path can replace the Gateway path for reachable equipment; see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources).
+
+### DataMiner nodes at the sites
+
+A site can host a full DataMiner node when it needs local DataMiner functionality or workloads that are not covered by Edge. All nodes are part of one DMS and share the same storage. A full DMA is not required merely because the site is remote.
 
 - Polling traffic stays within the site, which reduces WAN traffic and allows local interfaces such as serial connections.
 - With [Storage as a Service](xref:STaaS), each site needs outbound internet access. With self-managed storage, each node needs a reliable, low-latency connection to the central database clusters.

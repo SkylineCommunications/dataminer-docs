@@ -16,20 +16,32 @@ Recovery requires more than geographically separated machines. Remaining compute
 
 ## Compute and storage placement
 
+The following example uses STaaS and two compute locations in one DMS. Each location has its own storage connection. Cross-site equipment access is shown explicitly because moving a workload only helps when the recovery compute can still reach that workload's data sources.
+
 ```mermaid
-flowchart LR
+flowchart TB
     subgraph A["Location A"]
-        DA[DataMiner nodes]
+        DA["DMS compute nodes"]
+        EA["Equipment at site A"]
+        DA <-->|"Local network or site connection"| EA
     end
     subgraph B["Location B"]
-        DB[DataMiner nodes with recovery capacity]
+        DB["DMS compute nodes<br/>With recovery capacity"]
+        EB["Equipment at site B"]
+        DB <-->|"Local network or site connection"| EB
     end
-    DA <-- Cluster connectivity --> DB
-    DA --> S[(Storage designed for required failure domains)]
-    DB --> S
-    DA --> E[Managed equipment and services]
-    DB --> E
+    S[("STaaS<br/>ZRS or optional GRS")]
+    P["Public APIs and cloud services"]
+    DA <-->|"Cluster communication"| DB
+    DA <-->|"HTTPS storage access"| S
+    DB <-->|"HTTPS storage access"| S
+    DA <-->|"Recovery access: WAN / VPN / Edge"| EB
+    DB <-->|"Recovery access: WAN / VPN / Edge"| EA
+    DA <-->|"HTTPS / API calls"| P
+    DB <-->|"HTTPS / API calls"| P
 ```
+
+The two location boxes do not imply a two-node cluster: size and place the nodes for the selected recovery mechanism. Equipment at a failed site may itself be unavailable; the recovery paths apply only to sources that remain operational and reachable.
 
 Place DMS compute at both locations and use [Swarming](xref:Swarming) for supported workload movement and recovery. Swarming requires spare capacity and reachable data sources; global outage detection in Node Recovery also has cluster-size and leader-election prerequisites. Geographical placement alone does not guarantee automatic recovery.
 
@@ -42,6 +54,40 @@ GRS does not provide a replacement DMA or reconnect managed equipment. Nodes at 
 ### With self-managed databases
 
 For a geo-redundant on-premises deployment, configure Cassandra with a data center per site and an appropriate NetworkTopologyStrategy. OpenSearch uses data nodes at both sites and a non-data tie-breaker node at a third location, with shard allocation awareness. The tie-breaker provides an additional voting location so the cluster can retain a majority after losing a site.
+
+This storage variation replaces STaaS in the previous example. Both compute locations need connections to the database nodes they use, including the paths required during recovery. The drawing groups database nodes by site and does not specify node counts.
+
+```mermaid
+flowchart TB
+    subgraph A["Location A"]
+        DA["DMS compute"]
+        CA[("Cassandra data center A")]
+        OA[("OpenSearch data nodes A")]
+        DA <-->|"Database connections"| CA
+        DA <-->|"Database connections"| OA
+    end
+    subgraph B["Location B"]
+        DB["DMS compute"]
+        CB[("Cassandra data center B")]
+        OB[("OpenSearch data nodes B")]
+        DB <-->|"Database connections"| CB
+        DB <-->|"Database connections"| OB
+    end
+    subgraph Third["Third voting location"]
+        T["OpenSearch tie-breaker<br/>No stored data"]
+    end
+    DA <-->|"Cluster communication"| DB
+    CA <-->|"Cassandra replication"| CB
+    OA <-->|"OpenSearch cluster communication"| OB
+    OA <-->|"OpenSearch voting / cluster communication"| T
+    OB <-->|"OpenSearch voting / cluster communication"| T
+    DA <-->|"Cross-site database connections"| CB
+    DA <-->|"Cross-site database connections"| OB
+    DB <-->|"Cross-site database connections"| CA
+    DB <-->|"Cross-site database connections"| OA
+```
+
+The tie-breaker is not another database containing a copy of operational data. All database components run on Linux; replication, shard placement, voting, and network requirements must follow the storage configuration guidance.
 
 This arrangement gives control over data placement but makes database maintenance and network partitions part of your recovery design. See [Dedicated clustered storage](xref:Dedicated_clustered_storage) for the database placement and configuration guidance.
 

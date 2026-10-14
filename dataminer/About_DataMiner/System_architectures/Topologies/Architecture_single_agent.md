@@ -26,16 +26,56 @@ The one-box footprint is a deployment choice, not a sizing guarantee. Size the w
 
 ## Deployment variations
 
+### DaaS with STaaS
+
+The DMS has one cloud-hosted compute machine. Private equipment can be reached through a VPN or Edge; equipment does not need to be publicly accessible.
+
 ```mermaid
-flowchart LR
-    A[One DaaS node] --> S[(STaaS)]
-    B[Self-managed one-box DMS] --> T[(STaaS)]
-    subgraph Local["One Windows machine: limited non-production use"]
-        C[One DMA] --> W[(Cassandra and OpenSearch on WSL)]
+flowchart TB
+    subgraph Cloud["Cloud: one-box DMS"]
+        D["One DaaS compute machine"]
     end
+    S[("STaaS: managed storage")]
+    P["Public APIs and cloud services"]
+    subgraph Site["Private site network"]
+        G["Edge Gateway"]
+        E["Private equipment"]
+    end
+    D <-->|"Storage access over HTTPS"| S
+    D <-->|"HTTPS / API calls"| P
+    D <-->|"Option 1: site-to-site VPN"| E
+    D <-->|"Option 2: Edge tunnel"| G
+    G <-->|"Local network"| E
 ```
 
-Choose one of these variations:
+The VPN and Gateway paths are alternatives, not requirements to deploy both. An Edge Node can instead run compatible integrations locally; see the [distributed topology](xref:Architecture_distributed_sites#example-connections-across-sites).
+
+### Self-managed one-box DMS
+
+The compute machine is in your own network. Choose STaaS or, for limited non-production use, local databases on Linux through WSL. Dashed lines below represent **alternative storage choices**, not two storage platforms used by the same DMS.
+
+```mermaid
+flowchart TB
+    subgraph Site["Your site network"]
+        subgraph Box["One Windows compute machine"]
+            D["DMS compute: one Agent"]
+            W[("Local Cassandra and OpenSearch<br/>on Linux through WSL<br/>Non-production only")]
+        end
+        L["Equipment in the same network"]
+    end
+    S[("STaaS: managed storage")]
+    R["Equipment in another private network"]
+    P["Public APIs and cloud services"]
+    D <-->|"Local network / local interface"| L
+    D <-->|"WAN / VPN"| R
+    D <-->|"HTTPS / API calls"| P
+    D -.->|"Storage option: outbound HTTPS<br/>directly or via a proxy"| S
+    D -.->|"Storage option: local access"| W
+```
+
+For remote sources not reachable by WAN or VPN, Edge provides another connection option. The local-storage variation keeps compute and databases in one box, while STaaS keeps the local footprint to compute only.
+
+### Choosing a variation
 
 - **DaaS with STaaS**: Skyline operates the compute infrastructure and storage. You configure the system and provide a supported path to your data sources.
 - **Self-managed DMS with STaaS**: You operate one Windows compute machine and Skyline operates storage. This suits an existing server platform or a requirement to run the DMS locally. Outbound HTTPS to STaaS is required.

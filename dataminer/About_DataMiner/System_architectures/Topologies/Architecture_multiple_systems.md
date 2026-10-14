@@ -26,22 +26,40 @@ Any of the following can justify independent systems; they are alternatives, not
 
 ## Architecture
 
+This example shows two independently operated DMSs and an optional central DMS. Each has its **own system data storage**; federation shares selected operational information, not a common database or a single compute cluster.
+
 ```mermaid
 flowchart TB
-    subgraph R1["Region or business unit 1"]
-        direction LR
-        A1[DataMiner nodes] --- SA[(Storage)]
+    subgraph R1["Region 1: independent DMS"]
+        A["DMS compute"]
+        SA[("System 1 storage")]
+        EA["Local equipment"]
+        A <-->|"Storage access"| SA
+        A <-->|"Local network"| EA
     end
-    subgraph R2["Region or business unit 2"]
-        direction LR
-        B1[DataMiner nodes] --- SB[(Storage)]
+    subgraph R2["Region 2: independent DMS"]
+        B["DMS compute"]
+        SB[("System 2 storage")]
+        G["Edge Gateway"]
+        EB["Remote private equipment"]
+        B <-->|"Storage access"| SB
+        B <-->|"Edge tunnel"| G
+        G <-->|"Remote site's local network"| EB
     end
-    subgraph Central["Optional central system"]
-        C1[DataMiner nodes with<br/>replicated elements]
+    subgraph Central["Optional central DMS: federated view"]
+        C["DMS compute<br/>Selected status, alarms, and values"]
+        SC[("Central system storage")]
+        C <-->|"Storage access"| SC
     end
-    R1 -. Element replication .-> Central
-    R2 -. Element replication .-> Central
+    P["Public APIs and cloud services"]
+    B <-->|"HTTPS / API calls"| P
+    A -.->|"Selected data: replication / API / connector"| C
+    B -.->|"Selected data: replication / API / connector"| C
 ```
+
+Solid lines show operational connections within each system or to its sources. Dashed arrows show the **direction of selected data toward the central view**, not who initiates a network connection. For element replication, the central DMS must be able to reach the source DMS. Without these optional data-sharing paths, the systems remain independent.
+
+Storage access means outbound HTTPS for STaaS or database connections for self-managed storage. Each DMS can independently select VPN, Edge, direct local access, or public APIs for its sources. Network boundaries must permit any selected federation mechanism; a truly air-gapped system cannot share live data across that boundary.
 
 Each system can use a [single agent](xref:Architecture_single_agent), a [centralized cluster](xref:Architecture_centralized_cluster), or a [distributed topology](xref:Architecture_distributed_sites), and can add geo-redundancy as needed. Choose [hosting and storage](xref:Architecture_hosting_and_storage) per system: one region may use DaaS and STaaS, while an isolated operational network uses on-premises compute and databases.
 
