@@ -46,7 +46,7 @@ The cost of **Cost & Billing** is determined primarily by the number of **calcul
 | SaaS | Yes | Yes | Yes |
 | **Unmanaged Objects** *(32 × events × retention) + financial records* | 389,000 | 1,940,000 | 3,890,000 |
 | **Actions** *calculations + finalizations + (synchronizations × 2)* | 3,062 | 15,062 | 30,062 |
-| **Information Events** *2 x (calculations x 3) + finalizations + (synchronizations × 2)* | 7,062 | 35,062 | 70,062 |
+| **Information Events** (calculations x 3) + finalizations + (synchronizations x 4) | 7,124 | 35,124 | 70,124 |
 | **Hosted Managed Objects** | 1,000,000 | 1,000,000 | 1,000,000 |
 
 For sizing purposes, the following assumptions were used:
