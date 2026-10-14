@@ -23,6 +23,9 @@ Each of the different hosting possibilities has its own strengths in term of red
 
 You can also [combine these two options](xref:Hybrid_clusters) within the same DataMiner cluster.
 
+> [!TIP]
+> For reference architectures that show how these deployment models are used in practice, including their pros and cons, see [DataMiner System architectures](xref:Architecture_overview).
+
 > [!NOTE]
 > Exceptionally, instead of going for a standard DataMiner deployment model, you can also host both the DataMiner nodes and the storage nodes yourself. However, note that this is a deviation from our advised deployment path, and it is a complex setup that we do not recommend and that will involve additional costs (e.g., procurement of additional hardware for hosting the databases and associated running and maintenance costs, mandatory Skyline Communications engineering services for the deployment and configuration of the database cluster, as well as for database-related tickets, etc.). See [Self-managed DataMiner nodes and storage nodes](xref:DM_and_storage_selfhosted).
 >

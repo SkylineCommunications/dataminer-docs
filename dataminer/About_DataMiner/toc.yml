@@ -28,6 +28,33 @@ items:
         topicUid: DM_and_storage_selfhosted
       - name: Hybrid clusters
         topicUid: Hybrid_clusters
+  - name: System architectures
+    topicUid: Architecture_overview
+    items:
+      - name: Building blocks of a DataMiner System
+        topicUid: Architecture_building_blocks
+      - name: Reference architectures
+        items:
+          - name: Cloud-hosted system
+            topicUid: Architecture_cloud_hosted
+          - name: Self-managed nodes with Storage as a Service
+            topicUid: Architecture_self_managed_staas
+          - name: Hybrid cluster
+            topicUid: Architecture_hybrid_cluster
+          - name: On-premises system with self-managed storage
+            topicUid: Architecture_on_premises
+          - name: Geo-redundant on-premises system
+            topicUid: Architecture_geo_redundant
+          - name: Distributed multi-site system
+            topicUid: Architecture_distributed_sites
+          - name: Multiple independent DataMiner Systems
+            topicUid: Architecture_multiple_systems
+          - name: Lab, staging, and proof-of-concept systems
+            topicUid: Architecture_lab_and_staging
+      - name: Architectures by market segment
+        topicUid: Architecture_market_segments
+      - name: Architecture design considerations
+        topicUid: Architecture_design_considerations
   - name: Stack functions
     topicUid: Overview_Stack_Functions
     items:
