@@ -113,6 +113,7 @@ Below you can find an overview of the main features that have been added to Data
 | [Failover with shared hostname](xref:Failover_configuration_in_Cube) | DataMiner 10.1.8/10.2.0 |
 | GQI: [Ad hoc data sources](xref:Get_ad_hoc_data) | DataMiner 10.2.4/10.3.0 <!-- [ID 32656] [ID 32659] [ID 32930] -->|
 | GQI: [Alarms data source](xref:Get_alarms) | DataMiner 10.1.9/10.2.0 <!-- [ID 30320] --> |
+| GQI: [CPU usage limits](xref:GQI_DxM#cpu-usage-limits) | DataMiner web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 <!-- [ID 46509] --> |
 | GQI: [Custom operator](xref:GQI_Custom_Operator) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37840] --><br>DataMiner 10.2.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface) |
 | GQI: [Custom sort order](xref:GQI_Redirect_Sort_Tutorial) | DataMiner 10.4.5/10.5.0 <!-- [ID 39136] -->|
 | GQI: [DCF connections data source](xref:Get_DCF_connections) | DataMiner 10.1.3/10.2.0 <!-- [ID 29703] -->|
@@ -127,8 +128,10 @@ Below you can find an overview of the main features that have been added to Data
 | GQI: [Sending/receiving DMS messages](xref:GQI_GQIDMS) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35701] -->|
 | GQI: [Services in GQI extensions](xref:GQI_Extensions_Services) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 <!-- [ID 45635] --> |
 | GQI: [Trend data patterns](xref:Get_trend_data_patterns), [Trend data pattern events](xref:Get_trend_data_pattern_events), and [behavioral change events](xref:Get_behavioral_change_events) data sources | DataMiner web 10.3.3/10.4.0 <!-- [ID 34747] [ID 35027] [ID 34965] [ID 35058] -->|
+| GQI: [Using credentials in GQI extensions](xref:GQI_Extensions_Credentials) | DataMiner web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 <!-- [ID 46279] --> |
 | GQI: [View relations data source](xref:Get_view_relations) | DataMiner 10.1.4/10.2.0 <!-- [ID 28797] [ID 28877] -->|
 | [GQI DxM](xref:GQI_DxM) | DataMiner web 10.5.0 [CU1]/10.5.4 |
+| Installation: [Installing DataMiner from the command line](xref:Unattended_DM_installation#unattended-installation) | DataMiner 10.6.0 [CU8]/10.6.11 <!-- [ID 45554] --> |
 | [Low-Code Apps](xref:Application_framework) | DataMiner 10.2.5/10.3.0<br>DataMiner 10.0.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#applications) <!-- [ID 33040] -->|
 | Low-Code Apps: [*Change variable* actions](xref:LowCodeApps_event_config#changing-a-variable) | DataMiner web 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1<!-- [ID 41253] [ID 41324] --> |
 | Low-Code Apps: [*Copy to clipboard* action](xref:LowCodeApps_event_config#copying-text-to-the-clipboard) | DataMiner web 10.4.0 [CU11]/10.5.2<!-- [ID 41729]-->|
