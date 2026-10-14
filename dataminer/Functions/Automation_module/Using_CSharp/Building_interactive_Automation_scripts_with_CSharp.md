@@ -136,7 +136,7 @@ uib2.AppendBlock(blockButtonClose);
 engine.ShowUI(uib2);
 ```
 
-## Using the grid layout in web apps
+## Using the grid layout in web apps to control the tab behavior
 
 From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46602 / RN 46716 -->, you can set the [WebUILayout](xref:Skyline.DataMiner.Automation.UIBuilder.WebUILayout) property of a UIBuilder to `WebUILayout.Grid` to align keyboard navigation with the workflow of your dialog box, without changing how the dialog box looks. For more information on the available layout types, see [WebUILayout](xref:Skyline.DataMiner.Automation.WebUILayout). For versions prior to this, the table layout is used.
 
