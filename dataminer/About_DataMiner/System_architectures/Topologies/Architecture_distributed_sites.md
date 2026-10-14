@@ -26,22 +26,42 @@ There are several ways to collect data from remote sites. They can be combined w
 
 ### Example connections across sites
 
-This example combines a full DMS compute node at one site, an Edge Node at another, and a Gateway at a third. Only the full compute nodes belong to the DataMiner cluster and access shared system data storage. Edge components communicate with the DMS, not directly with its storage.
+The following examples separate distributed DMAs from Edge-based collection for clarity. Both use STaaS; self-managed storage is another deployment choice with different database connectivity requirements.
+
+#### DMAs at multiple sites
+
+These DMAs belong to one DMS. The unlabelled arrow indicates cluster communication; the sites are connected over a WAN or VPN. Each DMA accesses shared storage independently and polls its local equipment.
 
 ```mermaid
 flowchart TB
     subgraph Central["Central location or cloud"]
-        D["Central DMS compute"]
+        D["DMA 1"]
     end
-    S[("Shared system data storage")]
+    S[("STaaS")]
     P["Public APIs and cloud services"]
-    subgraph A["Site A: full DMS compute"]
-        DA["DMS compute node"]
+    subgraph A["Remote site network"]
+        DA["DMA 2"]
         EA["Local equipment"]
         DA <-->|"Local network / interface"| EA
     end
+    D <--> DA
+    D <-->|"HTTPS"| S
+    DA <-->|"HTTPS"| S
+    D <-->|"HTTPS / API calls"| P
+```
+
+#### Remote collection through Edge
+
+This example uses Edge only for remote data-source access. Edge components are not DMAs and do not access system data storage directly. The Edge Node runs compatible integrations locally, while the Gateway provides a tunnel for centrally running integrations.
+
+```mermaid
+flowchart TB
+    subgraph Central["Central DMS"]
+        D["DMA"]
+    end
+    S[("STaaS")]
     subgraph B["Site B: local integration execution"]
-        N["Edge Node<br/>Compatible integrations and buffering"]
+        N["Edge Node"]
         EB["Local equipment"]
         N <-->|"Local network / interface"| EB
     end
@@ -50,15 +70,12 @@ flowchart TB
         EC["Local equipment"]
         G <-->|"Local network"| EC
     end
-    D <-->|"Cluster communication over WAN / VPN"| DA
-    D <-->|"Storage connection"| S
-    DA <-->|"Storage connection from this site"| S
-    N <-->|"Integration management and collected data<br/>Direct connection or dataminer.services"| D
+    D <-->|"HTTPS"| S
+    N <-->|"Integration management and data"| D
     D <-->|"Edge tunnel"| G
-    D <-->|"HTTPS / API calls"| P
 ```
 
-For STaaS, both full compute locations need outbound HTTPS access, directly or via a supported proxy. For self-managed databases, both need the required database connections. A separate VPN path can replace the Gateway path for reachable equipment; see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources).
+STaaS requires outbound HTTPS from each DMA, directly or via a supported proxy. Edge Nodes can connect directly or through dataminer.services. For VPN setup, see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources). A real deployment can combine these collection approaches; they are drawn separately for readability.
 
 ### DataMiner nodes at the sites
 

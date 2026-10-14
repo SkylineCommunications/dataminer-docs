@@ -33,10 +33,10 @@ All nodes use STaaS; hybrid clusters are not supported with self-managed databas
 ```mermaid
 flowchart LR
     subgraph Cloud["DaaS: permanent or temporary capacity"]
-        D[DaaS nodes] --> S[(STaaS)]
+        D[DMAs hosted through DaaS] --> S[(STaaS)]
     end
     subgraph Site["Self-managed infrastructure"]
-        A[DataMiner nodes] --> E[Local equipment]
+        A[Self-managed DMAs] --> E[Local equipment]
     end
     A <-- Site-to-site VPN --> D
     A -- HTTPS --> S

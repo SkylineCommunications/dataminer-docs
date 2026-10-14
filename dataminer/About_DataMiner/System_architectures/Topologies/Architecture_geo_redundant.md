@@ -16,27 +16,27 @@ Recovery requires more than geographically separated machines. Remaining compute
 
 ## Compute and storage placement
 
-The following example uses STaaS and two compute locations in one DMS. Each location has its own storage connection. Cross-site equipment access is shown explicitly because moving a workload only helps when the recovery compute can still reach that workload's data sources.
+The following example uses STaaS and DMAs at two locations in one DMS. Each location has its own storage connection. The unlabelled arrow between DMAs indicates cluster communication. This drawing uses VPN connectivity for cross-site equipment access: moving a workload only helps when the recovery DMAs can still reach its data sources.
 
 ```mermaid
 flowchart TB
     subgraph A["Location A"]
-        DA["DMS compute nodes"]
+        DA["DMAs"]
         EA["Equipment at site A"]
         DA <-->|"Local network or site connection"| EA
     end
     subgraph B["Location B"]
-        DB["DMS compute nodes<br/>With recovery capacity"]
+        DB["DMAs<br/>With recovery capacity"]
         EB["Equipment at site B"]
         DB <-->|"Local network or site connection"| EB
     end
     S[("STaaS<br/>ZRS or optional GRS")]
     P["Public APIs and cloud services"]
-    DA <-->|"Cluster communication"| DB
+    DA <--> DB
     DA <-->|"HTTPS storage access"| S
     DB <-->|"HTTPS storage access"| S
-    DA <-->|"Recovery access: WAN / VPN / Edge"| EB
-    DB <-->|"Recovery access: WAN / VPN / Edge"| EA
+    DA <-->|"Recovery access over VPN"| EB
+    DB <-->|"Recovery access over VPN"| EA
     DA <-->|"HTTPS / API calls"| P
     DB <-->|"HTTPS / API calls"| P
 ```
@@ -60,14 +60,14 @@ This storage variation replaces STaaS in the previous example. Both compute loca
 ```mermaid
 flowchart TB
     subgraph A["Location A"]
-        DA["DMS compute"]
+        DA["DMAs"]
         CA[("Cassandra data center A")]
         OA[("OpenSearch data nodes A")]
         DA <-->|"Database connections"| CA
         DA <-->|"Database connections"| OA
     end
     subgraph B["Location B"]
-        DB["DMS compute"]
+        DB["DMAs"]
         CB[("Cassandra data center B")]
         OB[("OpenSearch data nodes B")]
         DB <-->|"Database connections"| CB
@@ -76,18 +76,14 @@ flowchart TB
     subgraph Third["Third voting location"]
         T["OpenSearch tie-breaker<br/>No stored data"]
     end
-    DA <-->|"Cluster communication"| DB
+    DA <--> DB
     CA <-->|"Cassandra replication"| CB
-    OA <-->|"OpenSearch cluster communication"| OB
-    OA <-->|"OpenSearch voting / cluster communication"| T
-    OB <-->|"OpenSearch voting / cluster communication"| T
-    DA <-->|"Cross-site database connections"| CB
-    DA <-->|"Cross-site database connections"| OB
-    DB <-->|"Cross-site database connections"| CA
-    DB <-->|"Cross-site database connections"| OA
+    OA <--> OB
+    OA <--> T
+    OB <--> T
 ```
 
-The tie-breaker is not another database containing a copy of operational data. All database components run on Linux; replication, shard placement, voting, and network requirements must follow the storage configuration guidance.
+Unlabelled links between OpenSearch components indicate database cluster communication and voting. Cross-site DMA-to-database paths are omitted to keep the drawing readable, but must be available where required by the recovery design. The tie-breaker is not another database containing a copy of operational data. All database components run on Linux; replication, shard placement, voting, and network requirements must follow the storage configuration guidance.
 
 This arrangement gives control over data placement but makes database maintenance and network partitions part of your recovery design. See [Dedicated clustered storage](xref:Dedicated_clustered_storage) for the database placement and configuration guidance.
 

@@ -33,7 +33,7 @@ The DMS has one cloud-hosted compute machine. Private equipment can be reached t
 ```mermaid
 flowchart TB
     subgraph Cloud["Cloud: one-box DMS"]
-        D["One DaaS compute machine"]
+        D["DMA"]
     end
     S[("STaaS: managed storage")]
     P["Public APIs and cloud services"]
@@ -43,23 +43,21 @@ flowchart TB
     end
     D <-->|"Storage access over HTTPS"| S
     D <-->|"HTTPS / API calls"| P
-    D <-->|"Option 1: site-to-site VPN"| E
-    D <-->|"Option 2: Edge tunnel"| G
+    D <-->|"Edge tunnel"| G
     G <-->|"Local network"| E
 ```
 
-The VPN and Gateway paths are alternatives, not requirements to deploy both. An Edge Node can instead run compatible integrations locally; see the [distributed topology](xref:Architecture_distributed_sites#example-connections-across-sites).
+This example uses an Edge Gateway for visual clarity. A site-to-site VPN is another option. An Edge Node can instead run compatible integrations locally; see the [distributed topology](xref:Architecture_distributed_sites#example-connections-across-sites).
 
-### Self-managed one-box DMS
+### Self-managed one-box DMS with STaaS
 
-The compute machine is in your own network. Choose STaaS or, for limited non-production use, local databases on Linux through WSL. Dashed lines below represent **alternative storage choices**, not two storage platforms used by the same DMS.
+The DMA is in your own network and uses STaaS. This example uses a VPN to reach another private network.
 
 ```mermaid
 flowchart TB
     subgraph Site["Your site network"]
-        subgraph Box["One Windows compute machine"]
-            D["DMS compute: one Agent"]
-            W[("Local Cassandra and OpenSearch<br/>on Linux through WSL<br/>Non-production only")]
+        subgraph Box["One Windows machine: DMS"]
+            D["DMA"]
         end
         L["Equipment in the same network"]
     end
@@ -69,11 +67,29 @@ flowchart TB
     D <-->|"Local network / local interface"| L
     D <-->|"WAN / VPN"| R
     D <-->|"HTTPS / API calls"| P
-    D -.->|"Storage option: outbound HTTPS<br/>directly or via a proxy"| S
-    D -.->|"Storage option: local access"| W
+    D <-->|"HTTPS: directly or via a proxy"| S
 ```
 
-For remote sources not reachable by WAN or VPN, Edge provides another connection option. The local-storage variation keeps compute and databases in one box, while STaaS keeps the local footprint to compute only.
+STaaS keeps the local footprint to one DMA, without local database servers.
+
+### Self-managed one-box DMS with local WSL databases
+
+For limited non-production use, both the DMA and Linux databases run on one Windows machine. This example shows local equipment only; remote access can be added if needed.
+
+```mermaid
+flowchart TB
+    subgraph Site["Your site network"]
+        subgraph Box["One Windows machine: DMS"]
+            D["DMA"]
+            W[("Cassandra and OpenSearch<br/>Linux on WSL")]
+            D <-->|"Local database access"| W
+        end
+        L["Local equipment"]
+    end
+    D <-->|"Local network / interface"| L
+```
+
+Unlike STaaS, this storage shares the machine's resources and failure domain with the DMA. This variation is for limited non-production use, not normal production.
 
 ### Choosing a variation
 

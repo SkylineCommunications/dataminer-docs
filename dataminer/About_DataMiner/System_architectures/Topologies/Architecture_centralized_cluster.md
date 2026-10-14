@@ -26,36 +26,61 @@ For DaaS access to private sources, see [Connecting to private data sources](xre
 
 ## Arrangement
 
-This example shows one DMS with centrally hosted compute and several ways to reach data sources. The three compute nodes illustrate a cluster, not a fixed minimum for every deployment. Dashed storage paths are alternatives: a DaaS DMS uses STaaS, while self-managed compute can use either storage option. Every compute node needs access to the chosen shared storage.
+Each example shows one DMS consisting of three DMAs. Arrows between DMAs indicate cluster communication without repeating the label. Three DMAs illustrate a cluster, not a fixed minimum for every deployment.
+
+### STaaS with Edge connectivity
+
+This example can use DaaS or self-managed DMAs. Each DMA accesses the same STaaS storage; an Edge Gateway connects centrally running integrations to private equipment.
 
 ```mermaid
 flowchart TB
     subgraph DMS["One DMS: central compute location or cloud region"]
-        A["Compute node 1"]
-        B["Compute node 2"]
-        C["Compute node 3"]
-        A <-->|"Cluster communication"| B
-        B <-->|"Cluster communication"| C
-        A <-->|"Cluster communication"| C
+        A["DMA 1"]
+        B["DMA 2"]
+        C["DMA 3"]
+        A <--> B
+        B <--> C
+        A <--> C
     end
     S[("STaaS")]
-    DB[("Self-managed Cassandra and OpenSearch<br/>Dedicated Linux machines")]
-    Local["Equipment in the same network<br/>Self-managed deployment"]
     Public["Public APIs and cloud services"]
     subgraph Remote["Remote private network"]
         G["Edge Gateway"]
         E["Private equipment"]
     end
-    DMS -.->|"Storage option: HTTPS<br/>from every compute node"| S
-    DMS -.->|"Storage option: database connections<br/>from every compute node"| DB
-    DMS <-->|"Local network"| Local
+    DMS <-->|"HTTPS from every DMA"| S
     DMS <-->|"HTTPS / API calls"| Public
-    DMS <-->|"Option 1: WAN / site-to-site VPN"| E
-    DMS <-->|"Option 2: Edge tunnel"| G
+    DMS <-->|"Edge tunnel"| G
     G <-->|"Local network"| E
 ```
 
-VPN and Edge Gateway paths represent alternative ways to reach remote equipment. The Gateway tunnels communication for integrations running on the central DMS; it is not a full DataMiner compute node. Use an Edge Node where compatible integrations should execute at the site instead.
+The Gateway is not a DMA. Use an Edge Node where compatible integrations should execute at the site instead.
+
+### Self-managed storage with VPN connectivity
+
+This example places self-managed DMAs and dedicated Linux database machines in the same site network. Remote private equipment is reached through a VPN.
+
+```mermaid
+flowchart TB
+    subgraph Site["Central site network"]
+        subgraph DMS["One DMS"]
+            A["DMA 1"]
+            B["DMA 2"]
+            C["DMA 3"]
+            A <--> B
+            B <--> C
+            A <--> C
+        end
+        DB[("Cassandra and OpenSearch<br/>Dedicated Linux machines")]
+        Local["Local equipment"]
+    end
+    Remote["Equipment in a remote private network"]
+    DMS <-->|"Database access from every DMA"| DB
+    DMS <-->|"Local network"| Local
+    DMS <-->|"Site-to-site VPN"| Remote
+```
+
+Storage and connectivity are independent choices: STaaS can also be used with a VPN, and self-managed storage with Edge. Each example uses one of each to keep the drawing clear.
 
 Choose [hosting and storage](xref:Architecture_hosting_and_storage) independently of this arrangement. DaaS uses STaaS. Self-managed nodes can use STaaS or dedicated clustered storage, on premises or in a cloud environment.
 
