@@ -22,7 +22,7 @@ The [Swarming](xref:Swarming) feature is not available in DataMiner Systems that
 >
 > In the setups described below, a "machine" or "compute node" can be a virtual machine or a physical server. Every machine must meet the minimum requirements detailed in [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). In the images illustrating the setups, the dark-blue line indicates a cluster of nodes, the gray line indicates a compute node, and the light-blue line indicates a regional boundary (high latency).
 
-Run Cassandra and OpenSearch on dedicated Linux machines, separately from the Windows machines hosting DataMiner. Native Windows installations of OpenSearch are not recommended. Cassandra is no longer supported on Windows starting from Cassandra 4.x and DataMiner 10.4.x.
+For Cassandra and OpenSearch, we recommend dedicated Ubuntu LTS machines, using an operating system version supported by the database release, separately from the machines hosting DataMiner.
 
 ![Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine](~/dataminer/images/Development-setup-DataMiner-Cassandra-and-OpenSearch.png)<br>
 *Development setup: DataMiner, Cassandra, and OpenSearch hosted on the same machine*

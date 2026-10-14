@@ -11,7 +11,7 @@ description: "Learn how to size and protect self-managed Cassandra and OpenSearc
 
 Dedicated clustered storage uses one Cassandra cluster and one OpenSearch cluster for the entire DataMiner System (DMS). Unlike storage per DataMiner Agent (DMA), the databases can be scaled for the DMS as a whole, independently of the number of DMAs. This architecture supports [Swarming](xref:Swarming).
 
-Host Cassandra and OpenSearch on **dedicated Linux machines**, on premises or in a cloud environment. DataMiner itself runs on separate Windows machines. A machine can be a physical server or a virtual machine. All machines must meet the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
+For Cassandra and OpenSearch, we recommend **dedicated Ubuntu LTS machines**, using an operating system version supported by the database release, on premises or in a cloud environment. DataMiner itself runs on separate Windows machines. A machine can be a physical server or a virtual machine. All machines must meet the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements).
 
 You are responsible for database installation, capacity, monitoring, upgrades, redundancy, and backups. For the configuration procedure, see [Configuring dedicated clustered storage](xref:Configuring_dedicated_clustered_storage).
 
@@ -21,7 +21,7 @@ A one-DMA DMS still uses separate Cassandra and OpenSearch clusters. A single DM
 
 ![One DMA with Cassandra and OpenSearch hosted on dedicated machines](~/dataminer/images/Recommended-Setup-1.png)
 
-For limited test, development, and staging environments, the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) can run Cassandra and OpenSearch locally on Linux through Windows Subsystem for Linux (WSL). This is not a recommendation to install either database natively on Windows, and this setup is not intended for normal production use. See [One-box system](xref:Architecture_single_agent) for the complete architecture and alternatives using STaaS.
+For limited test, development, and staging environments, the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) can run Cassandra and OpenSearch locally on Linux through Windows Subsystem for Linux (WSL). This setup is not intended for normal production use. See [One-box system](xref:Architecture_single_agent) for the complete architecture and alternatives using STaaS.
 
 ![Development setup with DataMiner and local databases on the same host](~/dataminer/images/Development-setup-DataMiner-Cassandra-and-OpenSearch.png)
 

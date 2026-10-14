@@ -19,7 +19,7 @@ DMAs can be distributed across the operational environment to increase the overa
 
 Depending on the application, licensing is available as **server-based licenses**, i.e., one license per DMA in the DataMiner System, and system-wide **volume-based licenses**, irrespective of the number of DMAs needed.
 
-For existing deployments, Failover is available for server-based licenses, excluding for DataMiner Probes. Failover has reached [End of Engineering](xref:Software_support_life_cycles); for new systems, use the [current redundancy guidance](xref:Overview_Architecture_and_components#redundancy).
+Failover is available for server-based licenses, excluding for DataMiner Probes.
 
 | Application | License | Available capacity tiers |
 |--|--|--|

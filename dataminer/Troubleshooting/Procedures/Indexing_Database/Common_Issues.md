@@ -192,7 +192,7 @@ openssl verify -verbose -CAfile [Path To Your RootCA] [Path To Your Admin Certif
 
 ## Elasticsearch/OpenSearch does not start up after an upgrade or disk cleanup (on Windows)
 
-This procedure is for existing native Windows installations only. For new OpenSearch deployments, use dedicated Linux machines as described in [Installing an OpenSearch database](xref:Installing_OpenSearch_database).
+For new OpenSearch deployments, we recommend Ubuntu LTS as described in [Installing an OpenSearch database](xref:Installing_OpenSearch_database).
 
 If Elasticsearch or OpenSearch are installed on a Windows system, after an operating system upgrade (e.g., upgrade from Windows Server 2019 to 2022), it can occur that the Elasticsearch or OpenSearch service no longer starts up. This same problem can also occur after automated disk cleanup.
 

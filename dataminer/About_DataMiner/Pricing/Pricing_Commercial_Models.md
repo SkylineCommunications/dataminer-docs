@@ -57,7 +57,7 @@ Usage-based services are charged based on the actual monthly usage of services, 
 |         | Perpetual-use licensing | Usage-based services |
 |---------|----------------------------|----------------------|
 | System capacity | Server-based licenses, each with fixed capacity tiers of managed objects: 5, 10, 25, 50, 100, 250, 500, 1000. | Volume-based, per managed object or monitored metric per month. Independent from the number of nodes deployed. |
-| Legacy Failover | Server-based license. | Included. Additional nodes do not incur separate node-license fees, as billing is based on the active number of managed objects or monitored metrics in a month. |
+| Failover | Server-based license. | Included. Users can deploy additional nodes for Failover without paying additional fees since billing is based on the active number of managed objects or monitored metrics in a month. |
 | Optional functions | Licensed per node. | Not applicable. All optional functions are included. |
 | Automation & orchestration | Based on the volume of concurrent services running. | Based on the automation volume. |
 | Object Modeling | All customer‑specific object models and object instances are included (provided the system is licensed for Tier-2). <br>Exception: objects belonging to Skyline Solutions or Standard Data Models (e.g., MediaOps, Ticketing) are charged as usage‑based services. | Charged as usage-based services. Charges apply for DOM creations (service: Automation Actions) and DOM capacity (service: Unmanaged Objects).|
@@ -66,8 +66,6 @@ Usage-based services are charged based on the actual monthly usage of services, 
 | DataMiner Probes | Server-based licenses, each with fixed capacity tiers of managed objects.  | N/A |
 
 > [!NOTE]
-> Failover has reached [End of Engineering](xref:Software_support_life_cycles). The row above describes licensing for existing deployments, not a recommendation for new systems. For current redundancy guidance, see [DataMiner System architecture and components](xref:Overview_Architecture_and_components#redundancy).
->
 > DataMiner Probes (DMP) are not clustered with a DataMiner System, which means perpetual-licensed DMPs can be used to bring data from remote locations to a DataMiner System running as a usage-based service.
 
 > [!IMPORTANT]
