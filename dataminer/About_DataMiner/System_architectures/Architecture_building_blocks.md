@@ -85,7 +85,7 @@ A single DMS can contain DMAs at different locations. This gives you one system 
 
 ### Hybrid clusters
 
-A [hybrid cluster](xref:Hybrid_clusters) combines DaaS nodes and self-managed nodes in one DMS, connected via a site-to-site VPN. All nodes use STaaS. Consider it for a specific full-node requirement, migration, or temporary capacity rather than simply for mixed public and private data sources. See [Hybrid deployments and temporary capacity](xref:Architecture_hybrid_cluster).
+A [hybrid cluster](xref:Hybrid_clusters) combines DaaS nodes and self-managed nodes in one DMS, connected via a site-to-site VPN. STaaS is mandatory for every node in a hybrid cluster. Consider it for a specific full-node requirement, migration, or temporary capacity rather than simply for mixed public and private data sources. See [Hybrid deployments and temporary capacity](xref:Architecture_hybrid_cluster).
 
 ### DataMiner Edge
 

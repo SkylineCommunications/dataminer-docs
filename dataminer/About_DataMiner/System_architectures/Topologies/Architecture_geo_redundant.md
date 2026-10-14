@@ -16,29 +16,26 @@ Recovery requires more than geographically separated machines. Remaining compute
 
 ## Compute and storage placement
 
-The following example uses STaaS and DMAs at two locations in one DMS. Each location has its own storage connection. The unlabelled arrow between DMAs indicates cluster communication. This drawing uses VPN connectivity for cross-site equipment access: moving a workload only helps when the recovery DMAs can still reach its data sources.
+The following example uses self-managed DMAs at two locations in one DMS, with STaaS in the cloud. Each location has its own storage connection. The unlabelled arrow between DMAs indicates cluster communication. Cross-site equipment access uses the routed WAN: moving a workload only helps when the recovery DMAs can still reach its data sources.
 
 ```mermaid
 flowchart TB
     subgraph A["Location A"]
         DA["DMAs"]
         EA["Equipment at site A"]
-        DA <-->|"Local network or site connection"| EA
+        DA <-->|"Local network"| EA
     end
     subgraph B["Location B"]
         DB["DMAs<br/>With recovery capacity"]
         EB["Equipment at site B"]
-        DB <-->|"Local network or site connection"| EB
+        DB <-->|"Local network"| EB
     end
-    S[("STaaS<br/>ZRS or optional GRS")]
-    P["Public APIs and cloud services"]
+    S@{ shape: cloud, label: "STaaS<br/>ZRS or optional GRS" }
     DA <--> DB
-    DA <-->|"HTTPS storage access"| S
-    DB <-->|"HTTPS storage access"| S
-    DA <-->|"Recovery access over VPN"| EB
-    DB <-->|"Recovery access over VPN"| EA
-    DA <-->|"HTTPS / API calls"| P
-    DB <-->|"HTTPS / API calls"| P
+    DA <-->|"HTTPS"| S
+    DB <-->|"HTTPS"| S
+    DA <-->|"Recovery access over WAN"| EB
+    DB <-->|"Recovery access over WAN"| EA
 ```
 
 The two location boxes do not imply a two-node cluster: size and place the nodes for the selected recovery mechanism. Equipment at a failed site may itself be unavailable; the recovery paths apply only to sources that remain operational and reachable.

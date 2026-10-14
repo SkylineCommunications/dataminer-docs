@@ -87,7 +87,7 @@ Connect the DMS to [dataminer.services](xref:Architecture_hosting_and_storage#be
 
 ### A broadcaster with a few facilities in one region
 
-For two studios and a playout center, a centralized cluster can reach equipment via the existing network, a VPN, or DataMiner Edge. Where polling should run locally, Edge Nodes or a distributed arrangement can bring integrations closer to the equipment. Add node redundancy for air-chain monitoring, and consider a geo-redundant design if the operation must withstand loss of the hosting facility. Hosting the cluster on premises or using DaaS is a separate operational decision.
+For two studios and a playout center, a centralized cluster can reach equipment via the existing network or DataMiner Edge, or via a site-to-site VPN when hosted on DaaS. Where polling should run locally, Edge Nodes or a distributed arrangement can bring integrations closer to the equipment. Add node redundancy for air-chain monitoring, and consider a geo-redundant design if the operation must withstand loss of the hosting facility. Hosting the cluster on premises or using DaaS is a separate operational decision.
 
 ### A satellite operator with a main and a backup teleport in different countries
 

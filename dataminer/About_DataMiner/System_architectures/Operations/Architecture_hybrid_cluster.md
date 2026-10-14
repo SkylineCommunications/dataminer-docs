@@ -28,18 +28,16 @@ Temporary capacity requires planning, not just provisioning a node. Identify wor
 
 ## Deployment requirements
 
-All nodes use STaaS; hybrid clusters are not supported with self-managed databases. A site-to-site VPN connects DaaS nodes and self-managed nodes, and all DMAs must run the same DataMiner version. See [Combining DaaS and self-managed nodes in one cluster](xref:Creating_hybrid_cluster).
+STaaS is mandatory for every DMA in a hybrid cluster; self-managed databases are not supported. A site-to-site VPN connects the DaaS DMAs and self-managed DMAs, and all DMAs must run the same DataMiner version. See [Combining DaaS and self-managed nodes in one cluster](xref:Creating_hybrid_cluster).
 
 ```mermaid
 flowchart LR
-    subgraph Cloud["DaaS: permanent or temporary capacity"]
-        D[DMAs hosted through DaaS] --> S[(STaaS)]
-    end
+    Cloud@{ shape: cloud, label: "Same cloud environment<br/>DaaS: DMAs<br/>STaaS: mandatory storage<br/>Low-latency access" }
     subgraph Site["Self-managed infrastructure"]
-        A[Self-managed DMAs] --> E[Local equipment]
+        A[Self-managed DMAs] <--> E[Local equipment]
     end
-    A <-- Site-to-site VPN --> D
-    A -- HTTPS --> S
+    A <-- Site-to-site VPN --> Cloud
+    A -- HTTPS to STaaS --> Cloud
 ```
 
 Choose a cloud region close enough to meet the cluster's latency requirements. Maintain the site connectivity needed by both normal operations and recovery. A VPN used only to reach equipment is not itself a hybrid cluster.

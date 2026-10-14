@@ -6,13 +6,13 @@ keywords: architecture, centralized cluster, redundancy, Swarming, Edge
 
 # Centralized cluster
 
-A centralized cluster is the most common starting point for a multi-node DMS. It hosts compute at a central location or cloud region, with shared system data storage and one operational view. Integrations reach data sources directly, across a WAN or VPN, or through DataMiner Edge. The equipment does not need to be located alongside the cluster.
+A centralized cluster is the most common starting point for a multi-node DMS. It hosts compute at a central location or cloud region, with shared system data storage and one operational view. Integrations reach data sources directly, across a routed network, or through DataMiner Edge. A DaaS cluster can also use a site-to-site VPN. The equipment does not need to be located alongside the cluster.
 
 ## When this topology fits
 
 This topology is useful when you want one centrally operated system, need more capacity than one DMA, or need node redundancy. You do not need all of these reasons to apply. For example, a broadcaster may use a small redundant cluster for critical monitoring, while an EPM deployment may use many nodes to divide polling and aggregation workloads.
 
-Centralized compute also fits private equipment at several sites if the connectivity and integration requirements can be met through a VPN or Edge. Where local integration execution is needed, consider Edge Nodes or a [distributed multi-site system](xref:Architecture_distributed_sites).
+Centralized compute also fits private equipment at several sites if the connectivity and integration requirements can be met through Edge or, for a DaaS cluster, a site-to-site VPN. Where local integration execution is needed, consider Edge Nodes or a [distributed multi-site system](xref:Architecture_distributed_sites).
 
 ## Common use cases
 
@@ -26,39 +26,28 @@ For DaaS access to private sources, see [Connecting to private data sources](xre
 
 ## Arrangement
 
-Each example shows one DMS consisting of three DMAs. Arrows between DMAs indicate cluster communication without repeating the label. Three DMAs illustrate a cluster, not a fixed minimum for every deployment.
+Each example shows one DMS consisting of three DMAs. Three DMAs illustrate a cluster, not a fixed minimum for every deployment.
 
-### STaaS with Edge connectivity
+### DaaS with site-to-site VPN connectivity
 
-This example can use DaaS or self-managed DMAs. Each DMA accesses the same STaaS storage; an Edge Gateway connects centrally running integrations to private equipment.
+With DaaS, the DMAs and STaaS are co-hosted in the same cloud environment, providing low-latency storage access. STaaS is the only storage option for DaaS. This example uses a site-to-site VPN to reach private equipment.
 
 ```mermaid
 flowchart TB
-    subgraph DMS["One DMS: central compute location or cloud region"]
-        A["DMA 1"]
-        B["DMA 2"]
-        C["DMA 3"]
-        A <--> B
-        B <--> C
-        A <--> C
-    end
-    S[("STaaS")]
+    Cloud@{ shape: cloud, label: "Same cloud environment<br/>DaaS: DMA 1, DMA 2, DMA 3<br/>STaaS: shared system data storage<br/>Low-latency access" }
     Public["Public APIs and cloud services"]
-    subgraph Remote["Remote private network"]
-        G["Edge Gateway"]
+    subgraph Remote["Private network"]
         E["Private equipment"]
     end
-    DMS <-->|"HTTPS from every DMA"| S
-    DMS <-->|"HTTPS / API calls"| Public
-    DMS <-->|"Edge tunnel"| G
-    G <-->|"Local network"| E
+    Cloud <-->|"HTTPS / API calls"| Public
+    Cloud <-->|"Site-to-site VPN"| E
 ```
 
-The Gateway is not a DMA. Use an Edge Node where compatible integrations should execute at the site instead.
+DataMiner Edge is an alternative to the VPN. An Edge Gateway lets centrally running integrations reach remote equipment, and an Edge Node runs compatible integrations at the site.
 
-### Self-managed storage with VPN connectivity
+### Self-managed storage with Edge connectivity
 
-This example places self-managed DMAs and dedicated Linux database machines in the same site network. Remote private equipment is reached through a VPN.
+This example places self-managed DMAs and dedicated Linux database machines in the same site network. An Edge Gateway gives the DMS access to equipment at a remote site, such as a headend or distant teleport. The arrows between DMAs indicate cluster communication.
 
 ```mermaid
 flowchart TB
@@ -74,13 +63,17 @@ flowchart TB
         DB[("Cassandra and OpenSearch<br/>Dedicated Linux machines")]
         Local["Local equipment"]
     end
-    Remote["Equipment in a remote private network"]
+    subgraph Remote["Remote site network"]
+        G["Edge Gateway"]
+        RE["Remote equipment"]
+    end
     DMS <-->|"Database access from every DMA"| DB
     DMS <-->|"Local network"| Local
-    DMS <-->|"Site-to-site VPN"| Remote
+    DMS <-->|"Edge tunnel"| G
+    G <-->|"Local network"| RE
 ```
 
-Storage and connectivity are independent choices: STaaS can also be used with a VPN, and self-managed storage with Edge. Each example uses one of each to keep the drawing clear.
+The Gateway is not a DMA. Self-managed DMAs can also use STaaS, with outbound HTTPS from every DMA. Each example uses one storage choice to keep the drawing clear.
 
 Choose [hosting and storage](xref:Architecture_hosting_and_storage) independently of this arrangement. DaaS uses STaaS. Self-managed nodes can use STaaS or dedicated clustered storage, on premises or in a cloud environment.
 

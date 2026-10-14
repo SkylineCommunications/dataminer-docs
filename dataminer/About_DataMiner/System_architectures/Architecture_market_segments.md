@@ -16,7 +16,7 @@ Air-chain monitoring often needs node redundancy, while studios and transmitter 
 
 | Scenario | Topology and operational choices |
 |--|--|
-| One facility, or a few studios and a playout center | A [centralized cluster](xref:Architecture_centralized_cluster) with node redundancy for critical monitoring. Reach private equipment directly, via VPN, or via Edge. |
+| One facility, or a few studios and a playout center | A [centralized cluster](xref:Architecture_centralized_cluster) with node redundancy for critical monitoring. Reach private equipment directly or via Edge, or via a site-to-site VPN when using DaaS. |
 | Regional stations or transmitter sites | A [distributed multi-site system](xref:Architecture_distributed_sites), using Edge Nodes for compatible local integrations and full DMAs where required. |
 | Continuity after loss of the hosting facility | Apply a [geo-redundant design](xref:Architecture_geo_redundant), including compute, storage, and device reachability. |
 | Small non-critical installation | A [one-box DMS](xref:Architecture_single_agent), if compute downtime is acceptable. |
@@ -29,7 +29,7 @@ Booking and orchestration combine operational data with resource control. Their 
 
 | Scenario | Topology and operational choices |
 |--|--|
-| Shared orchestration for local and cloud resources | A [centralized cluster](xref:Architecture_centralized_cluster), with VPN or Edge connectivity where required. |
+| Shared orchestration for local and cloud resources | A [centralized cluster](xref:Architecture_centralized_cluster), with Edge connectivity, or a site-to-site VPN for DaaS, where required. |
 | Integrations executed at several production facilities | A [distributed multi-site system](xref:Architecture_distributed_sites). |
 | Independent operations per business unit or security boundary | [Federated systems](xref:Architecture_multiple_systems), with selected information shared centrally while each DMS retains its own operations. |
 | Additional compute during an event | Scale the chosen cluster. A [hybrid deployment](xref:Architecture_hybrid_cluster) can temporarily add DaaS capacity to self-managed compute if full cloud nodes are required. |

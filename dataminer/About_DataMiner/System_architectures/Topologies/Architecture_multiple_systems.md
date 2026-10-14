@@ -26,40 +26,32 @@ Any of the following can justify independent systems; they are alternatives, not
 
 ## Architecture
 
-This example shows two independently operated DMSs and an optional central DMS. Each has its **own STaaS storage**; federation shares selected operational information, not a common database or a single cluster. Edge is the remote-access choice illustrated here.
+This example shows two independently operated DMSs and an optional central DMS. Each has its **own STaaS storage**; federation shares selected operational information, not a common database or a single cluster. Region 1 is self-managed, while region 2 and the central DMS run on DaaS, co-hosted with their STaaS storage. Edge is the remote-access choice illustrated here.
 
 ```mermaid
 flowchart TB
-    subgraph R1["Region 1: independent DMS"]
+    subgraph R1["Region 1: self-managed DMS"]
         A["DMAs"]
-        SA[("STaaS for system 1")]
         EA["Local equipment"]
-        A <-->|"HTTPS"| SA
         A <-->|"Local network"| EA
     end
-    subgraph R2["Region 2: independent DMS"]
-        B["DMAs"]
-        SB[("STaaS for system 2")]
+    SA@{ shape: cloud, label: "STaaS for system 1" }
+    R2@{ shape: cloud, label: "Region 2: DaaS DMS<br/>DMAs and STaaS for system 2<br/>Same cloud environment" }
+    subgraph Remote["Remote site network"]
         G["Edge Gateway"]
-        EB["Remote private equipment"]
-        B <-->|"HTTPS"| SB
-        B <-->|"Edge tunnel"| G
-        G <-->|"Remote site's local network"| EB
+        EB["Remote equipment"]
+        G <-->|"Local network"| EB
     end
-    subgraph Central["Optional central DMS: federated view"]
-        C["DMAs<br/>Federated view"]
-        SC[("STaaS for central system")]
-        C <-->|"HTTPS"| SC
-    end
-    P["Public APIs and cloud services"]
-    B <-->|"HTTPS / API calls"| P
+    C@{ shape: cloud, label: "Optional central DaaS DMS<br/>DMAs and STaaS for central system<br/>Federated view" }
+    A <-->|"HTTPS"| SA
+    R2 <-->|"Edge tunnel"| G
     A -.->|"Selected data: replication / API / connector"| C
-    B -.->|"Selected data: replication / API / connector"| C
+    R2 -.->|"Selected data: replication / API / connector"| C
 ```
 
 Solid lines show operational connections within each system or to its sources. Dashed arrows show the **direction of selected data toward the central view**, not who initiates a network connection. For element replication, the central DMS must be able to reach the source DMS. Without these optional data-sharing paths, the systems remain independent.
 
-Each DMS can instead use self-managed storage with the required database connections, and select connectivity for its own sources independently. These alternatives are not overlaid in the example. Network boundaries must permit any selected federation mechanism; a truly air-gapped system cannot share live data across that boundary.
+Each self-managed DMS can instead use self-managed storage with the required database connections; a DaaS DMS always uses STaaS. Each DMS selects connectivity for its own sources independently. Network boundaries must permit any selected federation mechanism; a truly air-gapped system cannot share live data across that boundary.
 
 Each system can use a [single agent](xref:Architecture_single_agent), a [centralized cluster](xref:Architecture_centralized_cluster), or a [distributed topology](xref:Architecture_distributed_sites), and can add geo-redundancy as needed. Choose [hosting and storage](xref:Architecture_hosting_and_storage) per system: one region may use DaaS and STaaS, while an isolated operational network uses on-premises compute and databases.
 

@@ -26,19 +26,18 @@ There are several ways to collect data from remote sites. They can be combined w
 
 ### Example connections across sites
 
-The following examples separate distributed DMAs from Edge-based collection for clarity. Both use STaaS; self-managed storage is another deployment choice with different database connectivity requirements.
+The following examples separate distributed DMAs from Edge-based collection for clarity. A real deployment can combine these collection approaches.
 
-#### DMAs at multiple sites
+#### Self-managed DMAs at multiple sites
 
-These DMAs belong to one DMS. The unlabelled arrow indicates cluster communication; the sites are connected over a WAN or VPN. Each DMA accesses shared storage independently and polls its local equipment.
+These self-managed DMAs belong to one DMS and use STaaS in the cloud. The unlabelled arrow indicates cluster communication over a routed WAN. Each DMA accesses STaaS independently and polls its local equipment.
 
 ```mermaid
 flowchart TB
-    subgraph Central["Central location or cloud"]
+    subgraph Central["Central site network"]
         D["DMA 1"]
     end
-    S[("STaaS")]
-    P["Public APIs and cloud services"]
+    S@{ shape: cloud, label: "STaaS<br/>Managed cloud storage" }
     subgraph A["Remote site network"]
         DA["DMA 2"]
         EA["Local equipment"]
@@ -47,19 +46,15 @@ flowchart TB
     D <--> DA
     D <-->|"HTTPS"| S
     DA <-->|"HTTPS"| S
-    D <-->|"HTTPS / API calls"| P
 ```
 
-#### Remote collection through Edge
+#### DaaS with remote collection through Edge
 
-This example uses Edge only for remote data-source access. Edge components are not DMAs and do not access system data storage directly. The Edge Node runs compatible integrations locally, while the Gateway provides a tunnel for centrally running integrations.
+In this example, the DMS runs on DaaS, co-hosted with STaaS in the same cloud environment. Edge components are not DMAs and do not access system data storage directly. The Edge Node runs compatible integrations locally, while the Gateway provides a tunnel for centrally running integrations. A self-managed DMS can use Edge in the same way.
 
 ```mermaid
 flowchart TB
-    subgraph Central["Central DMS"]
-        D["DMA"]
-    end
-    S[("STaaS")]
+    Cloud@{ shape: cloud, label: "Same cloud environment<br/>DaaS: DMAs<br/>STaaS: system data storage<br/>Low-latency access" }
     subgraph B["Site B: local integration execution"]
         N["Edge Node"]
         EB["Local equipment"]
@@ -70,12 +65,11 @@ flowchart TB
         EC["Local equipment"]
         G <-->|"Local network"| EC
     end
-    D <-->|"HTTPS"| S
-    N <-->|"Integration management and data"| D
-    D <-->|"Edge tunnel"| G
+    N <-->|"Integration management and data"| Cloud
+    Cloud <-->|"Edge tunnel"| G
 ```
 
-STaaS requires outbound HTTPS from each DMA, directly or via a supported proxy. Edge Nodes can connect directly or through dataminer.services. For VPN setup, see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources). A real deployment can combine these collection approaches; they are drawn separately for readability.
+STaaS requires outbound HTTPS from each self-managed DMA, directly or via a supported proxy. Edge Nodes can connect directly or through dataminer.services. A DaaS system can also use a site-to-site VPN; see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources).
 
 ### DataMiner nodes at the sites
 
@@ -87,7 +81,7 @@ A site can host a full DataMiner node when it needs local DataMiner functionalit
 
 ### Central polling over the WAN
 
-Smaller sites have no local DataMiner node. The equipment is polled directly from the central DataMiner nodes over the WAN, a VPN, or a [DataMiner Edge Gateway](xref:About_Edge_Gateways).
+Smaller sites have no local DataMiner node. The equipment is polled directly from the central DataMiner nodes over a routed network or through a [DataMiner Edge Gateway](xref:About_Edge_Gateways). A DaaS system can also use a site-to-site VPN.
 
 - Fewer servers to maintain.
 - Monitoring of a site stops when the connection to the site is lost. However, the loss of connectivity itself is detected and reported centrally.

@@ -12,7 +12,7 @@ A one-box system is a complete DMS whose compute workload runs on a single Agent
 
 You may choose this topology because your workload fits one node, you are evaluating DataMiner, or your operation can tolerate the node being unavailable during maintenance or recovery. These are examples, not cumulative requirements. A small production system can use this topology if its availability requirements permit it.
 
-The data sources can be public APIs, private equipment, or a combination. A DaaS DMS can reach private sources through a site-to-site VPN or DataMiner Edge; see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources). A self-managed DMS can use direct local access or the same remote connectivity options.
+The data sources can be public APIs, private equipment, or a combination. A DaaS DMS can reach private sources through a site-to-site VPN or DataMiner Edge; see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources). A self-managed DMS can use direct local access, routed network access, or DataMiner Edge to reach remote sites.
 
 ## Common use cases
 
@@ -28,30 +28,26 @@ The one-box footprint is a deployment choice, not a sizing guarantee. Size the w
 
 ### DaaS with STaaS
 
-The DMS has one cloud-hosted compute machine. Private equipment can be reached through a VPN or Edge; equipment does not need to be publicly accessible.
+The DMS has one cloud-hosted DMA. A DaaS system always uses STaaS, which is hosted in the same cloud environment for low-latency storage access. Private equipment can be reached through Edge or a site-to-site VPN; equipment does not need to be publicly accessible.
 
 ```mermaid
 flowchart TB
-    subgraph Cloud["Cloud: one-box DMS"]
-        D["DMA"]
-    end
-    S[("STaaS: managed storage")]
+    Cloud@{ shape: cloud, label: "Same cloud environment<br/>DaaS: one DMA<br/>STaaS: system data storage<br/>Low-latency access" }
     P["Public APIs and cloud services"]
     subgraph Site["Private site network"]
         G["Edge Gateway"]
         E["Private equipment"]
     end
-    D <-->|"Storage access over HTTPS"| S
-    D <-->|"HTTPS / API calls"| P
-    D <-->|"Edge tunnel"| G
+    Cloud <-->|"HTTPS / API calls"| P
+    Cloud <-->|"Edge tunnel"| G
     G <-->|"Local network"| E
 ```
 
-This example uses an Edge Gateway for visual clarity. A site-to-site VPN is another option. An Edge Node can instead run compatible integrations locally; see the [distributed topology](xref:Architecture_distributed_sites#example-connections-across-sites).
+This example uses an Edge Gateway for visual clarity. A site-to-site VPN is another option for DaaS. An Edge Node can instead run compatible integrations locally; see the [distributed topology](xref:Architecture_distributed_sites#example-connections-across-sites).
 
 ### Self-managed one-box DMS with STaaS
 
-The DMA is in your own network and uses STaaS. This example uses a VPN to reach another private network.
+The DMA is in your own network and uses STaaS in the cloud. This example uses an Edge Gateway to reach equipment at a remote site.
 
 ```mermaid
 flowchart TB
@@ -61,11 +57,15 @@ flowchart TB
         end
         L["Equipment in the same network"]
     end
-    S[("STaaS: managed storage")]
-    R["Equipment in another private network"]
+    S@{ shape: cloud, label: "STaaS<br/>Managed cloud storage" }
+    subgraph Remote["Remote site network"]
+        G["Edge Gateway"]
+        R["Remote equipment"]
+    end
     P["Public APIs and cloud services"]
     D <-->|"Local network / local interface"| L
-    D <-->|"WAN / VPN"| R
+    D <-->|"Edge tunnel"| G
+    G <-->|"Local network"| R
     D <-->|"HTTPS / API calls"| P
     D <-->|"HTTPS: directly or via a proxy"| S
 ```
@@ -93,7 +93,7 @@ Unlike STaaS, this storage shares the machine's resources and failure domain wit
 
 ### Choosing a variation
 
-- **DaaS with STaaS**: Skyline operates the compute infrastructure and storage. You configure the system and provide a supported path to your data sources.
+- **DaaS with STaaS**: Skyline operates the compute infrastructure and storage. STaaS is the only storage option for DaaS. You configure the system and provide a supported path to your data sources.
 - **Self-managed DMS with STaaS**: You operate one Windows compute machine and Skyline operates storage. This suits an existing server platform or a requirement to run the DMS locally. Outbound HTTPS to STaaS is required.
 - **Self-managed DMS with local WSL databases**: Cassandra and OpenSearch run locally on Linux through Windows Subsystem for Linux. This reduces the number of machines, not the combined resource requirements or maintenance responsibilities. Use the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) and follow its platform-specific restrictions. The local-storage setup is intended for small test, development, and staging environments, not normal production use.
 
