@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab-tablePid
-description: "Learn how the tablePid attribute identifies the table for which a search chain tab is defined in a DataMiner protocol."
+description: "Use the Tab tablePid attribute in a DataMiner protocol to identify the table for which a search chain tab is defined."
 ---
 
 # tablePid attribute

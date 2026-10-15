@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain
-description: "Learn how the SearchChain element defines CPE search fields and result tables, including suggestions and input handling in a DataMiner protocol."
+description: "Use the SearchChain element in a DataMiner protocol to define CPE search fields and result tables, including suggestions and input handling."
 ---
 
 # SearchChain element

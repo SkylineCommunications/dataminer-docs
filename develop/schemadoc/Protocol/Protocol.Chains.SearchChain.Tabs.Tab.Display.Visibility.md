@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility
-description: "Learn how the Visibility element combines a default setting with trigger conditions for search tab visibility in a DataMiner protocol."
+description: "Use the Visibility element in a DataMiner protocol to combine a default setting with trigger conditions for search tab visibility."
 ---
 
 # Visibility element
@@ -15,7 +15,7 @@ Configures chain tab visibility settings.
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
-|[default](xref:Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility-default)|||Specifies the default visibility when none of the conditions are met (Default: true).|
+|[default](xref:Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility-default)|||Specifies the default visibility when none of the conditions are met (default: true).|
 
 ## Children
 

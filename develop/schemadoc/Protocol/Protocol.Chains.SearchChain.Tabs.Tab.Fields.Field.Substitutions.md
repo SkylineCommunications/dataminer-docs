@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Substitutions
-description: "Learn how the Substitutions element contains rules that alter search input before it reaches the DataMiner Agent in a DataMiner protocol."
+description: "Use the Substitutions element in a DataMiner protocol to define rules that alter search input before it reaches the DataMiner Agent."
 ---
 
 # Substitutions element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field-name
-description: "Learn how the name attribute sets the name displayed for a search chain field in a DataMiner protocol."
+description: "Use the Field name attribute in a DataMiner protocol to set the name displayed for a search chain field."
 ---
 
 # name attribute

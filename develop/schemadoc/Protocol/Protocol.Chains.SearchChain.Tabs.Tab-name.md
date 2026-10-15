@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab-name
-description: "Learn how the name attribute sets a search tab name or allows its table description to be used in a DataMiner protocol."
+description: "Use the Tab name attribute in a DataMiner protocol to set a unique search tab name, or omit it to use the referred table's description."
 ---
 
 # name attribute

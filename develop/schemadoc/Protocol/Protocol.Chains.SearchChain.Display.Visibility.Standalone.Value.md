@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Display.Visibility.Standalone.Value
-description: "Learn how the Value element defines a trigger value that reverses default search chain visibility in a DataMiner protocol."
+description: "Use the Value element in a DataMiner protocol to define a trigger value that reverses default search chain visibility."
 ---
 
 # Value element

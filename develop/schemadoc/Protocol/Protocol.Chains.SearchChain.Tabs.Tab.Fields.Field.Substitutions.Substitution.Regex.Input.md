@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Substitutions.Substitution.Regex.Input
-description: "Learn how the Input element defines the regular expression matched against search field content before substitution in a DataMiner protocol."
+description: "Use the Input element in a DataMiner protocol to define the regular expression matched against search field content before substitution."
 ---
 
 # Input element

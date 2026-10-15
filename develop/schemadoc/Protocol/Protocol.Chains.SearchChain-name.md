@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain-name
-description: "Learn how the name attribute sets the unique name of a search chain in a CPE environment in a DataMiner protocol."
+description: "Use the SearchChain name attribute in a DataMiner protocol to set the unique name of a search chain in a CPE environment."
 ---
 
 # name attribute

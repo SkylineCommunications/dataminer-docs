@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs
-description: "Learn how the Tabs element contains the uniquely named tab definitions for a search chain in a DataMiner protocol."
+description: "Use the Tabs element in a DataMiner protocol to contain the uniquely named tab definitions for a search chain."
 ---
 
 # Tabs element

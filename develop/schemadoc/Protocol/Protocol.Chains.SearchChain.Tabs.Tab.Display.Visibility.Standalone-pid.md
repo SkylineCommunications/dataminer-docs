@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility.Standalone-pid
-description: "Learn how the pid attribute identifies the trigger parameter that controls search tab visibility in a DataMiner protocol."
+description: "Use the Standalone pid attribute in a DataMiner protocol to identify the trigger parameter that controls search tab visibility."
 ---
 
 # pid attribute

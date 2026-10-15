@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Display.Visibility.Standalone
-description: "Learn how the Standalone element maps trigger values to the opposite of default search chain visibility in a DataMiner protocol."
+description: "Use the Standalone element in a DataMiner protocol to map trigger values to the opposite of default search chain visibility."
 ---
 
 # Standalone element
