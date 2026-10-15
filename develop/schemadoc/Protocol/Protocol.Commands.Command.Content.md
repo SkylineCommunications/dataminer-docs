@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Commands.Command.Content
-description: "Learn how the Content element orders the parameters that form a command sent to a data source in a DataMiner protocol."
+description: "Use the Content element in a DataMiner protocol to define the consecutive parameters that form a command sent to a data source."
 ---
 
 # Content element

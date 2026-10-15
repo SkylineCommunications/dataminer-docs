@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Description
-description: "Learn how the Description element stores general protocol information, including device firmware requirements in a DataMiner protocol."
+description: "Use the Description element in a DataMiner protocol to store general protocol information, such as device firmware requirements."
 ---
 
 # Description element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.ElementType
-description: "Learn how the ElementType element names the device type represented by elements based on a connector in a DataMiner protocol."
+description: "Use the ElementType element in a DataMiner protocol to specify the type of device for which the protocol is used."
 ---
 
 # ElementType element

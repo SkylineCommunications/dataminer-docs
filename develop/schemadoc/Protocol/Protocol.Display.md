@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Display
-description: "Learn how the Display element defines Data Display page layout, ordering, defaults, and visibility in a DataMiner protocol."
+description: "Use the Display element in a DataMiner protocol to define Data Display page layout, ordering, defaults, and visibility."
 ---
 
 # Display element

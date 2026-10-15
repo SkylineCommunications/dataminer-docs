@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Display.Pages.Page.Visibility-value
-description: "Learn how the value attribute sets the parameter value that reverses a Data Display page's visibility in a DataMiner protocol."
+description: "Use the Visibility value attribute in a DataMiner protocol to set the parameter value that reverses page visibility."
 ---
 
 # value attribute

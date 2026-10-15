@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Commands.Command
-description: "Learn how the Command element defines a request or setting change sent to a data source and its expected response in a DataMiner protocol."
+description: "Use the Command element in a DataMiner protocol to configure a command sent to a data source, including its parameters, ID, and formatting."
 ---
 
 # Command element

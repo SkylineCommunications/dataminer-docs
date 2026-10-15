@@ -1,13 +1,13 @@
 ---
 uid: Protocol.Commands.Command-ascii
-description: "Learn how the ascii attribute selects command parameters to send as ASCII when the protocol uses Unicode in a DataMiner protocol."
+description: "Use the Command ascii attribute in a DataMiner protocol to send specific command parameters as ASCII when the protocol uses Unicode."
 ---
 
 # ascii attribute
 
 <!-- RN 7643 -->
 
-Allows to specify that parameters should be sent as ASCII even if the protocol is in Unicode.
+Allows you to specify that parameters should be sent as ASCII even if the protocol is in Unicode.
 
 ## Content Type
 

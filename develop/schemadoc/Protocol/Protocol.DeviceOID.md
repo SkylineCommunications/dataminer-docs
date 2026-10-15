@@ -1,6 +1,6 @@
 ---
 uid: Protocol.DeviceOID
-description: "Learn how the DeviceOID element assigns a device OID that combines with the vendor OID to identify a device uniquely in a DataMiner protocol."
+description: "Use the DeviceOID element in a DataMiner protocol to assign a device OID that combines with the vendor OID to uniquely identify a device."
 ---
 
 # DeviceOID element

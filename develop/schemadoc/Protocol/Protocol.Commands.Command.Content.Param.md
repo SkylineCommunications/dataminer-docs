@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Commands.Command.Content.Param
-description: "Learn how the Param element identifies a parameter to include in a command payload in a DataMiner protocol."
+description: "Use the Param element in a DataMiner protocol to specify the ID of a parameter to include in a command's content."
 ---
 
 # Param element

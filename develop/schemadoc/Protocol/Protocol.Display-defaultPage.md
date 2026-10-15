@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Display-defaultPage
-description: "Learn how the defaultPage attribute names the Data Display page shown first for an element in a DataMiner protocol."
+description: "Use the Display defaultPage attribute in a DataMiner protocol to name the Data Display page shown first for an element."
 ---
 
 # defaultPage attribute
