@@ -1,6 +1,6 @@
 ---
 uid: Protocol.ExportRules
-description: "Learn how the ExportRules element contains rules that customize displayed items in Dynamic Virtual Elements in a DataMiner protocol."
+description: "Use the ExportRules element in a DataMiner protocol to contain rules that customize displayed items in Dynamic Virtual Elements."
 ---
 
 # ExportRules element

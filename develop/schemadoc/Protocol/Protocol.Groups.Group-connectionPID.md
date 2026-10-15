@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group-connectionPID
-description: "Learn how the connectionPID attribute identifies the parameter that dynamically selects an HTTP connection for a group in a DataMiner protocol."
+description: "Use the Group connectionPID attribute in a DataMiner protocol to dynamically select an HTTP connection for a group."
 ---
 
 # connectionPID attribute

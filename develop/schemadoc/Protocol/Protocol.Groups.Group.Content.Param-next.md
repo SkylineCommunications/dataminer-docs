@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Param-next
-description: "Learn how the next attribute sets the delay before DataMiner reads the next parameter in a group in a DataMiner protocol."
+description: "Use the Param next attribute in a DataMiner protocol to set the delay before DataMiner reads the next parameter in a group."
 ---
 
 # next attribute

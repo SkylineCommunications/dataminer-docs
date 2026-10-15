@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Param
-description: "Learn how the Param element identifies a parameter included for consecutive execution within a group in a DataMiner protocol."
+description: "Use the Param element under Group Content in a DataMiner protocol to identify a parameter included for consecutive execution."
 ---
 
 # Param element

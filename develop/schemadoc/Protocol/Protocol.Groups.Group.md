@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group
-description: "Learn how the Group element assembles parameters, command/response pairs, actions, sessions, or triggers for execution in a DataMiner protocol."
+description: "Use the Group element in a DataMiner protocol to assemble parameters, command/response pairs, actions, sessions, or triggers."
 ---
 
 # Group element
@@ -37,5 +37,3 @@ Defines a group.
 Groups are used e.g., to perform actual device polling.
 
 In a group, you can assemble different parameters, command/response pairs or actions. When a group is executed, all parameters, pairs or actions included in the group will be executed one after the other.
-
-

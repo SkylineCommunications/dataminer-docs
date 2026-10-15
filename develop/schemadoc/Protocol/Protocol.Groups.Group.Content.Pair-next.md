@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Pair-next
-description: "Learn how the next attribute sets the delay after a pair response before the next group item executes in a DataMiner protocol."
+description: "Use the Pair next attribute in a DataMiner protocol to set the delay after a pair response before the next group item executes."
 ---
 
 # next attribute
@@ -21,10 +21,6 @@ If the last item in the group contains this attribute, it will also cause a dela
 
 Example:
 
-
 ```xml
 <Pair next="5000">25</Pair>
 ```
-
-
-

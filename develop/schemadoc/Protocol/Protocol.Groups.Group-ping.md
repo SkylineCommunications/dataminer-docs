@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group-ping
-description: "Learn how the ping attribute marks the group used to test an element's main connection in a DataMiner protocol."
+description: "Use the Group ping attribute in a DataMiner protocol to mark the group used to test an element's main connection."
 ---
 
 # ping attribute

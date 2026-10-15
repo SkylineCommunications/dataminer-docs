@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group-connection
-description: "Learn how the connection attribute selects the connection used by a group when a protocol defines multiple connections in a DataMiner protocol."
+description: "Use the Group connection attribute in a DataMiner protocol to select the connection used by a group when multiple connections exist."
 ---
 
 # connection attribute

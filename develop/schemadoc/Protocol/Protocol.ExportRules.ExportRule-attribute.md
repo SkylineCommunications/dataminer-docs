@@ -1,6 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-attribute
-description: "Learn how the ExportRule attribute named attribute selects an XML attribute to change in a DataMiner protocol."
+description: "Use the 'attribute' attribute of ExportRule in a DataMiner protocol to specify the XML attribute to which an export rule applies."
 ---
 
 # attribute attribute

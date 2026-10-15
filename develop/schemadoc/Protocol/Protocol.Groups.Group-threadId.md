@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group-threadId
-description: "Learn how the threadId attribute selects the protocol thread that executes a group in a DataMiner protocol."
+description: "Use the Group threadId attribute in a DataMiner protocol to select the protocol thread that executes a group."
 ---
 
 # threadId attribute

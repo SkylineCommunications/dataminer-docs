@@ -1,6 +1,6 @@
 ---
 uid: Protocol.GeneralParameters.GeneralParameter-enabled
-description: "Learn how the enabled attribute controls whether a specified general parameter group is loaded in a DataMiner protocol."
+description: "Use the GeneralParameter enabled attribute in a DataMiner protocol to control whether a general parameter group is loaded."
 ---
 
 # enabled attribute

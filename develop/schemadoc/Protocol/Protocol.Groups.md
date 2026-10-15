@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups
-description: "Learn how the Groups element contains the uniquely identified and named groups defined for device polling in a DataMiner protocol."
+description: "Use the Groups element in a DataMiner protocol to contain the uniquely identified and named groups defined for device polling."
 ---
 
 # Groups element

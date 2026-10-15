@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content
-description: "Learn how the Content element orders same-type actions, pairs, parameters, sessions, or triggers for group execution in a DataMiner protocol."
+description: "Use the Content element in a DataMiner protocol to define the consecutive actions, pairs, parameters, sessions, or triggers for a group."
 ---
 
 # Content element
@@ -23,7 +23,7 @@ Contains the items that have to be executed consecutively when the group is exec
 |--- |--- |--- |
 |***choice***|||
 |&nbsp;&nbsp;[Action](xref:Protocol.Groups.Group.Content.Action)|[0, *]|Specifies the ID of an action to include in the group.|
-|&nbsp;&nbsp;[Pair](xref:Protocol.Groups.Group.Content.Pair)|[0, *]|Specifies the ID of a command/response pair to be included in the 
+|&nbsp;&nbsp;[Pair](xref:Protocol.Groups.Group.Content.Pair)|[0, *]|Specifies the ID of a command/response pair to be included in the group. |
 |&nbsp;&nbsp;[Param](xref:Protocol.Groups.Group.Content.Param)|[0, *]|Specifies the ID of a parameter to be included in the group.|
 |&nbsp;&nbsp;[Session](xref:Protocol.Groups.Group.Content.Session)|[0, *]|Specifies the ID of an HTTP session to be included in the group.|
 |&nbsp;&nbsp;[Trigger](xref:Protocol.Groups.Group.Content.Trigger)|[0, *]|Specifies the ID of a trigger to be included in the group.|

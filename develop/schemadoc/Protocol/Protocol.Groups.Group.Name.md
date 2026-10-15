@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Name
-description: "Learn how the Name element stores the optional name assigned to a protocol group in a DataMiner protocol."
+description: "Use the Name element under Group in a DataMiner protocol to store the optional name assigned to a protocol group."
 ---
 
 # Name element

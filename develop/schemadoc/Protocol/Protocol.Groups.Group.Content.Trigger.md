@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Trigger
-description: "Learn how the Trigger element identifies a trigger included for consecutive execution within a group in a DataMiner protocol."
+description: "Use the Trigger element under Group Content in a DataMiner protocol to identify a trigger included for consecutive execution."
 ---
 
 # Trigger element

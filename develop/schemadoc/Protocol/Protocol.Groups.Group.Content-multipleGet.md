@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content-multipleGet
-description: "Learn how the multipleGet attribute combines all group parameters into one SNMP Get operation in a DataMiner protocol."
+description: "Use the multipleGet attribute in a DataMiner protocol to combine all group parameters into one SNMP Get operation."
 ---
 
 # multipleGet attribute

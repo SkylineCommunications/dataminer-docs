@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Action
-description: "Learn how the Action element identifies an action included for consecutive execution within a group in a DataMiner protocol."
+description: "Use the Action element under Group Content in a DataMiner protocol to identify an action included for consecutive execution."
 ---
 
 # Action element
