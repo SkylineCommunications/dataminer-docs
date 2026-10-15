@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_retrieving_element_info
-description: "Learn how, using the SLNetClientTest tool, you can use GetLiteElementInfo to retrieve general information about elements."
+description: "Learn how to use the SLNetClientTest tool to retrieve general information about elements on a DMA, such as the hidden generic aggregator element."
 ---
 
 # Retrieving general information about elements
