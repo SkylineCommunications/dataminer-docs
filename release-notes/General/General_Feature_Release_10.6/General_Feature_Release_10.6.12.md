@@ -102,6 +102,14 @@ The generated package now includes the following files in the `Elastic` folder f
 
 A number of security enhancements have been made.
 
+#### Protocol: NotifyDataMiner(Queued) failures are now logged without internal offsets [ID 46709]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interface failed, up to now, the log included the internal offset added to the notify type.
+
+From now on, the log will show the original notify type without the offset.
+
 ### Fixes
 
 #### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
