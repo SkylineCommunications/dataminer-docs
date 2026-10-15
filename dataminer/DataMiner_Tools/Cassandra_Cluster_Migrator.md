@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_Cluster_Migrator
+description: "Use the Cassandra Cluster Migrator tool to switch from a general database to a Cassandra cluster setup."
 keywords: local database
 ---
 
