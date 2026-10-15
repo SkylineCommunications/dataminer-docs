@@ -40,4 +40,4 @@ When used with script actions of type "ui", the value specifies the UI.
 
 ## Remarks
 
-Used with script actions of type "assigndummy",  "csharp", "settemplate", "clearmemory", "get", "goto", "label", "set", "ui".
+Used with script actions of type "assigndummy", "csharp", "settemplate", "clearmemory", "get", "goto", "label", "set", "ui".

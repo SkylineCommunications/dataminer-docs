@@ -19,6 +19,6 @@ Contains the script actions.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
-|--- |--- |--- |--- |
-|Unique |The ID must be unique. |Script |@id |
+| Type | Description | Selector | Fields |
+|--|--|--|--|
+| Unique | The ID must be unique. | Script | @id |

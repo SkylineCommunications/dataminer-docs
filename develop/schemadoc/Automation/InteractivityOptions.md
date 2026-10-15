@@ -12,7 +12,7 @@ Defines the interactivity options for an automation script.
 |Item|Facet value|Description|
 |---|---|---|
 |***string restriction***|||
-|&nbsp;&nbsp;Enumeration|Auto|The script will be read to try to find out if interactivity is needed. This is also the behavior when the [Interactivity](xref:DMSScript.Interactivity) element is omitted. It is the behavior used in DataMiner versions prior to 10.5.9/10.6.0, where the element is not supported. See [How auto-detection determines interactivity](#how-auto-detection-determines-interactivity).|
+|&nbsp;&nbsp;Enumeration|Auto|The script will be read to try to find out if interactivity is needed. This is also the behavior when the [Interactivity](xref:DMSScript.Interactivity) element is omitted, and it is the behavior used in DataMiner versions prior to 10.5.9/10.6.0, where the element is not supported. See [How auto-detection determines interactivity](#how-auto-detection-determines-interactivity).|
 |&nbsp;&nbsp;Enumeration|Never|The script will never be interactive. It will not show any UI elements.|
 |&nbsp;&nbsp;Enumeration|Optional|The script will be interactive if it needs to be. It will show UI elements if needed.|
 |&nbsp;&nbsp;Enumeration|Always|The script will always be interactive. It will always show UI elements.|
@@ -30,7 +30,7 @@ Setting a value different from "Auto" replaces the [options](xref:DMSScript-opti
 
 - Setting "Optional" will enable the option flag "HasFindInteractiveClient".
 
-- Setting "Always" will enable the option flag "RequireInteractive". This is the preferred option when automation scripts are used in an [IAS component](xref:InteractiveAutomationScript) in low-code apps.
+- Setting "Always" will enable the option flag "RequireInteractive". This is the preferred option when automation scripts are used in an [Interactive automation script component](xref:InteractiveAutomationScript) in a low-code app.
 
 ## How auto-detection determines interactivity
 

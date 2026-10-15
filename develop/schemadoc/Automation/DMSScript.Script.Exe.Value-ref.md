@@ -11,7 +11,7 @@ Refers to an item. The item that is referred to depends on the type of script ac
 
 string
 
-When used with script actions of type "assigndummy",  "settemplate" or "set", the value specifies a script variable.
+When used with script actions of type "assigndummy", "settemplate", or "set", the value specifies a script variable.
 
 When used with script action of type "clearmemory", the value specifies the ID of the memory.
 
@@ -21,4 +21,4 @@ When used with script action of type "clearmemory", the value specifies the ID o
 
 ## Remarks
 
-Used with script actions of type "assigndummy",  "csharp", "settemplate", "clearmemory", "get", "goto", "label", "set", "ui".
+Used with script actions of type "assigndummy", "csharp", "settemplate", "clearmemory", "get", "goto", "label", "set", "ui".
