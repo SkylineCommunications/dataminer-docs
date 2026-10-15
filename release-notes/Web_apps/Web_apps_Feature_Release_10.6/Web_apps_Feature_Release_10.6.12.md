@@ -79,3 +79,9 @@ From now on, the column will expose the correct GUID value and will support filt
 When a *Trigger* component was linked to a *Time range* component, up to now, when the *Trigger* component was activated, the *Time range* component could revert to an older range. A manually entered range could also change.
 
 From now on, when a *Trigger* component is activated, the time range specified in the linked *Time range* component will be preserved.
+
+#### Dashboards/Low-Code Apps - Pivot component: Error appeared in settings before parameter was fetched [ID 46774]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, When a parameter used in a *Pivot* component had not yet been fetched, an error could appear in the component settings.
