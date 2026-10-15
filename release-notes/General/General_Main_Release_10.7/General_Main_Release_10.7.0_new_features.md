@@ -519,3 +519,12 @@ This will especially improve synchronization in shared sessions, keeping measure
 The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
 
 This request requires a CloudGateway version that supports it.
+
+### Security: New 'Intelligence Usage' user permission [ID 46765]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
+
+> [!NOTE]
+> The first time a system is upgraded to DataMiner version 10.7.0/10.6.12 or above, DataMiner will automatically grants this new permission to all existing groups with the *Admin Tools* permission.
