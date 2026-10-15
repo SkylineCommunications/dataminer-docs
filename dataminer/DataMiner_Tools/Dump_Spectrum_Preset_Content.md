@@ -1,5 +1,6 @@
 ---
 uid: Dump_Spectrum_Preset_Content
+description: "Use the Dump Spectrum Preset Content tool to visualize the content of the otherwise binary spectrum preset .dat files."
 ---
 
 # Dump Spectrum Preset Content

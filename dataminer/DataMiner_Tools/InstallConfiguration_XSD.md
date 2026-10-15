@@ -1,5 +1,6 @@
 ---
 uid: InstallConfiguration_XSD
+description: "Use this XML Schema file to check the validity of the InstallConfiguration.xml file, which is required for unattended installation of DataMiner."
 ---
 
 # InstallConfiguration Schema file

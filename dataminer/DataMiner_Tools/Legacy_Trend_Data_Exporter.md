@@ -1,5 +1,6 @@
 ---
 uid: Legacy_Trend_Data_Exporter
+description: "Use the legacy trend data exporter tool to realign average trend points in a CSV file to fixed intervals, such as 5-minute intervals."
 ---
 
 # Legacy trend data exporter
