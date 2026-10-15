@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_consulting_license_info
-description: "Use SLNetClientTest to check DMA license information, licensed applications, verification method, expiration date, and activated license counters."
+description: "Learn how, using the SLNetClientTest tool, you can check all license information on a DataMiner Agent."
 ---
 
 # Consulting license information for a DMA

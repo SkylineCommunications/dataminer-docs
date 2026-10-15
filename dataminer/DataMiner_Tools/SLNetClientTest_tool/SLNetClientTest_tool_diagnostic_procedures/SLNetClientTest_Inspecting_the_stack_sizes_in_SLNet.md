@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_Inspecting_the_stack_sizes_in_SLNet
-description: "Learn how to use the SLNetClientTest tool to check stack sizes in the SLNet process and assess whether client actions are experiencing delays."
+description: "Learn how, using the SLNetClientTest tool, you can get an overview of all stack sizes in the SLNet process."
 ---
 
 # Inspecting the stack sizes in SLNet

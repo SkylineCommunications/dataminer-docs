@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_retrieving_connection_info
-description: "Retrieve element connection info in SLNetClientTest by name or DMA ID/Element ID, then review Protocol Connection States for timeout details."
+description: "Learn how, using the SLNetClientTest tool, you can retrieve connection information for a particular element."
 ---
 
 # Retrieving connection info for a particular element

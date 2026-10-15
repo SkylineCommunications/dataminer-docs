@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_Requesting_QAction_metrics
-description: "Request or reset QAction metrics in SLNetClientTest for CPU usage, iterations, parameter/row counts, and execution time by QAction, element, or protocol."
+description: "Learn how, using the SLNetClientTest tool, you can request or reset QAction metrics like, for example, CPU usage."
 ---
 
 # Requesting QAction metrics

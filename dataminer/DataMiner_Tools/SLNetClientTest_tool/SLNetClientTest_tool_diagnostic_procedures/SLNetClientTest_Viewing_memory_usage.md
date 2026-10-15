@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_Viewing_memory_usage
-description: "Use SLNetClientTest to inspect SLProtocol memory usage for all elements or a selected element's parameters and tables from DataMiner 10.4.3/10.5.0 onward."
+description: "Learn how, using the SLNetClientTest tool, you can check how much memory specific elements, parameters, and tables are using in SLProtocol."
 ---
 
 # Viewing the memory usage of elements, parameters, and tables

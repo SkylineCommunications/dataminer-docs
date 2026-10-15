@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_verifying_sync_rules
-description: "Check active sync rules on a DMA in SLNetClientTest under Diagnostics > DMS > Config, then review cluster versions and extra known IP versions."
+description: "Learn how, using the SLNetClientTest tool, you can check which synchronization rules are in effect on a DMA."
 ---
 
 # Verifying sync rules

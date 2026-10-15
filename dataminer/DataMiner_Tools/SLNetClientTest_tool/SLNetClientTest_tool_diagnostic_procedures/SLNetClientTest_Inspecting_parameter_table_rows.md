@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_Inspecting_parameter_table_rows
-description: "Use SLNetClientTest to inspect parameter table rows for an element in SLProtocol or SLElement, including each table ID and row count."
+description: "Learn how, using the SLNetClientTest tool, you can inspect the number of rows a table holds in the SLProtocol or the SLElement process."
 ---
 
 # Inspecting parameter table rows in SLProtocol and SLElement

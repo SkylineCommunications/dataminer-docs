@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_query_hint_paths
-description: "Learn how to use the SLNetClientTest tool to query assembly resolution hint paths and troubleshoot dependency issues for QActions."
+description: "Learn how, using the SLNetClientTest tool, you can query the hint paths used to look up QAction dependencies."
 ---
 
 # Querying the assembly resolution hint paths

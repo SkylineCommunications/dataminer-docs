@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_consulting_replication_info
-description: "Use SLNetClientTest to view replication information for a DMA, including counts of source elements and services replicated by other DMAs in the DMS."
+description: "Learn how, using the SLNetClientTest tool, you can retrieve information about the elements and services on a DMA that are being replicated by other DMAs."
 ---
 
 # Consulting replication information for other DMAs in a DMS

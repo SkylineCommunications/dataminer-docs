@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_Inspecting_the_contents_of_a_table_parameter
-description: "Learn how to use the SLNetClientTest tool to inspect the contents of a table parameter for a specific element, and then view or export the table data."
+description: "Learn how, using the SLNetClientTest tool, you can inspect the contents of a table parameter in a specific element."
 ---
 
 # Inspecting the contents of a table parameter

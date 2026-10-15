@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_info_on_open_gqi_sessions
-description: "Use SLNetClientTest to view open GQI sessions running in SLHelper, including each session's ID, creation time, and last update time."
+description: "Learn how, using the SLNetClientTest tool, you can retrieve information about the open GQI sessions running in SLHelper."
 ---
 
 # Retrieving information on open GQI sessions

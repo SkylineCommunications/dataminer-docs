@@ -1,6 +1,6 @@
 ---
 uid: SLNetClientTest_viewing_connection_details
-description: "Open Diagnostics > Connection Details in SLNetClientTest to inspect a client connection's user, activity, subscriptions, and traffic statistics."
+description: "Learn how, using the SLNetClientTest tool, you can select a client connection to see detailed information about that connection."
 ---
 
 # Viewing connection details
