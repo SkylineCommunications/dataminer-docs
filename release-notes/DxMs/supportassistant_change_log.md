@@ -4,9 +4,9 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
-#### 14 October 2026 - Enhancement - SupportAssistant 1.10.0 - Improved Remote Log Collection uploads [ID 46681]
+#### 14 October 2026 - Enhancement - SupportAssistant 1.10.0 - Improved remote log collection uploads [ID 46681]
 
-SupportAssistant will now try the Cloud endpoint, then the configured proxy, and finally direct access, so uploads continue working when one route is unavailable.
+SupportAssistant will now try the cloud endpoint, then the configured proxy, and finally direct access, so remote log collection uploads continue working when one route is unavailable.
 
 #### 15 September 2026 - Enhancement - SupportAssistant 1.9.4 - DataMiner Assistant metrics included in WatchDog offloads [ID 46392]
 
