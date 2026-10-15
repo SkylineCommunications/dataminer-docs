@@ -29,11 +29,11 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 “**Documentation**” means all materials furnished by Skyline for the use of the Deliverables, including operating manuals, user guides, specifications, release notes, and any applicable Service Description.
 
-“**DPA**” means Skyline's then-current data processing agreement, as published or referenced by Skyline, or any separate written data processing agreement entered into by the Parties.
+“**DPA**” means Skyline's then-current data processing agreement, as published, referenced, or made available by Skyline, or any separate written data processing agreement entered into by the Parties.
 
 “**Fully Offline On-Premises Deployment**” means a deployment of the Software on Customer’s own infrastructure that cannot maintain Cloud Connected status, and that has been expressly approved as such by Skyline in the Quotation.
 
-“**Maintenance and Support Terms**” means Skyline’s then-current terms governing maintenance and support for self-managed deployments of the Software, as published or referenced by Skyline.
+“**Maintenance and Support Terms**” means Skyline’s then-current terms governing maintenance and support for self-managed deployments of the Software, as [published](xref:Support_Terms_On_Premises) or referenced by Skyline.
 
 “**Parties**” means Skyline and the Customer, and “Party” means either of them.
 
@@ -53,7 +53,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 “**Skyline**” means Skyline Communications N.V. with its registered office at Ambachtenstraat 33, 8870 Izegem, Belgium, or the Skyline entity specified in the applicable Regional Schedule.
 
-“**SLA**” means Skyline’s then-current service level terms for the SaaS Service, as published or referenced by Skyline.
+“**SLA**” means Skyline’s then-current service level terms for the SaaS Service, as [published](xref:Support_Terms_SaaS) or referenced by Skyline.
 
 “**Software**” means all software licensed by Skyline, including the DataMiner software and its accompanying drivers.
 
@@ -70,12 +70,12 @@ keywords: General Terms and Conditions, Terms and Conditions
 2.3 In the event of a conflict between documents forming part of the Agreement, the following order of precedence shall apply (highest to lowest):
 
 (a) the Quotation;
-(b) the applicable Regional Schedule (Part B);
-(c) any applicable DPA;
-(d) any applicable commercial schedule;
-(e) any applicable Service Description or usage policy;
-(f) any applicable SLA or Maintenance and Support Terms;
-(g) these terms;
+(b) any applicable DPA (with respect to the processing of Personal Data);
+(c) the applicable Regional Schedule (Part B);
+(d) these General Terms and Conditions (Part A);
+(e) any applicable commercial schedule;
+(f) any applicable Service Description or usage policy;
+(g) any applicable SLA or Maintenance and Support Terms;
 (h) the End User License Agreement (EULA) embedded in the Software.
 
 ### 3. Ordering and Payment
@@ -156,7 +156,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 ### 8. Data Protection
 
-8.1 Skyline processes Personal Data about Customer’s personnel for the purpose of performing the Agreement (controller processing). Such processing is governed by Skyline’s privacy notice, available on Skyline’s website.
+8.1 Skyline processes Personal Data about Customer’s personnel for the purpose of performing the Agreement (controller processing). Such processing is governed by Skyline’s applicable privacy notice, as published on Skyline’s website or [documentation portal](xref:dataminer.services_privacy_policy).
 
 8.2 Where Skyline processes Personal Data on behalf of Customer as processor, such processing shall be governed by the DPA.
 
