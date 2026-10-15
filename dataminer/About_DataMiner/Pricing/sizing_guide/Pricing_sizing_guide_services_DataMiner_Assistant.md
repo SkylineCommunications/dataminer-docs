@@ -7,6 +7,8 @@ description: "Use this DataMiner Assistant sizing guide to estimate Document Int
 
 Document Intelligence is charged **per page processed**, not per document or per workflow run.
 
+For information about the licensing and metering of the other DataMiner Intelligence capabilities, see [DataMiner Intelligence pricing](xref:Pricing_DataMiner_Intelligence).
+
 ## Service volumes
 
 | Category | Service | Metering unit | Calculation method |

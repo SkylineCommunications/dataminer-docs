@@ -18,7 +18,7 @@ AI agents operate by combining:
 
 ### Native agents
 
-Native agents are built-in agents that ship with the DataMiner Assistant DxM. They have access to all available tools and skills, and they combine multiple DataMiner Intelligence capabilities to autonomously investigate questions, retrieve information, and perform guided actions.
+Native agents are built-in agents that ship with the DataMiner Assistant DxM and are included at no additional cost. They are available as soon as the DxM has been installed and the Assistant app has been enabled. They have access to all available tools and skills, and they combine multiple DataMiner Intelligence capabilities to autonomously investigate questions, retrieve information, and perform guided actions.
 
 The following native agents are available:
 
@@ -34,6 +34,19 @@ On the agents overview page, native agents are labeled with a "Native" tag. You 
 [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents) are user-defined agents that bundle a name, description, instructions, and a curated set of references into a reusable, purpose-built entity. You can create them to have agents that are specifically tailored to certain operational workflows or domains.
 
 Specialized agents only have access to the specific tools and skills assigned to them.
+
+> [!IMPORTANT]
+> Specialized agents are an experimental feature and are licensed separately. They only become available once the specialized agents feature has been enabled. For more information, see [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents) and [DataMiner Intelligence pricing](xref:Pricing_DataMiner_Intelligence).
+
+### Enabling agents
+
+The agents become available in the following order:
+
+1. The native agents are available once the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) has been installed and the Assistant app has been enabled.
+1. The specialized agents feature becomes available once it has been enabled via the [feature flags](xref:Intelligence_Assistant_DxM#feature-flags).
+1. You can then start adding specialized agents, as well as the [skills](xref:Intelligence_Assistant_Skills) and [tools](xref:Intelligence_Assistant_Tools) they use.
+
+For guidance on how to divide responsibilities between agents, skills, and tools, see [Designing agents, skills, and tools](xref:Intelligence_Agent_Best_Practices).
 
 ## Agent context
 

@@ -19,7 +19,7 @@ When this preview feature has been enabled, you can access the Assistant app via
 Alternatively, the app is also available from Microsoft Teams or Microsoft Copilot. See [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
 
 > [!NOTE]
-> To enable the Assistant app in preview in your DataMiner System, contact [ai@skyline.be](mailto:ai@skyline.be).
+> To enable the Assistant app in preview in your DataMiner System, contact [ai@skyline.be](mailto:ai@skyline.be). Once the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is running, an administrator also has to enable the `AssistantOptions.ShowUserInterface` [feature flag](xref:Intelligence_Assistant_DxM#feature-flags).
 
 ## Assistant app user interface
 
@@ -50,3 +50,42 @@ When you open the app, a welcome screen is displayed with the following elements
   - **Model selector**: In the lower-right corner, you can choose which model answers your question (e.g., GPT-5.6 Luna). The last selected model is remembered across sessions.
 
   - **Speech-to-text**: A microphone button next to the chat input that allows you to use speech-to-text for entering your questions.
+
+## Managing agents, skills, and tools
+
+The left sidebar of the Assistant app also gives access to the pages where you can manage [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools):
+
+- **Agents**: Only visible if the [specialized agents feature flag](xref:Intelligence_Assistant_DxM#feature-flags) has been enabled.
+- **Skills**: Always visible.
+- **Tools**: Always visible.
+
+Everyone can view the items on these pages, but creating or editing them requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.
+
+## Starting a chat via URL parameters
+
+You can open the Assistant app with a specific agent, model, reasoning level, and question by adding query parameters to its URL. When the app loads with one or more of these parameters, it applies them before rendering and, if a message is provided, immediately sends it. This allows you to share links that start a conversation without any further interaction.
+
+The following query parameters are supported:
+
+| Parameter | Description |
+|-----------|-------------|
+| `agentId` | The ID (not the name) of the [native](xref:Intelligence_Assistant_Agents#native-agents) or [specialized](xref:Intelligence_Assistant_Specialized_Agents) agent to start the conversation with. You can find the ID of an agent in the URL of its details page, e.g., `https://[DMA]/assistant/agents/details/a3e1c2d4-5f6b-4a7e-8c9d-1b2f3e4a5c6d`. |
+| `model` | The model to use for the conversation. |
+| `reasoningLevel` | The reasoning level to use for models that support reasoning. Valid values are `None`, `Low`, `Medium`, `High`, and `Xhigh`. Not all models support every level. |
+| `message` | The initial message. When set, this message is sent automatically once the app has finished loading. The value must be URL-encoded, e.g., spaces as `%20` and question marks as `%3F`. |
+
+For example, the following URL opens the Assistant with the agent with ID `a3e1c2d4-5f6b-4a7e-8c9d-1b2f3e4a5c6d` at the *High* reasoning level, and immediately asks how to reset a device:
+
+```text
+https://[DMA]/root/assistant?agentId=a3e1c2d4-5f6b-4a7e-8c9d-1b2f3e4a5c6d&reasoningLevel=High&message=How%20do%20I%20reset%20a%20device%3F
+```
+
+> [!NOTE]
+>
+> - Selecting a value via a URL parameter is equivalent to selecting it in the user interface.
+> - If a parameter is missing or invalid, or refers to an agent, model, or reasoning level that is not available, the app falls back to its default for that option.
+> - Parameter values are case-sensitive. For example, use `reasoningLevel=High` and not `reasoningLevel=high`.
+
+## Checking the version
+
+To check the version of the DataMiner Assistant DxM, click the user icon in the top-right corner of the DataMiner web UI and select *About*. The window lists the versions of all components, including the *Assistant*. If the DataMiner Assistant DxM is not installed or not enabled, *Not installed* is shown.

@@ -61,7 +61,7 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/dataminer/Functions/EPM/EPM.html" title="Experience and Performance Management" target="_self"><img src="~/dataminer/images/Experience_Performance_Management.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/dataminer/Functions/DataMiner_Intelligence/Intelligence_Assistant_DxM.html" title="DataMiner Intelligence" target="_self"><img src="~/dataminer/images/DataMiner_Intelligence.svg" style="width:100%"></a>
+    <a href="/dataminer/Functions/DataMiner_Intelligence/Intelligence_Overview.html" title="DataMiner Intelligence" target="_self"><img src="~/dataminer/images/DataMiner_Intelligence.svg" style="width:100%"></a>
   </div>
 </div>
 
