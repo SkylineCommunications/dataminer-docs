@@ -41,6 +41,8 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
+*No new features have been added yet.*
+
 ## Changes
 
 ### Enhancements
@@ -101,6 +103,14 @@ The generated package now includes the following files in the `Elastic` folder f
 <!-- 46665: MR 10.7.0 - FR 10.6.12 -->
 
 A number of security enhancements have been made.
+
+#### Protocol: NotifyDataMiner(Queued) failures are now logged without internal offsets [ID 46709]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interface failed, up to now, the log included the internal offset added to the notify type.
+
+From now on, the log will show the original notify type without the offset.
 
 ### Fixes
 
@@ -171,6 +181,14 @@ From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will loa
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
+
+#### Remote DELT export and migration failures did not show the failure reason [ID 46699]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you exported or migrated an element hosted on another DMA in the cluster, up to now, a failure only produced a generic error message in DataMiner Cube. To find the cause, you had to check the DELT error log on the DMA hosting the element.
+
+From now on, DataMiner Cube now also displays the failure reason.
 
 #### SLAnalytics - Alarm Focus: Swarming notifications could be missed during startup [ID 46717]
 

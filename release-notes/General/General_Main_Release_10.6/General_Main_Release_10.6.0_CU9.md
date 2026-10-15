@@ -87,6 +87,14 @@ From now on, these registrations will be cleared when they are no longer needed.
 
 In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
 
+#### Remote DELT export and migration failures did not show the failure reason [ID 46699]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you exported or migrated an element hosted on another DMA in the cluster, up to now, a failure only produced a generic error message in DataMiner Cube. To find the cause, you had to check the DELT error log on the DMA hosting the element.
+
+From now on, DataMiner Cube now also displays the failure reason.
+
 #### SLAnalytics - Alarm Focus: Swarming notifications could be missed during startup [ID 46717]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
