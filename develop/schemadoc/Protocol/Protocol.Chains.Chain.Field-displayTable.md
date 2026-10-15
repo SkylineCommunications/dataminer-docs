@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field-displayTable
-description: "Learn how the displayTable attribute is defined as a string on an EPM chain field, but its purpose is not yet documented in a DataMiner protocol."
+description: "Learn about the displayTable attribute of the Field element in a DataMiner protocol, including its string content type and Chain Field parent."
 ---
 
 # displayTable attribute

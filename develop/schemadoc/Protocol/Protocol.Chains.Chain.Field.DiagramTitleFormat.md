@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.DiagramTitleFormat
-description: "Learn how the DiagramTitleFormat element sets a custom EPM diagram box title with parameter and display-key placeholders in a DataMiner protocol."
+description: "Use the DiagramTitleFormat element in a DataMiner protocol to set a custom EPM diagram box title with parameter and display key placeholders."
 ---
 
 # DiagramTitleFormat element

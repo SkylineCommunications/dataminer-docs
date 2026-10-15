@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Advanced
-description: "Learn how the Advanced element sets advanced command and response settings for equal-response handling and byte stuffing in a DataMiner protocol."
+description: "Learn how the Advanced element configures settings for ignoring duplicate responses and enabling byte stuffing in a DataMiner protocol."
 ---
 
 # Advanced element

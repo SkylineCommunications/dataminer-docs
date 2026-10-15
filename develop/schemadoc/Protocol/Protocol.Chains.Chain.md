@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain
-description: "Learn how the Chain element defines a topology view and its fields for an EPM or Service Overview Manager element in a DataMiner protocol."
+description: "Use the Chain element in a DataMiner protocol to define a topology view and its fields for an EPM or Service Overview Manager element."
 ---
 
 # Chain element

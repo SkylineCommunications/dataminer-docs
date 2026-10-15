@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.Display.Selection.Visibility
-description: "Learn how the Visibility element combines a default setting with trigger conditions for field selection visibility in a DataMiner protocol."
+description: "Use the Visibility element in a DataMiner protocol to combine a default setting with trigger conditions for field selection visibility."
 ---
 
 # Visibility element

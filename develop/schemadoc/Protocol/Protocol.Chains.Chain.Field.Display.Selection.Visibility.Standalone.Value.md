@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.Display.Selection.Visibility.Standalone.Value
-description: "Learn how the Value element defines a trigger value that reverses default field selection visibility in a DataMiner protocol."
+description: "Use the Value element in a DataMiner protocol to define a trigger value that reverses default field selection visibility."
 ---
 
 # Value element

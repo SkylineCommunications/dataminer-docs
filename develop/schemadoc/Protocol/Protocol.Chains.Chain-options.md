@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain-options
-description: "Learn how the options attribute configures chain security, filtering, grouping, navigation, and Visio behavior in a DataMiner protocol."
+description: "Use the Chain options attribute in a DataMiner protocol to configure chain security, filtering, grouping, navigation, and Visio behavior."
 ---
 
 # options attribute

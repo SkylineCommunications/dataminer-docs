@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain-defaultSelectionField
-description: "Learn how the defaultSelectionField attribute names the chain field to select automatically when it has one result in a DataMiner protocol."
+description: "Use the defaultSelectionField attribute in a DataMiner protocol to specify a chain field that is automatically selected when its filter matches a single item."
 ---
 
 # defaultSelectionField attribute

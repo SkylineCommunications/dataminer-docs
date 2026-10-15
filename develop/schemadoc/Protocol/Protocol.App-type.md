@@ -1,6 +1,6 @@
 ---
 uid: Protocol.App-type
-description: "Learn how the type attribute names the DataMiner app represented by elements based on the protocol in a DataMiner protocol."
+description: "Learn how the App type attribute specifies the app name displayed in the DataMiner Cube Apps list for elements based on the protocol."
 ---
 
 # type attribute

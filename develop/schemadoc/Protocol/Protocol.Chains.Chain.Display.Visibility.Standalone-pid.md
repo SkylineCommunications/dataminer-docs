@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Display.Visibility.Standalone-pid
-description: "Learn how the pid attribute identifies the parameter whose values can reverse default chain visibility in a DataMiner protocol."
+description: "Use the Standalone pid attribute in a DataMiner protocol to identify the parameter whose values can reverse default chain visibility."
 ---
 
 # pid attribute

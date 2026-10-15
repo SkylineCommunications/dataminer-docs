@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.Display.Selection
-description: "Learn how the Selection element configures visibility settings for an EPM chain field selection control in a DataMiner protocol."
+description: "Use the Selection element in a DataMiner protocol to configure visibility settings for an EPM chain field selection control."
 ---
 
 # Selection element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains
-description: "Learn how the Chains element contains topology and search chains shown as tabs for EPM or SOM elements in a DataMiner protocol."
+description: "Use the Chains element in a DataMiner protocol to contain topology and search chains shown as tabs for EPM or SOM elements."
 ---
 
 # Chains element

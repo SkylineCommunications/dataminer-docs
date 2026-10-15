@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field-name
-description: "Learn how the name attribute sets the name of a block in an EPM chain drill-down diagram in a DataMiner protocol."
+description: "Use the Field name attribute in a DataMiner protocol to set the name of a block in an EPM chain drill-down diagram."
 ---
 
 # name attribute
