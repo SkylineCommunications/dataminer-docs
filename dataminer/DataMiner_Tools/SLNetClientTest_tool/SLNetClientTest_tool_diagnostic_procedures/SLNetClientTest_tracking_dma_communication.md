@@ -1,6 +1,7 @@
 ---
 uid: SLNetClientTest_tracking_dma_communication
 keywords: Cube follow
+description: "Learn how, using the SLNetClientTest tool, you can activate follow mode for several aspects of DMA communication."
 ---
 
 # Tracking DMA communication

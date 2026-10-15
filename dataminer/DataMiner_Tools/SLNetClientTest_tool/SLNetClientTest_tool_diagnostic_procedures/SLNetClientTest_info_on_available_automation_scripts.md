@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_info_on_available_automation_scripts
+description: "Learn how, using the SLNetClientTest tool, you can retrieve information on the available automation scripts available in your DataMiner System."
 ---
 
 # Retrieving information on the available automation scripts
