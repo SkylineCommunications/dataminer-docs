@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Actions.Action
-description: "Learn how the Action element defines an executable action, its condition, name, target, and type in a DataMiner protocol."
+description: "Learn how the Action element defines an executable action and its condition, name, target, and type in a DataMiner protocol."
 ---
 
 # Action element

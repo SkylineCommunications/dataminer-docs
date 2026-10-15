@@ -5,7 +5,7 @@ description: "Use the Action Type options attribute to provide action-specific s
 
 # options attribute
 
-This attribute allows defining different options depending on the type of action.
+This attribute allows different options to be defined depending on the type of action.
 
 ## Content Type
 

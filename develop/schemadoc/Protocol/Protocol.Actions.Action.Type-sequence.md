@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Actions.Action.Type-sequence
-description: "Use the Action Type sequence attribute with set info actions to specify the sequence assigned to a protocol parameter."
+description: "Use the Action Type sequence attribute with 'set info' actions to specify the sequence assigned to a protocol parameter."
 ---
 
 # sequence attribute

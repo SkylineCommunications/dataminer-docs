@@ -5,7 +5,14 @@ description: "Use the action ID to identify an action uniquely in a protocol and
 
 # id attribute
 
-Specifies the unique action ID.
+Specifies the unique action ID of the action.
+
+A unique object ID must be assigned to every action in a protocol. The ID identifies the action in the `Actions` collection; it does not describe the action's execution type.
+
+DataMiner can resolve the action declaration by its ID while processing the protocol's triggers, timers, or other action references.
+
+> [!TIP]
+> If you change an existing ID, update every protocol element that refers to the action and validate the connector before deployment.
 
 ## Content Type
 
@@ -14,18 +21,6 @@ Specifies the unique action ID.
 ## Parent
 
 [Action](xref:Protocol.Actions.Action)
-
-## Usage and constraints
-
-Assign a unique object ID to every action in the protocol. The ID identifies the action in the `Actions` collection; it does not describe the action's execution type.
-
-## Expected result
-
-DataMiner can resolve the action declaration by its ID while processing the protocol's triggers, timers, or other action references.
-
-## Failure and edge cases
-
-Duplicate IDs make action references ambiguous. If you change an existing ID, update every protocol element that refers to the action and validate the connector before deployment.
 
 ## Example
 
@@ -43,8 +38,3 @@ Duplicate IDs make action references ambiguous. If you change an existing ID, up
 - [Action element](xref:Protocol.Actions.Action)
 - [Start action](xref:LogicActionStart)
 - [Connector logic actions](xref:LogicActions)
-
-## Authoritative references
-
-- [Protocol XML schema](xref:SchemaProtocol)
-- [Action element](xref:Protocol.Actions.Action)
