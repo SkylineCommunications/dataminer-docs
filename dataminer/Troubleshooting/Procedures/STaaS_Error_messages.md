@@ -134,4 +134,6 @@ To resolve this issue:
 
 1. Remove the file `C:\ProgramData\Skyline Communications\DxMs Shared\Data\NodeId.txt`.
 
+1. If the *NodeId.txt* file is also present in the folder `C:\ProgramData\Skyline Communications\DataMiner Orchestrator\Data`, remove it there as well.
+
 1. Restart the DMA.

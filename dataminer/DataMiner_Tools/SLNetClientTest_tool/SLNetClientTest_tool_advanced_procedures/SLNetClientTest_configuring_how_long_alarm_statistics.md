@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_configuring_how_long_alarm_statistics
+description: "Use the SLNetClientTest tool to control how long alarm statistics stay available in memory for recent monitoring and requested time ranges."
 ---
 
 # Configuring how long alarm statistics are kept in memory

@@ -100,17 +100,19 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerCoreModules#apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
+1. If you are using the auto-generated SSL certificate from APIGateway, optionally generate a new one to contain the new IP address:
 
-1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+   1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
 
-   ```powershell
-   $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
-   Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+   1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
 
-   $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
-   $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
-   ```
+      ```powershell
+      $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
+      Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+      
+      $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
+      $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+      ```
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
@@ -221,17 +223,19 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerCoreModules#apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
+1. If you are using the auto-generated SSL certificate from APIGateway, optionally generate a new one to contain the new IP address:
 
-1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+   1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
 
-   ```powershell
-   $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
-   Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+   1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
 
-   $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
-   $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
-   ```
+      ```powershell
+      $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
+      Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+      
+      $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
+      $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+      ```
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 

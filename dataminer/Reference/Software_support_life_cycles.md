@@ -120,6 +120,7 @@ The following features currently have the "End of Engineering" status. They will
 
 | Item | Details | Future status |
 |------|---------|---------------|
+| Support for Cassandra 3.x | Support will end for Cassandra 3.x, which is the last Cassandra version that supports Windows. We recommend switching to [STaaS](xref:STaaS) or to [dedicated clustered storage](xref:Dedicated_clustered_storage) with a more recent Cassandra version hosted on Linux | End of support as of DataMiner 10.7.x (Q4 2026). |
 | Support for Cassandra Single | Support will end for setups where each DMA has its own Cassandra database. Instead we recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [dedicated clustered storage](xref:Dedicated_clustered_storage) instead. | End of Support as of DataMiner 10.8.x (Q4 2027). |
 | Support for Elasticsearch 6.8 | As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead. | End of support as of DataMiner 10.7.x (Q4 2026). |
 
@@ -136,7 +137,7 @@ The following features currently have the "End of Support" status. They will no 
 |------|---------|---------------|
 | Support for MySQL as local database | End of Support as of DataMiner 10.6.x. Existing features will work, but some new features will require [Storage as a Service](xref:STaaS) (recommended) or [dedicated clustered storage](xref:Dedicated_clustered_storage). | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Support for overlays of type 'kml' | As Google has deprecated KML layer support, [KML overlays](xref:Layer_types#overlays-of-type-kml) used in both the [maps component](xref:DashboardMaps) and the [Maps add-on module](xref:About_DMS_Maps) will also no longer be available. We recommend switching to [GeoJSON overlays](xref:Layer_types#overlays-of-type-geojson). | End of Life:<br> - August 2026 for systems running DataMiner versions below 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7<br>- May 2027 for DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 and later |
-| Two-site redundant indexing clusters | This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS). | End of Life as of DataMiner 10.7.x (Q4 2026).|
+| Two-site redundant indexing clusters | This setup (as mentioned under [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)) should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS). | End of Life as of DataMiner 10.7.x (Q4 2026).|
 
 ### End of Life
 
@@ -190,6 +191,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 
 - **End of Life – .NET Remoting**: To improve security, gRPC must be used instead of .NET Remoting. For details, see [DataMiner Agent hardening](xref:DataMiner_hardening_guide#dataminer-agent-hardening).
 - **End of Support - [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server)**: This type of authentication will be deprecated.
+- **End of Support - Cassandra 3.x**: Support ends for Cassandra 3.x, which is the last Cassandra version that supports Windows. We recommend switching to [STaaS](xref:STaaS) or to [dedicated clustered storage](xref:Dedicated_clustered_storage) with a more recent Cassandra version hosted on Linux
 - **End of Support – Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll)**: This option is superfluous and should no longer be used.
 - **End of Support – Elasticsearch 6.8**: As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead.
 - **End of Engineering – Failover**: This feature will be replaced by [Swarming](xref:Swarming).
@@ -205,7 +207,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Engineering – SLOffload tool**: This tool is obsolete and cannot be used in systems with a Cassandra general database.
 - **End of Engineering – SLNetPlugins**: These bespoke plugins for SLNet should no longer be used.
 - **End of Life – [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service)**: This configuration is obsolete and should not be used.
-- **End of Life – Two-site redundant indexing clusters**: This setup should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS).
+- **End of Life – Two-site redundant indexing clusters**: This setup (as mentioned under [Configuring multiple Elasticsearch clusters](xref:Configuring_multiple_Elasticsearch_clusters)) should no longer be used. For optimal redundancy, we recommend switching to [Storage as a Service](xref:STaaS).
 - **End of Life – Use of JScript in QActions**: C# should be used instead. JScript in QActions cannot be used on Windows Server 2025.
 - **End of Life – Use of VBScript in QActions**: C# should be used instead.
 - **End of Engineering – Visual overviews in DataMiner web apps**: The lightweight version of Visual Overview shown in DataMiner web apps is now considered legacy UI. [Several capabilities](xref:DashboardVisualOverview#unsupported-capabilities) of Visual Overview in Cube are not supported in the web apps.

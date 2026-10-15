@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_changing_number_records_protocol_cache
+description: "Use the SLNetClientTest tool to adjust the protocol cache size to help tune DataMiner Agent performance after consulting with Skyline."
 ---
 
 # Changing the number of records in the protocol cache

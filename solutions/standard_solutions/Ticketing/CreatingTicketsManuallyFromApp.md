@@ -6,7 +6,7 @@ uid: CreatingTicketsManuallyFromApp
 
 1. On the Tickets page of the Ticketing app, click *Create Ticket*.
 
-   ![Create Ticket button in the top-right corner of the Ticketing app's Tickets page](~/solutions/images/Ticketing_Create_Ticket_button.png)
+   ![Create Ticket button in the upper-right corner of the Ticketing app's Tickets page](~/solutions/images/Ticketing_Create_Ticket_button.png)
 
 1. In the pop-up window, fill in the following information:
 

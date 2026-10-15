@@ -662,6 +662,9 @@ This table contains a one-year history of behavioral change points. See [Behavio
 
 From DataMiner 10.2.12 onwards, the partitioning of the table is optimized into table version *analytics_changepoints_v2*. In earlier versions, large and heavily trended elements can cause larger partition sizes of the version *analytics_changepoints_v1* tables.
 
+> [!NOTE]
+> From DataMiner 10.6.11/10.7.0 onwards<!-- RN 46524 -->, DataMiner reads change points exclusively from the current data store. Change points that were written only to the deprecated *analytics_changepoints_v1* tables before migration are no longer returned. Change points stored in the current format are unaffected.
+
 The analytics_changepoints table is defined as follows:
 
 |Name|Type|Primary Key|Description|

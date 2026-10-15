@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_removing_references
+description: "Learn how, using the SLNetClientTest tool, you can remove references to elements, services, or redundancy groups that no longer exist from Views.xml."
 ---
 
 # Removing references to items that no longer exist

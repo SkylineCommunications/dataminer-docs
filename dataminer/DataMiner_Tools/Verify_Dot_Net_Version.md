@@ -8,11 +8,11 @@ From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, the *VerifyDo
 
 It checks whether the following versions are installed:
 
-- **Microsoft ASP.NET 8.0**: If this check fails, install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) before continuing the upgrade.
-
 - **Microsoft ASP.NET 10.0**: Checked from DataMiner 10.6.1/10.6.0 [CU0]/10.5.0 [CU10] onwards<!--RN 44121-->. If this check fails, install the [Microsoft ASP.NET 10.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/10.0) before continuing the upgrade.
 
 - **Microsoft .NET Framework 4.8**: Checked from DataMiner 10.6.6/10.7.0 onwards<!--RN 45196-->. If this check fails, install [Microsoft .NET Framework 4.8](https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48) before continuing the upgrade.
+
+- **Microsoft ASP.NET 8.0**: Required for DataMiner versions prior to DataMiner 10.6.0 [CU8]/10.5.0 [CU20]/10.6.11. From DataMiner 10.6.0 [CU8]/10.5.0 [CU20]/10.6.11 onwards<!--RN 46579-->, this version is no longer checked by the prerequisite. For earlier DataMiner versions, if this check fails, install the [Microsoft ASP.NET 8.0 Hosting Bundle](https://dotnet.microsoft.com/en-us/download/dotnet/8.0) before continuing the upgrade.
 
 You may have to **reboot the server** after installation to be able to pass this prerequisite check.
 

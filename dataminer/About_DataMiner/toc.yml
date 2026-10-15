@@ -7,8 +7,6 @@ items:
     topicUid: Overview_Standardized_Foundation
   - name: Digital transformation
     topicUid: Digital_transformation
-  - name: Open software platform
-    topicUid: Overview_Platform_Open_Platform
   - name: References and use cases
     topicUid: Overview_References_and_use_cases
   - name: Security
@@ -125,6 +123,8 @@ items:
             - name: Solutions
               topicUid: Pricing_sizing_guide_solutions
               items:
+                - name: Cost & Billing
+                  topicUid: Pricing_sizing_guide_solutions_Cost_Billing
                 - name: InfraOps
                   topicUid: Pricing_sizing_guide_solutions_InfraOps
                 - name: MediaOps Plan

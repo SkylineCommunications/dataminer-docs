@@ -54,6 +54,6 @@ Proceed as follows to upgrade your DataMiner Agent(s) in System Center:
 
 1. Click *Upgrade* to start the upgrade procedure.
 
-The upgrade process can take several minutes, depending on the network properties, the type of upgrade, and the size and complexity of your DataMiner System. You can follow the progress of the update in the *Progress* tab.
+The upgrade process can take several minutes, depending on the network properties, the type of upgrade, and the size and complexity of your DataMiner System. You can follow the progress of the update in the *Progress* tab. From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!--RN 46504-->, the status of a cluster upgrade is also displayed next to the cluster name in the Cube header (*Upgrading*, *Upgrade done*, or *Upgrade failed*). Note that the *Upgrade failed* status is only shown to users who have permission to view and launch upgrades.
 
 During a full DMS upgrade, you can connect to any Agent that has completed its local upgrade. Prior to DataMiner 10.6.6/10.7.0<!--RN 45312-->, the only exception is the orchestrating Agent (i.e., the Agent from which the upgrade was triggered), which can only be accessed after all Agents in the cluster have been upgraded.

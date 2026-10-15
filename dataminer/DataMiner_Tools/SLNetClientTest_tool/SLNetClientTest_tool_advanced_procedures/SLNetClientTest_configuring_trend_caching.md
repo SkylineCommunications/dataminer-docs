@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_configuring_trend_caching
+description: "Use the SLNetClientTest tool to configure trend caching, set expiration to 120 seconds, limit records to 1000000, or clear the cache."
 ---
 
 # Configuring trend caching

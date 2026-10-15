@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU20
 ---
 
-# General Main Release 10.5.0 CU20 - Preview
+# General Main Release 10.5.0 CU20
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version:
@@ -26,6 +26,12 @@ uid: General_Main_Release_10.5.0_CU20
 
 ### Enhancements
 
+#### MessageBroker library has been upgraded to Microsoft .NET 10 [ID 44205]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+The MessageBroker library has been upgraded to Microsoft .NET 10.
+
 #### NATSMigration: Prerequisite checks added [ID 45668] [ID 46125]
 
 <!-- MR 10.5.0 [CU20] - FR TBD -->
@@ -45,15 +51,13 @@ The UserDefinableApiEndpoint DxM now reports its health status to dataminer.serv
 
 When it can validate or repair the IIS rewrite rule for user-defined APIs, it reports a healthy status. If the rule cannot be repaired, it reports an unhealthy status.
 
-#### DxMs upgraded [ID 46577]
+#### VerifyDotNetVersion prerequisite check will no longer check whether .NET 8 is installed [ID 46579]
 
-<!-- RN 46577: MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
-The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+From now on, the `VerifyDotNetVersion` prerequisite check will no longer check whether .NET 8 is installed when you install or upgrade DataMiner.
 
-- DataMiner DataAPI 1.5.0
-
-For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+Microsoft .NET 10 remains required.
 
 ### Fixes
 
@@ -117,6 +121,12 @@ On systems using STaaS, up to now, ordering DOM entries by an optional field cou
 
 Up to now, testing a connection that used SNMPv3 credentials from the Credential Library with SHA-224, SHA-256, SHA-384, or SHA-512 authentication could cause the SLSNMPManager process to stop unexpectedly.
 
+#### SNMP: Community credentials could be lost when an automation script modified an element [ID 46537]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+Up to now, when an automation script modified an element that used community credentials from the Credential Library on its main connection, the element could lose those credentials if the script did not change them. From now on, the credentials will be retained.
+
 #### SLScripting could stop working due to recursive assembly resolution logging [ID 46572]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
@@ -124,3 +134,9 @@ Up to now, testing a connection that used SNMPv3 credentials from the Credential
 In some cases, when SLScripting tried to log that a different version of an assembly had been loaded than the requested version, the logging could trigger another resolution attempt for the same assembly. This could result in a recursive loop that caused SLScripting to stop working.
 
 A safeguard has now been introduced in the version mismatch logger and the resolve failure logger to prevent this recursive behavior.
+
+#### Problem when APIGateway was shut down [ID 46619]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 [CU0] -->
+
+Up to now, when the APIGateway module was shut down, it would stop working unexpectedly and throw an `ObjectDisposedException`.

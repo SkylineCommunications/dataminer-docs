@@ -292,7 +292,7 @@ Up to now, when you logged in to a DaaS system using external authentication, in
 
 #### MessageBroker would not be able to connect to the NATS bus of a DMA when the server name of the DMA was an invalid DNS name [ID 45640]
 
-<!-- MR 10.5.0 [CU17] / 10.6.0 [CU5] - FR 10.6.8 -->
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU6] - FR 10.6.8 -->
 
 Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the server name of that Agent was an invalid DNS name.
 

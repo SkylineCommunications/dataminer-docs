@@ -77,6 +77,9 @@ Every request that can be linked to a token counts toward that token's rate limi
 
 From DataMiner 10.6.10/10.7.0 onwards<!-- RN 46244 -->, it is also possible to enable notice generation by setting `GenerateNotice` to `true` on the `ApiTokenRateLimit` of a token via the API.
 
+> [!IMPORTANT]
+> From DataMiner 10.5.0 [CU20], 10.6.0 [CU8], and 10.6.11 onwards<!-- RN 46336 -->, you can configure notice generation directly via *System Center* > *User-Defined APIs* when creating or editing a token. See [Configuring a rate limit for an API token](xref:UD_APIs_Viewing_in_Cube#configuring-a-rate-limit-for-an-api-token).
+
 When this is enabled, and the rate limit is exceeded on an endpoint, the *UserDefinableApiEndpoint* DxM sends a notification to the DataMiner Agent on the same server or virtual machine. The Agent then generates a notice.
 
 Only one notice is generated per token until you manually clear the notice. Notices are not cleared automatically. After you manually clear a notice, another notice is generated when the token reaches its rate limit again, subject to the one-minute suppression. If there has already been a rate limit notice in the previous minute, no additional notice is generated if the rate limit is exceeded again for the token.

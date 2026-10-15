@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_setting_TTL_database
+description: "Learn how, using the SLNetClientTest tool, you can update the TTL (time to live) for database records."
 ---
 
 # Setting the TTL for database records
