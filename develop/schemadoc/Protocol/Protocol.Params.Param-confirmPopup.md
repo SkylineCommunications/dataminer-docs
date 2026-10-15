@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param-confirmPopup
-description: "Learn how to use the confirmPopup attribute to override DataMiner Cube confirmation settings for parameter changes in a DataMiner connector protocol."
+description: "Learn how to use the confirmPopup attribute to override DataMiner Cube confirmation settings for parameter changes in a DataMiner protocol."
 ---
 
 # confirmPopup attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Validation.Regex
-description: "Learn how the Regex element defines the allowed search field content pattern for input validation in a DataMiner connector protocol."
+description: "Learn how the Regex element defines the allowed search field content pattern for input validation in a DataMiner protocol."
 ---
 
 # Regex element

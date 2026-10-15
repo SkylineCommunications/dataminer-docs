@@ -1,6 +1,6 @@
 ---
 uid: Protocol-TimerTime
-description: "Use the TimerTime simple type to represent loop execution or a positive timer interval in the DataMiner connector protocol schema."
+description: "Use the TimerTime simple type to represent loop execution or a positive timer interval in the DataMiner protocol schema."
 ---
 
 # TimerTime simple type

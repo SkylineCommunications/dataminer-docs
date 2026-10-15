@@ -1,6 +1,6 @@
----
+﻿---
 uid: Protocol-EnumTriggerOn
-description: "Review the allowed values for the EnumTriggerOn simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumTriggerOn simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumTriggerOn simple type

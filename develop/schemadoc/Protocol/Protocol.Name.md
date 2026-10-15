@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Name
-description: "Learn how to use the Name element to set the unique connector protocol name used throughout a DataMiner System."
+description: "Learn how to use the Name element to set the unique protocol name used throughout a DataMiner System."
 ---
 
 # Name element

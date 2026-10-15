@@ -1,6 +1,6 @@
 ---
 uid: Protocol-EnumHttpRequestVerb
-description: "Review the allowed values for the EnumHttpRequestVerb simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumHttpRequestVerb simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumHttpRequestVerb simple type

@@ -1,6 +1,6 @@
 ---
 uid: Protocol-EnumParamInterpretEndian
-description: "Review the allowed values for the EnumParamInterpretEndian simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumParamInterpretEndian simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumParamInterpretEndian simple type

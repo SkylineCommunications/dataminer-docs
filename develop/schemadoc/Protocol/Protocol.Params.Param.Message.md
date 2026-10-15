@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Message
-description: "Learn how the Message element shows a confirmation message when a user changes a write parameter in the user interface in a DataMiner connector protocol."
+description: "Learn how the Message element shows a confirmation message when a user changes a write parameter in the user interface in a DataMiner protocol."
 ---
 
 # Message element

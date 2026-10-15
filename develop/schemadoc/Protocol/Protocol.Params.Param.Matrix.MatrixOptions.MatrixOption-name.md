@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption-name
-description: "Learn how the name attribute selects the matrix option that controls a specific appearance or behavior setting in a DataMiner connector protocol."
+description: "Learn how the name attribute selects the matrix option that controls a specific appearance or behavior setting in a DataMiner protocol."
 ---
 
 # name attribute

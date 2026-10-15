@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Display.Visibility.Standalone
-description: "Learn how the Standalone element maps parameter values to the opposite of the configured default chain visibility in a DataMiner connector protocol."
+description: "Learn how the Standalone element maps parameter values to the opposite of the configured default chain visibility in a DataMiner protocol."
 ---
 
 # Standalone element

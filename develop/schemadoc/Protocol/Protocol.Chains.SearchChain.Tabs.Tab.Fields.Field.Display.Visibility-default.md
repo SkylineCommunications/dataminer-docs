@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Display.Visibility-default
-description: "Learn how the default attribute sets search field visibility when no standalone condition is met in a DataMiner connector protocol."
+description: "Learn how the default attribute sets search field visibility when no standalone condition is met in a DataMiner protocol."
 ---
 
 # default attribute

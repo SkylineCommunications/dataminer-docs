@@ -1,6 +1,6 @@
 ---
 uid: Protocol-TypePingInterval
-description: "Use the TypePingInterval simple type to validate ping intervals from 1000 to 300000 milliseconds in the DataMiner connector protocol schema."
+description: "Use the TypePingInterval simple type to validate ping intervals from 1000 to 300000 milliseconds in the DataMiner protocol schema."
 ---
 
 # TypePingInterval simple type

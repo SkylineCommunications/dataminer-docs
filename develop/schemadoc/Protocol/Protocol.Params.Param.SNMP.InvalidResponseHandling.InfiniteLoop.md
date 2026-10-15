@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.InvalidResponseHandling.InfiniteLoop
-description: "Learn how the InfiniteLoop element sets SNMP table response handling when polling detects an infinite loop in a DataMiner connector protocol."
+description: "Learn how the InfiniteLoop element sets SNMP table response handling when polling detects an infinite loop in a DataMiner protocol."
 ---
 
 # InfiniteLoop element

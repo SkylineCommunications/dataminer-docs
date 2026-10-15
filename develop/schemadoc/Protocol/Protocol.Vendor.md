@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Vendor
-description: "Consult the DataMiner connector protocol schema reference for the Vendor element, which records the vendor name for the monitored data source."
+description: "Consult the DataMiner protocol schema reference for the Vendor element, which records the vendor name for the monitored data source."
 ---
 
 # Vendor element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.ByteOffset
-description: "Learn how the ByteOffset element subtracts an offset from incoming bytes and adds it to outgoing bytes in a group in a DataMiner connector protocol."
+description: "Learn how the ByteOffset element subtracts an offset from incoming bytes and adds it to outgoing bytes in a group in a DataMiner protocol."
 ---
 
 # ByteOffset element

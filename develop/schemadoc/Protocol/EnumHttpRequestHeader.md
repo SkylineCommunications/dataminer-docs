@@ -1,6 +1,6 @@
 ---
 uid: Protocol-EnumHttpRequestHeader
-description: "Review the allowed values for the EnumHttpRequestHeader simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumHttpRequestHeader simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumHttpRequestHeader simple type

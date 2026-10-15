@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Actions.Action.Name
-description: "Use the Action Name element to assign a nonempty name to an action defined in a DataMiner connector protocol."
+description: "Use the Action Name element to assign a non-empty name to an action defined in a DataMiner protocol XML file."
 ---
 
 # Name element

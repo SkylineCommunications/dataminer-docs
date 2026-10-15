@@ -1,6 +1,6 @@
 ---
 uid: Protocol-EnumOIDType
-description: "Review the allowed values for the EnumOIDType simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumOIDType simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumOIDType simple type

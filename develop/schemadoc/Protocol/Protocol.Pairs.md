@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Pairs
-description: "Learn how to use the Pairs element to list uniquely identified command and response pairs in a DataMiner connector protocol."
+description: "Learn how to use the Pairs element to list uniquely identified command and response pairs in a DataMiner protocol."
 ---
 
 # Pairs element

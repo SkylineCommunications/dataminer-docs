@@ -1,6 +1,6 @@
 ---
 uid: Protocol-TypeTriggerOnId
-description: "Use the TypeTriggerOnId simple type to accept an unsigned ID or each as a default trigger target in the DataMiner connector protocol schema."
+description: "Use the TypeTriggerOnId simple type to accept an unsigned ID or each as a default trigger target in the DataMiner protocol schema."
 ---
 
 # TypeTriggerOnId simple type

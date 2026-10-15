@@ -1,6 +1,6 @@
 ---
 uid: Protocol-TypeGroupParamId
-description: "Use the TypeGroupParamId simple type to validate group parameter IDs and optional execution suffixes in the DataMiner connector protocol schema."
+description: "Use the TypeGroupParamId simple type to validate group parameter IDs and optional execution suffixes in the DataMiner protocol schema."
 ---
 
 # TypeGroupParamId simple type

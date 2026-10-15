@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Dependencies
-description: "Learn how the Dependencies element links parameters and requires valid dependent values before command execution in a DataMiner connector protocol."
+description: "Learn how the Dependencies element links parameters and requires valid dependent values before command execution in a DataMiner protocol."
 ---
 
 # Dependencies element

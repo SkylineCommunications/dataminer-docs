@@ -1,6 +1,6 @@
----
+﻿---
 uid: Protocol-EnumTriggerTime
-description: "Review the allowed values for the EnumTriggerTime simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumTriggerTime simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumTriggerTime simple type

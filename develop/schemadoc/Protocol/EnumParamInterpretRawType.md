@@ -1,6 +1,6 @@
----
+﻿---
 uid: Protocol-EnumParamInterpretRawType
-description: "Review the allowed values for the EnumParamInterpretRawType simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumParamInterpretRawType simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumParamInterpretRawType simple type

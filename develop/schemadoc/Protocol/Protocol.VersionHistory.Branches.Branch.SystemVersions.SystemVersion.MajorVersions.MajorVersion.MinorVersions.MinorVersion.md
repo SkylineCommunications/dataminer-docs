@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion
-description: "Consult the DataMiner connector protocol schema reference for the MinorVersion element, which defines a minor version with release and change information."
+description: "Consult the DataMiner protocol schema reference for the MinorVersion element, which defines a minor version with release and change information."
 ---
 
 # MinorVersion element

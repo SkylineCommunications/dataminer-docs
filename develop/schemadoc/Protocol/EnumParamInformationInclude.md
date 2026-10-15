@@ -1,6 +1,6 @@
 ---
 uid: Protocol-EnumParamInformationInclude
-description: "Review the allowed values for the EnumParamInformationInclude simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumParamInformationInclude simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumParamInformationInclude simple type

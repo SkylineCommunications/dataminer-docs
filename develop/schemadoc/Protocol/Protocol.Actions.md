@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Actions
-description: "Learn how the Actions element contains uniquely identified and named actions in a DataMiner connector protocol."
+description: "Learn how the Actions element contains uniquely identified and named actions in a DataMiner protocol."
 ---
 
 # Actions element

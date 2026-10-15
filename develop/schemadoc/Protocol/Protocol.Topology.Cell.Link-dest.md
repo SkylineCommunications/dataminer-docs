@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topology.Cell.Link-dest
-description: "Consult the DataMiner connector protocol schema reference for the dest attribute, which identifies a column for foreign key relations within an EPM table."
+description: "Consult the DataMiner protocol schema reference for the dest attribute, which identifies a column for foreign key relations within an EPM table."
 ---
 
 # dest attribute

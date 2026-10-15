@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Content
-description: "Consult the DataMiner connector protocol schema reference for the Content element, which lists actions to execute or triggers to activate."
+description: "Consult the DataMiner protocol schema reference for the Content element, which lists actions to execute or triggers to activate."
 ---
 
 # Content element

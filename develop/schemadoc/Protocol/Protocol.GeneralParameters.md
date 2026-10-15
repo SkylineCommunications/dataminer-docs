@@ -1,6 +1,6 @@
 ---
 uid: Protocol.GeneralParameters
-description: "Learn how the GeneralParameters element lists which general parameter groups DataMiner should load in a DataMiner connector protocol."
+description: "Learn how the GeneralParameters element lists which general parameter groups DataMiner should load in a DataMiner protocol."
 ---
 
 # GeneralParameters element

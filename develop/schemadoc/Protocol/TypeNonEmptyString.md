@@ -1,6 +1,6 @@
 ---
 uid: Protocol-TypeNonEmptyString
-description: "Use the TypeNonEmptyString simple type to require a string containing at least one character in the DataMiner connector protocol schema."
+description: "Use the TypeNonEmptyString simple type to require a string containing at least one character in the DataMiner protocol schema."
 ---
 
 # TypeNonEmptyString simple type

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.DiagramSorting
-description: "Learn how the DiagramSorting element sets the field item sort criteria and direction for an EPM diagram in a DataMiner connector protocol."
+description: "Learn how the DiagramSorting element sets the field item sort criteria and direction for an EPM diagram in a DataMiner protocol."
 ---
 
 # DiagramSorting element

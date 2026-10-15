@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Session-connection
-description: "Learn how the connection attribute selects the connection to execute within an HTTP session included in a group in a DataMiner connector protocol."
+description: "Learn how the connection attribute selects the connection to execute within an HTTP session included in a group in a DataMiner protocol."
 ---
 
 # connection attribute

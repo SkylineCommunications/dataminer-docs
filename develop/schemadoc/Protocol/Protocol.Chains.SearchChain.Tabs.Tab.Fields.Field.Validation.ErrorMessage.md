@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Validation.ErrorMessage
-description: "Learn how the ErrorMessage element sets the message shown when search field input fails validation in a DataMiner connector protocol."
+description: "Learn how the ErrorMessage element sets the message shown when search field input fails validation in a DataMiner protocol."
 ---
 
 # ErrorMessage element

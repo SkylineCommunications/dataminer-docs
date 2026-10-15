@@ -1,6 +1,6 @@
 ---
 uid: Protocol-TypeProtocolVersion
-description: "Use the TypeProtocolVersion simple type to validate four-part protocol version numbers in the DataMiner connector protocol schema."
+description: "Use the TypeProtocolVersion simple type to validate four-part protocol version numbers in the DataMiner protocol schema."
 ---
 
 # TypeProtocolVersion simple type

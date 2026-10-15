@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-displayIconAndLabel
-description: "Learn how the displayIconAndLabel attribute chooses whether a discreet entry shows only an icon or an icon with a label in a DataMiner connector protocol."
+description: "Learn how the displayIconAndLabel attribute chooses whether a discreet entry shows only an icon or an icon with a label in a DataMiner protocol."
 ---
 
 # displayIconAndLabel attribute

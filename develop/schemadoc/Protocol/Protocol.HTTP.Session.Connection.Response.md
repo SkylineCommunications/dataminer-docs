@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Response
-description: "Learn how to use the Response element to configure where to store an HTTP response status, headers, and body in a DataMiner connector protocol."
+description: "Learn how to use the Response element to configure where to store an HTTP response status, headers, and body in a DataMiner protocol."
 ---
 
 # Response element

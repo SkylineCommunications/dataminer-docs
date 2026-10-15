@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Pair
-description: "Learn how the Pair element identifies a command/response pair included for consecutive group execution in a DataMiner connector protocol."
+description: "Learn how the Pair element identifies a command/response pair included for consecutive group execution in a DataMiner protocol."
 ---
 
 # Pair element

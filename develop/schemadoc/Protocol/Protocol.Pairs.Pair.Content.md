@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair.Content
-description: "Learn how to use the Content element to associate one command with its expected normal and error responses in a DataMiner connector protocol."
+description: "Learn how to use the Content element to associate one command with its expected normal and error responses in a DataMiner protocol."
 ---
 
 # Content element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Display.Visibility
-description: "Learn how the Visibility element combines a default setting with trigger conditions for search chain visibility in a DataMiner connector protocol."
+description: "Learn how the Visibility element combines a default setting with trigger conditions for search chain visibility in a DataMiner protocol."
 ---
 
 # Visibility element

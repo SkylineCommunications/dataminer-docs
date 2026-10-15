@@ -1,6 +1,6 @@
 ---
 uid: Protocol
-description: "Consult the DataMiner connector protocol schema reference for the Protocol element, which serves as the root of a DataMiner connector protocol definition."
+description: "Consult the DataMiner protocol schema reference for the Protocol element, which serves as the root of a DataMiner protocol definition."
 ---
 
 # Protocol element

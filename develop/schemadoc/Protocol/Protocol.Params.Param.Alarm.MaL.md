@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.MaL
-description: "Learn how to use the MaL element to set the default major-low threshold in a parameter alarm template in a DataMiner connector protocol."
+description: "Learn how to use the MaL element to set the default major-low threshold in a parameter alarm template in a DataMiner protocol."
 ---
 
 # MaL element

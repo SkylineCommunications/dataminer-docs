@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Time-id
-description: "Consult the DataMiner connector protocol schema reference for the id attribute, which identifies the item whose value a trigger condition checks."
+description: "Consult the DataMiner protocol schema reference for the id attribute, which identifies the item whose value a trigger condition checks."
 ---
 
 # id attribute

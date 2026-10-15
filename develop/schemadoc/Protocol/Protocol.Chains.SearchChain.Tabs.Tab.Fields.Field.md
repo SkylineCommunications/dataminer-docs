@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field
-description: "Learn how the Field element defines a search field, its table column, display rules, substitutions, and validation in a DataMiner connector protocol."
+description: "Learn how the Field element defines a search field, its table column, display rules, substitutions, and validation in a DataMiner protocol."
 ---
 
 # Field element

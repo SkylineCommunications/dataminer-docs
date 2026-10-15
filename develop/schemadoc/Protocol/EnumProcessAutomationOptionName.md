@@ -1,6 +1,6 @@
----
+﻿---
 uid: Protocol-EnumProcessAutomationOptionName
-description: "Review the allowed values for the EnumProcessAutomationOptionName simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumProcessAutomationOptionName simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumProcessAutomationOptionName simple type

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content
-description: "Learn how the Content element orders same-type actions, pairs, parameters, sessions, or triggers for group execution in a DataMiner connector protocol."
+description: "Learn how the Content element orders same-type actions, pairs, parameters, sessions, or triggers for group execution in a DataMiner protocol."
 ---
 
 # Content element

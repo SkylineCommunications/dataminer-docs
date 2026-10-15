@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.On-id
-description: "Consult the DataMiner connector protocol schema reference for the id attribute, which identifies the item that causes a trigger to go off."
+description: "Consult the DataMiner protocol schema reference for the id attribute, which identifies the item that causes a trigger to go off."
 ---
 
 # id attribute

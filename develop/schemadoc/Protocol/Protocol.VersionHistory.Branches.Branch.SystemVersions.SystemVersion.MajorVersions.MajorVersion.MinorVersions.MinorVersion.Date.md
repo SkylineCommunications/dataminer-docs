@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Date
-description: "Consult the DataMiner connector protocol schema reference for the Date element, which records a minor protocol version's release date in YYYY-MM-DD format."
+description: "Consult the DataMiner protocol schema reference for the Date element, which records a minor protocol version's release date in YYYY-MM-DD format."
 ---
 
 # Date element

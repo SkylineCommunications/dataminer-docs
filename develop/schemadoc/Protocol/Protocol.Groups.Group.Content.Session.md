@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Session
-description: "Learn how the Session element identifies an HTTP session included for consecutive execution within a group in a DataMiner connector protocol."
+description: "Learn how the Session element identifies an HTTP session included for consecutive execution within a group in a DataMiner protocol."
 ---
 
 # Session element

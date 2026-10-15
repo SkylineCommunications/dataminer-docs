@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Actions.Action.Type-options
-description: "Use the Action Type options attribute to provide action-specific settings for an action in a DataMiner connector protocol."
+description: "Use the Action Type options attribute to provide action-specific settings for an action in a DataMiner protocol."
 ---
 
 # options attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Substitutions.Substitution.Regex
-description: "Learn how the Regex element pairs an input pattern with replacement output for a search field substitution in a DataMiner connector protocol."
+description: "Learn how the Regex element pairs an input pattern with replacement output for a search field substitution in a DataMiner protocol."
 ---
 
 # Regex element

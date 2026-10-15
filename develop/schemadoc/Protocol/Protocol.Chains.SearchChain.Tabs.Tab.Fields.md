@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields
-description: "Learn how the Fields element contains the uniquely named fields included in a search chain tab in a DataMiner connector protocol."
+description: "Learn how the Fields element contains the uniquely named fields included in a search chain tab in a DataMiner protocol."
 ---
 
 # Fields element

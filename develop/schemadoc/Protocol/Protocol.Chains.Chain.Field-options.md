@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field-options
-description: "Learn how the options attribute configures EPM field filters, diagrams, details, tabs, sorting, and related behavior in a DataMiner connector protocol."
+description: "Learn how the options attribute configures EPM field filters, diagrams, details, tabs, sorting, and related behavior in a DataMiner protocol."
 ---
 
 # options attribute

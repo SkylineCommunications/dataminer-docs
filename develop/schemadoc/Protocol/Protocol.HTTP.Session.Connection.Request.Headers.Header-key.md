@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request.Headers.Header-key
-description: "Learn how the key attribute sets the key for an HTTP request header key-value pair in a DataMiner connector protocol."
+description: "Learn how the key attribute sets the key for an HTTP request header key-value pair in a DataMiner protocol."
 ---
 
 # key attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol-TypeObjectId
-description: "Use the TypeObjectId simple type to validate IDs for actions, groups, triggers, QActions, and timers in the DataMiner connector protocol schema."
+description: "Use the TypeObjectId simple type to validate IDs for actions, groups, triggers, QActions, and timers in the DataMiner protocol schema."
 ---
 
 # TypeObjectId simple type

@@ -1,6 +1,6 @@
 ---
 uid: Protocol-EnumChainsFilters
-description: "Review the allowed values for the EnumChainsFilters simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumChainsFilters simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumChainsFilters simple type

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Commands.Command.Name
-description: "Learn how the Name element stores the optional name assigned to a command in a DataMiner connector protocol."
+description: "Learn how the Name element stores the optional name assigned to a command in a DataMiner protocol definition."
 ---
 
 # Name element

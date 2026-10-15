@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request
-description: "Learn how to use the Request element to configure the URL, verb, headers, and data or parameters for an HTTP request in a DataMiner connector protocol."
+description: "Learn how to use the Request element to configure the URL, verb, headers, and data or parameters for an HTTP request in a DataMiner protocol."
 ---
 
 # Request element

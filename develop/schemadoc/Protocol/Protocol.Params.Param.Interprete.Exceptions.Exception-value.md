@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception-value
-description: "Learn how the value attribute identifies the incoming text or number that should trigger a parameter exception in a DataMiner connector protocol."
+description: "Learn how the value attribute identifies the incoming text or number that should trigger a parameter exception in a DataMiner protocol."
 ---
 
 # value attribute

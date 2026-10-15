@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field
-description: "Learn how the Field element defines an EPM drill-down block, its linked parameter, options, and display settings in a DataMiner connector protocol."
+description: "Learn how the Field element defines an EPM drill-down block, its linked parameter, options, and display settings in a DataMiner protocol."
 ---
 
 # Field element

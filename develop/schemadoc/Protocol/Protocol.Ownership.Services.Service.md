@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Services.Service
-description: "Learn how to use the Service element to declare ownership of a service description and selected service properties in a DataMiner connector protocol."
+description: "Learn how to use the Service element to declare ownership of a service description and selected service properties in a DataMiner protocol."
 ---
 
 # Service element

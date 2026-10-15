@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Range
-description: "Learn how the Range element rejects communication parameter values outside a defined minimum and maximum in a DataMiner connector protocol."
+description: "Learn how the Range element rejects communication parameter values outside a defined minimum and maximum in a DataMiner protocol."
 ---
 
 # Range element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl-parameterId
-description: "Consult the DataMiner connector protocol schema reference for the parameterId attribute, which identifies the parameter that implements the tree control."
+description: "Consult the DataMiner protocol schema reference for the parameterId attribute, which identifies the parameter that implements the tree control."
 ---
 
 # parameterId attribute

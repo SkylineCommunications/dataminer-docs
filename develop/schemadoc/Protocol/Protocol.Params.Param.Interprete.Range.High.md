@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Range.High
-description: "Learn how the High element sets the maximum accepted value for a communication or simulated parameter in a DataMiner connector protocol."
+description: "Learn how the High element sets the maximum accepted value for a communication or simulated parameter in a DataMiner protocol."
 ---
 
 # High element

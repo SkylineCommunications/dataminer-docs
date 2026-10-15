@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain-groupingName
-description: "Learn how the groupingName attribute assigns an EPM chain to a named group in DataMiner Cube in a DataMiner connector protocol."
+description: "Learn how the groupingName attribute assigns an EPM chain to a named group in DataMiner Cube in a DataMiner protocol."
 ---
 
 # groupingName attribute

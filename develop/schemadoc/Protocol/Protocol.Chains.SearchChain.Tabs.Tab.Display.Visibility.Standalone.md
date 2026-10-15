@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility.Standalone
-description: "Learn how the Standalone element maps trigger values to the opposite of default search tab visibility in a DataMiner connector protocol."
+description: "Learn how the Standalone element maps trigger values to the opposite of default search tab visibility in a DataMiner protocol."
 ---
 
 # Standalone element

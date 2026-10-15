@@ -1,6 +1,6 @@
 ---
 uid: Protocol-TypeVendorOID
-description: "Use the TypeVendorOID simple type to validate Skyline vendor OIDs and optional numeric suffixes in the DataMiner connector protocol schema."
+description: "Use the TypeVendorOID simple type to validate Skyline vendor OIDs and optional numeric suffixes in the DataMiner protocol schema."
 ---
 
 # TypeVendorOID simple type

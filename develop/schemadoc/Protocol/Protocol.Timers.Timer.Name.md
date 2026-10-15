@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Name
-description: "Consult the DataMiner connector protocol schema reference for the Name element, which sets the name used to identify a timer."
+description: "Consult the DataMiner protocol schema reference for the Name element, which sets the name used to identify a timer."
 ---
 
 # Name element

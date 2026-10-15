@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.LengthType-times
-description: "Learn how the times attribute sets how many occurrences identify the next parameter when parsing a serial response in a DataMiner connector protocol."
+description: "Learn how the times attribute sets how many occurrences identify the next parameter when parsing a serial response in a DataMiner protocol."
 ---
 
 # times attribute

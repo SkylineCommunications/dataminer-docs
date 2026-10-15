@@ -1,6 +1,6 @@
 ---
 uid: Protocol-EnumColumnOptionType
-description: "Review the allowed values for the EnumColumnOptionType simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumColumnOptionType simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumColumnOptionType simple type

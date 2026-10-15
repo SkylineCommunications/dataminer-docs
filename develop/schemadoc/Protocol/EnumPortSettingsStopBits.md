@@ -1,6 +1,6 @@
----
+﻿---
 uid: Protocol-EnumPortSettingsStopBits
-description: "Review the allowed values for the EnumPortSettingsStopBits simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumPortSettingsStopBits simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumPortSettingsStopBits simple type

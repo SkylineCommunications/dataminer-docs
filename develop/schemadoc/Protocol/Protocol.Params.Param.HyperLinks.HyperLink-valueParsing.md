@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.HyperLinks.HyperLink-valueParsing
-description: "Learn how the valueParsing attribute matches alarm values to control when a custom shortcut command appears in a DataMiner connector protocol."
+description: "Learn how the valueParsing attribute matches alarm values to control when a custom shortcut command appears in a DataMiner protocol."
 ---
 
 # valueParsing attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol-EnumMatrixMatrixOptionType
-description: "Review the allowed values for the EnumMatrixMatrixOptionType simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumMatrixMatrixOptionType simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumMatrixMatrixOptionType simple type

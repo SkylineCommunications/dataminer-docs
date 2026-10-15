@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Mib
-description: "Learn how to use the Mib element to add SMI-compliant content to the connector's generated MIB in a DataMiner connector protocol."
+description: "Learn how to use the Mib element to add SMI-compliant content to the connector's generated MIB in a DataMiner protocol."
 ---
 
 # Mib element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Chains.Chain-topology
-description: "Learn how the topology attribute links a Service Overview Manager chain to a named protocol topology in a DataMiner connector protocol."
+description: "Learn how the topology attribute links a Service Overview Manager chain to a named protocol topology in a DataMiner protocol."
 ---
 
 # topology attribute

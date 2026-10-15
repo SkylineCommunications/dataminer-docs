@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Information.Includes
-description: "Learn how the obsolete Includes element groups extra parameter details for display in an information tooltip in a DataMiner connector protocol."
+description: "Learn how the obsolete Includes element groups extra parameter details for display in an information tooltip in a DataMiner protocol."
 ---
 
 # Includes element [obsolete]

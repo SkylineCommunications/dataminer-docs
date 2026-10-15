@@ -1,6 +1,6 @@
----
+﻿---
 uid: Protocol-EnumSNMPType
-description: "Review the allowed values for the EnumSNMPType simple type and what each value represents in DataMiner connector protocols."
+description: "Review the allowed values for the EnumSNMPType simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumSNMPType simple type

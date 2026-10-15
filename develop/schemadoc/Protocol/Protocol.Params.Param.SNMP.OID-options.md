@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.OID-options
-description: "Learn how the options attribute configures SNMP table retrieval, partial polling, instances, columns, and subtables in a DataMiner connector protocol."
+description: "Learn how the options attribute configures SNMP table retrieval, partial polling, instances, columns, and subtables in a DataMiner protocol."
 ---
 
 # options attribute

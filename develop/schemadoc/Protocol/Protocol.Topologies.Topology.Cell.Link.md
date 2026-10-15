@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell.Link
-description: "Consult the DataMiner connector protocol Link element reference for related EPM topology configuration guidance."
+description: "Consult the DataMiner protocol Link element reference for related EPM topology configuration guidance."
 ---
 
 # Link element

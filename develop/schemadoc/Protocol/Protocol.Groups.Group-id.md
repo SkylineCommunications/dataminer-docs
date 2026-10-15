@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Groups.Group-id
-description: "Learn how the id attribute sets the unique identifier of a protocol group in a DataMiner connector protocol."
+description: "Learn how the id attribute sets the unique identifier of a protocol group in a DataMiner protocol definition."
 ---
 
 # id attribute
