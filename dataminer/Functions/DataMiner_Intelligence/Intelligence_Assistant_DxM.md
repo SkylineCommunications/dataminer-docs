@@ -14,7 +14,10 @@ A [DataMiner Assistant app](xref:Intelligence_Assistant_app) is also currently b
 
 ## Installation
 
-DataMiner Assistant is included in DataMiner web upgrade packages, but it is not activated automatically. To activate it, you need to [install the DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node) initially.
+DataMiner Assistant is included in DataMiner web upgrade packages, but it is not activated automatically:
+
+- On **DataMiner as a Service (DaaS)** systems, the DataMiner Assistant DxM is enabled by default.
+- On **on-premises** systems, you need to install the DxM initially to activate it. To do so, run the DataMiner Assistant MSI installer from the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\Web` on the DataMiner Agent. Local installers for DataMiner 10.6 or newer include the DataMiner Assistant DxM by default.
 
 Once it has been installed, DataMiner Assistant is upgraded automatically when you install DataMiner upgrades. From DataMiner 10.5.7/10.6.0 onwards, it is upgraded with full DataMiner upgrade packages.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
 

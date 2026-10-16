@@ -16,9 +16,7 @@ description: "Learn how to enable the DataMiner Assistant DxM and the DataMiner 
 
 1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. [Install the DataMiner Assistant DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
-
-   The DxM is included in DataMiner web upgrade packages, but you need to install it once to activate it. After that, it is upgraded automatically when you install DataMiner upgrades. For more information on the installation and prerequisites, see [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
+1. Make sure the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM#installation) is installed.
 
 1. [Enable the DataMiner Assistant app](xref:Intelligence_Assistant_app#accessing-the-assistant-app).
 
