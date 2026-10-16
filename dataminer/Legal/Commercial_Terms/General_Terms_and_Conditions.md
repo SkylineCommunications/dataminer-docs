@@ -5,7 +5,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 # Skyline General Terms and Conditions
 
-*Version 1.0 — Effective Date: 15 June 2026*
+*Last updated: 16 October 2026*
 
 ## Part A — General Terms and Conditions
 
