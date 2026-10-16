@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions
-description: "Learn how to use the ArrayOptions element to define table columns, primary and display keys, pagination, and options in a DataMiner protocol."
+description: "Use the ArrayOptions element in a DataMiner protocol to define table columns, primary and display keys, pagination, and options."
 ---
 
 # ArrayOptions element

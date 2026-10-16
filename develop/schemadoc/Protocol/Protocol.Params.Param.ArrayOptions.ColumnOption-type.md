@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-type
-description: "Learn how to use the type attribute to choose how DataMiner populates and handles a table column in a DataMiner protocol."
+description: "Use the type attribute in a DataMiner protocol to determine how DataMiner populates and handles a table column."
 ---
 
 # type attribute

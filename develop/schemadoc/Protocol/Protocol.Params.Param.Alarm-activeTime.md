@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm-activeTime
-description: "Learn how to use the activeTime attribute to automatically clear a constant alarm after a configured duration in a DataMiner protocol."
+description: "Use the activeTime attribute in a DataMiner protocol to automatically clear a constant alarm after a configured duration."
 ---
 
 # activeTime attribute

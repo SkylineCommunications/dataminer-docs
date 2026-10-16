@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.Monitored-disabledIf
-description: "Learn how to use the disabledIf attribute to disable parameter monitoring when another parameter has a specified value in a DataMiner protocol."
+description: "Use the disabledIf attribute in a DataMiner protocol to disable parameter monitoring when another parameter has a specified value."
 ---
 
 # disabledIf attribute

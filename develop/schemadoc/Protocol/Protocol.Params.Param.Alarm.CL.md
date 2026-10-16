@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.CL
-description: "Learn how to use the CL element to set the default critical-low threshold in a parameter alarm template in a DataMiner protocol."
+description: "Use the CL element in a DataMiner protocol to set the default critical-low threshold in a parameter alarm template."
 ---
 
 # CL element

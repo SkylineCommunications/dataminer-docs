@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.MaH
-description: "Learn how to use the MaH element to set the default major-high threshold in a parameter alarm template in a DataMiner protocol."
+description: "Use the MaH element in a DataMiner protocol to set the default major-high threshold in a parameter alarm template."
 ---
 
 # MaH element

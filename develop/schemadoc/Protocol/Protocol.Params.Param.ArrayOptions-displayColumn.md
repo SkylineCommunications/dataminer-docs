@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions-displayColumn
-description: "Learn how to use the displayColumn attribute to select a legacy display-key column that identifies table rows to users in a DataMiner protocol."
+description: "Learn how the legacy displayColumn attribute was used in a DataMiner protocol to select a display key column that identifies table rows to users."
 ---
 
 # displayColumn attribute

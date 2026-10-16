@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.MiH
-description: "Learn how to use the MiH element to set the default minor-high threshold in a parameter alarm template in a DataMiner protocol."
+description: "Use the MiH element in a DataMiner protocol to set the default minor-high threshold in a parameter alarm template."
 ---
 
 # MiH element

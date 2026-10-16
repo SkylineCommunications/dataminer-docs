@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-pollingRate
-description: "Learn how to use the pollingRate attribute to set a minimum polling interval for a specific SNMP table column in a DataMiner protocol."
+description: "Use the pollingRate attribute in a DataMiner protocol to set a minimum polling interval for a specific SNMP table column."
 ---
 
 # pollingRate attribute

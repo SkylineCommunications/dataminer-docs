@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions-deleteRow
-description: "Learn how to use the deleteRow attribute to control how missing SNMP table rows are deleted or marked uninitialized in a DataMiner protocol."
+description: "Use the deleteRow attribute in a DataMiner protocol to control how missing SNMP table rows are deleted or marked uninitialized."
 ---
 
 # deleteRow attribute

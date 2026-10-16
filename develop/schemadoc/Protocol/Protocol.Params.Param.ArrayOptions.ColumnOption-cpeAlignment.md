@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-cpeAlignment
-description: "Learn how to use the cpeAlignment attribute to align KPI values in EPM table columns to the left, center, or right in a DataMiner protocol."
+description: "Use the cpeAlignment attribute in a DataMiner protocol to align KPI values in EPM table columns to the left, center, or right."
 ---
 
 # cpeAlignment attribute
