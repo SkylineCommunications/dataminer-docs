@@ -4,12 +4,13 @@ keywords: DataMiner Intelligence, agentic AI, AI agents, DataMiner Assistant
 description: "Discover DataMiner Intelligence, the agentic AI capabilities of DataMiner, its main components, and how to get started with the DataMiner Assistant."
 ---
 
-# DataMiner Intelligence
+# About DataMiner Intelligence
 
 DataMiner Intelligence covers all agentic AI capabilities of DataMiner. It consists of:
 
 - The **DataMiner Intelligence agent framework**, with AI agents that help you **understand**, **act**, and **create** on the DataMiner platform.
 - **Other integrated AI capabilities**, such as natural language to GQI and Document Intelligence.
+
 > [!NOTE]
 > In the context of DataMiner Intelligence, "agents" refers to AI agents. These are not to be confused with DataMiner Agents, i.e., DataMiner nodes. See [DataMiner System architecture and components](xref:Overview_Architecture_and_components).
 
@@ -44,15 +45,10 @@ In addition to chat interaction, DataMiner Intelligence will also be able to be 
 
 DataMiner Intelligence relies on two components that each need to be enabled separately:
 
-1. **DataMiner Assistant DxM**: This [DataMiner Extension Module](xref:DataMinerExtensionModules) provides the AI capabilities in DataMiner. It is not included in DataMiner upgrade packages, so you need to deploy it separately. Your DataMiner System must be connected to dataminer.services for this.
+- The **DataMiner Assistant DxM**, which provides the AI capabilities in DataMiner.
+- The **DataMiner Assistant app**, the chat interface that allows you to interact with the agents.
 
-   For more information on the prerequisites and the installation, see [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
-
-1. **DataMiner Assistant chat interface**: The [DataMiner Assistant app](xref:Intelligence_Assistant_app) allows you to chat with the agents within DataMiner. It currently needs to be enabled on request.
-
-   For more information on how to enable and access the app, see [DataMiner Assistant app](xref:Intelligence_Assistant_app).
-
-Once both components are available, you can start exploring DataMiner Intelligence through the DataMiner Assistant chat interface. To learn how DataMiner Intelligence handles your data, see [Data privacy and security](xref:Intelligence_Data_Privacy_Security).
+For the steps to enable both components and start exploring DataMiner Intelligence, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 ## Other AI capabilities
 
