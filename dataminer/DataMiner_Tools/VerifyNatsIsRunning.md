@@ -1,5 +1,6 @@
 ---
 uid: VerifyNatsIsRunning
+description: "Find out how the Verify NATS is Running check verifies whether the NATS service is running on all required DMAs."
 ---
 
 # Verify NATS is Running
