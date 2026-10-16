@@ -14,9 +14,12 @@ A [DataMiner Assistant app](xref:Intelligence_Assistant_app) is also currently b
 
 ## Installation
 
-DataMiner Assistant is currently not included in DataMiner upgrade packages and [needs to be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+DataMiner Assistant is included in DataMiner web upgrade packages, but it is not activated automatically:
 
-Once it has been deployed, DataMiner Assistant is upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
+- On [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) systems, the DataMiner Assistant DxM is enabled by default.
+- On on-premises systems, you need to install the DxM initially to activate it. To do so, run the DataMiner Assistant MSI installer from the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\Web` on the DataMiner Agent. Local installers for DataMiner 10.6 or newer include the DataMiner Assistant DxM by default.
+
+Once it has been installed, DataMiner Assistant is upgraded automatically when you install DataMiner upgrades. From DataMiner 10.5.7/10.6.0 onwards, it is upgraded with full DataMiner upgrade packages.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
 
 To upgrade to version 2.0.0 (which involves a name change of the DxM, as previously it was called "Copilot"), you will need to install DataMiner Assistant manually, even if the Copilot DxM was already installed. After that, automatic upgrades will resume.
 
@@ -24,6 +27,7 @@ For DataMiner Assistant to run correctly, the following **prerequisites** must b
 
 - **Connection to dataminer.services**: The DataMiner System [must be connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - **GQI**: For the "natural language to GQI" feature to work, the [GQI DxM](xref:GQI_DxM) needs to be installed.
+- **No Failover**: For [script tools](xref:Intelligence_Assistant_ScriptTools) to work, the DxM must not be installed on DataMiner Agents that are part of a Failover pair. See [Limitation for Failover setups](xref:Intelligence_Assistant_ScriptTools#limitation-for-failover-setups).
 
 ## Logging
 
