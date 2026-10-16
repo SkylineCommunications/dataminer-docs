@@ -166,6 +166,14 @@ When you loaded a preset containing a threshold in a Spectrum component, in some
 
 The threshold will now be displayed when the preset is loaded.
 
+#### System Center - Agents: Migration window could remain open after an element export failed [ID 46657]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When an element export failed during migration, up to now, the Element migration window could continue to show "Migration has started." indefinitely without indicating that an error had occurred.
+
+From now on, the window will indicate that the migration finished with errors.
+
 #### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
