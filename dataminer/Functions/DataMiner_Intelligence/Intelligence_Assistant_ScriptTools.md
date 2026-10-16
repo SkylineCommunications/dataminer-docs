@@ -28,7 +28,7 @@ To be able to use script tools, we recommend one of the following approaches:
 - Add one or more DataMiner Agents that are not part of a Failover pair to your DataMiner System, and install the DataMiner Assistant DxM on those Agents.
 
   > [!TIP]
-  > To request a free license for such a DataMiner Agent, contact [your Account Manager](https://community.dataminer.services/get-in-touch/sales-team/).
+  > To request a free license for such a DataMiner Agent, contact the Skyline Sales department at [sales@skyline.be](mailto:sales@skyline.be).
 
 The automation scripts triggered by script tools can still reach any other DataMiner Agent in the DataMiner System, including Agents that are part of a Failover pair.
 
