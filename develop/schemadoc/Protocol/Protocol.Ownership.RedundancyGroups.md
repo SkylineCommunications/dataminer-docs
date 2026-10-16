@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.RedundancyGroups
-description: "Learn how to use the RedundancyGroups element to group ownership declarations for protocol-created redundancy groups in a DataMiner protocol."
+description: "Use the RedundancyGroups element in a DataMiner protocol to group ownership declarations for protocol-created redundancy groups."
 ---
 
 # RedundancyGroups element

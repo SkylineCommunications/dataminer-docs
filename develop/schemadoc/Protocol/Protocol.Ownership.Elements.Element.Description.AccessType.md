@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.Description.AccessType
-description: "Learn how to use the AccessType element to set user access to an element description through ownership settings in a DataMiner protocol."
+description: "Use the AccessType element in a DataMiner protocol to set the user access type for an element description through ownership settings."
 ---
 
 # AccessType element

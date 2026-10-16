@@ -1,6 +1,6 @@
 ---
 uid: Protocol.NoTimeouts.NoTimeout
-description: "Learn how to use the NoTimeout element to identify a response value that should not cause a communication timeout in a DataMiner protocol."
+description: "Use the NoTimeout element in a DataMiner protocol to identify a response value that should not cause a communication timeout."
 ---
 
 # NoTimeout element

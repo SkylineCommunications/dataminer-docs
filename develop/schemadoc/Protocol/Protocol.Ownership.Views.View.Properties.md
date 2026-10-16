@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Views.View.Properties
-description: "Learn how to use the Properties element to group ownership declarations for selected properties of a view in a DataMiner protocol."
+description: "Use the Properties element in a DataMiner protocol to group ownership declarations for selected properties of a view."
 ---
 
 # Properties element

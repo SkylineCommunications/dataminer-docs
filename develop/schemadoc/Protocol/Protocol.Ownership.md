@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Ownership
-description: "Learn how to use the Ownership element to configure access to elements, views, services, and redundancy groups in a DataMiner protocol."
+description: "Use the Ownership element in a DataMiner protocol to configure access to elements, views, services, and redundancy groups."
 ---
 
 # Ownership element
 
-Specifies the level of access users will have to elements, views, services and redundancy groups created by elements based on this protocol.<!-- RN 13010 -->
+Specifies the level of access users will have to elements, views, services, and redundancy groups created by elements based on this protocol.<!-- RN 13010 -->
 
 ## Parent
 
@@ -46,7 +46,7 @@ Please note the following regarding the usage of this tag:
     </Components>
     ```
 
-  These files will be synchronized across the DataMiner System, and are attached to the managing element on export/import.
+  These files will be synchronized across the DataMiner System and are attached to the managing element on export/import.
 
   When the protocol or protocol version of an owner element is changed, a check is performed to find out whether the new protocol (version) applies any ownership settings. If so, the currently owned components are transferred and the new ownership settings are applied. If the new protocol (version) does not apply any ownership settings, the ownership file will be deleted.
 

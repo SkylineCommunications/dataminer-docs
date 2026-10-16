@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.RedundancyGroups.RedundancyGroup.Description
-description: "Learn how to use the Description element to declare ownership and access settings for a redundancy group description in a DataMiner protocol."
+description: "Use the Description element in a DataMiner protocol to declare ownership and access settings for a redundancy group description."
 ---
 
 # Description element

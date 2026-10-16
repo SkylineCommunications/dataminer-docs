@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Views.View
-description: "Learn how to use the View element to declare ownership of selected properties for a DataMiner view in a DataMiner protocol."
+description: "Use the Ownership.Views.View element in a DataMiner protocol to declare ownership of selected properties for a DataMiner view."
 ---
 
 # View element

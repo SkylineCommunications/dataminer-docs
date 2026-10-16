@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Services
-description: "Learn how to use the Services element to group ownership declarations for services created by the protocol in a DataMiner protocol."
+description: "Use the Ownership.Services element in a DataMiner protocol to group ownership declarations for services created by the protocol."
 ---
 
 # Services element

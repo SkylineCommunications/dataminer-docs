@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair-options
-description: "Learn how to use the options attribute to set port, retry, timeout, and byte transmission options for a pair in a DataMiner protocol."
+description: "Use the Pair options attribute in a DataMiner protocol to set port, retry, timeout, and byte transmission options for a pair."
 ---
 
 # options attribute

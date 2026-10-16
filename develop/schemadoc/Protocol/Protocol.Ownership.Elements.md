@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements
-description: "Learn how to use the Elements element to group ownership declarations for DataMiner elements created by the protocol in a DataMiner protocol."
+description: "Use the Ownership.Elements element in a DataMiner protocol to group ownership declarations for DataMiner elements created by the protocol."
 ---
 
 # Elements element

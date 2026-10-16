@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair.Content.Response
-description: "Learn how to use the Response element to identify an expected response for a command and response pair in a DataMiner protocol."
+description: "Use the Response element in a DataMiner protocol to identify an expected response for a command and response pair."
 ---
 
 # Response element

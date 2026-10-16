@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.RedundancyGroups.RedundancyGroup.Description.AccessType
-description: "Learn how to use the AccessType element to set user access to a redundancy group description through ownership settings in a DataMiner protocol."
+description: "Use the AccessType element in a DataMiner protocol to set the user access type for a redundancy group description through ownership settings."
 ---
 
 # AccessType element

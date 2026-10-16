@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.AlarmTemplate
-description: "Learn how to use the AlarmTemplate element to declare ownership and access settings for an element's alarm template in a DataMiner protocol."
+description: "Use the AlarmTemplate element in a DataMiner protocol to declare ownership and access settings for an element alarm template."
 ---
 
 # AlarmTemplate element

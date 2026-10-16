@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.Protocol
-description: "Learn how to use the Protocol element to target DataMiner elements running a matching protocol, with wildcard support in a DataMiner protocol."
+description: "Use the Ownership.Elements.Element.Protocol element in a DataMiner protocol to target DataMiner elements running a matching protocol."
 ---
 
 # Protocol element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.AlarmTemplate.AccessType
-description: "Learn how to use the AccessType element to set user access to an element's alarm template through ownership settings in a DataMiner protocol."
+description: "Use the AccessType element in a DataMiner protocol to configure the user access type for an element alarm template through ownership settings."
 ---
 
 # AccessType element

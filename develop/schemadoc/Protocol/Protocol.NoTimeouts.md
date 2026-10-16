@@ -1,6 +1,6 @@
 ---
 uid: Protocol.NoTimeouts
-description: "Learn how to use the NoTimeouts element to group response values that should not cause communication timeouts in a DataMiner protocol."
+description: "Use the NoTimeouts element in a DataMiner protocol to group response values that should not cause communication timeouts."
 ---
 
 # NoTimeouts element

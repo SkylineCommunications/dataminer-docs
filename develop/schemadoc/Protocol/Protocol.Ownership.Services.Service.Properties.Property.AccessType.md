@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Services.Service.Properties.Property.AccessType
-description: "Learn how to use the AccessType element to set user access to a selected service property through ownership settings in a DataMiner protocol."
+description: "Use the AccessType element in a DataMiner protocol to set the user access type for a selected service property through ownership settings."
 ---
 
 # AccessType element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element
-description: "Learn how to use the Element element to declare ownership for elements matching a protocol and their configurable fields in a DataMiner protocol."
+description: "Use the Element element in a DataMiner protocol to declare ownership for elements matching a protocol and their configurable fields."
 ---
 
 # Element element

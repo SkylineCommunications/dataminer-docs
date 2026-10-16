@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.RedundancyGroups.RedundancyGroup.Maintenance
-description: "Learn how to use the Maintenance element to declare ownership and access settings for redundancy group maintenance in a DataMiner protocol."
+description: "Use the Maintenance element in a DataMiner protocol to declare ownership and access settings for redundancy group maintenance."
 ---
 
 # Maintenance element

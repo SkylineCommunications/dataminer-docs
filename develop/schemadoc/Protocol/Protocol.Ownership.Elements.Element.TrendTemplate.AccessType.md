@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.TrendTemplate.AccessType
-description: "Learn how to use the AccessType element to set user access to an element's trend template through ownership settings in a DataMiner protocol."
+description: "Use the AccessType element in a DataMiner protocol to set the user access type for an element trend template through ownership settings."
 ---
 
 # AccessType element

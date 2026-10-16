@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.Properties.Property
-description: "Learn how to use the Property element to declare ownership and access settings for a selected element property in a DataMiner protocol."
+description: "Use the Property element in a DataMiner protocol to declare ownership and access settings for a selected element property."
 ---
 
 # Property element

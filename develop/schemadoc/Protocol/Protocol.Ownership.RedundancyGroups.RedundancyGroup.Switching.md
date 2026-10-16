@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ownership.RedundancyGroups.RedundancyGroup.Switching
-description: "Learn how to use the Switching element to declare ownership and access settings for redundancy group switching in a DataMiner protocol."
+description: "Use the Switching element in a DataMiner protocol to declare ownership and access settings for redundancy group switching."
 ---
 
 # Switching element
