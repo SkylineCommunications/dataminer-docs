@@ -1,5 +1,6 @@
 ---
 uid: Spectrum_Simulation_protocol
+description: "Use the Spectrum simulation protocol to test DataMiner Spectrum Analysis, SLSpectrum commands, carriers, and amplitudes without a real device."
 ---
 
 # Spectrum simulation protocol

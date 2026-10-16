@@ -1,5 +1,6 @@
 ---
 uid: Standalone_Elastic_Backup_Tool
+description: "Find out how the deprecated Standalone Elastic Backup tool was used to back up and restore Elasticsearch database clusters."
 ---
 
 # Standalone Elastic Backup tool

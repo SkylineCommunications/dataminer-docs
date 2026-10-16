@@ -1,5 +1,6 @@
 ---
 uid: Verify_Cluster_Events_Tool
+description: "Find out how the Verify Cluster Events tool can be used to verify the state of the in-memory SLNet EventCache across DMAs in a cluster."
 ---
 
 # Verify Cluster Events Tool
