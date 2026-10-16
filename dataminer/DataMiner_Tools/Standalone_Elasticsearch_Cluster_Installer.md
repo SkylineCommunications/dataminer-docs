@@ -1,6 +1,8 @@
 ---
 uid: Standalone_Elasticsearch_Cluster_Installer
+description: "Find out how the deprecated Standalone Elasticsearch Cluster Installer was used to install Elasticsearch 6.8.23 on Windows."
 ---
+
 # Standalone Elasticsearch Cluster Installer
 
 > [!IMPORTANT]
