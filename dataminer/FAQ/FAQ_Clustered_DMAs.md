@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Clustered_DMAs
+description: "Cluster DataMiner Agents to unify dashboards, capacity, connectors, alarms, and administration, and enable swarming and cross-agent services."
 ---
 
 # What are the benefits of using clustered DataMiner Agents as opposed to separate ones?
