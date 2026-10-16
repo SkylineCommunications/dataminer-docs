@@ -20,9 +20,9 @@ description: "Learn how to enable the DataMiner Assistant DxM and the DataMiner 
 
    The DxM is included in DataMiner web upgrade packages, but you need to install it once to activate it. After that, it is upgraded automatically when you install DataMiner upgrades. For more information on the installation and prerequisites, see [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
 
-1. Request access to the DataMiner Assistant app by contacting [ai@skyline.be](mailto:ai@skyline.be).
+1. [Enable the DataMiner Assistant app](xref:Intelligence_Assistant_app#accessing-the-assistant-app).
 
-   The app is currently available in preview on request. For more information, see [DataMiner Assistant app](xref:Intelligence_Assistant_app).
+   For more information on the app and its user interface, see [DataMiner Assistant app](xref:Intelligence_Assistant_app).
 
 1. Open the DataMiner Assistant app from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
 
