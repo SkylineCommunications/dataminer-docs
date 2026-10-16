@@ -12,7 +12,7 @@ As a consequence of this fix, the Microsoft 365 version of DataMiner Assistant i
 
 #### 21 September 2026 - Enhancement - CloudGateway 3.5.0 - Retrieve information using GetCloudDMSInformationRequest SLNET message
 
-From this CloudGateway version onward, you can retrieve information about your DMS connected to dataminer.services from within DataMiner (from DataMiner 10.6.11/10.7.0 onwards) using the `GetCloudDMSInformationRequest` SLNET message.
+From this CloudGateway version onward, you can retrieve information about your DMS connected to dataminer.services from within DataMiner (from DataMiner 10.6.11/10.7.0 onwards<!-- RN 46393 -->) using the `GetCloudDMSInformationRequest` SLNET message.
 
 #### 21 September 2026 - Enhancement - CloudGateway 3.5.0 - Support for improved login flow for remote access and sharing
 
