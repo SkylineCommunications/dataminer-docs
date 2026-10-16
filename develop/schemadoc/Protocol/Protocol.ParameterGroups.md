@@ -1,6 +1,6 @@
 ---
 uid: Protocol.ParameterGroups
-description: "Learn how to use the ParameterGroups element to define the DCF interfaces exposed by the connector in a DataMiner protocol."
+description: "Use the ParameterGroups element in a DataMiner protocol to define the DataMiner Connectivity Framework (DCF) interfaces."
 ---
 
 # ParameterGroups element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param-save
-description: "Learn how to use the save attribute to persist a standalone parameter value whenever it changes in a DataMiner protocol."
+description: "Use the save attribute of the Param element in a DataMiner protocol to store a standalone parameter value whenever it changes."
 ---
 
 # save attribute

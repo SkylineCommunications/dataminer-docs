@@ -1,6 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group-calculateAlarmState
-description: "Learn how to use the calculateAlarmState attribute to control whether DataMiner calculates the interface alarm state in a DataMiner protocol."
+description: "Use the calculateAlarmState attribute in a DataMiner protocol to control whether DataMiner calculates the interface alarm state."
 ---
 
 # calculateAlarmState attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group-dynamicUsePK
-description: "Learn how to use the dynamicUsePK attribute to select primary keys instead of display keys for dynamic interface names in a DataMiner protocol."
+description: "Use the dynamicUsePK attribute in a DataMiner protocol to select primary keys instead of display keys for dynamic interface names."
 ---
 
 # dynamicUsePK attribute

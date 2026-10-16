@@ -1,6 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group-id
-description: "Learn how to use the id attribute to assign a unique parameter group ID below the range reserved for dynamic interfaces in a DataMiner protocol."
+description: "Use the id attribute in a DataMiner protocol to assign a unique parameter group ID below the range reserved for dynamic interfaces."
 ---
 
 # id attribute
