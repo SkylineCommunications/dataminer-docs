@@ -23,7 +23,7 @@ Make sure the following are available:
 To add a Python connector script to a connector solution:
 
 1. Open the connector solution in Visual Studio.
-1. In Solution Explorer, right-click the **Connector Scripts** solution folder.
+1. In Solution Explorer, right-click the **Connector Scripts** solution folder, create it first if it doesn't exist.
 1. Select **Add** > **New Project**.
 1. Search for and select **DataMiner Connector Script**.
 1. Enter a project name that follows the template `ConnectorScript_{n}` (for example `ConnectorScript_1`), and select **Create**.
