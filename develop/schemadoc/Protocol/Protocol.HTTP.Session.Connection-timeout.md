@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection-timeout
-description: "Learn how the timeout attribute overrides the session or default timeout in milliseconds for one HTTP connection in a DataMiner protocol."
+description: "Use the timeout attribute in a DataMiner protocol to override the session or default timeout in milliseconds for an HTTP connection."
 ---
 
 # timeout attribute

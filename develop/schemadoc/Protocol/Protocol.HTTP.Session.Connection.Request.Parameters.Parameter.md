@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request.Parameters.Parameter
-description: "Learn how to use the Parameter element to add a fixed or parameter-sourced key-value pair to an HTTP request in a DataMiner protocol."
+description: "Use the Parameter element in a DataMiner protocol to add a fixed or parameter-sourced key-value pair to an HTTP request."
 ---
 
 # Parameter element

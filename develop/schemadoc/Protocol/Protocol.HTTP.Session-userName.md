@@ -1,13 +1,13 @@
 ---
 uid: Protocol.HTTP.Session-userName
-description: "Learn how the userName attribute supplies a fixed username or parameter ID for credential-based HTTP authentication in a DataMiner protocol."
+description: "Use the userName attribute in a DataMiner protocol to specify a fixed username or parameter ID for credentials-based HTTP authentication."
 ---
 
 # userName attribute
 
-If you set loginMethod to “credentials”, then use this attribute to specify the user name.
+If you set loginMethod to “credentials”, then use this attribute to specify the username.
 
-It is possible to specify the ID of a parameter that will contain the user name.
+It is possible to specify the ID of a parameter that will contain the username.
 
 ## Content Type
 

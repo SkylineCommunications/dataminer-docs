@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP
-description: "Learn how to use the HTTP element to define the connector's HTTP sessions and connections in a DataMiner protocol."
+description: "Use the HTTP element in a DataMiner protocol to configure HTTP-specific features, including sessions and connections."
 ---
 
 # HTTP element
@@ -28,25 +28,25 @@ Contains the configuration of the HTTP-specific features in a protocol.
 
 ```xml
 <HTTP>
-	<Session id="1" loginMethod="credentials" userName="Administrator" password="MyAdminPw" proxyServer="proxy.mycorp.be" proxyUser="MyProxyUser" proxypassword="MyProxyPw">
-		<Connection id="1">
-			<Request verb="GET" url="/foobar.html">
-				<Parameters>
-					<Parameter key="foo">bar</Parameter>
-					<Parameter key="lorem" pid="23"></Parameter>
-				</Parameters>
-				<Headers>
-					<Header key="Accept-Encoding">gzip, deflate</Header>
-					<Header key="Accept">application/xml</Header>
-				</Headers>
-			</Request>
-			<Response statusCode="25">
-				<Headers>
-					<Header key="Connection" pid="15"></Header>
-				</Headers>
-				<Content pid="19"></Content>
-			</Response>
-		</Connection>
-	</Session>
+   <Session id="1" loginMethod="credentials" userName="Administrator" password="MyAdminPw" proxyServer="proxy.mycorp.be" proxyUser="MyProxyUser" proxypassword="MyProxyPw">
+      <Connection id="1">
+         <Request verb="GET" url="/foobar.html">
+            <Parameters>
+               <Parameter key="foo">bar</Parameter>
+               <Parameter key="lorem" pid="23"></Parameter>
+            </Parameters>
+            <Headers>
+               <Header key="Accept-Encoding">gzip, deflate</Header>
+               <Header key="Accept">application/xml</Header>
+            </Headers>
+         </Request>
+         <Response statusCode="25">
+            <Headers>
+               <Header key="Connection" pid="15"></Header>
+            </Headers>
+            <Content pid="19"></Content>
+         </Response>
+      </Connection>
+   </Session>
 </HTTP>
 ```

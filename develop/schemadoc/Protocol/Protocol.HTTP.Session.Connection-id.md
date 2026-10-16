@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection-id
-description: "Learn how the id attribute sets the unique identifier of a connection within an HTTP session in a DataMiner protocol."
+description: "Use the id attribute in a DataMiner protocol to set the unique identifier of a connection within an HTTP session."
 ---
 
 # id attribute

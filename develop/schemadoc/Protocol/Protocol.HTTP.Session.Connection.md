@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection
-description: "Learn how to use the Connection element to pair an HTTP request with response storage settings and connection options in a DataMiner protocol."
+description: "Use the Connection element in a DataMiner protocol to pair an HTTP request with response storage settings and connection options."
 ---
 
 # Connection element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request.Parameters.Parameter-key
-description: "Learn how the key attribute sets the key of an HTTP request parameter key-value pair in a DataMiner protocol."
+description: "Use the key attribute in a DataMiner protocol to set the key of an HTTP request parameter key-value pair."
 ---
 
 # key attribute

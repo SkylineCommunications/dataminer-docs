@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session-name
-description: "Learn how the name attribute sets the descriptive name assigned to an HTTP session in a DataMiner protocol."
+description: "Use the name attribute in a DataMiner protocol to set the descriptive name assigned to an HTTP session."
 ---
 
 # name attribute

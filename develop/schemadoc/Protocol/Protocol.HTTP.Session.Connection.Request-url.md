@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request-url
-description: "Learn how the url attribute sets an absolute or relative URL for an HTTP request in a DataMiner protocol."
+description: "Use the url attribute in a DataMiner protocol to configure an absolute or relative URL for an HTTP request."
 ---
 
 # url attribute

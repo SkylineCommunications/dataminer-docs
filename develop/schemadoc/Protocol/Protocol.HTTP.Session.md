@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session
-description: "Learn how to use the Session element to configure HTTP connections, authentication, proxy access, and timeouts in a DataMiner protocol."
+description: "Use the Session element in a DataMiner protocol to configure HTTP connections, authentication, proxy access, and timeouts."
 ---
 
 # Session element

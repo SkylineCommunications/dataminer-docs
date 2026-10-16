@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Response.Headers.Header-key
-description: "Learn how to use the key attribute to select the HTTP response header whose value will be stored in a DataMiner protocol."
+description: "Use the key attribute in a DataMiner protocol to select the HTTP response header whose value will be stored."
 ---
 
 # key attribute

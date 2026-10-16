@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Responses.Response-id
-description: "Learn how the Response id attribute assigns the unique nonzero identifier used to reference a protocol response."
+description: "Use the Response id attribute in a DataMiner protocol to assign the unique non-zero identifier used to reference a protocol response."
 ---
 
 # id attribute

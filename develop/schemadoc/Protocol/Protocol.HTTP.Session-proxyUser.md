@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session-proxyUser
-description: "Learn how the proxyUser attribute supplies a fixed proxy username or parameter ID for HTTP proxy authentication in a DataMiner protocol."
+description: "Use the proxyUser attribute in a DataMiner protocol to specify a fixed proxy username or parameter ID for HTTP proxy authentication."
 ---
 
 # proxyUser attribute

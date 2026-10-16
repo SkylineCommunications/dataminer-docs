@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request.Headers.Header
-description: "Learn how the Header element defines a key-value HTTP request header using fixed text or a parameter value in a DataMiner protocol."
+description: "Use the Header element in a DataMiner protocol to define a key-value HTTP request header using fixed text or a parameter value."
 ---
 
 # Header element

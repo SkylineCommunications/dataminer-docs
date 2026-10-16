@@ -1,6 +1,6 @@
 ---
 uid: Protocol.HTTP.Session-proxyPassword
-description: "Learn how the proxyPassword attribute supplies a fixed proxy password or parameter ID for HTTP proxy authentication in a DataMiner protocol."
+description: "Use the proxyPassword attribute in a DataMiner protocol to specify a fixed proxy password or parameter ID for HTTP proxy authentication."
 ---
 
 # proxyPassword attribute
