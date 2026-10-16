@@ -1014,3 +1014,9 @@ Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConn
 In script log files, execution times for scripts running longer than one minute could be incorrect. In addition, the `SLAutomation` log file did not include the library name when it logged the start or completion of script library compilation.
 
 From now on, the script log file will report the correct total execution time, and the `SLAutomation` log file will now include the library name in these messages.
+
+#### Failover: BrokerGateway redirects would cause a Failover setup to fail [ID 46781]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirects were configured and BrokerGateway was manually configured with redirected NATS addresses.
