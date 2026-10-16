@@ -1,5 +1,6 @@
 ---
 uid: Building_interactive_Automation_scripts_with_CSharp
+description: Learn how to build interactive automation scripts with C#, including dialog boxes for displaying or requesting information and grid layouts for web apps.
 ---
 
 # Building interactive automation scripts with C#
@@ -134,3 +135,65 @@ uib2.AppendBlock(blockButtonClose);
 // Display the dialog box
 engine.ShowUI(uib2);
 ```
+
+## Using the grid layout in web apps to control the tab behavior
+
+From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46602 / RN 46716 -->, you can set the [WebUILayout](xref:Skyline.DataMiner.Automation.UIBuilder.WebUILayout) property of a UIBuilder to `WebUILayout.Grid` to align keyboard navigation with the workflow of your dialog box, without changing how the dialog box looks. For more information on the available layout types, see [WebUILayout](xref:Skyline.DataMiner.Automation.WebUILayout). For versions prior to this, the table layout is used.
+
+In the default table layout, pressing the TAB key moves the focus from left to right across each row before moving to the next row. In the grid layout, the components stay at the rows and columns defined in the script, but the TAB order follows the order in which you add the blocks to the UIBuilder using `AppendBlock`.
+
+The following example arranges four time input fields in two columns. Because the blocks are added from top to bottom in the first column and then in the second column, pressing the TAB key moves down the first column before continuing in the second column.
+
+```cs
+var uiBuilder = new UIBuilder
+{
+  WebUILayout = WebUILayout.Grid,
+  RowDefs = "auto;auto",
+  ColumnDefs = "auto;auto"
+};
+
+var firstColumnTop = new UIBlockDefinition
+{
+  Type = UIBlockType.Time,
+  Row = 1,
+  Column = 0
+};
+
+var firstColumnBottom = new UIBlockDefinition
+{
+  Type = UIBlockType.Time,
+  Row = 2,
+  Column = 0
+};
+
+var secondColumnTop = new UIBlockDefinition
+{
+  Type = UIBlockType.Time,
+  Row = 1,
+  Column = 1
+};
+
+var secondColumnBottom = new UIBlockDefinition
+{
+  Type = UIBlockType.Time,
+  Row = 2,
+  Column = 1
+};
+
+// The order of these calls determines the TAB order.
+uiBuilder.AppendBlock(firstColumnTop);
+uiBuilder.AppendBlock(firstColumnBottom);
+uiBuilder.AppendBlock(secondColumnTop);
+uiBuilder.AppendBlock(secondColumnBottom);
+
+engine.ShowUI(uiBuilder);
+```
+
+The screen recording below shows a similar dialog box with two side-by-side feed booking panels. Pressing the TAB key moves through all the fields in the first panel before continuing in the second panel, even though fields in both panels share the same rows.
+
+![Tab navigation in a dialog box using the grid layout](~/dataminer/images/IAS_Grid_Layout_Tab_Order.gif)
+
+> [!NOTE]
+>
+> - You can define [row](xref:Skyline.DataMiner.Automation.UIBuilder.RowDefs) and [column](xref:Skyline.DataMiner.Automation.UIBuilder.ColumnDefs) sizes using `auto` (or `a`) or `*`.
+> - Avoid overlapping blocks, because the grid layout does not automatically resolve overlaps or adjust spans.
