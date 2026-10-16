@@ -41,6 +41,15 @@ Before you upgrade to this DataMiner version:
 
 From now on, the *ClusterEndpointsManager* soft-launch option will always be enabled, regardless of the soft-launch configuration.
 
+#### BrokerGateway: HTTPS communication now supports redirects [ID 46687]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+BrokerGateway now takes redirects configured in *DMS.xml* into account when communicating over HTTPS. This allows the required API calls to work as intended in manually configured setups.
+
+> [!NOTE]
+> NATS communication does not take redirects into account.
+
 ### Fixes
 
 #### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]

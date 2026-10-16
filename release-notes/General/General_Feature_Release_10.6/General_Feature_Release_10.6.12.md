@@ -104,6 +104,15 @@ The generated package now includes the following files in the `Elastic` folder f
 
 A number of security enhancements have been made.
 
+#### BrokerGateway: HTTPS communication now supports redirects [ID 46687]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+BrokerGateway now takes redirects configured in *DMS.xml* into account when communicating over HTTPS. This allows the required API calls to work as intended in manually configured setups.
+
+> [!NOTE]
+> NATS communication does not take redirects into account.
+
 #### Protocol: NotifyDataMiner(Queued) failures are now logged without internal offsets [ID 46709]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->

@@ -27,7 +27,14 @@ description: "Release notes for General Main Release 10.5.0 CU21, including prer
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### BrokerGateway: HTTPS communication now supports redirects [ID 46687]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+BrokerGateway now takes redirects configured in *DMS.xml* into account when communicating over HTTPS. This allows the required API calls to work as intended in manually configured setups.
+
+> [!NOTE]
+> NATS communication does not take redirects into account.
 
 ### Fixes
 
