@@ -6,8 +6,9 @@ description: "Learn how to enable the DataMiner Assistant DxM and the DataMiner 
 
 # Getting started with DataMiner Intelligence
 
-[DataMiner Intelligence](xref:DataMiner_Intelligence) relies on two components that each need to be enabled separately:
+[DataMiner Intelligence](xref:DataMiner_Intelligence) has the following requirements. The DataMiner Assistant DxM and the DataMiner Assistant app each need to be enabled separately.
 
+- **dataminer.services connection**: Your DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - **DataMiner Assistant DxM**: This [DataMiner Extension Module](xref:DataMinerExtensionModules) provides the AI capabilities in DataMiner, including the agent framework, [natural language to GQI](xref:Intelligence_NL2GQI), and [Document Intelligence](xref:docintel).
 - **DataMiner Assistant app**: This chat interface allows you to interact with the DataMiner Intelligence agents from within DataMiner.
 
@@ -15,9 +16,9 @@ description: "Learn how to enable the DataMiner Assistant DxM and the DataMiner 
 
 1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. Deploy the DataMiner Assistant DxM.
+1. [Install the DataMiner Assistant DxM](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
 
-   The DxM is not included in DataMiner upgrade packages, so you need to [deploy it separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node). For more information on the prerequisites, see [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
+   The DxM is included in DataMiner web upgrade packages, but you need to install it once to activate it. After that, it is upgraded automatically when you install DataMiner upgrades. For more information on the installation and prerequisites, see [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
 
 1. Request access to the DataMiner Assistant app by contacting [ai@skyline.be](mailto:ai@skyline.be).
 

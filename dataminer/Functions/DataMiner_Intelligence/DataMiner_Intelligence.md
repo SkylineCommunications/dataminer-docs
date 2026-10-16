@@ -6,6 +6,9 @@ description: "Discover DataMiner Intelligence, the agentic AI capabilities of Da
 
 # About DataMiner Intelligence
 
+> [!IMPORTANT]
+> DataMiner Intelligence is currently a prerelease feature. Its official release is expected in DataMiner 10.7.1. The functionality is ready to be deployed and tested in production environments, but it is still subject to significant changes and improvements toward the official release. We welcome your feedback at [ai@skyline.be](mailto:ai@skyline.be).
+
 DataMiner Intelligence covers all agentic AI capabilities of DataMiner. It consists of:
 
 - The **DataMiner Intelligence agent framework**, with AI agents that help you **understand**, **act**, and **create** on the DataMiner platform.
@@ -34,16 +37,16 @@ It is also extensible, so that you can tailor it to your own environment and wor
 
 ### Interacting with the agents
 
-You can interact with the agents through the chat interfaces of the **DataMiner Assistant app**:
+You can interact with the agents through the following DataMiner Assistant chat interfaces:
 
 - The [DataMiner Assistant app](xref:Intelligence_Assistant_app), which is integrated within DataMiner and available from the DataMiner landing page.
 - The [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365), which gives you access to the agents from Microsoft Teams or Microsoft Copilot.
 
-In addition to chat interaction, DataMiner Intelligence will also be able to be triggered from DataMiner Automation. This will allow you to launch agentic workflows from any automated workflow, for example when a new alarm is generated.
+In addition to chat interaction, it will soon be possible to trigger DataMiner Intelligence from DataMiner Automation. This will allow you to launch agentic workflows from any automated workflow, for example when a new alarm is generated.
 
 ## Getting started
 
-DataMiner Intelligence relies on two components that each need to be enabled separately:
+DataMiner Intelligence requires a [connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and relies on two components that each need to be enabled separately:
 
 - The **DataMiner Assistant DxM**, which provides the AI capabilities in DataMiner.
 - The **DataMiner Assistant app**, the chat interface that allows you to interact with the agents.
