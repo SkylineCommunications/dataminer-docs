@@ -18,6 +18,17 @@ Script tools are only available to an agent if both of the following conditions 
 
 During a conversation, the Assistant initially uses only the script tool name and description to determine whether the tool may be relevant. If it is relevant, the Assistant retrieves the remaining tool information, including the parameters and context. The agent then collects or confirms the required inputs, executes the script, and uses the result or error to continue the conversation.
 
+## Limitation for Failover setups
+
+Script tools cannot be used if the DataMiner Assistant DxM runs on DataMiner Agents that are part of a [Failover](xref:About_DMA_Failover) pair.
+
+To be able to use script tools, we recommend one of the following approaches:
+
+- Move away from Failover and use [Swarming](xref:Swarming) instead.
+- Add one or more DataMiner Agents that are not part of a Failover pair to your DataMiner System, and install the DataMiner Assistant DxM on those Agents.
+
+The automation scripts triggered by script tools can still reach any other DataMiner Agent in the DataMiner System, including Agents that are part of a Failover pair.
+
 ## Execution flow
 
 ### 1. The AI agent selects the tool

@@ -27,6 +27,7 @@ For DataMiner Assistant to run correctly, the following **prerequisites** must b
 
 - **Connection to dataminer.services**: The DataMiner System [must be connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - **GQI**: For the "natural language to GQI" feature to work, the [GQI DxM](xref:GQI_DxM) needs to be installed.
+- **No Failover**: For [script tools](xref:Intelligence_Assistant_ScriptTools) to work, the DxM must not be installed on DataMiner Agents that are part of a Failover pair. See [Limitation for Failover setups](xref:Intelligence_Assistant_ScriptTools#limitation-for-failover-setups).
 
 ## Logging
 
