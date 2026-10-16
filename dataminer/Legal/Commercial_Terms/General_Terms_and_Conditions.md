@@ -5,8 +5,6 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 # Skyline General Terms and Conditions
 
-*Version 1.0 — Effective Date: 15 June 2026*
-
 ## Part A — General Terms and Conditions
 
 ### 1. Definitions
@@ -301,3 +299,5 @@ This Schedule applies where the Quotation specifies Skyline Communications APAC 
 (c) Either Party may seek injunctive or equitable relief in any court of competent jurisdiction to protect its intellectual property rights or Confidential Information.
 
 **S3.5 Limitation of Liability** The limitations and exclusions of liability set forth in clause 13 shall be subject to the Unfair Contract Terms Act 1977 (2020 Rev Ed) of Singapore, to the extent applicable. Any term that would be rendered void or unenforceable under said Act shall be deemed modified to the minimum extent necessary to make it valid and enforceable.
+
+*Last updated: 16 October 2026*
