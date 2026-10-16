@@ -8,9 +8,8 @@ description: "Discover DataMiner Intelligence, the agentic AI capabilities of Da
 
 DataMiner Intelligence covers all agentic AI capabilities of DataMiner. It consists of:
 
-- The **DataMiner Intelligence agent framework**, with operational and DevOps AI agents that help you **understand**, **act**, and **create** on the DataMiner platform.
-- **Other integrated AI capabilities**, such as natural language to GQI and Document Intelligence, which bring AI directly into specific DataMiner features.
-
+- The **DataMiner Intelligence agent framework**, with AI agents that help you **understand**, **act**, and **create** on the DataMiner platform.
+- **Other integrated AI capabilities**, such as natural language to GQI and Document Intelligence.
 > [!NOTE]
 > In the context of DataMiner Intelligence, "agents" refers to AI agents. These are not to be confused with DataMiner Agents, i.e., DataMiner nodes. See [DataMiner System architecture and components](xref:Overview_Architecture_and_components).
 
@@ -34,7 +33,7 @@ It is also extensible, so that you can tailor it to your own environment and wor
 
 ### Interacting with the agents
 
-You can interact with the agents through the chat interfaces of the **DataMiner Assistant**:
+You can interact with the agents through the chat interfaces of the **DataMiner Assistant app**:
 
 - The [DataMiner Assistant app](xref:Intelligence_Assistant_app), which is integrated within DataMiner and available from the DataMiner landing page.
 - The [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365), which gives you access to the agents from Microsoft Teams or Microsoft Copilot.
