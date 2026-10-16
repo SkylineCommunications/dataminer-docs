@@ -54,13 +54,13 @@ In addition to the terms defined in this section, other terms and phrases that a
 
 ## 3. Monthly Uptime
 
-Skyline shall issue a Credit to User if Monthly Uptime falls below 99 % of the total minutes in any calendar month, based on the table below.
+Skyline commits to a Monthly Uptime of at least 99.9% of the total minutes in any calendar month. Skyline shall issue a Credit to User if Monthly Uptime falls below 99.9% of the total minutes in any calendar month, based on the table below.
 
 | Monthly Uptime as a percent of minutes in the month | Credit: percent of that month's SaaS fees |
 |--|--|
-| < 99 % | 5% |
-| < 97 % | 25% |
-| < 95 % | 50% |
+| < 99.9% | 5% |
+| < 99% | 10% |
+| < 95% | 20% |
 
 As used above:
 
@@ -109,4 +109,4 @@ Level 3 priority: A condition where an occurrence affects the SaaS but does not 
 ## 6. Miscellaneous
 
 Credits provide User's sole remedies and Skyline's sole liabilities and responsibilities for Downtime, below-target Monthly Uptime, and below-target Issue Response - and Corrective time; provided this sentence does not restrict User's right, if any, to terminate their SaaS agreement for material breach.
-Under no circumstances is Provider required to issue Credits in excess of 50% of any calendar month's fees.
+Under no circumstances is Provider required to issue Credits in excess of 20% of any calendar month's fees.
