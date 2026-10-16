@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsMatrixSettingNames
+description: "Let users rename standard matrix inputs and outputs through a discreetDestination table that saves display keys to the linked XML file."
 ---
 
 # Setting input/output names via a table

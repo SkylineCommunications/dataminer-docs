@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails
+description: "Consult the DataMiner protocol schema reference for the LinkedDetails element, which shows details for tree items matching a discrete value."
 ---
 
 # LinkedDetails element

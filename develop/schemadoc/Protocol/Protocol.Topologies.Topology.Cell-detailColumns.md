@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell-detailColumns
+description: "Consult the DataMiner protocol schema reference for the detailColumns attribute, its string type, and Cell parent."
 ---
 
 # detailColumns attribute

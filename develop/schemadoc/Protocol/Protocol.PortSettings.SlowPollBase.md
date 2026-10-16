@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SlowPollBase
+description: "Learn how the SlowPollBase element configures whether slow polling is based on a timeout count or time duration for the main connection."
 ---
 
 # SlowPollBase element

@@ -1,5 +1,6 @@
 ---
 uid: LogicUseCase3
+description: "Explore how connector execution flows through SLProtocol and SLScripting, how QActions run, and how to design efficient scripting logic."
 ---
 
 # Use case: Internal flow – QActions

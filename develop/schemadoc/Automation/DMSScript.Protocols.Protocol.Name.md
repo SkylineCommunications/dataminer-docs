@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Protocols.Protocol.Name
+description: "Use the Protocol Name element to specify the non-empty protocol name associated with a dummy variable in an automation script."
 ---
 
 # Name element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Databits
+description: "Learn how the Databits element defines the default, allowed range, and selectable data bit counts for an element connection."
 ---
 
 # Databits element

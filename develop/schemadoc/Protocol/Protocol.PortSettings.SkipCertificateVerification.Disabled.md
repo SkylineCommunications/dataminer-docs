@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SkipCertificateVerification.Disabled
+description: "Learn how the Disabled element under SkipCertificateVerification controls whether users can configure the SSL/TLS certificate verification setting."
 ---
 
 # Disabled element

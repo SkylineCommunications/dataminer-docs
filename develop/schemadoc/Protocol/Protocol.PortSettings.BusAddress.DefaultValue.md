@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.DefaultValue
+description: "Learn how the DefaultValue element under BusAddress sets the initial bus address or disables bus address entry."
 ---
 
 # DefaultValue element

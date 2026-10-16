@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory
+description: "Consult the DataMiner protocol schema reference for the VersionHistory element, which contains the branch-based release history for a protocol."
 ---
 
 # VersionHistory element

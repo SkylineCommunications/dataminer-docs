@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group.Params.Param-index
+description: "Use the index attribute in a DataMiner protocol to identify the primary key column for an included table parameter."
 ---
 
 # index attribute

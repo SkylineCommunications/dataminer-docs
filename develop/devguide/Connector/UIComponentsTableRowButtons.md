@@ -1,12 +1,11 @@
 ---
 uid: UIComponentsTableRowButtons
+description: "Configure table cell buttons that open DataMiner elements, services, redundancy groups, or views in a new card."
 ---
 
 # Configuring buttons to open DataMiner objects from table cells
 
-From DataMiner 10.1.9 (RN 30413) onwards, it is possible open elements, services, redundancy groups and views by clicking buttons in Data Display table cells.
-
-For this purpose, the cell button must be configured as illustrated below. The table cell will then display an icon that includes the severity and, if necessary, the name. Clicking the link will open the linked object in a new card.
+Buttons in Data Display table cells can be configured to open elements, services, redundancy groups, or views, using the configuration illustrated below. The table cell will then display an icon that includes the severity and, if necessary, the name. Clicking the link will open the linked object in a new card.<!-- RN 30413 -->
 
 Example:
 

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VendorOID
+description: "Consult the DataMiner protocol schema reference for the VendorOID element, which sets the unique vendor OID used to define MIB objects."
 ---
 
 # VendorOID element

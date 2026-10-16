@@ -1,5 +1,6 @@
 ---
 uid: QuestionsAndAnswers
+description: "Review answers to connector development questions about SNMP tables and instances, table searches, communication issues, and group execution actions."
 ---
 
 # Questions & Answers

@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDVEs
+description: "Understand how Dynamic Virtual Elements represent device subcomponents through child elements whose data and communication are managed by a parent element."
 ---
 
 # Dynamic Virtual Elements

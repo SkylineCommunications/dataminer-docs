@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-options
+description: "Learn how the QAction options attribute configures binary input, debugging, compilation, queuing, grouping, and DLL naming."
 ---
 
 # options attribute

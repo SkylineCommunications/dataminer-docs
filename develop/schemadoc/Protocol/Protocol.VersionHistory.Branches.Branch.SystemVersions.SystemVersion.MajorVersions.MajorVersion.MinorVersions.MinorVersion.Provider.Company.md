@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Provider.Company
+description: "Consult the DataMiner protocol schema reference for the Company element, which names the company providing a minor protocol version."
 ---
 
 # Company element

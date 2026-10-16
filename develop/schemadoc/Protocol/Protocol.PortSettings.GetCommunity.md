@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.GetCommunity
+description: "Learn how the GetCommunity element configures the default SNMP get community string or SNMPv3 authentication password and whether users can edit it."
 ---
 
 # GetCommunity element

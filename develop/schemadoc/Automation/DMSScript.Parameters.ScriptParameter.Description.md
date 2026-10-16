@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Parameters.ScriptParameter.Description
+description: "Use the ScriptParameter Description element to define the non-empty name by which an automation script accesses a parameter variable."
 ---
 
 # Description element

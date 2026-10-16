@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field-options
+description: "Use the Field options attribute in a DataMiner protocol to configure EPM field filters, diagrams, details, tabs, sorting, and related behavior."
 ---
 
 # options attribute

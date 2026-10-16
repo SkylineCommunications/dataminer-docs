@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Display.Visibility.Standalone.Value
+description: "Use the Value element in a DataMiner protocol to define a trigger value that reverses default search field visibility."
 ---
 
 # Value element

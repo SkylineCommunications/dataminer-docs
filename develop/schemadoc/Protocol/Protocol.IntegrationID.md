@@ -1,5 +1,6 @@
 ---
 uid: Protocol.IntegrationID
+description: "Use the IntegrationID element in a DataMiner protocol to assign an integration ID matching the required DMS-DRV-number format."
 ---
 
 # IntegrationID element

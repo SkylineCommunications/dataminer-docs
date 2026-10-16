@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsOverview
+description: "Learn how groups, parameters, pairs, sessions, actions, and triggers are processed in SLProtocol and interact with communication processes."
 ---
 
 # Overview

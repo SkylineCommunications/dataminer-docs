@@ -1,5 +1,6 @@
 ---
 uid: LogicActionCopy
+description: "Use the copy action to overwrite destination parameters with a source parameter's value. Learn when parameter change events are raised."
 ---
 
 # copy

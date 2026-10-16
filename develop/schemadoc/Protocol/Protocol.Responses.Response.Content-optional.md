@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Responses.Response.Content-optional
+description: "Learn how the optional attribute marks response parameters as optional and specifies which later parameters DataMiner skips after a mismatch."
 ---
 
 # optional attribute

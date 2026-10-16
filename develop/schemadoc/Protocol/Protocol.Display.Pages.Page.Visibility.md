@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display.Pages.Page.Visibility
+description: "Use the Visibility element in a DataMiner protocol to configure default and parameter-controlled visibility for a Data Display page."
 ---
 
 # Visibility element

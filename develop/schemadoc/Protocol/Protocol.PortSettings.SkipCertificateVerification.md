@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SkipCertificateVerification
+description: "Learn how the SkipCertificateVerification element configures default and user-selectable SSL/TLS certificate verification for HTTP connections."
 ---
 
 # SkipCertificateVerification element

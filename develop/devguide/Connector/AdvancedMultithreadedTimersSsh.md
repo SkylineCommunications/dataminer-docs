@@ -1,5 +1,6 @@
 ---
 uid: AdvancedMultiThreadedTimersSsh
+description: "Implement multithreaded SSH requests by building SSH settings and command arrays in a QAction, processing responses, and running post-response logic."
 ---
 
 # SSH

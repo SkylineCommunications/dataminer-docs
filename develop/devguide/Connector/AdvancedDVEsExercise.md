@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDVEsExercise
+description: "Practice creating DVE elements for specified Flashlink modules and exporting selected module and voltage table parameters for one chassis."
 ---
 
 # Exercise

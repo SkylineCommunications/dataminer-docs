@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Name
+description: "Consult the DataMiner protocol schema reference for the Name element, which sets the name used to identify a trigger."
 ---
 
 # Name element

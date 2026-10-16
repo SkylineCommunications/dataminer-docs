@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Threads.Thread
+description: "Learn how each Thread element creates a separate group execution queue for assigned connections, with optional targeting and logging identifiers."
 ---
 
 # Thread element

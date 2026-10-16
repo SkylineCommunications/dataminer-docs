@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.Hierarchy.Table
+description: "Consult the DataMiner protocol schema reference for the Table element, which defines table links for an advanced tree control hierarchy."
 ---
 
 # Table element

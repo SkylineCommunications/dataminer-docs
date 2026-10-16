@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.Range
+description: "Learn how the Range element under BusAddress defines the first and last bus addresses users can enter for an element."
 ---
 
 # Range element

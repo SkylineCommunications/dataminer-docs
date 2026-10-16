@@ -1,5 +1,6 @@
----
+﻿---
 uid: Protocol-EnumProtocolType
+description: "Review the allowed values for the EnumProtocolType simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumProtocolType simple type

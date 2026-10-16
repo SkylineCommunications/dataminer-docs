@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Decimals
+description: "Learn how the Decimals element sets how many decimal places DataMiner stores in memory for a parameter value in a DataMiner protocol."
 ---
 
 # Decimals element
