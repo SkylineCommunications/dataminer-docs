@@ -1,11 +1,11 @@
 ---
 uid: Legacy_Trend_Data_Exporter
-description: "Use the legacy trend data exporter tool to realign average trend points in a CSV file to fixed intervals, such as 5-minute intervals."
+description: "Learn how the legacy trend data exporter tool can be used realign average trend points in a CSV file to fixed intervals, such as 5-minute intervals."
 ---
 
 # Legacy trend data exporter
 
-In the currently supported DataMiner versions, average trending is calculated in a better way compared to legacy DataMiner versions, resulting in improved performance.<!-- RN 28684 --> However, with this way of calculating, in some specific cases, intervals between two average trend points are not guaranteed to be constant. In cases where trend exports are generated and a fixed interval is expected, e.g., when exporting the 5-minute average trending points, this could be an issue. For this purpose, you can use the legacy trend data exporter tool. This standalone tool will realign the average trend points in a given .csv file to ensure fixed intervals (see example below).
+In the currently supported DataMiner versions, average trending is calculated in a better way compared to legacy DataMiner versions (prior to DataMiner 10.1.10/10.2.0), resulting in improved performance.<!-- RN 28684 --> However, with this way of calculating, in some specific cases, intervals between two average trend points are not guaranteed to be constant. In cases where trend exports are generated and a fixed interval is expected, e.g., when exporting the 5-minute average trending points, this could be an issue. For this purpose, you can use the legacy trend data exporter tool. This standalone tool will realign the average trend points in a given .csv file to ensure fixed intervals (see example below).
 
 You can download this tool from [DataMiner Dojo](https://community.dataminer.services/download/legacy-trend-data-exporter/).
 

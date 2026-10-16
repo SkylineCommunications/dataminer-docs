@@ -1,6 +1,6 @@
 ---
 uid: SLLogCollector
-description: "Use the SLLogCollector tool to easily collect log information and memory dumps from a DataMiner Agent."
+description: "Use the SLLogCollector tool to easily collect log information and memory dumps from a DataMiner Agent to troubleshoot DataMiner issues."
 ---
 
 # SLLogCollector

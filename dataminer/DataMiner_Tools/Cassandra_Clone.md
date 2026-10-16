@@ -1,6 +1,6 @@
 ---
 uid: Cassandra_Clone
-description: "Use the deprecated Cassandra Clone tool to clone data from a table in a Cassandra database to another table."
+description: "Learn how the deprecated Cassandra Clone tool could be used to clone data from a table in a Cassandra database to another table."
 ---
 
 # Cassandra Clone
