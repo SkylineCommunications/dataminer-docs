@@ -217,6 +217,6 @@ From now on, the script log file will report the correct total execution time, a
 
 #### Failover: BrokerGateway redirects would cause a Failover setup to fail [ID 46781]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
 Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirects were configured and BrokerGateway was manually configured with redirected NATS addresses.
