@@ -1034,6 +1034,7 @@ items:
           - name: Getting started with EPM
             topicUid: EPM_Introduction_Tutorial
   - name: Intelligence
+    topicUid: DataMiner_Intelligence
     items:
       - name: DataMiner Assistant DxM
         topicUid: Intelligence_Assistant_DxM
