@@ -693,6 +693,8 @@ items:
         topicUid: EnableSwarming
       - name: Swarming elements
         topicUid: SwarmingElements
+      - name: Swarming services
+        topicUid: SwarmingServices
       - name: Swarming bookings
         topicUid: SwarmingBookings
       - name: Swarming scheduled tasks
