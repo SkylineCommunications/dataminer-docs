@@ -20,8 +20,18 @@ Once it has been installed, DataMiner Assistant is upgraded automatically when y
 For DataMiner Assistant to run correctly, the following **prerequisites** must be met:
 
 - **Connection to dataminer.services**: The DataMiner System [must be connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
 - **GQI**: For the "natural language to GQI" feature to work, the [GQI DxM](xref:GQI_DxM) needs to be installed.
-- **No Failover**: For [script tools](xref:Intelligence_Assistant_ScriptTools) to work, the DxM must not be installed on DataMiner Agents that are part of a Failover pair. See [Limitation for Failover setups](xref:Intelligence_Assistant_ScriptTools#limitation-for-failover-setups).
+
+- **No Failover**: The DxM is not supported on DataMiner Agents that are part of a Failover pair.
+
+   If you currently have Failover Agents, we recommend one of the following approaches:
+
+  - Move away from Failover and use [Swarming](xref:Swarming) instead.
+  - Add one or more DataMiner Agents that are not part of a Failover pair to your DataMiner System, and install the DataMiner Assistant DxM on those Agents.
+
+    > [!TIP]
+    > To request a free license for such a DataMiner Agent, contact the Skyline Sales department at [sales@skyline.be](mailto:sales@skyline.be).
 
 ## Logging
 
