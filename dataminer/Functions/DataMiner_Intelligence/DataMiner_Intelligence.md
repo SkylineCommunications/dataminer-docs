@@ -7,7 +7,7 @@ description: "Discover DataMiner Intelligence, the agentic AI capabilities of Da
 # About DataMiner Intelligence
 
 > [!IMPORTANT]
-> DataMiner Intelligence is currently a prerelease feature. Its official release is expected in DataMiner 10.7.1. The functionality is ready to be deployed and tested in production environments, but it might still subject to significant changes and improvements toward the official release. We welcome your feedback at [ai@skyline.be](mailto:ai@skyline.be).
+> DataMiner Intelligence is currently a prerelease feature. Its official release is expected in DataMiner 10.7.1. The functionality is ready to be deployed and tested in production environments, but there may still be significant changes and improvements before the official release. We welcome your feedback at [ai@skyline.be](mailto:ai@skyline.be).
 
 DataMiner Intelligence covers all agentic AI capabilities of DataMiner. It consists of:
 

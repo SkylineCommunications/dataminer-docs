@@ -6,11 +6,13 @@ description: "Learn how to enable the DataMiner Assistant DxM and the DataMiner 
 
 # Getting started with DataMiner Intelligence
 
-[DataMiner Intelligence](xref:DataMiner_Intelligence) has the following requirements. The DataMiner Assistant DxM and the DataMiner Assistant app each need to be enabled separately.
+[DataMiner Intelligence](xref:DataMiner_Intelligence) has the following requirements:
 
 - **dataminer.services connection**: Your DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 - **DataMiner Assistant DxM**: This [DataMiner Extension Module](xref:DataMinerExtensionModules) provides the AI capabilities in DataMiner, including the agent framework, [natural language to GQI](xref:Intelligence_NL2GQI), and [Document Intelligence](xref:docintel).
 - **DataMiner Assistant app**: This chat interface allows you to interact with the DataMiner Intelligence agents from within DataMiner.
+
+The DataMiner Assistant DxM and the DataMiner Assistant app each need to be enabled separately.
 
 ## Enabling DataMiner Intelligence
 
