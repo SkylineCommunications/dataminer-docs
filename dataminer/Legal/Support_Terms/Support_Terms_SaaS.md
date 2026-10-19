@@ -4,6 +4,8 @@ uid: Support_Terms_SaaS
 
 # Support terms: SaaS
 
+*Last updated: 16 October 2026*
+
 ## 1. Introduction
 
 This document describes Skyline's service level terms for its SaaS (the "**SaaS SLA**").
