@@ -4,19 +4,19 @@ uid: Support_Terms_SaaS
 
 # Support terms: SaaS
 
-*Last updated: 16 October 2026*
+*Last updated: 19 October 2026*
 
 ## 1. Introduction
 
 This document describes Skyline's service level terms for its SaaS (the "**SaaS SLA**").
 
-This SaaS SLA applies to all Skyline's SaaS solutions. The User accepts this SaaS SLA when placing SaaS orders at Skyline. Any deviations from this SaaS SLA shall only be valid upon written agreement by Skyline, and any User terms on the same subject matter shall be deemed null and void.
+This SaaS SLA applies to all Skyline's SaaS solutions and supplements the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions). The User accepts this SaaS SLA when placing SaaS orders at Skyline. Any deviations from this SaaS SLA shall only be valid upon written agreement by Skyline, and any User terms on the same subject matter shall be deemed null and void.
 
 ## 2. Definitions
 
 For the purpose of these Terms, the following terms shall have the meanings indicated below:
 
-- "**Business Hours**" means 9:00 AM until 4:30 PM, Monday through Friday, in the time zone of the geographically closest [offices](https://skyline.be/contact) of Skyline (Izegem, Lisbon, Miami, or Singapore), excluding respective public holidays.
+- "**Business Hours**" means 9:00 AM until 4:30 PM, Monday through Friday, in the time zone of the geographically closest [offices](https://skyline.be/contact) of Skyline (Izegem, Lisbon, Sarajevo, Miami, or Singapore), excluding respective public holidays.
 
 - "**Corrective Action**" means a solution, workaround, or action plan that provides resolution of the User's Issue.
 
@@ -38,7 +38,7 @@ For the purpose of these Terms, the following terms shall have the meanings indi
 
 - "**Response time**" means the time given to Skyline to provide a notification of proper receipt and follow-up to the User.
 
-- "**Skyline**" means Skyline Communications N.V. and any other group company.
+- "**Skyline**" means Skyline Communications N.V. or the Skyline contracting entity specified in the applicable Quotation or Regional Schedule.
 
 - "**SaaS**" means the online version of DataMiner, or a part thereof, a software application provided by Skyline. This service is accessed over the internet and is hosted on the Microsoft Azure platform.
 
@@ -50,9 +50,9 @@ For the purpose of these Terms, the following terms shall have the meanings indi
 
 - "**Upgrades**" means the provision of improvements and new functionalities for the SaaS.
 
-- "**User**" means the customer that uses SaaS.
+- "**User**" means the Customer that has acquired the right to use the SaaS under the Agreement.
 
-In addition to the terms defined in this section, other terms and phrases that are capitalized in this Agreement shall have the meanings ascribed to them in the context in which they are used in the relevant sections of these terms.
+In addition to the terms defined in this section, other terms and phrases that are capitalized in this SaaS SLA shall have the meanings ascribed to them in the context in which they are used in the relevant sections of these terms or, if not defined herein, in the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions).
 
 ## 3. Monthly Uptime
 
@@ -72,7 +72,7 @@ As used above:
 
 - "**Downtime**" means any period during which the User cannot log in to the SaaS, other than because of errors of User or its agents or failures of software or equipment operated by User or under its control. Notwithstanding the foregoing, Downtime does not include: (a) Scheduled Maintenance; or (b) failures due to Force Majeure. Downtime begins when User submits a Downtime ticket.
 
-- "**Scheduled Maintenance**" means any period of Maintenance on the SaaS, provided Provider has given User three days' notice of such maintenance.
+- "**Scheduled Maintenance**" means any period of Maintenance on the SaaS, provided Skyline has given User three days' notice of such maintenance.
 
 - "**Downtime ticket**" means a ticket properly submitted through Skyline's 24/7 telephone Support helpdesk.
 
@@ -92,7 +92,7 @@ To be able to assist the User in an efficient manner, when generating a ticket o
 
 ## 5. Ticket Priority Levels
 
-Depending on the Priority Level of a ticket, Skyline will address the ticket within the time frames set out below. Response Time will commence once the ticket for the Issue has been created by the User. Corrective Time will commence once Skyline is able to reproduce the Issue. Corrective Time does not include the time when the Issue is on status "Awaiting Customer Input" or "Corrective Action Proposed". When the Corrective Action consists of an action plan, it shall always conclude the planned next steps, required User actions, and, if possible, a timeline for the next steps.
+Depending on the Priority Level of a ticket, Skyline will address the ticket within the time frames set out below. Response Time will commence once the ticket for the Issue has been created by the User. Corrective Time will commence once Skyline is able to reproduce the Issue. Corrective Time does not include the time when the Issue is on status "Awaiting Customer Input" or "Corrective Action Proposed". When the Corrective Action consists of an action plan, it shall always include the planned next steps, required User actions, and, if possible, a timeline for the next steps.
 
 The following Priority Levels shall be distinguished and assigned by Skyline:
 
@@ -111,4 +111,4 @@ Level 3 priority: A condition where an occurrence affects the SaaS but does not 
 ## 6. Miscellaneous
 
 Credits provide User's sole remedies and Skyline's sole liabilities and responsibilities for Downtime, below-target Monthly Uptime, and below-target Issue Response - and Corrective time; provided this sentence does not restrict User's right, if any, to terminate their SaaS agreement for material breach.
-Under no circumstances is Provider required to issue Credits in excess of 20% of any calendar month's fees.
+Under no circumstances is Skyline required to issue Credits in excess of 20% of any calendar month's fees.

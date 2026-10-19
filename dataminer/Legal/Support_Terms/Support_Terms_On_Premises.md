@@ -2,19 +2,19 @@
 uid: Support_Terms_On_Premises
 ---
 
-# Support services terms: on premises
+# Support terms: on premises
+
+*Last updated: 19 October 2026*
 
 ## Introduction
 
-This document sets out the terms of Skyline's Support Services for its Software (the "**Terms**").
+This document sets out the Maintenance and Support Terms of Skyline's Support Services for self-managed deployments of its Software (the "**Terms**"), and supplements the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions).
 
 ## Definitions
 
 For the purpose of these Terms, the following terms shall have the meanings indicated below:
 
 - "**Business Hours**" means 9:00 AM until 4:30 PM, Monday through Friday, in the time zone of the geographically closest [offices](https://skyline.be/contact) of Skyline (Izegem, Lisbon, Sarajevo, Miami, or Singapore), excluding respective public holidays.
-
-- "**Service Credit(s)**" means credits that can be utilized by the User for one of the following services: optimization services, performance reviews, architecture reviews, design workshops, or other consultancy services.
 
 - "**Corrective Action**" means a solution, workaround or action plan that provides resolution of the User's Issue.
 
@@ -32,9 +32,11 @@ For the purpose of these Terms, the following terms shall have the meanings indi
 
 - "**Parties**" means both Skyline and the User.
 
+- "**Professional Services Credit(s)**" means credits that can be utilized by the User for one of the following services: optimization services, performance reviews, architecture reviews, design workshops, or other consultancy services.
+
 - "**Response time**" means the time given to Skyline to provide a notification of proper receipt and follow-up to the User.
 
-- "**Skyline**" means Skyline Communications N.V. and any other group company.
+- "**Skyline**" means Skyline Communications N.V. or the Skyline contracting entity specified in the applicable Quotation or Regional Schedule.
 
 - "**Software**" means Skyline's DataMiner and accompanying software (if any).
 
@@ -46,7 +48,9 @@ For the purpose of these Terms, the following terms shall have the meanings indi
 
 - "**Upgrades**" means the provision of improvements and new functionalities for the Software.
 
-- "**User**" means the customer that uses Software licenses.
+- "**User**" means the Customer that has acquired the right to use the Software under the Agreement.
+
+Capitalized terms used but not defined in these Terms shall have the meanings given to them in the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions).
 
 ## Support plans
 
@@ -84,19 +88,19 @@ The User shall ensure that they have an industry-standard and uninterrupted remo
 
 ## Ticket generation
 
-When the User encounters an Issue with the Software or wishes to receive Support for another reason, the User should open a ticket for Support using the [Support application](https://supportpreview.dataminer.services/Home/CreateTicket). More details about this can be found in the [Support application documentation](xref:User_operations_support).
+When the User encounters an Issue with the Software or wishes to receive Support for another reason, the User should open a ticket for Support using the [Support application](https://admin.dataminer.services/support). More details about this can be found in the [Support application documentation](xref:User_operations_support).
 
 If for some reason the User cannot access the Support application and create a ticket, they can also [contact Skyline's Support helpdesk](xref:Contacting_tech_support).
 
-Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through the [Support application](https://supportpreview.dataminer.services/Home/CreateTicket).
+Support is available during Business Hours only, except if the User has purchased an Out of Business Hours Support plan. If the User wishes to create a ticket in follow-up of their telephone support, the User needs to generate a ticket through the [Support application](https://admin.dataminer.services/support).
 
-The User can always consult the status of their tickets using Skyline's [Support application](https://supportpreview.dataminer.services/). More details about this can be found in the [User Operations Support documentation](xref:User_operations_support). The ticket number will be used by Skyline for the entire lifecycle of the specific Issue or question.
+The User can always consult the status of their tickets using Skyline's [Support application](https://admin.dataminer.services/support). More details about this can be found in the [User Operations Support documentation](xref:User_operations_support). The ticket number will be used by Skyline for the entire lifecycle of the specific Issue or question.
 
 To be able to assist the User in an efficient manner, when generating a ticket or calling Skyline's helpdesk, the User is required to provide the following information: (a) a general description of the operating environment, (b) a list of all hardware components, operating systems, and networks, (c) a reproducible test case, and (d) any log files, trace and systems files. The User's failure to provide this information may prevent Skyline from identifying and fixing the Issue.
 
 ## Proactive support
 
-Skyline assumes that the Software is always connected to dataminer.services and that the necessary [prerequisites](xref:RemoteLogCollection#requirements) are met for remote log collection using the Customer DataMiner Reporting tool ("**CDMR**"). This allows the User and Skyline to proactively react to occurrences before they may become critical.
+Unless the User has an approved Fully Offline On-Premises Deployment, Skyline assumes that the Software is always connected to dataminer.services and that the necessary [prerequisites](xref:RemoteLogCollection#requirements) are met for remote log collection using the Customer DataMiner Reporting tool ("**CDMR**"). This allows the User and Skyline to proactively react to occurrences before they may become critical.
 
 ## Exclusions
 
@@ -108,7 +112,7 @@ Skyline shall have no obligation of any kind to provide Support for Issues cause
 - Software connectors that have not been developed by Skyline.
 - IP network failures or other network issues not caused by, or related to, the Software.
 - Versions of the Software that are not supported.
-- When CDMR or dataminer.services connectivity is disabled.
+- When CDMR or dataminer.services connectivity is disabled, unless the User has an approved Fully Offline On-Premises Deployment.
 - Insufficient hardware, data computing or storage resources to run the Software, as compared to the advice provided by Skyline in that respect. Such advice shall take into account the minimum system specifications published by Skyline but shall also consider the exact nature and use of the application at hand, which may justify the need for higher specifications.
 - Any external circumstance out of Skyline's control (e.g., remote access unavailable).
 
@@ -134,7 +138,7 @@ The following priority levels shall be distinguished:
 
 ### Response and Corrective times
 
-Depending on the Priority Level of a ticket, Skyline will address the ticket within the time frames set out below. Response Time will commence once the ticket for the Issue has been created by the User. Corrective Time will commence once Skyline is able to reproduce the Issue. Corrective Time does not include the time when the Issue is on status "Awaiting Customer Input" or "Corrective Action Proposed". When the Corrective Action consists of an action plan, it shall always conclude the planned next steps, required User actions, and, if possible, a timeline for the next steps.
+Depending on the Priority Level of a ticket, Skyline will address the ticket within the time frames set out below. Response Time will commence once the ticket for the Issue has been created by the User. Corrective Time will commence once Skyline is able to reproduce the Issue. Corrective Time does not include the time when the Issue is on status "Awaiting Customer Input" or "Corrective Action Proposed". When the Corrective Action consists of an action plan, it shall always include the planned next steps, required User actions, and, if possible, a timeline for the next steps.
 
 #### Continuity plan
 
@@ -156,7 +160,7 @@ Depending on the Priority Level of a ticket, Skyline will address the ticket wit
 
 In the event of a Failure, the following procedure shall apply: (i) the User shall inform Skyline in writing of the Failure within three (3) business days of the alleged Failure, (ii) Skyline shall investigate the alleged Failure and inform the User in writing of its acceptance or non-acceptance of the alleged Failure, (iii) the User shall provide reasonable assistance to Skyline in its efforts to correct any problems or processes inhibiting Skyline's ability to reach the time frames, and if the Failure by Skyline is proved, (iv) Skyline shall credit 0.25 % of the Support Services fee for the impacted licenses to the User, subject to a maximum of 5% of the yearly Support Services fee.
 
-The credit for Failures stated in this Failures section shall be the User's sole and exclusive remedy with respect to any alleged or actual Failure.
+Any such credit shall apply against future Support Services invoices only, does not apply to other amounts the User may owe Skyline, and does not entitle the User to any refund or payment under any circumstances, including upon termination. The credit for Failures stated in this Failures section shall be the User's sole and exclusive remedy with respect to any alleged or actual Failure.
 
 ### Out of business hours support
 
