@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.CRC.Type
-description: "Learn how to use the Type element to select a CRC algorithm and configure each stage of its calculation in a DataMiner protocol."
+description: "Use the Type element in a DataMiner protocol to select a CRC algorithm and configure each stage of its calculation."
 ---
 
 # Type element
@@ -19,11 +19,11 @@ Defines the CRC calculation algorithm.
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
-|[byteoffset](xref:Protocol.Params.Param.CRC.Type-byteoffset)|int||Allows to add an offset to every single byte of the CRC.|
+|[byteoffset](xref:Protocol.Params.Param.CRC.Type-byteoffset)|int||Allows you to add an offset to every single byte of the CRC.|
 |[groupbytes](xref:Protocol.Params.Param.CRC.Type-groupbytes)|string||Specifies the number of bytes on which to perform the operation.|
 |[mod](xref:Protocol.Params.Param.CRC.Type-mod)|unsignedInt||Specifies that a modulo operation has to be performed on the CRC after it has been calculated.|
 |[off](xref:Protocol.Params.Param.CRC.Type-off)|int||Specifies an offset value to be added to the calculated CRC.|
-|[options](xref:Protocol.Params.Param.CRC.Type-options)|string||Specifies additional options, separated by semicolons (”;”).|
+|[options](xref:Protocol.Params.Param.CRC.Type-options)|string||Specifies additional options, separated by semicolons (";").|
 |[totaloffset](xref:Protocol.Params.Param.CRC.Type-totaloffset)|unsignedInt||Specifies an offset value to be added to the CRC after it has been calculated.|
 
 ## Remarks
@@ -50,5 +50,5 @@ One of the following values can be specified:
 1. Byteoffset
 1. CRC (with groupbytes and off attributes if specified)
 1. Mod
-1. Totaloffset (added or ‘OR’-ed, depending on the ‘OR TOTALOFFSET’ option)
+1. Totaloffset (added or "OR"-ed, depending on the "OR TOTALOFFSET" option)
 1. Ones complement

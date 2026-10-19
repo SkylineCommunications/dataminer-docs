@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation-remote
-description: "Learn how to use the remote attribute to identify the remote column parameter in a cross-driver mapping in a DataMiner protocol."
+description: "Use the remote attribute to identify a column parameter in a remote protocol when creating a direct view table from multiple protocols."
 ---
 
 # remote attribute

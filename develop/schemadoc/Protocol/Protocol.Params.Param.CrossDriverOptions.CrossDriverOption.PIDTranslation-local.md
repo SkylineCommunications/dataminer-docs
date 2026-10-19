@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation-local
-description: "Learn how to use the local attribute to identify the local column parameter in a cross-driver mapping in a DataMiner protocol."
+description: "Use the local attribute to identify a column parameter in this protocol when creating a direct view table from multiple protocols."
 ---
 
 # local attribute
