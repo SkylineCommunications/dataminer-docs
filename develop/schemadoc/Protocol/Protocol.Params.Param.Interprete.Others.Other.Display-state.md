@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Params.Param.Interprete.Others.Other.Display-state
-description: "Learn how the state attribute displays a matched rare-condition parameter in gray when its state is disabled in a DataMiner protocol."
+description: "Set the state attribute in a DataMiner protocol to 'disabled' to display a matched rare-condition parameter in gray."
 ---
 
 # state attribute
 
-If set to “disabled”, the parameter will be displayed in gray.
+Set this attribute to `disabled`, to have the parameter displayed in gray.
 
 ## Content Type
 
@@ -17,10 +17,6 @@ If set to “disabled”, the parameter will be displayed in gray.
 
 ## Examples
 
-
 ```xml
 <Display state="disabled">Unavailable</Display>
 ```
-
-
-

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Scale-low
-description: "Learn how the low attribute sets the converted value corresponding to the lowest device value in a scale mapping in a DataMiner protocol."
+description: "Use the low attribute in a DataMiner protocol to set the converted value corresponding to the lowest returned value in a scale mapping."
 ---
 
 # low attribute

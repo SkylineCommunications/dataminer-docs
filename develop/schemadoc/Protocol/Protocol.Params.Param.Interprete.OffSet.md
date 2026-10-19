@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Params.Param.Interprete.OffSet
-description: "Learn how the OffSet element provides the value added by an OffSet operation in an Interprete sequence in a DataMiner protocol."
+description: "Use the OffSet element in a DataMiner protocol to provide the value added by an OffSet operation in an Interprete sequence."
 ---
 
 # OffSet element
 
-In case the Sequence tag contains "OffSet " as an operation, to offset to be added can be specified using this tag.
+In case the `Sequence` element contains `OffSet`" as an operation, the offset to be added can be specified using the `OffSet` element.
 
 ## Type
 
@@ -25,11 +25,11 @@ unsignedInt
 
 ```xml
 <Interprete>
-	<RawType>signed number</RawType>
-	<LengthType>fixed</LengthType>
-	<Length>1</Length>
-	<Type>double</Type>
-	<OffSet>128</OffSet>
-	<Sequence noset="true">OffSet</Sequence>
+   <RawType>signed number</RawType>
+   <LengthType>fixed</LengthType>
+   <Length>1</Length>
+   <Type>double</Type>
+   <OffSet>128</OffSet>
+   <Sequence noset="true">OffSet</Sequence>
 </Interprete>
 ```

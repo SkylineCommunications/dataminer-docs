@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception-id
-description: "Learn how the id attribute assigns a unique numeric ID to a parameter exception definition in a DataMiner protocol."
+description: "Use the id attribute in a DataMiner protocol to assign a unique numeric ID to a parameter exception definition."
 ---
 
 # id attribute

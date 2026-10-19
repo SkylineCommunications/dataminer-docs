@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Others.Other.Value
-description: "Learn how the Value element assigns a numeric value to a rare parameter condition so alarms can monitor it in a DataMiner protocol."
+description: "Use the Value element in a DataMiner protocol to assign a numeric value to a rare parameter condition so alarms can monitor it."
 ---
 
 # Value element

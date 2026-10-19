@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Scale-lowData
-description: "Learn how the lowData attribute sets the lowest device value used as the source endpoint of a scale mapping in a DataMiner protocol."
+description: "Use the lowData attribute in a DataMiner protocol to set the lowest returned value used as the source endpoint of a scale mapping."
 ---
 
 # lowData attribute

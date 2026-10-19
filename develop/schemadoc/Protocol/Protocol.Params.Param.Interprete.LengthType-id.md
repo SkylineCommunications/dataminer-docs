@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.LengthType-id
-description: "Learn how the id attribute references the parameter that provides a variable length or marks the next response parameter in a DataMiner protocol."
+description: "Use the id attribute in a DataMiner protocol to reference the parameter that provides a variable length or marks the next response parameter."
 ---
 
 # id attribute

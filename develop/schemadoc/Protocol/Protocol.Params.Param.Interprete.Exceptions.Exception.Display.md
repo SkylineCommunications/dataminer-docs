@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Display
-description: "Learn how the Display element sets the text shown when an incoming parameter value matches an exception definition in a DataMiner protocol."
+description: "Use the Display element in a DataMiner protocol to set the text shown when an incoming parameter value matches an exception definition."
 ---
 
 # Display element
 
-Specifies the text that has to be displayed when the incoming value matches the contents of the value attribute of the Protocol.Params.Param.Interprete.Exceptions.Exception tag.
+Specifies the text that has to be displayed when the incoming value matches the contents of the `value` attribute of the `Protocol.Params.Param.Interprete.Exceptions.Exception` element.
 
 ## Type
 
@@ -19,4 +19,4 @@ Specifies the text that has to be displayed when the incoming value matches the 
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
-|[state](xref:Protocol.Params.Param.Interprete.Exceptions.Exception.Display-state)|[EnumDisplayState](xref:Protocol-EnumDisplayState)||Displays the parameter displayed in gray when set to "disabled".|
+|[state](xref:Protocol.Params.Param.Interprete.Exceptions.Exception.Display-state)|[EnumDisplayState](xref:Protocol-EnumDisplayState)||Displays the parameter in gray when set to `disabled`.|

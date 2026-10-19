@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Range.High
-description: "Learn how the High element sets the maximum accepted value for a communication or simulated parameter in a DataMiner protocol."
+description: "Use the High element in a DataMiner protocol to set the maximum accepted value for a communication or simulated parameter."
 ---
 
 # High element
@@ -17,10 +17,6 @@ decimal
 
 ## Examples
 
-
 ```xml
 <High>18</High>
 ```
-
-
-

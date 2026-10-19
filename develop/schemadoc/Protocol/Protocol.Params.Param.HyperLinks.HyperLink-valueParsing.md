@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.HyperLinks.HyperLink-valueParsing
-description: "Use the valueParsing attribute in a DataMiner protocol to make a custom shortcut command appear for specific alarms and information events."
+description: "Learn how the deprecated valueParsing attribute in a DataMiner protocol shows custom shortcut commands for specific alarms and information events."
 ---
 
 # valueParsing attribute

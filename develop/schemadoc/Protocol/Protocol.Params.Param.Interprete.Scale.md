@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Scale
-description: "Learn how the Scale element maps a device value range to a different range interpreted by DataMiner in a DataMiner protocol."
+description: "Use the Scale element in a DataMiner protocol to map a returned value range to a different range interpreted by DataMiner."
 ---
 
 # Scale element

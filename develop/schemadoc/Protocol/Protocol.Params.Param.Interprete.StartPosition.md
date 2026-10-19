@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.StartPosition
-description: "Learn how the StartPosition element sets the first bit used by a read or write bits parameter within its group in a DataMiner protocol."
+description: "Use the StartPosition element in a DataMiner protocol to set the first bit used by a read or write bits parameter within its group."
 ---
 
 # StartPosition element

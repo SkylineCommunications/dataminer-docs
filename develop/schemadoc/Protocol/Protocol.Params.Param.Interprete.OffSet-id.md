@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.OffSet-id
-description: "Learn how the id attribute references the parameter that supplies the offset value for an OffSet operation in a DataMiner protocol."
+description: "Use the id attribute in a DataMiner protocol to reference the parameter that supplies the offset value for an OffSet operation."
 ---
 
 # id attribute
@@ -18,4 +18,4 @@ Specifies the ID of the parameter that holds the offset value.
 ## Remarks
 
 > [!NOTE]
-> In case this attribute is used, no value should be specified in the OffSet tag.
+> In case this attribute is used, no value should be specified in the `OffSet` element.

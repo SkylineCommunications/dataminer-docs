@@ -1,13 +1,13 @@
 ---
 uid: Protocol.Params.Param.Interprete.Exceptions.Exception.Display-state
-description: "Learn how the state attribute shows an intercepted exception value in gray when its display state is disabled in a DataMiner protocol."
+description: "Set the state attribute in a DataMiner protocol to 'disabled' to display a parameter in gray when an exception is intercepted."
 ---
 
 # state attribute
 
-Displays the parameter displayed in gray when set to "disabled".
+Displays the parameter in gray when set to `disabled`.
 
-The default state is "enabled".
+The default state is `enabled`.
 
 ## Content Type
 
@@ -19,7 +19,7 @@ The default state is "enabled".
 
 ## Remarks
 
-To emphasize the rare condition of the parameter, you can set the state attribute to “disabled” to have the parameter displayed in gray.
+To emphasize the rare condition of the parameter, you can set the `state` attribute to `disabled` to have the parameter displayed in gray.
 
 ## Examples
 

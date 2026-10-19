@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Length
-description: "Learn how the Length element sets the exact byte length when a parameter uses a fixed length type in a DataMiner protocol."
+description: "Use the Length element in a DataMiner protocol to set the exact byte length when a parameter uses a fixed length type."
 ---
 
 # Length element
@@ -17,7 +17,7 @@ unsignedInt
 
 ## Remarks
 
-If you set Protocol.Params.Param.Interprete.LengthType to “fixed”, use this tag to specify the exact length of the parameter (in bytes).
+If you set `Protocol.Params.Param.Interprete.LengthType` to "fixed", use this element to specify the exact length of the parameter (in bytes).
 
 ## Examples
 

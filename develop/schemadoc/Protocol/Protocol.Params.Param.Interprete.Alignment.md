@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Alignment
-description: "Learn how the Alignment element sets the starting alignment used to extract multibyte BCD values from an incoming stream in a DataMiner protocol."
+description: "Use the Alignment element in a DataMiner protocol to set the starting alignment used to retrieve BCD numbers from an incoming stream."
 ---
 
 # Alignment element
@@ -17,7 +17,7 @@ Used to retrieve BCD numbers from an incoming stream.
 
 ## Remarks
 
-When a Protocol.Params.Param.Interprete.Bits tag is defined in a group, only a couple of bits will be used from each byte. When a read bit parameter, with its rawtype set to “bcd”, is assigned to that group and exists of multiple bytes, the Alignment tag can be needed to specify the exact starting position of the first BCD.
+When a `Protocol.Params.Param.Interprete.Bits` element is defined in a group, only a couple of bits will be used from each byte. When a read bit parameter, with its rawtype set to "bcd", is assigned to that group and exists of multiple bytes, the `Alignment` element can be needed to specify the exact starting position of the first BCD.
 
 ## Examples
 

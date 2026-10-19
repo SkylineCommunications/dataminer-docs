@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Params.Param.Interprete.Exceptions
-description: "Learn how the Exceptions element groups parameter exceptions that map incoming values to display and stored values in a DataMiner protocol."
+description: "Use the Exceptions element in a DataMiner protocol to group parameter exceptions that map incoming values to display and stored values."
 ---
 
 # Exceptions element
 
-Contains Exception elements, each representing a different exceptional state.
+Contains `Exception` elements, each representing a different exceptional state.
 
 ## Parent
 
@@ -15,7 +15,7 @@ Contains Exception elements, each representing a different exceptional state.
 
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Exception](xref:Protocol.Params.Param.Interprete.Exceptions.Exception)|[0, *]|Defines an exception for an exception value you want to intercept of which the Interprete.Type is identical to that of the parameter in question.|
+|&nbsp;&nbsp;[Exception](xref:Protocol.Params.Param.Interprete.Exceptions.Exception)|[0, *]|Defines an exception for an exception value you want to intercept of which the `Interprete.Type` is identical to that of the parameter in question.|
 
 ## Constraints
 
@@ -28,15 +28,15 @@ Contains Exception elements, each representing a different exceptional state.
 > [!NOTE]
 >
 > - Exception tags are only useful for parameters of type “read”.
-> - Only use the Exceptions tag to intercept values of the same Interprete.Type as that of your parameter. If you want to intercept values of another type, use the Protocol.Params.Param.Interprete.Others tag.
+> - Only use the Exceptions tag to intercept values of the same `Interprete.Type` as that of your parameter. If you want to intercept values of another type, use the `Protocol.Params.Param.Interprete.Others` tag.
 
 ## Examples
 
 ```xml
 <Exceptions>
-	<Exception id="1" value="0">
-		<Display state="disabled">Not Found</Display>
-		<Value>0</Value>
-	</Exception>
+   <Exception id="1" value="0">
+      <Display state="disabled">Not Found</Display>
+      <Value>0</Value>
+   </Exception>
 </Exceptions>
 ```

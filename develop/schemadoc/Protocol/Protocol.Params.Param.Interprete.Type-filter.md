@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Type-filter
-description: "Learn how the filter attribute limits a processed parameter value to printable characters when enabled in a DataMiner protocol."
+description: "Set the filter attribute to true in a DataMiner protocol to limit a processed parameter value to printable characters."
 ---
 
 # filter attribute

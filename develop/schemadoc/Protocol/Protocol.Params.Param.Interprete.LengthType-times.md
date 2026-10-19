@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.LengthType-times
-description: "Learn how the times attribute sets how many occurrences identify the next parameter when parsing a serial response in a DataMiner protocol."
+description: "Use the times attribute in a DataMiner protocol to set how many occurrences identify the next parameter when parsing a serial response."
 ---
 
 # times attribute
@@ -19,7 +19,7 @@ unsignedInt
 
 This is used when the parameter is used in a response.
 
-If LengthType is “next param”, then this attribute has to contain the number of times the next parameter should occur before it is considered to be the next parameter.
+If `LengthType` is `next param`, then this attribute has to contain the number of times the next parameter should occur before it is considered to be the next parameter.
 
 In the following example, the value of the parameter after this parameter will occur twice in the total response. Once in this parameter and once in the next:
 
@@ -27,20 +27,20 @@ In the following example, the value of the parameter after this parameter will o
 <LengthType times="2">next param</LengthType>
 ```
 
-In the following example, the parameter with ID 10 is the header, the parameter with ID 50 has LengthType “next param”, the parameter with ID 11 is a fixed param and the parameter with ID 12 is the trailer.
+In the following example, the parameter with ID 10 is the header, the parameter with ID 50 has `LengthType` set to `next param`, the parameter with ID 11 is a fixed param, and the parameter with ID 12 is the trailer.
 
 The response of the device looks like [header] ‘ABCD’ ‘C’ [trailer], the value of the fixed param is present in the value of the next param. This means that times should be equal to 2 in order to have the wanted value in the next param parameter.
 
 ```xml
 <Response id="1">
-	<Name>Response1</Name>
-	<Description>Response1</Description>
-	<Content>
-		<Param>10</Param>
-		<Param>50</Param>
-		<Param>11</Param>
-		<Param>12</Param>
-	</Content>
+   <Name>Response1</Name>
+   <Description>Response1</Description>
+   <Content>
+      <Param>10</Param>
+      <Param>50</Param>
+      <Param>11</Param>
+      <Param>12</Param>
+   </Content>
 </Response>
 ```
 

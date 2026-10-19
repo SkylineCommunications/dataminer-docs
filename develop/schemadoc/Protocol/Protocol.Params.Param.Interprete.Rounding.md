@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Rounding
-description: "Learn how the Rounding element selects how DataMiner rounds a processed parameter value, with down as the default in a DataMiner protocol."
+description: "Use the Rounding element in a DataMiner protocol to select how DataMiner rounds a processed parameter value, with down as the default."
 ---
 
 # Rounding element

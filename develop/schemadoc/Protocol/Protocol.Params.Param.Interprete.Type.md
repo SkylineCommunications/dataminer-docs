@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Type
-description: "Learn how the Type element controls how DataMiner processes and stores a parameter value, with filtering and trimming in a DataMiner protocol."
+description: "Use the Type element in a DataMiner protocol to control how DataMiner processes and stores a parameter value, with filtering and trimming."
 ---
 
 # Type element

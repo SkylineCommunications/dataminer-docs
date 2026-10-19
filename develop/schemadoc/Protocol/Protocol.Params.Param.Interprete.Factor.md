@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Factor
-description: "Learn how the Factor element multiplies a parameter value by a specified factor before further processing in a DataMiner protocol."
+description: "Use the Factor element in a DataMiner protocol to multiply a parameter value by a specified factor before further processing."
 ---
 
 # Factor element
@@ -18,7 +18,7 @@ decimal
 ## Remarks
 
 > [!NOTE]
-> Currently, the Sequence tag is used more frequently than the Factor tag.
+> Currently, the `Sequence` tag is used more frequently than the `Factor` tag.
 
 ## Examples
 

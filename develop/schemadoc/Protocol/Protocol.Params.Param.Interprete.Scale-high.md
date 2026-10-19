@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Scale-high
-description: "Learn how the high attribute sets the converted value corresponding to the highest device value in a scale mapping in a DataMiner protocol."
+description: "Use the high attribute in a DataMiner protocol to set the converted value corresponding to the highest returned value in a scale mapping."
 ---
 
 # high attribute

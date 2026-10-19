@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Type-trim
-description: "Learn how the trim attribute removes leading, trailing, or both types of whitespace from a processed parameter value in a DataMiner protocol."
+description: "Use the trim attribute in a DataMiner protocol to remove leading, trailing, or both types of whitespace from a processed parameter value."
 ---
 
 # trim attribute
@@ -17,7 +17,7 @@ Specifies whether to remove leading and/or trailing whitespace.
 
 ## Remarks
 
-You can specify the following values. If you add both values, separate them by a semicolon (”;”).
+You can specify the following values. If you add both values, separate them by a semicolon (";").
 
 - left: all leading whitespace will be removed
 - right: all trailing whitespace will be removed.
