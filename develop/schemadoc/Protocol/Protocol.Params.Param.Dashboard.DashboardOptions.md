@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Dashboard.DashboardOptions
-description: "Learn how to use the DashboardOptions element to group the options that control how a button panel is displayed in a DataMiner protocol."
+description: "Use the DashboardOptions element in a DataMiner protocol to group the options that control how a button panel is displayed."
 ---
 
 # DashboardOptions element

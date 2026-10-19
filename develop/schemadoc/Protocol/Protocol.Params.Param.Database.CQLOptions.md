@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.CQLOptions
-description: "Learn how to use the CQLOptions element to configure Cassandra keys, table properties, and a post-creation query in a DataMiner protocol."
+description: "Use the CQLOptions element in a DataMiner protocol to configure Cassandra keys, table properties, and a post-creation query."
 ---
 
 # CQLOptions element

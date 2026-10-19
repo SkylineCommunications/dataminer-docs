@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.CQLOptions.Finalizer
-description: "Learn how to use the Finalizer element to run a CQL query after logger table creation to preload data or create indexes in a DataMiner protocol."
+description: "Use the Finalizer element in a DataMiner protocol to run a CQL query after logger table creation to preload data or create indexes."
 ---
 
 # Finalizer element

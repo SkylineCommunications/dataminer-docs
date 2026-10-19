@@ -31,8 +31,7 @@ Specifies the name of the option.
 
 [DashboardOption](xref:Protocol.Params.Param.Dashboard.DashboardOptions.DashboardOption)
 
-
-## Reamrks
+## Remarks
 
 Possible values:
 
