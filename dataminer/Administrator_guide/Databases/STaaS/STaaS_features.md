@@ -114,6 +114,8 @@ In addition, the following **other limitations** currently apply:
 
 - Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 
+- An individual event sent to STaaS must not exceed 1 MB. This limit applies to the entire event, not only to the value it contains.
+
 - For element table data, the first 768 bytes of a table instance row key (768 ASCII characters, or as few as 192 in a worst-case UTF-8 scenario) must be unique to avoid conflicts in the database; longer keys are truncated.
 
 - Regarding logger tables:
