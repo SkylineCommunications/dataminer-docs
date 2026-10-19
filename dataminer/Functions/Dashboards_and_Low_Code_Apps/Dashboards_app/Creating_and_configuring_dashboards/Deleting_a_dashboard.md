@@ -1,8 +1,11 @@
 ---
 uid: Deleting_a_dashboard
+description: "Find out how to delete a dashboard in the DataMiner Dashboards app and how to remove orphan dashboards directly from the server if necessary."
 ---
 
 # Deleting a dashboard
+
+To delete a dashboard in the Dashboards app:
 
 1. In the list of dashboards on the left, select the dashboard you want to delete.
 
@@ -10,14 +13,8 @@ uid: Deleting_a_dashboard
 
 1. In the confirmation box, click *Delete* or *OK*, depending on your DataMiner version<!--RN 38278-->.
 
-
-
-# Deleting an orphan dashboard
-
-Only users with edit access to a dashboard can delete it.  If that user is no longer a dataminer user there is no Delete option in the Right-click menu.
-
-To delete them from the server:
-
-1. On the Dataminer Agent navigate to C:\Skyline DataMiner\dashboards and delete the applicable [dashboardname].json files (making sure to leave security.json intact)
-
-1. If you have a Dataminer System with multiple agents this will need to be repeated on each dma.
+> [!NOTE]
+> To delete a dashboard, you need **edit access** to that dashboard. However, this means that if the only user with edit access to a dashboard is no longer a DataMiner user, the dashboard can no longer be deleted from the user interface. Instead, you can delete such orphan dashboards directly from the server:
+>
+> 1. On the DataMiner Agent, navigate to `C:\Skyline DataMiner\dashboards` and delete the applicable `[dashboardname].json` files (making sure to leave `security.json` intact).
+> 1. If you have a DataMiner System with multiple Agents, repeat this on each DMA.
