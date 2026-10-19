@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Params.Param.Display.Trending
-description: "Learn how the Trending element configures average trend aggregation and optional logarithmic scaling for a parameter in a DataMiner protocol."
+description: "Use the Trending element in a DataMiner protocol to configure average trend aggregation and optional logarithmic scaling for a parameter."
 ---
 
 # Trending element
 
-Specifies the formula to be used for the average trending data of this parameter. By default, the average over a 5 minute timespan is stored.
+Specifies the formula to be used for the average trending data of this parameter. By default, the average over a 5-minute time span is stored.
 
 ## Parent
 

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Positions.Position.Page-measType
-description: "Learn how the measType attribute overrides how a parameter is displayed on one specified Data Display page in a DataMiner protocol."
+description: "Use the measType attribute in a DataMiner protocol to override how a parameter is displayed on one specified Data Display page."
 ---
 
 # measType attribute

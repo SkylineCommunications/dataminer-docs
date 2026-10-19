@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.ParametersView
-description: "Learn how the ParametersView element displays a parameter as a chart and defines its chart type, sources, and height in a DataMiner protocol."
+description: "Use the ParametersView element in a DataMiner protocol to display a parameter as a chart and define its chart type, sources, and height."
 ---
 
 # ParametersView element
@@ -22,11 +22,11 @@ Allows displaying a parameter as a chart.
 
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Occurrences|Description|
 |--- |--- |--- |
-|&nbsp;&nbsp;[Parameters](xref:Protocol.Params.Param.Display.ParametersView.Parameters)|[0, 1]|If you use */Protocol/Params/Param/Display/ParametersView* to display a parameter as a chart, then here you have to define the parameters holding the actual values to be displayed.|
+|&nbsp;&nbsp;[Parameters](xref:Protocol.Params.Param.Display.ParametersView.Parameters)|[0, 1]|If you use `Protocol.Params.Param.Display.ParametersView` to display a parameter as a chart, then here you have to define the parameters holding the actual values to be displayed.|
 
 ## Remarks
 
 The parameters holding the actual values to be displayed have to be specified in Protocol.Params.Param.Display.ParametersView.Parameters.
 
 > [!NOTE]
-> If you use this tag, make sure to set Protocol.Params.Param.Measurement.Type to “Chart”.
+> If you use this tag, make sure to set `Protocol.Params.Param.Measurement.Type` to `Chart`.

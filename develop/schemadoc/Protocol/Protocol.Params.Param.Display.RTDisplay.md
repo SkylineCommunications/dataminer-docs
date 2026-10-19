@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.RTDisplay
-description: "Learn how the RTDisplay element controls whether DataMiner pushes a parameter to SLElement for display and external use in a DataMiner protocol."
+description: "Use the RTDisplay element in a DataMiner protocol to control whether DataMiner pushes a parameter to SLElement for display and external use."
 ---
 
 # RTDisplay element

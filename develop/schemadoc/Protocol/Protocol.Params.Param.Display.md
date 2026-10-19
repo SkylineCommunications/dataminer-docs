@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display
-description: "Learn how the Display element controls how a parameter appears, including its position, units, range, and trending in a DataMiner protocol."
+description: "Use the Display element in a DataMiner protocol to control how a parameter is shown, including its position, units, range, and trending."
 ---
 
 # Display element
@@ -23,5 +23,5 @@ Defines if and how a parameter will be displayed on the user interface.
 |&nbsp;&nbsp;[Range](xref:Protocol.Params.Param.Display.Range)|[0, 1]|Defines the parameter value range.|
 |&nbsp;&nbsp;[RTDisplay](xref:Protocol.Params.Param.Display.RTDisplay)|[0, 1]|Specifies whether the parameter should be pushed to the SLElement process.|
 |&nbsp;&nbsp;[Steps](xref:Protocol.Params.Param.Display.Steps)|[0, 1]|Defines the step size of a write parameter.|
-|&nbsp;&nbsp;[Trending](xref:Protocol.Params.Param.Display.Trending)|[0, 1]|Specifies the formula to be used for the average trending data of this parameter. By default, the average over a 5 minute timespan is stored.|
+|&nbsp;&nbsp;[Trending](xref:Protocol.Params.Param.Display.Trending)|[0, 1]|Specifies the formula to be used for the average trending data of this parameter. By default, the average over a 5-minute time span is stored.|
 |&nbsp;&nbsp;[Units](xref:Protocol.Params.Param.Display.Units)|[0, 1]|Specifies a unit for a parameter value displayed on the user interface.|

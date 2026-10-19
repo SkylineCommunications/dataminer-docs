@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Range.High
-description: "Learn how the High element sets the maximum display range value or the maximum string length for a write parameter in a DataMiner protocol."
+description: "Use the High element in a DataMiner protocol to set the maximum display range value or maximum string length for a write parameter."
 ---
 
 # High element

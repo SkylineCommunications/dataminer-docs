@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.ParametersView.Parameters.Parameter-options
-description: "Learn how the options attribute is a string field on a ParametersView Parameter element but is not yet implemented in a DataMiner protocol."
+description: "Learn about the options attribute on a ParametersView Parameter element in a DataMiner protocol, which is not yet implemented."
 ---
 
 # options attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Trending.Type-operations
-description: "Learn how the operations attribute applies log10 scaling to the vertical axis of a trend graph for positive values in a DataMiner protocol."
+description: "Use the operations attribute in a DataMiner protocol to choose a logarithmic scale for the vertical axis of a parameter's trend graph."
 ---
 
 # operations attribute
@@ -23,10 +23,10 @@ Option to choose a logarithmic scale for the vertical axis. The parameter’s re
 
 ```xml
 <Param>
-	<Display>
-		<Trending>
-			<Type operations="log10"/>
-		</Trending>
-	</Display>
+   <Display>
+      <Trending>
+         <Type operations="log10"/>
+      </Trending>
+   </Display>
 </Param>
 ```

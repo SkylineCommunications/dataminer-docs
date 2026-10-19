@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Params.Param.Display.ParametersView.Parameters.Parameter
-description: "Learn how the Parameter element adds one source parameter to a ParametersView chart, with optional row selection in a DataMiner protocol."
+description: "Use the Parameter element in a DataMiner protocol to add a source parameter to a ParametersView chart, with optional row selection."
 ---
 
 # Parameter element
 
-If you use the Protocol.Params.Param.Display.ParametersView tag to display a parameter as a chart, then add a Parameter tag inside the Protocol.Params.Param.Display.ParametersView.Parameters tag for every parameter holding a value to be displayed.
+If you use the `Protocol.Params.Param.Display.ParametersView` element to display a parameter as a chart, then add a `Parameter` element inside the `Protocol.Params.Param.Display.ParametersView.Parameters` element for every parameter holding a value to be displayed.
 
 ## Parent
 

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Information.Includes.Include
-description: "Learn how the Include element adds parameter range, unit, step size, or timestamp details to an information tooltip in a DataMiner protocol."
+description: "Learn how the obsolete Include element in a DataMiner protocol adds parameter range, unit, step size, or timestamp details to an information tooltip."
 ---
 
 # Include element
@@ -26,4 +26,4 @@ Contains one of the following values:
 |steps|The step size of the parameter.|
 |time|A time stamp that refers to one of the following: The last known change / The last time the parameter was changed by its write parameter (if any)|
 
-Information specified in Protocol.Params.Param.Information.Include tags will appear underneath the contents of the Protocol.Params.Param.Information.Subtext tag.
+Information specified in `Protocol.Params.Param.Information.Include` tags will appear underneath the contents of the `Protocol.Params.Param.Information.Subtext` tag.

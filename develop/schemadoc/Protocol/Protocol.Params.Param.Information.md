@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Information
-description: "Learn how the Information element defines tooltip content and default alarm details that provide context for a parameter in a DataMiner protocol."
+description: "Use the Information element in a DataMiner protocol to define tooltip content and default alarm details that provide context for a parameter."
 ---
 
 # Information element

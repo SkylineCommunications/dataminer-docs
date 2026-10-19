@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Information.Subtext
-description: "Learn how the Subtext element provides the expandable body text displayed below a parameter tooltip title in a DataMiner protocol."
+description: "Use the Subtext element in a DataMiner protocol to provide the expandable body text displayed below a parameter tooltip title."
 ---
 
 # Subtext element

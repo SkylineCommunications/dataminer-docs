@@ -1,11 +1,13 @@
 ---
 uid: Protocol.Params.Param.HyperLinks.HyperLink
-description: "Learn how the HyperLink element defines a deprecated custom alarm shortcut command that is unsupported by DataMiner Cube in a DataMiner protocol."
+description: "Learn about the deprecated HyperLink element in a DataMiner protocol, which was used to define a custom command in an alarm context menu."
 ---
 
 # HyperLink element
 
-Deprecated. Defines a custom command (i.e., "hyperlink") that has to appear on the shortcut menu when users right-click an alarm of the parameter in question. This is not supported in DataMiner Cube. Instead, a separate [Hyperlinks.xml](xref:Hyperlinks_xml) file is used.
+Deprecated. Defines a custom command (i.e., "hyperlink") that has to appear on the shortcut menu when users right-click an alarm of the parameter in question. 
+
+This is not supported in DataMiner Cube. Instead, a separate [Hyperlinks.xml](xref:Hyperlinks_xml) file is used.
 
 ## Type
 

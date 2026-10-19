@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Trending.Type
-description: "Learn how the Type element selects the aggregation formula used to calculate average trending data over each time span in a DataMiner protocol."
+description: "Use the Type element in a DataMiner protocol to select the aggregation formula used to calculate average trending data over each time span."
 ---
 
 # Type element

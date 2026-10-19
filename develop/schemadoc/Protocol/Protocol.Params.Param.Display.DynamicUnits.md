@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.DynamicUnits
-description: "Learn how the DynamicUnits element defines dynamic units that DataMiner can use to convert displayed parameter values in a DataMiner protocol."
+description: "Use the DynamicUnits element in a DataMiner protocol to define dynamic units that DataMiner can use to convert displayed parameter values."
 ---
 
 # DynamicUnits element

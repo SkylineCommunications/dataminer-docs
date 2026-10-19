@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Description
-description: "Learn how the Description element provides a common parameter label distinct from its technical name in a DataMiner protocol."
+description: "Use the Description element in a DataMiner protocol to provide a parameter name distinct from the technical name of the parameter."
 ---
 
 # Description element

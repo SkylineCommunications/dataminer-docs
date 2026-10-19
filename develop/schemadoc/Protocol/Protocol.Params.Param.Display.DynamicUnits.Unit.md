@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.DynamicUnits.Unit
-description: "Learn how the Unit element defines one available dynamic unit and its optional number of displayed decimal places in a DataMiner protocol."
+description: "Use the Unit element in a DataMiner protocol to define an available dynamic unit, optionally including the number of displayed decimal places."
 ---
 
 # Unit element
