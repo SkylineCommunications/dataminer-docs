@@ -1,5 +1,6 @@
 ---
 uid: DataMinerSizeTool
+description: "Use the DataMiner Size tool to count the metrics present in a DataMiner System and to determine the overall load on that system."
 keywords: WhatsTheSize, What's The Size
 ---
 

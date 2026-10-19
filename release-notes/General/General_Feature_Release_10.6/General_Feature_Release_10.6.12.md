@@ -41,6 +41,8 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
+*No new features have been added yet.*
+
 ## Changes
 
 ### Enhancements
@@ -102,7 +104,30 @@ The generated package now includes the following files in the `Elastic` folder f
 
 A number of security enhancements have been made.
 
+#### BrokerGateway: HTTPS communication now supports redirects [ID 46687]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+BrokerGateway now takes redirects configured in *DMS.xml* into account when communicating over HTTPS. This allows the required API calls to work as intended in manually configured setups.
+
+> [!NOTE]
+> NATS communication does not take redirects into account.
+
+#### Protocol: NotifyDataMiner(Queued) failures are now logged without internal offsets [ID 46709]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interface failed, up to now, the log included the internal offset added to the notify type.
+
+From now on, the log will show the original notify type without the offset.
+
 ### Fixes
+
+#### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When an element had unmasked alarms, its severity could be incorrect after it was restarted.
 
 #### SNMP GET results could be matched to the wrong polling group [ID 46507]
 
@@ -136,6 +161,14 @@ When requesting eligible resources while ignoring a booking and its service defi
 
 From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
 
+#### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
+
+From now on, configuration updates will be synchronized across the cluster, and new Agents will automatically inherit the existing cluster settings.
+
 #### STaaS: Feedback registrations could cause a memory leak [ID 46617]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -151,3 +184,39 @@ From now on, these registrations will be cleared when they are no longer needed.
 Up to now, when you loaded a preset with both the `SPA_PRESET_DONT_APPLY_SETTINGS` and `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flags, the measurement point cycle would not be loaded.
 
 From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will load the measurement point cycle regardless of whether the `SPA_PRESET_DONT_APPLY_SETTINGS` flag is also passed.
+
+#### STaaS: Certain exceptions were incorrectly wrapped [ID 46637]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
+
+#### Remote DELT export and migration failures did not show the failure reason [ID 46699]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you exported or migrated an element hosted on another DMA in the cluster, up to now, a failure only produced a generic error message in DataMiner Cube. To find the cause, you had to check the DELT error log on the DMA hosting the element.
+
+From now on, DataMiner Cube now also displays the failure reason.
+
+#### SLAnalytics - Alarm Focus: Swarming notifications could be missed during startup [ID 46717]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, SLAnalytics subscribed to swarming notifications after startup prefetch, which could cause it to miss notifications while the cache was being initialized. From now on, it will subscribe before startup prefetch. History reads triggered during prefetch will wait for the cache lock; normal prefetched-cache lookup behavior will remain unchanged.
+
+If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.
+
+#### Automation: Script execution time could be incorrect in script log files [ID 46749]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+In script log files, execution times for scripts running longer than one minute could be incorrect. In addition, the `SLAutomation` log file did not include the library name when it logged the start or completion of script library compilation.
+
+From now on, the script log file will report the correct total execution time, and the `SLAutomation` log file will now include the library name in these messages.
+
+#### Failover: BrokerGateway redirects would cause a Failover setup to fail [ID 46781]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirects were configured and BrokerGateway was manually configured with redirected NATS addresses.

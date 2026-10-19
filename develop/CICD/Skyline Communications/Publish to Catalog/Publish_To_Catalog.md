@@ -11,9 +11,12 @@ This platform is constantly getting improved. At present, several workarounds ar
 > [!TIP]
 > See also: [About the Catalog app](xref:About_the_Catalog_app)
 
+> [!NOTE]
+> The procedures below are meant for Skyline employees and contain links that are only accessible to Skyline employees.
+
 ## Publishing connectors
 
-Connectors (also known as protocols or drivers) are XML files and assemblies that are packaged into .dmprotocol files. The source code of these is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
+Connectors (also known as protocols) are XML files and assemblies that are packaged into .dmprotocol files. The source code of these is currently hosted on GitHub under the [Skyline Communications organization](https://github.com/SkylineCommunications). GitHub workflows are used to (pre-)release new versions in the Catalog.
 
 Perform the following steps to release a connector version:
 
@@ -25,39 +28,41 @@ Perform the following steps to release a connector version:
 
    - [DIS](xref:Installing_and_configuring_DataMiner_Integration_Studio)
 
-   - [SLC SE RepoManager](https://tools.skyline.be/installers/SERepoManager/SERepoInstaller.msi)
+1. Register the connector in the Catalog (note that for all non-connector items, registration happens automatically from the GitHub workflows, but for connectors, a pre-registration is required):
 
-1. Open the source code:
+   1. Register the connector using the [Connector Admin Tool](https://aka.dataminer.services/Connector_Admin_Tool).
 
-   1. Find the connector in the SLC SE RepoManager under the tab *Protocols*.
+      If the new connector belongs to a new vendor, you can also add the vendor on the *Add New Connector* page.
 
-   1. Open the connector solution using Visual Studio.
+   1. Copy the [Integration ID](xref:Protocol.IntegrationID), the [Vendor OID](xref:Protocol.VendorOID), and the [Device OID](xref:Protocol.DeviceOID) received in the previous step and paste these within the appropriate connector XML tags.
 
-1. Tag the commit:
+   1. Look up the newly registered connector in the Catalog and copy the GUID from the URL.
 
-   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g., 1.0.0.X.
+      A new connector will always initially be registered as private, so you need to log in to access it. When applicable, the connector can be [made public](xref:Change_Catalog_Publishing_State) once a first release or pre-release is made.
 
-   1. Right-click the branch and select *View History*.
+   1. Make sure the root folder of the repository contains a *catalog.yml* file, add an `id` property to it, and paste the catalog GUID as its value, for example:
 
-   1. Right-click the commit you want to release and select *New Tag*.
+      ```yaml
+      id: PASTE_CATALOG_GUID_HERE
+      ```
 
-   1. Fill in a tag name matching the branch. Connectors use four numbers for versioning, e.g., `1.0.0.3`.
+      This configuration is required to make sure the release flow succeeds.
 
-   1. Fill in a comment.
+1. Add the *DataMiner Connector* workflow to the repository.
 
-   1. In the top bar in Visual Studio, select *Git* > *Commit or Stash*.
+   The workflow will automatically run, and a *auto-generated-catalog.yml* file will be created in the *.githubtocatalog* folder within the connector repository. This file should never be edited manually.
 
-      This opens a new window.
+   Optionally, you can use this file as an example to extend the *catalog.yml* you created during the registration step with extra properties. Here are a few examples where this could be useful:
 
-   1. In the new window, select the ellipsis "..." and choose *Push all Tags to Origin*.
+      - The Catalog item needs to have a different name than defined within the *protocol.xml* file. This can, for example, happen when a special character that is not allowed within the `Protocol.Name` tag of the *Protocol.xml* is needed as the Catalog item name.
 
-This will tag the commit, which will trigger Jenkins to perform a release cycle.
+      - Owners need to be specified for the connector.
 
-You can monitor the release pipeline:
+      - Extra tags need to be associated with the connector.
 
-- If it goes yellow or green, the connector has been successfully released, and users will be able to find it in the Catalog.
+      - ...
 
-- If it goes red, the release failed. You will need to either re-run the pipeline or remove the tag, fix the reported problems, and tag the commit again to trigger a new release.
+1. Release or pre-release using the GitHub release feature.
 
 ## Publishing DataMiner install packages
 
@@ -122,11 +127,9 @@ You can monitor the release pipeline:
 
 ## Publishing automation scripts
 
-Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently available both through the internal SLC SE RepoManager and on GitHub. All **new automation scripts should be created on GitHub**.
+Automation scripts are XML files and assemblies that are packaged into .dmapp files. The source code of these is currently hosted on GitHub under the [Skyline Communications organization](https://github.com/SkylineCommunications).
 
-If you use **SLC SE RepoManager**, Jenkins will be used to automatically publish scripts to the Catalog when tagging. For this, you should [follow the same steps as described for connectors](#publishing-connectors) above.
-
-If you use **GitHub**, the scripts will be published as private Catalog items. You can have them made public by contacting the Cloud domain.
+The scripts will automatically be registered as private Catalog items via GitHub workflows once a release or pre-release is made. When applicable, you can make them made public directly within the Catalog.
 
 ## Publishing dashboards
 

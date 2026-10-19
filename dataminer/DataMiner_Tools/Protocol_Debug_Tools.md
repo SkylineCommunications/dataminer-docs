@@ -1,5 +1,6 @@
 ---
 uid: Protocol_Debug_Tools
+description: "Use the protocol debug tools to visualize foreign key and view table relations, or build a Protocol.xml file with editable data to debug without a device."
 ---
 
 # Protocol debug tools

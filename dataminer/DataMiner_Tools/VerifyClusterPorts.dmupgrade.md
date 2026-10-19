@@ -1,5 +1,6 @@
 ---
 uid: VerifyClusterPortsdmupgrade
+description: "Find out how the VerifyClusterPorts check prevents situations where a DMS becomes non-functional after an upgrade that uses more or different ports."
 ---
 
 # VerifyClusterPorts.dmupgrade

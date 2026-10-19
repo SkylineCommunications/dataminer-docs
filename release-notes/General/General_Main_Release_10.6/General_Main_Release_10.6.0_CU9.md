@@ -41,7 +41,22 @@ Before you upgrade to this DataMiner version:
 
 From now on, the *ClusterEndpointsManager* soft-launch option will always be enabled, regardless of the soft-launch configuration.
 
+#### BrokerGateway: HTTPS communication now supports redirects [ID 46687]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+BrokerGateway now takes redirects configured in *DMS.xml* into account when communicating over HTTPS. This allows the required API calls to work as intended in manually configured setups.
+
+> [!NOTE]
+> NATS communication does not take redirects into account.
+
 ### Fixes
+
+#### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When an element had unmasked alarms, its severity could be incorrect after it was restarted.
 
 #### SNMP GET results could be matched to the wrong polling group [ID 46507]
 
@@ -74,3 +89,31 @@ From now on, the handlers will be removed when the connection closes.
 On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
 
 From now on, these registrations will be cleared when they are no longer needed.
+
+#### STaaS: Certain exceptions were incorrectly wrapped [ID 46637]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
+
+#### Remote DELT export and migration failures did not show the failure reason [ID 46699]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you exported or migrated an element hosted on another DMA in the cluster, up to now, a failure only produced a generic error message in DataMiner Cube. To find the cause, you had to check the DELT error log on the DMA hosting the element.
+
+From now on, DataMiner Cube now also displays the failure reason.
+
+#### SLAnalytics - Alarm Focus: Swarming notifications could be missed during startup [ID 46717]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, SLAnalytics subscribed to swarming notifications after startup prefetch, which could cause it to miss notifications while the cache was being initialized. From now on, it will subscribe before startup prefetch. History reads triggered during prefetch will wait for the cache lock; normal prefetched-cache lookup behavior will remain unchanged.
+
+If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.
+
+#### Failover: BrokerGateway redirects would cause a Failover setup to fail [ID 46781]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirects were configured and BrokerGateway was manually configured with redirected NATS addresses.

@@ -166,6 +166,14 @@ When you loaded a preset containing a threshold in a Spectrum component, in some
 
 The threshold will now be displayed when the preset is loaded.
 
+#### System Center - Agents: Migration window could remain open after an element export failed [ID 46657]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When an element export failed during migration, up to now, the Element migration window could continue to show "Migration has started." indefinitely without indicating that an error had occurred.
+
+From now on, the window will indicate that the migration finished with errors.
+
 #### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -173,6 +181,14 @@ The threshold will now be displayed when the preset is loaded.
 When another session changed the Last Session Preset of a Spectrum analyzer in shared mode, the banner in Cube said, "This spectrum element has changes to its currently loaded preset." Because this wording referred to a preset rather than the session that made the change, it could be unclear.
 
 The banner now says, "Another session has made changes to this spectrum analyzer."
+
+#### Embedded web pages could appear over popups [ID 46740]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When another Cube overlay was opened or closed, embedded web page content could appear over a popup. This happened because overlays shared a focus key that controlled the visibility of embedded web browsers.
+
+Each overlay now has its own focus key, so closing one overlay no longer affects the visibility of other active overlays.
 
 #### Data Display: Full-screen button did not work in pop-up windows [ID 46742]
 

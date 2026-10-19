@@ -1,10 +1,11 @@
 ---
-uid: Assistant_M365
+uid: Intelligence_Assistant_M365
+description: "Learn how to deploy and use DataMiner Assistant for Microsoft 365 to interact with your DataMiner System directly from Microsoft Teams or Copilot."
 ---
 
 # DataMiner Assistant for Microsoft 365
 
-The DataMiner Assistant for Microsoft 365 allows you to access all the features from the [DataMiner Assistant app](xref:DataMinerAssistant) directly from Microsoft Teams or Microsoft Copilot. If you have the necessary permissions, you will be able to request information from your DataMiner System from any location, even without direct access to DataMiner.
+The DataMiner Assistant for Microsoft 365 allows you to access all the features from the [DataMiner Assistant app](xref:Intelligence_Assistant_app) directly from Microsoft Teams or Microsoft Copilot. If you have the necessary permissions, you will be able to request information from your DataMiner System from any location, even without direct access to DataMiner.
 
 ![Welcome screen of the DataMiner Assistant agent in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)
 

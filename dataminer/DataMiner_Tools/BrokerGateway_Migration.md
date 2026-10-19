@@ -1,5 +1,6 @@
 ﻿---
 uid: BrokerGateway_Migration
+description: "Before upgrading to 10.6.0/10.6.1, make sure to migrate from the SLNet-managed NATS solution to the BrokerGateway-managed NATS solution."
 ---
 
 # Migrating to BrokerGateway

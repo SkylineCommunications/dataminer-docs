@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_activating_event_or_subscription_logging
+description: "Learn how, using the SLNetClientTest tool, you can activate event cache or subscription logging in DataMiner."
 ---
 
 # Activating event cache or subscription logging
