@@ -124,7 +124,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 6.1 The Software may be deployed in one of the following models, or a combination thereof, as specified in the Quotation:
 
-(a) Self-managed deployment: Customer installs and operates the Software on its own infrastructure, whether on-premises, in a private cloud, or in a hybrid configuration. Customer is responsible for the hosting environment and its compliance with Skyline’s system requirements as set out in the Documentation.
+(a) Self-managed deployment: Customer installs and operates the Software on its own infrastructure, whether on premises, in a private cloud, or in a hybrid configuration. Customer is responsible for the hosting environment and its compliance with Skyline’s system requirements as set out in the Documentation.
 
 (b) SaaS Service: Skyline provides Customer with cloud-hosted or managed access to the Software, as further described in the Quotation or applicable Service Description.
 
