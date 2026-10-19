@@ -19,4 +19,4 @@ string
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
-|[state](xref:Protocol.Params.Param.Interprete.Others.Other.Display-state)|[EnumDisplayState](xref:Protocol-EnumDisplayState)||If set to `disabled`, the parameter will be displayed in gray.|
+|[state](xref:Protocol.Params.Param.Interprete.Others.Other.Display-state)|[EnumDisplayState](xref:Protocol-EnumDisplayState)||Set this attribute to `disabled` to have the parameter displayed in gray.|

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Length.Content
-description: "Learn how the Content element groups the command or response parameters that define its calculated length in a DataMiner protocol."
+description: "Use the Content element in a DataMiner protocol to group the command/response parameters that define the calculated length of the command/response."
 ---
 
 # Content element

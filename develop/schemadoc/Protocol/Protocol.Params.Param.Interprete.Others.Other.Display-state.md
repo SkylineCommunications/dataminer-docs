@@ -5,7 +5,7 @@ description: "Set the state attribute in a DataMiner protocol to 'disabled' to d
 
 # state attribute
 
-Set this attribute to `disabled`, to have the parameter displayed in gray.
+Set this attribute to `disabled` to have the parameter displayed in gray.
 
 ## Content Type
 

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Length.Content.Param
-description: "Learn how the Param element selects a command or response parameter to include in a length calculation in a DataMiner protocol."
+description: "Use the Param element in a DataMiner protocol to select a command or response parameter to include in a length calculation."
 ---
 
 # Param element
