@@ -226,7 +226,7 @@ The update process now removes the old encrypted records, preventing them from a
 
 #### Automation: Script execution time could be incorrect in script log files [ID 46749]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
 In script log files, execution times for scripts running longer than one minute could be incorrect. In addition, the `SLAutomation` log file did not include the library name when it logged the start or completion of script library compilation.
 

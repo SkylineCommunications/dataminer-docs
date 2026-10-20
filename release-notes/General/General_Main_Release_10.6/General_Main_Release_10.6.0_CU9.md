@@ -112,6 +112,14 @@ Up to now, SLAnalytics subscribed to swarming notifications after startup prefet
 
 If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.
 
+#### Automation: Script execution time could be incorrect in script log files [ID 46749]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+In script log files, execution times for scripts running longer than one minute could be incorrect. In addition, the `SLAutomation` log file did not include the library name when it logged the start or completion of script library compilation.
+
+From now on, the script log file will report the correct total execution time, and the `SLAutomation` log file will now include the library name in these messages.
+
 #### Failover: BrokerGateway redirects would cause a Failover setup to fail [ID 46781]
 
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
