@@ -207,6 +207,15 @@ Up to now, SLAnalytics subscribed to swarming notifications after startup prefet
 
 If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.
 
+#### STaaS: Encrypted credential records could accumulate when credentials were updated [ID 46746]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- Not added to MR 10.7.0 - Introduced by RN 46061 -->
+
+On STaaS systems, when you updated a Credentials Library credential with encrypted fields, such as SNMPv3, token, or username and password fields, new records could be added to the `encryptedsecrets` table without removing the old ones. As a result, the table could grow indefinitely.
+
+The update process now removes the old encrypted records, preventing them from accumulating.
+
 #### Automation: Script execution time could be incorrect in script log files [ID 46749]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
