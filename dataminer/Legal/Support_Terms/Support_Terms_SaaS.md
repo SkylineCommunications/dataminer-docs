@@ -11,9 +11,7 @@ description: "Review Skyline's SaaS Support Terms and Service Level Agreement (S
 
 This document sets out Skyline's service level and support terms for its SaaS (the "**SaaS SLA**").
 
-This SaaS SLA applies to all of Skyline's SaaS offerings (and constitutes the SLA for the SaaS Service as referred to in the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions)). It forms part of and is governed by the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions), which apply to all SaaS orders placed by Customer with Skyline.
-
-Capitalized terms not defined in this SaaS SLA have the meaning given in the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions).
+This SaaS SLA applies to all of Skyline's SaaS offerings (and constitutes the SLA for the SaaS Service as referred to in the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions)). It forms part of and is governed by the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions), which apply to all SaaS orders placed by Customer with Skyline. Capitalized terms not defined in this SaaS SLA have the meaning given in the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions).
 
 ## 2. Definitions
 
