@@ -1,5 +1,6 @@
 ---
 uid: UIComponents
+description: "Explore the labels, controls, charts, tables, matrices, and other UI components that connector parameters can display in DataMiner."
 ---
 
 # UI components

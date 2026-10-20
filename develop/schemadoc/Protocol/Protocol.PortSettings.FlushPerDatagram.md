@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.FlushPerDatagram
+description: "Learn how FlushPerDatagram immediately forwards each received UDP datagram to SLProtocol for smart-serial connections."
 ---
 
 # FlushPerDatagram element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Interval
+description: "Consult the DataMiner protocol schema reference for the Interval element, which sets the millisecond delay between consecutive groups and pairs."
 ---
 
 # Interval element

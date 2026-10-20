@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-row
+description: "Learn how the row attribute runs a QAction when a table row changes and exposes the updated row values to the script."
 ---
 
 # row attribute

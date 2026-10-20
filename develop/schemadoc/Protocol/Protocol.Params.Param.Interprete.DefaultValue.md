@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.DefaultValue
+description: "Use the DefaultValue element in a DataMiner protocol to assign a startup value to an empty standalone parameter, but not to table columns."
 ---
 
 # DefaultValue element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.TimeoutTimeElement.DefaultValue
+description: "Learn how the TimeoutTimeElement DefaultValue sets the initial element timeout in milliseconds, using whole-second increments."
 ---
 
 # DefaultValue element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer
+description: "Consult the DataMiner protocol schema reference for the Timer element, which defines which groups run and when they execute."
 ---
 
 # Timer element

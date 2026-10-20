@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Parity.Disabled
+description: "Learn how the Disabled element under Parity controls whether users can change the parity in the DataMiner user interface."
 ---
 
 # Disabled element

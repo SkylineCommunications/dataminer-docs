@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Type-advanced
+description: "Consult the DataMiner protocol schema reference for the advanced attribute, which adds secondary connection types with optional names."
 ---
 
 # advanced attribute

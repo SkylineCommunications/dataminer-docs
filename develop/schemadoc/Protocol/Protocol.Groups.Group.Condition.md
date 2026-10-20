@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Condition
+description: "Use the Condition element in a DataMiner protocol to define a condition that must be true before a group executes."
 ---
 
 # Condition element

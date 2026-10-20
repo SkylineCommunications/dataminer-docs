@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.IPport
+description: "Learn how the IPport element configures the default IP port number and whether users can change it for an element connection."
 ---
 
 # IPport element

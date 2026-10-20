@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsHttpParsingHtml
+description: "Compare string operations, regular expressions, JavaScriptSerializer, and HTML Agility Pack approaches for parsing HTML data in connector logic."
 ---
 
 # Parsing HTML

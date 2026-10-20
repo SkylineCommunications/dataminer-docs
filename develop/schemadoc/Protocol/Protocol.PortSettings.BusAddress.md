@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress
+description: "Learn how the BusAddress element defines default, allowed, and selectable bus addresses for a connection or GPIB device."
 ---
 
 # BusAddress element

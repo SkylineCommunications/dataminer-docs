@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.TimeoutTime.Disabled
+description: "Learn how the Disabled element under TimeoutTime controls whether users can change the command or request timeout in the user interface."
 ---
 
 # Disabled element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapOID-type
+description: "Learn how the TrapOID type attribute constructs trap OIDs in auto, complete, composed, or wildcard mode for SNMP capture."
 ---
 
 # type attribute

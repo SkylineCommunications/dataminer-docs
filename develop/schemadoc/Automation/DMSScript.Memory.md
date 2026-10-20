@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Memory
+description: "Use the Memory element to contain an automation script's memory files and ensure that every file ID is unique within the collection."
 ---
 
 # Memory element
@@ -19,6 +20,6 @@ Contains the memory files.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
-|--- |--- |--- |--- |
-|Unique |The ID must be unique. |Memory |@id |
+| Type | Description | Selector | Fields |
+|--|--|--|--|
+| Unique | The ID must be unique. | Memory | @id |

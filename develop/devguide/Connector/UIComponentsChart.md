@@ -1,17 +1,18 @@
 ---
 uid: UIComponentsChart
+description: "Create pie, column, or row charts from numeric standalone or table parameters by configuring ParametersView and selecting the values to include."
 ---
 
 # Chart
 
-DataMiner Cube supports pie charts, column charts and row charts. To render a chart, the ParametersView tag is used. The type attribute of the ParametersView tag specifies the type of chart that should be rendered. In the Parameters child tag, the parameters that should be included in the chart are mentioned.
+DataMiner Cube supports pie charts, column charts, and row charts. To render a chart, the `ParametersView` tag is used. The type attribute of the `ParametersView` tag specifies the type of chart that should be rendered. In the `Parameters` child tag, the parameters that should be included in the chart are mentioned.
 
 > [!NOTE]
-> Only parameters with Interprete.type set to "double" and Interprete.RawType set to "numeric text" can be used for charts.
+> Only parameters with `Interprete.Type` set to "double" and `Interprete.RawType` set to "numeric text" can be used for charts.
 
 ## Pie chart
 
-In order to render a column chart, set the type attribute of the ParametersView tag to "pie".
+In order to render a column chart, set the `type` attribute of the `ParametersView` tag to "pie".
 
 > [!NOTE]
 > Pie charts only work if the referenced values are either all positive or all negative.
@@ -42,14 +43,14 @@ In order to render a column chart, set the type attribute of the ParametersView 
 
 ![DataMiner Cube Pie Chart UI Component](~/develop/images/uipiechart.png)
 
-In the example above, the parameter with ID 99 is a column parameter. In case of column parameters, the tableIndex attribute can be used to filter which rows should be included in the chart. The tableIndex attribute specifies the primary key of a specific row or a wildcard (`*`) can be used to include all matching rows (similar as filtering an alarm template).
+In the example above, the parameter with ID 99 is a column parameter. In case of column parameters, the `tableIndex` attribute can be used to filter which rows should be included in the chart. The `tableIndex` attribute specifies the primary key of a specific row or a wildcard (`*`) can be used to include all matching rows (similar as filtering an alarm template).
 
 > [!NOTE]
 > The referenced parameter does not need to be a column parameter. Standalone parameters can be used as well. In this case the table index is not used.
 
 ## Column chart
 
-In order to render a column chart, set the type attribute of the ParametersView tag to "column".
+In order to render a column chart, set the `type` attribute of the `ParametersView` tag to "column".
 
 ```xml
 <Param id="41">
@@ -79,7 +80,7 @@ In order to render a column chart, set the type attribute of the ParametersView 
 
 ## Row chart
 
-In order to render a row chart, set the type attribute of the ParametersView tag to "row".
+In order to render a row chart, set the `type` attribute of the `ParametersView` tag to "row".
 
 ```xml
 <Param id="42">

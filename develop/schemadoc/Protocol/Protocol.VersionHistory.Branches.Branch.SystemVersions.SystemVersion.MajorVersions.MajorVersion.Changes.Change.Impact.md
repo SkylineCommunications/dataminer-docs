@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change.Impact
+description: "Consult the DataMiner protocol schema reference for the Impact element, which describes the effect of a major protocol change."
 ---
 
 # Impact element

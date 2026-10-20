@@ -1,5 +1,6 @@
 ---
 uid: Debugging_connectors_Element_connections
+description: "Troubleshoot missing or out-of-order element connection data by checking logs and connection configuration, and handling data regardless of arrival order."
 ---
 
 # Debugging connectors: Element connections

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request.Data
+description: "Use the Data element in a DataMiner protocol to provide literal or parameter-based data for an HTTP request without encoding."
 ---
 
 # Data element

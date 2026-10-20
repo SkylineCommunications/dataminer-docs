@@ -1,5 +1,6 @@
 ---
 uid: How_to_create_an_HTTP_connector_CoinMarketCap_use_case
+description: "Learn how to build HTTP DataMiner connectors based on an example, from defining parameters and sessions to creating an element and processing responses."
 ---
 
 # How to create an HTTP connector (CoinMarketCap use case)
@@ -60,13 +61,13 @@ In HTTP connectors, HTTP sessions must be defined using `Session` tags. These ca
 `Session` tags define where the requests are targeted, how they will be shaped and which parameters will store the HTTP response. The following code snippet illustrates an HTTP session defined in a connector:
 
 ```xml
-<Session id="6" Name="Get Containers List">
+<Session id="6" name="Get Containers List">
    <Connection id="1">
       <Request verb="GET" url="/containers/list" />
       <Response statusCode="100">
          <Content pid="200"></Content>
       </Response>
-   <Connection>
+   </Connection>
 </Session>
 ```
 
@@ -101,7 +102,7 @@ This section will explain how to create a DataMiner connector with a publicly av
 
 Note that in this example we are interfacing with a website API. Other use cases could feature a physical device, or a virtualized product.
 
-### Step 1 – Gathering information and requirements
+### Step 1: Gathering information and requirements
 
 Whenever you need to work with an API, it is important that you first check all available documentation.
 
@@ -109,29 +110,35 @@ For our example, the CoinMarketCap API Documentation is available via [coinmarke
 
 For the sake of simplicity, we will only implement one call from the API, i.e., [Get Crypto Currency Listings](https://coinmarketcap.com/api/documentation/v1/#operation/getV1CryptocurrencyListingsHistorical).
 
-### Step 2 – Creating a new protocol solution in Visual Studio
+### Step 2: Creating a new protocol solution in Visual Studio
 
-In Visual Studio, go to *File > New > DataMiner Protocol Solution* to create a new protocol solution.
+1. In Visual Studio, go to *File > New > DataMiner Protocol Solution* to create a new protocol solution.
 
-![DataMiner Protocol Solution](~/develop/images/DIS_NewProtocolSolution.png)
+   ![DataMiner Protocol Solution](~/develop/images/DIS_NewProtocolSolution.png)
 
-In your new protocol, add the `Type` element, and set its value to "http". For example:
+1. Configure your new protocol as follows:
 
-```xml
-<Protocol xmlns="http://www.skyline.be/protocol">
-    <Name>HTTP Simple Use Case Article</Name>
-    <Description>HTTP Simple Use Case Article DataMiner connector</Description>
-    <Version>1.0.0.1</Version>
-    <IntegrationID>DMS-DRV-1234</IntegrationID>
-    <Provider>Skyline Communications</Provider>
-    <Vendor>CoinMarketCap</Vendor>
-    <VendorOID>1.3.6.1.4.1.8813.2.11</VendorOID>
-    <DeviceOID>1</DeviceOID>
-    <ElementType>Crypto Currency Tracker</ElementType>
-    <Type relativeTimers="true">http</Type>
-```
+   - Add the `Type` element, and set its value to "http".
 
-### Step 3 – Creating parameters
+   - Use the exact protocol namespace `http://www.skyline.be/protocol` on the `Protocol` root element. Do not add a trailing slash or replace it with a validator test namespace.
+
+   This is illustrated in the example below. However, note that the `VendorOID` value below is only an example. For details on how to find this value, refer to [VendorOID](xref:Protocol.VendorOID).
+
+   ```xml
+   <Protocol xmlns="http://www.skyline.be/protocol">
+       <Name>HTTP Simple Use Case Article</Name>
+       <Description>HTTP Simple Use Case Article DataMiner connector</Description>
+       <Version>1.0.0.1</Version>
+       <IntegrationID>DMS-DRV-1234</IntegrationID>
+       <Provider>Skyline Communications</Provider>
+       <Vendor>CoinMarketCap</Vendor>
+       <VendorOID>1.3.6.1.4.1.8813.2.11</VendorOID>
+       <DeviceOID>1</DeviceOID>
+       <ElementType>Crypto Currency Tracker</ElementType>
+       <Type relativeTimers="true">http</Type>
+   ```
+
+### Step 3: Creating parameters
 
 We will need to add several parameters to the protocol to build logic and collect the request details. Here is the list of the parameters that should be created for this example:
 
@@ -141,7 +148,7 @@ We will need to add several parameters to the protocol to build logic and collec
 
 For more information, see [Parameters](xref:LogicParameters).
 
-### Step 4 – Sending requests
+### Step 4: Sending requests
 
 To send an HTTP request, you can either execute the session via a timer or via a push of a button defined in the connector. For the sake of simplicity, in this example we will send the HTTP request via a push of a button. To do this, you will need to set up the following elements:
 
@@ -239,7 +246,7 @@ To send an HTTP request, you can either execute the session via a timer or via a
 
 Notice the extra header added to the `Headers` element. A header is typically a key/value combination, so in this case we aim to add a header to our HTTP request that has as key "X-CMC_PRO_API_KEY" and as value the content of the parameter with ID 3. The purpose of this parameter with ID 3 is to hold the CoinMarketCap API access key value. You need to make sure the CoinMarketCap API access key is properly set in this parameter before sending the request; otherwise you will not authenticate successfully.
 
-### Step 5 – Setting default port settings (optional)
+### Step 5: Setting default port settings (optional)
 
 As a best practice, we recommend that a `PortSettings` tag is added to the protocol markup. This restricts the number of possibilities when the HTTP connection is set during element creation.
 
@@ -268,7 +275,7 @@ Here is an example.
 
 For detailed information on the `PortSettings` element, see [Protocol.PortSettings](xref:Protocol.PortSettings).
 
-### Step 6 – Creating a new DataMiner element
+### Step 6: Creating a new DataMiner element
 
 In the DataMiner Cube Surveyor, navigate to the view where you want to add the element. Right-click the view and select *Create element*. For more information on element creation, see [Adding elements](xref:Adding_elements).
 
@@ -276,7 +283,7 @@ If no default port settings were specified, make sure to set Type of port to TCP
 
 ![Port configuration in DataMiner Cube](~/develop/images/HTTP_TypeOfPort.png)
 
-### Step 7 – Observing requests
+### Step 7: Observing requests
 
 When developing an HTTP connector, make sure to use the Stream Viewer application so you can identify whether the group has been sent and the reply has been received.
 
@@ -297,7 +304,7 @@ The image above shows an example of a Stream Viewer capture for Group 1. On the 
 > [!NOTE]
 > From DataMiner 10.1.0 [CU22]/10.2.0 [CU10]/10.3.1 onwards, the Stream Viewer tree view supports more levels. This allows for more detailed information. For example, in case of HTTP communication, there will be extra levels for sessions, connections, requests/responses, parameters, status codes, and error codes.
 
-### Step 8 – Processing the Response
+### Step 8: Processing the Response
 
 When a group is executed, data is automatically set in the response status code parameter and the response content parameter defined in the `Protocol.HTTP.Session.Connection.Response` tag.
 

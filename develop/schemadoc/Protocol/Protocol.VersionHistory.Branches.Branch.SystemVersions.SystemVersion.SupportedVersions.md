@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions
+description: "Consult the DataMiner protocol schema reference for the SupportedVersions element, which lists supported version ranges for related systems."
 ---
 
 # SupportedVersions element

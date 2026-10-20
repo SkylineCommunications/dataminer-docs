@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.Description
+description: "Use the Description element in a DataMiner protocol to declare ownership and access settings for an element description."
 ---
 
 # Description element

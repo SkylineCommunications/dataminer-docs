@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Parameters
+description: "Use the Parameters element to contain an automation script's parameter variables and ensure that each ScriptParameter ID is unique."
 ---
 
 # Parameters element
@@ -18,6 +19,6 @@ Contains the parameter script variables defined in the script.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
-|--- |--- |--- |--- |
-|Unique |The ID must be unique. |Parameters |@id |
+| Type | Description | Selector | Fields |
+|--|--|--|--|
+| Unique | The ID must be unique. | Parameters | @id |

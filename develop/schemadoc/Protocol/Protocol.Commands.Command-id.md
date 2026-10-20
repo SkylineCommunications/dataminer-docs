@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Commands.Command-id
+description: "Learn how the id attribute sets a command's non-zero unique identifier in a DataMiner protocol definition."
 ---
 
 # id attribute

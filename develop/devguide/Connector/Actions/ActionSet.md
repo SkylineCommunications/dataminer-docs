@@ -1,5 +1,6 @@
 ---
 uid: LogicActionSet
+description: "Use the set action on parameters or groups to perform single or multiple SNMP set operations through a selected connector connection."
 ---
 
 # set

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CRC.Type-mod
+description: "Use the mod attribute in a DataMiner protocol to apply a modulo operation after DataMiner calculates the CRC."
 ---
 
 # mod attribute
@@ -18,7 +19,7 @@ unsignedInt
 
 ```xml
 <Param>
-	<CRC>
-		<Type mod="95">
+   <CRC>
+      <Type mod="95">
         ...
 ```

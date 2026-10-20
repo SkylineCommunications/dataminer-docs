@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsPageButton
+description: "Define page buttons that open pop-up Data Display pages, use ellipses in their labels, and follow sizing, nesting, and page-order guidance."
 ---
 
 # Page button
@@ -9,7 +10,7 @@ A page button allows a user to open a pop-up page. Such a page is also available
 To define a page button:
 
 1. Create a parameter of type "write" and set Type to "pagebutton".
-1. Add a Discreets tag. Each Discreet tag that is added will introduce an additional page button. The display text is the text that will appear on the button. The value text is the page that will be opened when a user clicks the button. (Note: This page is not shown in the page selection box of the element).
+1. Add a `Discreets` tag. Each `Discreet` tag that is added will introduce an additional page button. The display text is the text that will appear on the button. The value text is the page that will be opened when a user clicks the button. (Note: This page is not shown in the page selection box of the element).
 1. Specify the width of the page button (the value must at least be 110).
 
 > [!NOTE]
@@ -51,7 +52,7 @@ To define a page button:
 > - Typically, the [Description](xref:Protocol.Params.Param.Description) tag is omitted when a page button is defined.
 > - Page buttons are typically used to display a limited amount of data. A pop-up window opened by means of a page button should contain either data of less importance or data that should remain visible while users are working on other pages.
 > - We typically recommended avoiding too many nested page buttons.
-> - The page buttons are right-aligned on the page. So in the example above, this means that the Settings page button will be displayed to the far right, while the Advanced Settings page button will be displayed to its left.
+> - The page buttons are right-aligned on the page. So in the example above, this means that the *Settings* page button will be displayed to the far right, while the *Advanced Settings* page button will be displayed to its left.
 > - In the page tree, the pop-up pages are listed in the order defined in the protocol.
 
 ## See also

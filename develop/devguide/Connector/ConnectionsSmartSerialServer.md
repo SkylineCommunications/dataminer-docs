@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSmartSerialServer
+description: "Configure a smart-serial connection as a server, manage connected clients and allowed IP addresses, and understand message queue limits."
 ---
 
 # Configuring a smart-serial connection as a server
@@ -12,6 +13,10 @@ When a regular IP address is specified, the connection will act as a client and 
 
 > [!NOTE]
 > In case you want two smart-serial elements to communicate with each other on the same DMA, one element, which will act as a server, should have as IP address "any", whereas the other element should have as IP address "127.0.0.2". This will be interpreted by DataMiner as a remote IP address and this element will act as client.
+
+## Smart-serial connections and Swarming
+
+A smart-serial connection in server mode prevents [Swarming](xref:Swarming) by default. If the connector can configure where the data source sends its data during startup, you can bypass this default behavior. For more information, see [Enabling Swarming for elements with smart-serial connection in server mode](xref:SwarmingSmartSerialServerMode).
 
 ## Obtaining information about the connected clients
 

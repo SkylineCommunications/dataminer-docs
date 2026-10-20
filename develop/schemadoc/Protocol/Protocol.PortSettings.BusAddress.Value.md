@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.Value
+description: "Learn how each Value element under BusAddress defines an allowed bus address pattern, including optional wildcards."
 ---
 
 # Value element

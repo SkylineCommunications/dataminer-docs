@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Substitutions.Substitution.Regex
+description: "Use the Regex element in a DataMiner protocol to pair an input pattern with replacement output for a search field substitution."
 ---
 
 # Regex element

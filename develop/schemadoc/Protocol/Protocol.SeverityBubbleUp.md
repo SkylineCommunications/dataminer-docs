@@ -1,5 +1,6 @@
 ---
 uid: Protocol.SeverityBubbleUp
+description: "Learn how the SeverityBubbleUp element passes alarm severities through configured paths between linked protocol tables."
 ---
 
 # SeverityBubbleUp element

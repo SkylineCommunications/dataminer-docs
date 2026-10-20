@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group.Params.Param-id
+description: "Use the id attribute in a DataMiner protocol to identify the parameter included in a parameter group Params element."
 ---
 
 # id attribute

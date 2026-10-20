@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Time-dataDisplay
+description: "Consult the DataMiner protocol schema reference for the dataDisplay attribute, which sets group execution frequency while a Data Display is open."
 ---
 
 # dataDisplay attribute

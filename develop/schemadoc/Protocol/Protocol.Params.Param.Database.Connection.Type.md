@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.Connection.Type
+description: "Use the Type element in a DataMiner protocol to choose direct database writes or SLProtocol access for a logger table."
 ---
 
 # Type element

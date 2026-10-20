@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-inputParameters
+description: "Learn how the inputParameters attribute passes specified parameter values to functions inside a QAction script."
 ---
 
 # inputParameters attribute
