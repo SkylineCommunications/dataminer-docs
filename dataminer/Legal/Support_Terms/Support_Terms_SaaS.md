@@ -1,6 +1,6 @@
 ---
 uid: Support_Terms_SaaS
-description: Review Skyline's SaaS Support Terms and Service Level Agreement (SLA), covering monthly uptime commitments, service credits, and support priority levels.
+description: "Review Skyline's SaaS Support Terms and Service Level Agreement (SLA), covering monthly uptime commitments, service credits, and support priority levels."
 ---
 
 # Support terms: SaaS
@@ -57,7 +57,7 @@ As used above:
 
 - "**Monthly Uptime**" means the total minutes in the calendar month minus the minutes of Downtime suffered during such calendar month; provided that any Downtime of less than two (2) minutes does not count for such purposes, in the aggregate or otherwise.
 
-- "**Credit**" means a service credit issued by Skyline, at Skyline's sole discretion, either as a credit against future SaaS invoices or in the form of equivalent Usage-Based Entitlements (such as DataMiner Credits). Credits (a) are calculated solely on that calendar month's SaaS fees (or monthly consumption value) actually paid by Customer for the affected SaaS component, (b) do not apply to any other Deliverables or amounts Customer may owe Skyline, (c) apply to future SaaS invoices or usage only and are non-refundable and non-redeemable for cash under any circumstances (including upon expiration or termination of the Agreement), and (d) must be requested in writing in good faith, referencing the relevant Downtime ticket, within thirty (30) days after the end of the relevant calendar month in which Skyline did not meet the Monthly Uptime for the SaaS. Failure to submit a timely request forfeits any right to a Credit for that month.
+- "**Credit**" means a service credit issued by Skyline, at Skyline's sole discretion, either as a credit against future SaaS invoices or in the form of equivalent Usage-Based Entitlements (such as DataMiner credits). Credits (a) are calculated solely on that calendar month's SaaS fees (or monthly consumption value) actually paid by Customer for the affected SaaS component, (b) do not apply to any other Deliverables or amounts Customer may owe Skyline, (c) apply to future SaaS invoices or usage only and are non-refundable and non-redeemable for cash under any circumstances (including upon expiration or termination of the Agreement), and (d) must be requested in writing in good faith, referencing the relevant Downtime ticket, within thirty (30) days after the end of the relevant calendar month in which Skyline did not meet the Monthly Uptime for the SaaS. Failure to submit a timely request forfeits any right to a Credit for that month.
 
 - "**Downtime**" means any period during which Customer cannot log in to or access the SaaS, other than because of acts or omissions of Customer or its agents, or failures of software, networks, connectivity, or equipment operated by Customer or under its control. Notwithstanding the foregoing, Downtime does not include: (a) Scheduled Maintenance; (b) failures due to a force majeure event (as described in the Skyline General Terms and Conditions); or (c) suspension or restriction of access in accordance with the Agreement. Downtime begins when Customer submits a Downtime ticket.
 
