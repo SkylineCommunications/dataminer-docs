@@ -25,7 +25,7 @@ DataMiner Intelligence brings agents, skills, and tools to your DataMiner System
 
 - **[Document Intelligence](xref:docintel)**: Analyzes the contents of documents using an LLM to extract insights and information.
 
-For guidance on how to divide responsibilities between agents, skills, and tools, see [Designing agents, skills, and tools](xref:Intelligence_Agent_Best_Practices).
+To learn when to use agents, skills, or tools, see [Choosing between agents, skills, and tools](xref:Intelligence_Agents_Skills_Tools).
 
 ## Access channels
 

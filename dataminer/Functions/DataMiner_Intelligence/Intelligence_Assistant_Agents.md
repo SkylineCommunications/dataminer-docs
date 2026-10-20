@@ -46,7 +46,7 @@ The agents become available in the following order:
 1. The specialized agents feature becomes available once it has been enabled via the [feature flags](xref:Intelligence_Assistant_DxM#feature-flags).
 1. You can then start adding specialized agents, as well as the [skills](xref:Intelligence_Assistant_Skills) and [tools](xref:Intelligence_Assistant_Tools) they use.
 
-For guidance on how to divide responsibilities between agents, skills, and tools, see [Designing agents, skills, and tools](xref:Intelligence_Agent_Best_Practices).
+To learn when to use agents, skills, or tools, see [Choosing between agents, skills, and tools](xref:Intelligence_Agents_Skills_Tools).
 
 ## Agent context
 

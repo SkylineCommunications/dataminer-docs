@@ -27,7 +27,7 @@ For more information, see [Agents](xref:Intelligence_Assistant_Agents), [Skills]
 
 ### Do I need a specialized agent for every use case?
 
-No. The [native agents](xref:Intelligence_Assistant_Agents#native-agents) are intended to answer general questions about the data in your DataMiner System without requiring separate agents. [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents) are useful when you need to narrow the scope or add specialized domain context, for example for a particular network segment. For guidance, see [Designing agents, skills, and tools](xref:Intelligence_Agent_Best_Practices).
+No. The [native agents](xref:Intelligence_Assistant_Agents#native-agents) are intended to answer general questions about the data in your DataMiner System without requiring separate agents. [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents) are useful when you need to narrow the scope or add specialized domain context, for example for a particular network segment. For guidance, see [Choosing between agents, skills, and tools](xref:Intelligence_Agents_Skills_Tools).
 
 ### Can DataMiner Intelligence answer questions that require DataMiner context?
 

@@ -13,6 +13,7 @@ This page describes how [DataMiner Intelligence](xref:Intelligence_Overview) is 
 |------------|-----------|
 | [Native agents](xref:Intelligence_Assistant_Agents#native-agents) | Included at no additional cost. |
 | [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents) | Licensed separately. This is an experimental feature. |
+| [Natural language to GQI](xref:Intelligence_NL2GQI) | Included at no additional cost. |
 | [Document Intelligence](xref:docintel) | Charged per page processed. See [Sizing guide: DataMiner Assistant](xref:Pricing_sizing_guide_services_DataMiner_Assistant). |
 
 ## Metering
