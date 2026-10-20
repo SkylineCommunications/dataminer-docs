@@ -196,6 +196,14 @@ When you selected a correlation rule with an action to run an automation script,
 
 From now on, Cube will compare script names without taking casing into account, so a difference in capitalization will no longer cause the rule to be marked as modified.
 
+#### Spectrum: Marker could jump to another trace when adding the average trace [ID 46708]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a Spectrum component contained a single trace and no measurement points, adding a marker to the trace could cause it to jump to the average trace when you added that trace. This could happen when *Combined measurement point view* was disabled. The marker could also jump when you added the max or min trace.
+
+The marker will now remain on the trace where you added it.
+
 #### Embedded web pages could appear over popups [ID 46740]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
