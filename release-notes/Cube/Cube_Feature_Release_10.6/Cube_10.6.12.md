@@ -188,6 +188,14 @@ When another session changed the Last Session Preset of a Spectrum analyzer in s
 
 The banner now says, "Another session has made changes to this spectrum analyzer."
 
+#### Correlation: Rules with automation script actions could be incorrectly marked as modified [ID 46677]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you selected a correlation rule with an action to run an automation script, up to now, Cube could mark the rule as modified even though you had not changed it. This could happen when the casing of the script name in the rule differed from the name of the available script.
+
+From now on, Cube will compare script names without taking casing into account, so a difference in capitalization will no longer cause the rule to be marked as modified.
+
 #### Embedded web pages could appear over popups [ID 46740]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
