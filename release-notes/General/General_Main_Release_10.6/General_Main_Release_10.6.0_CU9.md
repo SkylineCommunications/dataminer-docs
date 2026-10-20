@@ -50,6 +50,16 @@ BrokerGateway now takes redirects configured in *DMS.xml* into account when comm
 > [!NOTE]
 > NATS communication does not take redirects into account.
 
+#### SLLogCollector packages now include the configuration files of ResourceManager, ProtocolFunctionManager, and Scheduler [ID 46753]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+SLLogCollector packages now include the following configuration files:
+
+- `C:\Skyline DataMiner\ResourceManager\Config.xml`
+- `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
+- `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
+
 ### Fixes
 
 #### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
