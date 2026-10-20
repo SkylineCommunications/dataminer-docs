@@ -5,7 +5,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 # Skyline General Terms and Conditions
 
-*Last updated: 16 October 2026*
+*Last updated: 20 October 2026*
 
 ## Part A — General Terms and Conditions
 
@@ -34,6 +34,8 @@ keywords: General Terms and Conditions, Terms and Conditions
 “**Fully Offline On-Premises Deployment**” means a deployment of the Software on Customer’s own infrastructure that cannot maintain Cloud Connected status, and that has been expressly approved as such by Skyline in the Quotation.
 
 “**Maintenance and Support Terms**” means Skyline’s then-current terms governing maintenance and support for self-managed deployments of the Software, as [published](xref:Support_Terms_On_Premises) or referenced by Skyline.
+
+“**Order Date**” means the date on which the Quotation is accepted by Customer (or, for online purchases, the date on which Customer’s order is accepted by Skyline).
 
 “**Parties**” means Skyline and the Customer, and “Party” means either of them.
 
@@ -82,7 +84,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 3.1 A PO issued by Customer serves administrative purposes only. Skyline’s acceptance or processing of a PO is subject to and governed by the Agreement.
 
-3.2 All invoices are payable, clear of any deductions, in the currency specified in the Quotation or, if none is specified, in the currency set out in the applicable Regional Schedule. The payment term of Skyline’s invoices is thirty (30) days from the date of the invoice, unless set out differently in the Quotation.
+3.2 All invoices are payable, clear of any deductions, in the currency specified in the Quotation or, if none is specified, in the currency set out in the applicable Regional Schedule. The payment term of Skyline’s invoices is thirty (30) days from the date of the invoice, unless set out differently in the Quotation. Unless otherwise specified in the Quotation, Skyline may invoice in full any fees that remain uninvoiced twelve (12) months after the Order Date, including fees for Deliverables not yet delivered or scheduled, and such invoices shall be payable in accordance with this clause 3.2.
 
 3.3 Invoices may be issued by the Skyline contracting entity specified in the Quotation or by any of its affiliates on behalf of that entity. Any invoice issued by a Skyline entity other than the contracting entity specified in the Quotation shall be deemed issued on behalf of, and for the account of, the contracting entity. Payment of such invoice shall discharge Customer’s payment obligation under the Agreement. The Skyline contracting entity specified in the Quotation shall remain the sole contracting party and shall retain all rights and remedies under the Agreement, including the right to enforce payment.
 
@@ -100,7 +102,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 4.2 Access to the SaaS Service shall be provided electronically upon activation of Customer’s account, in accordance with clause 6.
 
-4.3 All Services related to the Software shall be provided by Skyline using an agile delivery methodology. Maintenance and support services shall be subject to separate Maintenance and Support Terms.
+4.3 All Services related to the Software shall be provided by Skyline using an agile delivery methodology and remain subject to the validity period set out in clause 7.5. Maintenance and support services shall be subject to separate Maintenance and Support Terms.
 
 4.4 The following acceptance procedure applies to Software and Services deliverables only and does not apply to the SaaS Service. Customer may reject a Deliverable only to the extent it materially fails to conform to the agreed specifications or Documentation. Customer has fourteen (14) calendar days to accept the applicable Software or Services deliverables following delivery by Skyline. If Customer does not accept a Deliverable, it must notify Skyline of such non-acceptance within this period by written notice specifying the reasons for non-acceptance in reasonable detail. If Skyline, acting reasonably, determines that the non-acceptance is justified, it will initiate corrective actions, after which a new fourteen (14) day acceptance period will commence, and so further until the Deliverables have been accepted by Customer.
 
@@ -150,7 +152,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 7.4 If Customer exceeds or exhausts the applicable entitlements, Skyline may charge additional fees at the rates specified in the Quotation or, failing that, at Skyline’s then-current rates, require the purchase of additional entitlements, restrict further use, suspend access to the affected Deliverables, or apply such other measures as specified in the Quotation or applicable Service Description.
 
-7.5 Unless expressly stated otherwise in the Quotation, unused entitlements, credits, allowances, committed usage, or prepaid amounts are non-refundable, non-transferable, and expire at the end of the applicable entitlement period.
+7.5 Unless expressly stated otherwise in the Quotation, unused entitlements, credits, allowances, committed usage, ordered Services, or prepaid amounts are non-refundable, non-transferable, and expire at the end of the applicable entitlement period without relieving Customer of its payment obligations. Unless a different period is specified in accordance with clause 7.2, the entitlement period shall be the applicable Subscription Term or, where none applies, twenty-four (24) months from the Order Date. Any extension requires Skyline’s written approval.
 
 7.6 Skyline may update usage metrics, technical measurement methods, and commercial packaging from time to time, provided that such updates do not materially reduce Customer's purchased rights or materially increase Customer's fees during the then-current commitment period.
 
