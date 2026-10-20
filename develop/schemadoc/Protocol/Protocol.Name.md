@@ -16,7 +16,7 @@ Defines the name of the protocol.
 
 ## Remarks
 
-This name, which must be unique, will be used throughout the DataMiner System to identify the protocol. Typically, it refers to an element (e.g., brand name, device type, etc.). It cannot start with "Production" and following characters are forbidden: '<', '>', ':', '"', '/', '\\', '|', '?', '*', ';', '°'.
+This name, which must be unique, will be used throughout the DataMiner System to identify the protocol. Typically, it refers to an element (e.g., brand name, device type, etc.). It cannot start with "Production", and the following characters are forbidden: "`<`", "`>`", "`:`", "`"`", "`/`", "`\`", "`|`", "`?`", "`*`", "`;`", "`°`".
 
 ## Examples
 
