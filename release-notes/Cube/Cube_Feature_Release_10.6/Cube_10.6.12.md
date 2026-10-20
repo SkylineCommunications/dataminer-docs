@@ -62,6 +62,12 @@ When a Spectrum card is open, it automatically enters standby mode after the con
 
 The *Preset* section on the right side of a Spectrum component has now been adapted to the new theme.
 
+#### Correlation: Warning for rules using 'Group by alarm' is now shown in red [ID 46670]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you select a correlation rule that still uses the removed *Group by alarm* method, DataMiner Cube marks the rule as modified and displays a warning that the method is no longer supported. From now on, that warning will be shown in red, making it easier to see that you need to update the rule.
+
 ### Fixes
 
 #### Spectrum: Marker was shown on the first trace instead of the trace where it was added [ID 46290]
