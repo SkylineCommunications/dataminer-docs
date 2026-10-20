@@ -68,6 +68,31 @@ If you want to remain signed in after a client or server restart, we recommend t
 
 In the different DataMiner web apps, a number of popup windows have been redesigned.
 
+#### Dashboards/Low-Code Apps - EPM picker component: Updated dropdown input [ID 46787]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+The *EPM picker* component now uses the updated dropdown input for consistency with other components.
+
+#### GQI DxM: Maximum number of concurrent sessions is now configurable [ID 46819]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+You can now configure the maximum number of concurrent GQI sessions using `GQIOptions.MaxSessionCount` in *appsettings.custom.json*. The default remains 500, and supported values range from 1 to 10000.
+
+For example, the following configuration sets the session limit to 1000:
+
+```json
+{
+  "GQIOptions": {
+    "MaxSessionCount": 1000
+  }
+}
+```
+
+> [!CAUTION]
+> Change this setting at your own risk. Allowing too many resource-intensive query sessions can overload the system.
+
 ### Fixes
 
 #### GQI DxM: PaToken DOM Instance IDs could not be filtered correctly [ID 46616]
