@@ -173,7 +173,7 @@ From now on, the Resource Manager will take ignored booking into account when de
 
 #### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
 Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
 
