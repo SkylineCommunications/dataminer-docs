@@ -8,6 +8,14 @@ description: "Follow these instructions to change the IP address of a DMA safely
 
 The way you can change the IP address of a DMA depends on how your DataMiner System is set up. It is different for a standalone DMA, a DMA in a DMS, a Failover DMA in a DMS, and a DMA in a DMS using a Cassandra cluster.
 
+Several steps in the procedures below depend on which NATS setup is installed on the DMA. Check this in the *Windows Services* app before you start:
+
+- **Legacy NATS** (SLNet-managed): the Windows services **NATS** and **NAS** are running. Steps marked "legacy NATS" apply.
+- **BrokerGateway** (BrokerGateway-managed): the Windows services **nats-server** and **DataMiner BrokerGateway** are running. Steps marked "BrokerGateway" apply. See also [Migrating to BrokerGateway](xref:BrokerGateway_Migration#how-can-i-tell-the-difference-between-slnet-managed-nats-and-brokergateway-managed-nats).
+
+  > [!NOTE]
+  > After a migration to BrokerGateway, the legacy NAS and NATS services may still be present but stopped. Their presence alone does not mean that legacy NATS is in use. Likewise, the file `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` can also exist on DMAs that still use legacy NATS; its presence does not mean that BrokerGateway is in use.
+
 ## Standalone DMA
 
 For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a cluster:
@@ -23,14 +31,6 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 1. Go to the folder `C:\Skyline DataMiner\` and open the file *MaintenanceSettings.xml*.
 
 1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
-
-1. Go to the folder `C:\Skyline DataMiner\Configurations`, and check if the file *ClusterEndpoints.json* exists.
-
-   If the file exists, follow these steps:
-
-   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
-
-   1. When you have replaced the IP address, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) to create new certificates using the new IP address.
 
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
@@ -62,9 +62,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
       1. Restart the elasticsearch-service-x64 service.
 
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps.
-
-   If instead the **nats-server** service is installed and *Running*, skip these steps.
+1. **Legacy NATS only**:
 
    1. Open the file *SLCloud.xml*, located in the folder `C:\Skyline DataMiner\`.
 
@@ -86,7 +84,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
       1. Press Enter twice, enter NATS, and press Y.
 
-1. In the "Windows Services" app, if the "nats-server" service is installed and *Running*, perform the following steps. If, on the contrary the "NATS" service is installed and *Running*, skip this step.
+1. **BrokerGateway only**:
 
    1. Open the *appsettings.runtime.json* file, located in the folder `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\`.
 
@@ -100,19 +98,36 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. If you are using the auto-generated SSL certificate from APIGateway, optionally generate a new one to contain the new IP address:
+   1. Open the file *ClusterEndpoints.json*, located in the folder `C:\Skyline DataMiner\Configurations\`.
 
-   1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
+   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
-   1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+   1. Run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) to create new certificates using the new IP address.
 
-      ```powershell
-      $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
-      Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
-      
-      $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
-      $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
-      ```
+      NATSRepair lists the endpoints read from *ClusterEndpoints.json*; only continue if the list shows the new IP address.
+
+1. If HTTPS is configured on the DMA and the SSL/TLS certificate contains the old IP address in its *Subject Alternative Name* field, replace it with a certificate that contains the new IP address:
+
+   - If you use a certificate issued by a Certificate Authority, request a new certificate that contains the new IP address and update the HTTPS binding in IIS. See [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
+
+   - If you use the auto-generated SSL certificate from APIGateway, which contains the IP addresses of the server:
+
+      1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
+
+      1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+
+         ```powershell
+         $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
+         Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+       
+         $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
+         $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+         ```
+
+   If the certificate only contains hostnames or FQDNs, no new certificate is needed.
+
+   > [!NOTE]
+   > On systems using BrokerGateway, make sure the certificate is valid for the new IP address, as BrokerGateway communication relies on TLS. See [Migrating to BrokerGateway](xref:BrokerGateway_Migration#it-requirements).
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
@@ -137,16 +152,6 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
 
-1. Go to the folder `C:\Skyline DataMiner\Configurations`, and check if the file *ClusterEndpoints.json* exists.
-
-   If the file exists, follow these steps:
-
-   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
-
-   1. Repeat this action for all Agents in the cluster, including offline Failover Agents.
-
-   1. When the IP addresses have been changed on all Agents, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) on one Agent to create new certificates using the new IP address.
-
 1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
    1. Go to the folder `C:\Skyline DataMiner\` and open the file *DB.xml*.
@@ -177,9 +182,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
       1. Restart the elasticsearch-service-x64 service.
 
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IP addresses.
-
-   If instead the **nats-server** service is installed and *Running*, skip these steps.
+1. **Legacy NATS only**: perform the following steps on the DMA of which you have changed the IP address.
 
    1. Open the file *SLCloud.xml*, located in the folder `C:\Skyline DataMiner\`.
 
@@ -203,7 +206,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
          This will install both NAS and NATS.
 
-1. In the "Windows Services" app, if the "nats-server" service is installed and *Running*, perform the following steps on all **DataMiner agents in the DMS**. If, on the contrary the "NATS" service is installed and *Running*, skip this step.
+1. **BrokerGateway only**: perform the following steps on **all DMAs in the DMS**, including offline Failover DMAs.
 
    1. Open the *appsettings.runtime.json* file, located in the folder `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\`.
 
@@ -223,19 +226,36 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. If you are using the auto-generated SSL certificate from APIGateway, optionally generate a new one to contain the new IP address:
+   1. Open the file *ClusterEndpoints.json*, located in the folder `C:\Skyline DataMiner\Configurations\`.
 
-   1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
+   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
-   1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+   1. When the IP address has been replaced on all DMAs, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) on one DMA to create new certificates using the new IP address.
 
-      ```powershell
-      $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
-      Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
-      
-      $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
-      $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
-      ```
+      NATSRepair lists the endpoints read from *ClusterEndpoints.json*; only continue if the list shows the new IP address.
+
+1. If HTTPS is configured on the DMA and the SSL/TLS certificate contains the old IP address in its *Subject Alternative Name* field, replace it with a certificate that contains the new IP address:
+
+   - If you use a certificate issued by a Certificate Authority, request a new certificate that contains the new IP address and update the HTTPS binding in IIS. See [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
+
+   - If you use the auto-generated SSL certificate from APIGateway, which contains the IP addresses of the server:
+
+      1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
+
+      1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+
+         ```powershell
+         $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
+         Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+       
+         $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
+         $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+         ```
+
+   If the certificate only contains hostnames or FQDNs, no new certificate is needed.
+
+   > [!NOTE]
+   > On systems using BrokerGateway, make sure the certificate is valid for the new IP address, as BrokerGateway communication relies on TLS. See [Migrating to BrokerGateway](xref:BrokerGateway_Migration#it-requirements).
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
@@ -243,9 +263,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. In System Center, go to the Agents page and remove the old IP address from the list of DMAs in the cluster.
 
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IP addresses.
-
-   If instead the **nats-server** service is installed and *Running*, skip these steps.
+1. **Legacy NATS only**:
 
    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
@@ -265,7 +283,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
   
    1. On all DMAs in the cluster, navigate to *C:\Skyline DataMiner\SLCloud.xml*, and check if the previous IP address has been replaced by the new IP address.
 
-     Note that it can take up to an hour before this happens. If for any reason the old IP address is still visible in the file after that time, [contact Support](xref:Contacting_tech_support).
+      Note that it can take up to an hour before this happens. If for any reason the old IP address is still visible in the file after that time, [contact Support](xref:Contacting_tech_support).
 
 > [!NOTE]
 > If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IP addresses are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
@@ -277,12 +295,6 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 1. Stop the DataMiner software on **both** Failover DMAs.
 
 1. Change the IP address of the DMA server in Windows.
-
-1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
-
-   1. On the DMA of which you have changed the IP address, go to the folder `C:\Skyline DataMiner\` and open the file *DB.xml*.
-
-   1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
 1. On the DMA of which you have changed the IP address, go to the folder `C:\Skyline DataMiner\` and open the file *DMS.xml*.
 
@@ -296,46 +308,40 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. In the HTTPS tag, replace the old IP address with the newly configured one if necessary, and save the file.
 
-1. Go to the folder `C:\Skyline DataMiner\Configurations`, and check if the file *ClusterEndpoints.json* exists.
+1. If you are not using [Storage as a Service (STaaS)](xref:STaaS), and one or more of the databases used by DataMiner is hosted on the same server as DataMiner itself:
 
-   If the file exists, follow these steps:
+   1. On the DMA of which you have changed the IP address, go to the folder `C:\Skyline DataMiner\` and open the file *DB.xml*.
 
-   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+   1. Locate all occurrences of the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
-   1. Repeat this action for all Agents in the cluster, including offline Failover Agents.
+   1. If the DMAs host a Cassandra database, do the following **on both DMAs**:
 
-   1. When the IP addresses have been changed on all Agents, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) on one Agent to create new certificates using the new IP address.
+      1. Open the cassandra.yaml file (typically located in the folder `C:\Program Files\Cassandra\conf\`).
 
-1. If the DMAs host a Cassandra database, do the following **on both DMAs**:
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Open the cassandra.yaml file (typically located in the folder `C:\Program Files\Cassandra\conf\`).
+      1. Restart the cassandra service.
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
+      > [!NOTE]
+      > If the IP addresses of both DMAs in the Failover pair is changed, replace both IP addresses in both cassandra.yaml files.
 
-   1. Restart the cassandra service.
+   1. If the DMAs host an OpenSearch database, do the following **on both DMAs**:
 
-   > [!NOTE]
-   > If the IP addresses of both DMAs in the Failover pair is changed, replace both IP addresses in both cassandra.yaml files.
+      1. Open the opensearch.yml file (typically located in the folder `C:\Program Files\opensearch\config\`).
 
-1. If the DMAs host an OpenSearch database, do the following **on both DMAs**:
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Open the opensearch.yml file (typically located in the folder `C:\Program Files\opensearch\config\`).
+      1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
+   1. If the DMAs host an Elasticsearch database, do the following **on both DMAs**:
 
-   1. Restart the Java.exe service located under the *Details* tab in the Task Manager.
+      1. Open the elasticsearch.yml file (typically located in the folder `C:\Program Files\Elasticsearch\config\`).
 
-1. If the DMAs host an Elasticsearch database, do the following **on both DMAs**:
+      1. Replace any references to the old IP address with the new IP address, and save the file.
 
-   1. Open the elasticsearch.yml file (typically located in the folder `C:\Program Files\Elasticsearch\config\`).
+      1. Restart the elasticsearch-service-x64 service.
 
-   1. Replace any references to the old IP address with the new IP address, and save the file.
-
-   1. Restart the elasticsearch-service-x64 service.
-
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IP addresses.
-
-   If instead the **nats-server** service is installed and *Running*, skip these steps.
+1. **Legacy NATS only**: perform the following steps on the DMA of which you have changed the IP address.
 
    1. Open the file *SLCloud.xml*, located in the folder `C:\Skyline DataMiner\`.
 
@@ -359,9 +365,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
          This will install both NAS and NATS.
 
-1. In the *Windows Services* app, if the **nats-server** service is installed and *Running*, perform the following steps **on all DMAs in the DMS**.
-
-   If instead the **NATS** service is installed and *Running*, skip these steps.
+1. **BrokerGateway only**: perform the following steps on **all DMAs in the DMS**, including the offline Failover DMA.
 
    1. Open the *appsettings.runtime.json* file, located in the folder `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\`.
 
@@ -381,23 +385,42 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
    1. Restart the DataMiner BrokerGateway service.
 
-1. Uninstall and then re-install the [APIGateway Extension Module](xref:DataMinerCoreModules#apigateway), found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate.
+   1. Open the file *ClusterEndpoints.json*, located in the folder `C:\Skyline DataMiner\Configurations\`.
 
-1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
 
-   ```powershell
-   $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
-   Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+   1. When the IP address has been replaced on all DMAs, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) on one DMA to create new certificates using the new IP address.
 
-   $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
-   $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
-   ```
+      NATSRepair lists the endpoints read from *ClusterEndpoints.json*; only continue if the list shows the new IP address.
+
+1. If HTTPS is configured on the DMA and the SSL/TLS certificate contains the old IP address in its *Subject Alternative Name* field, replace it with a certificate that contains the new IP address:
+
+   - If you use a certificate issued by a Certificate Authority, request a new certificate that contains the new IP address and update the HTTPS binding in IIS. See [Setting up HTTPS on a DMA](xref:Setting_up_HTTPS_on_a_DMA#configuring-the-https-binding-in-iis).
+
+   - If you use the auto-generated SSL certificate from APIGateway, which contains the IP addresses of the server:
+
+      1. Uninstall [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), remove the HTTPS binding on port 443 in IIS, then reinstall the DataMiner APIGateway MSI found in `C:\Skyline DataMiner\Tools\ModuleInstallers\` to regenerate the SSL certificate and recreate the HTTPS binding in port 443.
+
+      1. Import the generated SSL certificate into the trusted root certificate store by running the following commands in an elevated PowerShell window:
+
+         ```powershell
+         $cert = Get-ChildItem -Path Cert:\LocalMachine\MY | where{$_.FriendlyName  -eq "Auto-Created Certificate by DataMiner APIGateway"}
+         Export-Certificate -Cert $cert -FilePath "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer"
+
+         $import = (Get-ChildItem -Path "C:\ProgramData\Skyline Communications\DataMiner APIGateway\APIGateway.cer")
+         $import | Import-Certificate -CertStoreLocation Cert:\LocalMachine\Root
+         ```
+
+   If the certificate only contains hostnames or FQDNs, no new certificate is needed.
+
+   > [!NOTE]
+   > On systems using BrokerGateway, make sure the certificate is valid for the new IP address, as BrokerGateway communication relies on TLS. See [Migrating to BrokerGateway](xref:BrokerGateway_Migration#it-requirements).
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
-1. Restart DataMiner on the DMA with the changed IP address.
+1. Start DataMiner on the DMA with the changed IP address.
 
-1. Restart DataMiner on the other Failover DMA. It should start up in offline mode.
+1. Start DataMiner on the other Failover DMA. It should start up in offline mode.
 
 1. On the online DMA, go to System Center \> Agents, and remove the old IP address from the list of DMAs in the cluster.
 
@@ -405,23 +428,21 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. In case the Failover status is not green and there are heartbeat errors, stop DataMiner, and double-check the DMS.xml files of both DMAs to make sure all references to the old IP address have been correctly replaced.
 
-1. In the *Windows Services* app, if the **NATS** service is installed and *Running*, perform the following steps on the DMA where you wish to swap IP addresses.
-
-   If instead the **nats-server** service is installed and *Running*, skip these steps.
+1. **Legacy NATS only**:
 
    1. Open the SLNetClientTest tool. See [Opening the SLNetClientTest tool](xref:Opening_the_SLNetClientTest_tool).
 
       > [!WARNING]
       > Always be extremely careful when using this tool, as it can have far-reaching consequences on the functionality of your DataMiner System.
 
-   1. Connect to the DMA with the changed IP address. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
+   1. Connect to the online Failover DMA. See [Connecting to a DMA with the SLNetClientTest tool](xref:Connecting_to_a_DMA_with_the_SLNetClientTest_tool).
 
    1. Go to the *Build Message* tab of the main window of the SLNetClientTest tool.
 
    1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
       > [!NOTE]
-      > > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
+      > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
    1. Close the SLNetClientTest tool.
 
@@ -458,7 +479,7 @@ If your DataMiner System uses the Cassandra cluster feature for its general data
 
 1. In a command window, execute *nodetool status* (from the directory `C:\Program Files\Cassandra\bin\`), in order to check the status of the cluster. this should result in a list with your new IP address, your old IP address and all other Cassandra nodes on the server. For example:
 
-   ![Example of the nodetool status resuls](~/dataminer/images/nodetoolstatus.png)
+   ![Example of the nodetool status results](~/dataminer/images/nodetoolstatus.png)
 
 1. In the same command window, execute *nodetool removenode \[host ID of the old IP\]*, e.g., *nodetool removenode 35506039-0f03-4a1e-8642-94484d440116*.
 
