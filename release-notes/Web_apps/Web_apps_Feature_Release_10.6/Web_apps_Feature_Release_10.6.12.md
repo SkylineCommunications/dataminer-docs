@@ -68,6 +68,12 @@ If you want to remain signed in after a client or server restart, we recommend t
 
 In the different DataMiner web apps, a number of popup windows have been redesigned.
 
+#### Dashboards/Low-Code Apps - EPM picker component: Updated dropdown input [ID 46787]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+The *EPM picker* component now uses the updated dropdown input for consistency with other components.
+
 ### Fixes
 
 #### GQI DxM: PaToken DOM Instance IDs could not be filtered correctly [ID 46616]
