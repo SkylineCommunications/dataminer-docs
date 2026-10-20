@@ -68,6 +68,19 @@ The *Preset* section on the right side of a Spectrum component has now been adap
 
 When you select a correlation rule that still uses the removed *Group by alarm* method, DataMiner Cube marks the rule as modified and displays a warning that the method is no longer supported. From now on, that warning will be shown in red, making it easier to see that you need to update the rule.
 
+#### Spectrum: Preset loading options now behave more consistently [ID 46683]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Preset loading options now behave more consistently:
+
+- Selecting or loading a private or public preset no longer changes the preset content checkboxes. Your selections will be saved and restored when you reopen the Spectrum Analyzer.
+- All preset content checkboxes remain enabled. Bold labels indicate which content is available in the selected preset.
+- Last Session presets restore the session independently of the content checkboxes used to load private and public presets.
+- When you load a preset from Visual Overview, its configured loading flags are used instead of being combined with previously active flags.
+
+The checkbox labels have also been clarified: *Trace* is now *Reference trace*, *Threshold* is now *Thresholds*, and *Measurement cycle* is now *Measurement points*.
+
 ### Fixes
 
 #### Spectrum: Marker was shown on the first trace instead of the trace where it was added [ID 46290]
