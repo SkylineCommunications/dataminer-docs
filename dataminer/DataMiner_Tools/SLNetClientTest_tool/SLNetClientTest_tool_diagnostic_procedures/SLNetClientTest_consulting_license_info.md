@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_consulting_license_info
+description: "Learn how, using the SLNetClientTest tool, you can check all license information on a DataMiner Agent."
 ---
 
 # Consulting license information for a DMA

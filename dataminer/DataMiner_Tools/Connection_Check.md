@@ -1,5 +1,6 @@
 ---
 uid: Connection_Check
+description: "Use the Connection Check tool to verify the connection between a client or server and a DataMiner Agent."
 ---
 
 # Connection Check
