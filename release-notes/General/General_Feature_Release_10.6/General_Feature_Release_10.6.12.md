@@ -57,7 +57,7 @@ The description will include the name of the predefined backup setting and the D
 
 #### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
 
@@ -173,7 +173,7 @@ From now on, the Resource Manager will take ignored booking into account when de
 
 #### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
 
-<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
 
@@ -230,7 +230,7 @@ The retry scheduler will increase the delay between attempts up to a maximum of 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 <!-- Not added to MR 10.7.0 - Introduced by RN 46061 -->
 
-On STaaS systems, when you updated a Credentials Library credential with encrypted fields, such as SNMPv3, token, or username and password fields, new records could be added to the `encryptedsecrets` table without removing the old ones. As a result, the table could grow indefinitely.
+On STaaS systems, when you updated a Credentials Library credential with encrypted fields (such as an SNMPv3, token, or username and password credential), new records could be added to the `encryptedsecrets` table without removing the old ones. As a result, the table could grow indefinitely.
 
 The update process now removes the old encrypted records, preventing them from accumulating.
 
