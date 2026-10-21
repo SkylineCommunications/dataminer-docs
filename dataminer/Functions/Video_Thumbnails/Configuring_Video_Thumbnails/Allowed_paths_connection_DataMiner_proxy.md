@@ -4,7 +4,7 @@ uid: Allowed_paths_connection_DataMiner_proxy
 
 # Allowed paths in case of connection via DataMiner proxy
 
-If a client does not have direct access to the video server, it can request a video feed via the DataMiner Agent acting as a proxy server.
+If a client does not have direct access to the video server, it can request a video feed via the DataMiner Agent acting as a proxy server if using the "Generic%20Images" type.
 
 When a video feed is requested via proxy, the list of allowed URLs will be restricted for security reasons.
 
