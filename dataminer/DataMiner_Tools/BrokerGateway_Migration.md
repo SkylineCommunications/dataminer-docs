@@ -66,7 +66,7 @@ For example, applying manual configuration on only one DataMiner Agent in a 10â€
 
 #### Spaces in the NATS config
 
-Only if you have disabled automatic NATS configuration via the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config), verify the following:
+This prerequisite is only relevant if you have disabled automatic NATS configuration via the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config).
 
 In `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`, verify that the cluster name, gateway name, and server name do not contain spaces. For more information, see [NATS Documentation â€” System Errors](https://docs.nats.io/reference/system/errors#server-name-and-cluster-errors).
 
