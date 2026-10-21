@@ -121,6 +121,12 @@ When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interfa
 
 From now on, the log will show the original notify type without the offset.
 
+#### STaaS: Support for direct-write-only entity types [ID 46711]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
+
 #### SLLogCollector packages now include the configuration files of ResourceManager, ProtocolFunctionManager, and Scheduler [ID 46753]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->

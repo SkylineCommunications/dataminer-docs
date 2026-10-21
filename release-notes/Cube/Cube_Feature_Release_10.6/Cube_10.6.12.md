@@ -81,6 +81,24 @@ Preset loading options now behave more consistently:
 
 The checkbox labels have also been clarified: *Trace* is now *Reference trace*, *Threshold* is now *Thresholds*, and *Measurement cycle* is now *Measurement points*.
 
+#### Cluster update status: Possible statuses have changed [ID 46504]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Since DataMiner Cube version 10.5.0 CU20/10.6.0 CU8/10.6.11, the status of a cluster update is displayed next to the cluster name in the Cube header.
+
+The possible statuses have now been changed to the following:
+
+- *Updating...* while the upgrade is in progress.
+- *Update done* when the upgrade was successful.
+- *Update failed* when the upgrade was not successful.
+
+The *Update failed* status is only shown to users who have permission to view and launch upgrades.
+
+> [!NOTE]
+> This feature will only work in conjunction with DataMiner server version 10.5.0 CU20/10.6.0 CU8/10.6.11 or newer.
+> If no status is available, Cube will continue to show the cluster name as before, ensuring compatibility with older DataMiner Systems.
+
 ### Fixes
 
 #### Spectrum: Marker was shown on the first trace instead of the trace where it was added [ID 46290]
