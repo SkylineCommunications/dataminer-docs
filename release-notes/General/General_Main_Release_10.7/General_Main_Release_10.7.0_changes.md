@@ -1,5 +1,6 @@
 ---
 uid: General_Main_Release_10.7.0_changes
+description: "Changes in DataMiner General Main Release 10.7.0, including breaking changes, enhancements, and fixes planned for this preview release."
 ---
 
 # General Main Release 10.7.0 – Changes (preview)
@@ -795,6 +796,12 @@ The generated package now includes the following files in the `Elastic` folder f
 When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interface failed, up to now, the log included the internal offset added to the notify type.
 
 From now on, the log will show the original notify type without the offset.
+
+#### STaaS: Support for direct-write-only entity types [ID 46711]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
 
 ### Fixes
 
