@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Inputs-tablePid
-description: "Learn how the tablePid attribute identifies the inputs table linked to a matrix control in a DataMiner protocol."
+description: "Use the tablePid attribute in a DataMiner protocol to identify the inputs table linked to a matrix control."
 ---
 
 # tablePid attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping
-description: "Learn how the Mapping element links an output column to a matrix column and defines its mapping role and value type in a DataMiner protocol."
+description: "Use the Mapping element in a DataMiner protocol to link an output column to a matrix column and define its mapping role and value type."
 ---
 
 # Mapping element

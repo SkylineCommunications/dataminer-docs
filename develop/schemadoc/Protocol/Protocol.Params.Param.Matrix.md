@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix
-description: "Learn how the Matrix element defines a matrix control by linking input and output tables and configuring its behavior in a DataMiner protocol."
+description: "Use the Matrix element in a DataMiner protocol to define a matrix control by linking input and output tables and configuring its behavior."
 ---
 
 # Matrix element

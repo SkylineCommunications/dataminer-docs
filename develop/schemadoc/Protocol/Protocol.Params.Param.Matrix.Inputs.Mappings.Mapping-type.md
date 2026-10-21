@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping-type
-description: "Learn how the type attribute specifies the value type used by an input table-to-matrix mapping in a DataMiner protocol."
+description: "Use the type attribute of the Mapping element in a DataMiner protocol to specify the value type used by an input table-to-matrix mapping."
 ---
 
 # type attribute

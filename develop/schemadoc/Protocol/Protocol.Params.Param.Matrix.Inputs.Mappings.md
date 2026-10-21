@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Inputs.Mappings
-description: "Learn how the Mappings element links input table columns to their corresponding matrix control columns in a DataMiner protocol."
+description: "Use the Mappings element in a DataMiner protocol to link input table columns to their corresponding matrix control columns."
 ---
 
 # Mappings element
