@@ -117,6 +117,12 @@ From now on, when a *Trigger* component is activated, the time range specified i
 
 Up to now, when a parameter used in a *Pivot* component had not yet been fetched, an error could appear in the component settings.
 
+#### Interactive automation scripts in web apps: Date-only controls could show an incorrect initial date [ID 46814]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a custom time zone was configured for an interactive automation script in a web app, date-only controls could show an incorrect initial date, typically the day before the specified date.
+
 #### Web apps: Incorrect error message when a request timed out via dataminer.services [ID 46826]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
