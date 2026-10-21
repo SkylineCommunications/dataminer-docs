@@ -37,10 +37,9 @@ To request a cost estimation, follow the procedure below:
    1. Click *Stop Migration/Replication* to stop the test run.
 
    > [!NOTE]
-   > This 24-hour period is not mandatory, but we recommend this to be able to extrapolate the data from a daily consumption to a monthly consumption.
-   
-   > [!NOTE]
-   > On systems using a Cassandra Cluster database with a DataMiner version prior to 10.5.0 [CU21], 10.6.0 [CU9], or 10.6.12, DELT exports of elements can return unfiltered data after a cost estimation has been run, even after the test run has been stopped. If you need to export elements with their data on those versions, restart the Agent(s) first. See [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation).
+   >
+   > - This 24-hour period is not mandatory, but we recommend this to be able to extrapolate the data from a daily consumption to a monthly consumption.
+   > - Prior to DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12, on systems using [dedicated clustered storage](xref:Dedicated_clustered_storage), DELT exports of elements can return unfiltered data after a cost estimation has been run, even after the test run has been stopped. If you need to export elements with their data on those versions, restart the Agent(s) first. See [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation).
 
 1. After this, at approximately 6 AM UTC, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Billing* for the relevant organization.
 
