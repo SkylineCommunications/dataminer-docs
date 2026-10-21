@@ -25,15 +25,15 @@ Setting up BrokerGateway with a custom manual config will allow you to create su
 
 ### Setting up a manual config
 
-1. From one single DMA, apply a custom config by sending a POST request to `https://[ip]/BrokerGateway/api/clusteringapi/applymanualconfig` using a request body that contains the full cluster config.
+From one single DMA, apply a custom config by sending a POST request to `https://[ip]/BrokerGateway/api/clusteringapi/applymanualconfig` using a request body that contains the full cluster config.
 
-   See [Manual config example](#manual-config-example) for an example request body and [BrokerGateway API keys](#brokergateway-api-keys) for the required node credentials.
+See [Manual config example](#manual-config-example) for an example request body and [BrokerGateway API keys](#brokergateway-api-keys) for the required node credentials.
 
-#### Altering an existing manual config setup
+### Altering an existing manual config setup
 
 1. On a single DMA of the DMS, open `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.custom.json`.
 
-1. Copy the **contents** of the *ClusterArchitecture* field (i.e. excluding the ClusterArchitecture field).
+1. Copy the **contents** of the `ClusterArchitecture` field (i.e., excluding the `ClusterArchitecture` field).
 
 1. Add or remove the relevant node entry in the appropriate region's `nodes` array, using the structure shown in [Manual config example](#manual-config-example).
 
@@ -48,79 +48,79 @@ The following example shows a supercluster consisting of two clusters with leaf 
 ```json
 {
   "regions": [
-  {
-    "name": "Cluster1",
-    "nodes": [
     {
-      "endpoint": "DMA1",
-      "bgw_api_key": "BGW_API_KEY_1",
-      "is_leaf": false,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
+      "name": "Cluster1",
+      "nodes": [
+        {
+          "endpoint": "DMA1",
+          "bgw_api_key": "BGW_API_KEY_1",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "DMA2",
+          "bgw_api_key": "BGW_API_KEY_2",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "DMA3",
+          "bgw_api_key": "BGW_API_KEY_3",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "LeafNode1",
+          "bgw_api_key": "LeafNode_BGW_API_KEY_1",
+          "is_leaf": true,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "LeafNode2",
+          "bgw_api_key": "LeafNode_BGW_API_KEY_2",
+          "is_leaf": true,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        }
+      ]
     },
     {
-      "endpoint": "DMA2",
-      "bgw_api_key": "BGW_API_KEY_2",
-      "is_leaf": false,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
-    },
-    {
-      "endpoint": "DMA3",
-      "bgw_api_key": "BGW_API_KEY_3",
-      "is_leaf": false,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
-    },
-    {
-      "endpoint": "LeafNode1",
-      "bgw_api_key": "LeafNode_BGW_API_KEY_1",
-      "is_leaf": true,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
-    },
-    {
-      "endpoint": "LeafNode2",
-      "bgw_api_key": "LeafNode_BGW_API_KEY_2",
-      "is_leaf": true,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
+      "name": "Cluster2",
+      "nodes": [
+        {
+          "endpoint": "DMA4",
+          "bgw_api_key": "BGW_API_KEY_4",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "DMA5",
+          "bgw_api_key": "BGW_API_KEY_5",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "DMA6",
+          "bgw_api_key": "BGW_API_KEY_6",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "LeafNode3",
+          "bgw_api_key": "LeafNode_BGW_API_KEY_3",
+          "is_leaf": true,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        }
+      ]
     }
-    ]
-  },
-  {
-    "name": "Cluster2",
-    "nodes": [
-    {
-      "endpoint": "DMA4",
-      "bgw_api_key": "BGW_API_KEY_4",
-      "is_leaf": false,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
-    },
-    {
-      "endpoint": "DMA5",
-      "bgw_api_key": "BGW_API_KEY_5",
-      "is_leaf": false,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
-    },
-    {
-      "endpoint": "DMA6",
-      "bgw_api_key": "BGW_API_KEY_6",
-      "is_leaf": false,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
-    },
-    {
-      "endpoint": "LeafNode3",
-      "bgw_api_key": "LeafNode_BGW_API_KEY_3",
-      "is_leaf": true,
-      "should_run_nats_node": true,
-      "additional_endpoints": []
-    }
-    ]
-  }
   ]
 }
 ```
@@ -129,9 +129,9 @@ The `additional_endpoints` property allows you to specify extra endpoints that B
 
 The `should_run_nats_node` property is currently non-functional but may be used in future releases.
 
-#### BrokerGateway API keys
+### BrokerGateway API keys
 
-Each node requires the *bgw_api_key* of that BrokerGateway node. You can find this on that server in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. Use the API key with the role "BrokerGateway" on the specific node.
+Each node requires the `bgw_api_key` of that BrokerGateway node. You can find this on that server in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. Use the API key with the role "BrokerGateway" on the specific node.
 
 ### Deconstructing the manual config
 
