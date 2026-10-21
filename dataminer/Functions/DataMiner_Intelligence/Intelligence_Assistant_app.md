@@ -55,7 +55,7 @@ When you open the app, a welcome screen is displayed with the following elements
 
 The left sidebar of the Assistant app also gives access to the pages where you can manage [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools):
 
-- **Agents**: Only visible if the [specialized agents feature flag](xref:Intelligence_Assistant_DxM#feature-flags) has been enabled.
+- **Agents**: Only visible if specialized agents have been made available in your DataMiner System.
 - **Skills**: Always visible.
 - **Tools**: Always visible.
 

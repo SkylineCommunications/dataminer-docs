@@ -1034,7 +1034,6 @@ items:
           - name: Getting started with EPM
             topicUid: EPM_Introduction_Tutorial
   - name: Intelligence
-    topicUid: Intelligence_Overview
     items:
       - name: About DataMiner Intelligence
         topicUid: DataMiner_Intelligence
@@ -1070,8 +1069,6 @@ items:
               topicUid: Intelligence_Assistant_custom_data_tools
           - name: Script tools
             topicUid: Intelligence_Assistant_ScriptTools
-        - name: Choosing between agents, skills, and tools
-          topicUid: Intelligence_Agents_Skills_Tools
       - name: DataMiner Assistant M365
         topicUid: Intelligence_Assistant_M365
       - name: Natural language to GQI

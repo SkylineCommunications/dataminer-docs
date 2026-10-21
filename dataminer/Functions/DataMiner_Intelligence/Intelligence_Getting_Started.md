@@ -14,6 +14,8 @@ description: "Learn how to enable the DataMiner Assistant DxM and the DataMiner 
 
 The DataMiner Assistant DxM and the DataMiner Assistant app each need to be enabled separately.
 
+For the best results, we recommend using the latest available DataMiner version.
+
 ## Enabling DataMiner Intelligence
 
 1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).

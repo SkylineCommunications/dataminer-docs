@@ -43,10 +43,10 @@ Specialized agents only have access to the specific tools and skills assigned to
 The agents become available in the following order:
 
 1. The native agents are available once the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) has been installed and the Assistant app has been enabled.
-1. The specialized agents feature becomes available once it has been enabled via the [feature flags](xref:Intelligence_Assistant_DxM#feature-flags).
+1. The specialized agents feature becomes available once an administrator has made it available in your DataMiner System.
 1. You can then start adding specialized agents, as well as the [skills](xref:Intelligence_Assistant_Skills) and [tools](xref:Intelligence_Assistant_Tools) they use.
 
-To learn when to use agents, skills, or tools, see [Choosing between agents, skills, and tools](xref:Intelligence_Agents_Skills_Tools).
+To learn when to create a specialized agent instead of a skill or tool, see the [FAQ](xref:Intelligence_FAQ#when-should-i-create-a-specialized-agent-instead-of-a-skill-or-tool).
 
 ## Agent context
 

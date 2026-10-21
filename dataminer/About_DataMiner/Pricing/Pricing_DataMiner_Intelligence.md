@@ -5,7 +5,7 @@ description: "Learn how DataMiner Intelligence usage is metered, which agents ar
 
 # DataMiner Intelligence pricing
 
-This page describes how [DataMiner Intelligence](xref:Intelligence_Overview) is licensed and metered.
+This page describes how [DataMiner Intelligence](xref:DataMiner_Intelligence) is licensed and metered.
 
 ## Licensing
 
