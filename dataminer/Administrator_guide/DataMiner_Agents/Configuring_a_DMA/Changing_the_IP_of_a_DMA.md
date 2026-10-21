@@ -16,6 +16,9 @@ Several steps in the procedures below depend on which NATS setup is installed on
   > [!NOTE]
   > After a migration to BrokerGateway, the legacy NAS and NATS services may still be present but stopped. Their presence alone does not mean that legacy NATS is in use. Likewise, the file `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` can also exist on DMAs that still use legacy NATS; its presence does not mean that BrokerGateway is in use.
 
+> [!IMPORTANT]
+> The NATS-related steps on this page only apply when automatic NATS configuration is enabled. If automatic NATS configuration is disabled (legacy *NATSForceManualConfig* or BrokerGateway manual config), do not run NATSRepair; update your manual NATS configuration instead. See [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config).
+
 ## Standalone DMA
 
 For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a cluster:
