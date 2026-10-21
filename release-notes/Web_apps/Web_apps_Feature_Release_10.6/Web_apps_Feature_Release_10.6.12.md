@@ -115,4 +115,12 @@ From now on, when a *Trigger* component is activated, the time range specified i
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
-Up to now, When a parameter used in a *Pivot* component had not yet been fetched, an error could appear in the component settings.
+Up to now, when a parameter used in a *Pivot* component had not yet been fetched, an error could appear in the component settings.
+
+#### Web apps: Incorrect error message when a request timed out via dataminer.services [ID 46826]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a request via dataminer.services took 30 seconds or longer and failed with an HTTP 504 timeout, the web apps would incorrectly display the following error message: "You are no longer connected with DataMiner Cloud, please refresh."
+
+From now on, the following message will be displayed instead: "The request timed out because the server did not respond in time."
