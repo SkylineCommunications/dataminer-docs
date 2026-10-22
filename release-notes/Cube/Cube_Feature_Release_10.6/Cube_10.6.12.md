@@ -211,6 +211,14 @@ When an element export failed during migration, up to now, the Element migration
 
 From now on, the window will indicate that the migration finished with errors.
 
+#### Services: Exclude conditions on groups could be saved incorrectly [ID 46658]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you configured a service with a group of child elements and applied an exclude condition to that group, Cube would incorrectly save the condition as both an include and an exclude trigger, and when you reopened the service in the editor, the exclude condition would be shown as an include condition. Saving the service again could then change its behavior.
+
+Cube will now save these conditions correctly and correct affected configurations when you open the service editor.
+
 #### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
