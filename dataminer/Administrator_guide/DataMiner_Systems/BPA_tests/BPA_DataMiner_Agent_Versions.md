@@ -7,7 +7,9 @@ description: "Learn about the DataMiner Agent Versions BPA test, which checks wh
 
 This BPA test checks whether all DataMiner Agents in a cluster report the same DataMiner server version and build. It identifies a mixed-version state whenever Agents report different versions or builds.
 
-The BPA test is executed across the cluster rather than on an individual DataMiner Agent and uses the cached cluster version information. It checks the complete version, including the build number. The test is included by default starting with DataMiner 10.6.12. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
+The BPA test is executed across the cluster rather than on an individual DataMiner Agent and uses the cached cluster version information. It checks the complete version, including the build number.
+
+This test is included by default from DataMiner 10.6.12/10.7.0 onwards<!-- RN 46808 -->. You can [run it in System Center](xref:Running_BPA_tests) on the *Agents > BPA* tab.
 
 ## Metadata
 
@@ -34,7 +36,7 @@ The BPA test reports an issue when DataMiner Agents report different server vers
 - The test was executed successfully.
 - The result message is `The cluster is currently in a mixed version state.`
 - The details include the latest reported version, every distinct reported version, and every Agent below the latest version.
-- For each affected Agent, the details can include its name, Node ID, and complete version and build.
+- For each affected Agent, the details can include its name, node ID, and complete version and build.
 
 A mixed-version state indicates that Agents are running different server versions or builds. Some newer features may not be available on all Agents.
 
@@ -44,16 +46,16 @@ The BPA test cannot provide a conclusive result when the cached cluster version 
 
 - The outcome is `IssuesDetected`.
 - `TestExecuted` is `false`.
-- The details include the failure reason and can include unresolved Agent Node IDs, the exception type, and the exception message.
+- The details include the failure reason and can include unresolved Agent node IDs, the exception type, and the exception message.
 
 This can occur in the following situations:
 
 - The cache query does not return exactly one valid `ClusterVersionEvent`.
 - The event does not contain any Agent version data. Unknown `0.0.0.0-0` version data is marked as unknown in the details and does not produce a successful uniform result.
 - The BPA cannot resolve the names of Agents affected by the mixed-version state.
-- The BPA receives duplicate Node IDs or cannot communicate with SLNet.
+- The BPA receives duplicate node IDs or cannot communicate with SLNet.
 
-When a Failover partner name is not available from the regular Agent information, the BPA can use `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` to resolve it. The file is only required when this fallback is needed. If the file is missing, invalid, ambiguous, or unreadable and the affected Agent name cannot otherwise be resolved, the test will be reported as not executed.
+When a Failover partner name is not available from the regular Agent information, the BPA can use `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` to resolve it. The file is only required when this fallback is needed. If the file is missing, invalid, ambiguous, or unreadable, and the affected Agent name cannot otherwise be resolved, the test will be reported as not executed.
 
 ## Impact when issues are detected
 
