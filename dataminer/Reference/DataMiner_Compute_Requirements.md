@@ -212,7 +212,7 @@ While for past DataMiner versions Elasticsearch could be used as an alternative,
 
 #### OpenSearch software
 
-For all supported DataMiner versions, we support all OpenSearch versions currently supported by the OpenSearch Software Foundation. At the moment, OpenSearch **3.0** is the recommended version.
+For all supported DataMiner versions, we support all OpenSearch versions currently supported by the OpenSearch Software Foundation. At the moment, OpenSearch **3.x** is the recommended version.
 
 #### RAM
 

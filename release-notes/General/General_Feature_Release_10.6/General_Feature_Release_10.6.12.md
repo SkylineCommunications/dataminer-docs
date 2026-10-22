@@ -57,7 +57,7 @@ The description will include the name of the predefined backup setting and the D
 
 #### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
 
@@ -121,6 +121,22 @@ When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interfa
 
 From now on, the log will show the original notify type without the offset.
 
+#### STaaS: Support for direct-write-only entity types [ID 46711]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
+
+#### SLLogCollector packages now include the configuration files of ResourceManager, ProtocolFunctionManager, and Scheduler [ID 46753]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+SLLogCollector packages now include the following configuration files:
+
+- `C:\Skyline DataMiner\ResourceManager\Config.xml`
+- `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
+- `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
+
 ### Fixes
 
 #### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
@@ -163,7 +179,7 @@ From now on, the Resource Manager will take ignored booking into account when de
 
 #### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
 
@@ -207,9 +223,26 @@ Up to now, SLAnalytics subscribed to swarming notifications after startup prefet
 
 If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.
 
-#### Automation: Script execution time could be incorrect in script log files [ID 46749]
+#### CCAEndpoint initialization is now retried after failures [ID 46752]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
+
+If initialization of `CCAEndpointManager` or `CCAEndpointHandler` fails, DataMiner will now keep retrying.
+
+The retry scheduler will increase the delay between attempts up to a maximum of 60 seconds.
+
+#### STaaS: Encrypted credential records could accumulate when credentials were updated [ID 46746]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- Not added to MR 10.7.0 - Introduced by RN 46061 -->
+
+On STaaS systems, when you updated a Credentials Library credential with encrypted fields (such as an SNMPv3, token, or username and password credential), new records could be added to the `encryptedsecrets` table without removing the old ones. As a result, the table could grow indefinitely.
+
+The update process now removes the old encrypted records, preventing them from accumulating.
+
+#### Automation: Script execution time could be incorrect in script log files [ID 46749]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
 In script log files, execution times for scripts running longer than one minute could be incorrect. In addition, the `SLAutomation` log file did not include the library name when it logged the start or completion of script library compilation.
 
@@ -220,3 +253,11 @@ From now on, the script log file will report the correct total execution time, a
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
 Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirects were configured and BrokerGateway was manually configured with redirected NATS addresses.
+
+#### STaaS: Source connection was not restored after stopping a migration or replication [ID 46782]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a STaaS migration or replication was stopped, the source connection was not restored as the current connection. Instead, DataMiner could continue to use the migration connection.
+
+From now on, stopping a STaaS migration or replication will restore the source connection.

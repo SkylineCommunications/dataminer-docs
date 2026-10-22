@@ -68,6 +68,31 @@ If you want to remain signed in after a client or server restart, we recommend t
 
 In the different DataMiner web apps, a number of popup windows have been redesigned.
 
+#### Dashboards/Low-Code Apps - EPM picker component: Updated dropdown input [ID 46787]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+The *EPM picker* component now uses the updated dropdown input for consistency with other components.
+
+#### GQI DxM: Maximum number of concurrent sessions is now configurable [ID 46819]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+You can now configure the maximum number of concurrent GQI sessions using `GQIOptions.MaxSessionCount` in *appsettings.custom.json*. The default remains 500, and supported values range from 1 to 10000.
+
+For example, the following configuration sets the session limit to 1000:
+
+```json
+{
+  "GQIOptions": {
+    "MaxSessionCount": 1000
+  }
+}
+```
+
+> [!CAUTION]
+> Change this setting at your own risk. Allowing too many resource-intensive query sessions can overload the system.
+
 ### Fixes
 
 #### GQI DxM: PaToken DOM Instance IDs could not be filtered correctly [ID 46616]
@@ -90,4 +115,18 @@ From now on, when a *Trigger* component is activated, the time range specified i
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
-Up to now, When a parameter used in a *Pivot* component had not yet been fetched, an error could appear in the component settings.
+Up to now, when a parameter used in a *Pivot* component had not yet been fetched, an error could appear in the component settings.
+
+#### Interactive automation scripts in web apps: Date-only controls could show an incorrect initial date [ID 46814]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a custom time zone was configured for an interactive automation script in a web app, date-only controls could show an incorrect initial date, typically the day before the specified date.
+
+#### Web apps: Incorrect error message when a request timed out via dataminer.services [ID 46826]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a request via dataminer.services took 30 seconds or longer and failed with an HTTP 504 timeout, the web apps would incorrectly display the following error message: "You are no longer connected with DataMiner Cloud, please refresh."
+
+From now on, the following message will be displayed instead: "The request timed out because the server did not respond in time."

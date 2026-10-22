@@ -1,5 +1,6 @@
 ---
 uid: General_Main_Release_10.7.0_changes
+description: "Changes in DataMiner General Main Release 10.7.0, including breaking changes, enhancements, and fixes planned for this preview release."
 ---
 
 # General Main Release 10.7.0 – Changes (preview)
@@ -743,14 +744,6 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
-#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
-
-It remains in the enum for backward compatibility, but using it will produce a compiler warning, and it will no longer appear in IntelliSense suggestions. The warning will recommend `Maintenance` instead.
-
 #### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
@@ -803,6 +796,12 @@ The generated package now includes the following files in the `Elastic` folder f
 When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interface failed, up to now, the log included the internal offset added to the notify type.
 
 From now on, the log will show the original notify type without the offset.
+
+#### STaaS: Support for direct-write-only entity types [ID 46711]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
 
 ### Fixes
 
@@ -985,14 +984,6 @@ When requesting eligible resources while ignoring a booking and its service defi
 
 From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
 
-#### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
-
-From now on, configuration updates will be synchronized across the cluster, and new Agents will automatically inherit the existing cluster settings.
-
 #### Spectrum: Measurement point cycle was not loaded when DONT_APPLY_SETTINGS was passed [ID 46630]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
@@ -1007,10 +998,10 @@ From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will loa
 
 Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConnectorManager` and `EdgeNodeLifecycleManager` could fail to initialize. From now on, both managers share a MessageBroker instance from `MessageBrokerCache`, created on the first request instead of during `OnInitialize`. This prevents a temporary NATS outage at startup from leaving the managers uninitialized.
 
-#### Automation: Script execution time could be incorrect in script log files [ID 46749]
+#### CCAEndpoint initialization is now retried after failures [ID 46752]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-In script log files, execution times for scripts running longer than one minute could be incorrect. In addition, the `SLAutomation` log file did not include the library name when it logged the start or completion of script library compilation.
+If initialization of `CCAEndpointManager` or `CCAEndpointHandler` fails, DataMiner will now keep retrying.
 
-From now on, the script log file will report the correct total execution time, and the `SLAutomation` log file will now include the library name in these messages.
+The retry scheduler will increase the delay between attempts up to a maximum of 60 seconds.

@@ -63,7 +63,7 @@ This could be the case if IIS was installed after the .NET framework. If these t
    > [!NOTE]
    > In this path, "1.1.4322" represents the version number of the .NET Framework that you installed on your server.
 
-For more information, see <http://support.microsoft.com/kb/306005/>.
+More information used to be available in the now retired Microsoft KB article 306005 named "How to repair IIS mapping after you remove and reinstall IIS".
 
 ## What do I do when I get a Dashboards error saying that the directory name is not valid?
 
@@ -89,7 +89,7 @@ If so, do the following:
 > [!NOTE]
 > If the error message persists, restart the computer.
 
-For more information, see <http://support.microsoft.com/kb/825791>.
+More information used to be available in the now retired Microsoft KB article 825791.
 
 ## What do I do if I have backup problems on a 64-bit OS?
 
