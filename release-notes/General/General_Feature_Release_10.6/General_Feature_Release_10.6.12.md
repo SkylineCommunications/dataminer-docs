@@ -41,7 +41,13 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*No new features have been added yet.*
+### New BPA test: DataMiner Agent Versions [ID 46808]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+A new BPA test, *DataMiner Agent Versions*, now runs daily to check whether all DataMiner Agents in the cluster are running the same DataMiner version. The check also includes offline Failover Agents.
+
+The test fails if it detects different versions. If the information required for the check is missing or incomplete, the result is inconclusive. In both cases, the output includes details.
 
 ## Changes
 

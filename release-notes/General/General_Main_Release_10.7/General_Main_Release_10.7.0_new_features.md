@@ -1,5 +1,6 @@
 ---
 uid: General_Main_Release_10.7.0_new_features
+description: "New features in DataMiner General Main Release 10.7.0, including capabilities and BPA tests planned for this preview release."
 ---
 
 # General Main Release 10.7.0 – New features - Preview
@@ -519,3 +520,11 @@ This will especially improve synchronization in shared sessions, keeping measure
 The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
 
 This request requires a CloudGateway version that supports it.
+
+### New BPA test: DataMiner Agent Versions [ID 46808]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+A new BPA test, *DataMiner Agent Versions*, now runs daily to check whether all DataMiner Agents in the cluster are running the same DataMiner version. The check also includes offline Failover Agents.
+
+The test fails if it detects different versions. If the information required for the check is missing or incomplete, the result is inconclusive. In both cases, the output includes details.
