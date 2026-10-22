@@ -38,3 +38,6 @@ Example: If your video server hosts thumbnails at `http://videoserver/thumbnails
 
 > [!CAUTION]
 > Setting up a proxy could create a weakness in the network security, giving users from the public network access to resources on the private network. Use this with extreme caution.
+
+> [!TIP]
+> For videos of type HLS, refer to [Video streaming with proxy](uid:Video_streaming_with_proxy).
