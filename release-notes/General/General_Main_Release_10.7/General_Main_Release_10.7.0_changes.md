@@ -803,6 +803,19 @@ From now on, the log will show the original notify type without the offset.
 
 DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
 
+#### Automation: Clearer error messages when saving scripts [ID 46713]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Error messages returned when saving an automation script now provide more details about what went wrong. For example, when you import a script in DataMiner Cube and a dummy references an unavailable protocol or protocol version, the error message will now identify the dummy, protocol, and version instead of showing a generic error.
+
+If you use `SaveAutomationScriptMessage` or `SaveAutomationScriptXmlMessage`, save errors will now be returned in the following response fields instead of a generic `TextMessage` containing a `DataMinerException` string:
+
+- `SaveAutomationScriptResponse.FailedMessages` for `SaveAutomationScriptMessage`.
+- `SaveAutomationScriptXmlResponse.SaveResponse.FailedMessages` for `SaveAutomationScriptXmlMessage`.
+
+The script save behavior itself has not changed.
+
 #### TCP server ports: Multiple elements can now receive data from the same allowed IP address [ID 46784]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
