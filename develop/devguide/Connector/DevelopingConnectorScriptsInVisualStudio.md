@@ -18,6 +18,8 @@ Make sure the following are available:
 - A 64-bit Python 3.14 installation.
 - A DataMiner connector solution.
 
+Install the latest Python 3.14 patch release from the [Python downloads](https://www.python.org/downloads/) page. Do not install Python 3.15 for the connector script project; the connector runtime only supports Python 3.14.
+
 ## Creating a connector script project
 
 To add a Python connector script to a connector solution:
