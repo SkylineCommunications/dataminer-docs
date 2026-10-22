@@ -521,6 +521,33 @@ The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve inf
 
 This request requires a CloudGateway version that supports it.
 
+### Interactive Automation scripts: New WebUILayout property [ID 46602]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+From now on, you can select the web UI layout for each dialog in an interactive Automation script using the `UIBuilder.WebUILayout` property.
+
+For example:
+
+```csharp
+var uiBuilder = new UIBuilder
+{
+    WebUILayout = WebUILayout.Grid
+};
+```
+
+The following values are supported:
+
+- `Default` and `Table`: Components are arranged in a table. TAB navigation proceeds from left to right across each row before moving to the next row.
+- `Grid`: Selects a CSS Grid layout that keeps visual placement independent of keyboard navigation. The order in which blocks are added to the `UIBuilder` determines the TAB order. To navigate through one column before continuing to the next, add the blocks from top to bottom in the first column, followed by the blocks in the next column.
+
+If you do not set this property, `Default` is used, preserving the existing table layout and navigation behavior. Existing scripts therefore continue to behave as before.
+
+This property does not change the behavior of existing grid definitions or component position and span properties.
+
+> [!NOTE]
+> Support for the `Grid` layout in the DataMiner web apps will be introduced separately.
+
 ### New BPA test: DataMiner Agent Versions [ID 46808]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
