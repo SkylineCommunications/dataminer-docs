@@ -301,6 +301,7 @@ Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConn
 
 #### DataMiner services could fail to load during DataMiner startup [ID 46773]
 
-<!-- MR TBD - FR 10.6.11 [CU0] -->
+<!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
+<!-- Not added to MR 10.7.0 - Introduced by RNs 46061 and 46134 -->
 
 Since DataMiner Feature Release 10.6.10, in some cases, DataMiner services could fail to load during DataMiner startup.
