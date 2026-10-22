@@ -1,5 +1,6 @@
 ---
 uid: Validate_Connectors
+description: "Find out how the Validate Connectors prerequisite check scans for connectors that are incompatible with the DataMiner version the DMA is being upgraded to."
 ---
 
 # Validate Connectors
