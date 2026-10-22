@@ -203,6 +203,14 @@ When you loaded a preset containing a threshold in a Spectrum component, in some
 
 The threshold will now be displayed when the preset is loaded.
 
+#### Spectrum component would remain blank after an element restart [ID 46646]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you restarted an element while a Spectrum component was open, the component would remain blank because it did not create a new session.
+
+From now on, the Spectrum component will create a new session when the element is restarted.
+
 #### System Center - Agents: Migration window could remain open after an element export failed [ID 46657]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
