@@ -1,5 +1,6 @@
 ---
 uid: General_configuration
+description: "Explore DataMiner general configuration FAQs to synchronize time with SNTP, manage Agent restarts, and troubleshoot connection issues."
 ---
 
 # Frequently asked questions about general configuration

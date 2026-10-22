@@ -1,5 +1,6 @@
 ---
 uid: FAQs_Pricing
+description: "Explore DataMiner pricing FAQs to compare the commercial models, review the deployment options, and learn how to buy and use credits."
 ---
 
 # Pricing
