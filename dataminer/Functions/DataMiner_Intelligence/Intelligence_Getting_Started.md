@@ -20,9 +20,9 @@ For the best results, we recommend using the latest available DataMiner version.
 
 1. Make sure your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. Make sure the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM#installation) is installed.
+1. Make sure the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is installed.
 
-1. [Enable the DataMiner Assistant app](xref:Intelligence_Assistant_app#accessing-the-assistant-app).
+1. [Enable the DataMiner Assistant app](xref:Intelligence_Assistant_app).
 
    For more information on the app and its user interface, see [DataMiner Assistant app](xref:Intelligence_Assistant_app).
 

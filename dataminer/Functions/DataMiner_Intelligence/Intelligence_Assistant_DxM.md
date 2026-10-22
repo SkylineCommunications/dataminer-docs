@@ -48,22 +48,11 @@ For DaaS systems running DataMiner 10.6 or newer, no installation is needed. The
 
 ### On-premises systems
 
-For DataMiner versions prior to 10.6, DataMiner Assistant is not included in the DataMiner upgrade packages and [needs to be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
-
-Starting with DataMiner 10.6, local DataMiner installers include the DataMiner Assistant DxM. This describes installer availability, not a minimum supported DataMiner version. To install it, run the DataMiner Assistant MSI installer from the `C:\Skyline DataMiner\Tools\ModuleInstallers\Web` folder on the DataMiner Agent.
-
-> [!NOTE]
-> Only use the MSI installer for the initial installation of the DataMiner Assistant DxM. Do not run it again for updates. Once the DxM has been installed, it is upgraded automatically when you install DataMiner upgrades.
+For on-premises installation and getting-started instructions, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 ## Upgrading
 
 Once DataMiner Assistant has been deployed, it is upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
-
-To upgrade to version 2.0.0 (which involves a name change of the DxM, as previously it was called "Copilot"), you will need to install DataMiner Assistant manually, even if the Copilot DxM was already installed. After that, automatic upgrades will resume.
-
-## Feature availability
-
-Some user-facing capabilities may not be available by default. To request access to preview features, contact [ai@skyline.be](mailto:ai@skyline.be). If you already have access but cannot see a capability, contact your DataMiner administrator.
 
 ## Logging
 

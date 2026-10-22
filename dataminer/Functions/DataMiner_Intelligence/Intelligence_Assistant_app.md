@@ -19,7 +19,7 @@ When this preview feature has been enabled, you can access the Assistant app via
 Alternatively, the app is also available from Microsoft Teams or Microsoft Copilot. See [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
 
 > [!NOTE]
-> To enable the Assistant app in preview in your DataMiner System, contact [ai@skyline.be](mailto:ai@skyline.be). Once the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is running, an administrator also has to enable the `AssistantOptions.ShowUserInterface` [feature flag](xref:Intelligence_Assistant_DxM#feature-flags).
+> To enable the Assistant app in preview in your DataMiner System, contact [ai@skyline.be](mailto:ai@skyline.be).
 
 ## Assistant app user interface
 
@@ -28,6 +28,9 @@ When you open the app, a welcome screen is displayed with the following elements
 ![Assistant app welcome screen, including suggestion cards, agent selector, model selector, and chat input box](~/dataminer/images/Assistant.png)
 
 - **Left sidebar**: Allows you to start a new session at any time by clicking *+ New session*. Below that, you can access your sessions, [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools).
+
+  > [!NOTE]
+  > The *Agents* button will only be visible in the sidebar if [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) have been made available in your DataMiner System.
 
 - **Header bar**: The header bar is similar to other native DataMiner apps, with a button to return to the landing page on the left, and a user icon on the right. Clicking the user icon opens a menu with the following options:
 
@@ -50,16 +53,6 @@ When you open the app, a welcome screen is displayed with the following elements
   - **Model selector**: In the lower-right corner, you can choose which model answers your question (e.g., GPT-5.6 Luna). The last selected model is remembered across sessions.
 
   - **Speech-to-text**: A microphone button next to the chat input that allows you to use speech-to-text for entering your questions.
-
-## Managing agents, skills, and tools
-
-The left sidebar of the Assistant app also gives access to the pages where you can manage [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools):
-
-- **Agents**: Only visible if specialized agents have been made available in your DataMiner System.
-- **Skills**: Always visible.
-- **Tools**: Always visible.
-
-Everyone can view the items on these pages, but creating or editing them requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.
 
 ## Starting a chat via URL parameters
 
@@ -85,7 +78,3 @@ https://[DMA]/root/assistant?agentId=a3e1c2d4-5f6b-4a7e-8c9d-1b2f3e4a5c6d&reason
 > - Selecting a value via a URL parameter is equivalent to selecting it in the user interface.
 > - If a parameter is missing or invalid, or refers to an agent, model, or reasoning level that is not available, the app falls back to its default for that option.
 > - Parameter values are case-sensitive. For example, use `reasoningLevel=High` and not `reasoningLevel=high`.
-
-## Checking the version
-
-To check the version of the DataMiner Assistant DxM, click the user icon in the top-right corner of the DataMiner web UI and select *About*. The window lists the versions of all components, including the *Assistant*. If the DataMiner Assistant DxM is not installed or not enabled, *Not installed* is shown.

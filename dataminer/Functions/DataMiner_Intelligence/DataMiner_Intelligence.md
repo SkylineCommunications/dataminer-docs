@@ -42,6 +42,8 @@ You can interact with the agents through the following DataMiner Assistant chat 
 - The [DataMiner Assistant app](xref:Intelligence_Assistant_app), which is integrated within DataMiner and available from the DataMiner landing page.
 - The [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365), which gives you access to the agents from Microsoft Teams or Microsoft Copilot.
 
+In addition to chat interaction, it will soon be possible to trigger DataMiner Intelligence from DataMiner Automation. This will allow you to launch agentic workflows from any automated workflow, for example when a new alarm is generated.
+
 ## Getting started
 
 DataMiner Intelligence requires a [connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and relies on two components that each need to be enabled separately:
