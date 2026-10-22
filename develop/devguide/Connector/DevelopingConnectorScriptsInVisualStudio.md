@@ -25,10 +25,10 @@ Install the latest Python 3.14 patch release from the [Python downloads](https:/
 To add a Python connector script to a connector solution:
 
 1. Open the connector solution in Visual Studio.
-1. In Solution Explorer, right-click the **Connector Scripts** solution folder.
+1. In Solution Explorer, right-click the **Connector Scripts** solution folder, create it first if it doesn't exist.
 1. Select **Add** > **New Project**.
 1. Search for and select **DataMiner Connector Script**.
-1. Enter a project name, for example `ConnectorScript_1`, and select **Create**.
+1. Enter a project name that follows the template `ConnectorScript_{n}` (for example `ConnectorScript_1`), and select **Create**.
 
 The **Connector Scripts** solution folder is included in new connector solutions. If you are working with an older solution, create the solution folder manually before you add the project.
 
