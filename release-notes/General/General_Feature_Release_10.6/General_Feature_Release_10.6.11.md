@@ -298,3 +298,9 @@ Up to now, when the APIGateway module was shut down, it would stop working unexp
 <!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
 
 Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConnectorManager` and `EdgeNodeLifecycleManager` could fail to initialize. From now on, both managers share a MessageBroker instance from `MessageBrokerCache`, created on the first request instead of during `OnInitialize`. This prevents a temporary NATS outage at startup from leaving the managers uninitialized.
+
+#### DataMiner services could fail to load during DataMiner startup [ID 46773]
+
+<!-- MR TBD - FR 10.6.11 [CU0] -->
+
+Since DataMiner Feature Release 10.6.10, in some cases, DataMiner services could fail to load during DataMiner startup.
