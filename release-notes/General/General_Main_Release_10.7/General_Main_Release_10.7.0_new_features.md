@@ -543,8 +543,6 @@ The following values are supported:
 
 If you do not set this property, `Default` is used, preserving the existing table layout and navigation behavior. Existing scripts therefore continue to behave as before.
 
-This property does not change the behavior of existing grid definitions or component position and span properties.
-
 > [!NOTE]
 > Support for the `Grid` layout in the DataMiner web apps will be introduced separately.
 
