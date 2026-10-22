@@ -744,6 +744,16 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
+#### SLScripting executable and dependencies now stored in a separate folder [ID 46346]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+The *SLScripting.exe* executable and its dependencies are now stored in `C:\Skyline DataMiner\Files\SLScripting\x86` instead of `C:\Skyline DataMiner\Files`.
+
+This reduces the risk of QActions loading assemblies from `C:\Skyline DataMiner\Files` instead of using the assemblies provided by their specific NuGet dependencies.
+
+If an assembly cannot be found, `C:\Skyline DataMiner\Files` is still used as a fallback folder.
+
 #### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
@@ -802,6 +812,24 @@ From now on, the log will show the original notify type without the offset.
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
 DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
+
+#### Automation: Clearer error messages when saving scripts [ID 46713]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Error messages returned when saving an automation script now provide more details about what went wrong.
+
+For example, when you import a script in DataMiner Cube and a dummy references an unavailable protocol or protocol version, the error message will now identify the dummy, protocol, and version instead of showing a generic error.
+
+#### TCP server ports: Multiple elements can now receive data from the same allowed IP address [ID 46784]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When multiple elements listen on the same TCP server port and explicitly list a client's IP address in their allowed IP addresses, all of those elements will now receive the data sent by that client. Previously, only one element would receive the data.
+
+Only one element can still respond to the client. This enhancement is intended for scenarios where multiple elements need to receive data without responding.
+
+If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
 
 ### Fixes
 

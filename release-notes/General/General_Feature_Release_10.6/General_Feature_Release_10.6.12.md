@@ -41,7 +41,38 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*No new features have been added yet.*
+### Interactive Automation scripts: New WebUILayout property [ID 46602]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+From now on, you can select the web UI layout for each dialog in an interactive Automation script using the `UIBuilder.WebUILayout` property.
+
+For example:
+
+```csharp
+var uiBuilder = new UIBuilder
+{
+    WebUILayout = WebUILayout.Grid
+};
+```
+
+The following values are supported:
+
+- `Default` and `Table`: Components are arranged in a table. TAB navigation proceeds from left to right across each row before moving to the next row.
+- `Grid`: Selects a CSS Grid layout that keeps visual placement independent of keyboard navigation. The order in which blocks are added to the `UIBuilder` determines the TAB order. To navigate through one column before continuing to the next, add the blocks from top to bottom in the first column, followed by the blocks in the next column.
+
+If you do not set this property, `Default` is used, preserving the existing table layout and navigation behavior. Existing scripts therefore continue to behave as before.
+
+> [!NOTE]
+> Support for the `Grid` layout in the DataMiner web apps will be introduced separately.
+
+### New BPA test: DataMiner Agent Versions [ID 46808]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+A new BPA test, *DataMiner Agent Versions*, now runs daily to check whether all DataMiner Agents in the cluster are running the same DataMiner version. The check also includes offline Failover Agents.
+
+The test fails if it detects different versions. If the information required for the check is missing or incomplete, the result is inconclusive. In both cases, the output includes details.
 
 ## Changes
 
@@ -54,6 +85,16 @@ Before you upgrade to this DataMiner version:
 When you create a backup without specifying a description, DataMiner will now generates one automatically.
 
 The description will include the name of the predefined backup setting and the DataMiner ID, matching the behavior of the DataMiner Taskbar Utility.
+
+#### SLScripting executable and dependencies now stored in a separate folder [ID 46346]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+The *SLScripting.exe* executable and its dependencies are now stored in `C:\Skyline DataMiner\Files\SLScripting\x86` instead of `C:\Skyline DataMiner\Files`.
+
+This reduces the risk of QActions loading assemblies from `C:\Skyline DataMiner\Files` instead of using the assemblies provided by their specific NuGet dependencies.
+
+If an assembly cannot be found, `C:\Skyline DataMiner\Files` is still used as a fallback folder.
 
 #### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
 
@@ -127,6 +168,14 @@ From now on, the log will show the original notify type without the offset.
 
 DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
 
+#### Automation: Clearer error messages when saving scripts [ID 46713]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Error messages returned when saving an automation script now provide more details about what went wrong.
+
+For example, when you import a script in DataMiner Cube and a dummy references an unavailable protocol or protocol version, the error message will now identify the dummy, protocol, and version instead of showing a generic error.
+
 #### SLLogCollector packages now include the configuration files of ResourceManager, ProtocolFunctionManager, and Scheduler [ID 46753]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -136,6 +185,16 @@ SLLogCollector packages now include the following configuration files:
 - `C:\Skyline DataMiner\ResourceManager\Config.xml`
 - `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
 - `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
+
+#### TCP server ports: Multiple elements can now receive data from the same allowed IP address [ID 46784]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When multiple elements listen on the same TCP server port and explicitly list a client's IP address in their allowed IP addresses, all of those elements will now receive the data sent by that client. Previously, only one element would receive the data.
+
+Only one element can still respond to the client. This enhancement is intended for scenarios where multiple elements need to receive data without responding.
+
+If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
 
 ### Fixes
 
