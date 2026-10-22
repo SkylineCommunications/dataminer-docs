@@ -807,14 +807,9 @@ DataGateway can now handle STaaS entity types configured for direct writes only,
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-Error messages returned when saving an automation script now provide more details about what went wrong. For example, when you import a script in DataMiner Cube and a dummy references an unavailable protocol or protocol version, the error message will now identify the dummy, protocol, and version instead of showing a generic error.
+Error messages returned when saving an automation script now provide more details about what went wrong.
 
-If you use `SaveAutomationScriptMessage` or `SaveAutomationScriptXmlMessage`, save errors will now be returned in the following response fields instead of a generic `TextMessage` containing a `DataMinerException` string:
-
-- `SaveAutomationScriptResponse.FailedMessages` for `SaveAutomationScriptMessage`.
-- `SaveAutomationScriptXmlResponse.SaveResponse.FailedMessages` for `SaveAutomationScriptXmlMessage`.
-
-The script save behavior itself has not changed.
+For example, when you import a script in DataMiner Cube and a dummy references an unavailable protocol or protocol version, the error message will now identify the dummy, protocol, and version instead of showing a generic error.
 
 #### TCP server ports: Multiple elements can now receive data from the same allowed IP address [ID 46784]
 
