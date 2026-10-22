@@ -67,6 +67,11 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
 1. **Legacy NATS only**:
 
+   1. If the file *ClusterEndpoints.json* exists in the folder `C:\Skyline DataMiner\Configurations\`, open it, replace the old IP address with the new one wherever it occurs, and save the file.
+
+      > [!NOTE]
+      > Legacy NATS does not use this file at runtime, but it must contain the correct IP addresses for a future migration to BrokerGateway.
+
    1. Open the file *SLCloud.xml*, located in the folder `C:\Skyline DataMiner\`.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
@@ -187,6 +192,11 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. **Legacy NATS only**: perform the following steps on the DMA of which you have changed the IP address.
 
+   1. If the file *ClusterEndpoints.json* exists in the folder `C:\Skyline DataMiner\Configurations\`, open it, replace the old IP address with the new one wherever it occurs, and save the file.
+
+      > [!NOTE]
+      > Legacy NATS does not use this file at runtime, but it must contain the correct IP addresses for a future migration to BrokerGateway.
+
    1. Open the file *SLCloud.xml*, located in the folder `C:\Skyline DataMiner\`.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
@@ -295,6 +305,10 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 For a Failover DMA within a cluster that either uses [Storage as a Service (STaaS)](xref:STaaS) or makes use of a [Cassandra database per DMA](xref:Configuring_storage_per_DMA#cassandra-database-per-dma):
 
+1. In DataMiner Cube, go to *System Center* > *Agents* > *Failover*, open the Failover settings of the pair and, on the *Type* tab, select *Manual*. See [Advanced Failover options](xref:Advanced_Failover_options).
+
+   This prevents both DMAs from going online at the same time while the IP addresses are being changed.
+
 1. Stop the DataMiner software on **both** Failover DMAs.
 
 1. Change the IP address of the DMA server in Windows.
@@ -345,6 +359,11 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
       1. Restart the elasticsearch-service-x64 service.
 
 1. **Legacy NATS only**: perform the following steps on the DMA of which you have changed the IP address.
+
+   1. If the file *ClusterEndpoints.json* exists in the folder `C:\Skyline DataMiner\Configurations\`, open it, replace the old IP address with the new one wherever it occurs, and save the file.
+
+      > [!NOTE]
+      > Legacy NATS does not use this file at runtime, but it must contain the correct IP addresses for a future migration to BrokerGateway.
 
    1. Open the file *SLCloud.xml*, located in the folder `C:\Skyline DataMiner\`.
 
@@ -423,6 +442,8 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. Start DataMiner on the DMA with the changed IP address.
 
+   Wait until this DMA is fully started and visible in the cluster before you continue.
+
 1. Start DataMiner on the other Failover DMA. It should start up in offline mode.
 
 1. On the online DMA, go to System Center \> Agents, and remove the old IP address from the list of DMAs in the cluster.
@@ -430,6 +451,8 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 1. Still on the *Agents* page in System Center, make sure the online Failover DMA is selected in the list on the left, and click the *Failover* button in the lower-right corner to check the Failover status. For more information, see [Viewing the current Failover DMA status](xref:Viewing_the_current_Failover_DMA_status).
 
 1. In case the Failover status is not green and there are heartbeat errors, stop DataMiner, and double-check the DMS.xml files of both DMAs to make sure all references to the old IP address have been correctly replaced.
+
+1. If you changed the Failover type to *Manual* earlier, set it back to *Automatic*.
 
 1. **Legacy NATS only**:
 
