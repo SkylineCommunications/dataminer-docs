@@ -240,6 +240,6 @@ Gigabit Ethernet is required for throughput, and low latency is required for eas
 
 #### Operating System
 
-We recommend installing OpenSearch on Linux, preferably using the latest version of Ubuntu LTS. While OpenSearch is compatible with Windows (see [Operating system compatibility](https://opensearch.org/docs/latest/install-and-configure/install-opensearch/index/#operating-system-compatibility)), this setup is not covered in our testing and therefore not recommended.
+For DataMiner deployments, we recommend installing OpenSearch on **Ubuntu LTS**, using a version supported by your OpenSearch release. For limited test and staging environments, the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) runs OpenSearch on Linux through Windows Subsystem for Linux (WSL).
 
 For information on compatibility between specific OpenSearch versions and operating system versions or builds, refer to the official database vendor documentation.
