@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Parity.Value
-description: "Learn how each Value element under Parity specifies a supported parity or SNMPv3 authentication algorithm users can select."
+description: "Use the Value element in a DataMiner protocol to specify an allowed parity value or SNMPv3 authentication algorithm."
 ---
 
 # Value element
@@ -19,8 +19,8 @@ Using one or more *Value* tags, you can specify the different values that users 
 
 > [!NOTE]
 >
-> - The value specified in the DefaultValue tag does not have to be specified in a Value tag.
-> - When no Value tags are specified, users will only be allowed to enter the value specified in the DefaultValue tag.
+> - The value specified in the `DefaultValue` tag does not have to be specified in a `Value` tag.
+> - When no `Value` tags are specified, users will only be allowed to enter the value specified in the `DefaultValue` tag.
 > - For an SNMPv3 connection, this tag can be used to specify the possible authentication algorithms.
 
 ## Examples

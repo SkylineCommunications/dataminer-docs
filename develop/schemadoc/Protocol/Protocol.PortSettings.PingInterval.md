@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.PingInterval
-description: "Learn how the PingInterval element configures the default ping interval and whether users can modify it for an element connection."
+description: "Use the PingInterval element in a DataMiner protocol to configure the default ping interval for a connection and whether users can modify it."
 ---
 
 # PingInterval element

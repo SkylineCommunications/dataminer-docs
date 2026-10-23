@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.PortTypeUDP
-description: "Learn how the PortTypeUDP element configures whether UDP/IP is available as a selectable port type for an element connection."
+description: "Use the PortTypeUDP element in a DataMiner protocol to configure settings related to the UDP/IP port type for a connection."
 ---
 
 # PortTypeUDP element

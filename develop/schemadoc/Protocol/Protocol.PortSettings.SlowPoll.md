@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.SlowPoll
-description: "Learn how the SlowPoll element configures slow polling defaults and whether users can modify them for the main connection."
+description: "Use the SlowPoll element in a DataMiner protocol to configure the default slow polling behavior and its editability for the main connection."
 ---
 
 # SlowPoll element

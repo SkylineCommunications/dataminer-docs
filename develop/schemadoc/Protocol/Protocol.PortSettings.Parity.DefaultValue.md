@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Parity.DefaultValue
-description: "Learn how the DefaultValue element under Parity sets the initial parity or SNMPv3 authentication algorithm for a new element."
+description: "Use the DefaultValue element in a DataMiner protocol to set the default parity or SNMPv3 authentication algorithm for a connection."
 ---
 
 # DefaultValue element

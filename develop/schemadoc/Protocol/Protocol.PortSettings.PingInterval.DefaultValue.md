@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.PingInterval.DefaultValue
-description: "Learn how the DefaultValue element under PingInterval sets the initial ping interval in milliseconds for an element connection."
+description: "Use the DefaultValue element in a DataMiner protocol to set the default ping interval in milliseconds for an element connection."
 ---
 
 # DefaultValue element
@@ -25,6 +25,6 @@ The value must be in the range [1000,300000]. The value should be a multiple of 
 
 ```xml
 <PingInterval>
-	<DefaultValue>10000</DefaultValue>
+   <DefaultValue>10000</DefaultValue>
 </PingInterval>
 ```

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.PortTypeIP
-description: "Learn how the PortTypeIP element configures whether TCP/IP is available as a selectable port type for an element connection."
+description: "Use the PortTypeIP element in a DataMiner protocol to configure settings related to the TCP/IP port type for a connection."
 ---
 
 # PortTypeIP element

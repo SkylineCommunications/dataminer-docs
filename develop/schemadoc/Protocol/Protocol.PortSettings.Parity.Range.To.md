@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Parity.Range.To
-description: "Learn how the To element under Parity Range sets the last parity value available in the allowed range."
+description: "Use the To element in a DataMiner protocol to specify the upper bound of an allowed range of parity values."
 ---
 
 # To element

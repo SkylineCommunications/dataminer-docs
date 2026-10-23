@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.PortTypeSerial
-description: "Learn how the PortTypeSerial element configures whether Serial is available as a selectable port type for an element connection."
+description: "Use the PortTypeSerial element in a DataMiner protocol to configure settings related to the serial port type for a connection."
 ---
 
 # PortTypeSerial element

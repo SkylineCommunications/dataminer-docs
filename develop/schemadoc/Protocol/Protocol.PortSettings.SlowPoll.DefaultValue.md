@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.SlowPoll.DefaultValue
-description: "Learn how the DefaultValue element under SlowPoll sets the timeout count or duration used for slow polling on the main connection."
+description: "Use the DefaultValue element in a DataMiner protocol to set the default timeout count or duration used for slow polling."
 ---
 
 # DefaultValue element
@@ -26,6 +26,6 @@ Contains an integer value.
 
 ```xml
 <SlowPoll>
-	<DefaultValue>30000</DefaultValue>
+   <DefaultValue>30000</DefaultValue>
 </SlowPoll>
 ```

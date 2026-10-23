@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Retries
-description: "Learn how the Retries element configures the maximum request retry count and whether users can modify it for an element connection."
+description: "Use the Retries element in a DataMiner protocol to configure the maximum request retry count for an element connection and whether users can modify it."
 ---
 
 # Retries element

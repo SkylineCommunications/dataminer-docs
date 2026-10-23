@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Parity
-description: "Learn how the Parity element defines default, allowed, and selectable parity settings for a serial or SNMPv3 connection."
+description: "Use the Parity element in a DataMiner protocol to define the default and allowed parity settings for a connection."
 ---
 
 # Parity element

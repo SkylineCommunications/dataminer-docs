@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.SlowPollBase.DefaultValue
-description: "Learn how the DefaultValue element under SlowPollBase selects timeout count or time duration as the basis for slow polling."
+description: "Use the DefaultValue element in a DataMiner protocol to set whether slow polling is based on a timeout count or duration by default."
 ---
 
 # DefaultValue element

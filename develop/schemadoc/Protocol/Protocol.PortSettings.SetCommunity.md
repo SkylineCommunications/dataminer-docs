@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.SetCommunity
-description: "Learn how the SetCommunity element configures the default SNMP set community string or SNMPv3 encryption password and whether users can edit it."
+description: "Use the SetCommunity element in a DataMiner protocol to configure the default value and editability of the SNMP set community string."
 ---
 
 # SetCommunity element
