@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation.LinkTo.ValueMapping
-description: "Learn how the ValueMapping element converts a device protocol value to its corresponding base protocol value in a DataMiner protocol."
+description: "Use the ValueMapping element in a DataMiner protocol to convert a device protocol value to its corresponding base protocol value."
 ---
 
 # ValueMapping element

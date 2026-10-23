@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication.Element-dynamic
-description: "Learn how the dynamic attribute references the parameter holding the DataMiner Agent and element IDs in a DataMiner protocol."
+description: "Use the dynamic attribute in a DataMiner protocol to specify the parameter containing the ID of the element to replicate from."
 ---
 
 # dynamic attribute

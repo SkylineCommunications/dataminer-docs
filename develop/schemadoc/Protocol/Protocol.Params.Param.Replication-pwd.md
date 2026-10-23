@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication-pwd
-description: "Learn how the pwd attribute sets the password used to log on to the DataMiner Agent hosting a replicated element in a DataMiner protocol."
+description: "Use the pwd attribute in a DataMiner protocol to set the password used to log on to the DataMiner Agent hosting the element to replicate from."
 ---
 
 # pwd attribute

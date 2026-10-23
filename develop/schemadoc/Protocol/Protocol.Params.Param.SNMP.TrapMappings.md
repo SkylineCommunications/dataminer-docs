@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapMappings
-description: "Learn how the TrapMappings element defines advanced SNMP trap alarm mappings when the TrapOID mapAlarm attribute is insufficient."
+description: "Use the TrapMappings element in a DataMiner protocol to define advanced SNMP trap alarm mappings when the TrapOID mapAlarm attribute is insufficient."
 ---
 
 # TrapMappings element
@@ -19,7 +19,7 @@ Specifies trap mappings.
 
 ## Remarks
 
-Use this section if the mapAlarm attribute of the Protocol.Params.Param.SNMP.TrapOID tag is too limited. If you want to make more advanced Alarm mappings, add one or more Protocol.Params.Param.SNMP.TrapMappings.TrapMapping elements to this Protocol.Params.Param.SNMP.TrapMappings tag.
+Use this section if the `mapAlarm` attribute of the [Protocol.Params.Param.SNMP.TrapOID](xref:Protocol.Params.Param.SNMP.TrapOID) element is too limited. If you want to make more advanced alarm mappings, add one or more `Protocol.Params.Param.SNMP.TrapMappings.TrapMapping` elements to this `Protocol.Params.Param.SNMP.TrapMappings` element.
 
 > [!NOTE]
-> It is possible to combine the Protocol.Params.Param.SNMP.TrapMappings tag with the mapAlarm attribute of the Protocol.Params.Param.SNMP.TrapOID tag.
+> It is possible to combine the `Protocol.Params.Param.SNMP.TrapMappings` element with the `mapAlarm` attribute of the [Protocol.Params.Param.SNMP.TrapOID](xref:Protocol.Params.Param.SNMP.TrapOID) element.

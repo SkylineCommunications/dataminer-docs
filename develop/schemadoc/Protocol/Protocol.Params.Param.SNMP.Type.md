@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.Type
-description: "Learn how the SNMP Type element selects the SNMP data type for a parameter, including integer, string, OID, and time types."
+description: "Use the Type element in a DataMiner protocol to specify the SNMP data type for a parameter, such as integer, string, OID, or time types."
 ---
 
 # Type element
@@ -8,7 +8,7 @@ description: "Learn how the SNMP Type element selects the SNMP data type for a p
 Specifies the SNMP type.
 
 > [!IMPORTANT]
-> We strongly recommend always specifying an SNMP type on a write parameter. Without the SNMP type, it will fall back to default behavior, which could not be as expected. Numbers will be set with the SNMP type *Integer32*. Text will be set with the SNMP type *OctetString*. A parameter with Protocol.Params.Param.Interprete.RawType defined as *numeric text* is considered to be text and will be set with the SNMP type *OctetString*.
+> We strongly recommend always specifying an SNMP type on a write parameter. Without the SNMP type, it will fall back to default behavior, which could not be as expected. Numbers will be set with the SNMP type `Integer32`. Text will be set with the SNMP type `OctetString`. A parameter with [Protocol.Params.Param.Interprete.RawType](xref:Protocol.Params.Param.Interprete.RawType) defined as `numeric text` is considered to be text and will be set with the SNMP type `OctetString`.
 
 ## Type
 
@@ -22,54 +22,48 @@ Specifies the SNMP type.
 
 One of the following predefined values:
 
-- Counter32
-- Counter64
-- Counter64string
+- `Counter32`
 
-  > [!NOTE]
-  > This type can be used to receive the SNMP counter64 as a string, where the counter64 uses double and may therefore lose definition.<!-- RN 9284 -->
+- `Counter64`
 
-- Gauge32
-- Integer
-- Integer32
-- IpAddress
-- NSAPAddress
-- NULL
-- ObjectID
-- OctetString
+- `Counter64string`: This type can be used to receive the SNMP counter64 as a string, where the counter64 uses double and may therefore lose definition.<!-- RN 9284 -->
 
-  > [!NOTE]
-  > In a read parameter, this type can be used to display ASCII characters when all octets fall within the ASCII range (0x00 - 0x7F). If any octet falls outside this range, all items will be displayed in hex format. For example, if the octets include the hex value "0x4D614D61", this will be displayed as "MaMa" because all octets are ASCII values. However, if the input is the hex value "0x4D61E7E3", this will be displayed as "4D.61.E7.E3" because two octet values fall outside the ASCII range.
+- `Gauge32`
 
-- OctetStringHex
+- `Integer`
 
-  > [!NOTE]
-  > This type can be used when it is necessary to maintain the hex format. For example, a write operation with value "01.02.03.04.05.06" will be sent as "010203040506" instead of the converted ASCII value "303130323033303430353036". Similarly, during a read operation, if the received value is "010203040506", it will be displayed as "01.02.03.04.05.06" in hex format.
+- `Integer32`
 
-- OctetStringASCII
+- `IpAddress`
 
-  > [!NOTE]
-  > This type can be used to retrieve extended ASCII characters such as `é`, `è`, `à`, and more. In a read parameter, it displays the incoming octet values according to the system's ANSI code page, which is determined by the Windows system locale and may differ between machines. To prevent misinterpreted characters, make sure the ANSI code page matches that of the SNMP device.
-  >
-  > For example, if the device sends the hex value `0x4D61E7E3`, this represents `Maçã` under the Western European (Windows-1252) code page, where `0xE7` and `0xE3` map to `ç` and `ã`. However, if the Windows system locale is set to a Cyrillic (Windows-1251) code page, those same byte values would display as `Maзг`.
-  >
-  > By contrast, if `Maçã` were actually encoded in UTF-8 `0x4D61C3A7C3A3` by the device, reading it as `OctetStringASCII` (using the system ANSI code page, e.g., Windows-1252) would produce `MaÃ§Ãã`. In this scenario, use `OctetStringUTF8` instead.
-  >
-  > SNMP itself treats these values purely as octets and provides no context about character encoding. It is the connector's responsibility to interpret those bytes correctly.
-  >
-  > For more information, refer to [Code Page Identifiers](https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers) and [Unicode and Character Sets](https://learn.microsoft.com/en-us/windows/win32/intl/unicode-and-character-sets).
+- `NSAPAddress`
 
-- OctetStringUTF8
+- `NULL`
 
-  > [!NOTE]
-  > This type can be used to retrieve Unicode characters. In a read parameter, it displays the incoming octet values according to the UTF-8 Unicode character set. For example, if the hex value "0x4D61C3A7C3A3" is received, it will be displayed as "Maçã".
-  
-- OctetStringDecimal
-- OID
-- Opaque
+- `ObjectID`
 
-  > [!NOTE]
-  > When used in a trap, it is processed the same way as the type OctetString.<!-- RN 7249 -->
+- `OctetString`: In a read parameter, this type can be used to display ASCII characters when all octets fall within the ASCII range (0x00 - 0x7F). If any octet falls outside this range, all items will be displayed in hex format. For example, if the octets include the hex value "0x4D614D61", this will be displayed as "MaMa" because all octets are ASCII values. However, if the input is the hex value "0x4D61E7E3", this will be displayed as "4D.61.E7.E3" because two octet values fall outside the ASCII range.
 
-- TimeTicks
-- UInteger32
+- `OctetStringHex`: This type can be used when it is necessary to maintain the hex format. For example, a write operation with value "01.02.03.04.05.06" will be sent as "010203040506" instead of the converted ASCII value "303130323033303430353036". Similarly, during a read operation, if the received value is "010203040506", it will be displayed as "01.02.03.04.05.06" in hex format.
+
+- `OctetStringASCII`: This type can be used to retrieve extended ASCII characters such as `é`, `è`, `à`, and more. In a read parameter, it displays the incoming octet values according to the system's ANSI code page, which is determined by the Windows system locale and may differ between machines. To prevent misinterpreted characters, make sure the ANSI code page matches that of the SNMP device.
+
+  For example, if the device sends the hex value `0x4D61E7E3`, this represents `Maçã` under the Western European (Windows-1252) code page, where `0xE7` and `0xE3` map to `ç` and `ã`. However, if the Windows system locale is set to a Cyrillic (Windows-1251) code page, those same byte values would display as `Maзг`.
+
+  By contrast, if `Maçã` were actually encoded in UTF-8 `0x4D61C3A7C3A3` by the device, reading it as `OctetStringASCII` (using the system ANSI code page, e.g., Windows-1252) would produce `MaÃ§Ãã`. In this scenario, use `OctetStringUTF8` instead.
+
+  SNMP itself treats these values purely as octets and provides no context about character encoding. It is the connector's responsibility to interpret those bytes correctly.
+
+  For more information, refer to [Code Page Identifiers](https://learn.microsoft.com/en-us/windows/win32/intl/code-page-identifiers) and [Unicode and Character Sets](https://learn.microsoft.com/en-us/windows/win32/intl/unicode-and-character-sets).
+
+- `OctetStringUTF8`: This type can be used to retrieve Unicode characters. In a read parameter, it displays the incoming octet values according to the UTF-8 Unicode character set. For example, if the hex value "0x4D61C3A7C3A3" is received, it will be displayed as "Maçã".
+
+- `OctetStringDecimal`
+
+- `OID`
+
+- `Opaque`: When used in a trap, this is processed the same way as the type OctetString.<!-- RN 7249 -->
+
+- `TimeTicks`
+
+- `UInteger32`

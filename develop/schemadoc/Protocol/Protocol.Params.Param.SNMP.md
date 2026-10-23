@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP
-description: "Learn how the SNMP element configures parameter polling, trap capture, response handling, value scaling, and SNMP data types."
+description: "Use the SNMP element in a DataMiner protocol to configure SNMP-related functionality for a parameter, including polling, traps, and data types."
 ---
 
 # SNMP element

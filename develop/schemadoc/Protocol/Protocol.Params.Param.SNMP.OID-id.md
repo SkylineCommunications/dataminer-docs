@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.OID-id
-description: "Learn how the id attribute references a parameter that supplies a partial OID or a subtable instance filter in a DataMiner protocol."
+description: "Use the id attribute in a DataMiner protocol to reference a parameter that supplies a partial OID or a subtable instance filter."
 ---
 
 # id attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapOID
-description: "Learn how the TrapOID element identifies SNMP traps to capture and configures binding filters, alarm mapping, and parameter updates."
+description: "Use the TrapOID element in a DataMiner protocol to identify SNMP traps to capture and configure binding filters, alarms, and parameter updates."
 ---
 
 # TrapOID element

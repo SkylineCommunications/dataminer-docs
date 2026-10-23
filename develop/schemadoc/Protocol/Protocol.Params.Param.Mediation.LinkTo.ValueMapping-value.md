@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation.LinkTo.ValueMapping-value
-description: "Learn how the value attribute sets the corresponding value in the current protocol for a mediation mapping in a DataMiner protocol."
+description: "Use the value attribute in a DataMiner protocol to set the corresponding value in the current protocol for a mediation mapping."
 ---
 
 # value attribute

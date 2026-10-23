@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapOID-setBindings
-description: "Learn how the setBindings attribute copies SNMP trap binding values or OIDs to parameters, including dynamic table cells."
+description: "Use the setBindings attribute in a DataMiner protocol to copy SNMP trap binding values or OIDs to parameters, including dynamic table cells."
 ---
 
 # setBindings attribute

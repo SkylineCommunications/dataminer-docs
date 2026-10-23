@@ -17,7 +17,7 @@ string
 
 ## Remarks
 
-In the options attribute, you can specify a number of options (separated by semicolons) depending on the measurement type. 
+In the options attribute, you can specify a number of options (separated by semicolons) depending on the measurement type.
 
 ### Options for measurement type "analog"
 
@@ -27,7 +27,7 @@ Possible options for measurement type "analog":
 
 Stretches the analog parameter vertically.
 
-#### vertificationDeviation=
+#### verificationDeviation=
 
 Allows you to specify a deviation on the command to be verified using Command Execution Verification (CEV or Confirm Sets):
 

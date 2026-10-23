@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation.LinkTo-ops
-description: "Learn how the ops attribute applies semicolon-separated conversion operations between linked protocol parameters in a DataMiner protocol."
+description: "Use the ops attribute in a DataMiner protocol to apply semicolon-separated conversion operations between linked protocol parameters."
 ---
 
 # ops attribute

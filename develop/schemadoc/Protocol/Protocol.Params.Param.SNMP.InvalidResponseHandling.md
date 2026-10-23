@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.InvalidResponseHandling
-description: "Learn how the InvalidResponseHandling element sets the SNMP response strategy for an infinite table polling loop in a DataMiner protocol."
+description: "Use the InvalidResponseHandling element in a DataMiner protocol to configure the response handling strategy for invalid SNMP responses."
 ---
 
 # InvalidResponseHandling element

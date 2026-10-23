@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapMappings.TrapMapping-bindingMatch
-description: "Learn how the bindingMatch attribute matches an SNMP trap binding number and value list, with wildcard support in a DataMiner protocol."
+description: "Use the bindingMatch attribute in a DataMiner protocol to match an SNMP trap binding number against a list of values, with wildcard support."
 ---
 
 # bindingMatch attribute
