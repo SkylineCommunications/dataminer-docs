@@ -4,9 +4,9 @@ uid: Allowed_paths_connection_DataMiner_proxy
 
 # Allowed paths in case of connection via DataMiner proxy
 
-If a client does not have direct access to the video server, it can request a video feed via the DataMiner Agent acting as a proxy server.
+If a client does not have direct access to the video server, it can request a thumbnail image via the DataMiner Agent acting as a proxy server, if the URL uses `?type=Generic%20Images`.
 
-When a video feed is requested via proxy, the list of allowed URLs will be restricted for security reasons.
+When a thumbnail image is requested via proxy, the list of allowed URLs will be restricted for security reasons.
 
 By default, the following URLs are allowed:
 
@@ -36,3 +36,6 @@ Example: If your video server hosts thumbnails at `http://videoserver/thumbnails
 
 > [!CAUTION]
 > Setting up a proxy could create a weakness in the network security, giving users from the public network access to resources on the private network. Use this with extreme caution.
+
+> [!TIP]
+> For videos of type HLS, refer to [Video streaming with proxy](uid:Video_streaming_with_proxy).
