@@ -1,6 +1,6 @@
 ---
 uid: FAQs
-description: "Browse DataMiner frequently asked questions for answers about pricing, support, connectors, configuration, automation, dashboards, and low-code apps."
+description: "Browse frequently asked questions about DataMiner for answers about pricing, support, connectors, configuration, automation, dashboards, and low-code apps."
 ---
 
 # Frequently asked questions

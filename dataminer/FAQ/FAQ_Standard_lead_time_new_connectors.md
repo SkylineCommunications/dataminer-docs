@@ -1,6 +1,6 @@
 ---
 uid: FAQ_Standard_lead_time_new_connectors
-description: "Plan new connector projects around the 6 to 9 week average lead time, including testing and validation, and account for complexity and pipeline capacity."
+description: "Plan new connector projects around the 6- to 9-week average lead time, including testing and validation, and account for complexity and pipeline capacity."
 ---
 
 # What is the standard lead time for new connectors?
