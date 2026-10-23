@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Type-dynamicSnmpGet
-description: "Learn how the dynamicSnmpGet attribute dynamically polls an SNMP cell, row, column, or table and schedules the request."
+description: "Use the dynamicSnmpGet attribute in a DataMiner protocol to dynamically poll an SNMP cell, row, column, or table and schedule the request."
 ---
 
 # dynamicSnmpGet attribute

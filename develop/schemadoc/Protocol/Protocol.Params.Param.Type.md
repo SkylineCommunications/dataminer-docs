@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Type
-description: "Learn how the Type element selects a parameter type and how each supported type behaves in a DataMiner connector."
+description: "Learn how the Type element selects a parameter type and how each supported type behaves in a DataMiner protocol."
 ---
 
 # Type element
@@ -19,13 +19,13 @@ Specifies the parameter type.
 
 |Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|Type|Required|Description|
 |--- |--- |--- |--- |
-|[alarmRegistration](xref:Protocol.Params.Param.Type-alarmRegistration)|string||Allows to trigger a QAction when specific parameters go into alarm.|
+|[alarmRegistration](xref:Protocol.Params.Param.Type-alarmRegistration)|string||Allows you to trigger a QAction when specific parameters go into alarm.|
 |[distribution](xref:Protocol.Params.Param.Type-distribution)|string||Used in situations in which elements of a certain type are linked to each other as parent and child.|
 |[dynamicSnmpGet](xref:Protocol.Params.Param.Type-dynamicSnmpGet)|string||Specifies what to retrieve (cell, row, etc.) and the way this request is added to the group execution queue.|
-|[id](xref:Protocol.Params.Param.Type-id)|string||If Type is “read bit” or “response”, this attribute specifies the ID of the parameter or response to which to refer, respectively.|
+|[id](xref:Protocol.Params.Param.Type-id)|string||If Type is "read bit" or "response", this attribute specifies the ID of the parameter or response to which to refer, respectively.|
 |[options](xref:Protocol.Params.Param.Type-options)|string||Specifies a number of options.|
 |[relativeTimers](xref:Protocol.Params.Param.Type-relativeTimers)|[EnumProtocolTypeRelativeTimers](xref:Protocol-EnumProtocolTypeRelativeTimers)|||
-|[times](xref:Protocol.Params.Param.Type-times)|unsignedInt||If Type is “trailer”, this attribute indicates how many times the trailer is allowed to occur before it is considered to be the trailer.|
+|[times](xref:Protocol.Params.Param.Type-times)|unsignedInt||If Type is "trailer", this attribute indicates how many times the trailer is allowed to occur before it is considered to be the trailer.|
 |[virtual](xref:Protocol.Params.Param.Type-virtual)|string||Configures which virtual element connections are allowed to and from elements based on the protocol you are creating.|
 
 ## Remarks

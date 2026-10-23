@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Type-id
-description: "Learn how the Type id attribute identifies the referenced parameter for read bit types or the referenced response for response types."
+description: "Use the Type id attribute in a DataMiner protocol to identify the referenced parameter for read bit types or the referenced response for response types."
 ---
 
 # id attribute

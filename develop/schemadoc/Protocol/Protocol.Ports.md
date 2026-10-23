@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Ports
-description: "Learn how the Ports element groups PortSettings definitions for additional connections in a multitype DataMiner connector."
+description: "Learn how the Ports element groups PortSettings definitions for additional connections in a multitype DataMiner protocol."
 ---
 
 # Ports element

@@ -1,11 +1,9 @@
 ---
 uid: Protocol.Params.Param.Type-relativeTimers
-description: "Learn how the relativeTimers attribute controls whether a changed timer interval completes or fires immediately."
+description: "Use the relativeTimers attribute in a DataMiner protocol to control whether a changed timer interval completes or fires immediately."
 ---
 
 # relativeTimers attribute
-
-
 
 ## Content Type
 
@@ -19,11 +17,7 @@ description: "Learn how the relativeTimers attribute controls whether a changed 
 
 This attribute can have the following values:
 
-
-|Value|Description
+|Value|Description|
 |--- |--- |
 |true|If you change the interval in the middle of the current interval, the timer will only be fired when the interval is completely finished.|
 |true with reset|If you change the interval in the middle of the current interval, the timer will be fired instantly.|
-
-
-
