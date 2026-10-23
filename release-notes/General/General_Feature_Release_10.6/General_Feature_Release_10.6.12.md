@@ -78,6 +78,38 @@ The test fails if it detects different versions. If the information required for
 
 ### Enhancements
 
+#### DataMiner Installer: Initial DataMiner configuration wizard has been redesigned [ID 45483]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+The initial DataMiner configuration wizard has been redesigned to guide you through selecting a commercial model, configuring storage, and connecting to dataminer.services.
+
+You can now follow this setup flow:
+
+1. Select a commercial model: Community Edition, usage-based services, or a perpetual-use license with a supplied DataMiner ID.
+
+   Community Edition requires acceptance of its terms.
+
+1. Choose Storage as a Service (STaaS), locally hosted storage, or externally hosted storage.
+
+1. Connect to dataminer.services when required.
+
+   The wizard will open a browser where you can sign in or create an account. Connection is required for Community Edition, usage-based services, and STaaS. For perpetual-use licenses with self-hosted storage, cloud registration is optional.
+
+1. Complete the applicable configuration details and review the setup.
+
+   Only the pages relevant to your selected configuration will be shown.
+
+1. Apply the configuration.
+
+   The wizard will report progress and stop if a configuration step fails.
+
+The cloud registration page provides options to reopen the sign-in page, retry registration, or refresh registration details.
+
+For perpetual-use licensing, you can supply an existing license file or generate a license request. License requests can now be generated without first starting and stopping DataMiner. Missing required configuration files are initialized automatically, preventing setup failures on fresh installations.
+
+Unattended configuration remains available for subscription and perpetual-use licensing. Passing a configuration file path containing spaces from the installer is now also handled correctly.
+
 #### DataMiner backup: A default description is now generated when no description is specified [ID 46206]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
