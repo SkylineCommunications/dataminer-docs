@@ -1,7 +1,7 @@
 ---
 uid: Intelligence_Assistant_DxM
 keywords: DataMiner Copilot
-description: "Learn about the DataMiner Assistant DxM, which provides conversational AI in DataMiner, for example in the Assistant app and the Document Intelligence API."
+description: "Learn how to install and upgrade the DataMiner Assistant DxM, which powers the Assistant app and Document Intelligence API."
 ---
 
 # DataMiner Assistant DxM
@@ -32,6 +32,27 @@ For DataMiner Assistant to run correctly, the following **prerequisites** must b
 
     > [!TIP]
     > To request a free license for such a DataMiner Agent, contact the Skyline Sales department at [sales@skyline.be](mailto:sales@skyline.be).
+
+### Choosing the Agents to install on
+
+You do not need to install the DataMiner Assistant DxM on every Agent in a DataMiner cluster. We recommend installing it on a few suitable Agents to provide redundancy. The DxM is not supported on Agents that are part of a Failover pair.
+
+If you currently have Failover Agents, consider moving to [Swarming](xref:Swarming) or adding one or more Agents that are not part of a Failover pair to your DataMiner System. Install the DataMiner Assistant DxM on those Agents.
+
+> [!TIP]
+> To request a free license for an additional DataMiner Agent, contact the Skyline Sales department at [sales@skyline.be](mailto:sales@skyline.be).
+
+### DataMiner as a Service (DaaS)
+
+For DaaS systems running DataMiner 10.6 or newer, no installation is needed. The DataMiner Assistant DxM is already installed and running. The Assistant app and some optional capabilities may not be available by default. To request preview access, contact [ai@skyline.be](mailto:ai@skyline.be).
+
+### On-premises systems
+
+For on-premises installation and getting-started instructions, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
+
+## Upgrading
+
+Once DataMiner Assistant has been deployed, it is upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
 
 ## Logging
 
