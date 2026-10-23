@@ -1,7 +1,7 @@
 ---
 uid: Intelligence_Assistant_DxM
 keywords: DataMiner Copilot
-description: "Learn how to install and upgrade the DataMiner Assistant DxM, including deployment requirements and feature availability."
+description: "Learn how to install and upgrade the DataMiner Assistant DxM, which provides conversational AI in DataMiner, for example in the Assistant app and the Document Intelligence API."
 ---
 
 # DataMiner Assistant DxM
