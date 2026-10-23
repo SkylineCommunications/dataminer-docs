@@ -110,6 +110,18 @@ For perpetual-use licensing, you can supply an existing license file or generate
 
 Unattended configuration remains available for subscription and perpetual-use licensing. Passing a configuration file path containing spaces from the installer is now also handled correctly.
 
+#### DataMiner Installer: Improved licensing registration and separate database TLS settings [ID 45881]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+During interactive setup, licensing registration now uses licensing API v2 with a bearer token obtained through CloudGateway instead of an organization API key. You authenticate in your browser, after which the wizard obtains the token and completes registration. Token acquisition is retried for up to two minutes with increasing delays between attempts.
+
+After successful registration, DataMiner restarts automatically and its startup is validated. The wizard no longer asks for an organization API key, system URL, administrator email address, or STaaS region.
+
+Cloud registration now uses a complete session URL provided by CloudGateway, with improved session tracking and browser authentication. The sign-in screen now displays the DataMiner logo instead of a globe icon.
+
+For externally hosted databases, separate TLS checkboxes now allow you to enable TLS independently for Cassandra and OpenSearch. Previously, both databases shared the same TLS setting. The corresponding properties are `CassandraTlsEnabled` and `OpenSearchTlsEnabled`.
+
 #### DataMiner backup: A default description is now generated when no description is specified [ID 46206]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
