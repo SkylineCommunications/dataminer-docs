@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Databits.Range
-description: "Learn how the Range element under Databits defines the minimum and maximum numbers of data bits users can select."
+description: "Use the Range element in a DataMiner protocol to define an allowed range of data bit values for an element connection."
 ---
 
 # Range element

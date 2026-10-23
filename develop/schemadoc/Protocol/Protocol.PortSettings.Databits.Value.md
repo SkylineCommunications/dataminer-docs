@@ -1,11 +1,11 @@
 ---
 uid: Protocol.PortSettings.Databits.Value
-description: "Learn how each Value element under Databits specifies a supported number of data bits that users can select."
+description: "Use the Value element in a DataMiner protocol to specify an allowed data bit value that users can enter for a connection."
 ---
 
 # Value element
 
-Using one or more Value elements, you can specify the different values that users are allowed to enter.
+Using one or more `Value` elements, you can specify the different values that users are allowed to enter.
 
 ## Type
 
@@ -17,8 +17,8 @@ unsignedInt
 
 ## Remarks
 
-- The value specified in the DefaultValue tag does not have to be specified in a Value tag.
-- When no Value tags are specified, users will only be allowed to enter the value specified in the DefaultValue tag.
+- The value specified in the `DefaultValue` tag does not have to be specified in a `Value` tag.
+- When no `Value` tags are specified, users will only be allowed to enter the value specified in the `DefaultValue` tag.
 
 ## Examples
 

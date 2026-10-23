@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Databits.Range.From
-description: "Learn how the From element under Databits Range sets the first number of data bits available in the allowed range."
+description: "Use the From element in a DataMiner protocol to specify the lower bound of an allowed range of data bit values."
 ---
 
 # From element

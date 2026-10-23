@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Baudrate.Range.From
-description: "Learn how the From element under Baudrate Range sets the first baud rate available in the allowed range."
+description: "Use the From element under Baudrate Range in a DataMiner protocol to set the first baud rate available in the allowed range."
 ---
 
 # From element

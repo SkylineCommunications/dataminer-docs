@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.Range.To
-description: "Learn how the To element under BusAddress Range sets the last bus address available in the allowed range."
+description: "Use the To element in a DataMiner protocol to specify the upper bound of an allowed range of bus addresses."
 ---
 
 # To element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings-name
-description: "Learn how the PortSettings name attribute identifies the additional protocol type defined by the Protocol Type advanced attribute."
+description: "Use the PortSettings name attribute in a DataMiner protocol to identify the additional protocol type defined in Protocol.Type@advanced."
 ---
 
 # name attribute

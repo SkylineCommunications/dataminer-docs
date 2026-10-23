@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress
-description: "Learn how the BusAddress element defines default, allowed, and selectable bus addresses for a connection or GPIB device."
+description: "Use the BusAddress element in a DataMiner protocol to define default and allowed bus address settings for a connection."
 ---
 
 # BusAddress element

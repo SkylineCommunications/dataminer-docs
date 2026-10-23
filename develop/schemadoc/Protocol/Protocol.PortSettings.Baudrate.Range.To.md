@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Baudrate.Range.To
-description: "Learn how the To element under Baudrate Range sets the last baud rate available in the allowed range."
+description: "Use the To element under Baudrate Range in a DataMiner protocol to set the last baud rate available in the allowed range."
 ---
 
 # To element

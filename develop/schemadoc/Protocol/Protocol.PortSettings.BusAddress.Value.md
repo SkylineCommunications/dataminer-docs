@@ -1,11 +1,11 @@
 ---
 uid: Protocol.PortSettings.BusAddress.Value
-description: "Learn how each Value element under BusAddress defines an allowed bus address pattern, including optional wildcards."
+description: "Use the Value element in a DataMiner protocol to specify an allowed bus address that users can enter for a connection."
 ---
 
 # Value element
 
-Using one or more Value elements, you can specify the different values that users are allowed to enter.
+Using one or more `Value` elements, you can specify the different values that users are allowed to enter.
 
 ## Type
 
@@ -17,8 +17,8 @@ string
 
 ## Remarks
 
-- The value specified in the DefaultValue tag does not have to be specified in a Value tag.
-- When no Value tags are specified, users will only be allowed to enter the value specified in the DefaultValue tag.
+- The value specified in the `DefaultValue` tag does not have to be specified in a `Value` tag.
+- When no `Value` tags are specified, users will only be allowed to enter the value specified in the `DefaultValue` tag.
 
 Contains
 
@@ -36,7 +36,7 @@ The following wildcards can be used:
 - \*: A series of characters
 - ?: A single character
 
-In the following example, users have to enter a value containing a dot (e.g., 10.5, 2.3, 245.63, etc.):
+In the following example, users have to enter a value containing a period (e.g., 10.5, 2.3, 245.63, etc.):
 
 ```xml
 <Value>*.*</Value>

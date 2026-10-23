@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.Range
-description: "Learn how the Range element under BusAddress defines the first and last bus addresses users can enter for an element."
+description: "Use the Range element in a DataMiner protocol to define an allowed range of bus addresses for an element connection."
 ---
 
 # Range element

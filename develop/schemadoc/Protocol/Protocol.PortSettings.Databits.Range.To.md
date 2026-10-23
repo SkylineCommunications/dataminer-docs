@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Databits.Range.To
-description: "Learn how the To element under Databits Range sets the last number of data bits available in the allowed range."
+description: "Use the To element in a DataMiner protocol to specify the upper bound of an allowed range of data bit values."
 ---
 
 # To element
