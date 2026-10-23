@@ -79,6 +79,10 @@ Keep the following in mind:
 - **Do not create one agent that does everything.** An agent that is expected to handle anything in DataMiner ends up with oversized instructions, ambiguous tool selection, and conflicting guidelines.
 - **Assign only what the agent needs.** A specialized agent only has access to the tools and skills assigned to it. If a skill refers to specific tools in its instructions, also add those tools to the agent.
 
+### Can one agent delegate a task to another agent?
+
+No. DataMiner Intelligence agents cannot currently delegate tasks to one another. To cover an end-to-end workflow, assign the required tools and skills to a single specialized agent.
+
 ### Should a capability that is only used by one agent still be implemented as a skill?
 
 Often, yes. When context is substantial and only relevant in certain situations, putting it in a skill is preferable, even if only one agent uses it. The skill is only loaded when needed, which keeps the agent focused and reduces the context sent by default.
@@ -115,6 +119,10 @@ Ask your DataMiner administrator to confirm that the DataMiner Assistant DxM is 
 
 Viewing agents, skills, and tools does not require the same permissions as managing them. Creating or editing them requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission. The *Agents* page is only available if specialized agents have been made available in your system.
 
+### Do specialized agents provide a separate security boundary?
+
+No. Assigning tools and skills defines an agent's capabilities, but does not create an agent-specific permission boundary. Continue to manage access through your DataMiner user permissions. For more information, see [Data privacy and security](xref:Intelligence_Data_Privacy_Security).
+
 ### Where can I find the DataMiner Assistant DxM version?
 
 In the DataMiner web apps, click the user icon in the top-right corner and select *About*. The version of the DataMiner Assistant DxM is listed as *Assistant*, together with the versions of the other DataMiner components.
@@ -131,7 +139,7 @@ DataMiner Intelligence normally limits raw data sent directly to the LLM to appr
 
 ### How are data queries executed and scaled?
 
-Tool execution and data fetching are load-balanced across the DataMiner Agents in the cluster. A single prompt can initiate multiple data fetches.
+Tool execution and data fetching are load-balanced across the DataMiner Agents in the cluster.
 
 DataMiner Intelligence uses GQI to fetch data efficiently. GQI uses bulk parameter fetching, paging, and optimized query lifecycles to reduce the impact on DataMiner System operations. Queries are load-balanced across DataMiner Agents through the NATS message broker, which supports scalability and resilience.
 
