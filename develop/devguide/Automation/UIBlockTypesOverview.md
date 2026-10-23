@@ -1,5 +1,6 @@
 ---
 uid: UIBlockTypesOverview
+description: Overview of UI block types for interactive automation scripts, including UIBuilder, UI versions, and web layout options.
 ---
 
 # UIBlockType overview
@@ -57,6 +58,9 @@ uiBuilder.RequireResponse = true;
 
 var results = engine.ShowUI(uiBuilder);
 ```
+
+> [!NOTE]
+> From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46602 / RN 46716 -->, you can use the [WebUILayout](xref:Skyline.DataMiner.Automation.UIBuilder.WebUILayout) property of the UIBuilder to select the layout used in web apps. For an example of the grid layout, see [Using the grid layout in web apps](xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps).
 
 ## Getting input
 
