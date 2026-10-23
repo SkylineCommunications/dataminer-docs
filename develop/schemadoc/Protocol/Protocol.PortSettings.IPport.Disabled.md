@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.IPport.Disabled
-description: "Learn how the Disabled element under IPport controls whether users can configure the port number in the DataMiner user interface."
+description: "Use the Disabled element in a DataMiner protocol to control whether users can modify the port number in the user interface."
 ---
 
 # Disabled element
@@ -19,7 +19,7 @@ Specifies whether the port number can be configured via the DataMiner user inter
 
 Contains one of the following predefined values:
 
-|Value|Description
+|Value|Description|
 |--- |--- |
 |true|Users will not be able to modify the setting in the DataMiner user interface.|
 |false|Users will be able to modify the setting in the DataMiner user interface.|

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Flowcontrol.Range.From
-description: "Learn how the From element under Flowcontrol Range sets the first flow control value available in the allowed range."
+description: "Use the From element in a DataMiner protocol to specify the lower bound of an allowed range of flow control values."
 ---
 
 # From element

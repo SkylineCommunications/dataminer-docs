@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.GetCommunity.DefaultValue
-description: "Learn how the DefaultValue element under GetCommunity sets the initial SNMP get community string or SNMPv3 authentication password."
+description: "Use the DefaultValue element in a DataMiner protocol to set the default SNMP get community string or SNMPv3 authentication password."
 ---
 
 # DefaultValue element

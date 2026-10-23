@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.LocalIPport.Disabled
-description: "Learn how the Disabled element under LocalIPport controls whether users can configure the local client port in the user interface."
+description: "Use the Disabled element in a DataMiner protocol to control whether users can modify the local port number in the user interface."
 ---
 
 # Disabled element
@@ -19,7 +19,7 @@ Specifies whether the local port number can be configured via the DataMiner user
 
 Contains one of the following predefined values:
 
-|Value|Description
+|Value|Description|
 |--- |--- |
 |true|Users will not be able to modify the setting in the DataMiner user interface.|
 |false|Users will be able to modify the setting in the DataMiner user interface.|

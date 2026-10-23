@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Flowcontrol.Range
-description: "Learn how the Range element under Flowcontrol defines the first and last flow control values users can select."
+description: "Use the Range element in a DataMiner protocol to define an allowed range of flow control values for an element connection."
 ---
 
 # Range element

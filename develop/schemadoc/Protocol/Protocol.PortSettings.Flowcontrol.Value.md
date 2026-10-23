@@ -1,11 +1,11 @@
 ---
 uid: Protocol.PortSettings.Flowcontrol.Value
-description: "Learn how each Value element under Flowcontrol specifies a flow control mode users can select, including SNMPv3 encryption algorithms."
+description: "Use the Value element in a DataMiner protocol to specify an allowed flow control value that users can enter for a connection."
 ---
 
 # Value element
 
-Using one or more Value elements, you can specify the different values that users are allowed to enter.
+Using one or more `Value` elements, you can specify the different values that users are allowed to enter.
 
 ## Type
 
@@ -17,14 +17,14 @@ Using one or more Value elements, you can specify the different values that user
 
 ## Remarks
 
-- The value specified in the DefaultValue tag does not have to be specified in a Value tag.
-- When no Value tags are specified, users will only be allowed to enter the value specified in the DefaultValue tag.
+- The value specified in the `DefaultValue` tag does not have to be specified in a `Value` tag.
+- When no `Value` tags are specified, users will only be allowed to enter the value specified in the `DefaultValue` tag.
 - For SNMPv3 connections, this can be used to specify the possible encryption algorithms.
 
 The following wildcards can be used:
 
-- *: A series of characters
-- ?: One single character
+- `*`: A series of characters
+- `?`: One single character
 
 ## Examples
 

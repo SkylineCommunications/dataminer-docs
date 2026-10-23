@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings
-description: "Learn how the PortSettings element defines defaults and restrictions for the main device port, including serial and SNMP settings."
+description: "Use the PortSettings element in a DataMiner protocol to define defaults and restrictions for the main device port, including serial and SNMP settings."
 ---
 
 # PortSettings element

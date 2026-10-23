@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.LocalIPport.DefaultValue
-description: "Learn how the DefaultValue element under LocalIPport sets the local client port for a serial connection over TCP/IP or UDP/IP."
+description: "Use the DefaultValue element in a DataMiner protocol to specify the default local IP port number for a connection."
 ---
 
 # DefaultValue element

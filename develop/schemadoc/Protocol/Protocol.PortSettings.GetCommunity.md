@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.GetCommunity
-description: "Learn how the GetCommunity element configures the default SNMP get community string or SNMPv3 authentication password and whether users can edit it."
+description: "Use the GetCommunity element in a DataMiner protocol to configure the default value and editability of the SNMP get community string."
 ---
 
 # GetCommunity element

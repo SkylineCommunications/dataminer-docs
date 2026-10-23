@@ -1,6 +1,6 @@
 ---
 uid: Protocol.PortSettings.Flowcontrol.Range.To
-description: "Learn how the To element under Flowcontrol Range sets the last flow control value available in the allowed range."
+description: "Use the To element in a DataMiner protocol to specify the upper bound of an allowed range of flow control values."
 ---
 
 # To element
