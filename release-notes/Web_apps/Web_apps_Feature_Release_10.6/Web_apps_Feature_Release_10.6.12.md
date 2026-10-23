@@ -32,6 +32,30 @@ On each DataMiner Agent, OpenAPI 3.1 and AsyncAPI 3.1 specifications will now be
 
 The specifications describe supported HTTP operations, request and response schemas, enum values, WebSocket messages, and subscriptions.
 
+### Interactive automation scripts: Grid layout now supported in web apps [ID 46716]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Interactive automation dialogs in the DataMiner web apps now support a Grid layout. Components retain the row and column positions defined in the script, while TAB navigation follows the order in which blocks are added using `UIBuilder.AppendBlock`. This allows you to align keyboard navigation with an operational workflow without changing the dialog's visual arrangement.
+
+To enable the Grid layout, set `WebUILayout` when creating a `UIBuilder`:
+
+```csharp
+var uiBuilder = new UIBuilder
+{
+    WebUILayout = WebUILayout.Grid
+};
+```
+
+For example, to make TAB navigation move down the first column before continuing in the second, append all blocks in the first column from top to bottom, followed by the blocks in the second column.
+
+The existing Table layout remains the default, preserving the layout and navigation behavior of scripts that do not set this property.
+
+> [!NOTE]
+>
+> - This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.12 or newer. See also [Interactive Automation scripts: New WebUILayout property [ID 46602]](xref:General_Feature_Release_10.6.12#interactive-automation-scripts-new-webuilayout-property-id-46602).
+> - Unlike the Table layout, the Grid layout does not automatically resolve overlapping components or adjust spans. It also does not reserve extra space for validation messages.
+
 ## Changes
 
 ### Enhancements
