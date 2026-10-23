@@ -122,6 +122,14 @@ From now on, these registrations will be cleared when they are no longer needed.
 
 In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
 
+#### Crash dumps of native processes will now be captured earlier when a process crashes [ID 46696]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+From now on, crash dumps of native processes will be captured earlier when a process crashes, to help gather more useful diagnostic information.
+
+Also, a number of minor issues have been fixed in SLDMS. For example, up to now, memory handling issues could occur in notification threads for DataMiner Agents.
+
 #### Remote DELT export and migration failures did not show the failure reason [ID 46699]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
