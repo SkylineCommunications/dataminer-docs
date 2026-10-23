@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Type-link
-description: "Learn how the link attribute identifies the file containing input and output labels for a matrix parameter in a DataMiner protocol."
+description: "Use the link attribute in a DataMiner protocol to identify the file containing input and output labels for a matrix parameter."
 ---
 
 # link attribute

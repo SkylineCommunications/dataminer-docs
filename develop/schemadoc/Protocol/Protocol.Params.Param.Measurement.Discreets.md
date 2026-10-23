@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets
-description: "Learn how the Discreets element groups the discreet values, labels, and controls available for a parameter in a DataMiner protocol."
+description: "Use the Discreets element in a DataMiner protocol to define the set of discrete values and corresponding display labels for a parameter."
 ---
 
 # Discreets element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets-matrixLayout
-description: "Learn how the matrixLayout attribute places matrix inputs and outputs along the left or top edges of the control in a DataMiner protocol."
+description: "Use the matrixLayout attribute in a DataMiner protocol to place matrix inputs and outputs along the left or top edges of the matrix control."
 ---
 
 # matrixLayout attribute
@@ -21,9 +21,9 @@ Configures the layout of the matrix.
 
 ## Remarks
 
-A typical matrix layout shows the inputs on the left and the outputs at the top. However, in certain circumstances, it can be useful to visualize a matrix in an alternative way. This can be done by this attribute.
+A typical matrix layout shows the inputs on the left and the outputs at the top. However, in certain circumstances, it can be useful to visualize a matrix in an alternative way. This can be done using this attribute.
 
-From DataMiner 10.0.8 (RN 25456, RN 25892) onwards, you can use the matrixLayout attribute to configure the following matrix layouts:
+You can use the `matrixLayout` attribute to configure the following matrix layouts:<!-- RN 25456, RN 25892 -->
 
 - **InputLeftOutputTop**: Shows the inputs on the left and outputs at the top (default).
 - **InputTopOutputLeft**: Shows the inputs at the top and outputs on the left.

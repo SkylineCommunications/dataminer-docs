@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-dependencyValues
-description: "Learn how the dependencyValues attribute lists the other parameter values that make a discreet entry available in a DataMiner protocol."
+description: "Use the dependencyValues attribute in a DataMiner protocol to list the other parameter values that make a discreet entry available."
 ---
 
 # dependencyValues attribute

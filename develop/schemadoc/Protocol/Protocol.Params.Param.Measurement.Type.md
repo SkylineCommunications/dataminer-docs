@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Type
-description: "Learn how the Type element selects how a parameter appears in the user interface and provides type-specific settings in a DataMiner protocol."
+description: "Use the Type element in a DataMiner protocol to select how a parameter is displayed in the user interface and provide type-specific settings."
 ---
 
 # Type element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Type-verificationDeviation
-description: "Learn how the verificationDeviation attribute sets allowed analog deviation during command execution verification in a DataMiner protocol."
+description: "Use the verificationDeviation attribute in a DataMiner protocol to set the allowed deviation for analog parameters during set verification."
 ---
 
 # verificationDeviation attribute

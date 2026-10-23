@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet
-description: "Learn how the Discreet element maps a parameter value to displayed text, an optional icon, and related behavior in a DataMiner protocol."
+description: "Use the Discreet element in a DataMiner protocol to map a parameter value to displayed text, an optional icon, and related behavior."
 ---
 
 # Discreet element

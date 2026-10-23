@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Type-width
-description: "Learn how the width attribute sets the displayed width of a button or page button parameter in a DataMiner protocol."
+description: "Use the width attribute in a DataMiner protocol to set the displayed width of a button or page button parameter."
 ---
 
 # width attribute

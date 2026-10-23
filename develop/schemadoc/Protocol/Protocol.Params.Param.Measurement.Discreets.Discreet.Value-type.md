@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Value-type
-description: "Learn how the type attribute selects a discreet value action, such as opening a card or setting a variable in a DataMiner protocol."
+description: "Use the type attribute in a DataMiner protocol to select a discreet value action, such as opening a card or setting a variable."
 ---
 
 # type attribute
@@ -48,7 +48,7 @@ In the following example, when the button is clicked, the value of parameter 112
 
 - It is possible to bind an action to a button to open a specific spectrum analyzer element. Optionally, you can also define a measurement point and/or preset for the element. Single buttons, buttons inside a table and buttons in an EPM interface are all supported.<!-- RN 13458, RN 13533 -->
 
-  To create such a button, in the Protocol.Params.Param.Measurement.Discreets.Discreet.Value tag, use the attribute type="Open" and specify a value using the following syntax:
+  To create such a button, in the `Protocol.Params.Param.Measurement.Discreets.Discreet.Value` tag, use the attribute `type="Open"` and specify a value using the following syntax:
 
   ```xml
   element=[SPECTRUM ELEMENT NAME OR ID]&measpt=[MEASUREMENTPOINTID]&preset=[PRESET NAME]
@@ -63,7 +63,7 @@ For example:
   </Discreet>
   ```
 
-In the Value tag, it is also possible to use a placeholder for a table cell that contains the required string value. For example:
+In the `Value` tag, it is also possible to use a placeholder for a table cell that contains the required string value. For example:
 
   ```xml
   <Discreet>

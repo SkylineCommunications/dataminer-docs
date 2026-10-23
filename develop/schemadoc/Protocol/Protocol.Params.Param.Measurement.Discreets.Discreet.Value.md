@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Value
-description: "Learn how the Value element defines a value that triggers a discreet label or button action when it matches a parameter in a DataMiner protocol."
+description: "Use the Value element in a DataMiner protocol to specify the parameter value that determines when a discreet display label is shown."
 ---
 
 # Value element
@@ -19,14 +19,14 @@ string
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
-|[location](xref:Protocol.Params.Param.Measurement.Discreets.Discreet.Value-location)|string||If type is "dll", the location of the DLL file.|
+|[location](xref:Protocol.Params.Param.Measurement.Discreets.Discreet.Value-location)|string||If type is "dll", this attribute indicates the location of the DLL file.|
 |[type](xref:Protocol.Params.Param.Measurement.Discreets.Discreet.Value-type)|[EnumDiscreteValue](xref:Protocol-EnumDiscreteValue)||Specifies the type.|
 
 ## Remarks
 
-If the value of the parameter matches the value in this tag, the contents of the Protocol.Params.Param.Measurement.Discreets.Discreet.Display tag will be displayed.
+If the value of the parameter matches the value in this tag, the contents of the `Protocol.Params.Param.Measurement.Discreets.Discreet.Display` tag will be displayed.
 
-When defining a button parameter, you can also use placeholders in the Value tag referring to Visio session variables. That way, when the button is clicked, the current value of one or more Visio session variables will be inserted in the value of the button parameter.
+When defining a button parameter, you can also use placeholders in the `Value` tag referring to Visio session variables. That way, when the button is clicked, the current value of one or more Visio session variables will be inserted in the value of the button parameter.
 
 ## Examples
 
