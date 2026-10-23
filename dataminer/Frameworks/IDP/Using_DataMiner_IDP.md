@@ -1,5 +1,6 @@
 ---
 uid: Using_DataMiner_IDP
+description: "Start using DataMiner IDP by discovering devices, adding existing elements, or importing inventory, and configure CI Types to manage them."
 ---
 
 # Using DataMiner IDP

@@ -1,5 +1,6 @@
 ---
 uid: Admin_activities
+description: "Configure IDP activities and choose to have automation enabled manually or automatically when activity completeness reaches 100%."
 ---
 
 # Activities
