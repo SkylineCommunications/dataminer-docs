@@ -29,7 +29,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
 1. Go to the folder `C:\Skyline DataMiner\` and open the file *DMS.xml*.
 
-1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
 1. Go to the folder `C:\Skyline DataMiner\` and open the file *MaintenanceSettings.xml*.
 
@@ -82,15 +82,17 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
       1. Press U to confirm that you want to uninstall NAS and NATS.
 
-      1. Press Enter twice, enter NAS, and press Y.
+      1. Press Enter twice, enter NAS, and press Y. (This will uninstall both NATS and NAS)
 
    1. Install NAS and NATS again:
 
       1. Go to `C:\Skyline DataMiner\Files\` and double-click *SLEndpointTool_Console.exe*.
 
-      1. Press I to confirm that you want to install NAS and NATS
+      1. Press I to confirm that you want to install NAS and NATS.
 
       1. Press Enter twice, enter NATS, and press Y.
+
+         This will install both NAS and NATS.
 
 1. **BrokerGateway only**:
 
@@ -147,6 +149,11 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 ## Single DMA in a DMS
 
 For a single DMA within a cluster that either uses [Storage as a Service (STaaS)](xref:STaaS) or makes use of a [Cassandra database per DMA](xref:Configuring_storage_per_DMA#cassandra-database-per-dma):
+
+1. Make sure all DMAs in the DMS are running and reachable, and that the Failover status of every Failover pair is green.
+
+   > [!IMPORTANT]
+   > **Legacy NATS only**: The NATS reset performed later in this procedure is canceled on all DMAs if any DMA in the DMS is reported as not running. In that case, the DMA with the new IP address keeps running an isolated NATS node and cannot communicate with the other DMAs.
 
 1. Stop the DataMiner software on the DMA for which you want to change the IP address.
 
@@ -289,14 +296,16 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
+      Send this message as soon as the DMA is running again. Until the reset has completed, the DMA with the new IP address runs an isolated NATS node, which can cause "No responders" errors, SLASPConnection RTEs, and Failover synchronization warnings.
+
       > [!NOTE]
       > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
    1. Close the SLNetClientTest tool.
-  
-   1. On all DMAs in the cluster, navigate to *C:\Skyline DataMiner\SLCloud.xml*, and check if the previous IP address has been replaced by the new IP address.
 
-      Note that it can take up to an hour before this happens. If for any reason the old IP address is still visible in the file after that time, [contact Support](xref:Contacting_tech_support).
+   1. On all DMAs in the cluster, open `C:\Skyline DataMiner\SLCloud.xml` and check if the previous IP address has been replaced by the new IP address.
+
+      Note that it can take up to an hour before this happens. If the old IP address is still visible after that time, check the file `C:\Skyline DataMiner\Logging\SLNATSCustodian.txt` on the DMA with the new IP address. If it reports that the reset was canceled because one or more DMAs are not running, fix those DMAs and send the message again. Otherwise, [contact Support](xref:Contacting_tech_support).
 
 > [!NOTE]
 > If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IP addresses are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
@@ -304,6 +313,11 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 ## Failover DMA in a DMS
 
 For a Failover DMA within a cluster that either uses [Storage as a Service (STaaS)](xref:STaaS) or makes use of a [Cassandra database per DMA](xref:Configuring_storage_per_DMA#cassandra-database-per-dma):
+
+1. Make sure all DMAs in the DMS are running and reachable, and that the Failover status of every Failover pair is green.
+
+   > [!IMPORTANT]
+   > **Legacy NATS only**: The NATS reset performed later in this procedure is canceled on all DMAs if any DMA in the DMS is reported as not running. In that case, the DMA with the new IP address keeps running an isolated NATS node and cannot communicate with the other DMAs.
 
 1. In DataMiner Cube, go to *System Center* > *Agents* > *Failover*, open the Failover settings of the pair and, on the *Type* tab, select *Manual*. See [Advanced Failover options](xref:Advanced_Failover_options).
 
@@ -467,14 +481,16 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
    1. In the *Message Type* dropdown list, select *Skyline.DataMiner.Net.Apps.NATSCustodian.NATSCustodianResetNatsRequest* and click *Send Message*.
 
+      Send this message as soon as the DMA is running again. Until the reset has completed, the DMA with the new IP address runs an isolated NATS node, which can cause "No responders" errors, SLASPConnection RTEs, and Failover synchronization warnings.
+
       > [!NOTE]
       > Do not send this message if automatic NATS configuration is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)). Instead, you will need to reset NATS manually. From DataMiner 10.5.0 [CU1]/10.5.4 onwards, sending this message while automatic NATS configuration is disabled is impossible.<!-- RN 42074 -->
 
    1. Close the SLNetClientTest tool.
 
-   1. On all DMAs in the cluster, navigate to `C:\Skyline DataMiner\SLCloud.xml` and check if the previous IP address has been replaced by the new IP address.
+   1. On all DMAs in the cluster, open `C:\Skyline DataMiner\SLCloud.xml` and check if the previous IP address has been replaced by the new IP address.
 
-      Note that it can take up to an hour before this happens. If for any reason the old IP address is still visible in the file after that time, [contact Support](xref:Contacting_tech_support).
+      Note that it can take up to an hour before this happens. If the old IP address is still visible after that time, check the file `C:\Skyline DataMiner\Logging\SLNATSCustodian.txt` on the DMA with the new IP address. If it reports that the reset was canceled because one or more DMAs are not running, fix those DMAs and send the message again. Otherwise, [contact Support](xref:Contacting_tech_support).
 
 > [!NOTE]
 > If the DataMiner System uses a remote database, the database configuration changes detailed above are not needed. In such a case, the IP addresses are not affected, because the remote server remains the same in the .yml file and in DB.xml. However, you must make sure that all the necessary ports are open and accessible. See [Configuring the IP network ports](xref:Configuring_the_IP_network_ports).
