@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Limitations_generic_SNMP_connector
+description: "Use the Generic SNMP connector for simple read-only devices with few parameters, and choose a dedicated connector for tables, parsing, or device control."
 ---
 
 # What are the limitations when using the Generic SNMP connector as opposed to a dedicated connector?
