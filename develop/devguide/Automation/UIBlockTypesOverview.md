@@ -1,6 +1,5 @@
 ---
 uid: UIBlockTypesOverview
-description: Overview of UI block types for interactive automation scripts, including UIBuilder, UI versions, and web layout options.
 ---
 
 # UIBlockType overview
