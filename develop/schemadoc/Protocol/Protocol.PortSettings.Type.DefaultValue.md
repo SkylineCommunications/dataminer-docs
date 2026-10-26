@@ -19,7 +19,7 @@ Specifies the default port type.
 
 Contains one of the following predefined values:
 
-|Value|Description
+|Value|Description|
 |--- |--- |
 |udp|The port type “UDP/IP” will be selected by default.|
 |ip|The port type “TCP/IP” will be selected by default.|

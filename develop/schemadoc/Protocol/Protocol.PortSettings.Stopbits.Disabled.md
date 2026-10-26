@@ -19,7 +19,7 @@ Specifies whether the number of stop bits can be modified in the DataMiner user 
 
 Contains one of the following predefined values:
 
-|Value|Description
+|Value|Description|
 |--- |--- |
 |true|Users will not be able to modify the setting in the DataMiner user interface.|
 |false|Users will be able to modify the setting in the DataMiner user interface.|
