@@ -20,4 +20,4 @@ Specifies the IDs of the parameters that will cause the QAction to be executed e
 
 ## Remarks
 
-Multiple values have to be separated by semicolons (”;”).
+Multiple values have to be separated by semicolons (";").

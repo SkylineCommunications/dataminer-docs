@@ -5,7 +5,7 @@ description: "Learn how the RCA Protocol element groups Link elements that defin
 
 # Protocol element
 
-*** No documentation available yet. ***
+Groups [Link](xref:Protocol.RCA.Protocol.Link) elements that define RCA chains by defining parameter relationships.
 
 ## Parent
 

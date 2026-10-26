@@ -17,4 +17,4 @@ Specifies the IDs of the parameters that will be passed to functions inside the 
 
 ## Remarks
 
-Multiple values have to be separated by semicolons (”;”).
+Multiple values have to be separated by semicolons (";").

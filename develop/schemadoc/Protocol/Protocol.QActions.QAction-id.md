@@ -7,6 +7,11 @@ description: "Learn how the id attribute uniquely identifies a QAction while rem
 
 Specifies the unique QAction ID.
 
+A unique object ID must be assigned to every QAction in the protocol. The ID identifies the QAction declaration; it is separate from the parameter IDs listed in [triggers](xref:Protocol.QActions.QAction-triggers) and [inputParameters](xref:Protocol.QActions.QAction-inputParameters).
+
+> [!IMPORTANT]
+> Avoid duplicate QAction IDs. These would make the protocol ambiguous and could prevent the intended QAction from loading. When you copy a QAction, assign a new ID and verify its required `name` and trigger configuration.
+
 ## Content Type
 
 [TypeObjectId](xref:Protocol-TypeObjectId)
@@ -14,18 +19,6 @@ Specifies the unique QAction ID.
 ## Parent
 
 [QAction](xref:Protocol.QActions.QAction)
-
-## Usage and constraints
-
-Assign a unique object ID to every QAction in the protocol. The ID identifies the QAction declaration; it is separate from the parameter IDs listed in `triggers` and `inputParameters`.
-
-## Expected result
-
-DataMiner can load the QAction declaration and associate its configured triggers with the code in that QAction.
-
-## Failure and edge cases
-
-Duplicate IDs make the protocol ambiguous and can prevent the intended QAction from loading. When you copy a QAction, assign a new ID and verify its required `name` and trigger configuration.
 
 ## Example
 
@@ -39,11 +32,5 @@ Duplicate IDs make the protocol ambiguous and can prevent the intended QAction f
 
 ## Related concepts
 
-- [QAction element](xref:Protocol.QActions.QAction)
 - [QActions](xref:LogicQActions)
 - [QAction execution](xref:LogicQActionsExecution)
-
-## Authoritative references
-
-- [Protocol XML schema](xref:SchemaProtocol)
-- [QAction element](xref:Protocol.QActions.QAction)
