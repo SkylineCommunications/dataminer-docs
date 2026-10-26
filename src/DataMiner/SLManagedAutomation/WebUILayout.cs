@@ -20,7 +20,7 @@ namespace Skyline.DataMiner.Automation
 		Table = 1,
 
 		/// <summary>
-		/// Components are positioned at the rows and columns defined in the script, while TAB navigation follows the order in which the blocks are appended to the <see cref="UIBuilder"/>.
+		/// Components are positioned in the rows and columns defined in the script, while TAB navigation follows the order in which the blocks are appended to the <see cref="UIBuilder"/>.
 		/// </summary>
 		Grid = 2,
 	}

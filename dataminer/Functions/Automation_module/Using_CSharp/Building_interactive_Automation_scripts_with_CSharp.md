@@ -1,6 +1,6 @@
 ---
 uid: Building_interactive_Automation_scripts_with_CSharp
-description: Learn how to build interactive automation scripts with C#, including dialog boxes for displaying or requesting information and grid layouts for web apps.
+description: "Learn how to build interactive automation scripts with C#, including dialog boxes for displaying or requesting information and grid layouts for web apps."
 ---
 
 # Building interactive automation scripts with C#
@@ -138,9 +138,9 @@ engine.ShowUI(uib2);
 
 ## Using the grid layout in web apps to control the tab behavior
 
-From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46602 / RN 46716 -->, you can set the [WebUILayout](xref:Skyline.DataMiner.Automation.UIBuilder.WebUILayout) property of a UIBuilder to `WebUILayout.Grid` to align keyboard navigation with the workflow of your dialog box, without changing how the dialog box looks. For more information on the available layout types, see [WebUILayout](xref:Skyline.DataMiner.Automation.WebUILayout). For versions prior to this, the table layout is used.
+From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46602 / RN 46716 -->, you can set the [WebUILayout](xref:Skyline.DataMiner.Automation.UIBuilder.WebUILayout) property of `UIBuilder` to `WebUILayout.Grid` to align keyboard navigation with the workflow of your dialog box, without changing how the dialog box looks. For versions prior to this, the table layout is used. For more information on the available layout types, see [WebUILayout](xref:Skyline.DataMiner.Automation.WebUILayout).
 
-In the default table layout, pressing the TAB key moves the focus from left to right across each row before moving to the next row. In the grid layout, the components stay at the rows and columns defined in the script, but the TAB order follows the order in which you add the blocks to the UIBuilder using `AppendBlock`.
+In the default table layout, pressing the TAB key moves the focus from left to right across each row before moving to the next row. In the grid layout, the components stay in the rows and columns defined in the script, but the TAB order follows the order in which you add the blocks to the UIBuilder using `AppendBlock`.
 
 The following example arranges four time input fields in two columns. Because the blocks are added from top to bottom in the first column and then in the second column, pressing the TAB key moves down the first column before continuing in the second column.
 
