@@ -4,7 +4,7 @@ namespace Skyline.DataMiner.Automation
 	/// Specifies the layout used to render the dialog box for an interactive automation script in DataMiner web apps.
 	/// </summary>
 	/// <remarks>
-	/// <para>See <see href="xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps">Using the grid layout in web apps</see> for more information.</para>
+	/// <para>See <see href="xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps-to-control-the-tab-behavior">Using the grid layout in web apps</see> for more information.</para>
 	/// <para>Feature introduced in DataMiner 10.6.12/10.7.0 (RN 46602 / RN 46716).</para>
 	/// </remarks>
 	public enum WebUILayout

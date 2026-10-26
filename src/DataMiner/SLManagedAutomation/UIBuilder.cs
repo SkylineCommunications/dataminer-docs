@@ -211,7 +211,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The layout of the dialog box. Default: <see cref="WebUILayout.Default"/>.</value>
 		/// <remarks>
-		/// <para>This layout is applied only when the script runs in a web app and the DataMiner Agent supports this property. Otherwise, the table layout is used. For more information, see <see href="xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps">Using the grid layout in web apps</see>.</para>
+		/// <para>This layout is applied only when the script runs in a web app and the DataMiner Agent supports this property. Otherwise, the table layout is used. For more information, see <see href="xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps-to-control-the-tab-behavior">Using the grid layout in web apps</see>.</para>
 		/// <para>Feature introduced in DataMiner 10.6.12/10.7.0 (RN 46602 / RN 46716).</para>
 		/// </remarks>
 		/// <example>
