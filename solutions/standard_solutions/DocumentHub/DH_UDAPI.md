@@ -16,6 +16,8 @@ DocumentHub ships with several [user-defined APIs](xref:UD_APIs), which you can 
 - **SLC-DH-UDAPI-DownloadFile**: Allows you to [download a file from a bucket](#downloading-a-file).
 - **SLC-DH-UDAPI-GetAgentVersion**: Allows you to [retrieve the installed version of the DocumentHub Assistant](#retrieving-version-information). Note that this feature is currently still in preview.
 
+DocumentHub now provides an OpenAPI specification for its user-defined APIs. Use it to review the available API operations and support integration with your applications.
+
 For an example of how you can authenticate requests to these APIs, refer to the tutorial [Managing buckets with the DocumentHub user-defined APIs](xref:Tutorial_DH_UDAPI). To find the route used as the public URL segment of each API, check the value defined in the *User-Defined APIs* module in DataMiner Cube.
 
 > [!TIP]
