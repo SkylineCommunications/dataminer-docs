@@ -6,6 +6,8 @@ uid: ReconnectAppAndInfo
 
 Use this method to use a cookie (received using the [ConnectAppAndInfo](xref:ConnectAppAndInfo), [ConnectAppAndInfoStep2](xref:ConnectAppAndInfoStep2) or [ConnectAppAndInfoUsingTicket](xref:ConnectAppAndInfoUsingTicket) method) to retrieve the connection string (GUID) needed to be able to connect to the host, together with information about the DataMiner Agent (time, alarm colors, etc.) and the user permissions granted.
 
+Deprecated since DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12<!--RN 46714-->.
+
 ## Input
 
 | Item | Format | Description |
