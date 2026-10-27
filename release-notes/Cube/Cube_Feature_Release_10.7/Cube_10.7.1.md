@@ -31,4 +31,10 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### State icons: Subscription exceptions would be logged on the DMA when the state icons feature was disabled [ID 46862]
+
+<!-- MR 10.5.0 [CU22] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+When state icons were disabled in the SLAnalytics configuration, DataMiner Cube would still subscribe to state icon changes for every trended parameter displayed on an element card. For partial or filtered tables, it renewed these subscriptions whenever a row was added or removed. Each subscription caused an exception to be logged on the DataMiner Agent to which DataMiner Cube was connected.
+
+From now on, DataMiner Cube will only subscribe to state icon changes when the state icons feature is enabled.
