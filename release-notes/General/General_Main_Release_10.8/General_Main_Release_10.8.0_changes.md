@@ -16,6 +16,12 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 
 ### Enhancements
 
+#### SLProtocol: Support for postPonePortInitialisation option removed [ID 46588]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Support for the [`postPonePortInitialisation`](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
+
 #### DataMiner upgrade: Upgrade action to configure SAML authentication redirects [ID 46589]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
