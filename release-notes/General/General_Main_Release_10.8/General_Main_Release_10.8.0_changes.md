@@ -39,6 +39,16 @@ To resolve these issues, upgrade Communication Gateway DxM to version 5.3.5 or h
 
 The additional connector check only detects these known connectors. Make sure no other connectors in use depend on a version of the NuGet package older than 6.0.0.
 
+#### DataMiner upgrade: Web-only upgrades to 10.7.x or later require at least 10.6.0 [ID 46910]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Web-only upgrade packages for version 10.7.x or later will now be blocked on DataMiner Agents running a server version older than 10.6.0. The error message will indicate this minimum version requirement.
+
+For example, before installing a 10.7.x web-only upgrade on a DataMiner Agent running 10.5.0, you will first have to perform a full upgrade to 10.6.0 or later.
+
+This validation does not affect full DataMiner upgrades.
+
 ### Fixes
 
 *No fixes have been added yet.*
