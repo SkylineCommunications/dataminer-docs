@@ -145,6 +145,8 @@ Use each function for a distinct responsibility:
 
 The object returned by `get_data()` must be JSON-serializable.
 
+For more information about the supported JSON data structures, see [Support for tables](xref:Data_API#support-for-tables). For applicable restrictions, see [Data source limitations](xref:Data_Sources_Limitations).
+
 Keeping the data retrieval and Edge Node communication separate makes the connector-specific code easier to debug and test.
 
 ## Creating a virtual environment
@@ -156,7 +158,8 @@ Use a project-local virtual environment to isolate the packages used during deve
 1. Set the environment location to `.venv`.
 1. Set the new environment as the current environment for the project.
 
-The name `.venv` is a convention that makes the project-local environment easy to recognize. It is excluded from source control and packaging.
+> [!NOTE]
+> The name `.venv` is a convention that makes the project-local environment easy to recognize. It is excluded from source control and packaging.
 
 ## Managing dependencies
 
