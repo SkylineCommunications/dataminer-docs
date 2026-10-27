@@ -27,6 +27,14 @@ description: "Release notes for General Main Release 10.5.0 CU21, including prer
 
 ### Enhancements
 
+#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
+
+It remains in the enum for backward compatibility, but using it will produce a compiler warning, and it will no longer appear in IntelliSense suggestions. The warning will recommend `Maintenance` instead.
+
 #### BrokerGateway: HTTPS communication now supports redirects [ID 46687]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -35,6 +43,30 @@ BrokerGateway now takes redirects configured in *DMS.xml* into account when comm
 
 > [!NOTE]
 > NATS communication does not take redirects into account.
+
+#### DxM upgrades: Improved rollback when an upgrade fails or is canceled [ID 46715]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+For the following DataMiner Extension Modules (DxMs), uninstalling the previous version is now part of the upgrade transaction:
+
+- ArtifactDeployer
+- CloudGateway
+- CoreGateway
+- Orchestrator
+- SupportAssistant
+
+If an upgrade fails or is canceled after the previous version has been uninstalled, that version will now be restored.
+
+#### SLLogCollector packages now include the configuration files of ResourceManager, ProtocolFunctionManager, and Scheduler [ID 46753]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+SLLogCollector packages now include the following configuration files:
+
+- `C:\Skyline DataMiner\ResourceManager\Config.xml`
+- `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
+- `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
 
 ### Fixes
 
@@ -62,6 +94,14 @@ On systems where GQI queries repeatedly opened connections, for example through 
 
 From now on, the handlers will be removed when the connection closes.
 
+#### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
+
+From now on, configuration updates will be synchronized across the cluster, and new Agents will automatically inherit the existing cluster settings.
+
 #### STaaS: Feedback registrations could cause a memory leak [ID 46617]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -75,6 +115,14 @@ From now on, these registrations will be cleared when they are no longer needed.
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
+
+#### Crash dumps of native processes will now be captured earlier when a process crashes [ID 46696]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+From now on, crash dumps of native processes will be captured earlier when a process crashes, to help gather more useful diagnostic information.
+
+Also, a number of minor issues have been fixed in SLDMS. For example, up to now, memory handling issues could occur in notification threads for DataMiner Agents.
 
 #### Remote DELT export and migration failures did not show the failure reason [ID 46699]
 
@@ -91,3 +139,11 @@ From now on, DataMiner Cube now also displays the failure reason.
 Up to now, SLAnalytics subscribed to swarming notifications after startup prefetch, which could cause it to miss notifications while the cache was being initialized. From now on, it will subscribe before startup prefetch. History reads triggered during prefetch will wait for the cache lock; normal prefetched-cache lookup behavior will remain unchanged.
 
 If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.
+
+#### STaaS: Source connection was not restored after stopping a migration or replication [ID 46782]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a STaaS migration or replication was stopped, the source connection was not restored as the current connection. Instead, DataMiner could continue to use the migration connection.
+
+From now on, stopping a STaaS migration or replication will restore the source connection.

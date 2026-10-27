@@ -41,11 +41,86 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*No new features have been added yet.*
+### Interactive Automation scripts: New WebUILayout property [ID 46602]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+From now on, you can select the web UI layout for each dialog in an interactive Automation script using the `UIBuilder.WebUILayout` property.
+
+For example:
+
+```csharp
+var uiBuilder = new UIBuilder
+{
+    WebUILayout = WebUILayout.Grid
+};
+```
+
+The following values are supported:
+
+- `Default` and `Table`: Components are arranged in a table. TAB navigation proceeds from left to right across each row before moving to the next row.
+- `Grid`: Selects a CSS Grid layout that keeps visual placement independent of keyboard navigation. The order in which blocks are added to the `UIBuilder` determines the TAB order. To navigate through one column before continuing to the next, add the blocks from top to bottom in the first column, followed by the blocks in the next column.
+
+If you do not set this property, `Default` is used, preserving the existing table layout and navigation behavior. Existing scripts therefore continue to behave as before.
+
+> [!NOTE]
+> Support for the `Grid` layout in the DataMiner web apps will be introduced separately.
+
+### New BPA test: DataMiner Agent Versions [ID 46808]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+A new BPA test, *DataMiner Agent Versions*, now runs daily to check whether all DataMiner Agents in the cluster are running the same DataMiner version. The check also includes offline Failover Agents.
+
+The test fails if it detects different versions. If the information required for the check is missing or incomplete, the result is inconclusive. In both cases, the output includes details.
 
 ## Changes
 
 ### Enhancements
+
+#### DataMiner Installer: Initial DataMiner configuration wizard has been redesigned [ID 45483]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+The initial DataMiner configuration wizard has been redesigned to guide you through selecting a commercial model, configuring storage, and connecting to dataminer.services.
+
+You can now follow this setup flow:
+
+1. Select a commercial model: Community Edition, usage-based services, or a perpetual-use license with a supplied DataMiner ID.
+
+   Community Edition requires acceptance of its terms.
+
+1. Choose Storage as a Service (STaaS), locally hosted storage, or externally hosted storage.
+
+1. Connect to dataminer.services when required.
+
+   The wizard will open a browser where you can sign in or create an account. Connection is required for Community Edition, usage-based services, and STaaS. For perpetual-use licenses with self-hosted storage, cloud registration is optional.
+
+1. Complete the applicable configuration details and review the setup.
+
+   Only the pages relevant to your selected configuration will be shown.
+
+1. Apply the configuration.
+
+   The wizard will report progress and stop if a configuration step fails.
+
+The cloud registration page provides options to reopen the sign-in page, retry registration, or refresh registration details.
+
+For perpetual-use licensing, you can supply an existing license file or generate a license request. License requests can now be generated without first starting and stopping DataMiner. Missing required configuration files are initialized automatically, preventing setup failures on fresh installations.
+
+Unattended configuration remains available for subscription and perpetual-use licensing. Passing a configuration file path containing spaces from the installer is now also handled correctly.
+
+#### DataMiner Installer: Improved licensing registration and separate database TLS settings [ID 45881]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+During interactive setup, licensing registration now uses licensing API v2 with a bearer token obtained through CloudGateway instead of an organization API key. You authenticate in your browser, after which the wizard obtains the token and completes registration. Token acquisition is retried for up to two minutes with increasing delays between attempts.
+
+After successful registration, DataMiner restarts automatically and its startup is validated. The wizard no longer asks for an organization API key, system URL, administrator email address, or STaaS region.
+
+Cloud registration now uses a complete session URL provided by CloudGateway, with improved session tracking and browser authentication. The sign-in screen now displays the DataMiner logo instead of a globe icon.
+
+For externally hosted databases, separate TLS checkboxes now allow you to enable TLS independently for Cassandra and OpenSearch. Previously, both databases shared the same TLS setting. The corresponding properties are `CassandraTlsEnabled` and `OpenSearchTlsEnabled`.
 
 #### DataMiner backup: A default description is now generated when no description is specified [ID 46206]
 
@@ -55,9 +130,19 @@ When you create a backup without specifying a description, DataMiner will now ge
 
 The description will include the name of the predefined backup setting and the DataMiner ID, matching the behavior of the DataMiner Taskbar Utility.
 
-#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+#### SLScripting executable and dependencies now stored in a separate folder [ID 46346]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
+
+The *SLScripting.exe* executable and its dependencies are now stored in `C:\Skyline DataMiner\Files\SLScripting\x86` instead of `C:\Skyline DataMiner\Files`.
+
+This reduces the risk of QActions loading assemblies from `C:\Skyline DataMiner\Files` instead of using the assemblies provided by their specific NuGet dependencies.
+
+If an assembly cannot be found, `C:\Skyline DataMiner\Files` is still used as a fallback folder.
+
+#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
 
@@ -121,6 +206,54 @@ When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interfa
 
 From now on, the log will show the original notify type without the offset.
 
+#### STaaS: Support for direct-write-only entity types [ID 46711]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
+
+#### Automation: Clearer error messages when saving scripts [ID 46713]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Error messages returned when saving an automation script now provide more details about what went wrong.
+
+For example, when you import a script in DataMiner Cube and a dummy references an unavailable protocol or protocol version, the error message will now identify the dummy, protocol, and version instead of showing a generic error.
+
+#### DxM upgrades: Improved rollback when an upgrade fails or is canceled [ID 46715]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+For the following DataMiner Extension Modules (DxMs), uninstalling the previous version is now part of the upgrade transaction:
+
+- ArtifactDeployer
+- CloudGateway
+- CoreGateway
+- Orchestrator
+- SupportAssistant
+
+If an upgrade fails or is canceled after the previous version has been uninstalled, that version will now be restored.
+
+#### SLLogCollector packages now include the configuration files of ResourceManager, ProtocolFunctionManager, and Scheduler [ID 46753]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+SLLogCollector packages now include the following configuration files:
+
+- `C:\Skyline DataMiner\ResourceManager\Config.xml`
+- `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
+- `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
+
+#### TCP server ports: Multiple elements can now receive data from the same allowed IP address [ID 46784]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When multiple elements listen on the same TCP server port and explicitly list a client's IP address in their allowed IP addresses, all of those elements will now receive the data sent by that client. Previously, only one element would receive the data.
+
+Only one element can still respond to the client. This enhancement is intended for scenarios where multiple elements need to receive data without responding.
+
+If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
+
 ### Fixes
 
 #### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
@@ -163,7 +296,7 @@ From now on, the Resource Manager will take ignored booking into account when de
 
 #### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
 
@@ -191,6 +324,14 @@ From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will loa
 
 In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
 
+#### Crash dumps of native processes will now be captured earlier when a process crashes [ID 46696]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+From now on, crash dumps of native processes will be captured earlier when a process crashes, to help gather more useful diagnostic information.
+
+Also, a number of minor issues have been fixed in SLDMS. For example, up to now, memory handling issues could occur in notification threads for DataMiner Agents.
+
 #### Remote DELT export and migration failures did not show the failure reason [ID 46699]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -207,9 +348,26 @@ Up to now, SLAnalytics subscribed to swarming notifications after startup prefet
 
 If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.
 
-#### Automation: Script execution time could be incorrect in script log files [ID 46749]
+#### CCAEndpoint initialization is now retried after failures [ID 46752]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
+
+If initialization of `CCAEndpointManager` or `CCAEndpointHandler` fails, DataMiner will now keep retrying.
+
+The retry scheduler will increase the delay between attempts up to a maximum of 60 seconds.
+
+#### STaaS: Encrypted credential records could accumulate when credentials were updated [ID 46746]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- Not added to MR 10.7.0 - Introduced by RN 46061 -->
+
+On STaaS systems, when you updated a Credentials Library credential with encrypted fields (such as an SNMPv3, token, or username and password credential), new records could be added to the `encryptedsecrets` table without removing the old ones. As a result, the table could grow indefinitely.
+
+The update process now removes the old encrypted records, preventing them from accumulating.
+
+#### Automation: Script execution time could be incorrect in script log files [ID 46749]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
 In script log files, execution times for scripts running longer than one minute could be incorrect. In addition, the `SLAutomation` log file did not include the library name when it logged the start or completion of script library compilation.
 
@@ -220,3 +378,11 @@ From now on, the script log file will report the correct total execution time, a
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
 Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirects were configured and BrokerGateway was manually configured with redirected NATS addresses.
+
+#### STaaS: Source connection was not restored after stopping a migration or replication [ID 46782]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a STaaS migration or replication was stopped, the source connection was not restored as the current connection. Instead, DataMiner could continue to use the migration connection.
+
+From now on, stopping a STaaS migration or replication will restore the source connection.

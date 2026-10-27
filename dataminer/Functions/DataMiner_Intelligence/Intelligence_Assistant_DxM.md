@@ -6,24 +6,32 @@ description: "Learn about the DataMiner Assistant DxM, which provides conversati
 
 # DataMiner Assistant DxM
 
-DataMiner Intelligence makes use of the DataMiner Assistant DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)), which provides conversational AI in DataMiner.
-
-The initial 1.0.0 version only supports the [natural language to GQI](xref:Intelligence_NL2GQI) feature. Starting from version 2.0.7, the [Document Intelligence](xref:docintel) feature is also supported.
-
-A [DataMiner Assistant app](xref:Intelligence_Assistant_app) is also currently being developed. You can preview it in DataMiner upon request. In addition, a [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365) is available on the Microsoft Marketplace, which has features similar to the Assistant app but allows direct access from Microsoft Teams or Microsoft Copilot.
+DataMiner Intelligence makes use of the DataMiner Assistant DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)), which provides the AI capabilities in DataMiner.
 
 ## Installation
 
-DataMiner Assistant is currently not included in DataMiner upgrade packages and [needs to be deployed separately](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node).
+DataMiner Assistant is included in DataMiner web upgrade packages, but it is not activated automatically in all systems:
 
-Once it has been deployed, DataMiner Assistant is upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
+- On [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) systems, the DataMiner Assistant DxM is enabled by default.
+- On on-premises systems, you need to install the DxM initially to activate it. To do so, run the DataMiner Assistant MSI installer from the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\Web` on the DataMiner Agent. Local installers for DataMiner 10.6.x or newer include the DataMiner Assistant DxM by default.
 
-To upgrade to version 2.0.0 (which involves a name change of the DxM, as previously it was called "Copilot"), you will need to install DataMiner Assistant manually, even if the Copilot DxM was already installed. After that, automatic upgrades will resume.
+Once it has been installed, DataMiner Assistant is upgraded automatically when you install DataMiner upgrades. From DataMiner 10.5.7/10.6.0 onwards, it is upgraded with full DataMiner upgrade packages.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
 
 For DataMiner Assistant to run correctly, the following **prerequisites** must be met:
 
 - **Connection to dataminer.services**: The DataMiner System [must be connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+
 - **GQI**: For the "natural language to GQI" feature to work, the [GQI DxM](xref:GQI_DxM) needs to be installed.
+
+- **No Failover**: The DxM is not supported on DataMiner Agents that are part of a Failover pair.
+
+   If you currently have Failover Agents, we recommend one of the following approaches:
+
+  - Move away from Failover and use [Swarming](xref:Swarming) instead.
+  - Add one or more DataMiner Agents that are not part of a Failover pair to your DataMiner System, and install the DataMiner Assistant DxM on those Agents.
+
+    > [!TIP]
+    > To request a free license for such a DataMiner Agent, contact the Skyline Sales department at [sales@skyline.be](mailto:sales@skyline.be).
 
 ## Logging
 

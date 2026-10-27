@@ -1,12 +1,11 @@
 ---
 uid: Configuring_pools_of_resources
+description: "Discover how to create and configure resource pools in DataMiner SRM, define pool properties, and add or manage resources in a resource pool."
 ---
 
 # Configuring pools of resources
 
 ## Adding a pool
-
-### [DataMiner 10.2.0/10.1.5 or higher](#tab/tabid-1)
 
 1. Make sure no existing resource pool is selected.
 
@@ -15,16 +14,6 @@ uid: Configuring_pools_of_resources
 1. Enter the pool name in the dialog box and click *OK*.
 
 1. To further configure the pool, select it in the resource pool pane, then proceed with the procedures outlined below.
-
-### [Prior to DataMiner 10.1.5](#tab/tabid-2)
-
-1. At the bottom of the leftmost column in the *resources* tab, click the *Add* button.
-
-1. Enter the pool name in the dialog box and click *OK*.
-
-1. To further configure the pool, select it in the column on the left, then proceed with the procedures outlined below.
-
-***
 
 ## Configuring pool properties
 
@@ -55,15 +44,13 @@ In order to define properties for all resources in a pool, and optionally limit 
 
 ## Adding resources to a pool
 
-### [DataMiner 10.2.0/10.1.5 or higher](#tab/tabid-1)
-
 1. While the pool is selected, in the *resources* tab, click the *Add resource* button.
 
 1. In the *general* subtab, configure the following fields as necessary:
 
    - *Name*: The name of the resource.
 
-   - *Status*: Determines whether the resource is currently available, unavailable or in maintenance. Note that this field is no longer used in recent SRM configurations.
+   - *Status*: Determines whether the resource is currently available or in maintenance. Setting the status to *Maintenance* makes the resource unavailable for new bookings and moves bookings that already use it to quarantine (see [Quarantine](xref:SRM_Quarantine)).
 
    - *Concurrency*: The maximum number of times the resource can be reserved at the same time.
 
@@ -82,84 +69,21 @@ In order to define properties for all resources in a pool, and optionally limit 
 
    - *Instance*: If a virtual function is selected in the *Function* field, here you can select one of the available entrypoint table instances. For example, if the linked element is a provisioning element, the instance can indicate which of its provisioned elements the resource should be linked to. In case the selected virtual function does not define an entrypoint table, the dropdown box will only show the option \<none>.
 
-   - *Function instance name*: Available from DataMiner 10.2.0 \[CU3]/10.2.6 onwards. Allows you to modify the name of the DVE linked to a function resource.
+   - *Function instance name*: Allows you to modify the name of the DVE linked to a function resource.
 
    > [!NOTE]
    >
    > - When a resource linked to a virtual function is saved, a corresponding (virtual) element is created, and its name and ID will be displayed.
    > - We highly recommend that updating the name of a function instance is done via the resource. Strictly speaking, this is also possible via the DVE parent, but if you change the name there, the resource will not be updated.
 
-   > [!WARNING]
-   > Virtual functions with generated protocol are currently still in soft launch, with the *Function* soft-launch option. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
-
-1. In the *properties* subtab, configure any properties if necessary. With the buttons in the lower-right corner, you can add, edit and delete resource properties.
+1. In the *properties* subtab, configure any properties if necessary. With the buttons in the lower-right corner, you can add, edit, and delete resource properties.
 
 1. Click *Save* in the lower-right corner.
 
 > [!NOTE]
 > You can also add a resource to a pool by moving or copying it from another pool. To move a resource, drag it from one pool to the other. To copy it, keep Ctrl pressed while you drag. Note that this is only supported for existing, valid resources, and you need to have permission to edit resources to do this. It is also not possible to copy a resource to or from the "(uncategorized)" pool, as this pool is reserved for resources that are not in any other pool.
 
-### [Prior to DataMiner 10.1.5](#tab/tabid-2)
-
-1. While the pool is selected, in the *resources* tab, click the *Add* button.
-
-1. In the dialog box, fill in the resource name.
-
-1. Optionally, the following fields can also be filled in:
-
-   - *Status*: Determines whether the resource is currently available, unavailable or in maintenance.
-
-   - *Element*: Links the resource to an existing DataMiner element.
-
-   - *Concurrency*: The maximum number of times the resource can be reserved at the same time.
-
-   - *Capacity*: Allows you to select and configure a profile parameter defining the capacity of the resource.
-
-   - *Capability*: Allows you to select and configure a profile parameter defining the capability of the resource.
-
-     > [!NOTE]
-     > To support time-dependent capabilities that are filled in by a script when necessary, you can select *Use time-dependent* and not specify a value for the capability. In addition, string capabilities are supported from this version onwards.
-
-1. If any resource property definitions have been defined, fill in the values required for the additional properties.
-
-   > [!NOTE]
-   > If you select an existing resource in the *resources* tab, you can view information on its configuration if you expand the *Properties* section at the bottom of the tab. This includes a button that allows you to quickly navigate to the element linked to the resource. Buttons are also available that allow you to add, edit or delete properties of a resource.
-
-1. Click *OK*.
-
-***
-
-## Adding a virtual function as a resource
-
-To make it possible to schedule a virtual function as a resource, prior to DataMiner 10.2.0/10.1.5 you must add it as a resource in the *Resources* module using the procedure below. From DataMiner 10.2.0/10.1.5 onwards, you can do so as detailed in [Adding resources to a pool](#adding-resources-to-a-pool).
-
-1. In the *Resources* tab, click the *Add function* button.
-
-   A window will open where you can add the virtual function.
-
-1. Select the virtual function definition and provider in the columns on the left.
-
-   > [!NOTE]
-   > Only virtual function definitions that have been set active will be listed.
-
-1. In the *Instances* list, in the *Resource* column, click *Create*. One of the available resource instances will be selected.
-
-   > [!NOTE]
-   > If the *Create* option is not available, no more resource instances can be added for this particular function and provider.
-
-1. Click *OK* to close the window.
-
-1. Optionally, to customize the name of the virtual functions that will be created for this resource:
-
-   1. Select the resource and click the *Edit* button.
-
-   1. In the *Edit Resource* window, fill a new name in the *Name* box.
-
-   1. Click *OK* to close the window.
-
 ### Removing a resource from a pool
-
-From DataMiner 10.2.10/10.3.0 onwards, you can remove a resource from a pool as follows:
 
 1. Select the resource pool.
 

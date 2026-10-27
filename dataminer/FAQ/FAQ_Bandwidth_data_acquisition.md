@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Bandwidth_data_acquisition
+description: "Estimate bandwidth for data acquisition with the SNMP rule of thumb of 1 kB per 10 Gets per second, then tune polling cycles to fit your ecosystem."
 ---
 
 # How much bandwidth must be provided for data acquisition on data sources?

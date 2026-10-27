@@ -62,6 +62,43 @@ When a Spectrum card is open, it automatically enters standby mode after the con
 
 The *Preset* section on the right side of a Spectrum component has now been adapted to the new theme.
 
+#### Correlation: Warning for rules using 'Group by alarm' is now shown in red [ID 46670]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you select a correlation rule that still uses the removed *Group by alarm* method, DataMiner Cube marks the rule as modified and displays a warning that the method is no longer supported. From now on, that warning will be shown in red, making it easier to see that you need to update the rule.
+
+#### Spectrum: Preset loading options now behave more consistently [ID 46683]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Preset loading options now behave more consistently:
+
+- Selecting or loading a private or public preset no longer changes the preset content checkboxes. Your selections will be saved and restored when you reopen the Spectrum Analyzer.
+- All preset content checkboxes remain enabled. Bold labels indicate which content is available in the selected preset.
+- Last Session presets restore the session independently of the content checkboxes used to load private and public presets.
+- When you load a preset from Visual Overview, its configured loading flags are used instead of being combined with previously active flags.
+
+The checkbox labels have also been clarified: *Trace* is now *Reference trace*, *Threshold* is now *Thresholds*, and *Measurement cycle* is now *Measurement points*.
+
+#### Cluster update status: Possible statuses have changed [ID 46504]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Since DataMiner Cube version 10.5.0 CU20/10.6.0 CU8/10.6.11, the status of a cluster update is displayed next to the cluster name in the Cube header.
+
+The possible statuses have now been changed to the following:
+
+- *Updating...* while the upgrade is in progress.
+- *Update done* when the upgrade was successful.
+- *Update failed* when the upgrade was not successful.
+
+The *Update failed* status is only shown to users who have permission to view and launch upgrades.
+
+> [!NOTE]
+> This feature will only work in conjunction with DataMiner server version 10.5.0 CU20/10.6.0 CU8/10.6.11 or newer.
+> If no status is available, Cube will continue to show the cluster name as before, ensuring compatibility with older DataMiner Systems.
+
 ### Fixes
 
 #### Spectrum: Marker was shown on the first trace instead of the trace where it was added [ID 46290]
@@ -166,6 +203,14 @@ When you loaded a preset containing a threshold in a Spectrum component, in some
 
 The threshold will now be displayed when the preset is loaded.
 
+#### Spectrum component would remain blank after an element restart [ID 46646]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you restarted an element while a Spectrum component was open, the component would remain blank because it did not create a new session.
+
+From now on, the Spectrum component will create a new session when the element is restarted.
+
 #### System Center - Agents: Migration window could remain open after an element export failed [ID 46657]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -174,6 +219,14 @@ When an element export failed during migration, up to now, the Element migration
 
 From now on, the window will indicate that the migration finished with errors.
 
+#### Services: Exclude conditions on groups could be saved incorrectly [ID 46658]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you configured a service with a group of child elements and applied an exclude condition to that group, Cube would incorrectly save the condition as both an include and an exclude trigger, and when you reopened the service in the editor, the exclude condition would be shown as an include condition. Saving the service again could then change its behavior.
+
+Cube will now save these conditions correctly and correct affected configurations when you open the service editor.
+
 #### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -181,6 +234,22 @@ From now on, the window will indicate that the migration finished with errors.
 When another session changed the Last Session Preset of a Spectrum analyzer in shared mode, the banner in Cube said, "This spectrum element has changes to its currently loaded preset." Because this wording referred to a preset rather than the session that made the change, it could be unclear.
 
 The banner now says, "Another session has made changes to this spectrum analyzer."
+
+#### Correlation: Rules with automation script actions could be incorrectly marked as modified [ID 46677]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you selected a correlation rule with an action to run an automation script, up to now, Cube could mark the rule as modified even though you had not changed it. This could happen when the casing of the script name in the rule differed from the name of the available script.
+
+From now on, Cube will compare script names without taking casing into account, so a difference in capitalization will no longer cause the rule to be marked as modified.
+
+#### Spectrum: Marker could jump to another trace when adding the average trace [ID 46708]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a Spectrum component contained a single trace and no measurement points, adding a marker to the trace could cause it to jump to the average trace when you added that trace. This could happen when *Combined measurement point view* was disabled. The marker could also jump when you added the max or min trace.
+
+The marker will now remain on the trace where you added it.
 
 #### Embedded web pages could appear over popups [ID 46740]
 

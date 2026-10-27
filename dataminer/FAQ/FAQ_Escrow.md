@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Escrow
+description: "Explore Skyline Communications' escrow service, including annual charges, quarterly source code deposits with Merak, verification, and release terms."
 ---
 
 # Does Skyline offer an escrow service?
