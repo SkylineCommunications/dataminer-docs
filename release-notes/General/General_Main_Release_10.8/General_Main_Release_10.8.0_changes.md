@@ -24,6 +24,21 @@ From now on, an upgrade action will automatically add a `Set-Cookie` header to `
 
 The upgrade action will leave the configuration unchanged if SAML is disabled or the required cookie header is already configured. Existing custom headers, including `Set-Cookie` headers for other cookies, will be preserved.
 
+#### DataMiner upgrade: Prerequisite check for Communication Gateway DxM version [ID 46798]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+During a DataMiner upgrade, a new prerequisite check will verify the version of the installed Communication Gateway DxM. If the installed version is older than 5.3.5, the upgrade will be blocked.
+
+If the installed Communication Gateway DxM version is older than 4.0.0, the check will also identify the following connectors that use an outdated version of the `Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Protocol` NuGet package:
+
+- Arista eOS Manager versions older than 1.0.0.5
+- CISCO Nexus versions older than 3.0.7.3
+
+To resolve these issues, upgrade Communication Gateway DxM to version 5.3.5 or higher. If any elements use a listed connector, configure them to use a connector version that uses version 6.0.0 or higher of the NuGet package. Remove listed connectors that are not in use.
+
+The additional connector check only detects these known connectors. Make sure no other connectors in use depend on a version of the NuGet package older than 6.0.0.
+
 ### Fixes
 
 *No fixes have been added yet.*
