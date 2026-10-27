@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell-table
-description: "Consult the DataMiner protocol schema reference for the table attribute, which links a topology cell to a table parameter and is deprecated."
+description: "Learn about the deprecated table attribute of the Topology Cell element in a DataMiner protocol, which links a cell to a table parameter."
 ---
 
 # table attribute
@@ -18,5 +18,3 @@ string
 ## Remarks
 
 Deprecated.
-
-

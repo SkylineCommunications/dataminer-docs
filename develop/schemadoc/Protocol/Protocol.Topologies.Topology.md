@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology
-description: "Consult the DataMiner protocol schema reference for the Topology element, which defines the cells represented in an EPM element diagram."
+description: "Use the Topology element in a DataMiner protocol to define an EPM topology diagram and configure the cells displayed within it."
 ---
 
 # Topology element

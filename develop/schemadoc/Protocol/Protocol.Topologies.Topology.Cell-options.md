@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell-options
-description: "Consult the DataMiner protocol schema reference for the options attribute, which defines deprecated options for a topology cell."
+description: "Learn about the deprecated options attribute of the Topology Cell element in a DataMiner protocol, previously used to set cell options."
 ---
 
 # options attribute
@@ -18,5 +18,3 @@ string
 ## Remarks
 
 Deprecated.
-
-

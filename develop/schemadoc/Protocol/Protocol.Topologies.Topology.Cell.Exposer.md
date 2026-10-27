@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell.Exposer
-description: "Consult the DataMiner protocol schema reference for the Exposer element, which exposes a topology cell and its linked tables to the EPM crawler."
+description: "Use the Exposer element in a DataMiner protocol to expose an EPM topology cell and its linked tables to the EPM crawler for client data retrieval."
 ---
 
 # Exposer element

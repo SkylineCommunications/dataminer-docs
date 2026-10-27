@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Topologies.Topology.Cell-listColumns
-description: "Consult the DataMiner protocol schema reference for the listColumns attribute, its string type, and Cell parent."
+description: "Use the listColumns attribute of the Topology Cell element in a DataMiner protocol to specify the list columns for an EPM topology cell."
 ---
 
 # listColumns attribute
 
-*** No documentation available yet ***
+***No documentation available yet***
 
 ## Content Type
 

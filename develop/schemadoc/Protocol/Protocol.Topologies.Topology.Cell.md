@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell
-description: "Consult the DataMiner protocol schema reference for the Cell element, which defines a cell in a CPE topology and its table mapping."
+description: "Use the Cell element under Topology in a DataMiner protocol to define a cell in an EPM topology and configure its table mapping and links."
 ---
 
 # Cell element
@@ -18,8 +18,8 @@ Specifies a cell within a CPE topology.
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
-|[detailColumns](xref:Protocol.Topologies.Topology.Cell-detailColumns)|string||*** No documentation available yet ***|
-|[listColumns](xref:Protocol.Topologies.Topology.Cell-listColumns)|string||*** No documentation available yet ***|
+|[detailColumns](xref:Protocol.Topologies.Topology.Cell-detailColumns)|string||***No documentation available yet***|
+|[listColumns](xref:Protocol.Topologies.Topology.Cell-listColumns)|string||***No documentation available yet***|
 |[name](xref:Protocol.Topologies.Topology.Cell-name)|string|Yes|Specifies the name of the cell.|
 |[options](xref:Protocol.Topologies.Topology.Cell-options)|string||Specifies a number of options (**Deprecated**).|
 |[table](xref:Protocol.Topologies.Topology.Cell-table)|string|Yes|Specifies the table parameter to which the cell is linked.|

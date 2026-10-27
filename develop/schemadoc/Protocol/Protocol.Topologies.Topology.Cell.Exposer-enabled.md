@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell.Exposer-enabled
-description: "Consult the DataMiner protocol schema reference for the enabled attribute, which controls whether a topology cell is exposed to the EPM crawler."
+description: "Use the enabled attribute of the Exposer element in a DataMiner protocol to control whether an EPM topology cell is exposed to the EPM crawler."
 ---
 
 # enabled attribute

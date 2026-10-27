@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies
-description: "Consult the DataMiner protocol schema reference for the Topologies element, which collects topology definitions for diagrams in an EPM element."
+description: "Use the Topologies element in a DataMiner protocol to define topology connections and diagrams displayed in an EPM element."
 ---
 
 # Topologies element

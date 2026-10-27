@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell.Exposer.LinkedIds
-description: "Consult the DataMiner protocol schema reference for the LinkedIds element, which lists the table parameter IDs linked through the exposer."
+description: "Use the LinkedIds element under Exposer in a DataMiner protocol to list the tables linked to an exposed cell within an EPM topology."
 ---
 
 # LinkedIds element
