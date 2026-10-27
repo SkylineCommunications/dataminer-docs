@@ -2,9 +2,9 @@
 uid: dataminer_services_change_log_2026
 ---
 
-### 27 October 2026 - Fix - Status Page - Display of incidents in the last 30 days restored
+### 27 October 2026 - Fix - Status page - Incidents from the last 30 days not shown
 
-The status page was no longer displaying the list of incidents of the last 30 days, this has now been fixed.
+The status page no longer displayed the list of incidents from the last 30 days. This has now been fixed.
 
 # dataminer.services change log - 2026
 
