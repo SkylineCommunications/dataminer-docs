@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Responses.Response.Name
-description: "Learn how the Response Name element assigns the response name, which often matches its associated command."
+description: "Learn how the Response Name element assigns the name of the response DataMiner expects after sending a specific command."
 ---
 
 # Name element
@@ -18,5 +18,3 @@ Specifies the name of the response.
 ## Remarks
 
 Often, the response will have the same name as the command with which it is associated.
-
-

@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Responses.Response.Content-optional
-description: "Learn how the optional attribute marks response parameters as optional and specifies which later parameters DataMiner skips after a mismatch."
+description: "Learn how the 'optional' attribute marks response parameters as optional and specifies which later parameters DataMiner skips after a mismatch."
 ---
 
 # optional attribute
 
-Specifies that no error will occur if they are not found in the response received from the device.
+Marks parameters in a response definition as optional, so that no error will occur if they are not found in the response received from the device.
 
 ## Content Type
 
@@ -23,8 +23,8 @@ If a parameter matches, DataMiner will simply go on to the next parameter and ch
 
 If an optional parameter does not match, the following special characters can be included in the optional attribute of the Protocol.Responses.Response tag to tell DataMiner what to do:
 
-- \+ : Tells DataMiner to skip the next parameter. Multiple “+” characters can be entered to have several parameters skipped.
-- \* : Tells DataMiner to skip the parameters in the response until it reaches the next optional parameter.
+- `+` : Tells DataMiner to skip the next parameter. Multiple `+` characters can be entered to have several parameters skipped.
+- `*` : Tells DataMiner to skip the parameters in the response until it reaches the next optional parameter.
 
 > [!NOTE]
 > In this attribute, refer to the parameters using their 0-based position in the response.
@@ -35,7 +35,7 @@ Take a look at the following example:
 
 ```xml
 <Content optional="0+++++++;1;2;3;4;5;6;7;8*;10*;13+++">
-	...
+   ...
 </Content>
 ```
 

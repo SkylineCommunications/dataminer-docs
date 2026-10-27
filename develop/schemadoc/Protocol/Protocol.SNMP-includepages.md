@@ -19,7 +19,7 @@ If set to *true*, the MIB of the protocol will contain several submaps: one for 
 
 Contains one of the following values:
 
-|Value|Description
+|Value|Description|
 |--- |--- |
 |false|The MIB will not automatically create an OID for each parameter.|
 |auto|The MIB will assign an OID to each parameter according to its number in the protocol.|

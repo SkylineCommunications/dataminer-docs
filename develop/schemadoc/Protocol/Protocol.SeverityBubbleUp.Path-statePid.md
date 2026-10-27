@@ -1,6 +1,6 @@
 ---
 uid: Protocol.SeverityBubbleUp.Path-statePid
-description: "Learn how the statePid attribute references a binary parameter that enables or disables a SeverityBubbleUp path at runtime."
+description: "Use the statePid attribute to reference the parameter that determines whether a severity bubble-up path is enabled or disabled."
 ---
 
 # statePid attribute
