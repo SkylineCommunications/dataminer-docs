@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Timers.Timer-id
-description: "Consult the DataMiner protocol schema reference for the id attribute, which assigns a unique ID to a timer."
+description: "Use the id attribute of the Timer element in a DataMiner protocol to assign a unique numeric identifier to a timer definition."
 ---
 
 # id attribute

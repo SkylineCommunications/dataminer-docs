@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Timers.Timer
-description: "Consult the DataMiner protocol schema reference for the Timer element, which defines which groups run and when they execute."
+description: "Use the Timer element in a DataMiner protocol to define which groups must be executed, when they run, and their recurrence interval."
 ---
 
 # Timer element
@@ -32,7 +32,7 @@ Specifies which groups have to be executed, and when.
 
 ## Remarks
 
-It is recommended to define multiple timers. That way, you can separate the important groups (which will be polled more frequently) from the less important groups (which will be polled less frequently).
+Defining multiple timers is recommended. That way, you can separate the important groups (which will be polled more frequently) from the less important groups (which will be polled less frequently).
 
 ## Examples
 

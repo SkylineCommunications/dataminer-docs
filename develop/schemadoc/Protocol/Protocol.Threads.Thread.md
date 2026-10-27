@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Threads.Thread
-description: "Learn how each Thread element creates a separate group execution queue for assigned connections, with optional targeting and logging identifiers."
+description: "Learn how the Thread element defines an additional execution thread for assigned connections, with its own group queue and optional ID and name."
 ---
 
 # Thread element
@@ -27,7 +27,7 @@ Each new thread will have its own group execution queue and runtime error thread
 
 The main protocol queue is always active.
 
-Starting from DataMiner 10.4.9 (RN 38887), you can create different threads for the same connection by giving the thread an ID. Optionally, you can also give it a name, but this is currently only used for logging purposes. For now, creating multiple threads for the same connection is **only supported for HTTP and SNMP connections**. If you try to configure this for a different kind of connection, the thread will not be created, and an entry will be added in the element logging to explain why.
+Starting from DataMiner 10.4.9/10.5.0<!-- RN 38887 -->, you can create different threads for the same connection by giving the thread an ID. Optionally, you can also give it a name, but this is currently only used for logging purposes. For now, creating multiple threads for the same connection is **only supported for HTTP and SNMP connections**. If you try to configure this for a different kind of connection, the thread will not be created, and an entry will be added in the element logging to explain why.
 
 > [!NOTE]
 > If you want to use a thread definition with an ID, all thread definitions will need to have an ID. Combining thread definitions with and without ID is not supported.

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Time
-description: "Consult the DataMiner protocol schema reference for the Time element, which sets how often the timer runs its included groups."
+description: "Use the Timer.Time element in a DataMiner protocol to specify how frequently the groups included in a timer must be executed."
 ---
 
 # Time element
@@ -19,7 +19,7 @@ Specifies how frequently the included groups will be executed.
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
-|[dataDisplay](xref:Protocol.Timers.Timer.Time-dataDisplay)|unsignedInt||Specifies the execution frequency of the included groups when a Data Display has been opened.|
+|[dataDisplay](xref:Protocol.Timers.Timer.Time-dataDisplay)|unsignedInt||Specifies the execution frequency of the included groups when Data Display has been opened.|
 |[initial](xref:Protocol.Timers.Timer.Time-initial)|string||Specifies whether the timer should be started when the element is started.|
 
 ## Remarks

@@ -2,6 +2,7 @@
 uid: Protocol.Threads.Thread-name
 description: "Learn how the Thread name attribute assigns an optional label used to identify the thread in DataMiner logs."
 ---
+
 # name attribute
 
 Name of the thread. This is only used for logging purposes.
@@ -16,4 +17,4 @@ Name of the thread. This is only used for logging purposes.
 
 ## Remarks
 
-*Feature introduced in DataMiner 10.4.9/10.5.0 (RN 38887).*
+Feature introduced in DataMiner 10.4.9/10.5.0<!-- RN 38887 -->.
