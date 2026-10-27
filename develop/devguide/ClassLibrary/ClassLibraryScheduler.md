@@ -6,6 +6,9 @@ uid: Scheduler_NuGet_Package
 
 The Scheduler NuGet package provides useful functionalities to interact with the Scheduler module using automation scripts. It enables the creation, updating, and deletion of scheduled tasks.
 
+> [!IMPORTANT]
+> The Scheduler API is now available in the DataMinerSystem library. Use the [IDmsScheduler](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDmsScheduler) interface instead of this prerelease package. For details, see the [release note for the improved Scheduler API](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.1#1137).
+
 ## Installing the Scheduler NuGet package
 
 To install the Scheduler package, follow these steps:
