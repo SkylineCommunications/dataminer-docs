@@ -17,16 +17,16 @@ uid: DocumentHub_1.1.3
 
 ### Create a default local-files bucket during deployment [ID 46838]
 
-When you deploy DocumentHub, it now creates a default Local bucket that points to `/`. You can use this bucket to access local files without creating one manually.
+When you deploy DocumentHub, it now creates a default *Local* bucket that points to `/`. You can use this bucket to access local files without creating a bucket manually.
 
-### OpenAPI specification generation for DocumentHub UDAPIs [ID 46903]
+### OpenAPI specification generation for DocumentHub user-defined APIs [ID 46903]
 
-OpenAPI specifications are now available for DocumentHub UDAPIs. Use them to review the available API operations and understand how to integrate your applications with DocumentHub.
+OpenAPI specifications are now available for DocumentHub user-defined APIs. Use them to review the available API operations and understand how to integrate your applications with DocumentHub.
 
 ## Changes
 
-### Remove DocumentHub-specific guardrails from the Assistant Agent [ID 46904]
-
-When you use the Assistant Agent to delete files or buckets, or to download files, it no longer displays DocumentHub-specific confirmation prompts or warnings. This removes extra steps from these workflows.
-
 ## Enhancements
+
+### Remove DocumentHub-specific guardrails from the Assistant agent [ID 46904]
+
+When you use the Assistant agent to delete files or buckets, or to download files, it no longer displays DocumentHub-specific confirmation prompts or warnings. This removes extra steps from these workflows.
