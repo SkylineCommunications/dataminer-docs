@@ -14,7 +14,6 @@ The following changes may have an impact on your system, so please make sure to 
 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
-- [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Changes
 
@@ -721,12 +720,6 @@ From now on, on systems that have already been upgraded successfully to a DataMi
 
 The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
 
-#### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
-
 #### Automation: GetAvailableAutomationScripts now returns additional script information [ID 46140]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -1009,14 +1002,6 @@ Change points are now also distinguished by creation time. As a result, previous
 Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
 
 From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
-
-#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
-
-<!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
-
-When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
-
-From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
 
 #### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
 
