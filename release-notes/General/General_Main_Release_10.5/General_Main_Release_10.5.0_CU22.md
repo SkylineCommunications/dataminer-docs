@@ -31,4 +31,8 @@ description: "Release notes for General Main Release 10.5.0 CU22, including prer
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Standalone BPA executor: BPA tests requiring SLNet could fail to run [ID 46809]
+
+<!-- MR 10.5.0 [CU22]/10.6.0 [CU10] - FR 10.7.1 -->
+
+The standalone BPA executor would throw a `NullReferenceException` when running a manually loaded BPA DLL file with the `RequireSLNet` flag, preventing the BPA test from executing.
