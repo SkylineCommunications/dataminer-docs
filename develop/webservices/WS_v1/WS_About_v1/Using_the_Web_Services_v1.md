@@ -46,6 +46,17 @@ The WSDL files can be found on the following addresses.
 | SOAP     | `http://DmaNameOrIpAddress/API/v1/soap.asmx?WSDL` |
 | JSON     | `http://DmaNameOrIpAddress/API/v1/json.asmx?WSDL` |
 
+## OpenAPI and AsyncAPI specifications
+
+From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46653-->, OpenAPI 3.1 and AsyncAPI 3.1 specifications of the DataMiner Web API are available on each DataMiner Agent in the following files:
+
+| Specification | File                                       |
+|---------------|--------------------------------------------|
+| OpenAPI 3.1   | `C:\Skyline DataMiner\API\docs\http.json`  |
+| AsyncAPI 3.1  | `C:\Skyline DataMiner\API\docs\ws.json`    |
+
+The specifications describe supported HTTP operations, request and response schemas, enum values, WebSocket messages, and subscriptions.
+
 ## SOAP
 
 When SOAP requests are used, the URL should have the structure `http(s)://{DMA IP}/api/v1/soap.asmx`, regardless of which method is chosen.
