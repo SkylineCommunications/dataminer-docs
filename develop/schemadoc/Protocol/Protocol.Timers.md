@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers
+description: "Use the Timers element in a DataMiner protocol to collect timers for recurring group execution and device polling."
 ---
 
 # Timers element

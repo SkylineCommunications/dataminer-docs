@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions-index
+description: "Use the index attribute in a DataMiner protocol to select the string column containing each table row's immutable primary key."
 ---
 
 # index attribute

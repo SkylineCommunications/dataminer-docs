@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SetCommunity.DefaultValue
+description: "Use the DefaultValue element in a DataMiner protocol to set the default SNMP set community string or SNMPv3 encryption password."
 ---
 
 # DefaultValue element

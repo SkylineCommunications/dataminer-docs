@@ -25,12 +25,14 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
-On each DataMiner Agent, OpenAPI 3.1 and AsyncAPI 3.1 specifications will now be available in the following folders:
+On each DataMiner Agent, OpenAPI 3.1 and AsyncAPI 3.1 specifications will now be available in the following files:
 
-- `C:\Skyline DataMiner\API\docs\http.json`
-- `C:\Skyline DataMiner\API\docs\ws.json`
+- `C:\Skyline DataMiner\WebPages\API\docs\http.json`
+- `C:\Skyline DataMiner\WebPages\API\docs\ws.json`
 
 The specifications describe supported HTTP operations, request and response schemas, enum values, WebSocket messages, and subscriptions.
+
+The files are also available over the web at `https://DmaNameOrIpAddress/API/docs/`.
 
 ### Interactive automation scripts: Grid layout now supported in web apps [ID 46716]
 

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Condition
+description: "Use the Condition element under Trigger in a DataMiner protocol to set the condition that must be met for a trigger to go off."
 ---
 
 # Condition element

@@ -121,6 +121,10 @@ If a required dynamic input has no value, the configuration is shown as incomple
 
 Using a single orchestration script with dynamic inputs can remove the need to create a separate script and resource pool for every variation of a setup.
 
+#### Resource selection panels now support search and filtering [ID 46907]
+
+Resource selection panels now include search and filtering capabilities, making it easier to find resources in large environments. This is available in the *Add Resource*, *Pick Resource*, *Swap Resource*, *Swap Resource (Node Graph)*, *Add Before*, *Add After*, and *Link Resource* panels.
+
 ## Changes
 
 ### Breaking changes
@@ -591,3 +595,7 @@ In addition, the confirmation dialog now adapts to the selection:
 When an orchestration script parameter for a node's automated action was linked to a property of the resource assigned to that node, it could occur that a job could not be confirmed. In this case, confirming the job failed with an error indicating that not all references could be resolved, for example: `Not all references could be resolved: "<parameter>" (linked to Resource Property) in <node>, event '<event>'`.
 
 This happened when the link did not store a node, which is the case for links configured on a resource pool. The link is now resolved against the node that owns the automated action, so the job can be confirmed.
+
+#### Scheduling: Incorrect eligible resources shown in 'Swap Resource from Node Graph' panel [ID 46906]
+
+In the Scheduling app, the *Swap Resource from Node Graph* panel could use incorrectly linked query feeds for its start and end time parameters. In some scenarios, the query therefore used incorrect job timings, which could result in incorrect data being returned for eligible resources. This issue has now been fixed.

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls
+description: "Consult the DataMiner protocol schema reference for the TreeControls element, which contains every tree control definition in the protocol."
 ---
 
 # TreeControls element

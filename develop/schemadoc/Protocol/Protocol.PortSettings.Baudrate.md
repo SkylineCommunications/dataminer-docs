@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Baudrate
+description: "Learn how the Baudrate element defines the default value, the allowed range, and the selectable baud rates for an element connection."
 ---
 
 # Baudrate element
@@ -23,5 +24,3 @@ Allows to limit baud rate settings and to define a default value.
 ## Remarks
 
 Typically, this information will correspond to the specifications received from the manufacturer.
-
-

@@ -1,5 +1,6 @@
 ---
 uid: Protocol
+description: "Consult the DataMiner protocol schema reference for the Protocol element, which serves as the root of a DataMiner protocol definition."
 ---
 
 # Protocol element
@@ -11,6 +12,7 @@ The root element of a DataMiner protocol.
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[baseFor](xref:Protocol-baseFor)|string||Specifies the type of element for which this protocol serves as a base protocol.|
+|xmlns|string|Yes|Specifies the XML namespace of the protocol. This must be set to `http://www.skyline.be/protocol`.|
 
 ## Children
 

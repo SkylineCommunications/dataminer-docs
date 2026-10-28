@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication
+description: "Use the Replication element in a DataMiner protocol to configure parameter replication from a specific parameter on another element."
 ---
 
 # Replication element
@@ -39,8 +40,8 @@ In the following example, you replicate parameter 1234 from element 111/1. The p
 
 ```xml
 <Replication ip="127.0.0.1" uid="uid" pwd="pwd" domain="domain">
-	<Element>111/1</Element>
-	<Parameter>1234</Parameter>
+   <Element>111/1</Element>
+   <Parameter>1234</Parameter>
 </Replication>
 ```
 
@@ -48,7 +49,7 @@ In the following example, the IDs are stored in parameters:
 
 ```xml
 <Replication uid="12" pwd="13">
-	<Element dynamic="14"></Element>
-	<Parameter dynamic="15"></Parameter>
+   <Element dynamic="14"></Element>
+   <Parameter dynamic="15"></Parameter>
 </Replication>
 ```

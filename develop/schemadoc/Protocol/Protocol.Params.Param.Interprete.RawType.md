@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.RawType
+description: "Use the RawType element in a DataMiner protocol to filter incoming parameter content by expected binary, numeric, text, or other data type."
 ---
 
 # RawType element
@@ -18,7 +19,7 @@ Specifies which type of content is allowed in the parameter.
 
 Contains one of the predefined values detailed in the sections below.
 
-If an incoming parameter value does not match the expected rawtype, DataMiner will not process it. The rawtype setting can therefore be considered as a kind of filter.
+If an incoming parameter value does not match the expected raw type, DataMiner will not process it. The `RawType` setting can therefore be considered as a kind of filter.
 
 ### bcd
 
@@ -41,22 +42,23 @@ Example:
 ```
 
 > [!NOTE]
-> If RawType is set to "double", the Interprete/LengthType should be set to "fixed" and Interprete/Length should either be 4 (float) or 8 (double).
+> If `RawType` is set to `double`, `Interprete.LengthType` should be set to `fixed` and `Interprete.Length` should either be 4 (float) or 8 (double).
 
 ### numeric text
 
 DataMiner will try to convert the hex value to a number using string conversion.
 
-Example: If the hex value is 31, the ASCII conversion gives 1. The parameter will contain 1 (result will be the same as what you see in the ASCII part of the stream).
+Example: If the hex value is 31, the ASCII conversion gives 1. The parameter will contain 1 (the result will be the same as what you see in the ASCII part of the stream).
 
 The following characters and digits:
+
 - 0-9
 - \+
 - \-
 - \.
 - \,
 - e or E or ' ' (space)
-- a-f or A-F (if Protocol.Params.Param.Interprete.Base is 16)
+- a-f or A-F (if `Protocol.Params.Param.Interprete.Base` is 16)
 
 In the following example, the value -3 will be saved in database as 2D 33:
 
@@ -82,7 +84,7 @@ Example:
 
 ### signed number
 
-When a next param is defined in Interprete.Type, the result will be the same as with unsigned number. When a fixed length is defined in Interprete.Type, the first half of the values will be positive number, and second half will be negative number.
+When a next param is defined in `Interprete.Type`, the result will be the same as with unsigned number. When a fixed length is defined in `Interprete.Type`, the first half of the values will be positive number, and second half will be negative number.
 
 Numbers between -128 and 127.
 
@@ -93,13 +95,14 @@ In the following example, the value -3 will be saved in database as FDFFFFFF and
 ```
 
 > [!NOTE]
-> If Interprete/Type is set to "double", RawType is set to "signed number", and Length is set to "fixed", then length must be set to either 1, 2, 4, or 8.
+> If `Interprete.Type` is set to `double`, `RawType` is set to `signed number`, and `Length` is set to `fixed`, then length must be set to either 1, 2, 4, or 8.
 
 ### text
 
 Alphanumeric ASCII characters only.
 
 Text consisting of the following characters:
+
 - 0-9
 - A-Z
 - a-z
@@ -112,7 +115,6 @@ Text consisting of the following characters:
 - a space (“ “)
 
 Example:
-
 
 ```xml
 <RawType>text</RawType>
@@ -133,4 +135,4 @@ In the following example, the value 1 will be saved in database as 01:
 ```
 
 > [!NOTE]
-> If Interprete/Type is set to "double", RawType is set to "unsigned number", and Length is set to "fixed", then length must be set to either 1, 2, 4, or 8.
+> If `Interprete.Type` is set to `double`, `RawType` is set to `unsigned number`, and `Length` is set to `fixed`, then length must be set to either 1, 2, 4, or 8.

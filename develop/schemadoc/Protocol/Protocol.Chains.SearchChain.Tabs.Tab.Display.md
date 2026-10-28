@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Display
+description: "Use the Display element in a DataMiner protocol to configure display and visibility settings for a search chain tab."
 ---
 
 # Display element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Display.Visibility-default
+description: "Use the Visibility default attribute in a DataMiner protocol to set search chain visibility when no standalone condition is met."
 ---
 
 # default attribute

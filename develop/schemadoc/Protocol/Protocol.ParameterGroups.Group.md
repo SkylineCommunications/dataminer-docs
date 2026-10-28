@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group
+description: "Use the Group element in a DataMiner protocol to define a DCF interface, its parameters, and dynamic table mapping."
 ---
 
 # Group element

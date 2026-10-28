@@ -1,5 +1,6 @@
 ---
 uid: Provisioning
+description: "Configure IDP provisioning with IPv4 and IPv6 ranges, hosting and fallback Agents, and automatic element creation after discovery."
 ---
 
 # Provisioning
@@ -22,4 +23,3 @@ The following actions are available on this page:
 
 > [!NOTE]
 > Both IPv4 and IPv6 ranges are supported. Both types of ranges can be combined in the same request.
->

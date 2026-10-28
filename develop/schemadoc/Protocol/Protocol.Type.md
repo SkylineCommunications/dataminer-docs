@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Type
+description: "Use the Type element in a DataMiner protocol to define the main connection type and specify protocol communication options."
 ---
 
 # Type element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-export
+description: "Use the export attribute in a DataMiner protocol to select the exported protocol tables that receive a discreet parameter value."
 ---
 
 # export attribute
@@ -24,25 +25,25 @@ In the example below, the exported protocol will contain the following discreet 
 
 ```xml
 <Param>
-	<Measurement>
-		<Discreets>
-			<Discreet export="1000">
-				<Display>OK</Display>
-				<Value>1</Value>
-			</Discreet>
-			<Discreet export="1200">
-				<Display>GOOD</Display>
-				<Value>2</Value>
-			</Discreet>
-			<Discreet>
-				<Display>Failure</Display>
-				<Value>3</Value>
-			</Discreet>
-			<Discreet export="1000;3000">
-				<Display>Fine</Display>
-				<Value>4</Value>
-			</Discreet>
-		</Discreets>
-	</Measurement>
+   <Measurement>
+      <Discreets>
+         <Discreet export="1000">
+            <Display>OK</Display>
+            <Value>1</Value>
+         </Discreet>
+         <Discreet export="1200">
+            <Display>GOOD</Display>
+            <Value>2</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Failure</Display>
+            <Value>3</Value>
+         </Discreet>
+         <Discreet export="1000;3000">
+            <Display>Fine</Display>
+            <Value>4</Value>
+         </Discreet>
+      </Discreets>
+   </Measurement>
 </Param>
 ```

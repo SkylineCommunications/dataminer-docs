@@ -1,5 +1,6 @@
 ---
 uid: IDP_Configuration_tab
+description: "Use the IDP app's Configuration tab to create backups, track changes, apply updates, and compare full or core device configurations."
 ---
 
 # Configuration tab

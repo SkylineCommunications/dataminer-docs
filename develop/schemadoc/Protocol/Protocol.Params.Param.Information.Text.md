@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Information.Text
+description: "Use the Text element in a DataMiner protocol to set the title displayed in a parameter information tooltip."
 ---
 
 # Text element
@@ -16,10 +17,6 @@ string
 
 ## Examples
 
-
 ```xml
 <Text>This is the title of the tooltip.</Text>
 ```
-
-
-

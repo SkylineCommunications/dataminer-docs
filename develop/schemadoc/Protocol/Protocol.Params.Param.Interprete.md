@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete
+description: "Use the Interprete element in a DataMiner protocol to define how DataMiner converts, validates, transforms, and stores a parameter value."
 ---
 
 # Interprete element

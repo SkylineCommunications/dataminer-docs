@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-snmpSetAndGet
+description: "Use the snmpSetAndGet attribute in a DataMiner protocol to perform an SNMP set followed by a get for a write parameter."
 ---
 
 # snmpSetAndGet attribute

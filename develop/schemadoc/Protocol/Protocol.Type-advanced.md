@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Type-advanced
+description: "Use the Type advanced attribute in a DataMiner protocol to add secondary connection types with optional names."
 ---
 
 # advanced attribute
@@ -18,7 +19,7 @@ string
 
 This allows you to create, for example, a serial protocol containing some SNMP commands, or a protocol that is capable of communicating with multiple ports.
 
-Protocol types have to be separated by semicolon (”;”).
+Protocol types have to be separated by semicolon (";").
 
 For more information on ports, see:
 

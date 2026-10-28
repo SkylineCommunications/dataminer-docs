@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId
+description: "Use the LinkedId element under Exposer LinkedIds in a DataMiner protocol to identify a linked table and its optional linking column."
 ---
 
 # LinkedId element

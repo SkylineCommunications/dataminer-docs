@@ -1,10 +1,11 @@
 ---
 uid: Protocol-TypeTriggerTime
+description: "Use the TypeTriggerTime simple type to accept defined trigger timing values or a custom string in the DataMiner protocol schema."
 ---
 
 # TypeTriggerTime simple type
 
-Represents the valid values for the Trigger/Time tag.
+Represents the valid values for the [Trigger.Time](xref:Protocol.Triggers.Trigger.Time) tag.
 
 ## Content Type
 

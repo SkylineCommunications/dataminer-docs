@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VendorOID
+description: "Use the VendorOID element in a DataMiner protocol to specify the unique vendor OID used to define MIB objects for elements."
 ---
 
 # VendorOID element

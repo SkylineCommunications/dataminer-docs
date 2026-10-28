@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Positions.Position.Column
+description: "Use the Column element in a DataMiner protocol to set the horizontal position of a parameter on a Data Display page."
 ---
 
 # Column element

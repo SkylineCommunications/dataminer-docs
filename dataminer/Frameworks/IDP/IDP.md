@@ -1,5 +1,6 @@
 ---
 uid: SolIDP
+description: "Explore DataMiner IDP, an out-of-the-box application to manage network inventory in a highly automated yet secure manner."
 ---
 
 # DataMiner IDP app

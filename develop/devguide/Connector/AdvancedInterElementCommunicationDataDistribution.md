@@ -1,5 +1,6 @@
 ---
 uid: AdvancedInterElementCommunicationDataDistribution
+description: "Learn how to distribute standalone and table parameter values between elements, in a fixed or dynamic way."
 ---
 
 # Data distribution

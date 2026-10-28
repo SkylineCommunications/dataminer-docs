@@ -1,5 +1,6 @@
 ---
 uid: MonitoringTrending
+description: "Configure parameter trending in DataMiner connectors, understand real-time and average calculations, manage history sets, and retrieve trend data."
 ---
 
 # Trending

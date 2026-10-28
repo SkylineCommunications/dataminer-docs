@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Credentials.Credential.Type
+description: "Set the Credential Type element to UserNameAndPassword or Token so it matches the linked entry in the DataMiner Credentials Library."
 ---
 
 # Type element

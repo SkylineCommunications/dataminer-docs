@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch
+description: "Use the Branch element in a DataMiner protocol to define a protocol version branch with its features and system versions."
 ---
 
 # Branch element

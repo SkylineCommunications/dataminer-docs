@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets
+description: "Use the Discreets element in a DataMiner protocol to define the set of discrete values and corresponding display labels for a parameter."
 ---
 
 # Discreets element

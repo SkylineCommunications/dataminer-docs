@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation-local
+description: "Use the local attribute to identify a column parameter in this protocol when creating a direct view table from multiple protocols."
 ---
 
 # local attribute

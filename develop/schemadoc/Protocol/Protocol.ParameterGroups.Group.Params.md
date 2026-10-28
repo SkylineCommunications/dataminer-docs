@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group.Params
+description: "Use the Params element in a DataMiner protocol to list the parameters included in a parameter group, where each parameter ID must be unique."
 ---
 
 # Params element

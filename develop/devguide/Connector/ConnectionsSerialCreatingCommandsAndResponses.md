@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSerialCreatingCommandsAndResponses
-description: A serial communication protocol specification implemented by a device typically defines a number of commands and responses.
+description: "Learn to build serial commands and responses from fixed and variable length parameters, including response matching, length fields, and CRC validation."
 ---
 
 # Creating commands and responses

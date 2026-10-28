@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Pair
+description: "Use the Pair element in a DataMiner protocol to identify a command/response pair included for consecutive group execution."
 ---
 
 # Pair element

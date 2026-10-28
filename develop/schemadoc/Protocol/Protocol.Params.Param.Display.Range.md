@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Range
+description: "Use the Range element in a DataMiner protocol to define the value range for a parameter, which affects controls, tooltips, trending, alarms, and analytics."
 ---
 
 # Range element

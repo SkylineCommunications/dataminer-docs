@@ -1,5 +1,6 @@
 ---
 uid: ChangeUnicode
+description: "Assess the impact of changing the Unicode option in a protocol, which depends on the deployed DataMiner version."
 ---
 
 # Change Unicode

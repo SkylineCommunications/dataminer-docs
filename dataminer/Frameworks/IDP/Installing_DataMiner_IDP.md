@@ -1,5 +1,6 @@
 ---
 uid: Installing_DataMiner_IDP
+description: "Install DataMiner IDP from the Catalog on DataMiner 10.4.0 CU0 or higher, then customize your setup with the IDP setup wizard."
 ---
 
 # Installing DataMiner IDP

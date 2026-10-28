@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ProcessAutomation.ProcessAutomationOptions.ProcessAutomationOption
+description: "Learn how a ProcessAutomationOption element links a supported Process Automation queue option name to the parameter storing its value."
 ---
 
 # ProcessAutomationOption element

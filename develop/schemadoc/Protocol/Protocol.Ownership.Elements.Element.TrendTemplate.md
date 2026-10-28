@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.TrendTemplate
+description: "Use the TrendTemplate element in a DataMiner protocol to declare ownership and access settings for an element trend template."
 ---
 
 # TrendTemplate element

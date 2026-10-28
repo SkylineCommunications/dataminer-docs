@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpRetrievingAVariable
+description: "Learn how to retrieve an SNMP variable in a DataMiner protocol by defining its parameter and OID, adding it to a group, and scheduling that group."
 ---
 
 # Retrieving a variable

@@ -1,10 +1,11 @@
 ---
 uid: Protocol.HTTP.Session-loginMethod
+description: "Use the loginMethod attribute in a DataMiner protocol to select credentials-based or client-certificate authentication for an HTTP session."
 ---
 
 # loginMethod attribute
 
-Specifies the authentication method to use.
+Specifies the authentication method to use.<!-- RN 25243 -->
 
 ## Content Type
 
@@ -16,14 +17,13 @@ Specifies the authentication method to use.
 
 ## Remarks
 
-The currently supported values for this attribute are:.
+The sections below detail the supported values for this attribute.
 
 ### credentials
 
-For credential-based authentication the supported authentication methods are:
+For credentials-based authentication, these are the supported authentication methods:
 
-
-|Method|Description
+|Method|Description|
 |--- |--- |
 |Basic (plain text)|HTTP Basic Authentication scheme (RFC 7617). Uses a base64 encoded string that contains the username and password.|
 |Digest|HTTP Digest Authentication scheme (RFC 2617). Based on a simple challenge-response paradigm. The Digest scheme challenges using a nonce value and might indicate that username hashing is supported. A valid response contains an unkeyed digest of the username, the password, the given nonce value, the HTTP method, and the requested URI. The additions to HTTP Digest Authentication described in RFC 7616 (e.g., support for SHA2-256 as the hashing algorithm) are not supported in DataMiner.|
@@ -33,8 +33,6 @@ For credential-based authentication the supported authentication methods are:
 HTTP Basic Authentication is the default scheme used. In case the server does not accept this type of authentication, it will provide the authentication scheme it expects (e.g., Digest). DataMiner will then use the authentication scheme as described by the server (if it is one of the supported types).
 
 ### certificate
-
-Supported from DataMiner 10.0.5 (RN 25243) onwards
 
 When configuring an HTTPS session in a DataMiner protocol, you can specify that authentication should be performed using a client certificate. To do so, in the `<Session>` tag, set the loginMethod attribute to "certificate".
 

@@ -1,10 +1,11 @@
 ---
 uid: Interactive_Automation_Script_Toolkit
+description: "Explore the Interactive Automation Script Toolkit, its NuGet package and namespace, version compatibility, features, and controller lifecycle."
 ---
 
 # Interactive Automation Script Toolkit
 
-The Interactive Automation Script Toolkit (or “IAS Toolkit” in short) is a library that can be used to create interactive automation scripts. Its main purpose is to make developing interactive automation scripts easier. Where you previously had to deal with UIBlocks of different types, you can now use TextBoxes and Buttons.
+The Interactive Automation Script Toolkit (or "IAS Toolkit" in short) is a library that can be used to create interactive automation scripts. Its main purpose is to make developing interactive automation scripts easier. Where you previously had to deal with UIBlocks of different types, you can now use TextBoxes and Buttons.
 
 Main features:
 
@@ -23,6 +24,17 @@ Main features:
 > [!TIP]
 > For more information on how to get started, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
 
+## NuGet package identifier vs. C# namespace
+
+The NuGet package identifier and the namespace used in C# code are different:
+
+| Item | Value |
+|---|---|
+| NuGet package | `Skyline.DataMiner.Utils.InteractiveAutomationScriptToolkit` |
+| C# namespace | `Skyline.DataMiner.Utils.InteractiveAutomationScript` |
+
+Install the NuGet package, then import the C# namespace in the script with `using Skyline.DataMiner.Utils.InteractiveAutomationScript;`.
+
 ## Versions
 
 | Version | Description |
@@ -34,3 +46,13 @@ Main features:
 | 5.0.x | Adds support for a focus lost event on many widgets. Compatible with **DataMiner 10.1.10** and higher. |
 | 6.0.x | Adds support for button styles. Compatible with **DataMiner 10.3.1** and higher. |
 | 7.0.x | Adds support for downloading files using the DownloadButton widget. Compatible with **DataMiner 10.3.7** and higher. |
+
+## InteractiveController lifecycle
+
+The initial-dialog method has changed between Toolkit versions. Use the method supported by the Toolkit package referenced by your script.
+
+| Toolkit version | Initial-dialog method |
+|---|---|
+| Up to 9.0.1 | `Run(initialDialog)` |
+| 9.0.2–9.0.11 | `ShowDialog(initialDialog)` is preferred; `Run(initialDialog)` is obsolete |
+| 10.0.1 and later | `ShowDialog(initialDialog)` |
