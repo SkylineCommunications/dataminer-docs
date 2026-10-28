@@ -12,7 +12,7 @@ The *Properties* window of an element includes the following tabs:
 
 - **Custom**: Displays all [custom properties](xref:Managing_element_properties), which can be freely added and edited by DataMiner users.
 
-- **Connectivity**: Only available for elements that have in/out interfaces defined in their protocol. This tab allows you to [view the element connections](xref:Viewing_element_connections).
+- **Connectivity**: Only available for elements that have in/out interfaces defined in their protocol. This tab allows you to [view DataMiner Connectivity Framework connections](xref:Viewing_element_connections).
 
 ## Accessing element properties
 

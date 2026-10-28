@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Description
+description: "Use the Description element in a DataMiner protocol to store general protocol information, such as device firmware requirements."
 ---
 
 # Description element

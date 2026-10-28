@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.ColumnDefinition-default
+description: "Use the default attribute in a DataMiner protocol to supply a database column value when a new row omits that value."
 ---
 
 # default attribute

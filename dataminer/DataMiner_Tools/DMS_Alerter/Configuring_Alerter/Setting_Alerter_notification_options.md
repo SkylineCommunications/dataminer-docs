@@ -1,5 +1,6 @@
 ---
 uid: Setting_Alerter_notification_options
+description: "Configure Alerter notification options to control balloon timing, enable sounds or beeps, and assign .wav files to selected alarm filters."
 ---
 
 # Setting the notification options in Alerter

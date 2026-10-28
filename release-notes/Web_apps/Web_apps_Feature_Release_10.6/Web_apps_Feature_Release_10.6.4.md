@@ -231,11 +231,11 @@ In the *Alarm table* component, a number of minor issues have been fixed:
 
 - In some cases, the *Load next ... alarms* button, which was centered horizontally, would not be visible until you scrolled to the side.
 
-#### Interactive Automation scripts in web apps: Redesigned Date component would incorrectly get a double update when the UI was set to V2 [ID 44665]
+#### Interactive automation scripts in web apps: Redesigned Date component would incorrectly get a double update when the UI was set to V2 [ID 44665]
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 -->
 
-When the interactive Automation script UI was set to version V2, in some cases, the redesigned Date component would get a double update, causing the component to flicker.
+When the interactive automation script UI was set to version V2, in some cases, the redesigned Date component would get a double update, causing the component to flicker.
 
 #### Dashboards/Low-Code Apps - Column & bar chart component: Problem when changing 'Legend > Show' or 'Tooltips > Show' [ID 44667]
 
@@ -430,7 +430,7 @@ From now on, all GQI extension instances will be able to properly release their 
 
 <!-- MR 10.5.0 [CU13] / 10.6.0 [CU1] - FR 10.6.4 [CU0] -->
 
-Cell values from Guid columns are converted to string values when passed to the `IGQIRowOperator.HandleRow` life cycle method of a custom operator.
+Cell values from Guid columns are converted to string values when passed to the `IGQIRowOperator.HandleRow` lifecycle method of a custom operator.
 
 As these string values would then be used throughout the rest of the query, up to now, this could lead to type mismatch errors.
 

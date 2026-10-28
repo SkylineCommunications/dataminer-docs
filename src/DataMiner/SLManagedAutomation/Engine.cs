@@ -7,6 +7,7 @@ using Skyline.DataMiner.Net.Profiles;
 using System.Collections.Generic;
 using Skyline.DataMiner.Net.Messages.SLDataGateway;
 using Skyline.DataMiner.Net.Automation;
+using Skyline.DataMiner.Automation.Credentials;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -95,7 +96,7 @@ namespace Skyline.DataMiner.Automation
 		///			e.responseMessage = Engine.SLNet.SendSingleResponseMessage(e.requestMessage);
 		///		}
 		///	
-		///		public void Run(Engine engine)
+		///		public void Run(IEngine engine)
 		///		{
 		///			// ...
 		///		}
@@ -135,6 +136,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <value>The timeout for the current C# code block.</value>
 		/// <remarks>
+		/// <para>This property controls the C# code block timeout. It does not set the timeout of the XML <c>findinteractiveclient</c> or <c>sleep</c> actions.</para>
 		/// <note type="note">
 		/// <para>From DataMiner 10.2.0/10.1.2 onwards, this property can also be used to determine when an interactive automation script times out.</para>
 		/// </note>
@@ -860,6 +862,7 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="text">Message to be shown in the information message.</param>
 		/// <exception cref="DataMinerException">Information event generation failed.</exception>
+		/// <remarks>Use information events for meaningful user-facing or audit events. Use <see cref="Log(string)"/> for diagnostic tracing.</remarks>
 		/// <example>
 		/// <code>
 		/// engine.GenerateInformation("Hello World!");
@@ -971,6 +974,10 @@ namespace Skyline.DataMiner.Automation
 		/// </summary>
 		/// <param name="name">The name of the script parameter.</param>
 		/// <returns>The specified script parameter or <see langword="null"/> if the script parameter with the specified name is not found.</returns>
+		/// <remarks>
+		/// <para>Use the returned <see cref="ScriptParam.Value"/> to read the input value. Script parameter values are strings, and the <see cref="ScriptParam"/> instance is supplied by DataMiner.</para>
+		/// <para>For the behavior when C# code accesses an undefined or empty value, see <see cref="RunTimeFlags.AllowUndef"/>.</para>
+		/// </remarks>
 		/// <example>
 		/// <code>
 		/// ScriptParam param = engine.GetScriptParam("input");
@@ -982,13 +989,51 @@ namespace Skyline.DataMiner.Automation
 		/// Retrieves an object representing a script parameter. Through this object, its value can be retrieved.
 		/// </summary>
 		/// <param name="id">The ID of the script parameter.</param>
-		/// <returns>The specified script parameter or <see langword="null"/> if the script parameter with the specified ID is not found..</returns>
+		/// <returns>The specified script parameter or <see langword="null"/> if the script parameter with the specified ID is not found.</returns>
+		/// <remarks>
+		/// <para>Use the returned <see cref="ScriptParam.Value"/> to read the input value. Script parameter values are strings, and the <see cref="ScriptParam"/> instance is supplied by DataMiner.</para>
+		/// <para>For the behavior when C# code accesses an undefined or empty value, see <see cref="RunTimeFlags.AllowUndef"/>.</para>
+		/// </remarks>
 		/// <example>
 		/// <code>
 		/// ScriptParam param = engine.GetScriptParam(5);
 		/// </code>
 		/// </example>
 		public ScriptParam GetScriptParam(int id) { return null; }
+
+		/// <summary>
+		/// Retrieves a set of credentials declared by this automation script from the Credentials Library.
+		/// </summary>
+		/// <param name="name">The name used to refer to the credentials in the script XML. The lookup is case insensitive.</param>
+		/// <returns>The set of credentials or <see langword="null"/> if the script does not declare a set of credentials with the specified name.</returns>
+		/// <remarks>
+		/// <para>The values of the set of credentials are retrieved from the Credentials Library each time this method is called, so they are never cached.</para>
+		/// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-set-of-credentials">Creating a set of credentials</see>.</para>
+		/// <note>Available from DataMiner 10.6.10/10.7.0 onwards.</note>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// ScriptCredential credential = engine.GetCredential("myCredential");
+		/// </code>
+		/// </example>
+		public ScriptCredential GetCredential(string name) { return null; }
+
+        /// <summary>
+        /// Retrieves a set of credentials declared by this automation script from the Credentials Library.
+        /// </summary>
+        /// <param name="id">The ID used to refer to the credentials in the script XML.</param>
+        /// <returns>The set of credentials or <see langword="null"/> if the script does not declare a set of credentials with the specified ID.</returns>
+        /// <remarks>
+        /// <para>The values of the set of credentials are retrieved from the Credentials Library each time this method is called, so they are never cached.</para>
+        /// <para>For more information about credentials in Automation, refer to <see href="xref:Script_variables#creating-a-set-of-credentials">Creating a set of credentials</see>.</para>
+        /// <note>Available from DataMiner 10.6.10/10.7.0 onwards.</note>
+        /// </remarks>
+        /// <example>
+        /// <code>
+        /// ScriptCredential credential = engine.GetCredential(1);
+        /// </code>
+        /// </example>
+        public ScriptCredential GetCredential(int id) { return null; }
 
 		/// <summary>
 		/// Returns a copy of the script output of the current script and, if the <see cref="SubScriptOptions.InheritScriptOutput"/> option is set to “true”, the child scripts.

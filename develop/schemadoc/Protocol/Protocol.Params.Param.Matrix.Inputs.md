@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Inputs
+description: "Use the Inputs element in a DataMiner protocol to connect an inputs table and its column mappings to a matrix control."
 ---
 
 # Inputs element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display.Pages.Page
+description: "Use the Page element in a DataMiner protocol to define a Data Display page name and optional visibility configuration."
 ---
 
 # Page element

@@ -50,7 +50,7 @@ FOUNDYES --- ENDING
 click HOME "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click DISC "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLNet/Troubleshooting_SLNet_Disconnects.html" "Go to disconnect cases"
 click BACK "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/Troubleshooting_SLNet_exe.html" "Go back to SLNet Troubleshooting"
-click GATHER "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html" "Go to LogCollector"
+click GATHER "/dataminer/DataMiner_Tools/SLLogCollector.html" "Go to LogCollector"
 click PRESENTYES "#slnetclienttest-tool"
 click PRESENTNO "#slnetclienttest-tool"
 %% -------------------------------------------------------------------------

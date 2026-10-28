@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topologies.Topology.Cell.Exposer.LinkedIds.LinkedId-columnPid
+description: "Use the columnPid attribute of the LinkedId element in a DataMiner protocol to identify the linking column when tables have no foreign key."
 ---
 
 # columnPid attribute

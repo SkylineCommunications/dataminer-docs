@@ -7,6 +7,77 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 > [!NOTE]
 > Range 1.2.x.x is supported as from **DataMiner 10.4.0**.
 
+### 1.2.1.2
+
+#### Fix - New scheduler tasks defaulted to zero repetitions instead of unlimited repetitions [ID 46858]
+
+When you created a scheduler task without specifying a repetition count, it defaulted to 0 instead of -1 (unlimited), so the task would not repeat. The default is now -1, ensuring that the task repeats indefinitely unless you configure a specific repetition count.
+
+### 1.2.1.1
+
+#### Fix - Daily scheduled task repetition intervals could be cleared when tasks were updated [ID 46561]
+
+When you updated a daily scheduled task that uses XML storage, its repetition interval in minutes could be cleared. The library now retains this interval when it retrieves and updates the task.
+
+### 1.2.1.0
+
+#### New feature - Creating and updating elements with additional connection types [ID 46400]
+
+The DataMinerSystem library now supports creating and updating elements with serial (single), smart-serial (single), WebSocket, GPIB, and SLA connections. Previously, only SNMP (v1/v2c and v3) and HTTP connections were supported.
+
+When you create an element for a protocol that requires connection-specific configuration, you must provide a connection that matches the type declared by that protocol. Protocols with virtual connections can still use the default configuration.
+
+For serial connections, only TCP and UDP are fully supported. For physical serial connections that use a COM port, the library only identifies the port as `ISerial`; it does not provide full configuration support.
+
+OPC connections are identified as `IOpcConnection`, but you cannot read or configure OPC-specific settings because DataMiner no longer supports this connection type.
+
+#### Breaking change - IUdp.IsSslTlsEnabled property removed [ID 46400]
+
+The `IsSslTlsEnabled` property has been removed from `IUdp` because SSL/TLS is not supported for UDP connections. Any code that accesses this property will need to be updated.
+
+#### Fix - Updating service property values changed their access type [ID 46488]
+
+When you updated a service property value through the DataMinerSystem library, the property's access type was changed to read-write. This could cause DataMiner to reject the update with an "Invalid data" error. The library now preserves the property's existing access type when you update its value.
+
+### 1.2.0.3
+
+#### New feature - Editing elements and services included in a service [ID 46034]
+
+In DataMiner, a service can contain entire elements, parts of elements, or other services as *child items*, configured on the *parameters* page when [adding or editing a service](xref:Adding_a_service). Previously, the library only exposed the read-only `IncludedParameters`. From now on, you can now **add, remove, and edit** these child items through `IDmsService.ParameterSettings` and persist the changes by calling `Update()` on the service.
+
+The new `IncludedElements` property returns the items as an `IReadOnlyList<ParamConfiguration>`, each being an `ElementParamConfiguration` (an included element) or a `ServiceParamConfiguration` (an included service). To be able to manage the list, `AddElement`, `AddService`, `Remove`, `RemoveByElementId`, `RemoveByServiceId`, `RemoveByAlias`, and `Clear` were added to `IServiceParamsSettings`.
+
+> [!NOTE]
+> When the same element or service is included more than once, assign a unique non-empty `Alias` to each instance.
+
+Example usage:
+
+```csharp
+IDmsService service = dms.GetService("MyService");
+
+// Include an element, limited to a single parameter.
+service.ParameterSettings.AddElement(
+    new DmsElementId(208, 613),
+    new[] { new ElementParamFilterConfiguration(100, "*", true) });
+
+// Include another service.
+service.ParameterSettings.AddService(new DmsServiceId(208, 50));
+
+// Edit an item that is already included.
+if (service.ParameterSettings.IncludedElements[0] is ElementParamConfiguration element)
+{
+    element.Alias = "Uplink router";
+    element.IncludedCapped = AlarmLevel.Major;
+    element.AddParameter(new ElementParamFilterConfiguration(200, "*", true));
+}
+
+// Remove an included element.
+service.ParameterSettings.RemoveByElementId(new DmsElementId(208, 999));
+
+// Persist all changes, just like clicking Apply when editing the service.
+service.Update();
+```
+
 ### 1.2.0.2
 
 #### Fix - Cyclic alarm template group caused an infinite loop [ID 45606]

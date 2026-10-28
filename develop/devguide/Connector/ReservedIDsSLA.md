@@ -1,5 +1,6 @@
 ---
 uid: ReservedIDsSLA
+description: "Consult the parameter IDs reserved for SLA connectors, including service status, breach, violation, outage, availability, and compliance data."
 ---
 
 # SLA

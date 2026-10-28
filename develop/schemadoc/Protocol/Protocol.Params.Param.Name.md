@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Name
+description: "Use the Name element in a DataMiner protocol to set the mandatory, unique technical name of a parameter."
 ---
 
 # Name element

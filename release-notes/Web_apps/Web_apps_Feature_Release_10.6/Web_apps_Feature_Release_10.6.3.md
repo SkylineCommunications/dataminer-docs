@@ -253,11 +253,11 @@ In web apps, the popup windows that appear in visual overviews have now been red
 
 When you export or import a dashboard or a low-code app, from now on, the theme will now automatically be included in the export or import package.
 
-#### Interactive Automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44541]
+#### Interactive automation scripts in web apps: New UsePreviousCollapsedState property will allow tree nodes to restore their IsCollapsed state when the UI is updated [ID 44541]
 
 <!-- MR 10.5.0 [CU12] / 10.6.0 [CU0] - FR 10.6.3 [CU0] -->
 
-When, in an interactive Automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, all tree nodes would revert their expanded state back to the `IsCollapsed` setting.
+When, in an interactive automation script, a TreeView control was used with the `SupportsLazyLoading` option set to false, up to now, each time the UI was updated, all tree nodes would revert their expanded state back to the `IsCollapsed` setting.
 
 Tree nodes now have a new `UsePreviousCollapsedState` property. By default, this property will be set to false. When set to true, each time the UI is updated, the previous state of the tree node in question will be restored. If no previous state is available, the current `IsCollapsed` state will be applied.
 

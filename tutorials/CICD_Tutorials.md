@@ -14,6 +14,12 @@ You can also run our tooling through [command line](xref:CICD_Command_Line_Examp
 
 For the development of items other than connectors (e.g., automation scripts, user-defined APIs, ad hoc data sources, etc.) we also provide a powerful [Skyline DataMiner Software Development Kit](xref:skyline_dataminer_sdk), which automatically runs our tooling for you in the background, directly within the standard .NET compilation and publishing.
 
+## For any item
+
+| Name | Description |
+|------|-------------|
+| [Setting up a workflow on a specific branch via GitHub](xref:CICD_Tutorial_Add_Workflow_To_Branch) | Learn how to add a GitHub Actions workflow directly to a specific branch in your repository on GitHub |
+
 ## For non-connector items
 
 | Name | Description |

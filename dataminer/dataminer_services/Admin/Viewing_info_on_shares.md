@@ -1,5 +1,6 @@
 ---
 uid: Viewing_info_on_shares
+description: "View shares in the Admin app to see items shared from a DataMiner System and check when each share was created and expires."
 keywords: cloud shares
 reviewer: Alexander Verkest
 ---

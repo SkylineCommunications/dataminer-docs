@@ -1,6 +1,6 @@
 ---
 uid: Adding_a_DMA_to_a_DMS_running_STaaS
-description: When adding a node to a DataMiner cluster that is running STaaS, make sure you apply these additional steps.
+description: "Make sure to apply these additional steps when adding a node to a DataMiner cluster that is running STaaS."
 ---
 
 # Adding a DataMiner Agent to a cluster running STaaS
@@ -20,7 +20,7 @@ description: When adding a node to a DataMiner cluster that is running STaaS, ma
    - DmsRefreshToken.data
    - DmsRefreshTokenExpiration.data
   
-1. Remove the *NodeId.txt* file from the folder `C:\ProgramData\Skyline Communications\DxMs Shared\Data` on the new DMA.
+1. Remove the *NodeId.txt* file from the folder `C:\ProgramData\Skyline Communications\DxMs Shared\Data` on the new DMA. If the file is also present in the folder `C:\ProgramData\Skyline Communications\DataMiner Orchestrator\Data`, remove it there as well.
 
 1. Start CloudGateway on the new DMA.
 

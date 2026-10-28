@@ -1,5 +1,6 @@
 ---
 uid: Running_Cassandra_as_non-SYSTEM_user
+description: "Run Cassandra as a restricted Windows user to reduce breach impact by granting minimum folder permissions and securing the service account."
 ---
 
 # Running Cassandra as a non-SYSTEM user (Windows)

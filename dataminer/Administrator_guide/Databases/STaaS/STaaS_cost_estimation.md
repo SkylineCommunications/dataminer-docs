@@ -1,6 +1,6 @@
 ---
 uid: STaaS_cost_estimation
-description: To view a cost estimation for STaaS, deploy the STaaS Migration Script package, and run the CloudStorageMigration script.
+description: "Follow these steps to view a cost estimation for STaaS. Deploy the STaaS Migration Script package, and run the CloudStorageMigration script."
 reviewer: Alexander Verkest
 ---
 
@@ -37,17 +37,19 @@ To request a cost estimation, follow the procedure below:
    1. Click *Stop Migration/Replication* to stop the test run.
 
    > [!NOTE]
-   > This 24-hour period is not mandatory, but we recommend this to be able to extrapolate the data from a daily consumption to a monthly consumption.
+   >
+   > - This 24-hour period is not mandatory, but we recommend this to be able to extrapolate the data from a daily consumption to a monthly consumption.
+   > - Prior to DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12, on systems using [dedicated clustered storage](xref:Dedicated_clustered_storage), DELT exports of elements can return unfiltered data after a cost estimation has been run, even after the test run has been stopped. If you need to export elements with their data on those versions, restart the Agent(s) first. See [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation).
 
-1. After this, at approximately 2 AM UTC, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Usage* for the relevant organization.
+1. After this, at approximately 6 AM UTC, you will be able to view your cost estimation in the [Admin app](https://admin.dataminer.services), under *Overview* > *Billing* for the relevant organization.
 
    > [!NOTE]
-   > You will only be able to see the *Usage* module if you are an Owner or Admin of the organization.
+   > You will only be able to see the *Billing* module if you are an Owner or Admin of the organization.
 
 If you have any questions regarding this cost estimation, please contact <support@dataminer.services>.
 
 > [!IMPORTANT]
-> Cost estimations can currently only be performed for the West Europe, UK South, Southeast Asia, and Central US regions.
+> Cost estimations can currently only be performed in the [live STaaS regions](xref:STaaS_features).
 
 > [!TIP]
 > To optimize the cost efficiency of a STaaS solution, adhere to the best practices to prevent storing unnecessary data [with automation scripts](xref:Automation_best_practices_information_events) or [with connectors](xref:Saving_parameters).

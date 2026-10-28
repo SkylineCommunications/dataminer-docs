@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-triggers
+description: "Learn how the triggers attribute identifies parameters whose value changes cause a QAction to execute."
 ---
 
 # triggers attribute
@@ -19,4 +20,4 @@ Specifies the IDs of the parameters that will cause the QAction to be executed e
 
 ## Remarks
 
-Multiple values have to be separated by semicolons (”;”).
+Multiple values have to be separated by semicolons (";").

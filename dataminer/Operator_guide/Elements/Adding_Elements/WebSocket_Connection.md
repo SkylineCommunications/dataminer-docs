@@ -6,12 +6,12 @@ uid: WebSocket_Connection
 
 For a **WebSocket** connection, you can specify the following connection settings while creating or editing an element:
 
-- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote locations are configured. For more information, refer to [Edge Manager](xref:EdgeManagerOverview).
+- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the EdgeManager DxM is installed and remote locations are configured. For more information, refer to [Edge Gateways](xref:About_Edge_Gateways).
 
 - **IP address/host**: The polling IP or URL of the destination.
 
 - **IP port**: The IP port of the destination. This is not always required.
 
-- **Bus address**: The bus address of the device. This is not always required. If the proxy server has to be bypassed, specify *bypassproxy*.
+- **Bus address**: The bus address of the device. This is not always required. If the proxy server has to be bypassed, specify *bypassProxy*.
 
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.

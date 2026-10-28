@@ -1,5 +1,6 @@
 ---
 uid: Configuring_the_TCP-IP_socket_settings
+description: "Configure the TCP/IP socket settings in DataMiner.xml so your DataMiner Agent can forward data encoded as UTF-8."
 ---
 
 # Configuring the TCP-IP socket settings

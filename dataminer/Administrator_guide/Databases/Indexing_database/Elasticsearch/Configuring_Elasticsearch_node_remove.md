@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Elasticsearch_node_remove
+description: "If you have an Elasticsearch cluster instead of an OpenSearch or a STaaS setup, follow the steps below to decommission and remove a node from that cluster."
 ---
 
 # Removing an Elasticsearch cluster node

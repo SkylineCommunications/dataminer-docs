@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_API
+description: "Explore which information NodeRecovery exposes over an API. This API can be accessed over SLNet and requires the Admin tools permission."
 ---
 
 # Node Recovery API
@@ -21,7 +22,7 @@ When this is requested, the leader node will provide the global cluster state, w
 To request this information, send a [GlobalClusterStateRequest](xref:Skyline.DataMiner.Net.NodeRecovery.Requests.GlobalClusterStateRequest) message. The response will be a [GlobalClusterStateResponse](xref:Skyline.DataMiner.Net.NodeRecovery.Requests.GlobalClusterStateResponse) containing the global consensus view of all node states.
 
 > [!NOTE]
-> When the leader node is unreachable or when no leader is elected, this request will fail with an exception, as the global cluster state cannot be retrieved in those scenarios.
+> When the leader node is unreachable or when no leader is elected, this request will fail with an exception, as the global cluster state cannot be retrieved in those scenarios. In a two-node cluster, no leader is ever elected for global detection, so this request is never available.
 
 ## Setting maintenance mode
 

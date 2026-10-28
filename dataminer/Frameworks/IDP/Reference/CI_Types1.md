@@ -338,7 +338,7 @@ For each connection, this section also has to contain one of the following array
 
     - **SetCommunity**: Contains the SNMP set community string and is only relevant when the *TypeConnection* equals *Snmp* or *Snmpv2*. In all other cases, an empty string has to be supplied.
 
-    - **DeviceAddress**: Contains the device address and can be relevant for specific protocols. For example, for an HTTP connection, this field could contain *bypassproxy*.
+    - **DeviceAddress**: Contains the device address and can be relevant for specific protocols. For example, for an HTTP connection, this field could contain *bypassProxy*.
 
     - **PortID**: Indicates the order of the connection in the element. The first connection in the element needs to be assigned value 1, the second connection needs to have value 2, etc. You can easily verify the order of the connections by editing or creating an element using the protocol in question (see [Adding elements](xref:Adding_elements)).
 

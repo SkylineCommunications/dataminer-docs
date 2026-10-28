@@ -1,5 +1,6 @@
 ---
 uid: SAML_config_to_connect_to_cloud
+description: "Configure SAML for dataminer.services by adding the required cloud URLs to your identity provider and DataMiner metadata for secure access."
 keywords: cloud connection
 ---
 

@@ -2,10 +2,17 @@
 uid: MediaOps_Live_1.1.0
 ---
 
-# MediaOps Live 1.1.0 - Preview
+# MediaOps Live 1.1.0
 
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> This version requires:
+>
+> - DataMiner 10.5.11 or higher.
+> - [Standard Data Model Registration](https://catalog.dataminer.services/details/52173e49-9185-4772-9b60-c186ee365a81) 2.0.0 or higher.
+> - [Categories](https://catalog.dataminer.services/details/c9666f3a-be26-42fd-83f2-6ee7fab4f11e) 1.2.5 or higher.
+
+> [!TIP]
+> Installing [MediaOps Plan](https://catalog.dataminer.services/details/1b67a623-4ca6-4d25-8b3d-ed4e39496a75) alongside MediaOps Live allows you to schedule orchestration events. This requires MediaOps Plan **1.5.0** or higher.
 
 ## New features
 
@@ -35,6 +42,18 @@ In addition, the MediaOps Live API has been extended so that job information (jo
 
 ### Enhancements
 
-#### Improved visualisation of pending connections [ID 45594]
+#### Improved visualization of pending connections [ID 45594]
 
 While a connection or disconnection is still in progress, an hourglass icon is now shown in front of the source name. This provides clearer feedback to the user about the current connection state.
+
+### Fixes
+
+#### Discrete parameters with numeric values caused orchestration events to fail [ID 45773]
+
+When discrete parameters were used with numeric values (e.g., to indicate video formats), it could occur that orchestration events failed. Now the validation correctly supports both numeric and string discrete parameters.
+
+#### CSV import could include the wrong endpoint when source and destination endpoints had the same name [ID 45959]
+
+When a source and destination endpoint in a virtual signal group shared the same name, a CSV import could include the wrong endpoint because matching was based on name only.
+
+When you import a virtual signal group from CSV, endpoints will now be resolved by both role and name, preventing mismatches when source and destination endpoints share the same name.

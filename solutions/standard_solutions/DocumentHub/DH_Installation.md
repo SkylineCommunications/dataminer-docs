@@ -8,9 +8,6 @@ uid: DH_Installation
 
 1. Check the prerequisites mentioned in the DocumentHub [release notes](xref:DocumentHub_RNs_index) matching the package version, and make sure your system meets these prerequisites.
 
-   > [!NOTE]
-   > Minimum DataMiner requirement: DataMiner 10.6.5/10.7.0.
-
 1. When all prerequisites are met, click the *Deploy* button.
 
    > [!TIP]
@@ -31,6 +28,8 @@ Migration and cleanup actions are defined in the install package and will depend
 
 > [!IMPORTANT]
 > When upgrading DocumentHub, to make sure all migration and cleanup actions take place, **first upgrade to the latest version of your current major version** before moving to the next major version, without skipping a major version.
+
+The installation will also deploy a *DocumentHub - Cleanup Downloaded Files* scheduled task in your DataMiner System. By default, this task runs daily at midnight and removes temporary files (e.g., files downloaded through the [DownloadFile user-defined API](xref:DH_UDAPI#downloading-a-file)) that are older than 24 hours. You can review or adjust its schedule in the DataMiner Cube *Scheduler* module.
 
 ## Post-installation configuration
 

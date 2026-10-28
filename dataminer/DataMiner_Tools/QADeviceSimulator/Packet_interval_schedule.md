@@ -1,5 +1,6 @@
 ---
 uid: Packet_interval_schedule
+description: "Configure the packet interval schedule with original, fixed, random, or rate timing, set random bounds in milliseconds, and repeat traps with Loop."
 ---
 
 # Packet interval schedule

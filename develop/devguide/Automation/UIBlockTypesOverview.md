@@ -1,12 +1,12 @@
 ---
 uid: UIBlockTypesOverview
+description: "Configure UIBlockType components for interactive automation scripts and understand the behavior and compatibility of the V1 and V2 UIs."
 ---
 
 # UIBlockType overview
 
 > [!TIP]
-> We highly recommend that you use the [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
-> For more information, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
+> We highly recommend that you use the [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit). For more information, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
 
 The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines different types of UI components.
 
@@ -57,6 +57,9 @@ uiBuilder.RequireResponse = true;
 
 var results = engine.ShowUI(uiBuilder);
 ```
+
+> [!NOTE]
+> From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46602 / RN 46716 -->, you can use the [WebUILayout](xref:Skyline.DataMiner.Automation.UIBuilder.WebUILayout) property of the UIBuilder to select the layout used in web apps. For an example of the grid layout, see [Using the grid layout in web apps](xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps-to-control-the-tab-behavior).
 
 ## Getting input
 

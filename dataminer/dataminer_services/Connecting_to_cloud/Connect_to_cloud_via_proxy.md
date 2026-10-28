@@ -1,5 +1,6 @@
 ---
 uid: Connect_to_cloud_via_proxy
+description: "Learn how to connect to dataminer.services via a proxy server, through which all outgoing traffic will then be routed."
 keywords: cloud connection, cloud proxy
 reviewer: Alexander Verkest
 ---
@@ -11,8 +12,6 @@ From DataMiner CloudFeed 1.0.6, CloudGateway 2.7.0, and ArtifactDeployer 1.4.1 o
 The proxy server has to support both HTTP and WebSocket traffic.
 
 To configure this:
-
-1. [Connect to dataminer.services](xref:Connect_to_dataminer_services).
 
 1. In the folder `C:\ProgramData\Skyline Communications\DxMs Shared\` on the DMA, create the file *appsettings.proxy.json* if it does not already exist, and configure the *ProxyOptions* as follows:
 
@@ -32,3 +31,5 @@ To configure this:
 
    > [!NOTE]
    > If you are using a version of CloudFeed prior to 1.1.0 or a version of ArtifactDeployer prior to 1.4.5, you will need to restart these DxMs as well.
+
+1. [Connect to dataminer.services](xref:Connect_to_dataminer_services).

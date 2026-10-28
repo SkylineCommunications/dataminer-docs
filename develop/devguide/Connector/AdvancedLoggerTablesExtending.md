@@ -1,5 +1,6 @@
 ---
 uid: AdvancedLoggerTablesExtending
+description: "Learn about logger table changes such as adding columns and broadening data types; deleting, narrowing, and renaming are not supported."
 ---
 
 # Extending logger tables

@@ -1,0 +1,183 @@
+---
+uid: General_Main_Release_10.6.0_CU9
+description: "Release notes for General Main Release 10.6.0 CU9, including prerequisites, enhancements, and fixes planned for this preview release."
+---
+
+# General Main Release 10.6.0 CU9 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!TIP]
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube 10.6.0 CU9](xref:Cube_Main_Release_10.6.0_CU9).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Main Release 10.6.0 CU9](xref:Web_apps_Main_Release_10.6.0_CU9).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+## Prerequisites
+
+Before you upgrade to this DataMiner version:
+
+- Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+
+  The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+
+  - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+  - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+- Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution.
+
+  For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+
+  See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Main_Release_10.6.0_changes#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43526-id-43856-id-43861-id-44035-id-44050-id-44062)
+
+## Changes
+
+### Enhancements
+
+#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
+
+It remains in the enum for backward compatibility, but using it will produce a compiler warning, and it will no longer appear in IntelliSense suggestions. The warning will recommend `Maintenance` instead.
+
+#### ClusterEndpointsManager soft-launch option is now always enabled [ID 46538]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+From now on, the *ClusterEndpointsManager* soft-launch option will always be enabled, regardless of the soft-launch configuration.
+
+#### BrokerGateway: HTTPS communication now supports redirects [ID 46687]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+BrokerGateway now takes redirects configured in *DMS.xml* into account when communicating over HTTPS. This allows the required API calls to work as intended in manually configured setups.
+
+> [!NOTE]
+> NATS communication does not take redirects into account.
+
+#### DxM upgrades: Improved rollback when an upgrade fails or is canceled [ID 46715]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+For the following DataMiner Extension Modules (DxMs), uninstalling the previous version is now part of the upgrade transaction:
+
+- ArtifactDeployer
+- CloudGateway
+- CoreGateway
+- Orchestrator
+- SupportAssistant
+
+If an upgrade fails or is canceled after the previous version has been uninstalled, that version will now be restored.
+
+#### SLLogCollector packages now include the configuration files of ResourceManager, ProtocolFunctionManager, and Scheduler [ID 46753]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+SLLogCollector packages now include the following configuration files:
+
+- `C:\Skyline DataMiner\ResourceManager\Config.xml`
+- `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
+- `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
+
+### Fixes
+
+#### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When an element had unmasked alarms, its severity could be incorrect after it was restarted.
+
+#### SNMP GET results could be matched to the wrong polling group [ID 46507]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When multiple polling groups were executed concurrently, results from SNMP GET requests could be matched to the wrong group, potentially causing runtime errors.
+
+The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
+
+#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+
+#### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, every time a connection to the DataMiner storage layer was opened, SLNet would register handlers for logging configuration changes and incoming messages. These handlers were not removed when the connection closed, leaving their associated objects in memory for the lifetime of the process.
+
+On systems where GQI queries repeatedly opened connections, for example through dashboards or low-code apps that refresh automatically, memory usage could keep increasing, potentially degrading performance or causing out-of-memory errors.
+
+From now on, the handlers will be removed when the connection closes.
+
+#### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
+
+From now on, configuration updates will be synchronized across the cluster, and new Agents will automatically inherit the existing cluster settings.
+
+#### STaaS: Feedback registrations could cause a memory leak [ID 46617]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+On STaaS systems, waiting for feedback or queues to be flushed for certain data types could leave event registrations uncleared and retain memory.
+
+From now on, these registrations will be cleared when they are no longer needed.
+
+#### STaaS: Certain exceptions were incorrectly wrapped [ID 46637]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
+
+#### Crash dumps of native processes will now be captured earlier when a process crashes [ID 46696]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+From now on, crash dumps of native processes will be captured earlier when a process crashes, to help gather more useful diagnostic information.
+
+Also, a number of minor issues have been fixed in SLDMS. For example, up to now, memory handling issues could occur in notification threads for DataMiner Agents.
+
+#### Remote DELT export and migration failures did not show the failure reason [ID 46699]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you exported or migrated an element hosted on another DMA in the cluster, up to now, a failure only produced a generic error message in DataMiner Cube. To find the cause, you had to check the DELT error log on the DMA hosting the element.
+
+From now on, DataMiner Cube now also displays the failure reason.
+
+#### SLAnalytics - Alarm Focus: Swarming notifications could be missed during startup [ID 46717]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, SLAnalytics subscribed to swarming notifications after startup prefetch, which could cause it to miss notifications while the cache was being initialized. From now on, it will subscribe before startup prefetch. History reads triggered during prefetch will wait for the cache lock; normal prefetched-cache lookup behavior will remain unchanged.
+
+If an alarm for a migrating element is processed before its history loads, a fresh model could still have an incorrect likelihood, for example 0 instead of 0.2. The later history load could then skip that existing model, leaving the learned history unrestored.
+
+#### Automation: Script execution time could be incorrect in script log files [ID 46749]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+In script log files, execution times for scripts running longer than one minute could be incorrect. In addition, the `SLAutomation` log file did not include the library name when it logged the start or completion of script library compilation.
+
+From now on, the script log file will report the correct total execution time, and the `SLAutomation` log file will now include the library name in these messages.
+
+#### Failover: BrokerGateway redirects would cause a Failover setup to fail [ID 46781]
+
+<!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
+
+Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirects were configured and BrokerGateway was manually configured with redirected NATS addresses.
+
+#### STaaS: Source connection was not restored after stopping a migration or replication [ID 46782]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When a STaaS migration or replication was stopped, the source connection was not restored as the current connection. Instead, DataMiner could continue to use the migration connection.
+
+From now on, stopping a STaaS migration or replication will restore the source connection.

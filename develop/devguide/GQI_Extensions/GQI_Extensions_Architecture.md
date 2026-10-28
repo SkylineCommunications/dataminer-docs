@@ -32,11 +32,14 @@ The worker process exists as long as it is being used by at least one active que
 
 The worker process can be terminated manually using Task Manager in case an extension is using too many resources or has an issue. In that case, all dependent query sessions will become invalid and will respond with the message "*Extension worker for 'ExtensionLibrary' has exited.*" when you attempt to interact with them.<!-- RN 43770-->
 
+> [!TIP]
+> From DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!-- RN 46509 -->, the total CPU usage of all extension workers is limited. For information on how to configure this limit, see [GQI DxM CPU usage limits](xref:GQI_DxM#cpu-usage-limits).
+
 ## Communication process
 
 **Process name:** `DataMiner GQI.ExtensionsWorker.SLNet.exe`
 
-This process handles communication between GQI extensions and the DataMiner Agent using SLNet. All extensions for a given user share the same SLNet connection to optimize resource use.
+This process handles communication between GQI extensions and the DataMiner Agent using SLNet. To optimize resource use, underlying SLNet connections can be shared per user, per security context, or for system-level access.
 
 - **Technology:** .NET Framework 4
 - **Communication:** Connects to the DataMiner Agent via IPC (SLNet)

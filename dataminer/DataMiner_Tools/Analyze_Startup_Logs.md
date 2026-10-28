@@ -1,5 +1,6 @@
 ---
 uid: Analyze_Startup_Logs
+description: "Use the Analyze Startup Logs tool to analyze log files and find out why a DataMiner Agent fails to start."
 ---
 
 # Analyze startup logs

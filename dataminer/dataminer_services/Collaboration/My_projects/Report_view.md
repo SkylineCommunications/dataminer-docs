@@ -1,5 +1,6 @@
 ---
 uid: Report_view
+description: "Open the Report view to review a project timeline, status, Skyline reference, description, contacts, and responsible office."
 ---
 
 # Report view

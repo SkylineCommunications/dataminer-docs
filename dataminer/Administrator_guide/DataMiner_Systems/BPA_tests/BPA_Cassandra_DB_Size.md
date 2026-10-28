@@ -1,5 +1,6 @@
 ---
 uid: BPA_Cassandra_DB_Size
+description: "Learn about the Local Single Cassandra DB Size BPA test, which checks the size of the local Cassandra file system against a predefined set of rules."
 ---
 
 # Local Single Cassandra DB Size

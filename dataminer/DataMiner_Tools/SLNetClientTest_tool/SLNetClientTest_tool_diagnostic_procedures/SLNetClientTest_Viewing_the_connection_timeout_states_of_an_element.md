@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Viewing_the_connection_timeout_states_of_an_element
+description: "Learn how, using the SLNetClientTest tool, you can view the connection timeout states of an element."
 ---
 
 # Viewing the connection timeout states of an element

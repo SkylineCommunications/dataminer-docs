@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_triggering_DOM_midnight_sync
+description: "Learn how, using the SLNetClientTest tool, you can trigger a midnight synchronization for a DOM manager."
 ---
 
 # Triggering a midnight sync for a DOM manager

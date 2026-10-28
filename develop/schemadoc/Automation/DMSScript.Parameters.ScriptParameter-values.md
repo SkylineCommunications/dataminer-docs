@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Parameters.ScriptParameter-values
+description: "Use the ScriptParameter values attribute to name the memory file that supplies selectable values for an automation script parameter."
 ---
 
 # values attribute
@@ -16,4 +17,4 @@ string
 
 ## Remarks
 
- If you do not want to restrict the possible values to the entries of a memory file, leave this empty.
+If you do not want to restrict the possible values to the entries of a memory file, leave this empty.

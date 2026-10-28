@@ -1,5 +1,6 @@
 ---
 uid: Using_a_DMS_Serial_Gateway
+description: "Use a DMS Serial Gateway to configure TCP server ports, add elements with correct IP and port settings, and verify reliable DMA communication."
 ---
 
 # Using a DMS Serial Gateway

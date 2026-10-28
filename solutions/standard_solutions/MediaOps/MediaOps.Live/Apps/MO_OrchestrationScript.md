@@ -61,7 +61,7 @@ public override IEnumerable<IOrchestrationParameters> GetParameters()
 
 ## Orchestrate(IEngine engine)
 
-In the `Orchestrate` method, all orchestration logic can be added. This includes any logic that can be done from a normal Automation script. Additionally, the values provided for the required parameters in the `GetParameters` method can be retrieved.
+In the `Orchestrate` method, all orchestration logic can be added. This includes any logic that can be done from a normal automation script. Additionally, the values provided for the required parameters in the `GetParameters` method can be retrieved.
 
 ```csharp
 public override void Orchestrate(IEngine engine)

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SSH.Credentials.Password-pid
+description: "Learn how the Password pid attribute identifies the parameter that supplies the password for SSH password-based authentication."
 ---
 
 # pid attribute

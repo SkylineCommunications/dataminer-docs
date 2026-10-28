@@ -1,5 +1,6 @@
 ---
 uid: Managing_dataminer_services_keys
+description: "Manage dataminer.services keys in the Admin app by creating labeled key sets, assigning permissions, or regenerating and revoking keys."
 keywords: cloud keys
 reviewer: Alexander Verkest
 ---

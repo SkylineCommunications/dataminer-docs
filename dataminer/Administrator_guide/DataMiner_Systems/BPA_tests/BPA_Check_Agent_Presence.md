@@ -1,5 +1,6 @@
 ---
 uid: BPA_Check_Agent_Presence
+description: "Learn about the NATS cluster verification BPA test, which performs a NATS client connection test to each Agent."
 ---
 
 # NATS cluster verification

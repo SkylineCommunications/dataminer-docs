@@ -1,26 +1,26 @@
 ---
 uid: Partner_Program
-description: Explore the DataMiner Partner Program and enable your customers to leverage the full potential of the new generation of transformational technology.
+description: Explore the DataMiner Partner Program and discover how you can help customers run complex operations with operational intelligence.
 ---
 
 # DataMiner Partner Program
 
-The world around us is changing fast. The **shift towards transformational technology**, i.e., the virtualized, cloudified, ALL-IP ecosystems, is affecting everything you can think of: the way platforms are designed and deployed, the way companies are organized and operate, the way projects are managed, as well as the entire technology vendor and user landscape and dynamic.
+The world around us is changing fast. The systems and services organizations depend on are increasingly connected, distributed, and complex. This is changing how operations are designed, managed, and improved, as well as the roles of technology vendors, partners, and users.
 
-Today, companies want modular technology solutions that can be leveraged and used easily and efficiently. They need to build and design ecosystems that enable them to run their operation but simultaneously **evolve continuously** as well. In other words, they need to establish an agile data-driven operation that empowers their people, enables them to create digital relationships with third parties, allows them to optimize continuously, and allows them to leverage the latest and greatest that technology has to offer to innovate their services.
+Organizations need platforms with the intelligence to connect information across complex operations, helping teams make better decisions, coordinate work, optimize resources, and deliver better services. They also need the agility to **continuously adapt and evolve**. In other words, they need to establish an agile, intelligence-enabled operation that empowers their people, supports their digital relationships with third parties, and is able to effortlessly and continuously improve, allowing them to leverage the latest and greatest that technology has to offer to innovate their services.
 
-This all is a massive undertaking as it touches on every imaginable aspect of an organization. And there's no underestimating [the role of DataMiner](#the-role-of-dataminer) and [the role of our partners](#our-evolving-partnership) for companies to be successful in this new data-driven world.
+All this is a massive undertaking as it touches on every imaginable aspect of an organization. And there's no underestimating [the role of DataMiner](#the-role-of-dataminer) and [the role of our partners](#our-evolving-partnership) in helping organizations successfully put these changes into practice.
 
 > [!TIP]
 > For more information on the DataMiner Partner Program, see [Grow faster as a DataMiner Partner](https://skyline.be/partner).
 
 ## The role of DataMiner
 
-DataMiner plays a vital role in the new emerging world as it embodies the strategic technology that enables your customers to leverage the full potential of the new generation of transformational technology. DataMiner brings their ecosystem to life.
+DataMiner is the intelligence that runs complex operations. It connects operational data, systems, services, and workflows so organizations can understand what is happening and act on it in context.
 
 DataMiner enables organizations to:
 
-- gain valuable insights in their ever more complex operation
+- gain valuable insights into their ever more complex operation
 
 - provision services across their entire operation easily and securely
 
@@ -30,21 +30,21 @@ DataMiner enables organizations to:
 
 - ...
 
-DataMiner itself is also a modular transformational technology platform that can be leveraged and used in infinite ways, similar to all-IP, virtualized, and cloudified products and solutions.
+DataMiner is also an open, modular platform. Its architecture allows it to integrate with an organization's existing systems and support solutions tailored to the operation.
 
-Because of the pronounced open architecture and powerful enabling capabilities of DataMiner, anybody can leverage it to design innovative new solutions and to make digital transformation happen. This includes you as a partner.
+With its open architecture and powerful capabilities, DataMiner gives partners room to build solutions around their customers' operational needs. You can combine your expertise with DataMiner to help customers improve outcomes across complex operations.
 
 ## Our evolving partnership
 
-As the industry continues to evolve, so too does the role each of us plays within it. Like many others, your position in the broader market landscape is transforming, driven by changing customer needs and expectations. This creates an opportunity for us to realign and collaborate even more closely to deliver value in new and innovative ways.
+As the industry continues to evolve, so too does the role each of us plays within it. Like many others, your position in the broader market landscape is evolving in response to changing customer needs and expectations. This creates an opportunity for us to realign and collaborate even more closely to deliver value in new and innovative ways.
 
-Gone are the days when engineering teams would contract a small number of vendors and a systems integrator to deploy rigid, monolithic ecosystems, which were then handed off to operational teams for static use over many years. Today's organizations are focused on building agile, data-driven operational platforms that can evolve continuously. Meeting those expectations requires all of us — vendors, partners, and integrators — to embrace flexibility, modularity, and innovation.
+Complex operations now span systems, services, workflows, and teams, and they continue to change over time. Customers need platforms that bring these parts together, help them understand their operation as a whole, and support coordinated action. Meeting those expectations requires all of us — vendors, partners, and integrators — to embrace flexibility, modularity, and innovation.
 
-In this new paradigm, the capabilities and characteristics of an operational platform are no longer solely defined by the core infrastructure and processing products, as was typical in the past. Instead, they are shaped by how these components interact, the flexibility of the overall architecture, and especially the tooling that surrounds and enables it.
+An operational platform's capabilities are not defined by infrastructure and processing products alone. They also depend on how well systems, data, workflows, and teams work together, and on the intelligence and controls available to coordinate them.
 
-This tooling layer plays a pivotal role. It determines how infrastructure is leveraged, what workflows are supported, how efficiently systems operate, how easily new solutions can be integrated, and how secure and scalable the platform is as a whole.
+The platform layer plays a pivotal role. It connects infrastructure and workflows, supports efficient operations, and makes it possible to integrate new solutions while maintaining security and scalability.
 
-This is exactly where DataMiner comes in. As a platform designed to empower and enhance core systems through a powerful and adaptive tooling layer, DataMiner enables our shared customers to meet their evolving needs with agility and confidence.
+DataMiner provides this intelligence layer by connecting operational systems, data, knowledge, and workflows. Its open architecture helps shared customers coordinate decisions and action across complex operations while integrating existing tools or replacing them selectively.
 
 By working together, we can ensure that we are not just keeping pace with industry change, we are leading it.
 
@@ -52,27 +52,25 @@ By working together, we can ensure that we are not just keeping pace with indust
 
 - **General consultancy & guidance**:
 
-  The transition to transformational technology is affecting anything imaginable related to an operation and organization, e.g., the way systems are architected, deployed, operated, and evolved.
+  The increasing complexity of operations affects how systems are architected, deployed, operated, and evolved. It also affects how companies and teams are organized, how they collaborate with you and other actors (such as technology and product vendors), how services are delivered, and which business models are used.
 
-  It also affects the way companies and teams are organized, how they need to collaborate with you and other actors (such as technology and product vendors), how services are delivered, which business models are used, and so forth.
+  This is the world of operational intelligence, Agility, DevOps, CI/CD, continuous learning, data-driven empowerment, goal-driven rather than task-driven work, collaboration, and continuous innovation.
 
-  This is the world of Agility, DevOps, CI/CD, continuous learning, data-driven empowerment, being goal-driven rather than task-driven, collaboration, continuous innovation, and so on.
-
-  Therefore, **customers need partners that can guide them through this, who share the new mindset and empower their organization**.  And that could be you.
+  Therefore, **customers need partners who can guide them through these changes, apply intelligence to their operations, and empower their organization**. And that could be you.
 
 - **System architecture consultancy & services**:
 
   Today, the objective is two-fold:
 
-  1. Building and designing an ecosystem to support a specific type of business or operation (i.e., the core infrastructure).
+  1. Building and designing an ecosystem that can operate as a unified, intelligence-enabled platform to support a specific type of business or operation (i.e., the core infrastructure).
 
-  1. Building and designing an ecosystem so that it is also an agile, data-driven platform that can evolve easily and continuously: a solution that is driven by open-architecture coding tools, code repositories, a CI/CD infrastructure that enables low-effort and secure continuous evolution, powerful data collection, automation, orchestration, process automation tooling, and much more.
+  1. Building and designing an ecosystem so that it is also an agile, data-driven platform that can evolve easily and continuously: a solution that is driven by open-architecture coding tools, code repositories, a CI/CD infrastructure that enables low-effort and secure continuous evolution, powerful data collection, operational intelligence, automation, orchestration, process automation tooling, and much more.
 
-  The latter objective adds a new dimension to any project these days, which is in fact far more strategic and relevant compared to the core infrastructure as it is very definitive towards the success of an operation in the context of the new world. And *you* could be the one delivering exactly that by combining your expertise with the power of DataMiner.
+  Both objectives are essential to the success of an operation in today's new world. And by combining your expertise with the power of DataMiner, *you* could be the one delivering exactly what is needed for these.
 
 - **Innovation services**:
 
-  The new generation of transformational technology can be leveraged in countless ways. Therefore, today does not revolve around lifting and shifting an existing business to a new generation of technology, but about being innovative and taking the opportunity to rethink and question everything we are accustomed to.
+  Customers need more than new technology: they need better ways to run complex operations and deliver outcomes. This creates an opportunity to rethink established approaches and develop services that use operational intelligence in new ways.
 
   In that sense, **the qualities and capabilities of the solutions that you offer are no longer exclusively defined by the core technology and product vendors**.
 

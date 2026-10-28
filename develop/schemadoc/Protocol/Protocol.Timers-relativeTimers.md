@@ -1,10 +1,11 @@
 ---
 uid: Protocol.Timers-relativeTimers
+description: "Learn how the Timers relativeTimers attribute makes all contained timers relative except if their fixedTimer attribute is set to true."
 ---
 
 # relativeTimers attribute
 
-If this is set to *true*, then none of the timers defined under this tag are considered fixed (unless a timer has its fixedTimer attribute set to *true*, which acts as an override for a specific timer.).
+If this is set to *true*, then none of the timers defined under this tag are considered fixed (unless a timer has its `fixedTimer` attribute set to *true*, which acts as an override for a specific timer.).
 
 ## Content Type
 

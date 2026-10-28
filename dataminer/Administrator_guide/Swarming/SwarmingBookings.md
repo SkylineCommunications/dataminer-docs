@@ -1,5 +1,6 @@
 ---
 uid: SwarmingBookings
+description: "Enable the BookingSwarming soft-launch option to swarm bookings and their event scripts to a different Agent."
 ---
 
 # Swarming bookings

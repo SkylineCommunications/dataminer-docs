@@ -19,7 +19,7 @@ To the line object, add a shape data field of type **SubscriptionFilter**, and s
 value=[comparison]
 ```
 
-If you want to specify multiple comparisons, separate them with semicolons (”;”).
+If you want to specify multiple comparisons, separate them with semicolons (";").
 
 Example:
 

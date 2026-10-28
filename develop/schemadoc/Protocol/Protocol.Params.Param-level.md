@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-level
+description: "Use the level attribute in a DataMiner protocol to set the security level that controls which users can access a parameter."
 ---
 
 # level attribute

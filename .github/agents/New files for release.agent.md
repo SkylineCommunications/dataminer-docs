@@ -18,4 +18,7 @@ You are a documentation specialist creating and updating markdown files and toc.
 
 - The level-one title in the new files should contain a preview label.
 
-- Add the new files to the correct toc.yml file.
+- Add the new files to the correct toc.yml file, with the preview label:
+
+  - Main release files should be added *below* the latest previous main release, feature release files should be added *above* the latest previous feature release. 
+  - Existing preview labels must remain untouched. It's OK if this means that several successive files have a preview label.

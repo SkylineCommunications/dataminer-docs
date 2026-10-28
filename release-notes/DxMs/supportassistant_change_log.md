@@ -4,6 +4,18 @@ uid: supportassistant_change_log
 
 # Support Assistant change log
 
+#### 14 October 2026 - Enhancement - SupportAssistant 1.10.0 - Improved remote log collection uploads [ID 46681]
+
+SupportAssistant will now try the cloud endpoint, then the configured proxy, and finally direct access, so remote log collection uploads continue working when one route is unavailable.
+
+#### 15 September 2026 - Enhancement - SupportAssistant 1.9.4 - DataMiner Assistant metrics included in WatchDog offloads [ID 46392]
+
+DataMiner Assistant metrics are now included in WatchDog offloads.
+
+#### 4 August 2026 - Enhancement -SupportAssistant 1.9.3 - Release from GitHub
+
+SupportAssistant is now released from GitHub, which fully signs the MSI, binaries, and executables.
+
 #### 12 June 2026 - Enhancement - SupportAssistant 1.9.2 - Upgrade to .NET 10
 
 SupportAssistant has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.

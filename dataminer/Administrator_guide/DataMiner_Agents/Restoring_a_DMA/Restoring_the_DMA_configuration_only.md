@@ -1,5 +1,6 @@
 ---
 uid: Restoring_the_DMA_configuration_only
+description: "Restore the DMA configuration manually by copying the DataMiner folder, overwriting all files and directories, and deleting DMS.xml."
 ---
 
 # Restoring the DMA configuration only

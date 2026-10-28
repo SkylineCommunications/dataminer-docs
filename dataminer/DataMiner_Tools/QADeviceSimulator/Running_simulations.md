@@ -1,5 +1,6 @@
 ---
 uid: Running_simulations
+description: "Run simulations with QA Device Simulator, configure packet loss, delay, and database limits, then start unattended command-line tests."
 ---
 
 # Running simulations

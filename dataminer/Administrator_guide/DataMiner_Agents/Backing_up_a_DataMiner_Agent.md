@@ -1,6 +1,7 @@
 ---
 uid: Backing_up_a_DataMiner_Agent
 keywords: backup dataminer
+description: "Learn how to back up a DataMiner Agent with full, configuration, or custom backups and automate daily, weekly, or monthly runs."
 ---
 
 # Backing up a DataMiner Agent

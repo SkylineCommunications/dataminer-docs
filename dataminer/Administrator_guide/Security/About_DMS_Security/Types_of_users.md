@@ -1,5 +1,6 @@
 ---
 uid: Types_of_users
+description: "Learn about the different types of users in DataMiner — Local users, manually and automatically added domain users, and cloud users."
 ---
 
 # Types of users

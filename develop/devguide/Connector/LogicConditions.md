@@ -1,5 +1,6 @@
 ---
 uid: LogicConditions
+description: "Learn how to define conditions in DataMiner connectors using supported arithmetic, relational, equality, bitwise, and logical operators and operands."
 ---
 
 # Conditions

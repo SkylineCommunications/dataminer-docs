@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Change
+description: "Use the Change element under MinorVersion Changes in a DataMiner protocol to record a modification made in a minor version."
 ---
 
 # Change element

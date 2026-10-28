@@ -1,8 +1,12 @@
 ---
 uid: Cassandra_Clone
+description: "Learn how the deprecated Cassandra Clone tool could be used to clone data from a table in a Cassandra database to another table."
 ---
 
 # Cassandra Clone
+
+> [!IMPORTANT]
+> This tool is deprecated. It was designed to work with a version of Cassandra that is currently no longer supported.
 
 The Cassandra Clone tool can be used to clone data from a table in a [Cassandra database](xref:Cassandra_database) to another table. The table can be part of the same keyspace or can be in another keyspace. It is mainly intended to be used in case of severe issues with repair and/or compaction of a Cassandra database, in order to avoid loss of data.
 

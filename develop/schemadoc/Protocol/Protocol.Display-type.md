@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display-type
+description: "Use the Display type attribute in a DataMiner protocol to select the protocol display type used by DataMiner."
 ---
 
 # type attribute

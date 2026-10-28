@@ -65,11 +65,11 @@ For every DataMiner System you want Data Aggregator to connect to, you will need
 
 ### DMS with BrokerGateway
 
-If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the following fields:
+If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the following fields in `C:\Program Files\Skyline Communications\DataMiner DataAggregator\appsettings.custom.json`:
 
 - **ID**: A unique ID.
 
-- **CredsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`.
+- **CredsUrl**: The API endpoint of BrokerGateway, for example: `https://dma/BrokerGateway/api/natsconnection/getnatsconnectiondetails`. This points to the address of a DMA reachable from the server on which Data Aggregator is installed.
 
 - **APIKeyPath**:
 
@@ -85,7 +85,7 @@ If [BrokerGateway](xref:BrokerGateway_Migration) is enabled, specify the followi
 
 ### DMS without BrokerGateway
 
-If the DMS does not use [BrokerGateway](xref:BrokerGateway_Migration) yet, specify the following fields:
+If the DMS does not use [BrokerGateway](xref:BrokerGateway_Migration) yet, specify the following fields in `C:\Program Files\Skyline Communications\DataMiner DataAggregator\appsettings.custom.json`:
 
 - **ID**: A unique ID.
 

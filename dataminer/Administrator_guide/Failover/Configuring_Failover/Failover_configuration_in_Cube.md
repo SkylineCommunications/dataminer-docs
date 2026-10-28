@@ -1,5 +1,6 @@
 ---
 uid: Failover_configuration_in_Cube
+description: "Follow these instructions to configure Failover in DataMiner Cube. Set the type to virtual IP or shared hostname, and configure the heartbeat settings."
 ---
 
 # Failover configuration in Cube
@@ -22,7 +23,7 @@ uid: Failover_configuration_in_Cube
 1. Select the type of Failover you want to configure: *Failover (Virtual IP)* or *Failover (Hostname)*.
 
    > [!IMPORTANT]
-   > In DataMiner Systems that already contain a Failover pair configured with a shared hostname or that contain a DataMiner Agent that was added by hostname, always select *Failover (Hostname)*. In DataMiner Systems that already contain a Failover pair configured with virtual IP addresses, always select *Failover (Virtual IP)*.
+   > In DataMiner Systems that already contain a Failover pair configured with a shared hostname, always select *Failover (Hostname)*. In DataMiner Systems that already contain a Failover pair configured with virtual IP addresses, always select *Failover (Virtual IP)*.
 
 1. If you selected *Failover (Virtual IP)*:
 

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.SeverityBubbleUp.Path
+description: "Learn how each SeverityBubbleUp Path element orders the table IDs followed when alarm severities are passed to linked tables."
 ---
 
 # Path element

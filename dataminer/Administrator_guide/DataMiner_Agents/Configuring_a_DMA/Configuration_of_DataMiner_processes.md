@@ -1,6 +1,7 @@
 ---
 uid: Configuration_of_DataMiner_processes
 keywords: enabling gRPC, gRPC configuration
+description: "Follow these instructions to configure different DataMiner processes in order to enhance overall system performance."
 ---
 
 # Configuring DataMiner processes
@@ -307,23 +308,27 @@ In Windows Task Manager, the DataMiner processes all have names starting with "S
 
 In this case, SLWatchdog will do the following:
 
-1. Send an email message stating the name of the DataMiner process toward all recipients specified in the SLWatchdog configuration settings. By default, this message will include a dump file containing copies of all DataMiner log files found on the DataMiner Agent the moment the problem was detected.
+- Send an email message stating the name of the DataMiner process toward all recipients specified in the SLWatchdog configuration settings. By default, this message will include a dump file containing copies of all DataMiner log files found on the DataMiner Agent the moment the problem was detected.
 
-1. Restart the process (in case the process that disappeared was SLScripting, SLProtocol, or SLAutomation), or restart the DataMiner Agent as a whole (in case the process that disappeared was one of the other processes, which in many cases have a number of dependencies).
+- Either restart the process, or restart the DataMiner Agent completely, depending on which process disappeared.
 
-   > [!NOTE]
-   >
-   > - **SLScripting**: The process is restarted automatically without restarting the entire DataMiner Agent.
-   > - **SLProtocol** (from DataMiner 10.4.12/10.5.0 onwards): When an SLProtocol process disappears, a new SLProtocol process will be started automatically, and all elements that were hosted by the disappeared process will be migrated to the newly created process. Affected elements will be restarted to ensure data synchronization. There is a one-minute delay between the disappearance of an SLProtocol process and the creation of a new one. A notice alarm will also be created indicating the process disappearance and number of affected elements.
-   > - **SLAutomation**: The process will be restarted automatically with a one-minute delay, without restarting the entire DataMiner Agent. This delay is necessary to ensure that processes are not restarted while the DMA is in the process of shutting down.
+  For the following processes, no full DataMiner restart is needed:
 
-1. Create two information messages:
+  - **SLScripting**/**SLASPConnection**/**SLHelper**: The process is restarted automatically without restarting the entire DataMiner Agent.
+  - **SLProtocol** (from DataMiner 10.4.12/10.5.0 onwards): When an SLProtocol process disappears, a new SLProtocol process will be started automatically, and all elements that were hosted by the disappeared process will be migrated to the newly created process. Affected elements will be restarted to ensure data synchronization. There is a one-minute delay between the disappearance of an SLProtocol process and the creation of a new one. A notice alarm will also be created indicating the process disappearance and number of affected elements.
+  - **SLAutomation**: The process will be restarted automatically with a one-minute delay, without restarting the entire DataMiner Agent. This delay is necessary to ensure that processes are not restarted while the DMA is in the process of shutting down.
 
-   - One at the moment the DataMiner Agent is stopped.
+  Most [DxMs and DcMs](xref:DataMinerExtensionModules) can also be restarted without triggering a full DataMiner restart, with the exception of DataMiner StorageModule, which does require a full DataMiner restart. Note that if DataMiner APIGateway is restarted, all client and inter-server connections will temporarily be dropped.
 
-   - One at the moment the DataMiner Agent is restarted.
+  Other processes often have a number of dependencies, making a full DataMiner restart necessary.
 
-   Both messages will be displayed in the DataMiner Alarm Console.
+- In case a DataMiner restart was needed, create two information messages:
+
+  - One at the moment the DataMiner Agent is stopped.
+
+  - One at the moment the DataMiner Agent is restarted.
+
+  Both messages will be displayed in the DataMiner Alarm Console.
 
 #### When an anomaly has been detected in a DataMiner process
 
@@ -637,15 +642,15 @@ Example:
 
 ### Fine-tuning NATS settings
 
-From DataMiner 10.1.0/10.1.1 onwards, DataMiner processes use the NATS open-source messaging system to communicate with each other. Some settings for NATS can be fine-tuned in *MaintenanceSettings.xml*, using the following tags:
+DataMiner processes use the NATS open-source messaging system to communicate with each other. Some settings for NATS can be fine-tuned in *MaintenanceSettings.xml*, using the tags listed below. However, note that these settings should ideally be changed [using SLNetClientTest tool](xref:SLNetClientTest_finetuning_nats_settings) instead.
 
 - *NATSDisasterCheck*: Set this to true or false in order to respectively activate or deactivate automatic detection and triggering of NATS cluster self-healing (default: false).
 
 - *NATSResetWindow*: Specify a value in seconds to set a window during which only one NATS reset can occur. This prevents situations where NATS disaster recovery is triggered too often. The minimum value is 60. If a lower value is specified, 60 will be used instead.
 
-- *NATSLogFileCleanupMs*: Supported from DataMiner 10.1.0 \[CU9\]/10.1.8 onwards. Determines the time (in milliseconds) between NATS log file cleanup attempts. This timing will only be applied after the next cleanup attempt after the configuration change. For example, if the next cleanup attempt is in 15 minutes, and you change this value, the next cleanup will still be in 15 minutes, but all subsequent cleanups will happen after 1-minute intervals. The default value of this setting is 900000 (15 minutes).
+- *NATSLogFileCleanupMs*: Determines the time (in milliseconds) between NATS log file cleanup attempts. This timing will only be applied after the next cleanup attempt after the configuration change. For example, if the next cleanup attempt is in 15 minutes, and you change this value, the next cleanup will still be in 15 minutes, but all subsequent cleanups will happen after 1-minute intervals. The default value of this setting is 900000 (15 minutes).
 
-- *NATSLogFileAmountToKeep*: Supported from DataMiner 10.1.0 \[CU9\]/10.1.8 onwards. The number of log files to keep (default =10). This value only applies to the log files that do not have the .log extension.
+- *NATSLogFileAmountToKeep*: The number of log files to keep (default =10). This value only applies to the log files that do not have the .log extension.
 
 Example:
 
@@ -664,17 +669,14 @@ Example:
 </MaintenanceSettings>
 ```
 
-> [!NOTE]
-> From DataMiner 10.1.0/10.1.3 onwards, you can instead configure this using the SLNetClientTest tool. See [Fine-tuning NATS settings](xref:SLNetClientTest_finetuning_nats_settings).
-
 > [!TIP]
 > See also: [Increasing the timeout for the NATS connection](xref:SLCloud_xml#increasing-the-timeout-for-the-nats-connection)
 
 ### Fine-tuning message throttling
 
-From DataMiner 10.2.0/10.1.2 onwards, message throttling is enabled on connections from web applications (e.g., Monitoring app, Dashboards app, Web APIs, etc.) to SLNet. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
+On connections from web applications (e.g., Monitoring app, Dashboards app, Web APIs, etc.) to SLNet, message throttling is enabled. This is a mechanism that avoids an excessive number of parameter update messages being sent at the same time.
 
-From DataMiner 10.1.3 onwards, the following settings can be fine-tuned for this in *MaintenanceSettings.xml:*
+The following settings can be fine-tuned for this in *MaintenanceSettings.xml:*
 
 - *MessageThrottlingThreshold*: Time interval in ms. The default and minimum value is 250. If two updates for the same parameter are received within this interval, message throttling is activated. The first of the parameter updates is sent immediately, but messages for the same parameter that come after this are throttled until no more parameter updates have been received for this same time interval. Once the throttling has stopped, the last update is also sent after at most this time interval.
 

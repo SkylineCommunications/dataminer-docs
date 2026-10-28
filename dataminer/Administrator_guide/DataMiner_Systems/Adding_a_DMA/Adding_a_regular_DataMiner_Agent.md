@@ -1,6 +1,6 @@
 ---
 uid: Adding_a_regular_DataMiner_Agent
-description: Find out what is required to add a DataMiner Agent as a node in a cluster, from the prerequisites to the procedure in DataMiner Cube.
+description: "Follow these instructions to add a regular DataMiner Agent as a node in a cluster after checking whether all prerequisites are met."
 ---
 
 # Adding a regular DataMiner Agent as a node in a cluster
@@ -19,7 +19,7 @@ Verify the prerequisites listed under [Adding a node to a DataMiner cluster](xre
 ### NATS
 
 - The DataMiner Agent you add must use the same NATS solution as the rest of the cluster. This means that if the cluster has been [migrated to BrokerGateway](xref:BrokerGateway_Migration), the DMA you add also needs to be migrated to BrokerGateway, but if the cluster still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
-- If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the added DMA.<!-- RN 42019+42020 -->
+- If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config), you will need to manually adjust your NATS configuration with the added DMA.<!-- RN 42019+42020 -->
 
 ### Swarming
 
@@ -33,10 +33,13 @@ Verify the prerequisites listed under [Adding a node to a DataMiner cluster](xre
 
 1. Enter the IP address of the DMA you want to add and click *Add*.
 
+> [!IMPORTANT]
+> Always use the IP address to add a regular DMA to a cluster. Adding Agents based on hostname is only supported for DataMiner Probes.
+
 > [!NOTE]
 >
 > - Do not use the *Join cluster* button to add a node to an existing cluster. This button should only be used during the [initial setup of a cluster](xref:Setting_up_a_new_DMS_in_DataMiner_Cube).
 > - To add a Failover pair to a cluster, first add the primary DMA as a regular node, and then configure Failover. See [Preparing the two DataMiner Agents](xref:Preparing_the_two_DataMiner_Agents).
 
 > [!TIP]
-> To verify if your DataMiner cluster is working correctly, you can run the [*SLNet connections between the DataMiner Agents* BPA test](xref:BPA_Check_Cluster_SLNet_Connections).
+> To verify if your DataMiner cluster is working correctly, you can run the [*SLNet connections between the DataMiner Agents* BPA test](xref:BPA_Check_Cluster_SLNet_Connections). If you are using a DataMiner version prior to 10.6.0/10.6.1 and your system has not been [migrated to BrokerGateway](xref:BrokerGateway_Migration) yet, run the *NATS cluster verification* BPA test.

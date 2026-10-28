@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Commands.Command.WebSocketMessageType
+description: "Learn how the WebSocketMessageType element selects binary or text format for a WebSocket command message in a DataMiner protocol."
 ---
 
 # WebSocketMessageType element

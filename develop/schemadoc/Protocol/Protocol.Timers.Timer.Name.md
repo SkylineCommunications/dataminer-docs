@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Name
+description: "Use the Timer.Name element in a DataMiner protocol to assign a descriptive and unique name to a timer definition."
 ---
 
 # Name element

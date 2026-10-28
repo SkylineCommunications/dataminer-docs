@@ -53,7 +53,7 @@ ImpactIssue --- |Yes|NotFixedProtocolIssue
 ImpactIssue --- |No|IsolateIssue
 IsolateIssue --- Alarms
 %% Define hyperlinks %%
-click SyncCheck "/dataminer/Reference/DataMiner_Tools/Sync_Check.html"
+click SyncCheck "/dataminer/DataMiner_Tools/Sync_Check.html"
 click Alarms "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Alarms.html"
 %% Apply styles to blocks %%
 class START classTerminal;

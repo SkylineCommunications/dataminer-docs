@@ -13,6 +13,9 @@ This interface provides various methods to create objects that can be used to co
 
 Available from DataMiner 10.4.5/10.5.0 onwards.<!-- RN 39136 -->
 
+> [!NOTE]
+> From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!-- RN 45635 -->, when using the `Skyline.DataMiner.Core.GQI.Extensions` API and the [GQI DxM](xref:GQI_DxM), this type can be used to inject a factory via the constructor of a GQI extension or GQI service. In earlier versions, use the [Factory](xref:GQI_OnInitInputArgs#properties) property of [OnInitInputArgs](xref:GQI_OnInitInputArgs).
+
 ## Methods
 
 ### IGQISortField CreateSortField(IGQIColumn, GQISortDirection = GQISortDirection.Ascending)

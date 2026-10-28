@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_retrieving_dcf_debug_info
+description: "Learn how, using the SLNetClientTest tool, you can retrieve DCF debug information by sending SLNet requests for DCF path highlighting with a DEBUG flag."
 ---
 
 # Retrieving DCF debug information

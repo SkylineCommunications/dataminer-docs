@@ -1,7 +1,7 @@
 ---
 uid: Cleaning_up_unused_files_on_a_DMA
 keywords: unused drivers, unused connectors, cleanup
-description: Learn how to remove clutter from your DataMiner System by cleaning up unused protocols, unused alarm filters and unused Visio files.
+description: "Learn how to remove clutter from your DataMiner System by cleaning up unused protocols, unused alarm filters and unused Visio files."
 ---
 
 # Cleaning up unused files

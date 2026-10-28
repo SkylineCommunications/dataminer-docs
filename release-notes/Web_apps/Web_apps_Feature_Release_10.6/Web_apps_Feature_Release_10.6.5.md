@@ -132,7 +132,7 @@ Because of a number of enhancements, the DataMiner Comparison tool will now be a
 
 #### Web upgrade: Prerequisite check will now verify whether .NET 10 is installed [ID 44906]
 
-<!-- MR 10.7.0 - FR 10.6.5 -->
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.5 -->
 
 When you install a DataMiner web upgrade package, from now on, a prerequisite check will verify whether Microsoft .NET 10 is installed. If not, the installation will fail.
 
@@ -182,7 +182,7 @@ From now on, whenever an exception occurs while data is being requested, the ses
 
 Also, a number of enhancements have been made to ensure that closing sessions will no longer interfere with other session operations.
 
-#### Interactive Automation scripts in web apps: Checkbox of redesigned Treeview component has been aligned with that of other components [ID 45025]
+#### Interactive automation scripts in web apps: Checkbox of redesigned Treeview component has been aligned with that of other components [ID 45025]
 
 <!-- MR 10.5.0 [CU14] / 10.6.0 [CU2] - FR 10.6.5 -->
 

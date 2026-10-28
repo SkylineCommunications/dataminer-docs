@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSerialPairs
+description: "Understand command-response pairs, their use with groups and timers, and response clearing when parameters are reused or a pair has multiple responses."
 ---
 
 # Pairs

@@ -81,7 +81,7 @@ CHECKCRASHORDISP --- |NO| RTE
 click HOME "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 click CRASHORDISP "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html"
 click RTE "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Troubleshooting_Process_Identification.html"
-click COLLECTLOGS "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html"
+click COLLECTLOGS "/dataminer/DataMiner_Tools/SLLogCollector.html"
 click CHECKRTE "#identifying-runtime-errors"
 click NORTE "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
 class START,CHECKRTE classTerminal;

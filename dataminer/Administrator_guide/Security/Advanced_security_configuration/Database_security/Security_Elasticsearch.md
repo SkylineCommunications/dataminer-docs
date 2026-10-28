@@ -1,5 +1,6 @@
 ---
 uid: Security_Elasticsearch
+description: "Configure Elasticsearch security with TLS, enable authentication, and protect cluster communication with certificates for secure DataMiner search access."
 keywords: elasticsearch, security
 ---
 

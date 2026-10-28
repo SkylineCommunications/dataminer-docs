@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Alerter_alarm_storm_prevention
+description: "Configure alarm storm prevention in Alerter to make sure that you are not flooded with alarm notifications."
 ---
 
 # Configuring alarm storm prevention in Alerter

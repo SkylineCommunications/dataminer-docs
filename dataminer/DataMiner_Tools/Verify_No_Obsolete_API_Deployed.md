@@ -1,5 +1,6 @@
 ---
 uid: Verify_No_Obsolete_API_Deployed
+description: "Find out how the Verify No Obsolete API Deployed check ensures that no obsolete APIs are deployed on the DMS."
 ---
 
 # Verify No Obsolete API Deployed

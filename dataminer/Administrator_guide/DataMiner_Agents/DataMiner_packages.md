@@ -1,6 +1,7 @@
 ---
 uid: DataMiner_packages
 keywords: driver package, connector package, .dmupgrade, .dmupdate, .dmbackup, .dmapp, .dmprotocol, .dmimport
+description: "Explore DataMiner packages and learn how .dmupgrade, .dmupdate, .dmbackup, .dmapp, and .dmprotocol files upgrade, restore, and install systems."
 ---
 
 # DataMiner packages
@@ -82,7 +83,7 @@ The actual content of a protocol package differs from that of the other packages
 
 - Additional assemblies (if needed)
 
-- Protocol-specific help
+- For DataMiner Edge protocols, scripts and a *dependencies.json* file (from DataMiner 10.6.10/10.7.0 onwards)<!--RN 45906-->
 
 ## Import package (.dmimport)
 

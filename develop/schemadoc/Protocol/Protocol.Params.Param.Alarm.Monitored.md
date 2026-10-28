@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.Monitored
+description: "Use the Monitored element in a DataMiner protocol to allow users to enable or disable the alarm configuration assigned to a parameter."
 ---
 
 # Monitored element

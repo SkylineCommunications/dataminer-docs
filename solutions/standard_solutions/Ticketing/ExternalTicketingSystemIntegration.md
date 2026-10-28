@@ -7,7 +7,7 @@ description: Learn how the Ticketing Solution can be integrated with external ti
 
 The Ticketing Solution can integrate with external ticketing systems such as:
 
-- ServiceNow
+- [ServiceNow](xref:ServiceNowIntegration)
 - Jira
 - Remedy
 

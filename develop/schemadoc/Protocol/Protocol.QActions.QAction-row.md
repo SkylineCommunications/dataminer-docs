@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-row
+description: "Use the row attribute in a DataMiner protocol to run a QAction when a table row changes and expose the updated row values to the script."
 ---
 
 # row attribute

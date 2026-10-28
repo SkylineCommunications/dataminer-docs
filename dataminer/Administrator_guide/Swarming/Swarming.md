@@ -1,5 +1,6 @@
 ---
 uid: Swarming
+description: "Discover how Swarming lets you move DataMiner objects between Agents to eliminate downtime and balance cluster load."
 ---
 
 # Swarming

@@ -4,6 +4,16 @@ uid: cloudfeed_change_log
 
 # Cloud Feed change log
 
+#### 14 September 2026 - Fix - CloudFeed 1.4.10: Problem when sending batches to Azure [ID 46479]
+
+In some rare cases, CloudFeed could restart unexpectedly when multiple send operations simultaneously attempted to create an *Azure Event Hubs* batch.
+
+The batch-sending mechanism has now been updated to ensure that only one send operation can access the event queue at a time. During shutdown, CloudFeed will now wait for an active send operation before flushing the remaining events.
+
+#### 9 July 2026 - Enhancement - CloudFeed 1.4.9: Enhanced handling of files in use during upgrades [ID 45965]
+
+From now on, the *Windows Restart Manager* will be enabled when installing the CloudFeed DxM. This will prevent unnecessary delays caused by files still in use by the CloudFeed instance that is being upgraded, increasing overall performance and reliability of the upgrade process.
+
 #### 25 June 2026 - Enhancement - CloudFeed 1.4.8 - Upgrade to .NET 10
 
 DataMiner CloudFeed has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.

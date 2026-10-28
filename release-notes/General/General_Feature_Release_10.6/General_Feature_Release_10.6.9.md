@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.9
 ---
 
-# General Feature Release 10.6.9 – Preview
+# General Feature Release 10.6.9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -30,13 +30,19 @@ Before you upgrade to this DataMiner version:
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
-*No new features have been added yet.*
+#### Automation: Added support for running scripts in separate SLAutomation.ScriptRunner processes by SolutionId [ID 45557]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+To help prevent DLL version conflicts between solutions, scripts can now run their C# code in separate `SLAutomation.ScriptRunner` child processes grouped by the script's `SolutionId` tag.
+
+When a script has a `SolutionId`, DataMiner will create a runner process for that `SolutionId` (or reuse an existing one), and execute the script code in that process instead of the main `SLAutomation` process.
+
+When you update a script that uses `SolutionId`, you can send an `InvalidateScriptRunnerMessage` to force creation of a new runner process on the next execution, ensuring the latest DLLs are loaded. A maximum of 10 runner processes can exist at the same time per `SolutionId`, and 50 runner processes in total.
+
+Runner processes are automatically stopped after they have been idle for one hour. In the *SLNetClientTest* tool, you can view the current runners via *Advanced* > *Automation...* > *Script Runners Overview*.
 
 ## Changes
 
@@ -47,16 +53,6 @@ Before you upgrade to this DataMiner version:
 <!-- 45582: MR 10.7.0 - FR 10.6.9 -->
 
 A number of security enhancements have been made.
-
-#### DataAPI: Enhanced handling of element creations failing because another element with the same name already exists [ID 45643]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-When DataAPI creates an element, in some cases, the element is not immediately fully synchronized in DataMiner. Subsequent requests then detect that an element with the same name already exists and fail, even though DataAPI itself created that element.
-
-To determine whether DataAPI created an element, the request must confirm that it is genuinely the same element. Up to now, when a name collision occurred, the request would simply fail with no way to identify its own recently created element.
-
-From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
 
 #### 'DataMiner Agent Minimum Requirements' BPA test: Enhanced time server check on hybrid clusters [ID 45661]
 
@@ -77,6 +73,43 @@ From now on, gRPC connections that go through the Azure Cloud Relay service will
 
 This will allow those connections to survive a temporary outage of the Azure Cloud Relay service, for example when restarting or deploying a new version.
 
+#### SLLogCollector: Extra logging and progress updates while files are being archived [ID 45650]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+In some cases, SLLogCollector can get stuck while archiving files.
+
+To improve visibility during archiving, SLLogCollector will now log which file is currently being archived and update the busy message with the number of files copied so far.
+
+#### SLLogCollector: Users can now choose whether to use the 'Output pending calls' option [ID 45722]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Up to now, when you opened the SLLogCollector, the *Output pending calls* option would automatically be selected when any of the running processes have runtime errors linked to elements. Users would not have any control over this option. From now on, they will.
+
+If you want SLLogCollector to collect all pending calls for a number of the specific elements, do the following:
+
+1. Select the *Output pending calls* option.
+1. Click *Load elements*, and select all elements of which you want the pending calls to be collected.
+
+   Elements with runtime errors will be automatically selected.
+
+> [!NOTE]
+>
+> - The *Output pending calls* option will still automatically be selected when any of the running processes have runtime errors linked to elements.
+> - Clearing the *Output pending calls* option will only hide the element selection grid. The current selection will not be cleared, so when you select the *Output pending calls* option again, everything is restored without any need to reload the elements.
+
+#### Automation: Improved save logic for automation scripts [ID 45836]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+A number of enhancements have been made to the save logic of automation scripts:
+
+- A per-script execution reference is now kept, so deletion of an in-use script DLL is deferred until all script executions have ended.
+- When a script is updated while another instance is still running, a new DLL is created as before, while the old DLL is kept until the running instance finishes.
+- Local save logic no longer deletes DLL files that were triggered by its own file-change event.
+- A newly saved script now waits until its (re)compilation is complete before it is executed.
+
 #### ConfigureIIS.bat script will now ensure a dedicated Application Pool for the API application [ID 45842]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -96,6 +129,38 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 <!-- MR 10.7.0 - FR 10.6.9 -->
 
 From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
+
+#### DOM: `FilterElement<T>` select extensions moved to the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace [ID 45902]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you use the DOM helper method `Read(IQuery<DomInstance>, SelectedFields<DomInstance>)` for a select read, you can pass either an `IQuery<T>` object or a `FilterElement<T>` object.
+
+Up to now, the extension method that allowed `FilterElement<T>` to be passed was located in the `Skyline.DataMiner.Net.Messages` namespace, which is often not imported in scripts. As a result, this could lead to confusing syntax errors where the filter appeared to be incorrectly converted to an `IQuery`.
+
+Equivalent extension methods have now been added in the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace, which also contains `SelectedFields<T>`. The old extension methods have been converted to regular static methods so that already compiled code remains compatible with newer `SLNetTypes` versions.
+
+#### DxMs upgraded [ID 45944] [ID 46119] [ID 46159]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+The following DataMiner Extension Modules (DxMs), which are included in the DataMiner upgrade package, have been upgraded to the indicated versions:
+
+- DataMiner ArtifactDeployer 1.10.0
+- DataMiner CloudGateway 3.3.2
+- DataMiner CoreGateway 2.14.17
+- DataMiner DataAPI 1.4.6
+- DataMiner FieldControl 2.12.2
+- DataMiner Orchestrator 1.11.0
+- DataMiner SupportAssistant 1.9.3
+
+For detailed information about the changes included in those versions, refer to the [DxM release notes](xref:DxM_RNs_index).
+
+#### DOM: Server-side support for string list FieldDescriptors [ID 46051]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When using DOM in scripts, ad hoc data sources, etc., from now on, it will be possible to specify a `List<string>` type on a normal FieldDescriptor. Up to now, only single fields were allowed. Now, multiple string values will also be supported.
 
 ### Fixes
 
@@ -148,3 +213,103 @@ From now on, the *Get parameter table by alias* data source will only be availab
 When an element was frequently stopped and restarted, up to now, alarms would accumulate as duplicates in the internal alarm grouping counters, causing a memory leak in the SLAnalytics process. Alarms would incorrectly not be removed from the element's alarm counter when the element stopped, and were re-added as new entries each time the element restarted.
 
 From now on, alarms will be properly removed from the element alarm counter when an element stops. An additional safeguard has also been added to prevent duplicate alarm entries from being inserted into the counter if the same alarm tree already exists.
+
+#### Problem occurring while SL\* services were being shut down would prevent DataMiner from starting up again [ID 45839]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, while the SL* services were being shut down, in some cases, an access violation crash could occur.
+
+As a result, DataMiner could fail to start up again.
+
+#### Reconnecting a WMI connection could cause the SLProtocol process to stop unexpectedly [ID 45851]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, in some cases, reconnecting a WMI connection could cause the `SLProtocol` process to stop unexpectedly.
+
+In addition, opening StreamViewer would incorrectly show all items in the tree structure as `Undefined`.
+
+From now on, reconnecting a WMI connection will no longer cause `SLProtocol` to stop unexpectedly, and StreamViewer will correctly show the group and action executing the WMI query.
+
+#### Problem with SLProtocol when a queued QAction finished after an element had been stopped [ID 45882]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when an element was stopped while queued QActions were still running, in some cases, one of those QActions could finish after `SLProtocol` had already cleaned up its internal objects.
+
+As a result, when that QAction thread then tried to update element metrics, it would attempt to access an object that had already been deleted, causing the `SLProtocol` process to crash.
+
+#### When DataMiner was stopped, the SLAnalytics process could get stuck while being stopped [ID 45910]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+When the DataMiner software was stopped, in some cases, the SLAnalytics process could get stuck while being stopped.
+
+#### Smart-serial client connection state incorrectly shown as undefined [ID 45931]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when an element with a smart-serial connection acted as a client, in some cases, the *Connection State* column in the *Communication Info* table on the *General parameters* page would incorrectly show `Undefined`.
+
+From now on, that column will correctly show the actual connection state, e.g., `Connected`.
+
+#### StorageModule DxM would fail to start because of a WebSocket issue [ID 45933]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+Because of a WebSocket issue, in some rare cases, the StorageModule DxM would fail to start. As a result, DataMiner would not be able to start up.
+
+#### Problem with SLDataMiner when SLWatchdog requested element statistics while an element was being stopped [ID 45945]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requested statistics about the number of active elements while an element was being stopped.
+
+#### STaaS: Page size would incorrectly be ignored when retrieving DOM instances from a STaaS database [ID 45952]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+<!-- Not added to MR 10.7.0 -->
+
+When DOM instances were retrieved from a STaaS database, up to now, the page size would incorrectly be ignored.
+
+#### SLAutomation could stop unexpectedly when Engine methods were used from different threads [ID 45955]
+
+<!-- MR 10.7.0 - FR 10.6.9 -->
+
+In some cases, SLAutomation could stop unexpectedly when automation scripts used `Engine` methods from different threads at the same time.
+
+This was caused by non-thread-safe access to cached element information, e.g., when `engine.FindElement` and `engine.CreateExtraDummy` were called concurrently.
+
+Access to that cache has now been made thread safe.
+
+> [!NOTE]
+> The `Engine` object itself is still not thread safe. Scripts should not use the same `Engine` instance from more than one thread at a time.
+
+#### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.
+
+#### BrokerGateway could stop unexpectedly on startup because of concurrent semaphore access [ID 46009]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some cases, BrokerGateway could stop unexpectedly during startup when multiple threads tried to create a semaphore with the same key at the same time. This could cause the semaphore to be released more than once, which made BrokerGateway crash.
+
+#### Invalid matrix 'columntypes' definition could cause SLProtocol to stop unexpectedly [ID 46011]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a matrix parameter had fewer `columntypes` defined in its options than there were dimensions, `SLProtocol` could stop unexpectedly when `protocol.SendToDisplay` was called on that matrix parameter.
+
+From now on, missing matrix outputs that are not covered by `columntypes` will be handled correctly.
+
+#### Service card reports could show incorrect alarm counts on clustered databases [ID 46048]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, on clustered databases (Cassandra Cluster or STaaS), alarm counts in the *Reports* section of a service card could be duplicated by the number of DataMiner Agents involved in that service.
+
+From now on, those alarm counts will be calculated correctly when a service includes elements hosted on multiple Agents.

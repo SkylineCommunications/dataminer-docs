@@ -1,5 +1,6 @@
 ---
 uid: Change_email_dataminer_services_account
+description: "Change the email address for your dataminer.services account by re-registering, then restore access to linked services, projects, and data."
 keywords: cloud email, cloud account
 reviewer: Alexander Verkest
 ---

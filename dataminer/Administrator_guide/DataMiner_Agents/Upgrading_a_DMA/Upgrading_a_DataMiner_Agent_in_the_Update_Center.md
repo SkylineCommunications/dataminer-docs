@@ -1,6 +1,6 @@
 ---
 uid: Upgrading_a_DataMiner_Agent_in_the_Update_Center
-description: Select 'Check for updates' in the Cube user icon menu, authenticate, go to the 'software' tab, download the right upgrade, and then click 'Upgrade'.
+description: "Follow these instructions to upgrade or update a DataMiner Agent in DataMiner Cube's Upgrade Center."
 ---
 
 # Upgrading a DataMiner Agent in the Update Center

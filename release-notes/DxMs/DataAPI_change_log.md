@@ -7,6 +7,14 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 17 September 2026 - New feature - DataAPI 1.5.0 - Added support for pushing data to existing elements [ID 45976]
+
+Data API can now push data directly to an existing element, including a specific sub-target of that element. This allows data to be sent to elements that use an existing connector, rather than requiring Data API to create an auto-generated connector and element.
+
+When data is pushed to an existing element, its connector is reused without being changed.
+
+At present, this functionality is reserved for scripts running on an Edge Node.
+
 ### 7 July 2026 - Enhancement - DataAPI 1.4.6 - Initialization behavior improvement and lock handling improvements [ID 45737]
 
 The following changes have been made to Data API functionality:

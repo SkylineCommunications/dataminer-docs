@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Databits.Range
+description: "Use the Range element in a DataMiner protocol to define an allowed range of data bit values for an element connection."
 ---
 
 # Range element

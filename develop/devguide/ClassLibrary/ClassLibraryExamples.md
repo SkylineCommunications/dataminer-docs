@@ -120,32 +120,6 @@ IDmsStandaloneParameter<string> parameter = element.GetStandaloneParameter<strin
 string value = parameter.GetValue();
 ```
 
-## Setting a property and renaming the element
-
-The following example performs a rename of an element and also sets a property.
-
-```csharp
-IDms dms = protocol.GetDms();
-
-IDmsElement element = dms.GetElement(new DmsElementId(346, 529981));
-
-element.Name = "Renamed Element";
-
-if (element.Properties["CustomProperty"].IsWritable)
-{
-    IWritableProperty myProperty = element.Properties["CustomProperty"].AsWritable();
-    myProperty.Value = "A";
-}
-else
-{
-   // "My Property" is a read-only property.
-}
-
-element.Update(); // Apply the changes.
-```
-
-The updates are only sent to DataMiner when the Update method is executed. This makes it possible to set multiple properties at once while only one message needs to be sent to DataMiner to apply all changes.
-
 ## Verifying whether a DataMiner Agent is running
 
 The following example checks the state of a DataMiner Agent.
@@ -159,69 +133,6 @@ AgentState state = agent.State;
 
 > [!NOTE]
 > It is advised to verify the state of the Agent that hosts the remote element before performing operations on the remote element.
-
-## Creating, updating and retrieving HTTP connections of elements
-
-The following diagram gives an overview of the provided interfaces:
-
-![Connections class diagram](~/develop/images/classlibrary1205_1.png)
-
-The following example illustrates how to create an element with an HTTP connection:
-
-```csharp
-private static void CreateElement(SLProtocol protocol)
-{
-    IDms dms = protocol.GetDms();
-    IDma agent = dms.GetAgent(protocol.DataMinerID);
-    
-    IDmsProtocol elementProtocol = dms.GetProtocol("MyProtocolName", "1.0.0.1");
-    
-    ITcp port = new Tcp("127.0.0.1", 8888);
-    IHttpConnection myHttpConnection = new HttpConnection(port);
-    
-    var configuration = new ElementConfiguration(
-        dms,
-        "MyElementName",
-        elementProtocol,
-        new List<IElementConnection> { myHttpConnection });
-    
-    DmsElementId createdElementId = agent.CreateElement(configuration);
-}
-```
-
-The following example illustrates how to update an HTTP connection of an existing element:
-
-```csharp
-private static void SetPort(SLProtocol protocol)
-{
-    IDms myDms = protocol.GetDms();
-    
-    var element = myDms.GetElement("myHttpElement");
-    
-    int portNumber = 8888;
-    
-    ElementConnectionCollection connections = element.Connections;
-    
-    // We assume that in this example we know the first connection is the HTTP connection.
-    if (connections.Length > 0)
-    {
-        var httpConnection = connections[0] as IHttpConnection;
-        
-        if (httpConnection != null)
-        {
-            var currentPortNumber = httpConnection.TcpConfiguration.RemotePort;
-        
-            if (currentPortNumber != portNumber)
-            {
-                httpConnection.TcpConfiguration.RemotePort = portNumber;
-            
-                // Apply changes.
-                element.Update();
-            }
-        }
-    }
-}
-```
 
 ## Creating and deleting properties in a DataMiner System
 

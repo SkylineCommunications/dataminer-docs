@@ -1,5 +1,6 @@
 ---
 uid: Adding_a_user
+description: "Add local users or domain users in DataMiner with correct credentials, security level, and contact details."
 ---
 
 # Adding a user

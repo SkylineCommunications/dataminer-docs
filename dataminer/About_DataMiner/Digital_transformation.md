@@ -55,7 +55,7 @@ Go to [Digital Transformation](https://skyline.be/digital-transformation) to fin
 - How to manage your data and automate your processes
 - How to set up processes across business teams, operations, and ICT media and broadband technical teams, no longer isolating the business, operational, and technical processes, such as the deployment, monitoring, and orchestration of infrastructure
 - The powerful and versatile data acquisition and control layer
-- Collaboration across teams, suppliers, and customers to create endless possibilities (ChatOps, Dashboard Sharing, Custom Applications, and dynamic deployment of new APIs)
+- Collaboration across teams, suppliers, and customers to create endless possibilities (e.g., Dashboard Sharing, Custom Applications, and dynamic deployment of new APIs)
 - Augmented Operation, powered by AI
 
 > [!TIP]

@@ -1,5 +1,6 @@
 ---
 uid: Security_key_principles
+description: "Apply key security principles such as attack surface reduction, Zero Trust, least privilege, secure APIs, encryption, and SecOps to DataMiner."
 ---
 
 # Security: General key principles and best practices

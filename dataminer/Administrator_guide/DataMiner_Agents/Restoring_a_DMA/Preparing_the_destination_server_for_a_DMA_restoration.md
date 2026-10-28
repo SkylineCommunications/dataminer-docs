@@ -1,5 +1,6 @@
 ---
 uid: Preparing_the_destination_server_for_a_DMA_restoration
+description: "Follow these instructions to make sure that the server is clean and ready for the installation before you restore a DMA backup."
 ---
 
 # Preparing the destination server for a DMA restoration

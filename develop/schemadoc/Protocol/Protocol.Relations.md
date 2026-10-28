@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Relations
+description: "Use the Relations element in a DataMiner protocol to group foreign key links that define relationships between tables."
 ---
 
 # Relations element

@@ -1,5 +1,6 @@
 ---
 uid: Connecting_Alerter_to_another_DMS
+description: "Connect Alerter to another DataMiner System by configuring the DMS name, host, advanced settings, and connection loss notifications."
 ---
 
 # Connecting Alerter to another DataMiner System

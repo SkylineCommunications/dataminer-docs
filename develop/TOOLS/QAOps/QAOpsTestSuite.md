@@ -34,9 +34,8 @@ When you [create or edit a test suite in the QAOps Operator app](xref:QAOps_Main
 
 - **Description**: Description of the test suite.
 
-- **Global categories**: Semicolon-separated list of category IDs used for UI filtering.
+- **Global categories**: Categories selected with checkboxes, used for UI filtering with the buttons in the header bar of the QAOps apps.
 
-The *ID* column for a test suite contains a ULID that uniquely identifies the test suite. This cannot be adjusted.
+The *Test Suite ID* is a ULID that uniquely identifies the test suite. It is generated automatically and cannot be adjusted.
 
-> [!IMPORTANT]
-> In the QAOps Operator app, remember to click the **Update** button in the table when you have finished making changes.
+Once the test suite exists, the *Test Package Selection* section of the dialog allows you to add test packages from the DataMiner Catalog, change their execution order, or remove them. For a step-by-step guide, see [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites).

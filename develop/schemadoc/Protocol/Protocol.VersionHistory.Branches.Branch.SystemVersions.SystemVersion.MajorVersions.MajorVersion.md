@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion
+description: "Use the MajorVersion element in a DataMiner protocol to define a major version, including its changes and minor versions."
 ---
 
 # MajorVersion element

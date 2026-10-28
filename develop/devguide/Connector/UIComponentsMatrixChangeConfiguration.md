@@ -1,12 +1,13 @@
 ---
 uid: UIComponentsMatrixChangeConfiguration
+description: "Dynamically resize or reconfigure a standard matrix from a QAction with NT_UPDATE_PORTS_XML, then refresh the display and store changes in XML."
 ---
 
 # Dynamically changing matrix configuration
 
 Using the NotifyDataMinerQueued type 128 (NT_UPDATE_PORTS_XML) call, the configuration of a matrix can dynamically be changed. For a detailed description on how to dynamically change the matrix options from a QAction, see [NT_UPDATE_PORTS_XML (128)](xref:NT_UPDATE_PORTS_XML).
 
-When a configuration change is performed using this method, the change is stored in the XML file that is referred to in the link attribute of the Measurement.Type tag.
+When a configuration change is performed using this method, the change is stored in the XML file that is referred to in the link attribute of the `Measurement.Type` tag.
 
 For example, consider the following matrix parameter:
 
@@ -53,7 +54,7 @@ protocol.NotifyDataMinerQueued(128, updateConfig, updateValue);
 protocol.SendToDisplay(parameterId);
 ```
 
-In that case, the XML file will state "8;8" as the value for the physicalSize attritube:
+In that case, the XML file will state "8;8" as the value for the `physicalSize` attribute:
 
 ```xml
 <Discreets xmlns="http://www.skyline.be/protocol" physicalSize="8;8">…</Discreets>

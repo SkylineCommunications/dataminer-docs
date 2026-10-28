@@ -41,5 +41,5 @@ uid: Overview_of_the_files_found_in_the_root_folder
 | videoservers.xml | Configuration of video servers (for video thumbnails). | No |
 | Views.xml | [View configuration](xref:Views_xml). | Yes |
 
-> [!NOTE]
-> Files marked as "synchronized" in the rightmost column are synchronized among all DMAs in the cluster every day at midnight (00:00). Therefore, it is of great importance that the time settings of all DMAs in the cluster are synchronized as well. For more information, see [How do I synchronize time settings within a DMS?](xref:General_configuration#how-do-i-synchronize-time-settings-within-a-dms).
+> [!IMPORTANT]
+> For more information on when files and folders are synchronized, refer to [Data synchronization](xref:Data_synchronization)

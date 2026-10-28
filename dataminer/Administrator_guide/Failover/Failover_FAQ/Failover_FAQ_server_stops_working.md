@@ -1,5 +1,6 @@
 ---
 uid: Failover_FAQ_server_stops_working
+description: "Find out what happens when the database server on one of the Agents of a Failover pair stops working."
 ---
 
 # What happens when the database server on one of the DMAs stops working?

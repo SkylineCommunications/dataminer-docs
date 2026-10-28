@@ -1,5 +1,6 @@
 ---
 uid: Time-based_license
+description: "Request a time-based license for your DataMiner Agent by following these instructions and sending the request.lic file to Skyline."
 ---
 
 # Time-based license

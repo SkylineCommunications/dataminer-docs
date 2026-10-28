@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation
+description: "Configure the Simulation element as the root of an SNMP simulation file, then define endpoints, options, defaults, and simulated OIDs."
 ---
 
 # Simulation element

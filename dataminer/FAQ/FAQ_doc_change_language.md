@@ -1,5 +1,6 @@
 ---
 uid: FAQ_doc_change_language
+description: "Translate DataMiner documentation in your browser, or enable English auto-generated subtitles and use Auto-translate for training videos."
 ---
 
 # How can I view DataMiner documentation or learning materials in a different language?

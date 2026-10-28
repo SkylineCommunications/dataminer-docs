@@ -1,8 +1,9 @@
----
+﻿---
 uid: Cube_Feature_Release_10.2.12
+status: archived
 ---
 
-# DataMiner Cube Feature Release 10.2.12
+# DataMiner Cube Feature Release 10.2.12 [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).

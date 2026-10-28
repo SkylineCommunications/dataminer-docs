@@ -1,5 +1,6 @@
 ---
 uid: Loaded_packets
+description: "Manage loaded packets by selecting traps to send, adding SNMPv1, SNMPv2, or SNMPv3 packets, and duplicating, removing, or renaming them."
 ---
 
 # Loaded packets

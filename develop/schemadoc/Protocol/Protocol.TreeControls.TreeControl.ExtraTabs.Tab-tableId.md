@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab-tableId
+description: "Use the tableId attribute of the Tab element in a DataMiner protocol to identify the table for an additional tree control tab."
 ---
 
 # tableId attribute

@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_interfaces
+description: "Explore DataMiner interfaces to connect web clients and third-party tools, and configure private, public, optional, and custom integrations."
 ---
 
 # DataMiner interfaces

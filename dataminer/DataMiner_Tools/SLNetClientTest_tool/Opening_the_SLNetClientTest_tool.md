@@ -1,5 +1,6 @@
 ---
 uid: Opening_the_SLNetClientTest_tool
+description: "Open the SLNetClientTest tool either by selecting 'Client Test' from the DataMiner Taskbar Utility or by running SLNetClientTest.exe from the server."
 ---
 
 # Opening the SLNetClientTest tool

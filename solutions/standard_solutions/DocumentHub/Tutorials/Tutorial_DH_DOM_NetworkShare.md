@@ -12,7 +12,7 @@ Expected duration: 15 minutes
 
 - Access to the DocumentHub app on a DataMiner Agent.
 - A network share accessible from all DataMiner Agents in the cluster.
-- Network credentials with read/write permissions to the share.
+- Network credentials that have both share-level and NTFS permissions to create and modify files in the target folder.
 - IIS Web Server role installed on DMAs for browser-based file access (optional).
 
 > [!NOTE]
@@ -31,7 +31,13 @@ Expected duration: 15 minutes
 
    Example network share location: `\\server\share`
 
-1. Ensure that the share has appropriate read/write permissions configured.
+1. Make sure the account used by DataMiner has the required permissions on both the share and the underlying NTFS folder:
+
+   - At the share level, grant the account at least *Change* or *Full Control* so it can create and modify files.
+   - In the NTFS permissions of the target folder, grant the same account at least *Modify* or *Write* access.
+
+   > [!NOTE]
+   > If the network share is configured with the correct share permissions, but the folder itself is missing NTFS write access, uploads will fail even if the share is reachable.
 
 1. Test connectivity from each DMA by accessing the share via Windows Explorer or command line:
 
@@ -39,8 +45,7 @@ Expected duration: 15 minutes
    dir \\server\share
    ```
 
-   > [!NOTE]
-   > If the share is not accessible, verify network connectivity, firewall rules, and share permissions.
+   If the share is not accessible, verify network connectivity, firewall rules, and both share-level and NTFS permissions.
 
 ## Step 2: Configure the network share in DocumentHub
 
@@ -65,11 +70,13 @@ Configure the network share directly in the DocumentHub app:
 
 1. Click **Test** to verify that DataMiner can access the network share.
 
-   > [!NOTE]
-   > If the test fails, verify the following things:
+   > [!IMPORTANT]
+   > The test only confirms that DataMiner can reach the share with the provided credentials. It can still succeed even when the account lacks the required write permission to upload files. If the account does not have write access on the share or on the NTFS folder, uploads can still fail later during actual file creation.
+   >
+   > Verify the following before saving the configuration:
    >
    > - The UNC path is correct.
-   > - The credentials have read/write permissions.
+   > - The credentials have both share-level and NTFS write permissions.
    > - The share is accessible from all DMAs.
    > - There are no firewall rules blocking access.
 

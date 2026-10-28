@@ -19,9 +19,9 @@ uid: WS_Methods_v1_overview
 | [AddElementToRecent](xref:AddElementToRecent) | Adds an element to the Recent list. |
 | [AddElementToView](xref:AddElementToView) | Adds an element to a specified view. |
 | [AddElementsToRecent](xref:AddElementsToRecent) | Adds a number of elements to the Recent list. |
-| [AddJobAttachment](xref:AddJobAttachment) | Adds an attachment to a job. For internal use at Skyline only.|
-| [AddJobAttachmentV2](xref:AddJobAttachmentV2) | Adds an attachment to a job. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. For internal use at Skyline only. |
-| [AddOrUpdateJobsSectionDefinitionField](xref:AddOrUpdateJobsSectionDefinitionField) | Adds or updates a job section definition field. |
+| [AddJobAttachment](xref:AddJobAttachment) | Obsolete. Adds an attachment to a job. For internal use at Skyline only.|
+| [AddJobAttachmentV2](xref:AddJobAttachmentV2) | Obsolete. Adds an attachment to a job. Available from DataMiner 10.2.0 [CU9]/10.2.12 onwards. For internal use at Skyline only. |
+| [AddOrUpdateJobsSectionDefinitionField](xref:AddOrUpdateJobsSectionDefinitionField) | Obsolete. Adds or updates a job section definition field. |
 | [AddServiceToPinned](xref:AddServiceToPinned) | Pins a service in the Recent list. |
 | [AddServiceToRecent](xref:AddServiceToRecent) | Adds a service to the Recent list. |
 | [AddServicesToRecent](xref:AddServicesToRecent) | Adds a number of services to the Recent list. |
@@ -50,10 +50,10 @@ uid: WS_Methods_v1_overview
 | [ContinueAutomationScript](xref:ContinueAutomationScript) | Continues an automation script. |
 | [CreateAlarmTemplate](xref:CreateAlarmTemplate) | Creates a new alarm template. |
 | [CreateElement](xref:CreateElement) | Creates a new element on the specified DMA. |
-| [CreateJob](xref:CreateJob) | Creates a job. |
-| [CreateJobsDomain](xref:CreateJobsDomain) | Creates a job domain. |
-| [CreateJobsSectionDefinition](xref:CreateJobsSectionDefinition) | Creates a job section definition. |
-| [CreateJobTemplate](xref:CreateJobTemplate) | Creates a job template. |
+| [CreateJob](xref:CreateJob) | Obsolete. Creates a job. |
+| [CreateJobsDomain](xref:CreateJobsDomain) | Obsolete. Creates a job domain. |
+| [CreateJobsSectionDefinition](xref:CreateJobsSectionDefinition) | Obsolete. Creates a job section definition. |
+| [CreateJobTemplate](xref:CreateJobTemplate) | Obsolete. Creates a job template. |
 | [CreateNoteForElement](xref:CreateNoteForElement) | Creates a note for a specified element. |
 | [CreateNoteForService](xref:CreateNoteForService) | Creates a note for a specified service. |
 | [CreateNoteForView](xref:CreateNoteForView) | Creates a note for a specified view. |
@@ -66,14 +66,14 @@ uid: WS_Methods_v1_overview
 | [DeleteAlarmTemplate](xref:DeleteAlarmTemplate) | Deletes the specified alarm template. |
 | [DeleteBookingAttachments](xref:DeleteBookingAttachments) | Deletes multiple attachment files from a booking. |
 | [DeleteElement](xref:DeleteElement) | Deletes the specified element. |
-| [DeleteJob](xref:DeleteJob) | Deletes a job. |
-| [DeleteJobAttachments](xref:DeleteJobAttachments) | Deletes multiple attachments from a job. |
-| [DeleteJobs](xref:DeleteJobs) | Deletes several jobs at the same time. |
-| [DeleteJobsDomain](xref:DeleteJobsDomain) | Deletes a jobs domain. |
-| [DeleteJobsSectionDefinition](xref:DeleteJobsSectionDefinition) | Deletes a job section definition. No longer supported. Use [DeleteJobsSectionDefinitionFromDomain](xref:DeleteJobsSectionDefinitionFromDomain) instead. |
-| [DeleteJobsSectionDefinitionField](xref:DeleteJobsSectionDefinitionField) | Deletes a job section definition field. |
-| [DeleteJobsSectionDefinitionFromDomain](xref:DeleteJobsSectionDefinitionFromDomain) | Deletes a job section definition from a specific job domain. |
-| [DeleteJobTemplate](xref:DeleteJobTemplate) | Deletes a job template. |
+| [DeleteJob](xref:DeleteJob) | Obsolete. Deletes a job. |
+| [DeleteJobAttachments](xref:DeleteJobAttachments) | Obsolete. Deletes multiple attachments from a job. |
+| [DeleteJobs](xref:DeleteJobs) | Obsolete. Deletes several jobs at the same time. |
+| [DeleteJobsDomain](xref:DeleteJobsDomain) | Obsolete. Deletes a jobs domain. |
+| [DeleteJobsSectionDefinition](xref:DeleteJobsSectionDefinition) | Obsolete. Deletes a job section definition. No longer supported. Use [DeleteJobsSectionDefinitionFromDomain](xref:DeleteJobsSectionDefinitionFromDomain) instead. |
+| [DeleteJobsSectionDefinitionField](xref:DeleteJobsSectionDefinitionField) | Obsolete. Deletes a job section definition field. |
+| [DeleteJobsSectionDefinitionFromDomain](xref:DeleteJobsSectionDefinitionFromDomain) | Obsolete. Deletes a job section definition from a specific job domain. |
+| [DeleteJobTemplate](xref:DeleteJobTemplate) | Obsolete. Deletes a job template. |
 | [DeleteRedundancyGroup](xref:DeleteRedundancyGroup) | Deletes the specified redundancy group |
 | [DeleteService](xref:DeleteService) | Deletes the specified service |
 | [DeleteServiceTemplate](xref:DeleteServiceTemplate) | Deletes the specified service template. Available from DataMiner 10.2.1 onwards. |
@@ -85,8 +85,8 @@ uid: WS_Methods_v1_overview
 | [DeleteVisioFileFromProtocol](xref:DeleteVisioFileFromProtocol) | Deletes a particular Visio file that can be assigned to a protocol. |
 | [DetachAutomationScript](xref:DetachAutomationScript) | Aborts a running automation script. |
 | [DetachServiceFromServiceTemplate](xref:DetachServiceFromServiceTemplate) | Detaches the specified service from its service template. |
-| [DuplicateJobsDomain](xref:DuplicateJobsDomain) | Duplicates a jobs domain. |
-| [DuplicateJobsSectionDefinition](xref:DuplicateJobsSectionDefinition) | Duplicates a section definition from one jobs domain to another. |
+| [DuplicateJobsDomain](xref:DuplicateJobsDomain) | Obsolete. Duplicates a jobs domain. |
+| [DuplicateJobsSectionDefinition](xref:DuplicateJobsSectionDefinition) | Obsolete. Duplicates a section definition from one jobs domain to another. |
 | [EditElement](xref:EditElement) | Edits the specified element. |
 | [EditSLAElement](xref:EditSLAElement) | Edits the specified SLA element |
 | [EditService](xref:EditService) | Edits the specified service. |
@@ -132,7 +132,7 @@ uid: WS_Methods_v1_overview
 | [GetActiveAlarmsV2](xref:GetActiveAlarmsV2) | Retrieves all the active alarms along with the alarm cache status. |
 | [GetActiveTickets](xref:GetActiveTickets) | Deprecated. Use [GetActiveTicketsV2](xref:GetActiveTicketsV2)instead |
 | [GetActiveTicketsV2](xref:GetActiveTicketsV2) | Obsolete. Retrieves the active tickets. |
-| [GetAffectedJobDomains](xref:GetAffectedJobDomains) | Retrieves all domains a specific section definition is linked to. |
+| [GetAffectedJobDomains](xref:GetAffectedJobDomains) | Obsolete. Retrieves all domains a specific section definition is linked to. |
 | [GetAffectedTickets](xref:GetAffectedTickets) | Obsolete. Gets the tickets linked to a particular DataMiner resource. |
 | [GetAggregationDataTree](xref:GetAggregationDataTree) | Retrieves the data of specified aggregation rules. |
 | [GetAggregationRules](xref:GetAggregationRules) | Retrieves the available aggregation rules. |
@@ -175,8 +175,8 @@ uid: WS_Methods_v1_overview
 | [GetBookingAttachmentNames](xref:GetBookingAttachmentNames) | Retrieve the names of all files attached to a specific booking. |
 | [GetBookingManagers](xref:GetBookingManagers) | Retrieves all booking managers. |
 | [GetBookings](xref:GetBookings) | Retrieves all bookings matching a filter. |
-| [GetBookingsForJob](xref:GetBookingsForJob) | Retrieves all bookings for a job. |
-| [GetBookingsForJobSection](xref:GetBookingsForJobSection) | Retrieves all bookings for a job section. |
+| [GetBookingsForJob](xref:GetBookingsForJob) | Obsolete. Retrieves all bookings for a job. |
+| [GetBookingsForJobSection](xref:GetBookingsForJobSection) | Obsolete. Retrieves all bookings for a job section. |
 | [GetBookingsForService](xref:GetBookingsForService) | Retrieves all bookings that make use of the specified service. |
 | [GetButtonPanelInfo](xref:GetButtonPanelInfo) | Retrieves the parameter IDs of the parameters containing information on a button panel. |
 | [GetCapacityParametersForResource](xref:GetCapacityParametersForResource) | Retrieves all the capacity parameters for a specific resource. |
@@ -236,22 +236,22 @@ uid: WS_Methods_v1_overview
 | [GetInformationEventsSorted](xref:GetInformationEventsSorted) | Retrieves the information events for a specified time span, sorted according to a particular alarm state, start index, count filter and orderBy. |
 | [GetInformationEventsSortedV2](xref:GetInformationEventsSortedV2) | Retrieves the information events for a specified time span, sorted according to a particular alarm state, start index, count filter and orderBy, as well as the alarm cache status. |
 | [GetInformationEventsV2](xref:GetInformationEventsV2) | Retrieves the information events for a specified time span, as well as the alarm cache status. |
-| [GetJob](xref:GetJob) | Retrieves a specific job by ID. |
-| [GetJobAttachmentNames](xref:GetJobAttachmentNames) | Retrieve the names of all files attached to a specific job. |
-| [GetJobFieldOptions](xref:GetJobFieldOptions) | Retrieves the dropdown options of a job field. |
-| [GetJobs](xref:GetJobs) | Retrieves all jobs. |
-| [GetJobsDomain](xref:GetJobsDomain) | Retrieves a jobs domain. |
-| [GetJobsDomains](xref:GetJobsDomains) | Retrieve all available job domains. |
-| [GetJobsHistory](xref:GetJobsHistory) | Retrieves the history of a job. |
-| [GetJobsSectionDefinition](xref:GetJobsSectionDefinition) | Retrieves a job section definition. Can only be used in case there is **only one job domain**. Otherwise, use **GetJobsSectionDefinitionV2**. |
-| [GetJobsSectionDefinitions](xref:GetJobsSectionDefinitions) | Retrieves all job section definitions. Can only be used in case there is only one job domain. Otherwise, use GetJobsSectionDefinitionsV2. |
-| [GetJobsSectionDefinitionV2](xref:GetJobsSectionDefinitionV2) | Retrieves a job section definition. |
-| [GetJobsSectionDefinitionsV2](xref:GetJobsSectionDefinitionsV2) | Retrieves all job section definitions. |
-| [GetJobSuggestions](xref:GetJobSuggestions) | Retrieves job suggestions. |
-| [GetJobTemplate](xref:GetJobTemplate) | Retrieves a job template. Can only be used in case there is only one job domain. Otherwise, use GetJobTemplateV2. |
-| [GetJobTemplates](xref:GetJobTemplates) | Retrieves all job templates. Can only be used in case there is **only one job domain**. Otherwise, use **GetJobTemplatesV2**. |
-| [GetJobTemplateV2](xref:GetJobTemplateV2) | Retrieves a job template from a domain. |
-| [GetJobTemplatesV2](xref:GetJobTemplatesV2) | Retrieves all job templates from a domain. |
+| [GetJob](xref:GetJob) | Obsolete. Retrieves a specific job by ID. |
+| [GetJobAttachmentNames](xref:GetJobAttachmentNames) | Obsolete. Retrieve the names of all files attached to a specific job. |
+| [GetJobFieldOptions](xref:GetJobFieldOptions) | Obsolete. Retrieves the dropdown options of a job field. |
+| [GetJobs](xref:GetJobs) | Obsolete. Retrieves all jobs. |
+| [GetJobsDomain](xref:GetJobsDomain) | Obsolete. Retrieves a jobs domain. |
+| [GetJobsDomains](xref:GetJobsDomains) | Obsolete. Retrieve all available job domains. |
+| [GetJobsHistory](xref:GetJobsHistory) | Obsolete. Retrieves the history of a job. |
+| [GetJobsSectionDefinition](xref:GetJobsSectionDefinition) | Obsolete. Retrieves a job section definition. Can only be used in case there is **only one job domain**. Otherwise, use **GetJobsSectionDefinitionV2**. |
+| [GetJobsSectionDefinitions](xref:GetJobsSectionDefinitions) | Obsolete. Retrieves all job section definitions. Can only be used in case there is only one job domain. Otherwise, use GetJobsSectionDefinitionsV2. |
+| [GetJobsSectionDefinitionV2](xref:GetJobsSectionDefinitionV2) | Obsolete. Retrieves a job section definition. |
+| [GetJobsSectionDefinitionsV2](xref:GetJobsSectionDefinitionsV2) | Obsolete. Retrieves all job section definitions. |
+| [GetJobSuggestions](xref:GetJobSuggestions) | Obsolete. Retrieves job suggestions. |
+| [GetJobTemplate](xref:GetJobTemplate) | Obsolete. Retrieves a job template. Can only be used in case there is only one job domain. Otherwise, use GetJobTemplateV2. |
+| [GetJobTemplates](xref:GetJobTemplates) | Obsolete. Retrieves all job templates. Can only be used in case there is **only one job domain**. Otherwise, use **GetJobTemplatesV2**. |
+| [GetJobTemplateV2](xref:GetJobTemplateV2) | Obsolete. Retrieves a job template from a domain. |
+| [GetJobTemplatesV2](xref:GetJobTemplatesV2) | Obsolete. Retrieves all job templates from a domain. |
 | [GetMapConfigs](xref:GetMapConfigs) | Retrieves the available map configurations. |
 | [GetMaskedAlarms](xref:GetMaskedAlarms) | Retrieves the list of all the masked alarms. |
 | [GetMaskedAlarmsCached](xref:GetMaskedAlarmsCached) | Retrieves only masked alarms added or changed since a particular point in time. |
@@ -447,17 +447,17 @@ uid: WS_Methods_v1_overview
 | [ToggleMatrixCrosspointForLabels](xref:ToggleMatrixCrosspointForLabels) | Allows you to toggle a matrix crosspoint by specifying the input and output labels. |
 | [TriggerSnmpResyncActiveAlarms](xref:TriggerSnmpResyncActiveAlarms) | Triggers a resend of the active alarms to an SNMP Manager. |
 | [TryConnectAndInfo](xref:TryConnectAndInfo) | Retrieves the connection string using the configured authentication method, together with information about the DataMiner Agent (time, alarm colors, etc.) and the user permissions granted. |
-| [UnhideJobSectionDefinition](xref:UnhideJobSectionDefinition) | Makes a job section definition visible. |
-| [UnhideJobSectionDefinitionField](xref:UnhideJobSectionDefinitionField) | Makes a job section definition field visible. |
+| [UnhideJobSectionDefinition](xref:UnhideJobSectionDefinition) | Obsolete. Makes a job section definition visible. |
+| [UnhideJobSectionDefinitionField](xref:UnhideJobSectionDefinitionField) | Obsolete. Makes a job section definition field visible. |
 | [UnmaskAlarm](xref:UnmaskAlarm) | Unmasks an alarm. |
 | [UnmaskElement](xref:UnmaskElement) | Unmasks an element. |
 | [UpdateAlarmTemplate](xref:UpdateAlarmTemplate) | Updates a specific alarm template. |
-| [UpdateDomainSectionDefinitionConfiguration](xref:UpdateDomainSectionDefinitionConfiguration) | Updates all client info of section definitions in a domain. |
-| [UpdateJob](xref:UpdateJob) | Updates a specific job. |
-| [UpdateJobsDomain](xref:UpdateJobsDomain) | Updates a specific job domain. |
-| [UpdateJobsSectionDefinition](xref:UpdateJobsSectionDefinition) | Updates a specific job section definition. |
-| [UpdateJobsSectionDefinitionFieldOrder](xref:UpdateJobsSectionDefinitionFieldOrder) | Updates the field order of a section definition. |
-| [UpdateJobTemplate](xref:UpdateJobTemplate) | Updates a job template. |
+| [UpdateDomainSectionDefinitionConfiguration](xref:UpdateDomainSectionDefinitionConfiguration) | Obsolete. Updates all client info of section definitions in a domain. |
+| [UpdateJob](xref:UpdateJob) | Obsolete. Updates a specific job. |
+| [UpdateJobsDomain](xref:UpdateJobsDomain) | Obsolete. Updates a specific job domain. |
+| [UpdateJobsSectionDefinition](xref:UpdateJobsSectionDefinition) | Obsolete. Updates a specific job section definition. |
+| [UpdateJobsSectionDefinitionFieldOrder](xref:UpdateJobsSectionDefinitionFieldOrder) | Obsolete. Updates the field order of a section definition. |
+| [UpdateJobTemplate](xref:UpdateJobTemplate) | Obsolete. Updates a job template. |
 | [UpdateNoteForElement](xref:UpdateNoteForElement) | Updates a specific note for an element. |
 | [UpdateNoteForService](xref:UpdateNoteForService) | Updates a specific note for a service. |
 | [UpdateNoteForView](xref:UpdateNoteForView) | Updates a specific note for a view. |

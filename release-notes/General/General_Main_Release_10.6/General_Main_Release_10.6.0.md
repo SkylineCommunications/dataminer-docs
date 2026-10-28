@@ -32,3 +32,9 @@ Before you upgrade to this DataMiner version:
   For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43526] [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Main_Release_10.6.0_changes#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43526-id-43856-id-43861-id-44035-id-44050-id-44062)
+
+## Important changes
+
+The following change may have an impact on your system, so please make sure to check this before you upgrade:
+
+- [Unicode string values will now be saved correctly in non-Unicode elements [ID 43929]](xref:General_Main_Release_10.6.0_changes#unicode-string-values-will-now-be-saved-correctly-in-non-unicode-elements-id-43929)

@@ -27,7 +27,9 @@ These are the out-of-the-box DataMiner applications that are included in the Med
 
 To install MediaOps Live:
 
-1. Look up the [MediaOps Live package](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) in the DataMiner Catalog, and make sure your system meets the mentioned prerequisites.
+1. Look up the [MediaOps Live package](https://catalog.dataminer.services/details/213031b9-af0b-488c-be20-934912b967c0) in the DataMiner Catalog.
+
+1. Check the prerequisites in the [release notes](xref:MediaOps_RNs_index) for the version you want to deploy and make sure they are met.
 
 1. When all prerequisites are met, click the *Deploy* button.
 

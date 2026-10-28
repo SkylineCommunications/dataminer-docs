@@ -1,8 +1,12 @@
 ---
 uid: github_reusable_workflows_connector_master_workflow
+description: Learn how the Connector Master Workflow validates, packages, and uploads legacy and SDK-style DataMiner connector solutions.
 ---
 
 # Connector Master Workflow
+
+> [!IMPORTANT]
+> The legacy connector pipeline is deprecated and no longer available as of 2 November 2026. Update any legacy projects in your connector solution to SDK-style projects. The Connector Master Workflow continues to support SDK-style connector solutions.
 
 The Connector Master Workflow should run on repositories containing a Connector Solution as provided by the DIS extension in Visual Studio.
 
@@ -64,11 +68,21 @@ jobs:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Connector Master Workflow.yml@main
     with:
       sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
+      # Only needed when the repository contains more than one solution (SDK-style connectors only):
+      # solution-filter-name: "MyConnector.sln"
       # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
       api-key: ${{ secrets.DATAMINER_TOKEN }}
       sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
 ```
+
+### Optional inputs
+
+| Input | Type | Default | Description |
+|--|--|--|--|
+| `sonarCloudProjectName` | string | | The SonarCloud project identifier. If omitted, the SonarCloud analysis is skipped. |
+| `solution-filter-name` | string | | The name of the solution file (`.sln` or `.slnx`) to build when the repository contains more than one solution. If not provided, the workflow auto-discovers the solution and fails when multiple are found. Only supported for SDK-style connector solutions; the legacy connector pipeline rejects this input. |
+| `debug` | boolean | `false` | Enables debug output for the DataMiner tooling. |
 
 ## Skyline quality gate
 

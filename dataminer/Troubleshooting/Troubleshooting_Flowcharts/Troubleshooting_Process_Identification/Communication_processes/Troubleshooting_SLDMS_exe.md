@@ -36,7 +36,7 @@ START --- OI
 %% Define hyperlinks %%
 click StartPage "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
 click OI "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Process_Identification/Communication_processes/SLDMS/SLDMS_Frequent_Issues.html" "Frequent Issues"
-click LogCollector "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
+click LogCollector "/dataminer/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
 click Rte "#option-1-rte-and-memory-leak"
 click Leak "#option-1-rte-and-memory-leak"
 click Crash "#option-2-process-crash"

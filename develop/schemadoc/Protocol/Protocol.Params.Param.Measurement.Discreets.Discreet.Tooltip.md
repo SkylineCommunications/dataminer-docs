@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Tooltip
+description: "Use the Tooltip element in a DataMiner protocol to define hover text for the icon of a discreet value displayed in a table cell."
 ---
 
 # Tooltip element

@@ -1,5 +1,6 @@
 ---
 uid: Accessing_Alerter
+description: "Install Skyline Alerter from the DMA tools page, add your DataMiner Agent account, and start viewing alarms and collaboration."
 ---
 
 # Accessing Alerter

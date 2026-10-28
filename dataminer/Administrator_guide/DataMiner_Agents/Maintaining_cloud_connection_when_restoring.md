@@ -1,6 +1,7 @@
 ---
 uid: Maintaining_cloud_connection_when_restoring
 keywords: cloud connection
+description: "Follow these steps to make sure the dataminer.services connection is maintained when you restore a DMA on a new server."
 ---
 
 # Maintaining the dataminer.services connection when restoring a DMA

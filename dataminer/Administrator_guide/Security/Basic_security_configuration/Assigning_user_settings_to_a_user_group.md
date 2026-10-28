@@ -1,5 +1,6 @@
 ---
 uid: Assigning_user_settings_to_a_user_group
+description: "Assign default user settings to a DataMiner user group, either by creating a new set of settings or by copying settings from another group."
 ---
 
 # Assigning user settings to a user group

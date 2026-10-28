@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SkipCertificateVerification.Disabled
+description: "Use the Disabled element in a DataMiner protocol to control whether users can configure SSL/TLS certificate verification in the user interface."
 ---
 
 # Disabled element

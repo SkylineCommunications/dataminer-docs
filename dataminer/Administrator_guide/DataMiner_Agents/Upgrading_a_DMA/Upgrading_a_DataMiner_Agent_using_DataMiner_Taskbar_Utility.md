@@ -1,6 +1,6 @@
 ---
 uid: Upgrading_a_DataMiner_Agent_using_DataMiner_Taskbar_Utility
-description: Right-click the DataMiner Taskbar Utility icon and click 'Upgrade'. Make sure you upgrade all DataMiner Agents in a DMS to the same version.
+description: "Follow these instructions to upgrade a DataMiner Agent using DataMiner Taskbar Utility. Make sure you upgrade all DMAs in a DMS to the same version."
 ---
 
 # Upgrading a DataMiner Agent using DataMiner Taskbar Utility

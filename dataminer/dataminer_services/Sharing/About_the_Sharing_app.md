@@ -1,5 +1,6 @@
 ---
 uid: About_the_Sharing_app
+description: "Use the DataMiner Sharing app to share live dashboard data with anyone on the fly, with more sharing options planned."
 keywords: cloud shares, cloud sharing
 reviewer: Alexander Verkest
 ---

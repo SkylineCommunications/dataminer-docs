@@ -87,7 +87,7 @@ The Admin app now has a support page where users that are part of a verified org
 
 ### 11 September 2025 - Enhancement - Catalog - Custom icons
 
-It is now possible to apply custom icons to your Catalog items using the [Key Catalog API](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v3.0).
+It is now possible to apply custom icons to your Catalog items using the [Key Catalog API](https://global.dataminer.services/swagger/catalogapi-web/index.html?urls.primaryName=Key+Catalog+API+v3.0).
 
 ### 10 September 2025 - New feature - Catalog - Improved home page
 
@@ -313,9 +313,9 @@ It could occur that users were able to update the range/version state or set/del
 
 ### 1 April 2025 - New feature - Catalog API - Ability to retrieve vendors [ID 42633]
 
-It is now possible to retrieve vendors using the public Catalog API. For the full API reference, go to [Public Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Public+Catalog+API+v2.0).
+It is now possible to retrieve vendors using the public Catalog API. For the full API reference, go to [Public Catalog API Swagger](https://global.dataminer.services/swagger/catalogapi-web/index.html?urls.primaryName=Public+Catalog+API+v2.0).
 
-The ID of a vendor can (optionally) be used to set the vendor for a Catalog item using any existing create, register, or update Catalog API call. For the full API reference, go to [Key Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Key+Catalog+API+v2.0).
+The ID of a vendor can (optionally) be used to set the vendor for a Catalog item using any existing create, register, or update Catalog API call. For the full API reference, go to [Key Catalog API Swagger](https://global.dataminer.services/swagger/catalogapi-web/index.html?urls.primaryName=Key+Catalog+API+v2.0).
 
 ### 13 March 2025 - Enhancement - Admin - Tooltips for long node names [ID 42510]
 
@@ -389,7 +389,7 @@ In some cases, when a Catalog object was retrieved, duplicate owners could be re
 
 ### 24 February 2025 - New feature - Catalog API - Public call to get all types [ID 42340]
 
-A new call is available that allows users to get all the Catalog item types without the need to authenticate. For the full API reference, go to [Public Catalog API Swagger](https://catalogapi-prod.cca-prod.aks.westeurope.dataminer.services/swagger/index.html?urls.primaryName=Public+Catalog+API+v2.0).
+A new call is available that allows users to get all the Catalog item types without the need to authenticate. For the full API reference, go to [Public Catalog API Swagger](https://global.dataminer.services/swagger/catalogapi-web/index.html?urls.primaryName=Public+Catalog+API+v2.0).
 
 ### 20 February 2025 - Fix - Catalog - Deploy button not shown when switching pages [ID 42317]
 

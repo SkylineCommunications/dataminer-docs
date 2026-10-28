@@ -1,10 +1,9 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version
+description: "Use the Version element under SupportedVersions in a DataMiner protocol to define the minimum and maximum supported system versions."
 ---
 
 # Version element
-
-
 
 ## Type
 

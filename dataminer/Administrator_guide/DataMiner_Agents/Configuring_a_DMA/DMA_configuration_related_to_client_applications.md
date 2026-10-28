@@ -1,5 +1,6 @@
 ---
 uid: DMA_configuration_related_to_client_applications
+description: "Follow these instructions to configure client communication settings and to specify how client versions should be managed."
 ---
 
 # DMA configuration related to client applications

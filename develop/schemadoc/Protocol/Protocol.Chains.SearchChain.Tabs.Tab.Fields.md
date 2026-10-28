@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields
+description: "Use the Fields element in a DataMiner protocol to contain the uniquely named fields included in a search chain tab."
 ---
 
 # Fields element

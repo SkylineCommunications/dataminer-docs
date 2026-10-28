@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.6.0_CU6
 ---
 
-# General Main Release 10.6.0 CU6 - Preview
+# General Main Release 10.6.0 CU6
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -34,16 +34,6 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-#### DataAPI: Enhanced handling of element creations failing because another element with the same name already exists [ID 45643]
-
-<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
-
-When DataAPI creates an element, in some cases, the element is not immediately fully synchronized in DataMiner. Subsequent requests then detect that an element with the same name already exists and fail, even though DataAPI itself created that element.
-
-To determine whether DataAPI created an element, the request must confirm that it is genuinely the same element. Up to now, when a name collision occurred, the request would simply fail with no way to identify its own recently created element.
-
-From now on, DataAPI will verify whether the existing element is one it created earlier by matching and tracking both the identifier and the type (i.e., the protocol). When both match, the request is allowed to proceed. If not, it is treated as a conflict and will be rejected.
-
 #### APIGateway: gRPC connections that go through the Azure Cloud Relay service will now buffer event messages [ID 45671]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
@@ -60,6 +50,16 @@ The *ConfigureIIS.bat* script will now ensure a dedicated Application Pool for t
 
 This new application pool is called *DataMiner WebAPI AppPool*. it is solely intended to serve as pool for the web API, and will not recycle periodically.
 
+#### DOM: `FilterElement<T>` select extensions moved to the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace [ID 45902]
+
+<!-- MR 10.6.0 [CU6] - FR 10.6.9 -->
+
+When you use the DOM helper method `Read(IQuery<DomInstance>, SelectedFields<DomInstance>)` for a select read, you can pass either an `IQuery<T>` object or a `FilterElement<T>` object.
+
+Up to now, the extension method that allowed `FilterElement<T>` to be passed was located in the `Skyline.DataMiner.Net.Messages` namespace, which is often not imported in scripts. As a result, this could lead to confusing syntax errors where the filter appeared to be incorrectly converted to an `IQuery`.
+
+Equivalent extension methods have now been added in the `Skyline.DataMiner.Net.Apps.ManagerStore.Select` namespace, which also contains `SelectedFields<T>`. The old extension methods have been converted to regular static methods so that already compiled code remains compatible with newer `SLNetTypes` versions.
+
 ### Fixes
 
 #### Problem when multiple Agents in a DMS synchronized with Azure Entra simultaneously [ID 44546]
@@ -73,6 +73,14 @@ Up to now, when multiple Agents in a DMS synchronized with Azure Entra simultane
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
 Up to now, when a large message (e.g., a message with a size of 400 KB) was sent over a WebSocket connection, in some cases, an internal buffer issue could cause the SLPort process to stop unexpectedly.
+
+#### MessageBroker would not be able to connect to the NATS bus of a DMA when the server name of the DMA was an invalid DNS name [ID 45640]
+
+<!-- MR 10.5.0 [CU17] / 10.6.0 [CU6] - FR 10.6.8 -->
+
+Up to now, MessageBroker would not be able to connect to the NATS bus of a DataMiner Agent when the server name of that Agent was an invalid DNS name.
+
+From now on, *NATSRepair.exe* and *NATSMigration.exe* will now make sure the default *MessageBrokerConfig.json* file points to localhost instead of the server name.
 
 #### Protocol object outside of QAction run would incorrectly not be notified when the element was stopped [ID 45749]
 
@@ -101,3 +109,71 @@ From now on, the *Get parameter table by alias* data source will only be availab
 When an element was frequently stopped and restarted, up to now, alarms would accumulate as duplicates in the internal alarm grouping counters, causing a memory leak in the SLAnalytics process. Alarms would incorrectly not be removed from the element's alarm counter when the element stopped, and were re-added as new entries each time the element restarted.
 
 From now on, alarms will be properly removed from the element alarm counter when an element stops. An additional safeguard has also been added to prevent duplicate alarm entries from being inserted into the counter if the same alarm tree already exists.
+
+#### Problem occurring while SL\* services were being shut down would prevent DataMiner from starting up again [ID 45839]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, while the SL* services were being shut down, in some cases, an access violation crash could occur.
+
+As a result, DataMiner could fail to start up again.
+
+#### Reconnecting a WMI connection could cause the SLProtocol process to stop unexpectedly [ID 45851]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, in some cases, reconnecting a WMI connection could cause the `SLProtocol` process to stop unexpectedly.
+
+In addition, opening StreamViewer would incorrectly show all items in the tree structure as `Undefined`.
+
+From now on, reconnecting a WMI connection will no longer cause `SLProtocol` to stop unexpectedly, and StreamViewer will correctly show the group and action executing the WMI query.
+
+#### Problem with SLProtocol when a queued QAction finished after an element had been stopped [ID 45882]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when an element was stopped while queued QActions were still running, in some cases, one of those QActions could finish after `SLProtocol` had already cleaned up its internal objects.
+
+As a result, when that QAction thread then tried to update element metrics, it would attempt to access an object that had already been deleted, causing the `SLProtocol` process to crash.
+
+#### Smart-serial client connection state incorrectly shown as undefined [ID 45931]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when an element with a smart-serial connection acted as a client, in some cases, the *Connection State* column in the *Communication Info* table on the *General parameters* page would incorrectly show `Undefined`.
+
+From now on, that column will correctly show the actual connection state, e.g., `Connected`.
+
+#### Problem with SLDataMiner when SLWatchdog requested element statistics while an element was being stopped [ID 45945]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some rare cases, SLDataMiner could stop unexpectedly when SLWatchdog requested statistics about the number of active elements while an element was being stopped.
+
+#### SLSNMPManager process could stop working unexpectedly when it received a malformed SNMP packet [ID 45993]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, the SLSNMPManager process could stop working unexpectedly when, while using SNMP++, it received a malformed SNMP packet containing an integer type with length zero.
+
+#### BrokerGateway could stop unexpectedly on startup because of concurrent semaphore access [ID 46009]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+In some cases, BrokerGateway could stop unexpectedly during startup when multiple threads tried to create a semaphore with the same key at the same time. This could cause the semaphore to be released more than once, which made BrokerGateway crash.
+
+#### Invalid matrix 'columntypes' definition could cause SLProtocol to stop unexpectedly [ID 46011]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, when a matrix parameter had fewer `columntypes` defined in its options than there were dimensions, `SLProtocol` could stop unexpectedly when `protocol.SendToDisplay` was called on that matrix parameter.
+
+From now on, missing matrix outputs that are not covered by `columntypes` will be handled correctly.
+
+#### Service card reports could show incorrect alarm counts on clustered databases [ID 46048]
+
+<!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
+
+Up to now, on clustered databases (Cassandra Cluster or STaaS), alarm counts in the *Reports* section of a service card could be duplicated by the number of DataMiner Agents involved in that service.
+
+From now on, those alarm counts will be calculated correctly when a service includes elements hosted on multiple Agents.

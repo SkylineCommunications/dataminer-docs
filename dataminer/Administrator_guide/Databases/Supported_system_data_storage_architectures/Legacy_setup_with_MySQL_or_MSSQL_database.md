@@ -1,5 +1,6 @@
 ---
 uid: Legacy_setup_with_MySQL_or_MSSQL_database
+description: "Learn why the legacy setup with MySQL or MSSQL database limits your DataMiner System and why we recommend using Storage as a Service instead."
 ---
 
 # Legacy setup with MySQL or MSSQL database

@@ -1,5 +1,6 @@
 ---
 uid: List_of_tasks_linked_to_a_project
+description: "Use the list of tasks linked to a project to search, sort, filter, create, and edit tasks by status and project risk."
 ---
 
 # List of tasks linked to a project
@@ -10,12 +11,12 @@ When you click a project in the *My projects* tab, you will see the list of task
 
 - To sort the list of tasks by a particular property, or filter it by status, type, label (i.e., a free-form identifier added by someone at Skyline) and/or project, click the button to the right of the search box.
 
-    - To sort the list, select a property and indicate the order (ascending or descending) by toggling the button to the right of it.
+  - To sort the list, select a property and indicate the order (ascending or descending) by toggling the button to the right of it.
 
-    - To filter the list, select a status, a type, a label, an assignee and/or a project. If you only want to see the tasks that are flagged as a project risk, then select “Yes” under Project risk.
+  - To filter the list, select a status, a type, a label, an assignee and/or a project. If you only want to see the tasks that are flagged as a project risk, then select “Yes” under Project risk.
 
-        > [!NOTE]
-        > By default, tasks with the status “Closed” are not listed. If you want the list to show tasks that have been closed, open the status selection box and click the *Looking for closed tasks?* option at the bottom of the list. When you then click *Proceed* to load all closed tasks of the current project, a warning will appear.
+    > [!NOTE]
+    > By default, tasks with the status “Closed” are not listed. If you want the list to show tasks that have been closed, open the status selection box and click the *Looking for closed tasks?* option at the bottom of the list. When you then click *Proceed* to load all closed tasks of the current project, a warning will appear.
 
 - To create a new task under the current project, click *New task*. For more information on how to create a task, see [Creating a new task under the current project](xref:Creating_a_new_task_under_the_current_project).
 

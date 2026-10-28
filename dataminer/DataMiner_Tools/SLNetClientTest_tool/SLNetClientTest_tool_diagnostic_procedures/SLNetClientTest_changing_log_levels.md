@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_changing_log_levels
+description: "Learn how, using the SLNetClientTest tool, you can change log levels for DataMiner log files that are not displayed in Cube."
 ---
 
 # Changing the log levels for a log file

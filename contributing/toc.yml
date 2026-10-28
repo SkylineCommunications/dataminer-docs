@@ -27,6 +27,8 @@ items:
       topicUid: CTB_Reviewing_Contribution
     - name: Tips for writing documentation
       topicUid: CTB_Tips
+    - name: House style
+      topicUid: CTB_Docs_house_style
     - name: Reporting an issue
       topicUid: CTB_Reporting_Issue
     - name: Troubleshooting

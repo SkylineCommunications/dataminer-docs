@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation.LinkTo
+description: "Use the LinkTo element in a DataMiner protocol to connect base and device protocol parameters with optional conversions and value mappings."
 ---
 
 # LinkTo element
@@ -33,14 +34,14 @@ For more information, refer to [DataMiner Mediation Layer](xref:AdvancedDataMine
 
 ```xml
 <Param id="73102">
-	<Name>Name Process</Name>
-	<Description>Name Process</Description>
-	<Mediation>
-		<LinkTo protocol="Network Server Manager" pid="82"/>
-		<LinkTo protocol="Linux Server Manager" pid="82"/>
-		<LinkTo protocol="windows Server Manager" pid="82"/>
-		<LinkTo protocol="Microsoft Platform" pid="97"/>
-	</Mediation>
-	…
+   <Name>Name Process</Name>
+   <Description>Name Process</Description>
+   <Mediation>
+      <LinkTo protocol="Network Server Manager" pid="82"/>
+      <LinkTo protocol="Linux Server Manager" pid="82"/>
+      <LinkTo protocol="windows Server Manager" pid="82"/>
+      <LinkTo protocol="Microsoft Platform" pid="97"/>
+   </Mediation>
+   …
 </Param>
 ```

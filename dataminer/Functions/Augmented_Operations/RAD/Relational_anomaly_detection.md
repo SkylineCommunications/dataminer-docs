@@ -4,7 +4,11 @@ uid: Relational_anomaly_detection
 
 # Relational anomaly detection
 
+## About relational anomaly detection
+
 From DataMiner 10.5.3/10.6.0 onwards, you can use relational anomaly detection (RAD) to detect when a group of parameters, also known as a "relational anomaly group", deviates from its normal behavior.<!-- RN 42034 -->
+
+Relational anomaly detection is self-learning. Rather than relying on predefined rules or fixed thresholds (for example, "alert if traffic drops below X"), it learns the normal behavior and relationships between the parameters in a group from historical trend data. For each new data point, it compares the observed values against what is expected based on that learned behavior, and produces an [anomaly score](#about-the-anomaly-score).
 
 The RAD functionality works in three different steps:
 
@@ -16,7 +20,13 @@ The RAD functionality works in three different steps:
 
 ![The three steps of the RAD algorithm](~/dataminer/images/RAD_Overview_Algorithm.png)
 
-Every five minutes, RAD calculates an anomaly score for each configured relational anomaly group. This score is based on the average value of each parameter in that group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
+### About the anomaly score
+
+Every five minutes, RAD calculates an anomaly score for each configured relational anomaly group. This score answers the question "How large is the current prediction error compared to the error that is expected for this group, based on history?"
+
+The anomaly score is based on the average value of each parameter in the group over the last five minutes. A high anomaly score indicates that the relationships between the parameters are broken, whereas a low anomaly score means the relationships remain intact. Historical anomaly scores can be visualized in the [RAD Manager](xref:RAD_manager) app.
+
+The score is relative: a value around 1 means "normal" (i.e., the current deviation is similar to the historically normal deviation), and a value around 6 means the deviation is roughly six times larger than what is typical for that group. By default, this value of 6 is considered the [anomaly threshold](#anomaly-threshold), and anomalies will get flagged when they rise above this threshold.
 
 ## Prerequisites
 
@@ -49,14 +59,52 @@ The easiest way to configure these relational anomaly groups is by using the [RA
 
 ### Options for relational anomaly groups
 
-For each relational anomaly group, several configuration options are available. The table below provides an overview of these options:
+Anomaly detection needs can vary significantly from one use case to another. What counts as a meaningful deviation, and how quickly it should be reported, depends heavily on the parameters being monitored and the operational context. This is why several options are available that allow you to tune the detection to your own situation and strike the right balance between catching real issues and avoiding unnecessary alerts.
 
-| <div style="width:200px">Name in RAD Manager app</div> | Name in API and XML | Description |
-|--|--|--|
-| Group name | `name` | The name of the relational anomaly group. This name is used when generating a suggestion event or displaying all groups in the *RAD Manager*. |
-| Update model on new data? | `updateModel` | Indicates whether RAD should update its internal model of the relationships between the parameters in the group when new trend data is available. If this is not selected, the model will only be trained immediately after creation and when [manually specifying a training range](xref:RAD_manager#configuring-model-training).<br>Enabling this can be useful when monitoring parameters that you would like to see changing over time; the model can then adapt to the new behavior, and only more pronounced breaks in relations will be detected. If the parameter relationship is static (e.g., two parameters that should remain equal forever), it is better not to enable this option.|
-| Anomaly threshold | `anomalyThreshold` in API, `anomalyScore` in XML | The threshold used for suggestion event generation. Suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A higher threshold results in fewer suggestion events, while a lower threshold results in more. Default: 6 (or 3 prior to DataMiner 10.5.9/10.6.0<!-- RN 43400 -->).|
-| Minimum anomaly duration | `minimumAnomalyDuration` | Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 --> This option specifies the minimum duration (in minutes) that deviating behavior must persist to be considered a significant anomaly, similar to [alarm hysteresis](xref:Alarm_hysteresis). This value must be 5 minutes or higher. If this is set to a value greater than 5 minutes, the deviating behavior must persist longer before an anomaly event is triggered. You can configure this to filter out noise events due to a single, short, harmless outlier, for instance caused by a planned maintenance or a device restart. Default: 15 minutes (or 5 minutes prior to DataMiner 10.5.9<!-- RN 43400 -->). |
+For example:
+
+- To have fewer false alarms from brief fluctuations, you can increase the [minimum anomaly duration](#minimum-anomaly-duration).
+- To alert only on strong, clear anomalies, you can increase the [anomaly threshold](#anomaly-threshold).
+- To detect more subtle deviations, you can decrease the [anomaly threshold](#anomaly-threshold).
+- To react faster to real, sustained issues, you can decrease the [minimum anomaly duration](#minimum-anomaly-duration).
+
+The available configuration options are listed below according to their name in the RAD Manager app.
+
+#### Group name
+
+Name in API and XML: `name`.
+
+The name of the relational anomaly group. This name is used when generating a suggestion event or displaying all groups in the *RAD Manager*.
+
+#### Update model on new data
+
+Name in API and XML: `updateModel`.
+
+This option indicates whether RAD should update its internal model of the relationships between the parameters in the group when new trend data is available. If this is not enabled, the model will only be trained immediately after creation and when [a training range is specified manually](xref:RAD_manager#configuring-model-training).
+
+Enabling this can be useful when monitoring parameters that you would like to see changing over time; the model can then adapt to the new behavior, and only more pronounced breaks in relations will be detected. If the parameter relationship is static (e.g., two parameters that should remain equal forever), it is better not to enable this option.
+
+#### Anomaly threshold
+
+Name in API: `anomalyThreshold`.
+
+Name in XML: `anomalyScore`.
+
+The threshold used for suggestion event generation. Suggestion events are generated when RAD detects a region with an anomaly score higher than this threshold. A lower threshold makes detection more sensitive (more alerts, including weaker deviations), resulting in more suggestion events; a higher threshold makes it less sensitive (only strong, clear deviations).
+
+Default value: 6 (or 3 prior to DataMiner 10.5.9/10.6.0<!-- RN 43400 -->).
+
+#### Minimum anomaly duration
+
+Name in API and XML: `minimumAnomalyDuration`.
+
+Supported from DataMiner 10.5.4/10.6.0 onwards. <!-- RN 42283 -->
+
+This option controls how long behavior must stay anomalous before it is considered a significant anomaly, similar to [alarm hysteresis](xref:Alarm_hysteresis). The score is smoothed over time, so a single brief spike will not immediately be flagged as an anomaly; the behavior has to persist.
+
+This value must be 5 minutes or higher. If this is set to a value greater than 5 minutes, the deviating behavior must persist longer before an anomaly event is triggered. You can configure this to filter out noise events due to a single, short, harmless outlier, for instance caused by a planned maintenance or a device restart. A longer duration reduces false alarms from short fluctuations (with slightly slower detection); a shorter duration makes detection faster and more reactive.
+
+Default: 15 minutes (or 5 minutes prior to DataMiner 10.5.9<!-- RN 43400 -->).
 
 ### Shared model groups
 

@@ -32,7 +32,7 @@ The Data API creates auto-generated connectors and provisions elements with them
 
 If no auto-generated connector for the specified type exists yet, the Data API generates a new one. However, if an auto-generated connector already exists for the specified type, the Data API updates it when the JSON-formatted body contains keys for which no parameters exist in the connector.
 
-You can manage alarm templates, trend templates, information templates, and Visio files for auto-generated connectors through the [Protocols & Templates](xref:protocols) module. Elements created by the Data API include an initial trend template where all parameters have trending enabled.
+You can manage alarm templates, trend templates, information templates, and Visio files for auto-generated connectors through the [Protocols & Templates](xref:protocols) module. Elements created by the Data API include an initial trend template where all non-string parameters have trending enabled.
 
 ## Support for tables
 

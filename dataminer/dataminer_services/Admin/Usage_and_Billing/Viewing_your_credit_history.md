@@ -1,5 +1,6 @@
 ---
 uid: Viewing_your_credit_history
+description: "Review your credit history in the Admin app to track purchases, subscriptions, usage charges, and balance corrections."
 keywords: credit history, transactions, billing history, credit balance, orders
 ---
 

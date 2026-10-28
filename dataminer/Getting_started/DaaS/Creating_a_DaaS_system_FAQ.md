@@ -12,7 +12,7 @@ Follow the instructions under [Creating a new DMS on dataminer.services](xref:Cr
 
 ### Can I try out DaaS for free?
 
-If you [create a new organization](xref:Creating_an_organization), you can try out a DataMiner Community Edition DaaS system for free. This trial system will expire after **one week**. Once this expiration date is reached, the system will automatically be removed unless it is upgraded beforehand.
+If you [create a new organization](xref:Creating_an_organization), you can try out a DataMiner [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) DaaS system for free. This trial system will expire after **one week**. Once this expiration date is reached, the system will automatically be removed unless it is upgraded beforehand.
 
 To **upgrade** your trial system to a regular DataMiner Community Edition DaaS system, please contact <salesops@skyline.be>.
 
@@ -122,7 +122,9 @@ In addition, while the [Web Services API](xref:Using_the_Web_Services_v1) is acc
 
 If you create a new DataMiner System via <https://dataminer.services>, it will by default be hosted in the West-Europe region.
 
-However, you can request for it to be hosted in a different available region without incurring any additional costs. To do so, please contact <daas@dataminer.services>.
+During the creation process, you can choose a different compute region via the advanced settings.
+
+If your preferred region is not available in the options yet, please contact <daas@dataminer.services>.
 
 > [!NOTE]
 > When choosing a region, you must select a region that supports availability zones. For an overview, refer to [Azure Regions List](https://learn.microsoft.com/en-us/azure/reliability/regions-list).
@@ -131,7 +133,7 @@ However, you can request for it to be hosted in a different available region wit
 
 If you create a new DataMiner System via <https://dataminer.services>, the data for your system will by default be hosted in the West-Europe region.
 
-However, you can request for it to be hosted in any of the available STaaS regions. To do so, please contact <daas@dataminer.services>. For detailed information, refer to [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
+During the creation process, you can configure the storage region and (optional) geo-replication region via the advanced settings. For detailed information, refer to [Data location and redundancy](xref:STaaS_features#data-location-and-redundancy).
 
 > [!NOTE]
 > It is perfectly possible to host your DaaS system in one region and your data in another region.

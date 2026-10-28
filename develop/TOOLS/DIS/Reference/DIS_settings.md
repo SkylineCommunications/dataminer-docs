@@ -20,21 +20,19 @@ To add a DMA to the list:
    | Display name | In this box, enter the name of the DMA as it will appear in the list. |
    | Host | In this box, enter the IP address or server name of the DataMiner Agent using the following syntax:<br>`https://[IP address or server name]:[Port]/SLNetService`<br>Note:<br>- Both HTTP and HTTPS are supported.<br>- Specifying the IP port is optional. Default port: 8004<br>- Specifying the suffix "/SLNetService" is optional.<br>See also [If a DMA uses DataMiner configuration switching](#if-a-dma-uses-dataminer-configuration-switching) |
    | Login | Choose how you want DIS to log on to the DMA:<br>- Using the current Windows user (default)<br>- Using a specific user/password combination |
+   | Force Authenticate Local User | Available when *Login* is set to use a username and password. When selected, DIS will authenticate using a local user account even if external or federated authentication is configured on the DataMiner Agent. |
    | Group | The DMAs listed in the DMA tab can be organized in groups.<br> In this box, enter or select the name of the group to which you want the DMA to belong. |
    | Production DMA | Select this checkbox if the DMA is a production DMA.<br> When you try to publish a protocol or an automation script to a production DMA, a confirmation box will appear to prevent you from accidentally publishing that file to it. |
 
 1. Click *Test connection* to check whether DIS is able to connect to the DMA you configured.
-1. If the DMA you are configuring is not your local DMA, then, in the *Debugging* tab, select the *Enable remote debugging* checkbox and specify the following settings if you want to be able to debug QActions while connected to this remote DMA.
 
-   | Setting | Description |
-   | ------- | ----------- |
-   | Publish path | The network path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br>Default: \\\\remote-dma\\dis |
-   | Path on DataMiner | The local path to the shared folder on the remote DMA where DIS will upload the DLL files and the symbol files.<br>Default: C:\\dis\\ |
-   | Debugger qualifier | The qualifier supplied by Remote Debugging Monitor (msvsmon.exe) at startup.<br>Format: dmaname:ipport |
+1. If the DMA you are configuring is not your local DMA, configure the following settings in the *Debugging* tab to be able to debug QActions while connected to this remote DMA:
+
+   - Select *Enable remote debugging*.
+   - Set *Debugger qualifier* to the qualifier supplied by the Remote Debugging Monitor (msvsmon.exe) in a log entry at startup. Format: `dmaname:ipport`. Default port: 4026.
 
    > [!TIP]
-   > See also:
-   > [Debugging connectors and automation scripts](xref:Debugging_connectors_and_Automation_scripts)
+   > See also: [Debugging connectors and automation scripts](xref:Debugging_connectors_and_Automation_scripts)
 
 1. Click *OK* to close the *Edit DMA Connection* window.
 
@@ -249,6 +247,16 @@ Click *Fix default XML encoding* if you want DataMiner Integration Studio to cha
 > - DIS automatically saves XML files using the following encoding:
 >   - Unicode (UTF-8 with signature) - Codepage 65001
 > - XML files with an UTF-8 signature header can only be uploaded to DataMiner using DataMiner Cube.
+
+## XML Schemas
+
+In the *XML Schemas* tab, you can configure how DIS manages XML schema updates at startup.
+
+The tab contains a *Download XML Schemas on Visual Studio startup* checkbox, which is enabled by default.
+
+- When this checkbox is enabled, DIS will check for a newer version of the [Skyline.DataMiner.XmlSchemas](https://www.nuget.org/packages/Skyline.DataMiner.XmlSchemas) NuGet package each time Visual Studio starts. If a newer version is available, DIS will automatically download the updated schemas and install them into Visual Studio (e.g. `C:\Program Files\Microsoft Visual Studio\18\Professional\Xml\Schemas`). The outcome — whether a new version was installed or the current version is already up to date — will be reported in the DIS output window.
+
+- When this checkbox is disabled, DIS will install the schemas that are bundled with DIS, as long as it detects that the currently installed schemas differ from the bundled ones.
 
 ## Info
 

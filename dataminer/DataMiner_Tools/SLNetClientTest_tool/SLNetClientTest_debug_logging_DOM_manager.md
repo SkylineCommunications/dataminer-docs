@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_debug_logging_DOM_manager
+description: "Learn how, using the SLNetClientTest tool, you can manually enable or disable debug logging for individual DOM managers."
 ---
 
 # Enabling or disabling debug logging for a DOM manager

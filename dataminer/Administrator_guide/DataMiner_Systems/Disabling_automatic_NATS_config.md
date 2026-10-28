@@ -1,5 +1,6 @@
 ---
 uid: Disabling_automatic_NATS_config
+description: "Learn how you can configure NATS manually, especially in scenarios where specific system characteristics necessitate a custom NATS layout."
 ---
 
 # Disabling automatic NATS configuration
@@ -24,108 +25,113 @@ Setting up BrokerGateway with a custom manual config will allow you to create su
 
 ### Setting up a manual config
 
-1. Enable manual configuration by sending a POST request to `https://[ip]/BrokerGateway/api/clusteringapi/setmanualconfigflag` with the following request body:
+From one single DMA, apply a custom config by sending a POST request to `https://[ip]/BrokerGateway/api/clusteringapi/applymanualconfig` using a request body that contains the full cluster config.
 
-   ```json
-   {
-     "distribute_in_cluster": true,
-     "has_manual_config": true
-   }
-   ```
+See [Manual config example](#manual-config-example) for an example request body and [BrokerGateway API keys](#brokergateway-api-keys) for the required node credentials.
 
-   Make sure the request includes a **valid BrokerGateway API key** in the `BrokerGateway-Api-Key` HTTP header. This Administrator key can be found in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+### Altering an existing manual config setup
 
-   Note that `distribute_in_cluster` must be set to *true* to ensure that the configuration flag is automatically propagated to all nodes in the cluster.
+1. On a single DMA of the DMS, open `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.custom.json`.
 
-1. Apply a custom config by sending a POST request to `https://[ip]/BrokerGateway/api/clusteringapi/applymanualconfig` using a request body that contains the full cluster config.
+1. Copy the **contents** of the `ClusterArchitecture` field (i.e., excluding the `ClusterArchitecture` field).
 
-   Below is an example for a supercluster consisting of two clusters with leaf nodes:
+1. Add or remove the relevant node entry in the appropriate region's `nodes` array, using the structure shown in [Manual config example](#manual-config-example).
 
-   ```json
-   {
-     "regions": [
-     {
-       "name": "Cluster1",
-       "nodes": [
-       {
-         "endpoint": "DMA1",
-         "bgw_api_key": "BGW_API_KEY_1",
-         "is_leaf": false,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       },
-       {
-         "endpoint": "DMA2",
-         "bgw_api_key": "BGW_API_KEY_2",
-         "is_leaf": false,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       },
-       {
-         "endpoint": "DMA3",
-         "bgw_api_key": "BGW_API_KEY_3",
-         "is_leaf": false,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       },
-       {
-         "endpoint": "LeafNode1",
-         "bgw_api_key": "LeafNode_BGW_API_KEY_1",
-         "is_leaf": true,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       },
-       {
-         "endpoint": "LeafNode2",
-         "bgw_api_key": "LeafNode_BGW_API_KEY_2",
-         "is_leaf": true,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       }
-       ]
-     },
-     {
-       "name": "Cluster2",
-       "nodes": [
-       {
-         "endpoint": "DMA4",
-         "bgw_api_key": "BGW_API_KEY_4",
-         "is_leaf": false,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       },
-       {
-         "endpoint": "DMA5",
-         "bgw_api_key": "BGW_API_KEY_5",
-         "is_leaf": false,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       },
-       {
-         "endpoint": "DMA6",
-         "bgw_api_key": "BGW_API_KEY_6",
-         "is_leaf": false,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       },
-       {
-         "endpoint": "LeafNode3",
-         "bgw_api_key": "LeafNode_BGW_API_KEY_3",
-         "is_leaf": true,
-         "should_run_nats_node": true,
-         "additional_endpoints": []
-       }
-       ]
-     }
-     ]
-   }
-   ```
+   When adding a node, specify its endpoint and [BrokerGateway API key](#brokergateway-api-keys).
 
-   Each node requires the *bgw_api_key* of that BrokerGateway node. This can be found on that server in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. Use the API key with the role "BrokerGateway" on the specific node.
+1. From one single DMA, apply a custom config by sending a POST request to `https://[ip]/BrokerGateway/api/clusteringapi/applymanualconfig` using the request body generated in the previous steps.
 
-   The `additional_endpoints` property allows you to specify extra endpoints that BrokerGateway must include when generating NATS certificates. This is required when adding nodes that are part of a Failover pair; in such cases, the Failover VIP or shared hostname should be listed here.
+### Manual config example
 
-   The `should_run_nats_node` property is currently non-functional but may be used in future releases.
+The following example shows a supercluster consisting of two clusters with leaf nodes:
+
+```json
+{
+  "regions": [
+    {
+      "name": "Cluster1",
+      "nodes": [
+        {
+          "endpoint": "DMA1",
+          "bgw_api_key": "BGW_API_KEY_1",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "DMA2",
+          "bgw_api_key": "BGW_API_KEY_2",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "DMA3",
+          "bgw_api_key": "BGW_API_KEY_3",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "LeafNode1",
+          "bgw_api_key": "LeafNode_BGW_API_KEY_1",
+          "is_leaf": true,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "LeafNode2",
+          "bgw_api_key": "LeafNode_BGW_API_KEY_2",
+          "is_leaf": true,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        }
+      ]
+    },
+    {
+      "name": "Cluster2",
+      "nodes": [
+        {
+          "endpoint": "DMA4",
+          "bgw_api_key": "BGW_API_KEY_4",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "DMA5",
+          "bgw_api_key": "BGW_API_KEY_5",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "DMA6",
+          "bgw_api_key": "BGW_API_KEY_6",
+          "is_leaf": false,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        },
+        {
+          "endpoint": "LeafNode3",
+          "bgw_api_key": "LeafNode_BGW_API_KEY_3",
+          "is_leaf": true,
+          "should_run_nats_node": true,
+          "additional_endpoints": []
+        }
+      ]
+    }
+  ]
+}
+```
+
+The `additional_endpoints` property allows you to specify extra endpoints that BrokerGateway must include when generating NATS certificates. This is required when adding nodes that are part of a Failover pair; in such cases, the Failover VIP or shared hostname should be listed here.
+
+The `should_run_nats_node` property is currently non-functional but may be used in future releases.
+
+### BrokerGateway API keys
+
+Each node requires the `bgw_api_key` of that BrokerGateway node. You can find this on that server in `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. Use the API key with the role "BrokerGateway" on the specific node.
 
 ### Deconstructing the manual config
 

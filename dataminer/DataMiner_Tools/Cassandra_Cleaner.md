@@ -1,8 +1,12 @@
 ---
 uid: Cassandra_Cleaner
+description: "Learn how the deprecated Cassandra Cleaner tool could be used to remove data from the Cassandra timetrace or infotrace table for a specific time range."
 ---
 
 # Cassandra Cleaner
+
+> [!IMPORTANT]
+> This tool is deprecated. It was designed to work with a version of Cassandra that is currently no longer supported.
 
 ## About this tool
 

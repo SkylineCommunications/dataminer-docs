@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.HiddenColumns
+description: "Use the HiddenColumns element in a DataMiner protocol to list the table column parameters to hide in a tree control layout."
 ---
 
 # HiddenColumns element

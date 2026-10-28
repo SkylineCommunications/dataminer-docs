@@ -1,5 +1,6 @@
 ---
 uid: NodeRecovery_About
+description: "Explore DataMiner Node Recovery, which offers a way to monitor and act upon node outages in the DataMiner System."
 ---
 
 # Node Recovery

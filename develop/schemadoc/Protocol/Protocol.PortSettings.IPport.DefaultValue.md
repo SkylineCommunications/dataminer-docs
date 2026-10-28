@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.IPport.DefaultValue
+description: "Use the DefaultValue element in a DataMiner protocol to set the default port number for an element connection."
 ---
 
 # DefaultValue element

@@ -117,7 +117,7 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
      - **cluster_name**: This needs to be the same for all nodes in your Cassandra cluster.
 
-     - **hinted_handoff_throttle_in_kb**: Only used prior to Cassandra 4.1. Set this to *10240*.
+     - **hinted_handoff_throttle_in_kb**: Only used in older Cassandra versions (prior to 4.1). Set this to *10240*.
 
      - **hinted_handoff_throttle**: From Cassandra 4.1 onwards, this option replaces *hinted_handoff_throttle_in_kb*. Set this to *10000*.
 
@@ -127,7 +127,7 @@ If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STa
 
      - **data_file_directories**: The location(s) where you want to store the data.
 
-     - **auto_snapshot_ttl**: This option is available since Cassandra 4.1. Set this to the desired time to keep the automatic snapshots. For example, to keep them for a day: `auto_snapshot_ttl: 1d`.
+     - **auto_snapshot_ttl**: This option is available in newer Cassandra versions (since 4.1). Set this to the desired time to keep the automatic snapshots. For example, to keep them for a day: `auto_snapshot_ttl: 1d`.
 
      - **seeds**: The IP address(es) of all the seeds in your Cassandra cluster. Cassandra nodes use this list of hosts to find each other and learn the topology of the ring.
 

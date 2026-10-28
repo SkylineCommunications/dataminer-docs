@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-verificationTimeout
+description: "Use the verificationTimeout attribute in a DataMiner protocol to override the timeout for verifying a parameter set operation."
 ---
 
 # verificationTimeout attribute

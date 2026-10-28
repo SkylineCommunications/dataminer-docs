@@ -1,5 +1,6 @@
 ---
 uid: Security_must_haves
+description: "Validate security must-have requirements before purchasing products by checking IAM, RBAC, audit trails, APIs, audits, and secure integrations."
 ---
 
 # Security: Must-have requirements to validate new products

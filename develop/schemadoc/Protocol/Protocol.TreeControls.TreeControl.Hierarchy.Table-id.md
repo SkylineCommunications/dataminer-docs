@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.Hierarchy.Table-id
+description: "Use the id attribute of the Table element in a DataMiner protocol to identify a table required in a tree control hierarchy."
 ---
 
 # id attribute
@@ -18,6 +19,6 @@ unsignedInt
 
 ```xml
 <Hierarchy>
-	<Table id="100"/>
-	...
+   <Table id="100"/>
+   ...
 ```

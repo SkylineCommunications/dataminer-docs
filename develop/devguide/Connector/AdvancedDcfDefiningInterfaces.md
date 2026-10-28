@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDcfDefiningInterfaces
+description: "Define standalone and dynamic DCF interfaces in a connector, configure direction and naming, and link interface alarm states to parameters."
 ---
 
 # Defining interfaces

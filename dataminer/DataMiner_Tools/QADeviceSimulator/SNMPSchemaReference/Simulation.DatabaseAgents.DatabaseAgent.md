@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents_DatabaseAgent
+description: "Configure the DatabaseAgent element to simulate a device from MySQL or Cassandra data by setting the server, schema, table, user, and password."
 ---
 
 # DatabaseAgent element

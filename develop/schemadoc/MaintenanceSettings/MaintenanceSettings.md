@@ -22,7 +22,6 @@ Configures general system settings.
 | &#160;&#160;[Filtering](xref:MaintenanceSettings.Filtering) | [0, 1] | Configures filtering. |
 | &#160;&#160;[HTTPS](xref:MaintenanceSettings.HTTPS) | [0, 1] | Configures DataMiner to use HTTPS. For more information, refer to [Configuring HTTPS settings in DataMiner](xref:Setting_up_HTTPS_on_a_DMA#configuring-https-in-dataminer). |
 | &#160;&#160;[Logging](xref:MaintenanceSettings.Logging) | [0, 1] | Configures logging. |
-| &#160;&#160;[NATSForceManualConfig](xref:MaintenanceSettings.NATSForceManualConfig) | [0, 1] | When set to "true", disables the automatic reset timer in NATSCustodian. |
 | &#160;&#160;[Network](xref:MaintenanceSettings.Network) | [0, 1] | Configures network-related settings. |
 | &#160;&#160;[ProtocolSettings](xref:MaintenanceSettings.ProtocolSettings) | [0, 1] | Configures protocol-related settings. |
 | &#160;&#160;[RecycleBinSize](xref:MaintenanceSettings.RecycleBinSize) | [0, 1] | Specifies the maximum size (in MB) of the DataMiner recycle bin. |

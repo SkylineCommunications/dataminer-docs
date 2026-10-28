@@ -1,5 +1,6 @@
 ---
 uid: My_projects
+description: "Open the My projects tab in the Collaboration app to review project names, current statuses, due dates, tasks, and reports."
 ---
 
 # My projects

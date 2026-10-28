@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_Agents_Agent
+description: "Configure the SNMP simulation agent element with an IP, port, MAC address, community strings, and optional SNMPv3 security settings."
 ---
 
 # Agent element

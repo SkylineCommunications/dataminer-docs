@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Decimals
+description: "Use the Decimals element in a DataMiner protocol to control how many decimal places are shown for a parameter value."
 ---
 
 # Decimals element

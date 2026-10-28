@@ -49,7 +49,7 @@ This page displays an overview of all levels of facility management and all loca
 
   - Delete a location (along with any sublocations). However, this is only possible if neither the location nor any of its sublocations still contain devices.
 
-  - Select a different plan or picture image for a location, building, room or floor. The image has a size limit of 2 MB and must have the extension .jpg, .jpeg or .png. Uploaded images are added to the Documents folder of the DMA and synchronized with other DMAs in the cluster.
+  - Select a different plan or picture image for a location, building, room, or floor. See [Setting a plan or picture for locations, buildings, floors, and rooms](xref:Configuring_images_IDP#setting-a-plan-or-picture-for-locations-buildings-floors-and-rooms).
 
   - Change the parent structure of any item below the highest level. To do so, click the *Edit* button in the editor to enter edit mode, and then specify the location, building, etc. where the item belongs. After you have clicked the *Edit* button, you can also click the *View* button to switch back to the previous mode and only modify the details related to the item.
 

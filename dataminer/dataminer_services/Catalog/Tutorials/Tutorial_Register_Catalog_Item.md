@@ -1,6 +1,7 @@
 ---
 uid: Tutorial_Register_Catalog_Item
 reviewer: Alexander Verkest
+description: "Learn how to register a new connector in the Catalog through Postman with a PUT request, organization key, and ZIP file under 250 MB."
 ---
 
 # Registering a new connector in the Catalog

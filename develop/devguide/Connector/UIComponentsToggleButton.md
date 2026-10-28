@@ -1,12 +1,21 @@
 ---
 uid: UIComponentsToggleButton
+description: "Learn how to configure a DataMiner connector toggle button with paired read and write parameters and two discrete values."
 ---
 
 # Toggle button
 
 A toggle button allows the user to choose one from two predefined options.
 
-To define a toggle button, set Type to "togglebutton", and provide a discrete list with the two available options.
+A toggle button is implemented as a read/write parameter pair:
+
+- The read parameter reports the current state. Set its measurement type to "discreet".
+- The write parameter changes the state. Set its measurement type to "togglebutton".
+
+Define the same two discrete values on both parameters. DataMiner uses the value reported by the read parameter to determine which of the two values to send when the user clicks the toggle button. For example, when the read parameter reports "Disabled", clicking the toggle button will send "Enabled".
+
+> [!IMPORTANT]
+> A measurement type of "togglebutton" is only valid for the write parameter. The associated read parameter is required and must use the measurement type "discreet". A write parameter configured as a toggle button cannot determine the next value to send without its read parameter.
 
 ```xml
 <Param id="200">

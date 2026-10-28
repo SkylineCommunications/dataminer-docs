@@ -1,5 +1,6 @@
 ---
 uid: Adding_a_user_group
+description: "Add local user groups or domain user groups in DataMiner to organize permissions and access across your system."
 ---
 
 # Adding a user group

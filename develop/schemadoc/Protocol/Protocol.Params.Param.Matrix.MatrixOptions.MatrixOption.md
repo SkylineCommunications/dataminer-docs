@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.MatrixOptions.MatrixOption
+description: "Use the MatrixOption element in a DataMiner protocol to define one matrix appearance or behavior setting and its value type."
 ---
 
 # MatrixOption element
@@ -23,6 +24,6 @@ string
 
 ## Constraints
 
-|Type|Description|Selector|Fields
+|Type|Description|Selector|Fields|
 |--- |--- |--- |--- |
 |Unique |No duplicate values must occur for the name attribute. |MatrixOption |@name |

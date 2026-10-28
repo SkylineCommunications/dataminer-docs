@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Databits
+description: "Use the Databits element in a DataMiner protocol to define default and allowed data bit settings for an element connection."
 ---
 
 # Databits element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Ports.PortSettings
+description: "Use the PortSettings element in a DataMiner protocol to specify communication and port settings for an additional connection."
 ---
 
 # PortSettings element

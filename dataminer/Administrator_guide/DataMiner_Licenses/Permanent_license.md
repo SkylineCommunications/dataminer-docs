@@ -1,5 +1,6 @@
 ---
 uid: Permanent_license
+description: "Request a permanent license for your DataMiner Agent by following these instructions and sending the request.lic file to Skyline."
 ---
 
 # Permanent license

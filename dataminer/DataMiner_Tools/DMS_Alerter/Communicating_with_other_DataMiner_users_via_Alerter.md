@@ -1,5 +1,6 @@
 ---
 uid: Communicating_with_other_DataMiner_users_via_Alerter
+description: "Use Alerter to exchange chat messages with DataMiner users, open collaboration notifications, and reposition the collaboration balloon."
 ---
 
 # Communicating with other DataMiner users via Alerter

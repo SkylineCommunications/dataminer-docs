@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers
+description: "Use the Triggers element in a DataMiner protocol to collect the uniquely identified triggers defined in the protocol."
 ---
 
 # Triggers element

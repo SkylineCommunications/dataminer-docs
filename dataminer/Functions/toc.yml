@@ -1,23 +1,4 @@
 items:
-  - name: Assistant
-    items:
-      - name: DataMiner Assistant DxM
-        topicUid: Assistant_DxM
-      - name: DataMiner Assistant app
-        topicUid: DataMinerAssistant
-        items:
-        - name: Context structure
-          topicUid: Assistant_Context
-        - name: Adding custom user context
-          topicUid: Assistant_UserContext
-        - name: DataMiner Assistant M365
-          topicUid: Assistant_M365
-        - name: Data privacy and security
-          topicUid: Assistant_DataPrivacySecurity
-      - name: Natural language to GQI
-        topicUid: NL2GQI
-      - name: Document Intelligence
-        topicUid: docintel
   - name: Augmented Operations
     topicUid: Overview_Augmented_Operations
     items:
@@ -160,6 +141,8 @@ items:
             topicUid: Manually_executing_a_script
           - name: Script execution options
             topicUid: Script_execution_options
+          - name: Script runners
+            topicUid: Script_Runners
       - name: Using C# code in automation scripts
         topicUid: Using_CSharp_code_in_Automation_scripts
         items:
@@ -992,14 +975,36 @@ items:
             topicUid: DOM_Remove_FieldDescriptor_Definition
           - name: Generating code with the DOM Editor
             topicUid: DOM_Generating_code_with_the_DOM_editor
-  - name: Edge Manager
+  - name: DataMiner Edge
+    topicUid: DataMiner_Edge
     items:
-    - name: About Edge Manager
-      topicUid: EdgeManagerOverview
-    - name: Getting started
-      topicUid: EdgeManagerGettingStarted
-    - name: Troubleshooting
-      topicUid: EdgeManagerTroubleshooting
+      - name: Installing the EdgeManager DxM
+        topicUid: Installing_EdgeManager_DxM
+      - name: Edge Nodes
+        items:
+          - name: About Edge Nodes
+            topicUid: About_Edge_Nodes
+          - name: Installing an Edge Node
+            topicUid: Installing_an_Edge_Node
+            items:
+              - name: Installing on Windows
+                topicUid: Installing_an_Edge_Node_on_Windows
+              - name: Installing on Linux
+                topicUid: Installing_an_Edge_Node_on_Linux
+      - name: Edge Gateways
+        items:
+          - name: About Edge Gateways
+            topicUid: About_Edge_Gateways
+          - name: Getting started
+            topicUid: Getting_started_with_Edge_Gateways
+          - name: Troubleshooting
+            topicUid: Troubleshooting_Edge_Gateways
+  - name: Element Connections
+    items:
+    - name: About the Element Connections module
+      topicUid: Element_Connections_module
+    - name: Configuring virtual elements
+      topicUid: Configuring_virtual_elements
   - name: Experience and Performance Management (EPM)
     topicUid: EPM
     items:
@@ -1028,6 +1033,50 @@ items:
         items:
           - name: Getting started with EPM
             topicUid: EPM_Introduction_Tutorial
+  - name: Intelligence
+    items:
+      - name: About DataMiner Intelligence
+        topicUid: DataMiner_Intelligence
+      - name: Getting started with DataMiner Intelligence
+        topicUid: Intelligence_Getting_Started
+      - name: DataMiner Assistant DxM
+        topicUid: Intelligence_Assistant_DxM
+      - name: DataMiner Assistant app
+        topicUid: Intelligence_Assistant_app
+        items:
+        - name: Agents
+          topicUid: Intelligence_Assistant_Agents
+          items:
+          - name: Native agents
+            items:
+            - name: Insights agent
+              topicUid: Intelligence_Assistant_InsightsAgent
+            - name: Documentation agent
+              topicUid: Intelligence_Assistant_DocumentationAgent
+          - name: Specialized agents
+            topicUid: Intelligence_Assistant_Specialized_Agents
+        - name: Skills
+          topicUid: Intelligence_Assistant_Skills
+        - name: Tools
+          topicUid: Intelligence_Assistant_Tools
+          items:
+          - name: Data tools
+            topicUid: Intelligence_Assistant_DataTools
+            items:
+            - name: Native data tools
+              topicUid: Intelligence_Assistant_native_data_tools
+            - name: Custom data tools
+              topicUid: Intelligence_Assistant_custom_data_tools
+          - name: Script tools
+            topicUid: Intelligence_Assistant_ScriptTools
+        - name: Data privacy and security
+          topicUid: Intelligence_Data_Privacy_Security
+      - name: DataMiner Assistant M365
+        topicUid: Intelligence_Assistant_M365
+      - name: Natural language to GQI
+        topicUid: Intelligence_NL2GQI
+      - name: Document Intelligence
+        topicUid: docintel
   - name: Inventory & Asset Management
     items:
       - name: About DataMiner Inventory & Asset Management
@@ -1465,6 +1514,8 @@ items:
     items:
       - name: About Visual Overview
         topicUid: About_Visual_Overview
+      - name: Configuring the Visio drawing theme
+        topicUid: Configuring_Visio_drawing_theme
       - name: Managing Visio files linked to protocols
         topicUid: Managing_Visio_files_linked_to_protocols
       - name: Setting the active Visio file for an element, service, or view
@@ -1473,5 +1524,4 @@ items:
         topicUid: Visual_overview_page_priority
       - name: Cleaning up unused Visio files
         topicUid: Cleaning_up_unused_Visio_files
-
 

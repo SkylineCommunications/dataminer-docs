@@ -1,6 +1,6 @@
 ---
 uid: Removing_a_DataMiner_Agent_from_a_DataMiner_System
-description: Find out how to remove a regular node from a DataMiner cluster and how to remove a node that is part of a Failover pair.
+description: "Learn how to remove a regular node from a DataMiner cluster and how to remove a node that is part of a Failover pair."
 ---
 
 # Removing a node from a DataMiner cluster
@@ -8,7 +8,7 @@ description: Find out how to remove a regular node from a DataMiner cluster and 
 Depending on whether the node is part of a Failover pair or not, a different procedure must be used.
 
 > [!NOTE]
-> If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the removed node.
+> If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config), you will need to manually adjust your NATS configuration with the removed node.
 
 ## Removing a node that is not part of a Failover pair
 

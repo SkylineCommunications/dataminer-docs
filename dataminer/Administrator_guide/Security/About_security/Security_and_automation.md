@@ -1,5 +1,6 @@
 ---
 uid: Security_and_automation
+description: "Use security and automation to automate compliance checks, asset onboarding, updates, permissions, and firewall controls across DataMiner."
 ---
 
 # Automation in the context of security

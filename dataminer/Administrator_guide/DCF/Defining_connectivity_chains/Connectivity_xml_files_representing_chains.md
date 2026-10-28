@@ -1,5 +1,6 @@
 ---
 uid: Connectivity_xml_files_representing_chains
+description: "Learn to define connectivity chains by creating and configuring Connectivity.xml files with links and mappings for your elements."
 ---
 
 # Connectivity.xml files representing chains

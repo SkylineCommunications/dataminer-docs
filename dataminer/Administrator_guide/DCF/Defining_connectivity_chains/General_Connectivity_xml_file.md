@@ -1,5 +1,6 @@
 ---
 uid: General_Connectivity_xml_file
+description: "Configure the main Connectivity.xml file to enable automated service and redundancy group management based on connectivity settings."
 ---
 
 # General Connectivity.xml file

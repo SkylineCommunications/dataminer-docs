@@ -1,5 +1,6 @@
 ---
 uid: Failover_FAQ_what_if_DMA_stopped
+description: "Find out what happens if either the online Agent or the offline Agent is stopped in a Failover setup."
 ---
 
 # What happens if one of the DMAs is stopped in a Failover setup?

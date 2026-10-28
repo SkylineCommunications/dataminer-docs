@@ -1,5 +1,6 @@
 ---
 uid: Trap_sender
+description: "Use the Trap Sender to configure traps, set packet intervals, review loaded packets, and edit bindings before sending them."
 ---
 
 # Trap sender

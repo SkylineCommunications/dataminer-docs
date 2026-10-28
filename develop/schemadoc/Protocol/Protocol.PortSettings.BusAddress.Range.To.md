@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.Range.To
+description: "Use the To element in a DataMiner protocol to specify the upper bound of an allowed range of bus addresses."
 ---
 
 # To element

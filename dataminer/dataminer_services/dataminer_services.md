@@ -1,5 +1,6 @@
 ---
 uid: dataminer_services
+description: "Explore dataminer.services to connect your DMS and use Collaboration, Catalog, Sharing, Remote Access, Community, Admin, and ChatOps."
 keywords: cloud, dataminer cloud
 ---
 
@@ -37,7 +38,7 @@ keywords: cloud, dataminer cloud
     <a href="/dataminer/dataminer_services/Admin/About_the_Admin_app.html" title="Admin app" target="_self"><img src="~/dataminer/images/DataMiner_Admin_App.svg" style="width:100%"></a>
   </div>
   <div class="column">
-    <a href="/dataminer/dataminer_services/ChatOps/About_ChatOps.html" title="ChatOps" target="_self"><img src="~/dataminer/images/DataMiner_Chatops.svg" style="width:100%"></a>
+    <a href="/dataminer/dataminer_services/ChatOps/DataMiner_Teams_bot.html" title="ChatOps" target="_self"><img src="~/dataminer/images/DataMiner_Chatops.svg" style="width:100%"></a>
   </div>  
 </div>
 

@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Reference_Overview
+description: "Use the SNMP simulation schema reference to configure AutoBuildVersion 1.3 files with agents, options, attributes, and OID definitions."
 ---
 
 # SNMP simulation schema reference

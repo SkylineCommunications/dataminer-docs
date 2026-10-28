@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.Range
+description: "Use the Range element in a DataMiner protocol to define an allowed range of bus addresses for an element connection."
 ---
 
 # Range element

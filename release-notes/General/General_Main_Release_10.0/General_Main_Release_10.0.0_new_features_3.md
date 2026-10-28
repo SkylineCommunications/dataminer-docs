@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.0.0_new_features_3
+status: archived
 ---
 
-# General Main Release 10.0.0 - New features (part 3)
+# General Main Release 10.0.0 - New features (part 3) [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Elasticsearch_node_add
+description: "Follow these steps to add a node or a potential master node to an Elasticsearch cluster after checking the prerequisites."
 ---
 
 # Adding an Elasticsearch cluster node

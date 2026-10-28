@@ -76,7 +76,6 @@ Other---End
 %% Define hyperlinks %%
 click HOME "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to the start page"
 click RTE "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Critical_Issues/Troubleshooting_Critical_Issues_Alarm_Console.html"
-click CRASH "https://community.dataminer.services/ioc-flowchart---crash/" "Crash investigation diagram"
 click Dcom "#how-to-configure-dcom-manually"
 click ChartDirector "#error-could-not-start-the-chartdirector-object"
 click  UrlProcessing "#error-occurred-while-processing-url"
