@@ -6,7 +6,7 @@ uid: cloudgateway_change_log
 
 #### 28 October 2026 - Fix - CloudGateway 4.0.3 - DataMiner Assistant for Microsoft 365 endpoint fixes
 
-Several issues with the communication between the CloudGateway and the Assistant DxM have been fixed: errors during Assistant DxM startup are no longer cached and all sessions are properly disposed & recreated on reset.
+Several issues with the communication between the CloudGateway and Assistant DxM have been fixed. Errors during Assistant DxM startup are no longer cached, and all sessions are now properly disposed of and recreated on reset.
 
 #### 5 October 2026 - Fix - CloudGateway 4.0.0 - DataMiner Assistant for Microsoft 365 unable to communicate with CloudGateway
 
