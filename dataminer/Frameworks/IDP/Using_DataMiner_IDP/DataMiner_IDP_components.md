@@ -1,6 +1,6 @@
 ---
 uid: DataMiner_IDP_components
-description: "Explore the different DataMiner IDP components, their protocols, and roles in discovery, provisioning, configuration, connectivity, and rack management."
+description: "Explore the DataMiner IDP components, their protocols, and their roles in discovery, provisioning, configuration, connectivity, and rack management."
 ---
 
 # DataMiner IDP components
