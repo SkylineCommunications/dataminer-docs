@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 28 October 2026 - Fox CloudGateway 4.0.3 - DataMiner Assistant for Microsoft 365 endpoint fixes
+#### 28 October 2026 - Fix - CloudGateway 4.0.3 - DataMiner Assistant for Microsoft 365 endpoint fixes
 
 Several issues with the communication between the CloudGateway and the Assistant DxM have been fixed: errors during Assistant DxM startup are no longer cached and all sessions are properly disposed & recreated on reset.
 
