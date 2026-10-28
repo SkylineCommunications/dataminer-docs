@@ -25,7 +25,7 @@ DIS now starts up and loads solutions faster:
 
 #### Improved solution type detection [ID 46884]
 
-DIS now determines the type of an opened solution more accurately. Previously, adding a test project to, for example, a protocol solution caused DIS to treat it as an "AsProject" solution. Now, when a DataMiner test project is added to a protocol solution or a legacy Automation script solution, DIS no longer considers it a new solution type.
+DIS now determines the type of an opened solution more accurately. Previously, adding a test package project to, for example, a protocol solution caused DIS to treat it as an "AsProject" solution. Now, when a DataMiner test package project is added to a protocol solution or a legacy Automation script solution, DIS no longer considers it a new solution type.
 
 #### Updated NuGet package dependencies
 
