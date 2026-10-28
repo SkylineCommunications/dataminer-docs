@@ -266,6 +266,18 @@ When session sharing is enabled, all cards showing the same spectrum session wil
 
 From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46113-->, when you close a spectrum analyzer card using shared session mode, its configuration is automatically saved as a shared last-session preset. When another user opens the card, the same configuration will be loaded.
 
+From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46514-->, you can **push configuration changes to other users**. Before these versions, changes to the shared last-session preset were not immediately reflected in other clients. To push changes:
+
+1. Right-click the *# clients* button in the top-right corner of the display section.
+
+1. Select *Push to other clients*.
+
+   Other clients will see a banner where they can apply or ignore the changes.
+
+   ![Spectrum analyzer card with a banner reporting that another session changed the analyzer, and Reload preset and Ignore options](~/dataminer/images/Sharing_spectrum_session.png)<br>*Spectrum Analyzer card in DataMiner 10.6.12*
+
+   Closing the Spectrum card also triggers the banner. The *Spectrum card behavior upon last-session preset modification in shared mode* setting under *Settings* > *Card* controls how other clients handle pushed changes. For details, see [Card settings](xref:User_settings#card-settings).
+
 ### Enabling shared session mode
 
 To enable sharing of spectrum sessions for a spectrum element:
