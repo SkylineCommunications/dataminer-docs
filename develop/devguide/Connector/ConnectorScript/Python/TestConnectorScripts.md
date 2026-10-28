@@ -23,6 +23,8 @@ The guide uses one example throughout: a connector for an encoder. It reads the 
 
 Your data is validated twice on its way into DataMiner: first by the Edge Node, then by the Data API.
 
+For more information, see [About Edge Nodes](xref:About_Edge_Nodes). 
+
 ### The Edge Node checks the request
 
 Your script sends its data with `POST http://localhost:5016/api/data`. The Edge Node only accepts the request when:
@@ -129,6 +131,9 @@ Your tests should start the script the same way the Edge Node does:
 - The script is stopped after 300 seconds by default, so every network call needs a timeout.
 
 ## Example connector script
+
+> [!NOTE]
+> Before starting, see [Developing connector scripts in Visual Studio](xref:DevelopingConnectorScriptsInVisualStudio) for information on how to create and develop a connector script.
 
 Consider the following encoder connector script, where the work is divided over these functions:
 
