@@ -22,3 +22,14 @@ A new *Intelligence Usage* user permission has now been added. This permission w
 
 > [!NOTE]
 > The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grants this new permission to all existing groups with the *Admin Tools* permission.
+
+### Security: New 'Intelligence App' user permission [ID 46817]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
+
+> [!NOTE]
+>
+> - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
+> - The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grants this new permission to all existing groups with the *Admin Tools* permission.
