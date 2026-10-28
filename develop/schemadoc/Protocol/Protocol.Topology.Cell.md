@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topology.Cell
-description: "Consult the DataMiner protocol schema reference for the Cell element, which defines an EPM topology cell, its table, and links to other cells."
+description: "Use the Cell element under Topology in a DataMiner protocol to define a cell in an EPM topology and configure its table mapping and links."
 ---
 
 # Cell element

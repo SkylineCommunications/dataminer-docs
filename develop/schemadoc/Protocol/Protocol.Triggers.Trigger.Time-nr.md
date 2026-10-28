@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Time-nr
-description: "Consult the DataMiner protocol schema reference for the nr attribute, which treats the Time value as a parameter ID instead of a literal value."
+description: "Use the nr attribute of the Trigger Time element in a DataMiner protocol to treat the Time value as a parameter ID instead of a literal value."
 ---
 
 # nr attribute

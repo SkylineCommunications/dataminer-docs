@@ -1,6 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.OverrideDisplayColumns
-description: "Consult the DataMiner protocol schema reference for the OverrideDisplayColumns element, which uses other columns as row display keys or indexes."
+description: "Use the OverrideDisplayColumns element in a DataMiner protocol to override the display key or index of a row with another column."
 ---
 
 # OverrideDisplayColumns element

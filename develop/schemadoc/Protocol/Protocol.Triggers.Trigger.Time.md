@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Time
-description: "Consult the DataMiner protocol schema reference for the Time element, which defines when a trigger goes off in combination with its On element."
+description: "Use the Trigger.Time element together with the Trigger.On element in a DataMiner protocol to define when a trigger goes off."
 ---
 
 # Time element

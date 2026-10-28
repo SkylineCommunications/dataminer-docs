@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topology.Cell-name
-description: "Consult the DataMiner protocol schema reference for the name attribute, which sets the name used to identify a topology cell."
+description: "Use the name attribute of the Cell element in a DataMiner protocol to assign a name that identifies an EPM topology cell."
 ---
 
 # name attribute

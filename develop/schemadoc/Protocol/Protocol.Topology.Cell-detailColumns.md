@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Topology.Cell-detailColumns
-description: "Consult the DataMiner protocol schema reference for the detailColumns attribute, its string type, and Cell parent."
+description: "Use the detailColumns attribute of the Cell element in a DataMiner protocol to specify the detail columns for an EPM topology cell."
 ---
 
 # detailColumns attribute
 
-*** No documentation available yet ***
+***No documentation available yet***
 
 ## Content Type
 

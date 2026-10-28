@@ -1,6 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab-title
-description: "Consult the DataMiner protocol schema reference for the title attribute, which sets the displayed title of an additional tree control tab."
+description: "Use the title attribute of the Tab element in a DataMiner protocol to set the displayed title of an additional tree control tab."
 ---
 
 # title attribute

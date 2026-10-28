@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Time-value
-description: "Consult the DataMiner protocol schema reference for the value attribute, which sets the operand used to evaluate a trigger condition."
+description: "Use the value attribute of the Trigger Time element in a DataMiner protocol to set the operand value used to evaluate a trigger condition."
 ---
 
 # value attribute

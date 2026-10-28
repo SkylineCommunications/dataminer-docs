@@ -1,11 +1,14 @@
 ---
 uid: Protocol.Triggers.Trigger.Type
-description: "Consult the DataMiner protocol schema reference for the Type element, which selects whether to execute actions or activate triggers."
+description: "Use the Type element under Trigger in a DataMiner protocol to select whether to execute actions or activate triggers."
 ---
 
 # Type element
 
-Specifies what should happen when the trigger goes off.
+Specifies what should happen when the trigger goes off:
+
+- execute one or more actions, or
+- activate one or more triggers.
 
 ## Type
 
@@ -14,8 +17,3 @@ Specifies what should happen when the trigger goes off.
 ## Parent
 
 [Trigger](xref:Protocol.Triggers.Trigger)
-
-## Remarks
-
-- execute one or more actions, or
-- activate one or more triggers.

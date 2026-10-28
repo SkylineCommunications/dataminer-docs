@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Content.Id-else
-description: "Consult the DataMiner protocol schema reference for the else attribute, which marks an action to run when the trigger condition is not met."
+description: "Use the else attribute of the Trigger Content Id element in a DataMiner protocol to run an action when the condition is not met."
 ---
 
 # else attribute

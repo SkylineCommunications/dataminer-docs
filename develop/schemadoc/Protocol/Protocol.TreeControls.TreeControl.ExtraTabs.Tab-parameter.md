@@ -1,11 +1,11 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab-parameter
-description: "Consult the DataMiner protocol schema reference for the parameter attribute, which sets the foreign key required for a relation tab."
+description: "Use the parameter attribute of the Tab element in a DataMiner protocol to set the foreign key parameter required for a relation tab."
 ---
 
 # parameter attribute
 
-Foreign key (parameter ID). Mandatory if the type attribute is set to “relation”.
+Foreign key (parameter ID). Mandatory if the type attribute is set to "relation".
 
 ## Content Type
 

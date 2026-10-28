@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger
-description: "Consult the DataMiner protocol schema reference for the Trigger element, which defines when specified actions run or other triggers activate."
+description: "Use the Trigger element in a DataMiner protocol to define when specified actions run or other triggers activate."
 ---
 
 # Trigger element

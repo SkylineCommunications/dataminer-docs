@@ -1,6 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraDetails
-description: "Consult the DataMiner protocol schema reference for the ExtraDetails element, which groups definitions for additional tree item information."
+description: "Use the ExtraDetails element in a DataMiner protocol to group definitions for additional tree item information in a tree control layout."
 ---
 
 # ExtraDetails element

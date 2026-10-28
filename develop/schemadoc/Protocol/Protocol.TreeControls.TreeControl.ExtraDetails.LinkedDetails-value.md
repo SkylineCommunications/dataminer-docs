@@ -1,6 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails-value
-description: "Consult the DataMiner protocol schema reference for the value attribute, which matches a discrete value to determine which extra details appear."
+description: "Use the value attribute of the LinkedDetails element in a DataMiner protocol to match a discrete value for displaying extra tree item details."
 ---
 
 # value attribute

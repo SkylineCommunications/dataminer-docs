@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Content.Id
-description: "Consult the DataMiner protocol schema reference for the Id element, which identifies an action to execute or another trigger to activate."
+description: "Use the Id element under Trigger Content in a DataMiner protocol to identify an action to execute or a trigger to activate."
 ---
 
 # Id element

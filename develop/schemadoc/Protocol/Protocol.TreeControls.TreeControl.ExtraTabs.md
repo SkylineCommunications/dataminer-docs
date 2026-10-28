@@ -1,6 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraTabs
-description: "Consult the DataMiner protocol schema reference for the ExtraTabs element, which contains the additional tab definitions for a tree control."
+description: "Use the ExtraTabs element under TreeControl in a DataMiner protocol to define additional tabs displayed in a tree control."
 ---
 
 # ExtraTabs element

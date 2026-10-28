@@ -1,6 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.Hierarchy
-description: "Consult the DataMiner protocol schema reference for the Hierarchy element, which defines relationships between visible tables in a tree control."
+description: "Use the Hierarchy element under TreeControl in a DataMiner protocol to define relationships between visible tables in a tree control."
 ---
 
 # Hierarchy element

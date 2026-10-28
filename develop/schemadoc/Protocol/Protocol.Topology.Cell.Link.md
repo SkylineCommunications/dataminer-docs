@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Topology.Cell.Link
-description: "Consult the DataMiner protocol schema reference for the Link element, which maps one EPM topology cell to another through foreign key relations."
+description: "Use the Link element under Cell in a DataMiner protocol to map one EPM topology cell to another through foreign key relations."
 ---
 
 # Link element

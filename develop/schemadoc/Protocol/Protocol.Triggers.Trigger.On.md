@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.On
-description: "Consult the DataMiner protocol schema reference for the On element, which defines the item or event that sets off a trigger."
+description: "Use the On element under Trigger in a DataMiner protocol to define the item or event that sets off a trigger."
 ---
 
 # On element

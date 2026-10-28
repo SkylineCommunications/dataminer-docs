@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger-id
-description: "Consult the DataMiner protocol schema reference for the id attribute, which assigns a unique ID to a trigger."
+description: "Use the id attribute of the Trigger element in a DataMiner protocol to assign a unique ID to a trigger."
 ---
 
 # id attribute
