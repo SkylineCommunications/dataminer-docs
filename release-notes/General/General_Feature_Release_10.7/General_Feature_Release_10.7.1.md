@@ -106,6 +106,14 @@ This validation does not affect full DataMiner upgrades.
 
 ### Fixes
 
+#### STaaS: Incomplete state-change history after migrating from Cassandra [ID 46769]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+After migrating from Cassandra to STaaS, state-change history could be incomplete for parameters in index-only tables or tables with a display column when the parameter instance contained uppercase characters. This could affect dashboards and heatlines in DataMiner Cube.
+
+This issue occurred when history was stored under both the original-case and lowercase instances. State-change retrieval now reads both instances and merges the results by timestamp, giving precedence to the lowercase instance when timestamps match.
+
 #### Standalone BPA executor: BPA tests requiring SLNet could fail to run [ID 46809]
 
 <!-- MR 10.5.0 [CU22]/10.6.0 [CU10] - FR 10.7.1 -->
