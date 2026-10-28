@@ -1,5 +1,6 @@
 ---
 uid: AdvancedCustomPropertiesEditingCustomProperties
+description: "Edit a custom DataMiner property from connector logic by using the NT_EDIT_PROPERTY NotifyDataMiner call."
 ---
 
 # Editing custom properties

@@ -1,12 +1,13 @@
 ---
 uid: LogicActionExecuteOne
+description: "Use the 'execute one' action to queue a group after timer-scheduled groups in case that group is not in the execution queue yet."
 ---
 
 # execute one
 
 This action can only be executed on a group.
 
-This action first checks if the specified group is already in the queue. If it is, nothing will happen. If it is not already in the queue, this action will add the specified group to the end of the group execution queue, after groups scheduled by a timer.
+This action first checks if the specified group is already in the queue. If it is, nothing will happen. If it is not in the queue yet, this action will add the specified group to the end of the group execution queue, after groups scheduled by a timer.
 
 ## Attributes
 

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Action
+description: "Use the Action element under Group Content in a DataMiner protocol to identify an action included for consecutive execution."
 ---
 
 # Action element

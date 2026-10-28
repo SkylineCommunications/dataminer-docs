@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion-id
+description: "Use the id attribute of the MajorVersion element in a DataMiner protocol to specify the unique ID of a major version component."
 ---
 
 # id attribute

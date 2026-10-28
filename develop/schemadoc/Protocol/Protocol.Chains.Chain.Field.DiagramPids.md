@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.DiagramPids
+description: "Use the DiagramPids element in a DataMiner protocol to list the read parameter IDs shown inside an EPM diagram box."
 ---
 
 # DiagramPids element

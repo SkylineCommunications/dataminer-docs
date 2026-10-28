@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Description
+description: "Use the Description element in a DataMiner protocol to provide a parameter name distinct from the technical name of the parameter."
 ---
 
 # Description element

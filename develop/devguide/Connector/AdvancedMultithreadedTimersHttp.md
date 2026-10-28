@@ -1,5 +1,6 @@
 ---
 uid: AdvancedMultiThreadedTimersHttp
+description: "Implement multithreaded HTTP requests by building request objects in one QAction and processing responses and post-response logic in subsequent QActions."
 ---
 
 # HTTP

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Length
+description: "Use the Length element in a DataMiner protocol to define a command or response length from a selected set of parameters."
 ---
 
 # Length element

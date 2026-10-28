@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Script.Exe.Include
+description: "Use the Include element and its params attribute to specify an item and parameters included in a DataMiner automation script action."
 ---
 
 # Include element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-whereValue
+description: "Use the whereValue attribute in a DataMiner protocol to specify the value that whereTag must match for an export rule to be applied."
 ---
 
 # whereValue attribute

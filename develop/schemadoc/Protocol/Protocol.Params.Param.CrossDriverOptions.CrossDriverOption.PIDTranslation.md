@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation
+description: "Use the PIDTranslation element in a DataMiner protocol to map a remote protocol column parameter to a local column parameter."
 ---
 
 # PIDTranslation element

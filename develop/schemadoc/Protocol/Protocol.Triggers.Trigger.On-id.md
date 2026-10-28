@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.On-id
+description: "Use the id attribute of the Trigger On element in a DataMiner protocol to identify the item or parameter that sets off a trigger."
 ---
 
 # id attribute

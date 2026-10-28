@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.ParametersView-options
+description: "Use the options attribute in a DataMiner protocol to set the chart height in pixels for a parameter displayed as a chart."
 ---
 
 # options attribute

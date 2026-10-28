@@ -31,7 +31,7 @@ HTTP example:
 ```xml
 <PortSettings>
    <BusAddress>
-      <DefaultValue>ByPassProxy</DefaultValue>
+      <DefaultValue>bypassProxy</DefaultValue>
    </BusAddress>
    <IPport>
       <DefaultValue>80</DefaultValue>

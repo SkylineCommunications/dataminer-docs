@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.ColumnDefinition
+description: "Use the ColumnDefinition element in a DataMiner protocol to set a table column's database type and optional default value."
 ---
 
 # ColumnDefinition element

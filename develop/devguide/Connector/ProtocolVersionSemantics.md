@@ -1,5 +1,6 @@
 ---
 uid: ProtocolVersionSemantics
+description: "Understand the four-part DataMiner protocol version scheme (A.B.C.D) to communicate branches, system versions, major changes, and minor iterations."
 ---
 
 # Protocol version semantics

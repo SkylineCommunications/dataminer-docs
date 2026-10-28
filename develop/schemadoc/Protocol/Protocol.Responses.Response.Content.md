@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Responses.Response.Content
+description: "Learn how the Response Content element specifies the consecutive parameters that form an expected device response and marks which parameters are optional."
 ---
 
 # Content element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.CQLOptions.Clustering
+description: "Use the Clustering element in a DataMiner protocol to specify how the primary key of a table is defined in Cassandra."
 ---
 
 # Clustering element
@@ -18,7 +19,7 @@ string
 
 Contains a comma- or semicolon-separated list of column idx values denoting the columns that form the primary key.
 
-In Cassandra, the primary key can consist of a single column or of multiple columns. The latter case is referred to as a composite or compound row key. A composite or compound row key consists of two parts: a partition key and one or more clustering columns (referred to as clustering key). The partition key can consist of multiple columns. To indicate a composite partition key in the protocol, parentheses must be used (RN 12170). In case no parentheses are used, the first entry denotes the partition key and the remaining entries form the clustering key.
+In Cassandra, the primary key can consist of a single column or of multiple columns. The latter case is referred to as a composite or compound row key. A composite or compound row key consists of two parts: a partition key and one or more clustering columns (referred to as clustering key). The partition key can consist of multiple columns. To indicate a composite partition key in the protocol, parentheses must be used<!-- RN 12170 -->. In case no parentheses are used, the first entry denotes the partition key and the remaining entries form the clustering key.
 
 > [!NOTE]
 > When the Clustering tag is used, the primary key (index) set in the index attribute of the ArrayOptions tag will not be used. Instead the complete key defined in the Clustering tag will be used.

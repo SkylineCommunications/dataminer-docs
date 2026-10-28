@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topology.Cell.Link-dest
+description: "Use the dest attribute of the Link element in a DataMiner protocol to identify a column parameter for foreign key relations in an EPM table."
 ---
 
 # dest attribute

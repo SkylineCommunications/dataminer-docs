@@ -1,10 +1,11 @@
 ---
 uid: Protocol.Params.Param.CRC.Type-options
+description: "Learn how to use the options attribute to invert CRC bits or apply total offset with a bitwise OR operation in a DataMiner protocol."
 ---
 
 # options attribute
 
-Specifies additional options, separated by semicolons (”;”).
+Specifies additional options, separated by semicolons (";").
 
 ## Content Type
 

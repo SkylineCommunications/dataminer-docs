@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Positions.Position
+description: "Use the Position element in a DataMiner protocol to define a parameter location by Data Display page, row, and column."
 ---
 
 # Position element

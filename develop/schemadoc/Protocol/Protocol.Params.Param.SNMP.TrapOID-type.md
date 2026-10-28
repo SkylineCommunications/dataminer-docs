@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapOID-type
+description: "Use the type attribute in a DataMiner protocol to construct trap OIDs in auto, complete, composed, or wildcard mode for SNMP capture."
 ---
 
 # type attribute
@@ -18,7 +19,7 @@ Specifies how the trap OID is constructed.
 
 The following values are supported:
 
-|Type|Description
+|Type|Description|
 |--- |--- |
 |auto|The resulting OID is the combination of VendorOID + DeviceOID + Param ID.|
 |complete|The complete trap OID is specified in TrapOID.|
@@ -33,22 +34,22 @@ Examples:
 
 ```xml
 <Protocol xmlns="http://www.skyline.be/protocol">
-    <VendorOID>1.3.6.1.4.1.8813.2.1</VendorOID>
-    <DeviceOID>1000</DeviceOID>
-    <Params>
-    <Param id="5000">
-    	<Name>Trap Receiver</Name>
-    	<Description>Trap Received</Description>
-    	<Type>dummy</Type>
-    	<Display>
-    		<RTDisplay>false</RTDisplay>
-    	</Display>
-    	<SNMP>
-    		<Enabled>true</Enabled>
-    		<TrapOID setBindings="allBindingInfo" type="composed" ipid="4998">20</TrapOID>
-    	</SNMP>
-    </Param>
-    …
+   <VendorOID>1.3.6.1.4.1.8813.2.1</VendorOID>
+   <DeviceOID>1000</DeviceOID>
+   <Params>
+   <Param id="5000">
+      <Name>Trap Receiver</Name>
+      <Description>Trap Received</Description>
+      <Type>dummy</Type>
+      <Display>
+         <RTDisplay>false</RTDisplay>
+      </Display>
+      <SNMP>
+         <Enabled>true</Enabled>
+         <TrapOID setBindings="allBindingInfo" type="composed" ipid="4998">20</TrapOID>
+      </SNMP>
+   </Param>
+   …
 </Protocol>
 ```
 
@@ -72,24 +73,24 @@ Examples:
 
 ```xml
 <Protocol xmlns="http://www.skyline.be/protocol">
-    <VendorOID>1.3.6.1.4.1.8813.2.1</VendorOID>
-    <DeviceOID>1000</DeviceOID>
-    <Params>
-    	<Param id="5000">
-    		<Name>Trap Receiver</Name>
-    		<Description>Trap Received</Description>
-    		<Type>dummy</Type>
-    		<Display>
-    			<RTDisplay>false</RTDisplay>
-    		</Display>
-    		<SNMP>
-    			<Enabled>true</Enabled>
-    			<TrapOID setBindings="allBindingInfo" type="composed" ipid="4998">20</TrapOID>
-    		</SNMP>
-    	</Param>
-    	...
-    </Params>
-    ...
+   <VendorOID>1.3.6.1.4.1.8813.2.1</VendorOID>
+   <DeviceOID>1000</DeviceOID>
+   <Params>
+      <Param id="5000">
+         <Name>Trap Receiver</Name>
+         <Description>Trap Received</Description>
+         <Type>dummy</Type>
+         <Display>
+            <RTDisplay>false</RTDisplay>
+         </Display>
+         <SNMP>
+            <Enabled>true</Enabled>
+            <TrapOID setBindings="allBindingInfo" type="composed" ipid="4998">20</TrapOID>
+         </SNMP>
+      </Param>
+      ...
+   </Params>
+   ...
 </Protocol>
 ```
 

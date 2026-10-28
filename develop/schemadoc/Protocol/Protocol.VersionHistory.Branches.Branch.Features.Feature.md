@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.Features.Feature
+description: "Use the Feature element under Branch Features in a DataMiner protocol to describe an individual feature supported by a branch."
 ---
 
 # Feature element

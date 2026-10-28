@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSerialDynamicPolling
+description: "Change a serial connection's polling IP and port at runtime with a dynamic IP parameter while avoiding unintended changes to shared sockets."
 ---
 
 # Dynamic polling

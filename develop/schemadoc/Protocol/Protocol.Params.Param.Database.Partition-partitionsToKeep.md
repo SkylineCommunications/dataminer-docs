@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.Partition-partitionsToKeep
+description: "Use the partitionsToKeep attribute in a DataMiner protocol to set how many historical database partitions a logger table retains."
 ---
 
 # partitionsToKeep attribute

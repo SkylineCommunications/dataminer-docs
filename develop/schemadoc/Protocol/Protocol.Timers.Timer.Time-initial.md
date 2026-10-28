@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Time-initial
+description: "Use the initial attribute of the Time element in a DataMiner protocol to control whether and when a timer starts with its element."
 ---
 
 # initial attribute
@@ -16,7 +17,7 @@ string
 
 ## Remarks
 
-|Options|Description
+|Options|Description|
 |--- |--- |
 |true|The timer will be started when the element is started.|
 |false|The timer will not be started when the element is started. This allows you to dynamically start the timer by performing an action.|

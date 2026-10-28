@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger
+description: "Use the Trigger element in a DataMiner protocol to define when specified actions run or other triggers activate."
 ---
 
 # Trigger element

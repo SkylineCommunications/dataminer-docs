@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Compliancies.MaximumSupportedVersion
+description: "Use the MaximumSupportedVersion element in a DataMiner protocol to set the latest DataMiner version the protocol is compatible with."
 ---
 
 # MaximumSupportedVersion element

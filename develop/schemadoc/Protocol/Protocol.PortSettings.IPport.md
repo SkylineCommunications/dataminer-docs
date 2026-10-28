@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.IPport
+description: "Use the IPport element in a DataMiner protocol to configure the default IP port number for an element connection and whether users can change it."
 ---
 
 # IPport element

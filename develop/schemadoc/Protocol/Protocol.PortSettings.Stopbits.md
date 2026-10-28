@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Stopbits
+description: "Use the Stopbits element in a DataMiner protocol to define default and allowed stop bit settings for an element connection."
 ---
 
 # Stopbits element

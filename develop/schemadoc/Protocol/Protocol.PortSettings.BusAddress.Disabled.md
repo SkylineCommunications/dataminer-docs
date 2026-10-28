@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.Disabled
+description: "Use the Disabled element in a DataMiner protocol to control whether users can modify the bus address in the user interface."
 ---
 
 # Disabled element
@@ -18,7 +19,7 @@ Specifies whether the bus address can be modified in the DataMiner user interfac
 
 Contains one of the following predefined values:
 
-|Value|Description
+|Value|Description|
 |--- |--- |
 |true|Users will not be able to modify the setting in the DataMiner user interface.|
 |false|Users will be able to modify the setting in the DataMiner user interface.|

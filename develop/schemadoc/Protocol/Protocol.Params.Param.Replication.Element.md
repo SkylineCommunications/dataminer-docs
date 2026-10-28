@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication.Element
+description: "Use the Element element in a DataMiner protocol to identify the DataMiner Agent and element from which a parameter is replicated."
 ---
 
 # Element element

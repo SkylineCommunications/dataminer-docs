@@ -18,6 +18,6 @@ Contains the different major versions within this branch of this package.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
+|Type|Description|Selector|Fields|
 |--- |--- |--- |--- |
 |Unique |The ID of the major versions for a specific system version must be unique. |MajorVersion |@id |

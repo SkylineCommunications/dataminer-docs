@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsSLProtocol
+description: "Explore the inner workings of SLProtocol, covering thread architecture, priority queues, group and item execution, and multithreading."
 ---
 
 # SLProtocol

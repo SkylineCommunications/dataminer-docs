@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair.Content.ResponseOnBadCommand
+description: "Use the ResponseOnBadCommand element in a DataMiner protocol to match a known error response and avoid retrying the command."
 ---
 
 # ResponseOnBadCommand element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Trigger-next
+description: "Use the Trigger next attribute in a DataMiner protocol to set the delay before DataMiner executes the next trigger in a group."
 ---
 
 # next attribute

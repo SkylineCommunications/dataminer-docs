@@ -1,5 +1,6 @@
 ---
 uid: ChangeColumnOrder
+description: "Assess how reordering table column parameters affects stored data, trending, alarms, QActions, and integrations that rely on column positions."
 ---
 
 # Change column order

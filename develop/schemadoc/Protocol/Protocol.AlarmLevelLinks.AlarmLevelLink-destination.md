@@ -1,5 +1,6 @@
 ---
 uid: Protocol.AlarmLevelLinks.AlarmLevelLink-destination
+description: "Learn how the destination attribute identifies the column that receives the numeric alarm level from an alarm level link in a DataMiner protocol."
 ---
 
 # destination attribute
@@ -79,7 +80,7 @@ In this case, the destination consists of three parts:
 
    Below you can find an example of a "where clause" to find the destination (in which 7105 is the remote element):
 
-   |Link option|Description
+   |Link option|Description|
    |--- |--- |
    |DISPLAY_NOLINK|VALUE=2002 === BBC|
    |PK_NOLINK|VALUE=2002 === 100|

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference
+description: "Use the Reference element under MinorVersion References in a DataMiner protocol to link a minor version to an external tracking ticket."
 ---
 
 # Reference element

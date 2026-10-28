@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.Hierarchy.Table-parent
+description: "Use the parent attribute of the Table element in a DataMiner protocol to identify the parent table in a tree control hierarchy."
 ---
 
 # parent attribute
@@ -18,6 +19,6 @@ unsignedInt
 
 ```xml
 <Hierarchy>
-	<Table id="200" parent="100"/>
-	...
+   <Table id="200" parent="100"/>
+   ...
 ```

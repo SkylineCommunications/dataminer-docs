@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Provider
+description: "Use the Provider element under MinorVersion in a DataMiner protocol to identify the company and author responsible for a minor version."
 ---
 
 # Provider element

@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsHttpImplementing
-description: To periodically request information from a device via HTTP, the approach is very similar to serial communication.
+description: "Implement periodic HTTP polling in a DataMiner connector with sessions, requests, responses, groups, and timers."
 ---
 
 # Implementing HTTP communication
@@ -116,7 +116,13 @@ The [url](xref:Protocol.HTTP.Session.Connection.Request-url) attribute defines t
 
 However, this should be used only when there is no other option, because when the specified host becomes unavailable, the element will go into timeout, giving the impression that the host specified in the element wizard is no longer available.
 
-Including a request header (e.g., "Accept", "Content-Type", "Content-Length", etc.) is possible by defining a header. See [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header).
+#### Request headers
+
+Including a request header (e.g., "Accept" or "Content-Type") is possible by defining a header under `Request/Headers`. The request `Header@key` is an [HTTP request header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header-key), and its `pid` attribute can provide a dynamic value; without `pid`, the element content is used as a fixed value. See [Protocol.HTTP.Session.Connection.Request.Headers.Header](xref:Protocol.HTTP.Session.Connection.Request.Headers.Header).
+
+DataMiner automatically adds `Accept-Encoding: gzip, deflate`, `User-Agent: DataMiner/1.0`, and `Connection: Keep-Alive` to HTTP requests. For `POST` and `PUT` requests, DataMiner sets `Content-Length`. Do not define these headers in the protocol unless you intentionally need a different value; do not define `Content-Length`.
+
+#### Request data
 
 By using either Data or Parameters, you can send data along with the HTTP request. See [Protocol.HTTP.Session.Connection.Request.Data](xref:Protocol.HTTP.Session.Connection.Request.Data) and [Protocol.HTTP.Session.Connection.Request.Parameters](xref:Protocol.HTTP.Session.Connection.Request.Parameters).
 
@@ -210,24 +216,28 @@ The following example gives an overview of how to capture the different parts of
 
 Using the statusCode attribute, you can specify the ID of the parameter in which the status line (e.g., "HTTP/1.1 200 OK") should be put.
 
+#### Status codes and retries
+
+DataMiner behaves as follows based on the received status code:<!-- RN 5132 -->
+
+- 2xx (Success): No additional action is performed.
+- 3xx (Redirection): In case the location response header is present, automatically redirect (301 ""Moved permanently"", 303 "See other", 307 "Temporary redirect", etc.). Note that in case this automatic redirection is not desired, this can be disabled by specifying the [customRedirect](xref:Protocol.Type-communicationOptions#customredirect) communication option. If `customRedirect` is specified, the protocol implements the redirection logic. In case nothing is done, the element will go into timeout. In case no location response header is returned (300: Multiple choices, 306: Unused), the element will go into timeout.
+- 4xx (Client error): The element will go into timeout.
+- 5xx (Server error): The element will go into timeout.
+
+A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e., upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e., upon reception of the ERROR_WINHTTP_CANNOT_CONNECT, ERROR_WINHTTP_SECURE_FAILURE, or SEC_E_BUFFER_TOO_SMALL error).<!-- RN 13111, RN 34888 --> Any other error does not trigger the retry mechanism and will typically cause the request to time out.
+
 > [!NOTE]
->
-> - DataMiner behaves as follows based on the received status code (RN 5132):
->
->   - 2xx (Success): No additional action is performed.
->   - 3xx (Redirection): In case the location response header is present, automatically redirect (301 ""Moved permanently"", 303 "See other", 307 "Temporary redirect", etc.). Note that in case this automatic redirection is not desired, this can be disabled by specifying the [customRedirect](xref:Protocol.Type-communicationOptions#customredirect) communication option. If customRedirect is specified, the protocol implements the redirection logic. In case nothing is done, the element will go into timeout. In case no location response header is returned (300: Multiple choices, 306: Unused), the element will go into timeout.
->   - 4xx (Client error): The element will go into timeout.
->   - 5xx (Server error): The element will go into timeout.
->
-> - HTTP communication logging can be enabled by setting information logging to level 3 (RN 14439).
-> - A retry mechanism (as configured in the element connection settings) is triggered when an HTTP request times out (i.e., upon reception of the WINHTTP_ERROR_TIMEOUT error) and when the SLPort process is unable to connect to the web server (i.e., upon reception of the ERROR_WINHTTP_CANNOT_CONNECT, ERROR_WINHTTP_SECURE_FAILURE, or SEC_E_BUFFER_TOO_SMALL error).<!-- RN 13111, RN 34888 --> Any other error does not trigger the retry mechanism and will typically cause the request to time out.
+> HTTP communication logging can be enabled by setting information logging to level 3.<!-- RN 14439 -->
 
 > [!TIP]
 > See also: [Change-based event handling](xref:InnerWorkingsChangeBasedEventHandling)
 
-The value of a header can be captured by defining a header (see [Protocol.HTTP.Session.Connection.Response.Headers.Header](xref:Protocol.HTTP.Session.Connection.Response.Headers.Header)) and specifying the name of the header and the ID of the parameter in which the value should be put.
+#### Response headers and content
 
-The message body can be captured by specifying the ID of the parameter in which the body should be put in Content (see [Protocol.HTTP.Session.Connection.Response.Content](xref:Protocol.HTTP.Session.Connection.Response.Content)).
+Capture a response header only under `Response/Headers`. The response `Header@key` is an [HTTP response header](xref:Protocol.HTTP.Session.Connection.Response.Headers.Header-key), and its required `pid` attribute identifies the parameter that receives the value. Request headers and response headers have separate schema ownership and must not be interchanged. See [Protocol.HTTP.Session.Connection.Response.Headers.Header](xref:Protocol.HTTP.Session.Connection.Response.Headers.Header).
+
+The HTTP status line is a response marker, not a response header. Capture it with the [Response@statusCode](xref:Protocol.HTTP.Session.Connection.Response-statusCode) attribute. Capture the message body by specifying the parameter ID in [Content@pid](xref:Protocol.HTTP.Session.Connection.Response.Content-pid).
 
 ## See also
 

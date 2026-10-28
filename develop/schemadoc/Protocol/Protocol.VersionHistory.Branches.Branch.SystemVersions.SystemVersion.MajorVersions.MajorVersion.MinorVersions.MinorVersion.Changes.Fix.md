@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix
+description: "Use the Fix element under MinorVersion Changes in a DataMiner protocol to document a bug fix and identify where the bug originated."
 ---
 
 # Fix element

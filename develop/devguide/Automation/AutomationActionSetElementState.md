@@ -1,5 +1,6 @@
 ---
 uid: AutomationActionSetElementState
+description: "Configure the 'Set element state' action to start, stop, restart, pause, mask, or unmask the element assigned to an automation script dummy."
 ---
 
 # Set element state
