@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Type-communicationOptions
-description: "Consult the DataMiner protocol schema reference for the communicationOptions attribute, which selects supported communication behaviors."
+description: "Use the Type communicationOptions attribute in a DataMiner protocol to specify various communication options."
 ---
 
 # communicationOptions attribute
@@ -17,7 +17,7 @@ string
 
 ## Remarks
 
-The following options are available:
+The options listed below are available.
 
 ### asyncWMI
 

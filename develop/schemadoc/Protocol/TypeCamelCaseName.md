@@ -5,7 +5,7 @@ description: "Use the TypeCamelCaseName simple type to validate camel-cased name
 
 # TypeCamelCaseName simple type
 
-Represents a camel cased string.
+Represents a camel-cased string.
 
 ## Content Type
 

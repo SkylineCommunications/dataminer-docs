@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches
-description: "Consult the DataMiner protocol schema reference for the Branches element, which lists uniquely identified branches in a protocol version history."
+description: "Use the Branches element in a DataMiner protocol to list the branch-based release history for a protocol."
 ---
 
 # Branches element

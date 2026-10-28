@@ -13,4 +13,3 @@ Specifies the default values in the alarm template.
 |--- |--- |--- |
 |***string restriction***|||
 |&nbsp;&nbsp;Pattern|`[^,]*`||
-

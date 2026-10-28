@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Type-options
-description: "Consult the DataMiner protocol schema reference for the options attribute, which configures Unicode, view refreshes, or virtual protocol export."
+description: "Use the Type options attribute in a DataMiner protocol to configure Unicode, view refreshes, or virtual protocol export."
 ---
 
 # options attribute

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Type-databaseOptions
-description: "Consult the DataMiner protocol schema reference for the databaseOptions attribute, which selects custom data IDs or partitioned trending tables."
+description: "Use the Type databaseOptions attribute in a DataMiner protocol to specify database options, for instance to activate partitioning on trending tables."
 ---
 
 # databaseOptions attribute

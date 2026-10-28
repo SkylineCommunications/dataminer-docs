@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions
-description: "Consult the DataMiner protocol schema reference for the MajorVersions element, which lists major versions within a branch's system version."
+description: "Use the MajorVersions element under SystemVersion in a DataMiner protocol to list major versions supported within a branch's system version."
 ---
 
 # MajorVersions element

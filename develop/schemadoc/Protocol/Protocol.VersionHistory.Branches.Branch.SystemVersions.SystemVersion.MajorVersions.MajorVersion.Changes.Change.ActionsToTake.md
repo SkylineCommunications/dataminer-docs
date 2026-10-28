@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change.ActionsToTake
-description: "Consult the DataMiner protocol schema reference for the ActionsToTake element, which lists the actions required for a major protocol change."
+description: "Use the ActionsToTake element under Change in a DataMiner protocol to list the required actions for a major protocol change."
 ---
 
 # ActionsToTake element

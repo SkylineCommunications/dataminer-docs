@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression.Location
-description: "Consult the DataMiner protocol schema reference for the Location element, which records where a validation result suppression applies."
+description: "Use the Location element under Suppression in a DataMiner protocol to specify the location where a suppression applies."
 ---
 
 # Location element

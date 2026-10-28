@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression
-description: "Consult the DataMiner protocol schema reference for the Suppression element, which records one suppressed result with its reason and location."
+description: "Use the Suppression element under MinorVersion Suppressions in a DataMiner protocol to record one suppressed result with its reason and location."
 ---
 
 # Suppression element

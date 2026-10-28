@@ -1,11 +1,11 @@
 ---
 uid: Protocol.Type-relativeTimers
-description: "Consult the DataMiner protocol schema reference for the relativeTimers attribute, which controls timer behavior when an interval changes."
+description: "Use the relativeTimers attribute of the Type element in a DataMiner protocol to configure timer behavior when an interval is changed."
 ---
 
 # relativeTimers attribute
 
-*** No documentation available yet. ***
+Specifies how timers behave when their interval is changed.
 
 ## Content Type
 

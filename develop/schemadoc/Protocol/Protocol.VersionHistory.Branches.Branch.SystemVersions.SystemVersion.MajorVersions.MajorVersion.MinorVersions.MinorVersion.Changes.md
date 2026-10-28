@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes
-description: "Consult the DataMiner protocol schema reference for the Changes element, which lists fixes, changes, and features in a minor protocol version."
+description: "Use the Changes element under MinorVersion in a DataMiner protocol to group the fixes, changes, and new features of a minor version."
 ---
 
 # Changes element

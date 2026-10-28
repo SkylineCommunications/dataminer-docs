@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression.Reason
-description: "Consult the DataMiner protocol schema reference for the Reason element, which records why a validation result is suppressed."
+description: "Use the Reason element under Suppression in a DataMiner protocol to record why a validation result is suppressed."
 ---
 
 # Reason element

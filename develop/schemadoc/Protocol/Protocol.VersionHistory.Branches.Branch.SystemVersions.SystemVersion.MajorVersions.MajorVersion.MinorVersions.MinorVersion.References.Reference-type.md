@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference-type
-description: "Consult the DataMiner protocol schema reference for the type attribute, which classifies a version-history reference such as a ticket."
+description: "Use the type attribute of the Reference element in a DataMiner protocol to classify a tracking or ticketing reference."
 ---
 
 # type attribute

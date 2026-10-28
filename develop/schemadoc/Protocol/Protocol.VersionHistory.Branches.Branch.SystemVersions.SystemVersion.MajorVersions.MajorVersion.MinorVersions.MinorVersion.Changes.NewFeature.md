@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.NewFeature
-description: "Consult the DataMiner protocol schema reference for the NewFeature element, which documents a feature added in a minor protocol version."
+description: "Use the NewFeature element under MinorVersion Changes in a DataMiner protocol to document a feature added in a minor version."
 ---
 
 # NewFeature element

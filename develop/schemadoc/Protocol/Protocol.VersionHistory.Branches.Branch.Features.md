@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.Features
-description: "Consult the DataMiner protocol schema reference for the Features element, which lists the features supported by a protocol branch."
+description: "Use the Features element under Branch in a DataMiner protocol to list the features and capabilities supported by a branch."
 ---
 
 # Features element

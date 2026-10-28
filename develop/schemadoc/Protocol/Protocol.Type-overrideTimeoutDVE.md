@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Type-overrideTimeoutDVE
-description: "Consult the DataMiner protocol schema reference for the overrideTimeoutDVE attribute, which makes DVEs inherit timeout from their main element."
+description: "Use the Type overrideTimeoutDVE attribute in a DataMiner protocol to make DVEs go into timeout when their parent element is in timeout."
 ---
 
 # overrideTimeoutDVE attribute

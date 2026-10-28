@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions
-description: "Consult the DataMiner protocol schema reference for the Suppressions element, which lists all suppressions for a minor protocol version."
+description: "Use the Suppressions element under MinorVersion in a DataMiner protocol to list validator result suppressions for a minor version."
 ---
 
 # Suppressions element

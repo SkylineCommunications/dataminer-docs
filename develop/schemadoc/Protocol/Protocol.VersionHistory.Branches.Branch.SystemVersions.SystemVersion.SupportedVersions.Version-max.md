@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version-max
-description: "Consult the DataMiner protocol schema reference for the max attribute, which sets the maximum system version included in a supported range."
+description: "Use the max attribute of the Version element in a DataMiner protocol to specify the maximum system version supported by a protocol range."
 ---
 
 # max attribute

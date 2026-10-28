@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference
-description: "Consult the DataMiner protocol schema reference for the Reference element, which records a typed reference to a registration or tracking system."
+description: "Use the Reference element under MinorVersion References in a DataMiner protocol to link a minor version to an external tracking ticket."
 ---
 
 # Reference element

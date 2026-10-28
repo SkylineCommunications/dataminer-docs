@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.Comment
-description: "Consult the DataMiner protocol schema reference for the Comment element, which stores descriptive information about a protocol branch."
+description: "Use the Comment element under Branch in a DataMiner protocol to add descriptive information or remarks about a protocol branch."
 ---
 
 # Comment element

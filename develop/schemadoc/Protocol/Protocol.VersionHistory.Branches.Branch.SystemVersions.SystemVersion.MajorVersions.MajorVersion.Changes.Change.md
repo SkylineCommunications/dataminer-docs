@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change
-description: "Consult the DataMiner protocol schema reference for the Change element, which documents a major protocol change, its impact, and actions."
+description: "Use the Change element under MajorVersion Changes in a DataMiner protocol to document a major change, its impact, and actions."
 ---
 
 # Change element

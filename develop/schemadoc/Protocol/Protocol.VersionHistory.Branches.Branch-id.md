@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch-id
-description: "Consult the DataMiner protocol schema reference for the id attribute, which assigns the unique ID of a branch version component."
+description: "Use the id attribute of the Branch element in a DataMiner protocol to assign a unique ID to a protocol version history branch."
 ---
 
 # id attribute

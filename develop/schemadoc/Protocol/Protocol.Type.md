@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Type
-description: "Consult the DataMiner protocol schema reference for the Type element, which selects the main connection type and related protocol options."
+description: "Use the Type element in a DataMiner protocol to define the main connection type and specify protocol communication options."
 ---
 
 # Type element

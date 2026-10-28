@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-introducedIn
-description: "Consult the DataMiner protocol schema reference for the introducedIn attribute, which identifies the version where the fixed bug originated."
+description: "Use the introducedIn attribute of the Fix element in a DataMiner protocol to identify the version where a resolved issue originated."
 ---
 
 # introducedIn attribute

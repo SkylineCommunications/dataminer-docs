@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression-type
-description: "Consult the DataMiner protocol schema reference for the type attribute, which classifies a validation suppression by its suppression type."
+description: "Use the type attribute of the Suppression element in a DataMiner protocol to specify the classification type of a validation suppression."
 ---
 
 # type attribute

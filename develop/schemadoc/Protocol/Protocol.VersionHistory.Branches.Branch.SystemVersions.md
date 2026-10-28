@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions
-description: "Consult the DataMiner protocol schema reference for the SystemVersions element, which lists unique system version entries for a protocol branch."
+description: "Use the SystemVersions element under Branch in a DataMiner protocol to list the system versions supported by a protocol branch."
 ---
 
 # SystemVersions element

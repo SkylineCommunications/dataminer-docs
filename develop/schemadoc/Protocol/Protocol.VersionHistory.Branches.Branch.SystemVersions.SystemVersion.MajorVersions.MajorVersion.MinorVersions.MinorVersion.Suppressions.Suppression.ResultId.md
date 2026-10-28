@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression.ResultId
-description: "Consult the DataMiner protocol schema reference for the ResultId element, which identifies the validation result being suppressed."
+description: "Use the ResultId element under Suppression in a DataMiner protocol to specify the ID of the validation result that is suppressed."
 ---
 
 # ResultId element

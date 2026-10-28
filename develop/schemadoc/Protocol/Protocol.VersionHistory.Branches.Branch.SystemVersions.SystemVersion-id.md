@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion-id
-description: "Consult the DataMiner protocol schema reference for the id attribute, which assigns the unique ID of a system version component."
+description: "Use the id attribute of the SystemVersion element in a DataMiner protocol to specify the ID of a supported system version."
 ---
 
 # id attribute

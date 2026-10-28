@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.SupportedVersions.Version-min
-description: "Consult the DataMiner protocol schema reference for the min attribute, which sets the minimum system version included in a supported range."
+description: "Use the min attribute of the Version element in a DataMiner protocol to specify the minimum system version supported by a protocol range."
 ---
 
 # min attribute

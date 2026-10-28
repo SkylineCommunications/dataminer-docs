@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.Comment
-description: "Consult the DataMiner protocol schema reference for the Comment element, which stores descriptive information about a system version entry."
+description: "Use the Comment element under SystemVersion in a DataMiner protocol to store descriptive remarks for a system version entry."
 ---
 
 # Comment element

@@ -1,6 +1,6 @@
 ---
 uid: Protocol.Version
-description: "Consult the DataMiner protocol schema reference for the Version element, which identifies the protocol version assigned to DataMiner elements."
+description: "Use the Version element in a DataMiner protocol to specify the version of the protocol assigned to DataMiner elements."
 ---
 
 # Version element

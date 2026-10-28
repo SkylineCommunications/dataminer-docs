@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References
-description: "Consult the DataMiner protocol schema reference for the References element, which groups task and system references for a minor protocol version."
+description: "Use the References element under MinorVersion in a DataMiner protocol to group task and tracking references for a minor version."
 ---
 
 # References element

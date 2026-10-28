@@ -1,6 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Suppressions.Suppression-taskId
-description: "Consult the DataMiner protocol schema reference for the taskId attribute, which records the task ID associated with a validation suppression."
+description: "Use the taskId attribute of the Suppression element in a DataMiner protocol to record the task ID associated with a suppression."
 ---
 
 # taskId attribute
