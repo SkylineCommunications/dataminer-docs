@@ -16,7 +16,7 @@ namespace Skyline.DataMiner.Automation
     /// <note>
     /// The `Engine` object, and every object you obtain through it (such as <see cref="Element"/> objects returned by <see cref="Engine.FindElement"/>, dummies, and their parameters), is not thread-safe. It may only be used from a single thread at a time.
     /// 
-    /// Though sending SLNet messages is. Using methods <see cref="Engine.SendSLNetSingleResponseMessage(DMSMessage)"/>, <see cref="Engine.SendSLNetMessages(DMSMessage[])"/> and <see cref="Engine.SendSLNetMessage(DMSMessage)"/> is thread-safe.
+    /// However, sending SLNet messages through the Engine object, i.e., using the methods <see cref="Engine.SendSLNetSingleResponseMessage(DMSMessage)"/>, <see cref="Engine.SendSLNetMessages(DMSMessage[])"/>, and <see cref="Engine.SendSLNetMessage(DMSMessage)"/>, is thread-safe.
     /// </note>
     /// </summary>
     public class Engine : IDisposable, IEngine
