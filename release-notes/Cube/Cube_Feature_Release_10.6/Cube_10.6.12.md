@@ -81,7 +81,7 @@ Preset loading options now behave more consistently:
 
 The checkbox labels have also been clarified: *Trace* is now *Reference trace*, *Threshold* is now *Thresholds*, and *Measurement cycle* is now *Measurement points*.
 
-#### Cluster update status: Possible statuses have changed [ID 46504]
+#### Cluster update status: Possible statuses have changed [ID 46843]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
