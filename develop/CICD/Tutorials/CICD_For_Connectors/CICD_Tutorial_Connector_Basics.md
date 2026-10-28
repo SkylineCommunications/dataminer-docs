@@ -300,7 +300,7 @@ These are some of the more interesting things you can find in our reusable workf
 
 ### Advanced options: CD
 
-The *Skyline Communications* organization provides starter workflows that run the reusable workflow for CI and then allow optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Connector.yml):
+The *Skyline Communications* organization provides starter workflows that run the reusable workflow for CI and then allow optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-Connector.yml):
 
 - The CI reusable workflow is triggered as specified above.
 

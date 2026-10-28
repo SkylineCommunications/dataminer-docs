@@ -203,6 +203,14 @@ When you loaded a preset containing a threshold in a Spectrum component, in some
 
 The threshold will now be displayed when the preset is loaded.
 
+#### Spectrum component would remain blank after an element restart [ID 46646]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you restarted an element while a Spectrum component was open, the component would remain blank because it did not create a new session.
+
+From now on, the Spectrum component will create a new session when the element is restarted.
+
 #### System Center - Agents: Migration window could remain open after an element export failed [ID 46657]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -210,6 +218,14 @@ The threshold will now be displayed when the preset is loaded.
 When an element export failed during migration, up to now, the Element migration window could continue to show "Migration has started." indefinitely without indicating that an error had occurred.
 
 From now on, the window will indicate that the migration finished with errors.
+
+#### Services: Exclude conditions on groups could be saved incorrectly [ID 46658]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you configured a service with a group of child elements and applied an exclude condition to that group, Cube would incorrectly save the condition as both an include and an exclude trigger, and when you reopened the service in the editor, the exclude condition would be shown as an include condition. Saving the service again could then change its behavior.
+
+Cube will now save these conditions correctly and correct affected configurations when you open the service editor.
 
 #### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
 

@@ -83,6 +83,9 @@ var antenna = new Resource(Guid.NewGuid())
 helper.AddOrUpdateResources(decoder, antenna);
 ```
 
+> [!NOTE]
+> From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46492-->, `ResourceMode.Unavailable` is obsolete. Set resources to `ResourceMode.Available` or `ResourceMode.Maintenance` instead, as appropriate.
+
 ## Updating resources
 
 ```csharp

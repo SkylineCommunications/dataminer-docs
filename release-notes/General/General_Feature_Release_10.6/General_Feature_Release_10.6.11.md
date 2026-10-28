@@ -138,12 +138,6 @@ Microsoft .NET 10 remains required.
 
 ### Fixes
 
-#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
-
-<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
-
-Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
-
 #### Saving a service template could be blocked on a system with swarming disabled [ID 46235]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
