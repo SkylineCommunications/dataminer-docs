@@ -41,7 +41,25 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*No new features have been added yet.*
+#### Security: New 'Intelligence Usage' user permission [ID 46765]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
+
+> [!NOTE]
+> The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+
+#### Security: New 'Intelligence App' user permission [ID 46817]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
+
+> [!NOTE]
+>
+> - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
+> - The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
 
 ## Changes
 
@@ -87,6 +105,14 @@ For example, before installing a 10.7.x web-only upgrade on a DataMiner Agent ru
 This validation does not affect full DataMiner upgrades.
 
 ### Fixes
+
+#### STaaS: Incomplete state-change history after migrating from Cassandra [ID 46769]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+After migrating from Cassandra to STaaS, state-change history could be incomplete for parameters in index-only tables or tables with a display column when the parameter instance contained uppercase characters. This could affect dashboards and heatlines in DataMiner Cube.
+
+This issue occurred when history was stored under both the original-case and lowercase instances. State-change retrieval now reads both instances and merges the results by timestamp, giving precedence to the lowercase instance when timestamps match.
 
 #### Standalone BPA executor: BPA tests requiring SLNet could fail to run [ID 46809]
 
