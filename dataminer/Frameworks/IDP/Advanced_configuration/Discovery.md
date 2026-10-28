@@ -1,5 +1,6 @@
 ---
 uid: Discovery
+description: "Configure IDP discovery profiles, IPv4 and IPv6 scan ranges, timeouts, retries, and device identification settings."
 ---
 
 # Discovery
