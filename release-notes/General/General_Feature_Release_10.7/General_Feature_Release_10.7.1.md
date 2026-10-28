@@ -41,7 +41,14 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-*No new features have been added yet.*
+### Security: New 'Intelligence Usage' user permission [ID 46765]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
+
+> [!NOTE]
+> The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grants this new permission to all existing groups with the *Admin Tools* permission.
 
 ## Changes
 
