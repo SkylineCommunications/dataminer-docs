@@ -227,14 +227,6 @@ On the *Card* page, the settings are divided into four sections, i.e., a section
 
   - *Update automatically*: The new settings saved in the updated preset are automatically loaded.
 
-- **Spectrum card behavior upon last-session preset modification in shared mode**: From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46514-->, this setting determines how a spectrum card in shared mode will behave when the last-session spectrum preset is modified outside the spectrum card:
-
-  - *Notify* (default): An information bar is displayed on the element card, which allows the user to apply or ignore the changes.
-
-  - *Skip*: No information bar is displayed. The card continues to use its current settings.
-
-  - *Update automatically*: Changes are applied automatically without displaying an information bar.
-
 ### Connection settings
 
 On the *Connection* page, the following settings are available:
