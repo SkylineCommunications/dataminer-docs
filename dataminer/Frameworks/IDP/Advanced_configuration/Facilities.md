@@ -1,5 +1,6 @@
 ---
 uid: Facilities
+description: "Configure IDP Facilities to assign devices to racks, manage locations, and set rack views with top-down or bottom-up slot numbering."
 ---
 
 # Facilities
