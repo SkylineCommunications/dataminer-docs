@@ -1,5 +1,6 @@
 ---
 uid: CI_Types1
+description: "Define IDP CI Types in JSON to identify devices, provision elements, configure parameter sets, and manage software upgrades."
 ---
 
 # CI Types
