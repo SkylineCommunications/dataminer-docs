@@ -5,7 +5,7 @@ description: "Use the TypeTriggerTime simple type to accept defined trigger timi
 
 # TypeTriggerTime simple type
 
-Represents the valid values for the Trigger/Time tag.
+Represents the valid values for the [Trigger.Time](xref:Protocol.Triggers.Trigger.Time) tag.
 
 ## Content Type
 

@@ -5,7 +5,7 @@ description: "Use the Display wideColumnPages attribute in a DataMiner protocol 
 
 # wideColumnPages attribute
 
-Defines the pages that have only one column. Page names are separated by a semicolon (”;”).
+Defines the pages that have only one column. Page names are separated by a semicolon (";").
 
 ## Content Type
 

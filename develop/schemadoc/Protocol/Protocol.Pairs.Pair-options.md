@@ -5,7 +5,7 @@ description: "Use the options attribute of the Pair element in a DataMiner proto
 
 # options attribute
 
-Specifies a number of options, separated by semicolons (”;”).
+Specifies a number of options, separated by semicolons (";").
 
 ## Content Type
 

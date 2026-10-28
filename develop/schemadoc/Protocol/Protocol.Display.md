@@ -19,7 +19,7 @@ Defines the layout and the order of the Data Display pages.
 |[pageOptions](xref:Protocol.Display-pageOptions)|string||Used for EPM elements in order to disable the possibility to open the Data Display page of the element.|
 |[pageOrder](xref:Protocol.Display-pageOrder)|string||Defines the order of the pages.|
 |[type](xref:Protocol.Display-type)|[EnumDisplayType](xref:Protocol-EnumDisplayType)||See the tooltips of the different options.|
-|[wideColumnPages](xref:Protocol.Display-wideColumnPages)|string||Defines the pages that have only one column. Page names are separated by a semicolon (”;”).|
+|[wideColumnPages](xref:Protocol.Display-wideColumnPages)|string||Defines the pages that have only one column. Page names are separated by a semicolon (";").|
 
 ## Children
 

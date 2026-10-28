@@ -19,7 +19,7 @@ string
 
 The following placeholders can be defined:
 
-|Placeholder|Description
+|Placeholder|Description|
 |--- |--- |
 |[TABLE]|Sets the table name.|
 |[PID:#]|Sets the parameter name of the parameter with ID #.|

@@ -61,7 +61,7 @@ A CRC parameter is defined by two essential elements:
 
 ### dataminer info
 
-A parameter of type DATAMINER INFO will contain the following data separated by semicolons (”;”):
+A parameter of type DATAMINER INFO will contain the following data separated by semicolons (";"):
 
 - DMA ID
 - DMA name
@@ -152,7 +152,7 @@ Header and trailer parameters can be defined to allow DataMiner to easily detect
 
 A parameter of type IP will contain the IP address and IP port, separated by ”:”.
 
-Multiple address/port combination will be separated by semicolons (”;”).
+Multiple address/port combination will be separated by semicolons (";").
 
 `<Type>IP</Type>` can result in “10.12.230.326:80” or “localhost:80”
 
@@ -178,7 +178,7 @@ See also:
 
 A parameter of type POLLINGIP will contain the IP address that is being polled by the DMA (without having to specify a read action).
 
-Multiple IP addresses will be separated by semicolons (”;”).
+Multiple IP addresses will be separated by semicolons (";").
 
 `<Type>POLLINGIP</Type>` can result in “10.12.230.326” or “localhost”.
 

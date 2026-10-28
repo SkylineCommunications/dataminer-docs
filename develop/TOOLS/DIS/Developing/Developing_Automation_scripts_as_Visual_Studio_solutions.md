@@ -6,7 +6,7 @@ description: "Use this legacy reference to create, import, package, and upload D
 # Developing automation scripts as Visual Studio solutions
 
 > [!IMPORTANT]
-> This page documents the legacy DIS automation-script-solution format. As of [v2](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates/releases/tag/2.0.0) of the Visual Studio Templates, the *DataMiner Automation Script Solution* template is obsolete and new scripts should use the project templates based on the [Skyline.DataMiner.SDK](xref:skyline_dataminer_sdk). Do not use this page as the workflow for new scripts.
+> This page documents the legacy DIS automation script solution format. As of [v2](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates/releases/tag/2.0.0) of the Visual Studio Templates, the *DataMiner Automation Script Solution* template is obsolete and new scripts should use the project templates based on the [Skyline.DataMiner.SDK](xref:skyline_dataminer_sdk). Do not use this page as the workflow for new scripts.
 
 - An automation script solution can contain multiple scripts, whereas a connector solution can only contain one single connector.
 

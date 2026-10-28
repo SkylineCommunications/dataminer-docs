@@ -5,7 +5,7 @@ description: "Use the TypeTimerContentGroupCol simple type to validate the col:n
 
 # TypeTimerContentGroupCol simple type
 
-Specifies a valid pattern for the Timer/Content/Group tag.
+Specifies a valid pattern for the [Timer.Content.Group](xref:Protocol.Timers.Timer.Content.Group) element.
 
 ## Content Type
 

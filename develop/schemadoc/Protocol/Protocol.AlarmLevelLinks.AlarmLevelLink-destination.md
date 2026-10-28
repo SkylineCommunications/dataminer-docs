@@ -80,7 +80,7 @@ In this case, the destination consists of three parts:
 
    Below you can find an example of a "where clause" to find the destination (in which 7105 is the remote element):
 
-   |Link option|Description
+   |Link option|Description|
    |--- |--- |
    |DISPLAY_NOLINK|VALUE=2002 === BBC|
    |PK_NOLINK|VALUE=2002 === 100|

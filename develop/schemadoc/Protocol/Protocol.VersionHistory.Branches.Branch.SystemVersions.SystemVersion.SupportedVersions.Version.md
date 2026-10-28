@@ -5,8 +5,6 @@ description: "Use the Version element under SupportedVersions in a DataMiner pro
 
 # Version element
 
-
-
 ## Type
 
 string

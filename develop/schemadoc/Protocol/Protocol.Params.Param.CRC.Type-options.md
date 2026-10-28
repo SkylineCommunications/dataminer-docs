@@ -5,7 +5,7 @@ description: "Learn how to use the options attribute to invert CRC bits or apply
 
 # options attribute
 
-Specifies additional options, separated by semicolons (”;”).
+Specifies additional options, separated by semicolons (";").
 
 ## Content Type
 
