@@ -479,25 +479,37 @@ uid: NTNotifyTypesOverview
 
 ## Notify type offsets in log entries
 
-[NotifyProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyProtocol(System.Int32,System.Object,System.Object)), [NotifyDataMiner](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMiner(System.Int32,System.Object,System.Object)) and [NotifyDataMinerQueued](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMinerQueued(System.Int32,System.Object,System.Object)) all end up in the same internal notification call. The method that was used is determined by an offset that is added to the notify type:
+[NotifyProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyProtocol(System.Int32,System.Object,System.Object)), [NotifyDataMiner](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMiner(System.Int32,System.Object,System.Object)), and [NotifyDataMinerQueued](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMinerQueued(System.Int32,System.Object,System.Object)) all end up in the same internal notification call. The method that was used is determined by an offset that is added to the notify type.
 
-|Method|Offset|Native notify type|
-|--- |--- |--- |
-|NotifyProtocol|none|`type`|
-|NotifyDataMiner|+ 10000|`type + 10000`|
-|NotifyDataMinerQueued|+ 20000|`type + 20000`|
+The notify type shown in a failure log depends on the DataMiner version:
 
-For example, notify type 106 (<xref:NT_MAKE_ALARM>) results in the native notify types 106, 10106 and 20106 respectively.
+- **Prior to DataMiner 10.6.12/10.7.0**, failed `NotifyDataMiner` and `NotifyDataMinerQueued` calls are logged with the with the internal offset added to the original notify type.
 
-This offset is visible when a call fails, because the log entry contains the native notify type instead of the notify type that was passed in code. The IDs in the table above are therefore **not** the values that appear in such log entries.
+  |Method|Offset|Value shown in log|
+  |--- |--- |--- |
+  |NotifyProtocol|none|`type`|
+  |NotifyDataMiner|+ 10000|`type + 10000`|
+  |NotifyDataMinerQueued|+ 20000|`type + 20000`|
 
-For example, the following entry is logged when a `NotifyDataMiner(106 /*NT_MAKE_ALARM*/, 0, alarmDetails)` call fails:
+  For example, with notify type 106 (<xref:NT_MAKE_ALARM>), the native notify types are 106, 10106, and 20106 respectively.
 
-```txt
-SLManagedScripting.exe|ManagedInterop|ERR|-1|24288|48|NotifyDataMiner with 10106 failed. 0x80040221
-```
+  The following entry is logged when a `NotifyDataMiner(106 /*NT_MAKE_ALARM*/, 0, alarmDetails)` call fails:
 
-Here, 10106 is 106 (<xref:NT_MAKE_ALARM>) + 10000, and not a parameter ID or a notify type of its own. To find the notify type that was used, subtract the offset that belongs to the method in the log entry.
+  ```txt
+  SLManagedScripting.exe|ManagedInterop|ERR|-1|24288|48|NotifyDataMiner with 10106 failed. 0x80040221
+  ```
+
+  Here, 10106 is 106 (<xref:NT_MAKE_ALARM>) + 10000, and not a parameter ID or a notify type of its own. In these earlier versions, subtract the offset that belongs to the method in the log entry to find the notify type that was used.
+
+- **From DataMiner 10.6.12/10.7.0 onwards**<!--RN 46709-->, failed `NotifyDataMiner` and `NotifyDataMinerQueued` calls are logged with the original notify type passed in code, without the offset.
+
+  For example, the following entry is logged when a `NotifyDataMiner(106 /*NT_MAKE_ALARM*/, 0, alarmDetails)` call fails:
+
+  ```txt
+  SLManagedScripting.exe|ManagedInterop|ERR|-1|24288|48|NotifyDataMiner with 106 failed. 0x80040221
+  ```
+
+  Here, 106 is the notify type passed to `NotifyDataMiner`, corresponding to <xref:NT_MAKE_ALARM>. The method offset is not included.
 
 > [!TIP]
-> The error code at the end of the entry can be looked up in the [error codes table](xref:ErrorCodeTable). In the example above, `0x80040221` is `SL_INVALID_DATA` ("Invalid data."), which indicates that the arguments passed to the call were not valid, for example a reference to an element or parameter that cannot be resolved.
+> The error code at the end of either entry can be looked up in the [error codes table](xref:ErrorCodeTable). In the examples above, `0x80040221` is `SL_INVALID_DATA` ("Invalid data."), which indicates that the arguments passed to the call were not valid, for example a reference to an element or parameter that cannot be resolved.
