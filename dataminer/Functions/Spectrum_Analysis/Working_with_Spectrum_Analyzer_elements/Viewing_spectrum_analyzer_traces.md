@@ -55,13 +55,18 @@ To save the real-time display as a .jpg file instead:
 
 If DataMiner Cube detects no activity from the user for some time, the display is set to standby. As soon as you move the mouse pointer over the display, the real-time display of the trace is resumed. You can switch this automatic standby mode on and off, and change the interval after which the display is set to standby.
 
-To do so, on the spectrum analyzer card in DataMiner Cube, go to the *trace* tab. The following options are available in the *Standby* section:
+By default, the display enters standby after 5 minutes of inactivity.
+
+To configure automatic standby, on the spectrum analyzer card in DataMiner Cube, go to the *trace* tab. The following options are available in the *Standby* section:
 
 - To switch standby mode on, select *Automatic standby mode*.
 
 - To switch standby mode off, clear the selection from *Automatic standby mode*.
 
 - To change the number of minutes DataMiner will wait before setting the display to standby, next to *Inactivity period*, enter a different value.
+
+> [!NOTE]
+> From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!-- RN 46574 -->, automatic standby is not applied when a spectrum analyzer is configured to use [shared session mode](xref:Viewing_spectrum_analyzer_traces#enabling-shared-session-mode), and the standby options in the ribbon are disabled.
 
 ## Freezing/unfreezing the trace
 
