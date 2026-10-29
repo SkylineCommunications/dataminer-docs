@@ -96,6 +96,12 @@ Microsoft .NET 10 remains required.
 
 ### Fixes
 
+#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
+
 #### Stopping an element with a logger table could cause SLProtocol to stop unexpectedly [ID 46299]
 
 <!-- MR 10.5.0 [CU20]/10.6.0 [CU8] - FR 10.6.11 -->
