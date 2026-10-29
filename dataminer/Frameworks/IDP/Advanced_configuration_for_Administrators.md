@@ -1,5 +1,6 @@
 ---
 uid: Advanced_configuration_for_Administrators
+description: "Explore the advanced configuration settings for DataMiner IDP that are available on the Admin tab of the IDP app."
 ---
 
 # Advanced configuration for Administrators
