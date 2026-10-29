@@ -4,6 +4,31 @@ uid: DIS_3.1
 
 # DIS 3.1
 
+## DIS 3.1.27
+
+### New features
+
+#### Directory.Build.props templates now apply only to .csproj projects [ID 46923]
+
+The `Directory.Build.props` templates that DIS generates (`AsProjectDirectoryBuildProps.template`, `AutomationScriptDirectoryBuildProps.template`, and `ConnectorDirectoryBuildProps.template`) now apply their settings only to `.csproj` projects, using the condition `'$(MSBuildProjectExtension)' == '.csproj'`:
+
+- In all three templates, the `ItemGroup` that links `stylecop.json` and `.editorconfig`, and the `ItemGroup` that adds the `StyleCop.Analyzers` `PackageReference`, now have this condition.
+- In `AutomationScriptDirectoryBuildProps.template` and `ConnectorDirectoryBuildProps.template`, the first `PropertyGroup` that sets `PlatformTarget` (`x86`) and `DisableImplicitFrameworkReferences` also has this condition.
+
+These templates are used when the info bar in the solution settings file performs a fix.
+
+#### Updated NuGet package dependencies
+
+- [Skyline.DataMiner.CICD.DMApp.Automation](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMApp.Automation) version 6.5.0
+- [Skyline.DataMiner.CICD.DMProtocol](https://www.nuget.org/packages/Skyline.DataMiner.CICD.DMProtocol) version 6.5.0
+- [Skyline.DataMiner.CICD.Parsers.Common](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Parsers.Common) version 6.5.0
+
+### Fixes
+
+#### Low-code app import failure caused by an incorrect download address [ID 46920]
+
+In some cases, importing a low-code app would fail because the address used to download the file was incorrect. This issue has now been fixed.
+
 ## DIS 3.1.26
 
 ### New features
