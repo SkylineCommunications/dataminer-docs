@@ -10,14 +10,14 @@ uid: DIS_3.1
 
 #### Support for offline development [ID 46052]
 
-DIS now keeps track of the latest known versions of the components it uses. At startup, DIS checks in the background whether any of these components have a new version and, if so, updates the stored component information.
+DIS now keeps track of the latest known versions of the components it uses. At startup, it will check in the background whether any of these components have a new version and, if so, will update the stored component information.
 
 - The info bars that indicate whether an update is available for a specific NuGet package now use the version stored in the component information, instead of retrieving it online when the info bar runs.
-- When you create a QAction or Automation script project while developing a connector or Automation script as an XML file (i.e., not as a solution), DIS no longer tries to retrieve the latest version of the dev pack online. Instead, it uses the version found in other QActions or Automation C# exe blocks. If no version can be found there, it falls back to a default version from the component information.
+- When you create a QAction or automation script project while developing a connector or an automation script as an XML file (i.e., not as a solution), DIS no longer tries to retrieve the latest version of the dev pack online. Instead, it uses the version found in other QActions or Automation C# exe blocks. If no version can be found there, it falls back to a default version from the component information.
 
-#### Faster startup and solution loading [ID 46718]
+#### Faster startup and faster solution loading [ID 46718]
 
-DIS now starts up and loads solutions faster:
+DIS now starts up faster, and also loads solutions faster:
 
 - The package initialization (e.g., updating templates) now runs in the background instead of on the UI thread.
 - When you open a solution, DIS no longer parses all projects to determine the DataMiner project type. It now only inspects the `.csproj` file, using a newer version of the library that provides this information.
@@ -25,7 +25,7 @@ DIS now starts up and loads solutions faster:
 
 #### Improved solution type detection [ID 46884]
 
-DIS now determines the type of an opened solution more accurately. Previously, adding a test package project to, for example, a protocol solution caused DIS to treat it as an "AsProject" solution. Now, when a DataMiner test package project is added to a protocol solution or a legacy Automation script solution, DIS no longer considers it a new solution type.
+DIS now determines the type of an opened solution more accurately. Previously, adding a test package project to, for example, a protocol solution caused DIS to treat it as an "AsProject" solution. Now, when a DataMiner test package project is added to a protocol solution or a legacy automation script solution, DIS will no longer consider it a new solution type.
 
 #### Updated NuGet package dependencies
 
