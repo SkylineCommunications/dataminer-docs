@@ -65,6 +65,12 @@ A new *Intelligence App* user permission has now been added. This permission wil
 
 ### Enhancements
 
+#### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
+
 #### SLProtocol: Support for postPonePortInitialisation option removed [ID 46588]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
@@ -106,6 +112,28 @@ This validation does not affect full DataMiner upgrades.
 
 ### Fixes
 
+#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
+
+#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
+
+From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
+
+#### SLNet: Array index errors when retrieving alarm filters or redundancy group information [ID 46607]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filters or redundancy group information if an SLXML query returned an array with unexpected dimensions.
+
+SLNet will now retry failed redundancy group queries once after a short delay. Array index errors will also be logged in *SLNet.txt* with the variable name, the exact array index, and the complete query response array in compressed form to help diagnose the issue.
+
 #### STaaS: Incomplete state-change history after migrating from Cassandra [ID 46769]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
@@ -113,6 +141,13 @@ This validation does not affect full DataMiner upgrades.
 After migrating from Cassandra to STaaS, state-change history could be incomplete for parameters in index-only tables or tables with a display column when the parameter instance contained uppercase characters. This could affect dashboards and heatlines in DataMiner Cube.
 
 This issue occurred when history was stored under both the original-case and lowercase instances. State-change retrieval now reads both instances and merges the results by timestamp, giving precedence to the lowercase instance when timestamps match.
+
+#### DataMiner services could fail to load during DataMiner startup [ID 46773]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+<!-- Not added to MR 10.7.0 - Introduced by RNs 46061 and 46134 -->
+
+Since DataMiner Feature Release 10.6.10, in some cases, DataMiner services could fail to load during DataMiner startup.
 
 #### Standalone BPA executor: BPA tests requiring SLNet could fail to run [ID 46809]
 

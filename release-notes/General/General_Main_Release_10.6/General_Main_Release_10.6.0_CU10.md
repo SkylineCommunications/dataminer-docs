@@ -39,6 +39,14 @@ Before you upgrade to this DataMiner version:
 
 ### Fixes
 
+#### SLNet: Array index errors when retrieving alarm filters or redundancy group information [ID 46607]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filters or redundancy group information if an SLXML query returned an array with unexpected dimensions.
+
+SLNet will now retry failed redundancy group queries once after a short delay. Array index errors will also be logged in *SLNet.txt* with the variable name, the exact array index, and the complete query response array in compressed form to help diagnose the issue.
+
 #### STaaS: Incomplete state-change history after migrating from Cassandra [ID 46769]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->

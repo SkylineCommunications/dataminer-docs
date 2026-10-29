@@ -26,8 +26,7 @@ These are the most important things to keep in mind:
 
 ## Contribution workflow
 
-1. Make a new task if one does not exist yet under the *R&D Communication & Synchronisation
-* project. You can set the type to *New Feature*.
+1. Make a new task if one does not exist yet under the *R&D Communication & Synchronisation* project. You can set the type to *New Feature*.
 
 1. Fork the private DataMinerSystem library repository [SkylineCommunications/Skyline.DataMiner.Core.DataMinerSystem](https://github.com/SkylineCommunications/Skyline.DataMiner.Core.DataMinerSystem), and clone your fork.
 
