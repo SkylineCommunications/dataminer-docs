@@ -1,5 +1,6 @@
 ---
 uid: Pushing_Tokens_Into_A_Process
+description: "Push tokens into a process with ProcessHelper.PushToken, or configure token generation at activation window start or on a recurring schedule."
 ---
 
 # Pushing tokens into a process
@@ -21,7 +22,7 @@ When a process has at least one defined activation window (past, present, or fut
 > - For each token pushed into a process, a new process DOM instance must be generated.
 > - This method requires *ProcessAutomation.dll*
 
-### Pushing tokens at the start of an activation window
+## Pushing tokens at the start of an activation window
 
 When an activation window starts, it is possible to immediately push a token into the process. You can achieve this as follows:
 
@@ -61,7 +62,7 @@ When an activation window starts, it is possible to immediately push a token int
 
    1. Click *OK* and *Confirm* to save all changes and exit the configuration wizard.
 
-### Pushing tokens periodically
+## Pushing tokens periodically
 
 During an activation window, it is possible to push new tokens into a process on a regular basis. You can achieve this as follows:
 
