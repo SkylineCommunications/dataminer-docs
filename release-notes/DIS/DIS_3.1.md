@@ -25,9 +25,9 @@ These templates are used when the info bar in the solution settings file perform
 
 ### Fixes
 
-#### Fixed LCA import failure caused by an incorrect download address [ID 46920]
+#### Low-code app import failure caused by an incorrect download address [ID 46920]
 
-In some cases, importing a low-code app (LCA) failed because the address used to download the file was incorrect. This issue has been fixed.
+In some cases, importing a low-code app would fail because the address used to download the file was incorrect. This issue has now been fixed.
 
 ## DIS 3.1.26
 
