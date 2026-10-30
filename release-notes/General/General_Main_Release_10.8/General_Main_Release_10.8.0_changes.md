@@ -91,6 +91,14 @@ For example, before installing a 10.7.x web-only upgrade on a DataMiner Agent ru
 
 This validation does not affect full DataMiner upgrades.
 
+#### Scheduler: Removed unnecessary DMAObjects dependency from SLNetTypes [ID 46914]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+The `ScheduledTaskDetails` class, which is used only to migrate scheduled tasks from local storage to database storage, has been moved from SLNetTypes to SLNet.
+
+As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.Config.dll*.
+
 ### Fixes
 
 *No fixes have been added yet.*
