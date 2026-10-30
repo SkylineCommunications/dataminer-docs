@@ -108,6 +108,14 @@ This update also resolves the following issues:
 
 Performance has improved for GQI queries that retrieve table parameters from multiple elements.
 
+#### Web apps: 'Report an issue' link now includes system information [ID 46824]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The *Report an issue* link in the help menu of the DataMiner web apps now includes the DataMiner Agent node ID, organization ID, and coordination ID as URL parameters, when available. This allows the system from which you report an issue to be identified.
+
+The information is retrieved when you open the help menu in the header bar. The help button is temporarily disabled and displays a loading indicator until retrieval is complete. Any IDs that cannot be retrieved are omitted from the URL.
+
 ### Fixes
 
 *No fixes have been added yet.*
