@@ -102,7 +102,7 @@ This update also resolves the following issues:
 
 ### Enhancements
 
-#### GQI: Improved performance for inter-element table parameter queries [ID 46078]
+#### GQI DxM: Improved performance for inter-element table parameter queries [ID 46078]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
