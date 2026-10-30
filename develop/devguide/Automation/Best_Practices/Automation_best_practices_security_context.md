@@ -11,7 +11,7 @@ Using the user's context ensures that the operation is subject to that user's pe
 
 ## DataMinerSystem class library
 
-When you access DataMiner through the DataMinerSystem class library, `engine.GetDms()` uses the System account. To perform operations in the security context of the user running the script, get the DMS connection by calling `engine.GetUserDms()` (available from version 1.2.1.3 of `Skyline.DataMiner.Core.DataMinerSystem.Automation` onwards).
+When you access DataMiner through the DataMinerSystem class library, `engine.GetDms()` uses the System account. To perform operations in the security context of the user running the script, get the DMS connection by calling `engine.GetDmsAsUser()` (available from version 1.2.1.3 of `Skyline.DataMiner.Core.DataMinerSystem.Automation` onwards).
 
 If you are using a version prior to 1.2.1.3, we recommend upgrading the NuGet package. If upgrading is not possible, you can still obtain an `IDms` object in the user context by calling `engine.GetUserConnection().GetDms()`.
 
@@ -48,7 +48,7 @@ RunPath(engine, "DataMinerSystem class library - System user", delegate
 // User account (v1.2.1.3 and later)
 RunPath(engine, "DataMinerSystem class library - Running script user", delegate
 {
-    IDms dms = engine.GetUserDms();
+    IDms dms = engine.GetDmsAsUser();
     IDmsElement element = dms.GetElement(new DmsElementId(DataMinerId, ElementId));
     element.GetStandaloneParameter<double?>(ParameterId).SetValue(2);
 });
