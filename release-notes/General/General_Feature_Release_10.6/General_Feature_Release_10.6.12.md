@@ -270,11 +270,11 @@ When multiple polling groups were executed concurrently, results from SNMP GET r
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
 
-#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+#### NATS cluster verification BPA could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
 
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
-On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+On systems where DataMiner BrokerGateway manages NATS, the `NATS cluster verification` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
 
 #### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
 
