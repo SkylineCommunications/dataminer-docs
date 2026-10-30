@@ -1,5 +1,6 @@
 ---
 uid: srm_stack
+description: "Explore the DataMiner SRM stack and its different modules to schedule resources, automate workflows, and manage service lifecycles."
 ---
 
 # The DataMiner Service and Resource Management stack
