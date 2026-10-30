@@ -1,5 +1,6 @@
 ---
 uid: PA_Creating_script_tasks
+description: "Create script tasks for Process Automation using profile definitions and PA_ProfileLoadDomTemplate, keeping execution within 15 minutes."
 ---
 
 # Creating script tasks
