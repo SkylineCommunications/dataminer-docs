@@ -66,7 +66,7 @@ To configure automatic standby, on the spectrum analyzer card in DataMiner Cube,
 - To change the number of minutes DataMiner will wait before setting the display to standby, next to *Inactivity period*, enter a different value.
 
 > [!NOTE]
-> From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!-- RN 46574 -->, automatic standby is not applied when a spectrum analyzer is configured to use [shared session mode](xref:Viewing_spectrum_analyzer_traces#enabling-shared-session-mode), and the standby options in the ribbon are disabled.
+> From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!-- RN 46574 -->, automatic standby is not applied when a spectrum analyzer is configured to use [shared session mode](xref:Viewing_spectrum_analyzer_traces#enabling-shared-session-mode). In that case, the standby options in the ribbon are disabled.
 
 ## Freezing/unfreezing the trace
 
