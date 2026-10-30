@@ -1,5 +1,6 @@
 ---
 uid: Process_Automation_App
+description: "Use the Process Automation app in DataMiner Cube to configure process definitions, create activation windows, and monitor processes and tokens."
 ---
 
 # Process Automation app

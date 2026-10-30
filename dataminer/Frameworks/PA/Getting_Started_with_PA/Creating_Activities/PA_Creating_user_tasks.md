@@ -1,5 +1,6 @@
 ---
 uid: PA_Creating_user_tasks
+description: "Create user tasks in Process Automation with a user DOM definition using the pa_user_task ModuleID and PA User Task behavior definition."
 ---
 
 # Creating user tasks

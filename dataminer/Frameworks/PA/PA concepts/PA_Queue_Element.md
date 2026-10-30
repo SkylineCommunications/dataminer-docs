@@ -1,5 +1,6 @@
 ---
 uid: PA_Queue_Element
+description: "Use a queue element to manage activity execution, limit concurrent tasks, prevent resource conflicts, and coordinate queues in Process Automation."
 ---
 
 # Queue element
