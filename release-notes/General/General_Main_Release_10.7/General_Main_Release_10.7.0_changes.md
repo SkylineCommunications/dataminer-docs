@@ -977,7 +977,7 @@ Access to that cache has now been made thread safe.
 
 #### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
 
-<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] / 10.7.0 [CU0] - FR 10.7.1 -->
+<!-- MR 10.7.0 [CU0] - FR 10.7.1 -->
 
 Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
 
@@ -1014,14 +1014,6 @@ Change points are now also distinguished by creation time. As a result, previous
 Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
 
 From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
-
-#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
-
-<!-- MR 10.7.0 - FR 10.7.1 -->
-
-When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
-
-From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
 
 #### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
 
