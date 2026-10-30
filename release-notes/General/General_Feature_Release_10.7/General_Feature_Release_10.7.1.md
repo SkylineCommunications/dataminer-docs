@@ -95,6 +95,42 @@ From now on, it will only scan folders for connectors on the incompatibility lis
 
 The incompatible connector versions reported, the message shown, and the requirement to remove those versions before upgrading remain unchanged. No configuration is required.
 
+#### Automation: Progress notifications for non-interactive scripts [ID 46778]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+From now on, clients can add the `PROGRESS` execution option to an `ExecuteScriptMessage` to receive progress notifications for non-interactive automation scripts. This extends the progress tracking already available for interactive scripts.
+
+This is especially useful when scripts are executed asynchronously using the `DEFER:TRUE` option, as clients can track when a script starts and finishes without waiting for execution to complete.
+
+Before sending the `ExecuteScriptMessage`, the client must subscribe to `ScriptProgressEventMessage` events. Use the returned `ScriptID` and the DataMiner ID to identify events associated with that script execution.
+
+For example:
+
+```csharp
+var executeMessage = new ExecuteScriptMessage("MyScript")
+{
+    DataMinerID = dmaId,
+    Options = new SA(new[] { "DEFER:TRUE", "PROGRESS" })
+};
+
+var response = (ExecuteScriptResponseMessage)connection.HandleSingleResponseMessage(executeMessage);
+var scriptId = response.ScriptID;
+```
+
+For scripts executed with `PROGRESS`, SLAutomation can send the following `ScriptProgressEventMessage` notifications:
+
+- `Started`: The script has started executing.
+- `Completed`: The script has finished executing. The notification includes the execution result.
+- `RunStatus` or `DelayInfo`: Additional execution status information, for example, when the script is waiting for locked resources or an error occurs.
+- `Progress`: Progress explicitly communicated by the script.
+
+The existing behavior for interactive scripts remains unchanged. Scripts executed with the `INTERACTIVE` option can additionally receive the following notifications:
+
+- `InteractiveUI`: The script is paused and requires input from the client.
+- `Detached`: The client has detached from the script.
+- `Hidden`: The client interface should be hidden.
+
 #### DataMiner upgrade: Prerequisite check for Communication Gateway DxM version [ID 46798]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
