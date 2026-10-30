@@ -66,64 +66,7 @@ Perform the following steps to release a connector version:
 
 ## Publishing DataMiner install packages
 
-DataMiner install packages, i.e., .dmapp files, can contain any other artifacts, including other install packages and companion files. The source code of these packages is currently only available through the internal SLC SE RepoManager. They use internal Jenkins pipelines for QA and automatic publishing to the Catalog.
-
-1. Make sure the following prerequisites are available:
-
-   - [Visual Studio](https://visualstudio.microsoft.com/downloads/)
-
-   - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-
-   - [DIS](xref:Installing_and_configuring_DataMiner_Integration_Studio)
-
-   - [SLC SE RepoManager](https://tools.skyline.be/installers/SERepoManager/SERepoInstaller.msi)
-
-1. Open the source code:
-
-   1. Find or create a new install package in the SLC SE RepoManager under the tab *Packages*.
-
-      > [!NOTE]
-      > Make sure you use the correct *Constraint* field to define the appropriate visibility of the Catalog item. See [Creating a repository](xref:Creating_a_repository).
-
-   1. Open the solution using Visual Studio.
-
-1. Include the required artifacts:
-
-   1. Open *manifest.xml*.
-
-      > [!TIP]
-      > If you open this in Visual Studio, you will get Intellisense.
-
-   1. You can now add XML tags to add artifacts like connectors, automation scripts, etc.
-
-   > [!TIP]
-   > For more information, refer to [Creating a repository for an install package](xref:Creating_a_repository_for_an_install_package).
-
-1. Tag the commit:
-
-   1. In the lower-right corner, select and check out the correct branch. This must be a branch ending in *".X"*, e.g., 1.0.0.X.
-
-   1. Right-click the branch and select *View History*.
-
-   1. Right-click the commit you want to release and select *New Tag*.
-
-   1. Fill in a tag name matching the branch. Packages use three numbers with a "-CUx" suffix for versioning, e.g., `1.0.1-CU0`.
-
-   1. Fill in a comment.
-
-   1. In the top bar in Visual Studio, select *Git* > *Commit or Stash*.
-
-      This opens a new window.
-
-   1. In the new window, select the ellipsis "..." and choose *Push all Tags to Origin*.
-
-This will tag the commit, which will trigger Jenkins to perform a release cycle.
-
-You can monitor the release pipeline:
-
-- If it goes yellow or green, the install package has been successfully released, and users will be able to find it in the Catalog.
-
-- If it goes red, the release failed. You will need to either re-run the pipeline or remove the tag, fix the reported problems, and tag the commit again to trigger a new release.
+DataMiner install packages, i.e., .dmapp files, can contain any other artifacts, including other install packages and companion files. To publish them to the Catalog, use CI/CD on GitHub. For more information, see [CI/CD using GitHub for non-connector items](xref:CICD_on_GitHub_getting_started#cicd-using-github-for-non-connector-items).
 
 ## Publishing automation scripts
 
