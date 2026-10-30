@@ -1,5 +1,6 @@
 ---
 uid: Booking_Manager_Admin_tab
+description: "Use the Booking Manager's Admin tab to access resources, profiles, and service definitions, check the SRM version, and analyze framework files."
 ---
 
 # The Admin tab

@@ -1,5 +1,6 @@
 ---
 uid: SRM_properties_Booking_Manager
+description: "Explore the different properties you can use for service definitions and other SRM objects when you use the Booking Manager standard app."
 ---
 
 # SRM properties for use with the Booking Manager app

@@ -1,5 +1,6 @@
 ---
 uid: Booking_Manager_Config_tab
+description: "Use the Booking Manager's Config tab to customize booking defaults, wizards, logging, lifecycle colors, SLA tracking, and configuration backups."
 ---
 
 # The Config tab
