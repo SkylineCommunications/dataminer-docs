@@ -1,5 +1,6 @@
 ---
 uid: Interacting_with_SRM_using_code
+description: "Interact with SRM using code to automate booking actions, find object references, and add script dependencies with the SRM Dev Pack."
 ---
 
 # Interacting with SRM using code

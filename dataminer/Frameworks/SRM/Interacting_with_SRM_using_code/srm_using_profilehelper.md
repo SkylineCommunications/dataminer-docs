@@ -1,5 +1,6 @@
 ---
 uid: srm_using_profilehelper
+description: "Use ProfileHelper in C# to manage Profile Manager parameters, definitions, and instances, perform bulk updates, and troubleshoot errors."
 keywords: ProfileManager, profile definitions, profile instances, profile parameters
 ---
 
