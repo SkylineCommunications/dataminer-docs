@@ -34,7 +34,7 @@ See [smartIpHeader](xref:Protocol.Type-communicationOptions#smartipheader).
 
 For each smart-serial server port of type TCP, elements can have a list of IP addresses configured from which they will accept incoming messages and to which they will forward messages.<!-- RN 23592, RN 23673, RN 23694, RN 23739 -->
 
-From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46784 -->, when multiple elements listen on the same TCP server port and explicitly list the same client's IP address, all those elements receive data from that client. Only one element can respond to the client. Elements that do not explicitly list the client's IP address do not receive its data. In earlier versions, only one of the elements received the data. This behavior allows multiple elements to receive the same data without responding.
+From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46784 -->, when multiple elements listen on the same TCP server port and explicitly list the same client's IP address, all those elements receive data from that client. Only one element can respond to the client. Other elements that listen to the same server port but do not explicitly list the client's IP address do not receive its data. In earlier versions, only one of the elements received the data. This behavior allows multiple elements to receive the same data without responding.
 
 - When, for a particular smart-serial server port, an element has a list of allowed IP addresses configured, it will
   - accept messages only from those IP addresses, and
