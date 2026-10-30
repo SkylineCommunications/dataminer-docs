@@ -35,15 +35,23 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
-
-### Fixes
-
-#### SLNet: Array index errors when retrieving alarm filters or redundancy group information [ID 46607]
+#### DataMiner upgrade: Improved performance of the ValidateConnectors prerequisite [ID 46743]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
-SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filters or redundancy group information if an SLXML query returned an array with unexpected dimensions.
+The `ValidateConnectors` upgrade prerequisite checks for installed connector versions that are incompatible with the target DataMiner version. Previously, it recursively scanned the entire `C:\Skyline DataMiner\Protocols` folder, which could slow down upgrade prerequisite checks on DataMiner Agents with many connectors or large connector version folders.
+
+From now on, it will only scan folders for connectors on the incompatibility list, and only at the level where *protocol.xml* is expected. This makes the check faster and less sensitive to unrelated content in the *Protocols* folder.
+
+The incompatible connector versions reported, the message shown, and the requirement to remove those versions before upgrading remain unchanged. No configuration is required.
+
+### Fixes
+
+#### SLNet: Array index errors when retrieving alarm filter, trend filter, or redundancy group information [ID 46607]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filter, trend filter, or redundancy group information if an SLXML query returned an array with unexpected dimensions.
 
 SLNet will now retry failed redundancy group queries once after a short delay. Array index errors will also be logged in *SLNet.txt* with the variable name, the exact array index, and the complete query response array in compressed form to help diagnose the issue.
 

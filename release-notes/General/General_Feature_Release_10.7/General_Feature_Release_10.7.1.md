@@ -85,6 +85,52 @@ From now on, an upgrade action will automatically add a `Set-Cookie` header to `
 
 The upgrade action will leave the configuration unchanged if SAML is disabled or the required cookie header is already configured. Existing custom headers, including `Set-Cookie` headers for other cookies, will be preserved.
 
+#### DataMiner upgrade: Improved performance of the ValidateConnectors prerequisite [ID 46743]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The `ValidateConnectors` upgrade prerequisite checks for installed connector versions that are incompatible with the target DataMiner version. Previously, it recursively scanned the entire `C:\Skyline DataMiner\Protocols` folder, which could slow down upgrade prerequisite checks on DataMiner Agents with many connectors or large connector version folders.
+
+From now on, it will only scan folders for connectors on the incompatibility list, and only at the level where *protocol.xml* is expected. This makes the check faster and less sensitive to unrelated content in the *Protocols* folder.
+
+The incompatible connector versions reported, the message shown, and the requirement to remove those versions before upgrading remain unchanged. No configuration is required.
+
+#### Automation: Progress notifications for non-interactive scripts [ID 46778]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+From now on, clients can add the `PROGRESS` execution option to an `ExecuteScriptMessage` to receive progress notifications for non-interactive automation scripts. This extends the progress tracking already available for interactive scripts.
+
+This is especially useful when scripts are executed asynchronously using the `DEFER:TRUE` option, as clients can track when a script starts and finishes.
+
+Before sending the `ExecuteScriptMessage`, the client must subscribe to `ScriptProgressEventMessage` events. Use the returned `ScriptID` and the DataMiner ID to identify events associated with that script execution.
+
+For example:
+
+```csharp
+var executeMessage = new ExecuteScriptMessage("MyScript")
+{
+    DataMinerID = dmaId,
+    Options = new SA(new[] { "DEFER:TRUE", "PROGRESS" })
+};
+
+var response = (ExecuteScriptResponseMessage)connection.HandleSingleResponseMessage(executeMessage);
+var scriptId = response.ScriptID;
+```
+
+For scripts executed with `PROGRESS`, SLAutomation can send the following `ScriptProgressEventMessage` notifications:
+
+- `Started`: The script has started executing.
+- `Completed`: The script has finished executing. The notification includes the execution result.
+- `RunStatus` or `DelayInfo`: Additional execution status information, for example, when the script is waiting for locked resources or an error occurs.
+- `Progress`: Progress explicitly communicated by the script.
+
+The existing behavior for interactive scripts remains unchanged. Scripts executed with the `INTERACTIVE` option can additionally receive the following notifications:
+
+- `InteractiveUI`: The script is paused and requires input from the client.
+- `Detached`: The client has detached from the script.
+- `Hidden`: The client interface should be hidden.
+
 #### DataMiner upgrade: Prerequisite check for Communication Gateway DxM version [ID 46798]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
@@ -100,6 +146,12 @@ To resolve these issues, upgrade Communication Gateway DxM to version 5.3.5 or h
 
 The additional connector check only detects these known connectors. Make sure no other connectors in use depend on a version of the NuGet package older than 6.0.0.
 
+#### SLScripting can no longer run as a service [ID 46869]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
+
 #### DataMiner upgrade: Web-only upgrades to 10.7.x or later require at least 10.6.0 [ID 46910]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
@@ -110,27 +162,27 @@ For example, before installing a 10.7.x web-only upgrade on a DataMiner Agent ru
 
 This validation does not affect full DataMiner upgrades.
 
+#### Scheduler: Removed unnecessary DMAObjects dependency from SLNetTypes [ID 46914]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+The `ScheduledTaskDetails` class, which is used only to migrate scheduled tasks from local storage to database storage, has been moved from SLNetTypes to SLNet.
+
+As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.Config.dll*.
+
 ### Fixes
 
 #### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
 
-<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] / 10.7.0 [CU0] - FR 10.7.1 -->
+<!-- MR 10.7.0 [CU0] - FR 10.7.1 -->
 
 Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
 
-#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
-
-<!-- MR 10.7.0 - FR 10.7.1 -->
-
-When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
-
-From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
-
-#### SLNet: Array index errors when retrieving alarm filters or redundancy group information [ID 46607]
+#### SLNet: Array index errors when retrieving alarm filter, trend filter, or redundancy group information [ID 46607]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
-SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filters or redundancy group information if an SLXML query returned an array with unexpected dimensions.
+SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filter, trend filter, or redundancy group information if an SLXML query returned an array with unexpected dimensions.
 
 SLNet will now retry failed redundancy group queries once after a short delay. Array index errors will also be logged in *SLNet.txt* with the variable name, the exact array index, and the complete query response array in compressed form to help diagnose the issue.
 
