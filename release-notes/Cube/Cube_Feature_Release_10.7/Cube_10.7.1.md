@@ -50,3 +50,11 @@ Both permissions are enabled by the limited administrator and full administrator
 When state icons were disabled in the SLAnalytics configuration, DataMiner Cube would still subscribe to state icon changes for every trended parameter displayed on an element card. For partial or filtered tables, it renewed these subscriptions whenever a row was added or removed. Each subscription caused an exception to be logged on the DataMiner Agent to which DataMiner Cube was connected.
 
 From now on, DataMiner Cube will only subscribe to state icon changes when the state icons feature is enabled.
+
+#### Memory leaks in custom text block controls and workspace settings [ID 46871]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+DataMiner Cube could retain certain custom text block controls and workspace setting views in memory after they were no longer in use, causing memory leaks.
+
+From now on, Cube will stop timers and remove event subscriptions when these controls are unloaded, hidden, or their content changes. The workspace settings suggestion timer will only run while suggestions are being processed.
