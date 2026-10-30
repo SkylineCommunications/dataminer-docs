@@ -269,6 +269,8 @@ It is possible for the same spectrum session to be shared, for instance when mul
 
 When session sharing is enabled, all cards showing the same spectrum session will show the same trace using the same settings. The fact that a shared session is being used will be shown in the info pane. If a user changes a setting (e.g., frequency, bandwidth, etc.), this change will immediately be applied to all other cards showing that same session.
 
+From DataMiner 10.6.12/10.7.0 onwards<!--RN 46513-->, selecting or deselecting a measurement point in a shared session is immediately reflected in all other connected clients.
+
 From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46113-->, when you close a spectrum analyzer card using shared session mode, its configuration is automatically saved as a shared last-session preset. When another user opens the card, the same configuration will be loaded.
 
 From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46514-->, you can **push configuration changes to other users**. Before these versions, changes to the shared last-session preset were not immediately reflected in other clients. To push changes:
