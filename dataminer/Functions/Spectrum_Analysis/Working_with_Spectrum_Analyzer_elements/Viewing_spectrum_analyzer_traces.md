@@ -272,11 +272,13 @@ From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46514-->, you ca
 
 1. Select *Push to other clients*.
 
-   Other clients will see a banner where they can apply or ignore the changes.
+   By default, other clients will then see a banner where they can apply or ignore the changes.
 
    ![Spectrum analyzer card with a banner reporting that another session changed the analyzer, and Reload preset and Ignore options](~/dataminer/images/Sharing_spectrum_session.png)<br>*Spectrum Analyzer card in DataMiner 10.6.12*
 
-   Closing the Spectrum card also triggers the banner. The *Spectrum card behavior upon last-session preset modification in shared mode* setting under *Settings* > *Card* controls how other clients handle pushed changes. For details, see [Card settings](xref:User_settings#card-settings).
+   Closing the Spectrum card also triggers the banner.
+
+   This behavior may be different depending on the *Spectrum card behavior upon last-session preset modification in shared mode* user setting, available under *Settings* > *Card*. For details, see [Card settings](xref:User_settings#card-settings).
 
 ### Enabling shared session mode
 
