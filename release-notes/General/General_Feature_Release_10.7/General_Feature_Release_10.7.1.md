@@ -146,6 +146,12 @@ To resolve these issues, upgrade Communication Gateway DxM to version 5.3.5 or h
 
 The additional connector check only detects these known connectors. Make sure no other connectors in use depend on a version of the NuGet package older than 6.0.0.
 
+#### SLScripting can no longer run as a service [ID 46869]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
+
 #### DataMiner upgrade: Web-only upgrades to 10.7.x or later require at least 10.6.0 [ID 46910]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->

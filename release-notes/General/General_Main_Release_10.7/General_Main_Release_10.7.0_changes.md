@@ -874,6 +874,12 @@ Only one element can still respond to the client. This enhancement is intended f
 
 If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
 
+#### SLScripting can no longer run as a service [ID 46869]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
