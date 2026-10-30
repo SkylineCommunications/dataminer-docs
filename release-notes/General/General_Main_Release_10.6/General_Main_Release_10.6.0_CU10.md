@@ -35,7 +35,15 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner upgrade: Improved performance of the ValidateConnectors prerequisite [ID 46743]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The `ValidateConnectors` upgrade prerequisite checks for installed connector versions that are incompatible with the target DataMiner version. Previously, it recursively scanned the entire `C:\Skyline DataMiner\Protocols` folder, which could slow down upgrade prerequisite checks on DataMiner Agents with many connectors or large connector version folders.
+
+From now on, it will only scan folders for connectors on the incompatibility list, and only at the level where *protocol.xml* is expected. This makes the check faster and less sensitive to unrelated content in the *Protocols* folder.
+
+The incompatible connector versions reported, the message shown, and the requirement to remove those versions before upgrading remain unchanged. No configuration is required.
 
 ### Fixes
 
