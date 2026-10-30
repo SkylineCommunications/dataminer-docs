@@ -1,5 +1,6 @@
 ---
 uid: SRM_launching_booking_wizard
+description: "Launch the standard Booking Wizard from a custom script with CreateNewBooking and set default service definition, timing, and resource values."
 ---
 
 # Launching the standard Booking Wizard from a custom script
