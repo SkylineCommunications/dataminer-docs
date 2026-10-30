@@ -59,9 +59,13 @@ To load a preset in DataMiner Cube:
 1. In the *Preset contents* section, select the checkboxes corresponding to the preset content you want to load.
 
    > [!NOTE]
-   > Depending on the content of the preset, some checkboxes may not be available.
+   >
+   > - Prior to DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12, some checkboxes may not be available, depending on the selected preset. From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46683-->, all preset content checkboxes remain enabled. Bold labels indicate which content is available in the selected preset.
+   > - Selecting or loading a private or public preset does not change your checkbox selections. Your selections are saved and restored when you reopen the Spectrum Analyzer. Last-session presets restore the session independently of the checkboxes used to load private and public presets.
 
 1. Click the *Load* button.
+
+From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46683-->, when you load a preset from Visual Overview, its configured loading flags are used instead of being combined with previously active flags.
 
 > [!NOTE]
 > When a reference trace has been loaded from a preset, it will be added in the list of traces in the info pane, with the corresponding trace color.
