@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Edge.Scripts.Script-id
+description: "Use the id attribute on a Script element to assign the unique identifier of an Edge script in a DataMiner protocol."
 ---
 
 # id attribute

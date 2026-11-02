@@ -1,5 +1,6 @@
 ---
 uid: Protocol.AllowDynamicParameterCreation
+description: "Use the AllowDynamicParameterCreation element in a DataMiner protocol to specify whether the protocol can be extended with dynamically created parameters."
 ---
 
 # AllowDynamicParameterCreation element

@@ -12,7 +12,7 @@ Constrains the values allowed for the numeric setting.
 
 ## Children
 
-|Name|Occurrences|Description
+|Name|Occurrences|Description|
 |--- |--- |--- |
 |***Sequence***|||
 |&nbsp;&nbsp;[Low](xref:Protocol.Settings.Setting.Number.Range.Low)|[0, 1]|Specifies the inclusive lower bound.|

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Edge.Scripts.Script.Arguments.Argument.SettingRef-field
+description: "Use the field attribute on a SettingRef element to select a specific field from the referenced setting for an Edge script argument."
 ---
 
 # field attribute

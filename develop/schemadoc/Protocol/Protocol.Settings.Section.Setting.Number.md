@@ -12,7 +12,7 @@ Specifies a numeric setting.
 
 ## Children
 
-|Name|Occurrences|Description
+|Name|Occurrences|Description|
 |--- |--- |--- |
 |***All***|||
 |&nbsp;&nbsp;[Range](xref:Protocol.Settings.Section.Setting.Number.Range)|[0, 1]|Constrains the values allowed for the numeric setting.|

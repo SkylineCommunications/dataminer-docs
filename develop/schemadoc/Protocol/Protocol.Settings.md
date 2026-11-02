@@ -12,7 +12,7 @@ Contains all settings defined in the protocol. These settings provide configurat
 
 ## Children
 
-|Name|Occurrences|Description
+|Name|Occurrences|Description|
 |--- |--- |--- |
 |***Choice***|||
 |&nbsp;&nbsp;[Setting](xref:Protocol.Settings.Setting)||Contains a protocol setting.|

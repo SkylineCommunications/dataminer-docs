@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Edge.Scripts.Script.Arguments.Argument-name
+description: "Use the name attribute on an Argument element to identify the input value that an Edge script retrieves when it runs."
 ---
 
 # name attribute

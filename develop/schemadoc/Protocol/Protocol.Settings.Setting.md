@@ -12,7 +12,7 @@ Contains a protocol setting.
 
 ## Children
 
-|Name|Occurrences|Description
+|Name|Occurrences|Description|
 |--- |--- |--- |
 |***Choice***|||
 |&nbsp;&nbsp;[Text](xref:Protocol.Settings.Setting.Text)||Specifies a free-form text setting.|

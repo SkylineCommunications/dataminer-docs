@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Edge.Scripts.Script.Arguments.Argument.SettingRef-id
+description: "Use the id attribute on a SettingRef element to identify the protocol setting whose value is provided as an Edge script argument."
 ---
 
 # id attribute

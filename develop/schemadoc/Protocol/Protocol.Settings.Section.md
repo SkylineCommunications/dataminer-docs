@@ -12,7 +12,7 @@ Groups related protocol settings under a section heading.
 
 ## Children
 
-|Name|Occurrences|Description
+|Name|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Setting](xref:Protocol.Settings.Section.Setting)|[1, *]|Contains a setting in this section.|
 

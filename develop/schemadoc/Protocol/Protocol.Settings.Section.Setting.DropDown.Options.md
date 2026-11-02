@@ -12,6 +12,6 @@ Contains the options available for the dropdown setting.
 
 ## Children
 
-|Name|Occurrences|Description
+|Name|Occurrences|Description|
 |--- |--- |--- |
 |&nbsp;&nbsp;[Option](xref:Protocol.Settings.Section.Setting.DropDown.Options.Option)|[1, *]|Defines an option that can be selected.|
