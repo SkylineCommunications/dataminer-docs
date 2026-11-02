@@ -14,6 +14,7 @@ These are the most frequently used components in a protocol:
 - <xref:LogicTriggers>
 - <xref:LogicActions>
 - <xref:LogicQActions>
+- <xref:ConnectorScripts>
 - <xref:LogicConditions>
 
 > [!NOTE]

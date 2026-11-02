@@ -1,5 +1,6 @@
 ---
 uid: DevelopingConnectorScriptsInVisualStudio
+description: "Learn how to create, configure, debug, test, and package a Python-based connector script for a DataMiner Edge Node in Visual Studio."
 ---
 
 # Developing connector scripts in Visual Studio

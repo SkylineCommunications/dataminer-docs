@@ -209,8 +209,11 @@ items:
           topicUid: LogicQActionsAutomationScriptExecution            
         - name: Examples
           topicUid: LogicQActionsExamples
-      - name: Connector Scripts
-        topicUid: DevelopingConnectorScriptsInVisualStudio
+      - name: Connector scripts
+        topicUid: ConnectorScripts
+        items:
+        - name: Developing connector scripts in Visual Studio
+          topicUid: DevelopingConnectorScriptsInVisualStudio
       - name: Conditions
         topicUid: LogicConditions
       - name: Reserved IDs
