@@ -80,7 +80,7 @@ The test fails if it detects different versions. If the information required for
 
 #### DataMiner Installer: Initial DataMiner configuration wizard has been redesigned [ID 45483]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
 
 The initial DataMiner configuration wizard has been redesigned to guide you through selecting a commercial model, configuring storage, and connecting to dataminer.services.
 
@@ -112,7 +112,7 @@ Unattended configuration remains available for subscription and perpetual-use li
 
 #### DataMiner Installer: Improved licensing registration and separate database TLS settings [ID 45881]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
 
 During interactive setup, licensing registration now uses licensing API v2 with a bearer token obtained through CloudGateway instead of an organization API key. You authenticate in your browser, after which the wizard obtains the token and completes registration. Token acquisition is retried for up to two minutes with increasing delays between attempts.
 
@@ -270,11 +270,11 @@ When multiple polling groups were executed concurrently, results from SNMP GET r
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
 
-#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+#### NATS cluster verification BPA could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
 
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
-On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+On systems where DataMiner BrokerGateway manages NATS, the `NATS cluster verification` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
 
 #### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
 

@@ -1,5 +1,6 @@
 ---
 uid: Deploying_and_Configuring_the_PA_Framework
+description: "Deploy and configure the PA framework by checking the prerequisites, installing the SRM and PA packages, and running the setup script."
 ---
 
 # Deploying and configuring the PA framework

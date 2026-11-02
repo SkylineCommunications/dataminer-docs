@@ -39,7 +39,19 @@ Both permissions are enabled by the limited administrator and full administrator
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Element migration and DELT export: Safeguards for element connections [ID 46857]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+Element connections cannot be imported. Previously, migrating an element used in element connections could cause those connections to stop working. Element connections are also not included in DELT export packages.
+
+From now on, DataMiner Cube will handle elements used in element connections as follows:
+
+- **Element migration**: These elements will no longer appear in the list of elements that can be migrated, preventing migration from breaking their element connections.
+- **DELT export**: These elements will display a warning icon indicating that their element connections will not be included in the exported `.dmimport` package. You can still export the elements, but you will need to manually configure their element connections again after importing the package.
+
+> [!NOTE]
+> If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
 
 ### Fixes
 
@@ -50,3 +62,11 @@ Both permissions are enabled by the limited administrator and full administrator
 When state icons were disabled in the SLAnalytics configuration, DataMiner Cube would still subscribe to state icon changes for every trended parameter displayed on an element card. For partial or filtered tables, it renewed these subscriptions whenever a row was added or removed. Each subscription caused an exception to be logged on the DataMiner Agent to which DataMiner Cube was connected.
 
 From now on, DataMiner Cube will only subscribe to state icon changes when the state icons feature is enabled.
+
+#### Memory leaks in custom text block controls and workspace settings [ID 46871]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+DataMiner Cube could retain certain custom text block controls and workspace setting views in memory after they were no longer in use, causing memory leaks.
+
+From now on, Cube will stop timers and remove event subscriptions when these controls are unloaded, hidden, or their content changes. The workspace settings suggestion timer will only run while suggestions are being processed.

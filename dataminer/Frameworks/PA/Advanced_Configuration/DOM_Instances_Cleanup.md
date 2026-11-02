@@ -1,5 +1,6 @@
 ---
 uid: DOM_Instances_Cleanup
+description: "Configure DOM instances cleanup for Process Automation by adjusting the default 30-day TTL. Unlimited TTL is not supported."
 ---
 
 # DOM instances cleanup
