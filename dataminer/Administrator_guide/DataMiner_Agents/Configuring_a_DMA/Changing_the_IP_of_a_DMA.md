@@ -13,13 +13,10 @@ The way you can change the IP address of a DMA depends on how your DataMiner Sys
 Several steps in the procedures below depend on which NATS setup is installed on the DMA. Check this in the *Windows Services* app before you start:
 
 - **BrokerGateway** (BrokerGateway-managed): the Windows services **nats-server** and **DataMiner BrokerGateway** are running. Follow the procedure in the "BrokerGateway" tab. See also [Migrating to BrokerGateway](xref:BrokerGateway_Migration#how-can-i-tell-the-difference-between-slnet-managed-nats-and-brokergateway-managed-nats).
-- **Legacy NATS** (SLNet-managed): The Windows services **NATS** and **NAS** are running. Follow the procedure in the "Legacy NATS" tab.
+- **Legacy NATS** (SLNet-managed): the Windows services **NATS** and **NAS** are running. Follow the procedure in the "Legacy NATS" tab.
 
 > [!NOTE]
 > After a migration to BrokerGateway, the legacy NAS and NATS services may still be present but stopped. Their presence alone does not mean that legacy NATS is in use. Likewise, the file `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` can also exist on DMAs that still use legacy NATS; its presence does not mean that BrokerGateway is in use.
-
-> [!IMPORTANT]
-> The NATS/BrokerGateway-related steps on this page only apply when **automatic NATS configuration** is enabled. If automatic NATS configuration is disabled (legacy *NATSForceManualConfig* or BrokerGateway manual config), do not run NATSRepair; update your manual NATS configuration instead. See [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config).
 
 ## Standalone DMA
 
@@ -71,6 +68,9 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
 1. Perform the following steps to update your BrokerGateway setup:
 
+   > [!IMPORTANT]
+   > Only follow these steps if automatic NATS configuration is enabled. If it is disabled, do not run NATSRepair; update your manual NATS configuration instead. See [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config).
+
    1. Open the *appsettings.runtime.json* file, located in the folder `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\`.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
@@ -85,7 +85,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
    1. Open the file *ClusterEndpoints.json*, located in the folder `C:\Skyline DataMiner\Configurations\`.
 
-   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+   1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
    1. Run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) to create new certificates using the new IP address.
 
@@ -112,7 +112,7 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
    If the certificate only contains hostnames or FQDNs, no new certificate is needed.
 
    > [!NOTE]
-   > On systems using BrokerGateway, make sure the certificate is valid for the new IP address, as BrokerGateway communication relies on TLS. See [Migrating to BrokerGateway](xref:BrokerGateway_Migration#it-requirements).
+   > Make sure the certificate is valid for the new IP address, as BrokerGateway communication relies on TLS. See [Migrating to BrokerGateway](xref:BrokerGateway_Migration#it-requirements).
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
@@ -164,6 +164,9 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
 
 1. Perform the following steps to update your NATS setup:
 
+   > [!IMPORTANT]
+   > Only follow these steps if automatic NATS configuration is enabled. If it is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)), do not reinstall NATS and NAS; update your manual NATS configuration instead.
+
    1. If the file *ClusterEndpoints.json* exists in the folder `C:\Skyline DataMiner\Configurations\`, open it, replace the old IP address with the new one wherever it occurs, and save the file.
 
       > [!NOTE]
@@ -212,9 +215,6 @@ For a standalone DMA, i.e., a DMA that is not combined with other DMAs in a clus
          ```
 
    If the certificate only contains hostnames or FQDNs, no new certificate is needed.
-
-   > [!NOTE]
-   > On systems using BrokerGateway, make sure the certificate is valid for the new IP address, as BrokerGateway communication relies on TLS. See [Migrating to BrokerGateway](xref:BrokerGateway_Migration#it-requirements).
 
 1. If your DataMiner Agent is connected to dataminer.services, restart all [DataMiner Extension Modules](xref:DataMinerExtensionModules).
 
@@ -277,6 +277,9 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. To update your BrokerGateway setup, perform the following steps on **all DMAs in the DMS**, including offline Failover DMAs:
 
+   > [!IMPORTANT]
+   > Only follow these steps if automatic NATS configuration is enabled. If it is disabled, do not run NATSRepair; update your manual NATS configuration instead. See [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config).
+
    1. Open the *appsettings.runtime.json* file, located in the folder `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\`.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
@@ -297,7 +300,7 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
    1. Open the file *ClusterEndpoints.json*, located in the folder `C:\Skyline DataMiner\Configurations\`.
 
-   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+   1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
    1. When the IP address has been replaced on all DMAs, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) on one DMA to create new certificates using the new IP address.
 
@@ -383,6 +386,9 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
 1. To update your NATS setup, perform the following steps on the DMA of which you have changed the IP address:
 
+   > [!IMPORTANT]
+   > Only follow these steps if automatic NATS configuration is enabled. If it is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)), do not reinstall NATS and NAS; update your manual NATS configuration instead.
+
    1. If the file *ClusterEndpoints.json* exists in the folder `C:\Skyline DataMiner\Configurations\`, open it, replace the old IP address with the new one wherever it occurs, and save the file.
 
       > [!NOTE]
@@ -398,7 +404,9 @@ For a single DMA within a cluster that either uses [Storage as a Service (STaaS)
 
       1. Press U to confirm that you want to uninstall NAS and NATS.
 
-      1. Press Enter twice, enter NAS, and press Y. (This will uninstall both NATS and NAS)
+      1. Press Enter twice, enter NAS, and press Y.
+
+         This will uninstall both NATS and NAS.
 
    1. Install NAS and NATS again:
 
@@ -528,6 +536,9 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. To update your BrokerGateway setup, perform the following steps on **all DMAs in the DMS**, including the offline Failover DMA:
 
+   > [!IMPORTANT]
+   > Only follow these steps if automatic NATS configuration is enabled. If it is disabled, do not run NATSRepair; update your manual NATS configuration instead. See [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config).
+
    1. Open the *appsettings.runtime.json* file, located in the folder `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\`.
 
    1. Replace any references to the old IP address with the new IP address, and save the file.
@@ -548,7 +559,7 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
    1. Open the file *ClusterEndpoints.json*, located in the folder `C:\Skyline DataMiner\Configurations\`.
 
-   1. Locate the old IP address in this file, replace it with the newly configured one if and wherever necessary, and save the file.
+   1. Locate the old IP address in this file, replace it with the newly configured one wherever necessary, and save the file.
 
    1. When the IP address has been replaced on all DMAs, run [NATSRepair](xref:BrokerGateway_Migration#natsrepairexe) on one DMA to create new certificates using the new IP address.
 
@@ -655,6 +666,9 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. To update your NATS setup, perform the following steps on the DMA of which you have changed the IP address:
 
+   > [!IMPORTANT]
+   > Only follow these steps if automatic NATS configuration is enabled. If it is disabled (with the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config)), do not reinstall NATS and NAS; update your manual NATS configuration instead.
+
    1. If the file *ClusterEndpoints.json* exists in the folder `C:\Skyline DataMiner\Configurations\`, open it, replace the old IP address with the new one wherever it occurs, and save the file.
 
       > [!NOTE]
@@ -718,8 +732,6 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
 
 1. In case the Failover status is not green and there are heartbeat errors, stop DataMiner, and double-check the DMS.xml files of both DMAs to make sure all references to the old IP address have been correctly replaced.
 
-1. If you changed the Failover type to *Manual* earlier, set it back to *Automatic*.
-
 1. Send a *NATSCustodianResetNatsRequest* message using SLNetClientTest tool:
 
    > [!IMPORTANT]
@@ -743,6 +755,8 @@ For a Failover DMA within a cluster that either uses [Storage as a Service (STaa
    1. On all DMAs in the cluster, open `C:\Skyline DataMiner\SLCloud.xml` and check if the previous IP address has been replaced by the new IP address.
 
       Note that it can take up to an hour before this happens. If the old IP address is still visible after that time, check the file `C:\Skyline DataMiner\Logging\SLNATSCustodian.txt` on the DMA with the new IP address. If it reports that the reset was canceled because one or more DMAs are not running, fix those DMAs and send the message again. Otherwise, [contact Support](xref:Contacting_tech_support).
+
+1. If you changed the Failover type to *Manual* earlier, set it back to *Automatic*.
 
 ***
 
