@@ -8,7 +8,7 @@ Specifies the name under which the argument value is made available to the scrip
 
 ## Content Type
 
-[TypeNonEmptyString](xref:TypeNonEmptyString)
+[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)
 
 ## Parent
 

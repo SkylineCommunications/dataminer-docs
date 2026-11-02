@@ -29,5 +29,5 @@ Contains a setting in this section.
 
 |Name|Type|Required|Description
 |--- |--- |--- |--- |
-|[id](xref:Protocol.Settings.Section.Setting-id)|[TypeNonEmptyString](xref:TypeNonEmptyString)|Yes|Specifies the unique ID of the setting.|
-|[displayName](xref:Protocol.Settings.Section.Setting-displayName)|[TypeNonEmptyString](xref:TypeNonEmptyString)|Yes|Specifies the name shown to the user for this setting.|
+|[id](xref:Protocol.Settings.Section.Setting-id)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the unique ID of the setting.|
+|[displayName](xref:Protocol.Settings.Section.Setting-displayName)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the name shown to the user for this setting.|

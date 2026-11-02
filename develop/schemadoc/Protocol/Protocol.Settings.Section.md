@@ -20,4 +20,4 @@ Groups related protocol settings under a section heading.
 
 |Name|Type|Required|Description
 |--- |--- |--- |--- |
-|[displayName](xref:Protocol.Settings.Section-displayName)|[TypeNonEmptyString](xref:TypeNonEmptyString)|Yes|Specifies the section name shown to the user.|
+|[displayName](xref:Protocol.Settings.Section-displayName)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the section name shown to the user.|

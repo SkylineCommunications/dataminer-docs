@@ -8,7 +8,7 @@ Specifies the interval at which the script has to be executed, expressed as an I
 
 ## Content Type
 
-[TypePositiveDuration](xref:TypePositiveDuration)
+[TypePositiveDuration](xref:Protocol-TypePositiveDuration)
 
 ## Parent
 

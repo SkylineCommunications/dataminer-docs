@@ -8,7 +8,7 @@ Specifies the GUID specified in the manifest.json of the dmscript. This links th
 
 ## Content Type
 
-[TypeGuid](xref:TypeGuid)
+[TypeGuid](xref:Protocol-TypeGuid)
 
 ## Parent
 

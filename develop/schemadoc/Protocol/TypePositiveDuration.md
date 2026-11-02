@@ -1,10 +1,10 @@
 ---
-uid: TypePositiveDurationProtocol
+uid: Protocol-TypePositiveDuration
 ---
 
 # TypePositiveDuration simple type
 
-
+Represents a positive duration.
 
 ## Content Type
 

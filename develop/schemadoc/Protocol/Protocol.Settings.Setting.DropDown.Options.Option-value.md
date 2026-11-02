@@ -8,7 +8,7 @@ Specifies the value stored when this option is selected.
 
 ## Content Type
 
-[TypeNonEmptyString](xref:TypeNonEmptyString)
+[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)
 
 ## Parent
 

@@ -20,4 +20,4 @@ Specifies an input argument that will be passed to the script when it is started
 
 |Name|Type|Required|Description
 |--- |--- |--- |--- |
-|[name](xref:Protocol.Edge.Scripts.Script.Arguments.Argument-name)|[TypeNonEmptyString](xref:TypeNonEmptyString)|Yes|Specifies the name under which the argument value is made available to the script. The script can use this name to retrieve the value.|
+|[name](xref:Protocol.Edge.Scripts.Script.Arguments.Argument-name)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the name under which the argument value is made available to the script. The script can use this name to retrieve the value.|

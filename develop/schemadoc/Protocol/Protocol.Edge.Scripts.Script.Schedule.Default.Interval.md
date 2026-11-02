@@ -14,4 +14,4 @@ Specifies that the script has to be executed repeatedly, started at a fixed inte
 
 |Name|Type|Required|Description
 |--- |--- |--- |--- |
-|[period](xref:Protocol.Edge.Scripts.Script.Schedule.Default.Interval-period)|[TypePositiveDuration](xref:TypePositiveDuration)|Yes|Specifies the interval at which the script has to be executed, expressed as an ISO 8601 duration (e.g. "PT5M" for every 5 minutes).|
+|[period](xref:Protocol.Edge.Scripts.Script.Schedule.Default.Interval-period)|[TypePositiveDuration](xref:Protocol-TypePositiveDuration)|Yes|Specifies the interval at which the script has to be executed, expressed as an ISO 8601 duration (e.g. "PT5M" for every 5 minutes).|

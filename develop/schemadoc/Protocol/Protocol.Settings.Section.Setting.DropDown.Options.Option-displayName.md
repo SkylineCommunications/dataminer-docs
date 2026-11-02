@@ -8,7 +8,7 @@ Specifies the name shown to the user for this option.
 
 ## Content Type
 
-[TypeNonEmptyString](xref:TypeNonEmptyString)
+[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)
 
 ## Parent
 

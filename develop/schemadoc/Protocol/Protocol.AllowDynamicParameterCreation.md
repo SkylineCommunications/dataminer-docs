@@ -8,7 +8,7 @@ Specifies whether the connector can be extended with dynamically created (auto-g
 
 ## Type
 
-[EnumTrueFalse](xref:EnumTrueFalse)
+[EnumTrueFalse](xref:Protocol-EnumTrueFalse)
 
 ## Parent
 

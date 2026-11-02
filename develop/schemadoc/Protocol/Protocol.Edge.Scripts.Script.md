@@ -24,4 +24,4 @@ Specifies a script related to Edge functionality.
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Edge.Scripts.Script-id)|string|Yes|Specifies the unique ID for this script.|
 |[displayName](xref:Protocol.Edge.Scripts.Script-displayName)|string|Yes|Specifies name of the script that will be shown to the user.|
-|[guid](xref:Protocol.Edge.Scripts.Script-guid)|[TypeGuid](xref:TypeGuid)|Yes|Specifies the GUID specified in the manifest.json of the dmscript. This links the script tag with the correct dmscript.|
+|[guid](xref:Protocol.Edge.Scripts.Script-guid)|[TypeGuid](xref:Protocol-TypeGuid)|Yes|Specifies the GUID specified in the manifest.json of the dmscript. This links the script tag with the correct dmscript.|

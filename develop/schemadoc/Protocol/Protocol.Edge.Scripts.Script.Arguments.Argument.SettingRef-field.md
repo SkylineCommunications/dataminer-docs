@@ -8,7 +8,7 @@ Specifies a certain field that has to be selected out of the referenced setting.
 
 ## Content Type
 
-[TypeNonEmptyString](xref:TypeNonEmptyString)
+[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)
 
 ## Parent
 

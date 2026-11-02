@@ -8,7 +8,7 @@ Specifies the ID of the setting (as specified in /Protocol/Settings/Setting@id) 
 
 ## Content Type
 
-[TypeNonEmptyString](xref:TypeNonEmptyString)
+[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)
 
 ## Parent
 

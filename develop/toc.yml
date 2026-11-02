@@ -3611,9 +3611,15 @@ items:
         - name: Section
           topicUid: Protocol.Settings.Section
           items: 
+          - name: '@displayName'
+            topicUid: Protocol.Settings.Section-displayName
           - name: Setting
             topicUid: Protocol.Settings.Section.Setting
             items: 
+            - name: '@displayName'
+              topicUid: Protocol.Settings.Section.Setting-displayName
+            - name: '@id'
+              topicUid: Protocol.Settings.Section.Setting-id
             - name: DropDown
               topicUid: Protocol.Settings.Section.Setting.DropDown
               items: 
@@ -3656,6 +3662,10 @@ items:
         - name: Setting
           topicUid: Protocol.Settings.Setting
           items: 
+          - name: '@displayName'
+            topicUid: Protocol.Settings.Setting-displayName
+          - name: '@id'
+            topicUid: Protocol.Settings.Setting-id
           - name: DropDown
             topicUid: Protocol.Settings.Setting.DropDown
             items: 
@@ -4209,6 +4219,8 @@ items:
         topicUid: Protocol-TypeDllImport
       - name: TypeEmptyString
         topicUid: Protocol-TypeEmptyString
+      - name: TypeGuid
+        topicUid: Protocol-TypeGuid
       - name: TypeGroupParamId
         topicUid: Protocol-TypeGroupParamId
       - name: TypeNonEmptyString
@@ -4229,6 +4241,8 @@ items:
         topicUid: Protocol-TypePortRetryCount
       - name: TypePortSlowPoll
         topicUid: Protocol-TypePortSlowPoll
+      - name: TypePositiveDuration
+        topicUid: Protocol-TypePositiveDuration
       - name: TypeProtocolVersion
         topicUid: Protocol-TypeProtocolVersion
       - name: TypeQActionOptions
