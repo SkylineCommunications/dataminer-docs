@@ -35,6 +35,14 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### DataMiner upgrade: Upgrade action to configure SAML authentication redirects [ID 46589]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+From now on, an upgrade action will automatically add a `Set-Cookie` header to `WebPages/web.config` on systems with SAML authentication enabled. This cookie configures web authentication to use redirects instead of an embedded iframe, ensuring compatibility with SAML providers that do not allow their sign-in pages to be displayed in an iframe.
+
+The upgrade action will leave the configuration unchanged if SAML is disabled or the required cookie header is already configured. Existing custom headers, including `Set-Cookie` headers for other cookies, will be preserved.
+
 #### DataMiner upgrade: Improved performance of the ValidateConnectors prerequisite [ID 46743]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
