@@ -5,10 +5,47 @@ description: "Set up HTTPS on a DMA by installing an SSL/TLS certificate, config
 
 # Setting up HTTPS on a DMA
 
-To securely host your DataMiner Agent, we recommend that you make sure HTTPS connections are required. To do so, you first have to install an SSL/TLS certificate and set up an HTTPS binding. Using certificates issued by a trusted Certificate Authority (CA) is recommended. Optionally, specify the auto-detection settings for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g., by a firewall).
+To securely host your DataMiner Agent, we recommend ensuring that HTTPS connections are required. To do so:
+
+1. Make sure the SSL/TLS certificate meets the [requirements](#certificate-requirements).
+1. [Install an SSL/TLS certificate and set up an HTTPS binding](#configuring-the-https-binding-in-iis).
+1. [Configure DataMiner to use HTTPS](#configuring-https-in-dataminer).
+1. Optionally, [set up HTTP to HTTPS redirection](#configuring-http-to-https-redirection).
+1. Optionally, [specify the auto-detection settings](#specifying-auto-detection-information-for-an-inter-dma-https-connection) for DataMiner to avoid connection issues when traffic between the DataMiner nodes is filtered (e.g., by a firewall).
+
+If you encounter any issues, refer to the [list of common issues](#common-issues-after-configuring-https).
 
 > [!TIP]
 > See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)
+
+## Certificate requirements
+
+### Subject Alternative Name
+
+Required:
+
+- **Primary IP**
+- **FQDN**: For example, `dataminer01.domain.net`.
+- **Virtual IP**: Only if [Failover with virtual IP](xref:Failover_configuration_in_Cube) is used.
+- **Shared hostname**: Only if [Failover with hostnames](xref:Failover_configuration_in_Cube) is used.
+
+Optional:
+
+- **localhost and 127.0.0.1**: While this is not strictly necessary, it can be useful.
+- **Acquisition IP**: If clients are expected to connect to DataMiner using this IP address.
+- **Hostname in short format**: Only if this is a valid DNS within your environment. For example, `dataminer01`.
+
+### Wildcard certificates
+
+Wildcards can be used (e.g., `*.domain.net`) to reuse the same certificate on multiple DataMiner Agents, but this only covers the FQDNs. If the certificate needs to be valid for IP addresses, the certificate will need to include the IP addresses of all the Agents (primary, acquisition, virtual IP).
+
+That means that if the certificate needs to be valid for 3 Failover pairs (each with a primary and acquisition IP), there will be a total of 18 IP addresses in the certificate (i.e., 3 pairs * 2 Agents per pair * 3 IP addresses per Agent).
+
+### Other requirements
+
+There are no further specific requirements for the certificate. We recommend using an industry-standard key length and encryption algorithm.
+
+Using certificates issued by a trusted Certificate Authority (CA) is recommended.
 
 ## Configuring the HTTPS binding in IIS
 
