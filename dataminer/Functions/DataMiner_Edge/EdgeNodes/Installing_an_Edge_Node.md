@@ -22,7 +22,7 @@ We recommend connecting through dataminer.services. Only use a direct connection
 
 Make sure the following requirements are met:
 
-- DataMiner version 10.6.11 or higher.
+- DataMiner version 10.6.11/10.7.0 or higher.
 
 - The latest version of the [EdgeManager DxM](xref:Installing_EdgeManager_DxM).
 
