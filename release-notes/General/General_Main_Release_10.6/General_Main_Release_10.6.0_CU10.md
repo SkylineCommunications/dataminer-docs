@@ -35,6 +35,50 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### DataMiner Installer: Initial DataMiner configuration wizard has been redesigned [ID 45483]
+
+<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
+
+The initial DataMiner configuration wizard has been redesigned to guide you through selecting a commercial model, configuring storage, and connecting to dataminer.services.
+
+You can now follow this setup flow:
+
+1. Select a commercial model: Community Edition, usage-based services, or a perpetual-use license with a supplied DataMiner ID.
+
+   Community Edition requires acceptance of its terms.
+
+1. Choose Storage as a Service (STaaS), locally hosted storage, or externally hosted storage.
+
+1. Connect to dataminer.services when required.
+
+   The wizard will open a browser where you can sign in or create an account. Connection is required for Community Edition, usage-based services, and STaaS. For perpetual-use licenses with self-hosted storage, cloud registration is optional.
+
+1. Complete the applicable configuration details and review the setup.
+
+   Only the pages relevant to your selected configuration will be shown.
+
+1. Apply the configuration.
+
+   The wizard will report progress and stop if a configuration step fails.
+
+The cloud registration page provides options to reopen the sign-in page, retry registration, or refresh registration details.
+
+For perpetual-use licensing, you can supply an existing license file or generate a license request. License requests can now be generated without first starting and stopping DataMiner. Missing required configuration files are initialized automatically, preventing setup failures on fresh installations.
+
+Unattended configuration remains available for subscription and perpetual-use licensing. Passing a configuration file path containing spaces from the installer is now also handled correctly.
+
+#### DataMiner Installer: Improved licensing registration and separate database TLS settings [ID 45881]
+
+<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
+
+During interactive setup, licensing registration now uses licensing API v2 with a bearer token obtained through CloudGateway instead of an organization API key. You authenticate in your browser, after which the wizard obtains the token and completes registration. Token acquisition is retried for up to two minutes with increasing delays between attempts.
+
+After successful registration, DataMiner restarts automatically and its startup is validated. The wizard no longer asks for an organization API key, system URL, administrator email address, or STaaS region.
+
+Cloud registration now uses a complete session URL provided by CloudGateway, with improved session tracking and browser authentication. The sign-in screen now displays the DataMiner logo instead of a globe icon.
+
+For externally hosted databases, separate TLS checkboxes now allow you to enable TLS independently for Cassandra and OpenSearch. Previously, both databases shared the same TLS setting. The corresponding properties are `CassandraTlsEnabled` and `OpenSearchTlsEnabled`.
+
 #### DataMiner upgrade: Upgrade action to configure SAML authentication redirects [ID 46589]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
