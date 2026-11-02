@@ -79,7 +79,7 @@ Support for the [`postPonePortInitialisation`](xref:Protocol.Type-communicationO
 
 #### DataMiner upgrade: Upgrade action to configure SAML authentication redirects [ID 46589]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
 From now on, an upgrade action will automatically add a `Set-Cookie` header to `WebPages/web.config` on systems with SAML authentication enabled. This cookie configures web authentication to use redirects instead of an embedded iframe, ensuring compatibility with SAML providers that do not allow their sign-in pages to be displayed in an iframe.
 
