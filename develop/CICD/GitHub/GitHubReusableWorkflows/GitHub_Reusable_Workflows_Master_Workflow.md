@@ -1,6 +1,7 @@
 ---
 uid: github_reusable_workflows_master_workflow
 keywords: GitHub, workflow, master
+description: Learn how the Master Workflow builds, tests, and publishes DataMiner packages, including automatic Catalog publication notifications.
 ---
 
 # Master Workflow
@@ -164,6 +165,8 @@ This job only runs during a release cycle (tag) and when DataMiner packages (`.d
 1. Generating an SBOM (Software Bill of Materials) for each package.
 1. Extracting release notes from the GitHub release (if available) or falling back to the commit message.
 1. Publishing the packages to the [DataMiner Catalog](https://catalog.dataminer.services/).
+
+For repositories in the *SkylineCommunications* or *SkylineCommunicationsCore* organization with OIDC enabled, the job then notifies DataMiner Dependabot about each published Catalog item. It reads the IDs from `manifest.yml` inside the restored `*.CatalogInformation.zip` package artifacts, including any `override-catalog-identifiers` mappings already applied during packaging. The workflow retrieves the webhook signing secret from the Skyline-managed Azure Key Vault, so you do not need to configure additional repository secrets. Repeated deliveries from the same workflow run are deduplicated. Notification failures appear as warnings in the workflow summary and do not fail a successful publication. Repositories outside these organizations do not send these notifications.
 
 ## CI job details
 
