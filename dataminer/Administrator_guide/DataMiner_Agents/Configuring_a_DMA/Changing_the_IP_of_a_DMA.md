@@ -12,8 +12,8 @@ The way you can change the IP address of a DMA depends on how your DataMiner Sys
 
 Several steps in the procedures below depend on which NATS setup is installed on the DMA. Check this in the *Windows Services* app before you start:
 
-- **BrokerGateway** (BrokerGateway-managed): the Windows services **nats-server** and **DataMiner BrokerGateway** are running. Follow the procedure in the "BrokerGateway" tab. See also [Migrating to BrokerGateway](xref:BrokerGateway_Migration#how-can-i-tell-the-difference-between-slnet-managed-nats-and-brokergateway-managed-nats).
-- **Legacy NATS** (SLNet-managed): the Windows services **NATS** and **NAS** are running. Follow the procedure in the "Legacy NATS" tab.
+- **BrokerGateway** (BrokerGateway-managed): The Windows services **nats-server** and **DataMiner BrokerGateway** are running. Follow the procedure in the "BrokerGateway" tab. See also [Migrating to BrokerGateway](xref:BrokerGateway_Migration#how-can-i-tell-the-difference-between-slnet-managed-nats-and-brokergateway-managed-nats).
+- **Legacy NATS** (SLNet-managed): The Windows services **NATS** and **NAS** are running. Follow the procedure in the "Legacy NATS" tab.
 
 > [!NOTE]
 > After a migration to BrokerGateway, the legacy NAS and NATS services may still be present but stopped. Their presence alone does not mean that legacy NATS is in use. Likewise, the file `C:\Skyline DataMiner\Configurations\ClusterEndpoints.json` can also exist on DMAs that still use legacy NATS; its presence does not mean that BrokerGateway is in use.
