@@ -232,7 +232,7 @@ When recommended by Skyline, the migration can be run manually:
 
 ### Updating the Data Aggregator configuration
 
-The following is only relevant when Data Aggregator is in active use.
+The following is only relevant when Data Aggregator is in active use and if the Data-aggregator configuration uses a [Multi-DMS connection](xref:Data_Aggregator_settings#multi-dms-connection).
 [Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be manually updated by following the guide at [Data Aggregator Settings - DMS with BrokerGateway](xref:Data_Aggregator_settings#dms-with-brokergateway).
 
 > [!NOTE]
