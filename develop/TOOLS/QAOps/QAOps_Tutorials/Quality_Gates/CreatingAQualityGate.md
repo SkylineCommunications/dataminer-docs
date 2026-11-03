@@ -11,15 +11,15 @@ Expected duration: 10 minutes.
 
 ## Prerequisites
 
-- Access to [QAOps Staging Quality Gates](https://qaopsstaging-skyline.on.dataminer.services/public/qaops-quality-gates/index.html), with permission to create gates.
+- Access to [QAOps Sandbox Quality Gates](https://qaops-sandbox.skyline.be/public/qaops-quality-gates/index.html), with permission to create gates.
 
 - A basic understanding of [QAOps quality gates](xref:QAOps_Quality_Gates).
 
-Use staging throughout this tutorial. Do not copy production configuration IDs or tokens into the exercise.
+Use sandbox throughout this tutorial. Do not copy configuration IDs or tokens from production or staging into the exercise. The screenshots were captured on staging; create your own gate in sandbox.
 
 ## Step 1: Create the gate
 
-1. Open the staging Quality Gates app.
+1. Open the sandbox Quality Gates app.
 
 1. Click *Create gate*.
 

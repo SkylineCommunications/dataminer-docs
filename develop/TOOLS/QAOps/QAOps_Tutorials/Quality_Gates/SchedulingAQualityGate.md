@@ -14,7 +14,7 @@ Expected duration: 15 minutes.
 
 ## Prerequisites
 
-- A gate on [QAOps Staging](https://qaopsstaging-skyline.on.dataminer.services/public/qaops-quality-gates/index.html) with access to its *Automation* settings.
+- A gate on [QAOps Sandbox](https://qaops-sandbox.skyline.be/public/qaops-quality-gates/index.html) with access to its *Automation* settings.
 
 - A notification destination you are authorized to use.
 

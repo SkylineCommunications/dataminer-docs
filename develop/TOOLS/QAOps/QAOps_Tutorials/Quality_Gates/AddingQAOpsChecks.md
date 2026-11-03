@@ -11,11 +11,11 @@ Expected duration: 10 minutes, excluding the duration of a new test run.
 
 ## Prerequisites
 
-- A quality gate on [QAOps Staging](https://qaopsstaging-skyline.on.dataminer.services/public/qaops-quality-gates/index.html) that you can edit.
+- A quality gate on [QAOps Sandbox](https://qaops-sandbox.skyline.be/public/qaops-quality-gates/index.html) that you can edit.
 
-- An existing staging [configuration](xref:QAOps_Configuration) with an allowed [test suite](xref:QAOps_Test_Suite).
+- An existing sandbox [configuration](xref:QAOps_Configuration) with an allowed [test suite](xref:QAOps_Test_Suite).
 
-The screenshots use the staging configuration *Run-Scoped RC* and suite *Run-Scoped*. Select the pair appropriate for your own tests; available names and IDs can differ.
+The screenshots use the staging configuration *Run-Scoped RC* and suite *Run-Scoped*. Select the pair appropriate for your own sandbox tests; available names and IDs can differ.
 
 ## Step 1: Add a QAOps check
 
@@ -49,7 +49,7 @@ The screenshots use the staging configuration *Run-Scoped RC* and suite *Run-Sco
 
 1. Follow the available result link to inspect the underlying test results.
 
-   If no link is available, open the QAOps User app's [Results page](xref:QAOps_Main_UI#qaops-user---results) on staging and select the same configuration and suite. A newer failing run will not be replaced by an older passing result. Outdated or incomplete evidence also needs attention.
+   If no link is available, open the QAOps User app's [Results page](xref:QAOps_Main_UI#qaops-user---results) on sandbox and select the same configuration and suite. A newer failing run will not be replaced by an older passing result. Outdated or incomplete evidence also needs attention.
 
 1. Click *Refresh status* if you need to request reevaluation after results become available.
 
@@ -57,7 +57,7 @@ The screenshots use the staging configuration *Run-Scoped RC* and suite *Run-Sco
 
 ## Step 3: Produce a new result when needed
 
-You can use the existing [test-run workflow](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_Trigger_A_Test_Run) to execute the selected configuration and suite on staging, then return to the gate.
+You can use the existing [test-run workflow](xref:QAOps_Tutorials_User_Tutorials_Basic_How_To_Trigger_A_Test_Run) to execute the selected configuration and suite on sandbox, then return to the gate. Use `-san saqaopssandbox` with the test-run command.
 
 To run QAOps checks directly from the gate instead:
 

@@ -13,7 +13,7 @@ An external check receives evidence; it does not run your validation. Your scrip
 
 ## Prerequisites
 
-- A gate you can edit on [QAOps Staging](https://qaopsstaging-skyline.on.dataminer.services/public/qaops-quality-gates/index.html).
+- A gate you can edit on [QAOps Sandbox](https://qaops-sandbox.skyline.be/public/qaops-quality-gates/index.html).
 
 - Permission to create a token for the external reporting source.
 
@@ -25,7 +25,7 @@ Check the installed command before continuing:
 dataminer-qaops report-external-check --help
 ```
 
-The examples use the staging storage account `saqaopsstaging`. Keep all gate IDs, source IDs, and tokens in the same staging environment.
+The examples use the sandbox storage account `saqaopssandbox`. Keep all gate IDs, source IDs, and tokens in the same sandbox environment. The `report-external-check` command requires `--storage-account-name`; it does not support the `-san` alias used by the test-run commands.
 
 ## Step 1: Add an external check
 
@@ -91,11 +91,11 @@ The examples use the staging storage account `saqaopsstaging`. Keep all gate IDs
 
    ```powershell
    dataminer-qaops report-external-check `
-     --gate-id "<your-staging-gate-id>" `
-     --source-id "<your-staging-source-id>" `
+     --gate-id "<your-sandbox-gate-id>" `
+     --source-id "<your-sandbox-source-id>" `
      --status "OK" `
      --message "External release validation completed successfully." `
-     --storage-account-name "saqaopsstaging"
+     --storage-account-name saqaopssandbox
    ```
 
    The tool will generate a report ID and UTC observation time when you omit them. The command waits for a bounded receipt response; acceptance does not guarantee that the app has refreshed already.
@@ -131,12 +131,12 @@ $message = if ($validationExitCode -eq 0) {
 }
 
 dataminer-qaops report-external-check `
-  --gate-id "<your-staging-gate-id>" `
-  --source-id "<your-staging-source-id>" `
+  --gate-id "<your-sandbox-gate-id>" `
+  --source-id "<your-sandbox-source-id>" `
   --status "$status" `
   --message "$message" `
   --result-link "https://ci.example.com/runs/123" `
-  --storage-account-name "saqaopsstaging"
+  --storage-account-name saqaopssandbox
 
 $reportExitCode = $LASTEXITCODE
 if ($reportExitCode -ne 0) {
@@ -159,6 +159,6 @@ An exact duplicate is idempotent and does not consume another report use. Reusin
 
 Use the time the validation was observed, not a newer retry time. Older or equal-time reports can be retained without replacing the current evidence, and resending them does not make evidence fresh. If the source stops reporting, the check will eventually become a warning when its evidence expires.
 
-If reporting fails, check that the source is enabled, the gate and source IDs belong together, the token includes the exact source scope, and `--storage-account-name` still targets staging.
+If reporting fails, check that the source is enabled, the gate and source IDs belong together, the token includes the exact source scope, and `--storage-account-name` still targets sandbox.
 
 If sending succeeds but receipt polling returns HTTP 403 or 404, the report-specific response queue or its access permissions may not be ready. This does not prove that the report was rejected. Keep the printed report ID and observation time, allow time for permissions to propagate, and retry the unchanged report. If receipt access continues to fail, contact `support.boost@skyline.be`; do not change the report identity just to obtain a new response queue.
