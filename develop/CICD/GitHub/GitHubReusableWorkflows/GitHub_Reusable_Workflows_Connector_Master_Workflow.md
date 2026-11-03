@@ -1,20 +1,20 @@
 ---
 uid: github_reusable_workflows_connector_master_workflow
-description: Learn how the SDK-only Connector Master Workflow validates, tests, packages, and publishes DataMiner connector solutions.
+description: "Learn how the SDK-only Connector Master Workflow validates, tests, packages, and publishes DataMiner connector solutions."
 ---
 
 # Connector Master Workflow
 
 > [!IMPORTANT]
 > The legacy connector pipeline is deprecated and no longer available as of 2 November 2026. Update any legacy projects in your connector solution to SDK-style projects. The Connector Master Workflow continues to support SDK-style connector solutions.
+>
+> The separate *Connector Master SDK Workflow.yml* entry point is also no longer available. If you previously called it directly, change your workflow reference to *Connector Master Workflow.yml* and remove the internal `use-oidc` input. Connector Master resolves OIDC from the repository owner and the optional `oidc-client-id`, `oidc-tenant-id`, and `oidc-subscription-id` inputs.
 
 The Connector Master Workflow should run on repositories containing a Connector Solution as provided by the DIS extension in Visual Studio.
 
 The workflow runs the SDK-style connector pipeline directly, without detecting or dispatching to a legacy pipeline. Existing SDK-style callers of *Connector Master Workflow.yml* keep the same inputs, secrets, and `quality_gate` output.
 
-The separate *Connector Master SDK Workflow.yml* entry point is also removed. If you called it directly, change your workflow reference to *Connector Master Workflow.yml* and remove the internal `use-oidc` input. Connector Master resolves OIDC from the repository owner and the optional `oidc-client-id`, `oidc-tenant-id`, and `oidc-subscription-id` inputs.
-
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Connector solution to your private storage in the catalog if it passes the Skyline quality gate job.
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your connector solution to your private storage in the Catalog if it passes the Skyline quality gate job.
 
 The following actions will be performed:
 

@@ -1,7 +1,7 @@
 ---
 uid: github_reusable_workflows_master_workflow
 keywords: GitHub, workflow, master
-description: Learn how the Master Workflow builds, tests, and publishes DataMiner packages, including automatic Catalog publication notifications.
+description: "Learn how the Master Workflow builds, tests, and publishes DataMiner packages, including automatic Catalog publication notifications."
 ---
 
 # Master Workflow

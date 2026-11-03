@@ -1,6 +1,6 @@
 ---
 uid: github_reusable_workflows
-description: Learn how to select and call reusable GitHub workflows for SDK-style connectors and solutions using the Skyline DataMiner SDK.
+description: "Learn how to select and call reusable GitHub workflows for SDK-style connectors and solutions using the Skyline DataMiner SDK."
 ---
 
 # GitHub reusable workflows
@@ -22,18 +22,18 @@ You can find all available reusable workflows in the [_ReusableWorkflows](https:
 
 For more details about what each workflow does, you can check one of the links below:
 
-- [Master Workflow](xref:github_reusable_workflows_master_workflow), including automation script solutions using `Skyline.DataMiner.Sdk`
+- [Master Workflow](xref:github_reusable_workflows_master_workflow) (also used for automation script solutions using `Skyline.DataMiner.Sdk`)
 - [NuGet Solution Master Workflow](xref:github_reusable_workflows_nuget_solution_master_workflow)
 - [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow)
 - [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow)
 - [Update Catalog Details](xref:github_reusable_workflows_update_catalog_details)
 
 > [!IMPORTANT]
-> As of 2 November 2026, the Automation workflows and the legacy connector pipeline are removed. Use Master Workflow for solutions using `Skyline.DataMiner.Sdk` and Connector Master Workflow for SDK-style connector solutions. See [Automation workflow migration](xref:github_reusable_workflows_automation_master_workflow) and [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow) for details.
+> As of 2 November 2026, the Automation workflows and the legacy connector pipeline are no longer available. Use the Master Workflow for solutions using `Skyline.DataMiner.Sdk` and the Connector Master Workflow for SDK-style connector solutions. See [Automation workflow migration](xref:github_reusable_workflows_automation_master_workflow) and [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow) for details.
 
 ### GitHub to Catalog tool
 
-Connector Master Workflow uses the GitHub to Catalog tool. This tool auto-generates an *auto-generated-catalog.yml* file, which can extend an existing *catalog.yml* (or *manifest.yml*) file by adding metadata and registration details for a Catalog item. To function, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics. Solutions using `Skyline.DataMiner.Sdk` instead provide their package metadata in *CatalogInformation* directories.
+The Connector Master Workflow uses the GitHub to Catalog tool. This tool auto-generates an *auto-generated-catalog.yml* file, which can extend an existing *catalog.yml* (or *manifest.yml*) file by adding metadata and registration details for a Catalog item. To function, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics. Solutions using `Skyline.DataMiner.Sdk` instead provide their package metadata in *CatalogInformation* directories.
 
 For more information, refer to the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [inferring the Catalog item type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 

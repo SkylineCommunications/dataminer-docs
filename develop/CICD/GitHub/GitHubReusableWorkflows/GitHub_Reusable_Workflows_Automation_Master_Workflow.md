@@ -1,26 +1,27 @@
 ---
 uid: github_reusable_workflows_automation_master_workflow
-description: Migrate automation script solutions from the retired Automation workflows to Skyline.DataMiner.Sdk projects and the Master Workflow.
+description: "Migrate automation script solutions from the retired Automation workflows to Skyline.DataMiner.Sdk projects and the Master Workflow."
+keywords: Automation Master Workflow
 ---
 
-# Automation Master Workflow
+# Automation workflow migration
 
 > [!IMPORTANT]
-> The Automation workflows are removed as of 2 November 2026. Migrate your solution to `Skyline.DataMiner.Sdk` projects and use the [Master Workflow](xref:github_reusable_workflows_master_workflow).
+> The Automation workflows are no longer available as of 2 November 2026. Migrate your solution to `Skyline.DataMiner.Sdk` projects and use the [Master Workflow](xref:github_reusable_workflows_master_workflow).
+>
+> This applies to all three entry points:
+>
+> - *Automation Master Workflow.yml*
+> - *Automation Master SDK Workflow.yml*
+> - *Automation Master Legacy Workflow.yml*
+>
+> These files are not retained as redirects. The former SDK-style Automation pipeline is also retired; changing only the workflow filename does not migrate the projects or their packaging configuration.
 
-This applies to all three entry points:
-
-- *Automation Master Workflow.yml*
-- *Automation Master SDK Workflow.yml*
-- *Automation Master Legacy Workflow.yml*
-
-These files are not retained as redirects. The former SDK-style Automation pipeline is also retired; changing only the workflow filename does not migrate the projects or their packaging configuration.
-
-## Migrate to Master Workflow
+## Migrating to the Master Workflow
 
 1. Convert your automation script solution to projects using the [Skyline DataMiner SDK](xref:skyline_dataminer_sdk).
 
-   Review the package configuration and the Catalog metadata in each package's *CatalogInformation* directory.
+1. Review the package configuration and the Catalog metadata in each package's *CatalogInformation* directory.
 
 1. Replace the reusable workflow reference in your caller with `SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main`.
 
@@ -61,4 +62,6 @@ jobs:
       AZURE_TOKEN: ${{ secrets.AZURE_TOKEN }}
 ```
 
-Static analysis is optional. If you do not use SonarCloud, omit `sonarcloud-project-name` and its secret mapping. Skyline-managed repositories can load credentials through OIDC and Azure Key Vault; external callers can provide secrets or their own OIDC configuration. See [GitHub secrets and tokens](xref:GitHub_Secrets).
+Static analysis is optional. If you do not use SonarCloud, omit `sonarcloud-project-name` and its secret mapping.
+
+Skyline-managed repositories can load credentials through OIDC and Azure Key Vault; external callers can provide secrets or their own OIDC configuration. See [GitHub secrets and tokens](xref:GitHub_Secrets).
