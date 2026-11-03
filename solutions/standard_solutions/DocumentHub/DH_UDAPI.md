@@ -20,11 +20,14 @@ As of version 1.1.3, DocumentHub provides an OpenAPI specification for its user-
 
 For an example of how you can authenticate requests to these APIs, refer to the tutorial [Managing buckets with the DocumentHub user-defined APIs](xref:Tutorial_DH_UDAPI). To find the route used as the public URL segment of each API, check the value defined in the *User-Defined APIs* module in DataMiner Cube.
 
+> [!TIP]
+> For the full source code of these scripts,  to the [DocumentHub Solution repository](https://github.com/SkylineCommunications/SLC-S-DocumentHub) on GitHub (look for projects starting with `SLC-DH-UDAPI-*`).
+
 ## API specification
 
 The DocumentHub Solution repository contains a single OpenAPI specification for all `SLC-DH-UDAPI-*` scripts. The specification, `docs/openapi/DocumentHub.json`, lists the routes, HTTP methods, and request and response models, grouped by API. To access it, go to the [DocumentHub Solution repository](https://github.com/SkylineCommunications/SLC-S-DocumentHub) on GitHub and open `docs/openapi/DocumentHub.json`.
 
-The following are the default routes. The public route can be configured separately for each API in the *User-Defined APIs* module in DataMiner Cube.
+The default routes are listed below. The public route can be configured separately for each API in the *User-Defined APIs* module in DataMiner Cube.
 
 | API | Default route |
 | --- | --- |
@@ -44,11 +47,8 @@ You can also open the JSON specification in an OpenAPI viewer, such as [Swagger 
 The `DocumentHub` and `DocumentHub-Internal` packages publish the OpenAPI specification to the DataMiner Agent when installed. You can browse it with the [Skyline API Explorer](https://catalog.dataminer.services/details/33d3f002-f7bf-46f3-9405-f491b6f84453?q=api%20explorer):
 
 1. Open the API Explorer app.
-1. Find **DocumentHub User-Defined API**.
+1. Look up **DocumentHub User-Defined API**.
 1. Select **Explore Specification**.
-
-> [!TIP]
-> For the full source code of these scripts, go to the [DocumentHub Solution repository](https://github.com/SkylineCommunications/SLC-S-DocumentHub) on GitHub (look for projects starting with `SLC-DH-UDAPI-*`).
 
 ## Handling of unsupported methods
 
