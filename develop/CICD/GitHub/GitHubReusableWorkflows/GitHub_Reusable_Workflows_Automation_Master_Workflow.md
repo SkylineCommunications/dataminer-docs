@@ -8,9 +8,9 @@ description: Learn how the deprecated Automation Master Workflow validates, pack
 > [!IMPORTANT]
 > The Automation Master Workflow is deprecated and no longer available as of 2 November 2026. Update your solution to use `Skyline.DataMiner.Sdk` projects and the [Master Workflow](xref:github_reusable_workflows_master_workflow).
 
-The Automation Master Workflow should run on repositories containing an [automation script solution](xref:Automation_scripts_as_a_Visual_Studio_solution) as provided by the DIS extension in Visual Studio.
+The Automation Master Workflow should run on repositories containing an automation script solution as provided by the DIS extension in Visual Studio.
 
-It was migrated from a workflow using an [internal Jenkins pipeline](xref:Pipeline_stages_for_Automation_scripts) to handle automation and quality assurance within Skyline Communications.
+It was migrated from a workflow using an internal Jenkins pipeline to handle automation and quality assurance within Skyline Communications.
 
 This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your automation script solution to your private storage in the catalog if it passes the Skyline quality gate job.
 
