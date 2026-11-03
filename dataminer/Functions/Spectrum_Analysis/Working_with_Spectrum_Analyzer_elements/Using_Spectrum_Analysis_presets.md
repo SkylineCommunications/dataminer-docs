@@ -65,8 +65,6 @@ To load a preset in DataMiner Cube:
 
 1. Click the *Load* button.
 
-From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46683-->, when you load a preset from Visual Overview, its configured loading flags are used instead of being combined with previously active flags.
-
 > [!NOTE]
 > When a reference trace has been loaded from a preset, it will be added in the list of traces in the info pane, with the corresponding trace color.
 >
