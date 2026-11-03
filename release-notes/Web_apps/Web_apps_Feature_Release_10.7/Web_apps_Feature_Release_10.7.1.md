@@ -116,6 +116,23 @@ The *Report an issue* link in the help menu of the DataMiner web apps now includ
 
 The information is retrieved when you open the help menu in the header bar. The help button is temporarily disabled and displays a loading indicator until retrieval is complete. Any IDs that cannot be retrieved are omitted from the URL.
 
+#### DataMiner apps: Updated header bar and theme settings [ID 46917]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The header bar and app options of DataMiner apps now use the latest DataMiner controls for a more consistent experience:
+
+- For apps created in the low-code editor, the header bar retains the app's accent color with contrasting buttons. App, user, and context menus remain light-themed.
+- For uploaded apps, the theme selected in the user settings (*Light*, *Dark*, or *System*) now applies to the app shell and embedded content that supports both light and dark color schemes.
+
+The following changes have also been made:
+
+- The app theme setting is no longer restricted to advanced settings.
+- For uploaded apps, *Production* and *Staging* have been renamed to *Published* and *Draft*.
+- *Versions* in the header bar's options menu has been renamed to *History*.
+- *Help* is now available in the header bar.
+- The app title is now also displayed on mobile devices.
+
 ### Fixes
 
 *No fixes have been added yet.*
