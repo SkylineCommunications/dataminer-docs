@@ -14,4 +14,3 @@ uid: SchemaReference
 |[LogSettings](xref:SchemaLogSettings)|LogSettings XML schema.|
 |[MaintenanceSettings](xref:SchemaMaintenanceSettings)|MaintenanceSettings XML schema.|
 |[SNMP Managers](xref:SchemaSNMPManagers)|SNMP Managers XML schema.|
-|[PackageManifest](xref:SchemaPackageManifest)|XML schema for defining the contents of an application package.|
