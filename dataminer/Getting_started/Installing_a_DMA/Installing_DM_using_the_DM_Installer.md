@@ -82,39 +82,73 @@ To install DataMiner using v10.6 or v10.5 Installer, follow the steps below:
    > [!NOTE]
    > If you have accidentally closed the configuration window, you can run it manually from `C:\Skyline DataMiner\Tools\FirstStartupChoice\FirstStartupChoice.exe`. Make sure to run it with administrator privileges.
 
-1. If you want to proceed with the configuration of your DataMiner Agent, click *Run Configuration Tool* to start the DataMiner Configurator, and then click *Next*.
+1. If you want to proceed with the configuration of your DataMiner Agent, click *Run Configuration Tool* to start the DataMiner Configurator, and then follow the steps for your DataMiner version.
 
-1. On the *Storage* page, select the desired database type:
-
-   - [STaaS (Storage as a Service)](xref:STaaS) (recommended).
-
-   - *Self Managed - External*: A regular [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage). If you select this option, you will also need to fill in the connection details for both Cassandra and OpenSearch.
-
-     > [!NOTE]
-     > Make sure these clusters are active and reachable from the machine where you are installing DataMiner. You are responsible for the management of these external database clusters.
-
-1. Click *Next* to proceed to the *Registration* page, and fill in the required details to connect your DataMiner Agent to dataminer.services:
-
-   - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner Systems in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
-   - *System name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
-   - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
-   - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
-   - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
-
-   ![Registration details when STaaS was selected](~/dataminer/images/Registration_of_DMA_when_StaaS_is_selected.png)<br>*Example with registration details for a STaaS setup*
+   **From DataMiner 10.6.0 [CU10]/10.6.12 onwards:**
 
    > [!NOTE]
-   > By default, if you install DataMiner while connected to the internet, DataMiner is deployed in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. However, if you want to do an offline installation or if you want to install DataMiner with a [perpetual license](xref:Permanent_license), click the link below the registration fields and enter the DataMiner ID provided by Skyline. If you do not have a DataMiner ID yet, contact <dataminer.licensing@skyline.be>.
-   >
-   > ![Perpetual license configuration](~/dataminer/images/Perpetual_License.png)
-   >
-   > You can also deploy DataMiner in subscription mode first and [switch to a perpetual license](xref:Switching_from_subscription_mode_to_perpetual_license) later.
+   > The initial DataMiner configuration wizard was redesigned in DataMiner 10.6.0 [CU10]/10.6.12. Only the pages that are relevant to your selected configuration are shown.
 
-1. Click *Next*, and verify the configuration settings you entered.
+   1. Select a commercial model: *Community Edition*, usage-based services, or a perpetual-use license with a DataMiner ID provided by Skyline.
 
-1. To start the configuration, click *Configure*.
+      If you select Community Edition, you will need to accept its terms.
 
-   The configuration progress will now be displayed.
+   1. Choose the type of storage: [Storage as a Service (STaaS)](xref:STaaS) (recommended), locally hosted storage, or externally hosted storage.
+
+      If you select externally hosted storage ([dedicated clustered storage](xref:Configuring_dedicated_clustered_storage)), you will also need to fill in the connection details for both Cassandra and OpenSearch.
+
+      > [!NOTE]
+      > Make sure these clusters are active and reachable from the machine where you are installing DataMiner. You are responsible for the management of these external database clusters.
+
+   1. Connect to dataminer.services if required.
+
+      The wizard will open a browser where you can sign in or create an account. A connection is required for Community Edition, usage-based services, and STaaS. For a perpetual-use license with self-hosted storage, registration with dataminer.services is optional.
+
+      On the cloud registration page, you can reopen the sign-in page, retry the registration, or refresh the registration details.
+
+   1. For a perpetual-use license, supply an existing license file or generate a license request.
+
+      You can generate a license request without having to start and stop DataMiner first.
+
+   1. Complete the applicable configuration details, and review the setup.
+
+   1. Apply the configuration.
+
+      The wizard will show the progress and will stop if a configuration step fails.
+
+   **In earlier versions:**
+
+   1. Click *Next*. Then, on the *Storage* page, select the desired database type:
+
+      - [STaaS (Storage as a Service)](xref:STaaS) (recommended).
+
+      - *Self Managed - External*: A regular [dedicated clustered storage setup](xref:Configuring_dedicated_clustered_storage). If you select this option, you will also need to fill in the connection details for both Cassandra and OpenSearch.
+
+        > [!NOTE]
+        > Make sure these clusters are active and reachable from the machine where you are installing DataMiner. You are responsible for the management of these external database clusters.
+
+   1. Click *Next* to proceed to the *Registration* page, and fill in the required details to connect your DataMiner Agent to dataminer.services:
+
+      - *Organization API Key*: Provide an organization key that has the necessary permissions to add DataMiner Systems in your organization. For more information on how you can add a new organization key to your organization on dataminer.services, see [Managing dataminer.services keys](xref:Managing_dataminer_services_keys).
+      - *System name*: This name will be used to identify the DataMiner System in various dataminer.services applications.
+      - *System URL*: This URL will grant you remote access to your DataMiner System web applications. You can choose to either [disable or enable this remote access feature](xref:Controlling_remote_access) at any time.
+      - *Admin Email*: This email address must be associated with a dataminer.services account that is a member of your organization. It will become the owner of the DMS on dataminer.services.
+      - *STaaS Region*: If you have selected to use [STaaS](xref:STaaS) for data storage, select the region where your data should be hosted.
+
+      ![Registration details when STaaS was selected](~/dataminer/images/Registration_of_DMA_when_StaaS_is_selected.png)<br>*Example with registration details for a STaaS setup*
+
+      > [!NOTE]
+      > By default, if you install DataMiner while connected to the internet, DataMiner is deployed in subscription mode with a [Community Edition](xref:Pricing_Commercial_Models#dataminer-community-edition) license. However, if you want to do an offline installation or if you want to install DataMiner with a [perpetual license](xref:Permanent_license), click the link below the registration fields and enter the DataMiner ID provided by Skyline. If you do not have a DataMiner ID yet, contact <dataminer.licensing@skyline.be>.
+      >
+      > ![Perpetual license configuration](~/dataminer/images/Perpetual_License.png)
+      >
+      > You can also deploy DataMiner in subscription mode first and [switch to a perpetual license](xref:Switching_from_subscription_mode_to_perpetual_license) later.
+
+   1. Click *Next*, and verify the configuration settings you entered.
+
+   1. To start the configuration, click *Configure*.
+
+      The configuration progress will now be displayed.
 
 1. When the configuration is complete, click *Finish* to close the installer.
 
