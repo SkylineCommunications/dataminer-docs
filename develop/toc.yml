@@ -810,8 +810,6 @@ items:
           topicUid: ConnectorBestPracticesValidation
         - name: Points of attention
           items:
-            - name: Skyline Driver Passport Platform
-              topicUid: Skyline_Driver_Passport_Platform
             - name: Minimum DMA version
               topicUid: Minimum_DMA_version
     - name: How-tos
@@ -5638,43 +5636,6 @@ items:
       items:
       - name: NillablePositiveOrZeroInteger
         topicUid: SNMP-NillablePositiveOrZeroInteger
-  - name: NuGet stages schema
-    topicUid: SchemaNuGetStagesConfig
-    items:
-      - name: NuGetStages
-        topicUid: NuGetStages
-        items:
-        - name: Configurations
-          topicUid: NuGetStages.Configurations
-          items:
-          - name: Configuration
-            topicUid: NuGetStages.Configurations.Configuration
-            items: 
-            - name: '@scope'
-              topicUid: NuGetStages.Configurations.Configuration-scope
-            - name: PackageCreation
-              topicUid: NuGetStages.Configurations.Configuration.PackageCreation
-              items:
-              - name: Enabled
-                topicUid: NuGetStages.Configurations.Configuration.PackageCreation.Enabled
-            - name: PackagePublishing
-              topicUid: NuGetStages.Configurations.Configuration.PackagePublishing
-              items:
-              - name: Destinations
-                topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations
-                items:
-                - name: Destination
-                  topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations.Destination
-                  items: 
-                  - name: Server
-                    topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations.Destination.Server
-              - name: Enabled
-                topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Enabled
-            - name: PackageSigning
-              topicUid: NuGetStages.Configurations.Configuration.PackageSigning
-              items:
-              - name: Enabled
-                topicUid: NuGetStages.Configurations.Configuration.PackageSigning.Enabled
   - name: Package manifest schema
     topicUid: SchemaPackageManifest
     items:
@@ -7562,19 +7523,6 @@ items:
         topicUid: ApplicationPackageStructure
       - name: Application packages for SRM projects
         topicUid: SRM_project_config_using_CICD
-    - name: Skyline Driver Passport Platform
-      topicUid: TOODriverPassportPlatform
-      items:
-        - name: Platform location
-          topicUid: Platform_location
-        - name: Platform capabilities
-          topicUid: Platform_capabilities
-        - name: Using the Driver Passport Platform
-          topicUid: Using_the_Driver_Passport_Platform
-        - name: Notifications
-          topicUid: Notifications
-        - name: Viewing test results
-          topicUid: Viewing_test_results
     - name: QAOps
       topicUid: QAOps
       items:
