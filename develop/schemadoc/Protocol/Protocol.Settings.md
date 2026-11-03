@@ -1,10 +1,13 @@
 ---
 uid: Protocol.Settings
+description: "Use the Settings element in a DataMiner protocol to define configuration options for elements running this protocol."
 ---
 
 # Settings element
 
-Contains all settings defined in the protocol. These settings provide configuration options for elements running this protocol. Feature introduced in DataMiner 10.6.10 (RN 45928)
+Contains all settings defined in the protocol. These settings provide configuration options for elements running this protocol.
+
+Feature introduced in DataMiner 10.6.10/10.7.0.<!-- RN 45928 -->
 
 ## Parent
 

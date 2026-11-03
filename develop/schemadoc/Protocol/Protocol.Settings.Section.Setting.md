@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Section.Setting
+description: "Use the Setting element under Section in a DataMiner protocol to define an individual configuration setting within a section."
 ---
 
 # Setting element
@@ -27,7 +28,7 @@ Contains a setting in this section.
 
 ## Attributes
 
-|Name|Type|Required|Description
+|Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Settings.Section.Setting-id)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the unique ID of the setting.|
 |[displayName](xref:Protocol.Settings.Section.Setting-displayName)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the name shown to the user for this setting.|

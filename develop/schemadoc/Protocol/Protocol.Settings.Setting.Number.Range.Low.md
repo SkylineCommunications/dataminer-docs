@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Setting.Number.Range.Low
+description: "Use the Low element under Range in a DataMiner protocol to define the inclusive lower bound allowed for a numeric setting."
 ---
 
 # Low element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Setting.Number
+description: "Use the Number element under Setting in a DataMiner protocol to define a numeric configuration setting for an element."
 ---
 
 # Number element

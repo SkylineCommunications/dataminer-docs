@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Section.Setting-displayName
+description: "Use the displayName attribute of the Setting element in a DataMiner protocol to specify the name shown to the user for this setting."
 ---
 
 # displayName attribute

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Section.Setting.DropDown.Options.Option-displayName
+description: "Use the displayName attribute of the Option element in a DataMiner protocol to specify the label displayed to the user for this option."
 ---
 
 # displayName attribute

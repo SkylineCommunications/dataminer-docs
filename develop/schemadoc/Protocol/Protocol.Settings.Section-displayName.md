@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Section-displayName
+description: "Use the displayName attribute of the Section element in a DataMiner protocol to specify the section name shown to the user."
 ---
 
 # displayName attribute

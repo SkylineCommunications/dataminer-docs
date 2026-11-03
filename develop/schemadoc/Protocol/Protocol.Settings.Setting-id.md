@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Setting-id
+description: "Use the id attribute of the Setting element in a DataMiner protocol to assign a unique identifier to a protocol configuration setting."
 ---
 
 # id attribute

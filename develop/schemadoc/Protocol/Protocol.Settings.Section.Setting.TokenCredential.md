@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Section.Setting.TokenCredential
+description: "Use the TokenCredential element under Setting in a DataMiner protocol to configure a token-based credential setting for an element."
 ---
 
 # TokenCredential element

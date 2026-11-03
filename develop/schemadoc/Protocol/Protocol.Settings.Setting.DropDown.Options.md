@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Setting.DropDown.Options
+description: "Use the Options element under DropDown in a DataMiner protocol to contain the available selectable options for a dropdown setting."
 ---
 
 # Options element

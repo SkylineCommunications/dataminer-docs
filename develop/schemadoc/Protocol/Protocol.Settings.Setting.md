@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Settings.Setting
+description: "Use the Setting element under Settings in a DataMiner protocol to define an individual configuration setting for an element."
 ---
 
 # Setting element
@@ -27,7 +28,7 @@ Contains a protocol setting.
 
 ## Attributes
 
-|Name|Type|Required|Description
+|Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[id](xref:Protocol.Settings.Setting-id)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the unique ID of the setting.|
 |[displayName](xref:Protocol.Settings.Setting-displayName)|[TypeNonEmptyString](xref:Protocol-TypeNonEmptyString)|Yes|Specifies the name shown to the user for this setting.|

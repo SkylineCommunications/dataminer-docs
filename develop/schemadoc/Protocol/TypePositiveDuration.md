@@ -1,5 +1,6 @@
 ---
 uid: Protocol-TypePositiveDuration
+description: "Use the TypePositiveDuration simple type to represent a positive duration in the DataMiner protocol schema."
 ---
 
 # TypePositiveDuration simple type
