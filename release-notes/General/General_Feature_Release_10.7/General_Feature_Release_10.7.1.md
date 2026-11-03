@@ -212,5 +212,3 @@ The standalone BPA executor would throw a `NullReferenceException` when running 
 <!-- MR 10.8.0 - FR 10.7.1 -->
 
 During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
-
-Both the legacy SLUpgrade flow and the Orchestrator upgrade flow now preserve these settings when they are present in the installed configuration. All other `<runtime>` settings still come from the upgrade package, and the behavior for other configuration files remains unchanged.
