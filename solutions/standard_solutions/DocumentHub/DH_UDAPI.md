@@ -21,7 +21,7 @@ As of version 1.1.3, DocumentHub provides an OpenAPI specification for its user-
 For an example of how you can authenticate requests to these APIs, refer to the tutorial [Managing buckets with the DocumentHub user-defined APIs](xref:Tutorial_DH_UDAPI). To find the route used as the public URL segment of each API, check the value defined in the *User-Defined APIs* module in DataMiner Cube.
 
 > [!TIP]
-> For the full source code of these scripts,  to the [DocumentHub Solution repository](https://github.com/SkylineCommunications/SLC-S-DocumentHub) on GitHub (look for projects starting with `SLC-DH-UDAPI-*`).
+> For the full source code of these scripts, go to the [DocumentHub Solution repository](https://github.com/SkylineCommunications/SLC-S-DocumentHub) on GitHub (look for projects starting with `SLC-DH-UDAPI-*`).
 
 ## API specification
 
