@@ -4,7 +4,7 @@ uid: SchemaPackageManifest
 
 # Package manifest schema
 
-The package manifest schema is an XML schema for defining the contents of an application package. For more information, refer to [Application packages](xref:ApplicationPackages) and [Pipeline stages for install packages](xref:Pipeline_stages_for_install_packages).
+The package manifest schema is an XML schema for defining the contents of an [application package](xref:ApplicationPackages).
 
 ## Root element
 
