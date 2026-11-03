@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsTreeControlAdvancedHierarchy
+description: "Configure conditional branches in a DataMiner tree control so the hierarchy path changes based on a parent row's cell value."
 ---
 
 # Advanced hierarchy

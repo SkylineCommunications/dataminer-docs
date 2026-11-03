@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Range.Low
+description: "Use the Low element in a DataMiner protocol to set the minimum accepted value for a communication or simulated parameter."
 ---
 
 # Low element
@@ -16,10 +17,6 @@ decimal
 
 ## Examples
 
-
 ```xml
 <Low>3</Low>
 ```
-
-
-

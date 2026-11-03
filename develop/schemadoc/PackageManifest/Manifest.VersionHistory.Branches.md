@@ -18,6 +18,6 @@ Contains the different branches of this package.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
+|Type|Description|Selector|Fields|
 |--- |--- |--- |--- |
 |Unique |The branch IDs must be unique. |Branch |@id |

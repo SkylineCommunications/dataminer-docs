@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-tag
+description: "Use the ExportRule tag attribute in a DataMiner protocol to identify the XML element to which an export rule is applied."
 ---
 
 # tag attribute

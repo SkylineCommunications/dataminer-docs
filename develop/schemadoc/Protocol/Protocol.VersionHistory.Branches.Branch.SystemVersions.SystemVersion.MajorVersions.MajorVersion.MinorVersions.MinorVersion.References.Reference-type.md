@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References.Reference-type
+description: "Use the type attribute of the Reference element in a DataMiner protocol to classify a tracking or ticketing reference."
 ---
 
 # type attribute

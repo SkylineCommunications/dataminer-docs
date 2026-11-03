@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.Display.Selection.Visibility.Standalone
+description: "Use the Standalone element in a DataMiner protocol to map trigger values to the opposite of default field selection visibility."
 ---
 
 # Standalone element

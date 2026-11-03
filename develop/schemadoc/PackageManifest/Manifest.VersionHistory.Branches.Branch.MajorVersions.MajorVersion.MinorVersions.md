@@ -18,6 +18,6 @@ Contains the different minor versions within this major range of this package.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
+|Type|Description|Selector|Fields|
 |--- |--- |--- |--- |
 |Unique |The ID of the minor versions for a specific system version must be unique. |MinorVersion |@id |

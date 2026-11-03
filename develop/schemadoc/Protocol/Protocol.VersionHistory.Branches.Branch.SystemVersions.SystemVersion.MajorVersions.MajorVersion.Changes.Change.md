@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change
+description: "Use the Change element under MajorVersion Changes in a DataMiner protocol to document a major change, its impact, and actions."
 ---
 
 # Change element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets-dependencyId
+description: "Use the dependencyId attribute in a DataMiner protocol to reference the parameter whose state determines which discrete values are available."
 ---
 
 # dependencyId attribute
@@ -27,8 +28,8 @@ If no dependencyValues are defined, an empty list will be shown.<!-- RN 5817 -->
 
 ```xml
 <Measurement>
-	<Type>discreet</Type>
-	<Discreets dependencyId="10" />
+   <Type>discreet</Type>
+   <Discreets dependencyId="10" />
 </Measurement>
 ```
 
@@ -38,7 +39,7 @@ In the following example, the parameter will show a dropdown box of all the semi
 
 ```xml
 <Measurement>
-	<Type>string</Type>
-	<Discreets dependencyId="10"/>
+   <Type>string</Type>
+   <Discreets dependencyId="10"/>
 </Measurement>
 ```

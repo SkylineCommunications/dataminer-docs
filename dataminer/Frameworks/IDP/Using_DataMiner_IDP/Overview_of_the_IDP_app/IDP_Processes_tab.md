@@ -1,5 +1,6 @@
 ---
 uid: IDP_Processes_tab
+description: "Use the IDP app's Processes tab to schedule single or recurring processes with Process Automation and configure activities, resources, and tokens."
 ---
 
 # Processes tab

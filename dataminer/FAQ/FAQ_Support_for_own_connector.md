@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Support_for_own_connector
+description: "Get prepaid consultancy for your own DataMiner connector, as technical support excludes development and troubleshooting; use purchased credits on demand."
 ---
 
 # Does technical support apply to the actual DataMiner connectors I design?

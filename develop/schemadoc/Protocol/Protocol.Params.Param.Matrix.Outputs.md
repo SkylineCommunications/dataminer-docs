@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Outputs
+description: "Use the Outputs element in a DataMiner protocol to connect an outputs table and its column mappings to a matrix control."
 ---
 
 # Outputs element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Flowcontrol
+description: "Use the Flowcontrol element in a DataMiner protocol to define default and allowed flow control settings for an element connection."
 ---
 
 # Flowcontrol element

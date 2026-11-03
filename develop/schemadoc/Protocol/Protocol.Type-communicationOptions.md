@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Type-communicationOptions
+description: "Use the Type communicationOptions attribute in a DataMiner protocol to specify various communication options."
 ---
 
 # communicationOptions attribute
@@ -16,7 +17,7 @@ string
 
 ## Remarks
 
-The following options are available:
+The options listed below are available.
 
 ### asyncWMI
 

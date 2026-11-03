@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.References
+description: "Use the References element under MinorVersion in a DataMiner protocol to group task and tracking references for a minor version."
 ---
 
 # References element

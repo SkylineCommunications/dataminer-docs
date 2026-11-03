@@ -2008,6 +2008,8 @@ items:
             topicUid: Protocol.AlarmLevelLinks.AlarmLevelLink-id
           - name: '@remoteElement'
             topicUid: Protocol.AlarmLevelLinks.AlarmLevelLink-remoteElement
+      - name: AllowDynamicParameterCreation
+        topicUid: Protocol.AllowDynamicParameterCreation
       - name: App
         topicUid: Protocol.App
         items: 
@@ -2237,6 +2239,47 @@ items:
                 topicUid: Protocol.Display.Pages.Page.Visibility-overridePID
               - name: '@value'
                 topicUid: Protocol.Display.Pages.Page.Visibility-value
+      - name: Edge
+        topicUid: Protocol.Edge
+        items: 
+        - name: Scripts
+          topicUid: Protocol.Edge.Scripts
+          items: 
+          - name: Script
+            topicUid: Protocol.Edge.Scripts.Script
+            items: 
+            - name: '@displayName'
+              topicUid: Protocol.Edge.Scripts.Script-displayName
+            - name: '@guid'
+              topicUid: Protocol.Edge.Scripts.Script-guid
+            - name: '@id'
+              topicUid: Protocol.Edge.Scripts.Script-id
+            - name: Arguments
+              topicUid: Protocol.Edge.Scripts.Script.Arguments
+              items: 
+              - name: Argument
+                topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument
+                items: 
+                - name: '@name'
+                  topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument-name
+                - name: SettingRef
+                  topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument.SettingRef
+                  items: 
+                  - name: '@field'
+                    topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument.SettingRef-field
+                  - name: '@id'
+                    topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument.SettingRef-id
+            - name: Schedule
+              topicUid: Protocol.Edge.Scripts.Script.Schedule
+              items: 
+              - name: Default
+                topicUid: Protocol.Edge.Scripts.Script.Schedule.Default
+                items: 
+                - name: Interval
+                  topicUid: Protocol.Edge.Scripts.Script.Schedule.Default.Interval
+                  items: 
+                  - name: '@period'
+                    topicUid: Protocol.Edge.Scripts.Script.Schedule.Default.Interval-period
       - name: ElementType
         topicUid: Protocol.ElementType
       - name: ExportRules
@@ -3562,6 +3605,106 @@ items:
             topicUid: Protocol.Responses.Response.Description
           - name: Name
             topicUid: Protocol.Responses.Response.Name
+      - name: Settings
+        topicUid: Protocol.Settings
+        items: 
+        - name: Section
+          topicUid: Protocol.Settings.Section
+          items: 
+          - name: '@displayName'
+            topicUid: Protocol.Settings.Section-displayName
+          - name: Setting
+            topicUid: Protocol.Settings.Section.Setting
+            items: 
+            - name: '@displayName'
+              topicUid: Protocol.Settings.Section.Setting-displayName
+            - name: '@id'
+              topicUid: Protocol.Settings.Section.Setting-id
+            - name: DropDown
+              topicUid: Protocol.Settings.Section.Setting.DropDown
+              items: 
+              - name: Options
+                topicUid: Protocol.Settings.Section.Setting.DropDown.Options
+                items: 
+                - name: Option
+                  topicUid: Protocol.Settings.Section.Setting.DropDown.Options.Option
+                  items: 
+                  - name: '@displayName'
+                    topicUid: Protocol.Settings.Section.Setting.DropDown.Options.Option-displayName
+                  - name: '@value'
+                    topicUid: Protocol.Settings.Section.Setting.DropDown.Options.Option-value
+            - name: IPAddress
+              topicUid: Protocol.Settings.Section.Setting.IPAddress
+            - name: IPPort
+              topicUid: Protocol.Settings.Section.Setting.IPPort
+            - name: Number
+              topicUid: Protocol.Settings.Section.Setting.Number
+              items: 
+              - name: Decimals
+                topicUid: Protocol.Settings.Section.Setting.Number.Decimals
+              - name: Range
+                topicUid: Protocol.Settings.Section.Setting.Number.Range
+                items: 
+                - name: High
+                  topicUid: Protocol.Settings.Section.Setting.Number.Range.High
+                - name: Low
+                  topicUid: Protocol.Settings.Section.Setting.Number.Range.Low
+            - name: SNMPCommunityCredential
+              topicUid: Protocol.Settings.Section.Setting.SNMPCommunityCredential
+            - name: SNMPv3Credential
+              topicUid: Protocol.Settings.Section.Setting.SNMPv3Credential
+            - name: Text
+              topicUid: Protocol.Settings.Section.Setting.Text
+            - name: TokenCredential
+              topicUid: Protocol.Settings.Section.Setting.TokenCredential
+            - name: UsernamePasswordCredential
+              topicUid: Protocol.Settings.Section.Setting.UsernamePasswordCredential
+        - name: Setting
+          topicUid: Protocol.Settings.Setting
+          items: 
+          - name: '@displayName'
+            topicUid: Protocol.Settings.Setting-displayName
+          - name: '@id'
+            topicUid: Protocol.Settings.Setting-id
+          - name: DropDown
+            topicUid: Protocol.Settings.Setting.DropDown
+            items: 
+            - name: Options
+              topicUid: Protocol.Settings.Setting.DropDown.Options
+              items: 
+              - name: Option
+                topicUid: Protocol.Settings.Setting.DropDown.Options.Option
+                items: 
+                - name: '@displayName'
+                  topicUid: Protocol.Settings.Setting.DropDown.Options.Option-displayName
+                - name: '@value'
+                  topicUid: Protocol.Settings.Setting.DropDown.Options.Option-value
+          - name: IPAddress
+            topicUid: Protocol.Settings.Setting.IPAddress
+          - name: IPPort
+            topicUid: Protocol.Settings.Setting.IPPort
+          - name: Number
+            topicUid: Protocol.Settings.Setting.Number
+            items: 
+            - name: Decimals
+              topicUid: Protocol.Settings.Setting.Number.Decimals
+            - name: Range
+              topicUid: Protocol.Settings.Setting.Number.Range
+              items: 
+              - name: High
+                topicUid: Protocol.Settings.Setting.Number.Range.High
+              - name: Low
+                topicUid: Protocol.Settings.Setting.Number.Range.Low
+          - name: SNMPCommunityCredential
+            topicUid: Protocol.Settings.Setting.SNMPCommunityCredential
+          - name: SNMPv3Credential
+            topicUid: Protocol.Settings.Setting.SNMPv3Credential
+          - name: Text
+            topicUid: Protocol.Settings.Setting.Text
+          - name: TokenCredential
+            topicUid: Protocol.Settings.Setting.TokenCredential
+          - name: UsernamePasswordCredential
+            topicUid: Protocol.Settings.Setting.UsernamePasswordCredential
       - name: SeverityBubbleUp
         topicUid: Protocol.SeverityBubbleUp
         items: 
@@ -4076,6 +4219,8 @@ items:
         topicUid: Protocol-TypeDllImport
       - name: TypeEmptyString
         topicUid: Protocol-TypeEmptyString
+      - name: TypeGuid
+        topicUid: Protocol-TypeGuid
       - name: TypeGroupParamId
         topicUid: Protocol-TypeGroupParamId
       - name: TypeNonEmptyString
@@ -4096,6 +4241,8 @@ items:
         topicUid: Protocol-TypePortRetryCount
       - name: TypePortSlowPoll
         topicUid: Protocol-TypePortSlowPoll
+      - name: TypePositiveDuration
+        topicUid: Protocol-TypePositiveDuration
       - name: TypeProtocolVersion
         topicUid: Protocol-TypeProtocolVersion
       - name: TypeQActionOptions

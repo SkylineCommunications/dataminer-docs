@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSerialSeriallyPollingDevices
+description: "Learn how one element can poll multiple devices from a table using dynamic IP changes, and what to take into account when configuring this."
 ---
 
 # Serially polling different devices from a single element

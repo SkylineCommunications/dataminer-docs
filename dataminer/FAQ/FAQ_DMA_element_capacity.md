@@ -1,5 +1,6 @@
 ---
 uid: FAQ_DMA_element_capacity
+description: "Review DMA element capacity guidance, including the typical E0250 limit of 250 elements, approved E500/E1000 cases, and key Agent health metrics."
 ---
 
 # How does Skyline define the DMA element capacity?

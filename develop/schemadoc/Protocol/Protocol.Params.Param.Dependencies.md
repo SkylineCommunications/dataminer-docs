@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Dependencies
+description: "Use the Dependencies element in a DataMiner protocol to link parameters, so a command is only executed if dependent parameters have a valid value."
 ---
 
 # Dependencies element

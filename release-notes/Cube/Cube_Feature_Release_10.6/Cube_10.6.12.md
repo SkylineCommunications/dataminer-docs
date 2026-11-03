@@ -81,6 +81,24 @@ Preset loading options now behave more consistently:
 
 The checkbox labels have also been clarified: *Trace* is now *Reference trace*, *Threshold* is now *Thresholds*, and *Measurement cycle* is now *Measurement points*.
 
+#### Cluster update status: Possible statuses have changed [ID 46843]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+Since DataMiner Cube version 10.5.0 CU20/10.6.0 CU8/10.6.11, the status of a cluster update is displayed next to the cluster name in the Cube header.
+
+The possible statuses have now been changed to the following:
+
+- *Updating...* while the upgrade is in progress.
+- *Update done* when the upgrade was successful.
+- *Update failed* when the upgrade was not successful.
+
+The *Update failed* status is only shown to users who have permission to view and launch upgrades.
+
+> [!NOTE]
+> This feature will only work in conjunction with DataMiner server version 10.5.0 CU20/10.6.0 CU8/10.6.11 or newer.
+> If no status is available, Cube will continue to show the cluster name as before, ensuring compatibility with older DataMiner Systems.
+
 ### Fixes
 
 #### Spectrum: Marker was shown on the first trace instead of the trace where it was added [ID 46290]
@@ -185,6 +203,14 @@ When you loaded a preset containing a threshold in a Spectrum component, in some
 
 The threshold will now be displayed when the preset is loaded.
 
+#### Spectrum component would remain blank after an element restart [ID 46646]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you restarted an element while a Spectrum component was open, the component would remain blank because it did not create a new session.
+
+From now on, the Spectrum component will create a new session when the element is restarted.
+
 #### System Center - Agents: Migration window could remain open after an element export failed [ID 46657]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -192,6 +218,14 @@ The threshold will now be displayed when the preset is loaded.
 When an element export failed during migration, up to now, the Element migration window could continue to show "Migration has started." indefinitely without indicating that an error had occurred.
 
 From now on, the window will indicate that the migration finished with errors.
+
+#### Services: Exclude conditions on groups could be saved incorrectly [ID 46658]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you configured a service with a group of child elements and applied an exclude condition to that group, Cube would incorrectly save the condition as both an include and an exclude trigger, and when you reopened the service in the editor, the exclude condition would be shown as an include condition. Saving the service again could then change its behavior.
+
+Cube will now save these conditions correctly and correct affected configurations when you open the service editor.
 
 #### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
 

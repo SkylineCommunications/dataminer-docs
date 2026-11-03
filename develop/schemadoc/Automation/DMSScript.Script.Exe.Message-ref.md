@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Script.Exe.Message-ref
+description: "Use the Message ref attribute to identify the parameter whose value an automation script logmessage action writes to the log."
 ---
 
 # ref attribute

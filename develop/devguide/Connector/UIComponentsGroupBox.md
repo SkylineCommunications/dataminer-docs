@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsGroupBox
+description: "Create a titled group box around related parameters by pairing fixed title parameters with begin and end measurement options on the same page."
 ---
 
 # Group box
@@ -10,17 +11,17 @@ To define a group box with a title, create two parameters of type "fixed".
 
 The first parameter defines the group box header.
 
-- Set Type to "fixed".
-- Add the title of the group to the Description tag.
-- Set its Measurement Type to "title".
-- Set the options of its measurement type to "begin".
+- Set `Type` to "fixed".
+- Add the title of the group to the `Description` tag.
+- Set its `Measurement.Type` to "title".
+- Set the options of its `Measurement.Type` to "begin".
 
- The second parameter defines the group box footer.
+The second parameter defines the group box footer.
 
-- Set Type to "fixed".
-- To only have a line (and no title) at the bottom, leave out the Description tag (or leave it empty).
-- Set Measurement Type to "title".
-- Set the options of its measurement type to "end.".
+- Set `Type` to "fixed".
+- To only have a line (and no title) at the bottom, leave out the `Description` tag (or leave it empty).
+- Set `Measurement.Type` to "title".
+- Set the options of its `Measurement.Type` to "end.".
 - Make sure to position this parameter on a row below the last parameter displayed in the group box.
 
 > [!NOTE]

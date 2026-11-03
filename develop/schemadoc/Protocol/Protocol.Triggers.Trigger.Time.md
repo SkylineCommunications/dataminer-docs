@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Time
+description: "Use the Trigger.Time element together with the Trigger.On element in a DataMiner protocol to define when a trigger goes off."
 ---
 
 # Time element

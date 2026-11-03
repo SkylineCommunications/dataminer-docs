@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.AlarmTemplate
+description: "Use the AlarmTemplate element in a DataMiner protocol to declare ownership and access settings for an element alarm template."
 ---
 
 # AlarmTemplate element

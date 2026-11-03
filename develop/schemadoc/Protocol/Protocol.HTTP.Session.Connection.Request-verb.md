@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request-verb
+description: "Use the verb attribute in a DataMiner protocol to select the HTTP request method, such as GET, POST, or PUT."
 ---
 
 # verb attribute

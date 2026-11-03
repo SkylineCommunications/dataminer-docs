@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session-password
+description: "Use the password attribute in a DataMiner protocol to specify a fixed password or parameter ID for credentials-based HTTP authentication."
 ---
 
 # password attribute

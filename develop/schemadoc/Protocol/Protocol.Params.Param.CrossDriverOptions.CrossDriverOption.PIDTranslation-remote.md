@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CrossDriverOptions.CrossDriverOption.PIDTranslation-remote
+description: "Use the remote attribute to identify a column parameter in a remote protocol when creating a direct view table from multiple protocols."
 ---
 
 # remote attribute

@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Southbound_integration_EMS_NMS
+description: "Plan southbound EMS/NMS integration by connecting DataMiner directly to devices with dedicated connectors, and check MIB/API support for DVEs."
 ---
 
 # What is the recommended method for southbound integration of an EMS/NMS?

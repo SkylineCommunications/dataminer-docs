@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Copy_existing_connector
+description: "Get written permission from the owner before copying any third-party DataMiner connector or part of it to develop a new connector."
 ---
 
 # Can I copy existing third-party DataMiner connectors or parts of them?

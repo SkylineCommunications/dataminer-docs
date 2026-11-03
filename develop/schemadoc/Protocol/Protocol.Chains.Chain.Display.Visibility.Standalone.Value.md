@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Display.Visibility.Standalone.Value
+description: "Use the Value element in a DataMiner protocol to define a parameter value that reverses the configured default chain visibility."
 ---
 
 # Value element

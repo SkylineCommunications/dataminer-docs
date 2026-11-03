@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Parity
+description: "Use the Parity element in a DataMiner protocol to define the default and allowed parity settings for a connection."
 ---
 
 # Parity element

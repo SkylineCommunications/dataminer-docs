@@ -1,5 +1,6 @@
----
+﻿---
 uid: Protocol-EnumTrueFalse
+description: "Review the allowed values for the EnumTrueFalse simple type and what each value represents in DataMiner protocols."
 ---
 
 # EnumTrueFalse simple type

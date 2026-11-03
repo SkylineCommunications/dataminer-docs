@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP-options
+description: "Use the options attribute in a DataMiner protocol to define a dynamic SNMP community string or connection context for a parameter."
 ---
 
 # options attribute
@@ -16,13 +17,13 @@ string
 
 ## Remarks
 
-- In the Param tag of the parameter that will contain the **GetCommunity** string to be used whenever an SNMP Get command has to be performed on connection 0 (i.e., the first connection), specify the following SNMP tag:
+- In the `Param` tag of the parameter that will contain the **GetCommunity** string to be used whenever an SNMP Get command has to be performed on connection 0 (i.e., the first connection), specify the following `SNMP` tag:
 
   ```xml
   <SNMP options="GetCommunity:0">
   ```
 
-  In the Param tag of the parameter that will contain the **SetCommunity** string to be used whenever an SNMP Set command has to be performed on connection 0 (i.e., the first connection), specify the following SNMP tag:
+  In the `Param` tag of the parameter that will contain the **SetCommunity** string to be used whenever an SNMP Set command has to be performed on connection 0 (i.e., the first connection), specify the following `SNMP` tag:
 
   ```xml
   <SNMP options="SetCommunity:0">

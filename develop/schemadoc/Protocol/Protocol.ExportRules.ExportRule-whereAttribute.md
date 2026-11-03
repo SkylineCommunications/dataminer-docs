@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-whereAttribute
+description: "Use the whereAttribute attribute in a DataMiner protocol to specify an XML attribute whose value is checked before an export rule is applied."
 ---
 
 # whereAttribute attribute

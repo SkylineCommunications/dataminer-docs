@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Display.Visibility
+description: "Use the Visibility element in a DataMiner protocol to combine a default setting with parameter-based conditions for chain visibility."
 ---
 
 # Visibility element

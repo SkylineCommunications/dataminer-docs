@@ -1,5 +1,6 @@
 ---
 uid: FAQ_SOP_connectors
+description: "Check the standard operating procedures for connector deployment, and learn about billable additional logic and non-billable enhancements."
 ---
 
 # What are the standard operating procedures for connector deployment?

@@ -1,5 +1,6 @@
 ---
 uid: AutomationActionIf
+description: "Define conditional automation script logic with If, Else, and Endif action blocks and a condition that determines which branch executes."
 ---
 
 # If

@@ -149,9 +149,9 @@ We want to adhere to the [Semantic Versioning for NuGet packages](https://learn.
 
 A specific version number is in the form *Major.Minor.Patch[-Suffix]*, where the components have the following meanings:
 
-- *Major*: Breaking changes (API breaking changes, DataMiner minimum dependency changes, etc.)
-- *Minor*: New features, but backwards compatible
-- *Patch*: Backwards compatible bug fixes only
+- *Major*: Breaking changes, including API breaking changes or an increase to the minimum required dependency version
+- *Minor*: New features or compatible dependency updates
+- *Patch*: Backwards-compatible bug fixes only
 - *-Suffix* (optional): A hyphen followed by a string denoting a pre-release version.
 
 ## Package Metadata Conventions

@@ -1,5 +1,6 @@
 ---
 uid: IDP_Facilities_tab
+description: "Use the IDP app's Facilities tab to navigate infrastructure levels, locate device racks, and view expected and actual energy consumption KPIs."
 ---
 
 # Facilities tab

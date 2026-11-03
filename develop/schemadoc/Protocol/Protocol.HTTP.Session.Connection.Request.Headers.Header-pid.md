@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request.Headers.Header-pid
+description: "Use the pid attribute in a DataMiner protocol to identify the parameter whose value is inserted into an HTTP request header."
 ---
 
 # pid attribute

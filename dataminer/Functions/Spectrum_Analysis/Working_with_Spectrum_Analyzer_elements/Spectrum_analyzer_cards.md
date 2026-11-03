@@ -12,7 +12,7 @@ Spectrum analyzer cards are a special type of element cards in DataMiner Cube. T
 
 The Spectrum Analysis user interface consists of four main components.
 
-![Spectrum Analysis UI](~/dataminer/images/Spectrum_Analysis_UI.png)<br/>*Spectrum Analysis UI in DataMiner 10.4.1*
+![Spectrum Analysis UI](~/dataminer/images/Spectrum_Analysis_UI.png)<br/>*Spectrum Analysis UI in DataMiner 10.6.12*
 
 - A **ribbon** (1) at the top of the card.
 

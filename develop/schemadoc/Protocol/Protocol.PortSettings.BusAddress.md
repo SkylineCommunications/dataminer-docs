@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress
+description: "Use the BusAddress element in a DataMiner protocol to define default and allowed bus address settings for a connection."
 ---
 
 # BusAddress element

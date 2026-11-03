@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field
+description: "Use the Field element in a DataMiner protocol to define an EPM drill-down block, its linked parameter, options, and display settings."
 ---
 
 # Field element

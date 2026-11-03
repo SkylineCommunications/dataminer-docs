@@ -1,10 +1,11 @@
 ---
 uid: Protocol.PortSettings.Baudrate.Value
+description: "Learn how each Value element under Baudrate specifies a baud rate that users can select when configuring an element."
 ---
 
 # Value element
 
-Using one or more Value elements, you can specify the different values that users are allowed to enter.
+Using one or more `Value` elements, you can specify the different values that users are allowed to enter.
 
 ## Type
 
@@ -18,8 +19,8 @@ integer
 
 > [!NOTE]
 >
-> - The value specified in the DefaultValue tag does not have to be specified in a Value tag.
-> - When no Value tags are specified, users will only be allowed to enter the value specified in the DefaultValue tag.
+> - The value specified in the `DefaultValue` tag does not have to be specified in a `Value` tag.
+> - When no `Value` tags are specified, users will only be allowed to enter the value specified in the `DefaultValue` tag.
 
 Contains a value of type integer.
 

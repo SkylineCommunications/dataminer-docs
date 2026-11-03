@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Type-distribution
+description: "Learn how the distribution attribute shares parameter data between linked parent and child elements based on protocol and connection criteria."
 ---
 
 # distribution attribute
@@ -22,7 +23,7 @@ To use data distribution, you have to add the distribution attribute to a parame
 
 The distribution attribute can contain the following settings:
 
-|Setting|Description
+|Setting|Description|
 |--- |--- |
 |Protocol @|The data will be sent to all elements with the specified protocol.|
 |Version|The data will be sent to all elements with the specified protocol version.|
@@ -62,5 +63,4 @@ distribution="protocol:Tandberg;version:x;pid:100;pollingip:*300"
 >
 > - When used on column parameters, the row in the receiving elements should already exist. In order to do this automatically it is possible to add the autoAdd option in the table. This way a row is created when a cell value is distributed.
 > - When a row is removed, this removal is not pushed to the receiving element. Instead, you have to add an extra column that indicates if the row is to be deleted. The receiving element can then see if the row can be removed, and use a QAction to do so. (Similar to the usage of a “state” column often used on SNMP tables)
-> - Information events containing “Set by SLProtocol - to parametervalue” will be generated when a parameter set via data distribution has its RTDisplay option set to true. A large number of sets will cause a large number of information events to be generated. To avoid this, and if the receiving parameter does not have to be displayed, set the RTDisplay option of the receiving parameter to false. Data
-distribution will continue to work.
+> - Information events containing “Set by SLProtocol - to parametervalue” will be generated when a parameter set via data distribution has its RTDisplay option set to true. A large number of sets will cause a large number of information events to be generated. To avoid this, and if the receiving parameter does not have to be displayed, set the RTDisplay option of the receiving parameter to false. Data distribution will continue to work.

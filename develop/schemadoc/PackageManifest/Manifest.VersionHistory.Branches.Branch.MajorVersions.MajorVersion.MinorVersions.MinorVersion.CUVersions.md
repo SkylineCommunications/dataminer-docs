@@ -18,6 +18,6 @@ Contains the different Cumulative Upgrade versions of this package within this m
 
 ## Constraints
 
-|Type|Description|Selector|Fields
+|Type|Description|Selector|Fields|
 |--- |--- |--- |--- |
 |Unique |The ID of the CU versions for a specific minor version must be unique. |CU |@id |

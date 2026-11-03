@@ -1,6 +1,6 @@
 ---
 uid: ConnectionsSnmpRetrievingTables
-description: An overview of the different methods that are available for retrieving tables via SNMP in a protocol.
+description: "Learn how to configure SNMP table polling and choose a retrieval method based on performance, SNMP version, and device limitations."
 ---
 
 # Retrieving tables
@@ -9,11 +9,15 @@ Tables in a MIB are structured as illustrated below. There is always a table fol
 
 ![MIB table structure](~/develop/images/iftable.png)
 
-In a protocol, a table is implemented using a parameter representing the table (of type "array") and additional parameters for each column in the table. By adding `<SNMP>` tags that include the appropriate `<OID>` definitions, you can map the table and its columns to the corresponding SNMP table and column OIDs, enabling SNMP polling similar to polling single variables.
+In a protocol, a table is implemented using a parameter representing the table (of type "array") and additional parameters for each column in the table. By adding [SNMP](xref:Protocol.Params.Param.SNMP) tags that include the appropriate [OID](xref:Protocol.Params.Param.SNMP.OID) definitions, you can map the table and its columns to the corresponding SNMP table and column OIDs, enabling SNMP polling similar to polling single variables.
 
 ## Retrieval methods
 
-A protocol can retrieve SNMP tables using various methods. The desired method is specified on the table parameter by setting the options attribute within the <OID> tag. Only one retrieval method can be configured per table. The following sections describe each available method:
+A protocol can retrieve SNMP tables using various methods. To configure the retrieval method, use the table parameter's [SNMP.OID@options](xref:Protocol.Params.Param.SNMP.OID-options) attribute.
+
+Only one retrieval method can be configured per table.
+
+The following sections describe each available method:
 
 - **[GetNext](#getnext)**: Fetches each cell individually using SNMP **GetNext** requests.
 
@@ -25,8 +29,11 @@ A protocol can retrieve SNMP tables using various methods. The desired method is
 
 - **[MultipleGetBulk](#multiplegetbulk)**: Uses **GetBulk** requests to fetch all column values for multiple rows at a time.
 
+> [!TIP]
+> See also: [Protocol.Params.Param.SNMP.OID@options](xref:Protocol.Params.Param.SNMP.OID-options)
+
 > [!NOTE]
-> The [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/) include the following [Wireshark](xref:Wireshark) captures to help understand the different retrieval methods:
+> The [Protocol Development Guide Companion Files](https://community.dataminer.services/documentation/protocol-development-guide-companion-files/) include the following [Wireshark](xref:Wireshark) captures to help you understand the different retrieval methods:
 >
 > - GetNext.pcap
 > - GetNext+MultipleGet.pcap
@@ -332,7 +339,7 @@ To use this polling method, add `multipleGetBulk` to the `options` attribute of 
 
 > [!NOTE]
 >
-> - Choose the number of rows per request carefully to avoid SNMP responses that exceed the network Path MTU. Large responses may be fragmented, which can reduce reliability. For typical Ethernet networks, keep SNMP responses under 1472 bytes (plus 8 bytes for the UDP header and 20 bytes for the IPv4 header, totaling 1500 bytes). For more details, see [RFC 3416, section 2.3](https://www.rfc-editor.org/rfc/rfc3416.html#section-2.3).
+> - Choose the number of rows per request carefully to avoid SNMP responses that exceed the network Path MTU. Large responses may be fragmented, which can reduce reliability. For typical Ethernet networks, keep SNMP responses under 1472 bytes (plus 8 bytes for the UDP header and 20 bytes for the IPv4 header, totaling 1500 bytes). Note that this is a network recommendation, not a schema limit. For more details, see [RFC 3416, section 2.3](https://www.rfc-editor.org/rfc/rfc3416.html#section-2.3).
 > - The GetBulk request is only available in SNMPv2 and later. This method is not supported on SNMPv1 devices.
 
 #### Example
@@ -392,17 +399,25 @@ SNMP communication flow:
 
 1. The GetBulk requests proceed until the response contains an OID outside the table range, or contains a column OID that is not defined in the protocol table.
 
+## Partial SNMP retrieval
+
+The [partialSNMP:x](xref:Protocol.Params.Param.SNMP.OID-options#partialsnmp) option retrieves only `x` rows per cycle from a large table. This can allow sets to be performed between cycles and can reduce timeout risk. The displayed table is updated only after the complete table has been retrieved.
+
+The `partialSNMP:x` option must be used together with the `instance` option. The option is supported with **GetNext + MultipleGet (column-based)**, **MultipleGetNext**, and **MultipleGetBulk**. It cannot be combined with **GetNext** or with subtables and other filtered-row retrieval.
+
+With `MultipleGetBulk`, `partialSNMP` sets the total number of rows in a cycle and `multipleGetBulk` sets the maximum number of rows in each individual GetBulk request. For details and recommendations, refer to [Combining PartialSNMP with multipleGetBulk](xref:Protocol.Params.Param.SNMP.OID-options#combining-partialsnmp-with-multiplegetbulk).
+
 ### Index shift issues during polling
 
-SNMP table indexes are often based on sequential numbers (e.g., `1`, `2`, `3`, etc.). When a row is added or removed from such a table, the indexes of subsequent rows will shift. If DataMiner is polling the table during this shift, and the polling method does **not retrieve an entire row in one operation**, this can result in inconsistent data retrieval. Parts of a row may be collected **before** the shift and others **after**, causing the final row in DataMiner to contain a **mix of values from two different rows**, leading to an incorrect representation of the data.
+Your polling method choice could affect data retrieval consistency. Because SNMP table indexes are often based on sequential numbers (e.g., `1`, `2`, `3`, etc.), when a row is added or removed from such a table, the **indexes of subsequent rows will shift**. If DataMiner is polling the table during this shift, and the polling method does not retrieve an entire row in one operation, this can result in inconsistent data retrieval. Parts of a row may be collected before the shift and others after, causing the final row in DataMiner to contain a **mix of values from two different rows**, leading to an incorrect representation of the data.
 
-To avoid this issue, choose polling methods that can retrieve complete rows in a single operation such as **GetNext + MultipleGet (row-based)**, **MultipleGetNext**, and **MultipleGetBulk**.
+To reduce this risk, choose polling methods that can **retrieve complete rows in a single operation** such as GetNext + MultipleGet (row-based), MultipleGetNext, and MultipleGetBulk.
 
 > [!CAUTION]
 > Methods that fetch individual columns across multiple requests, such as **GetNext** or **GetNext + MultipleGet (column-based)**, are **especially vulnerable** to this problem.
 
 > [!NOTE]
-> Tables where the row indexes do **not** shift when rows are added or removed (e.g., tables with fixed or unique indexes) are **not affected** by this issue.
+> Tables where the row indexes do not shift when rows are added or removed (e.g., tables with fixed or unique indexes) are not affected by this issue.
 
 ## Instance Option
 
