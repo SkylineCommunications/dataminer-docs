@@ -135,4 +135,8 @@ The following changes have also been made:
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Web API: WebSocket deadlock could prevent clients from receiving messages [ID 46946]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When many WebSocket messages were sent in a very short time, a deadlock could occur in the Web API, preventing clients from receiving any further messages.
