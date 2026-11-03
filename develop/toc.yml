@@ -7315,7 +7315,7 @@ items:
         topicUid: github_reusable_workflows_master_workflow
       - name: DataMiner App Package Master Workflow
         topicUid: github_reusable_workflows_dataminer_app_packages_master_workflow
-      - name: Automation Master Workflow
+      - name: Automation workflow migration
         topicUid: github_reusable_workflows_automation_master_workflow
       - name: NuGet Solution Master Workflow
         topicUid: github_reusable_workflows_nuget_solution_master_workflow
