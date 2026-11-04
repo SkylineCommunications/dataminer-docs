@@ -34,20 +34,44 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 - All Agents in your DataMiner System must have internet access, either directly or through a proxy.
 
-  From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46570 -->, you can allow STaaS traffic through your firewall by whitelisting a single IP address (or two IP addresses for a geo-replicated setup). See [IP addresses to whitelist](#ip-addresses-to-whitelist).
-
-  For earlier DataMiner versions, contact <support@dataminer.services> for specific endpoints or IPs to whitelist. The configuration depends on the region you will register your system for.
+  If a firewall restricts outbound traffic, you can whitelist STaaS based on hostnames or based on IP addresses. See [Hostnames and IP addresses to whitelist](#hostnames-and-ip-addresses-to-whitelist).
 
   > [!NOTE]
   > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
 
 - DataMiner CloudGateway version 2.8.0 or higher. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
 
-## IP addresses to whitelist
+## Hostnames and IP addresses to whitelist
 
-From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46570 -->, you can allow STaaS traffic through your firewall by whitelisting a single IP address, determined by the region your system is registered for. For a **geo-replicated (GRS)** setup, you must whitelist **two IP addresses**: the IP address of the primary region and the IP address of its geo-redundancy pair region.
+If a firewall restricts outbound traffic from your DataMiner Agents, make sure STaaS traffic is allowed. You can whitelist this traffic either [based on hostnames](#whitelisting-based-on-hostnames) or [based on IP addresses](#whitelisting-based-on-ip-addresses). In both cases, what you need to whitelist depends on your DataMiner version.
 
-In the table below, you can find the IP addresses corresponding with each region:
+> [!TIP]
+> From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46570 -->, the whitelisting configuration is much simpler, as no additional hostnames or Microsoft Azure IP addresses need to be requested from support. We therefore recommend [upgrading DataMiner](xref:Upgrading_a_DataMiner_Agent) to version 10.6.12/10.7.0 or higher.
+
+### Whitelisting based on hostnames
+
+The hostnames to whitelist depend on your DataMiner version:
+
+| DataMiner version | Hostnames to whitelist |
+|--|--|
+| DataMiner 10.6.12/10.7.0 or higher<!-- RN 46570 --> | Only `https://*.dataminer.services/`. No other hostnames are needed. |
+| Earlier DataMiner versions | `https://*.dataminer.services/`, **and in addition** some extra hostnames, which depend on the region your system is registered for (and, for a geo-replicated (GRS) setup, its geo-redundancy pair region). These additional hostnames are not listed in this documentation. To get them, contact <support@dataminer.services>. |
+
+> [!NOTE]
+> `https://*.dataminer.services/` is also required to [connect your system to dataminer.services](xref:Connect_to_cloud_requirements), so you may already have whitelisted it.
+
+### Whitelisting based on IP addresses
+
+The IP addresses to whitelist depend on your DataMiner version:
+
+| DataMiner version | IP addresses to whitelist |
+|--|--|
+| DataMiner 10.6.12/10.7.0 or higher<!-- RN 46570 --> | Only the region IP address(es) listed below. No other IP addresses are needed. |
+| Earlier DataMiner versions | The region IP address(es) listed below, **and in addition** the Microsoft Azure IP addresses for your region (and, for a GRS setup, its geo-redundancy pair region). These Microsoft Azure IP addresses are not listed in this documentation. To get them, contact <support@dataminer.services>. |
+
+The region IP address is determined by the region your system is registered for. For a **geo-replicated (GRS)** setup, you must whitelist **two region IP addresses**: the IP address of the primary region and the IP address of its geo-redundancy pair region.
+
+In the table below, you can find the region IP address corresponding with each region:
 
 | Region         | Region IP address |
 |----------------|-------------------|
