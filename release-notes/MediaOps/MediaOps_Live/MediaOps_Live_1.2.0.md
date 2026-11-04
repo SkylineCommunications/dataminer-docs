@@ -3,10 +3,7 @@ uid: MediaOps_Live_1.2.0
 description: Highlights of the features, enhancements, and fixes included in the MediaOps Live 1.2.0 release, including improved CSV encoding.
 ---
 
-# MediaOps Live 1.2.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Live 1.2.0
 
 > [!NOTE]
 > This version requires:
