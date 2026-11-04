@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Dashboard.DashboardOptions.DashboardOption-name
+description: "Learn how to use the name attribute to select which button panel display setting a DashboardOption configures in a DataMiner protocol."
 ---
 
 # name attribute
@@ -30,8 +31,7 @@ Specifies the name of the option.
 
 [DashboardOption](xref:Protocol.Params.Param.Dashboard.DashboardOptions.DashboardOption)
 
-
-## Reamrks
+## Remarks
 
 Possible values:
 

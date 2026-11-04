@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-name
+description: "Use the ExportRule name attribute in a DataMiner protocol to specify the name assigned to an export rule."
 ---
 
 # name attribute

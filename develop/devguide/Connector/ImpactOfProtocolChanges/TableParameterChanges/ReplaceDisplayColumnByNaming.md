@@ -1,5 +1,6 @@
 ---
 uid: ReplaceDisplayColumnByNaming
+description: "Assess the impact of replacing displayColumn with naming on protocol compatibility and access to trend and alarm history."
 ---
 
 # Replace displayColumn by naming

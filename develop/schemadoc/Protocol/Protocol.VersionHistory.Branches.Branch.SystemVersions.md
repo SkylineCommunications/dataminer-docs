@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions
+description: "Use the SystemVersions element under Branch in a DataMiner protocol to list the system versions supported by a protocol branch."
 ---
 
 # SystemVersions element

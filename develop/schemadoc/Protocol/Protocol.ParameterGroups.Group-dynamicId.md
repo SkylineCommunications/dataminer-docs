@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group-dynamicId
+description: "Use the dynamicId attribute in a DataMiner protocol to identify the table parameter used to generate dynamic DCF interfaces."
 ---
 
 # dynamicId attribute

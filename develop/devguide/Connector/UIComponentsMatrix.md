@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsMatrix
+description: "Explore standard matrix parameters for representing routers and switches, including crosspoints, dynamic configuration, names, and discreet info."
 ---
 
 # Standard matrix

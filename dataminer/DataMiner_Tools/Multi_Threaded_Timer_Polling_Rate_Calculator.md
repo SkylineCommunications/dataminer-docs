@@ -1,5 +1,6 @@
 ---
 uid: Multi_Threaded_Timer_Polling_Rate_Calculator
+description: "Use the multithreaded timer polling rate calculator spreadsheet to derive pollingrate settings from timer KPIs and configure an even thread spread."
 ---
 
 # Multithreaded timer polling rate calculator

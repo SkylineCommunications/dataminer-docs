@@ -1,5 +1,6 @@
 ---
 uid: Data_Aggregator_Migrators
+description: "Use the Data Aggregator Migrator tools to adapt existing GQI queries either after switching to the GQI DxM or after upgrading the Data Aggregator DxM."
 ---
 
 # Data Aggregator Migrators

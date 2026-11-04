@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.OID-ipid
+description: "Use the ipid attribute in a DataMiner protocol to reference the parameter holding an alternative IP address for SNMP polling."
 ---
 
 # ipid attribute

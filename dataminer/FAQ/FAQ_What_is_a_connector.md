@@ -1,5 +1,6 @@
 ---
 uid: FAQ_What_is_a_connector
+description: "Explore DataMiner connectors designed for monitoring and control, including SNMP and proprietary protocols."
 ---
 
 # What is a DataMiner connector?

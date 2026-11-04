@@ -1,5 +1,6 @@
 ---
 uid: SNMP_Bandwidth_Estimation_Tool
+description: "Use the SNMP bandwidth estimation tool to help you calculate the estimated bandwidth needed for a system that communicates with data sources using SNMP."
 ---
 
 # SNMP bandwidth estimation tool

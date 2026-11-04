@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Dashboard
+description: "Use the Dashboard element in a DataMiner protocol to configure a parameter for use as a dashboard button panel."
 ---
 
 # Dashboard element

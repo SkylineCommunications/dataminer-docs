@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.MaL
+description: "Use the MaL element in a DataMiner protocol to set the default major-low threshold in a parameter alarm template."
 ---
 
 # MaL element

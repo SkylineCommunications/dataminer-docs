@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpSnmpv3
+description: "Understand SNMPv3 security in DataMiner, including USM settings, supported authentication and encryption protocols, and SNMP engine IDs and timeliness."
 ---
 
 # SNMPv3

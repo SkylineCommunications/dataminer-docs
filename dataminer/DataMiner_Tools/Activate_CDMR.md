@@ -1,5 +1,6 @@
 ---
 uid: Activate_CDMR
+description: "Use two scripts to activate CDMR across every DMA in your cluster, then verify email reporting in information events."
 ---
 
 # Activate CDMR tool

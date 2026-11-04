@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.OID-type
+description: "Use the type attribute in a DataMiner protocol to select how DataMiner constructs an OID from vendor, device, parameter, and explicit values."
 ---
 
 # type attribute
@@ -18,8 +19,7 @@ Specifies how the OID is constructed.
 
 The following values are supported:
 
-
-|Type|Description
+|Type|Description|
 |--- |--- |
 |auto|The resulting OID is the combination of vendor OID + device OID + parameter ID.|
 |complete|The resulting OID is the SNMP.OID value of this parameter.|
@@ -33,7 +33,7 @@ When no type (or any other value for the type attribute) is specified, this will
 - In case SNMP.OID is not empty and exceeds 10 characters: Acts as “complete”.
 
 > [!NOTE]
-> It is advised to always explicitly specify a type.
+> We recommend always explicitly specifying a type.
 
 ### auto
 

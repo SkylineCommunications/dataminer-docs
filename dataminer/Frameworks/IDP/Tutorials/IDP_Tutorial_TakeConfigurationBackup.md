@@ -1,5 +1,6 @@
 ---
 uid: IDP_Tutorial_TakeConfigurationBackup
+description: "Follow this 20-minute IDP configuration backup tutorial to set up an archive, customize a backup script, and retrieve device configurations."
 keywords: idp tutorial, idp kata, idp configuration backup
 ---
 

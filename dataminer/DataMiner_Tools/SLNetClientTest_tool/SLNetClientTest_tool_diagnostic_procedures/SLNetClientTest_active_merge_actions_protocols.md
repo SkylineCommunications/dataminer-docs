@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_active_merge_actions_protocols
+description: "Learn how, using the SLNetClientTest tool, you can request a list of currently active merge actions for protocols doing aggregation actions."
 ---
 
 # Requesting a list of active merge actions for a protocol

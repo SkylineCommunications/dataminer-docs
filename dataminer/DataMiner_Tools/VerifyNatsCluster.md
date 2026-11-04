@@ -1,5 +1,6 @@
 ---
 uid: VerifyNatsCluster
+description: "Find out how the Verify NATS Cluster check verifies whether the NATS service is running on all required DMAs."
 ---
 
 # Verify NATS Cluster

@@ -19,7 +19,7 @@ uid: DMAConnectAndInfo
 | User                          | [DMAUser](xref:DMAUser) | The user login, full name and email address of each user. |
 | UserGroups                    | [DMAUserGroup](xref:DMAUserGroup) | The IDs and names of the user groups. |
 | SLNetConnectionID             | String | The SLNet connection ID. |
-| Cookie                        | String | The encoded timestamp, client info hash, username and password |
+| Cookie                        | String | Obsolete from DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46714-->. The encoded timestamp, client info hash, username and password. |
 | ClusterInfo.IsCassandraActive | Boolean | Indicates whether the DMA uses a Cassandra database. |
 | ClusterInfo.IsSearchActive    | Boolean | Indicates whether the DMA uses an indexing database. |
 | HasDelegatedAuthentication    | Boolean | Indicates whether authentication is delegated to a third-party system. |

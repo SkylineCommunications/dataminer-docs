@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_viewing_connection_details
+description: "Learn how, using the SLNetClientTest tool, you can select a client connection to see detailed information about that connection."
 ---
 
 # Viewing connection details

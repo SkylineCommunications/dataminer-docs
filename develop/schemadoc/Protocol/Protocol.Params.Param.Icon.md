@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Icon
+description: "Use the Icon element in a DataMiner protocol to show a predefined or custom XAML icon for a parameter in a tree control."
 ---
 
 # Icon element

@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_consulting_correlation_info
+description: "Learn how, using the SLNetClientTest tool, you can retrieve more information about Correlation on a DMA."
 ---
 
 # Consulting Correlation information

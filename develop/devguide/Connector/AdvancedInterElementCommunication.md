@@ -1,5 +1,6 @@
 ---
 uid: AdvancedInterElementCommunication
+description: "Discover ways to exchange parameter data between DataMiner elements: using element connections, data distribution, replication, or InterApp calls."
 ---
 
 # Inter-element communication

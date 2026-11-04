@@ -1,5 +1,6 @@
 ---
 uid: How_to_aggregate_alarm_severities
+description: "Aggregate alarm severities from multiple DataMiner elements by linking source tables to overview tables with AlarmLevelLink and SeverityBubbleUp."
 ---
 
 # How to aggregate alarm severities

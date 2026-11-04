@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication.Parameter
+description: "Use the Parameter element in a DataMiner protocol to identify the source parameter to replicate from another element."
 ---
 
 # Parameter element

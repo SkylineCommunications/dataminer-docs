@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Script.Exe.Message
+description: "Use the Message element to supply text for various actions, such as comments, notifications, information events, and log messages."
 ---
 
 # Message element

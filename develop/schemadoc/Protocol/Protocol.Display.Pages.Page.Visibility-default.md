@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display.Pages.Page.Visibility-default
+description: "Use the Visibility default attribute in a DataMiner protocol to set whether a Data Display page is visible by default."
 ---
 
 # default attribute

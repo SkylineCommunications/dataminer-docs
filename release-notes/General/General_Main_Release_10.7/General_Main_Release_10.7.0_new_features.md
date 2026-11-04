@@ -1,5 +1,6 @@
 ---
 uid: General_Main_Release_10.7.0_new_features
+description: "New features in DataMiner General Main Release 10.7.0, including capabilities and BPA tests planned for this preview release."
 ---
 
 # General Main Release 10.7.0 – New features - Preview
@@ -519,3 +520,36 @@ This will especially improve synchronization in shared sessions, keeping measure
 The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
 
 This request requires a CloudGateway version that supports it.
+
+### Interactive Automation scripts: New WebUILayout property [ID 46602]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+From now on, you can select the web UI layout for each dialog in an interactive Automation script using the `UIBuilder.WebUILayout` property.
+
+For example:
+
+```csharp
+var uiBuilder = new UIBuilder
+{
+    WebUILayout = WebUILayout.Grid
+};
+```
+
+The following values are supported:
+
+- `Default` and `Table`: Components are arranged in a table. TAB navigation proceeds from left to right across each row before moving to the next row.
+- `Grid`: Selects a CSS Grid layout that keeps visual placement independent of keyboard navigation. The order in which blocks are added to the `UIBuilder` determines the TAB order. To navigate through one column before continuing to the next, add the blocks from top to bottom in the first column, followed by the blocks in the next column.
+
+If you do not set this property, `Default` is used, preserving the existing table layout and navigation behavior. Existing scripts therefore continue to behave as before.
+
+> [!NOTE]
+> Support for the `Grid` layout in the DataMiner web apps will be introduced separately.
+
+### New BPA test: DataMiner Agent Versions [ID 46808]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+A new BPA test, *DataMiner Agent Versions*, now runs daily to check whether all DataMiner Agents in the cluster are running the same DataMiner version. The check also includes offline Failover Agents.
+
+The test fails if it detects different versions. If the information required for the check is missing or incomplete, the result is inconclusive. In both cases, the output includes details.

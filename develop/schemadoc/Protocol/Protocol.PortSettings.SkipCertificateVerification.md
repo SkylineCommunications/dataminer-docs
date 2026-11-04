@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SkipCertificateVerification
+description: "Use the SkipCertificateVerification element in a DataMiner protocol to configure SSL/TLS certificate verification settings for HTTP connections."
 ---
 
 # SkipCertificateVerification element

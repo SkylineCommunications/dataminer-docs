@@ -1,10 +1,11 @@
 ---
 uid: Protocol.Params.Param.Alarm-options
+description: "Use the options attribute in a DataMiner protocol to configure threshold and property behavior for alarms on linked tables."
 ---
 
 # options attribute
 
-Specifies a number of options, separated by semicolons (”;”). These options can only be used if the table is linked to another table.
+Specifies a number of options, separated by semicolons (";"). These options can only be used if the table is linked to another table.
 
 ## Content Type
 

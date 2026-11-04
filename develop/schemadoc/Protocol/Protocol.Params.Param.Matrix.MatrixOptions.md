@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.MatrixOptions
+description: "Use the MatrixOptions element in a DataMiner protocol to group options that control how a matrix looks and behaves."
 ---
 
 # MatrixOptions element

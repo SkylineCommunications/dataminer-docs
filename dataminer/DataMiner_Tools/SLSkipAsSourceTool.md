@@ -1,5 +1,6 @@
 ---
 uid: SLSkipAsSourceTool
+description: "Use the SLSkipAsSourceTool to fix the state of the SkipAsSource flags on IP addresses when odd communication behavior is reported for a Failover DMA."
 ---
 
 # SLSkipAsSourceTool

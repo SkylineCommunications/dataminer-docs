@@ -1,5 +1,6 @@
 ---
 uid: ChangeProtocolName
+description: "Assess how changing a protocol name affects existing elements, exported protocols, scripts, dashboards, and other integrations or references."
 ---
 
 # Change protocol name

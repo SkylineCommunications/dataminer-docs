@@ -1,5 +1,6 @@
 ---
 uid: Copy_Element_Data
+description: "Use the Copy Element Data tool to simulate problems and build projects based on real data. It consists of two automation scripts."
 ---
 
 # Copy Element Data

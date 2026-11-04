@@ -1,5 +1,6 @@
 ---
 uid: LogicActionWmi
+description: "Configure the WMI action to run a WMI query against a selected server and return specified columns to standalone or table parameters."
 ---
 
 # wmi

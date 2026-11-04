@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Trending-logarithmic
+description: "Use the logarithmic attribute in a DataMiner protocol to switch a parameter trend graph to a logarithmic scale."
 ---
 
 # logarithmic attribute

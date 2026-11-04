@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.GetCommunity
+description: "Use the GetCommunity element in a DataMiner protocol to configure the default value and editability of the SNMP get community string."
 ---
 
 # GetCommunity element

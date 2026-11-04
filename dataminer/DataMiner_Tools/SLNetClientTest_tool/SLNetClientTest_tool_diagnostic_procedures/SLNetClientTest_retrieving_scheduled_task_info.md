@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_retrieving_scheduled_task_info
+description: "Learn how, using the SLNetClientTest tool, you can retrieve information about the scheduled tasks configured in a DataMiner System."
 keywords: swarming scheduled tasks, SchedulerTasks, swarming troubleshooting
 ---
 

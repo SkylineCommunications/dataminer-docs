@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Content.Group
+description: "Use the Timer.Content.Group element in a DataMiner protocol to specify the ID of a group to execute when the timer triggers."
 ---
 
 # Group element

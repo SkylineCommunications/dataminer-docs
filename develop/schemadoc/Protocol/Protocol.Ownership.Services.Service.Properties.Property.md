@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Ownership.Services.Service.Properties.Property
+description: "Use the Property element in a DataMiner protocol to declare ownership and access settings for a selected service property."
 ---
 
 # Property element

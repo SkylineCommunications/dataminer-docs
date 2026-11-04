@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Version
+description: "Use the Version element in a DataMiner protocol to specify the version of the protocol assigned to DataMiner elements."
 ---
 
 # Version element

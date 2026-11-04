@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Inspecting_the_parameter_notification_queue
+description: "Learn how, using the SLNetClientTest tool, you can inspect the state and the settings of the SLNet parameter notification queue."
 ---
 
 # Inspecting the parameter notification queue

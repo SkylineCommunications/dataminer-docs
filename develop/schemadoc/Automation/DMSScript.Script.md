@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Script
+description: "Use the Script element to contain an automation script's ordered Exe actions and ensure that every action ID is unique."
 ---
 
 # Script element
@@ -18,6 +19,6 @@ Contains the script actions.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
-|--- |--- |--- |--- |
-|Unique |The ID must be unique. |Script |@id |
+| Type | Description | Selector | Fields |
+|--|--|--|--|
+| Unique | The ID must be unique. | Script | @id |

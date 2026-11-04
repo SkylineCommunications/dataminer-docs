@@ -1,5 +1,6 @@
 ---
 uid: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
+description: "Use multiple protocol threads to acknowledge incoming data promptly while parsing large responses independently on a separate connector thread."
 ---
 
 # How to use multiple protocol threads to split communication and parsing

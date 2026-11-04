@@ -1,5 +1,6 @@
 ---
 uid: FAQ_DIS_Training
+description: "Access the online DIS training module on DataMiner Dojo to learn all DIS features and capabilities and how to use them."
 ---
 
 # What kind of training is available for DIS?

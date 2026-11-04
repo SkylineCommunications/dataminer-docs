@@ -1,5 +1,6 @@
 ---
 uid: LogicQActionsMemberFields
+description: "Learn how to safely share or persist QAction data across executions and elements, handle multiple SLScripting processes, and implement IDisposable."
 ---
 
 # QAction member fields

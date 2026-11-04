@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Type-scientificNotation
+description: "Use the scientificNotation attribute in a DataMiner protocol to select universal or scientific notation with culture-independent formatting."
 ---
 
 # scientificNotation attribute
@@ -20,7 +21,7 @@ Only to be specified in case of measurement type “number”.
 
 By default, 0 decimals are shown. To specify the number of decimals to show, the Decimals tag of the Display tag can be used.
 
-See also: Protocol.Params.Param.Display.[Decimals](xref:Protocol.Params.Param.Display.Decimals).
+See also: [Protocol.Params.Param.Display.Decimals](xref:Protocol.Params.Param.Display.Decimals).
 
 Values are represented using culture-independent (invariant) formatting.<!-- RN 27690 -->
 
