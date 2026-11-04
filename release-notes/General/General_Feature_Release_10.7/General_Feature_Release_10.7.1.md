@@ -79,7 +79,7 @@ Support for the [`postPonePortInitialisation`](xref:Protocol.Type-communicationO
 
 #### DataMiner upgrade: Upgrade action to configure SAML authentication redirects [ID 46589]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
 From now on, an upgrade action will automatically add a `Set-Cookie` header to `WebPages/web.config` on systems with SAML authentication enabled. This cookie configures web authentication to use redirects instead of an embedded iframe, ensuring compatibility with SAML providers that do not allow their sign-in pages to be displayed in an iframe.
 
@@ -206,3 +206,9 @@ Since DataMiner Feature Release 10.6.10, in some cases, DataMiner services could
 <!-- MR 10.5.0 [CU22]/10.6.0 [CU10] - FR 10.7.1 -->
 
 The standalone BPA executor would throw a `NullReferenceException` when running a manually loaded BPA DLL file with the `RequireSLNet` flag, preventing the BPA test from executing.
+
+#### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.

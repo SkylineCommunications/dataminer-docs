@@ -1,5 +1,6 @@
 ---
 uid: PA_Activities
+description: "Explore Process Automation activities, including script, user, and resource tasks, and learn how they exchange data through a process DOM instance."
 ---
 
 # Activities

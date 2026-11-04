@@ -64,6 +64,6 @@ Perform the following steps to release a connector version:
 
 1. Release or pre-release using the GitHub release feature.
 
-## Publishing DataMiner install packages
+## Publishing DataMiner app packages
 
 DataMiner install packages, i.e., .dmapp files, can contain any other artifacts, including other install packages and companion files. To publish them to the Catalog, use CI/CD on GitHub. For more information, see [CI/CD using GitHub for non-connector items](xref:CICD_on_GitHub_getting_started#cicd-using-github-for-non-connector-items).
