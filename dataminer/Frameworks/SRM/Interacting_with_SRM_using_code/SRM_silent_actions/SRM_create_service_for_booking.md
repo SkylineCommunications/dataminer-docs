@@ -1,5 +1,6 @@
 ---
 uid: SRM_create_service_for_booking
+description: "Find out how to create a service for an existing booking with External Service Management using ServiceManagement.CreateReservationService."
 ---
 
 # Creating a service for an existing booking

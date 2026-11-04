@@ -1,5 +1,6 @@
 ---
 uid: SRM_apply_profile_to_unmatched_resource
+description: "Find out how you can silently apply a profile to an unmapped resource or a resource that is not part of a booking."
 ---
 
 # Silently applying a profile to an unmapped resource or resource not part of a booking

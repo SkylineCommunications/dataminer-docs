@@ -1,5 +1,6 @@
 ---
 uid: SRM_creating_booking_silently
+description: "Find out, by exploring an example, how a booking can be created without user interaction by means of an automation script."
 ---
 
 # Silently creating a booking
