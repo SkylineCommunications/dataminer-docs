@@ -127,6 +127,14 @@ This issue occurred when history was stored under both the original-case and low
 
 The standalone BPA executor would throw a `NullReferenceException` when running a manually loaded BPA DLL file with the `RequireSLNet` flag, preventing the BPA test from executing.
 
+#### Service & Resource Management: Canceled reservations could prevent resource updates [ID 46952]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Resources could not be updated when they were used by a canceled reservation. This could prevent changes to the resource mode, such as putting a resource into maintenance, as well as changes to its availability window or capacity.
+
+Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
+
 #### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
 
 <!-- MR 10.6.0 [CU10] - FR 10.6.12 -->

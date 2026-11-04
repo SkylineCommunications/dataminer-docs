@@ -226,3 +226,11 @@ Both online and offline Agents will now keep their XML-based services in memory 
 <!-- MR 10.8.0 - FR 10.7.1 -->
 
 During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
+
+#### Service & Resource Management: Canceled reservations could prevent resource updates [ID 46952]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Resources could not be updated when they were used by a canceled reservation. This could prevent changes to the resource mode, such as putting a resource into maintenance, as well as changes to its availability window or capacity.
+
+Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
