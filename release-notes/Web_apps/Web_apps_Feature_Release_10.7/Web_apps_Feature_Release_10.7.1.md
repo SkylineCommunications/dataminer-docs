@@ -133,10 +133,34 @@ The following changes have also been made:
 - *Help* is now available in the header bar.
 - The app title is now also displayed on mobile devices.
 
+#### Web apps and Web API: Legacy Ticketing functionality removed [ID 46947]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Following its end of life, the legacy Ticketing app and its Web API implementation have been removed. Ticketing is now reported as unavailable.
+
+For compatibility with existing WSDL-based clients, the Ticketing methods in the [public web services](xref:Using_the_Web_Services_v1) retain their existing signatures and remain in the WSDL. However, these methods are no longer functional. Calls will now throw an `ObsoleteMethodWebApiException`.
+
 ### Fixes
+
+#### Web API: GetUsers could return an empty user list [ID 46942]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When the DataMiner security or view configuration changed while a `GetUsers` Web API call was being processed, the call could incorrectly return an empty list. This could happen, for example, when an element was created or deleted.
+
+As a result, users with access to a dashboard or a DataMiner app could be shown as "User not found" in its access settings.
 
 #### Web API: WebSocket deadlock could prevent clients from receiving messages [ID 46946]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
 When many WebSocket messages were sent in a very short time, a deadlock could occur in the Web API, preventing clients from receiving any further messages.
+
+#### Dashboards app: Preselected parameter values missing from PDF reports [ID 46972]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a PDF report was generated from a dashboard with stacked components, parameter selectors could fail to display their preselected values. This affected reports generated from the Dashboards app as well as scheduled reports.
+
+Parameter selectors now correctly display the preselected values. Some selectors may take up slightly more space in the report.

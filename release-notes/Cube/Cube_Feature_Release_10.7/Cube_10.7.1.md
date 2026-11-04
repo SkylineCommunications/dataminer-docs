@@ -78,3 +78,11 @@ From now on, Cube will stop timers and remove event subscriptions when these con
 When you opened a visual overview containing a spectrum component, reference lines, markers, and thresholds configured in the drawing or in a preset would not be displayed correctly until you resized that visual overview.
 
 These items will now be displayed correctly when the spectrum component is first opened.
+
+#### Scheduler: Timeline task deletion could fail and Edit/Delete options could be missing [ID 46935]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When DataMiner Cube was connected via gRPC, deleting a scheduled task from *Scheduler > Timeline > Tasks* could fail because the delete request used an incorrect hosting DataMiner ID.
+
+Also, when no Scheduler templates were available, the *Edit* and *Delete* options would be missing from a scheduled task's context menu. These options will now be displayed when you have the corresponding Scheduler permissions, regardless of whether templates are available.

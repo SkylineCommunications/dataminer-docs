@@ -97,6 +97,12 @@ From now on, it will only scan folders for connectors on the incompatibility lis
 
 The incompatible connector versions reported, the message shown, and the requirement to remove those versions before upgrading remain unchanged. No configuration is required.
 
+#### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
 ### Fixes
 
 #### SLNet: Array index errors when retrieving alarm filter, trend filter, or redundancy group information [ID 46607]
@@ -120,6 +126,14 @@ This issue occurred when history was stored under both the original-case and low
 <!-- MR 10.5.0 [CU22]/10.6.0 [CU10] - FR 10.7.1 -->
 
 The standalone BPA executor would throw a `NullReferenceException` when running a manually loaded BPA DLL file with the `RequireSLNet` flag, preventing the BPA test from executing.
+
+#### Service & Resource Management: Canceled reservations could prevent resource updates [ID 46952]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Resources could not be updated when they were used by a canceled reservation. This could prevent changes to the resource mode, such as putting a resource into maintenance, as well as changes to its availability window or capacity.
+
+Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
 
 #### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
 
