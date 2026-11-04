@@ -143,6 +143,14 @@ For compatibility with existing WSDL-based clients, the Ticketing methods in the
 
 ### Fixes
 
+#### Web API: GetUsers could return an empty user list [ID 46942]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When the DataMiner security or view configuration changed while a `GetUsers` Web API call was being processed, the call could incorrectly return an empty list. This could happen, for example, when an element was created or deleted.
+
+As a result, users with access to a dashboard or a DataMiner app could be shown as "User not found" in its access settings.
+
 #### Web API: WebSocket deadlock could prevent clients from receiving messages [ID 46946]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
