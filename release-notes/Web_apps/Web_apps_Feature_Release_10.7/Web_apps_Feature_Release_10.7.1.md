@@ -133,6 +133,14 @@ The following changes have also been made:
 - *Help* is now available in the header bar.
 - The app title is now also displayed on mobile devices.
 
+#### Web apps and Web API: Legacy Ticketing functionality removed [ID 46947]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Following its end of life, the legacy Ticketing app and its Web API implementation have been removed. Ticketing is now reported as unavailable.
+
+For compatibility with existing WSDL-based clients, the Ticketing methods in the [public web services](xref:Using_the_Web_Services_v1) retain their existing signatures and remain in the WSDL. However, these methods are no longer functional. Calls will now throw an `ObsoleteMethodWebApiException`.
+
 ### Fixes
 
 #### Web API: WebSocket deadlock could prevent clients from receiving messages [ID 46946]
