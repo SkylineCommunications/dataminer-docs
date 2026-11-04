@@ -156,3 +156,11 @@ As a result, users with access to a dashboard or a DataMiner app could be shown 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
 When many WebSocket messages were sent in a very short time, a deadlock could occur in the Web API, preventing clients from receiving any further messages.
+
+#### Dashboards app: Preselected parameter values missing from PDF reports [ID 46972]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a PDF report was generated from a dashboard with stacked components, parameter selectors could fail to display their preselected values. This affected reports generated from the Dashboards app as well as scheduled reports.
+
+Parameter selectors now correctly display the preselected values. Some selectors may take up slightly more space in the report.
