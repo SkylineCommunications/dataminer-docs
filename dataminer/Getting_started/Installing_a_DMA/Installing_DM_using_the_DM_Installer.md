@@ -95,14 +95,16 @@ To install DataMiner using v10.6 or v10.5 Installer, follow the steps below:
 
    1. Choose the type of storage: [Storage as a Service (STaaS)](xref:STaaS) (recommended), locally hosted storage, or externally hosted storage.
 
-      If you select externally hosted storage ([dedicated clustered storage](xref:Configuring_dedicated_clustered_storage)), you will also need to fill in the connection details for both Cassandra and OpenSearch.
+      If you select externally hosted storage ([dedicated clustered storage](xref:Configuring_dedicated_clustered_storage)), you will also need to fill in the connection details for both Cassandra and OpenSearch. You can enable TLS separately for Cassandra and OpenSearch using the corresponding checkboxes.
 
       > [!NOTE]
       > Make sure these clusters are active and reachable from the machine where you are installing DataMiner. You are responsible for the management of these external database clusters.
 
    1. Connect to dataminer.services if required.
 
-      The wizard will open a browser where you can sign in or create an account. A connection is required for Community Edition, usage-based services, and STaaS. For a perpetual-use license with self-hosted storage, registration with dataminer.services is optional.
+      The wizard will open a browser where you can sign in or create an account. After you have signed in, the wizard completes the registration automatically. You no longer need to provide an organization API key, system URL, administrator email address, or STaaS region. After a successful registration, DataMiner restarts automatically and its startup is validated.
+
+      A connection is required for Community Edition, usage-based services, and STaaS. For a perpetual-use license with self-hosted storage, registration with dataminer.services is optional.
 
       On the cloud registration page, you can reopen the sign-in page, retry the registration, or refresh the registration details.
 
