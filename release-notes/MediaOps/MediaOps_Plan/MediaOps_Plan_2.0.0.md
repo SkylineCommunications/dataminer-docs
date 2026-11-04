@@ -125,6 +125,20 @@ Using a single orchestration script with dynamic inputs can remove the need to c
 
 Resource selection panels now include search and filtering capabilities, making it easier to find resources in large environments. This is available in the *Add Resource*, *Pick Resource*, *Swap Resource*, *Swap Resource (Node Graph)*, *Add Before*, *Add After*, and *Link Resource* panels.
 
+#### Scheduling: Configure nodes when adding or swapping them in running jobs [ID 46981]
+
+When you add, insert, or swap a node in a running job, you can now configure it as part of the operation. This also lets you add resources that have mandatory values.
+
+Automated actions that have already run are read-only and remain unchanged. They are excluded from mandatory-value checks. A node added during a run does not run actions whose execution time has passed. A swapped-in node retains the actions already executed by the replaced node, whether you keep its configuration or revert to the configuration from the newly selected pool.
+
+#### Scheduling: Edit node configuration in running jobs [ID 46982]
+
+You can now update an existing node's configuration in a running job.
+
+Actions that have already run remain locked and unchanged, even if their script is no longer available or the action runs while the configuration panel is open. Actions that ran on the resource pool are not added to a node if they did not run on that node.
+
+The configuration remains read-only for completed or canceled jobs, when another user is editing the job, and at the job level.
+
 ## Changes
 
 ### Breaking changes

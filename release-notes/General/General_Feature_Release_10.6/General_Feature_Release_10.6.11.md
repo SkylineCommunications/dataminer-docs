@@ -213,6 +213,14 @@ Up to now, after the IP address of a DataMiner Agent had changed, running *NATSR
 
 Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* could incorrectly be missing from the error overview at the end of the command-line output.
 
+#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
+
+<!-- MR TBD - FR 10.6.11 -->
+
+When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
+
+From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
+
 #### STaaS: Ordering DOM entries by optional fields could throw a CRUD exception [ID 46377]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
