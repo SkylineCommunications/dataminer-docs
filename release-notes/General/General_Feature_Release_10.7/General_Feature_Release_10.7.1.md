@@ -215,7 +215,7 @@ The standalone BPA executor would throw a `NullReferenceException` when running 
 
 #### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 When services or elements were updated in a DataMiner cluster, offline Agents in a Failover setup would experience a memory and CPU spike in the StorageModule process for each update. The size of the spike depended on the number of services and elements in the cluster.
 
