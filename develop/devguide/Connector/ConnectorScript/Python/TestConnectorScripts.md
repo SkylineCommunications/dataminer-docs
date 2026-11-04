@@ -1,50 +1,57 @@
 ---
 uid: TestConnectorScriptsPython
+description: "Learn how to test a Python-based connector script before deployment by validating its payload and mocking device and Edge Node requests."
 ---
 
-# Testing a Python script before you deploy it
+# Testing connector scripts
 
-A Python script reads data from a device and sends it to an Edge Node, which forwards it to DataMiner. This guide explains how to test such a script before you deploy it. It covers how to:
+A Python script reads data from a device and sends it to an [Edge Node](xref:About_Edge_Nodes), which forwards it to DataMiner. Before you deploy such a script, you should test it. This includes:
 
-- Check that the data your script produces is correct and will be accepted.
-- Mock the device your script reads from, and the push to the Edge Node.
+- Checking whether the data that your script produces is correct and will be accepted.
+- Mocking the device your script reads from and the push to the Edge Node.
 
-## Overview
+The instructions below will guide you through this using the example of a connector for an encoder. This example connector reads the encoder status over HTTP and sends the device name, its CPU usage, and a table of network interfaces.
 
-The guide uses one example throughout: a connector for an encoder. It reads the encoder status over HTTP and sends the device name, its CPU usage, and a table of network interfaces. Each section builds on the previous one, so if you start from scratch, follow them in order:
+Follow the instructions below in the indicated order:
 
-1. [Learn what the Edge Node expects](#learn-what-the-edge-node-expects)
-1. [Look at the example connector script](#example-connector-script)
-1. [Capture real device responses as fixtures](#capture-real-device-responses-as-fixtures)
-1. [Validate the payload](#validate-the-payload)
-1. [Replace the Edge Node endpoint with a mock and test the push](#replace-the-edge-node-with-a-mock)
+1. [Learn what the Edge Node expects](#behavior-expected-by-the-edge-node).
+1. [Look at the example connector script](#example-connector-script).
+1. [Capture real device responses as fixtures](#capturing-real-device-responses-as-fixtures).
+1. Create the necessary tests:
+   1. [To validate the payload](#validating-the-payload).
+   1. [To mock the Edge Node endpoint and test the push](#mocking-the-edge-node-endpoint-and-testing-the-push).
+1. [Run the tests](#running-connector-script-tests).
 
-## Learn what the Edge Node expects
+> [!NOTE]
+> Before you start, make sure you have read [Developing connector scripts in Visual Studio](xref:DevelopingConnectorScriptsInVisualStudio) for information on how to create and develop a connector script.
+
+> [!IMPORTANT]
+> Edge Node mode is currently available in preview. For more information, see [About Edge Nodes](xref:About_Edge_Nodes).
+
+## Behavior expected by the Edge Node
 
 Your data is validated twice on its way into DataMiner: first by the Edge Node, then by the Data API.
 
-For more information, see [About Edge Nodes](xref:About_Edge_Nodes). 
+- The **Edge Node checks the request**:
 
-### The Edge Node checks the request
+  Your script sends its data with `POST http://localhost:5016/api/data`. The Edge Node only accepts the request when:
 
-Your script sends its data with `POST http://localhost:5016/api/data`. The Edge Node only accepts the request when:
+  - The body is JSON and is not empty.
+  - The body is at most 1 MB. A larger body is refused with `413 Payload Too Large`.
+  - The `runSecret` header contains the value of the `EDGE_RUN_SECRET` environment variable, which the Edge Node sets for every run.
 
-- The body is JSON and is not empty.
-- The body is at most 1 MB. A larger body is refused with `413 Payload Too Large`.
-- The `runSecret` header contains the value of the `EDGE_RUN_SECRET` environment variable, which the Edge Node sets for every run.
+- The **Data API reads the content**:
 
-### The Data API reads the content
+  The Data API then turns your JSON into parameter values, applying the [rules detailed below](#rules-applied-to-the-json-payload).
 
-The Data API then turns your JSON into parameter values.
+  > [!NOTE]
+  > The Edge Node answers your script with `202 Accepted` before the Data API has seen the data. If the Data API rejects or drops the request, the script is not aware.
 
-> [!NOTE]
-> The Edge Node answers your script with `202 Accepted` before the Data API has seen the data. If the Data API rejects or drops the request, the script is not aware.
-
-The rules below are applied to the JSON payload.
+### Rules applied to the JSON payload
 
 #### Single values become parameters
 
-Every top-level key becomes a parameter. Numbers become numeric values, strings become text, and a nested object is flattened into dotted names. This payload:
+Every top-level key becomes a parameter. Numbers become numeric values, strings become text, and a nested object is flattened into dotted names. For example:
 
 ```json
 {
@@ -54,12 +61,12 @@ Every top-level key becomes a parameter. Numbers become numeric values, strings 
 }
 ```
 
-sets three parameters: `Device Name` to `Encoder 1`, `CPU Utilization` to `42.5`, and `Details.Rack` to `4`.
+The payload in the example above sets three parameters: `Device Name` to `Encoder 1`, `CPU Utilization` to `42.5`, and `Details.Rack` to `4`.
 
 Booleans are converted to text. `{"Online": true}` sets `Online` to the text `True`, not to a number or a state.
 Convert the boolean before you send it, e.g., send `Up` instead of `True` and `Down` instead of `False`.
 
-#### `null` values are not updated
+#### null values are not updated
 
 A top-level `null` does not clear a parameter. The Data API skips it, so the parameter keeps its last value, for example:
 
@@ -95,10 +102,10 @@ Two kinds of arrays are not turned into tables:
 - **An empty array is ignored.** `"Interfaces": []` sends nothing for that table, so you cannot use it to clear the table.
 - **An array of plain values is not supported.** In `"Tags": ["4K", "HEVC"]`, the items are skipped because they are not objects, and the Data API records an error that your script never sees. Wrap them instead, e.g., `"Tags": [{"Id": "4K"}, {"Id": "HEVC"}]`.
 
-#### The `Id` column identifies each row
+#### The Id column identifies each row
 
-A key named `Id` becomes the primary key of the table. It determines which row each update is written to.
-Every row needs an `Id` value that is not null or empty, and that value must be unique.
+A key named `Id` becomes the primary key of the table. It determines which row each update is written to. Every row needs an `Id` value that is not null or empty, and that value must be unique.
+
 Without an `Id`, rows are numbered by their position: the first object is row 1, the second is row 2, and so on. If the device lists its interfaces in a different order next time, the values move to other rows.
 
 #### Nested arrays become linked tables
@@ -121,19 +128,18 @@ This fills two tables:
 
 The VLANs of all interfaces end up in one table, so their `Id` values must be unique across all interfaces, not just within one. If `eth0` and `eth1` both had VLAN `100`, only one of those rows would be kept.
 
-### How the Edge Node starts your script
+### Script starting behavior
 
-Your tests should start the script the same way the Edge Node does:
+The Edge Node will start the script in the following way:
 
 - Arguments arrive as `--name=value`.
 - Secrets arrive as environment variables, never as arguments.
 - A run only counts as failed when the script ends with a non-zero exit code. If your script catches an exception and only prints it, the Edge Node reports a successful run, even though no data was sent.
 - The script is stopped after 300 seconds by default, so every network call needs a timeout.
 
-## Example connector script
+Ensure that your tests start the script in the same way.
 
-> [!NOTE]
-> Before starting, see [Developing connector scripts in Visual Studio](xref:DevelopingConnectorScriptsInVisualStudio) for information on how to create and develop a connector script.
+## Example connector script
 
 Consider the following encoder connector script, where the work is divided over these functions:
 
@@ -215,7 +221,7 @@ if __name__ == "__main__":
 
 The next sections test each of these functions.
 
-## Capture real device responses as fixtures
+## Capturing real device responses as fixtures
 
 To test `transform()`, you need input, preferably a real response from the device. Instead of calling the encoder in every test, save its response once in a file, called a fixture, and use that file in your tests.
 
@@ -245,13 +251,17 @@ To test `transform()`, you need input, preferably a real response from the devic
    }
    ```
 
-## Validate the payload
+## Creating connector script tests
 
-With the files in place, you can check that the output follows the rules from [Learn what the Edge Node expects](#learn-what-the-edge-node-expects).
+### Validating the payload
 
-### Write a payload validator
+With the files in place, you can check that the output follows the [rules applied to the JSON payload](#rules-applied-to-the-json-payload).
 
-Instead of repeating these rules in every test, put them in one helper that takes a payload and returns a list of problems, for example `tests/payload_rules.py`:
+To do so, [write a payload validator](#creating-a-payload-validator) and [test the transformation](#testing-the-transformation).
+
+#### Creating a payload validator
+
+Instead of repeating [the rules](#rules-applied-to-the-json-payload) in every test, put them in one helper that takes a payload and returns a list of problems, for example `tests/payload_rules.py`:
 
 ```python
 """Checks a payload against the rules of the Edge Node and the Data API."""
@@ -348,9 +358,9 @@ Some notes on the validator:
 - An `Id` must be a plain value. An array, an object, or an empty string counts as a missing `Id`.
 - The `Id` checks run per table, after all rows are collected. This way, the VLANs of all interfaces are checked together, in the same way the Data API merges them into one table.
 
-The validator does not know which parameters, tables, and columns the element's connector defines. A payload without problems can still contain a key that the connector does not have, and that key is lost. The expected payload test in the next section detects accidental key changes.
+The validator does not know which parameters, tables, and columns the element's connector defines. A payload without problems can still contain a key that the connector does not have, and that key is lost. The expected payload test mentioned under [Testing the transformation](#testing-the-transformation) detects accidental key changes.
 
-### Test the transformation
+#### Testing the transformation
 
 With the validator and the fixtures, you can test `transform()` with three kinds of tests:
 
@@ -358,7 +368,7 @@ With the validator and the fixtures, you can test `transform()` with three kinds
 - **The rules test** runs the validator on the result.
 - **Edge case tests** cover situations such as an empty table or a missing field. Decide what the correct behavior is, e.g., an empty table or an error, and write a test for it. Note that an empty array leaves the table in DataMiner unchanged.
 
-Save them as `tests/test_payload.py`:
+Save these tests as `tests/test_payload.py`:
 
 ```python
 import json
@@ -461,13 +471,15 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-## Replace the Edge Node with a mock
+### Mocking the Edge Node endpoint and testing the push
 
-The tests so far check the data. The next tests check that the script sends it correctly, and that it raises an error when the Edge Node does not accept it.
+The tests so far check the data. The next tests check whether the script sends the data correctly and whether it raises an error when the Edge Node does not accept the data.
 
-### Test the push
+#### Testing the push
 
-The following tests check that the payload is sent with the run secret and a timeout, and that a rejected or failed request raises an exception. Save them as `tests/test_push.py`:
+The following tests check whether the payload is sent with the run secret and a timeout and whether a rejected or failed request raises an exception.
+
+Save these tests as `tests/test_push.py`:
 
 ```python
 import unittest
@@ -512,9 +524,11 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-### Test a complete run
+#### Testing a complete run
 
-The last test runs `main()` from start to finish, as the Edge Node would, with both the device call and the push mocked. It then checks the payload that would have been sent. The argument is passed as `--host=value`, the same way the Edge Node passes it. Save it as `tests/test_main.py`:
+The last test runs `main()` from start to finish, as the Edge Node would, with both the device call and the push mocked. It then checks the payload that would have been sent. The argument is passed as `--host=value`, the same way the Edge Node passes it.
+
+Save this test as `tests/test_main.py`:
 
 ```python
 import json
@@ -551,7 +565,7 @@ if __name__ == "__main__":
     unittest.main()
 ```
 
-## Summary
+## Running connector script tests
 
 Run all tests from the project root:
 
@@ -559,7 +573,7 @@ Run all tests from the project root:
 python -m unittest discover -s tests -t . -p "test*.py" -v
 ```
 
-In Visual Studio, the tests also appear in Test Explorer, where you can run and debug them.
+In Visual Studio, the tests also appear in *Test Explorer*, where you can run and debug them.
 
 Together, these tests cover the script without a device or an Edge Node:
 

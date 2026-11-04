@@ -214,6 +214,8 @@ items:
         items:
         - name: Developing connector scripts in Visual Studio
           topicUid: DevelopingConnectorScriptsInVisualStudio
+        - name: Testing connector scripts
+          topicUid: TestConnectorScriptsPython
       - name: Conditions
         topicUid: LogicConditions
       - name: Reserved IDs
@@ -885,12 +887,6 @@ items:
           topicUid: Investigating_slow_device_control_using_dotTrace
         - name: Protocol thread runtime errors - use cases
           topicUid: Protocol_thread_run_time_errors_use_cases
-    - name: Connector scripts
-      items:
-      - name: Python
-        items:
-        - name: Testing
-          topicUid: TestConnectorScriptsPython
   - name: Automation scripts
     topicUid: AutomationDevGuideIndex
     items:
