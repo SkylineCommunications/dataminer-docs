@@ -70,3 +70,11 @@ From now on, DataMiner Cube will only subscribe to state icon changes when the s
 DataMiner Cube could retain certain custom text block controls and workspace setting views in memory after they were no longer in use, causing memory leaks.
 
 From now on, Cube will stop timers and remove event subscriptions when these controls are unloaded, hidden, or their content changes. The workspace settings suggestion timer will only run while suggestions are being processed.
+
+#### Visual Overview: Reference lines, markers, and thresholds would not appear when opening a spectrum component [ID 46902]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you opened a visual overview containing a spectrum component, reference lines, markers, and thresholds configured in the drawing or in a preset would not be displayed correctly until you resized that visual overview.
+
+These items will now be displayed correctly when the spectrum component is first opened.
