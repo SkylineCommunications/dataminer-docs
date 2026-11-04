@@ -97,6 +97,12 @@ From now on, it will only scan folders for connectors on the incompatibility lis
 
 The incompatible connector versions reported, the message shown, and the requirement to remove those versions before upgrading remain unchanged. No configuration is required.
 
+#### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
 ### Fixes
 
 #### SLNet: Array index errors when retrieving alarm filter, trend filter, or redundancy group information [ID 46607]
