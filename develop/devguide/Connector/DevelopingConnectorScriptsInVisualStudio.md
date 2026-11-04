@@ -5,7 +5,7 @@ description: "Learn how to create, configure, debug, test, and package a Python-
 
 # Developing connector scripts in Visual Studio
 
-You can use the **DataMiner Connector Script** project template to develop a Python-based integration for a DataMiner Edge Node in Visual Studio. The template provides the files and project settings needed for a consistent development experience and keeps the connector-specific data retrieval logic separate from the Edge Node communication.
+You can use the *DataMiner Connector Script* project template to develop a Python-based integration for a DataMiner Edge Node in Visual Studio. The template provides the files and project settings needed for a consistent development experience and keeps the connector-specific data retrieval logic separate from the Edge Node communication.
 
 > [!IMPORTANT]
 > Edge Node mode is currently available in preview. For more information, see [About Edge Nodes](xref:About_Edge_Nodes).
@@ -19,19 +19,23 @@ Make sure the following are available:
 - A 64-bit Python 3.14 installation.
 - A DataMiner connector solution.
 
-Install the latest Python 3.14 patch release from the [Python downloads](https://www.python.org/downloads/) page. Do not install Python 3.15 for the connector script project; the connector runtime only supports Python 3.14.
+Install the latest **Python 3.14** patch release from the [Python downloads](https://www.python.org/downloads/) page. Do not install Python 3.15 for the connector script project; the connector runtime only supports Python 3.14.
 
 ## Creating a connector script project
 
 To add a Python connector script to a connector solution:
 
 1. Open the connector solution in Visual Studio.
-1. In Solution Explorer, right-click the **Connector Scripts** solution folder, create it first if it doesn't exist.
-1. Select **Add** > **New Project**.
-1. Search for and select **DataMiner Connector Script**.
-1. Enter a project name that follows the template `ConnectorScript_{n}` (for example `ConnectorScript_1`), and select **Create**.
 
-The **Connector Scripts** solution folder is included in new connector solutions. If you are working with an older solution, create the solution folder manually before you add the project.
+1. In *Solution Explorer*, right-click the *Connector Scripts* solution folder.
+
+   If this folder does not exist yet, you will need to create it first. The folder is automatically included in new connector solutions but must be added manually in older solutions.
+
+1. Select *Add* > *New Project*.
+
+1. Search for and select *DataMiner Connector Script*.
+
+1. Enter a project name that follows the template `ConnectorScript_{n}` (for example, `ConnectorScript_1`), and select *Create*.
 
 ## Registering the script in the connector
 
@@ -85,7 +89,7 @@ The schedule in this example runs the script every hour. Configure the schedule 
 
 ### Passing connector settings to the script
 
-Connector settings are not required for every script. When a script needs connector-specific configuration, define the values under `Settings` and map them to command-line arguments under `Edge.Scripts.Script.Arguments`, as shown in the example:
+Connector settings are not required for every script. When a script needs connector-specific configuration, define the values under `Settings` and map them to command-line arguments under `Edge.Scripts.Script.Arguments`, as shown in the example above:
 
 - `SettingRef.id` refers to the `id` of a setting defined under `Settings`.
 - `SettingRef.field` selects a field from a compound setting, such as the `username` or `password` field of `UsernamePasswordCredential`.
@@ -101,7 +105,7 @@ parser.add_argument("--password", required=True)
 
 Use settings for deployment-specific values and credentials instead of hard-coding them in the script. The argument name does not have to match the setting ID, but the `SettingRef` ID must match an existing setting.
 
-## Understanding the project structure
+## Project structure
 
 The generated project has the following structure:
 
@@ -141,7 +145,9 @@ def main():
 Use each function for a distinct responsibility:
 
 1. In `parse_input()`, define and parse the input arguments required by the connector script.
+
 1. In `get_data()`, implement the communication with the data source and return the collected data.
+
 1. Leave `push_data_to_edge_node()` responsible for returning that data to the Edge Node.
 
 The object returned by `get_data()` must be JSON-serializable.
@@ -154,9 +160,12 @@ Keeping the data retrieval and Edge Node communication separate makes the connec
 
 Use a project-local virtual environment to isolate the packages used during development:
 
-1. In Solution Explorer, expand **Python Environments**.
+1. In *Solution Explorer*, expand *Python Environments*.
+
 1. Add a virtual environment based on a 64-bit Python 3.14 interpreter.
+
 1. Set the environment location to `.venv`.
+
 1. Set the new environment as the current environment for the project.
 
 > [!NOTE]
@@ -164,11 +173,16 @@ Use a project-local virtual environment to isolate the packages used during deve
 
 ## Managing dependencies
 
-Install each direct third-party dependency in the project virtual environment. To update `requirements.txt` in Visual Studio:
+Install each direct third-party dependency in the project virtual environment.
+
+To update `requirements.txt` in Visual Studio:
 
 1. Right-click the `.venv` environment.
-1. Select **Generate requirements.txt**.
-1. Select **Replace entire file**.
+
+1. Select *Generate requirements.txt*.
+
+1. Select *Replace entire file*.
+
 1. Review the generated file and retain only the direct dependencies used by the connector script.
 
 Do not list transitive dependencies manually. During packaging, the wheels resolver uses `pip` to resolve the transitive dependency graph from the direct dependencies in `requirements.txt`.
@@ -190,9 +204,13 @@ You can start `run/main.py` with the standard Visual Studio Python debugger. The
 If the connector script requires input arguments:
 
 1. Open the Python project properties.
-1. Go to the **Debug** tab.
-1. Add the values under **Script Arguments**.
+
+1. Go to the *Debug* tab.
+
+1. Add the values under *Script Arguments*.
+
 1. Set breakpoints in `parse_input()`, `get_data()`, or `push_data_to_edge_node()`.
+
 1. Start debugging.
 
 > [!CAUTION]
@@ -204,19 +222,19 @@ When reproducing a production issue, use representative non-sensitive input in y
 
 ## Testing the connector script
 
-The project uses Python's built-in `unittest` framework. Run the tests from Test Explorer or from the project root:
+The project uses Python's built-in `unittest` framework. Run the tests from *Test Explorer* or from the project root:
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -t . -p "test*.py" -v
 ```
 
-Unit tests do not inherit the Script Arguments configured on the Visual Studio Debug tab. Pass an argument list directly to `parse_input()` or patch `sys.argv` in the test.
+Unit tests do not inherit the script arguments configured in the Visual Studio *Debug* tab. Pass an argument list directly to `parse_input()` or patch `sys.argv` in the test.
 
 Focus the tests on:
 
-- Parsing valid and invalid inputs.
+- The parsing of valid and invalid inputs.
 - The data returned by `get_data()`.
-- Error handling for unavailable data sources and invalid responses.
+- The error handling for unavailable data sources and invalid responses.
 - The interaction between `main()`, `get_data()`, and `push_data_to_edge_node()`.
 - The script identity and entry point in `manifest.json`.
 

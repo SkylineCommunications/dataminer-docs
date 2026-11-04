@@ -5,7 +5,7 @@ description: "Learn how connector scripts run Python-based integrations on DataM
 
 # Connector scripts
 
-A connector script is optional Python-based logic that a DataMiner connector can use. When used, it executes on a DataMiner Edge Node, where it collects and processes data close to the data source and returns the resulting data to the DataMiner element.
+A connector script is optional Python-based logic that a DataMiner connector can use. When a connector script is used, it is executed on a [DataMiner Edge Node](xref:About_Edge_Nodes), where it collects and processes data close to the data source and returns the resulting data to the DataMiner element.
 
 Connector scripts complement the logic that runs in DataMiner by executing in the managed environment of an Edge Node. This is useful when the integration must run locally at a remote site or close to a data source.
 
