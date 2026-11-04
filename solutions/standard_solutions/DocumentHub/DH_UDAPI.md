@@ -23,6 +23,33 @@ For an example of how you can authenticate requests to these APIs, refer to the 
 > [!TIP]
 > For the full source code of these scripts, go to the [DocumentHub Solution repository](https://github.com/SkylineCommunications/SLC-S-DocumentHub) on GitHub (look for projects starting with `SLC-DH-UDAPI-*`).
 
+## API specification
+
+The DocumentHub Solution repository contains a single OpenAPI specification for all `SLC-DH-UDAPI-*` scripts. The specification, `docs/openapi/DocumentHub.json`, lists the routes, HTTP methods, and request and response models, grouped by API. To access it, go to the [DocumentHub Solution repository](https://github.com/SkylineCommunications/SLC-S-DocumentHub) on GitHub and open `docs/openapi/DocumentHub.json`.
+
+The default routes are listed below. The public route can be configured separately for each API in the *User-Defined APIs* module in DataMiner Cube.
+
+| API | Default route |
+| --- | --- |
+| Manage Buckets (`Buckets`) | `dh-buckets` |
+| Manage DOM Sources (`DomSources`) | `dh-dom-sources` |
+| Manage SharePoint Sources (`SharePointConfigurations`) | `dh-sharepoint-configs` |
+| Manage Files (`Files`) | `dh-files` |
+| Download File (`DownloadFile`) | `dh-download-file` |
+| Read DOM Modules (`DomModules`) | `dh-dom-modules` |
+| Read DOM Definitions (`DomDefinitions`) | `dh-dom-definitions` |
+| Get Agent Version (`AgentVersion`) | `dh-agent-version` |
+
+You can also open the JSON specification in an OpenAPI viewer, such as [Swagger Editor](https://editor.swagger.io/), to explore the API interactively.
+
+## API Explorer
+
+The `DocumentHub` and `DocumentHub-Internal` packages publish the OpenAPI specification to the DataMiner Agent when installed. You can browse it with the [Skyline API Explorer](https://catalog.dataminer.services/details/33d3f002-f7bf-46f3-9405-f491b6f84453?q=api%20explorer):
+
+1. Open the API Explorer app.
+1. Look up **DocumentHub User-Defined API**.
+1. Select **Explore Specification**.
+
 ## Handling of unsupported methods
 
 Each DocumentHub UDAPI script only supports a specific set of HTTP methods. If you send a request using a method that is not supported (for example, `PATCH` on `SLC-DH-UDAPI-ManageBuckets`), the script's default branch returns an HTTP `400` status code with a message listing the supported methods.
