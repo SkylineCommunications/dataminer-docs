@@ -18,7 +18,7 @@ AI agents operate by combining:
 
 ### Native agents
 
-Native agents are built-in agents that ship with the DataMiner Assistant DxM. They have access to all available tools and skills, and they combine multiple DataMiner Intelligence capabilities to autonomously investigate questions, retrieve information, and perform guided actions.
+Native agents are built-in agents that ship with the DataMiner Assistant DxM. They are available as soon as the DxM has been installed and the Assistant app has been enabled. They have access to all available tools and skills, and they combine multiple DataMiner Intelligence capabilities to autonomously investigate questions, retrieve information, and perform guided actions.
 
 The following native agents are available:
 
@@ -34,6 +34,9 @@ On the agents overview page, native agents are labeled with a "Native" tag. You 
 [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents) are user-defined agents that bundle a name, description, instructions, and a curated set of references into a reusable, purpose-built entity. You can create them to have agents that are specifically tailored to certain operational workflows or domains.
 
 Specialized agents only have access to the specific tools and skills assigned to them.
+
+> [!IMPORTANT]
+> Specialized agents are an experimental feature. They only become available once the specialized agents feature has been enabled by an administrator. For more information, see [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents).
 
 ## Agent context
 

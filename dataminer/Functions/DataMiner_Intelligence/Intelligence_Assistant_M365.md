@@ -5,7 +5,7 @@ description: "Learn how to deploy and use DataMiner Assistant for Microsoft 365 
 
 # DataMiner Assistant for Microsoft 365
 
-The DataMiner Assistant for Microsoft 365 allows you to access all the features from the [DataMiner Assistant app](xref:Intelligence_Assistant_app) directly from Microsoft Teams or Microsoft Copilot. If you have the necessary permissions, you will be able to request information from your DataMiner System from any location, even without direct access to DataMiner.
+The DataMiner Assistant for Microsoft 365 lets you chat with the DataMiner Insights agent from Microsoft Teams or Microsoft Copilot. The integration currently supports the DataMiner Insights agent only; you cannot select another agent from Microsoft Teams or Microsoft Copilot. If you have the necessary permissions, you can request information from your DataMiner System from any location, even without direct access to DataMiner.
 
 ![Welcome screen of the DataMiner Assistant agent in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)
 
@@ -53,7 +53,6 @@ Below you can find a quick guide of typical ways to interact with the Assistant.
 | Get account info | Displays your signed-in account details and the currently selected system. |"who am I?", "show my account" |
 | System configuration | Guides you through selecting an organization and DataMiner System to work with. | "configure system", "switch system" |
 | Get active system info | Shows the currently selected DataMiner System, including a link to open it in your browser. | "which system is active?", "show current system" |
-| Configure agent | Configure the AI agent that is used for the conversation. A default AI agent can be selected for the current system. | "select agent", "change agent" |
 | Configure model | Select the model that is used by the AI agent. A default model can be selected for the current AI agent. | "select model", "change model" |
 | Agent info | Display the AI agent and model that are currently being used | "agent info", "active agent" |
 | Live system queries | Sends queries to the DataMiner Assistant for real-time data (e.g., alarms, elements, services) and provides links to the monitoring UI. | "show active alarms", "what services are running?" |

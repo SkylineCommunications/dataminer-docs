@@ -29,6 +29,9 @@ When you open the app, a welcome screen is displayed with the following elements
 
 - **Left sidebar**: Allows you to start a new session at any time by clicking *+ New session*. Below that, you can access your sessions, [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools).
 
+  > [!NOTE]
+  > The *Agents* button will only be visible in the sidebar if [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) have been made available in your DataMiner System.
+
 - **Header bar**: The header bar is similar to other native DataMiner apps, with a button to return to the landing page on the left, and a user icon on the right. Clicking the user icon opens a menu with the following options:
 
   - *About*: Provides access to information about the app, including the version of the app and all of its components.
@@ -50,3 +53,28 @@ When you open the app, a welcome screen is displayed with the following elements
   - **Model selector**: In the lower-right corner, you can choose which model answers your question (e.g., GPT-5.6 Luna). The last selected model is remembered across sessions.
 
   - **Speech-to-text**: A microphone button next to the chat input that allows you to use speech-to-text for entering your questions.
+
+## Starting a chat via URL parameters
+
+You can open the Assistant app with a specific agent, model, reasoning level, and question by adding query parameters to its URL. When the app loads with one or more of these parameters, it applies them before rendering and, if a message is provided, immediately sends it. This allows you to share links that start a conversation without any further interaction.
+
+The following query parameters are supported:
+
+| Parameter | Description |
+|-----------|-------------|
+| `agentId` | The ID (not the name) of the [native](xref:Intelligence_Assistant_Agents#native-agents) or [specialized](xref:Intelligence_Assistant_Specialized_Agents) agent to start the conversation with. You can find the ID of an agent in the URL of its details page, e.g., `https://[DMA]/assistant/agents/details/a3e1c2d4-5f6b-4a7e-8c9d-1b2f3e4a5c6d`. |
+| `model` | The model to use for the conversation. |
+| `reasoningLevel` | The reasoning level to use for models that support reasoning. Valid values are `None`, `Low`, `Medium`, `High`, and `Xhigh`. Not all models support every level. |
+| `message` | The initial message. When set, this message is sent automatically once the app has finished loading. The value must be URL-encoded, e.g., spaces as `%20` and question marks as `%3F`. |
+
+For example, the following URL opens the Assistant with the agent with ID `a3e1c2d4-5f6b-4a7e-8c9d-1b2f3e4a5c6d` at the *High* reasoning level, and immediately asks how to reset a device:
+
+```text
+https://[DMA]/root/assistant?agentId=a3e1c2d4-5f6b-4a7e-8c9d-1b2f3e4a5c6d&reasoningLevel=High&message=How%20do%20I%20reset%20a%20device%3F
+```
+
+> [!NOTE]
+>
+> - Selecting a value via a URL parameter is equivalent to selecting it in the user interface.
+> - If a parameter is missing or invalid, or refers to an agent, model, or reasoning level that is not available, the app falls back to its default for that option.
+> - Parameter values are case-sensitive. For example, use `reasoningLevel=High` and not `reasoningLevel=high`.

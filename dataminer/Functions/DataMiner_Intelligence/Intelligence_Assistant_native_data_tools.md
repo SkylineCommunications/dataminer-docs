@@ -16,14 +16,14 @@ Several native data tools are available in the Assistant app out of the box, wit
 - *dcf-interfaces*
 - *elements*
 - *parameter-relations*: Requires the [ModelHost DxM](xref:DataMinerExtensionModules#modelhost).
-- *parameters*: Includes standalone and table parameters, and parameter trend data.
+- *parameters*: Includes standalone and table parameters, parameter trend data, and cross-element comparisons for elements that share a protocol.
 - *pattern-occurrence*
 - *process-automation-processes*: Only visible when the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option is enabled.
 - *process-automation-tokens*: Only visible when the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option is enabled.
 - *relational-anomalies*
 - *resource-pools*: Requires the appropriate license; only visible when the [GenericInterface](xref:Overview_of_Soft_Launch_Options#genericinterface) soft-launch option is enabled.
-- *services*
+- *services*: Provides detailed service information and service-related insights.
 - *trend-data-pattern*
-- *views*
+- *views*: Lets you inspect views and nested views, find their elements and services, and identify which views contain a specific element or service.
 
 Native data tools cover a fixed set of GQI data sources. To query DOM instances of a specific DOM definition, a specific ad hoc GQI data source, or a fully customized ad hoc data source, define a custom data tool instead. See [Custom data tools](xref:Intelligence_Assistant_custom_data_tools).

@@ -138,6 +138,8 @@ items:
               items:
               - name: GV AMPP
                 topicUid: Pricing_sizing_guide_use_cases_GV_AMPP
+    - name: DataMiner Intelligence
+      topicUid: Pricing_DataMiner_Intelligence
     - name: Perpetual-Use Licensing
       topicUid: Pricing_Perpetual_Use_Licensing
     - name: Professional Service credits
