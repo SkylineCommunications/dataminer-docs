@@ -103,6 +103,8 @@ From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can automatically update to a m
 
 ### Using a hotfixed Cube version
 
+To use a hotfixed version of DataMiner Cube:
+
 1. Extract the hotfix *.dmupgrade* package using 7-Zip.
 
    Alternatively, make a copy of the package, change the copy's extension to *.zip*, and extract it using Windows *Extract All*.
@@ -113,12 +115,11 @@ From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can automatically update to a m
 
    Keep *Cube.zip* and *versions.txt* together in this folder.
 
-1. In DataMiner Cube, go to *System Center > System settings > Manage client versions*.
+1. In DataMiner Cube, go to *System Center* > *System settings* > *Manage client versions*.
 
 1. Select *Force a specific version* and select that *Cube.zip*.
 
-> [!IMPORTANT]
-> Use the supplied *Cube.zip* as-is. Do not extract its contents and create a new ZIP. Repackaging can change the archive's byte size even when its contents are unchanged. If a package for the same Cube version already exists on an Agent with a different byte size, Cube reports "Error: file already exists but has incorrect size".
+   Selecting this option ensures that users connecting to the DMA will use this version even if a more recent version is available. Otherwise, users connecting to the DMA could receive a newer Cube version through dataminer.services that does not yet contain the fix.
 
-> [!NOTE]
-> When using a hotfix package containing a Cube fix, select *Force a specific version*. Otherwise, users connecting to the DMA may receive a newer Cube version through dataminer.services that does not yet contain the fix.
+> [!IMPORTANT]
+> Use the supplied *Cube.zip* as is. Do not extract its contents and create a new ZIP. Repackaging can change the archive's byte size even when its contents are unchanged. If a package for the same Cube version already exists on an Agent with a different byte size, Cube reports "Error: file already exists but has incorrect size".
