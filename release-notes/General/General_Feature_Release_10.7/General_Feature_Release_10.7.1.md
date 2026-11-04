@@ -207,6 +207,14 @@ Since DataMiner Feature Release 10.6.10, in some cases, DataMiner services could
 
 The standalone BPA executor would throw a `NullReferenceException` when running a manually loaded BPA DLL file with the `RequireSLNet` flag, preventing the BPA test from executing.
 
+#### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+When services or elements were updated in a DataMiner cluster, offline Agents in a Failover setup would experience a memory and CPU spike in the StorageModule process for each update. The size of the spike depended on the number of services and elements in the cluster.
+
+Both online and offline Agents will now keep their XML-based services in memory at all times. The service cache in the StorageModule backend will only be reinitialized during a Failover switch or in exceptional circumstances.
+
 #### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
