@@ -66,4 +66,6 @@ Perform the following steps to release a connector version:
 
 ## Publishing DataMiner app packages
 
-DataMiner install packages, i.e., .dmapp files, can contain any other artifacts, including other install packages and companion files. To publish them to the Catalog, use CI/CD on GitHub. For more information, see [CI/CD using GitHub for non-connector items](xref:CICD_on_GitHub_getting_started#cicd-using-github-for-non-connector-items).
+DataMiner app packages, i.e., .dmapp files, can contain any other artifacts, including automation scripts, other app packages, and companion files. The source code of these is currently hosted on GitHub under the [Skyline Communications organization](https://github.com/SkylineCommunications).
+
+The packages will automatically be registered as private Catalog items via GitHub workflows once a release or pre-release is made. When applicable, you can make them public directly within the Catalog. For more information, see [CI/CD using GitHub for non-connector items](xref:CICD_on_GitHub_getting_started#cicd-using-github-for-non-connector-items).
