@@ -84,10 +84,7 @@ To install DataMiner using v10.6 or v10.5 Installer, follow the steps below:
 
 1. If you want to proceed with the configuration of your DataMiner Agent, click *Run Configuration Tool* to start the DataMiner Configurator, and then follow the steps for your DataMiner version.
 
-   **From DataMiner 10.6.0 [CU10]/10.6.12 onwards:**
-
-   > [!NOTE]
-   > The initial DataMiner configuration wizard was redesigned in DataMiner 10.6.0 [CU10]/10.6.12. Only the pages that are relevant to your selected configuration are shown.
+   **From DataMiner 10.6.0 [CU10]/10.6.12 onwards<!--RN 45483-->:**
 
    1. Select a commercial model: *Community Edition*, usage-based services, or a perpetual-use license with a DataMiner ID provided by Skyline.
 
@@ -95,14 +92,14 @@ To install DataMiner using v10.6 or v10.5 Installer, follow the steps below:
 
    1. Choose the type of storage: [Storage as a Service (STaaS)](xref:STaaS) (recommended), locally hosted storage, or externally hosted storage.
 
-      If you select externally hosted storage ([dedicated clustered storage](xref:Configuring_dedicated_clustered_storage)), you will also need to fill in the connection details for both Cassandra and OpenSearch. You can enable TLS separately for Cassandra and OpenSearch using the corresponding checkboxes.
+      If you select externally hosted storage ([dedicated clustered storage](xref:Configuring_dedicated_clustered_storage)), you will also need to fill in the connection details for both Cassandra and OpenSearch. During this step, you can also enable TLS separately for Cassandra and OpenSearch<!--RN 45881-->.
 
       > [!NOTE]
       > Make sure these clusters are active and reachable from the machine where you are installing DataMiner. You are responsible for the management of these external database clusters.
 
    1. Connect to dataminer.services if required.
 
-      The wizard will open a browser where you can sign in or create an account. After you have signed in, the wizard completes the registration automatically. You no longer need to provide an organization API key, system URL, administrator email address, or STaaS region. After a successful registration, DataMiner restarts automatically and its startup is validated.
+      The wizard will open a browser where you can sign in or create an account. After you have signed in, the wizard completes the registration automatically<!--RN 45881-->. After a successful registration, DataMiner restarts automatically.
 
       A connection is required for Community Edition, usage-based services, and STaaS. For a perpetual-use license with self-hosted storage, registration with dataminer.services is optional.
 
