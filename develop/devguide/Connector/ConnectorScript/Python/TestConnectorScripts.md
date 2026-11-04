@@ -104,9 +104,11 @@ Two kinds of arrays are not turned into tables:
 
 #### The Id column identifies each row
 
-A key named `Id` becomes the primary key of the table. It determines which row each update is written to. Every row needs an `Id` value that is not null or empty, and that value must be unique.
+A key named `Id` becomes the primary key of the table. It determines which row each update is written to.
 
-Without an `Id`, rows are numbered by their position: the first object is row 1, the second is row 2, and so on. If the device lists its interfaces in a different order next time, the values move to other rows.
+If the rows of a table contain an `Id` key, every row in that table must have an `Id` value that is not null or empty, and each value must be unique.
+
+If none of the rows contain an `Id` key, the rows are numbered by their position instead: the first object is row 1, the second is row 2, and so on. If the device lists its interfaces in a different order next time, the values move to other rows. To avoid this, always include an `Id` key with a stable value in every row.
 
 #### Nested arrays become linked tables
 
@@ -128,16 +130,16 @@ This fills two tables:
 
 The VLANs of all interfaces end up in one table, so their `Id` values must be unique across all interfaces, not just within one. If `eth0` and `eth1` both had VLAN `100`, only one of those rows would be kept.
 
-### Script starting behavior
+### Script run behavior
 
-The Edge Node will start the script in the following way:
+When the Edge Node runs your script, the following applies:
 
 - Arguments arrive as `--name=value`.
 - Secrets arrive as environment variables, never as arguments.
 - A run only counts as failed when the script ends with a non-zero exit code. If your script catches an exception and only prints it, the Edge Node reports a successful run, even though no data was sent.
 - The script is stopped after 300 seconds by default, so every network call needs a timeout.
 
-Ensure that your tests start the script in the same way.
+Make sure your tests run the script under the same conditions.
 
 ## Example connector script
 
@@ -567,16 +569,24 @@ if __name__ == "__main__":
 
 ## Running connector script tests
 
-Run all tests from the project root:
+The project uses Python's built-in `unittest` framework. Run all tests from *Test Explorer* in Visual Studio, where you can also debug them, or from the project root:
 
 ```powershell
-python -m unittest discover -s tests -t . -p "test*.py" -v
+.\.venv\Scripts\python.exe -m unittest discover -s tests -t . -p "test*.py" -v
 ```
 
-In Visual Studio, the tests also appear in *Test Explorer*, where you can run and debug them.
+Unit tests do not inherit the script arguments configured in the Visual Studio *Debug* tab. Pass an argument list directly to `parse_input()` or patch `sys.argv` in the test, as in the [complete run test](#testing-a-complete-run).
 
 Together, these tests cover the script without a device or an Edge Node:
 
 - `test_payload.py` checks that `transform()` produces the expected payload, and that the payload follows the rules of the Edge Node and the Data API.
 - `test_push.py` checks that the payload is sent with the run secret and a timeout, and that a failed push raises an exception.
-- `test_main.py` checks a complete run, started the same way the Edge Node starts it.
+- `test_main.py` checks a complete run, with the script run the same way the Edge Node runs it.
+
+In addition, consider adding tests for:
+
+- The parsing of valid and invalid inputs by `parse_input()`.
+- The error handling when the device is unavailable or returns an invalid response.
+- The script identity and entry point in `manifest.json`.
+
+Always mock external systems and HTTP requests, so that the tests remain deterministic and do not depend on network access.
