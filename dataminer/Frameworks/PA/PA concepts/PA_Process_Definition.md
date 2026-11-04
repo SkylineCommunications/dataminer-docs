@@ -1,5 +1,6 @@
 ---
 uid: PA_Process_Definition
+description: "Explore process definition components in Process Automation, including start and end events, activation windows, and gateway routing rules."
 ---
 
 # Process definition

@@ -209,6 +209,11 @@ items:
           topicUid: LogicQActionsAutomationScriptExecution            
         - name: Examples
           topicUid: LogicQActionsExamples
+      - name: Connector scripts
+        topicUid: ConnectorScripts
+        items:
+        - name: Developing connector scripts in Visual Studio
+          topicUid: DevelopingConnectorScriptsInVisualStudio
       - name: Conditions
         topicUid: LogicConditions
       - name: Reserved IDs
@@ -810,8 +815,6 @@ items:
           topicUid: ConnectorBestPracticesValidation
         - name: Points of attention
           items:
-            - name: Skyline Driver Passport Platform
-              topicUid: Skyline_Driver_Passport_Platform
             - name: Minimum DMA version
               topicUid: Minimum_DMA_version
     - name: How-tos
@@ -2008,6 +2011,8 @@ items:
             topicUid: Protocol.AlarmLevelLinks.AlarmLevelLink-id
           - name: '@remoteElement'
             topicUid: Protocol.AlarmLevelLinks.AlarmLevelLink-remoteElement
+      - name: AllowDynamicParameterCreation
+        topicUid: Protocol.AllowDynamicParameterCreation
       - name: App
         topicUid: Protocol.App
         items: 
@@ -2237,6 +2242,47 @@ items:
                 topicUid: Protocol.Display.Pages.Page.Visibility-overridePID
               - name: '@value'
                 topicUid: Protocol.Display.Pages.Page.Visibility-value
+      - name: Edge
+        topicUid: Protocol.Edge
+        items: 
+        - name: Scripts
+          topicUid: Protocol.Edge.Scripts
+          items: 
+          - name: Script
+            topicUid: Protocol.Edge.Scripts.Script
+            items: 
+            - name: '@displayName'
+              topicUid: Protocol.Edge.Scripts.Script-displayName
+            - name: '@guid'
+              topicUid: Protocol.Edge.Scripts.Script-guid
+            - name: '@id'
+              topicUid: Protocol.Edge.Scripts.Script-id
+            - name: Arguments
+              topicUid: Protocol.Edge.Scripts.Script.Arguments
+              items: 
+              - name: Argument
+                topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument
+                items: 
+                - name: '@name'
+                  topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument-name
+                - name: SettingRef
+                  topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument.SettingRef
+                  items: 
+                  - name: '@field'
+                    topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument.SettingRef-field
+                  - name: '@id'
+                    topicUid: Protocol.Edge.Scripts.Script.Arguments.Argument.SettingRef-id
+            - name: Schedule
+              topicUid: Protocol.Edge.Scripts.Script.Schedule
+              items: 
+              - name: Default
+                topicUid: Protocol.Edge.Scripts.Script.Schedule.Default
+                items: 
+                - name: Interval
+                  topicUid: Protocol.Edge.Scripts.Script.Schedule.Default.Interval
+                  items: 
+                  - name: '@period'
+                    topicUid: Protocol.Edge.Scripts.Script.Schedule.Default.Interval-period
       - name: ElementType
         topicUid: Protocol.ElementType
       - name: ExportRules
@@ -3562,6 +3608,106 @@ items:
             topicUid: Protocol.Responses.Response.Description
           - name: Name
             topicUid: Protocol.Responses.Response.Name
+      - name: Settings
+        topicUid: Protocol.Settings
+        items: 
+        - name: Section
+          topicUid: Protocol.Settings.Section
+          items: 
+          - name: '@displayName'
+            topicUid: Protocol.Settings.Section-displayName
+          - name: Setting
+            topicUid: Protocol.Settings.Section.Setting
+            items: 
+            - name: '@displayName'
+              topicUid: Protocol.Settings.Section.Setting-displayName
+            - name: '@id'
+              topicUid: Protocol.Settings.Section.Setting-id
+            - name: DropDown
+              topicUid: Protocol.Settings.Section.Setting.DropDown
+              items: 
+              - name: Options
+                topicUid: Protocol.Settings.Section.Setting.DropDown.Options
+                items: 
+                - name: Option
+                  topicUid: Protocol.Settings.Section.Setting.DropDown.Options.Option
+                  items: 
+                  - name: '@displayName'
+                    topicUid: Protocol.Settings.Section.Setting.DropDown.Options.Option-displayName
+                  - name: '@value'
+                    topicUid: Protocol.Settings.Section.Setting.DropDown.Options.Option-value
+            - name: IPAddress
+              topicUid: Protocol.Settings.Section.Setting.IPAddress
+            - name: IPPort
+              topicUid: Protocol.Settings.Section.Setting.IPPort
+            - name: Number
+              topicUid: Protocol.Settings.Section.Setting.Number
+              items: 
+              - name: Decimals
+                topicUid: Protocol.Settings.Section.Setting.Number.Decimals
+              - name: Range
+                topicUid: Protocol.Settings.Section.Setting.Number.Range
+                items: 
+                - name: High
+                  topicUid: Protocol.Settings.Section.Setting.Number.Range.High
+                - name: Low
+                  topicUid: Protocol.Settings.Section.Setting.Number.Range.Low
+            - name: SNMPCommunityCredential
+              topicUid: Protocol.Settings.Section.Setting.SNMPCommunityCredential
+            - name: SNMPv3Credential
+              topicUid: Protocol.Settings.Section.Setting.SNMPv3Credential
+            - name: Text
+              topicUid: Protocol.Settings.Section.Setting.Text
+            - name: TokenCredential
+              topicUid: Protocol.Settings.Section.Setting.TokenCredential
+            - name: UsernamePasswordCredential
+              topicUid: Protocol.Settings.Section.Setting.UsernamePasswordCredential
+        - name: Setting
+          topicUid: Protocol.Settings.Setting
+          items: 
+          - name: '@displayName'
+            topicUid: Protocol.Settings.Setting-displayName
+          - name: '@id'
+            topicUid: Protocol.Settings.Setting-id
+          - name: DropDown
+            topicUid: Protocol.Settings.Setting.DropDown
+            items: 
+            - name: Options
+              topicUid: Protocol.Settings.Setting.DropDown.Options
+              items: 
+              - name: Option
+                topicUid: Protocol.Settings.Setting.DropDown.Options.Option
+                items: 
+                - name: '@displayName'
+                  topicUid: Protocol.Settings.Setting.DropDown.Options.Option-displayName
+                - name: '@value'
+                  topicUid: Protocol.Settings.Setting.DropDown.Options.Option-value
+          - name: IPAddress
+            topicUid: Protocol.Settings.Setting.IPAddress
+          - name: IPPort
+            topicUid: Protocol.Settings.Setting.IPPort
+          - name: Number
+            topicUid: Protocol.Settings.Setting.Number
+            items: 
+            - name: Decimals
+              topicUid: Protocol.Settings.Setting.Number.Decimals
+            - name: Range
+              topicUid: Protocol.Settings.Setting.Number.Range
+              items: 
+              - name: High
+                topicUid: Protocol.Settings.Setting.Number.Range.High
+              - name: Low
+                topicUid: Protocol.Settings.Setting.Number.Range.Low
+          - name: SNMPCommunityCredential
+            topicUid: Protocol.Settings.Setting.SNMPCommunityCredential
+          - name: SNMPv3Credential
+            topicUid: Protocol.Settings.Setting.SNMPv3Credential
+          - name: Text
+            topicUid: Protocol.Settings.Setting.Text
+          - name: TokenCredential
+            topicUid: Protocol.Settings.Setting.TokenCredential
+          - name: UsernamePasswordCredential
+            topicUid: Protocol.Settings.Setting.UsernamePasswordCredential
       - name: SeverityBubbleUp
         topicUid: Protocol.SeverityBubbleUp
         items: 
@@ -4076,6 +4222,8 @@ items:
         topicUid: Protocol-TypeDllImport
       - name: TypeEmptyString
         topicUid: Protocol-TypeEmptyString
+      - name: TypeGuid
+        topicUid: Protocol-TypeGuid
       - name: TypeGroupParamId
         topicUid: Protocol-TypeGroupParamId
       - name: TypeNonEmptyString
@@ -4096,6 +4244,8 @@ items:
         topicUid: Protocol-TypePortRetryCount
       - name: TypePortSlowPoll
         topicUid: Protocol-TypePortSlowPoll
+      - name: TypePositiveDuration
+        topicUid: Protocol-TypePositiveDuration
       - name: TypeProtocolVersion
         topicUid: Protocol-TypeProtocolVersion
       - name: TypeQActionOptions
@@ -5491,403 +5641,6 @@ items:
       items:
       - name: NillablePositiveOrZeroInteger
         topicUid: SNMP-NillablePositiveOrZeroInteger
-  - name: NuGet stages schema
-    topicUid: SchemaNuGetStagesConfig
-    items:
-      - name: NuGetStages
-        topicUid: NuGetStages
-        items:
-        - name: Configurations
-          topicUid: NuGetStages.Configurations
-          items:
-          - name: Configuration
-            topicUid: NuGetStages.Configurations.Configuration
-            items: 
-            - name: '@scope'
-              topicUid: NuGetStages.Configurations.Configuration-scope
-            - name: PackageCreation
-              topicUid: NuGetStages.Configurations.Configuration.PackageCreation
-              items:
-              - name: Enabled
-                topicUid: NuGetStages.Configurations.Configuration.PackageCreation.Enabled
-            - name: PackagePublishing
-              topicUid: NuGetStages.Configurations.Configuration.PackagePublishing
-              items:
-              - name: Destinations
-                topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations
-                items:
-                - name: Destination
-                  topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations.Destination
-                  items: 
-                  - name: Server
-                    topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Destinations.Destination.Server
-              - name: Enabled
-                topicUid: NuGetStages.Configurations.Configuration.PackagePublishing.Enabled
-            - name: PackageSigning
-              topicUid: NuGetStages.Configurations.Configuration.PackageSigning
-              items:
-              - name: Enabled
-                topicUid: NuGetStages.Configurations.Configuration.PackageSigning.Enabled
-  - name: Package manifest schema
-    topicUid: SchemaPackageManifest
-    items:
-    - name: Manifest
-      topicUid: Manifest
-      items: 
-      - name: Content
-        topicUid: Manifest.Content
-        items: 
-        - name: AppPackages
-          topicUid: Manifest.Content.AppPackages
-          items: 
-          - name: AppPackage
-            topicUid: Manifest.Content.AppPackages.AppPackage
-            items: 
-            - name: RepoPath
-              topicUid: Manifest.Content.AppPackages.AppPackage.RepoPath
-            - name: Version
-              topicUid: Manifest.Content.AppPackages.AppPackage.Version
-              items: 
-              - name: Selection
-                topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection
-                items: 
-                - name: Range
-                  topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Range
-                  items: 
-                  - name: '@rangeSelection'
-                    topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Range-rangeSelection
-                - name: Specific
-                  topicUid: Manifest.Content.AppPackages.AppPackage.Version.Selection.Specific
-        - name: AutomationScripts
-          topicUid: Manifest.Content.AutomationScripts
-          items: 
-          - name: AutomationScript
-            topicUid: Manifest.Content.AutomationScripts.AutomationScript
-            items: 
-            - name: RepoPath
-              topicUid: Manifest.Content.AutomationScripts.AutomationScript.RepoPath
-            - name: Selection
-              topicUid: Manifest.Content.AutomationScripts.AutomationScript.Selection
-              items: 
-              - name: Name
-                topicUid: Manifest.Content.AutomationScripts.AutomationScript.Selection.Name
-            - name: Version
-              topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version
-              items: 
-              - name: Selection
-                topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection
-                items: 
-                - name: Range
-                  topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range
-                  items: 
-                  - name: '@rangeSelection'
-                    topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Range-rangeSelection
-                - name: Specific
-                  topicUid: Manifest.Content.AutomationScripts.AutomationScript.Version.Selection.Specific
-        - name: CompanionFiles
-          topicUid: Manifest.Content.CompanionFiles
-          items: 
-          - name: CompanionFile
-            topicUid: Manifest.Content.CompanionFiles.CompanionFile
-            items: 
-            - name: RepoPath
-              topicUid: Manifest.Content.CompanionFiles.CompanionFile.RepoPath
-            - name: Selections
-              topicUid: Manifest.Content.CompanionFiles.CompanionFile.Selections
-              items: 
-              - name: File
-                topicUid: Manifest.Content.CompanionFiles.CompanionFile.Selections.File
-              - name: Folder
-                topicUid: Manifest.Content.CompanionFiles.CompanionFile.Selections.Folder
-              - name: WildcardFilter
-                topicUid: Manifest.Content.CompanionFiles.CompanionFile.Selections.WildcardFilter
-            - name: Version
-              topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version
-              items: 
-              - name: Selection
-                topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection
-                items: 
-                - name: Range
-                  topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range
-                  items: 
-                  - name: '@rangeSelection'
-                    topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Range-rangeSelection
-                - name: Specific
-                  topicUid: Manifest.Content.CompanionFiles.CompanionFile.Version.Selection.Specific
-        - name: CustomSolutions
-          topicUid: Manifest.Content.CustomSolutions
-          items: 
-          - name: CustomSolution
-            topicUid: Manifest.Content.CustomSolutions.CustomSolution
-            items: 
-            - name: RepoPath
-              topicUid: Manifest.Content.CustomSolutions.CustomSolution.RepoPath
-            - name: Selections
-              topicUid: Manifest.Content.CustomSolutions.CustomSolution.Selections
-              items: 
-              - name: File
-                topicUid: Manifest.Content.CustomSolutions.CustomSolution.Selections.File
-              - name: Folder
-                topicUid: Manifest.Content.CustomSolutions.CustomSolution.Selections.Folder
-              - name: WildcardFilter
-                topicUid: Manifest.Content.CustomSolutions.CustomSolution.Selections.WildcardFilter
-            - name: Version
-              topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version
-              items: 
-              - name: Selection
-                topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection
-                items: 
-                - name: Range
-                  topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range
-                  items: 
-                  - name: '@rangeSelection'
-                    topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Range-rangeSelection
-                - name: Specific
-                  topicUid: Manifest.Content.CustomSolutions.CustomSolution.Version.Selection.Specific
-        - name: Dashboards
-          topicUid: Manifest.Content.Dashboards
-          items: 
-          - name: Dashboard
-            topicUid: Manifest.Content.Dashboards.Dashboard
-            items: 
-            - name: DestinationPath
-              topicUid: Manifest.Content.Dashboards.Dashboard.DestinationPath
-            - name: RepoPath
-              topicUid: Manifest.Content.Dashboards.Dashboard.RepoPath
-            - name: Version
-              topicUid: Manifest.Content.Dashboards.Dashboard.Version
-              items: 
-              - name: Selection
-                topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection
-                items: 
-                - name: Range
-                  topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range
-                  items: 
-                  - name: '@rangeSelection'
-                    topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Range-rangeSelection
-                - name: Specific
-                  topicUid: Manifest.Content.Dashboards.Dashboard.Version.Selection.Specific
-        - name: Functions
-          topicUid: Manifest.Content.Functions
-          items: 
-          - name: Function
-            topicUid: Manifest.Content.Functions.Function
-            items: 
-            - name: RepoPath
-              topicUid: Manifest.Content.Functions.Function.RepoPath
-            - name: Version
-              topicUid: Manifest.Content.Functions.Function.Version
-              items: 
-              - name: Selection
-                topicUid: Manifest.Content.Functions.Function.Version.Selection
-                items: 
-                - name: Range
-                  topicUid: Manifest.Content.Functions.Function.Version.Selection.Range
-                  items: 
-                  - name: '@rangeSelection'
-                    topicUid: Manifest.Content.Functions.Function.Version.Selection.Range-rangeSelection
-                - name: Specific
-                  topicUid: Manifest.Content.Functions.Function.Version.Selection.Specific
-        - name: Protocols
-          topicUid: Manifest.Content.Protocols
-          items: 
-          - name: Protocol
-            topicUid: Manifest.Content.Protocols.Protocol
-            items: 
-            - name: RepoPath
-              topicUid: Manifest.Content.Protocols.Protocol.RepoPath
-            - name: SignDevelopmentVersion
-              topicUid: Manifest.Content.Protocols.Protocol.SignDevelopmentVersion
-            - name: Templates
-              topicUid: Manifest.Content.Protocols.Protocol.Templates
-              items: 
-              - name: AlarmTemplates
-                topicUid: Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates
-                items: 
-                - name: Template
-                  topicUid: Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates.Template
-                  items: 
-                  - name: '@replaceExisting'
-                    topicUid: Manifest.Content.Protocols.Protocol.Templates.AlarmTemplates.Template-replaceExisting
-              - name: InformationTemplates
-                topicUid: Manifest.Content.Protocols.Protocol.Templates.InformationTemplates
-                items: 
-                - name: Template
-                  topicUid: Manifest.Content.Protocols.Protocol.Templates.InformationTemplates.Template
-                  items: 
-                  - name: '@replaceExisting'
-                    topicUid: Manifest.Content.Protocols.Protocol.Templates.InformationTemplates.Template-replaceExisting
-              - name: TrendTemplates
-                topicUid: Manifest.Content.Protocols.Protocol.Templates.TrendTemplates
-                items: 
-                - name: Template
-                  topicUid: Manifest.Content.Protocols.Protocol.Templates.TrendTemplates.Template
-                  items: 
-                  - name: '@replaceExisting'
-                    topicUid: Manifest.Content.Protocols.Protocol.Templates.TrendTemplates.Template-replaceExisting
-            - name: Version
-              topicUid: Manifest.Content.Protocols.Protocol.Version
-              items: 
-              - name: Selection
-                topicUid: Manifest.Content.Protocols.Protocol.Version.Selection
-                items: 
-                - name: Range
-                  topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range
-                  items: 
-                  - name: '@rangeSelection'
-                    topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Range-rangeSelection
-                - name: Specific
-                  topicUid: Manifest.Content.Protocols.Protocol.Version.Selection.Specific
-              - name: SetAsProduction
-                topicUid: Manifest.Content.Protocols.Protocol.Version.SetAsProduction
-                items: 
-                - name: '@copyTemplates '
-                  topicUid: Manifest.Content.Protocols.Protocol.Version.SetAsProduction-copyTemplates 
-        - name: Visios
-          topicUid: Manifest.Content.Visios
-          items: 
-          - name: Visio
-            topicUid: Manifest.Content.Visios.Visio
-            items: 
-            - name: RepoPath
-              topicUid: Manifest.Content.Visios.Visio.RepoPath
-            - name: Version
-              topicUid: Manifest.Content.Visios.Visio.Version
-              items: 
-              - name: Selection
-                topicUid: Manifest.Content.Visios.Visio.Version.Selection
-                items: 
-                - name: Range
-                  topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range
-                  items: 
-                  - name: '@rangeSelection'
-                    topicUid: Manifest.Content.Visios.Visio.Version.Selection.Range-rangeSelection
-                - name: Specific
-                  topicUid: Manifest.Content.Visios.Visio.Version.Selection.Specific
-              - name: SetAsActive
-                topicUid: Manifest.Content.Visios.Visio.Version.SetAsActive
-              - name: SetAsDefault
-                topicUid: Manifest.Content.Visios.Visio.Version.SetAsDefault
-      - name: MinimumRequiredVersions
-        topicUid: Manifest.MinimumRequiredVersions
-        items:
-        - name: MinimumRequiredVersion
-          topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion
-          items:
-          - name: '@key'
-            topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion-key
-          - name: '@value'
-            topicUid: Manifest.MinimumRequiredVersions.MinimumRequiredVersion-value
-      - name: Name
-        topicUid: Manifest.Name
-      - name: Version
-        topicUid: Manifest.Version
-      - name: VersionHistory
-        topicUid: Manifest.VersionHistory
-        items: 
-        - name: Branches
-          topicUid: Manifest.VersionHistory.Branches
-          items: 
-          - name: Branch
-            topicUid: Manifest.VersionHistory.Branches.Branch
-            items: 
-            - name: '@id'
-              topicUid: Manifest.VersionHistory.Branches.Branch-id
-            - name: Comment
-              topicUid: Manifest.VersionHistory.Branches.Branch.Comment
-            - name: Features
-              topicUid: Manifest.VersionHistory.Branches.Branch.Features
-              items: 
-              - name: Feature
-                topicUid: Manifest.VersionHistory.Branches.Branch.Features.Feature
-            - name: MajorVersions
-              topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions
-              items: 
-              - name: MajorVersion
-                topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion
-                items: 
-                - name: '@id'
-                  topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion-id
-                - name: Changes
-                  topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes
-                  items: 
-                  - name: Change
-                    topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes.Change
-                    items: 
-                    - name: ActionsToTake
-                      topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes.Change.ActionsToTake
-                      items: 
-                      - name: ActionToTake
-                        topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes.Change.ActionsToTake.ActionToTake
-                    - name: Impact
-                      topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.Changes.Change.Impact
-                - name: MinorVersions
-                  topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions
-                  items: 
-                  - name: MinorVersion
-                    topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion
-                    items: 
-                    - name: '@id'
-                      topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion-id
-                    - name: CUVersions
-                      topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions
-                      items: 
-                      - name: CU
-                        topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU
-                        items: 
-                        - name: '@basedOn'
-                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU-basedOn
-                        - name: '@id'
-                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU-id
-                        - name: Changes
-                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Changes
-                          items: 
-                          - name: Change
-                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Changes.Change
-                          - name: Fix
-                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Changes.Fix
-                          - name: NewFeature
-                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Changes.NewFeature
-                        - name: Date
-                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Date
-                        - name: Provider
-                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Provider
-                          items: 
-                          - name: Author
-                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Provider.Author
-                          - name: Company
-                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.Provider.Company
-                        - name: References
-                          topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References
-                          items: 
-                          - name: Reference
-                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.Reference
-                            items: 
-                            - name: '@type'
-                              topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.Reference-type
-                          - name: TaskId
-                            topicUid: Manifest.VersionHistory.Branches.Branch.MajorVersions.MajorVersion.MinorVersions.MinorVersion.CUVersions.CU.References.TaskId
-    - name: SchemaTypes
-      topicUid: Manifest-TypeAlarmTemplateName
-      items:
-      - name: EnumLatestReleaseLatestBuild
-        topicUid: Manifest-EnumLatestReleaseLatestBuild
-      - name: EnumTrueFalse
-        topicUid: Manifest-EnumTrueFalse
-      - name: TypeMinimumRequiredVersionKeys
-        topicUid: Manifest-TypeMinimumRequiredVersionKeys
-      - name: TypeAlarmTemplateName
-        topicUid: Manifest-TypeAlarmTemplateName
-      - name: TypeEmptyString
-        topicUid: Manifest-TypeEmptyString
-      - name: TypeInformationTemplateName
-        topicUid: Manifest-TypeInformationTemplateName
-      - name: TypeNonEmptyString
-        topicUid: Manifest-TypeNonEmptyString
-      - name: TypePackageVersion
-        topicUid: Manifest-TypePackageVersion
-      - name: TypeTrendTemplateName
-        topicUid: Manifest-TypeTrendTemplateName
 - name: Web Services
   items:
     - name: Using the Web Services
@@ -7168,7 +6921,7 @@ items:
         topicUid: github_reusable_workflows_master_workflow
       - name: DataMiner App Package Master Workflow
         topicUid: github_reusable_workflows_dataminer_app_packages_master_workflow
-      - name: Automation Master Workflow
+      - name: Automation workflow migration
         topicUid: github_reusable_workflows_automation_master_workflow
       - name: NuGet Solution Master Workflow
         topicUid: github_reusable_workflows_nuget_solution_master_workflow
@@ -7237,75 +6990,6 @@ items:
           topicUid: migration_from_gerrit_to_github
         - name: GitHub Guidelines
           topicUid: Using_GitHub_for_CICD
-    - name: CI/CD Skyline Communications Gerrit and Jenkins
-      items:
-      - name: High-level overview
-        topicUid: High-level_overview
-      - name: Components
-        items:
-        - name: SLC SE Repo Manager
-          topicUid: TOOSLCSERepositoryManager
-          items:
-          - name: Cloning a repository
-            topicUid: Cloning_a_repository
-          - name: Pushing to a repository
-            topicUid: Pushing_to_a_repository
-          - name: Creating a repository
-            topicUid: Creating_a_repository
-          - name: Reloading the tree
-            topicUid: Reloading_the_tree
-          - name: Removing a repository
-            topicUid: Removing_a_repository
-          - name: Options window
-            topicUid: Options_window
-          - name: Sandbox mode
-            topicUid: Sandbox_mode
-          - name: Updating .gitignore and Jenkins file
-            topicUid: Updating_gitignore_and_Jenkins_file
-          - name: Repository types
-            topicUid: Repository_types 
-        - name: Gerrit
-          topicUid: Gerrit
-        - name: Jenkins
-          topicUid: Jenkins
-        - name: SonarQube
-          topicUid: SonarQube
-      - name: Protocol development with CI/CD Pipeline
-        items:
-        - name: Git protocol repositories
-          topicUid: Git_protocol_repositories
-        - name: Pipeline stages for protocols
-          topicUid: Pipeline_stages_for_protocols
-      - name: Function development with CI/CD pipeline
-        items:
-        - name: Pipeline stages for functions
-          topicUid: Pipeline_stages_for_functions
-      - name: Automation script development with CI/CD pipeline
-        items:
-        - name: Automation scripts as a Visual Studio solution
-          topicUid: Automation_scripts_as_a_Visual_Studio_solution
-        - name: Pipeline stages for automation scripts
-          topicUid: Pipeline_stages_for_Automation_scripts
-      - name: Visual overview development with CI/CD pipeline
-        items:
-        - name: Pipeline stages for visual overviews
-          topicUid: Pipeline_stages_for_visual_overviews
-      - name: Dashboard Development with CI/CD pipeline
-        items:
-        - name: Pipeline stages for dashboards
-          topicUid: Pipeline_stages_for_dashboards
-      - name: Custom solution development with CI/CD pipeline
-        items:
-        - name: Pipeline stages for custom solutions
-          topicUid: Pipeline_stages_for_custom_solutions
-      - name: Install package development with CICD pipeline
-        items:
-        - name: Creating a repository for an install package
-          topicUid: Creating_a_repository_for_an_install_package
-        - name: Pipeline stages for install packages
-          topicUid: Pipeline_stages_for_install_packages
-      - name: FAQ
-        topicUid: FAQ
     - name: CI/CD Troubleshooting
       items:
         - name: GitHub failures
@@ -7468,8 +7152,6 @@ items:
         - name: Producing NuGet packages
           topicUid: Producing_NuGet
           items:
-            - name: Producing NuGet packages via SLC SE Repo Manager
-              topicUid: Producing_NuGet_RepoManager
             - name: Producing NuGet packages via GitHub
               topicUid: Producing_NuGet_GitHub
     - name: Application packages
@@ -7486,19 +7168,6 @@ items:
         topicUid: ApplicationPackageStructure
       - name: Application packages for SRM projects
         topicUid: SRM_project_config_using_CICD
-    - name: Skyline Driver Passport Platform
-      topicUid: TOODriverPassportPlatform
-      items:
-        - name: Platform location
-          topicUid: Platform_location
-        - name: Platform capabilities
-          topicUid: Platform_capabilities
-        - name: Using the Driver Passport Platform
-          topicUid: Using_the_Driver_Passport_Platform
-        - name: Notifications
-          topicUid: Notifications
-        - name: Viewing test results
-          topicUid: Viewing_test_results
     - name: QAOps
       topicUid: QAOps
       items:

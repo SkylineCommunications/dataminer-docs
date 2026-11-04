@@ -146,7 +146,7 @@ Best practices:
 
 - [Default settings](xref:Default_settings)
 - [Communication](xref:Communication1)
-- [Points of Attention](xref:Skyline_Driver_Passport_Platform)
+- [Points of Attention](xref:Minimum_DMA_version)
 
 DataMiner Protocol Markup Language:
 
