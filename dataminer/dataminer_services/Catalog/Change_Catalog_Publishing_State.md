@@ -1,6 +1,6 @@
 ---
 uid: Change_Catalog_Publishing_State
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 description: "Change a Catalog item's publishing state using the UI or API to make it public for all users or private for your organization."
 ---
 

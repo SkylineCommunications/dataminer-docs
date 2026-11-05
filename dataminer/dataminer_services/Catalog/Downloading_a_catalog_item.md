@@ -1,6 +1,6 @@
 ---
 uid: Downloading_a_catalog_item
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 description: "Download a Catalog item version with the API by sending a GET request with an organization key that has Download Catalog versions permission."
 ---
 
