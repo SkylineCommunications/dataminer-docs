@@ -4,15 +4,15 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 5 November 2026 - Enhancement - CloudGateway 4.0.4 - TunnelStreams dependency updated
+#### 5 November 2026 - Enhancement - CloudGateway 4.1.0 - TunnelStreams dependency updated
 
 The `Skyline.TunnelStreams` dependency has been updated to version 2.1.2.<!-- RN 46090 -->
 
-#### 5 November 2026 - Enhancement - CloudGateway 4.0.4 - Improved tunnel endpoint discovery and selection
+#### 5 November 2026 - Feature - CloudGateway 4.1.0 - Improved tunnel endpoint discovery and selection
 
 CloudGateway now discovers and probes tunnel endpoints, selecting up to two based on API priority and latency. It keeps the legacy endpoint as a fallback and retains the last successful selection if a refresh fails.<!-- RN 46831 -->
 
-#### 5 November 2026 - Fix - CloudGateway 4.0.4 - CloudGateway service not configured after a downgrade
+#### 5 November 2026 - Fix - CloudGateway 4.1.0 - CloudGateway service not configured after a downgrade
 
 After downgrading CloudGateway, the application could be installed without being configured as a service. This issue has now been resolved.<!-- RN 46880 -->
 
