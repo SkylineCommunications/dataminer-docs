@@ -31,3 +31,12 @@ description: Explore QAOps tutorials for Skyline employees, including test runs,
 | [Updating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Update_A_Configuration) | Learn how to update an existing configuration with the Edit Configuration dialog and Table Mode. |
 | [Adding self-hosted DataMiner servers](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers) | Learn how to connect your own single DataMiner Agent or DataMiner cluster to QAOps. |
 | [Creating and managing test suites](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites) | Learn how to create a test suite and add and manage its Catalog test packages. |
+
+## QAOps Quality Gates
+
+| Name | Description |
+|--|--|
+| [Creating a quality gate](xref:QAOps_Tutorials_Creating_A_Quality_Gate) | Create a gate, choose evidence freshness, and add editors. |
+| [Adding QAOps checks](xref:QAOps_Tutorials_Adding_QAOps_Checks) | Connect a configuration and test suite, inspect evidence, and distinguish refresh from execution. |
+| [Scheduling a quality gate digest](xref:QAOps_Tutorials_Scheduling_A_Quality_Gate) | Configure a daily status digest with a notification rule and time zone. |
+| [Adding and reporting external checks](xref:QAOps_Tutorials_External_Quality_Gate_Checks) | Create an external source and report validation results from a script or CI job. |

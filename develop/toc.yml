@@ -7185,6 +7185,8 @@ items:
         topicUid: QAOps_Test_Run
       - name: QAOps test results
         topicUid: QAOps_Test_Result
+      - name: QAOps quality gates
+        topicUid: QAOps_Quality_Gates
       - name: QAOps tool
         topicUid: QAOps_Tool
       - name: QAOps tutorials
@@ -7215,6 +7217,16 @@ items:
             topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Add_Self_Hosted_Servers
           - name: Creating and managing test suites
             topicUid: QAOps_Tutorials_Operator_Tutorials_How_To_Manage_Test_Suites
+        - name: Quality Gates
+          items:
+          - name: Creating a quality gate
+            topicUid: QAOps_Tutorials_Creating_A_Quality_Gate
+          - name: Adding QAOps checks
+            topicUid: QAOps_Tutorials_Adding_QAOps_Checks
+          - name: Scheduling a quality gate digest
+            topicUid: QAOps_Tutorials_Scheduling_A_Quality_Gate
+          - name: Adding and reporting external checks
+            topicUid: QAOps_Tutorials_External_Quality_Gate_Checks
     - name: Third-party Tools
       topicUid: ThirdPartyTools
       items:
