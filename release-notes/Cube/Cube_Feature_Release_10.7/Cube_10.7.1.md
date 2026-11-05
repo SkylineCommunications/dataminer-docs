@@ -86,3 +86,14 @@ These items will now be displayed correctly when the spectrum component is first
 When DataMiner Cube was connected via gRPC, deleting a scheduled task from *Scheduler > Timeline > Tasks* could fail because the delete request used an incorrect hosting DataMiner ID.
 
 Also, when no Scheduler templates were available, the *Edit* and *Delete* options would be missing from a scheduled task's context menu. These options will now be displayed when you have the corresponding Scheduler permissions, regardless of whether templates are available.
+
+#### Documents: Uploading element documents to subfolders could delete or corrupt files [ID 46940]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you uploaded an element document to a subfolder in DataMiner Cube, the following issues could occur:
+
+- If a document with the same file name existed in the element's root documents folder, that document would be deleted.
+- If the destination file already existed in the subfolder, either as a complete document or as a partial file from an aborted upload, the uploaded data would be appended to that file instead of replacing it, resulting in a corrupt document.
+
+From now on, uploading an element document to a subfolder will no longer delete a document with the same file name in the root documents folder, and overwriting an existing document will replace its contents correctly.
