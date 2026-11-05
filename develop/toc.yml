@@ -214,6 +214,8 @@ items:
         items:
         - name: Developing connector scripts in Visual Studio
           topicUid: DevelopingConnectorScriptsInVisualStudio
+        - name: Testing connector scripts
+          topicUid: TestConnectorScriptsPython
       - name: Conditions
         topicUid: LogicConditions
       - name: Reserved IDs

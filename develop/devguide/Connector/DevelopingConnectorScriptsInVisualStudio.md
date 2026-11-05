@@ -222,23 +222,7 @@ When reproducing a production issue, use representative non-sensitive input in y
 
 ## Testing the connector script
 
-The project uses Python's built-in `unittest` framework. Run the tests from *Test Explorer* or from the project root:
-
-```powershell
-.\.venv\Scripts\python.exe -m unittest discover -s tests -t . -p "test*.py" -v
-```
-
-Unit tests do not inherit the script arguments configured in the Visual Studio *Debug* tab. Pass an argument list directly to `parse_input()` or patch `sys.argv` in the test.
-
-Focus the tests on:
-
-- The parsing of valid and invalid inputs.
-- The data returned by `get_data()`.
-- The error handling for unavailable data sources and invalid responses.
-- The interaction between `main()`, `get_data()`, and `push_data_to_edge_node()`.
-- The script identity and entry point in `manifest.json`.
-
-Mock external systems and HTTP requests so the unit tests remain deterministic and do not depend on network access.
+For information on how to test your connector script before you deploy it, see [Testing connector scripts](xref:TestConnectorScriptsPython).
 
 ## Working with Git
 
