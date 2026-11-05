@@ -21,11 +21,11 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ## New features
 
-### DataMiner Apps: Support for uploading web applications [ID 45878]
+### DataMiner apps: Support for uploading web applications [ID 45878]
 
 <!-- MR 10.5.0 [CU22] / 10.6.0 [CU10] - FR 10.7.1 -->
 
-You can now upload web applications to a DataMiner System and manage them alongside apps created in the low-code editor. Both types of apps are now referred to as **DataMiner Apps**.
+You can now upload web applications to a DataMiner System and manage them alongside apps created in the low-code editor. Both types of apps are now referred to as **DataMiner apps**.
 
 On the DataMiner landing page, the *Add* menu now contains the options to upload an app, browse the Catalog, and create an app in the low-code editor. Clicking the *Add* button itself will create an app in the low-code editor.
 
@@ -47,7 +47,7 @@ To upload an app, select *Add* > *Upload App* on the landing page and provide a 
 
 Uploaded apps are always deployed in staging. Use the *Publish* button to publish an app to production.
 
-DataMiner Apps share the same header bar, authentication, and DataMiner security permissions. You can access them from the landing page, the Surveyor in DataMiner Cube, and the app navigation in the web apps. They support per-user permissions, versioning, deletion, deployment from the Catalog, and export and import through DIS. Adding `?embed` to an app URL hides the header bar.
+DataMiner apps share the same header bar, authentication, and DataMiner security permissions. You can access them from the landing page, the Surveyor in DataMiner Cube, and the app navigation in the web apps. They support per-user permissions, versioning, deletion, deployment from the Catalog, and export and import through DIS. Adding `?embed` to an app URL hides the header bar.
 
 #### Hosting and app integration
 
@@ -55,7 +55,7 @@ Uploaded apps are deployed in `C:\Skyline DataMiner\applications` and hosted thr
 
 The app assets run in an iframe with an isolated, opaque origin, which restricts access to browser resources. Apps can use the `postMessage` API to communicate with the hosting app framework:
 
-- **Request API access**: Send `{"request":"token"}`. The response is `{"token":token}`. Pass this token as the connection parameter in Web API calls.
+- **Request API access**: Send `{"tokens":[{"endpoint":"/API/v1/Json.asmx"}]}`. The response contains the token under `tokens["/API/v1/Json.asmx"]`. Pass this token as the connection parameter or in the `Authorization: Bearer <token>` header in Web API calls.
 - **Update the browser URL**: Send `{"url":newURL}`. No response is returned.
 - **Store client-side data**: Send `{"storage":{"write":{"key":key,"data":data}}}`.
 - **Read stored client-side data**: Send `{"storage":{"read":{"key":key}}}`. The response is `{"storage":{"data":data,"key":key}}`.
@@ -140,6 +140,28 @@ The following changes have also been made:
 Following its end of life, the legacy Ticketing app and its Web API implementation have been removed. Ticketing is now reported as unavailable.
 
 For compatibility with existing WSDL-based clients, the Ticketing methods in the [public web services](xref:Using_the_Web_Services_v1) retain their existing signatures and remain in the WSDL. However, these methods are no longer functional. Calls will now throw an `ObsoleteMethodWebApiException`.
+
+#### DataMiner apps and Web API: Endpoint-based tokens and Authorization header support [ID 46953]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Uploaded DataMiner apps can now request authentication tokens for multiple API endpoints in a single `postMessage` request to their parent window. For example:
+
+```json
+{"tokens":[{"endpoint":"/API/v1/Json.asmx"}]}
+```
+
+Each supported endpoint receives a separate response, with the token keyed by the requested endpoint. In this example, the token is returned under `tokens["/API/v1/Json.asmx"]`.
+
+Currently, only relative endpoints starting with `/api/v1/` are supported, regardless of casing. Unsupported endpoints, including absolute URLs, return the error message `This endpoint is not supported.`. This contract prepares for future support for user-defined APIs, which are not yet supported by these token requests.
+
+The Web API now also accepts a connection string in the HTTP header `Authorization: Bearer <connection string>`. Authentication is handled as follows:
+
+- A non-empty connection parameter takes precedence over the Bearer header.
+- When the connection parameter is empty or omitted, Bearer credentials are used. Invalid Bearer credentials cause authentication to fail, even if a valid authentication cookie is present.
+- Existing cookie-based authentication remains available when no Bearer credentials are supplied.
+
+Cross-origin resource sharing (CORS) now allows the `Authorization` header for sandboxed uploaded apps.
 
 ### Fixes
 
