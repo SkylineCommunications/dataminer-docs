@@ -1,7 +1,7 @@
 ---
 uid: STaaS_features
 description: "Explore the many STaaS features. STaaS takes care of data redundancy, data resilience, data security, and data availability out of the box."
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # STaaS features

@@ -1,6 +1,6 @@
 ---
 uid: About_the_Catalog_app
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 description: "Explore the Catalog app, which allows you to browse and deploy DataMiner connectors, packages, dashboards, scripts, and other items on your system."
 ---
 
