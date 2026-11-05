@@ -152,6 +152,12 @@ The additional connector check only detects these known connectors. Make sure no
 
 From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
 
+#### MessageBroker: Large ChunkingMessageBroker replies will now use acknowledged chunks [ID 46882]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, large ChunkingMessageBroker replies will use acknowledged chunks to avoid NATS slow consumer exceptions.
+
 #### DataMiner upgrade: Web-only upgrades to 10.7.x or later require at least 10.6.0 [ID 46910]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
