@@ -163,6 +163,14 @@ The Web API now also accepts a connection string in the HTTP header `Authorizati
 
 Cross-origin resource sharing (CORS) now allows the `Authorization` header for sandboxed uploaded apps.
 
+#### Web apps: Information message when an app manages its own theme [ID 46973]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When an app manages its own theme, the user settings now display the message "Theme setting is managed by the app." above the *Theme* setting. This clarifies why your selected theme does not affect that app.
+
+The message is not shown in apps that support this setting, such as Assistant, the DataMiner landing page, and uploaded DataMiner apps.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
