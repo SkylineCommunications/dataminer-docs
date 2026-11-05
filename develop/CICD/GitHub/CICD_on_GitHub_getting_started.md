@@ -21,7 +21,7 @@ To get started with this, refer to the following tutorials:
 - [Using GitHub Codespaces](xref:CICD_Tutorial_For_Other_Items_User_Defined_API_GitHub_Codespaces)
 - [Creating multi-artifact packages](xref:CICD_Tutorial_For_Other_Items_Multi-Artifact_DataMiner_Package_VisualStudio_And_GitHub)
 
-Below are a few examples of how to get specific kinds of items into a DataMiner install package (.dmapp file):
+Below are a few examples of how to get specific kinds of items into a DataMiner app package (.dmapp file):
 
 - **Automation scripts, user-defined APIs, and ad hoc data sources**: Create these with the [Skyline DataMiner SDK](xref:skyline_dataminer_sdk) Visual Studio templates. You can [add them as extra projects](xref:skyline_dataminer_sdk_dataminer_package_project#adding-extra-artifacts-in-the-same-solution) to the solution of a [DataMiner Package Project](xref:skyline_dataminer_sdk_dataminer_package_project), so that they are included in the .dmapp file.
 
