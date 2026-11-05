@@ -4,9 +4,9 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 5 November 2026 - Enhancement - CloudGateway 4.1.0 - TunnelStreams dependency updated
+#### 5 November 2026 - Enhancement - CloudGateway 4.1.0 - Improved memory usage
 
-The `Skyline.TunnelStreams` dependency has been updated to version 2.1.2.<!-- RN 46090 -->
+An underlying dependency was updated to improve CloudGateway memory usage.<!-- RN 46090 -->
 
 #### 5 November 2026 - Feature - CloudGateway 4.1.0 - Tunnel endpoint discovery and selection
 
