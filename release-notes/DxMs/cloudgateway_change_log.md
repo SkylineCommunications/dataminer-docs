@@ -8,7 +8,7 @@ uid: cloudgateway_change_log
 
 The `Skyline.TunnelStreams` dependency has been updated to version 2.1.2.<!-- RN 46090 -->
 
-#### 5 November 2026 - Feature - CloudGateway 4.1.0 - Improved tunnel endpoint discovery and selection
+#### 5 November 2026 - Feature - CloudGateway 4.1.0 - Tunnel endpoint discovery and selection
 
 CloudGateway now discovers and probes tunnel endpoints, selecting up to two based on API priority and latency. It keeps the legacy endpoint as a fallback and retains the last successful selection if a refresh fails.<!-- RN 46831 -->
 
