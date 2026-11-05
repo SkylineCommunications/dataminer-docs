@@ -67,8 +67,6 @@ Availability (%) = 100 - (weighted violation time / monitoring span) x 100
 
 At 100% impact, one hour in a 24-hour span reduces availability by 4.1667 percentage points.
 
-When several alarms are active, their combined outage impact also depends on alarm grouping.
-
 ## Example: delay time versus minimum outage threshold
 
 Delay time and minimum outage threshold have different effects:
@@ -85,11 +83,60 @@ The following examples assume 100% impact, no manual correction, and an outage e
 | 5 minutes | 2 minutes | 0 | 5 minutes |
 | 5 minutes | 0 | 1 minute | 4 minutes |
 | 5 minutes | 2 minutes | 1 minute | 4 minutes |
+| 90 seconds | 2 minutes | 0 | 0 |
 | 90 seconds | 2 minutes | 1 minute | 0 |
 
 In the third example, the one-minute threshold is subtracted from the five-minute outage. The two-minute delay determines whether the outage qualifies.
 
+In the fourth example, the 90-second outage is shorter than the two-minute delay, so its corrected duration is zero even though the minimum outage threshold is zero.
+
 See [Configuring the alarm settings for an SLA](xref:Configuring_the_alarm_settings_for_an_SLA).
+
+## Combining alarm impacts
+
+### Configuring Component Info on source alarms
+
+*Component info* is text associated with an alarm-generating parameter, for example `Video` or `Audio`. You can configure it in the information template for the **protocol of the monitored element**, not in the information template for Skyline SLA Definition Basic.
+
+In Cube:
+
+1. Open *Apps > Protocols & Templates*.
+
+1. Select the source protocol.
+
+1. Create or edit an information template.
+
+1. Select the relevant parameter.
+
+1. Configure *Parameters > Component info*.
+
+1. Save the template.
+
+1. Activate the template if necessary.
+
+For the complete procedures, see [Creating an information template](xref:Creating_an_information_template) and [Activating an information template](xref:Activating_an_information_template). Check the scope before making changes: an information template can affect multiple elements.
+
+The configured text becomes part of the source alarm. The SLA displays the received value in the *Component Info* column of its *Active Service Alarms* table (table 250, column PID 264). This column reflects the incoming alarm information; it is not where you configure the grouping.
+
+### Combining simultaneous alarm impacts
+
+Component Info does not assign an impact percentage. It determines how the SLA combines the impacts of alarms that contribute at the same time:
+
+- Alarms with the same nonempty text form one group. Only the highest impact within that group contributes.
+- Contributions from different groups are added.
+- Alarms with empty Component Info contribute individually.
+- The combined impact is capped at 100%.
+
+Assuming the individual alarm impacts have already been determined and no other alarms contribute:
+
+| First alarm impact | Second alarm impact | Component Info on the source alarms | Combined outage impact |
+|---|---|---|---|
+| 20% | 50% | Both `Video` | 50% |
+| 20% | 50% | `Video` and `Audio` | 70% |
+| 20% | 50% | Both empty | 70% |
+| 70% | 60% | `Video` and `Audio` | 100% |
+
+Choose the text according to which alarms should share one impact contribution. The same text groups contributing alarms even when they originate from different elements within the monitored service.
 
 ## Tracking, display, and retention
 
