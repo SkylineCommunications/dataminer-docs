@@ -148,7 +148,7 @@ The additional connector check only detects these known connectors. Make sure no
 
 #### Security enhancements [ID 46850]
 
-<!-- 46850: MR 10.8.0 - FR 10.7.1 -->
+<!-- 46850: MR 10.7.0 - FR 10.7.1 -->
 
 A number of security enhancements have been made.
 
