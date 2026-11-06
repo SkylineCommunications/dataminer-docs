@@ -194,3 +194,9 @@ When many WebSocket messages were sent in a very short time, a deadlock could oc
 When a PDF report was generated from a dashboard with stacked components, parameter selectors could fail to display their preselected values. This affected reports generated from the Dashboards app as well as scheduled reports.
 
 Parameter selectors now correctly display the preselected values. Some selectors may take up slightly more space in the report.
+
+#### GQI DxM: Parameter table queries could deadlock during paging with live updates [ID 46998]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When live updates were enabled for a parameter table query, a deadlock could occur if a table update notification arrived while GQI was fetching rows. Paging and update delivery could then wait indefinitely for each other, also blocking unrelated queries and session cleanup.

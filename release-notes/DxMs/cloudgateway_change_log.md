@@ -1,5 +1,6 @@
 ---
 uid: cloudgateway_change_log
+description: "Release notes for the DataMiner Cloud Gateway DxM, covering new features, enhancements, and fixes for cloud connectivity."
 ---
 
 # Cloud Gateway change log
