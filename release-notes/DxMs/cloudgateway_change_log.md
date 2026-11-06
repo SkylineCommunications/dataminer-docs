@@ -4,17 +4,17 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 5 November 2026 - Enhancement - CloudGateway 4.1.0 - Improved memory usage
+#### 5 November 2026 - Enhancement - CloudGateway 4.1.0 - Improved memory usage [ID 46090]
 
-An underlying dependency was updated to improve CloudGateway memory usage.<!-- RN 46090 -->
+An underlying dependency was updated to improve CloudGateway memory usage.
 
-#### 5 November 2026 - Feature - CloudGateway 4.1.0 - Tunnel endpoint discovery and selection
+#### 5 November 2026 - Feature - CloudGateway 4.1.0 - Tunnel endpoint discovery and selection [ID 46831]
 
-CloudGateway now discovers and probes tunnel endpoints, selecting up to two based on API priority and latency. It keeps the legacy endpoint as a fallback and retains the last successful selection if a refresh fails.<!-- RN 46831 -->
+CloudGateway now discovers and probes tunnel endpoints, selecting up to two based on API priority and latency. It keeps the legacy endpoint as a fallback and retains the last successful selection if a refresh fails.
 
-#### 5 November 2026 - Fix - CloudGateway 4.1.0 - CloudGateway service not configured after a downgrade
+#### 5 November 2026 - Fix - CloudGateway 4.1.0 - CloudGateway service not configured after a downgrade [ID 46880]
 
-After downgrading CloudGateway, the application could be installed without being configured as a service. This issue has now been resolved.<!-- RN 46880 -->
+After downgrading CloudGateway, the application could be installed without being configured as a service. This issue has now been resolved.
 
 #### 28 October 2026 - Fix - CloudGateway 4.0.3 - DataMiner Assistant for Microsoft 365 endpoint fixes
 
