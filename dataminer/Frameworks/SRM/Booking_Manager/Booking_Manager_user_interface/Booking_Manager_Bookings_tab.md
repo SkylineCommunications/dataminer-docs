@@ -1,5 +1,6 @@
 ---
 uid: Booking_Manager_Bookings_tab
+description: "Use the Booking Manager's Bookings tab to filter bookings by state and time, view timelines, and create, edit, or manage bookings."
 ---
 
 # The Bookings tab

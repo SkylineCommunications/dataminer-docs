@@ -1,5 +1,6 @@
 ---
 uid: SRM_launching_booking_wizard_pages
+description: "Launch specific Booking Wizard pages from a custom script with WizardUserInteraction to combine silent booking actions with user interaction."
 ---
 
 # Launching specific pages of the standard Booking Wizard from a custom script

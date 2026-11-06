@@ -1,5 +1,6 @@
 ---
 uid: srm_using_resourcemanagerhelper
+description: "Use ResourceManagerHelper in C# to manage resources and pools, retrieve bookings with filters and paging, and find available resources."
 keywords: ResourceManagerHelper
 ---
 

@@ -1,5 +1,6 @@
 ---
 uid: SRM_creating_editing_many_bookings_with_caching
+description: "Find out how, by using SRM caching with SrmCache, you can silently create or edit many bookings in custom scripts and reduce the number of API calls."
 ---
 
 # Silently creating or editing many bookings using caching
