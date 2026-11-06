@@ -8,9 +8,9 @@ uid: cloudgateway_change_log
 
 An underlying dependency was updated to improve CloudGateway memory usage.
 
-#### 5 November 2026 - Feature - CloudGateway 4.1.0 - Tunnel endpoint discovery and selection [ID 46831]
+#### 5 November 2026 - Enhancement - CloudGateway 4.1.0 - Multi-region connections [ID 46831]
 
-CloudGateway now discovers and probes tunnel endpoints, selecting up to two based on API priority and latency. It keeps the legacy endpoint as a fallback and retains the last successful selection if a refresh fails.
+CloudGateway now supports connecting to multiple dataminer.services regions, paving the way for improved cloud connection redundancy once this capability becomes available on dataminer.services.
 
 #### 5 November 2026 - Fix - CloudGateway 4.1.0 - CloudGateway service not configured after a downgrade [ID 46880]
 
