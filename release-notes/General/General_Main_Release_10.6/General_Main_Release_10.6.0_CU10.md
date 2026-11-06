@@ -97,6 +97,12 @@ From now on, it will only scan folders for connectors on the incompatibility lis
 
 The incompatible connector versions reported, the message shown, and the requirement to remove those versions before upgrading remain unchanged. No configuration is required.
 
+#### MessageBroker: Large ChunkingMessageBroker replies will now use acknowledged chunks [ID 46882]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+From now on, large ChunkingMessageBroker replies will use acknowledged chunks to avoid NATS slow consumer exceptions.
+
 #### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->

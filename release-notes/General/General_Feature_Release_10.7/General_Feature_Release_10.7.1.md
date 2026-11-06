@@ -154,7 +154,7 @@ From now on, SLScripting will no longer be able to run as a service. It will alw
 
 #### MessageBroker: Large ChunkingMessageBroker replies will now use acknowledged chunks [ID 46882]
 
-<!-- MR 10.7.0 - FR 10.7.1 -->
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
 From now on, large ChunkingMessageBroker replies will use acknowledged chunks to avoid NATS slow consumer exceptions.
 
