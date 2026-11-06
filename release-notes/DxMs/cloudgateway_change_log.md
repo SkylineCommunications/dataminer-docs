@@ -4,7 +4,7 @@ uid: cloudgateway_change_log
 
 # Cloud Gateway change log
 
-#### 5 November 2026 - Enhancement - CloudGateway 4.1.0 - Improved memory usage [ID 46090]
+#### 5 November 2026 - Enhancement - CloudGateway 4.1.0 - Improved memory usage
 
 An underlying dependency was updated to improve CloudGateway memory usage.
 
