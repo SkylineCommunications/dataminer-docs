@@ -3,10 +3,10 @@ uid: General_Main_Release_10.6.0_CU9
 description: "Release notes for General Main Release 10.6.0 CU9, including prerequisites, enhancements, and fixes planned for this preview release."
 ---
 
-# General Main Release 10.6.0 CU9 - Preview
+# General Main Release 10.6.0 CU9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
