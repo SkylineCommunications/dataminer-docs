@@ -97,15 +97,9 @@ Below are a couple of examples of such connections sections.
 ```md
 #### SNMP Connection - Main
 
-This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
-
-SNMP CONNECTION:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 - **IP address/host**: The polling IP of the device.
-- **Device address**: The device address of the device.
-
-SNMP Settings:
-
 - **IP port**: The IP port of the device.
 - **Get community string**: The community string used when reading values from the device (default: *public*).
 - **Set community string**: The community string used when setting values on the device (default: *private*).
@@ -115,8 +109,6 @@ SNMP Settings:
 #### HTTP Connection - Main
 
 This connector uses an HTTP connection and requires the following input during element creation:
-
-HTTP CONNECTION:
 
 - **IP address/host**: The polling IP or URL of the destination.
 - **IP port**: The IP port of the destination. For HTTPS connections, the default is *443*.
