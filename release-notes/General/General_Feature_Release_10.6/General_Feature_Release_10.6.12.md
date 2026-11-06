@@ -175,9 +175,10 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
 
-#### Security enhancements [ID 46665]
+#### Security enhancements [ID 46665] [ID 46850]
 
 <!-- 46665: MR 10.7.0 - FR 10.6.12 -->
+<!-- 46850: MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
 
 A number of security enhancements have been made.
 
@@ -245,12 +246,6 @@ When multiple elements listen on the same TCP server port and explicitly list a 
 Only one element can still respond to the client. This enhancement is intended for scenarios where multiple elements need to receive data without responding.
 
 If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
-
-#### Security enhancements [ID 46850]
-
-<!-- 46850: MR 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
-
-A number of security enhancements have been made.
 
 ### Fixes
 
