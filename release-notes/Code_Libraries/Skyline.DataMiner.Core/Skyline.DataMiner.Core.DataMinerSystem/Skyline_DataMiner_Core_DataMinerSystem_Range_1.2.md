@@ -7,6 +7,17 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 > [!NOTE]
 > Range 1.2.x.x is supported as from **DataMiner 10.4.0**.
 
+### 1.2.1.3
+
+#### New feature - GetDmsAsUser method added for Automation scripts [ID 46916]
+
+The DataMinerSystem Automation library now provides a new `GetDmsAsUser()` extension method on `Engine` and `IEngine`. It returns an object implementing `IDms` and executes `DMSMessage` requests in the security context of the user running the Automation script.
+
+`GetDmsAsUser()` is now the recommended way to get a DMS object in Automation scripts. `GetDms()` executes actions with System account permissions, so only use it when system permissions are explicitly required.
+
+> [!NOTE]
+> Only `DMSMessage` requests are handled in the user context. Other flows, such as subscriptions (monitors), are not executed in the user context.
+
 ### 1.2.1.2
 
 #### Fix - New scheduler tasks defaulted to zero repetitions instead of unlimited repetitions [ID 46858]
