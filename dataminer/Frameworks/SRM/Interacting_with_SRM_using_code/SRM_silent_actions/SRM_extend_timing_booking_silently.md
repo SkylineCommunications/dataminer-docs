@@ -1,5 +1,6 @@
 ---
 uid: SRM_extend_timing_booking_silently
+description: "Find out how, by using TryExtend in an automation script, you can silently extend the timing of an SRM booking by one hour without user interaction."
 ---
 
 # Silently extending the timing of a booking

@@ -1,5 +1,6 @@
 ---
 uid: SRM_rename_booking_silently
+description: "Find out how, by using TryChangeName in an automation script, you can silently rename a booking and its associated service without user interaction."
 ---
 
 # Silently renaming a booking
