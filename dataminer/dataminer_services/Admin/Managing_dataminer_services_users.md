@@ -2,7 +2,7 @@
 uid: Managing_dataminer_services_users
 description: "Manage dataminer.services users in the Admin app by adding access, changing organization roles, or deleting users to revoke access."
 keywords: cloud users
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Managing dataminer.services users
