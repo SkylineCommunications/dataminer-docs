@@ -1,0 +1,85 @@
+---
+uid: Architecture_multiple_systems
+description: Find out when to use multiple independent DataMiner Systems instead of one cluster, and how to share data between them with element replication.
+keywords: architecture, multiple DMS, multi-DMS, element replication, regions, security zones
+---
+
+# Independent and federated DataMiner Systems
+
+Instead of one DataMiner System that covers everything, you can deploy several independent systems, for example one per region, business unit, or security zone. Each system has its own nodes and storage, and can be hosted on premises or in the cloud.
+
+This arrangement makes sense when independence is part of the requirement. Each system can have its own change process and failure domain. When a central DMS gathers selected data from these systems, the overall arrangement can be described as **federated DataMiner Systems**: independently operated systems with a shared higher-level view. This is an architectural description, not a separate DataMiner feature.
+
+A central DMS collecting alarms or status from other management systems is also commonly called a **manager of managers**. Federation is the broader term here: it can use element replication, connectors, or APIs to gather information, while the source systems retain their own operations. Systems that deliberately share no data remain independent rather than federated.
+
+Unlike extending one cluster, this arrangement requires separate configuration, backups, and upgrades, so plan how to prevent configuration drift and which information should cross the boundaries.
+
+## When to use this architecture
+
+Any of the following can justify independent systems; they are alternatives, not requirements that must all apply:
+
+- **Distance**: Sites or users are spread over different continents. One cluster with storage in one region would lead to high latency for some of them, and a single self-managed OpenSearch cluster cannot be stretched over long distances.
+- **Organization**: Different business units or teams have their own operations, change processes, and upgrade schedules.
+- **Security zones**: Networks are strictly separated, for example an operational technology network and a corporate network, or networks of different customers in a managed service.
+- **Data residency**: Data of different regions must be stored in different jurisdictions. Separate systems allow you to keep each region's data in its own location.
+- **Blast radius**: You want to limit the impact of a failure, an upgrade, or a configuration error to one part of the organization.
+
+## Architecture
+
+This example shows two independently operated DMSs and an optional central DMS. Each has its **own STaaS storage**; federation shares selected operational information, not a common database or a single cluster. Region 1 is self-managed, while region 2 and the central DMS run on DaaS, co-hosted with their STaaS storage. Edge is the remote-access choice illustrated here.
+
+```mermaid
+flowchart TB
+    subgraph R1["Region 1: self-managed DMS"]
+        A["DMAs"]
+        EA["Local equipment"]
+        A <-->|"Local network"| EA
+    end
+    SA@{ shape: cloud, label: "STaaS for system 1" }
+    R2@{ shape: cloud, label: "Region 2: DaaS DMS<br/>DMAs and STaaS for system 2<br/>Same cloud environment" }
+    subgraph Remote["Remote site network"]
+        G["Edge Gateway"]
+        EB["Remote equipment"]
+        G <-->|"Local network"| EB
+    end
+    C@{ shape: cloud, label: "Optional central DaaS DMS<br/>DMAs and STaaS for central system<br/>Federated view" }
+    A <-->|"HTTPS"| SA
+    R2 <-->|"Edge tunnel"| G
+    A -.->|"Selected data: replication / API / connector"| C
+    R2 -.->|"Selected data: replication / API / connector"| C
+```
+
+Solid lines show operational connections within each system or to its sources. Dashed arrows show the **direction of selected data toward the central view**, not who initiates a network connection. For element replication, the central DMS must be able to reach the source DMS. Without these optional data-sharing paths, the systems remain independent.
+
+Each self-managed DMS can instead use self-managed storage with the required database connections; a DaaS DMS always uses STaaS. Each DMS selects connectivity for its own sources independently. Network boundaries must permit any selected federation mechanism; a truly air-gapped system cannot share live data across that boundary.
+
+Each system can use a [single agent](xref:Architecture_single_agent), a [centralized cluster](xref:Architecture_centralized_cluster), or a [distributed topology](xref:Architecture_distributed_sites), and can add geo-redundancy as needed. Choose the [deployment model](xref:Overview_hosting) per system: one region may use DaaS and STaaS, while an isolated operational network uses on-premises compute and databases.
+
+## Sharing information between systems
+
+If you need a central view across systems, you have several options:
+
+- **[Element replication](xref:Replicated_elements)**: An element from one DMS is shown in another DMS, with its parameter values and alarms. This is suitable for a limited number of key elements, such as a summary or aggregation element per system. The source and destination DMA must use the same DataMiner version, and the replicating DMS must be able to reach the source DMS (gRPC on port 443 or .NET Remoting on port 8004).
+- **Dashboards and APIs**: Combine data from several systems in dashboards or external tools, for example via [dataminer.services](xref:Overview_dataminer_services) or APIs.
+- **Manager of managers**: A central DataMiner System monitors the other systems in the same way it monitors any other data source, for example via connectors or alarm forwarding.
+
+Each of these options adds connections and dependencies between the systems. Keep the integration as simple as possible.
+
+## Redundancy
+
+Each system has its own redundancy design. Separation limits direct dependencies, but shared infrastructure and cross-system integrations may still create common failure points. Central views depend on the availability and connectivity of the source systems.
+
+## Maintenance and backups
+
+- Each system needs its own operations and monitoring. Skyline manages maintenance and backups for DaaS systems; arrange these for each self-managed DMS.
+- When you use element replication, keep the DataMiner versions of the systems aligned.
+- Keep configurations such as connectors, alarm templates, and Automation scripts consistent across systems, for example via the [Catalog](xref:About_the_Catalog_app) or a CI/CD process.
+
+## Commonly used in
+
+- International media groups and service providers with operations on several continents.
+- Telecom and cable operators that keep separate systems for different networks or technology domains.
+- Managed service providers that run separate systems for different customers.
+- Government and defense organizations with strictly separated networks.
+
+See also [Typical starting points per industry](xref:Overview_Architecture_and_components#typical-starting-points-per-industry).

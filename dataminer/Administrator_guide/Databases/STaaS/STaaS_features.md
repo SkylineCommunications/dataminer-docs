@@ -110,7 +110,7 @@ In addition, the following **other limitations** currently apply:
 
 - [Exporting trend data](xref:Exporting_elements_services_etc_to_a_dmimport_file) to a .dmimport file (also known as a "DELT export") is not supported.
 
-- DMZ setups are currently not supported.
+- Every DMA must be able to initiate outbound HTTPS connections to STaaS, directly or through a proxy. For a restricted network or DMZ, configure this access according to [Setting up STaaS](xref:Setting_up_StaaS#prerequisites).
 
 - Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
 

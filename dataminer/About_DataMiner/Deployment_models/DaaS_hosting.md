@@ -40,11 +40,11 @@ DataMiner as a Service will allow you to spin up your DataMiner System in the cl
 
 - *Grow as you go*
 
-  DaaS is built with scalability in mind. This means that you will be able to easily scale both vertically (add or remove resources) and horizontally (add or remove nodes) whenever you need. Another function coming up is intelligent resource distribution or "swarming", which will enable you to automatically redistribute elements between nodes for even more efficiency.
+  DaaS is built with scalability in mind. This means that you will be able to easily scale both vertically (add or remove resources) and horizontally (add or remove nodes)   whenever you need. With [Swarming](xref:Swarming), you can redistribute elements between nodes for even more efficiency.
 
 - *Hybrid infrastructure monitoring*
 
-  DaaS will enable you to seamlessly monitor your entire infrastructure regardless of whether it is located on premises or off premises.
+    DaaS will enable you to seamlessly monitor your entire infrastructure regardless of whether it is located on premises or off premises. Private equipment can be reached through a site-to-site VPN or [DataMiner Edge](xref:DataMiner_Edge). See [Connecting to private data sources](xref:Connecting_to_private_data_sources).
 
   ![DaaS](~/dataminer/images/DaaS.svg)
 

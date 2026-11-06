@@ -11,6 +11,8 @@ Before you set up an OpenSearch cluster, take the following into account:
 
 - **System requirements**: Make sure your OpenSearch nodes meet all [OpenSearch requirements](xref:DataMiner_Compute_Requirements#opensearch-requirements) detailed in the DataMiner Compute Requirements.
 
+- **Operating system**: We recommend dedicated Ubuntu LTS machines, using a version supported by your OpenSearch release. For limited test and staging environments, the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) provides Linux-based databases through WSL.
+
 - **Number of nodes**: For a production cluster, use **at least three** cluster-manager-eligible nodes and always an odd number. This is required because of the way OpenSearch works internally: to elect a cluster manager and avoid split-brain situations, a majority (quorum) of the cluster-manager-eligible nodes must be available, which is only possible with an odd number of nodes. A single-node setup is only suitable for testing or evaluation.
 
 - **Java**: OpenSearch bundles its own Java runtime, so you do not need to install Java separately. Note that OpenSearch 3.x requires Java 21.
