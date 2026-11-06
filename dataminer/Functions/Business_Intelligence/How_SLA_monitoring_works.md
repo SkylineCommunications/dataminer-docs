@@ -5,11 +5,12 @@ description: "Learn how DataMiner Business Intelligence turns service alarms int
 
 # How SLA monitoring works
 
-DataMiner Business Intelligence monitors Service Level Agreement (SLA) compliance for a DataMiner service. An SLA element links the monitored service to an SLA definition, such as Skyline SLA Definition Basic.
+DataMiner Business Intelligence monitors Service Level Agreement (SLA) compliance for a DataMiner service. An SLA element links the monitored service to an SLA definition. Usually, this is the *Skyline SLA Definition Basic* SLA definition.
 
 The monitored service supplies alarm information. DataMiner Core determines how those alarms affect the SLA and calculates outage, availability, and compliance information. The SLA protocol provides the configuration parameters, tables, display pages, and supporting actions.
 
-This page describes SLA monitoring with the 3.x range of the Skyline SLA Definition Basic protocol. Available settings and page names depend on the protocol version.
+> [!NOTE]
+> This page describes SLA monitoring with the 3.x range of the Skyline SLA Definition Basic protocol. Available settings and page names depend on the protocol version.
 
 ## From service alarms to compliance
 
@@ -21,13 +22,13 @@ The SLA uses the resulting alarm impacts to maintain outage intervals and calcul
 
 For the configuration procedures, see [Configuring the alarm settings for an SLA](xref:Configuring_the_alarm_settings_for_an_SLA) and [Checking the SLA compliance](xref:Checking_the_SLA_compliance).
 
-## SLA tables and visibility
+## SLA tables in Skyline SLA Definition Basic
 
-Skyline SLA Definition Basic uses tables for alarms, outages, configuration, and historical information. Some are displayed on standard element pages, while others support internal calculations.
+Different tables are used for alarms, outages, configuration, and historical information. Some are displayed on standard element pages, while others support internal calculations.
 
 The following table summarizes visibility on the standard element card. Display settings can also control whether active alarms are shown.
 
-| Table (PID) | Purpose | Shown on the element card |
+| Table (parameter ID) | Purpose | Shown on the element card |
 |---|---|---|
 | Outage List (37) | Recorded outage intervals and their details | Yes, on *Outage List* |
 | Active Service Alarms (250) | Current alarms and their SLA impact | Yes, on *Active Service Alarms* |
@@ -39,7 +40,9 @@ The following table summarizes visibility on the standard element card. Display 
 
 Tables 550 and 750 support the SLA internally and are not displayed on the standard element card.
 
-The *History* page displays tracking-period summaries from table 1000, rather than individual alarm events from table 750. Outages and alarms also have different roles: one outage can involve several alarms, and an alarm can contribute to more than one outage interval.
+The *History* page displays tracking period summaries from table 1000, rather than individual alarm events from table 750.
+
+Outages and alarms also have different roles: one outage can involve several alarms, and an alarm can contribute to more than one outage interval.
 
 For the parameter contract, see [Reserved SLA parameter IDs](xref:ReservedIDsSLA).
 
