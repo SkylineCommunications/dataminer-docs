@@ -830,12 +830,6 @@ Only one element can still respond to the client. This enhancement is intended f
 
 If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
 
-#### Security enhancements [ID 46850]
-
-<!-- 46850: MR 10.7.0 - FR 10.7.1 -->
-
-A number of security enhancements have been made.
-
 #### SLScripting can no longer run as a service [ID 46869]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->

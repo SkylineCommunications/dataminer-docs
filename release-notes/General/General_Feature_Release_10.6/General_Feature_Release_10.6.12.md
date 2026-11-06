@@ -246,6 +246,12 @@ Only one element can still respond to the client. This enhancement is intended f
 
 If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
 
+#### Security enhancements [ID 46850]
+
+<!-- 46850: MR 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
