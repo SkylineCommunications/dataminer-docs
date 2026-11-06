@@ -1,5 +1,6 @@
 ---
 uid: Viewing_a_list_of_current_active_service_alarms
+description: "View the service alarms currently affecting an SLA and understand how active alarms, recorded outages, and tracking-period history differ."
 ---
 
 # Viewing a list of current active service alarms
@@ -26,7 +27,9 @@ This page displays an overview of the current alarms, with detailed information 
   > [!NOTE]
   > By default, during offline windows, no alarms are taken into account, but this can be overruled on parameter level.
 
-To view a list of all alarms that have affected the SLA, including past alarms, go to the *History* page of the SLA. This page displays an overview of all alarms that have occurred, with detailed information on compliance, availability and violations.
+To view SLA results by tracking period, go to the *History* page of the SLA element. The *History Statistics* table summarizes compliance, availability, and violations for each recorded tracking period. It is not a list of individual historical alarms.
+
+Use the *Active Service Alarms* page to view current alarms, and the *Outage List* page to view recorded outage intervals.
 
 > [!NOTE]
 >
