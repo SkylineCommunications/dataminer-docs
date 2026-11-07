@@ -21,7 +21,7 @@ The ID(s) of the commands on which to perform stuffing.
 
 #### Type@allowed
 
-(optional): If the byte(s) specified in the value attribute is followed by one of the characters specified in the allowed attribute, then it will not be repeated. The value can also be a hex string).
+(optional): If the byte(s) specified in the value attribute is followed by one of the characters specified in the [allowed](xref:Protocol.Actions.Action.Type-allowed) attribute, then it will not be repeated. The value can also be a hex string).
 
 #### Type@startoffset
 

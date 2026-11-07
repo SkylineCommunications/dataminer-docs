@@ -29,7 +29,7 @@ You can trigger on a row change by using the [row](xref:Protocol.QActions.QActio
 <QAction id="..." encoding="..." triggers="1052" row="true">
 ```
 
-In the example above, the triggers attribute is set to the parameter ID of the write parameter for a column in the table. This means the QAction will be triggered by any change made to this write parameter for every row.
+In the example above, the [triggers](xref:Protocol.QActions.QAction-triggers) attribute is set to the parameter ID of the write parameter for a column in the table. This means the QAction will be triggered by any change made to this write parameter for every row.
 
 > [!NOTE]
 >
