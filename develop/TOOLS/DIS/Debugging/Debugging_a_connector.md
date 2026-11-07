@@ -35,7 +35,7 @@ When you have finished configuring all necessary settings, you can start debuggi
     > [!NOTE]
     >
     > - Instead of clicking the yellow lightning bolt, you can also open DataMiner Cube, connect to the DataMiner Agent to which DIS is connected, and perform an action in the user interface that triggers the QAction you are debugging.
-    > - When a QAction refers to another QAction in a DllImport attribute, then that referenced QAction will now also automatically be injected when you debug a protocol in DIS.
+    > - When a QAction refers to another QAction in a [DllImport](xref:Protocol.QActions.QAction-dllImport) attribute, then that referenced QAction will now also automatically be injected when you debug a protocol in DIS.
 
 ## [Debugging protocol XML file](#tab/protocol-2)
 

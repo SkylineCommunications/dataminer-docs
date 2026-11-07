@@ -108,7 +108,7 @@ The byte value sent to a device depends on the Interprete definition of the para
 
 When the `ascii="true"` option is specified on a command, all string-type parameters of that command will be sent as Windows code page byte values. Numeric parameters will not be converted, nor will any parameters with [Interprete.Value](xref:Protocol.Params.Param.Interprete.Value) defined with the hardcoded "0x" format.
 
-Specifying a parameter ID in the `ascii` attribute of a command forces the conversion of the value from Unicode to Windows code page, regardless of the Interprete definition.
+Specifying a parameter ID in the [ascii](xref:Protocol.Commands.Command-ascii) attribute of a command forces the conversion of the value from Unicode to Windows code page, regardless of the Interprete definition.
 
 ### Serial responses
 
