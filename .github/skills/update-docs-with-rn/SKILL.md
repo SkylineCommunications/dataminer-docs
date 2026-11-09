@@ -6,7 +6,7 @@ argument-hint: 'Any release note number (e.g., 45557)'
 
 # Update documentation with a release note
 
-Decide whether a release note requires a user-guide or developer-guide update, and apply that update when needed. This skill does not publish the release note itself.
+Decide whether a release note requires a user-guide or developer-guide update, and apply that update after approval from the user. This skill does not publish the release note itself.
 
 ## Workflow
 
@@ -50,13 +50,14 @@ Decide whether a release note requires a user-guide or developer-guide update, a
    - Items with no impact are marked "no user documentation update required" (or "no developer documentation update required").
    - If a release note item is ambiguous or unclear, ask the user for clarification instead of guessing.
 
-7. **If an update is required, propose and apply it immediately.**
+7. **If an update is required, propose it to the user for review.**
    - Integrate the change into the existing text rather than appending disconnected notes; match the surrounding tone, structure, and heading style.
    - Always mention the DataMiner version(s) (Main Release and Feature Release, when applicable) from which the new/changed behavior is available.
    - Keep the old way of working documented as well (for users on older, still-supported DataMiner versions), clearly distinguishing it from the new behavior by version.
    - Read and follow the house style rules in `.github/instructions/dataminer-docs-house-style.instructions.md` (sentence casing, US English, no em dashes, etc.).
    - Update the corresponding `toc.yml` only if a new page is created; prefer editing existing pages over creating new ones.
    - Do not remove or alter unrelated content.
+   - Do not apply changes without the user's explicit approval.
 
 ## Output format
 

@@ -31,6 +31,19 @@ Skill identifiers and folder names use lowercase, so the RN skills are named `ad
 1. Ask only for missing required inputs, using the available question tool. For a bare `Review`, ask whether to apply changes or list issues, as required by the review skill.
 1. For multiple requested tasks, load and run each relevant skill, respecting prerequisites. Do not execute unrelated workflows.
 
+## Execution
+
+- Execute the selected skill directly in the current conversation. Do not delegate routine documentation work or tool discovery to subagents.
+- Use only the tools needed by the selected skill, and preserve its approval requirements and fallback behavior.
+
+### SkylineApi retrieval for RN requests only
+
+These rules apply only to `Add RN` and `Update docs with` requests, including equivalent natural-language requests. Other commands do not require SkylineApi discovery or retrieval.
+
+- At the selected skill's retrieval step, use the SkylineApi release-note retrieval tool directly. If its definition is not already available in the current conversation, discover it using the tool-search tool first.
+- Use the returned release-note data to continue the selected skill. Do not repeatedly rediscover the same tool or retrieve the same RN again unless the data is incomplete or a refresh is needed.
+- If discovery or retrieval fails, report the concrete failure and follow the selected skill's fallback. Do not launch subagents to expose tools or repeat discovery attempts without new information.
+
 ## Boundaries
 
 - `Add RN` publishes a release note under `release-notes`; it does not automatically update the user or developer guide.
