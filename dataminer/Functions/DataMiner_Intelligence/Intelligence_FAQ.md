@@ -27,9 +27,9 @@ Use cases that require explicit knowledge of your environment, for example diagn
 
 ### What is the difference between agents, skills, and tools?
 
-- **Agents** interpret requests and decide how to investigate or act.
-- **Skills** provide agents with domain-specific workflows, instructions, and resources.
-- **Tools** let agents query data or run explicitly assigned actions, such as GQI data queries or automation scripts.
+- **Agents** are autonomous systems that sense their environment, process input to make decisions, and take actions to achieve a specific goal.
+- **Skills** are specialized knowledge sets or procedural instruction workflows that enable AI to handle specific tasks step by step.
+- **Tools** are external functions that allow AI to interact directly with DataMiner.
 
 When deciding what to create, start with the smallest concept that can do the job:
 
