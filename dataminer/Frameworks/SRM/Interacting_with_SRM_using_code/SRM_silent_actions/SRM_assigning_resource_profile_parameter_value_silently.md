@@ -1,5 +1,6 @@
 ---
 uid: SRM_assigning_resource_profile_parameter_value_silently
+description: "Find out how resource, profile, and parameter values can be assigned to a booking without user interaction by means of an automation script."
 ---
 
 # Silently assigning resource, profile and parameter values

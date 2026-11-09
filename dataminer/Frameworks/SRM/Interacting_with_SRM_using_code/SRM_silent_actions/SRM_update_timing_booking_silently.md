@@ -1,5 +1,6 @@
 ---
 uid: SRM_update_timing_booking_silently
+description: "Find out how you can silently update SRM booking timing, including start and end dates in local time and pre-roll and post-roll durations."
 ---
 
 # Silently updating the timing of a booking
