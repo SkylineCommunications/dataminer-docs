@@ -75,7 +75,7 @@ In preparation of service swarming, all load, save, and delete actions for servi
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
 
-Support for the [`postPonePortInitialisation`](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
+Support for the [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
 
 #### DataMiner upgrade: Upgrade action to configure SAML authentication redirects [ID 46589]
 

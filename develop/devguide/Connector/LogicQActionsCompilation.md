@@ -33,7 +33,7 @@ A QAction can make use of the functionality defined in an external DLL. In order
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll">
 ```
 
-It is also possible to use [ProtocolName] and [ProtocolVersion] placeholders in the [`dllImport`](xref:Protocol.QActions.QAction-dllImport) attribute. With these placeholders, you can avoid having to update the references every time the protocol name or version is updated.
+It is also possible to use [ProtocolName] and [ProtocolVersion] placeholders in the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute. With these placeholders, you can avoid having to update the references every time the protocol name or version is updated.
 
 ```xml
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll;[ProtocolName].[ProtocolVersion].QAction.1.dll">
