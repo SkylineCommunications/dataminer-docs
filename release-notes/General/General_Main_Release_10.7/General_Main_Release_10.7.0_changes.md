@@ -775,11 +775,11 @@ When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can no
 
 Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
 
-#### STaaS traffic can now use a single IP address [ID 46570]
+#### STaaS traffic can now use a single hostname and IP address [ID 46570]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single IP address for STaaS traffic.
+All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single hostname (`https://*.dataminer.services/`) or a single IP address per region for STaaS traffic, without having to request additional hostnames or Microsoft Azure IP addresses from support.
 
 If this single endpoint is not reachable, DataMiner will continue to use the existing endpoints.
 
