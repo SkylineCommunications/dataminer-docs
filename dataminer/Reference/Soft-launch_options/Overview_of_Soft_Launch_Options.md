@@ -135,6 +135,17 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 - **Minimum version**: 10.0.12
 - **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:Cube_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
 
+### EndOfSupport.SLHelperGQI
+
+Enables GQI via SLHelper, which is disabled by default from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 46927 -->
+
+If your system still uses GQI via SLHelper, enable this option before upgrading from a version older than 10.7.0. Otherwise, the [GQI in SLHelper upgrade prerequisite](xref:EndOfSupport_SLHelperGQI) blocks the upgrade when it detects recent GQI activity.<!-- RN 46957 -->
+
+> [!WARNING]
+> GQI via SLHelper has reached [End of Support](xref:Software_support_life_cycles) and will be removed in a future DataMiner version. Only use this option to ease the transition to the [GQI DxM](xref:GQI_DxM).
+
+- **Minimum version**: 10.7.0/10.7.1
+
 ### Functions
 
 This option enabled the Virtual Functions module in Cube. The module and related objects are **End of life** and should no longer be used.

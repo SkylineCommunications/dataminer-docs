@@ -53,7 +53,6 @@ The following features currently have the "End of Engineering" status. They will
 | [Atlassian Crowd authentication](xref:Configuring_Atlassian_Crowd_settings#authenticating-dataminer-users-against-an-atlassian-crowd-server) | This type of authentication will be deprecated. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Connectors: Display columns in tables | The [displayColumn attribute](xref:Protocol.Params.Param.ArrayOptions-displayColumn) should no longer be used in tables. | End of Life to be confirmed. |
 | Connectors: [dllName option in QAction options attribute](xref:Protocol.QActions.QAction-options#dllnamenamedll) | This option is superfluous and should no longer be used. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
-| GQI in SLHelper | The [GQI DxM](xref:GQI_DxM) should be used instead. | End of Support as of DataMiner 10.7.x. |
 | Logger tables of type DirectConnection with a primary key |See [Defining a logger table of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable). | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Pivot table and Group components | End of Engineering as of DataMiner 10.6.x. These components are being retired in the Dashboards app and Low-Code Apps. | End of Support as of DataMiner 10.7.x (Q4 2026).<br>End of Life as of DataMiner 10.8.x (Q4 2027). |
 | [Radius authentication](xref:Configuring_RADIUS_settings) | This type of authentication is deprecated and has inherent flaws. We recommend using a different type of authentication instead. | End of Support as of DataMiner 10.7.x (Q4 2026). <br>End of Life as of DataMiner 10.8.x (Q4 2027). |
@@ -75,6 +74,7 @@ The following features currently have the "End of Support" status. They will no 
 | Item | Details | Future status |
 |------|---------|---------------|
 | Asset Manager | End of Support as of DataMiner 10.6.x. Module is being retired. | End of Life to be confirmed. |
+| GQI in SLHelper | End of Support and disabled by default as of DataMiner 10.7.0/10.7.1.<!-- RN 46927 --> Use the [GQI DxM](xref:GQI_DxM) instead. | End of Life to be confirmed. |
 | Logger tables with autoincrement option | See [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement). | End of Life as of DataMiner 10.8.x (Q4 2027). |
 | Legacy Reporter & Dashboards | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option | This feature does not work correctly and should no longer be used. | End of Life as of DataMiner 10.7.x (Q4 2026). |
