@@ -59,7 +59,7 @@ When the package project is built, the SDK does the following for each included 
 
 1. It adds this zip file to the package, in the *AppInstallContent\ZipFiles\WebApp* folder.
 
-When the package is installed, the web application is imported on the DataMiner System. The default installation code (`installerHelper.InstallDefaultContent()`) imports all web applications included in the package.
+When the package is installed, the web application is installed on the DataMiner System. The default installation code (`installerHelper.InstallDefaultContent()`) installs all web applications included in the package.
 
 ### Output folder
 
@@ -81,19 +81,19 @@ For example, to zip the *build* folder instead:
 > [!NOTE]
 > Previously, web applications were deployed by placing the built web site in the *PackageContent/CompanionFiles* folder of the package project and registering it with `installerHelper.WebApplications.RegisterStaticApp()`. This method is now deprecated. Use a web application project instead.
 
-## Importing web applications during installation
+## Installing web applications during installation
 
-The [Skyline.DataMiner.Utils.AppInstallerHelper](https://www.nuget.org/packages/Skyline.DataMiner.Utils.AppInstallerHelper) NuGet package also allows you to import the web applications included in the package separately in the installation code of the package project:
+The [Skyline.DataMiner.Utils.AppInstallerHelper](https://www.nuget.org/packages/Skyline.DataMiner.Utils.AppInstallerHelper) NuGet package also allows you to install the web applications included in the package separately in the installation code of the package project:
 
 ```csharp
 var installerHelper = new AppInstallerHelper(Engine.SLNetRaw, context);
 
-// Import all web applications included in the package.
+// Install all web applications included in the package.
 installerHelper.WebApplications.InstallWebApplications();
 
-// Or import specific web applications.
+// Or install specific web applications.
 foreach (var webApplication in installerHelper.WebApplications.GetWebApplicationsToInstall())
 {
-    installerHelper.WebApplications.ImportWebApplication(webApplication);
+    installerHelper.WebApplications.InstallWebApplication(webApplication);
 }
 ```
