@@ -45,7 +45,7 @@ Expected duration: 20 minutes
 > [!NOTE]
 > If you have already followed the previous tutorial, [Getting started with DOM](xref:DOM_Getting_Started_With_DOM), this script has already been deployed, so you can skip to [step 2](#step-2-deploy-the-kata-dom-package).
 
-1. Go to <https://catalog.dataminer.services/details/automation-script/3195>.
+1. Go to <https://catalog.dataminer.services/details/11674850-aeac-48c4-9f35-03c387ebcf18>.
 
 1. Click the *Deploy* button to deploy the DOM Editor package to your DMA.
 
