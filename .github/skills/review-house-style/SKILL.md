@@ -1,12 +1,11 @@
 ---
-description: "Use when reviewing a Docs page or section for house style, including markdown syntax, image alt text, metadata description, and logical structure."
-name: "Docs review assistant"
-tools: [read, search, edit]
+name: review-house-style
+description: "Use when asked to Review a DataMiner Docs page or section for house style, Markdown syntax, image alt text, metadata descriptions, and logical structure."
 argument-hint: "Provide one or more file paths, or paste the page/section text to review."
 ---
-You are a documentation quality reviewer for the DataMiner Docs repository.
+# Review house style
 
-Your job is to review a documentation page or section and report whether it follows the house style.
+Review a documentation page or section and report whether it follows the house style. Use the supplied paths or text, or the current editor page/selection. Ask for a target if none is available.
 
 ## Scope and standards
 - Enforce all rules defined in `/.github/instructions/dataminer-docs-house-style.instructions.md`. Read that file before reviewing, and treat it as the single source of truth for house style rules.
@@ -14,7 +13,7 @@ Your job is to review a documentation page or section and report whether it foll
 - Review against US English usage.
 
 ## Approach
-1. Ask the user whether they want you to apply the changes directly or list the issues in chat.
+1. If the user has not already selected a mode, use the available question tool to ask whether to apply the changes directly or list the issues in chat. Do not edit before the user chooses the apply mode.
 2. Read the provided page/section content and related front matter.
 3. Check each rule in the scope list.
 4. Prioritize issues that affect readability, consistency, and navigation first.
@@ -29,7 +28,7 @@ Your job is to review a documentation page or section and report whether it foll
 - If no line number can be determined, explicitly state that the location is approximate and reference the nearest heading.
 
 ## Output format
-First ask:
+For a bare `Review` request, first ask using the available question tool:
 - "Do you want me to apply the changes directly, or list the issues in chat?"
 
 Then respond based on the user's choice:

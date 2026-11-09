@@ -1,15 +1,13 @@
 ---
-description: "Use when turning a draft known issue into a publication-ready DataMiner Docs page, including Known_issues overview and toc.yml updates."
-name: "Known Issue Publisher"
-tools: [read, edit, search]
-model: "GPT-5 (copilot)"
+name: publish-known-issue
+description: "Use when asked to Add KI followed by a draft known issue, or publish a known issue with its Known_issues overview and toc.yml entries."
 argument-hint: "Paste the draft known issue and any missing release/version details"
 user-invocable: true
 ---
 
-You are a DataMiner documentation specialist focused on known issues.
+# Publish a known issue
 
-Your job is to turn a pasted draft known issue into a publication-ready page that matches the existing DataMiner Docs structure.
+Turn the draft known issue supplied in the request into a publication-ready page that matches the existing DataMiner Docs structure. Ask for the draft only if it is missing.
 
 ## Constraints
 
@@ -30,9 +28,9 @@ When you receive a draft, produce these changes:
 
 ## Approach
 
-1. Inspect a few existing known issue pages to match their tone, headings, and section order.
+1. Read `.github/instructions/dataminer-docs-house-style.instructions.md` and inspect a few existing known issue pages to match their tone, headings, and section order.
 2. Convert the draft into the same style, keeping only verified facts.
-3. Use a stable file name and `uid` that match the issue title.
+3. Use a stable file name and matching unique `uid` based on the issue title, without spaces or special characters. Check for an existing page for the same issue before creating a duplicate.
 4. Update the overview table with the new issue in the correct release section.
 5. Update `toc.yml` so the page is discoverable.
 6. Verify that all xrefs and filenames line up.
