@@ -65,8 +65,6 @@ When the package is installed, the web application is imported on the DataMiner 
 
 The folder that is zipped is determined as follows:
 
-1. The *DataMinerWebApplicationOutputPath* property, if specified in the web application project.
-
 1. The *BuildOutputFolder* property, if specified in the web application project.
 
 1. The *dist* folder for *.esproj* projects, or the *wwwroot* folder in the publish directory for other projects.
@@ -76,7 +74,7 @@ For example, to zip the *build* folder instead:
 ```xml
 <PropertyGroup>
   <DataMinerType>WebApplication</DataMinerType>
-  <DataMinerWebApplicationOutputPath>build</DataMinerWebApplicationOutputPath>
+  <BuildOutputFolder>$(MSBuildProjectDirectory)\build</BuildOutputFolder>
 </PropertyGroup>
 ```
 
