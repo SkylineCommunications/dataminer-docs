@@ -95,40 +95,20 @@ In the fourth example, the 90-second outage is shorter than the two-minute delay
 
 See [Configuring the alarm settings for an SLA](xref:Configuring_the_alarm_settings_for_an_SLA).
 
-## Combining alarm impacts
+## Impact combination with Component Info
 
-### Configuring Component Info on source alarms
+When multiple alarms occur simultaneously, DataMiner SLA monitoring combines their impacts into an overall outage impact using *Component info*.
 
-*Component info* is text associated with an alarm-generating parameter, for example `Video` or `Audio`. You can configure it in the information template for the **protocol of the monitored element**, not in the information template for Skyline SLA Definition Basic.
+Component info is a text tag associated with an alarm-generating parameter (for example, `Video` or `Audio`) configured in the information template of the monitored element's protocol. The SLA displays this value in the *Component Info* column of the *Active Service Alarms* table (table 250, column PID 264). For details on setting up information templates, see [Creating an information template](xref:Creating_an_information_template).
 
-In Cube:
+Rather than assigning an impact percentage, Component Info determines how the SLA groups and aggregates the impacts of alarms that overlap in time:
 
-1. Open *Apps > Protocols & Templates*.
+- **Same Component Info**: Alarms with the same non-empty Component Info value form a single group. Only the highest impact within that group contributes to the outage impact.
+- **Different Component Info**: Alarms with different Component Info values are treated as distinct groups, and their impacts are added together.
+- **No Component Info**: Alarms with an empty Component Info value contribute individually and are added together.
+- **Maximum cap**: The total combined impact across all groups is capped at 100%.
 
-1. Select the source protocol.
-
-1. Create or edit an information template.
-
-1. Select the relevant parameter.
-
-1. Configure *Parameters > Component info*.
-
-1. Save the template.
-
-1. Activate the template if necessary.
-
-For the complete procedures, see [Creating an information template](xref:Creating_an_information_template) and [Activating an information template](xref:Activating_an_information_template). Check the scope before making changes: an information template can affect multiple elements.
-
-The configured text becomes part of the source alarm. The SLA displays the received value in the *Component Info* column of its *Active Service Alarms* table (table 250, column PID 264). This column reflects the incoming alarm information; it is not where you configure the grouping.
-
-### Combining simultaneous alarm impacts
-
-Component Info does not assign an impact percentage. It determines how the SLA combines the impacts of alarms that contribute at the same time:
-
-- Alarms with the same nonempty text form one group. Only the highest impact within that group contributes.
-- Contributions from different groups are added.
-- Alarms with empty Component Info contribute individually.
-- The combined impact is capped at 100%.
+The same text groups contributing alarms even when they originate from different elements within the monitored service.
 
 Assuming the individual alarm impacts have already been determined and no other alarms contribute:
 
@@ -138,8 +118,6 @@ Assuming the individual alarm impacts have already been determined and no other 
 | 20% | 50% | `Video` and `Audio` | 70% |
 | 20% | 50% | Both empty | 70% |
 | 70% | 60% | `Video` and `Audio` | 100% |
-
-Choose the text according to which alarms should share one impact contribution. The same text groups contributing alarms even when they originate from different elements within the monitored service.
 
 ## Tracking, display, and retention
 
