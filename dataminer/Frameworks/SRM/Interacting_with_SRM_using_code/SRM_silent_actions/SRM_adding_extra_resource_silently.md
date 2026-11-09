@@ -1,6 +1,6 @@
 ---
 uid: SRM_adding_extra_resource_silently
-description: "Silently add an extra resource to an SRM booking with AddResource or TryAddResource, reusing or creating a compatible service definition."
+description: "Silently add an extra resource to an SRM booking, reusing or creating a compatible service definition when needed."
 ---
 
 # Silently adding an extra resource and potentially creating a new service definition

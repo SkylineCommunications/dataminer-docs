@@ -1,6 +1,6 @@
 ---
 uid: SRM_editing_pending_booking_silently
-description: "Find out how, by using TryEditBooking, you can silently edit a pending SRM booking and update its name or assigned resource before the booking starts."
+description: "Find out how you can silently edit a pending SRM booking and update its name or assigned resource before the booking starts."
 ---
 
 # Silently editing a pending booking
