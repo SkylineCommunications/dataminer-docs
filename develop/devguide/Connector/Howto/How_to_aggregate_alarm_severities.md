@@ -108,7 +108,7 @@ Like in the previous table, the Names must be added using logic other than via a
 </AlarmLevelLinks>
 ```
 
-In this second link, the remoteElement attribute will define:
+In this second link, the [remoteElement](xref:Protocol.AlarmLevelLinks.AlarmLevelLink-remoteElement) attribute will define:
 
 - Which element to use: value in column 102 of the Probe Element Table.
 - Which table to use in the remote element: Service Table with parameter ID 1100.

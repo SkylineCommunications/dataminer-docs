@@ -30,7 +30,7 @@ In order to dynamically expose an element's interface table to DCF, use the [*dy
 
 The table containing the interfaces should be as static as possible and should not remove rows without manual interaction of a user. It should be treated just like DVE tables in terms of row removal. Make sure that all columns in interface tables that are used to create the display key are marked as "saved".
 
-All rows of the specified table that match the filter specified in the dynamicIndex attribute will be considered an interface. The name of this interface will be the name defined in the Group concatenated with the display key of the row (with a space (" ") between the two parts).
+All rows of the specified table that match the filter specified in the [dynamicIndex](xref:Protocol.ParameterGroups.Group-dynamicIndex) attribute will be considered an interface. The name of this interface will be the name defined in the Group concatenated with the display key of the row (with a space (" ") between the two parts).
 
 ```xml
 <ParameterGroups>

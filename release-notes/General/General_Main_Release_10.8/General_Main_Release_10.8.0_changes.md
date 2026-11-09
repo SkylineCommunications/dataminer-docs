@@ -20,7 +20,7 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
 
-Support for the [`postPonePortInitialisation`](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
+Support for the [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
 
 #### Automation: Progress notifications for non-interactive scripts [ID 46778]
 

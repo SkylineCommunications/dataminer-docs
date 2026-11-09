@@ -27,7 +27,7 @@ Example:
 </TreeControl>
 ```
 
-The parameterId attribute refers to a regular parameter of type "read" as illustrated below, which is used to position the tree control (Interprete.Type should be set to "string" to retain backward compatibility with Element Display).
+The [parameterId](xref:Protocol.TreeControls.TreeControl-parameterId) attribute refers to a regular parameter of type "read" as illustrated below, which is used to position the tree control (Interprete.Type should be set to "string" to retain backward compatibility with Element Display).
 
 ```xml
 <Param id="20000">

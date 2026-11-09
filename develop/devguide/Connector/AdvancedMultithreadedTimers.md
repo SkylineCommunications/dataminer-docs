@@ -133,7 +133,7 @@ For SNMP, the group defines the OIDs to request:
 > - The SNMP parameters need to have the "loadOID" option.
 > - A table (array) parameter cannot be used in this group; when tables are polled, this also needs to be done through a single  parameter with "loadOID".
 
-To process the response, a QAction is defined that has the options="group" attribute and the triggers attribute set to the ID of the group mentioned in the multithreaded timer.
+To process the response, a QAction is defined that has the options="group" attribute and the [triggers](xref:Protocol.QActions.QAction-triggers) attribute set to the ID of the group mentioned in the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="Send Request" encoding="csharp" options="group" triggers="1011" row="true">
