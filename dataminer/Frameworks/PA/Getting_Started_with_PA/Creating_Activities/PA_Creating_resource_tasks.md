@@ -1,5 +1,6 @@
 ---
 uid: PA_Creating_resource_tasks
+description: "Create resource tasks for Process Automation with profiles, SRM functions, scripts, and resource pools, keeping execution within 15 minutes."
 ---
 
 # Creating resource tasks

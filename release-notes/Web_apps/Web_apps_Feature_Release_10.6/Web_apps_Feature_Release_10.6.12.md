@@ -3,21 +3,17 @@ uid: Web_apps_Feature_Release_10.6.12
 description: "Release notes for DataMiner web apps Feature Release 10.6.12, with new features, enhancements, and fixes planned for this preview release."
 ---
 
-# DataMiner web apps Feature Release 10.6.12 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.12
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU9].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.12](xref:General_Feature_Release_10.6.12).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.12](xref:Cube_Feature_Release_10.6.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -25,12 +21,14 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
-On each DataMiner Agent, OpenAPI 3.1 and AsyncAPI 3.1 specifications will now be available in the following folders:
+On each DataMiner Agent, OpenAPI 3.1 and AsyncAPI 3.1 specifications will now be available in the following files:
 
-- `C:\Skyline DataMiner\API\docs\http.json`
-- `C:\Skyline DataMiner\API\docs\ws.json`
+- `C:\Skyline DataMiner\WebPages\API\docs\http.json`
+- `C:\Skyline DataMiner\WebPages\API\docs\ws.json`
 
 The specifications describe supported HTTP operations, request and response schemas, enum values, WebSocket messages, and subscriptions.
+
+The files are also available over the web at `https://DmaNameOrIpAddress/API/docs/`.
 
 ### Interactive automation scripts: Grid layout now supported in web apps [ID 46716]
 

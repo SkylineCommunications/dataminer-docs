@@ -88,7 +88,7 @@ This filter can be used to pass along a custom table relation chain (affects FK 
 
 This filter should be followed by an integer, and determines which page is retrieved (with 1 being the first page).
 
-This filter is intended for use with [partial tables](xref:Table_parameters#partial-tables), i.e., large tables that are split up into multiple pages. The page size (i.e., the number of rows per page) is defined in the protocol via the [partial attribute](xref:Protocol.Params.Param.ArrayOptions-partial) of the `Params.Param.ArrayOptions` element, and it is typically 1000 rows.
+This filter is intended for use with [partial tables](xref:Table_parameters#partial-tables), i.e., large tables that are split up into multiple pages. The page size (i.e., the number of rows per page) is defined in the protocol via the [partial](xref:Protocol.Params.Param.ArrayOptions-partial) attribute of the [Params.Param.ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) element, and it is typically 1000 rows.
 
 The response includes a `PageCount` field that indicates how many pages are available:
 

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation
+description: "Use the Mediation element in a DataMiner protocol to group links between parameters in a base protocol and parameters in a device protocol."
 ---
 
 # Mediation element

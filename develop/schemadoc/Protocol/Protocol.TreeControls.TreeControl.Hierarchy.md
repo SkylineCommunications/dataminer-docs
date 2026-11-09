@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.Hierarchy
+description: "Use the Hierarchy element under TreeControl in a DataMiner protocol to define relationships between visible tables in a tree control."
 ---
 
 # Hierarchy element

@@ -14,7 +14,6 @@ The following changes may have an impact on your system, so please make sure to 
 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
-- [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Changes
 
@@ -495,38 +494,6 @@ From now on, the *Standalone BPA Executor* tool will return one of the following
 | 1 | Unexpected errors have occurred. |
 | 2 | BPA tests have detected issues. |
 
-#### DataMiner Installer: Initial DataMiner configuration wizard has been redesigned [ID 45483]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-The initial DataMiner configuration wizard has been redesigned to guide you through selecting a commercial model, configuring storage, and connecting to dataminer.services.
-
-You can now follow this setup flow:
-
-1. Select a commercial model: Community Edition, usage-based services, or a perpetual-use license with a supplied DataMiner ID.
-
-   Community Edition requires acceptance of its terms.
-
-1. Choose Storage as a Service (STaaS), locally hosted storage, or externally hosted storage.
-
-1. Connect to dataminer.services when required.
-
-   The wizard will open a browser where you can sign in or create an account. Connection is required for Community Edition, usage-based services, and STaaS. For perpetual-use licenses with self-hosted storage, cloud registration is optional.
-
-1. Complete the applicable configuration details and review the setup.
-
-   Only the pages relevant to your selected configuration will be shown.
-
-1. Apply the configuration.
-
-   The wizard will report progress and stop if a configuration step fails.
-
-The cloud registration page provides options to reopen the sign-in page, retry registration, or refresh registration details.
-
-For perpetual-use licensing, you can supply an existing license file or generate a license request. License requests can now be generated without first starting and stopping DataMiner. Missing required configuration files are initialized automatically, preventing setup failures on fresh installations.
-
-Unattended configuration remains available for subscription and perpetual-use licensing. Passing a configuration file path containing spaces from the installer is now also handled correctly.
-
 #### DataMiner Object Models: SLDataGateway will now try to read only the selected fields from a STaaS database [ID 45503]
 
 <!-- MR 10.7.0 - FR 10.6.8 -->
@@ -671,18 +638,6 @@ The CloudFeed DxM has been upgraded to Microsoft .NET 10.
 
 From now on, when you open the SLLogCollector tool, the tool will automatically be configured to include a memory dump of the SLPort and SLSNMPManager processes when a runtime error was detected in SLProtocol.
 
-#### DataMiner Installer: Improved licensing registration and separate database TLS settings [ID 45881]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-During interactive setup, licensing registration now uses licensing API v2 with a bearer token obtained through CloudGateway instead of an organization API key. You authenticate in your browser, after which the wizard obtains the token and completes registration. Token acquisition is retried for up to two minutes with increasing delays between attempts.
-
-After successful registration, DataMiner restarts automatically and its startup is validated. The wizard no longer asks for an organization API key, system URL, administrator email address, or STaaS region.
-
-Cloud registration now uses a complete session URL provided by CloudGateway, with improved session tracking and browser authentication. The sign-in screen now displays the DataMiner logo instead of a globe icon.
-
-For externally hosted databases, separate TLS checkboxes now allow you to enable TLS independently for Cassandra and OpenSearch. Previously, both databases shared the same TLS setting. The corresponding properties are `CassandraTlsEnabled` and `OpenSearchTlsEnabled`.
-
 #### Enhanced performance when upgrading the ModelHost DxM [ID 45967]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -723,7 +678,7 @@ The colors used by the DataMiner Taskbar Utility for upgrade events now align wi
 
 #### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
 
-<!-- MR 10.7.0 - FR 10.6.10 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
 
@@ -875,6 +830,12 @@ Only one element can still respond to the client. This enhancement is intended f
 
 If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
 
+#### SLScripting can no longer run as a service [ID 46869]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -976,6 +937,12 @@ Access to that cache has now been made thread safe.
 > [!NOTE]
 > The `Engine` object itself is still not thread safe. Scripts should not use the same `Engine` instance from more than one thread at a time.
 
+#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
+
+<!-- MR 10.7.0 [CU0] - FR 10.7.1 -->
+
+Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
+
 #### ManagerStore: Fixed limit logic when adding objects from the DatabaseCacheLayer [ID 46205]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -1009,14 +976,6 @@ Change points are now also distinguished by creation time. As a result, previous
 Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
 
 From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
-
-#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
-
-<!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
-
-When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
-
-From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
 
 #### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
 
@@ -1077,3 +1036,11 @@ Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConn
 If initialization of `CCAEndpointManager` or `CCAEndpointHandler` fails, DataMiner will now keep retrying.
 
 The retry scheduler will increase the delay between attempts up to a maximum of 60 seconds.
+
+#### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+When services or elements were updated in a DataMiner cluster, offline Agents in a Failover setup would experience a memory and CPU spike in the StorageModule process for each update. The size of the spike depended on the number of services and elements in the cluster.
+
+Both online and offline Agents will now keep their XML-based services in memory at all times. The service cache in the StorageModule backend will only be reinitialized during a Failover switch or in exceptional circumstances.

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session-ignoreTimeout
+description: "Use the ignoreTimeout attribute in a DataMiner protocol to prevent timeout alarms for an HTTP session while preserving timeout triggers."
 ---
 
 # ignoreTimeout attribute

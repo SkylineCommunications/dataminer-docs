@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsTreeControlIcons
+description: "Configure default and row-specific icons for DataMiner tree control nodes by using table parameters, icon references, and discrete values."
 ---
 
 # Icons
@@ -16,7 +17,7 @@ By default, the icon in the tree items will be chosen according to this priority
 1. The `<Icon ref="...">` defined on the table parameter (referencing an icon in `C:\Skyline DataMiner\Protocols\Icons.xml`).
 1. A default icon if no `<Icon>` is defined on the table parameter.
 
-By specifying a column in OverrideIconColumns (under the TreeControl tag), you can apply a custom icon based on a cell value in that row. The column must be a parameter of type “discreet” and all discrete values must have an iconRef attribute referring to an icon. If the iconRef attribute is empty or invalid, or the value is “Not Initialized”, a default icon will be displayed.
+By specifying a column in OverrideIconColumns (under the TreeControl tag), you can apply a custom icon based on a cell value in that row. The column must be a parameter of type “discreet” and all discrete values must have an [iconRef](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-iconRef) attribute referring to an icon. If the iconRef attribute is empty or invalid, or the value is “Not Initialized”, a default icon will be displayed.
 
 ```xml
 <Discreets>

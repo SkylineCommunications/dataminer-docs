@@ -3,10 +3,10 @@ uid: General_Feature_Release_10.6.12
 description: "Release notes for General Feature Release 10.6.12, including prerequisites, new features, enhancements, and fixes planned for this preview release."
 ---
 
-# General Feature Release 10.6.12 - Preview
+# General Feature Release 10.6.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -30,14 +30,6 @@ Before you upgrade to this DataMiner version:
   For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
-
-## Important changes
-
-*No important changes have been selected yet.*
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -80,7 +72,7 @@ The test fails if it detects different versions. If the information required for
 
 #### DataMiner Installer: Initial DataMiner configuration wizard has been redesigned [ID 45483]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
 
 The initial DataMiner configuration wizard has been redesigned to guide you through selecting a commercial model, configuring storage, and connecting to dataminer.services.
 
@@ -112,7 +104,7 @@ Unattended configuration remains available for subscription and perpetual-use li
 
 #### DataMiner Installer: Improved licensing registration and separate database TLS settings [ID 45881]
 
-<!-- MR 10.7.0 - FR 10.6.12 -->
+<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
 
 During interactive setup, licensing registration now uses licensing API v2 with a bearer token obtained through CloudGateway instead of an organization API key. You authenticate in your browser, after which the wizard obtains the token and completes registration. Token acquisition is retried for up to two minutes with increasing delays between attempts.
 
@@ -183,9 +175,10 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
 
-#### Security enhancements [ID 46665]
+#### Security enhancements [ID 46665] [ID 46850]
 
 <!-- 46665: MR 10.7.0 - FR 10.6.12 -->
+<!-- 46850: MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
 
 A number of security enhancements have been made.
 
@@ -270,11 +263,11 @@ When multiple polling groups were executed concurrently, results from SNMP GET r
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
 
-#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+#### NATS cluster verification BPA could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
 
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
-On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+On systems where DataMiner BrokerGateway manages NATS, the `NATS cluster verification` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
 
 #### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
 
@@ -386,3 +379,11 @@ Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirect
 When a STaaS migration or replication was stopped, the source connection was not restored as the current connection. Instead, DataMiner could continue to use the migration connection.
 
 From now on, stopping a STaaS migration or replication will restore the source connection.
+
+#### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
+
+<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
+
+After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
+
+Concurrent module registrations could overwrite newer routing configuration with an older snapshot, leaving proxy routes missing. Routing configuration updates are now processed sequentially to prevent this.

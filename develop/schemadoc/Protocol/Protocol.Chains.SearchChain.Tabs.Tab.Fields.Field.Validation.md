@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Validation
+description: "Use the Validation element in a DataMiner protocol to check search input against a regular expression and define an error message."
 ---
 
 # Validation element

@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsProgressBar
+description: "Define a progress bar for a numeric parameter by setting its measurement type to progress and configuring the range in the Display element."
 ---
 
 # Progress bar

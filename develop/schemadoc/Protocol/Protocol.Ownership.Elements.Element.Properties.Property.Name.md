@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.Properties.Property.Name
+description: "Use the Name element in a DataMiner protocol to select an element property for ownership settings, with wildcard support."
 ---
 
 # Name element

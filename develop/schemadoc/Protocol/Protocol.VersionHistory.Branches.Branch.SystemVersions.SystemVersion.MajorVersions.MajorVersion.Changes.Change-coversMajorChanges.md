@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.Changes.Change-coversMajorChanges
+description: "Use the coversMajorChanges attribute of the Change element in a DataMiner protocol to list covered major-change validator IDs."
 ---
 
 # coversMajorChanges attribute

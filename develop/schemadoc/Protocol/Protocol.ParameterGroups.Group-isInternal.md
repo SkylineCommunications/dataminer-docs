@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group-isInternal
+description: "Use the isInternal attribute in a DataMiner protocol to mark a DCF interface as internal instead of external."
 ---
 
 # isInternal attribute

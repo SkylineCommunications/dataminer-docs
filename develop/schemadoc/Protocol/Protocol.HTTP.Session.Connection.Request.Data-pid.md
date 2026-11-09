@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session.Connection.Request.Data-pid
+description: "Use the pid attribute in a DataMiner protocol to identify the parameter containing unencoded HTTP request data."
 ---
 
 # pid attribute

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.Info
+description: "Use the Info element in a DataMiner protocol to set a default value that generates an information event for a parameter."
 ---
 
 # Info element

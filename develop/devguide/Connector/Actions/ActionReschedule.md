@@ -1,5 +1,6 @@
 ---
 uid: LogicActionReschedule
+description: "Use the reschedule action to change when a timer queues its groups, based on whether the timer is currently running."
 ---
 
 # reschedule

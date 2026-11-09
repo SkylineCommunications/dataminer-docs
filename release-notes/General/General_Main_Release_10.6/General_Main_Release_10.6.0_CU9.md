@@ -3,10 +3,10 @@ uid: General_Main_Release_10.6.0_CU9
 description: "Release notes for General Main Release 10.6.0 CU9, including prerequisites, enhancements, and fixes planned for this preview release."
 ---
 
-# General Main Release 10.6.0 CU9 - Preview
+# General Main Release 10.6.0 CU9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -82,6 +82,12 @@ SLLogCollector packages now include the following configuration files:
 - `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
 - `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
 
+#### Security enhancements [ID 46850]
+
+<!-- 46850: MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Element severity could be incorrect after a restart when unmasked alarms were present [ID 46501]
@@ -98,11 +104,11 @@ When multiple polling groups were executed concurrently, results from SNMP GET r
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
 
-#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+#### NATS cluster verification BPA could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
 
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
-On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+On systems where DataMiner BrokerGateway manages NATS, the `NATS cluster verification` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
 
 #### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
 

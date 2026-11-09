@@ -1,5 +1,6 @@
 ---
 uid: Configuration
+description: "Manage IDP configuration settings for network shares, file transfers, working directories, purge limits, and backup types."
 ---
 
 # Configuration

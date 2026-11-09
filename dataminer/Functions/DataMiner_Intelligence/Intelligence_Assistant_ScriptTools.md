@@ -46,7 +46,7 @@ The execution mode determines whether the current conversation waits for the res
 
 When a synchronous script finishes within the wait period, its output or execution error is returned to the agent. The agent can then explain the result, ask for a follow-up action, or report the error to the user.
 
-Key/value output added by the script through [`Engine.AddOrUpdateScriptOutput`](xref:Skyline.DataMiner.Automation.Engine.AddOrUpdateScriptOutput*) is added to the context window after the script finishes. The Assistant can use this output to formulate the response, for example by summarizing the result or reporting values returned by the script.
+Key/value output added by the script through [Engine.AddOrUpdateScriptOutput](xref:Skyline.DataMiner.Automation.Engine.AddOrUpdateScriptOutput*) is added to the context window after the script finishes. The Assistant can use this output to formulate the response, for example by summarizing the result or reporting values returned by the script.
 
 If a synchronous script does not finish within 30 minutes, it continues running in the background. The Assistant reports that no response was received within the wait period. The output, errors, and completion events from that execution are not available in the current response.
 

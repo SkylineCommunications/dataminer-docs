@@ -1,5 +1,6 @@
 ---
 uid: ReservedIDsAggregator
+description: "Consult the parameter ID ranges reserved for DataMiner Aggregator, including rule controls and data parameters."
 ---
 
 # Aggregator

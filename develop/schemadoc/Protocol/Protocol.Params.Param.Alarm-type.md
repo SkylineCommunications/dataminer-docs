@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm-type
+description: "Use the type attribute in a DataMiner protocol to calculate alarm limits from a nominal value using absolute or relative thresholds."
 ---
 
 # type attribute

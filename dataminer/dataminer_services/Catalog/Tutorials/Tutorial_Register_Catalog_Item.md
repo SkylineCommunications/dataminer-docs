@@ -1,6 +1,6 @@
 ---
 uid: Tutorial_Register_Catalog_Item
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 description: "Learn how to register a new connector in the Catalog through Postman with a PUT request, organization key, and ZIP file under 250 MB."
 ---
 

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-whereTag
+description: "Use the whereTag attribute in a DataMiner protocol to specify the XML element whose value is checked in an export rule condition."
 ---
 
 # whereTag attribute

@@ -1,5 +1,6 @@
 ---
 uid: Overview_of_the_IDP_app_UI
+description: "Explore the different tabs of the IDP app UI to manage inventory, connectivity, configurations, software updates, facilities, and scheduled processes."
 ---
 
 # Overview of the IDP app UI

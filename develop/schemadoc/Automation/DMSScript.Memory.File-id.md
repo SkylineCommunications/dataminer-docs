@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Memory.File-id
+description: "Use the File id attribute as the unique positive integer that identifies a memory file within a DataMiner automation script."
 ---
 
 # id attribute

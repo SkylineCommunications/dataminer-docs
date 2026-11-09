@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsDropDownList
+description: "Define a dropdown list as a discreet write parameter so users can choose one value from a fixed or dynamically supplied list."
 ---
 
 # Dropdown list
@@ -168,7 +169,7 @@ When you add a dropdown list, it is possible to show a checkbox for one entry by
 
 ## Creating a dynamic dropdown list
 
-When a standard dropdown list is configured, the items to choose from are statically defined in the protocol. Alternatively, you can also create a dynamic dropdown list. To do so, create a parameter that holds the dynamic entries in a parameter (by providing a semicolon-separated list of entries) and refer to this parameter using the dependencyId attribute.
+When a standard dropdown list is configured, the items to choose from are statically defined in the protocol. Alternatively, you can also create a dynamic dropdown list. To do so, create a parameter that holds the dynamic entries in a parameter (by providing a semicolon-separated list of entries) and refer to this parameter using the [dependencyId](xref:Protocol.Params.Param.Measurement.Discreets-dependencyId) attribute.
 
 ```xml
 <Param id="400" trending="false">

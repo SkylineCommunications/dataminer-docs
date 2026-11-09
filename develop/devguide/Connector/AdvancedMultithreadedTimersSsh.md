@@ -1,5 +1,6 @@
 ---
 uid: AdvancedMultiThreadedTimersSsh
+description: "Implement multithreaded SSH requests by building SSH settings and command arrays in a QAction, processing responses, and running post-response logic."
 ---
 
 # SSH
@@ -130,7 +131,7 @@ Format of the request: requestInfo (object[]):
 To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
+> Whereas typically you provide a parameter ID in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="SSH Data" encoding="csharp" options="group" triggers="1011" row="true">

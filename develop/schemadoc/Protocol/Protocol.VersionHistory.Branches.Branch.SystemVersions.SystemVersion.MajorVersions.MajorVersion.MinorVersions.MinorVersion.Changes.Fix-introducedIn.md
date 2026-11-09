@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion.Changes.Fix-introducedIn
+description: "Use the introducedIn attribute of the Fix element in a DataMiner protocol to identify the version where a resolved issue originated."
 ---
 
 # introducedIn attribute

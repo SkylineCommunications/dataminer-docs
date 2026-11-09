@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.CH
+description: "Use the CH element in a DataMiner protocol to set the default critical-high threshold in a parameter alarm template."
 ---
 
 # CH element

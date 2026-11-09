@@ -182,7 +182,7 @@ Verify the following:
 
 - Verify that the necessary endpoints are reachable.
 
-  These depend on the region you have registered your system for. During the [STaaS setup](xref:Setting_up_StaaS), you should have received information from <support@dataminer.services> about the specific endpoints or IPs to whitelist.
+  You can whitelist these based on hostnames or based on IP addresses. For more information, see [Hostnames and IP addresses to whitelist](xref:Setting_up_StaaS#hostnames-and-ip-addresses-to-whitelist).
 
 ## Common pitfalls
 

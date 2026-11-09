@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapOID-checkBindings
+description: "Use the checkBindings attribute in a DataMiner protocol to filter SNMP traps by comparing bindings with fixed strings or other parameters."
 ---
 
 # checkBindings attribute

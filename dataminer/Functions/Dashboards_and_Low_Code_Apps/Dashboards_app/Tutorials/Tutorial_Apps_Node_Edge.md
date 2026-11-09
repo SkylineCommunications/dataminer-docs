@@ -66,7 +66,7 @@ To deploy the package:
 
 The package will deploy the following components:
 
-- Automation script [JSON Reader](https://catalog.dataminer.services/details/automation-script/5491): You will be able to find this in the Automation module, in the folder *Automation Scripts/GQI/Data sources*.
+- Automation script JSON Reader: You will be able to find this in the Automation module, in the folder *Automation Scripts/GQI/Data sources*.
 
 - Provisioning files: These will be available in the Documents module, in the folder *GQI data sources*.
 

@@ -1,5 +1,6 @@
 ---
 uid: Booking_Manager_user_interface
+description: "Explore the Booking Manager user interface and its Bookings, Config, and Admin tabs to create and manage bookings in DataMiner SRM."
 ---
 
 # Booking Manager user interface

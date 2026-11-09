@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpTraps
+description: "Configure a DataMiner connector to capture and process SNMP traps, map bindings, generate alarms, and send traps from QActions."
 ---
 
 # Traps
@@ -38,13 +39,13 @@ The OID of the traps that should be captured is specified in the TrapOID tag. Th
 
 By default, only traps received from the polling IP address of the main connection of an element will be captured. Using the ipid attribute, you can refer to a parameter containing the IP addresses from which traps should be captured.
 
-The checkBindings attribute allows you to prevent traps from being processed further unless the specified binding checks succeed. The following example specifies that binding 2 of the trap must contain *display* and binding 3 must match the value of parameter 102 (which can also contain wildcards). Only if both conditions are met, DataMiner will process the trap.
+The [checkBindings](xref:Protocol.Params.Param.SNMP.TrapOID-checkBindings) attribute allows you to prevent traps from being processed further unless the specified binding checks succeed. The following example specifies that binding 2 of the trap must contain *display* and binding 3 must match the value of parameter 102 (which can also contain wildcards). Only if both conditions are met, DataMiner will process the trap.
 
 ```xml
 checkBindings="2=*display*|3=id:102"
 ```
 
-The setBindings attribute allows you to set a specified parameter with the value of a specified binding. The following example states that parameter with ID 250 should be set with the value of the first binding.
+The [setBindings](xref:Protocol.Params.Param.SNMP.TrapOID-setBindings) attribute allows you to set a specified parameter with the value of a specified binding. The following example states that parameter with ID 250 should be set with the value of the first binding.
 
 ```xml
 setBindings="1,250"
@@ -82,7 +83,7 @@ DataMiner Protocol Markup Language:
 
 ## Generating alarms upon receiving traps
 
-It is possible to specify that alarms should be generated when a trap is received. This is done using the mapAlarm attribute.
+It is possible to specify that alarms should be generated when a trap is received. This is done using the [mapAlarm](xref:Protocol.Params.Param.SNMP.TrapOID-mapAlarm) attribute.
 
 > [!NOTE]
 >

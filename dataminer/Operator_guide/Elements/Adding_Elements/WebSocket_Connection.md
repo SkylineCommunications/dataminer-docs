@@ -12,6 +12,6 @@ For a **WebSocket** connection, you can specify the following connection setting
 
 - **IP port**: The IP port of the destination. This is not always required.
 
-- **Bus address**: The bus address of the device. This is not always required. If the proxy server has to be bypassed, specify *bypassproxy*.
+- **Bus address**: The bus address of the device. This is not always required. If the proxy server has to be bypassed, specify *bypassProxy*.
 
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.

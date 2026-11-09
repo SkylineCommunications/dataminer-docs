@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsTableDisplayKeys
+description: "Define unique, user-friendly display keys for table rows with naming or NamingFormat, and understand their effects on alarms, filters, and trend data."
 ---
 
 # Display keys
@@ -24,7 +25,7 @@ More information on how a display key can be defined can be found in the followi
 - [NamingFormat](xref:UIComponentsTableDisplayKeys#namingformat)
 - [displayColumn attribute](xref:UIComponentsTableDisplayKeys#displaycolumn-attribute)
 
-Only one approach should be used at a time and new protocols should avoid using the displayColumn attribute because it performs less well and displayColumn is not supported by Cassandra.
+Only one approach should be used at a time and new protocols should avoid using the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute because it performs less well and displayColumn is not supported by Cassandra.
 
 > [!NOTE]
 > Based on the way the display key is defined, there is also an important difference in the way trend data is stored in the trend data database table. In case the displayColumn attribute is used, the display key is used in the trend data table. In case either the "naming" option or NamingFormat is used, the primary key is used in the trend data table. Therefore, it is not allowed to change existing protocols to start using naming instead of the displayColumn attribute (unless the TAM instructs to do so, as this results in a major protocol change), as this would result in the trend history becoming unavailable (even though it is still present in the database).

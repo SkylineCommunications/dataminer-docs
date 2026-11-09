@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation.LinkTo-protocol
+description: "Use the protocol attribute in a DataMiner protocol to name the protocol containing the remote parameter for a mediation link."
 ---
 
 # protocol attribute
@@ -16,10 +17,6 @@ string
 
 ## Examples
 
-
 ```xml
 <LinkTo protocol="Microsoft Platform" pid="97"/>
 ```
-
-
-

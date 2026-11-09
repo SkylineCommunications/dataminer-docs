@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDcf
+description: "Understand how the DataMiner Connectivity Framework models and manages device interfaces and connections for path visualization and control."
 ---
 
 # DataMiner Connectivity Framework

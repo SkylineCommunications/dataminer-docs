@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.PortTypeSerial
+description: "Use the PortTypeSerial element in a DataMiner protocol to configure settings related to the serial port type for a connection."
 ---
 
 # PortTypeSerial element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SlowPollBase
+description: "Use the SlowPollBase element in a DataMiner protocol to configure whether slow polling is based on a timeout count or time duration."
 ---
 
 # SlowPollBase element

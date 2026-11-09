@@ -2,10 +2,7 @@
 uid: MediaOps_Plan_2.0.0
 ---
 
-# MediaOps Plan 2.0.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Plan 2.0.0
 
 > [!NOTE]
 > This version requires:
@@ -120,6 +117,24 @@ Dynamic input values are kept throughout the job lifecycle:
 If a required dynamic input has no value, the configuration is shown as incomplete.
 
 Using a single orchestration script with dynamic inputs can remove the need to create a separate script and resource pool for every variation of a setup.
+
+#### Resource selection panels now support search and filtering [ID 46907]
+
+Resource selection panels now include search and filtering capabilities, making it easier to find resources in large environments. This is available in the *Add Resource*, *Pick Resource*, *Swap Resource*, *Swap Resource (Node Graph)*, *Add Before*, *Add After*, and *Link Resource* panels.
+
+#### Scheduling: Configure nodes when adding or swapping them in running jobs [ID 46981]
+
+When you add, insert, or swap a node in a running job, you can now configure it as part of the operation. This also lets you add resources that have mandatory values.
+
+Automated actions that have already run are read-only and remain unchanged. They are excluded from mandatory-value checks. A node added during a run does not run actions whose execution time has passed. A swapped-in node retains the actions already executed by the replaced node, whether you keep its configuration or revert to the configuration from the newly selected pool.
+
+#### Scheduling: Edit node configuration in running jobs [ID 46982]
+
+You can now update an existing node's configuration in a running job.
+
+Actions that have already run remain locked and unchanged, even if their script is no longer available or the action runs while the configuration panel is open. Actions that ran on the resource pool are not added to a node if they did not run on that node.
+
+The configuration remains read-only for completed or canceled jobs, when another user is editing the job, and at the job level.
 
 ## Changes
 
@@ -591,3 +606,7 @@ In addition, the confirmation dialog now adapts to the selection:
 When an orchestration script parameter for a node's automated action was linked to a property of the resource assigned to that node, it could occur that a job could not be confirmed. In this case, confirming the job failed with an error indicating that not all references could be resolved, for example: `Not all references could be resolved: "<parameter>" (linked to Resource Property) in <node>, event '<event>'`.
 
 This happened when the link did not store a node, which is the case for links configured on a resource pool. The link is now resolved against the node that owns the automated action, so the job can be confirmed.
+
+#### Scheduling: Incorrect eligible resources shown in 'Swap Resource from Node Graph' panel [ID 46906]
+
+In the Scheduling app, the *Swap Resource from Node Graph* panel could use incorrectly linked query feeds for its start and end time parameters. In some scenarios, the query therefore used incorrect job timings, which could result in incorrect data being returned for eligible resources. This issue has now been fixed.

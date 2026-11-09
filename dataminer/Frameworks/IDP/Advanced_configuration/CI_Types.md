@@ -1,5 +1,6 @@
 ---
 uid: CI_Types
+description: "Configure CI Types in DataMiner IDP using the CI Type Management wizard to set up discovery, provisioning, backups, and software updates."
 ---
 
 # CI Types

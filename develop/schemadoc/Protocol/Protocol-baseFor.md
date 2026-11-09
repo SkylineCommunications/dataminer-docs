@@ -1,5 +1,6 @@
 ---
 uid: Protocol-baseFor
+description: "Use the baseFor attribute to mark a DataMiner protocol as a base protocol for an element type so other protocols can be based on it."
 ---
 
 # baseFor attribute

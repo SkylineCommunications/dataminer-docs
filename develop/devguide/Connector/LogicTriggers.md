@@ -1,5 +1,6 @@
 ---
 uid: LogicTriggers
+description: "Learn how triggers work in DataMiner protocols, how they can be activated, and what they can be used for."
 ---
 
 # Triggers

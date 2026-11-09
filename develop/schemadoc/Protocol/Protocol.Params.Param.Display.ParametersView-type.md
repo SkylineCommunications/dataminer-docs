@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.ParametersView-type
+description: "Use the type attribute of the ParametersView element in a DataMiner protocol to select the chart type used to display a parameter."
 ---
 
 # type attribute
@@ -16,10 +17,9 @@ Specifies the chart type.
 
 ## Remarks
 
-> [!NOTE]
->
-> - Pie charts only work if the referenced values are either all positive or all negative.
-> - StackedArea charts should not be used to display values that are constantly changing.
+- Pie charts only work if the referenced values are either all positive or all negative.
+
+- Stacked area charts should not be used to display values that are constantly changing.
 
 ## Examples
 

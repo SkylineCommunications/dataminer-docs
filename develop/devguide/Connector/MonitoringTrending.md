@@ -1,5 +1,6 @@
 ---
 uid: MonitoringTrending
+description: "Configure parameter trending in DataMiner connectors, understand real-time and average calculations, manage history sets, and retrieve trend data."
 ---
 
 # Trending
@@ -8,7 +9,7 @@ DataMiner provides the possibility to show trend graphs of parameters indicating
 
 In a protocol, it is possible to define whether or not a parameter should support trending. If trending is not supported for a parameter, the parameter will not be included in the trend template.
 
-By default, trending is supported when RTDisplay of the parameter is set to true. Use the trending attribute of the Param tag to disable trend support:
+By default, trending is supported when RTDisplay of the parameter is set to true. Use the [trending](xref:Protocol.Params.Param-trending) attribute of the Param tag to disable trend support:
 
 ```xml
 <Param id="100" trending="false">
@@ -264,4 +265,4 @@ public class QAction
 ```
 
 > [!NOTE]
-> In the *ParameterIndexPair*, provide the key that is used to store the trend record. This is the primary key, except when the displayColumn attribute is used. In that case, provide the display key as this is the key used to store the trend record.
+> In the *ParameterIndexPair*, provide the key that is used to store the trend record. This is the primary key, except when the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute is used. In that case, provide the display key as this is the key used to store the trend record.

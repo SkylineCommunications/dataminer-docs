@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair.Content
+description: "Use the Content element in a DataMiner protocol to associate one command with its expected normal and error responses."
 ---
 
 # Content element

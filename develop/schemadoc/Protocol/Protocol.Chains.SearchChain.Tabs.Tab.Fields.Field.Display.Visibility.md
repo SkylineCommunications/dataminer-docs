@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Fields.Field.Display.Visibility
+description: "Use the Visibility element in a DataMiner protocol to combine a default setting with trigger conditions for search field visibility."
 ---
 
 # Visibility element

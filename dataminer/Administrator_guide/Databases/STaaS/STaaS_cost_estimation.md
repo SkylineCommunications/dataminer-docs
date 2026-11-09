@@ -1,7 +1,7 @@
 ---
 uid: STaaS_cost_estimation
 description: "Follow these steps to view a cost estimation for STaaS. Deploy the STaaS Migration Script package, and run the CloudStorageMigration script."
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Requesting a cost estimation for STaaS

@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSerialSerialSingle
+description: "Learn how the serial single connection type prevents DataMiner from combining multiple connections to the same device."
 ---
 
 # Serial single
