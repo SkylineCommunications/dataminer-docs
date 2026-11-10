@@ -382,7 +382,7 @@ From now on, stopping a STaaS migration or replication will restore the source c
 
 #### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
 
-<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.6.12 -->
 
 After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
 
