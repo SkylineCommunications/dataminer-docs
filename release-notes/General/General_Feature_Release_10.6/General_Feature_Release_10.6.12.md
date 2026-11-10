@@ -178,7 +178,7 @@ The generated package now includes the following files in the `Elastic` folder f
 #### Security enhancements [ID 46665] [ID 46850]
 
 <!-- 46665: MR 10.7.0 - FR 10.6.12 -->
-<!-- 46850: MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+<!-- 46850: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
 
 A number of security enhancements have been made.
 
