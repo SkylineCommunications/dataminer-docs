@@ -97,15 +97,18 @@ See [Configuring the alarm settings for an SLA](xref:Configuring_the_alarm_setti
 
 ## Impact combination with Component Info
 
-When multiple alarms occur simultaneously, DataMiner SLA monitoring combines their impacts into an overall outage impact using *Component info*.
+When multiple alarms occur simultaneously, DataMiner SLA monitoring combines their impacts into an overall outage impact using *Component Info*.
 
-Component info is a text tag associated with an alarm-generating parameter (for example, `Video` or `Audio`) configured in the information template of the monitored element's protocol. The SLA displays this value in the *Component Info* column of the *Active Service Alarms* table (table 250, column PID 264). For details on setting up information templates, see [Creating an information template](xref:Creating_an_information_template).
+*Component Info* is a text tag associated with an alarm-generating parameter (for example, `Video` or `Audio`). You can configure it in the information template for the **protocol of the monitored element**, not in the information template for Skyline SLA Definition Basic. The SLA displays this value in the *Component Info* column of the *Active Service Alarms* table (table 250, column PID 264).
 
-Rather than assigning an impact percentage, Component Info determines how the SLA groups and aggregates the impacts of alarms that overlap in time:
+> [!TIP]
+> For details on setting up information templates, see [Creating an information template](xref:Creating_an_information_template) and [Activating an information template](xref:Activating_an_information_template). Keep in mind that changes to an information template can affect multiple elements.
 
-- **Same Component Info**: Alarms with the same non-empty Component Info value form a single group. Only the highest impact within that group contributes to the outage impact.
-- **Different Component Info**: Alarms with different Component Info values are treated as distinct groups, and their impacts are added together.
-- **No Component Info**: Alarms with an empty Component Info value contribute individually and are added together.
+Rather than assigning an impact percentage, *Component Info* determines how the SLA groups and aggregates the impacts of alarms that overlap in time:
+
+- **Same Component Info**: Alarms with the same non-empty *Component Info* value form a single group. Only the highest impact within that group contributes to the outage impact.
+- **Different Component Info**: Alarms with different *Component Info* values are treated as distinct groups, and their impacts are added together.
+- **No Component Info**: Alarms with an empty *Component Info* value contribute individually and are added together.
 - **Maximum cap**: The total combined impact across all groups is capped at 100%.
 
 The same text groups contributing alarms even when they originate from different elements within the monitored service.
