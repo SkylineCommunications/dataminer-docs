@@ -182,6 +182,17 @@ As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
+#### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+DataMiner upgrades will now remove the following unused DLL files from `C:\Skyline DataMiner\Files\SLScripting\x86`:
+
+- *Skyline.DataMiner.Core.DMAObjects.Config.dll*
+- *Skyline.DataMiner.Core.StorageModule.dll*
+
+These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
+
 ### Fixes
 
 #### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]

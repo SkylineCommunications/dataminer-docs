@@ -91,6 +91,17 @@ The `ScheduledTaskDetails` class, which is used only to migrate scheduled tasks 
 
 As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.Config.dll*.
 
+#### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+DataMiner upgrades will now remove the following unused DLL files from `C:\Skyline DataMiner\Files\SLScripting\x86`:
+
+- *Skyline.DataMiner.Core.DMAObjects.Config.dll*
+- *Skyline.DataMiner.Core.StorageModule.dll*
+
+These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
+
 ### Fixes
 
 #### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
