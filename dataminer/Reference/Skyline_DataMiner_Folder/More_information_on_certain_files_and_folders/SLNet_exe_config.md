@@ -59,9 +59,9 @@ The *runtime* section contains .NET runtime settings for the SLNet process, such
 
 ### gcServer
 
-Determines whether SLNet uses server garbage collection. By default, the .NET runtime automatically reclaims memory from objects that are no longer reachable by the application.
+The *gcServer* element determines whether SLNet uses server or workstation garbage collection. Garbage collection itself is always active; this setting only selects the mode. The *enabled* attribute defaults to *false*, which selects workstation garbage collection.
 
-With server garbage collection, the .NET runtime uses a separate heap and a dedicated garbage collection thread for each logical processor. This can make garbage collection faster on servers with multiple processors, but it can also use more memory and CPU.
+Server garbage collection uses one heap and one dedicated garbage collection thread for each processor available to the process. This can improve performance on multiprocessor systems, but can also use more memory and CPU.
 
 To enable server garbage collection, set the *enabled* attribute to *true*:
 
@@ -77,9 +77,9 @@ For more information, refer to [gcServer element](https://learn.microsoft.com/en
 
 ### GCHeapCount
 
-Limits the number of heaps and garbage collection threads used by server garbage collection. This setting only has an effect when *gcServer* is enabled. The actual number of heaps cannot exceed the number of processors available to the SLNet process.
+The *GCHeapCount* element limits the number of heaps and garbage collection threads used by server garbage collection. It only applies when *gcServer* is enabled. The actual number of heaps is the lower of the configured value and the number of processors the process is allowed to use.
 
-For example, to enable server garbage collection and limit it to eight heaps:
+Despite its name, the *enabled* attribute of this element takes the number of heaps. For example, to enable server garbage collection and use at most eight heaps:
 
 ```xml
 <runtime>
