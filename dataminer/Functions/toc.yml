@@ -192,6 +192,8 @@ items:
   - name: Business Intelligence
     topicUid: sla
     items:
+      - name: How SLA monitoring works
+        topicUid: How_SLA_monitoring_works
       - name: Creating an SLA
         items:
           - name: Creating a new SLA
