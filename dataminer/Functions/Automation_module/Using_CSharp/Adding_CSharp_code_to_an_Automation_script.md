@@ -161,7 +161,7 @@ To prevent problems caused by faulty script statements, every C# code block has 
 
 Inside a code block, you can change the timeout delay for that particular code block by setting the Timeout property of the engine object.
 
-This C# code block timeout is separate from the `<Timeout>` element used by the [Find interactive client](xref:Find_interactive_client) and [Sleep](xref:Sleep) script actions.
+This C# code block timeout is separate from the [Timeout](xref:DMSScript.Script.Exe.Timeout) element used by the [Find interactive client](xref:Find_interactive_client) and [Sleep](xref:Sleep) script actions.
 
 Example:
 

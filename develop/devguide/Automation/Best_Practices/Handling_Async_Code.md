@@ -12,7 +12,7 @@ The automation script entry point is synchronous: use `void Run(IEngine engine)`
 >
 > This applies even when the work you offload is fully synchronous. Dispatching Engine calls to other threads (for example with `Task.Run`, `Parallel.For`, or a manually started `Thread`) and using the Engine or its objects from more than one thread at a time can corrupt the Automation subsystem's internal state and crash the process (`SLAutomation`). Keep all interaction with the Engine and its objects on the script's entry point thread.
 >
-> Note that sending SLNet messages through the `Engine` object, i.e., using the methods `Engine.SendSLNetSingleResponseMessage`, `Engine.SendSLNetMessages`, and `Engine.SendSLNetMessage`, is thread-safe.
+> Note that sending SLNet messages through the `Engine` object, i.e., using the methods [Engine.SendSLNetSingleResponseMessage](xref:Skyline.DataMiner.Automation.Engine.SendSLNetSingleResponseMessage(Skyline.DataMiner.Net.Messages.DMSMessage)), [Engine.SendSLNetMessages](xref:Skyline.DataMiner.Automation.Engine.SendSLNetMessages(Skyline.DataMiner.Net.Messages.DMSMessage[])), and [Engine.SendSLNetMessage](xref:Skyline.DataMiner.Automation.Engine.SendSLNetMessage(Skyline.DataMiner.Net.Messages.DMSMessage)), is thread-safe.
 
 If an external library only exposes an async method, call it synchronously from the entry point thread. Do not pass the Engine object or objects obtained from it into the asynchronous operation.
 
