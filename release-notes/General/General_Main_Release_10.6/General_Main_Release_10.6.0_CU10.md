@@ -105,7 +105,7 @@ From now on, large ChunkingMessageBroker replies will use acknowledged chunks to
 
 #### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
 
-<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
@@ -151,7 +151,7 @@ Canceled reservations are now ignored when checking whether resource updates wou
 
 #### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
 
-<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.6.12 -->
 
 After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
 

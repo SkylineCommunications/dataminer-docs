@@ -33,7 +33,7 @@ Before you upgrade to this DataMiner version:
 
 ## Important changes
 
-*No important changes have been selected yet.*
+- [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 
 ## Highlights
 
@@ -43,25 +43,36 @@ Before you upgrade to this DataMiner version:
 
 #### Security: New 'Intelligence Usage' user permission [ID 46765]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
 
 > [!NOTE]
-> The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+> The first time a system is upgraded to DataMiner version 10.7.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
 
 #### Security: New 'Intelligence App' user permission [ID 46817]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
 
 > [!NOTE]
 >
 > - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
-> - The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+> - The first time a system is upgraded to DataMiner version 10.7.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
 
 ## Changes
+
+### Breaking changes
+
+#### Document Intelligence: Assistant permission checks [ID 46944]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission.
+
+> [!IMPORTANT]
+> Document Intelligence in DataMiner 10.6 is incompatible with newer Assistant versions that enforce these checks.
 
 ### Enhancements
 
@@ -178,9 +189,20 @@ As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.
 
 #### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
 
-<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
+#### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+DataMiner upgrades will now remove the following unused DLL files from `C:\Skyline DataMiner\Files\SLScripting\x86`:
+
+- *Skyline.DataMiner.Core.DMAObjects.Config.dll*
+- *Skyline.DataMiner.Core.StorageModule.dll*
+
+These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
 
 ### Fixes
 

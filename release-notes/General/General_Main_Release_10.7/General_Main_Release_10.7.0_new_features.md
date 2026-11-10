@@ -546,6 +546,15 @@ If you do not set this property, `Default` is used, preserving the existing tabl
 > [!NOTE]
 > Support for the `Grid` layout in the DataMiner web apps will be introduced separately.
 
+#### Security: New 'Intelligence Usage' user permission [ID 46765]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
+
+> [!NOTE]
+> The first time a system is upgraded to DataMiner version 10.7.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+
 ### New BPA test: DataMiner Agent Versions [ID 46808]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
@@ -553,3 +562,14 @@ If you do not set this property, `Default` is used, preserving the existing tabl
 A new BPA test, *DataMiner Agent Versions*, now runs daily to check whether all DataMiner Agents in the cluster are running the same DataMiner version. The check also includes offline Failover Agents.
 
 The test fails if it detects different versions. If the information required for the check is missing or incomplete, the result is inconclusive. In both cases, the output includes details.
+
+#### Security: New 'Intelligence App' user permission [ID 46817]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
+
+> [!NOTE]
+>
+> - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
+> - The first time a system is upgraded to DataMiner version 10.7.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.

@@ -175,10 +175,11 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
 
-#### Security enhancements [ID 46665] [ID 46850]
+#### Security enhancements [ID 46665] [ID 46848] [ID 46850]
 
 <!-- 46665: MR 10.7.0 - FR 10.6.12 -->
-<!-- 46850: MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+<!-- 46848: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+<!-- 46850: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
 
 A number of security enhancements have been made.
 
@@ -382,7 +383,7 @@ From now on, stopping a STaaS migration or replication will restore the source c
 
 #### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
 
-<!-- MR 10.6.0 [CU10] - FR 10.6.12 -->
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.6.12 -->
 
 After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
 

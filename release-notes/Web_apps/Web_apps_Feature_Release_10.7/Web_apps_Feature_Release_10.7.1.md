@@ -104,7 +104,7 @@ This update also resolves the following issues:
 
 #### GQI DxM: Improved performance for inter-element table parameter queries [ID 46078]
 
-<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 Performance has improved for GQI queries that retrieve table parameters from multiple elements.
 
@@ -197,6 +197,6 @@ Parameter selectors now correctly display the preselected values. Some selectors
 
 #### GQI DxM: Parameter table queries could deadlock during paging with live updates [ID 46998]
 
-<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 When live updates were enabled for a parameter table query, a deadlock could occur if a table update notification arrived while GQI was fetching rows. Paging and update delivery could then wait indefinitely for each other, also blocking unrelated queries and session cleanup.

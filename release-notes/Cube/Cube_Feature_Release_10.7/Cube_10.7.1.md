@@ -33,7 +33,7 @@ DataMiner Cube now displays the following permissions under *General* in the use
 Both permissions are enabled by the limited administrator and full administrator presets. They are hidden when the connected DataMiner Agent does not support them.
 
 > [!NOTE]
-> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.8.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
+> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.7.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
 
 ## Changes
 
