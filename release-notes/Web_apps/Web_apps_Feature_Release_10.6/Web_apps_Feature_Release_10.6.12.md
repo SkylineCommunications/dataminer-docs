@@ -51,7 +51,7 @@ The existing Table layout remains the default, preserving the layout and navigat
 
 > [!NOTE]
 >
-> - This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.12 or newer. See also [Interactive Automation scripts: New WebUILayout property [ID 46602]](xref:General_Feature_Release_10.6.12#interactive-automation-scripts-new-webuilayout-property-id-46602).
+> - This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.12 or newer. See also [Interactive automation scripts: New WebUILayout property [ID 46602]](xref:General_Feature_Release_10.6.12#interactive-automation-scripts-new-webuilayout-property-id-46602).
 > - Unlike the Table layout, the Grid layout does not automatically resolve overlapping components or adjust spans. It also does not reserve extra space for validation messages.
 
 ## Changes
