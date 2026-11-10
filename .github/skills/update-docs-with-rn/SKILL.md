@@ -1,10 +1,12 @@
 ---
-name: RNs to Docs
-description: Look up a DataMiner release note, decide whether the user guide or developer docs need to be updated, and apply the update if so.
-argument-hint: A release note number (e.g., 45557)
+name: update-docs-with-rn
+description: 'Use when asked to Update docs with a release note ID or assess RN documentation impact. Compare the published and original RN, then update the user or developer guide only where needed.'
+argument-hint: 'Any release note number (e.g., 45557)'
 ---
 
-You are a DataMiner documentation specialist deciding whether a release note requires a documentation update, and applying that update when needed.
+# Update documentation with a release note
+
+Decide whether a release note requires a user-guide or developer-guide update, and apply that update after approval from the user. This skill does not publish the release note itself.
 
 ## Workflow
 
@@ -14,13 +16,13 @@ You are a DataMiner documentation specialist deciding whether a release note req
    - If it cannot be found, continue with step 2 and rely on the original release note instead.
 
 2. **Retrieve the original release note from SkylineApi.**
-   - Use the Collaboration MCP Server to retrieve the original release note (as published by the developer on collaboration.dataminer.services) for the same release note number.
+   - Use the Collaboration MCP Server to retrieve the original release note from SkylineApi (as published by the developer on collaboration.dataminer.services) for the same release note number. Discover the release-note retrieval tool if necessary.
    - The original release note sometimes contains more detail and background than the documented version, such as the developer's own description, the affected components, and the exact versions.
-   - If the Collaboration MCP Server is not available or the release note cannot be retrieved, tell the user that only the documented version is used, and point them to the setup instructions in the comment at the bottom of this file.
+   - If the Collaboration MCP Server is not available or the release note cannot be retrieved, explicitly report the retrieval problem, tell the user that only the documented version is used if available, and provide the setup instructions below.
    - If neither version can be retrieved, ask the user to clarify or paste the release note content.
 
 3. **Compare both versions and show them to the user.**
-   - Show both the documented release note content (title and description) and the original release note content, so the user knows what the release note is about, before continuing with the analysis.
+   - Show both the documented release note content (title and description) and the original release note content, so the user knows what the release note is about, before continuing with the analysis. If either version is unavailable, label it unavailable rather than fabricating a quote. If only the original is available, use its category and versions, explicitly noting that no documented category is available.
    - Base the analysis on the combined information from both versions. Where they differ, use the original release note for technical detail and the documented version for the wording and versions published in the docs.
    - Compare the release note categories. Release notes are categorized as bug fixes, new features, or enhancements. Treat the category in the documented release note as authoritative. A different category in the original release note means its developer-selected category was corrected during publication in the DataMiner Docs.
    - Explicitly point out any relevant information that is present in the original release note but missing from the documented version, or vice versa.
@@ -48,13 +50,14 @@ You are a DataMiner documentation specialist deciding whether a release note req
    - Items with no impact are marked "no user documentation update required" (or "no developer documentation update required").
    - If a release note item is ambiguous or unclear, ask the user for clarification instead of guessing.
 
-7. **If an update is required, propose and apply it immediately.**
+7. **If an update is required, propose it to the user for review.**
    - Integrate the change into the existing text rather than appending disconnected notes; match the surrounding tone, structure, and heading style.
    - Always mention the DataMiner version(s) (Main Release and Feature Release, when applicable) from which the new/changed behavior is available.
    - Keep the old way of working documented as well (for users on older, still-supported DataMiner versions), clearly distinguishing it from the new behavior by version.
-   - Follow the house style rules in `.github/instructions/dataminer-docs-house-style.instructions.md` (sentence casing, US English, no em dashes, etc.).
+   - Read and follow the house style rules in `.github/instructions/dataminer-docs-house-style.instructions.md` (sentence casing, US English, no em dashes, etc.).
    - Update the corresponding `toc.yml` only if a new page is created; prefer editing existing pages over creating new ones.
    - Do not remove or alter unrelated content.
+   - Do not apply changes without the user's explicit approval.
 
 ## Output format
 
@@ -76,4 +79,10 @@ Then, for each analyzed release note item, report:
 - Do not invent functionality that isn't described in the release note.
 - Only edit documentation files directly relevant to the analyzed release note.
 
-<!-- To use this agent, you will first have to make sure you are connected to the Collaboration MCP Server. To do so, in VS Code, press Ctrl + Shift + P and select "MCP: List Servers". If the server is not listed yet, select "+ Add Server", then select HTTP, and then enter the URL "https://collaboration-mcp-server.thankfulsea-26bd4902.westeurope.azurecontainerapps.io/mcp", and select "Global". Note that this will only work for Skyline employees. -->
+## Collaboration MCP setup
+
+This server is available only to Skyline employees.
+
+1. In VS Code, press Ctrl+Shift+P and select *MCP: List Servers*.
+1. If the server is not listed, select *+ Add Server*, then *HTTP*.
+1. Enter `https://collaboration-mcp-server.thankfulsea-26bd4902.westeurope.azurecontainerapps.io/mcp` and select *Global*.
