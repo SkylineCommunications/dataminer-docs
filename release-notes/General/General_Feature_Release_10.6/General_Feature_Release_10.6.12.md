@@ -33,11 +33,11 @@ Before you upgrade to this DataMiner version:
 
 ## New features
 
-### Interactive Automation scripts: New WebUILayout property [ID 46602]
+### Interactive automation scripts: New WebUILayout property [ID 46602]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-From now on, you can select the web UI layout for each dialog in an interactive Automation script using the `UIBuilder.WebUILayout` property.
+From now on, you can select the web UI layout for each dialog in an interactive automation script using the `UIBuilder.WebUILayout` property.
 
 For example:
 
