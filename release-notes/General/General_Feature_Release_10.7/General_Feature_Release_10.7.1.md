@@ -33,7 +33,7 @@ Before you upgrade to this DataMiner version:
 
 ## Important changes
 
-*No important changes have been selected yet.*
+- [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 
 ## Highlights
 
@@ -62,6 +62,17 @@ A new *Intelligence App* user permission has now been added. This permission wil
 > - The first time a system is upgraded to DataMiner version 10.7.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
 
 ## Changes
+
+### Breaking changes
+
+#### Document Intelligence: Assistant permission checks [ID 46944]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission.
+
+> [!IMPORTANT]
+> Document Intelligence in DataMiner 10.6 is incompatible with newer Assistant versions that enforce these checks.
 
 ### Enhancements
 

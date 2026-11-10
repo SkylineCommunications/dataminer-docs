@@ -14,6 +14,7 @@ The following changes may have an impact on your system, so please make sure to 
 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
+- [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 
 ## Changes
 
@@ -42,6 +43,15 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e.,
 Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
 
 In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
+
+#### Document Intelligence: Assistant permission checks [ID 46944]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission.
+
+> [!IMPORTANT]
+> Document Intelligence in DataMiner 10.6 is incompatible with newer Assistant versions that enforce these checks.
 
 ### Enhancements
 
