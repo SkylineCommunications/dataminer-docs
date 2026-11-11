@@ -4,8 +4,6 @@ items:
     items:
     - name: What is Skyline's mission and vision
       topicUid: FAQ_MissionVision
-    - name: Does DataMiner process personal data in a GDPR-compliant manner
-      topicUid: FAQ_GDPR
     - name: Does Skyline offer an escrow service
       topicUid: FAQ_Escrow
     - name: What are the principal advantages of DataMiner
