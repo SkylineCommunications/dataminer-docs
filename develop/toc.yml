@@ -293,14 +293,14 @@ items:
           topicUid: UIComponentsTableForeignKeys
         - name: Relations
           topicUid: UIComponentsTableRelations
+        - name: Custom table context menu
+          topicUid: UIComponentsCustomTableContextMenu
         - name: Setting row text color
           topicUid: UIComponentsTableSettingRowTextColor
         - name: Configuring buttons to open DataMiner objects from table cells
           topicUid: UIComponentsTableRowButtons
         - name: Exercise
           topicUid: UIComponentsTableExercise
-      - name: Custom table context menu
-        topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
         items:
           - name: Standard matrix
