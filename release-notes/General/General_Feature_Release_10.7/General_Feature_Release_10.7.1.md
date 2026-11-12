@@ -193,6 +193,14 @@ As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
+#### Automation: Clearer error messages when script compilation fails [ID 46989]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+When an automation script fails to compile, DataMiner will now report the `SL_AUTOMATION_SCRIPT_COMPILATION_FAILED` error, including the compiler diagnostics, when loading the script. Previously, the script would fail at runtime with a "No Assembly found for cookie" error and be retried 100 times.
+
+The compilation error will be displayed when you execute the script in DataMiner Cube and returned when you execute it through code.
+
 #### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
