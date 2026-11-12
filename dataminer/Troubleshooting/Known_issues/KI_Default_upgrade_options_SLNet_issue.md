@@ -18,7 +18,7 @@ Install DataMiner 10.5.0 [CU4] or 10.5.7.<!-- RN 42746 -->
 
 ## Workaround
 
-Manually remove the `<DefaultUpgradeOptions>` element from the *MaintenanceSettings.xml* file and restart DataMiner.
+Manually remove the [DefaultUpgradeOptions](xref:MaintenanceSettings.SLNet.DefaultUpgradeOptions) element from the *MaintenanceSettings.xml* file and restart DataMiner.
 
 ## Description
 

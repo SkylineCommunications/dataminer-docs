@@ -606,7 +606,7 @@ Example:
 
 It is possible to have an information event generated whenever a connection fails to be authenticated. From DataMiner 10.1.8/10.2.0 onwards, this is enabled by default.
 
-To enable this option in older systems, add an `EnableFailedAuthenticationInfoEvents` element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
+To enable this option in older systems, add an [EnableFailedAuthenticationInfoEvents](xref:MaintenanceSettings.SLNet.EnableFailedAuthenticationInfoEvents) element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
 
 Example:
 
@@ -623,7 +623,7 @@ Example:
 
 ### Configuring a cluster transition state timeout
 
-In the `ClusterTransitionStateTimeout` element, you can specify a cluster transition state timeout (in seconds).
+In the [ClusterTransitionStateTimeout](xref:MaintenanceSettings.SLNet.ClusterTransitionStateTimeout) element, you can specify a cluster transition state timeout (in seconds).
 
 DataMiner Agents leaving the DataMiner System (i.e., cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
 
