@@ -25,10 +25,10 @@ By default, the message is sent in binary format.
 
 ```xml
 <Command id="1">
-   <Name>Message</Name>
-   <WebSocketMessageType>text</WebSocketMessageType>
-   <Content>
-      <Param>2</Param>
-   </Content>
+    <Name>Message</Name>
+    <WebSocketMessageType>text</WebSocketMessageType>
+    <Content>
+        <Param>2</Param>
+    </Content>
 </Command>
 ```

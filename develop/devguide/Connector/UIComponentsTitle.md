@@ -11,15 +11,15 @@ To define a title, create a parameter of type "fixed". In the `Measurement` tag,
 
 ```xml
 <Param id="280" trending="false">
-  <Name>TitleSoftwareManagement</Name>
-  <Description>TitleSoftwareManagement</Description>
-  <Type>fixed</Type>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-    <Type options="begin">title</Type>
-  </Measurement>
+    <Name>TitleSoftwareManagement</Name>
+    <Description>Software Management</Description>
+    <Type>fixed</Type>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
+    <Measurement>
+        <Type options="begin">title</Type>
+    </Measurement>
 </Param>
 ```
 

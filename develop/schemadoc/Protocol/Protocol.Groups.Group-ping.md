@@ -36,10 +36,10 @@ You can only test connections for which a ping group has been defined in the pro
 
 ```xml
 <Group id="6" ping="true">
-   <Name>sysUptime</Name>
-   <Description>System Uptime</Description>
-   <Content>
-      <Param>6</Param>
-   </Content>
+    <Name>sysUptime</Name>
+    <Description>System Uptime</Description>
+    <Content>
+        <Param>6</Param>
+    </Content>
 </Group>
 ```

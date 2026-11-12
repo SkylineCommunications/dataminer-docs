@@ -11,14 +11,14 @@ There are two ways to establish links between parameters in a base protocol and 
 
 ```xml
 <Param id="73102">
-   <Name>Name Process</Name>
-   <Description>Name Process</Description>
-   <Mediation>
-      <LinkTo protocol="Network Server Manager" pid="82"/>
-      <LinkTo protocol="Linux Server Manager" pid="82"/>
-      <LinkTo protocol="windows Server Manager" pid="82"/>
-      <LinkTo protocol="Microsoft Platform" pid="97"/>
-   </Mediation>
+    <Name>NameProcess</Name>
+    <Description>Name Process</Description>
+    <Mediation>
+        <LinkTo protocol="Network Server Manager" pid="82"/>
+        <LinkTo protocol="Linux Server Manager" pid="82"/>
+        <LinkTo protocol="windows Server Manager" pid="82"/>
+        <LinkTo protocol="Microsoft Platform" pid="97"/>
+    </Mediation>
 ```
 
 It is possible to create a base protocol that is not linked to a specific element type but directly to a protocol, allowing you to link protocols with different element types to the same base protocol. When a base protocol contains a Mediation.LinkTo@protocol attribute referring a protocol, the element type in the [basefor](xref:Protocol-baseFor) attribute of the protocol that is referred to will be disregarded.<!-- RN 19591 -->
@@ -37,11 +37,11 @@ For example:
 
 ```xml
 <Param id="101" trending="true" save="true">
-   <Name>pct_value1</Name>
-   <Description>Procentual Value 1</Description>
-   <Mediation>
-     <LinkTo pid="71000" />
-   </Mediation>
+    <Name>ProcentualValue1</Name>
+    <Description>Procentual Value 1</Description>
+    <Mediation>
+        <LinkTo pid="71000" />
+    </Mediation>
 ```
 
 ## See also

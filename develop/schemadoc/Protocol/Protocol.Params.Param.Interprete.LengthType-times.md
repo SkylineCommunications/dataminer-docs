@@ -33,14 +33,14 @@ The response of the device looks like [header] ‘ABCD’ ‘C’ [trailer], the
 
 ```xml
 <Response id="1">
-   <Name>Response1</Name>
-   <Description>Response1</Description>
-   <Content>
-      <Param>10</Param>
-      <Param>50</Param>
-      <Param>11</Param>
-      <Param>12</Param>
-   </Content>
+    <Name>Response1</Name>
+    <Description>Response1</Description>
+    <Content>
+        <Param>10</Param>
+        <Param>50</Param>
+        <Param>11</Param>
+        <Param>12</Param>
+    </Content>
 </Response>
 ```
 

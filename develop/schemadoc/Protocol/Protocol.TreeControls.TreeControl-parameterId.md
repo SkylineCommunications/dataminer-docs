@@ -19,13 +19,13 @@ Specifies the parameter ID of the tree control.
 
 ```xml
 <TreeControl parameterId="4640">
-  ...
+    ...
 </TreeControl>
 ...
 <Param id="4640" trending="false">
-  <Name>TreeControlParam</Name>
-  <Description>Parameter of the TreeControl</Description>
-  <Type>read</Type>
-  ...
+    <Name>TreeControlParam</Name>
+    <Description>Parameter of the Tree Control</Description>
+    <Type>read</Type>
+    ...
 </Param>
 ```

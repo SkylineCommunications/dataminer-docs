@@ -32,7 +32,7 @@ Only valid if the CRC type is set to one of the following values:
 
 ```xml
 <Param>
-	<CRC>
-		<Type off="128">REST</Type>
+    <CRC>
+        <Type off="128">REST</Type>
         ...
 ```

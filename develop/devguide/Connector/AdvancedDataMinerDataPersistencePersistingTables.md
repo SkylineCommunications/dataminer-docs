@@ -21,20 +21,20 @@ For example, the following table parameter defines some columns to be saved. Col
 
 ```xml
 <Param id="1000" trending="false">
-   <Name>Inputs</Name>
-   <Description>Inputs</Description>
-   <Type>array</Type>
-   <ArrayOptions index="0">
-      <NamingFormat><![CDATA[ ;1003;.;1005;. ]]></NamingFormat>
-      <ColumnOption idx="0" pid="1001" type="retrieved" options="" />
-      <ColumnOption idx="1" pid="1002" type="retrieved" options="" />
-      <ColumnOption idx="2" pid="1003" type="retrieved" options=";save" />
-      <ColumnOption idx="3" pid="1004" type="retrieved" options="" />
-      <ColumnOption idx="4" pid="1005" type="retrieved" options=";save" />
-      <ColumnOption idx="5" pid="1006" type="retrieved" options="" />
-      <ColumnOption idx="6" pid="1007" type="retrieved" options=";save" />
-   </ArrayOptions>
-  ...
+    <Name>Inputs</Name>
+    <Description>Inputs</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <NamingFormat><![CDATA[ ;1003;.;1005;. ]]></NamingFormat>
+        <ColumnOption idx="0" pid="1001" type="retrieved" options="" />
+        <ColumnOption idx="1" pid="1002" type="retrieved" options="" />
+        <ColumnOption idx="2" pid="1003" type="retrieved" options=";save" />
+        <ColumnOption idx="3" pid="1004" type="retrieved" options="" />
+        <ColumnOption idx="4" pid="1005" type="retrieved" options=";save" />
+        <ColumnOption idx="5" pid="1006" type="retrieved" options="" />
+        <ColumnOption idx="6" pid="1007" type="retrieved" options=";save" />
+    </ArrayOptions>
+    ...
 </Param>
 ```
 

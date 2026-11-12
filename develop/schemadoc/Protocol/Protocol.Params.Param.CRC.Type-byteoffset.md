@@ -23,6 +23,6 @@ Can be used in combination with all possible CRC types.
 
 ```xml
 <Param>
-   <CRC>
-      <Type byteoffset="2">
+    <CRC>
+        <Type byteoffset="2">
 ```

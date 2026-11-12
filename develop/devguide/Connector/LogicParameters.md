@@ -29,16 +29,16 @@ A **fixed** parameter acts as a data placeholder that will not change. Though it
 
 ```xml
 <Param id="11">
-  <Name>Fixed_0x0A</Name>
-  <Description>Fixed 0x0A</Description>
-  <Type>read</Type>
-  <Interprete>
-      <RawType>other</RawType>
-      <Type>string</Type>
-      <LengthType>fixed</LengthType>
-      <Length>1</Length>
-      <Value>0x0A</Value>
-   </Interprete>
+    <Name>Fixed0x0A</Name>
+    <Description>Fixed 0x0A</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>fixed</LengthType>
+        <Length>1</Length>
+        <Value>0x0A</Value>
+    </Interprete>
 </Param>
 ```
 
@@ -66,17 +66,17 @@ For example, to define a parameter that holds the combination DMA ID/element ID,
 
 ```xml
 <Param id="48">
-  <Name>GlobalElementID</Name>
-  <Description>Global Element ID</Description>
-  <Information>
-     <Subtext>The global element ID. Format: {dmaID}/{elementID}</Subtext>
-  </Information>
-  <Type>elementdmaid</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <Type>string</Type>
-     <LengthType>next param</LengthType>
-  </Interprete>
+    <Name>GlobalElementID</Name>
+    <Description>Global Element ID</Description>
+    <Information>
+        <Subtext>The global element ID. Format: {dmaID}/{elementID}</Subtext>
+    </Information>
+    <Type>elementdmaid</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
 </Param>
 ```
 

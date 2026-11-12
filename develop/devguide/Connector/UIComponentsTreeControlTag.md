@@ -13,17 +13,17 @@ Example:
 
 ```xml
 <TreeControl parameterId="20000" readOnly="true">
-  <Hierarchy>
-    <Table id="10000"/>
-    <Table id="11000" parent="10000" />
-    <Table id="12000" parent="11000" />
-  </Hierarchy>
-  <OverrideDisplayColumns>10003,11005,12005</OverrideDisplayColumns>
-  <OverrideIconColumns>12006</OverrideIconColumns>
-  <HiddenColumns>10002</HiddenColumns>
-  <ExtraTabs>
-    <Tab tableId="10000" title="Items" type="default"/>
-  </ExtraTabs>
+    <Hierarchy>
+        <Table id="10000"/>
+        <Table id="11000" parent="10000" />
+        <Table id="12000" parent="11000" />
+    </Hierarchy>
+    <OverrideDisplayColumns>10003,11005,12005</OverrideDisplayColumns>
+    <OverrideIconColumns>12006</OverrideIconColumns>
+    <HiddenColumns>10002</HiddenColumns>
+    <ExtraTabs>
+        <Tab tableId="10000" title="Items" type="default"/>
+    </ExtraTabs>
 </TreeControl>
 ```
 
@@ -31,17 +31,17 @@ The [parameterId](xref:Protocol.TreeControls.TreeControl-parameterId) attribute 
 
 ```xml
 <Param id="20000">
-  <Name>Overview</Name>
-  <Description>Overview</Description>
-  <Type>read</Type>
-  <Interprete>
-    <RawType>other</RawType>
-    <Type>string</Type>
-    <LengthType>next param</LengthType>
-  </Interprete>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
+    <Name>Overview</Name>
+    <Description>Overview</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
 </Param>
 ```
 

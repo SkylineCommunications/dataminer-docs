@@ -11,20 +11,20 @@ Since DataMiner version 7.5, it is possible to dynamically perform a get of an S
 
 ```xml
 <Param id="50011" trending="false" save="true">
-   <Name>Dynamic Polling OID</Name>
-   <Description>Dynamic Polling OID</Description>
-   <Type options="dynamic snmp get">read</Type>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-   </Interprete>
-   <Display>
-      <RTDisplay>true</RTDisplay>
-   </Display>
-   <Measurement>
-      <Type>string</Type>
-   </Measurement>
+    <Name>DynamicPollingOID</Name>
+    <Description>Dynamic Polling OID</Description>
+    <Type options="dynamic snmp get">read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <LengthType>next param</LengthType>
+        <Type>string</Type>
+    </Interprete>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
+    <Measurement>
+        <Type>string</Type>
+    </Measurement>
 </Param>
 ```
 
@@ -45,7 +45,7 @@ When there are different parameters with the same OID, one of them will be used 
 
 ```xml
 <SNMP>
-  <OID type="complete" ipid="201" skipDynamicSNMPGet="true">1.3.6.0</OID>
+    <OID type="complete" ipid="201" skipDynamicSNMPGet="true">1.3.6.0</OID>
 </SNMP>
 ```
 
@@ -55,10 +55,10 @@ To specify what to retrieve and how this request is added to the group execution
 
 ```xml
 <Param id="100">
-  <Name>Dynamic Get OID</Name>
-  <Description>Dynamic Get OID</Description>
-  <Information></Information>
-  <Type dynamicSnmpGet="true">read</Type>
+    <Name>DynamicGetOID</Name>
+    <Description>Dynamic Get OID</Description>
+    <Information></Information>
+    <Type dynamicSnmpGet="true">read</Type>
 </Param>
 ```
 

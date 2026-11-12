@@ -191,17 +191,17 @@ Once the Swarming feature has been enabled, running enhanced services using non-
 
     ```xml
     <Param id="7">
-      <Name>raw_alarmid_input</Name>
-      <Description>raw_alarmid_input</Description>
-      <Type>read</Type>
-      <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-      </Interprete>
-      <Measurement>
-        <Type>string</Type>
-      </Measurement>
+        <Name>raw_alarmid_input</Name>
+        <Description>Raw Alarm ID Input</Description>
+        <Type>read</Type>
+        <Interprete>
+            <RawType>other</RawType>
+            <LengthType>next param</LengthType>
+            <Type>string</Type>
+        </Interprete>
+        <Measurement>
+            <Type>string</Type>
+        </Measurement>
     </Param>
     ```
 

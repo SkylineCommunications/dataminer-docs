@@ -26,40 +26,40 @@ To have an EPM tab in the Surveyor in Cube, the DMS must be able to recognize th
 
    ```xml
    <Param id="1" save="true" trending="false">
-      <Name>ElementManagerType</Name>
-      <Description>Element Manager Type</Description>
-      <Information>
-         <Subtext>Element Manager Type: Frontend or Backend</Subtext>
-      </Information>
-      <Type>read</Type>
-      <Interprete>
-         <RawType>numeric text</RawType>
-         <Type>double</Type>
-         <LengthType>next param</LengthType>
-      </Interprete>
-      <Display>
-         <RTDisplay>true</RTDisplay>
-         <Positions>
-            <Position>
-               <Page>General Configuration</Page>
-               <Row>0</Row>
-               <Column>0</Column>
-            </Position>
-         </Positions>
-      </Display>
-      <Measurement>
-         <Type>discreet</Type>
-         <Discreets>
-            <Discreet>
-               <Display>Frontend</Display>
-               <Value>1</Value>
-            </Discreet>
-            <Discreet>
-               <Display>Backend</Display>
-               <Value>2</Value>
-            </Discreet>
-         </Discreets>
-      </Measurement>
+       <Name>ElementManagerType</Name>
+       <Description>Element Manager Type</Description>
+       <Information>
+           <Subtext>Element Manager Type: Frontend or Backend</Subtext>
+       </Information>
+       <Type>read</Type>
+       <Interprete>
+           <RawType>numeric text</RawType>
+           <Type>double</Type>
+           <LengthType>next param</LengthType>
+       </Interprete>
+       <Display>
+           <RTDisplay>true</RTDisplay>
+           <Positions>
+               <Position>
+                   <Page>General Configuration</Page>
+                   <Row>0</Row>
+                   <Column>0</Column>
+               </Position>
+           </Positions>
+       </Display>
+       <Measurement>
+           <Type>discreet</Type>
+           <Discreets>
+               <Discreet>
+                   <Display>Frontend</Display>
+                   <Value>1</Value>
+               </Discreet>
+               <Discreet>
+                   <Display>Backend</Display>
+                   <Value>2</Value>
+               </Discreet>
+           </Discreets>
+       </Measurement>
    </Param>
    ```
 

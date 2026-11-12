@@ -19,7 +19,7 @@ unsignedInt
 
 ```xml
 <Param>
-   <CRC>
-      <Type mod="95">
+    <CRC>
+        <Type mod="95">
         ...
 ```

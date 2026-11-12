@@ -33,69 +33,69 @@ Response format:
 ```
 
 ```xml
-<Pair id="50">
-   <Name>SendChassisEmberPacket</Name>
-   <Content>
-      <Command>50</Command> <!--SendS101Frame -->
-   </Content>
+<Pair id="50">
+    <Name>SendChassisEmberPacket</Name>
+    <Content>
+        <Command>50</Command> <!--SendS101Frame -->
+    </Content>
 </Pair>
 ```
 
 Below you can find the structure of the referenced parameters:
 
 ```xml
-<Param id="50" trending="false">
-   <Name>S101BOF</Name>
-   <Description>S101 BOF</Description>
-   <Type options="headerTrailerLink=1">header</Type>
-   <Interprete>
-      <RawType>unsigned number</RawType>
-      <LengthType>fixed</LengthType>
-      <Type>double</Type>
-      <Value>0xFE</Value>
-      <Length>1</Length>
-   </Interprete>
+<Param id="50" trending="false">
+    <Name>S101BOF</Name>
+    <Description>S101 BOF</Description>
+    <Type options="headerTrailerLink=1">header</Type>
+    <Interprete>
+        <RawType>unsigned number</RawType>
+        <LengthType>fixed</LengthType>
+        <Type>double</Type>
+        <Value>0xFE</Value>
+        <Length>1</Length>
+    </Interprete>
 </Param>
 ```
 
 ```xml
-<Param id="51" trending="false">
-   <Name>S101EOF</Name>
-   <Description>S101 EOF</Description>
-   <Type options="headerTrailerLink=1">trailer</Type>
-   <Interprete>
-      <RawType>unsigned number</RawType>
-      <LengthType>fixed</LengthType>
-      <Type>double</Type>
-      <Value>0xFF</Value>
-      <Length>1</Length>
-   </Interprete>
+<Param id="51" trending="false">
+    <Name>S101EOF</Name>
+    <Description>S101 EOF</Description>
+    <Type options="headerTrailerLink=1">trailer</Type>
+    <Interprete>
+        <RawType>unsigned number</RawType>
+        <LengthType>fixed</LengthType>
+        <Type>double</Type>
+        <Value>0xFF</Value>
+        <Length>1</Length>
+    </Interprete>
 </Param>
 ```
 
 ```xml
-<Param id="52" trending="false">
-   <Name>S101RequestData</Name>
-   <Description>S101 Request Data</Description>
-   <Type>read</Type>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-   </Interprete>
+<Param id="52" trending="false">
+    <Name>S101RequestData</Name>
+    <Description>S101 Request Data</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <LengthType>next param</LengthType>
+        <Type>string</Type>
+    </Interprete>
 </Param>
 ```
 
 ```xml
-<Param id="53" trending="false">
-   <Name>S101ResponseData</Name>
-   <Description>S101 Reponse Data</Description>
-   <Type>read</Type>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-   </Interprete>
+<Param id="53" trending="false">
+    <Name>S101ResponseData</Name>
+    <Description>S101 Response Data</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <LengthType>next param</LengthType>
+        <Type>string</Type>
+    </Interprete>
 </Param>
 ```
 

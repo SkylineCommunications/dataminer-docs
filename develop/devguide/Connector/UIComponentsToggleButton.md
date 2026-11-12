@@ -19,56 +19,56 @@ Define the same two discrete values on both parameters. DataMiner uses the value
 
 ```xml
 <Param id="200">
-  <Name>PollingToggleButton</Name>
-  <Description>Polling</Description>
-  <Type>read</Type>
-  <Interprete>
-    <RawType>numeric text</RawType>
-    <Type>double</Type>
-    <LengthType>next param</LengthType>
-  </Interprete>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-    <Type>discreet</Type>
-    <Discreets>
-      <Discreet>
-        <Display>Disabled</Display>
-        <Value>0</Value>
-      </Discreet>
-      <Discreet>
-        <Display>Enabled</Display>
-        <Value>1</Value>
-      </Discreet>
-    </Discreets>
-  </Measurement>
+    <Name>PollingToggleButton</Name>
+    <Description>Polling</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <Type>double</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
+    <Measurement>
+        <Type>discreet</Type>
+        <Discreets>
+            <Discreet>
+                <Display>Disabled</Display>
+                <Value>0</Value>
+            </Discreet>
+            <Discreet>
+                <Display>Enabled</Display>
+                <Value>1</Value>
+            </Discreet>
+        </Discreets>
+    </Measurement>
 </Param>
 <Param id="201" setter="true">
-  <Name>PollingToggleButton</Name>
-  <Description>Polling</Description>
-  <Type>write</Type>
-  <Interprete>
-    <RawType>numeric text</RawType>
-    <Type>double</Type>
-    <LengthType>next param</LengthType>
-  </Interprete>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-    <Type>togglebutton</Type>
-    <Discreets>
-      <Discreet>
-        <Display>Disabled</Display>
-        <Value>0</Value>
-      </Discreet>
-      <Discreet>
-        <Display>Enabled</Display>
-        <Value>1</Value>
-      </Discreet>
-    </Discreets>
-  </Measurement>
+    <Name>PollingToggleButton</Name>
+    <Description>Polling</Description>
+    <Type>write</Type>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <Type>double</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
+    <Measurement>
+        <Type>togglebutton</Type>
+        <Discreets>
+            <Discreet>
+                <Display>Disabled</Display>
+                <Value>0</Value>
+            </Discreet>
+            <Discreet>
+                <Display>Enabled</Display>
+                <Value>1</Value>
+            </Discreet>
+        </Discreets>
+    </Measurement>
 </Param>
 ```
 

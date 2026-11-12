@@ -13,63 +13,63 @@ Certain routines must be followed in a spectrum analyzer connector.
 - By default, we use 401 as the number of points in the trace. You may need to configure the spectrum analyzer (send command) to use 401 points. Parameter 64001 contains the trace data, so there too you need to specify the number of points in the range tag (0 to 401). This parameter is of type string because the trace data (points) are passed by means of a comma-separated string. Note that this parameter expects values in dBm.
 
   ```xml
-  <Param id="64001">
-     <Name>Trace Data</Name>
-     <Description></Description>
-     <Type>read</Type>
-     <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-     </Interprete>
-     <Display>
-        <RTDisplay>true</RTDisplay>
-        <Units></Units>
-        <Decimals></Decimals>
-        <Steps></Steps>
-        <Range>
-           <Low>0</Low>
-           <High>401</High>
-        </Range>
-        <Positions>
-           <Position>
-              <Page></Page>
-              <Row></Row>
-              <Column></Column>
-           </Position>
-        </Positions>
-     </Display>
+  <Param id="64001">
+      <Name>TraceData</Name>
+      <Description></Description>
+      <Type>read</Type>
+      <Interprete>
+          <RawType>other</RawType>
+          <LengthType>next param</LengthType>
+          <Type>string</Type>
+      </Interprete>
+      <Display>
+          <RTDisplay>true</RTDisplay>
+          <Units></Units>
+          <Decimals></Decimals>
+          <Steps></Steps>
+          <Range>
+              <Low>0</Low>
+              <High>401</High>
+          </Range>
+          <Positions>
+              <Position>
+                  <Page></Page>
+                  <Row></Row>
+                  <Column></Column>
+              </Position>
+          </Positions>
+      </Display>
   ```
 
 - To allow conversion of units, the following parameters need to be defined in the protocol:
 
   ```xml
-  <Param id="64024">
-     <Name>dBmV Conversion Factor</Name>
-     <Description>dBmV Conversion Factor</Description>
-     <Type>read</Type>
-     <Interprete>
-        <RawType>numeric text</RawType>
-        <LengthType>fixed</LengthType>
-        <Length>5</Length>
-        <Type>double</Type>
-        <Value>48.75</Value>
-     </Interprete>
-    ...
-  <Param/>
-  <Param id="64025">
-     <Name>dBuV Conversion Factor</Name>
-     <Description>dBuV Conversion Factor</Description>
-     <Type>read</Type>
-     <Interprete>
-        <RawType>numeric text</RawType>
-        <LengthType>fixed</LengthType>
-        <Length>6</Length>
-        <Type>double</Type>
-        <Value>108.75</Value>
-     </Interprete>
-    ...
-  <Param/>
+  <Param id="64024">
+      <Name>DBmVConversionFactor</Name>
+      <Description>dBmV Conversion Factor</Description>
+      <Type>read</Type>
+      <Interprete>
+          <RawType>numeric text</RawType>
+          <LengthType>fixed</LengthType>
+          <Length>5</Length>
+          <Type>double</Type>
+          <Value>48.75</Value>
+      </Interprete>
+      ...
+  </Param>
+  <Param id="64025">
+      <Name>DBuVConversionFactor</Name>
+      <Description>dBuV Conversion Factor</Description>
+      <Type>read</Type>
+      <Interprete>
+          <RawType>numeric text</RawType>
+          <LengthType>fixed</LengthType>
+          <Length>6</Length>
+          <Type>double</Type>
+          <Value>108.75</Value>
+      </Interprete>
+      ...
+  </Param>
   ```
 
 - Spectrum traces are requested through SLSpectrum. When no trace is returned, a new trace will be requested after a certain amount of time:

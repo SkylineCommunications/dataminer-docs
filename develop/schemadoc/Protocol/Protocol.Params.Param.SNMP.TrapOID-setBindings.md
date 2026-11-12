@@ -25,7 +25,7 @@ Syntax:
 
 ```xml
 <Param id="1000">
-    <Name>Trap Receiver</Name>
+    <Name>TrapReceiver</Name>
     ...
     <SNMP>
         <Enabled>true</Enabled>

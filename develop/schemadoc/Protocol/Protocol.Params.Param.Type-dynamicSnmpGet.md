@@ -25,7 +25,7 @@ Example:
 
 ```xml
 <Param id="100">
-    <Name>Dynamic Get OID</Name>
+    <Name>DynamicGetOID</Name>
     <Description>Dynamic Get OID</Description>
     <Information></Information>
     <Type dynamicSnmpGet="true">read</Type>

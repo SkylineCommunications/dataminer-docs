@@ -229,15 +229,15 @@ See the following example:
 
 ```xml
 <Param id="ID">
-  <Name>Title_Begin_TitleName</Name>
-  <Description>TitleDescription</Description>
-  <Type>fixed</Type>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-    <Type options="begin;connect">title</Type>
-  </Measurement>
+    <Name>Title_Begin_TitleName</Name>
+    <Description>TitleDescription</Description>
+    <Type>fixed</Type>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
+    <Measurement>
+        <Type options="begin;connect">title</Type>
+    </Measurement>
 </Param>
 ```
 

@@ -54,19 +54,19 @@ The following example table is configured to save the value of a cell every 5 mi
 
 ```xml
 <Param id="100" saveInterval="PT5M">
-	<Name>myTable</Name>
-	<Description>My Table</Description>
-	<Type>array</Type>
-	<ArrayOptions index="0">
-		<ColumnOption idx="0" pid="101" type="retrieved" options="" />
-		<ColumnOption idx="1" pid="102" type="retrieved" options=";save" />
-	</ArrayOptions>
-	...
+    <Name>Items</Name>
+    <Description>Items</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="101" type="retrieved" options="" />
+        <ColumnOption idx="1" pid="102" type="retrieved" options=";save" />
+    </ArrayOptions>
+    ...
 </Param>
 <Param id="101" trending="false">
-	...
+    ...
 </Param>
 <Param id="102" trending="false" saveInterval="PT5M">
-	...
+    ...
 </Param>
 ```

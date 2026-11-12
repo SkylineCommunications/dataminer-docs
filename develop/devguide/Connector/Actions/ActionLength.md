@@ -39,19 +39,19 @@ The ID(s) of the response(s).
 
 ```xml
 <Trigger id="3">
-   <Name>BeforeCommandTrigger</Name>
-   <On id="each">command</On>
-   <Time>before</Time>
-   <Type>action</Type>
-   <Content>
-      <Id>3</Id><!-- MakeCommand -->
-      <Id>5</Id><!-- GetCommandLength-->
-   </Content>
+    <Name>BeforeCommandTrigger</Name>
+    <On id="each">command</On>
+    <Time>before</Time>
+    <Type>action</Type>
+    <Content>
+        <Id>3</Id><!-- MakeCommand -->
+        <Id>5</Id><!-- GetCommandLength-->
+    </Content>
 </Trigger>
 <Action>
-   <Name>GetCommandLength</Name>
-   <On>command</On>
-   <Type>length</Type>
+    <Name>GetCommandLength</Name>
+    <On>command</On>
+    <Type>length</Type>
 </Action>
 ```
 
@@ -61,20 +61,20 @@ Consider the following length parameter used in a response:
 
 ```xml
 <Param id="300" trending="false">
-   <Name>responseCLengthField</Name>
-   <Description>Length Field</Description>
-   <Type>length</Type>
-   <Interprete>
-      <RawType>numeric text</RawType>
-      <LengthType>fixed</LengthType>
-      <Length>2</Length>
-      <Type>double</Type>
-   </Interprete>
-   <Length>
-      <Content>
-         <Param>3</Param>
-      </Content>
-   </Length>
+    <Name>ResponseCLengthField</Name>
+    <Description>Length Field</Description>
+    <Type>length</Type>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <LengthType>fixed</LengthType>
+        <Length>2</Length>
+        <Type>double</Type>
+    </Interprete>
+    <Length>
+        <Content>
+            <Param>3</Param>
+        </Content>
+    </Length>
 </Param>
 ```
 
@@ -89,18 +89,18 @@ Note that the length action needs to be performed after the read response action
 
 ```xml
 <Trigger id="3">
-   <Name>BeforeResponseTrigger</Name>
-   <On id="each">response</On>
-   <Time>before</Time>
-   <Type>action</Type>
-   <Content>
-      <Id>4</Id><!-- ReadResponse -->
-      <Id>6</Id><!-- GetResponseLength-->
-   </Content>
+    <Name>BeforeResponseTrigger</Name>
+    <On id="each">response</On>
+    <Time>before</Time>
+    <Type>action</Type>
+    <Content>
+        <Id>4</Id><!-- ReadResponse -->
+        <Id>6</Id><!-- GetResponseLength-->
+    </Content>
 </Trigger>
 <Action>
-   <Name>GetResponseLength</Name>
-   <On>response</On>
-   <Type>length</Type>
+    <Name>GetResponseLength</Name>
+    <On>response</On>
+    <Type>length</Type>
 </Action>
 ```

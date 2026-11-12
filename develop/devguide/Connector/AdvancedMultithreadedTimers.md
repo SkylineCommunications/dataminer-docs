@@ -31,12 +31,12 @@ For example, consider the following multithreaded timer:
 
 ````xml
 <Timer id="2" options="ip:2000,1;each:60000;threadpool:20;...">
-   <Name>Multithread Timer 2</Name>
-   <Time>2000</Time>
-   <Interval>0</Interval>
-   <Content>
-      <Group>1</Group>
-   </Content>
+    <Name>Multithread Timer 2</Name>
+    <Time>2000</Time>
+    <Interval>0</Interval>
+    <Content>
+        <Group>1</Group>
+    </Content>
 </Timer>
 ````
 
@@ -117,13 +117,13 @@ For SNMP, the group defines the OIDs to request:
 
 ```xml
 <Group id="2000" connection="0">
-   <Name>SNMP Poll Group</Name>
-   <Content multipleGet="true">
-      <Param>1000</Param>
-      <Param>1001</Param>
-      <Param>1002</Param>
-      <Param>1003:single</Param>
-   </Content>
+    <Name>SNMP Poll Group</Name>
+    <Content multipleGet="true">
+        <Param>1000</Param>
+        <Param>1001</Param>
+        <Param>1002</Param>
+        <Param>1003:single</Param>
+    </Content>
 </Group>
 ```
 

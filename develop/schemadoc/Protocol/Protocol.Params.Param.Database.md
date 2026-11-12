@@ -28,12 +28,12 @@ Specifies database-related settings for a particular parameter.
 
 ```xml
 <Param>
-   <Database>
-      <CQLOptions>
-         <Clustering>1;2</Clustering>
-         <TableProperty>CLUSTERING ORDER BY (&quot;[PID:52]&quot; DESC)</TableProperty>
-         <Finalizer>CREATE INDEX IF NOT EXISTS ON [TABLE] ([PID:52])</Finalizer>
-      </CQLOptions>
-   </Database>
+    <Database>
+        <CQLOptions>
+            <Clustering>1;2</Clustering>
+            <TableProperty>CLUSTERING ORDER BY (&quot;[PID:52]&quot; DESC)</TableProperty>
+            <Finalizer>CREATE INDEX IF NOT EXISTS ON [TABLE] ([PID:52])</Finalizer>
+        </CQLOptions>
+    </Database>
 </Param>
 ```

@@ -25,10 +25,10 @@ Example:
 
 ```xml
 <Param id="101" trending="false">
-  ...
-  <Type>array</Type>
-  <ArrayOptions index="0" options=";autoAdd">
-  ...
+    ...
+    <Type>array</Type>
+    <ArrayOptions index="0" options=";autoAdd">
+        ...
 </Param>
 ```
 
@@ -240,17 +240,17 @@ Example
 
 ```xml
 <Param id="11600">
-  <Name>CPE Frequencies</Name>
-  <Description>CPE Frequencies</Description>
-  <Type>array</Type>
-  <ArrayOptions index="0" partial=";true:1000" options=";volatile;view=90000,remoteId;
+    <Name>CPEFrequencies</Name>
+    <Description>CPE Frequencies</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0" partial=";true:1000" options=";volatile;view=90000,remoteId;
 directView=3301;onlyFilteredDirectView;filterChange=11601-9001,11602-9002,11603-9003,11604-9004">
-     <ColumnOption idx="0" pid="11601" type="retrieved" options=";"/>
-     <ColumnOption idx="1" pid="11602" type="retrieved" options=";"/>
-     <ColumnOption idx="2" pid="11603" type="retrieved" Options=";"/>
-     <ColumnOption idx="3" pid="11604" type="retrieved" Options=";"/>
-   </ArrayOptions>
-   ...
+        <ColumnOption idx="0" pid="11601" type="retrieved" options=";"/>
+        <ColumnOption idx="1" pid="11602" type="retrieved" options=";"/>
+        <ColumnOption idx="2" pid="11603" type="retrieved" Options=";"/>
+        <ColumnOption idx="3" pid="11604" type="retrieved" Options=";"/>
+    </ArrayOptions>
+    ...
 ```
 
 ### volatile

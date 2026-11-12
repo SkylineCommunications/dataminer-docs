@@ -11,17 +11,17 @@ It is possible to capture these changes in a protocol by defining a parameter of
 
 ```xml
 <Param id="107">
-   <Name>Discreet Info</Name>
-   <Description>Discreet Info</Description>
-   <Type>discreet info</Type>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-   </Interprete>
-   <Display>
-      <RTDisplay>false</RTDisplay>
-   </Display>
+    <Name>DiscreetInfo</Name>
+    <Description>Discreet Info</Description>
+    <Type>discreet info</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <LengthType>next param</LengthType>
+        <Type>string</Type>
+    </Interprete>
+    <Display>
+        <RTDisplay>false</RTDisplay>
+    </Display>
 </Param>
 ```
 

@@ -13,17 +13,17 @@ Example:
 
 ```xml
 <Param id="1000" trending="false">
-  <Name>Table</Name>
-  <Description>Table Description</Description>
-  <Type>array</Type>
-  <ArrayOptions index="0">
-    <ColumnOption idx="0" pid="1001" type="retrieved" options=""/>
-    <ColumnOption idx="1" pid="1002" type="retrieved" options=""/>
-    <ColumnOption idx="2" pid="1003" type="retrieved" options=""/>
-  </ArrayOptions>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
+    <Name>Items</Name>
+    <Description>Items</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="1001" type="retrieved" options=""/>
+        <ColumnOption idx="1" pid="1002" type="retrieved" options=""/>
+        <ColumnOption idx="2" pid="1003" type="retrieved" options=""/>
+    </ArrayOptions>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
 </Param>
 ```
 
@@ -33,58 +33,58 @@ For each table column, an additional parameter is defined which is referred to v
 
 ```xml
 <Param id="1001" trending="false">
-  <Name>Column1</Name>
-  <Description>Column 1 Description</Description>
-  <Type>read</Type>
-  <Interprete>
-    <RawType>other</RawType>
-    <Type>string</Type>
-    <LengthType>next param</LengthType>
-  </Interprete>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-    <Type>string</Type>
-  </Measurement>
+    <Name>Items_Column1</Name>
+    <Description>Column 1 (Items)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
+    <Measurement>
+        <Type>string</Type>
+    </Measurement>
 </Param>
 <Param id="1002" trending="false">
-  <Name>Column2</Name>
-  <Description>Column 2 Description</Description>
-  <Type>read</Type>
-  <Interprete>
-    <RawType>numeric text</RawType>
-    <Type>double</Type>
-    <LengthType>next param</LengthType>
-  </Interprete>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-    <Type>number</Type>
-  </Measurement>
+    <Name>Items_Column2</Name>
+    <Description>Column 2 (Items)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <Type>double</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
+    <Measurement>
+        <Type>number</Type>
+    </Measurement>
 </Param>
 <Param id="1003" trending="false">
-  <Name>Column3</Name>
-  <Description>Column 3 Description</Description>
-  <Type>write</Type>
-  <Interprete>
-    <RawType>numeric text</RawType>
-    <Type>double</Type>
-    <LengthType>next param</LengthType>
-  </Interprete>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-    <Type width="110">button</Type>
-    <Discreets>
-      <Discreet>
-        <Display>Button Name</Display>
-        <Value>1</Value>
-      </Discreet>
-    </Discreets>
-  </Measurement>
+    <Name>Items_Column3</Name>
+    <Description>Column 3 (Items)</Description>
+    <Type>write</Type>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <Type>double</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
+    <Measurement>
+        <Type width="110">button</Type>
+        <Discreets>
+            <Discreet>
+                <Display>Button Name</Display>
+                <Value>1</Value>
+            </Discreet>
+        </Discreets>
+    </Measurement>
 </Param>
 ```
 
@@ -97,9 +97,9 @@ The table parameter has an ArrayOptions tag that refers to the column parameters
 > The [idx](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-idx) attribute defines the order in which the columns are stored. The order in which the columns are displayed can be different (this is defined in the options attribute of the Type tag in the Measurements tag).
 
 ```xml
-  <Measurement>
+<Measurement>
     <Type options="tab=columns:1003|2-1001|0-1002|1">table</Type>
-  </Measurement>
+</Measurement>
 ```
 
 > [!TIP]
@@ -109,12 +109,12 @@ In order to create a writable column, create an additional parameter of type "wr
 
 ```xml
 <Param id="1102" setter="true">
-  <Name>Column2</Name>
-  <Description>Column 2 Description</Description>
-  <Type>write</Type>
-  <Display>
-    <RTDisplay>true</RTDisplay>
-  </Display>
+    <Name>Items_Column2</Name>
+    <Description>Column 2 (Items)</Description>
+    <Type>write</Type>
+    <Display>
+        <RTDisplay>true</RTDisplay>
+    </Display>
 </Param>
 ```
 

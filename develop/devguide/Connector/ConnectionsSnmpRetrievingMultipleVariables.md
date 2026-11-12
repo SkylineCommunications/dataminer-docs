@@ -11,13 +11,13 @@ Keep in mind that `Group.Content@multipleGet` should only be used for **individu
 
 ```xml
 <Group id="19100">
-  <Name>SNMP General System Parameters Group</Name>
-  <Type>poll</Type>
-  <Content multipleGet="true">
-     <Param>19100</Param>
-     <Param>19101</Param>
-     <Param>19102</Param>
-  </Content>
+    <Name>SNMP General System Parameters Group</Name>
+    <Type>poll</Type>
+    <Content multipleGet="true">
+        <Param>19100</Param>
+        <Param>19101</Param>
+        <Param>19102</Param>
+    </Content>
 </Group>
 ```
 

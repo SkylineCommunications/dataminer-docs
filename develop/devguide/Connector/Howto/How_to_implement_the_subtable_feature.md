@@ -38,8 +38,8 @@ The table definition in the connector for the *SAP Base Info Hidden* table:
 
 ```xml
 <Param id="4600">
-    <Name>sapBaseInfoHiddenTable</Name>
-    <Description>SAP Base Info Hidden</Description>
+    <Name>HiddenSAPBaseInfos</Name>
+    <Description>Hidden SAP Base Infos</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";naming=:4605">
         <ColumnOption idx="0" pid="4601" type="snmp" options=""/>
@@ -79,7 +79,7 @@ First, you need a dropdown list containing all the different available rows. In 
 
 ```xml
 <Param id="4673" trending="false">
-    <Name>sapFilterSelect</Name>
+    <Name>SAPFilterSelect</Name>
     <Description>Select SAP Filter</Description>
     <Information>
         <Subtext><![CDATA[Selecting a SAP from this list and adding it to the filter, will add this SAP to the SAP polling filter. The SAP will then be polled in the SAP tables.]]></Subtext>
@@ -133,8 +133,8 @@ With this in mind, your table definition should look something like this:
 
 ```xml
 <Param id="4100" trending="false">
-    <Name>sapBaseInfoTable</Name>
-    <Description>SAP Base Info</Description>
+    <Name>SAPBaseInfos</Name>
+    <Description>SAP Base Infos</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";naming=:4199">
         <ColumnOption idx="0" pid="4200" type="snmp" options="" />

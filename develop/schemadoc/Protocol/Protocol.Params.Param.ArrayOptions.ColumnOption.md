@@ -95,9 +95,9 @@ Example:
 
 ```xml
 <ArrayOptions index="0" displayColumn="1">
-  ...
-  <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayIcon"/>
-  ...
+    ...
+    <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayIcon"/>
+    ...
 ```
 
 When defining a discreet parameter of which the values have to be displayed as icons, make sure that every value of that parameter is associated with a particular icon.
@@ -106,18 +106,18 @@ Example:
 
 ```xml
 <Param id="120" trending="false">
-  ...
-  <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        ...
-        <Discreet iconRef="InputTransportStream">
-           <Display>Input TS</Display>
-           <Value>Input TS</Value>
-        </Discreet>
-        ...
-     </Discreets>
-  </Measurement>
+    ...
+    <Measurement>
+        <Type>discreet</Type>
+        <Discreets>
+            ...
+            <Discreet iconRef="InputTransportStream">
+                <Display>Input TS</Display>
+                <Value>Input TS</Value>
+            </Discreet>
+            ...
+        </Discreets>
+    </Measurement>
 </Param>
 ```
 
@@ -134,8 +134,8 @@ Example:
 
 ```xml
 <ArrayOptions index="0" displayColumn="1">
-  ...
-  <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayViewAlarm"/>
+    ...
+    <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayViewAlarm"/>
 ```
 
 Result: If the value in the displayViewAlarm column is a valid view ID, then that ID will be replaced by a view icon showing the view’s current alarm color. If the value is not a valid view ID, then the cell will be empty.

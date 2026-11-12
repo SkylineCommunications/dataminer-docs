@@ -36,27 +36,27 @@ Proceed as follows if you want to use an alarm template in `Protocol.Params.Para
 
 ```xml
 <Param id="800">
-   <Interprete>
-      <Type>string</Type>
-   </Interprete>
-   <Alarm>
-      <Monitored>true</Monitored>
-   </Alarm>
-   <SNMP>
-      <Enabled>true</Enabled>
-      <TrapOID mapAlarm="TRUE|Link:3" setBindings="2,801;6,802" ipid="*" />
-      <TrapMappings>
-         <TrapMapping bindingMatch="*" severity="id:1" value="[3] : Gone"/>
-      </TrapMappings>
-   </SNMP>
-   <Measurement>
-      <Type>discreet</Type>
-      <Discreets>
-         <Discreet>
-            <Display>Gone</Display>
-            <Value>1</Value>
-         </Discreet>
-      </Discreets>
-   </Measurement>
+    <Interprete>
+        <Type>string</Type>
+    </Interprete>
+    <Alarm>
+        <Monitored>true</Monitored>
+    </Alarm>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <TrapOID mapAlarm="TRUE|Link:3" setBindings="2,801;6,802" ipid="*" />
+        <TrapMappings>
+            <TrapMapping bindingMatch="*" severity="id:1" value="[3] : Gone"/>
+        </TrapMappings>
+    </SNMP>
+    <Measurement>
+        <Type>discreet</Type>
+        <Discreets>
+            <Discreet>
+                <Display>Gone</Display>
+                <Value>1</Value>
+            </Discreet>
+        </Discreets>
+    </Measurement>
 </Param>
 ```

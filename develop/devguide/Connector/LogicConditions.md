@@ -97,16 +97,16 @@ Parameter:
 
 ```xml
 <Param id="1">
-   <Name>exampleParameter</Name>
-   <Description>Example Parameter</Description>
-   <Type>read</Type>
-   <Interprete>
-      <RawType>numeric text</RawType>
-      <Type>double</Type>
-      <LengthType>fixed</LengthType>
-      <Length>4</Length>
-      <Value>0</Value>
-   </Interprete>
+    <Name>ExampleParameter</Name>
+    <Description>Example Parameter</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <Type>double</Type>
+        <LengthType>fixed</LengthType>
+        <Length>4</Length>
+        <Value>0</Value>
+    </Interprete>
 </Param>
 ```
 

@@ -17,7 +17,7 @@ To configure a parameter so it supports alarming, set `Monitored` to `true` in t
 
 ```xml
 <Alarm>
-   <Monitored>true</Monitored>
+    <Monitored>true</Monitored>
 </Alarm>
 ```
 
@@ -61,24 +61,24 @@ The example below shows a numeric parameter, for which a nominal value of 40 is 
 
 ```xml
 <Param id="22" trending="false" save="true">
-   <Name>CpuUsage</Name>
-   <Description>CPU Usage</Description>
-   <Information>…</Information>
-   <Type>read</Type>
-   <Interprete>
-      <RawType>numeric text</RawType>
-      <LengthType>next param</LengthType>
-      <Type>double</Type>
-   </Interprete>
-   <Display>…</Display>
-   <Measurement>
-      <Type>number</Type>
-   </Measurement>
-   <Alarm>
-      <Monitored>true</Monitored>
-      <Normal>40</Normal>
-      <WaH>80</WaH>
-   </Alarm>
+    <Name>CpuUsage</Name>
+    <Description>CPU Usage</Description>
+    <Information>…</Information>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <LengthType>next param</LengthType>
+        <Type>double</Type>
+    </Interprete>
+    <Display>…</Display>
+    <Measurement>
+        <Type>number</Type>
+    </Measurement>
+    <Alarm>
+        <Monitored>true</Monitored>
+        <Normal>40</Normal>
+        <WaH>80</WaH>
+    </Alarm>
 </Param>
 ```
 
@@ -86,34 +86,34 @@ The example below shows how the discrete value of a parameter can be used for se
 
 ```xml
 <Param id="10" trending="true">
-   <Name>OperationalStatus</Name>
-   <Description>Operational Status</Description>
-   <Information>…</Information>
-   <Type>read</Type>
-   <Interprete>
-      <RawType>numeric text</RawType>
-      <LengthType>next param</LengthType>
-      <Type>double</Type>
-   </Interprete>
-   <Display>…</Display>
-   <Measurement>
-      <Type>discreet</Type>
-      <Discreets>
-         <Discreet>
-            <Display>OK</Display>
-            <Value>0</Value>
-         </Discreet>
-         <Discreet>
-            <Display>Alarm</Display>
-            <Value>1</Value>
-         </Discreet>
-      </Discreets>
-   </Measurement>
-   <Alarm>
-      <Monitored>true</Monitored>
-      <Normal>0</Normal>
-      <CH>1</CH>
-   </Alarm>
+    <Name>OperationalStatus</Name>
+    <Description>Operational Status</Description>
+    <Information>…</Information>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <LengthType>next param</LengthType>
+        <Type>double</Type>
+    </Interprete>
+    <Display>…</Display>
+    <Measurement>
+        <Type>discreet</Type>
+        <Discreets>
+            <Discreet>
+                <Display>OK</Display>
+                <Value>0</Value>
+            </Discreet>
+            <Discreet>
+                <Display>Alarm</Display>
+                <Value>1</Value>
+            </Discreet>
+        </Discreets>
+    </Measurement>
+    <Alarm>
+        <Monitored>true</Monitored>
+        <Normal>0</Normal>
+        <CH>1</CH>
+    </Alarm>
 </Param>
 ```
 
@@ -123,23 +123,23 @@ In case you want to define default alarm values for exception values, use the va
 
 ```xml
 <Interprete>
-   <RawType>numeric text</RawType>
-   <LengthType>next param</LengthType>
-   <Type>double</Type>
-   <Exceptions>
-      <Exception id="1" value="-9999">
-         <Display state="disabled">Invalid</Display>
-         <Value>-9999</Value>
-      </Exception>
-      <Exception id="2" value="-9998">
-         <Display state="disabled">Transponder disabled</Display>
-         <Value>-9998</Value>
-      </Exception>
-   </Exceptions>
+    <RawType>numeric text</RawType>
+    <LengthType>next param</LengthType>
+    <Type>double</Type>
+    <Exceptions>
+        <Exception id="1" value="-9999">
+            <Display state="disabled">Invalid</Display>
+            <Value>-9999</Value>
+        </Exception>
+        <Exception id="2" value="-9998">
+            <Display state="disabled">Transponder disabled</Display>
+            <Value>-9998</Value>
+        </Exception>
+    </Exceptions>
 </Interprete>
 <Alarm>
-   <Monitored>true</Monitored>
-   <WaL>$-9999;$-9998</WaL>
+    <Monitored>true</Monitored>
+    <WaL>$-9999;$-9998</WaL>
 </Alarm>
 ```
 
@@ -162,7 +162,7 @@ In the example below, if parameter 10003 equals "Not Monitored", the parameter w
 
 ```xml
 <Alarm>
-   <Monitored disabledIf="10003,Not Monitored">true</Monitored>
+    <Monitored disabledIf="10003,Not Monitored">true</Monitored>
 </Alarm>
 ```
 
