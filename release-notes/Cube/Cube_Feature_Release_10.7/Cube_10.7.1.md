@@ -55,6 +55,14 @@ From now on, DataMiner Cube will handle elements used in element connections as 
 
 ### Fixes
 
+#### Visual Overview: Parameter shapes would stop updating after a remote DMA restart or Failover switch [ID 46800]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When a Visual Overview shape displayed a parameter value from an element hosted on a DataMiner Agent other than the one DataMiner Cube was connected to, the shape would stop updating after the hosting Agent was restarted or performed a Failover switch. Closing and reopening the card was the only way to make the value update again.
+
+From now on, the shape will subscribe to the parameter again after the hosting Agent comes back online, so the displayed value will continue to update.
+
 #### State icons: Subscription exceptions would be logged on the DMA when the state icons feature was disabled [ID 46862]
 
 <!-- MR 10.5.0 [CU22] / 10.6.0 [CU10] - FR 10.7.1 -->
