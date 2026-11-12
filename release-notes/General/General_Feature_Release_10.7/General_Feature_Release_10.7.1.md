@@ -298,3 +298,11 @@ During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was re
 Resources could not be updated when they were used by a canceled reservation. This could prevent changes to the resource mode, such as putting a resource into maintenance, as well as changes to its availability window or capacity.
 
 Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
+
+#### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+When initialization of `CCAEndpointManager` failed, the initialization alarm could remain active even after a subsequent retry succeeded.
+
+The alarm will now be cleared when initialization succeeds.
