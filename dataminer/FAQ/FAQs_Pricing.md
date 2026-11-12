@@ -41,11 +41,12 @@ Yes. Licensing and usage are measured at the DMS (DataMiner System) level. An or
 
 ### Can different commercial models exist in the same DataMiner System?
 
-Yes, but limited. A DataMiner System on perpetual licenses can consume the following services under the usage model:
+Yes, but with limitations. A DataMiner System using perpetual licenses can consume the following services under the usage model:
+
 - Collaboration Services
 - Unmanaged Objects
-- Automation, limited to Solutions using the Standard Data Model.
-- STaaS 
+- Automation, limited to Solutions using the Standard Data Model
+- STaaS
 
 ### Can I transition my perpetual licenses into a subscription?
 
