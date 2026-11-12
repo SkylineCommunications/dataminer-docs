@@ -200,3 +200,11 @@ Parameter selectors now correctly display the preselected values. Some selectors
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 When live updates were enabled for a parameter table query, a deadlock could occur if a table update notification arrived while GQI was fetching rows. Paging and update delivery could then wait indefinitely for each other, also blocking unrelated queries and session cleanup.
+
+#### Dashboards app: Input component values missing from non-stacked PDF reports [ID 47036]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a non-stacked PDF report was generated from a dashboard, values from *Dropdown*, *Text input* (including multiline text), *Numeric input*, and *Search input* components could be missing. These values will now be included in the report.
+
+Stacked reports remain unchanged.
