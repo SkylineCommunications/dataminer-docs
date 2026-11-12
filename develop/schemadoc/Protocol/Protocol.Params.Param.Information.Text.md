@@ -7,6 +7,9 @@ description: "Use the Text element in a DataMiner protocol to set the title disp
 
 Specifies the title of the tooltip.
 
+> [!NOTE]
+> This tag is rarely used because, by default, the parameter [Description](xref:Protocol.Params.Param.Description) will be used as the tooltip title. In most cases, this is the desired behavior, so we recommend avoiding a redundant `Information.Text` tag.
+
 ## Type
 
 string
