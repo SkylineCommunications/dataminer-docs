@@ -86,7 +86,7 @@ Below you can find an overview of the main features that have been added to Data
 | Databases: [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool) | DataMiner 10.1.8/10.2.0 <!-- [ID 29005] [ID 30234] -->|
 | DataMiner processes: [Customization of number of simultaneous SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes) | DataMiner 10.2.7/10.3.0 <!-- [ID 33358] -->|
 | DataMiner processes: [Fine-tuning message throttling](xref:Configuration_of_DataMiner_processes#fine-tuning-message-throttling) | DataMiner 10.1.3/10.2.0 <!-- [ID 28335] -->|
-| DataMiner processes: [Running elements in isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode) | DataMiner 10.6.0/10.5.4<!-- [ID 41757] --> |
+| DataMiner processes: [Running elements in isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode) | DataMiner 10.5.4/10.6.0<!-- [ID 41757] --> |
 | DataMiner processes: [Separate SLProtocol and SLScripting instances for specific protocol](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol) | DataMiner 10.2.5/10.3.0 |
 | DataMiner processes: [SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process) |  DataMiner 10.3.9/10.4.0<br>DataMiner 10.1.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#slprotocolasx64) |
 | [DMS connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) | DataMiner 10.1.12/10.2.0 |
