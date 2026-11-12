@@ -156,3 +156,9 @@ Canceled reservations are now ignored when checking whether resource updates wou
 After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
 
 Concurrent module registrations could overwrite newer routing configuration with an older snapshot, leaving proxy routes missing. Routing configuration updates are now processed sequentially to prevent this.
+
+#### BPA test 'DataMiner Agent Minimum Requirements' could fail with an execution error [ID 47078]
+
+<!-- MR 10.6.0 [CU10] - FR TBD -->
+
+After upgrading to certain DataMiner 10.6 builds, the *DataMiner Agent Minimum Requirements* BPA test could fail with an execution error instead of evaluating the system requirements.

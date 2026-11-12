@@ -200,3 +200,25 @@ Parameter selectors now correctly display the preselected values. Some selectors
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 When live updates were enabled for a parameter table query, a deadlock could occur if a table update notification arrived while GQI was fetching rows. Paging and update delivery could then wait indefinitely for each other, also blocking unrelated queries and session cleanup.
+
+#### Dashboards app: Input component values missing from non-stacked PDF reports [ID 47036]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a non-stacked PDF report was generated from a dashboard, values from *Dropdown*, *Text input* (including multiline text), *Numeric input*, and *Search input* components could be missing. These values will now be included in the report.
+
+Stacked reports remain unchanged.
+
+#### Dashboards app: GQI tables could stop loading rows and receiving live updates [ID 47054]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a GQI table in a dashboard was opened before its WebSocket connection was ready, scrolling could stop loading additional rows and live updates could stop appearing after the connection became available.
+
+#### Dashboards app: GQI table updates could exceed the JSON size limit [ID 47066]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When live updates were enabled for a GQI table in a dashboard, duplicated data in row updates could cause the JSON size limit to be exceeded. As a result, the table could stop loading additional rows.
+
+Unnecessary duplication in table updates has now been removed, reducing the amount of data sent to the dashboard.

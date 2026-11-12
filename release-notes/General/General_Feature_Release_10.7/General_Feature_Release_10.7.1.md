@@ -33,6 +33,7 @@ Before you upgrade to this DataMiner version:
 
 ## Important changes
 
+- [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 
 ## Highlights
@@ -65,6 +66,25 @@ A new *Intelligence App* user permission has now been added. This permission wil
 
 ### Breaking changes
 
+#### Service & Resource Management: Support for legacy reservations removed [ID 46931]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Support for legacy Resource Manager reservations has been removed from the DataMiner server. From now on, use `ReservationInstance` objects instead of legacy reservations.
+
+The related types remain available in SLNetTypes so existing projects can still compile. However, the following API members have been marked as obsolete:
+
+- The create, read, update, and delete (CRUD) methods for all three features in `ResourceManagerHelper`.
+- The error data related to these features in `ResourceManagerErrorData`.
+- The messages for the CRUD operations.
+- The `ResourceManagerConfigInfoMessage.ConfigInfoType.ForceCleanup` enum value, which was only used to clean up reservation-related files.
+
+SLNet will now throw a `DataMinerException` for CRUD requests related to these features or for a `ForceCleanup` request.
+
+For compatibility with older DataMiner server versions, the legacy reservation methods in `ResourceManagerHelper` will still send requests to SLNet.
+
+See also: [Service & Resource Management: Legacy reservation support removed for DataMiner 10.6.0 and later [ID 46936]](xref:Cube_Feature_Release_10.7.1#service--resource-management-legacy-reservation-support-removed-for-dataminer-1060-and-later-id-46936)
+
 #### Document Intelligence: Assistant permission checks [ID 46944]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
@@ -72,7 +92,7 @@ A new *Intelligence App* user permission has now been added. This permission wil
 Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission.
 
 > [!IMPORTANT]
-> Document Intelligence in DataMiner 10.6 is incompatible with newer Assistant versions that enforce these checks.
+> Document Intelligence in DataMiner 10.6 is incompatible with Assistant versions that enforce these permission checks (i.e., Assistant 4.0.0 or newer).
 
 ### Enhancements
 
@@ -193,6 +213,14 @@ As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
+#### Automation: Clearer error messages when script compilation fails [ID 46989]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+When an automation script fails to compile, DataMiner will now report the `SL_AUTOMATION_SCRIPT_COMPILATION_FAILED` error, including the compiler diagnostics, when loading the script. Previously, the script would fail at runtime with a "No Assembly found for cookie" error and be retried 100 times.
+
+The compilation error will be displayed when you execute the script in DataMiner Cube and returned when you execute it through code.
+
 #### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
@@ -270,3 +298,11 @@ During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was re
 Resources could not be updated when they were used by a canceled reservation. This could prevent changes to the resource mode, such as putting a resource into maintenance, as well as changes to its availability window or capacity.
 
 Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
+
+#### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+When initialization of `CCAEndpointManager` failed, the initialization alarm could remain active even after a subsequent retry succeeded.
+
+An initialization alarm will now only be generated if all initialization retries fail.

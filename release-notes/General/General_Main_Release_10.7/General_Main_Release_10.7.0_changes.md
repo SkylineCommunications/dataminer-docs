@@ -51,7 +51,7 @@ In preparation of service swarming, service template definitions have now been m
 Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission.
 
 > [!IMPORTANT]
-> Document Intelligence in DataMiner 10.6 is incompatible with newer Assistant versions that enforce these checks.
+> Document Intelligence in DataMiner 10.6 is incompatible with Assistant versions that enforce these permission checks (i.e., Assistant 4.0.0 or newer).
 
 ### Enhancements
 
