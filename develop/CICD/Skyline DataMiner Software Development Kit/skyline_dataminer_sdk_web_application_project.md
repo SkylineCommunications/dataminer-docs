@@ -1,11 +1,12 @@
 ---
 uid: skyline_dataminer_sdk_web_application_project
+description: "Create a DataMiner web application project with the SDK, configure App.info.json and its output folder, then package and install it on your system."
 keywords: Skyline.DataMiner.Sdk, Web Application, WebApplication, esproj, App.info.json
 ---
 
 # Skyline DataMiner Web Application Project
 
-A DataMiner web application is a standalone (static) web site that fully runs in the browser. It is developed in a separate project, typically a JavaScript project (*.esproj*), and deployed by including it in a [DataMiner Package Project](xref:skyline_dataminer_sdk_dataminer_package_project).
+A DataMiner web application is a standalone (static) website that fully runs in the browser. It is developed in a separate project, typically a JavaScript project (*.esproj*), and deployed by including it in a [DataMiner Package Project](xref:skyline_dataminer_sdk_dataminer_package_project).
 
 ## Creating a web application project
 
@@ -79,7 +80,7 @@ For example, to zip the *build* folder instead:
 ```
 
 > [!NOTE]
-> Previously, web applications were deployed by placing the built web site in the *PackageContent/CompanionFiles* folder of the package project and registering it with `installerHelper.WebApplications.RegisterStaticApp()`. This method is now deprecated. Use a web application project instead.
+> Previously, web applications were deployed by placing the built website in the *PackageContent/CompanionFiles* folder of the package project and registering it with `installerHelper.WebApplications.RegisterStaticApp()`. This method is now deprecated. Use a web application project instead.
 
 ## Installing web applications during installation
 
