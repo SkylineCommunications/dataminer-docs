@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Quality_Gates
-description: Learn how QAOps quality gates combine internal and external checks, track evidence freshness, assign failures, and schedule status digests.
+description: "Learn how QAOps quality gates combine internal and external checks, track evidence freshness, assign failures, and schedule status digests."
 ---
 
 # QAOps quality gates

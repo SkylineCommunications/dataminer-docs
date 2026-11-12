@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Tutorials_Adding_QAOps_Checks
-description: Add a QAOps test suite and configuration to a quality gate, inspect its evidence, and distinguish refreshing status from starting new tests.
+description: "Add a QAOps test suite and configuration to a quality gate, inspect its evidence, and distinguish refreshing status from starting new tests."
 ---
 
 # Adding QAOps checks to a quality gate

@@ -36,7 +36,7 @@ description: Explore QAOps tutorials for Skyline employees, including test runs,
 
 | Name | Description |
 |--|--|
-| [Creating a quality gate](xref:QAOps_Tutorials_Creating_A_Quality_Gate) | Create a gate, choose evidence freshness, and add editors. |
-| [Adding QAOps checks](xref:QAOps_Tutorials_Adding_QAOps_Checks) | Connect a configuration and test suite, inspect evidence, and distinguish refresh from execution. |
-| [Scheduling a quality gate digest](xref:QAOps_Tutorials_Scheduling_A_Quality_Gate) | Configure a daily status digest with a notification rule and time zone. |
-| [Adding and reporting external checks](xref:QAOps_Tutorials_External_Quality_Gate_Checks) | Create an external source and report validation results from a script or CI job. |
+| [Creating a quality gate](xref:QAOps_Tutorials_Creating_A_Quality_Gate) | Learn how to create a quality gate for a release-readiness overview. |
+| [Adding QAOps checks](xref:QAOps_Tutorials_Adding_QAOps_Checks) | Learn how to add checks to a quality gate to verify test suite results against specific configurations. |
+| [Scheduling a quality gate digest](xref:QAOps_Tutorials_Scheduling_A_Quality_Gate) | Learn how to schedule a quality gate digest to send automated status updates on a recurring basis. |
+| [Adding and reporting external checks](xref:QAOps_Tutorials_External_Quality_Gate_Checks) | Learn how to add external checks to a quality gate and report validation results directly from scripts or CI/CD pipelines. |

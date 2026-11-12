@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Tutorials_Creating_A_Quality_Gate
-description: Create your first QAOps quality gate, choose evidence freshness settings, and understand gate ownership before adding internal or external checks.
+description: "Create your first QAOps quality gate, choose evidence freshness settings, and understand gate ownership before adding internal or external checks."
 ---
 
 # Creating a quality gate

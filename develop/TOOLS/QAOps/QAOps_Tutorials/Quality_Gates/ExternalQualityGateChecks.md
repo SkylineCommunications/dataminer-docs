@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Tutorials_External_Quality_Gate_Checks
-description: Add an external check to a QAOps quality gate, create a source-scoped token, and report results from a script or CI pipeline with the QAOps tool.
+description: "Add an external check to a QAOps quality gate, create a source-scoped token, and report results from a script or CI pipeline with the QAOps tool."
 ---
 
 # Adding and reporting external checks

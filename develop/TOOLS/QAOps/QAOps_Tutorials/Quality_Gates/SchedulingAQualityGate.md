@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Tutorials_Scheduling_A_Quality_Gate
-description: Configure a daily QAOps quality gate digest with a notification rule, a five-field cron expression, an explicit time zone, and schedule previews.
+description: "Configure a daily QAOps quality gate digest with a notification rule, a five-field cron expression, an explicit time zone, and schedule previews."
 ---
 
 # Scheduling a quality gate digest
