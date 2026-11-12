@@ -305,4 +305,4 @@ Canceled reservations are now ignored when checking whether resource updates wou
 
 When initialization of `CCAEndpointManager` failed, the initialization alarm could remain active even after a subsequent retry succeeded.
 
-The alarm will now be cleared when initialization succeeds.
+An initialization alarm will now only be generated if all initialization retries fail.
