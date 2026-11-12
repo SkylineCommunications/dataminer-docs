@@ -208,3 +208,9 @@ When live updates were enabled for a parameter table query, a deadlock could occ
 When a non-stacked PDF report was generated from a dashboard, values from *Dropdown*, *Text input* (including multiline text), *Numeric input*, and *Search input* components could be missing. These values will now be included in the report.
 
 Stacked reports remain unchanged.
+
+#### Dashboards app: GQI tables could stop loading rows and receiving live updates [ID 47054]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a GQI table in a dashboard was opened before its WebSocket connection was ready, scrolling could stop loading additional rows and live updates could stop appearing after the connection became available.
