@@ -214,3 +214,11 @@ Stacked reports remain unchanged.
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
 When a GQI table in a dashboard was opened before its WebSocket connection was ready, scrolling could stop loading additional rows and live updates could stop appearing after the connection became available.
+
+#### Dashboards app: GQI table updates could exceed the JSON size limit [ID 47066]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When live updates were enabled for a GQI table in a dashboard, duplicated data in row updates could cause the JSON size limit to be exceeded. As a result, the table could stop loading additional rows.
+
+Unnecessary duplication in table updates has now been removed, reducing the amount of data sent to the dashboard.
