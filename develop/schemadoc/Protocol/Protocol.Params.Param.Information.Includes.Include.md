@@ -3,9 +3,12 @@ uid: Protocol.Params.Param.Information.Includes.Include
 description: "Learn how the obsolete Include element in a DataMiner protocol adds parameter range, unit, step size, or timestamp details to an information tooltip."
 ---
 
-# Include element
+# Include element [obsolete]
 
 Specifies additional information to be displayed in the tooltip.
+
+> [!IMPORTANT]
+> The `Includes` and `Include` tags are now obsolete. They were used by the legacy System Display application and are no longer used by DataMiner Cube.
 
 ## Type
 

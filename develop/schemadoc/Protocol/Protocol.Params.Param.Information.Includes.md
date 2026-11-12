@@ -7,6 +7,9 @@ description: "Learn how the obsolete Includes element in a DataMiner protocol gr
 
 Contains one or more `Protocol.Params.Param.Information.Include` tags to indicate that you want additional information to be displayed in the tooltip.
 
+> [!IMPORTANT]
+> The `Includes` and `Include` tags are now obsolete. They were used by the legacy System Display application and are no longer used by DataMiner Cube.
+
 ## Parent
 
 [Information](xref:Protocol.Params.Param.Information)

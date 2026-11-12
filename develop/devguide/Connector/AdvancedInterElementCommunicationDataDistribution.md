@@ -17,12 +17,6 @@ For example, the following parameter, defined on the parent element, will send t
    <Description>DistributedParameter</Description>
    <Information>
       <Subtext />
-      <Includes>
-         <Include>time</Include>
-         <Include>range</Include>
-         <Include>steps</Include>
-         <Include>units</Include>
-      </Includes>
    </Information>
    <Type distribution="protocol:Tandberg;pid:100;remote:true">read</Type>
    <Interprete>
