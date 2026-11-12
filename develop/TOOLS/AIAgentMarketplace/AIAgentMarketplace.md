@@ -14,9 +14,11 @@ The marketplace supports GitHub Copilot, Claude Code, Cursor, and OpenAI Codex. 
 
 ## Currently included agents
 
-| Agent | Description |
-|---|---|
-| DataMiner App Builder | Builds static frontend applications that can be deployed in DataMiner. It provides reusable skills for DataMiner APIs, data discovery, GQI queries, automation scripts, interactive automation scripts, frontend design, testing, and debugging. |
+| Plugin | Agent | Description |
+|---|---|---|
+| `dataminer-apps` | [DataMiner App Agent](xref:AIAgent_App_Agent) | Builds static frontend applications that can be deployed in DataMiner. It provides reusable skills for DataMiner APIs, data discovery, GQI queries, Automation scripts, interactive Automation scripts, frontend design, testing, and debugging. |
+
+Each agent has its own section in this documentation, with information on how to use it, best practices, and practical examples.
 
 ## Prerequisites
 
@@ -26,12 +28,7 @@ To use the AI Agent marketplace, you need:
 - The account or license required by your chosen AI client.
 - Access to GitHub to retrieve the marketplace and its plugins.
 
-To use the DataMiner App Builder, you also need:
-
-- A DataMiner System running DataMiner 10.5.0 or higher.
-- [Node.js](https://nodejs.org/en/download)
-- [Git](https://git-scm.com/install/)
-- [Assistant DxM](xref:Intelligence_Assistant_DxM)
+Individual agents can have additional prerequisites. For example, for the DataMiner App Agent, see [DataMiner App Agent prerequisites](xref:AIAgent_App_Agent#prerequisites).
 
 ## Getting started
 
@@ -63,7 +60,9 @@ To use the DataMiner App Builder, you also need:
 
 - Give the agent clear requirements and open the relevant project or workspace before you start.
 - Review generated code for correctness, security, and compatibility with your DataMiner System.
-- Do not include passwords, API keys, tokens, or other secrets in prompts.
+- Do not include passwords, API keys, tokens, or other secrets in prompts. If an agent needs to connect to a DataMiner System, use a non-production system and a dedicated account with only the rights the agent needs.
+
+For agent-specific guidance, see the best practices of the agent you are using, e.g., [DataMiner App Agent best practices](xref:AIAgent_App_Agent_Best_Practices).
 
 ## Releases
 
