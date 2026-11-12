@@ -14,6 +14,7 @@ The following changes may have an impact on your system, so please make sure to 
 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
+- [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 
 ## Changes
 
@@ -42,6 +43,15 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e.,
 Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
 
 In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
+
+#### Document Intelligence: Assistant permission checks [ID 46944]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission.
+
+> [!IMPORTANT]
+> Document Intelligence in DataMiner 10.6 is incompatible with newer Assistant versions that enforce these checks.
 
 ### Enhancements
 
@@ -775,11 +785,11 @@ When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can no
 
 Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
 
-#### STaaS traffic can now use a single IP address [ID 46570]
+#### STaaS traffic can now use a single hostname and IP address [ID 46570]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single IP address for STaaS traffic.
+All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single hostname (`https://*.dataminer.services/`) or a single IP address per region for STaaS traffic, without having to request additional hostnames or Microsoft Azure IP addresses from support.
 
 If this single endpoint is not reachable, DataMiner will continue to use the existing endpoints.
 
@@ -835,6 +845,12 @@ If an element explicitly lists a client's IP address as allowed, elements that d
 <!-- MR 10.7.0 - FR 10.7.1 -->
 
 From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
+
+#### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
 ### Fixes
 
@@ -1036,3 +1052,19 @@ Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConn
 If initialization of `CCAEndpointManager` or `CCAEndpointHandler` fails, DataMiner will now keep retrying.
 
 The retry scheduler will increase the delay between attempts up to a maximum of 60 seconds.
+
+#### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+When services or elements were updated in a DataMiner cluster, offline Agents in a Failover setup would experience a memory and CPU spike in the StorageModule process for each update. The size of the spike depended on the number of services and elements in the cluster.
+
+Both online and offline Agents will now keep their XML-based services in memory at all times. The service cache in the StorageModule backend will only be reinitialized during a Failover switch or in exceptional circumstances.
+
+#### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.6.12 -->
+
+After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
+
+Concurrent module registrations could overwrite newer routing configuration with an older snapshot, leaving proxy routes missing. Routing configuration updates are now processed sequentially to prevent this.

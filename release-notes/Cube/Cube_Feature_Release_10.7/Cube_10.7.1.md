@@ -33,7 +33,7 @@ DataMiner Cube now displays the following permissions under *General* in the use
 Both permissions are enabled by the limited administrator and full administrator presets. They are hidden when the connected DataMiner Agent does not support them.
 
 > [!NOTE]
-> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.8.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
+> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.7.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
 
 ## Changes
 
@@ -70,3 +70,30 @@ From now on, DataMiner Cube will only subscribe to state icon changes when the s
 DataMiner Cube could retain certain custom text block controls and workspace setting views in memory after they were no longer in use, causing memory leaks.
 
 From now on, Cube will stop timers and remove event subscriptions when these controls are unloaded, hidden, or their content changes. The workspace settings suggestion timer will only run while suggestions are being processed.
+
+#### Visual Overview: Reference lines, markers, and thresholds would not appear when opening a spectrum component [ID 46902]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you opened a visual overview containing a spectrum component, reference lines, markers, and thresholds configured in the drawing or in a preset would not be displayed correctly until you resized that visual overview.
+
+These items will now be displayed correctly when the spectrum component is first opened.
+
+#### Scheduler: Timeline task deletion could fail and Edit/Delete options could be missing [ID 46935]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When DataMiner Cube was connected via gRPC, deleting a scheduled task from *Scheduler > Timeline > Tasks* could fail because the delete request used an incorrect hosting DataMiner ID.
+
+Also, when no Scheduler templates were available, the *Edit* and *Delete* options would be missing from a scheduled task's context menu. These options will now be displayed when you have the corresponding Scheduler permissions, regardless of whether templates are available.
+
+#### Documents: Uploading element documents to subfolders could delete or corrupt files [ID 46940]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you uploaded an element document to a subfolder in DataMiner Cube, the following issues could occur:
+
+- If a document with the same file name existed in the element's root documents folder, that document would be deleted.
+- If the destination file already existed in the subfolder, either as a complete document or as a partial file from an aborted upload, the uploaded data would be appended to that file instead of replacing it, resulting in a corrupt document.
+
+From now on, uploading an element document to a subfolder will no longer delete a document with the same file name in the root documents folder, and overwriting an existing document will replace its contents correctly.

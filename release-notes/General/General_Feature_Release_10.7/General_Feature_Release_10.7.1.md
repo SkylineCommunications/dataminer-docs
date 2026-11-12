@@ -33,7 +33,7 @@ Before you upgrade to this DataMiner version:
 
 ## Important changes
 
-*No important changes have been selected yet.*
+- [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 
 ## Highlights
 
@@ -43,25 +43,36 @@ Before you upgrade to this DataMiner version:
 
 #### Security: New 'Intelligence Usage' user permission [ID 46765]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
 
 > [!NOTE]
-> The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+> The first time a system is upgraded to DataMiner version 10.7.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
 
 #### Security: New 'Intelligence App' user permission [ID 46817]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
 
 > [!NOTE]
 >
 > - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
-> - The first time a system is upgraded to DataMiner version 10.8.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+> - The first time a system is upgraded to DataMiner version 10.7.0/10.7.1 or above, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
 
 ## Changes
+
+### Breaking changes
+
+#### Document Intelligence: Assistant permission checks [ID 46944]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission.
+
+> [!IMPORTANT]
+> Document Intelligence in DataMiner 10.6 is incompatible with newer Assistant versions that enforce these checks.
 
 ### Enhancements
 
@@ -75,7 +86,7 @@ In preparation of service swarming, all load, save, and delete actions for servi
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
 
-Support for the [`postPonePortInitialisation`](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
+Support for the [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
 
 #### DataMiner upgrade: Upgrade action to configure SAML authentication redirects [ID 46589]
 
@@ -152,6 +163,12 @@ The additional connector check only detects these known connectors. Make sure no
 
 From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
 
+#### MessageBroker: Large ChunkingMessageBroker replies will now use acknowledged chunks [ID 46882]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+From now on, large ChunkingMessageBroker replies will use acknowledged chunks to avoid NATS slow consumer exceptions.
+
 #### DataMiner upgrade: Web-only upgrades to 10.7.x or later require at least 10.6.0 [ID 46910]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
@@ -169,6 +186,23 @@ This validation does not affect full DataMiner upgrades.
 The `ScheduledTaskDetails` class, which is used only to migrate scheduled tasks from local storage to database storage, has been moved from SLNetTypes to SLNet.
 
 As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.Config.dll*.
+
+#### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
+#### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+DataMiner upgrades will now remove the following unused DLL files from `C:\Skyline DataMiner\Files\SLScripting\x86`:
+
+- *Skyline.DataMiner.Core.DMAObjects.Config.dll*
+- *Skyline.DataMiner.Core.StorageModule.dll*
+
+These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
 
 ### Fixes
 
@@ -206,3 +240,33 @@ Since DataMiner Feature Release 10.6.10, in some cases, DataMiner services could
 <!-- MR 10.5.0 [CU22]/10.6.0 [CU10] - FR 10.7.1 -->
 
 The standalone BPA executor would throw a `NullReferenceException` when running a manually loaded BPA DLL file with the `RequireSLNet` flag, preventing the BPA test from executing.
+
+#### StorageModule: Errors or missing data when retrying storage operations [ID 46815]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a StorageModule insert operation was retried after a NATS timeout, it could be executed twice. The retry would then fail with an error indicating that the file or database row already existed. Insert operations now use an idempotency key to prevent the same operation from being executed more than once.
+
+During paged read operations, retries when fetching pages after the first page could cause data to be missed following a timeout. These requests will no longer be retried. If a read operation fails, an error will be returned instead.
+
+#### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+When services or elements were updated in a DataMiner cluster, offline Agents in a Failover setup would experience a memory and CPU spike in the StorageModule process for each update. The size of the spike depended on the number of services and elements in the cluster.
+
+Both online and offline Agents will now keep their XML-based services in memory at all times. The service cache in the StorageModule backend will only be reinitialized during a Failover switch or in exceptional circumstances.
+
+#### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
+
+#### Service & Resource Management: Canceled reservations could prevent resource updates [ID 46952]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Resources could not be updated when they were used by a canceled reservation. This could prevent changes to the resource mode, such as putting a resource into maintenance, as well as changes to its availability window or capacity.
+
+Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.

@@ -55,6 +55,6 @@ Use the same call as for setting the communication state of a remote element, bu
 
 ## Remarks
 
-- In case DVEs should reflect the communication state of the main element, set the overrideTimeoutDVE attribute to true instead of using a NT_CHANGE_COMMUNICATION_STATE call.
+- In case DVEs should reflect the communication state of the main element, set the [overrideTimeoutDVE](xref:Protocol.Type-overrideTimeoutDVE) attribute to true instead of using a NT_CHANGE_COMMUNICATION_STATE call.
 
   This notify call only works on DVE child elements in case the DVE parent has not set the overrideTimeoutDVE option to "true".

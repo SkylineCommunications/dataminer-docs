@@ -199,7 +199,7 @@ A CrudFailedException was thrown: TraceData: (amount = 1)
 
 These validation errors are contained in the `TraceData` property of the `CrudFailedException`. It has multiple collections, but the `ErrorData` is the most important. This collection can contain instances like `ApiTokenError` or `ApiDefinitionError`. Each of these then contains a reason and some additional metadata depending on that reason. For more information on the kind of errors you can expect, refer to [ApiDefinition errors](xref:UD_APIs_Objects_ApiDefinition#errors) and [ApiToken errors](xref:UD_APIs_Objects_ApiToken#errors).
 
-You can also prevent the `CrudFailedException` from being thrown and instead check for errors in the `TraceData` yourself. To do so, set the `ThrowExceptionsOnErrorData` properties to false for all helper components. Then, after a CRUD action, call the `GetTraceDataLastCall()` method on the respective helper component. You can then either check the error collection or use the existing `HasSucceeded()` method to see whether the `TraceData` contains errors.
+You can also prevent the `CrudFailedException` from being thrown and instead check for errors in the `TraceData` yourself. To do so, set the `ThrowExceptionsOnErrorData` properties to false for all helper components. Then, after a CRUD action, call the `GetTraceDataLastCall()` method on the respective helper component. You can then either check the error collection or use the existing [TraceData.HasSucceeded()](xref:Skyline.DataMiner.Net.TraceData.HasSucceeded) method to see whether the `TraceData` contains errors.
 
 ```csharp
 using Skyline.DataMiner.Automation;

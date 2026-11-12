@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Tool
-description: Use the QAOps .NET tool to run DataMiner test suites remotely, retrieve results, work with quality gates, and report external check evidence.
+description: "Use the QAOps .NET tool to run DataMiner test suites remotely, retrieve results, work with quality gates, and report external check evidence."
 ---
 
 # QAOps tool
@@ -38,14 +38,11 @@ dotnet tool install -g Skyline.DataMiner.QAOps
 
 ## Quick start
 
-To run a test suite and wait for results:
+To run a test suite and wait for results, provide your authentication token with the `--token` argument. Replace the placeholders with your token, test suite ID, and configuration ID:
 
 ```bash
-# Set your authentication token
-export QAOPS_TOKEN=<your-token>
-
-# Run a test suite and save results
 dataminer-qaops test-run-and-wait \
+  --token <your-token> \
   --testsuite-id <your-testsuite-id> \
   --configuration-id <your-configuration-id> \
   --result-filepath ./test-results.json

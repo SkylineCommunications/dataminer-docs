@@ -20,7 +20,7 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
 
-Support for the [`postPonePortInitialisation`](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
+Support for the [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) communication option has been removed from SLProtocol.
 
 #### Automation: Progress notifications for non-interactive scripts [ID 46778]
 
@@ -91,6 +91,21 @@ The `ScheduledTaskDetails` class, which is used only to migrate scheduled tasks 
 
 As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.Config.dll*.
 
+#### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+DataMiner upgrades will now remove the following unused DLL files from `C:\Skyline DataMiner\Files\SLScripting\x86`:
+
+- *Skyline.DataMiner.Core.DMAObjects.Config.dll*
+- *Skyline.DataMiner.Core.StorageModule.dll*
+
+These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
+
 ### Fixes
 
-*No fixes have been added yet.*
+#### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.

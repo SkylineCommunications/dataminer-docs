@@ -38,6 +38,8 @@ This subtag allows you to configure [connection strings between DataMiner Agents
 
 Redirects must be added in *DMS.xml* for each DMA. Failover Agents also need a redirect to each other's IP address. For detailed information, see [How can you configure connection strings?](xref:Connection_strings#how-can-you-configure-connection-strings)
 
+From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!-- RN 46687 -->, BrokerGateway takes *DMS.xml* redirects into account for HTTPS communication, allowing the required API calls to work in manually configured setups. NATS communication does not take these redirects into account.
+
 For example, from DataMiner 10.3.0/10.3.2 onwards <!-- RN 34983 -->, this subtag can be used to make the DMAs in a DMS communicate with each other over **gRPC** instead of .NET Remoting. This uses the standard HTTPS port 443 by default. In a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, this would require the following configuration.
 
 - On the DMA with IP 10.4.2.92:

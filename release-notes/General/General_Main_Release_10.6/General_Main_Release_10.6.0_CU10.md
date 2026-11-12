@@ -97,6 +97,18 @@ From now on, it will only scan folders for connectors on the incompatibility lis
 
 The incompatible connector versions reported, the message shown, and the requirement to remove those versions before upgrading remain unchanged. No configuration is required.
 
+#### MessageBroker: Large ChunkingMessageBroker replies will now use acknowledged chunks [ID 46882]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+From now on, large ChunkingMessageBroker replies will use acknowledged chunks to avoid NATS slow consumer exceptions.
+
+#### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
 ### Fixes
 
 #### SLNet: Array index errors when retrieving alarm filter, trend filter, or redundancy group information [ID 46607]
@@ -120,3 +132,27 @@ This issue occurred when history was stored under both the original-case and low
 <!-- MR 10.5.0 [CU22]/10.6.0 [CU10] - FR 10.7.1 -->
 
 The standalone BPA executor would throw a `NullReferenceException` when running a manually loaded BPA DLL file with the `RequireSLNet` flag, preventing the BPA test from executing.
+
+#### StorageModule: Errors or missing data when retrying storage operations [ID 46815]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a StorageModule insert operation was retried after a NATS timeout, it could be executed twice. The retry would then fail with an error indicating that the file or database row already existed. Insert operations now use an idempotency key to prevent the same operation from being executed more than once.
+
+During paged read operations, retries when fetching pages after the first page could cause data to be missed following a timeout. These requests will no longer be retried. If a read operation fails, an error will be returned instead.
+
+#### Service & Resource Management: Canceled reservations could prevent resource updates [ID 46952]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Resources could not be updated when they were used by a canceled reservation. This could prevent changes to the resource mode, such as putting a resource into maintenance, as well as changes to its availability window or capacity.
+
+Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
+
+#### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.6.12 -->
+
+After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
+
+Concurrent module registrations could overwrite newer routing configuration with an older snapshot, leaving proxy routes missing. Routing configuration updates are now processed sequentially to prevent this.

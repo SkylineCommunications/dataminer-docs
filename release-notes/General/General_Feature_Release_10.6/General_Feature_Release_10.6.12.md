@@ -3,10 +3,10 @@ uid: General_Feature_Release_10.6.12
 description: "Release notes for General Feature Release 10.6.12, including prerequisites, new features, enhancements, and fixes planned for this preview release."
 ---
 
-# General Feature Release 10.6.12 - Preview
+# General Feature Release 10.6.12
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -31,21 +31,13 @@ Before you upgrade to this DataMiner version:
 
   See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
 
-## Important changes
-
-*No important changes have been selected yet.*
-
-## Highlights
-
-*No highlights have been selected yet.*
-
 ## New features
 
-### Interactive Automation scripts: New WebUILayout property [ID 46602]
+### Interactive automation scripts: New WebUILayout property [ID 46602]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-From now on, you can select the web UI layout for each dialog in an interactive Automation script using the `UIBuilder.WebUILayout` property.
+From now on, you can select the web UI layout for each dialog in an interactive automation script using the `UIBuilder.WebUILayout` property.
 
 For example:
 
@@ -160,11 +152,11 @@ From now on, the *ClusterEndpointsManager* soft-launch option will always be ena
 
 Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
 
-#### STaaS traffic can now use a single IP address [ID 46570]
+#### STaaS traffic can now use a single hostname and IP address [ID 46570]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single IP address for STaaS traffic.
+All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single hostname (`https://*.dataminer.services/`) or a single IP address per region for STaaS traffic, without having to request additional hostnames or Microsoft Azure IP addresses from support.
 
 If this single endpoint is not reachable, DataMiner will continue to use the existing endpoints.
 
@@ -183,9 +175,11 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
 
-#### Security enhancements [ID 46665]
+#### Security enhancements [ID 46665] [ID 46848] [ID 46850]
 
 <!-- 46665: MR 10.7.0 - FR 10.6.12 -->
+<!-- 46848: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+<!-- 46850: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
 
 A number of security enhancements have been made.
 
@@ -386,3 +380,11 @@ Up to now, it was not possible to set up a Failover pair when `DMS.xml` redirect
 When a STaaS migration or replication was stopped, the source connection was not restored as the current connection. Instead, DataMiner could continue to use the migration connection.
 
 From now on, stopping a STaaS migration or replication will restore the source connection.
+
+#### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.6.12 -->
+
+After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
+
+Concurrent module registrations could overwrite newer routing configuration with an older snapshot, leaving proxy routes missing. Routing configuration updates are now processed sequentially to prevent this.

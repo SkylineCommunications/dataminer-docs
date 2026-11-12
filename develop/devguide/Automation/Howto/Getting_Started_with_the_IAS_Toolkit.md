@@ -179,7 +179,7 @@ Once you have added the widgets, the dialog is done.
 
 ## Displaying the dialog
 
-Now it is time to do a test run of the script. Create a new instance of your HelloWorldDialog and use the *InteractiveController.ShowDialog* method to display it.
+Now it is time to do a test run of the script. Create a new instance of your HelloWorldDialog and use the [InteractiveController.ShowDialog](xref:Skyline.DataMiner.Utils.InteractiveAutomationScript.InteractiveController.ShowDialog(Skyline.DataMiner.Utils.InteractiveAutomationScript.Dialog)) method to display it.
 
 The initial-dialog method depends on the Toolkit version. The established compatibility behavior is:
 

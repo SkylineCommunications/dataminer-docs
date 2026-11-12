@@ -67,7 +67,7 @@ In this example, a multithreaded HTTP timer is used. If a complex device is poll
 ![Example of CPU spikes when threads are launched simultaneously](~/develop/images/multi-threaded_timer_graph.png)<br>
 *Example of CPU spikes when threads are launched simultaneously*
 
-To overcome this, you can make use of the `pollingrate` attribute in the options tag. For more information, see [Multithreaded timers](xref:AdvancedMultiThreadedTimers).
+To overcome this, you can make use of the [pollingrate](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-pollingRate) attribute in the options tag. For more information, see [Multithreaded timers](xref:AdvancedMultiThreadedTimers).
 
 By defining the polling rate correctly, you can spread the launch of the threads equally over the timer's time and thereby avoid memory and CPU spikes.
 

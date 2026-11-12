@@ -2,7 +2,7 @@
 uid: About_the_Admin_app
 description: "Use the Admin app to manage the DataMiner Systems connected to dataminer.services: users, remote access, deployments, shares, and billing."
 keywords: cloud admin, cloud administration
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # About the Admin app

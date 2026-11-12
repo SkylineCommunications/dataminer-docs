@@ -53,7 +53,7 @@ uid: ErrorCodeTable
 |SL_FAILED|0x8004022D|Failed.|
 |SL_FAILEDTOCREATEFILE|0x8004022E|Unable to create the file.|
 |SL_FAILEDFILEINUSE|0x8004022F|The operation failed because the file is in use.|
-|SL_FAILED_TOO_MANY_FILES_COPIED_ FOR_THE_MOMENT|0x80040230|The operation failed because too many files are being copied now (please try again later).|
+|SL_FAILED_TOO_MANY_FILES_COPIED_FOR_THE_MOMENT|0x80040230|The operation failed because too many files are being copied now (please try again later).|
 |SL_FAILED_CRC|0x80040231|The CRC check failed.|
 |SL_FAILED_WRITE|0x80040232|Unable to write the data.|
 |SL_INVALID_SIZE_FOR_INTERPRETE_AS_DOUBLE|0x80040233|Invalid size for interprete type “double”.|
@@ -281,3 +281,13 @@ uid: ErrorCodeTable
 |SL_PAGED_SESSION_NOT_FOUND|0x80040327|Paged table session not found.|
 |SL_PAGED_SESSION_PAGE_NOT_FOUND|0x80040328|Paged table session page not found.|
 |SL_SYSTEM_REQUIREMENTS_NOT_MET|0x80040329|The system does not meet the requirements for this functionality.|
+|SL_FAILED_NAME_IN_USE|0x8004032A|The name is already used by another object in the DMS.|
+|SL_DUPLICATE_IP_DETECTED|0x8004032B|The IP already exists in the network.|
+|SL_SWARMING_NOT_COMPATIBLE|0x8004032C|This is not compatible with Swarming.|
+|SL_CANNOT_RESERVE_ALARM_ID|0x8004032D|An alarm ID cannot currently be reserved for this element.|
+|SL_SWARMING_IN_PROGRESS|0x8004032E|Swarming is in progress.|
+|SL_PORT_TYPE_DOES_NOT_SUPPORT_TUNNELING|0x8004032F|Port type does not support tunneling.|
+|SL_FAILED_TO_CREATE_TUNNEL|0x80040330|Failed to create tunnel.|
+|SL_UNABLE_TO_INITIALIZE_SERVER_SOCKET|0x80040331|Unable to initialize the server socket.|
+|SL_UNABLE_TO_BIND_TO_SERVER_SOCKET|0x80040332|Unable to bind to the server socket.|
+|SL_AUTOMATION_SCRIPT_COMPILATION_FAILED|0x80040333|The automation script failed to compile.<!-- RN 46989 -->|

@@ -3,21 +3,17 @@ uid: Web_apps_Feature_Release_10.6.12
 description: "Release notes for DataMiner web apps Feature Release 10.6.12, with new features, enhancements, and fixes planned for this preview release."
 ---
 
-# DataMiner web apps Feature Release 10.6.12 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner web apps Feature Release 10.6.12
 
 This Feature Release of the DataMiner web applications contains the same new features, enhancements, and fixes as DataMiner web apps Main Release 10.6.0 [CU9].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.12](xref:General_Feature_Release_10.6.12).
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.12](xref:Cube_Feature_Release_10.6.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
 
 ## New features
 
@@ -55,7 +51,7 @@ The existing Table layout remains the default, preserving the layout and navigat
 
 > [!NOTE]
 >
-> - This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.12 or newer. See also [Interactive Automation scripts: New WebUILayout property [ID 46602]](xref:General_Feature_Release_10.6.12#interactive-automation-scripts-new-webuilayout-property-id-46602).
+> - This feature will only work in conjunction with DataMiner server version 10.7.0/10.6.12 or newer. See also [Interactive automation scripts: New WebUILayout property [ID 46602]](xref:General_Feature_Release_10.6.12#interactive-automation-scripts-new-webuilayout-property-id-46602).
 > - Unlike the Table layout, the Grid layout does not automatically resolve overlapping components or adjust spans. It also does not reserve extra space for validation messages.
 
 ## Changes

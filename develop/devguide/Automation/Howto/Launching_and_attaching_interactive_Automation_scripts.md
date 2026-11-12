@@ -20,7 +20,7 @@ If you want a script to show the UI when user interaction is required:
   - *Auto* (default): Automatic detection is used.
 
     > [!NOTE]
-    > The `Interactivity` element is supported from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 --> Older versions always use automatic detection.
+    > The [Interactivity](xref:DMSScript.Interactivity) element is supported from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 --> Older versions always use automatic detection.
 
 - If you rely on automatic detection:
 

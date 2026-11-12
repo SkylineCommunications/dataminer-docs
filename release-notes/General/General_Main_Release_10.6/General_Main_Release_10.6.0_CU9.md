@@ -3,10 +3,10 @@ uid: General_Main_Release_10.6.0_CU9
 description: "Release notes for General Main Release 10.6.0 CU9, including prerequisites, enhancements, and fixes planned for this preview release."
 ---
 
-# General Main Release 10.6.0 CU9 - Preview
+# General Main Release 10.6.0 CU9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -81,6 +81,13 @@ SLLogCollector packages now include the following configuration files:
 - `C:\Skyline DataMiner\ResourceManager\Config.xml`
 - `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
 - `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
+
+#### Security enhancements [ID 46848] [ID 46850]
+
+<!-- 46848: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+<!-- 46850: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
