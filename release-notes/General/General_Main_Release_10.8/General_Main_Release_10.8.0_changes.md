@@ -10,9 +10,28 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 
 ## Important changes
 
-*No important changes have been selected yet.*
+- [Service & Resource Management: Support for legacy reservations, resource links, and virtual platforms removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-resource-links-and-virtual-platforms-removed-id-46931)
 
 ## Changes
+
+### Breaking changes
+
+#### Service & Resource Management: Support for legacy reservations, resource links, and virtual platforms removed [ID 46931]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Support for legacy Resource Manager reservations, resource links, and virtual platforms has been removed from the DataMiner server. Use `ReservationInstance` objects instead of legacy reservations.
+
+The related types remain available in SLNetTypes so existing projects can still compile. However, the following API members have been marked as obsolete:
+
+- The create, read, update, and delete (CRUD) methods for all three features in `ResourceManagerHelper`.
+- The error data related to these features in `ResourceManagerErrorData`.
+- The messages for the CRUD operations.
+- The `ResourceManagerConfigInfoMessage.ConfigInfoType.ForceCleanup` enum value, which was only used to clean up reservation-related files.
+
+SLNet will now throw a `DataMinerException` for CRUD requests related to these features or for a `ForceCleanup` request.
+
+For compatibility with older DataMiner server versions, the legacy reservation methods in `ResourceManagerHelper` will still send requests to SLNet. In contrast, the resource link and virtual platform methods will now throw exceptions on the client, even when connecting to older server versions.
 
 ### Enhancements
 
