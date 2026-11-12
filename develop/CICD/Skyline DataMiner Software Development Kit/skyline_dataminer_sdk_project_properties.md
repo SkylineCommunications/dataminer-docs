@@ -1,6 +1,6 @@
 ---
 uid: skyline_dataminer_sdk_project_properties
-keywords: Skyline.DataMiner.Sdk, DataMinerType, GenerateDataMinerPackage, MinimumRequiredDmVersion, MinimumRequiredDmWebVersion, VersionComment, CatalogPublishKeyName, CatalogDefaultDownloadKeyName, UserSecretsId
+keywords: Skyline.DataMiner.Sdk, DataMinerType, GenerateDataMinerPackage, MinimumRequiredDmVersion, MinimumRequiredDmWebVersion, VersionComment, CatalogPublishKeyName, CatalogDefaultDownloadKeyName, UserSecretsId, BuildOutputFolder
 ---
 
 # Skyline DataMiner SDK project properties
@@ -16,6 +16,10 @@ Supported types:
 - AutomationScriptLibrary
 - AdHocDataSource
 - UserDefinedApi
+- [WebApplication](xref:skyline_dataminer_sdk_web_application_project)
+
+> [!NOTE]
+> A *WebApplication* project does not produce its own DataMiner application package. Include it in a package project instead.
 
 ## GenerateDataMinerPackage
 
@@ -80,3 +84,9 @@ This is the name of the key defined either in Visual Studio User Secrets or as a
 ## UserSecretsId
 
 Visual Studio will automatically fill this in when adding user secrets.
+
+## BuildOutputFolder
+
+Only applicable for projects with *DataMinerType* `WebApplication`.
+
+The folder containing the build output of the web application. This is a property of the JavaScript SDK (*.esproj* projects), which the Skyline DataMiner SDK also uses for other web application projects. This folder is zipped together with the *App.info.json* file when the web application is included in a package. If this property is not specified, the default output folder is used. See [Output folder](xref:skyline_dataminer_sdk_web_application_project#output-folder).

@@ -6889,6 +6889,8 @@ items:
           topicUid: skyline_dataminer_sdk_dataminer_package_project_catalog_references
         - name: ProjectReferences.xml
           topicUid: skyline_dataminer_sdk_dataminer_package_project_project_references
+    - name: DataMiner Web Application Project
+      topicUid: skyline_dataminer_sdk_web_application_project
     - name: Visual Studio 2022 solution filter (*.slnf) files
       topicUid: skyline_dataminer_sdk_solution_filter_files
     - name: Frequently asked questions
