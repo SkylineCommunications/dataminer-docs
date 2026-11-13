@@ -16,18 +16,18 @@ For example, the following parameter indicates that this parameter can be used a
 
 ```xml
 <Param id="65" setter="true">
-    <Name>TotalBandwidth</Name>
-    <Description>Total Bandwidth</Description>
-    <Type virtual="source">write</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <LengthType>next param</LengthType>
-        <Type>double</Type>
-    </Interprete>
-    <Display>…</Display>
-    <Measurement>
-        <Type>number</Type>
-    </Measurement>
+   <Name>TotalBandwidth</Name>
+   <Description>Total Bandwidth</Description>
+   <Type virtual="source">write</Type>
+   <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>next param</LengthType>
+      <Type>double</Type>
+   </Interprete>
+   <Display>…</Display>
+   <Measurement>
+      <Type>number</Type>
+   </Measurement>
 </Param>
 ```
 

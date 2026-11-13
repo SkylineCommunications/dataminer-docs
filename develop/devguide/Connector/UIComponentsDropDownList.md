@@ -13,80 +13,80 @@ To define a dropdown list, create a parameter of type "write", set type to "disc
 
 ```xml
 <Param id="3105">
-    <Name>EthernetLinkMgmtSpeed</Name>
-    <Description>Link Speed</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <Type>double</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet>
-                <Display>All</Display>
-                <Value>0</Value>
-            </Discreet>
-            <Discreet>
-                <Display>10 Bt Half Duplex</Display>
-                <Value>1</Value>
-            </Discreet>
-            <Discreet>
-                <Display>10 Bt Full Duplex</Display>
-                <Value>2</Value>
-            </Discreet>
-            <Discreet>
-                <Display>100 Bt Half Duplex</Display>
-                <Value>3</Value>
-            </Discreet>
-            <Discreet>
-                <Display>100 Bt Full Duplex</Display>
-                <Value>4</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+  <Name>EthernetLinkMgmtSpeed</Name>
+  <Description>Link Speed</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet>
+        <Display>All</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet>
+        <Display>10 Bt Half Duplex</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>10 Bt Full Duplex</Display>
+        <Value>2</Value>
+      </Discreet>
+      <Discreet>
+        <Display>100 Bt Half Duplex</Display>
+        <Value>3</Value>
+      </Discreet>
+      <Discreet>
+        <Display>100 Bt Full Duplex</Display>
+        <Value>4</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 <Param id="3135" setter="true">
-    <Name>EthernetLinkMgmtSpeed</Name>
-    <Description>Link Speed</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <Type>double</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet>
-                <Display>All</Display>
-                <Value>0</Value>
-            </Discreet>
-            <Discreet>
-                <Display>10 Bt Half Duplex</Display>
-                <Value>1</Value>
-            </Discreet>
-            <Discreet>
-                <Display>10 Bt Full Duplex</Display>
-                <Value>2</Value>
-            </Discreet>
-            <Discreet>
-                <Display>100 Bt Half Duplex</Display>
-                <Value>3</Value>
-            </Discreet>
-            <Discreet>
-                <Display>100 Bt Full Duplex</Display>
-                <Value>4</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+  <Name>EthernetLinkMgmtSpeed</Name>
+  <Description>Link Speed</Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet>
+        <Display>All</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet>
+        <Display>10 Bt Half Duplex</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>10 Bt Full Duplex</Display>
+        <Value>2</Value>
+      </Discreet>
+      <Discreet>
+        <Display>100 Bt Half Duplex</Display>
+        <Value>3</Value>
+      </Discreet>
+      <Discreet>
+        <Display>100 Bt Full Duplex</Display>
+        <Value>4</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 ```
 
@@ -98,70 +98,70 @@ When you add a dropdown list, it is possible to show a checkbox for one entry by
 
 ```xml
 <Param id="1032">
-    <Name>OutputFormat</Name>
-    <Description>Output Format</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>signed number</RawType>
-        <Type>double</Type>
-        <LengthType>next param</LengthType>
-        <Exceptions>
-            <Exception id="1" value="0">
-                <Display state="disabled">Disabled</Display>
-                <Value>0</Value>
-            </Exception>
-        </Exceptions>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet>
-                <Display state="disabled">None</Display>
-                <Value>0</Value>
-            </Discreet>
-            <Discreet>
-                <Display>720p</Display>
-                <Value>1</Value>
-            </Discreet>
-            <Discreet>
-                <Display>1080p</Display>
-                <Value>2</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+  <Name>OutputFormat</Name>
+  <Description>Output Format</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>signed number</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+    <Exceptions>
+      <Exception id="1" value="0">
+        <Display state="disabled">Disabled</Display>
+        <Value>0</Value>
+      </Exception>
+    </Exceptions>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet>
+        <Display state="disabled">None</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet>
+        <Display>720p</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>1080p</Display>
+        <Value>2</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 <Param id="1033" setter="true">
-    <Name>OutputFormat</Name>
-    <Description>Output Format</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <Type>double</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet>
-                <Display state="disabled">Disabled</Display>
-                <Value>0</Value>
-            </Discreet>
-            <Discreet>
-                <Display>720p</Display>
-                <Value>1</Value>
-            </Discreet>
-            <Discreet>
-                <Display>1080p</Display>
-                <Value>2</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+  <Name>OutputFormat</Name>
+  <Description>Output Format</Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet>
+        <Display state="disabled">Disabled</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet>
+        <Display>720p</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>1080p</Display>
+        <Value>2</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 ```
 
@@ -173,54 +173,54 @@ When a standard dropdown list is configured, the items to choose from are static
 
 ```xml
 <Param id="400" trending="false">
-    <Name>DynamicDependencyLinkSpeed</Name>
-    <Description>Link Speed</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>DynamicDependencyLinkSpeed</Name>
+  <Description>Link Speed</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 <Param id="401" setter="true">
-    <Name>DynamicDependencyLinkSpeed</Name>
-    <Description>Link Speed</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets dependencyId="402" />
-    </Measurement>
+  <Name>DynamicDependencyLinkSpeed</Name>
+  <Description>Link Speed</Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>discreet</Type>
+    <Discreets dependencyId="402" />
+  </Measurement>
 </Param>
 <Param id="402" trending="false">
-    <Name>DynamicDependencyValuesLinkSpeed</Name>
-    <Description>Dynamic Dependency Values Link Speed</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-        <DefaultValue>10 Bt Half Duplex;10 Bt Full Duplex;100 Bt Half Duplex;100 Bt Full Duplex</DefaultValue>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>DynamicDependencyValuesLinkSpeed</Name>
+  <Description>Dynamic Dependency Values Link Speed</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+    <DefaultValue>10 Bt Half Duplex;10 Bt Full Duplex;100 Bt Half Duplex;100 Bt Full Duplex</DefaultValue>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 ```
 

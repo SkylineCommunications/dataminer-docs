@@ -11,25 +11,25 @@ To define a progress bar, set the Type of the Measurement tag to "progress" and 
 
 ```xml
 <Param id="260" trending="false">
-    <Name>Progress</Name>
-    <Description>Progress</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <Type>double</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Units>%</Units>
-        <Range>
-            <Low>0</Low>
-            <High>100</High>
-        </Range>
-    </Display>
-    <Measurement>
-        <Type>progress</Type>
-    </Measurement>
+  <Name>Progress</Name>
+  <Description>Progress</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+    <Units>%</Units>
+    <Range>
+      <Low>0</Low>
+      <High>100</High>
+    </Range>
+  </Display>
+  <Measurement>
+    <Type>progress</Type>
+  </Measurement>
 </Param>
 ```
 

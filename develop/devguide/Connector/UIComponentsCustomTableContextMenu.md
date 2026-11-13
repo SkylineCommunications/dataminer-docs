@@ -21,60 +21,60 @@ To define a custom context menu, define a parameter with the same name as the ta
 
 ```xml
 <Param id="2099">
-    <Name>MyTable_ContextMenu</Name>
-    <Description>Context Menu (My Table)</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet dependencyValues="2001;2002;2003;2004;2005">
-                <Display>Add new row...</Display>
-                <Value>add</Value>
-            </Discreet>
-            <Discreet options="table:singleSelection" dependencyValues="2001;2002?;2003:[value:2003];2004?:[value:2004]">
-                <Display>Duplicate item...</Display>
-                <Value>duplicate</Value>
-            </Discreet>
-            <Discreet options="table:selection;confirm:The selected item(s) will be deleted permanently.">
-                <Display>Delete selected row(s)...</Display>
-                <Value>delete</Value>
-            </Discreet>
-            <Discreet options="separator">
-                <Display>Separator -1</Display>
-                <Value>-1</Value>
-            </Discreet>
-            <Discreet options="rowTextColor=#00FF00">
-                <Display>Green</Display>
-                <Value>1</Value>
-            </Discreet>
-            <Discreet>
-                <Display>Clear table</Display>
-                <Value>clear</Value>
-            </Discreet>
-            <Discreet options="separator">
-                <Display>Separator 2</Display>
-                <Value>-2</Value>
-            </Discreet>
-            <!-- Level must be first option in the list of options into the Discreet@options attribute -->
-            <Discreet options="level:5">
-                <Display>Depends on Level Access</Display>
-                <Value>access</Value>
-            </Discreet>
-            <!-- Script must be last option in the list of options into the Discreet@options attribute -->
-            <Discreet options="script:Context Menu from a Protocol|d1=[this element]|p1=[value:1001];p2=[value:2002]|||NoConfirmation">
-                <Display>Start script</Display>
-                <Value>script1</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+  <Name>MyTable_ContextMenu</Name>
+  <Description>Context Menu (My Table)</Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet dependencyValues="2001;2002;2003;2004;2005">
+        <Display>Add new row...</Display>
+        <Value>add</Value>
+      </Discreet>
+      <Discreet options="table:singleSelection" dependencyValues="2001;2002?;2003:[value:2003];2004?:[value:2004]">
+        <Display>Duplicate item...</Display>
+        <Value>duplicate</Value>
+      </Discreet>
+      <Discreet options="table:selection;confirm:The selected item(s) will be deleted permanently.">
+        <Display>Delete selected row(s)...</Display>
+        <Value>delete</Value>
+      </Discreet>
+      <Discreet options="separator">
+        <Display>Separator -1</Display>
+        <Value>-1</Value>
+      </Discreet>
+      <Discreet options="rowTextColor=#00FF00">
+        <Display>Green</Display>
+        <Value>1</Value>
+      </Discreet>
+      <Discreet>
+        <Display>Clear table</Display>
+        <Value>clear</Value>
+      </Discreet>
+      <Discreet options="separator">
+        <Display>Separator 2</Display>
+        <Value>-2</Value>
+      </Discreet>
+      <!-- Level must be first option in the list of options into the Discreet@options attribute -->
+      <Discreet options="level:5">
+        <Display>Depends on Level Access</Display>
+        <Value>access</Value>
+      </Discreet>
+      <!-- Script must be last option in the list of options into the Discreet@options attribute -->
+      <Discreet options="script:Context Menu from a Protocol|d1=[this element]|p1=[value:1001];p2=[value:2002]|||NoConfirmation">
+        <Display>Start script</Display>
+        <Value>script1</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 ```
 
@@ -88,10 +88,10 @@ For example, consider the following menu item definition:
 
 ```xml
 <Discreets>
-    <Discreet dependencyValues="1011;1012" options="table:selection">
-        <Display>Load Configuration</Display>
-        <Value>load</Value>
-    </Discreet>
+  <Discreet dependencyValues="1011;1012" options="table:selection">
+    <Display>Load Configuration</Display>
+    <Value>load</Value>
+  </Discreet>
 </Discreets>
 ```
 
@@ -245,15 +245,15 @@ Examples
 
 ```xml
 <Discreet>
-    <Display>Example</Display>
-    <Value type="open">http://example.com/{elementName}</Value>
+  <Display>Example</Display>
+  <Value type="open">http://example.com/{elementName}</Value>
 </Discreet>
 ```
 
 ```xml
 <Discreet options="table:singleselection;confirm:Are you sure you want to delete {rowDK}?">
-    <Display>Delete selected row(s)...</Display>
-    <Value>delete</Value>
+  <Display>Delete selected row(s)...</Display>
+  <Value>delete</Value>
 </Discreet>
 ```
 

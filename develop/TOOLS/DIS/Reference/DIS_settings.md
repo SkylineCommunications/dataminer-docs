@@ -149,9 +149,9 @@ See the following example. If you select the *DIS tree view: Show description in
 
 ```xml
 <Param>
-    <Name>SysName</Name>
-    <Description>System Name</Description>
-    ...
+  <Name>SysName</Name>
+  <Description>System Name</Description>
+  ...
 </Param>
 ```
 

@@ -20,39 +20,39 @@ Define a write parameter for the column and use the [snmpSetAndGet](xref:Protoco
 
 ```xml
 <Param id="157" snmpSetAndGet="true">
-    <Name>Interfaces_AdminStatus</Name>
-    <Description>Admin Status (Interfaces)</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <LengthType>next param</LengthType>
-        <Type>double</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.2.2.1.7</OID>
-        <Type>integer</Type>
-    </SNMP>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet>
-                <Display>Up</Display>
-                <Value>1</Value>
-            </Discreet>
-            <Discreet>
-                <Display>Down</Display>
-                <Value>2</Value>
-            </Discreet>
-            <Discreet>
-                <Display>Testing</Display>
-                <Value>3</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+   <Name>Interfaces_AdminStatus</Name>
+   <Description>Admin Status (Interfaces)</Description>
+   <Type>write</Type>
+   <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>next param</LengthType>
+      <Type>double</Type>
+   </Interprete>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <OID type="complete">1.3.6.1.2.1.2.2.1.7</OID>
+      <Type>integer</Type>
+   </SNMP>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>discreet</Type>
+      <Discreets>
+         <Discreet>
+            <Display>Up</Display>
+            <Value>1</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Down</Display>
+            <Value>2</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Testing</Display>
+            <Value>3</Value>
+         </Discreet>
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 
@@ -64,34 +64,34 @@ This approach requires that you implement logic in the protocol to know which ro
 
     ```xml
     <Param id="117">
-        <Name>Interfaces_AdminStatus</Name>
-        <Description>Admin Status (Interfaces)</Description>
-        <Type>write</Type>
-        <Interprete>
-            <RawType>numeric text</RawType>
-            <LengthType>next param</LengthType>
-            <Type>double</Type>
-        </Interprete>
-        <Display>
-            <RTDisplay>true</RTDisplay>
-        </Display>
-        <Measurement>
-            <Type>discreet</Type>
-            <Discreets>
-                <Discreet>
-                    <Display>Up</Display>
-                    <Value>1</Value>
-                </Discreet>
-                <Discreet>
-                    <Display>Down</Display>
-                    <Value>2</Value>
-                </Discreet>
-                <Discreet>
-                    <Display>Testing</Display>
-                    <Value>3</Value>
-                </Discreet>
-            </Discreets>
-        </Measurement>
+       <Name>Interfaces_AdminStatus</Name>
+       <Description>Admin Status (Interfaces)</Description>
+       <Type>write</Type>
+       <Interprete>
+          <RawType>numeric text</RawType>
+          <LengthType>next param</LengthType>
+          <Type>double</Type>
+       </Interprete>
+       <Display>
+          <RTDisplay>true</RTDisplay>
+       </Display>
+       <Measurement>
+          <Type>discreet</Type>
+          <Discreets>
+             <Discreet>
+                <Display>Up</Display>
+                <Value>1</Value>
+             </Discreet>
+             <Discreet>
+                <Display>Down</Display>
+                <Value>2</Value>
+             </Discreet>
+             <Discreet>
+                <Display>Testing</Display>
+                <Value>3</Value>
+             </Discreet>
+          </Discreets>
+       </Measurement>
     </Param>
     ```
 
@@ -104,19 +104,19 @@ This approach requires that you implement logic in the protocol to know which ro
 
      ```xml
     <Param id="127" options="snmpSet">
-        <Name>InterfaceAdminStatusSNMPSet</Name>
-        <Description>Interface Admin Status SNMP Set</Description>
-        <Type>write</Type>
-        <Interprete>
-            <RawType>numeric text</RawType>
-            <LengthType>next param</LengthType>
-            <Type>double</Type>
-        </Interprete>
-        <SNMP>
-            <Enabled>true</Enabled>
-            <OID type="complete" id="99">1.3.6.1.2.1.2.2.1.7.*</OID>
-            <Type>integer</Type>
-        </SNMP>
+       <Name>InterfaceAdminStatusSNMPSet</Name>
+       <Description>Interface Admin Status SNMP Set</Description>
+       <Type>write</Type>
+       <Interprete>
+          <RawType>numeric text</RawType>
+          <LengthType>next param</LengthType>
+          <Type>double</Type>
+       </Interprete>
+       <SNMP>
+          <Enabled>true</Enabled>
+          <OID type="complete" id="99">1.3.6.1.2.1.2.2.1.7.*</OID>
+          <Type>integer</Type>
+       </SNMP>
     </Param>
     ```
 
@@ -126,17 +126,17 @@ This approach requires that you implement logic in the protocol to know which ro
 
      ```xml
     <Param id="99">
-        <Name>InterfacesInstance</Name>
-        <Description>Interfaces Instance</Description>
-        <Type>read</Type>
-        <Interprete>
-            <RawType>other</RawType>
-            <LengthType>next param</LengthType>
-            <Type>string</Type>
-        </Interprete>
-        <Measurement>
-            <Type>string</Type>
-        </Measurement>
+       <Name>InterfacesInstance</Name>
+       <Description>Interfaces Instance</Description>
+       <Type>read</Type>
+       <Interprete>
+          <RawType>other</RawType>
+          <LengthType>next param</LengthType>
+          <Type>string</Type>
+       </Interprete>
+       <Measurement>
+          <Type>string</Type>
+       </Measurement>
     </Param>
     ```
 

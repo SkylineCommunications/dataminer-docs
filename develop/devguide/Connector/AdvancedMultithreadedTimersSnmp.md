@@ -16,12 +16,12 @@ Assume the following multithreaded timer is defined:
 
 ```xml
 <Timer id="1" options="ip:2000,1;each:60000;pollingrate:30,10,10;threadPool:100,5,201,202,203,204,205,15000;dynamicthreadpool:200">
-    <Name>Poll timer SNMP</Name>
-    <Time>1000</Time>
-    <Interval>0</Interval>
-    <Content>
-        <Group>2000</Group>
-    </Content>
+  <Name>Poll timer SNMP</Name>
+  <Time>1000</Time>
+  <Interval>0</Interval>
+  <Content>
+    <Group>2000</Group>
+  </Content>
 </Timer>
 ```
 
@@ -41,13 +41,13 @@ Suppose group 2000 has the following content:
 
 ```xml
 <Group id="2000" connection="0">
-    <Name>SNMP Poll Group</Name>
-    <Content multipleGet="true">
-        <Param>1000</Param>
-        <Param>1001</Param>
-        <Param>1002</Param>
-        <Param>1003:single</Param>
-    </Content>
+  <Name>SNMP Poll Group</Name>
+  <Content multipleGet="true">
+    <Param>1000</Param>
+    <Param>1001</Param>
+    <Param>1002</Param>
+    <Param>1003:single</Param>
+  </Content>
 </Group>
 ```
 
@@ -59,25 +59,25 @@ Param 1003 is then defined as follows:
 
 ```xml
 <Param id="1003" trending="false">
-    <Name>STBService1Name</Name>
-    <Description>STB Svc. 1 Name</Description>
-    <Type options="loadOID">read</Type>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <Type>OctetStringASCII</Type>
-        <OID type="complete">1.3.6.1.4.1.23423.3.2.1.1.1.0</OID>
-    </SNMP>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>STBService1Name</Name>
+  <Description>STB Svc. 1 Name</Description>
+  <Type options="loadOID">read</Type>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Interprete>
+    <RawType>other</RawType>
+    <LengthType>next param</LengthType>
+    <Type>string</Type>
+  </Interprete>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <Type>OctetStringASCII</Type>
+    <OID type="complete">1.3.6.1.4.1.23423.3.2.1.1.1.0</OID>
+  </SNMP>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 ```
 
@@ -94,18 +94,18 @@ For example, suppose group 2000 has the following content:
 
 ```xml
 <Group id="2000" connection="1">
-    <Name>BSR group</Name>
-    <Description>BSR group</Description>
-    <Content multipleGet="true">
-        <Param>1023:instance</Param><!-- This means the parameters below should use the obtained value of this parameter as the instance -->
-        <Param>33</Param>
-        <Param>34</Param>
-        <Param>35</Param>
-        <Param>36</Param>
-        <Param>40</Param>
-        <Param>41:instance</Param><!-- This means the parameters below should use the obtained value of this parameter as the instance. -->
-        <Param>37</Param>
-    </Content>
+  <Name>BSR group</Name>
+  <Description>BSR group</Description>
+  <Content multipleGet="true">
+    <Param>1023:instance</Param><!-- This means the parameters below should use the obtained value of this parameter as the instance -->
+    <Param>33</Param>
+    <Param>34</Param>
+    <Param>35</Param>
+    <Param>36</Param>
+    <Param>40</Param>
+    <Param>41:instance</Param><!-- This means the parameters below should use the obtained value of this parameter as the instance. -->
+    <Param>37</Param>
+  </Content>
 </Group>
 ```
 
@@ -113,45 +113,45 @@ Suppose parameters 1023 and 33 are defined as follows:
 
 ```xml
 <Param id="1023" save="true">
-    <Name>CMInstance</Name>
-    <Description>CM Instance</Description>
-    <Type options="loadOID">read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.10.127.1.3.7.1.2</OID>
-    </SNMP>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>CMInstance</Name>
+  <Description>CM Instance</Description>
+  <Type options="loadOID">read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <LengthType>next param</LengthType>
+    <Type>string</Type>
+  </Interprete>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <OID type="complete">1.3.6.1.2.1.10.127.1.3.7.1.2</OID>
+  </SNMP>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 <Param id="33" trending="false">
-    <Name>DocsIfCmtsCmStatusUnerroreds</Name>
-    <Description>Docs If CMTS CM Status Unerroreds</Description>
-    <Type options="loadOID">read</Type>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.10.127.1.3.3.1.10</OID>
-    </SNMP>
-    <Interprete>
-        <RawType>unsigned number</RawType>
-        <LengthType>fixed</LengthType>
-        <Length>2</Length>
-        <Type>double</Type>
-    </Interprete>
-    <Measurement>
-        <Type>number</Type>
-    </Measurement>
+  <Name>DocsIfCmtsCmStatusUnerroreds</Name>
+  <Description>Docs If CMTS CM Status Unerroreds</Description>
+  <Type options="loadOID">read</Type>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <OID type="complete">1.3.6.1.2.1.10.127.1.3.3.1.10</OID>
+  </SNMP>
+  <Interprete>
+    <RawType>unsigned number</RawType>
+    <LengthType>fixed</LengthType>
+    <Length>2</Length>
+    <Type>double</Type>
+  </Interprete>
+  <Measurement>
+    <Type>number</Type>
+  </Measurement>
 </Param>
 ```
 
@@ -168,11 +168,11 @@ For example, suppose group 2000 has the following content:
 
 ```xml
 <Group id="20">
-    <Name>STBFastGroupMultipleTunerNewSnmpAgent</Name>
-    <Description>STB Fast Group Multiple Tuner New SNMP Agent</Description>
-    <Content multipleGet="true">
-        <Param>304:table</Param>
-    </Content>
+  <Name>STBFastGroupMultipleTunerNewSnmpAgent</Name>
+  <Description>STB Fast Group Multiple Tuner New SNMP Agent</Description>
+  <Content multipleGet="true">
+    <Param>304:table</Param>
+  </Content>
 </Group>
 ```
 
@@ -180,18 +180,18 @@ Where parameter 304 is defined as follows:
 
 ```xml
 <Param id="304" trending="false">
-    <Name>IfXTable</Name>
-    <Description>If X Table</Description>
-    <Type options="loadOID">read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.31.1.1.1;1.3.6.1.2.1.31.1.1.1.6;1.3.6.1.2.1.31.1.1.1.10</OID>
-    </SNMP>
+  <Name>IfXTable</Name>
+  <Description>If X Table</Description>
+  <Type options="loadOID">read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <LengthType>next param</LengthType>
+    <Type>string</Type>
+  </Interprete>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <OID type="complete">1.3.6.1.2.1.31.1.1.1;1.3.6.1.2.1.31.1.1.1.6;1.3.6.1.2.1.31.1.1.1.10</OID>
+  </SNMP>
 </Param>
 ```
 
@@ -205,10 +205,10 @@ For example, suppose group 2000 has the following content:
 
 ```xml
 <Group id="2000" connection="0">
-    <Name>SNMP Poll Group</Name>
-    <Content multipleGet="true">
-        <Param>304:tablev2</Param>
-    </Content>
+  <Name>SNMP Poll Group</Name>
+  <Content multipleGet="true">
+    <Param>304:tablev2</Param>
+  </Content>
 </Group>
 ```
 
@@ -216,18 +216,18 @@ For example, parameter 304 states that the columns with OID 1.3.6.1.2.1.31.1.1.1
 
 ```xml
 <Param id="304" trending="false">
-    <Name>IfXTable</Name>
-    <Description>If X Table</Description>
-    <Type options="loadOID">read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.31.1.1.1.6;1.3.6.1.2.1.31.1.1.1.10</OID>
-    </SNMP>
+  <Name>IfXTable</Name>
+  <Description>If X Table</Description>
+  <Type options="loadOID">read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <LengthType>next param</LengthType>
+    <Type>string</Type>
+  </Interprete>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <OID type="complete">1.3.6.1.2.1.31.1.1.1.6;1.3.6.1.2.1.31.1.1.1.10</OID>
+  </SNMP>
 </Param>
 ```
 

@@ -13,27 +13,27 @@ For example, the following parameter, defined on the parent element, will send t
 
 ```xml
 <Param id="100" trending="false">
-    <Name>DistributedParameter</Name>
-    <Description>Distributed Parameter</Description>
-    <Information>
-        <Subtext />
-        <Includes>
-            <Include>time</Include>
-            <Include>range</Include>
-            <Include>steps</Include>
-            <Include>units</Include>
-        </Includes>
-    </Information>
-    <Type distribution="protocol:Tandberg;pid:100;remote:true">read</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <LengthType>next param</LengthType>
-        <Type>double</Type>
-    </Interprete>
-    <Display>…</Display>
-    <Measurement>
-        <Type>number</Type>
-    </Measurement>
+   <Name>DistributedParameter</Name>
+   <Description>Distributed Parameter</Description>
+   <Information>
+      <Subtext />
+      <Includes>
+         <Include>time</Include>
+         <Include>range</Include>
+         <Include>steps</Include>
+         <Include>units</Include>
+      </Includes>
+   </Information>
+   <Type distribution="protocol:Tandberg;pid:100;remote:true">read</Type>
+   <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>next param</LengthType>
+      <Type>double</Type>
+   </Interprete>
+   <Display>…</Display>
+   <Measurement>
+      <Type>number</Type>
+   </Measurement>
 </Param>
 ```
 

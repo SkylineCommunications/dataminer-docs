@@ -97,25 +97,25 @@ The column processing order can be overruled in the protocol with the [processin
 
 ```xml
 <Param id="400" trending="false" export="true">
-    <Name>Alarms</Name>
-    <Description>Alarms</Description>
-    <Type>array</Type>
-    <ArrayOptions index="0" options=";naming=_401,404;processingOrder=0,4,5,1,2,3">
-        <ColumnOption idx="0" pid="401" type="custom" options=";save"/>
-        <ColumnOption idx="1" pid="403" type="custom" options=";save"/>
-        <ColumnOption idx="2" pid="404" type="custom" options=";save"/>
-        <ColumnOption idx="3" pid="406" type="custom" options=";save"/>
-        <ColumnOption idx="4" pid="416" type="custom" options=";save;foreignKey=1200"/>
-        <ColumnOption idx="5" pid="417" type="custom" options=";save;foreignKey=1300"/>
-    </ArrayOptions>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>double</Type>
-    </Interprete>
-    <Measurement>
-        <Type options="tab-columns:401|0-403|1-404|2-406|3-416|4-417|5,lines:30,width:100-100-100-100-100-100,sort:STRING">table</Type>
-    </Measurement>
+   <Name>Alarms</Name>
+   <Description>Alarms</Description>
+   <Type>array</Type>
+   <ArrayOptions index="0" options=";naming=_401,404;processingOrder=0,4,5,1,2,3">
+      <ColumnOption idx="0" pid="401" type="custom" options=";save"/>
+      <ColumnOption idx="1" pid="403" type="custom" options=";save"/>
+      <ColumnOption idx="2" pid="404" type="custom" options=";save"/>
+      <ColumnOption idx="3" pid="406" type="custom" options=";save"/>
+      <ColumnOption idx="4" pid="416" type="custom" options=";save;foreignKey=1200"/>
+      <ColumnOption idx="5" pid="417" type="custom" options=";save;foreignKey=1300"/>
+   </ArrayOptions>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>double</Type>
+   </Interprete>
+   <Measurement>
+      <Type options="tab-columns:401|0-403|1-404|2-406|3-416|4-417|5,lines:30,width:100-100-100-100-100-100,sort:STRING">table</Type>
+   </Measurement>
 </Param>
 ```
 

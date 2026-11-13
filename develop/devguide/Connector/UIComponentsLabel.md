@@ -11,23 +11,23 @@ A label displays the current value of a standalone parameter. The text provided 
 
 ```xml
 <Param id="102">
-    <Name>SoftwareVersion</Name>
-    <Description>Software Version</Description>
-    <Type>read</Type>
-    <Information>
-        <Subtext>Running software version.</Subtext>
-    </Information>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>SoftwareVersion</Name>
+  <Description>Software Version</Description>
+  <Type>read</Type>
+  <Information>
+    <Subtext>Running software version.</Subtext>
+  </Information>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 ```
 
@@ -39,20 +39,20 @@ The following example displays a numeric parameter:
 
 ```xml
 <Param id="1806" trending="false">
-    <Name>CPULoad</Name>
-    <Description>CPU Load</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <Type>double</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>number</Type>
-    </Measurement>
+  <Name>CPULoad</Name>
+  <Description>CPU Load</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>number</Type>
+  </Measurement>
 </Param>
 ```
 
@@ -69,37 +69,37 @@ In order to make a label editable, create a parameter of type "write" that has t
 
 ```xml
 <Param id="103" trending="false">
-    <Name>FolderTextBox</Name>
-    <Description>Document Folder</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-        <DefaultValue>C:\Skyline DataMiner\Documents</DefaultValue>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>FolderTextBox</Name>
+  <Description>Document Folder</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+    <DefaultValue>C:\Skyline DataMiner\Documents</DefaultValue>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 <Param id="104" setter="true">
-    <Name>FolderTextBox</Name>
-    <Description>Document Folder</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>FolderTextBox</Name>
+  <Description>Document Folder</Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 ```
 
@@ -120,48 +120,48 @@ It is possible to visualize a checkbox by providing a discrete entry on the writ
 
 ```xml
 <Param id="420">
-    <Name>ConfigurationFile</Name>
-    <Description>Configuration File</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-        <Exceptions>
-            <Exception id="1" value="-1">
-                <Display state="disabled">N/A</Display>
-                <Value>-1</Value>
-            </Exception>
-        </Exceptions>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>ConfigurationFile</Name>
+  <Description>Configuration File</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+    <Exceptions>
+      <Exception id="1" value="-1">
+        <Display state="disabled">N/A</Display>
+        <Value>-1</Value>
+      </Exception>
+    </Exceptions>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 <Param id="421" setter="true">
-    <Name>ConfigurationFile</Name>
-    <Description>Configuration File</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-        <Discreets>
-            <Discreet>
-                <Display state="disabled">N/A</Display>
-                <Value>-1</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+  <Name>ConfigurationFile</Name>
+  <Description>Configuration File</Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+    <Discreets>
+      <Discreet>
+        <Display state="disabled">N/A</Display>
+        <Value>-1</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 ```
 

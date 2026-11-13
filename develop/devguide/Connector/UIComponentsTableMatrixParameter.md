@@ -29,60 +29,60 @@ Example:
 
 ```xml
 <Param id="3" trending="false">
-    <Name>DummyMatrixParam</Name>
-    <Type>Matrix</Type>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>Matrix</Page>
-                <Row>0</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Matrix>
-        <Inputs tablePid="1000">
-            <!-- This is the table parameter ID of the inputs table of this matrix-->
-            <Mappings>
-                <Mapping type="pid" name="index">1001</Mapping><!-- This is the primary key column parameter ID of the inputs table of this matrix => Indicates the index of the input.-->
-                <Mapping type="pid" name="label">1002</Mapping><!-- This is the label column parameter ID of the inputs table of this matrix => Contains the label of the input.-->
-                <Mapping type="pid" name="state">1003</Mapping><!-- This is the state column parameter ID of the inputs table of this matrix => Indicates whether the input is enabled or not.-->
-                <Mapping type="pid" name="lock">1004</Mapping><!-- This is the lock column parameter ID of the inputs table of this matrix => Indicates whether the input is locked or not.-->
-                <Mapping type="pid" name="page">1005</Mapping><!-- This is the page column parameter ID of the inputs table of this matrix => Indicates on which page the input is located.-->
-            </Mappings>
-        </Inputs>
-        <Outputs tablePid="1200">
-            <!-- This is the table parameter ID of the outputs table of this matrix-->
-            <Mappings>
-                <Mapping type="pid" name="index">1201</Mapping><!-- This is the primary key column parameter ID of the outputs table of this matrix => Indicates the index of the output.-->
-                <Mapping type="pid" name="label">1202</Mapping><!-- This is the label column parameter ID of the outputs table of this matrix => Contains the label of the output.-->
-                <Mapping type="pid" name="state">1203</Mapping><!-- This is the state column parameter ID of the outputs table of this matrix => Indicates whether the output is enabled or not.-->
-                <Mapping type="pid" name="lock">1204</Mapping><!-- This is the lock column parameter ID of the outputs table of this matrix => Indicates whether the output is locked or not.-->
-                <Mapping type="pid" name="connectedInput">1205</Mapping><!-- This is the connectedInput column parameter ID of the inputs table of this matrix => Contains which input is connected to this output. Note: Tables only support one input per output.-->
-                <Mapping type="pid" name="page">1206</Mapping><!-- This is the page column parameter ID of the outputs table of this matrix => Indicates on which page the output is located.-->
-                <Mapping type="pid" name="tooltip">1207</Mapping><!-- This is the tooltip column parameter ID of the outputs table of this matrix => Contains the tooltip shown on the crosspoint of this output.-->
-                <Mapping type="pid" name="lockOverride">1208</Mapping><!-- This is the lockOverride column parameter ID of the outputs table of this matrix => Contains the lock override parameter for this output. This can be used to (un)set a crosspoint while locked.-->
-            </Mappings>
-        </Outputs>
-        <MatrixOptions>
-            <MatrixOption type="value" name="matrixLayout">InputLeftOutputTop</MatrixOption><!--Set this option if you want the matrix UI to position inputs or outputs at the top or on the left. Note: For table matrices, the only supported values are 'InputTopOutputLeft' or 'InputLeftOutputTop'.-->
-            <MatrixOption type="value" name="pages">true</MatrixOption><!-- Set this option if you want to enable auto-paging on this matrix. Note: Custom pages can be set via the page column on the tables.-->
-            <MatrixOption type="value" name="minimumConnectedInputsPerOutput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected inputs for an output. Note: 0 for no minimum.-->
-            <MatrixOption type="value" name="maximumConnectedInputsPerOutput">1</MatrixOption><!-- Set this option if you want to specify a maximum of connected inputs for an output. Note: Always 1 because of the nature of the table column (table matrix only). -->
-            <MatrixOption type="value" name="minimumConnectedOutputsPerInput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected outputs for an input. Note: 0 for no minimum.-->
-            <MatrixOption type="value" name="maximumConnectedOutputsPerInput">auto</MatrixOption><!-- Set this option if you want to specify a maximum of connected outputs for an input. Note: auto for no maximum (scales with the table).-->
-        </MatrixOptions>
-    </Matrix>
-    <Information>
-        <Subtext>Matrix representation (dummy parameter)</Subtext>
-    </Information>
-    <Alarm>
-        <Monitored>false</Monitored>
-        <!-- Monitoring on this parameter is not supported, since the monitoring is done on table level.-->
-    </Alarm>
-    <Measurement>
-        <Type>matrix</Type>
-    </Measurement>
+   <Name>DummyMatrixParam</Name>
+   <Type>Matrix</Type>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>
+         <Position>
+            <Page>Matrix</Page>
+            <Row>0</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Matrix>
+      <Inputs tablePid="1000">
+         <!-- This is the table parameter ID of the inputs table of this matrix-->
+         <Mappings>
+            <Mapping type="pid" name="index">1001</Mapping><!-- This is the primary key column parameter ID of the inputs table of this matrix => Indicates the index of the input.-->
+            <Mapping type="pid" name="label">1002</Mapping><!-- This is the label column parameter ID of the inputs table of this matrix => Contains the label of the input.-->
+            <Mapping type="pid" name="state">1003</Mapping><!-- This is the state column parameter ID of the inputs table of this matrix => Indicates whether the input is enabled or not.-->
+            <Mapping type="pid" name="lock">1004</Mapping><!-- This is the lock column parameter ID of the inputs table of this matrix => Indicates whether the input is locked or not.-->
+            <Mapping type="pid" name="page">1005</Mapping><!-- This is the page column parameter ID of the inputs table of this matrix => Indicates on which page the input is located.-->
+         </Mappings>
+      </Inputs>
+      <Outputs tablePid="1200">
+         <!-- This is the table parameter ID of the outputs table of this matrix-->
+         <Mappings>
+            <Mapping type="pid" name="index">1201</Mapping><!-- This is the primary key column parameter ID of the outputs table of this matrix => Indicates the index of the output.-->
+            <Mapping type="pid" name="label">1202</Mapping><!-- This is the label column parameter ID of the outputs table of this matrix => Contains the label of the output.-->
+            <Mapping type="pid" name="state">1203</Mapping><!-- This is the state column parameter ID of the outputs table of this matrix => Indicates whether the output is enabled or not.-->
+            <Mapping type="pid" name="lock">1204</Mapping><!-- This is the lock column parameter ID of the outputs table of this matrix => Indicates whether the output is locked or not.-->
+            <Mapping type="pid" name="connectedInput">1205</Mapping><!-- This is the connectedInput column parameter ID of the inputs table of this matrix => Contains which input is connected to this output. Note: Tables only support one input per output.-->
+            <Mapping type="pid" name="page">1206</Mapping><!-- This is the page column parameter ID of the outputs table of this matrix => Indicates on which page the output is located.-->
+            <Mapping type="pid" name="tooltip">1207</Mapping><!-- This is the tooltip column parameter ID of the outputs table of this matrix => Contains the tooltip shown on the crosspoint of this output.-->
+            <Mapping type="pid" name="lockOverride">1208</Mapping><!-- This is the lockOverride column parameter ID of the outputs table of this matrix => Contains the lock override parameter for this output. This can be used to (un)set a crosspoint while locked.-->
+         </Mappings>
+      </Outputs>
+      <MatrixOptions>
+         <MatrixOption type="value" name="matrixLayout">InputLeftOutputTop</MatrixOption><!--Set this option if you want the matrix UI to position inputs or outputs at the top or on the left. Note: For table matrices, the only supported values are 'InputTopOutputLeft' or 'InputLeftOutputTop'.-->
+         <MatrixOption type="value" name="pages">true</MatrixOption><!-- Set this option if you want to enable auto-paging on this matrix. Note: Custom pages can be set via the page column on the tables.-->
+         <MatrixOption type="value" name="minimumConnectedInputsPerOutput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected inputs for an output. Note: 0 for no minimum.-->
+         <MatrixOption type="value" name="maximumConnectedInputsPerOutput">1</MatrixOption><!-- Set this option if you want to specify a maximum of connected inputs for an output. Note: Always 1 because of the nature of the table column (table matrix only). -->
+         <MatrixOption type="value" name="minimumConnectedOutputsPerInput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected outputs for an input. Note: 0 for no minimum.-->
+         <MatrixOption type="value" name="maximumConnectedOutputsPerInput">auto</MatrixOption><!-- Set this option if you want to specify a maximum of connected outputs for an input. Note: auto for no maximum (scales with the table).-->
+      </MatrixOptions>
+   </Matrix>
+   <Information>
+      <Subtext>Matrix representation (dummy parameter)</Subtext>
+   </Information>
+   <Alarm>
+      <Monitored>false</Monitored>
+      <!-- Monitoring on this parameter is not supported, since the monitoring is done on table level.-->
+   </Alarm>
+   <Measurement>
+      <Type>matrix</Type>
+   </Measurement>
 </Param>
 ```

@@ -18,10 +18,10 @@ In case the element does not need to poll a device to find out which devices to 
 ```xml
 <Type advanced="serial:modules">serial</Type>
 <PortSettings name="Modules" visibleInUi="false">
-    <IPport>
-        <DefaultValue>65535</DefaultValue>
-        <Value>*</Value>
-    </IPport>
+   <IPport>
+      <DefaultValue>65535</DefaultValue>
+      <Value>*</Value>
+   </IPport>
 </PortSettings>
 ```
 
@@ -34,14 +34,14 @@ In addition, the protocol must define a parameter that will be used to change th
 
 ```xml
 <Param id="39999" trending="false" save="true">
-    <Name>DynamicPollingIPConn1</Name>
-    <Description>Connection 1 Dynamic Polling IP</Description>
-    <Type options="dynamic ip 1">read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
+   <Name>DynamicPollingIPConn1</Name>
+   <Description>Connection 1 Dynamic Polling IP</Description>
+   <Type options="dynamic ip 1">read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```
 
@@ -62,24 +62,24 @@ Two parameters can be used for this buffer. A parameter to hold all sets that ne
 
 ```xml
 <Param id="40000">
-    <Name>SetBuffer</Name>
-    <Description>Set Buffer</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
+   <Name>SetBuffer</Name>
+   <Description>Set Buffer</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 <Param id="40001">
-    <Name>ExecuteBuffer</Name>
-    <Description>Execute Buffer</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
+   <Name>ExecuteBuffer</Name>
+   <Description>Execute Buffer</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```
 
@@ -89,22 +89,22 @@ A timer executes a group, which contains two actions:
 
 ```xml
 <Timer id="4">
-    <Name>Module Polling</Name>
-    <Time>60000</Time>
-    <Interval>75</Interval>
-    <Content>
-        <!--start of module information retrieval-->
-        <Group>39000</Group>
-    </Content>
+   <Name>Module Polling</Name>
+   <Time>60000</Time>
+   <Interval>75</Interval>
+   <Content>
+      <!--start of module information retrieval-->
+      <Group>39000</Group>
+   </Content>
 </Timer>
 <Group id="39000">
-    <Name>start polling parameters</Name>
-    <Description>start polling parameters</Description>
-    <Type>poll action</Type>
-    <Content>
-        <Action>39000</Action>
-        <Action>39001</Action>
-    </Content>
+   <Name>start polling parameters</Name>
+   <Description>start polling parameters</Description>
+   <Type>poll action</Type>
+   <Content>
+      <Action>39000</Action>
+      <Action>39001</Action>
+   </Content>
 </Group>
 ```
 
@@ -112,14 +112,14 @@ The first action sets a parameter used as a flag (referred to as the "poll_flag"
 
 ```xml
 <Action id="39000">
-    <Name>Copy 'true' to poll_flag</Name>
-    <On id="39000">parameter</On>
-    <Type id="39001">copy</Type>
+   <Name>Copy 'true' to poll_flag</Name>
+   <On id="39000">parameter</On>
+   <Type id="39001">copy</Type>
 </Action>
 <Action id="39001">
-    <Name>Copy '0' to poll_row</Name>
-    <On id="39003">parameter</On>
-    <Type id="39004">copy</Type>
+   <Name>Copy '0' to poll_row</Name>
+   <On id="39003">parameter</On>
+   <Type id="39004">copy</Type>
 </Action>
 ```
 
@@ -127,14 +127,14 @@ A trigger is triggered on a change of the "poll_row" parameter, on the condition
 
 ```xml
 <Trigger id="39000">
-    <Name>Triggers on poll_row change</Name>
-    <On id="39003">parameter</On>
-    <Time>change</Time>
-    <Condition><![CDATA[(id:39000 == "true")]]></Condition>
-    <Type>action</Type>
-    <Content>
-        <Id>39002</Id>
-    </Content>
+   <Name>Triggers on poll_row change</Name>
+   <On id="39003">parameter</On>
+   <Time>change</Time>
+   <Condition><![CDATA[(id:39000 == "true")]]></Condition>
+   <Type>action</Type>
+   <Content>
+      <Id>39002</Id>
+   </Content>
 </Trigger>
 ```
 
@@ -142,9 +142,9 @@ The action is a "run actions" on a parameter, to initiate a QAction.
 
 ```xml
 <Action id="39002">
-    <Name>Start poll for ip</Name>
-    <On id="39005">parameter</On>
-    <Type>run actions</Type>
+   <Name>Start poll for ip</Name>
+   <On id="39005">parameter</On>
+   <Type>run actions</Type>
 </Action>
 ```
 
@@ -195,18 +195,18 @@ The trigger, triggered from the QAction, starts an action, which executes the gr
 
 ```xml
 <Trigger id="39103">
-    <Name>Trigger the 24h timer typel parameters Group</Name>
-    <On id="39103">parameter</On>
-    <Time>change</Time>
-    <Type>action</Type>
-    <Content>
-        <Id>39103</Id>
-    </Content>
+   <Name>Trigger the 24h timer typel parameters Group</Name>
+   <On id="39103">parameter</On>
+   <Time>change</Time>
+   <Type>action</Type>
+   <Content>
+      <Id>39103</Id>
+   </Content>
 </Trigger>
 <Action id="39103">
-    <Name>Get the 24h timer typel parameters Group</Name>
-    <On id="31001">group</On>
-    <Type>execute</Type>
+   <Name>Get the 24h timer typel parameters Group</Name>
+   <On id="31001">group</On>
+   <Type>execute</Type>
 </Action>
 ```
 
@@ -216,20 +216,20 @@ Note the connection="1" in the group and options="connection:1" in the pair to i
 
 ```xml
 <Group id="31001" connection="1">
-    <Name>HD0902 parameters Group 24h</Name>
-    <Description>HD0902 parameters Group 24h</Description>
-    <Content>
-        <Pair>30000</Pair>
-        ...
-    </Content>
+   <Name>HD0902 parameters Group 24h</Name>
+   <Description>HD0902 parameters Group 24h</Description>
+   <Content>
+      <Pair>30000</Pair>
+      ...
+   </Content>
 </Group>
 <Pair id="30000" options="connection:1">
-    <Name>Tl Hardware Version and SN Pair</Name>
-    <Description>T1 Hardware Version and SN Pair</Description>
-    <Content>
-        <Command>30000</Command>
-        <Response>30000</Response>
-    </Content>
+   <Name>Tl Hardware Version and SN Pair</Name>
+   <Description>T1 Hardware Version and SN Pair</Description>
+   <Content>
+      <Command>30000</Command>
+      <Response>30000</Response>
+   </Content>
 </Pair>
 ```
 
@@ -237,19 +237,19 @@ A trigger goes off after the group which starts actions to process the retrieved
 
 ```xml
 <Trigger id="30001">
-    <Name>Trigger after getting the 24h timer params</Name>
-    <On id="31001">group</On>
-    <Time>after</Time>
-    <Type>action</Type>
-    <Content>
-        <!--process received values-->
-        <Id>30101</Id>
-        <!--clear values/responses-->
-        <Id>30004</Id>
-        <Id>30006</Id>
-        <!--increment-->
-        <Id>30003</Id>
-    </Content>
+   <Name>Trigger after getting the 24h timer params</Name>
+   <On id="31001">group</On>
+   <Time>after</Time>
+   <Type>action</Type>
+   <Content>
+      <!--process received values-->
+      <Id>30101</Id>
+      <!--clear values/responses-->
+      <Id>30004</Id>
+      <Id>30006</Id>
+      <!--increment-->
+      <Id>30003</Id>
+   </Content>
 </Trigger>
 ```
 
@@ -257,9 +257,9 @@ This action starts a "run actions" action on a parameter to initiate a QAction. 
 
 ```xml
 <Action id="30101">
-    <Name>execute QAction to process 24h values</Name>
-    <On id="30101">parameter</On>
-    <Type>run actions</Type>
+   <Name>execute QAction to process 24h values</Name>
+   <On id="30101">parameter</On>
+   <Type>run actions</Type>
 </Action>
 ```
 
@@ -267,9 +267,9 @@ This action clears all temporary parameters, to make sure certain data is not re
 
 ```xml
 <Action id="30004">
-    <Name>Clear parameters</Name>
-    <On id="30000;30001;30002;30003;...">parameter</On>
-    <Type>clear</Type>
+   <Name>Clear parameters</Name>
+   <On id="30000;30001;30002;30003;...">parameter</On>
+   <Type>clear</Type>
 </Action>
 ```
 
@@ -277,9 +277,9 @@ This action clears all responses.
 
 ```xml
 <Action id="30006">
-    <Name>Clear responses</Name>
-    <On id="30000;...">response</On>
-    <Type>clear</Type>
+   <Name>Clear responses</Name>
+   <On id="30000;...">response</On>
+   <Type>clear</Type>
 </Action>
 ```
 
@@ -289,9 +289,9 @@ This action clears all responses.
 
 ```xml
 <Action id="30003">
-    <Name>increment poll_row</Name>
-    <On id="39010">parameter</On>
-    <Type>run actions</Type>
+   <Name>increment poll_row</Name>
+   <On id="39010">parameter</On>
+   <Type>run actions</Type>
 </Action>
 ```
 
@@ -303,14 +303,14 @@ A second QAction triggers on a change of the buffer parameter. If the buffer is 
 
 ```xml
 <Param id="40000">
-    <Name>SetBuffer</Name>
-    <Description>Set Buffer</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
+   <Name>SetBuffer</Name>
+   <Description>Set Buffer</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```
 
@@ -318,13 +318,13 @@ The previous QAction also triggers on a change of the execute buffer parameter. 
 
 ```xml
 <Param id="40001">
-    <Name>ExecuteBuffer</Name>
-    <Description>Execute Buffer</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
+   <Name>ExecuteBuffer</Name>
+   <Description>Execute Buffer</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```

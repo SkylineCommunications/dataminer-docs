@@ -25,14 +25,14 @@ It is also possible to implement recursive linking, in which case the table will
 
 ```xml
 <Param id="300" trending="false">
-    <Name>Amplifiers</Name>
-    <Description>Amplifiers</Description>
-    <Type>array</Type>
-    <ArrayOptions index="0" options="">
-        <ColumnOption idx="0" pid="301" type="retrieved" value="" options=""/>
-        <ColumnOption idx="1" pid="303" type="retrieved" value="" options=";foreignKey=300"/>
-        <ColumnOption idx="2" pid="304" type="retrieved" value=""/>
-    </ArrayOptions>
+  <Name>Amplifiers</Name>
+  <Description>Amplifiers</Description>
+  <Type>array</Type>
+  <ArrayOptions index="0" options="">
+    <ColumnOption idx="0" pid="301" type="retrieved" value="" options=""/>
+    <ColumnOption idx="1" pid="303" type="retrieved" value="" options=";foreignKey=300"/>
+    <ColumnOption idx="2" pid="304" type="retrieved" value=""/>
+  </ArrayOptions>
 </Param>
 ```
 

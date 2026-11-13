@@ -15,16 +15,16 @@ Suppose we want to create a tree control that lists all services and the audio a
 
       ```xml
       <Param id="1000" trending="false">
-          <Name>Services</Name>
-          <Description>Services</Description>
-          <Type>array</Type>
-          <ArrayOptions index="0" options=";naming=/1002">
-              <ColumnOption idx="0" pid="1001" type="autoincrement" options="" />
-              <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
-          </ArrayOptions>
-          <Display>
-              <RTDisplay>true</RTDisplay>
-          </Display>
+        <Name>Services</Name>
+        <Description>Services</Description>
+        <Type>array</Type>
+        <ArrayOptions index="0" options=";naming=/1002">
+          <ColumnOption idx="0" pid="1001" type="autoincrement" options="" />
+          <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
+        </ArrayOptions>
+        <Display>
+          <RTDisplay>true</RTDisplay>
+        </Display>
       </Param>
       ```
 
@@ -32,17 +32,17 @@ Suppose we want to create a tree control that lists all services and the audio a
 
       ```xml
       <Param id="4000" trending="false">
-          <Name>AudioStreams</Name>
-          <Description>Audio Streams</Description>
-          <Type>array</Type>
-          <ArrayOptions index="0" displayColumn="1">
-              <ColumnOption idx="0" pid="4001" type="autoincrement" options="" />
-              <ColumnOption idx="1" pid="4002" type="retrieved" options=";save" />
-              <ColumnOption idx="2" pid="4003" type="retrieved" options=";save" />
-          </ArrayOptions>
-          <Display>
-              <RTDisplay>true</RTDisplay>
-          </Display>
+        <Name>AudioStreams</Name>
+        <Description>Audio Streams</Description>
+        <Type>array</Type>
+        <ArrayOptions index="0" displayColumn="1">
+          <ColumnOption idx="0" pid="4001" type="autoincrement" options="" />
+          <ColumnOption idx="1" pid="4002" type="retrieved" options=";save" />
+          <ColumnOption idx="2" pid="4003" type="retrieved" options=";save" />
+        </ArrayOptions>
+        <Display>
+          <RTDisplay>true</RTDisplay>
+        </Display>
       </Param>
       ```
 
@@ -50,17 +50,17 @@ Suppose we want to create a tree control that lists all services and the audio a
 
       ```xml
       <Param id="6000" trending="false">
-          <Name>VideoStreams</Name>
-          <Description>Video Streams</Description>
-          <Type>array</Type>
-          <ArrayOptions index="0" options=";naming=/6002">
-              <ColumnOption idx="0" pid="6001" type="autoincrement" options="" />
-              <ColumnOption idx="1" pid="6002" type="retrieved" options=";save" />
-              <ColumnOption idx="2" pid="6003" type="retrieved" options=";save" />
-          </ArrayOptions>
-          <Display>
-              <RTDisplay>true</RTDisplay>
-          </Display>
+        <Name>VideoStreams</Name>
+        <Description>Video Streams</Description>
+        <Type>array</Type>
+        <ArrayOptions index="0" options=";naming=/6002">
+          <ColumnOption idx="0" pid="6001" type="autoincrement" options="" />
+          <ColumnOption idx="1" pid="6002" type="retrieved" options=";save" />
+          <ColumnOption idx="2" pid="6003" type="retrieved" options=";save" />
+        </ArrayOptions>
+        <Display>
+          <RTDisplay>true</RTDisplay>
+        </Display>
       </Param>
       ```
 
@@ -70,17 +70,17 @@ Suppose we want to create a tree control that lists all services and the audio a
 
       ```xml
       <Param id="3000" trending="false">
-          <Name>AudioLinks</Name>
-          <Description>Audio Links</Description>
-          <Type>array</Type>
-          <ArrayOptions index="0">
-              <ColumnOption idx="0" pid="3001" type="autoincrement" options="" />
-              <ColumnOption idx="1" pid="3002" type="retrieved" options=";foreignKey=1000" />
-              <ColumnOption idx="2" pid="3003" type="retrieved" options=";foreignKey=4000" />
-          </ArrayOptions>
-          <Display>
-              <RTDisplay>true</RTDisplay>
-          </Display>
+        <Name>AudioLinks</Name>
+        <Description>Audio Links</Description>
+        <Type>array</Type>
+        <ArrayOptions index="0">
+          <ColumnOption idx="0" pid="3001" type="autoincrement" options="" />
+          <ColumnOption idx="1" pid="3002" type="retrieved" options=";foreignKey=1000" />
+          <ColumnOption idx="2" pid="3003" type="retrieved" options=";foreignKey=4000" />
+        </ArrayOptions>
+        <Display>
+          <RTDisplay>true</RTDisplay>
+        </Display>
       </Param>
       ```
 
@@ -88,17 +88,17 @@ Suppose we want to create a tree control that lists all services and the audio a
 
       ```xml
       <Param id="5000" trending="false">
-          <Name>VideoLinks</Name>
-          <Description>Video Links</Description>
-          <Type>array</Type>
-          <ArrayOptions index="0">
-              <ColumnOption idx="0" pid="5001" type="autoincrement" options="" />
-              <ColumnOption idx="1" pid="5002" type="retrieved" options=";foreignKey=1000" />
-              <ColumnOption idx="2" pid="5003" type="retrieved" options=";foreignKey=6000" />
-          </ArrayOptions>
-          <Display>
-              <RTDisplay>true</RTDisplay>
-          </Display>
+        <Name>VideoLinks</Name>
+        <Description>Video Links</Description>
+        <Type>array</Type>
+        <ArrayOptions index="0">
+          <ColumnOption idx="0" pid="5001" type="autoincrement" options="" />
+          <ColumnOption idx="1" pid="5002" type="retrieved" options=";foreignKey=1000" />
+          <ColumnOption idx="2" pid="5003" type="retrieved" options=";foreignKey=6000" />
+        </ArrayOptions>
+        <Display>
+          <RTDisplay>true</RTDisplay>
+        </Display>
       </Param>
       ```
 
@@ -108,17 +108,17 @@ Suppose we want to create a tree control that lists all services and the audio a
 
       ```xml
       <Param id="2000" trending="false">
-          <Name>LinkTypes</Name>
-          <Description>Link Types</Description>
-          <Type>array</Type>
-          <ArrayOptions index="0">
-              <ColumnOption idx="0" pid="2001" type="autoincrement" options=";save" />
-              <ColumnOption idx="1" pid="2002" type="retrieved" options=";save" />
-              <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
-          </ArrayOptions>
-          <Display>
-              <RTDisplay>true</RTDisplay>
-          </Display>
+        <Name>LinkTypes</Name>
+        <Description>Link Types</Description>
+        <Type>array</Type>
+        <ArrayOptions index="0">
+          <ColumnOption idx="0" pid="2001" type="autoincrement" options=";save" />
+          <ColumnOption idx="1" pid="2002" type="retrieved" options=";save" />
+          <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
+        </ArrayOptions>
+        <Display>
+          <RTDisplay>true</RTDisplay>
+        </Display>
       </Param>
       ```
 
@@ -126,17 +126,17 @@ Suppose we want to create a tree control that lists all services and the audio a
 
       ```xml
       <Param id="7000" trending="false">
-          <Name>ServiceLinkTypes</Name>
-          <Description>Service Link Types</Description>
-          <Type>array</Type>
-          <ArrayOptions index="0" displayColumn="0">
-              <ColumnOption idx="0" pid="7001" type="autoincrement" options=""/>
-              <ColumnOption idx="1" pid="7002" type="retrieved" options=";foreignKey=1000"/>
-              <ColumnOption idx="2" pid="7003" type="retrieved" options=";foreignKey=2000"/>
-          </ArrayOptions>
-          <Display>
-              <RTDisplay>true</RTDisplay>
-          </Display>
+        <Name>ServiceLinkTypes</Name>
+        <Description>Service Link Types</Description>
+        <Type>array</Type>
+        <ArrayOptions index="0" displayColumn="0">
+          <ColumnOption idx="0" pid="7001" type="autoincrement" options=""/>
+          <ColumnOption idx="1" pid="7002" type="retrieved" options=";foreignKey=1000"/>
+          <ColumnOption idx="2" pid="7003" type="retrieved" options=";foreignKey=2000"/>
+        </ArrayOptions>
+        <Display>
+          <RTDisplay>true</RTDisplay>
+        </Display>
       </Param>
       ```
 
@@ -144,9 +144,9 @@ Suppose we want to create a tree control that lists all services and the audio a
 
     ```xml
     <Relations>
-        <Relation path="1000;3000;4000" options="includeInAlarms:topology1"/>
-        <Relation path="1000;5000;6000" options="includeInAlarms:topology2"/>
-        <Relation path="1000;7000;2000" options="includeInAlarms:topology3"/>
+      <Relation path="1000;3000;4000" options="includeInAlarms:topology1"/>
+      <Relation path="1000;5000;6000" options="includeInAlarms:topology2"/>
+      <Relation path="1000;7000;2000" options="includeInAlarms:topology3"/>
     </Relations>
     ```
 
@@ -154,16 +154,16 @@ Suppose we want to create a tree control that lists all services and the audio a
 
     ```xml
     <TreeControls>
-        <TreeControl parameterId="5" readOnly="false">
-            <Hierarchy>
-                <Table id="1000"/>
-                <Table id="2000" parent="1000"/>
-                <Table id="4000" parent="2000" condition="2003:audio;filter:fk=1001"/>
-                <Table id="6000" parent="2000" condition="2003:video;filter:fk=1001"/>
-            </Hierarchy>
-            <ReadonlyColumns>2003</ReadonlyColumns>
-            <OverrideDisplayColumns>2002</OverrideDisplayColumns>
-        </TreeControl>
+      <TreeControl parameterId="5" readOnly="false">
+        <Hierarchy>
+          <Table id="1000"/>
+          <Table id="2000" parent="1000"/>
+          <Table id="4000" parent="2000" condition="2003:audio;filter:fk=1001"/>
+          <Table id="6000" parent="2000" condition="2003:video;filter:fk=1001"/>
+        </Hierarchy>
+        <ReadonlyColumns>2003</ReadonlyColumns>
+        <OverrideDisplayColumns>2002</OverrideDisplayColumns>
+      </TreeControl>
     </TreeControls>
     ```
 

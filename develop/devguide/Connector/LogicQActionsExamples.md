@@ -371,23 +371,23 @@ protocol.NotifyDataMiner(106, 0, alarmData);   // NT_MAKE_ALARM call.
 
 ```xml
 <Param id="20" trending="false">
-    <Name>AlarmReceiver</Name>
-    <Description>Alarm Receiver</Description>
-    <Type options="linkAlarmValue=..">read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Alarm>
-        <Monitored>true</Monitored>
-    </Alarm>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+   <Name>AlarmReceiver</Name>
+   <Description>Alarm Receiver</Description>
+   <Type options="linkAlarmValue=..">read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Alarm>
+      <Monitored>true</Monitored>
+   </Alarm>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
 ```
 

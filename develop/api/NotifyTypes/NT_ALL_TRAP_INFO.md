@@ -10,30 +10,30 @@ For example, suppose the following context menu item has been defined:
 
 ```xml
 <Param id="3210" trending="false">
-    <Name>FunctionalUnits_ContextMenu</Name>
-    <Description>Context Menu (Functional Units)</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet dependencyValues="3214;3213">
-                <Display>Add Functional Unit...</Display>
-                <Value>addrow</Value>
-            </Discreet>
-            <Discreet options="table:selection">
-                <Display>Delete Functional Units</Display>
-                <Value>delete</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+   <Name>FunctionalUnits_ContextMenu</Name>
+   <Description>Context Menu (Functional Units)</Description>
+   <Type>write</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>discreet</Type>
+      <Discreets>
+         <Discreet dependencyValues="3214;3213">
+            <Display>Add Functional Unit...</Display>
+            <Value>addrow</Value>
+         </Discreet>
+         <Discreet options="table:selection">
+            <Display>Delete Functional Units</Display>
+            <Value>delete</Value>
+         </Discreet>
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 

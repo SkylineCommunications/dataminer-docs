@@ -23,10 +23,10 @@ Option to choose a logarithmic scale for the vertical axis. The parameter’s re
 
 ```xml
 <Param>
-    <Display>
-        <Trending>
-            <Type operations="log10"/>
-        </Trending>
-    </Display>
+   <Display>
+      <Trending>
+         <Type operations="log10"/>
+      </Trending>
+   </Display>
 </Param>
 ```

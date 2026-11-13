@@ -29,18 +29,18 @@ For a list of possible values, see [dynamicSnmpGet](xref:Protocol.Params.Param.T
 >
 >   ```xml
 >   <Param id="1282" snmpSetAndGet="executeNext">
->       ...
->       <Type options="connection=1">write</Type>
+>     ...
+>     <Type options="connection=1">write</Type>
 >   </Param>
->   ```
+>    ```
 
 ## Examples
 
 ```xml
 <Param id="4" trending="false" snmpSetAndGet="true">
-    <Name>SysContact</Name>
-    <Description>System Contact</Description>
-    <Type>write</Type>
+  <Name>SysContact</Name>
+  <Description>System Contact</Description>
+  <Type>write</Type>
 </Param>
 ```
 
@@ -52,19 +52,19 @@ In the example below, param 100 is the table using the instance option, and para
 
 ```xml
 <Param id="100" trending="false">
-    <Name>Items</Name>
-    <Description>Items</Description>
-    <Type>array</Type>
-    <ArrayOptions index="0">
-    ...
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete" options="instance;multipleGetNext">1.3.6.1.2.1.1.8</OID>
-    </SNMP>
-    ...
+  <Name>Items</Name>
+  <Description>Items</Description>
+  <Type>array</Type>
+  <ArrayOptions index="0">
+  ...
+  <SNMP>
+    <Enabled>true</Enabled>
+    <OID type="complete" options="instance;multipleGetNext">1.3.6.1.2.1.1.8</OID>
+  </SNMP>
+  ...
 <Param id="203" snmpSetAndGet="row;executeNext">
-    <Name>Items_Value</Name>
-    <Description>Value (Items)</Description>
-    <Type>write</Type>
-    ...
+  <Name>Items_Value</Name>
+  <Description>Value (Items)</Description>
+  <Type>write</Type>
+  ...
 ```

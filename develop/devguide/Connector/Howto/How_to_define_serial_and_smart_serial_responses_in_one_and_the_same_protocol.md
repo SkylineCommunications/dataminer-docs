@@ -34,12 +34,12 @@ Example:
 
 ```xml
 <Response id="100">
-    <Name>versionNegotiation</Name>
-    <Description>Version Negotiation</Description>
-    <Content>
-        <Param>200</Param>
-        <Param>50</Param>
-    </Content>
+   <Name>versionNegotiation</Name>
+   <Description>Version Negotiation</Description>
+   <Content>
+      <Param>200</Param>
+      <Param>50</Param>
+   </Content>
 </Response>
 ```
 
@@ -51,12 +51,12 @@ Example:
 
 ```xml
 <Response id="101" options="Connection:1">
-    <Name>mediaPlayerStatusSubscription</Name>
-    <Description>Media Player Status Subscription</Description>
-    <Content>
-        <Param>201</Param>
-        <Param>51</Param>
-    </Content>
+   <Name>mediaPlayerStatusSubscription</Name>
+   <Description>Media Player Status Subscription</Description>
+   <Content>
+      <Param>201</Param>
+      <Param>51</Param>
+   </Content>
 </Response>
 ```
 
@@ -71,28 +71,28 @@ To prevent any issue with protocols that have serial as well as smart-serial con
 
 ```xml
 <Responses>
-    <Response id="100" options="Connection:0">
-        <Name>versionNegotiation</Name>
-        <Description>Version Negotiation</Description>
-        <Content>
-            <Param>200</Param>
-            <Param>50</Param>
-        </Content>
-    </Response>
-    <Response id="105" options="Connection:0">
-        <Name>askConfigSubscription</Name>
-        <Description>Ask Config Subscription</Description>
-        <Content>
-            <Param>205</Param>
-            <Param>53</Param>
-        </Content>
-    </Response>
-    <Response id="106" options="Connection:1">
-        <Name>asynchronousFeedback</Name>
-        <Description>Asynchronous Feedback</Description>
-        <Content>
-            <Param>206</Param>
-        </Content>
-    </Response>
+   <Response id="100" options="Connection:0">
+      <Name>versionNegotiation</Name>
+      <Description>Version Negotiation</Description>
+      <Content>
+         <Param>200</Param>
+         <Param>50</Param>
+      </Content>
+   </Response>
+   <Response id="105" options="Connection:0">
+      <Name>askConfigSubscription</Name>
+      <Description>Ask Config Subscription</Description>
+      <Content>
+         <Param>205</Param>
+         <Param>53</Param>
+      </Content>
+   </Response>
+   <Response id="106" options="Connection:1">
+      <Name>asynchronousFeedback</Name>
+      <Description>Asynchronous Feedback</Description>
+      <Content>
+         <Param>206</Param>
+      </Content>
+   </Response>
 </Responses>
 ```

@@ -27,14 +27,14 @@ In the following example, only parameter 40 will be sent as ASCII:
 
 ```xml
 <Command id="8" ascii="40">
-    <Name>Data Input</Name>
-    <Content>
-        <Param>2</Param>
-        <Param>1</Param>
-        <Param>18</Param>
-        <Param>40</Param>
-        <Param>4</Param>
-    </Content>
+   <Name>Data Input</Name>
+   <Content>
+      <Param>2</Param>
+      <Param>1</Param>
+      <Param>18</Param>
+      <Param>40</Param>
+      <Param>4</Param>
+   </Content>
 </Command>
 ```
 

@@ -59,9 +59,9 @@ All `<Param>` tags inside a `<ParameterGroup>` should refer to a different and e
 
 ```xml
 <Group id="1" name="Input" type="in">
-    <Params>
-        <Param id="10"/>
-    </Params>
+  <Params>
+    <Param id="10"/>
+  </Params>
 </Group>
 ```
 
@@ -69,11 +69,11 @@ Note that it is also possible to refer to multiple parameters. In this case, the
 
 ```xml
 <Group id="1" name="Input" type="in">
-    <Params>
-        <Param id="10"/>
-        <Param id="20"/>
-        <Param id="30"/>
-    </Params>
+  <Params>
+    <Param id="10"/>
+    <Param id="20"/>
+    <Param id="30"/>
+  </Params>
 </Group>
 ```
 
@@ -81,9 +81,9 @@ In order to refer to a table cell, specify the ID of the column parameter in the
 
 ```xml
 <Group id="1" name="Input" type="in">
-    <Params>
-        <Param id="303" index="Port A1"/>
-    </Params>
+  <Params>
+    <Param id="303" index="Port A1"/>
+  </Params>
 </Group>
 ```
 
@@ -93,11 +93,11 @@ Finally, it is also possible to combine standalone parameters and cells. In that
 
 ```xml
 <Group id="1" name="Input" type="in">
-    <Params>
-        <Param id="303" index="Port A1"/>
-        <Param id="10" index=""/>
-        <Param id="20" index=""/>
-    </Params>
+  <Params>
+    <Param id="303" index="Port A1"/>
+    <Param id="10" index=""/>
+    <Param id="20" index=""/>
+  </Params>
 </Group>
 ```
 

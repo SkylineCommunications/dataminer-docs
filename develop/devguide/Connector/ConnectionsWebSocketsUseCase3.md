@@ -19,27 +19,27 @@ This should be configured in the *Connections.Connection.CommunicationOptions.We
 
 ```xml
 <Connection id="1" name="WebSocket Connection">
-    <Http>
-        <CommunicationOptions>
-            <WebSocket>true</WebSocket>
-            <NotifyConnectionPIDs>
-                <Connections>7</Connections>
-            </NotifyConnectionPIDs>
-            <MakeCommandByProtocol>true</MakeCommandByProtocol>
-            <WebSocketHandshake>25</WebSocketHandshake>
-        </CommunicationOptions>
-        <UserSettings>
-            <BusAddress>
-                <DefaultValue>bypassProxy</DefaultValue>
-            </BusAddress>
-            <IPport>
-                <DefaultValue>8050</DefaultValue>
-            </IPport>
-            <TimeoutTime>
-                <DefaultValue>5000</DefaultValue>
-            </TimeoutTime>
-        </UserSettings>
-    </Http>
+   <Http>
+      <CommunicationOptions>
+         <WebSocket>true</WebSocket>
+         <NotifyConnectionPIDs>
+            <Connections>7</Connections>
+         </NotifyConnectionPIDs>
+         <MakeCommandByProtocol>true</MakeCommandByProtocol>
+         <WebSocketHandshake>25</WebSocketHandshake>
+      </CommunicationOptions>
+      <UserSettings>
+         <BusAddress>
+            <DefaultValue>bypassProxy</DefaultValue>
+         </BusAddress>
+         <IPport>
+            <DefaultValue>8050</DefaultValue>
+         </IPport>
+         <TimeoutTime>
+            <DefaultValue>5000</DefaultValue>
+         </TimeoutTime>
+      </UserSettings>
+   </Http>
 </Connection>
 ```
 
@@ -47,16 +47,16 @@ This should be configured in the *Connections.Connection.CommunicationOptions.We
 
 ```xml
 <Session id="25" name="WebSocket Handshake">
-    <Connection id="1">
-        <Request verb="GET" pid="8">
-            <Headers>
-                <Header key="Sec-WebSocket-Extensions" pid="9"></Header>
-            </Headers>
-        </Request>
-        <Response statusCode="220">
-            <Content pid="270" />
-        </Response>
-    </Connection>
+   <Connection id="1">
+      <Request verb="GET" pid="8">
+         <Headers>
+            <Header key="Sec-WebSocket-Extensions" pid="9"></Header>
+         </Headers>
+      </Request>
+      <Response statusCode="220">
+         <Content pid="270" />
+      </Response>
+   </Connection>
 </Session>
 ```
 
@@ -64,24 +64,24 @@ Parameter 8 contains the default value *x-nmos/events/ws*. It is possible to mak
 
 ```xml
 <Param id="8" trending="false" save="true">
-    <Name>WebsocketUrl</Name>
-    <Description>Websocket URL</Description>
-    <Type>read</Type>
-    <Information>
-        <Subtext>This is the last part of the WebSocket connection URL.</Subtext>
-    </Information>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-        <DefaultValue>x-nmos/events/ws</DefaultValue>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+   <Name>WebsocketUrl</Name>
+   <Description>Websocket URL</Description>
+   <Type>read</Type>
+   <Information>
+      <Subtext>This is the last part of the WebSocket connection URL.</Subtext>
+   </Information>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+      <DefaultValue>x-nmos/events/ws</DefaultValue>
+   </Interprete>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
 ```
 
@@ -89,15 +89,15 @@ For this handshake, an extra header is needed. Add the correct header key and pl
 
 ```xml
 <Param id="9" trending="false">
-    <Name>Header</Name>
-    <Description>Header</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-        <DefaultValue>permessage-deflate; client_max_window_bits</DefaultValue>
-    </Interprete>
+   <Name>Header</Name>
+   <Description>Header</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+      <DefaultValue>permessage-deflate; client_max_window_bits</DefaultValue>
+   </Interprete>
 </Param>
 ```
 

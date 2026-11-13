@@ -11,25 +11,25 @@ Set the Type of the Measurement tag to "analog".
 
 ```xml
 <Param id="266" trending="false">
-    <Name>CPUUsage</Name>
-    <Description>CPU Usage</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <Type>double</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Units>%</Units>
-        <Range>
-            <Low>0</Low>
-            <High>100</High>
-        </Range>
-    </Display>
-    <Measurement>
-        <Type>analog</Type>
-    </Measurement>
+  <Name>CPUUsage</Name>
+  <Description>CPU Usage</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>numeric text</RawType>
+    <Type>double</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+    <Units>%</Units>
+    <Range>
+      <Low>0</Low>
+      <High>100</High>
+    </Range>
+  </Display>
+  <Measurement>
+    <Type>analog</Type>
+  </Measurement>
 </Param>
 ```
 

@@ -604,39 +604,39 @@ See the \<Replication> tag in the following example:
 
 ```xml
 <Param id="1">
-    <Name>Parameter1</Name>
-    <Description>Parameter 1</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>double</RawType>
-        <LengthType>fixed</LengthType>
-        <Length>8</Length>
-        <Type>double</Type>
-    </Interprete>
-    <Alarm>
-        <Monitored>true</Monitored>
-    </Alarm>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Units></Units>
-        <Range></Range>
-        <Decimals></Decimals>
-        <Steps></Steps>
-        <Positions>
-            <Position>
-                <Page>Main View</Page>
-                <Row>2</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Measurement>
-        <Type>number</Type>
-    </Measurement>
-    <Replication uid="" pwd="">
-        <Element dynamic="4"/>
-        <Parameter dynamic="5"/>
-    </Replication>
+  <Name>Parameter1</Name>
+  <Description>Parameter 1</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>double</RawType>
+    <LengthType>fixed</LengthType>
+    <Length>8</Length>
+    <Type>double</Type>
+  </Interprete>
+  <Alarm>
+    <Monitored>true</Monitored>
+  </Alarm>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+    <Units></Units>
+    <Range></Range>
+    <Decimals></Decimals>
+    <Steps></Steps>
+    <Positions>
+      <Position>
+        <Page>Main View</Page>
+        <Row>2</Row>
+        <Column>0</Column>
+      </Position>
+    </Positions>
+  </Display>
+  <Measurement>
+    <Type>number</Type>
+  </Measurement>
+  <Replication uid="" pwd="">
+    <Element dynamic="4"/>
+    <Parameter dynamic="5"/>
+  </Replication>
 </Param>
 ```
 

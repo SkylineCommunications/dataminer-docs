@@ -22,16 +22,16 @@ In order to capture traps in a protocol, define a parameter that will capture th
 
 ```xml
 <Param id="21">
-    <Name>TrapReceiver</Name>
-    <Description>Trap Receiver</Description>
-    <Type>dummy</Type>
-    <Display>
-        <RTDisplay>false</RTDisplay>
-    </Display>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <TrapOID setBindings="1,250" type="wildcard" ipid="100">1.2.3.4.*</TrapOID>
-    </SNMP>
+   <Name>TrapReceiver</Name>
+   <Description>Trap Receiver</Description>
+   <Type>dummy</Type>
+   <Display>
+      <RTDisplay>false</RTDisplay>
+   </Display>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID setBindings="1,250" type="wildcard" ipid="100">1.2.3.4.*</TrapOID>
+   </SNMP>
 </Param>
 ```
 
@@ -109,25 +109,25 @@ In case this behavior is not desired, the use of a group ID (negative number) be
 
 ```xml
 <Param id="1">
-    <SNMP>
-        <Enabled>true</Enabled>
-        <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received '[1]' [2]' '[3]'|Link:2,3" type="wildcard">1.3.6.1.4.1.31961.0.1.*</TrapOID>
-    </SNMP>
-    ...
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received '[1]' [2]' '[3]'|Link:2,3" type="wildcard">1.3.6.1.4.1.31961.0.1.*</TrapOID>
+   </SNMP>
+   ...
 </Param>
 <Param id="2">
-    <SNMP>
-        <Enabled>true</Enabled>
-        <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received2 '[1]' [2]' '[3]'|Link:2,3" type="wildcard">1.3.6.1.4.1.31961.0.2.*</TrapOID>
-    </SNMP>
-    ...
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received2 '[1]' [2]' '[3]'|Link:2,3" type="wildcard">1.3.6.1.4.1.31961.0.2.*</TrapOID>
+   </SNMP>
+   ...
 </Param>
 <Param id="3">
-    <SNMP>
-        <Enabled>true</Enabled>
-        <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received2 '[1]' [2]' '[3]'|Link:-1,2,3" type="wildcard">1.3.6.1.4.1.31961.0.3.*</TrapOID>
-    </SNMP>
-    ...
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received2 '[1]' [2]' '[3]'|Link:-1,2,3" type="wildcard">1.3.6.1.4.1.31961.0.3.*</TrapOID>
+   </SNMP>
+   ...
 </Param>
 ```
 
@@ -137,29 +137,29 @@ When a trap is received, all TrapMappings are checked top down until a bindingMa
 
 ```xml
 <Param id="10" trending="false">
-    <Name>TrapMappingTrapReceiver</Name>
-    <Description>Trap Mapping Trap Receiver</Description>
-    <Type>dummy</Type>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Alarm>
-        <Monitored>true</Monitored>
-    </Alarm>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <TrapOID mapAlarm="TRUE|Link:3,4,5" type="wildcard" checkBindings="1=id:2">1.3.6.1.4.1.31961.0.10.*</TrapOID>
-        <TrapMappings>
-            <TrapMapping bindingMatch="1:5" severity="Normal"></TrapMapping>
-            <TrapMapping bindingMatch="3:TS Sync Loss" severity="Critical" value="[4]:[3]:[5]"></TrapMapping>
-            <TrapMapping bindingMatch="3:Sync Byte Error" severity="Major" value="[4]:[3]:[5]"></TrapMapping>
-            <TrapMapping bindingMatch="3:CC Error" severity="Warning" value="[4]:[3]:[5]"></TrapMapping>
-            <TrapMapping bindingMatch="*" severity="information" value="Unknown trap:[4]-[3]-[5]"></TrapMapping>
-        </TrapMappings>
-    </SNMP>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+   <Name>TrapMappingTrapReceiver</Name>
+   <Description>Trap Mapping Trap Receiver</Description>
+   <Type>dummy</Type>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Alarm>
+      <Monitored>true</Monitored>
+   </Alarm>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID mapAlarm="TRUE|Link:3,4,5" type="wildcard" checkBindings="1=id:2">1.3.6.1.4.1.31961.0.10.*</TrapOID>
+      <TrapMappings>
+         <TrapMapping bindingMatch="1:5" severity="Normal"></TrapMapping>
+         <TrapMapping bindingMatch="3:TS Sync Loss" severity="Critical" value="[4]:[3]:[5]"></TrapMapping>
+         <TrapMapping bindingMatch="3:Sync Byte Error" severity="Major" value="[4]:[3]:[5]"></TrapMapping>
+         <TrapMapping bindingMatch="3:CC Error" severity="Warning" value="[4]:[3]:[5]"></TrapMapping>
+         <TrapMapping bindingMatch="*" severity="information" value="Unknown trap:[4]-[3]-[5]"></TrapMapping>
+      </TrapMappings>
+   </SNMP>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
 ```
 
@@ -169,47 +169,47 @@ In the following example, the severity is user-definable. The severity attribute
 
 ```xml
 <Param id="20" trending="false">
-    <Name>TrapMappingCustomTrapReceiver</Name>
-    <Description>Trap Mapping Custom Trap Receiver</Description>
-    <Type>dummy</Type>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Alarm>
-        <Monitored>true</Monitored>
-    </Alarm>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <TrapOID mapAlarm="TRUE|Link:3,4,5" type="wildcard">1.3.6.1.4.1.31961.0.20.*</TrapOID>
-        <TrapMappings>
-            <TrapMapping bindingMatch="1:5" severity="id:0"></TrapMapping>
-            <TrapMapping bindingMatch="3:TS Sync Loss" severity="id:1" value="[4]:[3]:[5]"></TrapMapping>
-            <TrapMapping bindingMatch="3:Sync Byte Error" severity="id:2" value="[4]:[3]:[5]"></TrapMapping>
-            <TrapMapping bindingMatch="3:CC Error" severity="id:3" value="[4]:[3]:[5]"></TrapMapping>
-            <TrapMapping bindingMatch="*" severity="NoTrap" value="Unknown trap:[4]-[3]-[5]"></TrapMapping>
-        </TrapMappings>
-    </SNMP>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet>
-                <Display>Ok</Display>
-                <Value>0</Value>
-            </Discreet>
-            <Discreet>
-                <Display>TS Sync Loss</Display>
-                <Value>1</Value>
-            </Discreet>
-            <Discreet>
-                <Display>Sync Byte Error</Display>
-                <Value>2</Value>
-            </Discreet>
-            <Discreet>
-                <Display>CC Error</Display>
-                <Value>3</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+   <Name>TrapMappingCustomTrapReceiver</Name>
+   <Description>Trap Mapping Custom Trap Receiver</Description>
+   <Type>dummy</Type>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Alarm>
+      <Monitored>true</Monitored>
+   </Alarm>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID mapAlarm="TRUE|Link:3,4,5" type="wildcard">1.3.6.1.4.1.31961.0.20.*</TrapOID>
+      <TrapMappings>
+         <TrapMapping bindingMatch="1:5" severity="id:0"></TrapMapping>
+         <TrapMapping bindingMatch="3:TS Sync Loss" severity="id:1" value="[4]:[3]:[5]"></TrapMapping>
+         <TrapMapping bindingMatch="3:Sync Byte Error" severity="id:2" value="[4]:[3]:[5]"></TrapMapping>
+         <TrapMapping bindingMatch="3:CC Error" severity="id:3" value="[4]:[3]:[5]"></TrapMapping>
+         <TrapMapping bindingMatch="*" severity="NoTrap" value="Unknown trap:[4]-[3]-[5]"></TrapMapping>
+      </TrapMappings>
+   </SNMP>
+   <Measurement>
+      <Type>discreet</Type>
+      <Discreets>
+         <Discreet>
+            <Display>Ok</Display>
+            <Value>0</Value>
+         </Discreet>
+         <Discreet>
+            <Display>TS Sync Loss</Display>
+            <Value>1</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Sync Byte Error</Display>
+            <Value>2</Value>
+         </Discreet>
+         <Discreet>
+            <Display>CC Error</Display>
+            <Value>3</Value>
+         </Discreet>
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 
@@ -224,16 +224,16 @@ It is possible that a QAction is required to process an incoming trap. When the 
 
 ```xml
 <Param id="1">
-    <Name>TrapReceiver</Name>
-    <Description>Trap Received</Description>
-    <Type>read</Type>
-    <Interprete>
-        <Type>string</Type>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <TrapOID setBindings="allBindingInfo" type="wildcard" ipid="100">...</TrapOID>
-    </SNMP>
+   <Name>TrapReceiver</Name>
+   <Description>Trap Received</Description>
+   <Type>read</Type>
+   <Interprete>
+      <Type>string</Type>
+   </Interprete>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID setBindings="allBindingInfo" type="wildcard" ipid="100">...</TrapOID>
+   </SNMP>
 </Param>
 ```
 

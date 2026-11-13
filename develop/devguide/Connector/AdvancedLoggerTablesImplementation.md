@@ -13,15 +13,15 @@ To implement a logger table, perform the following steps:
 
    ```xml
    <Param id="5200" trending="false">
-       <Name>LoggedTraps</Name>
-       <Description>Logged Traps</Description>
-       <Type>array</Type>
-       <ArrayOptions index="0" options="database">
-           <ColumnOption idx="0" pid="5201" type="retrieved" />
-           <ColumnOption idx="1" pid="5202" type="retrieved" />
-           ...
-       </ArrayOptions>
-       ...
+      <Name>LoggedTraps</Name>
+      <Description>Logged Traps</Description>
+      <Type>array</Type>
+      <ArrayOptions index="0" options="database">
+         <ColumnOption idx="0" pid="5201" type="retrieved" />
+         <ColumnOption idx="1" pid="5202" type="retrieved" />
+         ...
+      </ArrayOptions>
+      ...
    </Param>
    ```
 
@@ -29,20 +29,20 @@ To implement a logger table, perform the following steps:
 
    ```xml
    <Param id="5200" trending="false">
-       <Name>LoggedTraps</Name>
-       <Description>Logged Traps</Description>
-       <Type>array</Type>
-       <ArrayOptions index="0" options="database">
-           <ColumnOption idx="0" pid="5201" type="retrieved" />
-           <ColumnOption idx="1" pid="5202" type="retrieved" />
-           ...
-       </ArrayOptions>
-       <Database>
-           <CQLOptions>
-               <Clustering>25;2;0</Clustering>
-           </CQLOptions>
-       </Database>
-       ...
+      <Name>LoggedTraps</Name>
+      <Description>Logged Traps</Description>
+      <Type>array</Type>
+      <ArrayOptions index="0" options="database">
+         <ColumnOption idx="0" pid="5201" type="retrieved" />
+         <ColumnOption idx="1" pid="5202" type="retrieved" />
+         ...
+      </ArrayOptions>
+      <Database>
+         <CQLOptions>
+            <Clustering>25;2;0</Clustering>
+         </CQLOptions>
+      </Database>
+      ...
    </Param>
    ```
 
@@ -58,26 +58,26 @@ To implement a logger table, perform the following steps:
 
    ```xml
    <Param id="5204" trending="false">
-       <Name>sip</Name>
-       <Description>Source IP (Logged Traps)</Description>
-       <Information>
-           <Subtext>The Source IP of the trap.</Subtext>
-       </Information>
-       <Type>read</Type>
-       <Interprete>
-           <RawType>other</RawType>
-           <Type>string</Type>
-           <LengthType>next param</LengthType>
-       </Interprete>
-       <Database>
-           <ColumnDefinition>VARCHAR(20)</ColumnDefinition>
-       </Database>
-       <Display>
-           <RTDisplay>true</RTDisplay>
-       </Display>
-       <Measurement>
-           <Type>string</Type>
-       </Measurement>
+      <Name>sip</Name>
+      <Description>Source IP (Logged Traps)</Description>
+      <Information>
+         <Subtext>The Source IP of the trap.</Subtext>
+      </Information>
+      <Type>read</Type>
+      <Interprete>
+         <RawType>other</RawType>
+         <Type>string</Type>
+         <LengthType>next param</LengthType>
+      </Interprete>
+      <Database>
+         <ColumnDefinition>VARCHAR(20)</ColumnDefinition>
+      </Database>
+      <Display>
+         <RTDisplay>true</RTDisplay>
+      </Display>
+      <Measurement>
+         <Type>string</Type>
+      </Measurement>
    </Param>
    ```
 
@@ -132,27 +132,27 @@ To implement a logger table, perform the following steps:
 
    ```xml
    <Param id="5202" trending="false">
-       <Name>ts</Name>
-       <Description>Database Timestamp (Logged Traps)</Description>
-       <Information>
-           <Subtext>This is the principal timestamp used in the database.</Subtext>
-       </Information>
-       <Type>read</Type>
-       <Interprete>
-           <RawType>other</RawType>
-           <Type>string</Type>
-           <LengthType>next param</LengthType>
-       </Interprete>
-       <Database>
-           <ColumnDefinition>DATETIME</ColumnDefinition>
-           <Partition partitionsToKeep="7">day</Partition>
-       </Database>
-       <Display>
-           <RTDisplay>true</RTDisplay>
-       </Display>
-       <Measurement>
-           <Type>string</Type>
-       </Measurement>
+      <Name>ts</Name>
+      <Description>Database Timestamp (Logged Traps)</Description>
+      <Information>
+         <Subtext>This is the principal timestamp used in the database.</Subtext>
+      </Information>
+      <Type>read</Type>
+      <Interprete>
+         <RawType>other</RawType>
+         <Type>string</Type>
+         <LengthType>next param</LengthType>
+      </Interprete>
+      <Database>
+         <ColumnDefinition>DATETIME</ColumnDefinition>
+         <Partition partitionsToKeep="7">day</Partition>
+      </Database>
+      <Display>
+         <RTDisplay>true</RTDisplay>
+      </Display>
+      <Measurement>
+         <Type>string</Type>
+      </Measurement>
    </Param>
    ```
 
@@ -174,11 +174,11 @@ To implement a logger table, perform the following steps:
 
      ```xml
      <Param id="1003">
-         ...
-         <Database>
-             <ColumnDefinition>VARCHAR(200)</ColumnDefinition>
-             <Partition partitionsToKeep="2">hour</Partition>
-         </Database>
+        ...
+        <Database>
+           <ColumnDefinition>VARCHAR(200)</ColumnDefinition>
+           <Partition partitionsToKeep="2">hour</Partition>
+        </Database>
      </Param>
      ```
 
@@ -217,7 +217,7 @@ To indicate that a logger table should be stored in the indexing database instea
 
 ```xml
 <Database>
-    <IndexingOptions enabled="true" />
+   <IndexingOptions enabled="true" />
 </Database>
 ```
 
@@ -237,8 +237,8 @@ In order to prevent indices from rolling over in the indexing database, it is po
 
 ```xml
 <Database>
-    <ColumnDefinition>DATETIME</ColumnDefinition>
-    <Partition>infinite</Partition>
+   <ColumnDefinition>DATETIME</ColumnDefinition>
+   <Partition>infinite</Partition>
 </Database>
 ```
 

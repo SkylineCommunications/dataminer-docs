@@ -9,14 +9,14 @@ It is possible to dynamically change the WebSocket IP (and port). To this end, d
 
 ```xml
 <Param id="1" trending="false" save="true">
-    <Name>URL</Name>
-    <Description>URL</Description>
-    <Type options="dynamic ip">read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
+   <Name>URL</Name>
+   <Description>URL</Description>
+   <Type options="dynamic ip">read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```
 

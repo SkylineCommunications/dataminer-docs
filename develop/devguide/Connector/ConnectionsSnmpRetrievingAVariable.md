@@ -11,26 +11,26 @@ First, a parameter must be defined in the protocol that will hold the received v
 
 ```xml
 <Param id="1" trending="false">
-    <Name>SysUptime</Name>
-    <Description>System Uptime</Description>
-    <Information>
-        <Subtext>Displays the time since the network management portion of the system was last re-initialized.</Subtext>
-    </Information>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <LengthType>next param</LengthType>
-        <Type>double</Type>
-        <Sequence noset="true">div:100</Sequence>
-    </Interprete>
-    <SNMP>
-        <Enabled>true</Enabled>
-        <OID type="complete">1.3.6.1.2.1.1.3.0</OID>
-        <Type>timeticks</Type>
-    </SNMP>
-    <Measurement>
-        <Type options="time">number</Type>
-    </Measurement>
+   <Name>SysUptime</Name>
+   <Description>System Uptime</Description>
+   <Information>
+      <Subtext>Displays the time since the network management portion of the system was last re-initialized.</Subtext>
+   </Information>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>next param</LengthType>
+      <Type>double</Type>
+      <Sequence noset="true">div:100</Sequence>
+   </Interprete>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <OID type="complete">1.3.6.1.2.1.1.3.0</OID>
+      <Type>timeticks</Type>
+   </SNMP>
+   <Measurement>
+      <Type options="time">number</Type>
+   </Measurement>
 </Param>
 ```
 
@@ -48,11 +48,11 @@ Next, a group is defined which has the defined parameter as content.
 
 ```xml
 <Group id="1">
-    <Name>System Uptime</Name>
-    <Description>System Uptime</Description>
-    <Content>
-        <Param>1</Param>
-    </Content>
+   <Name>System Uptime</Name>
+   <Description>System Uptime</Description>
+   <Content>
+      <Param>1</Param>
+   </Content>
 </Group>
 ```
 
@@ -60,12 +60,12 @@ Finally, a timer is defined which has the defined group as its content. This tim
 
 ```xml
 <Timer id="1">
-    <Name>Fast timer</Name>
-    <Time>10000</Time>
-    <Interval>75</Interval>
-    <Content>
-        <Group>1</Group>
-    </Content>
+   <Name>Fast timer</Name>
+   <Time>10000</Time>
+   <Interval>75</Interval>
+   <Content>
+      <Group>1</Group>
+   </Content>
 </Timer>
 ```
 

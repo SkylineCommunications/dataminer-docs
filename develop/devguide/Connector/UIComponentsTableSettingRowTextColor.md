@@ -9,34 +9,34 @@ It is possible to change the text color of table rows. To use this feature, the 
 
 ```xml
 <Param id="100" trending="false">
-    <Name>Items</Name>
-    <Description>Items</Description>
-    <Type>array</Type>
-    <ArrayOptions index="0">
-        <ColumnOption idx="0" pid="101" type="retrieved" options="" />
-        <ColumnOption idx="1" pid="102" type="retrieved" options="" />
-        <ColumnOption idx="2" pid="103" type="retrieved" options=";save;rowTextColoring" />
-    </ArrayOptions>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
+  <Name>Items</Name>
+  <Description>Items</Description>
+  <Type>array</Type>
+  <ArrayOptions index="0">
+    <ColumnOption idx="0" pid="101" type="retrieved" options="" />
+    <ColumnOption idx="1" pid="102" type="retrieved" options="" />
+    <ColumnOption idx="2" pid="103" type="retrieved" options=";save;rowTextColoring" />
+  </ArrayOptions>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
 </Param>
 <Param id="103" trending="false">
-    <Name>Items_RowColor</Name>
-    <Description>Row Color (Items)</Description>
-    <Type>read</Type>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet options="rowTextColor=#FF0000">
-                <Display>Red</Display>
-                <Value>0</Value>
-            </Discreet>
-            <Discreet options="rowTextColor=#0000FF">
-                <Display>Blue</Display>
-                <Value>2</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+  <Name>Items_RowColor</Name>
+  <Description>Row Color (Items)</Description>
+  <Type>read</Type>
+  <Measurement>
+    <Type>discreet</Type>
+    <Discreets>
+      <Discreet options="rowTextColor=#FF0000">
+        <Display>Red</Display>
+        <Value>0</Value>
+      </Discreet>
+      <Discreet options="rowTextColor=#0000FF">
+        <Display>Blue</Display>
+        <Value>2</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 ```

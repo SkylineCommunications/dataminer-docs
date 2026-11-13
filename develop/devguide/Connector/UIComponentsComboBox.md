@@ -11,55 +11,55 @@ To define a combo box, set Type to "string" and also provide a list of discrete 
 
 ```xml
 <Param id="380">
-    <Name>PresetCombobox</Name>
-    <Description>Preset</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-        <Discreets dependencyId="382" />
-    </Measurement>
+  <Name>PresetCombobox</Name>
+  <Description>Preset</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+    <Discreets dependencyId="382" />
+  </Measurement>
 </Param>
 <Param id="381" setter="true">
-    <Name>PresetCombobox</Name>
-    <Description>Preset</Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-        <Discreets dependencyId="382" />
-    </Measurement>
+  <Name>PresetCombobox</Name>
+  <Description>Preset</Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+    <Discreets dependencyId="382" />
+  </Measurement>
 </Param>
 <Param id="382" trending="false">
-    <Name>PresetComboboxValues</Name>
-    <Description>Preset Combobox Values</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-        <DefaultValue>Default.xml;Baseline.xml</DefaultValue>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+  <Name>PresetComboboxValues</Name>
+  <Description>Preset Combobox Values</Description>
+  <Type>read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+    <DefaultValue>Default.xml;Baseline.xml</DefaultValue>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 ```
 

@@ -139,19 +139,19 @@ Example:
 >
 >   ```xml
 >   <Param id="1000" trending="false">
->       <Name>NetworkInterfaces</Name>
->       <Description>Network Interfaces</Description>
->       <Type id="56;57;58;59;60;61;62">array</Type>
->       <ArrayOptions index="0">
->           <ColumnOption idx="7" pid="63" type="retrieved" options="" />
->           <ColumnOption idx="8" pid="64" type="state" options=";delete" />
->       </ArrayOptions>
->       <Interprete>
->           <RawType>other</RawType>
->           <Type>double</Type>
->           <LengthType>next param</LengthType>
->       </Interprete>
->       ...
+>      <Name>NetworkInterfaces</Name>
+>      <Description>Network Interfaces</Description>
+>      <Type id="56;57;58;59;60;61;62">array</Type>
+>      <ArrayOptions index="0">
+>         <ColumnOption idx="7" pid="63" type="retrieved" options="" />
+>         <ColumnOption idx="8" pid="64" type="state" options=";delete" />
+>      </ArrayOptions>
+>      <Interprete>
+>         <RawType>other</RawType>
+>         <Type>double</Type>
+>         <LengthType>next param</LengthType>
+>      </Interprete>
+>      ...
 >   </Param>
 >   ```
 
@@ -168,12 +168,12 @@ Example:
 ```xml
 <ArrayOptions index="1" displayColumn="1" partial="true" options=";volatile;view=1500,remoteId;
 directView=5361;filterChange=19901-1501,19902-1502,19903-1503,19904-1504,19905-1505">
-    <ColumnOption idx="0" pid="19901" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
-    <ColumnOption idx="1" pid="19906" type="viewTableKey" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
-    <ColumnOption idx="2" pid="19902" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
-    <ColumnOption idx="3" pid="19903" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
-    <ColumnOption idx="4" pid="19904" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
-    <ColumnOption idx="5" pid="19905" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
+   <ColumnOption idx="0" pid="19901" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
+   <ColumnOption idx="1" pid="19906" type="viewTableKey" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
+   <ColumnOption idx="2" pid="19902" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
+   <ColumnOption idx="3" pid="19903" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
+   <ColumnOption idx="4" pid="19904" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
+   <ColumnOption idx="5" pid="19905" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
 </ArrayOptions>
 ```
 

@@ -38,32 +38,32 @@ Example:
 
 ```xml
 <Param id="1000" trending="false">
-    <Name>Inputs</Name>
-    <Description>Inputs</Description>
-    <Type>array</Type>
-    <Information>
-        <Subtext>Table representation of the matrix. This table will contain the information of the inputs.</Subtext>
-    </Information>
-    <ArrayOptions index="0" options=";naming=/1002">
-        <ColumnOption idx="0" pid="1001" type="autoincrement" options=";save" />
-        <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
-        <ColumnOption idx="2" pid="1003" type="retrieved" options=";save" />
-        <ColumnOption idx="3" pid="1004" type="retrieved" options=";save" />
-        <ColumnOption idx="4" pid="1005" type="retrieved" options=";save" />
-    </ArrayOptions>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>Tables</Page>
-                <Row>0</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Measurement>
-        <Type options="tab=columns:1001|0-1002|1-1003|2-1004|3-1005|4,width:80-200-60-60-100,sort:STRING-STRING-STRING-STRING-STRING,lines:15,filter:true">table</Type>
-    </Measurement>
+   <Name>Inputs</Name>
+   <Description>Inputs</Description>
+   <Type>array</Type>
+   <Information>
+      <Subtext>Table representation of the matrix. This table will contain the information of the inputs.</Subtext>
+   </Information>
+   <ArrayOptions index="0" options=";naming=/1002">
+      <ColumnOption idx="0" pid="1001" type="autoincrement" options=";save" />
+      <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
+      <ColumnOption idx="2" pid="1003" type="retrieved" options=";save" />
+      <ColumnOption idx="3" pid="1004" type="retrieved" options=";save" />
+      <ColumnOption idx="4" pid="1005" type="retrieved" options=";save" />
+   </ArrayOptions>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>
+         <Position>
+            <Page>Tables</Page>
+            <Row>0</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Measurement>
+      <Type options="tab=columns:1001|0-1002|1-1003|2-1004|3-1005|4,width:80-200-60-60-100,sort:STRING-STRING-STRING-STRING-STRING,lines:15,filter:true">table</Type>
+   </Measurement>
 </Param>
 ```
 
@@ -84,37 +84,37 @@ Example:
 
 ```xml
 <Param id="2000" trending="false">
-    <Name>Outputs</Name>
-    <Description>Outputs</Description>
-    <Type>array</Type>
-    <Information>
-        <Subtext>Table representation of the matrix. This table will contain the information of the outputs.</Subtext>
-    </Information>
-    <ArrayOptions index="0" options=";naming=/2002">
-        <ColumnOption idx="0" pid="2001" type="autoincrement" options=";save" />
-        <ColumnOption idx="1" pid="2002" type="retrieved" options=";save" />
-        <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
-        <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
-        <ColumnOption idx="4" pid="2005" type="retrieved" options=";save;foreignKey=1000" />
-        <ColumnOption idx="5" pid="2006" type="retrieved" options=";save" />
-        <ColumnOption idx="6" pid="2007" type="retrieved" options=";save" />
-        <ColumnOption idx="7" pid="2008" type="retrieved" options=";save" />
-        <ColumnOption idx="8" pid="2009" type="retrieved" options=";save" />
-        <ColumnOption idx="9" pid="2010" type="retrieved" options=";save" />
-    </ArrayOptions>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>Tables</Page>
-                <Row>1</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Measurement>
-        <Type options="tab=columns:2001|0-2002|1-2003|2-2004|3-2005|4-2006|5-2007|6-2008|7-2009|8-2010|9,width:80-200-60-60-112-80-80-0-112-100,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING,lines:15,filter:true">table</Type>
-    </Measurement>
+   <Name>Outputs</Name>
+   <Description>Outputs</Description>
+   <Type>array</Type>
+   <Information>
+      <Subtext>Table representation of the matrix. This table will contain the information of the outputs.</Subtext>
+   </Information>
+   <ArrayOptions index="0" options=";naming=/2002">
+      <ColumnOption idx="0" pid="2001" type="autoincrement" options=";save" />
+      <ColumnOption idx="1" pid="2002" type="retrieved" options=";save" />
+      <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
+      <ColumnOption idx="3" pid="2004" type="retrieved" options=";save" />
+      <ColumnOption idx="4" pid="2005" type="retrieved" options=";save;foreignKey=1000" />
+      <ColumnOption idx="5" pid="2006" type="retrieved" options=";save" />
+      <ColumnOption idx="6" pid="2007" type="retrieved" options=";save" />
+      <ColumnOption idx="7" pid="2008" type="retrieved" options=";save" />
+      <ColumnOption idx="8" pid="2009" type="retrieved" options=";save" />
+      <ColumnOption idx="9" pid="2010" type="retrieved" options=";save" />
+   </ArrayOptions>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>
+         <Position>
+            <Page>Tables</Page>
+            <Row>1</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Measurement>
+      <Type options="tab=columns:2001|0-2002|1-2003|2-2004|3-2005|4-2006|5-2007|6-2008|7-2009|8-2010|9,width:80-200-60-60-112-80-80-0-112-100,sort:STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING-STRING,lines:15,filter:true">table</Type>
+   </Measurement>
 </Param>
 ```
 
@@ -144,61 +144,61 @@ Example:
 
 ```xml
 <Param id="3" trending="false">
-    <Name>DummyMatrixParam</Name>
-    <Type>Matrix</Type>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>Matrix</Page>
-                <Row>0</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
-    </Display>
-    <Matrix>
-        <Inputs tablePid="1000">
-            <!-- This is the table parameter ID of the inputs table of this matrix-->
-            <Mappings>
-                <Mapping type="pid" name="index">1001</Mapping><!-- This is the primary key column parameter ID of the inputs table of this matrix => Indicates the index of the input.-->
-                <Mapping type="pid" name="label">1002</Mapping><!-- This is the label column parameter ID of the inputs table of this matrix => Contains the label of the input.-->
-                <Mapping type="pid" name="state">1003</Mapping><!-- This is the state column parameter ID of the inputs table of this matrix => Indicates whether the input is enabled or not.-->
-                <Mapping type="pid" name="lock">1004</Mapping><!-- This is the lock column parameter ID of the inputs table of this matrix => Indicates whether the input is locked or not.-->
-                <Mapping type="pid" name="page">1005</Mapping><!-- This is the page column parameter ID of the inputs table of this matrix => Indicates on which page the input is located.-->
-            </Mappings>
-        </Inputs>
-        <Outputs tablePid="2000">
-            <!-- This is the table parameter ID of the outputs table of this matrix-->
-            <Mappings>
-                <Mapping type="pid" name="index">2001</Mapping><!-- This is the primary key column parameter ID of the outputs table of this matrix => Indicates the index of the output.-->
-                <Mapping type="pid" name="label">2002</Mapping><!-- This is the label column parameter ID of the outputs table of this matrix => Contains the label of the output.-->
-                <Mapping type="pid" name="state">2003</Mapping><!-- This is the state column parameter ID of the outputs table of this matrix => Indicates whether the output is enabled or not.-->
-                <Mapping type="pid" name="lock">2004</Mapping><!-- This is the lock column parameter ID of the outputs table of this matrix => Indicates whether the output is locked or not.-->
-                <Mapping type="pid" name="connectedInput">2005</Mapping><!-- This is the connectedInput column parameter ID of the inputs table of this matrix => Contains which input is connected to this output. Note: Tables only support one input per output.-->
-                <Mapping type="pid" name="page">2006</Mapping><!-- This is the page column parameter ID of the outputs table of this matrix => Indicates on which page the output is located.-->
-                <Mapping type="pid" name="tooltip">2007</Mapping><!-- This is the tooltip column parameter ID of the outputs table of this matrix => Contains the tooltip shown on the crosspoint of this output.-->
-                <Mapping type="pid" name="lockOverride">2008</Mapping><!-- This is the lockOverride column parameter ID of the outputs table of this matrix => Contains the lock override parameter for this output. This can be used to (un)set a crosspoint while locked.-->
-            </Mappings>
-        </Outputs>
-        <MatrixOptions>
-            <MatrixOption type="value" name="matrixLayout">InputLeftOutputTop</MatrixOption><!--Set this option if you want the matrix UI to position inputs or outputs at the top or on the left. Note: For table matrices, the only supported values are 'InputTopOutputLeft' or 'InputLeftOutputTop'.-->
-            <MatrixOption type="value" name="pages">true</MatrixOption><!-- Set this option if you want to enable auto-paging on this matrix. Note: Custom pages can be set via the page column on the tables.-->
-            <MatrixOption type="value" name="minimumConnectedInputsPerOutput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected inputs for an output. Note: 0 for no minimum.-->
-            <MatrixOption type="value" name="maximumConnectedInputsPerOutput">1</MatrixOption><!-- Set this option if you want to specify a maximum of connected inputs for an output. Note: Always 1 because of the nature of the table column (table matrix only). -->
-            <MatrixOption type="value" name="minimumConnectedOutputsPerInput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected outputs for an input. Note: 0 for no minimum.-->
-            <MatrixOption type="value" name="maximumConnectedOutputsPerInput">auto</MatrixOption><!-- Set this option if you want to specify a maximum of connected outputs for an input. Note: auto for no maximum (scales with the table).-->
-        </MatrixOptions>
-    </Matrix>
-    <Information>
-        <Subtext>Matrix representation(dummy parameter)</Subtext>
-    </Information>
-    <Alarm>
-        <Monitored>false</Monitored>
-        <!-- Monitoring on this parameter is not supported, since the monitoring is done on table level.-->
-    </Alarm>
-    <Measurement>
-        <Type>matrix</Type>
-    </Measurement>
+   <Name>DummyMatrixParam</Name>
+   <Type>Matrix</Type>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>
+         <Position>
+            <Page>Matrix</Page>
+            <Row>0</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Matrix>
+      <Inputs tablePid="1000">
+         <!-- This is the table parameter ID of the inputs table of this matrix-->
+         <Mappings>
+            <Mapping type="pid" name="index">1001</Mapping><!-- This is the primary key column parameter ID of the inputs table of this matrix => Indicates the index of the input.-->
+            <Mapping type="pid" name="label">1002</Mapping><!-- This is the label column parameter ID of the inputs table of this matrix => Contains the label of the input.-->
+            <Mapping type="pid" name="state">1003</Mapping><!-- This is the state column parameter ID of the inputs table of this matrix => Indicates whether the input is enabled or not.-->
+            <Mapping type="pid" name="lock">1004</Mapping><!-- This is the lock column parameter ID of the inputs table of this matrix => Indicates whether the input is locked or not.-->
+            <Mapping type="pid" name="page">1005</Mapping><!-- This is the page column parameter ID of the inputs table of this matrix => Indicates on which page the input is located.-->
+         </Mappings>
+      </Inputs>
+      <Outputs tablePid="2000">
+         <!-- This is the table parameter ID of the outputs table of this matrix-->
+         <Mappings>
+            <Mapping type="pid" name="index">2001</Mapping><!-- This is the primary key column parameter ID of the outputs table of this matrix => Indicates the index of the output.-->
+            <Mapping type="pid" name="label">2002</Mapping><!-- This is the label column parameter ID of the outputs table of this matrix => Contains the label of the output.-->
+            <Mapping type="pid" name="state">2003</Mapping><!-- This is the state column parameter ID of the outputs table of this matrix => Indicates whether the output is enabled or not.-->
+            <Mapping type="pid" name="lock">2004</Mapping><!-- This is the lock column parameter ID of the outputs table of this matrix => Indicates whether the output is locked or not.-->
+            <Mapping type="pid" name="connectedInput">2005</Mapping><!-- This is the connectedInput column parameter ID of the inputs table of this matrix => Contains which input is connected to this output. Note: Tables only support one input per output.-->
+            <Mapping type="pid" name="page">2006</Mapping><!-- This is the page column parameter ID of the outputs table of this matrix => Indicates on which page the output is located.-->
+            <Mapping type="pid" name="tooltip">2007</Mapping><!-- This is the tooltip column parameter ID of the outputs table of this matrix => Contains the tooltip shown on the crosspoint of this output.-->
+            <Mapping type="pid" name="lockOverride">2008</Mapping><!-- This is the lockOverride column parameter ID of the outputs table of this matrix => Contains the lock override parameter for this output. This can be used to (un)set a crosspoint while locked.-->
+         </Mappings>
+      </Outputs>
+      <MatrixOptions>
+         <MatrixOption type="value" name="matrixLayout">InputLeftOutputTop</MatrixOption><!--Set this option if you want the matrix UI to position inputs or outputs at the top or on the left. Note: For table matrices, the only supported values are 'InputTopOutputLeft' or 'InputLeftOutputTop'.-->
+         <MatrixOption type="value" name="pages">true</MatrixOption><!-- Set this option if you want to enable auto-paging on this matrix. Note: Custom pages can be set via the page column on the tables.-->
+         <MatrixOption type="value" name="minimumConnectedInputsPerOutput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected inputs for an output. Note: 0 for no minimum.-->
+         <MatrixOption type="value" name="maximumConnectedInputsPerOutput">1</MatrixOption><!-- Set this option if you want to specify a maximum of connected inputs for an output. Note: Always 1 because of the nature of the table column (table matrix only). -->
+         <MatrixOption type="value" name="minimumConnectedOutputsPerInput">0</MatrixOption><!-- Set this option if you want to specify a minimum of connected outputs for an input. Note: 0 for no minimum.-->
+         <MatrixOption type="value" name="maximumConnectedOutputsPerInput">auto</MatrixOption><!-- Set this option if you want to specify a maximum of connected outputs for an input. Note: auto for no maximum (scales with the table).-->
+      </MatrixOptions>
+   </Matrix>
+   <Information>
+      <Subtext>Matrix representation(dummy parameter)</Subtext>
+   </Information>
+   <Alarm>
+      <Monitored>false</Monitored>
+      <!-- Monitoring on this parameter is not supported, since the monitoring is done on table level.-->
+   </Alarm>
+   <Measurement>
+      <Type>matrix</Type>
+   </Measurement>
 </Param>
 ```
 

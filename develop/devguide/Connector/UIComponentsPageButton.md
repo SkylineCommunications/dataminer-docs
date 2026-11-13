@@ -18,30 +18,30 @@ To define a page button:
 
 ```xml
 <Param id="220">
-    <Name>SettingsPageButton</Name>
-    <Description></Description>
-    <Type>write</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <Type>string</Type>
-        <LengthType>next param</LengthType>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type width="110">pagebutton</Type>
-        <Discreets>
-            <Discreet>
-                <Display>Settings...</Display>
-                <Value>Settings</Value>
-            </Discreet>
-            <Discreet>
-                <Display>Advanced Settings...</Display>
-                <Value>Advanced Settings</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+  <Name>SettingsPageButton</Name>
+  <Description></Description>
+  <Type>write</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <Type>string</Type>
+    <LengthType>next param</LengthType>
+  </Interprete>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Measurement>
+    <Type width="110">pagebutton</Type>
+    <Discreets>
+      <Discreet>
+        <Display>Settings...</Display>
+        <Value>Settings</Value>
+      </Discreet>
+      <Discreet>
+        <Display>Advanced Settings...</Display>
+        <Value>Advanced Settings</Value>
+      </Discreet>
+    </Discreets>
+  </Measurement>
 </Param>
 ```
 
