@@ -133,8 +133,8 @@ With this in mind, your table definition should look something like this:
 
 ```xml
 <Param id="4100" trending="false">
-    <Name>SAPBaseInfos</Name>
-    <Description>SAP Base Infos</Description>
+    <Name>SAPBaseInfo</Name>
+    <Description>SAP Base Info</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";naming=:4199">
         <ColumnOption idx="0" pid="4200" type="snmp" options="" />

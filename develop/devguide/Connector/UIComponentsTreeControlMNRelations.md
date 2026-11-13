@@ -28,12 +28,12 @@ Suppose we want to create a tree control that lists all services and the audio a
       </Param>
       ```
 
-    - Audio Streams (ID 4000): Contains the audio streams
+    - Audio (ID 4000): Contains the audio streams
 
       ```xml
       <Param id="4000" trending="false">
-        <Name>AudioStreams</Name>
-        <Description>Audio Streams</Description>
+        <Name>Audio</Name>
+        <Description>Audio</Description>
         <Type>array</Type>
         <ArrayOptions index="0" displayColumn="1">
           <ColumnOption idx="0" pid="4001" type="autoincrement" options="" />
@@ -46,12 +46,12 @@ Suppose we want to create a tree control that lists all services and the audio a
       </Param>
       ```
 
-    - Video Streams (ID 6000): Contains the video streams
+    - Video (ID 6000): Contains the video streams
 
       ```xml
       <Param id="6000" trending="false">
-        <Name>VideoStreams</Name>
-        <Description>Video Streams</Description>
+        <Name>Video</Name>
+        <Description>Video</Description>
         <Type>array</Type>
         <ArrayOptions index="0" options=";naming=/6002">
           <ColumnOption idx="0" pid="6001" type="autoincrement" options="" />
