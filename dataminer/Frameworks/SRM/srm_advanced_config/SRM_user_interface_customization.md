@@ -1,5 +1,6 @@
 ---
 uid: SRM_user_interface_customization
+description: "Find out how to create a custom Booking Manager frontend, use custom scripts, and customize Bookings list columns and timeline booking blocks."
 ---
 
 # User interface customization
