@@ -291,6 +291,14 @@ Both online and offline Agents will now keep their XML-based services in memory 
 
 During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
 
+#### DataMiner upgrade: DxMs installed under a previous product name could be skipped [ID 46938]
+
+<!-- MR 10.7.0 / 10.6.0 [CU10] - FR 10.7.1 -->
+
+During a DataMiner upgrade, installed DxMs could fail to be recognized if their product name had changed. For example, an existing SiteManager installation could be skipped instead of being upgraded to EdgeManager.
+
+The upgrade process now uses MSI upgrade codes to detect related products and recognize installations made under a previous product name.
+
 #### Service & Resource Management: Canceled reservations could prevent resource updates [ID 46952]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
@@ -306,3 +314,11 @@ Canceled reservations are now ignored when checking whether resource updates wou
 When initialization of `CCAEndpointManager` failed, the initialization alarm could remain active even after a subsequent retry succeeded.
 
 An initialization alarm will now only be generated if all initialization retries fail.
+
+#### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Previously, a DataMiner upgrade would install the CloudFeed DxM even on DataMiner Agents where it was not installed or had previously been uninstalled.
+
+From now on, the CloudFeed DxM will only be upgraded if it is already installed. It will be updated to the version included in the DataMiner upgrade package. This prevents unnecessary resource consumption on DataMiner Agents that do not need the CloudFeed DxM.

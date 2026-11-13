@@ -163,6 +163,14 @@ The Web API now also accepts a connection string in the HTTP header `Authorizati
 
 Cross-origin resource sharing (CORS) now allows the `Authorization` header for sandboxed uploaded apps.
 
+#### Web DcM: Updated PuppeteerSharp and bundled Chromium [ID 46955]
+
+<!-- MR 10.7.0 / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The Web DcM, which generates PDF reports, now uses PuppeteerSharp 25.15.0 instead of 21.1.1.
+
+This update also includes Chromium 155.0.8059.84.
+
 #### Web apps: Information message when an app manages its own theme [ID 46973]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
