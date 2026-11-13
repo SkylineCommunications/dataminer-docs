@@ -29,7 +29,7 @@ A fixed field is defined using a parameter of type "fixed". The content of fixed
 
 ```xml
 <Param id="100">
-   <Name>FixedSpace</Name>
+   <Name>Fixed_Space</Name>
    <Description>Fixed Space</Description>
    <Type>fixed</Type>
    <Interprete>
