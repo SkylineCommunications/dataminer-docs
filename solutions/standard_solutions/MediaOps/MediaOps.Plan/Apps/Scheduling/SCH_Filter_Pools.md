@@ -3,7 +3,7 @@ uid: SCH_Filter_Pools
 description: "Filter resource pools by category in the Scheduling app to find relevant pools faster. To do so, create categories in the Categories app."
 ---
 
-# Filtering resource pools by category
+# Filtering by category
 
 For systems that have many resource pools, it might become cumbersome to find the pools in the long list of pools. To make it easier to find the relevant pools, you can filter the pools by a selected category. For this, categories need to be created in the *Categories* app.
 
