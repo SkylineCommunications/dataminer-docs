@@ -27,7 +27,6 @@ Example:
 <Param id="100">
     <Name>DynamicGetOID</Name>
     <Description>Dynamic Get OID</Description>
-    <Information></Information>
     <Type dynamicSnmpGet="true">read</Type>
 </Param>
 ```
