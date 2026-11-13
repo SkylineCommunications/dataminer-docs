@@ -11,13 +11,9 @@ If you choose to [manage the DataMiner nodes yourself](#self-managed-dataminer-n
 
 ## Self-managed DataMiner nodes
 
-To set up and maintain your DataMiner System, you can make use of the DataMiner **System Center** in DataMiner Cube. This provides an intuitive UI to manage DataMiner nodes, users, log files, and so on. System Center is also the place where the administrator can configure the DataMiner redundancy settings (i.e., high-availability or Failover nodes), and it includes an upgrade center to easily trigger a software update, regardless of the number of DataMiner nodes.
+To set up and maintain your DataMiner System, you can make use of the DataMiner **System Center** in DataMiner Cube. This provides an intuitive UI to manage DataMiner nodes, users, log files, and so on. It also includes an upgrade center to easily trigger a software update, regardless of the number of DataMiner nodes.
 
-In terms of **redundancy**, each DMA (DataMiner node) in a DataMiner System can be teamed up with a dedicated backup DMA in a so-called [Failover setup](xref:failover). Within a DMA redundancy team, the backup DMA will continuously be synchronized so that, at all times, it is ready to take over from its team member the moment that one fails. When you team up a particular DataMiner node with a backup DMA, a virtual DMA team will be created. Within a DMA team, the two team members will act as peers. In other words, they will not act as master DMA versus slave DMA, but as active DMA versus passive DMA.
-
-By default, all synchronization traffic between the active and the passive team member will pass via the corporate network. If necessary, both team members can also be equipped with an additional network card to be used for synchronization traffic only.
-
-The decision when to switch from the active to the passive DMA can be taken either by a person (i.e., manual Failover) or by the DMAs themselves (i.e., automatic Failover). In the latter case, the two DMAs in the team will check each other’s status by exchanging heartbeats.
+In terms of **redundancy**, a DataMiner System with multiple nodes can use [Swarming](xref:Swarming) to move elements and other supported objects between nodes. Combined with [Node Recovery](xref:NodeRecovery_About), the remaining nodes can automatically take over the workload of a failed node, provided that they have enough spare capacity and can reach the managed equipment. Swarming replaces the older [Failover](xref:failover) feature, which has reached End of Engineering. For more information, see [Redundancy](xref:Overview_Architecture_and_components#redundancy).
 
 In terms of **backup and restore**, DataMiner nodes require a [one-time configuration by the administrator](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube#configuring-the-dataminer-backups) in order to fully automatically take care of backups. The administrator can choose:
 
@@ -52,7 +48,7 @@ The service is powered by Microsoft Azure’s cloud-native storage solutions, su
 
 *Easy & flexible configuration*
 
-Our development team has worked tirelessly to ensure all data types are added to the most suitable cloud-native storage provided by Microsoft Azure. And while all of this is being tested and validated rigorously, they are now working on migration options for existing systems and ensuring easy and flexible configuration.
+Our development team has worked tirelessly to ensure all data types are added to the most suitable cloud-native storage provided by Microsoft Azure. Existing systems can [migrate their data to STaaS](xref:Migrating_existing_data_to_STaaS).
 
 *Pay as you go*
 
