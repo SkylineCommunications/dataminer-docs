@@ -29,7 +29,7 @@ A **fixed** parameter acts as a data placeholder that will not change. Though it
 
 ```xml
 <Param id="11">
-   <Name>Fixed0x0A</Name>
+   <Name>Fixed_0x0A</Name>
    <Description>Fixed 0x0A</Description>
    <Type>read</Type>
    <Interprete>
