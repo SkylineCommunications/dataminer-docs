@@ -28,7 +28,7 @@ Here is an **example** of a *directView* table:
 ```xml
 <Param id="8500">
     <Name>View_RegionOverviews</Name>
-    <Description>View Region Overviews</Description>
+    <Description>View_Region Overviews</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";volatile;naming=/8502;view=8000;directView=801;onlyFilteredDirectView" partial="true:200">
         <ColumnOption idx="0" pid="8501" type="retrieved" options=";view=8001"/>
