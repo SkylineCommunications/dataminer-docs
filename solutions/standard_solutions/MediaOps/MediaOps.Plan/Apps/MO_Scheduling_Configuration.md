@@ -21,6 +21,12 @@ Depending on the app you are using, you can open the dialog in different ways:
 
 ## Scheduling configuration dialog layout
 
+By default, the *Scheduling Configuration* dialog opens in a simplified **operator view**. In this view, linked parameters, disabled or unconfigured automated actions, selected scripts, and linked arguments are hidden so you can focus on the parameters that require immediate attention.<!-- RN 45838, 46215 -->
+
+To view the complete configuration, select the **Show all details** checkbox at the top of the dialog to switch to the full **engineer view**. This displays all parameters (including linked parameters), all automated actions, selected scripts, and linked input arguments.
+
+When there is nothing to configure in the operator view, a message informs you that you can select *Show all details* to see all parameters and events.
+
 The dialog consists of two main areas:
 
 - **Left side**: The scheduling configuration, which consists of three sections: [Capabilities](#capabilities), [Capacities](#capacities), and [Configurations](#configurations).
@@ -95,6 +101,8 @@ To configure an automated action:
 
    - **Script input elements**: DataMiner element selections required by the script.
    - **Script input parameters**: Free-form parameters expected by the script.
+   - **Standalone profile parameters**: Profile parameters that are directly linked to the orchestration script without being part of a profile definition.<!-- RN 46447 -->
+   - **Dynamic inputs**: Orchestration scripts with dynamic inputs (available from MediaOps Live 1.2.0 onwards). Dynamic inputs adapt in real time to values you provide (for example, selecting options or counts will show or hide dependent fields). Related inputs are grouped in collapsible sections, required inputs are marked with a ✋ icon, and units are shown next to values. Dynamic inputs can also be linked dynamically to job or node properties and parameters.<!-- RN 46655 -->
 
 ## Mandatory parameters and full configuration
 
@@ -102,11 +110,13 @@ Capabilities, capacities, and configurations can be configured as mandatory in R
 
 Only when all mandatory parameters and all automated action inputs are fully defined, is a node considered fully configured. This is reflected in the UI by the hand icon disappearing from the node.
 
-All nodes and job-level configuration must be fully configured before you can confirm a job. Once a job is confirmed, you can only update the job in a way that keeps everything fully configured. If an update were to leave mandatory parameters incomplete, you can return the job to the tentative state first.
+All nodes and job-level configuration must be fully configured before you can confirm a job. However, jobs do not require resource nodes to be confirmed; node-less jobs can move through the *Tentative* and *Confirmed* states freely.<!-- RN 46064 -->
+
+Once a job is confirmed, you can update existing node configurations or add/swap nodes, even while the job is in the *Running* state. In running jobs, automated actions that have already executed remain locked and read-only, and they are excluded from mandatory-value checks.<!-- RN 46981, 46982 -->
 
 ## Dynamic parameter linking
 
-As from MediaOps Plan version 1.6.0, when configuring a resource pool in Resource Studio, or configuring a workflow in the Workflow Designer or Scheduling app, you can dynamically link parameter values to other data sources. Instead of manually entering fixed values for capabilities, capacities, configurations, or orchestration script inputs, you can configure a link to dynamically resolve the value from another source, such as a resource property, capability, capacity, configuration, or job property.
+When configuring a resource pool in Resource Studio, or configuring a workflow in the Workflow Designer, in the Scheduling app, or directly from the *Add Node* panel, you can dynamically link parameter values to other data sources. Instead of manually entering fixed values for capabilities, capacities, configurations, or orchestration script inputs, you can configure a link to dynamically resolve the value from another source, such as a resource property, capability, capacity, configuration, or job property.
 
 The value is automatically determined on job update based on the linked source. The UI shows a placeholder indicating where the value comes from.
 
@@ -122,7 +132,7 @@ The value is automatically determined on job update based on the linked source. 
 
 1. If the selected [link type is node-scoped](#node-scoped-link-types), in the node dropdown, select the node whose data you want to reference.
 
-   Depending on the link type, a second dropdown will appear where you can select the specific target (e.g., which property, which capability, which capacity, etc.).
+1. Select the specific target parameter or property from the corresponding dropdown (*Property*, *Capability*, *Capacity*, or *Configuration*).
 
 1. Click the *Link* button to confirm.
 
@@ -145,13 +155,13 @@ The available link types depend on the parameter category being configured. Each
 | Link type | Description | Available for |
 |--|--|--|
 | Resource Name | Resolves to the name of the resource assigned to a node. | Configuration parameters and orchestration script inputs |
-| Resource Property | Resolves to a specific property value of the assigned resource. | Configuration parameters, orchestration script inputs, and orchestration script elements |
+| Resource Property | Resolves to a specific property value of the assigned resource. | Capability parameters, capacity parameters, configuration parameters, orchestration script inputs, and orchestration script elements |
 | Resource Linked Object ID | Resolves to the linked object ID of the assigned resource. | Configuration parameters, orchestration script inputs, and orchestration script elements |
 | Capability Parameter | Resolves to the value of a capability configured on a node. | Capability parameters, configuration parameters, and orchestration script inputs |
 | Capacity Parameter | Resolves to the value of a capacity configured on a node. | Capacity parameters, configuration parameters, and orchestration script inputs |
 | Configuration Parameter | Resolves to the value of a configuration parameter on a node. | Capability parameters, capacity parameters, configuration parameters, and orchestration script inputs |
 | Job Name | Resolves to the name of the job. | Configuration parameters and orchestration script inputs |
-| Job Property | Resolves to a custom property defined on the job. | Capability parameters, configuration parameters, orchestration script inputs, and orchestration script elements |
+| Job Property | Resolves to a custom property defined on the job. | Capability parameters, capacity parameters, configuration parameters, orchestration script inputs, and orchestration script elements |
 
 ### Node-scoped link types
 
@@ -163,3 +173,11 @@ The following link types are node-scoped, meaning that a specific workflow node 
 - Capability Parameter
 - Capacity Parameter
 - Configuration Parameter
+
+### Linking dropdown and numeric parameters<!-- RN 46573 -->
+
+When parameter values are linked, the source type is evaluated when the link is resolved:
+
+- **Dropdown parameters**: Any dropdown parameter (whether it is a capability, a configuration, or an orchestration script profile parameter) can be linked to any text value, such as a job or node property, a resource property, or another dropdown or text parameter. The resolved text value is matched against the display values of the dropdown options, falling back to underlying values.
+- **Free-form numeric parameters**: A parameter with numeric input can be linked to any source that resolves to a number within the parameter's configured range.
+- **Invalid links**: If no option matches or if a resolved numeric value falls outside the allowed range, the parameter displays *Invalid value*. While an invalid link exists, the job cannot be confirmed or updated until it is corrected.

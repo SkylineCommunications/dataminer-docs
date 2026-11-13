@@ -1,6 +1,6 @@
 ---
 uid: SCH_Edit_Job
-description: Explore the Edit job panel of the Scheduling app. This panel consists of different sections where you can view and edit job settings and information.
+description: "Explore the Edit job panel of the Scheduling app. This panel consists of different sections where you can view and edit job settings and information."
 ---
 
 # Editing a job
@@ -25,7 +25,7 @@ All the way at the top of the panel, you can see an overview indicating the curr
 
 ## Job Info
 
-This section contains the **general information** about the job: the ID, name, description, priority, and the start and end time. Clicking the pencil icon in the upper-right corner allows you to make changes to this. The pencil icon below that can be used to modify the properties of the job.
+This section contains the **general information** about the job: the ID, name, description, job type, priority, and the start and end time. Clicking the pencil icon in the upper-right corner allows you to make changes to this. The pencil icon below that can be used to modify the properties of the job.
 
 Below this general information, different buttons are shown depending on the [state of the job](xref:MO_S_Job_States):
 
@@ -40,11 +40,14 @@ These buttons can be used for the following actions:
 
 - **Save as Tentative**: Moves the job to the tentative state, which will reserve all resources.
 - **Edit job config**: Allows you to configure the capabilities and/or capacities linked to the job. See [Scheduling configuration](xref:MO_Scheduling_Configuration).
-- **Confirm**: Moves the job from the tentative to the confirmed state, which will execute the orchestration script linked to the job.
+- **Confirm**: Moves the job from the tentative to the confirmed state, which will reserve the resources and create the orchestration events in MediaOps Live.<!-- RN 45894 -->
 - **Cancel job**: Cancels the job and frees up the resources again.
-- **Return to Tentative**: Moves the job back to the tentative state, which frees up the resources again.<!-- RN 43042 -->
+- **Return to Tentative**: Moves the job back to the tentative state, which frees up the resources and removes its orchestration events from MediaOps Live.<!-- RN 43042, 45894 -->
 - **Manual start**: Moves the start time of the job to the current time, so that it starts immediately. This will change the job state to running.
 - **Stop early**: Triggers the stop actions, so that the job stops immediately. This will change the job state to confirmed.
+
+> [!NOTE]
+> Even while a job is in the *Running* state, you can still add, swap, or edit node configurations in the *Nodes* or *Workflow* sections.<!-- RN 46981, 46982 -->
 
 ## Related
 

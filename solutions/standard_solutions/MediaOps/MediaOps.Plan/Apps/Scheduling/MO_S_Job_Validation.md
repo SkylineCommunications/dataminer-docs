@@ -1,11 +1,11 @@
 ---
 uid: Overview_MediaOps_Validation
-description: Validate upcoming jobs in the Scheduling app to catch resource and configuration issues early, and fix them before the booking starts.
+description: "Validate upcoming jobs in the Scheduling app to catch resource and configuration issues early, and fix them before the booking starts."
 ---
 
 # Validation of upcoming jobs
 
-To ensure smooth operations, it is essential that each booking is properly configured and that all required resources are available when the booking starts. By default, a scheduled task runs every hour to verify this. The task will validate the upcoming jobs set to start within the next hour. However, the interval and period can be [customized](#customizing-the-interval-and-period).
+To ensure smooth operations, it is essential that each booking is properly configured and that all required resources are available when the booking starts. By default, a scheduled task runs every hour to verify this. The task will validate the upcoming jobs set to start within the next two hours (120 minutes).<!-- RN 46566 --> However, the interval and period can be [customized](#customizing-the-interval-and-period).
 
 When an error is detected, the job will enter the [error state](xref:MO_S_Job_States). This will be indicated with a red color, for example:
 
@@ -27,7 +27,7 @@ Detected errors cannot be cleared individually by a user. Instead, any change to
 
 ## Customizing the interval and period
 
-By default, validation occurs every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task in the Scheduler module in DataMiner Cube. As long as the description of this scheduled task does not contain `[CUSTOM]`, the scheduled task will be automatically maintained by the solution.
+By default, validation occurs every hour. You can adjust this schedule by editing the **MediaOps // Scheduling - Validate upcoming bookings** scheduled task in the Scheduler module in DataMiner Cube. As long as the description of this scheduled task does not contain the word "custom" (case-insensitive), the scheduled task will be automatically maintained by the solution. Manually customized tasks are preserved during updates.<!-- RN 46566 -->
 
 Once you have customized the scheduled task, it is your responsibility to ensure that the script remains compatible with newer versions of the solution.
 
