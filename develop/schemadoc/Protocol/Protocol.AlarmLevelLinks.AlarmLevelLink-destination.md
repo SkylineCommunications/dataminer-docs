@@ -43,8 +43,8 @@ Table 2000 is defined as follows:
 
 ```xml
 <Param id="2000" trending="false">
-   <Name>ServiceOverviews</Name>
-   <Description>Service Overviews</Description>
+   <Name>Services</Name>
+   <Description>Services</Description>
    <Type>array</Type>
    <ArrayOptions index="0" options="">
       <NamingFormat>,2002</NamingFormat>

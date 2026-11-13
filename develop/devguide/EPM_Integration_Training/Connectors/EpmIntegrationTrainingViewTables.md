@@ -27,8 +27,8 @@ Here is an **example** of a *directView* table:
 
 ```xml
 <Param id="8500">
-    <Name>View_RegionOverviews</Name>
-    <Description>View_Region Overviews</Description>
+    <Name>View_Regions</Name>
+    <Description>View_Regions</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";volatile;naming=/8502;view=8000;directView=801;onlyFilteredDirectView" partial="true:200">
         <ColumnOption idx="0" pid="8501" type="retrieved" options=";view=8001"/>
@@ -52,8 +52,8 @@ In the example above, the information found in table 8000 is mapped to a view ta
 
 ```xml
 <Param id="8000">
-    <Name>RegionOverviews</Name>
-    <Description>Region Overviews</Description>
+    <Name>Regions</Name>
+    <Description>Regions</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";naming=/8002" partial="true:200">
         <ColumnOption idx="0" pid="8001" type="retrieved" options=""/>
@@ -84,8 +84,8 @@ Since you are essentially duplicating the information from the local table to a 
 
 ```xml
 <Param id="8001" trending="false" duplicateAs="8501">
-    <Name>RegionOverviews_Index</Name>
-    <Description>Index (Region Overviews)</Description>
+    <Name>Regions_Index</Name>
+    <Description>Index (Regions)</Description>
     <Information>
         <Subtext>This is the key used internally by DataMiner to identify the table entries.</Subtext>
     </Information>
