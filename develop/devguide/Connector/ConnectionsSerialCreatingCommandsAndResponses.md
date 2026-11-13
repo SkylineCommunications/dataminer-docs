@@ -555,7 +555,7 @@ In case the CRC value is required as hex instead of decimal, the Base tag can be
 
 ```xml
 <Param id="91">
-   <Name>CRC5</Name>
+   <Name>CRC_5</Name>
    <Description>CRC 5</Description>
    <Type>crc</Type>
    <Interprete>
