@@ -1,6 +1,6 @@
 ---
 uid: SCH_Filter_Pools
-description: Filter resource pools by category in the Scheduling app to find relevant pools faster. To do so, create categories in the Categories app.
+description: "Filter resource pools by category in the Scheduling app to find relevant pools faster. To do so, create categories in the Categories app."
 ---
 
 # Filtering resource pools by category
@@ -50,3 +50,17 @@ From the *Resource View* page or the *Add/Pick/Swap/Link Node* panels, you can f
 | Before filtering | After filtering |
 |:--:|:--:|
 | ![Unfiltered Resource View page](~/solutions/images/Scheduling_Categories_Before.png) | ![Resource View page filtered on the SAT category](~/solutions/images/Scheduling_Categories_After.png) |
+
+## Custom job types
+
+The Categories app is also used to define custom job types for the Scheduling app:
+
+1. In the Categories app, select the **Job Type** scope.
+
+   By default, a *Scheduled* job type is present.
+
+1. Click *New Category* to add custom job types as needed.
+
+1. Assign an icon to each job type.
+
+In the Scheduling app, these job types appear in the *Job Type* dropdown when you create or edit a job.<!-- RN 46112 --> The configured icons are displayed above the timeline on the *Job View* page, allowing you to filter the timeline by clicking a job type icon. Hovering over an icon displays the job type name. If no icon is configured, a default filter icon is shown.<!-- RN 46151 -->

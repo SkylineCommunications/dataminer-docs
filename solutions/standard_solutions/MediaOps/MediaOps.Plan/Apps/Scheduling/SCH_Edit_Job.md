@@ -1,6 +1,6 @@
 ---
 uid: SCH_Edit_Job
-description: Explore the Edit job panel of the Scheduling app. This panel consists of different sections where you can view and edit job settings and information.
+description: "Explore the Edit job panel of the Scheduling app. This panel consists of different sections where you can view and edit job settings and information."
 ---
 
 # Editing a job
@@ -25,7 +25,7 @@ All the way at the top of the panel, you can see an overview indicating the curr
 
 ## Job Info
 
-This section contains the **general information** about the job: the ID, name, description, priority, and the start and end time. Clicking the pencil icon in the upper-right corner allows you to make changes to this. The pencil icon below that can be used to modify the properties of the job.
+This section contains the **general information** about the job: the ID, name, description, job type, priority, and the start and end time. Clicking the pencil icon in the upper-right corner allows you to make changes to this. The pencil icon below that can be used to modify the properties of the job.
 
 Below this general information, different buttons are shown depending on the [state of the job](xref:MO_S_Job_States):
 
@@ -40,11 +40,14 @@ These buttons can be used for the following actions:
 
 - **Save as Tentative**: Moves the job to the tentative state, which will reserve all resources.
 - **Edit job config**: Allows you to configure the capabilities and/or capacities linked to the job. See [Scheduling configuration](xref:MO_Scheduling_Configuration).
-- **Confirm**: Moves the job from the tentative to the confirmed state, which will execute the orchestration script linked to the job.
+- **Confirm**: Moves the job from the tentative to the confirmed state, which will reserve the resources and create the orchestration events in MediaOps Live.<!-- RN 45894 -->
 - **Cancel job**: Cancels the job and frees up the resources again.
-- **Return to Tentative**: Moves the job back to the tentative state, which frees up the resources again.<!-- RN 43042 -->
+- **Return to Tentative**: Moves the job back to the tentative state, which frees up the resources and removes its orchestration events from MediaOps Live.<!-- RN 43042, 45894 -->
 - **Manual start**: Moves the start time of the job to the current time, so that it starts immediately. This will change the job state to running.
 - **Stop early**: Triggers the stop actions, so that the job stops immediately. This will change the job state to confirmed.
+
+> [!NOTE]
+> Even while a job is in the *Running* state, you can still add, swap, or edit node configurations in the *Nodes* or *Workflow* sections.<!-- RN 46981, 46982 -->
 
 ## Related
 
@@ -66,8 +69,22 @@ This section provides a list view of all nodes in the job. With the *Add Node* b
 
 If a node is linked to a resource pool but the resource itself still needs to be selected, the ![Red Hand](~/solutions/images/Red_Hand_icon.png) icon will be shown in the *Resource Select Column*. In that case, you can click the icon to pick the resource from the available resources in the pool.
 
+The following options and features are available in this section:
+
+- **Auto assign resources**: Above the *Nodes* table, you can click the *Auto assign resources* button to automatically assign eligible resources to all unassigned nodes in a *Draft* or *Tentative* job. If a resource cannot be assigned, a message will indicate the reason (e.g., missing mandatory configuration or no available resource in that time slot).<!-- RN 46409 -->
+- **Return resource node to pool**: In a *Draft* or *Tentative* job, you can swap an assigned resource node back to a resource pool node. For tentative jobs, this immediately releases the reservation for that resource.<!-- RN 46436 -->
+- **Search and filtering**: In all resource selection panels (*Add Resource*, *Pick Resource*, *Swap Resource*, etc.), search and filtering options are available to quickly locate the desired resources or pools.<!-- RN 46907 -->
+- **Swapping pools**: When you swap a node to a different resource pool with a different scheduling configuration, a prompt asks whether to **Keep** the current configuration and automated actions or **Revert** them to match the new pool.<!-- RN 45924 -->
+- **Editing running jobs**: In a *Running* job, you can edit existing node configurations and configure newly added or swapped nodes. Automated actions that have already executed remain locked and read-only.<!-- RN 46981, 46982 -->
+- **Node numbering**: When multiple nodes have the same name, they are numbered sequentially (e.g., "Encoder Pool (1)", "Encoder Pool (2)") instead of showing GUIDs.<!-- RN 46679 -->
+
 ## Workflow
 
 This section shows the nodes in the job in a workflow diagram and allows you to manage both the nodes and the connections between them.
+
+The following features are available in the workflow diagram:
+
+- **Tooltips**: Hovering over a node displays a tooltip with its alias, resource name, and resource pool name.<!-- RN 46025 -->
+- **Inserting nodes**: To insert a node between two connected nodes, select the connection and use the node insertion panel to pick the resource or pool.<!-- RN 46145 -->
 
 For a practical example, refer to the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder).
