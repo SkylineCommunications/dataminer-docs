@@ -26,7 +26,7 @@ The following example illustrates the definition of a view table that refers to 
 <!-- This is a ViewTable with the lst, 2nd, 3rd, 4th columns from table 200 and 4th and 5th columns from table 100. The Foreign Key from table 200 to table 100 is on column 203. -->
 <Param id="500">
    <Name>View_Services</Name>
-   <Description>View Services</Description>
+   <Description>View_Services</Description>
    <Type>array</Type>
    <ArrayOptions index="0" options=";volatile;view=200">
       <ColumnOption idx="0" pid="501" type="custom" options=";view=201" /><!-- ID -->
