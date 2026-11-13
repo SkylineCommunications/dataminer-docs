@@ -37,7 +37,7 @@ With the hex attribute, it is possible to display a number in HEX format:
 ```xml
 <Param>
    <Measurement>
-      <Type hex="true">NUMBER</Type>
+      <Type hex="true">number</Type>
    </Measurement>
 ```
 
