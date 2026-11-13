@@ -38,8 +38,8 @@ The table definition in the connector for the *SAP Base Info Hidden* table:
 
 ```xml
 <Param id="4600">
-    <Name>HiddenSAPBaseInfos</Name>
-    <Description>Hidden SAP Base Infos</Description>
+    <Name>SAPBaseInfoHidden</Name>
+    <Description>Hidden SAP Base Info</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";naming=:4605">
         <ColumnOption idx="0" pid="4601" type="snmp" options=""/>
