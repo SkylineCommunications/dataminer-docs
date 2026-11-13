@@ -133,8 +133,8 @@ For example:
 
 ```xml
 <Param id="100">
-  <Name>MainButtonPanels</Name>
-  <Description>Main Button Panels</Description>
+  <Name>MainButtonPanel</Name>
+  <Description>Main Button Panel</Description>
   <Type>array</Type>
   <ArrayOptions index="0" options=";naming=/101,102">
     <ColumnOption idx="0" pid="101" type="retrieved" options=""/>
