@@ -122,12 +122,12 @@ Suppose we want to create a tree control that lists all services and the audio a
       </Param>
       ```
 
-   - Services to Types FK Linking (ID: 7000): Links the services with the correct link type.
+   - Services to Link Types Relations (ID: 7000): Links the services with the correct link type.
 
       ```xml
       <Param id="7000" trending="false">
-        <Name>ServicesToTypesFKLinking</Name>
-        <Description>Services to Types FK Linking</Description>
+        <Name>ServicesToLinkTypesRelations</Name>
+        <Description>Services to Link Types Relations</Description>
         <Type>array</Type>
         <ArrayOptions index="0" displayColumn="0">
           <ColumnOption idx="0" pid="7001" type="autoincrement" options=""/>
