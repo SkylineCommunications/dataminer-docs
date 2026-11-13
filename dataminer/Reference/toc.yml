@@ -182,6 +182,8 @@ items:
         topicUid: swarming_bookings_benchmarks
       - name: Swarming elements benchmarks
         topicUid: swarming_elements_benchmarks
+      - name: Swarming services benchmarks
+        topicUid: swarming_services_benchmarks
       - name: Trending benchmarks
         topicUid: trend_benchmarks
       - name: User-Defined APIs benchmarks
