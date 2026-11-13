@@ -14,16 +14,7 @@ For example, the following parameter, defined on the parent element, will send t
 ```xml
 <Param id="100" trending="false">
    <Name>distributedParameter</Name>
-   <Description>DistributedParameter</Description>
-   <Information>
-      <Subtext />
-      <Includes>
-         <Include>time</Include>
-         <Include>range</Include>
-         <Include>steps</Include>
-         <Include>units</Include>
-      </Includes>
-   </Information>
+   <Description>Distributed Parameter</Description>
    <Type distribution="protocol:Tandberg;pid:100;remote:true">read</Type>
    <Interprete>
       <RawType>numeric text</RawType>
