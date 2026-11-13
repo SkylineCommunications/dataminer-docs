@@ -1,5 +1,6 @@
 ---
 uid: Standalone_BPA_Executor
+description: "Find out how you can use the Standalone BPA Executor tool to run Best Practices Analysis tests outside of DataMiner Cube. "
 ---
 
 # Standalone BPA Executor

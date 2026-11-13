@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Concurrent_users
+description: "Plan concurrent user access with DataMiner's unlimited user count, no per-user fee, and guaranteed support for at least 100 concurrent users."
 ---
 
 # How many (concurrent) users can log in to a DataMiner System?

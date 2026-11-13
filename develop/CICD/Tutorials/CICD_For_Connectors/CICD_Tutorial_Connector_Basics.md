@@ -282,7 +282,7 @@ You should now see your CI and CD jobs complete successfully.
 
 ### Advanced options: CI
 
-The *Skyline Communications* organization uses more than these actions. For enhanced CI, you can take a look at our [reusable workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Connector%20Master%20SDK%20Workflow.yml).
+The *Skyline Communications* organization uses more than these actions. For enhanced CI, you can take a look at our [Master Workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/Master%20Workflow.yml).
 
 These are some of the more interesting things you can find in our reusable workflows:
 
@@ -300,7 +300,7 @@ These are some of the more interesting things you can find in our reusable workf
 
 ### Advanced options: CD
 
-The *Skyline Communications* organization provides starter workflows that run the reusable workflow for CI and then allow optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-CICD-Connector.yml):
+The *Skyline Communications* organization provides starter workflows that run the reusable workflow for CI and then allow optional CD to be defined by the user. You can take a look at our [starter workflow](https://github.com/SkylineCommunications/.github/blob/main/workflow-templates/DataMiner-Connector.yml):
 
 - The CI reusable workflow is triggered as specified above.
 

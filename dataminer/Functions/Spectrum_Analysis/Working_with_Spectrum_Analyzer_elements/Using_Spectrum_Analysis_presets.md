@@ -30,7 +30,7 @@ Presets can be saved publicly (i.e., shared) or privately:
 
 - Private: Private presets are only available for the user account that created them. Other users will not be able to see or use these presets.
 
-From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46113-->, when a spectrum analyzer is configured to use [shared session mode](xref:Viewing_spectrum_analyzer_traces#enabling-shared-session-mode), its latest configuration is automatically saved in a shared last session preset when a user closes the card. When another user opens the spectrum analyzer, this preset is loaded automatically, so all users see the same configuration.
+From DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 onwards<!--RN 46113-->, when a spectrum analyzer is configured to use [shared session mode](xref:Viewing_spectrum_analyzer_traces#enabling-shared-session-mode), its latest configuration is automatically saved in a shared last session preset when a user closes the card. When another user opens the spectrum analyzer, this preset is loaded automatically, so all users see the same configuration. From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46514-->, other users can also be notified of changes to the shared last-session preset. See [Sharing spectrum sessions](xref:Viewing_spectrum_analyzer_traces#sharing-spectrum-sessions) for information on how to push these changes and how other clients can handle them.
 
 ## Saving presets
 
@@ -59,7 +59,9 @@ To load a preset in DataMiner Cube:
 1. In the *Preset contents* section, select the checkboxes corresponding to the preset content you want to load.
 
    > [!NOTE]
-   > Depending on the content of the preset, some checkboxes may not be available.
+   >
+   > - Prior to DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12, some checkboxes may not be available, depending on the selected preset. From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46683-->, all preset content checkboxes remain enabled. Bold labels indicate which content is available in the selected preset.
+   > - Selecting or loading a private or public preset does not change your checkbox selections. Your selections are saved and restored when you reopen the Spectrum Analyzer. Last-session presets restore the session independently of the checkboxes used to load private and public presets.
 
 1. Click the *Load* button.
 

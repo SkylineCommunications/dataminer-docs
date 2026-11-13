@@ -1,0 +1,123 @@
+---
+uid: Cube_Feature_Release_10.7.1
+description: "Release notes for DataMiner Cube Feature Release 10.7.1, with new features, enhancements, and fixes planned for this preview release."
+---
+
+# DataMiner Cube Feature Release 10.7.1 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU10].
+
+> [!TIP]
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.7.1](xref:General_Feature_Release_10.7.1).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.7.1](xref:Web_apps_Feature_Release_10.7.1).
+
+## Highlights
+
+*No highlights have been selected yet.*
+
+## New features
+
+### Security: Support for DataMiner Intelligence permissions [ID 46803]
+
+<!-- MR 10.6.0 [CU10]/10.7.0 [CU0] - FR 10.7.1 -->
+
+DataMiner Cube now displays the following permissions under *General* in the user group permissions configuration when the connected DataMiner Agent supports them:
+
+- *Intelligence Usage*: Grants access to all features related to DataMiner Intelligence.
+- *Intelligence App*: Grants access to the Intelligence app.
+
+Both permissions are enabled by the limited administrator and full administrator presets. They are hidden when the connected DataMiner Agent does not support them.
+
+> [!NOTE]
+> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.7.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
+
+## Changes
+
+### Breaking changes
+
+#### Service & Resource Management: Legacy reservation support removed for DataMiner 10.6.0 and later [ID 46936]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When DataMiner Cube connects to a DataMiner Agent running version 10.6.0 or later, legacy reservations will no longer be available in the following components:
+
+- The Resource Manager booking view and timeline/scheduler.
+- Dynamic lists.
+- *Reservation* shapes in Visual Overview.
+
+Legacy reservation support remains available when Cube connects to a DataMiner Agent running a version earlier than 10.6.0. Resources and `ReservationInstance` objects are not affected by this change.
+
+See also: [Service & Resource Management: Support for legacy reservations removed [ID 46931]](xref:General_Feature_Release_10.7.1#service--resource-management-support-for-legacy-reservations-removed-id-46931)
+
+### Enhancements
+
+#### Element migration and DELT export: Safeguards for element connections [ID 46857]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+Element connections cannot be imported. Previously, migrating an element used in element connections could cause those connections to stop working. Element connections are also not included in DELT export packages.
+
+From now on, DataMiner Cube will handle elements used in element connections as follows:
+
+- **Element migration**: These elements will no longer appear in the list of elements that can be migrated, preventing migration from breaking their element connections.
+- **DELT export**: These elements will display a warning icon indicating that their element connections will not be included in the exported `.dmimport` package. You can still export the elements, but you will need to manually configure their element connections again after importing the package.
+
+> [!NOTE]
+> If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
+
+### Fixes
+
+#### Visual Overview: Parameter shapes would stop updating after a remote DMA restart or Failover switch [ID 46800]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When a Visual Overview shape displayed a parameter value from an element hosted on a DataMiner Agent other than the one DataMiner Cube was connected to, the shape would stop updating after the hosting Agent was restarted or performed a Failover switch. Closing and reopening the card was the only way to make the value update again.
+
+From now on, the shape will subscribe to the parameter again after the hosting Agent comes back online, so the displayed value will continue to update.
+
+#### State icons: Subscription exceptions would be logged on the DMA when the state icons feature was disabled [ID 46862]
+
+<!-- MR 10.5.0 [CU22] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+When state icons were disabled in the SLAnalytics configuration, DataMiner Cube would still subscribe to state icon changes for every trended parameter displayed on an element card. For partial or filtered tables, it renewed these subscriptions whenever a row was added or removed. Each subscription caused an exception to be logged on the DataMiner Agent to which DataMiner Cube was connected.
+
+From now on, DataMiner Cube will only subscribe to state icon changes when the state icons feature is enabled.
+
+#### Memory leaks in custom text block controls and workspace settings [ID 46871]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+DataMiner Cube could retain certain custom text block controls and workspace setting views in memory after they were no longer in use, causing memory leaks.
+
+From now on, Cube will stop timers and remove event subscriptions when these controls are unloaded, hidden, or their content changes. The workspace settings suggestion timer will only run while suggestions are being processed.
+
+#### Visual Overview: Reference lines, markers, and thresholds would not appear when opening a spectrum component [ID 46902]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you opened a visual overview containing a spectrum component, reference lines, markers, and thresholds configured in the drawing or in a preset would not be displayed correctly until you resized that visual overview.
+
+These items will now be displayed correctly when the spectrum component is first opened.
+
+#### Scheduler: Timeline task deletion could fail and Edit/Delete options could be missing [ID 46935]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When DataMiner Cube was connected via gRPC, deleting a scheduled task from *Scheduler > Timeline > Tasks* could fail because the delete request used an incorrect hosting DataMiner ID.
+
+Also, when no Scheduler templates were available, the *Edit* and *Delete* options would be missing from a scheduled task's context menu. These options will now be displayed when you have the corresponding Scheduler permissions, regardless of whether templates are available.
+
+#### Documents: Uploading element documents to subfolders could delete or corrupt files [ID 46940]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you uploaded an element document to a subfolder in DataMiner Cube, the following issues could occur:
+
+- If a document with the same file name existed in the element's root documents folder, that document would be deleted.
+- If the destination file already existed in the subfolder, either as a complete document or as a partial file from an aborted upload, the uploaded data would be appended to that file instead of replacing it, resulting in a corrupt document.
+
+From now on, uploading an element document to a subfolder will no longer delete a document with the same file name in the root documents folder, and overwriting an existing document will replace its contents correctly.

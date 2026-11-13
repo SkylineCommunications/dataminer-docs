@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_Viewing_memory_usage
+description: "Learn how, using the SLNetClientTest tool, you can check how much memory specific elements, parameters, and tables are using in SLProtocol."
 ---
 
 # Viewing the memory usage of elements, parameters, and tables

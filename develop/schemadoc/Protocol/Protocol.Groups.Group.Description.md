@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Description
+description: "Use the Description element under Group in a DataMiner protocol to store optional descriptive text for a protocol group."
 ---
 
 # Description element

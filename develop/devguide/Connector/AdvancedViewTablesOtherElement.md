@@ -1,5 +1,6 @@
 ---
 uid: AdvancedViewTablesOtherElement
+description: "Build direct view tables to aggregate data from other elements, with options for filtered results and columns from different protocols."
 ---
 
 # View tables from other elements
@@ -125,7 +126,7 @@ DirectView updates are supported in the following scenarios:<!-- RN 27547 -->
 
 ## Allowing different remote element sources in view table columns
 
-From DataMiner 10.2.4 onwards (RN 32579), it is possible to have multiple sets of elements referenced by different columns within the same view table.
+It is possible to have multiple sets of elements referenced by different columns within the same view table.<!-- RN 32579 -->
 
 In the following example, parameters 201 and 301 each contain a list of remote elements, and both can be used within the same view table (in different ColumnOption tags).
 
@@ -134,6 +135,6 @@ In the following example, parameters 201 and 301 each contain a list of remote e
 <ColumnOption idx="4" pid="2005" type="retrieved" options=";view=:301:1000:4"/>
 ```
 
-## Creating a direct view table with table columns of different protocols
+## Creating a direct view table with table columns from different protocols
 
-From DataMiner 10.2.9 onwards (RN 33253), it is possible to a create a direct view table with table columns of different protocols. For more information, refer to [CrossDriverOptions](xref:Protocol.Params.Param.CrossDriverOptions).
+To create a direct view table with table columns from different protocols, refer to [CrossDriverOptions](xref:Protocol.Params.Param.CrossDriverOptions).<!-- RN 33253 -->

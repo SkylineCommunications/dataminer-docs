@@ -18,8 +18,24 @@ DocumentHub ships with several [user-defined APIs](xref:UD_APIs), which you can 
 
 For an example of how you can authenticate requests to these APIs, refer to the tutorial [Managing buckets with the DocumentHub user-defined APIs](xref:Tutorial_DH_UDAPI). To find the route used as the public URL segment of each API, check the value defined in the *User-Defined APIs* module in DataMiner Cube.
 
-> [!TIP]
-> For the full source code of these scripts, go to the [DocumentHub Solution repository](https://github.com/SkylineCommunications/SLC-S-DocumentHub) on GitHub (look for projects starting with `SLC-DH-UDAPI-*`).
+## API specification
+
+DocumentHub deploys a single OpenAPI specification for all `SLC-DH-UDAPI-*` APIs under public/APIs on the DataMiner System. The default local bucket lists files stored under `public/`, including `public/APIs/DocumentHub.json`. In the DocumentHub application, locate and download this file. You can then open it in an OpenAPI viewer, such as Swagger Editor, to explore the APIs interactively.
+
+The specification lists the routes, HTTP methods, and request and response models, grouped by API.
+
+The default routes are listed below. The public route can be configured separately for each API in the *User-Defined APIs* module in DataMiner Cube.
+
+| API | Default route |
+| --- | --- |
+| Manage Buckets (`Buckets`) | `dh-buckets` |
+| Manage DOM Sources (`DomSources`) | `dh-dom-sources` |
+| Manage SharePoint Sources (`SharePointConfigurations`) | `dh-sharepoint-configs` |
+| Manage Files (`Files`) | `dh-files` |
+| Download File (`DownloadFile`) | `dh-download-file` |
+| Read DOM Modules (`DomModules`) | `dh-dom-modules` |
+| Read DOM Definitions (`DomDefinitions`) | `dh-dom-definitions` |
+| Get Agent Version (`AgentVersion`) | `dh-agent-version` |
 
 ## Handling of unsupported methods
 

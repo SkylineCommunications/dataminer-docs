@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Display.Visibility.Standalone-pid
+description: "Use the Standalone pid attribute in a DataMiner protocol to identify the trigger parameter that controls search chain visibility."
 ---
 
 # pid attribute

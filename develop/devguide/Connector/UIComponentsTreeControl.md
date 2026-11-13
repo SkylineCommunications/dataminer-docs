@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsTreeControl
+description: "Learn how DataMiner Cube tree controls represent hierarchical data and review their configuration, relations, icons, and limitations."
 ---
 
 # Tree control

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ElementType
+description: "Use the ElementType element in a DataMiner protocol to specify the type of device for which the protocol is used."
 ---
 
 # ElementType element

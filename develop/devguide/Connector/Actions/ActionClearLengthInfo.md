@@ -1,5 +1,6 @@
 ---
 uid: LogicActionClearLengthInfo
+description: "Use the clear length info action on a response when updated header, trailer, or length parameter data requires length information to be recalculated."
 ---
 
 # clear length info

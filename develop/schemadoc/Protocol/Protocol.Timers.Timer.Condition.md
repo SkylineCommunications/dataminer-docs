@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Condition
+description: "Use the Timer.Condition element to define an execution condition for a timer, though defining conditions on timer groups is generally recommended instead."
 ---
 
 # Condition element

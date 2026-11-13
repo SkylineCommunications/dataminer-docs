@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Session-next
+description: "Use the Session next attribute in a DataMiner protocol to set the delay after a session response before the next item executes."
 ---
 
 # next attribute

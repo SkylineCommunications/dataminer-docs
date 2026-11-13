@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSmartSerialDynamicPolling
+description: "Configure dynamic polling for a client smart-serial connection so you can change its IP address and port while the element remains active."
 ---
 
 # Dynamic polling

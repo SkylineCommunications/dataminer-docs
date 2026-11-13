@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CrossDriverOptions
+description: "Use the CrossDriverOptions element in a DataMiner protocol to combine columns from multiple protocols in one direct view table."
 ---
 
 # CrossDriverOptions element

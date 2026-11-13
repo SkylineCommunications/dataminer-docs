@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ReadonlyColumns
+description: "Use the ReadonlyColumns element in a DataMiner protocol to hide write controls for specific table columns in a tree control."
 ---
 
 # ReadonlyColumns element

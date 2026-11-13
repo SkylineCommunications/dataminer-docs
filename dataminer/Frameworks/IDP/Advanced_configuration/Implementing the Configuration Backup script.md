@@ -1,5 +1,6 @@
 ---
 uid: ConfigurationBackupScript
+description: "Implement a Configuration Backup script in DataMiner IDP using C# to exchange file contents or paths, with optional change detection."
 ---
 
 # Implementing the Configuration Backup script

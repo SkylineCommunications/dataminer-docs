@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_trend_data_inspector
+description: "Learn how, using the SLNetClientTest tool, you can request trend data for a certain parameter and inspect the raw database records."
 ---
 
 # Consulting the trend data inspector

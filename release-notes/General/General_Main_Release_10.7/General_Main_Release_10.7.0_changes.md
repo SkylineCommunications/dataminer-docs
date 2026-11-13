@@ -1,5 +1,6 @@
 ---
 uid: General_Main_Release_10.7.0_changes
+description: "Changes in DataMiner General Main Release 10.7.0, including breaking changes, enhancements, and fixes planned for this preview release."
 ---
 
 # General Main Release 10.7.0 – Changes (preview)
@@ -13,7 +14,7 @@ The following changes may have an impact on your system, so please make sure to 
 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
-- [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
+- [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 
 ## Changes
 
@@ -42,6 +43,15 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e.,
 Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
 
 In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
+
+#### Document Intelligence: Assistant permission checks [ID 46944]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission.
+
+> [!IMPORTANT]
+> Document Intelligence in DataMiner 10.6 is incompatible with Assistant versions that enforce these permission checks (i.e., Assistant 4.0.0 or newer).
 
 ### Enhancements
 
@@ -678,7 +688,7 @@ The colors used by the DataMiner Taskbar Utility for upgrade events now align wi
 
 #### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
 
-<!-- MR 10.7.0 - FR 10.6.10 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
 
@@ -743,13 +753,15 @@ When enabling swarming using an `EnableSwarmingRequest`, you can now skip the an
 
 By default, the analysis will still be performed. Skipping it can considerably speed up the request, but you should only do so if you have already analyzed and resolved any alarm ID usage beforehand.
 
-#### Service & Resource Management: 'Unavailable' resource mode is now obsolete in SLNetTypes [ID 46492]
+#### SLScripting executable and dependencies now stored in a separate folder [ID 46346]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-The `Unavailable` resource mode in `SLNetTypes.dll` is now marked as obsolete.
+The *SLScripting.exe* executable and its dependencies are now stored in `C:\Skyline DataMiner\Files\SLScripting\x86` instead of `C:\Skyline DataMiner\Files`.
 
-It remains in the enum for backward compatibility, but using it will produce a compiler warning, and it will no longer appear in IntelliSense suggestions. The warning will recommend `Maintenance` instead.
+This reduces the risk of QActions loading assemblies from `C:\Skyline DataMiner\Files` instead of using the assemblies provided by their specific NuGet dependencies.
+
+If an assembly cannot be found, `C:\Skyline DataMiner\Files` is still used as a fallback folder.
 
 #### SRM: Reservation instance property updates are now performed by the DMA hosting the booking [ID 46534]
 
@@ -773,11 +785,11 @@ When the `SnmpPollingSnmpPlusPlusOnly` soft-launch option is enabled, you can no
 
 Log Collector packages now include a `Scripts.txt` file listing the files in `C:\Skyline DataMiner\Scripts` and its subfolders, excluding `.txf` files. For each file, it includes the creation date as recorded on the system and the last modified date.
 
-#### STaaS traffic can now use a single IP address [ID 46570]
+#### STaaS traffic can now use a single hostname and IP address [ID 46570]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
 
-All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single IP address for STaaS traffic.
+All STaaS traffic from DataGateway will now pass through a single endpoint per region. This will allow you to whitelist a single hostname (`https://*.dataminer.services/`) or a single IP address per region for STaaS traffic, without having to request additional hostnames or Microsoft Azure IP addresses from support.
 
 If this single endpoint is not reachable, DataMiner will continue to use the existing endpoints.
 
@@ -795,6 +807,50 @@ The generated package now includes the following files in the `Elastic` folder f
 - `_cluster.settings.json`
 - `_cat.recovery.txt`
 - `_cat.pending_tasks.txt`
+
+#### Protocol: NotifyDataMiner(Queued) failures are now logged without internal offsets [ID 46709]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When a `NotifyDataMiner(Queued)` method invoked through the `SLProtocol` interface failed, up to now, the log included the internal offset added to the notify type.
+
+From now on, the log will show the original notify type without the offset.
+
+#### STaaS: Support for direct-write-only entity types [ID 46711]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+DataGateway can now handle STaaS entity types configured for direct writes only, without an Event Hub configuration. This allows blob storage data types to be written directly through the Ingest API instead of Event Hub.
+
+#### Automation: Clearer error messages when saving scripts [ID 46713]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+Error messages returned when saving an automation script now provide more details about what went wrong.
+
+For example, when you import a script in DataMiner Cube and a dummy references an unavailable protocol or protocol version, the error message will now identify the dummy, protocol, and version instead of showing a generic error.
+
+#### TCP server ports: Multiple elements can now receive data from the same allowed IP address [ID 46784]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+When multiple elements listen on the same TCP server port and explicitly list a client's IP address in their allowed IP addresses, all of those elements will now receive the data sent by that client. Previously, only one element would receive the data.
+
+Only one element can still respond to the client. This enhancement is intended for scenarios where multiple elements need to receive data without responding.
+
+If an element explicitly lists a client's IP address as allowed, elements that do not explicitly list that IP address will still not receive data from that client.
+
+#### SLScripting can no longer run as a service [ID 46869]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
+
+#### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
 ### Fixes
 
@@ -897,6 +953,12 @@ Access to that cache has now been made thread safe.
 > [!NOTE]
 > The `Engine` object itself is still not thread safe. Scripts should not use the same `Engine` instance from more than one thread at a time.
 
+#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
+
+<!-- MR 10.7.0 [CU0] - FR 10.7.1 -->
+
+Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
+
 #### ManagerStore: Fixed limit logic when adding objects from the DatabaseCacheLayer [ID 46205]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -930,14 +992,6 @@ Change points are now also distinguished by creation time. As a result, previous
 Up to now, when the offline agent in a Failover setup was not running and the online agent was restarted, the `NodeId` field for the offline agent in *ClusterEndpoints.json* could be set to `null`.
 
 From now on, the field will retain its existing value when it cannot be retrieved from the offline agent.
-
-#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
-
-<!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
-
-When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
-
-From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
 
 #### Automation scripts and QActions: An unsuitable DLL version could be selected from hint paths [ID 46412]
 
@@ -977,14 +1031,6 @@ When requesting eligible resources while ignoring a booking and its service defi
 
 From now on, the Resource Manager will take ignored booking into account when determining whether such resources are eligible.
 
-#### ProtocolFunctionManager configuration changes were not synchronized across the cluster [ID 46583]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-Up to now, when you updated the ProtocolFunctionManager configuration on a DataMiner Agent, the changes were not synchronized with the other Agents in the cluster. As a result, you had to apply the settings manually on each Agent.
-
-From now on, configuration updates will be synchronized across the cluster, and new Agents will automatically inherit the existing cluster settings.
-
 #### Spectrum: Measurement point cycle was not loaded when DONT_APPLY_SETTINGS was passed [ID 46630]
 
 <!-- MR 10.7.0 - FR 10.6.12 -->
@@ -993,14 +1039,32 @@ Up to now, when you loaded a preset with both the `SPA_PRESET_DONT_APPLY_SETTING
 
 From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will load the measurement point cycle regardless of whether the `SPA_PRESET_DONT_APPLY_SETTINGS` flag is also passed.
 
-#### STaaS: Certain exceptions were incorrectly wrapped [ID 46637]
-
-<!-- MR 10.7.0 - FR 10.6.12 -->
-
-In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
-
 #### SLNet: Edge managers could fail to initialize when NATS was unavailable at startup [ID 46700]
 
 <!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
 
 Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConnectorManager` and `EdgeNodeLifecycleManager` could fail to initialize. From now on, both managers share a MessageBroker instance from `MessageBrokerCache`, created on the first request instead of during `OnInitialize`. This prevents a temporary NATS outage at startup from leaving the managers uninitialized.
+
+#### CCAEndpoint initialization is now retried after failures [ID 46752]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+If initialization of `CCAEndpointManager` or `CCAEndpointHandler` fails, DataMiner will now keep retrying.
+
+The retry scheduler will increase the delay between attempts up to a maximum of 60 seconds.
+
+#### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+When services or elements were updated in a DataMiner cluster, offline Agents in a Failover setup would experience a memory and CPU spike in the StorageModule process for each update. The size of the spike depended on the number of services and elements in the cluster.
+
+Both online and offline Agents will now keep their XML-based services in memory at all times. The service cache in the StorageModule backend will only be reinitialized during a Failover switch or in exceptional circumstances.
+
+#### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.6.12 -->
+
+After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
+
+Concurrent module registrations could overwrite newer routing configuration with an older snapshot, leaving proxy routes missing. Routing configuration updates are now processed sequentially to prevent this.

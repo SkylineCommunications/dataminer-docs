@@ -1,5 +1,6 @@
 ---
 uid: Verify_ASP_Net_Version
+description: "Find out how the Verify .NET Version check verifies whether the required .NET versions are installed."
 ---
 
 # Verify .NET Version

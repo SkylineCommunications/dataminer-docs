@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapOID-mapAlarm
+description: "Use the mapAlarm attribute in a DataMiner protocol to generate alarms from SNMP traps and map trap bindings to severity, value, and linked alarms."
 ---
 
 # mapAlarm attribute

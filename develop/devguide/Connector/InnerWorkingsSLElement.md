@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsSLElement
+description: "Learn when connector parameters require RTDisplay, how SLElement processes table columns, and which APIs depend on values being available there."
 ---
 
 # SLElement
@@ -31,7 +32,7 @@ A parameter requires that RTDisplay is set to true in the following cases:
 
 - The parameter is referred to by the web interface URL.
 
-- The parameters type tag includes the virtual attribute, and the parameter acts as a source.
+- The parameters type tag includes the [virtual](xref:Protocol.Params.Param.Type-virtual) attribute, and the parameter acts as a source.
 
 - The parameter needs to be available for an external source:
 

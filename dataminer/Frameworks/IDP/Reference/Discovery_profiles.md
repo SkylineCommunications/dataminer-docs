@@ -1,5 +1,6 @@
 ---
 uid: Discovery_profiles
+description: "Define IDP discovery profiles in JSON to retrieve device data using SNMP, HTTP, HTTPS, Serial, Telnet, or WMI actions."
 ---
 
 # Discovery profiles

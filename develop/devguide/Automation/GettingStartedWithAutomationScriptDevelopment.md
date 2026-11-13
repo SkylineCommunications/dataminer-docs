@@ -1,5 +1,6 @@
 ---
 uid: GettingStartedWithAutomationScriptDevelopment
+description: "Find resources for learning about DataMiner Automation, executing automation scripts, developing scripts, and choosing the appropriate C# workflow."
 ---
 
 # Getting started with automation script development
@@ -24,6 +25,9 @@ uid: GettingStartedWithAutomationScriptDevelopment
 - [Script actions in DataMiner Cube](xref:Automation_script_actions_in_DataMiner_Cube)
 - [Script execution options](xref:Script_execution_options)
 - [Using credentials in an automation script](xref:Using_credentials_in_an_automation_script)
+
+> [!NOTE]
+> The project-based SDK-style workflow is preferred for the creation of new C# automation scripts. For existing scripts, [inline C# blocks](xref:Adding_CSharp_code_to_an_Automation_script) can continue to be used. If the script XML contains a `[Project:<project-name>]` value, keep the C# source in that referenced project rather than copying it into an inline block. See [Visual Studio solutions](xref:DisVisualStudioSolutionsIntroduction) for the SDK-style and legacy-style project distinction.
 
 ## References
 

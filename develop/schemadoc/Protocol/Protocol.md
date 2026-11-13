@@ -1,5 +1,6 @@
 ---
 uid: Protocol
+description: "Consult the DataMiner protocol schema reference for the Protocol element, which serves as the root of a DataMiner protocol definition."
 ---
 
 # Protocol element
@@ -11,6 +12,7 @@ The root element of a DataMiner protocol.
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
 |[baseFor](xref:Protocol-baseFor)|string||Specifies the type of element for which this protocol serves as a base protocol.|
+|xmlns|string|Yes|Specifies the XML namespace of the protocol. This must be set to `http://www.skyline.be/protocol`.|
 
 ## Children
 
@@ -27,6 +29,7 @@ The root element of a DataMiner protocol.
 |&nbsp;&nbsp;[Description](xref:Protocol.Description)||Contains a description of the protocol.|
 |&nbsp;&nbsp;[DeviceOID](xref:Protocol.DeviceOID)||Specifies an OID for the device that will be managed with the protocol.|
 |&nbsp;&nbsp;[Display](xref:Protocol.Display)|[0, 1]|Defines the layout and the order of the Data Display pages.|
+|&nbsp;&nbsp;[Edge](xref:Protocol.Edge)|[0, 1]|Specifies everything regarding Edge functionality for DataMiner.|
 |&nbsp;&nbsp;[ElementType](xref:Protocol.ElementType)|[0, 1]|Specifies the type of device for which the protocol will be used.|
 |&nbsp;&nbsp;[ExportRules](xref:Protocol.ExportRules)|[0, 1]|Defines rules that are used for changing the displayed items in a Dynamic Virtual Element (DVE), for example changing the location of a parameter.|
 |&nbsp;&nbsp;[GeneralParameters](xref:Protocol.GeneralParameters)|[0, 1]|Specifies which general parameter groups should be loaded or not.|
@@ -44,11 +47,13 @@ The root element of a DataMiner protocol.
 |&nbsp;&nbsp;[Params](xref:Protocol.Params)|[0, 1]|Contains all the parameters defined in the protocol.|
 |&nbsp;&nbsp;[Ports](xref:Protocol.Ports)|[0, 1]|Groups the PortSettings elements for the additional protocol connections.|
 |&nbsp;&nbsp;[PortSettings](xref:Protocol.PortSettings)|[0, 1]|Defines the default port settings of the main device port. It also allows you to restrict the capabilities of the main device port, and to define the format and range of the bus address, if any.|
+|&nbsp;&nbsp;[ProcessAutomation](xref:Protocol.ProcessAutomation)|[0, 1]|Used in the Process Automation queue connector.|
 |&nbsp;&nbsp;[Provider](xref:Protocol.Provider)||Specifies the protocol provider.|
 |&nbsp;&nbsp;[QActions](xref:Protocol.QActions)|[0, 1]|Contains all the QActions defined in the protocol.|
 |&nbsp;&nbsp;[RCA](xref:Protocol.RCA)|[0, 1]|Configures Root Cause Analysis (RCA).|
 |&nbsp;&nbsp;[Relations](xref:Protocol.Relations)|[0, 1]|Defines relations between tables.|
 |&nbsp;&nbsp;[Responses](xref:Protocol.Responses)|[0, 1]|Contains all responses defined in the protocol.|
+|&nbsp;&nbsp;[Settings](xref:Protocol.Settings)|[0, 1]|Contains settings defined in the protocol.|
 |&nbsp;&nbsp;[SeverityBubbleUp](xref:Protocol.SeverityBubbleUp)|[0, 1]|Used to pass alarm severities to linked tables.|
 |&nbsp;&nbsp;[SNMP](xref:Protocol.SNMP)|[0, 1]|Specifies how the MIB file for the protocol will be created.|
 |&nbsp;&nbsp;[Swarming](xref:Protocol.Swarming)|[0, 1]|Contains the functionality to override the default swarming behavior.|

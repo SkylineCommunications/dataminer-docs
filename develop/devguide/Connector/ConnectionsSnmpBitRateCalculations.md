@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpBitRateCalculations
+description: "Calculate accurate SNMP bit rates in QActions by using SLSNMPManager counters, group execution deltas, and raw communication cycle data."
 ---
 
 # Bit rate calculations

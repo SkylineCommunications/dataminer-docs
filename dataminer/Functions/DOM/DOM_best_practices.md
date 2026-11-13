@@ -169,7 +169,7 @@ To reduce the size of the `DomBehaviorDefinition`, you should limit the number o
 
 ### Avoid using the AutoIncrementFieldDescriptor when high-performance create actions are required
 
-The [`AutoIncrementFieldDescriptor`](xref:DOM_AutoIncrementFieldDescriptor) generates a unique number for each create operation across the DMS. This may cause additional delays and hinder performance when creating `DomInstances`. It is advisable to avoid using this `FieldDescriptor` type when aiming for high-performance create actions.
+The [AutoIncrementFieldDescriptor](xref:DOM_AutoIncrementFieldDescriptor) generates a unique number for each create operation across the DMS. This may cause additional delays and hinder performance when creating `DomInstances`. It is advisable to avoid using this `FieldDescriptor` type when aiming for high-performance create actions.
 
 ## DOM CRUD and scripting
 

@@ -1,5 +1,6 @@
 ---
 uid: LogicActionReadStuffing
+description: "Use the read stuffing action to remove redundant stuffing bytes from serial response data within configured offsets."
 ---
 
 # read stuffing
@@ -27,7 +28,7 @@ Specifies the ID(s) of the response(s) on which the action needs to be performed
 
 ### Type@allowed
 
-If the byte specified in the value attribute is followed by one of the characters specified in the allowed attribute, then it will not be repeated.
+If the byte specified in the value attribute is followed by one of the characters specified in the [allowed](xref:Protocol.Actions.Action.Type-allowed) attribute, then it will not be repeated.
 
 ### Type@startoffset
 

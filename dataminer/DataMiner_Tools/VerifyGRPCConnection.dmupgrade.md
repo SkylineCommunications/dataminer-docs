@@ -1,5 +1,6 @@
 ---
 uid: VerifyGRPCConnectiondmupgrade
+description: "Find out how the VerifyGRPCConnection check verifies whether all DMAs in the cluster can communicate via gRPC over HTTPS port 443."
 ---
 
 # VerifyGRPCConnection.dmupgrade

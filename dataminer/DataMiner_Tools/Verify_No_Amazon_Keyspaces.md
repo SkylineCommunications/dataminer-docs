@@ -1,5 +1,6 @@
 ---
 uid: Verify_No_Amazon_Keyspaces
+description: "Find out how the Verify No Amazon Keyspaces check verifies that the DataMiner Agent does not rely on the Amazon Keyspaces Service on AWS for data storage."
 ---
 
 # Verify No Amazon Keyspaces

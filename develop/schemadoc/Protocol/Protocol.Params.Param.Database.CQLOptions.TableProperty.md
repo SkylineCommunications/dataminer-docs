@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.CQLOptions.TableProperty
+description: "Use the TableProperty element in a DataMiner protocol to set the CQL WITH clause used to configure Cassandra table properties."
 ---
 
 # TableProperty element

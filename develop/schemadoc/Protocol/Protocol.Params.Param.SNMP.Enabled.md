@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.Enabled
+description: "Use the Enabled element in a DataMiner protocol to control whether DataMiner is allowed to query the configured SNMP Agent."
 ---
 
 # Enabled element

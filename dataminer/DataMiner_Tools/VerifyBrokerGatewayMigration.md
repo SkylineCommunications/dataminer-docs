@@ -1,5 +1,6 @@
 ---
 uid: VerifyBrokerGatewayMigration
+description: "Find out how the Verify BrokerGateway Migration check verifies whether the DMS has migrated to the BrokerGateway-managed NATS solution."
 ---
 
 # Verify BrokerGateway Migration

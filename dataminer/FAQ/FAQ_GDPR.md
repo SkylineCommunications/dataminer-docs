@@ -1,5 +1,6 @@
 ---
 uid: FAQ_GDPR
+description: "Review DataMiner GDPR controls for personal data, including retention periods, access settings, encryption, and third-party system limitations."
 ---
 
 # Does DataMiner process personal data in a GDPR-compliant manner?

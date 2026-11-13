@@ -415,7 +415,7 @@ uid: WS_Methods_v1_overview
 | [MaskElement](xref:MaskElement) | Masks an element for a certain period of time. |
 | [PauseElement](xref:PauseElement) | Pauses an element. |
 | [ReapplyService](xref:ReapplyService) | Updates a particular service that is attached to a service template. |
-| [ReconnectAppAndInfo](xref:ReconnectAppAndInfo) | Uses a cookie to retrieve the connection string (GUID) needed to be able to connect to the host, together with information about the DataMiner Agent (time, alarm colors, etc.) and the user permissions granted. |
+| [ReconnectAppAndInfo](xref:ReconnectAppAndInfo) | Obsolete from DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!--RN 46714-->. Uses a cookie to retrieve the connection string (GUID) needed to be able to connect to the host, together with information about the DataMiner Agent (time, alarm colors, etc.) and the user permissions granted. |
 | [ReleaseOwnershipAlarm](xref:ReleaseOwnershipAlarm) | Releases ownership of an alarm. |
 | [RemoveElementFromPinned](xref:RemoveElementFromPinned) | Unpins an element in the Recent list. |
 | [RemoveElementFromView](xref:RemoveElementFromView) | Removes an element from a specified view. |

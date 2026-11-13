@@ -1,10 +1,14 @@
 ---
 uid: Protocol.Params.Param.Information.Includes
+description: "Learn how the obsolete Includes element in a DataMiner protocol groups extra parameter details for display in an information tooltip."
 ---
 
 # Includes element [obsolete]
 
-Contains one or more Protocol.Params.Param.Information.Include tags to indicate that you want additional information to be displayed in the tooltip.
+Contains one or more `Protocol.Params.Param.Information.Include` tags to indicate that you want additional information to be displayed in the tooltip.
+
+> [!IMPORTANT]
+> The `Includes` and `Include` tags are obsolete. These were only used with the legacy System Display application, not with DataMiner Cube.
 
 ## Parent
 
@@ -20,9 +24,9 @@ Contains one or more Protocol.Params.Param.Information.Include tags to indicate 
 
 ```xml
 <Includes>
-	<Include>range</Include>
-	<Include>units</Include>
-	<Include>steps</Include>
-	<Include>time</Include>
+   <Include>range</Include>
+   <Include>units</Include>
+   <Include>steps</Include>
+   <Include>time</Include>
 </Includes>
 ```

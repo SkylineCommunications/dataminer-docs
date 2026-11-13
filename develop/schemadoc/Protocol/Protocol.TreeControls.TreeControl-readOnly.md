@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl-readOnly
+description: "Set the readOnly attribute of the TreeControl element to true in a DataMiner protocol to disable all write parameters in the tree control."
 ---
 
 # readOnly attribute

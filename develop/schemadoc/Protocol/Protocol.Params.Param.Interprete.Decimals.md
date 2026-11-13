@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Decimals
+description: "Use the Decimals element in a DataMiner protocol to set how many decimal places DataMiner stores in memory for a parameter value."
 ---
 
 # Decimals element
@@ -18,14 +19,8 @@ unsignedInt
 
 By default, 6 decimals are stored.
 
-
-
 ## Examples
-
 
 ```xml
 <Decimals>2</Decimals>
 ```
-
-
-

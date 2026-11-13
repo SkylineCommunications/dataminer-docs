@@ -7,14 +7,9 @@ uid: Producing_NuGet
 > [!IMPORTANT]
 > This section might include some information that is only applicable to Skyline employees and/or links that are only accessible to Skyline employees.
 
-Automatic creation and publishing of NuGet packages is supported via the Skyline CI/CD pipelines on Jenkins and GitHub:
+Automatic creation and publishing of NuGet packages is supported via the [Skyline CI/CD pipelines on GitHub](xref:Producing_NuGet_GitHub).
 
-- [Producing NuGet packages via SLC SE Repo Manager](xref:Producing_NuGet_RepoManager)
-
-- [Producing NuGet packages via GitHub](xref:Producing_NuGet_GitHub)
-
-> [!TIP]
-> To create a new solution or project that produces a NuGet package, make use of the Visual Studio templates available at [https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates.Internal](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates.Internal).
+To create a new solution or project that produces a NuGet package, make use of the Visual Studio templates available at [https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates.Internal](https://github.com/SkylineCommunications/Skyline.DataMiner.VisualStudioTemplates.Internal).
 
 ## General
 
@@ -25,9 +20,6 @@ The rules below mainly focus on NuGet packages that are published to nuget.org. 
 - NuGet needs to include a license file
 
 - NuGet needs to be signed, as only signed packages can be published on nuget.org
-
-  > [!NOTE]
-  > If the NuGet is created via [SLC SE Repo Manager](xref:TOOSLCSERepositoryManager), the pipeline will take care of signing and publishing.
 
 ### Project type
 
@@ -149,9 +141,9 @@ We want to adhere to the [Semantic Versioning for NuGet packages](https://learn.
 
 A specific version number is in the form *Major.Minor.Patch[-Suffix]*, where the components have the following meanings:
 
-- *Major*: Breaking changes (API breaking changes, DataMiner minimum dependency changes, etc.)
-- *Minor*: New features, but backwards compatible
-- *Patch*: Backwards compatible bug fixes only
+- *Major*: Breaking changes, including API breaking changes or an increase to the minimum required dependency version
+- *Minor*: New features or compatible dependency updates
+- *Patch*: Backwards-compatible bug fixes only
 - *-Suffix* (optional): A hyphen followed by a string denoting a pre-release version.
 
 ## Package Metadata Conventions
@@ -205,7 +197,3 @@ Refer to the readme for more information.
 Always include a readme file to explain the purpose of the NuGet and how to use it.
 
 For an example, refer to [DataMinerSystem.Common](https://www.nuget.org/packages/Skyline.DataMiner.Core.DataMinerSystem.Common#readme-body-tab)
-
-### PackageLicenseFile and PackageIcon
-
-When NuGet packages are created via the [SLC SE Repo Manager](xref:TOOSLCSERepositoryManager), the manager will automatically add the default license and icon file.

@@ -1,5 +1,6 @@
 ---
 uid: LogicActionIncrement
+description: "Use the increment action to increase one or more parameter values by the configured amount, with an increment of one by default."
 ---
 
 # increment

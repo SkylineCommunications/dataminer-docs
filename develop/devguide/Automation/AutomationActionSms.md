@@ -1,5 +1,6 @@
 ---
 uid: AutomationActionSms
+description: "Configure the SMS action to send a Short Message Service notification from an automation script to a specified destination."
 ---
 
 # SMS

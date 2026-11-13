@@ -1,14 +1,15 @@
 ---
 uid: Automation_best_practices_information_events
+description: "Apply best practices to create useful automation script audit trails while avoiding unnecessary information events and excessive logging."
 ---
 
 # Generating information events
 
-To make sure your on-premises databases remain in good shape and do not get cluttered with unnecessary data, or to ensure a cost-efficient solution in case you make use of Storage as a Service, it is important to avoid producing unnecessary information events. As a general rule of thumb, when developing automation scripts, use information events in a meaningful way to do **audit trailing for events that are useful for end users**, e.g., CRUD actions on DataMiner objects such as "Start booking" or "Script x executed by y". Do not use them if they are only useful to you as a DevOps engineer creating the scripts in order to debug a flow.
+To make sure your on-premises databases remain in good shape and do not get cluttered with unnecessary data, or to ensure a cost-efficient solution in case you make use of Storage as a Service, it is important to avoid producing unnecessary information events. As a general rule of thumb, when developing automation scripts, use information events in a meaningful way to create **audit trails for events that are useful for end users**, such as CRUD actions on DataMiner objects like "Start booking" or "Script x executed by y". Do not use them if they are only useful to you as a DevOps engineer creating the scripts in order to debug a flow.
 
 Keep the following best practices in mind:
 
-- Avoid *Engine.GenerateInformation* for tracing. While it is very informative to see the progress of a script that is running, if you have a script that runs a lot, this quickly becomes overhead.
+- Avoid [Engine.GenerateInformation](xref:Skyline.DataMiner.Automation.Engine.GenerateInformation(System.String)) for tracing. While it is very informative to see the progress of a script that is running, if you have a script that runs a lot, this quickly becomes overhead.
 
   Instead, use *engine.Log* for tracing. This way, instead of generating information events, you will add lines in the Automation log file. If for some reason, you want convert these log lines to information events for a short amount of time, consider using preprocessor directives, or make a wrapper that allows you to quickly switch between information events and log lines.
 

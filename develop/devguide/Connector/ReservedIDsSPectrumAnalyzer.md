@@ -1,5 +1,6 @@
 ---
 uid: ReservedIDsSpectrumAnalyzer
+description: "Consult the parameter IDs reserved for Spectrum Analyzer connectors, including trace, frequency, amplitude, sweep, constellation, and control values."
 ---
 
 # Spectrum analyzer

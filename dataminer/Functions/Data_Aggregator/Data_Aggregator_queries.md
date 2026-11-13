@@ -60,7 +60,7 @@ From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards, configuring GQI queri
      - Use `"Contract": 0` for queries that should be executed via CoreGateway and SLHelper.
      - Use `"Contract": 1` for queries that should be executed via the GQI DxM.
 
-     The used contract should correspond to the [`UseGQIDxM`](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) setting.
+     The used contract should correspond to the [UseGQIDxM](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) setting.
 
    - In **earlier** DataMiner versions:
 

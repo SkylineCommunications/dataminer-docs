@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions-options
+description: "Use the options attribute in a DataMiner protocol to configure storage, naming, filtering, and behavior options for a table."
 ---
 
 # options attribute

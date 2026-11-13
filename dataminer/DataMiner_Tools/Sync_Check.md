@@ -1,5 +1,6 @@
 ---
 uid: Sync_Check
+description: "Use the Sync Check automation script to verify the synchronization of element and service files across a DataMiner System."
 ---
 
 # Sync Check

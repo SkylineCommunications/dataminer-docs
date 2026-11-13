@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair-timeout
+description: "Use the timeout attribute of a Pair element in a DataMiner protocol to override the default response timeout for a command and response pair."
 ---
 
 # timeout attribute

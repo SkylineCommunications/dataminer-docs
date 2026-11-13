@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.TimeoutTimeElement.Disabled
+description: "Learn how the Disabled element under TimeoutTimeElement controls whether users can configure the element timeout value in the DataMiner user interface."
 ---
 
 # Disabled element
@@ -18,7 +19,7 @@ Specifies whether the element timeout time for this connection can be configured
 
 Contains one of the following predefined values:
 
-|Value|Description
+|Value|Description|
 |--- |--- |
 |true|Users will not be able to modify the setting in the DataMiner user interface.|
 |false|Users will be able to modify the setting in the DataMiner user interface.|

@@ -38,7 +38,9 @@ In some existing setups, connection strings are also used in the cases below. Ho
   For example: Network Address Translation, a proxy, a gateway, etc. blocks access to the primary IP address.
 
   > [!IMPORTANT]
-  > Configuring the connection strings to translate an unreachable internal IP address to a reachable external one prevents the DataMiner upgrade client from upgrading the entire DMS at once. Any DMA on which this is configured will need to be upgraded separately. Tweaks to the default NATS configuration will also be needed. We therefore recommend ensuring that the primary IP address of each DMA is reachable instead (e.g., by setting up a virtual network).
+  >
+  > - Configuring the connection strings to translate an unreachable internal IP address to a reachable external one prevents the DataMiner upgrade client from upgrading the entire DMS at once. Any DMA on which this is configured will need to be **upgraded separately**.
+  > - With the default automatic BrokerGateway-managed NATS configuration, NATS uses each Agent's primary IP address instead of the redirected address. If NATS must use the redirected address, configure NATS manually as described under [Disabling automatic NATS configuration](xref:Disabling_automatic_NATS_config#brokergateway-managed-nats). If you later change the redirect, you will need to update the manual NATS configuration as well. We therefore recommend ensuring that the primary IP address of each DMA is reachable via the standard NATS ports instead.
 
 ## How can you configure connection strings?
 

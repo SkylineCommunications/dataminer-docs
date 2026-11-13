@@ -1,5 +1,6 @@
 ---
 uid: LogicQActionsAutomationScriptExecution
+description: "Start an automation script from a QAction by sending an ExecuteScriptMessage through SLProtocol, and handle the response and exceptions."
 ---
 
 # Starting an automation script from a QAction

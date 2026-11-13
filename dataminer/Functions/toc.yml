@@ -192,6 +192,8 @@ items:
   - name: Business Intelligence
     topicUid: sla
     items:
+      - name: How SLA monitoring works
+        topicUid: How_SLA_monitoring_works
       - name: Creating an SLA
         items:
           - name: Creating a new SLA
@@ -1035,6 +1037,10 @@ items:
             topicUid: EPM_Introduction_Tutorial
   - name: Intelligence
     items:
+      - name: About DataMiner Intelligence
+        topicUid: DataMiner_Intelligence
+      - name: Getting started with DataMiner Intelligence
+        topicUid: Intelligence_Getting_Started
       - name: DataMiner Assistant DxM
         topicUid: Intelligence_Assistant_DxM
       - name: DataMiner Assistant app

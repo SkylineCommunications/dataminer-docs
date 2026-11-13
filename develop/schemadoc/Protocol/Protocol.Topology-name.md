@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topology-name
+description: "Use the name attribute of the Topology element in a DataMiner protocol to set the topology name used by the Service Overview Manager."
 ---
 
 # name attribute

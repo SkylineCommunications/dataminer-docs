@@ -1,5 +1,6 @@
 ---
 uid: IDP_Software_tab
+description: "Use the IDP app's Software tab to review expected, detected, and deployed software versions, update managed elements, and check compliance."
 ---
 
 # Software tab

@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSerialBreakSignal
+description: "Configure serial break signals with separate connections, set and clear commands, the commbreak pair option, and port locking when elements share a device."
 ---
 
 # Break signal

@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_retrieving_mapping_info
+description: "Learn how, using the SLNetClientTest tool, you can retrieve live information about the mapping between elements and the processes they use."
 ---
 
 # Retrieving live information about the mapping between elements and the processes they use

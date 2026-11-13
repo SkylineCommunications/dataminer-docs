@@ -1,5 +1,6 @@
 ---
 uid: SLOffload_tool
+description: "Find out how to use the SLOffload tool to manually trigger a database offload to an Oracle or a MySQL database."
 keywords: central database
 ---
 

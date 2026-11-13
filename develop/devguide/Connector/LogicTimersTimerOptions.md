@@ -1,5 +1,6 @@
 ---
 uid: LogicTimersTimerOptions
+description: "Configure timer options for dynamic thread pools, row distribution, conditional execution, SNMP instances, IP addresses, ping checks, and more."
 ---
 
 # Timer options
@@ -191,7 +192,7 @@ Expected format: qaction:\<qactionId\>
 
 - **qactionId**: Specifies the ID of the QAction.
 
-The ID of the QAction that is activated by the timer. The triggers attribute of the QAction tag needs to be empty, and the option row="true" needs to be added.
+The ID of the QAction that is activated by the timer. The [triggers](xref:Protocol.QActions.QAction-triggers) attribute of the QAction tag needs to be empty, and the option row="true" needs to be added.
 
 RowKey() can then be called in the QAction to see which row was being called. Note that this is not executed multithreaded but sequentially.
 

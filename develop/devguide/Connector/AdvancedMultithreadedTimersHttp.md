@@ -1,5 +1,6 @@
 ---
 uid: AdvancedMultiThreadedTimersHttp
+description: "Implement multithreaded HTTP requests by building request objects in one QAction and processing responses and post-response logic in subsequent QActions."
 ---
 
 # HTTP
@@ -146,7 +147,7 @@ In this QAction, typically you will also set the state of the corresponding row 
 To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
+> Whereas typically you provide a parameter ID in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="Process HTTP Responses" encoding="csharp" options="group" triggers="1011" row="true">

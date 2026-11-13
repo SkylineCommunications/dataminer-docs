@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption
+description: "Use the ColumnOption element in a DataMiner protocol to define a table column's parameter, position, type, polling, and options."
 ---
 
 # ColumnOption element

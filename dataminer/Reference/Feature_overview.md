@@ -26,6 +26,7 @@ Below you can find an overview of the main features that have been added to Data
 | Augmented operations: [Time-scoped relations](xref:Adding_time_scoped_related_parameters_to_a_trend_graph) | DataMiner 10.3.8/10.4.0 <!-- [ID 36434] --> |
 | Automation: [Using Credentials Library credentials in automation scripts](xref:Using_credentials_in_an_automation_script) | DataMiner 10.6.10/10.7.0 <!-- [ID 44282] [ID 46229] --><br>Minimum DataMiner Cube version: 10.6.11/10.7.0 <!-- [ID 46251] --> |
 | Automation: [ExtendedErrorInfo](xref:Skyline.DataMiner.Automation.SubScriptOptions.ExtendedErrorInfo) property | DataMiner 10.2.7/10.3.0 <!-- [ID 33306] -->|
+| Automation: [Grid layout for interactive automation scripts in web apps](xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps-to-control-the-tab-behavior) | DataMiner 10.6.12/10.7.0 <!-- [ID 46602] [ID 46716] --><br>Minimum DataMiner web version: 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 |
 | Automation: [HideUI](xref:Skyline.DataMiner.Automation.Engine.HideUI) method | DataMiner web 10.3.0 [CU16]/10.4.0 [CU4]/10.4.7<!--  [ID 39451] [ID 39638] --> |
 | Automation: [Interactivity](xref:DMSScript.Interactivity) tag | DataMiner 10.5.9/10.6.0 <!-- [ID 42954]--> |
 | Automation: [IsReadOnly](xref:Skyline.DataMiner.Automation.UIBlockDefinition.IsReadOnly) property | DataMiner web 10.4.1/10.5.0 <!-- [ID 37659] -->|
@@ -38,6 +39,7 @@ Below you can find an overview of the main features that have been added to Data
 | Client-server communication: gRPC connections between [Cube and DMAs](xref:ConnectionSettings_txt#connectionsettingstxt-options) and [between DMAs](xref:DMS_xml#redirects-subtag) | DataMiner 10.3.0/10.3.2 <!-- [ID 34797] [ID 34983] --> |
 | Correlation: [*Group alarms* rule action](xref:Grouping_Alarms) | DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 <!-- [ID 44973] --> |
 | Cube: [BPA tests in System Center](xref:Running_BPA_tests) | DataMiner 10.1.2/10.2.0 <!-- [ID 28516] --> |
+| Cube: [DataMiner Agent Versions](xref:BPA_DataMiner_Agent_Versions) BPA test | DataMiner 10.6.12/10.7.0 <!-- [ID 46808] --> |
 | Cube: [Duplicating a resource](xref:Configuring_pools_of_resources#duplicating-a-resource-from-a-pool) | DataMiner Cube 10.3.7/10.4.0 <!-- [ID 36308] -->|
 | Cube: [*EnableAlarmSubscriptions* URL argument](xref:Options_for_opening_DataMiner_Cube#enablealarmsubscriptions) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 <!-- [ID 44779] --> |
 | Cube: [Health Metrics](xref:BPA_HealthMetrics) BPA test | DataMiner 10.5.0 [CU10]/10.6.1 <!-- [ID 43509]--> |
@@ -86,7 +88,7 @@ Below you can find an overview of the main features that have been added to Data
 | Databases: [Standalone Cassandra Backup tool](xref:Standalone_Cassandra_Backup_Tool) | DataMiner 10.1.8/10.2.0 <!-- [ID 29005] [ID 30234] -->|
 | DataMiner processes: [Customization of number of simultaneous SLScripting processes](xref:Configuration_of_DataMiner_processes#setting-the-number-of-simultaneously-running-slscripting-processes) | DataMiner 10.2.7/10.3.0 <!-- [ID 33358] -->|
 | DataMiner processes: [Fine-tuning message throttling](xref:Configuration_of_DataMiner_processes#fine-tuning-message-throttling) | DataMiner 10.1.3/10.2.0 <!-- [ID 28335] -->|
-| DataMiner processes: [Running elements in isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode) | DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4<!-- [ID 41757] --> |
+| DataMiner processes: [Running elements in isolation mode](xref:Adding_elements#adding-elements-in-isolation-mode) | DataMiner 10.5.4/10.6.0<!-- [ID 41757] --> |
 | DataMiner processes: [Separate SLProtocol and SLScripting instances for specific protocol](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol) | DataMiner 10.2.5/10.3.0 |
 | DataMiner processes: [SLProtocol as a 64-bit process](xref:Activating_SLProtocol_as_a_64_Bit_Process) |  DataMiner 10.3.9/10.4.0<br>DataMiner 10.1.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#slprotocolasx64) |
 | [DMS connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) | DataMiner 10.1.12/10.2.0 |
@@ -113,6 +115,7 @@ Below you can find an overview of the main features that have been added to Data
 | [Failover with shared hostname](xref:Failover_configuration_in_Cube) | DataMiner 10.1.8/10.2.0 |
 | GQI: [Ad hoc data sources](xref:Get_ad_hoc_data) | DataMiner 10.2.4/10.3.0 <!-- [ID 32656] [ID 32659] [ID 32930] -->|
 | GQI: [Alarms data source](xref:Get_alarms) | DataMiner 10.1.9/10.2.0 <!-- [ID 30320] --> |
+| GQI: [CPU usage limits](xref:GQI_DxM#cpu-usage-limits) | DataMiner web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 <!-- [ID 46509] --> |
 | GQI: [Custom operator](xref:GQI_Custom_Operator) | DataMiner web 10.3.0 [CU10]/10.4.1 <!-- [ID 37840] --><br>DataMiner 10.2.7 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#genericinterface) |
 | GQI: [Custom sort order](xref:GQI_Redirect_Sort_Tutorial) | DataMiner 10.4.5/10.5.0 <!-- [ID 39136] -->|
 | GQI: [DCF connections data source](xref:Get_DCF_connections) | DataMiner 10.1.3/10.2.0 <!-- [ID 29703] -->|
@@ -123,12 +126,15 @@ Below you can find an overview of the main features that have been added to Data
 | GQI: [Logging](xref:GQI_Logging) | DataMiner 10.4.0/10.4.4 <!-- [ID 38870] --> |
 | GQI: [Logging of metrics](xref:GQI_Logging#metrics) | DataMiner 10.4.0 [CU3]/10.4.5 <!-- [ID 39098] -->|
 | GQI: [IGQISession interface](xref:GQI_IGQISession) | DataMiner 10.5.0 [CU12]/10.6.3 <!-- [ID 44509] -->|
+| GQI: [Maximum number of concurrent sessions](xref:GQI_DxM#maximum-number-of-concurrent-sessions) | DataMiner web 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 <!-- [ID 46819] --> |
 | GQI: [Real-time updates for ad hoc data sources](xref:GQI_IGQIUpdateable) | DataMiner 10.4.4/10.5.0 <!-- [ID 38643] --> |
 | GQI: [Sending/receiving DMS messages](xref:GQI_GQIDMS) | DataMiner web 10.3.4/10.4.0 <!-- [ID 35701] -->|
 | GQI: [Services in GQI extensions](xref:GQI_Extensions_Services) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 <!-- [ID 45635] --> |
 | GQI: [Trend data patterns](xref:Get_trend_data_patterns), [Trend data pattern events](xref:Get_trend_data_pattern_events), and [behavioral change events](xref:Get_behavioral_change_events) data sources | DataMiner web 10.3.3/10.4.0 <!-- [ID 34747] [ID 35027] [ID 34965] [ID 35058] -->|
+| GQI: [Using credentials in GQI extensions](xref:GQI_Extensions_Credentials) | DataMiner web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 <!-- [ID 46279] --> |
 | GQI: [View relations data source](xref:Get_view_relations) | DataMiner 10.1.4/10.2.0 <!-- [ID 28797] [ID 28877] -->|
 | [GQI DxM](xref:GQI_DxM) | DataMiner web 10.5.0 [CU1]/10.5.4 |
+| Installation: [Installing DataMiner from the command line](xref:Unattended_DM_installation#unattended-installation) | DataMiner 10.6.0 [CU8]/10.6.11 <!-- [ID 45554] --> |
 | [Low-Code Apps](xref:Application_framework) | DataMiner 10.2.5/10.3.0<br>DataMiner 10.0.8 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#applications) <!-- [ID 33040] -->|
 | Low-Code Apps: [*Change variable* actions](xref:LowCodeApps_event_config#changing-a-variable) | DataMiner web 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1<!-- [ID 41253] [ID 41324] --> |
 | Low-Code Apps: [*Copy to clipboard* action](xref:LowCodeApps_event_config#copying-text-to-the-clipboard) | DataMiner web 10.4.0 [CU11]/10.5.2<!-- [ID 41729]-->|
@@ -184,4 +190,5 @@ Below you can find an overview of the main features that have been added to Data
 | Visual Overview: [Configuring the Visio drawing theme](xref:Configuring_Visio_drawing_theme) | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 <!-- [ID 45961] --> |
 | Visual Overview (web): [Load balancing](xref:Investigating_Web_Issues#load-balancing) | DataMiner 10.5.2/10.6.0 <!-- [ID 41434] [ID 41728] --> |
 | [Web DcM](xref:DataMinerCoreModules#web) | DataMiner 10.5.0 [CU8]/10.5.11 <!-- [ID 43439] --> |
+| Web Services: [OpenAPI and AsyncAPI specifications](xref:Using_the_Web_Services_v1#openapi-and-asyncapi-specifications) | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 <!-- [ID 46653] --> |
 | Web Services: [DMAAutomationScriptOptionClientTimeZone](xref:DMAAutomationScriptOptionClientTimeZone) custom data type | DataMiner 10.6.4/10.7.0 <!-- [ID 44742] [ID 44788] --> |

@@ -1,10 +1,11 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet.Display
+description: "Use the Display element in a DataMiner protocol to set the label shown when a parameter matches a defined discreet value."
 ---
 
 # Display element
 
-Specifies the string to be displayed when the value of the parameter matches the contents of the Protocol.Params.Param.Measurement.Discreets.Discreet.Value tag.
+Specifies the string to be displayed when the value of the parameter matches the contents of the `Protocol.Params.Param.Measurement.Discreets.Discreet.Value` tag.
 
 ## Type
 
@@ -18,4 +19,4 @@ Specifies the string to be displayed when the value of the parameter matches the
 
 |Name|Type|Required|Description|
 |--- |--- |--- |--- |
-|[state](xref:Protocol.Params.Param.Measurement.Discreets.Discreet.Display-state)|[EnumDisplayState](xref:Protocol-EnumDisplayState)||When Protocol.Params.Param.Interprete.Exceptions.Exception is used the same state needs to be placed in the write parameter.|
+|[state](xref:Protocol.Params.Param.Measurement.Discreets.Discreet.Display-state)|[EnumDisplayState](xref:Protocol-EnumDisplayState)||When `Protocol.Params.Param.Interprete.Exceptions.Exception` is used, the same state needs to be placed in the write parameter.|

@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsRedundantPolling
+description: "Configure redundant polling across exactly two matching connections and understand which timeout and SNMP scenarios trigger an interface switch."
 ---
 
 # Redundant polling
@@ -12,7 +13,7 @@ In the protocol, you need to define the 2 connections and specify that redundant
 <Type communicationOptions="redundantPolling" relativeTimers="true" advanced="snmp:Secondary">snmp</Type>
 ```
 
-The option [redundantPolling](xref:Protocol.Type-communicationOptions#redundantpolling) in the communicationOptions attribute is required to activate the redundant polling mechanism.
+The option [redundantPolling](xref:Protocol.Type-communicationOptions#redundantpolling) in the [communicationOptions](xref:Protocol.Type-communicationOptions) attribute is required to activate the redundant polling mechanism.
 
 > [!NOTE]
 > Redundant polling is supported with protocols that define exactly two connections of the same type. The following is supported: two SNMP, two serial, two smart-serial, or two HTTP connections.

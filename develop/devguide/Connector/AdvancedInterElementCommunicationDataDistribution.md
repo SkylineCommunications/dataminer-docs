@@ -1,5 +1,6 @@
 ---
 uid: AdvancedInterElementCommunicationDataDistribution
+description: "Learn how to distribute standalone and table parameter values between elements, in a fixed or dynamic way."
 ---
 
 # Data distribution
@@ -13,16 +14,7 @@ For example, the following parameter, defined on the parent element, will send t
 ```xml
 <Param id="100" trending="false">
    <Name>distributedParameter</Name>
-   <Description>DistributedParameter</Description>
-   <Information>
-      <Subtext />
-      <Includes>
-         <Include>time</Include>
-         <Include>range</Include>
-         <Include>steps</Include>
-         <Include>units</Include>
-      </Includes>
-   </Information>
+   <Description>Distributed Parameter</Description>
    <Type distribution="protocol:Tandberg;pid:100;remote:true">read</Type>
    <Interprete>
       <RawType>numeric text</RawType>
@@ -37,7 +29,7 @@ For example, the following parameter, defined on the parent element, will send t
 ```
 
 > [!NOTE]
-> By default, data distribution is enabled only for elements on the same DMA. In case data distribution of a parameter should be performed on the entire DMS, set the remote setting in the distribution attribute to true (;remote:true).
+> By default, data distribution is enabled only for elements on the same DMA. In case data distribution of a parameter should be performed on the entire DMS, set the remote setting in the [distribution](xref:Protocol.Params.Param.Type-distribution) attribute to true (;remote:true).
 
 In the following example, the data will be sent to parameter 100 of every element using the production version of the "Tandberg" protocol. Note that when you specify "production" and version 1.1.0.1 is the production version, the elements explicitly using version 1.1.0.1 instead of "production" will also receive the data. When you explicitly specify "1.1.0.1" in the distribution attribute, elements using "production" will receive the data.
 

@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Type
+description: "Use the DMSScript Type element to specify the script type with a non-empty string. For DataMiner automation scripts, set the value to Automation."
 ---
 
 # Type element

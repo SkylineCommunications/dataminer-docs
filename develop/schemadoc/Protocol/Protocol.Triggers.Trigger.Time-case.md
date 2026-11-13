@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Time-case
+description: "Use the case attribute of the Trigger Time element in a DataMiner protocol to select the comparison operator for a trigger condition."
 ---
 
 # case attribute
@@ -18,10 +19,6 @@ string
 
 In the following example, the trigger will be executed when the value of the Parameter with ID 1 is equal to 2:
 
-
 ```xml
 <Time id="1" case="equal" value="2">
 ```
-
-
-

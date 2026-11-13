@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display-pageOrder
+description: "Use the Display pageOrder attribute in a DataMiner protocol to order Data Display pages and add separators or web interface links."
 ---
 
 # pageOrder attribute

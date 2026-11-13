@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_activating_verbose_correlation_logging
+description: "Learn how, using the SLNetClientTest tool, you can activate verbose Correlation logging in DataMiner."
 ---
 
 # Activating verbose Correlation logging

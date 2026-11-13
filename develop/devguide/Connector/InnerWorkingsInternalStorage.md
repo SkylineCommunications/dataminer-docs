@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsInternalStorage
+description: "Learn what uninitialized numeric parameters return in DataMiner for standalone parameters and table cells, and how to detect uninitialized values."
 ---
 
 # Internal storage

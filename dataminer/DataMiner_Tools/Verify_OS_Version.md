@@ -1,5 +1,6 @@
 ---
 uid: Verify_OS_Version
+description: "Find out how the Verify OS Version check verifies whether the DataMiner version in the upgrade package supports the version of the OS installed on the DMA."
 ---
 
 # Verify OS Version

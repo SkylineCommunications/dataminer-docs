@@ -1,5 +1,6 @@
 ---
 uid: PA_User_DOM_Instance
+description: "Explore how a user DOM instance uses a fixed behavior definition, supports gateway decisions, and requires completion before the next activity."
 ---
 
 # User DOM instance

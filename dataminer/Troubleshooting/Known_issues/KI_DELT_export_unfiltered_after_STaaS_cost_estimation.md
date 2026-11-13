@@ -17,13 +17,13 @@ When a [STaaS cost estimation](xref:STaaS_cost_estimation) is started, the Cloud
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.5.0 [CU21], 10.6.0 [CU9], or 10.6.12.<!-- RN 46782 -->
 
 ## Workaround
 
 Restart the DataMiner Agents hosting the elements you want to export. After the restart, DELT exports are filtered correctly again.
 
-Note that the issue will reappear if a STaaS cost estimation or migration is started again on the system.
+Note that, until the fix is installed, the issue will reappear if a STaaS cost estimation or migration is started again on the system.
 
 ## Description
 

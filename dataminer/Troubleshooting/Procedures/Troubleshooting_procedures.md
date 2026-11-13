@@ -49,3 +49,5 @@ Other troubleshooting procedures:
 - [Re-registering DataMiner services and DLLs](xref:Re-registering_DataMiner_services_and_DLLs)
 
 - ['Sharing dashboard' window does not disappear](xref:Sharing_dashboard_window_does_not_disappear)
+
+- [DxM MSI installation or startup failures](xref:DxM_installation_or_startup_failures)

@@ -1,5 +1,6 @@
 ---
 uid: Verify_Cloud_DxM_Version
+description: "Find out how the Verify Cloud DxM Version prerequisite check verifies if the minimum required version is installed for all DxMs in the system."
 ---
 
 # Verify Cloud DxM Version

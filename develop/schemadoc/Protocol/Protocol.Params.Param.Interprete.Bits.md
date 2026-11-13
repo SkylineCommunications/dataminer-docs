@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Bits
+description: "Use the Bits element in a DataMiner protocol to select how many bits DataMiner reads from each byte in a multibyte group."
 ---
 
 # Bits element

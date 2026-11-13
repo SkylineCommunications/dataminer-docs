@@ -1,6 +1,6 @@
 ---
 uid: GQI_DxM
-description: "Learn how to configure the DataMiner GQI DxM, including CPU usage limits, logging, message handling, and idle child process termination."
+description: "Learn how to configure the DataMiner GQI DxM, including session and CPU limits, logging, message handling, and idle child process termination."
 ---
 
 # GQI DxM
@@ -62,6 +62,9 @@ The GQI DxM can be configured via JSON configuration files. The default configur
 
 To change configuration settings, use the configuration file named `appsettings.custom.json` in `C:\Program Files\Skyline Communications\DataMiner GQI\`. If this file does not exist yet, create it in the mentioned location.
 
+> [!CAUTION]
+> Changing the configuration closes all existing query sessions on that GQI instance.
+
 Below you can find an overview of the settings that can be configured in this file.
 
 ### Logging
@@ -105,6 +108,27 @@ To prevent GQI from consuming all available CPU resources, you can configure lim
 - **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all [extension workers](xref:GQI_Extensions_Architecture#extension-worker-processes) can use together. The default is 80%, which allows the extension workers to use up to 64% (i.e., 80% of 80%) of the total CPU capacity when the default values are used.
 
 Both settings accept integer values from 1 through 100. After changing either setting, restart the GQI service for the change to take effect.
+
+### Maximum number of concurrent sessions
+
+Available starting from DataMiner Web 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12.<!-- RN 46819 -->
+
+You can configure the maximum number of concurrent sessions per GQI instance with **MaxSessionCount** under `GQIOptions` in the *appsettings.custom.json* file.
+
+```json
+{
+  "GQIOptions": {
+    "MaxSessionCount": 500
+  }
+}
+```
+
+The default is 500. The setting accepts integer values from 1 through 10,000. When the limit is reached, new session requests will be rejected until existing sessions are closed or expire.
+
+Changes apply automatically when you save the configuration file, without restarting the GQI service.
+
+> [!CAUTION]
+> Change this setting at your own risk. Allowing too many resource-intensive query sessions can overload the system.
 
 ### Message handler configuration
 

@@ -1,5 +1,6 @@
 ---
 uid: Verify_Elastic_Storage_Type
+description: "Find out how the Verify Elastic Storage Type check verifies whether the system has successfully switched to an indexing database."
 ---
 
 # Verify Elastic Storage Type

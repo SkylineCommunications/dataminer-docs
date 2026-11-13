@@ -7,6 +7,12 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 > [!NOTE]
 > Range 1.2.x.x is supported as from **DataMiner 10.4.0**.
 
+### 1.2.1.2
+
+#### Fix - New scheduler tasks defaulted to zero repetitions instead of unlimited repetitions [ID 46858]
+
+When you created a scheduler task without specifying a repetition count, it defaulted to 0 instead of -1 (unlimited), so the task would not repeat. The default is now -1, ensuring that the task repeats indefinitely unless you configure a specific repetition count.
+
 ### 1.2.1.1
 
 #### Fix - Daily scheduled task repetition intervals could be cleared when tasks were updated [ID 46561]

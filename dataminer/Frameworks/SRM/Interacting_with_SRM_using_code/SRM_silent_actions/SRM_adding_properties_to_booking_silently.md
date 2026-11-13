@@ -1,5 +1,6 @@
 ---
 uid: SRM_adding_properties_to_booking_silently
+description: "Find out how properties can be added to an existing booking without user interaction by means of an automation script."
 ---
 
 # Silently adding properties to an existing booking

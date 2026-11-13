@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsWebSocketsUseCase3
+description: "Configure a WebSocket connection with a custom HTTP handshake and headers, while recognizing that it cannot reconnect after disconnection."
 ---
 
 # WebSocket connection with custom handshake
@@ -29,7 +30,7 @@ This should be configured in the *Connections.Connection.CommunicationOptions.We
    </CommunicationOptions>
    <UserSettings>
       <BusAddress>
-         <DefaultValue>byPassProxy</DefaultValue>
+         <DefaultValue>bypassProxy</DefaultValue>
       </BusAddress>
       <IPport>
          <DefaultValue>8050</DefaultValue>

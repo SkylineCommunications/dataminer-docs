@@ -1,10 +1,11 @@
 ---
 uid: Protocol-TypeCamelCaseName
+description: "Use the TypeCamelCaseName simple type to validate camel-cased names from 2 to 160 characters in the DataMiner protocol schema."
 ---
 
 # TypeCamelCaseName simple type
 
-Represents a camel cased string.
+Represents a camel-cased string.
 
 ## Content Type
 

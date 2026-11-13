@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database
+description: "Use the Database element in a DataMiner protocol to set storage, indexing, partition, and connection options for a parameter."
 ---
 
 # Database element

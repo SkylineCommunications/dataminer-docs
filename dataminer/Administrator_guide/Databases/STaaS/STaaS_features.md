@@ -1,7 +1,7 @@
 ---
 uid: STaaS_features
 description: "Explore the many STaaS features. STaaS takes care of data redundancy, data resilience, data security, and data availability out of the box."
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # STaaS features
@@ -113,6 +113,8 @@ In addition, the following **other limitations** currently apply:
 - Every DMA must be able to initiate outbound HTTPS connections to STaaS, directly or through a proxy. For a restricted network or DMZ, configure this access according to [Setting up STaaS](xref:Setting_up_StaaS#prerequisites).
 
 - Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
+
+- An individual event sent to STaaS must not exceed 1 MB. This limit applies to the entire event, not only to the value it contains.
 
 - For element table data, the first 768 bytes of a table instance row key (768 ASCII characters, or as few as 192 in a worst-case UTF-8 scenario) must be unique to avoid conflicts in the database; longer keys are truncated.
 
