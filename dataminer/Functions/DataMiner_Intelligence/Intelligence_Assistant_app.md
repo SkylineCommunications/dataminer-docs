@@ -29,6 +29,9 @@ When you open the app, a welcome screen is displayed with the following elements
 
 - **Left sidebar**: Allows you to start a new session at any time by clicking *+ New session*. Below that, you can access your sessions, [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools).
 
+  > [!NOTE]
+  > The *Agents* button will only be visible in the sidebar if [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) have been made available in your DataMiner System.
+
 - **Header bar**: The header bar is similar to other native DataMiner apps, with a button to return to the landing page on the left, and a user icon on the right. Clicking the user icon opens a menu with the following options:
 
   - *About*: Provides access to information about the app, including the version of the app and all of its components.
