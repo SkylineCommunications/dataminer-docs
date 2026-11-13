@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_life_cycle_states
+description: "Explore the different booking lifecycle states, and configure custom Created Booking Actions and state colors in the Booking Manager app."
 ---
 
 # Service Orchestration: booking lifecycle states configuration

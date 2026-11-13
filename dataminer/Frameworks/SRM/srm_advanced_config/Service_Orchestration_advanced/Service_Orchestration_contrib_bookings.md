@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_contrib_bookings
+description: "Find out how to configure contributing bookings with locked or unlocked lifecycles, main or local orchestration, late conversion, and lite mode."
 ---
 
 # Service Orchestration: contributing bookings configuration
