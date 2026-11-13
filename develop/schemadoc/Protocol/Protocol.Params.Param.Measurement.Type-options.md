@@ -104,7 +104,7 @@ or:
 
 ```xml
 <Param id="16" backup="true">
-    <Name>Matrix64x64</Name>
+    <Name>Matrix_64x64</Name>
     <Measurement>
         <!-- Sequence for matrix options COMin/COMax/CIMin/CIMax -->
         <Type options="matrix=64,64,0,64,0,64,pages,noDisconnectsInBackup" link="port64.xml">matrix</Type>
