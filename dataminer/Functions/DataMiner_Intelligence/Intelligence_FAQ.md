@@ -89,7 +89,9 @@ Often, yes. When context is substantial and only relevant in certain situations,
 
 ### What is the best way to make documentation available to agents?
 
-The simplest approach is to create one [skill](xref:Intelligence_Assistant_Skills) with multiple resource files. Organize the documentation as text-based files in the skill folder or in nested subfolders, and reference each resource explicitly in the skill instructions. Specify each path relative to the skill folder, including every nested folder. Agents will load the resources progressively when they are relevant.
+For a small documentation set, create one [skill](xref:Intelligence_Assistant_Skills) with multiple resource files. Organize the documentation as text-based files in the skill folder or in nested subfolders, and reference each resource explicitly in the skill instructions. Specify each path relative to the skill folder, including every nested folder. Agents will load the resources progressively when they are relevant.
+
+For a larger documentation set, use an indexed search tool to retrieve relevant content on demand, and make that tool available to the agent through a tool call.
 
 For the supported folder structure and `SKILL.md` requirements, see [Using skill files](xref:Intelligence_Assistant_Skills#using-skill-files).
 
@@ -126,10 +128,6 @@ No. Assigning tools and skills defines an agent's capabilities, but does not cre
 ### Where can I find the DataMiner Assistant DxM version?
 
 In the DataMiner web apps, click the user icon in the top-right corner and select *About*. The version of the DataMiner Assistant DxM is listed as *Assistant*, together with the versions of the other DataMiner components.
-
-### Does adding a new model require a new DxM version?
-
-Not always. Newer models that use the same APIs can be made available automatically. Adding a new model provider does require a DxM upgrade.
 
 ## Performance and supported functionality
 
