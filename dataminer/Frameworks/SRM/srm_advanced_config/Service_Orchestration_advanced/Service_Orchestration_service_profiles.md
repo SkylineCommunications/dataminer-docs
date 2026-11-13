@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_service_profiles
+description: "Find out how to configure service profiles and enable the Service Profile Wizard to simplify booking creation."
 ---
 
 # Service Orchestration: service profiles configuration

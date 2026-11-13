@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_service_definition_advanced
+description: "Find out how to configure service definitions to hide them in the Booking Manager and reuse contributing bookings."
 ---
 
 # Service Orchestration: service definitions configuration
