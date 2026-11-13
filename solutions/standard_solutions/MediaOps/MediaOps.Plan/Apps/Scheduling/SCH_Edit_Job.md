@@ -69,15 +69,6 @@ This section provides a list view of all nodes in the job. With the *Add Node* b
 
 If a node is linked to a resource pool but the resource itself still needs to be selected, the ![Red Hand](~/solutions/images/Red_Hand_icon.png) icon will be shown in the *Resource Select Column*. In that case, you can click the icon to pick the resource from the available resources in the pool.
 
-The following options and features are available in this section:
-
-- **Auto assign resources**: Above the *Nodes* table, you can click the *Auto assign resources* button to automatically assign eligible resources to all unassigned nodes in a *Draft* or *Tentative* job. If a resource cannot be assigned, a message will indicate the reason (e.g., missing mandatory configuration or no available resource in that time slot).<!-- RN 46409 -->
-- **Return resource node to pool**: In a *Draft* or *Tentative* job, you can swap an assigned resource node back to a resource pool node. For tentative jobs, this immediately releases the reservation for that resource.<!-- RN 46436 -->
-- **Search and filtering**: In all resource selection panels (*Add Resource*, *Pick Resource*, *Swap Resource*, etc.), search and filtering options are available to quickly locate the desired resources or pools.<!-- RN 46907 -->
-- **Swapping pools**: When you swap a node to a different resource pool with a different scheduling configuration, a prompt asks whether to **Keep** the current configuration and automated actions or **Revert** them to match the new pool.<!-- RN 45924 -->
-- **Editing running jobs**: In a *Running* job, you can edit existing node configurations and configure newly added or swapped nodes. Automated actions that have already executed remain locked and read-only.<!-- RN 46981, 46982 -->
-- **Node numbering**: When multiple nodes have the same name, they are numbered sequentially (e.g., "Encoder Pool (1)", "Encoder Pool (2)") instead of showing GUIDs.<!-- RN 46679 -->
-
 ## Workflow
 
 This section shows the nodes in the job in a workflow diagram and allows you to manage both the nodes and the connections between them.
