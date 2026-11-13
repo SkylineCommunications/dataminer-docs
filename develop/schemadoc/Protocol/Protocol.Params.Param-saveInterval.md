@@ -54,8 +54,8 @@ The following example table is configured to save the value of a cell every 5 mi
 
 ```xml
 <Param id="100" saveInterval="PT5M">
-	<Name>myTable</Name>
-	<Description>My Table</Description>
+	<Name>Items</Name>
+	<Description>Items</Description>
 	<Type>array</Type>
 	<ArrayOptions index="0">
 		<ColumnOption idx="0" pid="101" type="retrieved" options="" />

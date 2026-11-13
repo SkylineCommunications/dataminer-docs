@@ -20,7 +20,7 @@ Example:
 
 ```xml
 <Param id="1200" trending="false">
-   <Name>tblOutputs</Name>
+   <Name>Outputs</Name>
    <Description>Outputs</Description>
    <Type>array</Type>
    <Information>

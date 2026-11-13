@@ -11,7 +11,7 @@ This is typically useful for parameters holding a configurable value. For exampl
 
 ```xml
 <Param id="903" trending="false" save="true">
-    <Name>Inputs_AutoClear</Name>
+    <Name>AutoClearInputs</Name>
     <Description>Auto Clear Inputs</Description>
     <Information>
         <Subtext>Indicates whether or not to automatically remove missing inputs every hour.</Subtext>

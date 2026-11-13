@@ -21,8 +21,8 @@ To define a custom context menu, define a parameter with the same name as the ta
 
 ```xml
 <Param id="2099">
-  <Name>myTable_ContextMenu</Name>
-  <Description>Context Menu for My Table</Description>
+  <Name>MyTable_ContextMenu</Name>
+  <Description>Context Menu (My Table)</Description>
   <Type>write</Type>
   <Interprete>
     <RawType>other</RawType>

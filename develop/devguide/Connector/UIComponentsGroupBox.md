@@ -30,7 +30,7 @@ The second parameter defines the group box footer.
 
 ```xml
 <Param id="500">
-  <Name>Title_Begin_Identification</Name>
+  <Name>TitleBeginIdentification</Name>
   <Description>Identification</Description>
   <Type>fixed</Type>
   <Display>
@@ -41,7 +41,7 @@ The second parameter defines the group box footer.
   </Measurement>
 </Param>
 <Param id="501">
-  <Name>Title_End_Generic</Name>
+  <Name>TitleEndGeneric</Name>
   <Type>fixed</Type>
   <Display>
     <RTDisplay>true</RTDisplay>

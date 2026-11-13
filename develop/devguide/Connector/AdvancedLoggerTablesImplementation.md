@@ -13,15 +13,15 @@ To implement a logger table, perform the following steps:
 
    ```xml
    <Param id="5200" trending="false">
-      <Name>TrapsLogger</Name>
-      <Description>Traps Logger</Description>
+      <Name>LoggedTraps</Name>
+      <Description>Logged Traps</Description>
       <Type>array</Type>
       <ArrayOptions index="0" options="database">
          <ColumnOption idx="0" pid="5201" type="retrieved" />
          <ColumnOption idx="1" pid="5202" type="retrieved" />
-        ...
+         ...
       </ArrayOptions>
-     ...
+      ...
    </Param>
    ```
 
@@ -29,20 +29,20 @@ To implement a logger table, perform the following steps:
 
    ```xml
    <Param id="5200" trending="false">
-      <Name>TrapsLogger</Name>
-      <Description>Traps Logger</Description>
+      <Name>LoggedTraps</Name>
+      <Description>Logged Traps</Description>
       <Type>array</Type>
       <ArrayOptions index="0" options="database">
          <ColumnOption idx="0" pid="5201" type="retrieved" />
          <ColumnOption idx="1" pid="5202" type="retrieved" />
-        ...
+         ...
       </ArrayOptions>
       <Database>
          <CQLOptions>
             <Clustering>25;2;0</Clustering>
          </CQLOptions>
       </Database>
-     ...
+      ...
    </Param>
    ```
 
@@ -59,7 +59,7 @@ To implement a logger table, perform the following steps:
    ```xml
    <Param id="5204" trending="false">
       <Name>sip</Name>
-      <Description>Source IP (Traps Logger)</Description>
+      <Description>Source IP (Logged Traps)</Description>
       <Information>
          <Subtext>The Source IP of the trap.</Subtext>
       </Information>
@@ -133,7 +133,7 @@ To implement a logger table, perform the following steps:
    ```xml
    <Param id="5202" trending="false">
       <Name>ts</Name>
-      <Description>Database Timestamp (Traps Logger)</Description>
+      <Description>Database Timestamp (Logged Traps)</Description>
       <Information>
          <Subtext>This is the principal timestamp used in the database.</Subtext>
       </Information>
@@ -174,7 +174,7 @@ To implement a logger table, perform the following steps:
 
      ```xml
      <Param id="1003">
-       ...
+        ...
         <Database>
            <ColumnDefinition>VARCHAR(200)</ColumnDefinition>
            <Partition partitionsToKeep="2">hour</Partition>

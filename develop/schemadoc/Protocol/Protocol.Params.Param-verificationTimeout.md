@@ -36,9 +36,9 @@ With the hex attribute, it is possible to display a number in HEX format:
 
 ```xml
 <Param>
-  <Measurement>
-     <Type hex="true">NUMBER</Type>
-  </Measurement>
+   <Measurement>
+      <Type hex="true">NUMBER</Type>
+   </Measurement>
 ```
 
 In this case, the WRITE is of type STRING (write in HEX format)

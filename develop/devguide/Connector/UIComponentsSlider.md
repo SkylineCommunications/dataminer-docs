@@ -132,7 +132,7 @@ If you provide multiple discrete entries with state "disabled", a dropdown list 
 
 ```xml
 <Param id="174">
-  <Name>throughput</Name>
+  <Name>Throughput</Name>
   <Description>Throughput</Description>
   <Type>read</Type>
   <Interprete>
@@ -163,7 +163,7 @@ If you provide multiple discrete entries with state "disabled", a dropdown list 
   </Measurement>
 </Param>
 <Param id="175" setter="true">
-  <Name>throughput</Name>
+  <Name>Throughput</Name>
   <Description>Throughput</Description>
   <Type>write</Type>
   <Interprete>

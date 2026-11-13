@@ -13,8 +13,8 @@ Example:
 
 ```xml
 <Param id="1000" trending="false">
-  <Name>Table</Name>
-  <Description>Table Description</Description>
+  <Name>Items</Name>
+  <Description>Items</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
     <ColumnOption idx="0" pid="1001" type="retrieved" options=""/>
@@ -33,8 +33,8 @@ For each table column, an additional parameter is defined which is referred to v
 
 ```xml
 <Param id="1001" trending="false">
-  <Name>Column1</Name>
-  <Description>Column 1 Description</Description>
+  <Name>Items_Column1</Name>
+  <Description>Column 1 (Items)</Description>
   <Type>read</Type>
   <Interprete>
     <RawType>other</RawType>
@@ -49,8 +49,8 @@ For each table column, an additional parameter is defined which is referred to v
   </Measurement>
 </Param>
 <Param id="1002" trending="false">
-  <Name>Column2</Name>
-  <Description>Column 2 Description</Description>
+  <Name>Items_Column2</Name>
+  <Description>Column 2 (Items)</Description>
   <Type>read</Type>
   <Interprete>
     <RawType>numeric text</RawType>
@@ -65,8 +65,8 @@ For each table column, an additional parameter is defined which is referred to v
   </Measurement>
 </Param>
 <Param id="1003" trending="false">
-  <Name>Column3</Name>
-  <Description>Column 3 Description</Description>
+  <Name>Items_Column3</Name>
+  <Description>Column 3 (Items)</Description>
   <Type>write</Type>
   <Interprete>
     <RawType>numeric text</RawType>
@@ -109,8 +109,8 @@ In order to create a writable column, create an additional parameter of type "wr
 
 ```xml
 <Param id="1102" setter="true">
-  <Name>Column2</Name>
-  <Description>Column 2 Description</Description>
+  <Name>Items_Column2</Name>
+  <Description>Column 2 (Items)</Description>
   <Type>write</Type>
   <Display>
     <RTDisplay>true</RTDisplay>

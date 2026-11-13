@@ -27,24 +27,24 @@ To create a WebSocket, define a new WebSocket connection in the protocol. The *C
 ```xml
 <Connection id="1" name="WebSocket Connection">
    <Http>
-   <CommunicationOptions>
-      <WebSocket>true</WebSocket>
-      <NotifyConnectionPIDs>
-         <Connections>7</Connections>
-      </NotifyConnectionPIDs>
-      <MakeCommandByProtocol>true</MakeCommandByProtocol>
-   </CommunicationOptions>
-   <UserSettings>
-      <BusAddress>
-         <DefaultValue>bypassProxy</DefaultValue>
-      </BusAddress>
-      <IPport>
-         <DefaultValue>8050</DefaultValue>
-      </IPport>
-      <TimeoutTime>
-         <DefaultValue>5000</DefaultValue>
-      </TimeoutTime>
-   </UserSettings>
+      <CommunicationOptions>
+         <WebSocket>true</WebSocket>
+         <NotifyConnectionPIDs>
+            <Connections>7</Connections>
+         </NotifyConnectionPIDs>
+         <MakeCommandByProtocol>true</MakeCommandByProtocol>
+      </CommunicationOptions>
+      <UserSettings>
+         <BusAddress>
+            <DefaultValue>bypassProxy</DefaultValue>
+         </BusAddress>
+         <IPport>
+            <DefaultValue>8050</DefaultValue>
+         </IPport>
+         <TimeoutTime>
+            <DefaultValue>5000</DefaultValue>
+         </TimeoutTime>
+      </UserSettings>
    </Http>
 </Connection>
 ```
@@ -102,7 +102,7 @@ For each trigger, you will need an action.
      <Name>Read Response Action</Name>
      <On>response</On>
      <Type>read</Type>
-  </Action>   
+  </Action>
   ```
 
 ### Commands
@@ -145,7 +145,7 @@ The responses will come back in the **Protocol.Responses** tag.
    <Description>Generic Response</Description>
    <Content>
       <Param>11</Param>
-    </Content>
+   </Content>
 </Response>
 ```
 
@@ -172,7 +172,7 @@ The response must be cleared after the data is processed. You can do this with *
    <Type>action</Type>
    <Content>
       <Id>32</Id>
-    </Content>
+   </Content>
 </Trigger>
 ```
 
@@ -207,42 +207,42 @@ This parameter should be added and displayed to show the status of the WebSocket
 
 ```xml
 <Param id="7" trending="true">
-    <Name>WebsocketStatus</Name>
-    <Description>Websocket Status</Description>
-    <Type>read</Type>
-    <Information>
-        <Subtext>
-            <![CDATA[Status of the Websocket.
-             0: Closed
-             1: Open]]>
-        </Subtext>
-    </Information>
-    <Interprete>
-        <RawType>numeric text</RawType>
-        <LengthType>next param</LengthType>
-        <Type>double</Type>
-    </Interprete>
-    <Alarm>
-        <Monitored>true</Monitored>
-        <Normal>1</Normal>
-        <CH>0</CH>
-    </Alarm>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>discreet</Type>
-        <Discreets>
-            <Discreet>
-                <Display>Closed</Display>
-                <Value>0</Value>
-            </Discreet>
-            <Discreet>
-                <Display>Open</Display>
-                <Value>1</Value>
-            </Discreet>
-        </Discreets>
-    </Measurement>
+   <Name>WebsocketStatus</Name>
+   <Description>Websocket Status</Description>
+   <Type>read</Type>
+   <Information>
+      <Subtext>
+         <![CDATA[Status of the Websocket.
+         0: Closed
+         1: Open]]>
+      </Subtext>
+   </Information>
+   <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>next param</LengthType>
+      <Type>double</Type>
+   </Interprete>
+   <Alarm>
+      <Monitored>true</Monitored>
+      <Normal>1</Normal>
+      <CH>0</CH>
+   </Alarm>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>discreet</Type>
+      <Discreets>
+         <Discreet>
+            <Display>Closed</Display>
+            <Value>0</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Open</Display>
+            <Value>1</Value>
+         </Discreet>
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 

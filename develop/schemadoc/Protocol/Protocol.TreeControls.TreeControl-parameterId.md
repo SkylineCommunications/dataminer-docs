@@ -24,7 +24,7 @@ Specifies the parameter ID of the tree control.
 ...
 <Param id="4640" trending="false">
   <Name>TreeControlParam</Name>
-  <Description>Parameter of the TreeControl</Description>
+  <Description>Parameter of the Tree Control</Description>
   <Type>read</Type>
   ...
 </Param>

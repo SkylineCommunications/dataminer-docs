@@ -29,7 +29,7 @@ A fixed field is defined using a parameter of type "fixed". The content of fixed
 
 ```xml
 <Param id="100">
-   <Name>Fixed_Space</Name>
+   <Name>FixedSpace</Name>
    <Description>Fixed Space</Description>
    <Type>fixed</Type>
    <Interprete>
@@ -230,16 +230,16 @@ Imagine you have defined the following response:
 
 ```xml
 <Response id="300">
-  <Name>VariableLengthResponse</Name>
-  <Description>Variable Length response with 2 variable length parameters</Description>
-  <Content>
-     <Param>301</Param><!-- Response Next Param 1 -->
-     <Param>302</Param><!-- Response Fixed Colon (:) -->
-     <Param>303</Param><!-- Response Fixed Question Mark (?) -->
-     <Param>304</Param><!-- Response Next Param Data 2 -->
-     <Param>305</Param><!-- Response Fixed Semicolon (;) -->
-     <Param>306</Param><!-- Response Fixed Exclamation Mark (!) -->
-  </Content>
+   <Name>VariableLengthResponse</Name>
+   <Description>Variable Length response with 2 variable length parameters</Description>
+   <Content>
+      <Param>301</Param><!-- Response Next Param 1 -->
+      <Param>302</Param><!-- Response Fixed Colon (:) -->
+      <Param>303</Param><!-- Response Fixed Question Mark (?) -->
+      <Param>304</Param><!-- Response Next Param Data 2 -->
+      <Param>305</Param><!-- Response Fixed Semicolon (;) -->
+      <Param>306</Param><!-- Response Fixed Exclamation Mark (!) -->
+   </Content>
 </Response>
 ```
 
@@ -320,15 +320,15 @@ For example:
 
 ```xml
 <Response id="300">
-  <Name>responseCWithLengthAndDataAtEndWithoutTrailer</Name>
-  <Description>Response C With Length And Data at End Without Trailer</Description>
-  <Content>
-     <Param>300</Param><!-- ResponseC Key Field -->
-     <Param>301</Param><!-- ResponseC Variable Data -->
-     <Param>302</Param><!-- ResponseC Fixed Colon (:) -->
-     <Param>303</Param><!-- ResponseC Length Field -->
-     <Param>304</Param><!-- ResponseC Variable Length Data Field -->
-  </Content>
+   <Name>responseCWithLengthAndDataAtEndWithoutTrailer</Name>
+   <Description>Response C With Length And Data at End Without Trailer</Description>
+   <Content>
+      <Param>300</Param><!-- ResponseC Key Field -->
+      <Param>301</Param><!-- ResponseC Variable Data -->
+      <Param>302</Param><!-- ResponseC Fixed Colon (:) -->
+      <Param>303</Param><!-- ResponseC Length Field -->
+      <Param>304</Param><!-- ResponseC Variable Length Data Field -->
+   </Content>
 </Response>
 ```
 
@@ -336,20 +336,20 @@ The length parameter (ID 303) contains a definition as shown below.
 
 ```xml
 <Param id="303">
-  <Name>ResponseCLengthField</Name>
-  <Description>Response C Length Field</Description>
-  <Type>length</Type>
-  <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>2</Length>
-     <Type>double</Type>
-  </Interprete>
-  <Length>
-     <Content>
-        <Param>4</Param>
-     </Content>
-  </Length>
+   <Name>ResponseCLengthField</Name>
+   <Description>Response C Length Field</Description>
+   <Type>length</Type>
+   <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>2</Length>
+      <Type>double</Type>
+   </Interprete>
+   <Length>
+      <Content>
+         <Param>4</Param>
+      </Content>
+   </Length>
 </Param>
 ```
 
@@ -370,8 +370,8 @@ When the number of bytes is larger or smaller than defined, the response process
    <Time>before</Time>
    <Type>action</Type>
    <Content>
-      <Id>3</Id> <!-- Response Read --> 
-      <Id>4</Id> <!-- Response Length --> 
+      <Id>3</Id> <!-- Response Read -->
+      <Id>4</Id> <!-- Response Length -->
    </Content>
 </Trigger>
 
@@ -432,39 +432,39 @@ In the example below, the Interprete.Length will be defined at runtime by the co
 
 ```xml
 <Response id="500">
-  <Name>ResponseEWithOtherParam</Name>
-  <Description>Response E With Other Param</Description>
-  <Content>
-     <Param>500</Param><!-- ResponseE Key Field -->
-     <Param>501</Param><!-- ResponseE Variable Data -->
-     <Param>502</Param><!-- ResponseE Fixed Colon (:) -->
-     <Param>503</Param><!-- ResponseE Length Field -->
-     <Param>504</Param><!-- ResponseE Variable Length Data Field -->
-  </Content>
+   <Name>ResponseEWithOtherParam</Name>
+   <Description>Response E With Other Param</Description>
+   <Content>
+      <Param>500</Param><!-- ResponseE Key Field -->
+      <Param>501</Param><!-- ResponseE Variable Data -->
+      <Param>502</Param><!-- ResponseE Fixed Colon (:) -->
+      <Param>503</Param><!-- ResponseE Length Field -->
+      <Param>504</Param><!-- ResponseE Variable Length Data Field -->
+   </Content>
 </Response>
 
 <Param id="503">
-  <Name>ResponseELengthField</Name>
-  <Description>Response E Length Field</Description>
-  <Type>read</Type>
-  <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>2</Length>
-     <Type>double</Type>
-  </Interprete>
+   <Name>ResponseELengthField</Name>
+   <Description>Response E Length Field</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>2</Length>
+      <Type>double</Type>
+   </Interprete>
 </Param>
 <Param id="504">
-  <Name>responseEVariableLengthDataField</Name>
-  <Description>Response E Variable Length Data Field</Description>
-  <Type>read</Type>
-  <Information>...</Information>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType id="503">other param</LengthType>
-     <Type>string</Type>
-  </Interprete>
-  <Display>...</Display>
+   <Name>ResponseEVariableLengthDataField</Name>
+   <Description>Response E Variable Length Data Field</Description>
+   <Type>read</Type>
+   <Information>...</Information>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType id="503">other param</LengthType>
+      <Type>string</Type>
+   </Interprete>
+   <Display>...</Display>
    <Measurement>
       <Type>string</Type>
    </Measurement>
@@ -490,25 +490,25 @@ This parameter has a CRC child tag, where CRC.Type defines how the CRC is calcul
 
 ```xml
 <Param id="3000">
-  <Name>CRC</Name>
-  <Description>CRC</Description>
-  <Type>crc</Type>
-  <Interprete>
-     <RawType>unsigned number</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>1</Length>
-     <Type>double</Type>
-  </Interprete>
-  <CRC>
-     <Type mod="95" off="-32" totaloffset="32">sum</Type>
-     <Content>
-        <Param>0</Param>
-        <Param>1</Param>
-        <Param>2</Param>
-        <Param>3</Param>
-        <Param>4</Param>
-     </Content>
-  </CRC>
+   <Name>CRC</Name>
+   <Description>CRC</Description>
+   <Type>crc</Type>
+   <Interprete>
+      <RawType>unsigned number</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>1</Length>
+      <Type>double</Type>
+   </Interprete>
+   <CRC>
+      <Type mod="95" off="-32" totaloffset="32">sum</Type>
+      <Content>
+         <Param>0</Param>
+         <Param>1</Param>
+         <Param>2</Param>
+         <Param>3</Param>
+         <Param>4</Param>
+      </Content>
+   </CRC>
 </Param>
 ```
 
@@ -516,16 +516,16 @@ In the example below, the CRC calculation is done with parameter 0, 2, 6, 5, and
 
 ```xml
 <Command id="1">
-  <Name>Get Helix Current</Name>
-  <Description>Get Helix Current</Description>
-  <Content>
-     <Param>0</Param>
-     <Param>2</Param>
-     <Param>6</Param>
-     <Param>5</Param>
-     <Param>1</Param>
-     <Param>3000</Param>
-  </Content>
+   <Name>Get Helix Current</Name>
+   <Description>Get Helix Current</Description>
+   <Content>
+      <Param>0</Param>
+      <Param>2</Param>
+      <Param>6</Param>
+      <Param>5</Param>
+      <Param>1</Param>
+      <Param>3000</Param>
+   </Content>
 </Command>
 ```
 
@@ -535,46 +535,46 @@ The following protocol fragment triggers a "crc response" action:
 
 ```xml
 <Trigger id="4">
-  <Name>BeforeResponse_410</Name>
-  <On id="410">response</On>
-  <Time>before</Time>
-  <Type>action</Type>
-  <Content>
-     <Id>410</Id>
-  </Content>
+   <Name>BeforeResponse_410</Name>
+   <On id="410">response</On>
+   <Time>before</Time>
+   <Type>action</Type>
+   <Content>
+      <Id>410</Id>
+   </Content>
 </Trigger>
 
 <Action id="410">
-  <Name>Response CRC</Name>
-  <On>response</On>
-  <Type>crc</Type>
+   <Name>Response CRC</Name>
+   <On>response</On>
+   <Type>crc</Type>
 </Action>
 ```
 
 In case the CRC value is required as hex instead of decimal, the Base tag can be used as in the example below:
 
 ```xml
-<Param id ="91">
-  <Name>CRC 5</Name>
-  <Description>CRC 5</Description>
-  <Type>crc</Type>
-  <Interprete>
-     <RawType>numeric text</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>2</Length>
-     <Type>double</Type>
-     <Base>16</Base>
-  </Interprete>
-  <CRC>
-     <Type>exor</Type>
-     <Content>
-        <Param>0</Param>
-        <Param>1</Param>
-        <Param>2</Param>
-        <Param>3</Param>
-        <Param>4</Param>
-     </Content>
-  </CRC>
+<Param id="91">
+   <Name>CRC5</Name>
+   <Description>CRC 5</Description>
+   <Type>crc</Type>
+   <Interprete>
+      <RawType>numeric text</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>2</Length>
+      <Type>double</Type>
+      <Base>16</Base>
+   </Interprete>
+   <CRC>
+      <Type>exor</Type>
+      <Content>
+         <Param>0</Param>
+         <Param>1</Param>
+         <Param>2</Param>
+         <Param>3</Param>
+         <Param>4</Param>
+      </Content>
+   </CRC>
 </Param>
 ```
 
@@ -602,15 +602,15 @@ The byte or bytes in question need to be stored in a parameter of type "group" w
 
 ```xml
 <Param id="1000">
-  <Name>statusBytes</Name>
-  <Description>Status Bytes</Description>
-  <Type>group</Type>
-  <Interprete>
-     <RawType>unsigned number</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>2</Length>
-     <Type>double</Type>
-     <Endian>big</Endian>
+   <Name>StatusBytes</Name>
+   <Description>Status Bytes</Description>
+   <Type>group</Type>
+   <Interprete>
+      <RawType>unsigned number</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>2</Length>
+      <Type>double</Type>
+      <Endian>big</Endian>
    </Interprete>
 </Param>
 ```
@@ -622,11 +622,11 @@ Parameters of type "read bit" can then be defined to read out the value at certa
 ```xml
 <Type id="1000">read bit</Type>
 <Interprete>
-  <RawType>unsigned number</RawType>
-  <LengthType>fixed</LengthType>
-  <StartPosition>0</StartPosition>
-  <NbrOfBits>1</NbrOfBits>
-  <Type>double</Type>
+   <RawType>unsigned number</RawType>
+   <LengthType>fixed</LengthType>
+   <StartPosition>0</StartPosition>
+   <NbrOfBits>1</NbrOfBits>
+   <Type>double</Type>
 </Interprete>
 ```
 
@@ -647,41 +647,41 @@ A parameter of type "write bit" can be used to change a bit from a byte that is 
 
 ```xml
 <Param id="147">
-  <Name>logTxPowerMask</Name>
-  <Description>Log Tx Power Mask</Description>
-  <Type id="179">write bit</Type>
-  <Interprete>
-     <RawType>unsigned number</RawType>
-     <LengthType>fixed</LengthType>
-     <Type>double</Type>
-     <StartPosition>7</StartPosition>
-     <NbrOfBits>1</NbrOfBits>
-  </Interprete>
-  <Display>
-     <RTDisplay>true</RTDisplay>
-     <Range></Range>
-     <Units></Units>
-     <Positions>
-        <Position>
-           <Page>Fault history Mask</Page>
-           <Row>0</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
-  </Display>
-  <Measurement>
-     <Type>togglebutton</Type>
-     <Discreets>
-        <Discreet>
-           <Value>0</Value>
-           <Display>Disabled</Display>
-        </Discreet>
-        <Discreet>
-           <Value>1</Value>
-           <Display>Enabled</Display>
-        </Discreet>
-     </Discreets>
-  </Measurement>
+   <Name>LogTxPowerMask</Name>
+   <Description>Log Tx Power Mask</Description>
+   <Type id="179">write bit</Type>
+   <Interprete>
+      <RawType>unsigned number</RawType>
+      <LengthType>fixed</LengthType>
+      <Type>double</Type>
+      <StartPosition>7</StartPosition>
+      <NbrOfBits>1</NbrOfBits>
+   </Interprete>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Range></Range>
+      <Units></Units>
+      <Positions>
+         <Position>
+            <Page>Fault history Mask</Page>
+            <Row>0</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Measurement>
+      <Type>togglebutton</Type>
+      <Discreets>
+         <Discreet>
+            <Value>0</Value>
+            <Display>Disabled</Display>
+         </Discreet>
+         <Discreet>
+            <Value>1</Value>
+            <Display>Enabled</Display>
+         </Discreet>
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 
@@ -689,26 +689,26 @@ Note that a protocol will typically define 2 parameters of type "group"; one use
 
 ```xml
 <Param id="113">
-  <Name>faultHistoryMaskBinary</Name>
-  <Description>Fault history Mask Binary</Description>
-  <Type>group</Type>
-  <Interprete>
-     <RawType>unsigned number</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>4</Length>
-     <Type>double</Type>
-  </Interprete>
+   <Name>FaultHistoryMaskBinary</Name>
+   <Description>Fault History Mask Binary</Description>
+   <Type>group</Type>
+   <Interprete>
+      <RawType>unsigned number</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>4</Length>
+      <Type>double</Type>
+   </Interprete>
 </Param>
 <Param id="179">
-  <Name>faultHistoryMaskBinaryWrite</Name>
-  <Description>Fault history Mask Binary Write</Description>
-  <Type>group</Type>
-  <Interprete>
-     <RawType>unsigned number</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>4</Length>
-     <Type>double</Type>
-  </Interprete>
+   <Name>FaultHistoryMaskBinaryWrite</Name>
+   <Description>Fault History Mask Binary Write</Description>
+   <Type>group</Type>
+   <Interprete>
+      <RawType>unsigned number</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>4</Length>
+      <Type>double</Type>
+   </Interprete>
 </Param>
 ```
 
@@ -729,14 +729,14 @@ This is done using a trigger that triggers on a change of the parameter of type 
 </Trigger>
 
 <Action id="135">
-  <Name>clear fault history mask binary write</Name>
-  <On id="179">parameter</On>
-  <Type>clear</Type>
+   <Name>clear fault history mask binary write</Name>
+   <On id="179">parameter</On>
+   <Type>clear</Type>
 </Action>
 <Action id="45">
-  <Name>append data fault history mask binary</Name>
-  <On id="179">parameter</On>
-  <Type id="113">append data</Type>
+   <Name>append data fault history mask binary</Name>
+   <On id="179">parameter</On>
+   <Type id="113">append data</Type>
 </Action>
 ```
 
@@ -769,7 +769,7 @@ Parameter 100 is now defined as follows:
 
 ```xml
 <Param id="100">
-   <Name>audioGain_ResponseParameter</Name>
+   <Name>AudioGainResponseParameter</Name>
    <Description>Audio Gain - Response Parameter</Description>
    <Type id="3000">response</Type>
    <Interprete>

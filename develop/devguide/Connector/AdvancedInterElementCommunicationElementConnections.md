@@ -16,7 +16,7 @@ For example, the following parameter indicates that this parameter can be used a
 
 ```xml
 <Param id="65" setter="true">
-   <Name>generalData_Total Bandwidth</Name>
+   <Name>TotalBandwidth</Name>
    <Description>Total Bandwidth</Description>
    <Type virtual="source">write</Type>
    <Interprete>

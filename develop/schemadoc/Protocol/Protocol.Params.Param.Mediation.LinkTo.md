@@ -34,7 +34,7 @@ For more information, refer to [DataMiner Mediation Layer](xref:AdvancedDataMine
 
 ```xml
 <Param id="73102">
-   <Name>Name Process</Name>
+   <Name>NameProcess</Name>
    <Description>Name Process</Description>
    <Mediation>
       <LinkTo protocol="Network Server Manager" pid="82"/>

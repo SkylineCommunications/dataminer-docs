@@ -97,7 +97,7 @@ Parameter:
 
 ```xml
 <Param id="1">
-   <Name>exampleParameter</Name>
+   <Name>ExampleParameter</Name>
    <Description>Example Parameter</Description>
    <Type>read</Type>
    <Interprete>

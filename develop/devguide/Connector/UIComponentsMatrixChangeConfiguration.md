@@ -13,22 +13,22 @@ For example, consider the following matrix parameter:
 
 ```xml
 <Param id="4000">
-  <Name>matrixData_Matrix</Name>
-  <Description>Matrix</Description>
-  <Type options="dimensions=64,64;columntypes=4001:0-63">array</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
-  </Interprete>
-  <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>…</Positions>
-  </Display>
-  <Measurement>
-     <Type link="ports.xml" options="matrix=64,64,0,1,0,64">matrix</Type>
-     <Discreets>…</Discreets>
-  </Measurement>
+   <Name>Matrix</Name>
+   <Description>Matrix</Description>
+   <Type options="dimensions=64,64;columntypes=4001:0-63">array</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>double</Type>
+   </Interprete>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>…</Positions>
+   </Display>
+   <Measurement>
+      <Type link="ports.xml" options="matrix=64,64,0,1,0,64">matrix</Type>
+      <Discreets>…</Discreets>
+   </Measurement>
 </Param>
 ```
 

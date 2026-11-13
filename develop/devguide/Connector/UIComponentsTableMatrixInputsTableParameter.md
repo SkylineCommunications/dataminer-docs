@@ -17,7 +17,7 @@ Example:
 
 ```xml
 <Param id="1000" trending="false">
-   <Name>tblInputs</Name>
+   <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>
    <Information>

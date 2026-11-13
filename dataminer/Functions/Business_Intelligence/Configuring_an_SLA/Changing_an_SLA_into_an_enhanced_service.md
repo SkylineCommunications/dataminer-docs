@@ -19,20 +19,13 @@ It is possible to make a modification to the SLA protocol, in order to make the 
      <Description>Enhanced Service Mode</Description>
      <Type>read</Type>
      <Information>
-       <Text>Enhanced Service Mode</Text>
        <Subtext>
          <![CDATA[Use the SLA as an Enhanced Service.
-         No outages will be made. Only the active service alarms are shown.
-         Warning!: Though this is faster than just disabling outages.
-         Please note that data loss can occur when toggling this setting.
-         It is recommended to set this parameter only when the SLA is not in action (no active alarms, no outages).]]>
+No outages will be made. Only the active service alarms are shown.
+Warning!: Though this is faster than just disabling outages.
+Please note that data loss can occur when toggling this setting.
+It is recommended to set this parameter only when the SLA is not in action (no active alarms, no outages).]]>
        </Subtext>
-       <Includes>
-         <Include>range</Include>
-         <Include>steps</Include>
-         <Include>units</Include>
-         <Include>time</Include>
-       </Includes>
      </Information>
      <Interprete>
        <RawType>double</RawType>

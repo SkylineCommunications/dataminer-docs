@@ -154,7 +154,7 @@ Where Parameter.debugmode is a read parameter that can be changed via a write pa
 
 ```xml
 <Param id="10" trending="true">
-    <Name>debugMode</Name>
+    <Name>DebugMode</Name>
     <Description>Debug Mode</Description>
     <Type>read</Type>
     <Information>
@@ -190,7 +190,7 @@ Where Parameter.debugmode is a read parameter that can be changed via a write pa
     </Measurement>
 </Param>
 <Param id="60" setter="true">
-    <Name>debugMode</Name>
+    <Name>DebugMode</Name>
     <Description>Debug Mode</Description>
     <Type>write</Type>
     <Interprete>

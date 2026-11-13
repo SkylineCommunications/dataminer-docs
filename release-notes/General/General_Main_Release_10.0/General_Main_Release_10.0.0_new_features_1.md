@@ -604,7 +604,7 @@ See the \<Replication> tag in the following example:
 
 ```xml
 <Param id="1">
-  <Name>Parameter 1</Name>
+  <Name>Parameter1</Name>
   <Description>Parameter 1</Description>
   <Type>read</Type>
   <Interprete>

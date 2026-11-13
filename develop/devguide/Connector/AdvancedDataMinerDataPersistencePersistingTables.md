@@ -34,7 +34,7 @@ For example, the following table parameter defines some columns to be saved. Col
       <ColumnOption idx="5" pid="1006" type="retrieved" options="" />
       <ColumnOption idx="6" pid="1007" type="retrieved" options=";save" />
    </ArrayOptions>
-  ...
+   ...
 </Param>
 ```
 

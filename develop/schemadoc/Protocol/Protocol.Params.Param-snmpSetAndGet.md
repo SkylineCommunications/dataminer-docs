@@ -38,7 +38,7 @@ For a list of possible values, see [dynamicSnmpGet](xref:Protocol.Params.Param.T
 
 ```xml
 <Param id="4" trending="false" snmpSetAndGet="true">
-  <Name>sysContact</Name>
+  <Name>SysContact</Name>
   <Description>System Contact</Description>
   <Type>write</Type>
 </Param>
@@ -52,8 +52,8 @@ In the example below, param 100 is the table using the instance option, and para
 
 ```xml
 <Param id="100" trending="false">
-  <Name>Table 1</Name>
-  <Description>Table 1</Description>
+  <Name>Items</Name>
+  <Description>Items</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
   ...
@@ -63,8 +63,8 @@ In the example below, param 100 is the table using the instance option, and para
   </SNMP>
   ...
 <Param id="203" snmpSetAndGet="row;executeNext">
-  <Name>snmpSetAndGet Row</Name>
-  <Description>snmpSetAndGet Row</Description>
+  <Name>Items_Value</Name>
+  <Description>Value (Items)</Description>
   <Type>write</Type>
   ...
 ```

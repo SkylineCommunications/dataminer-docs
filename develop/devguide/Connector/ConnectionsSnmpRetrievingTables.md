@@ -110,7 +110,7 @@ With the **GetNext** method, you cannot explicitly select which columns to poll 
     </SNMP>
 </Param>
 <Param id="1001" trending="false">
-    <Name>InterfacesIndex</Name>
+    <Name>Interfaces_Index</Name>
     <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -120,7 +120,7 @@ With the **GetNext** method, you cannot explicitly select which columns to poll 
     </Interprete>
 </Param>
 <Param id="1002" trending="false">
-    <Name>InterfacesName</Name>
+    <Name>Interfaces_Name</Name>
     <Description>Name (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -166,7 +166,7 @@ To use this polling method, add `bulk` to the `options` attribute of the table p
     </SNMP>
 </Param>
 <Param id="1001" trending="false">
-    <Name>InterfacesIndex</Name>
+    <Name>Interfaces_Index</Name>
     <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -181,7 +181,7 @@ To use this polling method, add `bulk` to the `options` attribute of the table p
     </SNMP>
 </Param>
 <Param id="1002" trending="false">
-    <Name>InterfacesName</Name>
+    <Name>Interfaces_Name</Name>
     <Description>Name (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -227,7 +227,7 @@ To use this polling method, add `multipleGet` to the `options` attribute of the 
     </SNMP>
 </Param>
 <Param id="1001" trending="false">
-    <Name>InterfacesIndex</Name>
+    <Name>Interfaces_Index</Name>
     <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -242,7 +242,7 @@ To use this polling method, add `multipleGet` to the `options` attribute of the 
     </SNMP>
 </Param>
 <Param id="1002" trending="false">
-    <Name>InterfacesName</Name>
+    <Name>Interfaces_Name</Name>
     <Description>Name (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -290,7 +290,7 @@ To use this polling method, add `multipleGetNext` to the `options` attribute of 
     </SNMP>
 </Param>
 <Param id="1001" trending="false">
-    <Name>InterfacesIndex</Name>
+    <Name>Interfaces_Index</Name>
     <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -305,7 +305,7 @@ To use this polling method, add `multipleGetNext` to the `options` attribute of 
     </SNMP>
 </Param>
 <Param id="1002" trending="false">
-    <Name>InterfacesName</Name>
+    <Name>Interfaces_Name</Name>
     <Description>Name (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -360,7 +360,7 @@ To use this polling method, add `multipleGetBulk` to the `options` attribute of 
     </SNMP>
 </Param>
 <Param id="1001" trending="false">
-    <Name>InterfacesIndex</Name>
+    <Name>Interfaces_Index</Name>
     <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -375,7 +375,7 @@ To use this polling method, add `multipleGetBulk` to the `options` attribute of 
     </SNMP>
 </Param>
 <Param id="1002" trending="false">
-    <Name>InterfacesName</Name>
+    <Name>Interfaces_Name</Name>
     <Description>Name (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
@@ -443,8 +443,8 @@ To correctly poll these types of tables, you must add the `instance` option to t
 
 ```xml
 <Param id="1000">
-    <Name>Table</Name>
-    <Description>Table</Description>
+    <Name>Interfaces</Name>
+    <Description>Interfaces</Description>
     <Type>array</Type>
     <ArrayOptions index="0">
         <ColumnOption idx="0" pid="1001" type="snmp" />
@@ -456,8 +456,8 @@ To correctly poll these types of tables, you must add the `instance` option to t
     </SNMP>
 </Param>
 <Param id="1001" trending="false">
-    <Name>TableInstance</Name>
-    <Description>Instance (Table)</Description>
+    <Name>Interfaces_Instance</Name>
+    <Description>Instance (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -466,8 +466,8 @@ To correctly poll these types of tables, you must add the `instance` option to t
     </Interprete>
 </Param>
 <Param id="1002" trending="false">
-    <Name>TableColumn1</Name>
-    <Description>Column 1 (Table)</Description>
+    <Name>Interfaces_Column1</Name>
+    <Description>Column 1 (Interfaces)</Description>
     <Type>read</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -520,8 +520,8 @@ In this example, the parameter with ID 101 holds the filter.
 
 ```xml
 <Param id="1000">
-    <Name>Table</Name>
-    <Description>Table</Description>
+    <Name>Interfaces</Name>
+    <Description>Interfaces</Description>
     <Type>array</Type>
     <ArrayOptions index="0">
         <ColumnOption idx="0" pid="1001" type="snmp" />
@@ -546,47 +546,47 @@ In the example below, table 1100 will retrieve a filtered set of rows for the co
 
 ```xml
 <Param id="1100" trending="false">
-  <Name>Ports</Name>
-  <Description>Ports</Description>
-  <Type>array</Type>
-  <ArrayOptions index="0">
-     <ColumnOption idx="0" pid="1101" type="snmp" />
-     <ColumnOption idx="1" pid="1102" type="snmp" />
-  </ArrayOptions>
-  <Information>
-     <Subtext>This shows Information about the Ports on this Device.</Subtext>
-  </Information>
-   <SNMP>
-      <Enabled>true</Enabled>
-     <OID type="complete" options="instance"></OID>
-  </SNMP>
+    <Name>Ports</Name>
+    <Description>Ports</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="1101" type="snmp" />
+        <ColumnOption idx="1" pid="1102" type="snmp" />
+    </ArrayOptions>
+    <Information>
+        <Subtext>This shows Information about the Ports on this Device.</Subtext>
+    </Information>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete" options="instance"></OID>
+    </SNMP>
 </Param>
 <Param id="1101" trending="false">
-  <Name>Port Index</Name>
-  <Description>Port Index</Description>
-  <Type>read</Type>
-  <Interprete>
-      <RawType>other</RawType>
-      <Type>string</Type>
-      <LengthType>next param</LengthType>
-  </Interprete>
+    <Name>Ports_Index</Name>
+    <Description>Index (Ports)</Description>
+    <Type>read</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <Type>string</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
 </Param>
 <Param id="1102" trending="false">
-  <Name>Port Type</Name>
-  <Description>Port Type</Description>
-  <Type>read</Type>
-  <Information>
-     <Subtext>The type of the port.</Subtext>
-  </Information>
-  <SNMP>
-     <Enabled>true</Enabled>
-     <OID type="complete" id="1">1.2.3.4.*</OID>
-  </SNMP>
-  <Interprete>
-     <RawType>numeric text</RawType>
-     <Type>double</Type>
-     <LengthType>next param</LengthType>
-  </Interprete>
-...
+    <Name>Ports_Type</Name>
+    <Description>Type (Ports)</Description>
+    <Type>read</Type>
+    <Information>
+        <Subtext>The type of the port.</Subtext>
+    </Information>
+    <SNMP>
+        <Enabled>true</Enabled>
+        <OID type="complete" id="1">1.2.3.4.*</OID>
+    </SNMP>
+    <Interprete>
+        <RawType>numeric text</RawType>
+        <Type>double</Type>
+        <LengthType>next param</LengthType>
+    </Interprete>
+    ...
 </Param>
 ```

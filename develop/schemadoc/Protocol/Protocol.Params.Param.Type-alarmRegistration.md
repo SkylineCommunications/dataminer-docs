@@ -21,8 +21,8 @@ In the following example, the parameter with ID 500 will trigger the QAction whe
 
 ```xml
 <Param id="500" trending="false">
-    <Name>alarmRegistration</Name>
-    <Description>alarmRegistration</Description>
+    <Name>AlarmRegistration</Name>
+    <Description>Alarm Registration</Description>
     <Type alarmRegistration="1001;1002;1501">read</Type>
     ...
     <QAction id="500" encoding="csharp" inputParameters="500" triggers="500">

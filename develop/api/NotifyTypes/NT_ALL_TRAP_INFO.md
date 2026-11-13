@@ -10,8 +10,8 @@ For example, suppose the following context menu item has been defined:
 
 ```xml
 <Param id="3210" trending="false">
-   <Name>Functional Units_ContextMenu</Name>
-   <Description>Functional Units_ContextMenu</Description>
+   <Name>FunctionalUnits_ContextMenu</Name>
+   <Description>Context Menu (Functional Units)</Description>
    <Type>write</Type>
    <Interprete>
       <RawType>other</RawType>

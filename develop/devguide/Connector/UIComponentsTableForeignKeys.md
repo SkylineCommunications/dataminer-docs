@@ -25,8 +25,8 @@ It is also possible to implement recursive linking, in which case the table will
 
 ```xml
 <Param id="300" trending="false">
-  <Name>Recursive List</Name>
-  <Description>Recursive List</Description>
+  <Name>Amplifiers</Name>
+  <Description>Amplifiers</Description>
   <Type>array</Type>
   <ArrayOptions index="0" options="">
     <ColumnOption idx="0" pid="301" type="retrieved" value="" options=""/>

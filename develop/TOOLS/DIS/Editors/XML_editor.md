@@ -451,26 +451,26 @@ When working in the XML editor, you will notice so-called "virtual comments" nex
 
 In the following example, there are "virtual comments" next to the referenced parameters. They contain the names found in the `<Description>` tags of those parameters.
 
-For example, next to `<Param>30</Param>`, you can see `<!-- System Table -->` because, in the parameter definition, the `<Description>` tag contains "System Table".
+For example, next to `<Param>30</Param>`, you can see `<!-- Systems -->` because, in the parameter definition, the `<Description>` tag contains "Systems".
 
 ```xml
 <Group id="2">
     <Name>Table</Name>
     <Description>Table</Description>
     <Content>
-        <Param>30</Param><!-- System Table -->
+        <Param>30</Param><!-- Systems -->
     </Content>
 </Group>
 
 <Param id="30">
-    <Name>systemTable</Name>
-    <Description>System Table</Description>
+    <Name>Systems</Name>
+    <Description>Systems</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";naming=/33">
-        <ColumnOption idx="0" pid="31" type="snmp" options=";save" /><!-- System Index -->
-        <ColumnOption idx="1" pid="32" type="snmp" options=";save" /><!-- System ID -->
-        <ColumnOption idx="2" pid="33" type="snmp" options=";save" /><!-- System Description -->
-        <ColumnOption idx="3" pid="34" type="snmp" options=";save" /><!-- System Up Time -->
+        <ColumnOption idx="0" pid="31" type="snmp" options=";save" /><!-- Index (Systems) -->
+        <ColumnOption idx="1" pid="32" type="snmp" options=";save" /><!-- ID (Systems) -->
+        <ColumnOption idx="2" pid="33" type="snmp" options=";save" /><!-- Description (Systems) -->
+        <ColumnOption idx="3" pid="34" type="snmp" options=";save" /><!-- Up Time (Systems) -->
     </ArrayOptions>
 </Param>
 ```

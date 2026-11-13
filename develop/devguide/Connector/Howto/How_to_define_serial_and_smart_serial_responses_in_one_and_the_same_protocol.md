@@ -84,7 +84,7 @@ To prevent any issue with protocols that have serial as well as smart-serial con
       <Description>Ask Config Subscription</Description>
       <Content>
          <Param>205</Param>
-        <Param>53</Param>
+         <Param>53</Param>
       </Content>
    </Response>
    <Response id="106" options="Connection:1">

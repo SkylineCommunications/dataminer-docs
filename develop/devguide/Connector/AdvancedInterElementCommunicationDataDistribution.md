@@ -13,8 +13,8 @@ For example, the following parameter, defined on the parent element, will send t
 
 ```xml
 <Param id="100" trending="false">
-   <Name>distributedParameter</Name>
-   <Description>DistributedParameter</Description>
+   <Name>DistributedParameter</Name>
+   <Description>Distributed Parameter</Description>
    <Information>
       <Subtext />
       <Includes>

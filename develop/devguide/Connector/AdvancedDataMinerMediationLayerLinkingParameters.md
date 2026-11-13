@@ -11,7 +11,7 @@ There are two ways to establish links between parameters in a base protocol and 
 
 ```xml
 <Param id="73102">
-   <Name>Name Process</Name>
+   <Name>NameProcess</Name>
    <Description>Name Process</Description>
    <Mediation>
       <LinkTo protocol="Network Server Manager" pid="82"/>
@@ -37,10 +37,10 @@ For example:
 
 ```xml
 <Param id="101" trending="true" save="true">
-   <Name>pct_value1</Name>
+   <Name>ProcentualValue1</Name>
    <Description>Procentual Value 1</Description>
    <Mediation>
-     <LinkTo pid="71000" />
+      <LinkTo pid="71000" />
    </Mediation>
 ```
 

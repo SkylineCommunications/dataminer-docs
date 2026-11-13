@@ -51,7 +51,7 @@ In case of a ContextMenu parameter (of which the name is identical to that of th
 
 ```xml
 <Param id="1000" trending="false">
-    <Name>tblSites</Name>
+    <Name>Sites</Name>
     <Type>array</Type>
     ...
 ```
@@ -60,7 +60,7 @@ In the following example, after a right click in the table with parameter ID 100
 
 ```xml
 <Param id="1099">
-    <Name>tblSites_ContextMenu</Name>
+    <Name>Sites_ContextMenu</Name>
     <Type>write</Type>
     <Interprete>
         <RawType>other</RawType>

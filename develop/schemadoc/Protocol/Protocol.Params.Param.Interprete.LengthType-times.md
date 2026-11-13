@@ -48,12 +48,12 @@ In the following example, the trailer (ID 12) is the parameter after the next pa
 
 ```xml
 <Response id="1">
-    <Name>Response1</Name>
-    <Description>Response1</Description>
-    <Content>
-        <Param>10</Param>
-        <Param>50</Param>
-        <Param>12</Param>
-    </Content>
+   <Name>Response1</Name>
+   <Description>Response1</Description>
+   <Content>
+      <Param>10</Param>
+      <Param>50</Param>
+      <Param>12</Param>
+   </Content>
 </Response>
 ```

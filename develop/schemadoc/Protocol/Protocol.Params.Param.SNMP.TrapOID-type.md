@@ -37,19 +37,21 @@ Examples:
    <VendorOID>1.3.6.1.4.1.8813.2.1</VendorOID>
    <DeviceOID>1000</DeviceOID>
    <Params>
-   <Param id="5000">
-      <Name>Trap Receiver</Name>
-      <Description>Trap Received</Description>
-      <Type>dummy</Type>
-      <Display>
-         <RTDisplay>false</RTDisplay>
-      </Display>
-      <SNMP>
-         <Enabled>true</Enabled>
-         <TrapOID setBindings="allBindingInfo" type="composed" ipid="4998">20</TrapOID>
-      </SNMP>
-   </Param>
-   …
+      <Param id="5000">
+         <Name>TrapReceiver</Name>
+         <Description>Trap Received</Description>
+         <Type>dummy</Type>
+         <Display>
+            <RTDisplay>false</RTDisplay>
+         </Display>
+         <SNMP>
+            <Enabled>true</Enabled>
+            <TrapOID setBindings="allBindingInfo" type="composed" ipid="4998">20</TrapOID>
+         </SNMP>
+      </Param>
+      …
+   </Params>
+   ...
 </Protocol>
 ```
 
@@ -77,7 +79,7 @@ Examples:
    <DeviceOID>1000</DeviceOID>
    <Params>
       <Param id="5000">
-         <Name>Trap Receiver</Name>
+         <Name>TrapReceiver</Name>
          <Description>Trap Received</Description>
          <Type>dummy</Type>
          <Display>

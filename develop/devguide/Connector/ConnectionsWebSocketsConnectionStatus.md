@@ -9,7 +9,7 @@ The connection status can be retrieved by specifying a parameter in the NotifyCo
 
 ```xml
 <Param id="7" trending="false">
-   <Name>WebSocket Status</Name>
+   <Name>WebSocketStatus</Name>
    <Description>WebSocket Status</Description>
    <Type>read</Type>
    <Interprete>

@@ -11,7 +11,7 @@ It is possible to capture these changes in a protocol by defining a parameter of
 
 ```xml
 <Param id="107">
-   <Name>Discreet Info</Name>
+   <Name>DiscreetInfo</Name>
    <Description>Discreet Info</Description>
    <Type>discreet info</Type>
    <Interprete>

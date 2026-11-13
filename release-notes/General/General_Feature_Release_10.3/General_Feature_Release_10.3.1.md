@@ -72,7 +72,7 @@ Example:
 
 ```xml
 <Param id="1000" trending="false">
-   <Name>tblInputs</Name>
+   <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>
    <Information>
@@ -118,7 +118,7 @@ Example:
 
 ```xml
 <Param id="2000" trending="false">
-   <Name>tblOutputs</Name>
+   <Name>Outputs</Name>
    <Description>Outputs</Description>
    <Type>array</Type>
    <Information>

@@ -25,20 +25,20 @@ The following example illustrates the definition of a view table that refers to 
 ```xml
 <!-- This is a ViewTable with the lst, 2nd, 3rd, 4th columns from table 200 and 4th and 5th columns from table 100. The Foreign Key from table 200 to table 100 is on column 203. -->
 <Param id="500">
-  <Name>View_Services</Name>
-  <Description>View_Services</Description>
-  <Type>array</Type>
-  <ArrayOptions index="0" options=";volatile;view=200">
-     <ColumnOption idx="0" pid="501" type="custom" options=";view=201" /><!-- ID -->
-     <ColumnOption idx="1" pid="502" type="custom" options=";view=202" /><!-- Name -->
-     <ColumnOption idx="2" pid="503" type="custom" options=";view=204" /><!-- Category -->
-     <ColumnOption idx="3" pid="504" type="custom" options=";view=205" /><!-- Status -->
-     <ColumnOption idx="4" pid="505" type="custom" options=";view=203:104" /><!-- Stream Transport Protocol -->
-     <ColumnOption idx="5" pid="506" type="custom" options=";view=203:105" /><!-- Stream Type -->
-  </ArrayOptions>
-  <Information>
-     <Subtext>The list of services.</Subtext>
-  </Information>
+   <Name>View_Services</Name>
+   <Description>View Services</Description>
+   <Type>array</Type>
+   <ArrayOptions index="0" options=";volatile;view=200">
+      <ColumnOption idx="0" pid="501" type="custom" options=";view=201" /><!-- ID -->
+      <ColumnOption idx="1" pid="502" type="custom" options=";view=202" /><!-- Name -->
+      <ColumnOption idx="2" pid="503" type="custom" options=";view=204" /><!-- Category -->
+      <ColumnOption idx="3" pid="504" type="custom" options=";view=205" /><!-- Status -->
+      <ColumnOption idx="4" pid="505" type="custom" options=";view=203:104" /><!-- Stream Transport Protocol -->
+      <ColumnOption idx="5" pid="506" type="custom" options=";view=203:105" /><!-- Stream Type -->
+   </ArrayOptions>
+   <Information>
+      <Subtext>The list of services.</Subtext>
+   </Information>
 </Param>
 ```
 
@@ -46,27 +46,27 @@ Below is an example of a base table. Note that as the view table will show data 
 
 ```xml
 <Param id="200">
-  <Name>Services</Name>
-  <Description>Services</Description>
-  <Type>array</Type>
-  <ArrayOptions index="0" options="">
-     <ColumnOption idx="0" pid="201" type="retrieved" /><!-- ID -->
-     <ColumnOption idx="1" pid="202" type="retrieved" /><!-- Name -->
-     <ColumnOption idx="2" pid="203" type="retrieved" options=";foreignKey=100" /><!-- Stream ID -->
-     <ColumnOption idx="3" pid="204" type="retrieved" /><!-- Category -->
-     <ColumnOption idx="4" pid="205" type="retrieved" /><!-- Status -->
-     <ColumnOption idx="5" pid="206" type="retrieved" /><!-- Has CA -->
-     <ColumnOption idx="6" pid="207" type="retrieved" /><!-- Bandwidth -->
-     <ColumnOption idx="7" pid="208" type="retrieved" /><!-- Min Bandwidth -->
-     <ColumnOption idx="8" pid="209" type="retrieved" /><!-- Max Bandwidth -->
-  </ArrayOptions>
-  <Information>
-     <Subtext>The list of service.</Subtext>
-  </Information>
-  <Display>
+   <Name>Services</Name>
+   <Description>Services</Description>
+   <Type>array</Type>
+   <ArrayOptions index="0" options="">
+      <ColumnOption idx="0" pid="201" type="retrieved" /><!-- ID -->
+      <ColumnOption idx="1" pid="202" type="retrieved" /><!-- Name -->
+      <ColumnOption idx="2" pid="203" type="retrieved" options=";foreignKey=100" /><!-- Stream ID -->
+      <ColumnOption idx="3" pid="204" type="retrieved" /><!-- Category -->
+      <ColumnOption idx="4" pid="205" type="retrieved" /><!-- Status -->
+      <ColumnOption idx="5" pid="206" type="retrieved" /><!-- Has CA -->
+      <ColumnOption idx="6" pid="207" type="retrieved" /><!-- Bandwidth -->
+      <ColumnOption idx="7" pid="208" type="retrieved" /><!-- Min Bandwidth -->
+      <ColumnOption idx="8" pid="209" type="retrieved" /><!-- Max Bandwidth -->
+   </ArrayOptions>
+   <Information>
+      <Subtext>The list of service.</Subtext>
+   </Information>
+   <Display>
       <RTDisplay>true</RTDisplay>
-  </Display>
-  ...
+   </Display>
+   ...
 </Param>
 ```
 
@@ -76,23 +76,23 @@ For example, the column parameter with ID 201 of the base table will be included
 
 ```xml
 <Param id="201" duplicateAs="501">
-  <Name>ServiceId</Name>
-  <Description>Service ID</Description>
-  <Information>
-     <Subtext>The ID of the service.</Subtext>
-  </Information>
-  <Type>read</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <Type>string</Type>
-     <LengthType>next param</LengthType>
+   <Name>Services_ID</Name>
+   <Description>ID (Services)</Description>
+   <Information>
+      <Subtext>The ID of the service.</Subtext>
+   </Information>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <Type>string</Type>
+      <LengthType>next param</LengthType>
    </Interprete>
-  <Display>
-     <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-     <Type>string</Type>
-  </Measurement>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
 ```
 
@@ -100,23 +100,23 @@ Note that a parameter can be duplicated multiple times using a comma as separato
 
 ```xml
 <Param id="202" duplicateAs="502,605">
-  <Name>ServiceName</Name>
-  <Description>Service Name</Description>
-  <Information>
-     <Subtext>The name of the service.</Subtext>
-  </Information>
-  <Type>read</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <Type>string</Type>
-     <LengthType>next param</LengthType>
+   <Name>Services_Name</Name>
+   <Description>Name (Services)</Description>
+   <Information>
+      <Subtext>The name of the service.</Subtext>
+   </Information>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <Type>string</Type>
+      <LengthType>next param</LengthType>
    </Interprete>
-  <Display>
-     <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-     <Type>string</Type>
-  </Measurement>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
 ```
 
@@ -126,20 +126,20 @@ In case the write parameter should also be present for the view table, you only 
 
 ```xml
 <Param id="212" setter="true" duplicateAs="512">
-  <Name>ServiceName</Name>
-  <Description>Service Name</Description>
-  <Type>write</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <Type>string</Type>
-     <LengthType>next param</LengthType>
+   <Name>Services_Name</Name>
+   <Description>Name (Services)</Description>
+   <Type>write</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <Type>string</Type>
+      <LengthType>next param</LengthType>
    </Interprete>
-  <Display>
-     <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-     <Type>string</Type>
-  </Measurement>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
 ```
 
@@ -147,12 +147,12 @@ Why does this work with a randomly chosen unique parameter ID? Consider the foll
 
 ```xml
 <Param id="3190" duplicateAs="4190">
-   <Name>StreamActiveChannel</Name>
-   <Description>Stream Active Channel</Description>
-  <Type>write</Type>
+   <Name>Streams_ActiveChannel</Name>
+   <Description>Active Channel (Streams)</Description>
+   <Type>write</Type>
 ```
 
-In the background, DataMiner translates the original parameter name/description to "1_Stream Active Channel" for the duplicate parameter to have a unique parameter description. DataMiner Cube filters this "1_" out before displaying the parameter name. If there was a second parameter ID specified in the duplicateAs attribute, then this would have prefix "2_". In case the duplicateAs attribute of the write parameter does not specify a parameter ID, this means that no "1_" write parameter is created that matches the "1_" read parameter, so no write parameter is displayed for the duplicated read parameter.
+In the background, DataMiner translates the original parameter name/description to "1_Active Channel (Streams)" for the duplicate parameter to have a unique parameter description. DataMiner Cube filters this "1_" out before displaying the parameter name. If there was a second parameter ID specified in the duplicateAs attribute, then this would have prefix "2_". In case the duplicateAs attribute of the write parameter does not specify a parameter ID, this means that no "1_" write parameter is created that matches the "1_" read parameter, so no write parameter is displayed for the duplicated read parameter.
 
 So in case there are two view tables and there should only be a write parameter on one table view, in the duplicateAs attribute of the read parameter, first specify the parameter ID that should have a write parameter and then the parameter ID without write parameter; on the write parameter specify only one duplicateAs parameter ID.
 
@@ -160,15 +160,15 @@ For example:
 
 ```xml
 <Param id="3127" duplicateAs="4127,5127">
-   <Name>StreamActiveChannel</Name>
-   <Description>Stream Active Channel</Description>
+   <Name>Streams_ActiveChannel</Name>
+   <Description>Active Channel (Streams)</Description>
    <Type>read</Type>
-  ...
+   ...
 <Param id="3190" duplicateAs="4190">
-   <Name>StreamActiveChannel</Name>
-   <Description>Stream Active Channel</Description>
+   <Name>Streams_ActiveChannel</Name>
+   <Description>Active Channel (Streams)</Description>
    <Type>write</Type>
-  ...
+   ...
 ```
 
 The result of this will be that parameter 4127 has a write control and parameter 5127 has no write control displayed in the table view.
