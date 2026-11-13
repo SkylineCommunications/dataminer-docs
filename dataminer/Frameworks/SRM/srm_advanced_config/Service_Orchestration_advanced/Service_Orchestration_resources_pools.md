@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_resources_advanced
+description: "Find out how to configure resource filtering, sorting, and selection to customize bookings in the Booking Wizard."
 ---
 
 # Service Orchestration: resources configuration

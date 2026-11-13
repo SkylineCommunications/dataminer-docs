@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_profile_instances
+description: "Find out how to configure profile instances with defaults, assignment modes, filtering, and resource pool inheritance."
 ---
 
 # Service Orchestration: profile instances configuration

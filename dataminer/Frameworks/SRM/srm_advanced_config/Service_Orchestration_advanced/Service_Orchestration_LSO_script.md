@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_LSO_script
+description: "Find out how to configure LSO scripts to apply resource profiles, update booking parameters, and handle failures."
 ---
 
 # Service Orchestration: LSO script configuration
