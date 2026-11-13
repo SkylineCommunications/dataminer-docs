@@ -34,7 +34,7 @@ In addition, the protocol must define a parameter that will be used to change th
 
 ```xml
 <Param id="39999" trending="false" save="true">
-   <Name>DynamicPollingIPConn1</Name>
+   <Name>DynamicPollingIP_Connection1</Name>
    <Description>Connection 1 Dynamic Polling IP</Description>
    <Type options="dynamic ip 1">read</Type>
    <Interprete>
