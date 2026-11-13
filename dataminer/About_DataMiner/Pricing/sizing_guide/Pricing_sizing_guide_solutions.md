@@ -11,5 +11,6 @@ The solution sizing guides cover packaged DataMiner deployments. Each guide prov
 |---|---|---|
 | [InfraOps](xref:Pricing_sizing_guide_solutions_InfraOps) | Planning, monitoring, and automation for media, telecom, satellite, and energy organizations | Total number of assets<br>Number of records in the object model |
 | [MediaOps Plan](xref:Pricing_sizing_guide_solutions_MediaOps_Plan) | Planning, scheduling, and resource management for media and broadcast operations | Jobs per month |
+| [SLA Manager](xref:Pricing_sizing_guide_solutions_SLA_Manager) | Service level agreement tracking: compliance, outages, and violations per service | Number of SLAs created (one-time onboarding)<br>Number of SLAs in the system |
 | [Starlink](xref:Pricing_sizing_guide_solutions_Starlink) | Enterprise fleet monitoring and management for Starlink user terminals | Active terminals |
 | [Ticketing](xref:Pricing_sizing_guide_solutions_Ticketing) | Incident and ticket management, standalone or integrated with a third-party platform | Tickets per month |
