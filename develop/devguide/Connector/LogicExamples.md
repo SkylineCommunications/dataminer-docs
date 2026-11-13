@@ -130,6 +130,7 @@ flowchart LR
 
 ```xml
 <Protocol xmlns="http://www.skyline.be/protocol">
+
    <Params>
       <Param id="2">
          <Name>AfterStartup</Name>
@@ -137,6 +138,7 @@ flowchart LR
          <Type>dummy</Type>
       </Param>
    </Params>
+
    <Triggers>
       <Trigger id="1">
          <Name>After Startup</Name>
@@ -148,6 +150,7 @@ flowchart LR
          </Content>
       </Trigger>
    </Triggers>
+
    <Actions>
       <Action id="1">
          <Name>After Startup Group</Name>
@@ -160,6 +163,7 @@ flowchart LR
          <Type>run actions</Type>
       </Action>
    </Actions>
+
    <Groups>
       <Group id="2">
          <Name>After Startup</Name>
@@ -170,10 +174,12 @@ flowchart LR
          </Content>
       </Group>
    </Groups>
+
    <QActions>
       <QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
          ...
       </QAction>
    </QActions>
+
 </Protocol>
 ```
