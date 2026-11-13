@@ -45,7 +45,7 @@ When SLProtocol wants to connect to a smart-serial port in SLPort, it will first
 
     ```xml
     <Param id="10" trending="false">
-       <Name>TrailerDot</Name>
+       <Name>Trailer_Dot</Name>
        <Description>Trailer Dot</Description>
        <Type options="headerTrailerLink=1;connection=1">trailer</Type>
        <Interprete>
@@ -72,7 +72,7 @@ The headerTrailerLink option allows you to use multiple headers/trailers. This o
 
 ```xml
 <Param id="10" trending="false">
-   <Name>TrailerDot</Name>
+   <Name>Trailer_Dot</Name>
    <Description>Trailer Dot</Description>
    <Type options="headerTrailerLink=1">trailer</Type>
    <Interprete>
@@ -88,7 +88,7 @@ The headerTrailerLink option allows you to use multiple headers/trailers. This o
 </Param>
  
 <Param id="11" trending="false">
-   <Name>HeaderQuestionMark</Name>
+   <Name>Header_QuestionMark</Name>
    <Description>Header Question Mark</Description>
    <Type options="headerTrailerLink=1">header</Type>
    <Interprete>
@@ -104,7 +104,7 @@ The headerTrailerLink option allows you to use multiple headers/trailers. This o
 </Param>
  
 <Param id="13" trending="false">
-   <Name>HeaderHyphen</Name>
+   <Name>Header_Hyphen</Name>
    <Description>Header Hyphen</Description>
    <Type options="headerTrailerLink=2">header</Type>
    <Interprete>
@@ -120,7 +120,7 @@ The headerTrailerLink option allows you to use multiple headers/trailers. This o
 </Param>
  
 <Param id="12" trending="false">
-   <Name>TrailerPlus</Name>
+   <Name>Trailer_Plus</Name>
    <Description>Trailer Plus</Description>
    <Type options="headerTrailerLink=2">trailer</Type>
    <Interprete>
