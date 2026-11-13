@@ -55,8 +55,8 @@ To specify what to retrieve and how this request is added to the group execution
 
 ```xml
 <Param id="100">
-   <Name>DynamicGetOID</Name>
-   <Description>Dynamic Get OID</Description>
+   <Name>DynamicSnmpGetOID</Name>
+   <Description>Dynamic SNMP Get OID</Description>
    <Information></Information>
    <Type dynamicSnmpGet="true">read</Type>
 </Param>
