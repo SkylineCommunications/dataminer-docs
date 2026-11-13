@@ -1,5 +1,6 @@
 ---
 uid: Investigating_Web_Issues
+description: "Troubleshoot DataMiner web app connections, GQI queries, and other web features using client diagnostics and server-side repair procedures."
 ---
 
 # Troubleshooting – web
@@ -92,13 +93,14 @@ The *SLNet Client Test* tool contains a *Trend Data Inspector* (*Advanced > Test
 
 ### GQI
 
-GQI runs as an extension module ([GQI DxM](xref:GQI_DxM)) or inside the [SLHelper](xref:Troubleshooting_SLHelper_exe) process.
+GQI runs as an extension module ([GQI DxM](xref:GQI_DxM)) or inside the [SLHelper](xref:Troubleshooting_SLHelper_exe) process. Which one is used depends on the DataMiner version and configuration. See [Enabling or disabling the use of the GQI DxM](xref:GQI_DxM#enabling-or-disabling-the-use-of-the-gqi-dxm).
 
 - Are data sources missing? Check whether the DMA has the necessary licenses and soft-launch options.
 - Are there no errors, but invalid data? Check the origin of the invalid data.
 - Are ad-hoc data sources or operators failing? Contact the person who created the data source or the operator (check [GitHub](https://github.com/orgs/SkylineCommunications/repositories?q=gqi&type=all)).
-- Error messages, no data, no response, or slow performance? Then [record the GQI session](#record-gqi-session) and include the ad hoc data scripts (if any) when asking support.
 - GQI DxM not working? Try to [repair the service](#gqi-dxm-repair).
+- Does an error state that GQI via SLHelper is disabled? Make sure the client uses the GQI DxM, e.g., [web apps](xref:GQI_DxM#enabling-or-disabling-the-use-of-the-gqi-dxm) or [Data Aggregator](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).<!-- RN 46927 -->
+- Error messages, no data, no response, or slow performance with GQI via SLHelper? Then [record the GQI session](#record-gqi-session) and include the ad hoc data scripts (if any) when asking support.
 
 > [!NOTE]
 > The troubleshooting procedures below require access to the DataMiner server. If you are using a DaaS system, this is not possible, and you will need to contact <daas@dataminer.services> instead.

@@ -167,5 +167,7 @@ The following prerequisite checks are currently available:
 
 - [Validate Connectors](xref:Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
+- [GQI in SLHelper upgrade prerequisite](xref:EndOfSupport_SLHelperGQI): Verifies whether the DataMiner Agent still uses GQI via SLHelper, which is disabled by default from DataMiner 10.7.0/10.7.1 onwards. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46957 -->, this prerequisite is available by default and runs automatically when you upgrade from an earlier version.
+
 > [!NOTE]
 > Though this is not recommended, you can bypass these checks by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package. However, you should only do so if there is a clear reason to assume that the prerequisites do not work because of a bug in the software and they are consequently failing without a proper reason. If you bypass these checks in any other circumstances, and this results in a DataMiner issue, this is **not covered by support**.
