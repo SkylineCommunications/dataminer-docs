@@ -129,6 +129,8 @@ items:
                   topicUid: Pricing_sizing_guide_solutions_InfraOps
                 - name: MediaOps Plan
                   topicUid: Pricing_sizing_guide_solutions_MediaOps_Plan
+                - name: SLA Manager
+                  topicUid: Pricing_sizing_guide_solutions_SLA_Manager
                 - name: Starlink
                   topicUid: Pricing_sizing_guide_solutions_Starlink
                 - name: Ticketing

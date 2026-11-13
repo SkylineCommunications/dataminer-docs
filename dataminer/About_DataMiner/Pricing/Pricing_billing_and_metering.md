@@ -38,18 +38,38 @@ For offline or air-gapped environments, local usage logging is supported through
 |-----------|------------|
 | *DataMiner credits* | A flexible form of currency you can use to subscribe to DataMiner software and hosting services. Credits will be deducted automatically when you consume usage-based services. Credits are owned by an organization, and can be consumed among the DataMiner Systems of that organization. The credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services). |
 | *Start Date* | The date when the system comes online. |
-| *Duration* | An organization can select a 12-month, 24-month, or 36-month subscription. |
-| *Renewal Date* | Subscription date + duration.<br>At the Renewal Date, subscriptions renew automatically for 12 months at the then current credit rates, unless agreed otherwise. |
+| *Duration* | An organization can select a subscription of 1 to 36 months. The duration determines the discount (see [Subscription term and discounts](#subscription-term-and-discounts)).  |
+| *Renewal Date* | Subscription date + duration.<br>Service subscriptions of 12 months or more renew automatically for 12 months at the then current credit rates, unless agreed otherwise. Subscriptions shorter than 12 months end at the end of their term and do not renew. |
 | *MUA* | Monthly Utilization Allowance.<br>The fixed number of credits available per month under the subscription for each service.<br>The organization MUA is the sum of credits subscribed per service. |
-| *Credit Rate* | The credit rate depends on the region and is protected for the duration of the contract, i.e., 24-month or 36-month subscriptions protect against potential yearly price adjustments. |
+| *Credit Rate* | The credit rate depends on the region and is locked for the duration of the subscription i.e., multi-year subscriptions protect against potential yearly price adjustments. |
+
+
+## Subscription term and discounts
+
+The price of a tiered service depends on the commitment:
+
+| Commitment | Pricing |
+|---|---|
+| Pay-per-use | Graduated: each volume band is charged at its own rate. |
+| 1 to 11 months | The whole subscribed quantity is charged at the rate of the volume band it reaches, without discount. The band rate is locked for the term. Typically used to cover an expected peak or a one-time onboarding. |
+| 12 to 35 months | The whole subscribed quantity is charged at the rate of the volume band it reaches, minus that band's volume discount. |
+| 36 months | Same as 12 to 35 months, plus an extra 5 percentage points of discount. |
+
+Example: 30,000 Automation Actions in a month, with bands at 5 credits per 1,000 actions (0–25,000) and 4 credits per 1,000 actions (25,000–50,000, 15% volume discount):
+
+| Commitment | Calculation | Credits |
+|---|---|--:|
+| Pay-per-use | 25,000 × 5 / 1,000 + 5,000 × 4 / 1,000 | 145 |
+| 1-month subscription | 30,000 × 4 / 1,000 | 120 |
+| 12-month subscription | 30,000 × 4 × (1 − 15%) / 1,000 | 102 per month |
 
 ## Invoicing
 
 | Duration  | Invoicing |
 |-----------|------------|
-| 12 months | Start date: 100% |
-| 24 months | Start date: 60%<br>Start date + 12 months: 40% |
-| 36 months | Start date: 60%<br>Start date + 12 months: 20%<br>Start date + 24 months: 20% |
+| 1–12 months | Start date: 100% |
+| 13–24 months | Start date: 60%<br>Start date + 12 months: 40% |
+| 25–36 months | Start date: 60%<br>Start date + 12 months: 20%<br>Start date + 24 months: 20% |
 
 At the Renewal Date, the subscription will be invoiced yearly, unless replaced by a new contract.
 
@@ -64,14 +84,15 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 |  Data Plane   | *Unmanaged Objects*              | Unmanaged Object instances available in the system (see [DataMiner Object Models](xref:DOM)). |
 | Data Sources | *Connector Services*            | Use of Skyline-developed connectors made available through the [Catalog](https://catalog.dataminer.services/). Connectors developed by the user or a third party are not counted. |
 | Automation   | *Automation Actions*            | [**Automation script runs**](xref:Running_Automation_scripts) and **new Unmanaged Object instances** added to the [DataMiner Object Models](xref:DOM). |
+| Intelligence | *Document Intelligence* | Document processing operations executed via the [Document Intelligence tool](xref:docintel) in DataMiner Automation. |
 | Collaboration Services | *Dashboard Sharing*   | Sharing dashboards with real-time data and controls with internal or external organization users. |
 | Storage as a Service (STaaS) | *Alarm Updates* | New alarm updates written to the storage service. |
 | Storage as a Service (STaaS) | *Information Events*| New information events written to the storage service.|
 | Storage as a Service (STaaS) | *Trend Data Points* | New data point updates from trended metrics written to the storage service. |
 | Storage as a Service (STaaS) | *Element Data*| Metrics from Managed Objects written to the storage service. |
-| DataMiner as Service (DaaS)  | *Hosted Managed Objects* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
-| DataMiner as Service (DaaS)  | *Hosted Nodes*  | Additional hosted DataMiner nodes provisioned to increase resiliency or availability beyond the default hosted setup. |
-| DataMiner Assistant | *Document Intelligence* | Document processing operations executed via the [Document Intelligence tool](xref:docintel) in DataMiner Automation. |
+| DataMiner as a Service (DaaS)  | *Hosted Managed Objects* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
+| DataMiner as a Service (DaaS)  | *Hosted Nodes*  | Additional hosted DataMiner nodes provisioned to increase resiliency or availability beyond the default hosted setup. |
+
 
 > [!TIP]
 > For detailed information on these services and how to size these, refer to the [sizing guide](xref:Pricing_sizing_guide).
@@ -97,13 +118,14 @@ The number of credits consumed for Connector Services is calculated as the maxim
 
 ## Cancellation
 
-Subscriptions can be canceled up to 30 days before the Renewal Date. The subscription will remain active until the Renewal Date. The amount paid is not refundable.
+Subscriptions of 12 months or more can be canceled up to 30 days before the Renewal Date. The subscription will remain active until the Renewal Date. The amount paid is not refundable. Subscriptions shorter than 12 months end automatically at the end of their term.
+
 
 ## Changing subscription
 
 The subscribed MUA level can be changed at any time without altering the Renewal Date.
 
-- When the MUA level is increased, the additional credits are charged at the then current Credit Rate for a minimum 12-month duration. The new MUA can be used immediately.
+- When the MUA level is increased, the additional credits are charged at the then current Credit Rate for a minimum 12-month duration. For subscriptions shorter than 12 months, the additional credits are charged until the end of the term. The new MUA can be used immediately.
 
 - When the MUA level is decreased, the original MUA will be in effect until the Renewal Date. At Renewal Date the subscription will be renewed with the new MUA.
 
@@ -128,7 +150,7 @@ MUA increased to 250 credits on August 1, 2023
 
 **Notification**: You will receive alerts when you are approaching your usage limit and once you have exceeded it.
 
-**Avoid overages**: Although you are not penalized, the cost of overage is at the service's pay-per-use credit rate, which may be higher than the subscription rate. If you expect this overage to be **continuous**, you may want to **review your subscriptions** to benefit from more favorable pricing.
+**Avoid overages**: Although you are not penalized, the cost of overage is at the service's pay-per-use credit rate, which may be higher than the subscription rate. If you expect this overage to be **continuous**, you may want to **review your subscriptions** to benefit from more favorable pricing. For a **temporary peak**, a subscription of 1 to 11 months can be cheaper than pay-per-use (see [Subscription term and discounts](#subscription-term-and-discounts)).
 
 ## Non-production environments
 
