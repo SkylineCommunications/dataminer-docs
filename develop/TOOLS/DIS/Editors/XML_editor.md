@@ -455,8 +455,8 @@ For example, next to `<Param>30</Param>`, you can see `<!-- Systems -->` because
 
 ```xml
 <Group id="2">
-    <Name>Table</Name>
-    <Description>Table</Description>
+    <Name>Systems Polling</Name>
+    <Description>Systems Polling</Description>
     <Content>
         <Param>30</Param><!-- Systems -->
     </Content>
