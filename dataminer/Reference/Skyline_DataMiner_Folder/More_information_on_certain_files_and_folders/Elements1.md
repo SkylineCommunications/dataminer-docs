@@ -72,7 +72,7 @@ Here is an example of a *Description.xml* file containing aliases for two parame
 ```xml
 <Params nextSpectrumId="...">
   <Param id="100">
-    <Description>Other Name for Parameter 100</Description>
+    <Description>OtherNameForParam100</Description>
   </Param>
   <Param id="101">
     <Description>OtherNameForParam101</Description>
