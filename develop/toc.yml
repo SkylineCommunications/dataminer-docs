@@ -7008,6 +7008,28 @@ items:
       items:
         - name: AI Agent marketplace
           topicUid: AIAgentMarketplace
+          items:
+            - name: DataMiner App Agent
+              topicUid: AIAgent_App_Agent
+              items:
+                - name: Using the App Agent
+                  topicUid: AIAgent_App_Agent_Using
+                - name: Best practices
+                  topicUid: AIAgent_App_Agent_Best_Practices
+                - name: How it works
+                  topicUid: AIAgent_App_Agent_How_It_Works
+                - name: Deploying an app
+                  topicUid: AIAgent_App_Agent_Deploying
+                - name: Practical examples
+                  items:
+                    - name: Building an app from scratch
+                      topicUid: AIAgent_App_Agent_Example_From_Scratch
+                    - name: Replacing a low-code app
+                      topicUid: AIAgent_App_Agent_Example_Replace_LCA
+                    - name: Replacing a Visual Overview
+                      topicUid: AIAgent_App_Agent_Example_Replace_Visio
+                    - name: Integrating the DataMiner Assistant
+                      topicUid: AIAgent_App_Agent_Example_Assistant
     - name: DataMiner Integration Studio (DIS)
       items:
         - name: About DIS
