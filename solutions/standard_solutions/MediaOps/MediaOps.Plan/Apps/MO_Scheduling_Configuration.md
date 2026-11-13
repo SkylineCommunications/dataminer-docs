@@ -21,7 +21,7 @@ Depending on the app you are using, you can open the dialog in different ways:
 
 ## Scheduling configuration dialog layout
 
-By default, the *Select Configuration* dialog opens in a simplified **operator view**. In this view, linked parameters, disabled or unconfigured automated actions, selected scripts, and linked arguments are hidden so you can focus on the parameters that require immediate attention.<!-- RN 45838, 46215 -->
+By default, the *Scheduling Configuration* dialog opens in a simplified **operator view**. In this view, linked parameters, disabled or unconfigured automated actions, selected scripts, and linked arguments are hidden so you can focus on the parameters that require immediate attention.<!-- RN 45838, 46215 -->
 
 To view the complete configuration, select the **Show all details** checkbox at the top of the dialog to switch to the full **engineer view**. This displays all parameters (including linked parameters), all automated actions, selected scripts, and linked input arguments.
 

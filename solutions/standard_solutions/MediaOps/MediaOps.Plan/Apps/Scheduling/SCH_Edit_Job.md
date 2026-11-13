@@ -82,9 +82,4 @@ The following options and features are available in this section:
 
 This section shows the nodes in the job in a workflow diagram and allows you to manage both the nodes and the connections between them.
 
-The following features are available in the workflow diagram:
-
-- **Tooltips**: Hovering over a node displays a tooltip with its alias, resource name, and resource pool name.<!-- RN 46025 -->
-- **Inserting nodes**: To insert a node between two connected nodes, select the connection and use the node insertion panel to pick the resource or pool.<!-- RN 46145 -->
-
 For a practical example, refer to the tutorial [Creating a job and configuring it with resources](xref:Tutorial_MediaOps_Scheduling_Encoder_Decoder).

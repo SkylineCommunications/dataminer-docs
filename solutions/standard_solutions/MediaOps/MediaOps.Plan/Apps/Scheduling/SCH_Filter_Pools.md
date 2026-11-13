@@ -51,7 +51,7 @@ From the *Resource View* page or the *Add/Pick/Swap/Link Node* panels, you can f
 |:--:|:--:|
 | ![Unfiltered Resource View page](~/solutions/images/Scheduling_Categories_Before.png) | ![Resource View page filtered on the SAT category](~/solutions/images/Scheduling_Categories_After.png) |
 
-## Custom job types
+## Filtering jobs by job type
 
 The Categories app is also used to define custom job types for the Scheduling app:
 
