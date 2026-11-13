@@ -314,3 +314,11 @@ Canceled reservations are now ignored when checking whether resource updates wou
 When initialization of `CCAEndpointManager` failed, the initialization alarm could remain active even after a subsequent retry succeeded.
 
 An initialization alarm will now only be generated if all initialization retries fail.
+
+#### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Previously, a DataMiner upgrade would install the CloudFeed DxM even on DataMiner Agents where it was not installed or had previously been uninstalled.
+
+From now on, the CloudFeed DxM will only be upgraded if it is already installed. It will be updated to the version included in the DataMiner upgrade package. This prevents unnecessary resource consumption on DataMiner Agents that do not need the CloudFeed DxM.

@@ -170,3 +170,11 @@ Concurrent module registrations could overwrite newer routing configuration with
 <!-- MR 10.6.0 [CU10] - FR TBD -->
 
 After upgrading to certain DataMiner 10.6 builds, the *DataMiner Agent Minimum Requirements* BPA test could fail with an execution error instead of evaluating the system requirements.
+
+#### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Previously, a DataMiner upgrade would install the CloudFeed DxM even on DataMiner Agents where it was not installed or had previously been uninstalled.
+
+From now on, the CloudFeed DxM will only be upgraded if it is already installed. It will be updated to the version included in the DataMiner upgrade package. This prevents unnecessary resource consumption on DataMiner Agents that do not need the CloudFeed DxM.
