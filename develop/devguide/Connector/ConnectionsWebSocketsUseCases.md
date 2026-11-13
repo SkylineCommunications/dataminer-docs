@@ -213,8 +213,8 @@ This parameter should be added and displayed to show the status of the WebSocket
    <Information>
       <Subtext>
          <![CDATA[Status of the Websocket.
-         0: Closed
-         1: Open]]>
+0: Closed
+1: Open]]>
       </Subtext>
    </Information>
    <Interprete>
