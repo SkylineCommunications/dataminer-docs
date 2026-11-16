@@ -1,6 +1,6 @@
 ---
 uid: Architecture_multiple_systems
-description: Find out when to use multiple independent DataMiner Systems instead of one cluster, and how to share data between them with element replication.
+description: "Find out when to use multiple independent DataMiner Systems instead of one cluster, and how to share data between them with element replication."
 keywords: architecture, multiple DMS, multi-DMS, element replication, regions, security zones
 ---
 
@@ -26,7 +26,7 @@ Any of the following can justify independent systems; they are alternatives, not
 
 ## Architecture
 
-This example shows two independently operated DMSs and an optional central DMS. Each has its **own STaaS storage**; federation shares selected operational information, not a common database or a single cluster. Region 1 is self-managed, while region 2 and the central DMS run on DaaS, co-hosted with their STaaS storage. Edge is the remote-access choice illustrated here.
+This example shows two independently operated DMSs and an optional central DMS. Each has its **own STaaS storage**; federation shares selected operational information, not a common database or a single cluster. Region 1 is self-managed, while region 2 and the central DMS run on DaaS, co-hosted with their STaaS storage. [Edge](xref:DataMiner_Edge) is the remote-access choice illustrated here.
 
 ```mermaid
 flowchart TB

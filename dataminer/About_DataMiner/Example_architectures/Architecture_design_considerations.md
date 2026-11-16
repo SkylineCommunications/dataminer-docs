@@ -1,6 +1,6 @@
 ---
 uid: Architecture_design_considerations
-description: Review network, platform, virtualization, storage, backup, and sizing guidelines that apply when you design a DataMiner System architecture.
+description: "Review network, platform, virtualization, storage, backup, and sizing guidelines that apply when you design a DataMiner System architecture."
 keywords: architecture, design, latency, network, virtualization, backup, disaster recovery, sizing, pitfalls
 ---
 

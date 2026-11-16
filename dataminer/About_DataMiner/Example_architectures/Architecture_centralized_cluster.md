@@ -1,18 +1,18 @@
 ---
 uid: Architecture_centralized_cluster
-description: Design one centrally hosted DataMiner cluster for shared operations, with multiple nodes for workload growth and appropriate redundancy.
+description: "Design one centrally hosted DataMiner cluster for shared operations, with multiple nodes for workload growth and appropriate redundancy."
 keywords: architecture, centralized cluster, redundancy, Swarming, Edge
 ---
 
 # Centralized cluster
 
-A centralized cluster is the most common starting point for a multi-node DMS. It hosts compute at a central location or cloud region, with shared system data storage and one operational view. Integrations reach data sources directly, across a routed network, or through DataMiner Edge. A DaaS cluster can also use a site-to-site VPN. The equipment does not need to be located alongside the cluster.
+A centralized cluster is the most common starting point for a multi-node DMS. It hosts compute in a central location or cloud region, with shared system data storage and one operational view. Integrations reach data sources directly, across a routed network, or through [DataMiner Edge](xref:DataMiner_Edge). A DaaS cluster can also use a site-to-site VPN. The equipment does not need to be located alongside the cluster.
 
 ## When this topology fits
 
-This topology is useful when you want one centrally operated system, need more capacity than one DMA, or need node redundancy. You do not need all of these reasons to apply. For example, a broadcaster may use a small redundant cluster for critical monitoring, while an EPM deployment may use many nodes to divide polling and aggregation workloads.
+This topology is useful when you want one centrally operated system, need more capacity than one DMA, or need node redundancy. Not all of these reasons have to apply. For example, a broadcaster may use a small redundant cluster for critical monitoring, while an EPM deployment may use many nodes to divide polling and aggregation workloads.
 
-Centralized compute also fits private equipment at several sites if the connectivity and integration requirements can be met through Edge or, for a DaaS cluster, a site-to-site VPN. Where local integration execution is needed, consider Edge Nodes or a [distributed multi-site system](xref:Architecture_distributed_sites).
+Centralized compute also fits private equipment at several sites if the connectivity and integration requirements can be met through [DataMiner Edge](xref:DataMiner_Edge) or, for a DaaS cluster, a [site-to-site VPN](xref:Connecting_to_private_data_sources#about-the-site-to-site-vpn-connection). Where local integration execution is needed, consider Edge Nodes or a [distributed multi-site system](xref:Architecture_distributed_sites).
 
 ## Common use cases
 
@@ -22,9 +22,7 @@ Centralized compute also fits private equipment at several sites if the connecti
 - **Cable and telecom aggregation**: Multiple nodes divide polling, EPM aggregation, and user-facing workloads while remaining one system.
 - **Shared orchestration**: Booking, resource management, and automation operate across private and cloud resources without requiring a separate system for each location.
 
-For DaaS access to private sources, see [Connecting to private data sources](xref:Connecting_to_private_data_sources). The same topology can also run as a self-managed DMS.
-
-## Arrangement
+## Deployment examples
 
 Each example shows one DMS consisting of three DMAs. Three DMAs illustrate a cluster, not a fixed minimum for every deployment.
 
@@ -73,11 +71,11 @@ flowchart TB
     G <-->|"Local network"| RE
 ```
 
-The Gateway is not a DMA. Self-managed DMAs can also use STaaS, with outbound HTTPS from every DMA. Each example uses one storage choice to keep the drawing clear.
+The Edge Gateway is not a DMA. Self-managed DMAs can also use STaaS, with outbound HTTPS from every DMA. Each example uses one storage choice to keep the drawing clear.
 
 Choose the [deployment model](xref:Overview_hosting) independently of this arrangement. DaaS uses STaaS. Self-managed nodes can use STaaS or dedicated clustered storage, on premises or in a cloud environment.
 
-As the system grows, you can separate user-facing functions from polling or aggregation workloads. All nodes remain part of one DMS, so configuration and upgrades stay coordinated. This reduces the need for cross-system integration, but means changes and shared dependencies can affect the whole system.
+As the system grows, you can separate user-facing functions from polling or aggregation workloads. All nodes remain part of one DMS, so configuration and upgrades stay coordinated. This reduces the need for cross-system integration, but it also means that changes and shared dependencies can affect the whole system.
 
 ## Redundancy and maintenance
 

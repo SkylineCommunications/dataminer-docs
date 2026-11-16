@@ -1,6 +1,6 @@
 ---
 uid: Architecture_distributed_sites
-description: Explore the distributed multi-site DataMiner architecture, where one DataMiner System manages equipment at many stations, headends, or sites.
+description: "Explore the distributed multi-site DataMiner architecture, where one DataMiner System manages equipment at many stations, headends, or sites."
 keywords: architecture, multi-site, distributed, remote sites, DataMiner Edge, WAN
 ---
 
@@ -16,7 +16,7 @@ One or more of the following may make this topology a good fit; you do not need 
 
 - You manage equipment spread over many sites, and you want to operate it from one or more central operations centers.
 - Local interfaces or polling volumes make it useful to run integrations near the equipment.
-- Some sites need local data collection during interruptions, using a supported Edge integration or a deliberately independent system where required.
+- Some sites need local data collection during interruptions, using a supported [Edge integration](xref:DataMiner_Edge) or a deliberately independent system where required.
 
 Reliable cluster and storage connectivity remains a prerequisite for sites hosting full DMAs. For independently operational sites, see [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems).
 

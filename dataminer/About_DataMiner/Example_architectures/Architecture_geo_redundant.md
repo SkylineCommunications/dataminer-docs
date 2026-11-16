@@ -1,6 +1,6 @@
 ---
 uid: Architecture_geo_redundant
-description: Design a geo-redundant DataMiner System with compute at separate locations and storage and connectivity that support recovery after site loss.
+description: "Design a geo-redundant DataMiner System with compute at separate locations and storage and connectivity that support recovery after site loss."
 keywords: architecture, geo-redundancy, disaster recovery, failure domains, STaaS, Cassandra, OpenSearch
 ---
 
