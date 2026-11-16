@@ -19,3 +19,12 @@ The content of the *Alarm ID* and *Root Alarm ID* columns may differ depending o
 In the table above, "DMAID" refers to the DataMiner ID of the DataMiner Agent where the element was originally created. "HostingDMAID" refers to the DataMiner ID of the DataMiner Agent currently hosting the element and managing its alarms. Most of the time, these two values will be the same, but they may differ, for example, when an element is exported from one Agent and imported onto another Agent. In this case, the element retains the original DMAID, but the HostingDMAID will reflect the new Agent's ID.
 
 Note that from DataMiner Web 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards, property columns for alarms are linked to the underlying property by name instead of by ID. This allows queries to be reused across DataMiner Systems where the same property can have a different ID. Existing queries that were created using earlier versions will continue to reference properties by ID to remain backwards-compatible. The existing property columns are marked as legacy columns in the query builder and can be updated manually when necessary. <!-- RN 45085 -->
+
+## Alarm focus information
+
+The following optional columns provide information from [Alarm focus](xref:Alarm_focus). <!-- RN 47109 -->
+
+- **Alarm likelihood**: The likelihood score assigned to the alarm. The value is displayed as a percentage (for example, `0.7` is displayed as `70%`); its underlying numeric value is between 0 and 1.
+- **Is focus alarm**: Whether the alarm is considered unexpected based on its likelihood. An alarm with a likelihood below 70% is a focus alarm.
+
+Focus information is only available for active alarm trees. These columns are empty when no focus information is available, for example for inactive alarms or when the DataMiner server does not support retrieving focus events. Filtering *Is focus alarm* to `true`, or filtering *Alarm likelihood* with `=`, `<`, `>`, `<=`, or `>=`, only returns active alarms.
