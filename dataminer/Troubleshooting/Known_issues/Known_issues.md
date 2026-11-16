@@ -24,6 +24,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
 | [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 | October 9, 2026 |
 | [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | DataMiner 10.6.0 [CU8]/10.6.11 | August 12, 2026 |
@@ -58,6 +59,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
 | [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 | October 9, 2026 |
 | [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | DataMiner 10.6.0 [CU8]/10.6.11 | August 12, 2026 |
@@ -117,6 +119,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
 | [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 | October 9, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | DataMiner 10.6.0 [CU8]/10.6.11 | August 12, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
@@ -180,6 +183,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 21, 2025 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 | September 17, 2025 |
