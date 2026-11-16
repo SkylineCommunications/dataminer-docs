@@ -84,6 +84,8 @@ You can now follow this setup flow:
 
 1. Choose Storage as a Service (STaaS), locally hosted storage, or externally hosted storage.
 
+   ![Storage options in the configuration wizard](~/release-notes/images/Installer_Configurator_Storage.png)
+
 1. Connect to dataminer.services when required.
 
    The wizard will open a browser where you can sign in or create an account. Connection is required for Community Edition, usage-based services, and STaaS. For perpetual-use licenses with self-hosted storage, cloud registration is optional.
