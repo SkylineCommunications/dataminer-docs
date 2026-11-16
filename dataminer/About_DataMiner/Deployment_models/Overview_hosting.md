@@ -23,7 +23,7 @@ Each of the different hosting possibilities has its own strengths in term of red
 
 You can also [combine these two options](xref:Hybrid_clusters) within the same DataMiner cluster.
 
-The deployment model does not determine where your equipment can be. A DaaS system can monitor private equipment through a site-to-site VPN or DataMiner Edge. See [Connecting to private data sources](xref:Connecting_to_private_data_sources).
+The deployment model does not determine where your equipment should be located. A DaaS system can monitor private equipment through a site-to-site VPN or DataMiner Edge. See [Connecting to private data sources](xref:Connecting_to_private_data_sources).
 
 > [!TIP]
 > For example architectures that show how these deployment models are used in practice, see [DataMiner System architecture and components](xref:Overview_Architecture_and_components#choosing-an-architecture).
