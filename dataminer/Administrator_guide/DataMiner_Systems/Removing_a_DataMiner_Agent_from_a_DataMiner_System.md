@@ -7,8 +7,55 @@ description: "Learn how to remove a regular node from a DataMiner cluster and ho
 
 Depending on whether the node is part of a Failover pair or not, a different procedure must be used.
 
-> [!NOTE]
-> If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config), you will need to manually adjust your NATS configuration with the removed node.
+> [!IMPORTANT]
+> Only if [automatic NATS configuration is disabled](xref:Disabling_automatic_NATS_config), remove the Agent from the NATS cluster before you start the removal procedure below. For BrokerGateway-managed NATS, follow the steps in [Updating BrokerGateway-managed NATS before removal](#updating-brokergateway-managed-nats-before-removal). This also applies when decommissioning a Failover Agent.
+
+## Updating BrokerGateway-managed NATS before removal
+
+### Updating the DataMiner System's BrokerGateway-managed NATS
+
+Complete this procedure before removing the Agent from the DataMiner System. It applies when BrokerGateway-managed NATS automatic configuration is disabled.
+
+> [!CAUTION]
+> ApplyManualConfig applies the full architecture you submit. If you omit other Agents, they can be removed from their current NATS cluster. Review the complete architecture before applying it.
+
+1. On an Agent that will remain in the DataMiner System, back up `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.custom.json`.
+
+1. Copy the value of the `ClusterArchitecture` property into a separate JSON document.
+
+   Copy the full architecture object, without the enclosing `ClusterArchitecture` property.
+
+1. Remove the Agent you are decommissioning from the appropriate region in the architecture.
+
+   Preserve every other node and its configuration. If you need to verify a remaining node's `bgw_api_key`, locate the key with the `BrokerGateway` role in that node's `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`. If the Agent is part of a Failover pair, update `additional_endpoints` to retain only the endpoints required by the Agents that will remain.
+
+1. On an Agent that will remain in the DataMiner System, open [BrokerGateway Swagger](https://localhost/BrokerGateway/swagger/index.html).
+
+1. Select *Authorize* and enter the key with the `Administrator` role from that Agent's `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+1. Open `POST /api/clusteringapi/applymanualconfig`.
+
+1. Paste the complete architecture object into the request body and execute the call once.
+
+   Do not include the enclosing `ClusterArchitecture` property or invoke `SetManualConfig` separately.
+
+1. Check the API response for errors.
+
+1. Check the BrokerGateway logs on the remaining Agents and verify that the generated NATS configuration no longer includes the Agent you are removing.
+
+1. After the NATS configuration has been applied successfully, continue with the applicable removal procedure below.
+
+### Restoring BrokerGateway configuration on the removed Agent
+
+If you used the preceding procedure to remove a node from a manually configured BrokerGateway NATS cluster, reset the removed Agent's BrokerGateway configuration after removing it from the DataMiner System:
+
+1. On the removed Agent only, rename `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.custom.json` and `C:\Program Files\Skyline Communications\DataMiner BrokerGateway\appsettings.runtime.json`.
+
+   Keep the renamed files as backups; do not delete them.
+
+1. Restart the BrokerGateway service on the removed Agent.
+
+   BrokerGateway will start with a local, automatic configuration.
 
 ## Removing a node that is not part of a Failover pair
 

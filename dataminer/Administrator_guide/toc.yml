@@ -125,6 +125,8 @@ items:
         items:
           - name: Adding a regular DataMiner Agent
             topicUid: Adding_a_regular_DataMiner_Agent
+          - name: Adding a DMA with disabled automatic NATS configuration
+            topicUid: Adding_a_DMA_with_disabled_automatic_NATS_config
           - name: Adding a DataMiner Agent to a cluster running STaaS
             topicUid: Adding_a_DMA_to_a_DMS_running_STaaS
           - name: Combining DaaS and self-managed nodes
