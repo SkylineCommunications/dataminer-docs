@@ -10,9 +10,11 @@ A one-box system is a complete DMS whose compute workload runs on a single Agent
 
 ## When this topology fits
 
-You may choose this topology because your workload fits one node, you are evaluating DataMiner, or your operation can tolerate the node being unavailable during maintenance or recovery. These are examples, not cumulative requirements. A small production system can use this topology if its availability requirements permit it.
+This topology can for example be used in case your workload fits one node, you are evaluating DataMiner, or your operation can tolerate the node being unavailable during maintenance or recovery. These are examples, not cumulative requirements.
 
-The data sources can be public APIs, private equipment, or a combination. A DaaS DMS can reach private sources through a site-to-site VPN or DataMiner Edge; see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources). A self-managed DMS can use direct local access, routed network access, or DataMiner Edge to reach remote sites.
+A small production system can use this topology if its availability requirements permit it.
+
+The data sources can be public APIs, private equipment, or a combination. A DaaS DMS can reach private sources through a site-to-site VPN or DataMiner Edge (see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources)). A self-managed DMS can use direct local access, routed network access, or DataMiner Edge to reach remote sites.
 
 ## Common use cases
 
@@ -26,9 +28,18 @@ The one-box footprint is a deployment choice, not a sizing guarantee. Size the w
 
 ## Deployment variations
 
-### DaaS with STaaS
+Three variations are possible:
 
-The DMS has one cloud-hosted DMA. A DaaS system always uses STaaS, which is hosted in the same cloud environment for low-latency storage access. Private equipment can be reached through Edge or a site-to-site VPN; equipment does not need to be publicly accessible.
+- [**A single DaaS node**](#daas-node): Skyline operates the compute infrastructure and storage. STaaS is the only storage option for DaaS. You configure the system and provide a supported path to your data sources.
+- [**A Self-managed DMA with STaaS**](#self-managed-one-box-dms-with-staas): You operate one Windows compute machine and Skyline operates storage. This is suitable if you already have a server platform or need to run the DMS locally. Outbound HTTPS to STaaS is required.
+- [**Self-managed DMA with local WSL databases**](#self-managed-one-box-dms-with-local-wsl-databases): Cassandra and OpenSearch run locally on Linux through Windows Subsystem for Linux. This reduces the number of machines, not the combined resource requirements or maintenance responsibilities. The local-storage setup is intended for small test, development, and staging environments, not normal production use.
+
+> [!TIP]
+> For detailed requirements and architecture information, refer to [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements) and [Single DMA storage setups](xref:Dedicated_clustered_storage#single-dma-setups), respectively.
+
+### DaaS node
+
+The DMS consists of only one DaaS node. A DaaS system always uses STaaS, which is hosted in the same dataminer.services cloud environment for low-latency storage access. Private equipment can be reached through [Edge](xref:DataMiner_Edge) or a site-to-site VPN; equipment does not need to be publicly accessible.
 
 ```mermaid
 flowchart TB
@@ -43,7 +54,7 @@ flowchart TB
     G <-->|"Local network"| E
 ```
 
-This example uses an Edge Gateway for visual clarity. A site-to-site VPN is another option for DaaS. An Edge Node can instead run compatible integrations locally; see the [distributed topology](xref:Architecture_distributed_sites#example-connections-across-sites).
+The example above uses an Edge Gateway for visual clarity. A site-to-site VPN is another option for DaaS. An Edge Node can instead run compatible integrations locally (for details, refer to the [distributed topology](xref:Architecture_distributed_sites#example-connections-across-sites)).
 
 ### Self-managed one-box DMS with STaaS
 
@@ -74,7 +85,7 @@ STaaS keeps the local footprint to one DMA, without local database servers.
 
 ### Self-managed one-box DMS with local WSL databases
 
-For limited non-production use, both the DMA and Linux databases run on one Windows machine. This example shows local equipment only; remote access can be added if needed.
+For **limited non-production** use, both the DMA and Linux databases can run on one Windows machine. Unlike the previous [variation with STaaS](#self-managed-one-box-dms-with-staas), in this case the storage shares the machine's resources and failure domain with the DMA. This should not be used for production systems.
 
 ```mermaid
 flowchart TB
@@ -89,15 +100,7 @@ flowchart TB
     D <-->|"Local network / interface"| L
 ```
 
-Unlike STaaS, this storage shares the machine's resources and failure domain with the DMA. This variation is for limited non-production use, not normal production.
-
-### Choosing a variation
-
-- **DaaS with STaaS**: Skyline operates the compute infrastructure and storage. STaaS is the only storage option for DaaS. You configure the system and provide a supported path to your data sources.
-- **Self-managed DMS with STaaS**: You operate one Windows compute machine and Skyline operates storage. This suits an existing server platform or a requirement to run the DMS locally. Outbound HTTPS to STaaS is required.
-- **Self-managed DMS with local WSL databases**: Cassandra and OpenSearch run locally on Linux through Windows Subsystem for Linux. This reduces the number of machines, not the combined resource requirements or maintenance responsibilities. Use the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) and follow its platform-specific restrictions. The local-storage setup is intended for small test, development, and staging environments, not normal production use.
-
-For WSL, provide resources for DataMiner and both database components, and enable nested virtualization where required by the VHD instructions. See [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements) and [Single DMA storage setups](xref:Dedicated_clustered_storage#single-dma-setups).
+The example above shows local equipment only; remote access can be added if needed.
 
 ## Availability and growth
 
@@ -107,6 +110,20 @@ If the load outgrows one node, move to a [centralized cluster](xref:Architecture
 
 ## Operations and getting started
 
-For DaaS, Skyline manages backups under the [DaaS backup policy](xref:Creating_a_DaaS_system_FAQ#what-backup-policy-does-a-daas-system-have). For a self-managed DMS, configure [DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube) outside the box. STaaS provides daily storage backups retained for 30 days; with local databases, you must arrange database backups as well.
+For DaaS:
 
-For DaaS, start with [Creating a DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services). For a self-managed DMS with STaaS, use the [DataMiner installer](xref:Installing_DM_using_the_DM_installer) and [STaaS setup instructions](xref:Setting_up_StaaS). Compare costs using the [DaaS sizing guide](xref:Pricing_sizing_guide_services_DaaS) and [STaaS sizing guide](xref:Pricing_sizing_guide_services_StaaS).
+- Start with [Creating a DMS on dataminer.services](xref:Creating_a_DMS_on_dataminer_services).
+- Backups are managed automatically by Skyline (see [DaaS backup policy](xref:Creating_a_DaaS_system_FAQ#what-backup-policy-does-a-daas-system-have)).
+
+For a self-managed DMA with STaaS:
+
+- Use the [DataMiner installer](xref:Installing_DM_using_the_DM_installer) and [STaaS setup instructions](xref:Setting_up_StaaS).
+- You will need to configure [DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube) yourself; however, storage does not need to be included in these. STaaS provides daily storage backups that are retained for 30 days.
+
+For a self-managed DMA with local WSL databases
+
+- Use the [pre-installed DataMiner Virtual Hard Disk](xref:Using_a_pre_installed_DataMiner_Virtual_Hard_Disk) and follow its platform-specific restrictions.
+- You will need to configure [DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube) and arrange database backups yourself.
+
+> [!TIP]
+> Compare costs using the [DaaS sizing guide](xref:Pricing_sizing_guide_services_DaaS) and [STaaS sizing guide](xref:Pricing_sizing_guide_services_StaaS).
