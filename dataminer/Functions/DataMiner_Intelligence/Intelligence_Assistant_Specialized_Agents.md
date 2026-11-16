@@ -52,7 +52,7 @@ References define what a specialized agent can use during execution. Each refere
 
 By assigning only the relevant references, you ensure that the agent stays focused on its intended purpose and does not access unrelated resources.
 
-Note that specialized agents can also select built-in **native tools** directly, in addition to their explicitly assigned references.
+Note that specialized agents can also select built-in **native tools** directly, in addition to their explicitly assigned references. When you add a native data tool to an agent, its required context is included automatically.
 
 > [!IMPORTANT]
 > If a skill references specific tools in its instructions, those tools must also be explicitly added as references to the specialized agent. Skills only provide instructions and context; they do not automatically grant the agent access to any tools.
