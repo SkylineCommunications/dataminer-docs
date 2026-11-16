@@ -1,6 +1,6 @@
 ---
 uid: MO_Development_Interacting_with_Code
-description: Explore the different ways developers can interact with MediaOps using code — via automation scripts, connectors, or data sources.
+description: "Explore the different ways developers can interact with MediaOps using code — via automation scripts, connectors, or data sources."
 ---
 
 # Interacting with MediaOps using code
@@ -12,6 +12,9 @@ All functionality of MediaOps is available through code. Custom scripts, data so
 When creating a script that interacts with the MediaOps **Resource Studio**, **Scheduling**, or **Workflow Designer** apps, you will need to reference [Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Automation](https://www.nuget.org/packages/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan.Automation).
 
 When creating a script that interacts with the MediaOps **People and Organizations** app, you will need to reference [Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations.Automation](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations/tree/main/DevPack.Automation).
+
+> [!NOTE]
+> Lock-aware automation scripts in Scheduling and Workflow Designer (such as scripts for creating, editing, and deleting jobs or workflows) require a `Lock ID` input parameter. When calling these scripts from custom automation without holding an active lock, pass `/` as the value for this parameter.<!-- RN 46489 -->
 
 ## Connectors
 
