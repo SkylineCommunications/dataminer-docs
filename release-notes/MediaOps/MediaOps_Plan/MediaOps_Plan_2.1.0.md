@@ -24,3 +24,7 @@ Jobs, workflows, and recurring jobs now honor the flow rules defined on resource
 Connections stored before a rule change do not block later edits, so changing rules in Resource Studio does not freeze existing or running jobs.
 
 The `Jobs.Validate` method also reports forbidden connections as a `FlowRuleViolationJobValidationError` (code `J701`). MediaOps clears this error automatically the next time a save resolves the violation. Resource pools without flow rules are unaffected.
+
+### IDs of node groups in jobs and workflows now exposed [ID 47092]
+
+The IDs of node groups in jobs, recurring jobs, and workflows are now exposed, making it possible to identify existing groups when making changes (e.g., renaming a group or changing its nodes). Previously, when changes were made to node groups, those groups were removed and replaced by new groups.
