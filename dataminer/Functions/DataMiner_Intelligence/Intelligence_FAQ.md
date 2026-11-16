@@ -89,11 +89,9 @@ Often, yes. When context is substantial and only relevant in certain situations,
 
 ### What is the best way to make documentation available to agents?
 
-For a small documentation set, create one [skill](xref:Intelligence_Assistant_Skills) with multiple resource files. Organize the documentation as text-based files in the skill folder or in nested subfolders, and reference each resource explicitly in the skill instructions. Specify each path relative to the skill folder, including every nested folder. Agents will load the resources progressively when they are relevant.
+For a small documentation set, create one [skill](xref:Intelligence_Assistant_Skills) with multiple resource files. Organize the documentation as text-based files in the skill folder or in nested subfolders, and reference each resource explicitly in the skill instructions. Specify each path relative to the skill folder, including every nested folder. Agents will load the resources progressively when they are relevant. For the supported folder structure and `SKILL.md` requirements, see [Using skill files](xref:Intelligence_Assistant_Skills#using-skill-files).
 
 For a larger documentation set, use an indexed search tool to retrieve relevant content on demand, and make that tool available to the agent through a tool call.
-
-For the supported folder structure and `SKILL.md` requirements, see [Using skill files](xref:Intelligence_Assistant_Skills#using-skill-files).
 
 ### Why must script input descriptions be defined in the script tool?
 
@@ -119,7 +117,7 @@ Ask your DataMiner administrator to confirm that the DataMiner Assistant DxM is 
 
 ### Why can I view an agent, skill, or tool but not edit it?
 
-Viewing agents, skills, and tools does not require the same permissions as managing them. Creating or editing them requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission. The *Agents* page is only available if specialized agents have been made available in your system.
+Viewing agents, skills, and tools does not require the same permissions as managing them. Creating or editing them requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.
 
 ### Do specialized agents provide a separate security boundary?
 
@@ -141,8 +139,8 @@ Tool execution and data fetching are load-balanced across the DataMiner Agents i
 
 DataMiner Intelligence uses GQI to fetch data efficiently. GQI uses bulk parameter fetching, paging, and optimized query lifecycles to reduce the impact on DataMiner System operations. Queries are load-balanced across DataMiner Agents through the NATS message broker, which supports scalability and resilience.
 
-Queries on very large tables can be expensive. In that case, we recommend using targeted filtering, for example through custom skills.
+Queries on very large tables can be expensive. In that case, we recommend instructing the agent to filter specific columns using relevant keywords.
 
 ### What is the current EPM capability?
 
-EPM support is currently limited. EPM chains are not yet supported, and relational table data that is important for EPM is still being developed. Existing skills and tools can provide the data you need in the interim. You can create custom skills to optimize filtering for large collector-table queries.
+EPM support is currently limited. EPM chains are not yet supported, and relational table data that is important for EPM is still being developed. Existing skills and tools can provide the data you need in the interim. You can create custom skills to instruct the agent to filter specific columns using relevant keywords.

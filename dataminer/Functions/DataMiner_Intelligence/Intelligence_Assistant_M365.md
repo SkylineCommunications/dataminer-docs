@@ -5,7 +5,7 @@ description: "Learn how to deploy and use DataMiner Assistant for Microsoft 365 
 
 # DataMiner Assistant for Microsoft 365
 
-The DataMiner Assistant for Microsoft 365 lets you chat with the DataMiner Insights agent from Microsoft Teams or Microsoft Copilot. The integration currently supports the DataMiner Insights agent only; you cannot select another agent from Microsoft Teams or Microsoft Copilot. If you have the necessary permissions, you can request information from your DataMiner System from any location, even without direct access to DataMiner.
+The DataMiner Assistant for Microsoft 365 lets you chat with any agent available on your DataMiner System, including [specialized agents](xref:Intelligence_Assistant_Specialized_Agents), from Microsoft Teams or Microsoft Copilot. You can switch agents at any time by asking for it in natural language. If you have the necessary permissions, you can request information from your DataMiner System from any location, even without direct access to DataMiner.
 
 ![Welcome screen of the DataMiner Assistant agent in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)
 
@@ -55,5 +55,6 @@ Below you can find a quick guide of typical ways to interact with the Assistant.
 | Get active system info | Shows the currently selected DataMiner System, including a link to open it in your browser. | "which system is active?", "show current system" |
 | Configure model | Select the model that is used by the AI agent. A default model can be selected for the current AI agent. | "select model", "change model" |
 | Agent info | Display the AI agent and model that are currently being used | "agent info", "active agent" |
+| Configure agent | Configure the AI agent that is used for the conversation. A default AI agent can be selected for the current system. | "select agent", "change agent" |
 | Live system queries | Sends queries to the DataMiner Assistant for real-time data (e.g., alarms, elements, services) and provides links to the monitoring UI. | "show active alarms", "what services are running?" |
 | Session reset | Prompts for confirmation, then clears the conversation history so you can start fresh while staying signed in. | "reset", "start over", "clear history" |
