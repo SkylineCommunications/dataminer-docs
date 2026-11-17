@@ -14,7 +14,7 @@ This topology can for example be used in case your workload fits one node, you a
 
 A small production system can use this topology if its availability requirements permit it.
 
-The data sources can be public APIs, private equipment, or a combination. A DaaS DMS can reach private sources through a site-to-site VPN or DataMiner Edge (see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources)). A self-managed DMS can use direct local access, routed network access, or DataMiner Edge to reach remote sites.
+The data sources can be public APIs, private equipment, or a combination. A DaaS DMS can reach private sources through a [site-to-site VPN](xref:Connecting_to_private_data_sources#about-the-site-to-site-vpn-connection) or [DataMiner Edge](xref:DataMiner_Edge). A self-managed DMS can use direct local access, routed network access, or DataMiner Edge to reach remote sites.
 
 ## Common use cases
 
@@ -54,7 +54,7 @@ flowchart TB
     G <-->|"Local network"| E
 ```
 
-The example above uses an Edge Gateway for visual clarity. A site-to-site VPN is another option for DaaS. An Edge Node can instead run compatible integrations locally (for details, refer to the [distributed topology](xref:Architecture_distributed_sites#example-connections-across-sites)).
+The example above uses an Edge Gateway for visual clarity. A site-to-site VPN is another option for DaaS. An Edge Node can instead run compatible integrations locally (for details, refer to the [distributed topology](xref:Architecture_distributed_sites#architecture-variants)).
 
 ### Self-managed one-box DMS with STaaS
 

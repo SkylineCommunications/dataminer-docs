@@ -12,25 +12,32 @@ This arrangement keeps site data in one operational system and lets you add loca
 
 ## When to use this architecture
 
-One or more of the following may make this topology a good fit; you do not need to meet all of them:
+Any of the following cases can make this topology a good fit:
 
 - You manage equipment spread over many sites, and you want to operate it from one or more central operations centers.
 - Local interfaces or polling volumes make it useful to run integrations near the equipment.
 - Some sites need local data collection during interruptions, using a supported [Edge integration](xref:DataMiner_Edge) or a deliberately independent system where required.
 
-Reliable cluster and storage connectivity remains a prerequisite for sites hosting full DMAs. For independently operational sites, see [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems).
+> [!TIP]
+> Reliable cluster and storage connectivity remains a prerequisite for sites hosting full DMAs. For sites that operate independently, see [Multiple independent DataMiner Systems](xref:Architecture_multiple_systems).
+
+## Use cases
+
+- Broadcasters with a network of regional stations, studios, or transmitter sites.
+- Cable and telecom operators with many headends, hubs, or central offices.
+- Satellite operators with multiple teleports and gateway sites.
+- Rail, transport, and utility networks with many stations or substations.
+
+> [!TIP]
+> See also: [Typical starting points per industry](xref:Overview_Architecture_and_components#typical-starting-points-per-industry).
 
 ## Architecture variants
 
-There are several ways to collect data from remote sites. They can be combined within one system.
+The examples below show two approaches: distributing DMAs across sites and using Edge components for remote data collection. A deployment can combine both approaches.
 
-### Example connections across sites
+### Self-managed DMAs at multiple sites
 
-The following examples separate distributed DMAs from Edge-based collection for clarity. A real deployment can combine these collection approaches.
-
-#### Self-managed DMAs at multiple sites
-
-These self-managed DMAs belong to one DMS and use STaaS in the cloud. The unlabelled arrow indicates cluster communication over a routed WAN. Each DMA accesses STaaS independently and polls its local equipment.
+These self-managed DMAs belong to one DMS and use STaaS in the cloud. The unlabeled arrow indicates cluster communication over a routed WAN. Each DMA accesses STaaS independently and polls its local equipment.
 
 ```mermaid
 flowchart TB
@@ -48,9 +55,9 @@ flowchart TB
     DA <-->|"HTTPS"| S
 ```
 
-#### DaaS with remote collection through Edge
+### DaaS with remote collection through Edge
 
-In this example, the DMS runs on DaaS, co-hosted with STaaS in the same cloud environment. Edge components are not DMAs and do not access system data storage directly. The Edge Node runs compatible integrations locally, while the Gateway provides a tunnel for centrally running integrations. A self-managed DMS can use Edge in the same way.
+In this example, the DMS runs on DaaS, co-hosted with STaaS in the same cloud environment. The Edge Node runs compatible integrations locally, while the Gateway provides a tunnel for centrally running integrations. A self-managed DMS can use Edge in the same way. Note that the Edge components are not DMAs and do not access system data storage directly.
 
 ```mermaid
 flowchart TB
@@ -69,9 +76,11 @@ flowchart TB
     Cloud <-->|"Edge tunnel"| G
 ```
 
-STaaS requires outbound HTTPS from each self-managed DMA, directly or via a supported proxy. Edge Nodes can connect directly or through dataminer.services. A DaaS system can also use a site-to-site VPN; see [Connecting to private data sources with DaaS](xref:Connecting_to_private_data_sources).
+STaaS requires outbound HTTPS from each self-managed DMA, directly or via a supported proxy. Edge Nodes can connect to the DMS directly or through dataminer.services. A DaaS system can also reach remote equipment through a [site-to-site VPN](xref:Connecting_to_private_data_sources#about-the-site-to-site-vpn-connection).
 
-### DataMiner nodes at the sites
+## Choosing a variant
+
+### When use on-site DataMiner nodes?
 
 A site can host a full DataMiner node when it needs local DataMiner functionality or workloads that are not covered by Edge. All nodes are part of one DMS and share the same storage. A full DMA is not required merely because the site is remote.
 
@@ -79,17 +88,19 @@ A site can host a full DataMiner node when it needs local DataMiner functionalit
 - With [Storage as a Service](xref:STaaS), each site needs outbound internet access. With self-managed storage, each node needs a reliable, low-latency connection to the central database clusters.
 - Every node is a full DataMiner Agent that needs to be maintained and upgraded.
 
-### Central polling over the WAN
+### When use central polling over the WAN?
 
-Smaller sites have no local DataMiner node. The equipment is polled directly from the central DataMiner nodes over a routed network or through a [DataMiner Edge Gateway](xref:About_Edge_Gateways). A DaaS system can also use a site-to-site VPN.
+For smaller sites, you can poll equipment from central DataMiner nodes instead of deploying a local node. The equipment is polled directly over a routed network or through a [DataMiner Edge Gateway](xref:About_Edge_Gateways). A DaaS system can also use a [site-to-site VPN](xref:Connecting_to_private_data_sources#about-the-site-to-site-vpn-connection).
 
 - Fewer servers to maintain.
 - Monitoring of a site stops when the connection to the site is lost. However, the loss of connectivity itself is detected and reported centrally.
 - Suitable for sites with a limited number of devices and a stable connection.
 
-### DataMiner Edge Nodes
+### When use DataMiner Edge Nodes?
 
-An [Edge Node](xref:About_Edge_Nodes) runs compatible Python-based integrations locally and forwards their data to elements in the central system. During a connection interruption, it buffers collected data on disk and synchronizes it when connectivity returns. This provides local execution with a smaller footprint than a full DMA, but does not provide an independent complete DataMiner System. Edge Nodes are currently available in preview.
+This feature is currently in preview.
+
+An [Edge Node](xref:About_Edge_Nodes) runs compatible Python-based integrations locally and forwards their data to elements in the central system. During a connection interruption, it buffers collected data on disk and synchronizes it when connectivity returns. This provides local execution with a smaller footprint than a full DMA.
 
 ## Redundancy
 
@@ -97,32 +108,45 @@ An [Edge Node](xref:About_Edge_Nodes) runs compatible Python-based integrations 
 - **Sites**: Decide per site whether local redundancy is required. A DMS can have multiple compute nodes at critical sites and use Swarming for supported workloads, provided the recovery nodes can reach the equipment. Less critical sites may need only one compute node or an Edge component.
 - **WAN**: Do not cluster DataMiner nodes that depend on each other over unreliable WAN links. Design each site so that a WAN failure only affects the visibility of that site, not the rest of the system.
 
-### What happens when a site loses its connection
+### What happens when a site loses its connection?
 
-Distinguish the loss of the link to central compute from the loss of a site's storage connection. Neither a local DMA nor an Edge Node automatically guarantees all local alarms, control, and workflows during an outage.
+Losing the connection to the central DataMiner nodes is different from losing access to storage. Having a local DMA or an Edge Node does not, by itself, guarantee that local alarm handling, control, and workflows will remain available during an outage.
 
-| Site setup | Data collection at the site | Central visibility of the site |
-|--|--|--|
-| Full DMA at the site | Local equipment access does not remove the dependency on shared storage or other cluster functions. Test which operations remain available for the specific failed network path. | Updates from an unreachable site cannot be relied on until connectivity returns. |
-| Central polling, directly or through an Edge Gateway | Central polling cannot reach the equipment while its only connection is unavailable. | Live data from that path is unavailable during the interruption. |
-| Edge Node with compatible integrations | Collected data is buffered on disk and synchronized after reconnection. This is data-collection continuity, not independent central alarms or control. | New data reaches the DMS after connectivity returns. |
+If a site must remain fully operational in isolation, consider a separate DMS with a storage and connectivity design that supports that requirement. Test whether polling, alarm handling, control, and historical data storage continue during the expected outage, and verify how the site recovers after reconnection. Do not assume that deploying a local node guarantees continued operation.
 
-If a site must remain fully operational in isolation, consider a separate DMS with a storage and connectivity design that supports that requirement. Validate polling, alarms, control, historical storage, and reconnection against the actual failure scenario rather than assuming a local node guarantees them.
+#### Full on-site DMA
+
+A local DMA may still be able to communicate with the equipment, but it also depends on storage and other cluster functions. Local equipment access alone therefore does not guarantee continued operation. Test which functions remain available when the DMA loses communication with other nodes, with storage, or with both.
+
+Updates from an unreachable site cannot be relied on until connectivity returns.
+
+#### Central polling, directly or through an Edge Gateway
+
+If the connection used for polling is lost, the central DataMiner nodes can no longer collect new data from the equipment.
+
+Live monitoring through that connection is unavailable until connectivity is restored.
+
+#### Edge Node with compatible integrations
+
+Collected data is buffered on disk and synchronized after reconnection. This is allows data collection to continue but does not make central alarm handling or control available while the connection is down.
+
+New data reaches the DMS after connectivity returns.
 
 ## Maintenance and backups
 
-- All compute nodes in one DMS run the same DataMiner version. For self-managed compute, plan enough bandwidth and maintenance windows to reach every site. Skyline manages DaaS platform maintenance.
-- For the self-managed parts of a DMS, configure [DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube) outside the compute hosts. Skyline manages [DaaS backups](xref:Creating_a_DaaS_system_FAQ#what-backup-policy-does-a-daas-system-have).
+- All compute nodes in one DMS must run the same DataMiner version.
+
+- For the self-managed parts of a DMS:
+
+  - Plan enough bandwidth and maintenance windows to reach every site.
+  - Configure [DataMiner backups](xref:Backing_up_a_DataMiner_Agent_in_DataMiner_Cube) outside the compute hosts
+
+- For DaaS nodes:
+
+  - Skyline manages DaaS platform maintenance.
+  - Skyline manages [DaaS backups](xref:Creating_a_DaaS_system_FAQ#what-backup-policy-does-a-daas-system-have).
+
 - Keep an inventory of which elements run on which site, and use views and naming conventions per site to keep the system manageable.
-
-## Commonly used in
-
-- Broadcasters with a network of regional stations, studios, or transmitter sites.
-- Cable and telecom operators with many headends, hubs, or central offices.
-- Satellite operators with multiple teleports and gateway sites.
-- Rail, transport, and utility networks with many stations or substations.
-
-See also [Typical starting points per industry](xref:Overview_Architecture_and_components#typical-starting-points-per-industry).
 
 ## Sizing
 

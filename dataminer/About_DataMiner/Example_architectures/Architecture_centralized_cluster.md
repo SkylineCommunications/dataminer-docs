@@ -28,7 +28,7 @@ Each example shows one DMS consisting of three DMAs. Three DMAs illustrate a clu
 
 ### DaaS with site-to-site VPN connectivity
 
-With DaaS, the DMAs and STaaS are co-hosted in the same cloud environment, providing low-latency storage access. STaaS is the only storage option for DaaS. This example uses a site-to-site VPN to reach private equipment.
+With DaaS, the DMAs and STaaS are co-hosted in the same dataminer.services cloud environment, providing low-latency storage access. STaaS is the only storage option for DaaS. The example below uses a site-to-site VPN to reach private equipment.
 
 ```mermaid
 flowchart TB
@@ -41,11 +41,11 @@ flowchart TB
     Cloud <-->|"Site-to-site VPN"| E
 ```
 
-DataMiner Edge is an alternative to the VPN. An Edge Gateway lets centrally running integrations reach remote equipment, and an Edge Node runs compatible integrations at the site.
+Alternatively, [DataMiner Edge](xref:DataMiner_Edge) can be used. An Edge Gateway lets centrally running integrations reach remote equipment, and an Edge Node runs compatible integrations at the site.
 
 ### Self-managed storage with Edge connectivity
 
-This example places self-managed DMAs and dedicated Linux database machines in the same site network. An Edge Gateway gives the DMS access to equipment at a remote site, such as a headend or distant teleport. The arrows between DMAs indicate cluster communication.
+This example places self-managed DMAs and dedicated Linux database machines in the same site network. An [Edge Gateway](xref:About_Edge_Gateways), which is not a DMA, gives the DMS access to equipment at a remote site, such as a headend or distant teleport. The arrows between DMAs indicate cluster communication.
 
 ```mermaid
 flowchart TB
@@ -71,15 +71,13 @@ flowchart TB
     G <-->|"Local network"| RE
 ```
 
-The Edge Gateway is not a DMA. Self-managed DMAs can also use STaaS, with outbound HTTPS from every DMA. Each example uses one storage choice to keep the drawing clear.
-
-Choose the [deployment model](xref:Overview_hosting) independently of this arrangement. DaaS uses STaaS. Self-managed nodes can use STaaS or dedicated clustered storage, on premises or in a cloud environment.
+While the example above uses self-managed storage, self-managed DMAs could also use [STaaS](xref:DM_selfhosted_and_StaaS), with outbound HTTPS from every DMA.
 
 As the system grows, you can separate user-facing functions from polling or aggregation workloads. All nodes remain part of one DMS, so configuration and upgrades stay coordinated. This reduces the need for cross-system integration, but it also means that changes and shared dependencies can affect the whole system.
 
 ## Redundancy and maintenance
 
-Multiple nodes alone do not guarantee takeover. Use [Swarming](xref:Swarming) to move supported workloads across active nodes, with sufficient capacity and reachability for recovery. Global Node Recovery detection requires at least three nodes; two-node recovery can use local detection with additional network-split risks. See [Node Recovery detection](xref:NodeRecovery_Detection) before relying on automatic redistribution.
+Use [Swarming](xref:Swarming) to move supported workloads across active nodes, with sufficient capacity and reachability for recovery. Global Node Recovery detection requires at least three nodes; two-node recovery can use local detection with additional network-split risks. See [Node Recovery detection](xref:NodeRecovery_Detection).
 
 Provide storage redundancy as well as compute redundancy. Place redundant nodes in separate failure domains, rather than on the same physical host or storage array. A cluster at one location does not by itself withstand loss of that location; apply a [geo-redundant design](xref:Architecture_geo_redundant) if that is required.
 
@@ -87,6 +85,10 @@ Central polling depends on the connection to each remote site. Edge Nodes can pl
 
 ## Sizing and operations
 
-Size compute and any self-managed databases using the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). Keep capacity for the chosen recovery model, not just normal operation.
+Size compute and any self-managed databases using the [DataMiner Compute Requirements](xref:DataMiner_Compute_Requirements). Keep capacity for the chosen recovery model, not just for normal operation.
 
-For a self-managed DMS, coordinate platform upgrades across the cluster and configure DataMiner backups alongside the storage backup strategy. Skyline manages DaaS maintenance and backups; see [DataMiner as a Service](xref:DaaS_hosting). Develop and validate solution changes in [lab and staging](xref:Architecture_design_considerations#lab-and-staging-environments), promoting the same tested package version to production.
+For a self-managed DMS, coordinate platform upgrades across the cluster and configure DataMiner backups alongside the storage backup strategy.
+
+For DaaS setups, Skyline manages maintenance and backups (see [DataMiner as a Service](xref:DaaS_hosting)).
+
+Develop and validate solution changes in [lab and staging environments](xref:Architecture_design_considerations#lab-and-staging-environments), and then promote the same tested package version to production.
