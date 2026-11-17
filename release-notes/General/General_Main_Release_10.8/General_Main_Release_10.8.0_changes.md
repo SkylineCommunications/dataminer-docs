@@ -147,12 +147,6 @@ Newly assigned actions will now be stored in the database using their complete I
 > - To correct scheduled tasks that were swarmed and edited in a version without this fix, recreate them in a version that includes the fix. Editing them again will not resolve the issue.
 > - This fix is **not rolling compatible**. Upgrade all DataMiner Agents to a version that includes this fix. Until all Agents have been upgraded, avoid editing scheduled tasks swarmed across Agents running older versions, as this could cause action IDs to be reused.
 
-#### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
-
-<!-- MR 10.8.0 - FR 10.7.1 -->
-
-During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
-
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->

@@ -121,3 +121,11 @@ When you uploaded an element document to a subfolder in DataMiner Cube, the foll
 - If the destination file already existed in the subfolder, either as a complete document or as a partial file from an aborted upload, the uploaded data would be appended to that file instead of replacing it, resulting in a corrupt document.
 
 From now on, uploading an element document to a subfolder will no longer delete a document with the same file name in the root documents folder, and overwriting an existing document will replace its contents correctly.
+
+#### Automation: No warning when a script import failed because of invalid XML [ID 46970]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you imported an automation script containing invalid XML, the import would fail without displaying a warning. The failure would only be recorded in the Cube logging.
+
+Cube will now display a warning informing you that the import failed and that you should check the Cube logging.

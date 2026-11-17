@@ -1069,6 +1069,12 @@ When services or elements were updated in a DataMiner cluster, offline Agents in
 
 Both online and offline Agents will now keep their XML-based services in memory at all times. The service cache in the StorageModule backend will only be reinitialized during a Failover switch or in exceptional circumstances.
 
+#### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
+
 #### API Gateway: Missing proxy routes after a restart could cause persistent HTTP 404 errors [ID 46956]
 
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.6.12 -->
