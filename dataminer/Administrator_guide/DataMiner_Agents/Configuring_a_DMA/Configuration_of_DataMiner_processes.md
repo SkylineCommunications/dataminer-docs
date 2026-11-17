@@ -827,3 +827,49 @@ On a DMA, you can specify the port to be used for .NET Remoting.
 1. Save and close the file.
 
 1. Restart DataMiner.
+
+## Configuring .NET runtime settings for SLNet
+
+In the `runtime` section of the file [SLNet.exe.config](xref:SLNet_exe_config), you can configure .NET runtime settings for the SLNet process, such as the garbage collection settings below. These settings can improve SLNet performance on some servers, but the optimal configuration depends on the hardware and workload, so evaluate the effect of any change on the system.
+
+> [!NOTE]
+> Prior to DataMiner 10.7.0/10.7.1<!-- RN 46905 -->, DataMiner upgrades will overwrite these settings, so any changes you make in the `runtime` section are lost after an upgrade. With later DataMiner versions, customized [gcServer](#gcserver) and [GCHeapCount](#gcheapcount) settings in *SLNet.exe.config* are retained when you upgrade.
+
+### gcServer
+
+The *gcServer* element in *SLNet.exe.config* determines whether SLNet uses server or workstation garbage collection. Garbage collection itself is always active; this setting only selects the mode. The *enabled* attribute defaults to *false*, which selects workstation garbage collection.
+
+Server garbage collection uses one heap and one dedicated garbage collection thread for each processor available to the process. This can improve performance on multiprocessor systems, but can also use more memory and CPU.
+
+To enable server garbage collection, set the *enabled* attribute to *true*:
+
+```xml
+<runtime>
+    ...
+    <gcServer enabled="true" />
+    ...
+</runtime>
+```
+
+After you have made changes to *SLNet.exe.config*, restart DataMiner for the changes to take effect.
+
+For more information, refer to [gcServer element](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/gcserver-element).
+
+### GCHeapCount
+
+The *GCHeapCount* element in *SLNet.exe.config* limits the number of heaps and garbage collection threads used by server garbage collection. It only applies when *gcServer* is enabled. The actual number of heaps is the lower of the configured value and the number of processors the process is allowed to use.
+
+Despite its name, the *enabled* attribute of this element takes the number of heaps. For example, to enable server garbage collection and use at most eight heaps:
+
+```xml
+<runtime>
+    ...
+    <gcServer enabled="true" />
+    <GCHeapCount enabled="8" />
+    ...
+</runtime>
+```
+
+After you have made changes to *SLNet.exe.config*, restart DataMiner for the changes to take effect.
+
+For more information, refer to [GCHeapCount element](https://learn.microsoft.com/en-us/dotnet/framework/configure-apps/file-schema/runtime/gcheapcount-element).
