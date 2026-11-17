@@ -23,24 +23,9 @@ For DataMiner Assistant to run correctly, the following **prerequisites** must b
 
 - **GQI**: For the "natural language to GQI" feature to work, the [GQI DxM](xref:GQI_DxM) needs to be installed.
 
-- **No Failover**: The DxM is not supported on DataMiner Agents that are part of a Failover pair.
-
-   If you currently have Failover Agents, we recommend one of the following approaches:
-
-  - Move away from Failover and use [Swarming](xref:Swarming) instead.
-  - Add one or more DataMiner Agents that are not part of a Failover pair to your DataMiner System, and install the DataMiner Assistant DxM on those Agents.
-
-    > [!TIP]
-    > To request a free license for such a DataMiner Agent, contact the Skyline Sales department at [sales@skyline.be](mailto:sales@skyline.be).
-
 ### Choosing the Agents to install on
 
-You do not need to install the DataMiner Assistant DxM on every Agent in a DataMiner cluster. We recommend installing it on a few suitable Agents to provide redundancy. The DxM is not supported on Agents that are part of a Failover pair.
-
-If you currently have Failover Agents, consider moving to [Swarming](xref:Swarming) or adding one or more Agents that are not part of a Failover pair to your DataMiner System. Install the DataMiner Assistant DxM on those Agents.
-
-> [!TIP]
-> To request a free license for an additional DataMiner Agent, contact the Skyline Sales department at [sales@skyline.be](mailto:sales@skyline.be).
+You do not need to install the DataMiner Assistant DxM on every Agent in a DataMiner cluster. We recommend installing it on a few suitable Agents to provide redundancy.
 
 ### DataMiner as a Service (DaaS)
 
