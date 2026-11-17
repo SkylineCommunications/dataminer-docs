@@ -232,7 +232,9 @@ When recommended by Skyline, the migration can be run manually:
 
 ### Updating the Data Aggregator configuration
 
-[Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be manually updated by following the guide at [Data Aggregator Settings - DMS with BrokerGateway](xref:Data_Aggregator_settings#dms-with-brokergateway).
+This action is only relevant when [Data Aggregator](xref:Data_Aggregator_DxM) is in active use and it [connects to multiple DataMiner Systems](xref:Data_Aggregator_settings#multi-dms-connection).
+
+In this case, when a DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be manually updated by following the guide at [Data Aggregator Settings - DMS with BrokerGateway](xref:Data_Aggregator_settings#dms-with-brokergateway).
 
 > [!NOTE]
 > The Data Aggregator DxM does not work in combination with `ForcedEndpoints`.

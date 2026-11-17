@@ -153,7 +153,7 @@ When a protocol is flagged to run in separate instances, every element using tha
 > [!NOTE]
 >
 > - From DataMiner 10.2.7/10.3.0 onwards, this behavior can also be configured in the protocol itself using the [RunInSeparateInstance](xref:Protocol.SystemOptions.RunInSeparateInstance) tag. In that case, no DataMiner restart is required.
-> - From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, you can configure a specific element to run in its own SLProtocol and SLScripting process using the [*Run in isolation mode* option](xref:Adding_elements#adding-elements-in-isolation-mode). This allows you to isolate individual elements without affecting all elements using the same protocol.
+> - From DataMiner 10.5.4/10.6.0 onwards<!--RN 41758-->, you can configure a specific element to run in its own SLProtocol and SLScripting process using the [*Run in isolation mode* option](xref:Adding_elements#adding-elements-in-isolation-mode). This allows you to isolate individual elements without affecting all elements using the same protocol.
 
 To configure this:
 
@@ -606,7 +606,7 @@ Example:
 
 It is possible to have an information event generated whenever a connection fails to be authenticated. From DataMiner 10.1.8/10.2.0 onwards, this is enabled by default.
 
-To enable this option in older systems, add an `EnableFailedAuthenticationInfoEvents` element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
+To enable this option in older systems, add an [EnableFailedAuthenticationInfoEvents](xref:MaintenanceSettings.SLNet.EnableFailedAuthenticationInfoEvents) element in the `SLNet` section of the *MaintenanceSettings.xml* file, and set it to `true`.
 
 Example:
 
@@ -623,7 +623,7 @@ Example:
 
 ### Configuring a cluster transition state timeout
 
-In the `ClusterTransitionStateTimeout` element, you can specify a cluster transition state timeout (in seconds).
+In the [ClusterTransitionStateTimeout](xref:MaintenanceSettings.SLNet.ClusterTransitionStateTimeout) element, you can specify a cluster transition state timeout (in seconds).
 
 DataMiner Agents leaving the DataMiner System (i.e., cluster) will leave the transition state after the specified timeout delay, starting from the last received notification from any of the DataMiner processes.
 

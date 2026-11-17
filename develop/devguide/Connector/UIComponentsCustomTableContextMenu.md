@@ -103,7 +103,7 @@ string[] contextMenuData = (string[])contextMenu;
 
 - contextMenuData [0] = client identifier (reserved for future use).
 - contextMenuData [1] = action, discrete value (in the example above, the value would be "load").
-- contextMenuData [2…n] = additional entries depending on the action: an entry per dependency value defined in the dependencyValues attribute (if any) followed by entries denoting the primary keys of the selected rows (if any).
+- contextMenuData [2…n] = additional entries depending on the action: an entry per dependency value defined in the [dependencyValues](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-dependencyValues) attribute (if any) followed by entries denoting the primary keys of the selected rows (if any).
 
 In the example above, contextMenuData[2] contains the provided value for parameter 1011, contextMenuData[3] contains the provided value for parameter 1012, contextMenuData [4...n] contains the primary keys of the rows that were selected.
 

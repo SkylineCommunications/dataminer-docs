@@ -11,7 +11,7 @@ Specify `bypassProxy` in the Bus address field if you need to bypass the proxy s
 
 ## bypassProxy and proxyServer attribute
 
-In a protocol, it is possible to specify a proxy to be used via the proxyServer attribute.
+In a protocol, it is possible to specify a proxy to be used via the [proxyServer](xref:Protocol.HTTP.Session-proxyServer) attribute.
 
 Suppose the proxyServer attribute references parameter 1. The following behavior is observed:
 

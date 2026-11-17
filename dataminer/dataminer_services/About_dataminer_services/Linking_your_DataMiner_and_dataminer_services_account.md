@@ -2,7 +2,7 @@
 uid: Linking_your_DataMiner_and_dataminer_services_account
 description: "Link your DataMiner account to your dataminer.services account to make use of certain dataminer.services functionality."
 keywords: cloud account
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Linking your DataMiner account to your dataminer.services account

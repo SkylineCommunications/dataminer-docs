@@ -28,15 +28,10 @@ description: Document the connector's configuration, operation, connectivity, an
 
 #### SNMP Connection - [Name of the connection]
 
-This connector uses a Simple Network Management Protocol (SNMP) connection and requires the following input during element creation:
-
-SNMP CONNECTION:
+This connector uses an SNMP connection and requires the following input during element creation:
 
 - **IP address/host**: [The polling IP or URL of the destination.]
-- **Device address**: [Indicate if required or not. If it is, specify default value and range.]
-
-SNMP Settings:
-
+- **Device address**: [The device address of the device. Only include if required. Specify the default value and range if relevant.]
 - **Port number**: [The port of the connected device, by default 161.]
 - **Get community string**: [The community string used when reading values from the device (default: *public*).]
 - **Set community string**: [The community string used when setting values on the device (default: *private*).]
@@ -44,8 +39,6 @@ SNMP Settings:
 #### Serial connection - [Name of the connection]
 
 This connector uses a serial connection and requires the following input during element creation:
-
-SERIAL CONNECTION:
 
 - Direct connection:
 
@@ -64,8 +57,6 @@ SERIAL CONNECTION:
 #### HTTP Connection – [Name of the connection]
 
 This connector uses an HTTP connection and requires the following input during element creation:
-
-HTTP CONNECTION:
 
 - IP address/host: [The polling IP or URL of the destination.]
 - IP port: [The IP port of the destination.]

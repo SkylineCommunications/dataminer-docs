@@ -1,5 +1,6 @@
 ---
 uid: srm_using_profilehelper
+description: "Learn how to manage Profile Manager parameters, definitions, and instances using C# code, perform bulk updates, and troubleshoot errors."
 keywords: ProfileManager, profile definitions, profile instances, profile parameters
 ---
 

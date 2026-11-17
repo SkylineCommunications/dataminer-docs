@@ -1,5 +1,6 @@
 ---
 uid: github_reusable_workflows
+description: "Learn how to select and call reusable GitHub workflows for SDK-style connectors and solutions using the Skyline DataMiner SDK."
 ---
 
 # GitHub reusable workflows
@@ -21,16 +22,18 @@ You can find all available reusable workflows in the [_ReusableWorkflows](https:
 
 For more details about what each workflow does, you can check one of the links below:
 
-- [Master Workflow](xref:github_reusable_workflows_master_workflow)
-- [Automation Master Workflow](xref:github_reusable_workflows_automation_master_workflow)
+- [Master Workflow](xref:github_reusable_workflows_master_workflow) (also used for automation script solutions using `Skyline.DataMiner.Sdk`)
 - [NuGet Solution Master Workflow](xref:github_reusable_workflows_nuget_solution_master_workflow)
 - [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow)
 - [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow)
 - [Update Catalog Details](xref:github_reusable_workflows_update_catalog_details)
 
+> [!IMPORTANT]
+> As of 2 November 2026, the Automation workflows and the legacy connector pipeline are no longer available. Use the Master Workflow for solutions using `Skyline.DataMiner.Sdk` and the Connector Master Workflow for SDK-style connector solutions. See [Automation workflow migration](xref:github_reusable_workflows_automation_master_workflow) and [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow) for details.
+
 ### GitHub to Catalog tool
 
-Most reusable workflows make use of the GitHub to Catalog tool. This tool auto-generates an *auto-generated-catalog.yml* file, which can extend an existing *catalog.yml* (or *manifest.yml*) file by adding metadata and registration details for a Catalog item. To function, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics.
+The Connector Master Workflow uses the GitHub to Catalog tool. This tool auto-generates an *auto-generated-catalog.yml* file, which can extend an existing *catalog.yml* (or *manifest.yml*) file by adding metadata and registration details for a Catalog item. To function, the GitHub repository must infer the Catalog item type using either naming conventions or GitHub topics. Solutions using `Skyline.DataMiner.Sdk` instead provide their package metadata in *CatalogInformation* directories.
 
 For more information, refer to the [GitHubToCatalogYaml README](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml#readme-body-tab), specifically the section on [inferring the Catalog item type](https://github.com/SkylineCommunications/Skyline.DataMiner.CICD.Tools.GitHubToCatalogYaml?tab=readme-ov-file#inferring-catalog-item-type).
 
@@ -44,7 +47,13 @@ For example:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
+      actions: read
+      pull-requests: write
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
 ```
 
 For most reusable workflows, several arguments and secrets need to be provided. You can find out which arguments and secrets by opening the reusable workflow and looking at the "inputs:" and "secrets:" sections located at the top of the file. For more information on secrets, see [GitHub secrets and tokens](xref:GitHub_Secrets).
@@ -57,14 +66,19 @@ For example:
 jobs:
 
   CI:
-    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Automation Master Workflow.yml@main
+    permissions:
+      contents: read
+      id-token: write
+      packages: write
+      actions: read
+      pull-requests: write
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Master Workflow.yml@main
     with:
-      sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
-      # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
+      sonarcloud-project-name: my-org_my-project
     secrets:
-      api-key: ${{ secrets.DATAMINER_TOKEN }}
-      sonarCloudToken: ${{ secrets.SONAR_TOKEN }}
+      DATAMINER_TOKEN: ${{ secrets.DATAMINER_TOKEN }}
+      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 ```
 
 > [!NOTE]
-> Static code analysis through SonarCloud is optional. When you enable it, for repositories in the *SkylineCommunications* organization the analysis step uses the *SONAR_TOKEN* organization secret. For repositories outside of the *SkylineCommunications* organization, you will need to create a repository secret with name *SONAR_TOKEN*. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+> Static code analysis through SonarCloud is optional. Skyline-managed repositories can load credentials through OIDC and Azure Key Vault. For repositories outside these organizations, provide a *SONAR_TOKEN* secret or your own OIDC configuration. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).

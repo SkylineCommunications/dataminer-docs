@@ -1,5 +1,6 @@
 ---
 uid: SRM_launching_service_profile_wizard
+description: "Launch the Service Profile Booking Wizard from a custom script to hide or prefill fields, make them read-only, and customize labels and titles."
 ---
 
 # Launching the Service Profile Booking Wizard from a custom script

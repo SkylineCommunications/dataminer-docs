@@ -7,12 +7,15 @@ keywords: Skyline.DataMiner.Sdk, Package Project, ProjectReferences
 
 Inside the Skyline DataMiner Package Project, under the *PackageContent* directory, you can find the *ProjectReferences.xml* file. This file is used to decide which DataMiner projects are included in the package. This is based on the *ProjectReference* tags that you can find in .csproj files.
 
+By default, all .csproj and .esproj projects of the solution are included. Projects without a supported *DataMinerType* (e.g., unit test projects) are skipped. Web application projects are typically .esproj projects. See [DataMiner Web Application Project](xref:skyline_dataminer_sdk_web_application_project).
+
 For most scenarios, this file can be used as it is. However, in case you want to create multiple packages by adding multiple package projects, you will need to tweak the file to get the correct content for each package.
 
 ```xml
 <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
   <!-- Default include all -->
   <ProjectReference Include="..\*\*.csproj" />
+  <ProjectReference Include="..\*\*.esproj" />
   <!--
   <SolutionFilter Include="..\MySolutionFilter.slnf" />
   <ProjectReference Include="..\ProjectToInclude\ProjectToInclude.csproj" />

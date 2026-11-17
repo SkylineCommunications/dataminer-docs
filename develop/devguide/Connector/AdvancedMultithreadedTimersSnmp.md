@@ -238,7 +238,7 @@ This results in a number of getBulkRequest operations being performed.
 To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
+> Whereas typically you provide a parameter ID in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="2000" name="SNMP Data" encoding="csharp" row="true" triggers="2000" options="group">

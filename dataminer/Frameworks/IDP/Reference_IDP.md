@@ -1,5 +1,6 @@
 ---
 uid: Reference1
+description: "Explore the DataMiner IDP reference for information on discovery profiles, CI types, and how to use an IS-04 registry to provision DataMiner."
 ---
 
 # Reference

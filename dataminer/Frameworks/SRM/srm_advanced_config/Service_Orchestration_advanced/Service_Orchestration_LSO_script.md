@@ -166,7 +166,7 @@ You can then use the following methods to initiate their configuration:
 
 ## Handling LSO script failures
 
-In case an LSO script fails and throws an exception or exits with `engine.ExitFail`, the service state will be set to *Failed*.
+In case an LSO script fails and throws an exception or exits with [Engine.ExitFail](xref:Skyline.DataMiner.Automation.Engine.ExitFail(System.String)), the service state will be set to *Failed*.
 
 The booking lifecycle state will also be adjusted to one of the following values:<!-- RN 33121 -->
 

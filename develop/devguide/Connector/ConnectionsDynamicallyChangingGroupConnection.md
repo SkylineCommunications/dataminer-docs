@@ -5,7 +5,7 @@ description: "Select a connector group's connection dynamically by storing its z
 
 # Dynamically changing a connection of a group
 
-It is possible to dynamically select the connection to be used for a group using the connectionPID attribute.
+It is possible to dynamically select the connection to be used for a group using the [connectionPID](xref:Protocol.Groups.Group-connectionPID) attribute.
 
 The value of the parameter the connectionPID attribute refers to is the 0-based connection index number of the connection to be used.
 

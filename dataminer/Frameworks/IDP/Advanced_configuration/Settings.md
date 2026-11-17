@@ -1,5 +1,6 @@
 ---
 uid: Settings
+description: "Configure IDP settings for script folders, select a CI removal script, and rerun the setup wizard from the Admin tab."
 ---
 
 # Settings

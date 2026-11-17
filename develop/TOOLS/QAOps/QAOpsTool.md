@@ -1,5 +1,6 @@
 ---
 uid: QAOps_Tool
+description: "Install the QAOps CLI tool, authenticate with a token, and run automated test suites against DataMiner configurations. Explore commands and examples."
 ---
 
 # QAOps tool
@@ -35,14 +36,11 @@ dotnet tool install -g Skyline.DataMiner.QAOps
 
 ## Quick start
 
-To run a test suite and wait for results:
+To run a test suite and wait for results, provide your authentication token with the `--token` argument. Replace the placeholders with your token, test suite ID, and configuration ID:
 
 ```bash
-# Set your authentication token
-export QAOPS_TOKEN=<your-token>
-
-# Run a test suite and save results
 dataminer-qaops test-run-and-wait \
+  --token <your-token> \
   --testsuite-id <your-testsuite-id> \
   --configuration-id <your-configuration-id> \
   --result-filepath ./test-results.json

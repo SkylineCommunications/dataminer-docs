@@ -96,7 +96,7 @@ For example, the column parameter with ID 201 of the base table will be included
 </Param>
 ```
 
-Note that a parameter can be duplicated multiple times using a comma as separator in the duplicateAs attribute:
+Note that a parameter can be duplicated multiple times using a comma as separator in the [duplicateAs](xref:Protocol.Params.Param-duplicateAs) attribute:
 
 ```xml
 <Param id="202" duplicateAs="502,605">

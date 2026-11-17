@@ -2,7 +2,7 @@
 uid: Accessing_DMS_remotely_with_Cube
 description: "Use DataMiner Cube to access your DataMiner System via a remote access URL if the necessary requirements are met."
 keywords: cloud connection
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Accessing your DMS remotely with DataMiner Cube

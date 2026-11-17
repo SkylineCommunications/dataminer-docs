@@ -33,7 +33,7 @@ protocol.NotifyProtocol(374 /*NT_CLOSE_HISTORY_TREND_WINDOW*/, settings, null);
 
 - Regardless of which date and time you provide, it is not possible to close a window that has not completely passed yet. For example, if it is currently 02:04 PM, and you want to close the 02:00 PM to 02:05 PM average window, you need to wait until after 02:05 PM to send this request.
 
-- For this call to work, the historySet attribute of the parameter needs to be set to true. If this is not the case, the following logging will be shown in the element log file when you try to execute this call:<!-- RN 9686 -->
+- For this call to work, the [historySet](xref:Protocol.Params.Param-historySet) attribute of the parameter needs to be set to true. If this is not the case, the following logging will be shown in the element log file when you try to execute this call:<!-- RN 9686 -->
 
   ```txt
   `SLElement.exe|10232|CElement::NotifyFunc|ERR|-1|Error closing trend windows with timestamp VT_DATE : [TIMESTAMP]

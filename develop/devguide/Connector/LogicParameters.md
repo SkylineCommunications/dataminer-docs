@@ -83,7 +83,7 @@ For example, to define a parameter that holds the combination DMA ID/element ID,
 > [!NOTE]
 >
 > - The value of these parameters is filled in by the DataMiner software. It is not possible to use a trigger on value change on these parameters to capture the value set by software.
-> - Parameters of type "elementdmaid", "elementid" or "elementname" cannot be displayed. To show the values of these parameters, define a parameter of type "read" and perform a "copy" action to copy the value of one of these parameters to the "read" parameter. Alternatively, a SendToDisplay method call (SLProtocol) can be used.
+> - Parameters of type "elementdmaid", "elementid" or "elementname" cannot be displayed. To show the values of these parameters, define a parameter of type "read" and perform a "copy" action to copy the value of one of these parameters to the "read" parameter. Alternatively, a [SendToDisplay](xref:Skyline.DataMiner.Scripting.SLProtocol.SendToDisplay*) method call (SLProtocol) can be used.
 > - If you want to use the bus address in a command, the command could require either a decimal value or a hex value. Depending on the required format, you can use these Interprete values:
 >   - Bus address is a decimal value, command needs hex bytes
 >     Example: bus=23133
@@ -104,7 +104,7 @@ For example, to define a parameter that holds the combination DMA ID/element ID,
 > [!NOTE]
 >
 > - The value of these parameters is filled in by the DataMiner software. It is not possible to use a trigger on value change on these parameters to capture the value set by software.
-> - Parameters of types specified in this section cannot be displayed. To show the values of these parameters, define a parameter of type "read" and perform a "copy" action to copy the value of this parameter to the "read" parameter. Alternatively, a SendToDisplay method call (SLProtocol) can be used.
+> - Parameters of types specified in this section cannot be displayed. To show the values of these parameters, define a parameter of type "read" and perform a "copy" action to copy the value of this parameter to the "read" parameter. Alternatively, a [SendToDisplay](xref:Skyline.DataMiner.Scripting.SLProtocol.SendToDisplay*) method call (SLProtocol) can be used.
 
 ### Internal parameters
 

@@ -94,7 +94,7 @@ For each table column, an additional parameter is defined which is referred to v
 The table parameter has an ArrayOptions tag that refers to the column parameters and defines the order of the columns through the [idx](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-idx) attribute.
 
 > [!NOTE]
-> The idx attribute defines the order in which the columns are stored. The order in which the columns are displayed can be different (this is defined in the options attribute of the Type tag in the Measurements tag).
+> The [idx](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-idx) attribute defines the order in which the columns are stored. The order in which the columns are displayed can be different (this is defined in the options attribute of the Type tag in the Measurements tag).
 
 ```xml
   <Measurement>

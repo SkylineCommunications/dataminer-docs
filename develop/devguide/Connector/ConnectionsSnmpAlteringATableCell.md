@@ -16,7 +16,7 @@ Different approaches are possible to implement this functionality in a protocol.
 
 To implement an SNMP table set using [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet), you must use the "instance" option. This way, DataMiner will be able to know which row and column have been set. The table must also be displayed, as a user interaction is needed to perform the write (performing a set via a QAction will not work as the corresponding primary key will not be found).
 
-Define a write parameter for the column and use the `snmpSetAndGet` attribute by setting it to `true`.
+Define a write parameter for the column and use the [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet) attribute by setting it to `true`.
 
 ```xml
 <Param id="157" snmpSetAndGet="true">

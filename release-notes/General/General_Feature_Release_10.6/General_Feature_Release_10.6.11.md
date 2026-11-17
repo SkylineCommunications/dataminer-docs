@@ -138,12 +138,6 @@ Microsoft .NET 10 remains required.
 
 ### Fixes
 
-#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
-
-<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
-
-Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
-
 #### Saving a service template could be blocked on a system with swarming disabled [ID 46235]
 
 <!-- MR 10.7.0 - FR 10.6.11 -->
@@ -218,6 +212,14 @@ Up to now, after the IP address of a DataMiner Agent had changed, running *NATSR
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
 
 Up to now, some errors encountered by *NATSMigration.exe* or *NATSRepair.exe* could incorrectly be missing from the error overview at the end of the command-line output.
+
+#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
+
+<!-- MR TBD - FR 10.6.11 -->
+
+When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
+
+From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
 
 #### STaaS: Ordering DOM entries by optional fields could throw a CRUD exception [ID 46377]
 

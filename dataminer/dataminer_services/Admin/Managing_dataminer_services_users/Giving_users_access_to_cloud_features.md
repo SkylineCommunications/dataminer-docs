@@ -2,7 +2,7 @@
 uid: Giving_users_access_to_cloud_features
 description: "Control user access to dataminer.services by adding or removing accounts in your organization and DataMiner System."
 keywords: cloud users, cloud user access, cloud permissions
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Controlling user access to dataminer.services features

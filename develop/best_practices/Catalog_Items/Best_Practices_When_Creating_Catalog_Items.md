@@ -49,9 +49,9 @@ When you release a version of a Catalog item, make sure to **adhere to [semantic
 
 Use `A.B.C` without a suffix for a stable release of a Catalog item other than a connector (for connectors, see [Connector versioning format](#connector-versioning-format)). This is the recommended version for users and should be used when the Catalog item meets the quality standards for its intended audience.
 
-- **A (MAJOR)**: Incremented for incompatible changes, breaking changes, or major architectural redesigns that may require user action.
+- **A (MAJOR)**: Incremented for incompatible changes, breaking changes, an increase to the minimum required dependency version, or major architectural redesigns that may require user action.
 
-- **B (MINOR)**: Incremented for new functionality added in a backward-compatible manner.
+- **B (MINOR)**: Incremented for new functionality or compatible dependency updates added in a backward-compatible manner.
 
 - **C (PATCH)**: Incremented for backward-compatible bug fixes. When a new version range is introduced, the PATCH version (C) should always start at 0, not 1.
 

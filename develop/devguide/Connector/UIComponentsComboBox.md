@@ -7,7 +7,7 @@ description: "Define a combo box that lets users type or select a string by link
 
 Allows the user to either type a value or select a value from a list.
 
-To define a combo box, set Type to "string" and also provide a list of discrete values by referring to another parameter (via the dependencyId attribute) that holds the values.
+To define a combo box, set Type to "string" and also provide a list of discrete values by referring to another parameter (via the [dependencyId](xref:Protocol.Params.Param.Measurement.Discreets-dependencyId) attribute) that holds the values.
 
 ```xml
 <Param id="380">

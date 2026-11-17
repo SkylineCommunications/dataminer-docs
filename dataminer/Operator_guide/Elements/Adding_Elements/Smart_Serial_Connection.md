@@ -23,6 +23,8 @@ For smart-serial connections, you can specify the following connection settings 
 
   To add another accepted IP address, below the box, click *Add*.
 
+  From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46784 -->, if multiple elements listen on the same TCP server port and explicitly list the same client IP address, all of them receive data sent by that client. Only one element can respond to the client. Other elements that listen to the same server port but do not explicitly list the client's IP address do not receive its data. In earlier versions, only one of the elements received the data. This behavior is useful when multiple elements need to receive the same data without responding.
+
   > [!NOTE]
   > If *AllowedIPAddresses.Disabled* is set to "true" in the user settings of the smart-serial connection in the protocol, this functionality will not be available. See [Specifying the allowed IP address](xref:ConnectionsSmartSerialServer#specifying-the-allowed-ip-addresses).
 

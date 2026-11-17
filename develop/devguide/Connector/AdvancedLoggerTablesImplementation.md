@@ -244,7 +244,7 @@ In order to prevent indices from rolling over in the indexing database, it is po
 
 > [!NOTE]
 >
-> - The partitionsToKeep attribute value is ignored when Partition is set to "infinite".
+> - The [partitionsToKeep](xref:Protocol.Params.Param.Database.Partition-partitionsToKeep) attribute value is ignored when Partition is set to "infinite".
 > - The column does not need to be a datetime column. Any column type is supported.
 > - The value "infinite" only works on tables with IndexingOptions@enabled = true (i.e., logger tables stored in the indexing database).
 

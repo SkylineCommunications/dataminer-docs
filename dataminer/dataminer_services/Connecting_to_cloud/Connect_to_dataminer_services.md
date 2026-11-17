@@ -2,7 +2,7 @@
 uid: Connect_to_dataminer_services
 description: "Connect your DataMiner System to dataminer.services in Cube by checking permissions and entering your organization, DMS name, and URL."
 keywords: cloud connection, connect to the cloud, connecting to the cloud
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Connecting to dataminer.services

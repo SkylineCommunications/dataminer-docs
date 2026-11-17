@@ -1,5 +1,6 @@
 ---
 uid: SRM_find_reference_of_object
+description: "Find SRM object references using SRM Surveyor in the SLNetClientTest tool to retrieve service definition, resource, and profile GUIDs or node IDs."
 ---
 
 # Finding the reference of an SRM object

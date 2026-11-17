@@ -22,7 +22,7 @@ It is possible to let users dynamically change the names of matrix inputs/output
 ```
 
 > [!NOTE]
-> The display key must be specified using the displayColumn attribute. Using NamingFormat or the naming option is currently not supported.
+> The display key must be specified using the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute. Using NamingFormat or the naming option is currently not supported.
 
 The discreetDestination option defines the XML file that will contain the table data. The name of the file is typically "ports.xml", but another name can be used. Each time the table is updated, the changes will be forwarded to the associated XML file.
 

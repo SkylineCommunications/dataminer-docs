@@ -15,7 +15,6 @@ There are currently several major CI/CD flows within Skyline Communications. Her
 >
 > - [Migrating from Gerrit to GitHub](xref:migration_from_gerrit_to_github)
 > - [Using GitHub - Guidelines](xref:Using_GitHub_for_CICD)
-> - [CI/CD Skyline Communications Gerrit and Jenkins](xref:High-level_overview)
 
 ## Internal CI/CD for the core DataMiner software
 

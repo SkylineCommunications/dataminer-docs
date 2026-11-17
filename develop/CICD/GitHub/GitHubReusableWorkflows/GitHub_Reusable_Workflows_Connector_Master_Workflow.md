@@ -1,16 +1,20 @@
 ---
 uid: github_reusable_workflows_connector_master_workflow
-description: Learn how the Connector Master Workflow validates, packages, and uploads legacy and SDK-style DataMiner connector solutions.
+description: "Learn how the SDK-only Connector Master Workflow validates, tests, packages, and publishes DataMiner connector solutions."
 ---
 
 # Connector Master Workflow
 
 > [!IMPORTANT]
 > The legacy connector pipeline is deprecated and no longer available as of 2 November 2026. Update any legacy projects in your connector solution to SDK-style projects. The Connector Master Workflow continues to support SDK-style connector solutions.
+>
+> The separate *Connector Master SDK Workflow.yml* entry point is also no longer available. If you previously called it directly, change your workflow reference to *Connector Master Workflow.yml* and remove the internal `use-oidc` input. Connector Master resolves OIDC from the repository owner and the optional `oidc-client-id`, `oidc-tenant-id`, and `oidc-subscription-id` inputs.
 
 The Connector Master Workflow should run on repositories containing a Connector Solution as provided by the DIS extension in Visual Studio.
 
-This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your Connector solution to your private storage in the catalog if it passes the Skyline quality gate job.
+The workflow runs the SDK-style connector pipeline directly, without detecting or dispatching to a legacy pipeline. Existing SDK-style callers of *Connector Master Workflow.yml* keep the same inputs, secrets, and `quality_gate` output.
+
+This workflow will act as a quality gate and code coverage collection, only creating and uploading an artifact of your connector solution to your private storage in the Catalog if it passes the Skyline quality gate job.
 
 The following actions will be performed:
 
@@ -67,8 +71,8 @@ jobs:
   CI:
     uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/Connector Master Workflow.yml@main
     with:
-      sonarCloudProjectName: TODO: Go to 'https://sonarcloud.io/projects/create' and create a project. Then enter the id of the project as mentioned in the SonarCloud project URL here.
-      # Only needed when the repository contains more than one solution (SDK-style connectors only):
+      sonarCloudProjectName: my-org_my-connector
+      # Only needed when the repository contains more than one solution:
       # solution-filter-name: "MyConnector.sln"
       # The API-key: generated in the dataminer.services Admin app (https://admin.dataminer.services/) as authentication for a certain DataMiner System.
     secrets:
@@ -81,7 +85,7 @@ jobs:
 | Input | Type | Default | Description |
 |--|--|--|--|
 | `sonarCloudProjectName` | string | | The SonarCloud project identifier. If omitted, the SonarCloud analysis is skipped. |
-| `solution-filter-name` | string | | The name of the solution file (`.sln` or `.slnx`) to build when the repository contains more than one solution. If not provided, the workflow auto-discovers the solution and fails when multiple are found. Only supported for SDK-style connector solutions; the legacy connector pipeline rejects this input. |
+| `solution-filter-name` | string | | The name of the solution file (`.sln` or `.slnx`) to build when the repository contains more than one solution. If not provided, the workflow auto-discovers the solution. It fails when no matching solution or multiple solutions are found. Solution filter files (`.slnf`) are not supported. |
 | `debug` | boolean | `false` | Enables debug output for the DataMiner tooling. |
 
 ## Skyline quality gate
@@ -137,6 +141,8 @@ This job runs in parallel and provides significant quality of life improvements.
 ### Upload artifact package
 
 This step performs the upload with the [CatalogUpload .NET Tool](https://www.nuget.org/packages/Skyline.DataMiner.CICD.Tools.CatalogUpload). Deployment is handled in other user-configured jobs.
+
+For SDK-style connectors in the *SkylineCommunications* or *SkylineCommunicationsCore* organization with OIDC enabled, a successful Catalog upload also notifies DataMiner Dependabot. The workflow reads the Catalog ID from the root *catalog.yml* or *manifest.yml* selected for registration, including generated metadata when you do not provide a custom file. It retrieves the signing secret from the Skyline-managed Azure Key Vault, so no additional repository secret is needed. A notification failure appears as a workflow warning but does not invalidate the published connector. This notification does not run for repositories outside these organizations.
 
 ### Set artifact ID
 

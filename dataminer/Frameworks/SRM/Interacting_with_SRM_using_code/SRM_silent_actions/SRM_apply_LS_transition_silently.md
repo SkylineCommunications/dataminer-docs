@@ -1,5 +1,6 @@
 ---
 uid: SRM_apply_LS_transition_silently
+description: "Find out how booking lifecycle transitions can be applied to an existing booking without user interaction by means of an automation script."
 ---
 
 # Silently applying booking lifecycle transitions

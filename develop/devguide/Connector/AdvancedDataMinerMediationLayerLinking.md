@@ -5,7 +5,7 @@ description: "Link a device protocol to a base protocol by matching its Protocol
 
 # Linking a device protocol to a base protocol
 
-In the [Protocol.ElementType](xref:Protocol.ElementType) tag of the device protocol, specify the element type that is specified in the baseFor attribute of the base protocol.
+In the [Protocol.ElementType](xref:Protocol.ElementType) tag of the device protocol, specify the element type that is specified in the [baseFor](xref:Protocol-baseFor) attribute of the base protocol.
 
 For example:
 

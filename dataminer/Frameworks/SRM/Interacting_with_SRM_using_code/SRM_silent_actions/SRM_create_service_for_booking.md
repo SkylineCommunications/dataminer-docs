@@ -1,5 +1,6 @@
 ---
 uid: SRM_create_service_for_booking
+description: "Learn how to create a service for an existing SRM booking via code when using the External Service Management option."
 ---
 
 # Creating a service for an existing booking
