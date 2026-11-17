@@ -1,7 +1,7 @@
 ---
 name: "Update documentation"
 description: "Update DataMiner documentation. Use for Add RN, Review, Update docs with an RN, Add KI, Add desc, Detect dead links, and Make new release files."
-argument-hint: "Add RN <ID> | Review | Update docs with <ID> | Add KI <draft> | Add desc | Detect dead links [folder] | Make new release files <versions>"
+argument-hint: "Add RN <ID> | Review | Update docs with <ID> | Add KI <draft> | Check KI | Add desc | Detect dead links [folder] | Make new release files <versions>"
 ---
 
 # Update documentation
@@ -18,6 +18,7 @@ Match commands case-insensitively and accept equivalent natural-language request
 | `Review` | [review-house-style](../skills/review-house-style/SKILL.md) | Current page, selected section, supplied paths, or pasted text |
 | `Update docs with <ID>` | [update-docs-with-RN](../skills/update-docs-with-rn/SKILL.md) | Any valid release note ID |
 | `Add KI` followed by a draft | [publish-known-issue](../skills/publish-known-issue/SKILL.md) | Draft known issue and supplied version details |
+| `Check KI [page]` | [check-known-issues](../skills/check-known-issues/SKILL.md) | Optional known issue page; otherwise all unresolved known issues |
 | `Add desc` | [add-description](../skills/add-description/SKILL.md) | Current page or supplied path |
 | `Detect dead links` | [detect-dead-links](../skills/detect-dead-links/SKILL.md) | Optional folder; otherwise the whole repository, including Mermaid diagrams |
 | `Make new release files` | [new-files-for-release](../skills/new-files-for-release/SKILL.md) | Main Release/CU and Feature Release versions |
@@ -36,9 +37,9 @@ Skill identifiers and folder names use lowercase, so the RN skills are named `ad
 - Execute the selected skill directly in the current conversation. Do not delegate routine documentation work or tool discovery to subagents.
 - Use only the tools needed by the selected skill, and preserve its approval requirements and fallback behavior.
 
-### SkylineApi retrieval for RN requests only
+### SkylineApi retrieval for RN and KI-check requests only
 
-These rules apply only to `Add RN` and `Update docs with` requests, including equivalent natural-language requests. Other commands do not require SkylineApi discovery or retrieval.
+These rules apply only to `Add RN`, `Update docs with`, and `Check KI` requests, including equivalent natural-language requests. Other commands do not require SkylineApi discovery or retrieval. For `Check KI`, the same rules apply to the task and release-note retrieval tools.
 
 - At the selected skill's retrieval step, use the SkylineApi release-note retrieval tool directly. If its definition is not already available in the current conversation, discover it using the tool-search tool first.
 - Use the returned release-note data to continue the selected skill. Do not repeatedly rediscover the same tool or retrieve the same RN again unless the data is incomplete or a refresh is needed.
@@ -49,6 +50,7 @@ These rules apply only to `Add RN` and `Update docs with` requests, including eq
 - `Add RN` publishes a release note under `release-notes`; it does not automatically update the user or developer guide.
 - `Update docs with` analyzes an RN's impact on the user and developer guides; it does not automatically publish a release note.
 - Dead-link detection is read-only.
+- `Check KI` is read-only until the user confirms the proposed known issue updates. It uses SkylineApi to retrieve the tasks and release notes referenced in the known issue pages.
 - House-style review edits only when the user selects that mode.
 - Follow repository instructions and the selected skill. Never invent release versions, product facts, or missing source content.
 - Preserve unrelated changes. Do not commit, push, or update Collaboration data unless explicitly requested.

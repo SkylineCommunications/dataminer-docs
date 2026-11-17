@@ -26,6 +26,23 @@ When you receive a draft, produce these changes:
 3. Add the page entry in `dataminer/Troubleshooting/Known_issues/Known_issues.md`.
 4. Add the page to `dataminer/Troubleshooting/toc.yml`.
 
+## Collaboration IDs
+
+Ask for the Collaboration task ID (and the release note ID, if a fix release note already exists) if they were not provided. Store them as HTML comments in the `## Fix` section so that [check-known-issues](../check-known-issues/SKILL.md) can later check whether a fix is available:
+
+- `<!-- Task 12345 -->` for the Collaboration task.
+- `<!-- RN 12345 -->` for the release note.
+
+Example for an unresolved issue:
+
+```md
+## Fix
+
+No fix is available yet. <!-- Task 12345 -->
+```
+
+If no ID is available, still publish, but mention in the summary that the IDs are missing.
+
 ## Approach
 
 1. Read `.github/instructions/dataminer-docs-house-style.instructions.md` and inspect a few existing known issue pages to match their tone, headings, and section order.
