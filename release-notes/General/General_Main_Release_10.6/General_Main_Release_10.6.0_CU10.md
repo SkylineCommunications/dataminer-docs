@@ -103,6 +103,12 @@ The incompatible connector versions reported, the message shown, and the require
 
 From now on, large ChunkingMessageBroker replies will use acknowledged chunks to avoid NATS slow consumer exceptions.
 
+#### SLNet: Faster updates of large subscription sets [ID 46934]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+SLNet will now update large subscription sets more efficiently, particularly when replacing a subscription set with one that contains only a few added or removed subscriptions.
+
 #### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
 
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
