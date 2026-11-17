@@ -239,8 +239,6 @@ If any of the following features is in use, the upgrade will be blocked unless i
 | Atlassian Crowd authentication or user and group management | `EndOfSupport.Crowd` |
 | RADIUS authentication | `EndOfSupport.RADIUS` |
 
-At this stage, these options only affect the upgrade prerequisite checks. Enforcement within DataMiner itself is planned for a later version.
-
 ##### End of Life features
 
 The upgrade will be blocked if either of the following configurations is present:
@@ -287,7 +285,7 @@ SLNet will now retry failed redundancy group queries once after a short delay. A
 
 #### Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 Previously, editing a scheduled task that had been swarmed could cause action IDs to be reused. As a result, multiple scheduled tasks could reference the same action, causing one task to execute actions configured for another task.
 

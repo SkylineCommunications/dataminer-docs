@@ -14,6 +14,7 @@ The following changes may have an impact on your system, so please make sure to 
 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
+- [Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]](#scheduler-swarmed-tasks-could-execute-actions-configured-for-another-task-id-46728)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 
@@ -871,8 +872,6 @@ If any of the following features is in use, the upgrade will be blocked unless i
 | Atlassian Crowd authentication or user and group management | `EndOfSupport.Crowd` |
 | RADIUS authentication | `EndOfSupport.RADIUS` |
 
-At this stage, these options only affect the upgrade prerequisite checks. Enforcement within DataMiner itself is planned for a later version.
-
 ##### End of Life features
 
 The upgrade will be blocked if either of the following configurations is present:
@@ -1074,6 +1073,19 @@ From now on, passing the `SPA_PRESET_LOAD_MEASUREMENT_POINT_CYCLE` flag will loa
 <!-- MR 10.7.0 - FR 10.6.11 [CU0] -->
 
 Up to now, if NATS was unavailable when DataMiner started, the `EdgeScriptedConnectorManager` and `EdgeNodeLifecycleManager` could fail to initialize. From now on, both managers share a MessageBroker instance from `MessageBrokerCache`, created on the first request instead of during `OnInitialize`. This prevents a temporary NATS outage at startup from leaving the managers uninitialized.
+
+#### Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Previously, editing a scheduled task that had been swarmed could cause action IDs to be reused. As a result, multiple scheduled tasks could reference the same action, causing one task to execute actions configured for another task.
+
+Newly assigned actions will now be stored in the database using their complete IDs (DataMiner ID + action ID), ensuring that each action is uniquely identified. The legacy action ID columns will continue to be updated for downgrade compatibility.
+
+> [!CAUTION]
+>
+> - To correct scheduled tasks that were swarmed and edited in a version without this fix, recreate them in a version that includes the fix. Editing them again will not resolve the issue.
+> - This fix is **not rolling compatible**. Upgrade all DataMiner Agents to a version that includes this fix. Until all Agents have been upgraded, avoid editing scheduled tasks swarmed across Agents running older versions, as this could cause action IDs to be reused.
 
 #### Visual Overview in web apps: SLHelper could stop responding after a session startup failure [ID 46744]
 
