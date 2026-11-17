@@ -55,7 +55,7 @@ It contains among others the following settings:
 The *runtime* section contains .NET runtime settings for the SLNet process, such as the garbage collection settings below. These settings can improve SLNet performance on some servers, but the optimal configuration depends on the hardware and workload, so evaluate the effect of any change on the system.
 
 > [!NOTE]
-> From DataMiner 10.8.0/10.7.1 onwards<!-- RN 46905 -->, DataMiner upgrades keep the existing *gcServer* and *GCHeapCount* settings in *SLNet.exe.config*. All other settings in the *runtime* section are replaced by those of the upgrade package, so any other changes you make in this section will be lost after an upgrade.
+> From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46905 -->, DataMiner upgrades keep the existing *gcServer* and *GCHeapCount* settings in *SLNet.exe.config*. All other settings in the *runtime* section are replaced by those of the upgrade package, so any other changes you make in this section will be lost after an upgrade.
 
 ### gcServer
 
