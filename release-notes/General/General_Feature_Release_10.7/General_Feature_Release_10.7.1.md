@@ -33,6 +33,7 @@ Before you upgrade to this DataMiner version:
 
 ## Important changes
 
+- [Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]](#scheduler-swarmed-tasks-could-execute-actions-configured-for-another-task-id-46728)
 - [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 
@@ -247,6 +248,19 @@ Up to now, when a service was deleted, the generated deleted-service information
 SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filter, trend filter, or redundancy group information if an SLXML query returned an array with unexpected dimensions.
 
 SLNet will now retry failed redundancy group queries once after a short delay. Array index errors will also be logged in *SLNet.txt* with the variable name, the exact array index, and the complete query response array in compressed form to help diagnose the issue.
+
+#### Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Previously, editing a scheduled task that had been swarmed could cause action IDs to be reused. As a result, multiple scheduled tasks could reference the same action, causing one task to execute actions configured for another task.
+
+Newly assigned actions will now be stored in the database using their complete IDs (DataMiner ID + action ID), ensuring that each action is uniquely identified. The legacy action ID columns will continue to be updated for downgrade compatibility.
+
+> [!CAUTION]
+>
+> - To correct scheduled tasks that were swarmed and edited in a version without this fix, recreate them in a version that includes the fix. Editing them again will not resolve the issue.
+> - This fix is **not rolling compatible**. Upgrade all DataMiner Agents to a version that includes this fix. Until all Agents have been upgraded, avoid editing scheduled tasks swarmed across Agents running older versions, as this could cause action IDs to be reused.
 
 #### STaaS: Incomplete state-change history after migrating from Cassandra [ID 46769]
 
