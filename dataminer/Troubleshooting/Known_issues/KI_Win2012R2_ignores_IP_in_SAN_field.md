@@ -14,7 +14,7 @@ An issue in Windows 2012 R2 causes the IP address defined in the SAN field of a 
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet. <!--Task ID: 207790-->
 
 > [!NOTE]
 > Support for Windows 2012 R2 [ends in October 2023](https://learn.microsoft.com/en-us/lifecycle/announcements/windows-server-2012-r2-end-of-support).
