@@ -135,5 +135,3 @@ Cube will now display a warning informing you that the import failed and that yo
 <!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
 
 When you panned a trend graph to an older time range, the corresponding trend data would not be loaded until you zoomed the graph.
-
-From now on, the required trend data will be requested when you finish panning, without requiring an additional zoom operation.

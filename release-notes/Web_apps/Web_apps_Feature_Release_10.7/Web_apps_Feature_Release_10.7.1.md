@@ -165,7 +165,7 @@ Cross-origin resource sharing (CORS) now allows the `Authorization` header for s
 
 #### Web DcM: Updated PuppeteerSharp and bundled Chromium [ID 46955]
 
-<!-- MR 10.7.0 / 10.6.0 [CU10] - FR 10.7.1 -->
+<!-- MR 10.5.0 [CU22] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The Web DcM, which generates PDF reports, now uses PuppeteerSharp 25.15.0 instead of 21.1.1.
 
