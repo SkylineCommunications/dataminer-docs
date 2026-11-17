@@ -33,8 +33,9 @@ In the example above, the triggers attribute is set to the parameter ID of the w
 
 > [!NOTE]
 >
-> - In recent DataMiner versions, you can use a read column parameter as a trigger on a QAction with row=true option. In legacy versions prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible.<!-- RN 15040 & 15531 -->
+> - In recent DataMiner versions, you can use a read column parameter as a trigger on a QAction with `row="true"`. In legacy versions prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible.<!-- RN 15040 & 15531 -->
 > - For SNMP tables, it is also possible to provide the ID of a table parameter. In this case, the QAction will trigger every time a row has been updated.
+> - A QAction with `row="true"` cannot be used with single parameters.
 
 In a QAction, the following methods are available to retrieve information about the row that triggered the execution of the QAction:
 
