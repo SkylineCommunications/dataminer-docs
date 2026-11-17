@@ -15,6 +15,7 @@ The following changes may have an impact on your system, so please make sure to 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
+- [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 
 ## Changes
 
@@ -851,6 +852,35 @@ From now on, SLScripting will no longer be able to run as a service. It will alw
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
+#### DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner upgrades to version 10.7.x will now check for features that have reached End of Support or End of Life.
+
+##### End of Support features
+
+If any of the following features is in use, the upgrade will be blocked unless its corresponding case-sensitive soft-launch option is set to `true` in *SoftLaunchOptions.xml*:
+
+| Feature | Soft-launch option |
+|---------|--------------------|
+| MySQL as the main database | `EndOfSupport.MySQL` |
+| Elasticsearch 6.8 or earlier | `EndOfSupport.Elastic` |
+| Cassandra 3.x or earlier | `EndOfSupport.Cassandra3` |
+| Atlassian Crowd authentication or user and group management | `EndOfSupport.Crowd` |
+| RADIUS authentication | `EndOfSupport.RADIUS` |
+
+At this stage, these options only affect the upgrade prerequisite checks. Enforcement within DataMiner itself is planned for a later version.
+
+##### End of Life features
+
+The upgrade will be blocked if either of the following configurations is present:
+
+- .NET Remoting explicitly enabled in *MaintenanceSettings.xml* for communication between DataMiner Agents or between DataMiner Cube and SLNet.
+- A two-site redundant indexing cluster (EMCO).
+
+These checks have no soft-launch override. Remove or migrate these configurations before upgrading.
 
 ### Fixes
 

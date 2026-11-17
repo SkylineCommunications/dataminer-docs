@@ -36,6 +36,7 @@ Before you upgrade to this DataMiner version:
 - [Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]](#scheduler-swarmed-tasks-could-execute-actions-configured-for-another-task-id-46728)
 - [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
+- [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 
 ## Highlights
 
@@ -219,6 +220,35 @@ SLNet will now update large subscription sets more efficiently, particularly whe
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
+#### DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner upgrades to version 10.7.x will now check for features that have reached End of Support or End of Life.
+
+##### End of Support features
+
+If any of the following features is in use, the upgrade will be blocked unless its corresponding case-sensitive soft-launch option is set to `true` in *SoftLaunchOptions.xml*:
+
+| Feature | Soft-launch option |
+|---------|--------------------|
+| MySQL as the main database | `EndOfSupport.MySQL` |
+| Elasticsearch 6.8 or earlier | `EndOfSupport.Elastic` |
+| Cassandra 3.x or earlier | `EndOfSupport.Cassandra3` |
+| Atlassian Crowd authentication or user and group management | `EndOfSupport.Crowd` |
+| RADIUS authentication | `EndOfSupport.RADIUS` |
+
+At this stage, these options only affect the upgrade prerequisite checks. Enforcement within DataMiner itself is planned for a later version.
+
+##### End of Life features
+
+The upgrade will be blocked if either of the following configurations is present:
+
+- .NET Remoting explicitly enabled in *MaintenanceSettings.xml* for communication between DataMiner Agents or between DataMiner Cube and SLNet.
+- A two-site redundant indexing cluster (EMCO).
+
+These checks have no soft-launch override. Remove or migrate these configurations before upgrading.
 
 #### Automation: Clearer error messages when script compilation fails [ID 46989]
 
