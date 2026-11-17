@@ -129,3 +129,11 @@ From now on, uploading an element document to a subfolder will no longer delete 
 When you imported an automation script containing invalid XML, the import would fail without displaying a warning. The failure would only be recorded in the Cube logging.
 
 Cube will now display a warning informing you that the import failed and that you should check the Cube logging.
+
+#### Trending: Older trend data would not load after panning [ID 46994]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you panned a trend graph to an older time range, the corresponding trend data would not be loaded until you zoomed the graph.
+
+From now on, the required trend data will be requested when you finish panning, without requiring an additional zoom operation.
