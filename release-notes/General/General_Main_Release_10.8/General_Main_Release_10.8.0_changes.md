@@ -133,12 +133,6 @@ These files are no longer required following changes to the dependencies of SLNe
 
 ### Fixes
 
-#### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
-
-<!-- MR 10.8.0 - FR 10.7.1 -->
-
-During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
-
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->

@@ -165,7 +165,7 @@ Cross-origin resource sharing (CORS) now allows the `Authorization` header for s
 
 #### Web DcM: Updated PuppeteerSharp and bundled Chromium [ID 46955]
 
-<!-- MR 10.7.0 / 10.6.0 [CU10] - FR 10.7.1 -->
+<!-- MR 10.5.0 [CU22] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The Web DcM, which generates PDF reports, now uses PuppeteerSharp 25.15.0 instead of 21.1.1.
 
@@ -178,6 +178,14 @@ This update also includes Chromium 155.0.8059.84.
 When an app manages its own theme, the user settings now display the message "Theme setting is managed by the app." above the *Theme* setting. This clarifies why your selected theme does not affect that app.
 
 The message is not shown in apps that support this setting, such as Assistant, the DataMiner landing page, and uploaded DataMiner apps.
+
+#### DataMiner upgrade: DataMiner Assistant DxM installed on every Agent [ID 47047]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner web-only upgrades will now install the DataMiner Assistant DxM on every DataMiner Agent being upgraded, even if the DxM was not previously installed. Previously, upgrades would only update the DxM on Agents where it was already installed.
+
+If a newer version of the DataMiner Assistant DxM is already installed, it will not be downgraded.
 
 ### Fixes
 

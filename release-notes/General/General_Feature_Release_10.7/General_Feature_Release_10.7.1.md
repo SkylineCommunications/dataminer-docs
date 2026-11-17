@@ -33,8 +33,10 @@ Before you upgrade to this DataMiner version:
 
 ## Important changes
 
+- [Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]](#scheduler-swarmed-tasks-could-execute-actions-configured-for-another-task-id-46728)
 - [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
+- [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 
 ## Highlights
 
@@ -207,11 +209,44 @@ The `ScheduledTaskDetails` class, which is used only to migrate scheduled tasks 
 
 As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.Config.dll*.
 
+#### SLNet: Faster updates of large subscription sets [ID 46934]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+SLNet will now update large subscription sets more efficiently, particularly when replacing a subscription set with one that contains only a few added or removed subscriptions.
+
 #### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
 
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
+#### DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner upgrades to version 10.7.x will now check for features that have reached End of Support or End of Life.
+
+##### End of Support features
+
+If any of the following features is in use, the upgrade will be blocked unless its corresponding case-sensitive soft-launch option is set to `true` in *SoftLaunchOptions.xml*:
+
+| Feature | Soft-launch option |
+|---------|--------------------|
+| MySQL as the main database | `EndOfSupport.MySQL` |
+| Elasticsearch 6.8 or earlier | `EndOfSupport.Elastic` |
+| Cassandra 3.x or earlier | `EndOfSupport.Cassandra3` |
+| Atlassian Crowd authentication or user and group management | `EndOfSupport.Crowd` |
+| RADIUS authentication | `EndOfSupport.RADIUS` |
+
+##### End of Life features
+
+The upgrade will be blocked if either of the following configurations is present:
+
+- .NET Remoting explicitly enabled in *MaintenanceSettings.xml* for communication between DataMiner Agents or between DataMiner Cube and SLNet.
+- A two-site redundant indexing cluster (EMCO).
+
+These checks have no soft-launch override. Remove or migrate these configurations before upgrading.
 
 #### Automation: Clearer error messages when script compilation fails [ID 46989]
 
@@ -248,6 +283,27 @@ SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm 
 
 SLNet will now retry failed redundancy group queries once after a short delay. Array index errors will also be logged in *SLNet.txt* with the variable name, the exact array index, and the complete query response array in compressed form to help diagnose the issue.
 
+#### Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Previously, editing a scheduled task that had been swarmed could cause action IDs to be reused. As a result, multiple scheduled tasks could reference the same action, causing one task to execute actions configured for another task.
+
+Newly assigned actions will now be stored in the database using their complete IDs (DataMiner ID + action ID), ensuring that each action is uniquely identified. The legacy action ID columns will continue to be updated for downgrade compatibility.
+
+> [!CAUTION]
+>
+> - To correct scheduled tasks that were swarmed and edited in a version without this fix, recreate them in a version that includes the fix. Editing them again will not resolve the issue.
+> - This fix is **not rolling compatible**. Upgrade all DataMiner Agents to a version that includes this fix. Until all Agents have been upgraded, avoid editing scheduled tasks swarmed across Agents running older versions, as this could cause action IDs to be reused.
+
+#### Visual Overview in web apps: SLHelper could stop responding after a session startup failure [ID 46744]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+Previously, when Windows failed to create a window while SLHelper was starting a Cube session for a mobile visual overview, the automatic startup retry could leave the session in an invalid state. Cleaning up that session could then cause SLHelper to stop responding, blocking all mobile visual overview requests for all dashboards and users until SLHelper was restarted.
+
+Each startup retry will now use a new, isolated environment, and a session will only be considered started once it is running. Cleaning up a failed or unresponsive session will no longer block SLHelper. If a session cannot be started after several attempts, only the mobile visual overview requesting that session will fail; other sessions will remain unaffected.
+
 #### STaaS: Incomplete state-change history after migrating from Cassandra [ID 46769]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
@@ -277,6 +333,16 @@ When a StorageModule insert operation was retried after a NATS timeout, it could
 
 During paged read operations, retries when fetching pages after the first page could cause data to be missed following a timeout. These requests will no longer be retried. If a read operation fails, an error will be returned instead.
 
+#### SLDataMiner could stop responding when recovering from an SLScripting process crash [ID 46849]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When an SLScripting process disappeared while elements were starting, SLDataMiner could stop responding because of a deadlock. Elements could no longer be started or stopped, and the DataMiner Agent had to be restarted.
+
+From now on, elements that used the disappeared SLScripting process will be restarted without blocking other elements that are starting at the same time. Each process disappearance will only be recovered once.
+
+While DataMiner is stopping, no SLScripting or SLProtocol processes will be recovered or started.
+
 #### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
@@ -287,9 +353,15 @@ Both online and offline Agents will now keep their XML-based services in memory 
 
 #### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
+
+#### SLNet: Initial parameter event could be missing after updating a subscription set [ID 46913]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a parameter was removed from a subscription set and then added again, SLNet could fail to send the initial event for that parameter after the subscription update.
 
 #### DataMiner upgrade: DxMs installed under a previous product name could be skipped [ID 46938]
 
@@ -306,6 +378,15 @@ The upgrade process now uses MSI upgrade codes to detect related products and re
 Resources could not be updated when they were used by a canceled reservation. This could prevent changes to the resource mode, such as putting a resource into maintenance, as well as changes to its availability window or capacity.
 
 Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
+
+#### Failover: Deleted service templates could reappear after switching back [ID 46990]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+<!-- Not added to MR 10.7.0 - Introduced by RN 45370 -->
+
+Previously, a deleted service template could reappear in SLNet after switching back to the original active Agent in a Failover setup. This could happen when the template existed on that Agent and was deleted after switching to the other Agent.
+
+Deleted service templates will now remain absent after switching back.
 
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 
