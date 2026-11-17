@@ -17,7 +17,7 @@ If set to *true*, the QAction will be executed when a row of a table has changed
 
 ## Remarks
 
-A QAction with `row="true"` can be triggered by a write column parameter, a read column parameter, or an SNMP table parameter, or executed via [multithreaded timer](xref:AdvancedMultithreadedTimers) options (`qaction`, `qactionBefore`, or `qactionAfter`).
+A QAction with `row="true"` can be triggered by a write column parameter, a read column parameter, or an SNMP table parameter, or executed via [multithreaded timer](xref:AdvancedMultiThreadedTimers) options (`qaction`, `qactionBefore`, or `qactionAfter`).
 
 > [!IMPORTANT]
 > A QAction with `row="true"` cannot be used with single parameters. Do not specify single parameters in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute of a QAction that has `row="true"` enabled.
