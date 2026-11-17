@@ -27,6 +27,7 @@ For more details about what each workflow does, you can check one of the links b
 - [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow)
 - [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow)
 - [Update Catalog Details](xref:github_reusable_workflows_update_catalog_details)
+- [OKF Source Sync Review Workflow](https://github.com/SkylineCommunications/_ReusableWorkflows/blob/main/.github/workflows/OKF%20Source%20Sync%20Review%20Workflow.yml)
 
 > [!IMPORTANT]
 > As of 2 November 2026, the Automation workflows and the legacy connector pipeline are no longer available. Use the Master Workflow for solutions using `Skyline.DataMiner.Sdk` and the Connector Master Workflow for SDK-style connector solutions. See [Automation workflow migration](xref:github_reusable_workflows_automation_master_workflow) and [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow) for details.
@@ -82,3 +83,36 @@ jobs:
 
 > [!NOTE]
 > Static code analysis through SonarCloud is optional. Skyline-managed repositories can load credentials through OIDC and Azure Key Vault. For repositories outside these organizations, provide a *SONAR_TOKEN* secret or your own OIDC configuration. For more information, see [GitHub secrets and tokens](xref:GitHub_Secrets).
+
+### OKF source-sync reviewer follow-up
+
+Repositories that generate pull requests for OKF source synchronization can
+keep the `workflow_run` trigger locally while delegating the trusted reviewer
+request to the shared workflow. The caller must grant `actions: read`,
+`contents: read`, and `pull-requests: write`:
+
+```yml
+name: Request OKF source-sync review
+
+on:
+  workflow_run:
+    workflows:
+      - OKF source sync
+    types:
+      - completed
+
+permissions:
+  actions: read
+  contents: read
+  pull-requests: write
+
+jobs:
+  request-review:
+    uses: SkylineCommunications/_ReusableWorkflows/.github/workflows/OKF%20Source%20Sync%20Review%20Workflow.yml@main
+```
+
+The shared workflow acts only after a successful source-sync run. It matches
+the generated pull request to that exact workflow run, validates the referenced
+merged source pull request and author, and requests review idempotently. It
+never assigns users and safely skips preview, no-op, ambiguous, or ineligible
+cases.
