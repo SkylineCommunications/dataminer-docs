@@ -299,6 +299,16 @@ When a StorageModule insert operation was retried after a NATS timeout, it could
 
 During paged read operations, retries when fetching pages after the first page could cause data to be missed following a timeout. These requests will no longer be retried. If a read operation fails, an error will be returned instead.
 
+#### SLDataMiner could stop responding when recovering from an SLScripting process crash [ID 46849]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When an SLScripting process disappeared while elements were starting, SLDataMiner could stop responding because of a deadlock. Elements could no longer be started or stopped, and the DataMiner Agent had to be restarted.
+
+From now on, elements that used the disappeared SLScripting process will be restarted without blocking other elements that are starting at the same time. Each process disappearance will only be recovered once.
+
+While DataMiner is stopping, no SLScripting or SLProtocol processes will be recovered or started.
+
 #### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
