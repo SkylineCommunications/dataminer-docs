@@ -323,6 +323,12 @@ Both online and offline Agents will now keep their XML-based services in memory 
 
 During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
 
+#### SLNet: Initial parameter event could be missing after updating a subscription set [ID 46913]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a parameter was removed from a subscription set and then added again, SLNet could fail to send the initial event for that parameter after the subscription update.
+
 #### DataMiner upgrade: DxMs installed under a previous product name could be skipped [ID 46938]
 
 <!-- MR 10.7.0 / 10.6.0 [CU10] - FR 10.7.1 -->

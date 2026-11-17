@@ -159,6 +159,12 @@ From now on, elements that used the disappeared SLScripting process will be rest
 
 While DataMiner is stopping, no SLScripting or SLProtocol processes will be recovered or started.
 
+#### SLNet: Initial parameter event could be missing after updating a subscription set [ID 46913]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a parameter was removed from a subscription set and then added again, SLNet could fail to send the initial event for that parameter after the subscription update.
+
 #### DataMiner upgrade: DxMs installed under a previous product name could be skipped [ID 46938]
 
 <!-- MR 10.7.0 / 10.6.0 [CU10] - FR 10.7.1 -->
