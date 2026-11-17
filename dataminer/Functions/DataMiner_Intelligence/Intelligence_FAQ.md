@@ -105,8 +105,6 @@ The description will generally be the same for a given script, but defining it i
 
 No. Install the DataMiner Assistant DxM on a few suitable Agents to provide redundancy. The installation and configuration only have to be performed on the Agents that host the DxM.
 
-Do not install the DxM on a Failover pair. Failover configurations are not supported, and script tools cannot run automation scripts when the DxM is hosted on a Failover Agent.
-
 ### Is installation required on a DaaS system?
 
 For DaaS systems running DataMiner 10.6 or newer, no installation is needed. The DataMiner Assistant DxM is already installed and running. To request access to the Assistant app or preview capabilities, contact [ai@skyline.be](mailto:ai@skyline.be).
