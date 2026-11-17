@@ -179,6 +179,14 @@ When an app manages its own theme, the user settings now display the message "Th
 
 The message is not shown in apps that support this setting, such as Assistant, the DataMiner landing page, and uploaded DataMiner apps.
 
+#### DataMiner upgrade: DataMiner Assistant DxM installed on every Agent [ID 47047]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner web-only upgrades will now install the DataMiner Assistant DxM on every DataMiner Agent being upgraded, even if the DxM was not previously installed. Previously, upgrades would only update the DxM on Agents where it was already installed.
+
+If a newer version of the DataMiner Assistant DxM is already installed, it will not be downgraded.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
