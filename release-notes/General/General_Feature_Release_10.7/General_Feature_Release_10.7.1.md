@@ -351,6 +351,15 @@ Resources could not be updated when they were used by a canceled reservation. Th
 
 Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
 
+#### Failover: Deleted service templates could reappear after switching back [ID 46990]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+<!-- Not added to MR 10.7.0 - Introduced by RN 45370 -->
+
+Previously, a deleted service template could reappear in SLNet after switching back to the original active Agent in a Failover setup. This could happen when the template existed on that Agent and was deleted after switching to the other Agent.
+
+Deleted service templates will now remain absent after switching back.
+
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
