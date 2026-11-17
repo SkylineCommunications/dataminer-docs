@@ -335,7 +335,7 @@ description: "Review answers to connector development questions about SNMP table
 
 1. *Under which circumstances can `row=true` work and when not?*
 
-    `row=true` will work when the QAction triggers on a write column parameter, a read column parameter, or a table parameter (for SNMP tables). It is useless on a QAction that does not trigger on table-related parameters.
+    `row="true"` works when the QAction triggers on a write column parameter, a read column parameter, or a table parameter (for SNMP tables), or when it is executed via [multithreaded timer](xref:AdvancedMultithreadedTimers) options. A QAction with `row="true"` cannot be used with single parameters.
 
 1. *Is it OK to have an "After Startup" trigger to run a "Run Actions" action?*
 
