@@ -229,17 +229,16 @@ The tool returns specific exit codes to indicate the outcome of an operation:
 
 - **3**: Tests failed. The test run completed, but one or more tests failed.
 
-- **4**: Cancelled. The test run was cancelled.
+- **4**: Canceled. The test run was canceled.
 
 - **-1**: Unexpected exception. An error occurred during execution.
 
 - **-2**: Not implemented. Feature is not yet implemented.
 
 > [!NOTE]
-> Older versions of the tool do not return exit codes 3 and 4. They return 1 when one or more tests fail. If your pipeline checks for exit code 1 to detect failed tests, also check for exit code 3.
-
-> [!NOTE]
-> On Linux, negative exit codes are reported as unsigned values: -1 becomes 255 and -2 becomes 254.
+>
+> - Older versions of the tool do not return exit codes 3 and 4. They return 1 when one or more tests fail. If your pipeline checks for exit code 1 to detect failed tests, also check for exit code 3.
+> - On Linux, negative exit codes are reported as unsigned values: -1 becomes 255 and -2 becomes 254.
 
 > [!TIP]
 > These exit codes are useful for integrating the tool into CI/CD pipelines where you need to determine the success or failure of test runs programmatically.
