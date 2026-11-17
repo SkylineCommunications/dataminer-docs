@@ -38,11 +38,10 @@ For offline or air-gapped environments, local usage logging is supported through
 |-----------|------------|
 | *DataMiner credits* | A flexible form of currency you can use to subscribe to DataMiner software and hosting services. Credits will be deducted automatically when you consume usage-based services. Credits are owned by an organization, and can be consumed among the DataMiner Systems of that organization. The credit balance of an organization is displayed in the [Admin app](https://admin.dataminer.services). |
 | *Start Date* | The date when the system comes online. |
-| *Duration* | An organization can select a subscription of 1 to 36 months. The duration determines the discount (see [Subscription term and discounts](#subscription-term-and-discounts)).  |
+| *Duration* | An organization can select a subscription of 1 to 36 months. The duration determines the discount (see [Subscription term and discounts](#subscription-term-and-discounts)). |
 | *Renewal Date* | Subscription date + duration.<br>Service subscriptions of 12 months or more renew automatically for 12 months at the then current credit rates, unless agreed otherwise. Subscriptions shorter than 12 months end at the end of their term and do not renew. |
 | *MUA* | Monthly Utilization Allowance.<br>The fixed number of credits available per month under the subscription for each service.<br>The organization MUA is the sum of credits subscribed per service. |
-| *Credit Rate* | The credit rate depends on the region and is locked for the duration of the subscription i.e., multi-year subscriptions protect against potential yearly price adjustments. |
-
+| *Credit Rate* | The credit rate depends on the region and is locked for the duration of the subscription, i.e., multi-year subscriptions protect against potential yearly price adjustments. |
 
 ## Subscription term and discounts
 
@@ -93,7 +92,6 @@ Consumption above the contracted Monthly Utilization Allowance (MUA) is possible
 | DataMiner as a Service (DaaS)  | *Hosted Managed Objects* | Managed Objects hosted as a service, metered as the total sum of their metrics. |
 | DataMiner as a Service (DaaS)  | *Hosted Nodes*  | Additional hosted DataMiner nodes provisioned to increase resiliency or availability beyond the default hosted setup. |
 
-
 > [!TIP]
 > For detailed information on these services and how to size these, refer to the [sizing guide](xref:Pricing_sizing_guide).
 
@@ -119,7 +117,6 @@ The number of credits consumed for Connector Services is calculated as the maxim
 ## Cancellation
 
 Subscriptions of 12 months or more can be canceled up to 30 days before the Renewal Date. The subscription will remain active until the Renewal Date. The amount paid is not refundable. Subscriptions shorter than 12 months end automatically at the end of their term.
-
 
 ## Changing subscription
 
