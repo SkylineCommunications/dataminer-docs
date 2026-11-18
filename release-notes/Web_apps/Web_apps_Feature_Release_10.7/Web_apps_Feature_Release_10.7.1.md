@@ -163,6 +163,14 @@ The Web API now also accepts a connection string in the HTTP header `Authorizati
 
 Cross-origin resource sharing (CORS) now allows the `Authorization` header for sandboxed uploaded apps.
 
+#### Web DcM: Updated PuppeteerSharp and bundled Chromium [ID 46955]
+
+<!-- MR 10.5.0 [CU22] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The Web DcM, which generates PDF reports, now uses PuppeteerSharp 25.15.0 instead of 21.1.1.
+
+This update also includes Chromium 155.0.8059.84.
+
 #### Web apps: Information message when an app manages its own theme [ID 46973]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
@@ -170,6 +178,14 @@ Cross-origin resource sharing (CORS) now allows the `Authorization` header for s
 When an app manages its own theme, the user settings now display the message "Theme setting is managed by the app." above the *Theme* setting. This clarifies why your selected theme does not affect that app.
 
 The message is not shown in apps that support this setting, such as Assistant, the DataMiner landing page, and uploaded DataMiner apps.
+
+#### DataMiner upgrade: DataMiner Assistant DxM installed on every Agent [ID 47047]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner web-only upgrades will now install the DataMiner Assistant DxM on every DataMiner Agent being upgraded, even if the DxM was not previously installed. Previously, upgrades would only update the DxM on Agents where it was already installed.
+
+If a newer version of the DataMiner Assistant DxM is already installed, it will not be downgraded.
 
 ### Fixes
 
@@ -200,3 +216,25 @@ Parameter selectors now correctly display the preselected values. Some selectors
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 When live updates were enabled for a parameter table query, a deadlock could occur if a table update notification arrived while GQI was fetching rows. Paging and update delivery could then wait indefinitely for each other, also blocking unrelated queries and session cleanup.
+
+#### Dashboards app: Input component values missing from non-stacked PDF reports [ID 47036]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a non-stacked PDF report was generated from a dashboard, values from *Dropdown*, *Text input* (including multiline text), *Numeric input*, and *Search input* components could be missing. These values will now be included in the report.
+
+Stacked reports remain unchanged.
+
+#### Dashboards app: GQI tables could stop loading rows and receiving live updates [ID 47054]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a GQI table in a dashboard was opened before its WebSocket connection was ready, scrolling could stop loading additional rows and live updates could stop appearing after the connection became available.
+
+#### Dashboards app: GQI table updates could exceed the JSON size limit [ID 47066]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When live updates were enabled for a GQI table in a dashboard, duplicated data in row updates could cause the JSON size limit to be exceeded. As a result, the table could stop loading additional rows.
+
+Unnecessary duplication in table updates has now been removed, reducing the amount of data sent to the dashboard.

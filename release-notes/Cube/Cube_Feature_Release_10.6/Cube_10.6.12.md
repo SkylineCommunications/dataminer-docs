@@ -36,6 +36,8 @@ From now on, changes to measurement point selections will immediately be pushed 
 
 When a user changed the configuration of a Spectrum component in shared mode, up to now, the changes were not immediately reflected in other clients. From now on, the user can right-click the *x clients* button and select *Push changes to other users*. Other users will then receive a banner where they can apply or ignore the changes. Closing the Spectrum card also triggers the banner.
 
+![Banner shown when another uses pushes changes to the spectrum analyzer](~/release-notes/images/Sharing_spectrum_session.png)
+
 The *Spectrum card behavior upon last session preset modification in shared mode* setting, under *Settings* > *Card*, will control how other clients handle pushed changes:
 
 - *Notify* (default) will display the banner.

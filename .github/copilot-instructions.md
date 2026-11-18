@@ -41,7 +41,7 @@ For most key directories (with the exception of `src`), all images are placed in
 3. Do not use spaces in file and folder names.
 4. Use DocFX-flavored Markdown syntax as defined in `/contributing/CTB_Markdown_Syntax.md`.
 5. Follow the instructions defined in `/contributing/CTB_Tips.md`.
-6. One `.md` file must never contain more than 64000 characters.
+6. One `.md` file must never contain more than 512000 characters.
 7. If changes are implemented that remove all references to a specific image, that image must be removed, with the exception of any images included in the `connectors` directory.
 8. Avoid adding pages that only contain links to underlying pages but no actual content of their own.
 9. Ensure that all cross-references are accurate and up to date.

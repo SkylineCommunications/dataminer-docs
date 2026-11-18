@@ -18,7 +18,7 @@ Unassign the alarm template from the element and then assign it again.
 
 ## Fix
 
-No fix is available yet. <!--Task ID: 208267-->
+No fix is available yet. <!--Task IDs: 208267 & 243661-->
 
 ## Description
 

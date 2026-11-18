@@ -37,6 +37,22 @@ Both permissions are enabled by the limited administrator and full administrator
 
 ## Changes
 
+### Breaking changes
+
+#### Service & Resource Management: Legacy reservation support removed for DataMiner 10.6.0 and later [ID 46936]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When DataMiner Cube connects to a DataMiner Agent running version 10.6.0 or later, legacy reservations will no longer be available in the following components:
+
+- The Resource Manager booking view and timeline/scheduler.
+- Dynamic lists.
+- *Reservation* shapes in Visual Overview.
+
+Legacy reservation support remains available when Cube connects to a DataMiner Agent running a version earlier than 10.6.0. Resources and `ReservationInstance` objects are not affected by this change.
+
+See also: [Service & Resource Management: Support for legacy reservations removed [ID 46931]](xref:General_Feature_Release_10.7.1#service--resource-management-support-for-legacy-reservations-removed-id-46931)
+
 ### Enhancements
 
 #### Element migration and DELT export: Safeguards for element connections [ID 46857]
@@ -54,6 +70,14 @@ From now on, DataMiner Cube will handle elements used in element connections as 
 > If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
 
 ### Fixes
+
+#### Visual Overview: Parameter shapes would stop updating after a remote DMA restart or Failover switch [ID 46800]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When a Visual Overview shape displayed a parameter value from an element hosted on a DataMiner Agent other than the one DataMiner Cube was connected to, the shape would stop updating after the hosting Agent was restarted or performed a Failover switch. Closing and reopening the card was the only way to make the value update again.
+
+From now on, the shape will subscribe to the parameter again after the hosting Agent comes back online, so the displayed value will continue to update.
 
 #### State icons: Subscription exceptions would be logged on the DMA when the state icons feature was disabled [ID 46862]
 
@@ -97,3 +121,17 @@ When you uploaded an element document to a subfolder in DataMiner Cube, the foll
 - If the destination file already existed in the subfolder, either as a complete document or as a partial file from an aborted upload, the uploaded data would be appended to that file instead of replacing it, resulting in a corrupt document.
 
 From now on, uploading an element document to a subfolder will no longer delete a document with the same file name in the root documents folder, and overwriting an existing document will replace its contents correctly.
+
+#### Automation: No warning when a script import failed because of invalid XML [ID 46970]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you imported an automation script containing invalid XML, the import would fail without displaying a warning. The failure would only be recorded in the Cube logging.
+
+Cube will now display a warning informing you that the import failed and that you should check the Cube logging.
+
+#### Trending: Older trend data would not load after panning [ID 46994]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you panned a trend graph to an older time range, the corresponding trend data would not be loaded until you zoomed the graph.

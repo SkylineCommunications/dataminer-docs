@@ -20,7 +20,7 @@ It is possible to make a modification to the SLA protocol, in order to make the 
      <Type>read</Type>
      <Information>
        <Subtext>
-         <![CDATA[Use the SLA as an Enhanced Service.
+       <![CDATA[Use the SLA as an Enhanced Service.
    No outages will be made. Only the active service alarms are shown.
    Warning!: Though this is faster than just disabling outages.
    Please note that data loss can occur when toggling this setting.
