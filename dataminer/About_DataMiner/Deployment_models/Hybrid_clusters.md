@@ -25,15 +25,7 @@ A hybrid cluster is useful when you specifically need full DataMiner nodes in bo
 - You need a self-managed DataMiner node for functionality or integrations that DataMiner Edge does not provide, alongside DaaS nodes.
 - You want to temporarily add cloud capacity to a self-managed cluster, for example for an event or a seasonal peak (see [temporary capacity](#temporary-capacity)).
 
-```mermaid
-flowchart LR
-    Cloud@{ shape: cloud, label: "Same cloud environment<br/>DaaS: DMAs<br/>STaaS: mandatory storage<br/>Low-latency access" }
-    subgraph Site["Self-managed infrastructure"]
-        A["Self-managed DMAs"] <--> E["Local equipment"]
-    end
-    A <-- Site-to-site VPN --> Cloud
-    A -- HTTPS to STaaS --> Cloud
-```
+![Hybrid cluster](~/dataminer/images/Hybrid_Cluster.png)
 
 All nodes must run the same DataMiner version. For details on other requirements, refer to [Key considerations](xref:Creating_hybrid_cluster#key-considerations).
 
