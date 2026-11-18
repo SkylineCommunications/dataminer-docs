@@ -37,6 +37,7 @@ Before you upgrade to this DataMiner version:
 - [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
+- [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
 
 ## Highlights
 
@@ -255,6 +256,20 @@ These checks have no soft-launch override. Remove or migrate these configuration
 When an automation script fails to compile, DataMiner will now report the `SL_AUTOMATION_SCRIPT_COMPILATION_FAILED` error, including the compiler diagnostics, when loading the script. Previously, the script would fail at runtime with a "No Assembly found for cookie" error and be retried 100 times.
 
 The compilation error will be displayed when you execute the script in DataMiner Cube and returned when you execute it through code.
+
+#### DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, a DataMiner Agent using MySQL as its main database will no longer start unless the `EndOfSupport.MySQL` soft-launch option is set to `true`. If the option is missing or not set to `true`, DataMiner will stop and log an error.
+
+To temporarily continue using MySQL, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` and restart DataMiner:
+
+```xml
+<EndOfSupport.MySQL>true</EndOfSupport.MySQL>
+```
+
+Consider migrating to Cassandra Cluster or Storage as a Service (STaaS) instead.
 
 #### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
 
