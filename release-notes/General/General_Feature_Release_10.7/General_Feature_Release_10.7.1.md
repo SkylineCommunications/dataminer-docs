@@ -447,3 +447,11 @@ From now on, Script Runner will no longer add `C:\Skyline DataMiner\ProtocolScri
 Previously, a DataMiner upgrade would install the CloudFeed DxM even on DataMiner Agents where it was not installed or had previously been uninstalled.
 
 From now on, the CloudFeed DxM will only be upgraded if it is already installed. It will be updated to the version included in the DataMiner upgrade package. This prevents unnecessary resource consumption on DataMiner Agents that do not need the CloudFeed DxM.
+
+#### SLSNMPAgent: SNMP requests could fail after Failover or network changes [ID 47106]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+After a Failover switch, IP address recreation, or a network interface card (NIC) state change, SLSNMPAgent could fail to recreate its SNMP listener. As a result, the DataMiner Agent could stop responding to SNMP requests on the configured port.
+
+The previous listener will now be released before its replacement binds to the configured SNMP port, preventing an internal UDP port conflict.
