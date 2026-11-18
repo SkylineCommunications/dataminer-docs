@@ -80,7 +80,7 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 ### DataAPI
 
-Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube. When used together with the [EdgeManager DxM](xref:Installing_EdgeManager_DxM), it also allows the deployment of [Edge Nodes](xref:About_Edge_Nodes).
 
 This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
