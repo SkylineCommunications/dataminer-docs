@@ -18,6 +18,7 @@ The following changes may have an impact on your system, so please make sure to 
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
+- [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
 
 ## Changes
 
@@ -895,6 +896,22 @@ To temporarily continue using MySQL, add the following case-sensitive option to 
 ```
 
 Consider migrating to Cassandra Cluster or Storage as a Service (STaaS) instead.
+
+#### Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, Atlassian Crowd authentication is no longer supported by default. This includes authenticating users against a Crowd server and importing users and groups from a Crowd server.
+
+If Crowd is configured as the external authentication method in *DataMiner.xml* (`<ExternalAuthentication type="CROWD">`) and the `EndOfSupport.Crowd` soft-launch option is not set to `true`, the DataMiner Agent will log the reason and stop during startup. Without this override, saving Crowd external authentication settings will also be rejected.
+
+To temporarily continue using Atlassian Crowd, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` on every DataMiner Agent that uses Crowd, and restart DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.Crowd>true</EndOfSupport.Crowd>
+</SLNet>
+```
 
 ### Fixes
 
