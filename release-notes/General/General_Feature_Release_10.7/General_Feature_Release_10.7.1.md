@@ -34,9 +34,14 @@ Before you upgrade to this DataMiner version:
 ## Important changes
 
 - [Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]](#scheduler-swarmed-tasks-could-execute-actions-configured-for-another-task-id-46728)
+- [GQI: GQI via SLHelper disabled by default [ID 46927]](#gqi-gqi-via-slhelper-disabled-by-default-id-46927)
 - [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
+- [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
+- [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
+- [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
+- [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
 
 ## Highlights
 
@@ -209,6 +214,22 @@ The `ScheduledTaskDetails` class, which is used only to migrate scheduled tasks 
 
 As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.Config.dll*.
 
+#### GQI: GQI via SLHelper disabled by default [ID 46927]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+GQI via SLHelper is now disabled by default in favor of the GQI DxM. Legacy GQI requests will return an error directing you to use the GQI DxM instead.
+
+As a temporary fallback, you can re-enable GQI via SLHelper by adding the following option to the `SLNet` section of `C:\Skyline DataMiner\SoftLaunchOptions.xml` and restarting DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.SLHelperGQI>true</EndOfSupport.SLHelperGQI>
+</SLNet>
+```
+
+The legacy GQI implementation in SLHelper will be removed completely in a later version.
+
 #### SLNet: Faster updates of large subscription sets [ID 46934]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
@@ -256,6 +277,36 @@ When an automation script fails to compile, DataMiner will now report the `SL_AU
 
 The compilation error will be displayed when you execute the script in DataMiner Cube and returned when you execute it through code.
 
+#### DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, a DataMiner Agent using MySQL as its main database will no longer start unless the `EndOfSupport.MySQL` soft-launch option is set to `true`. If the option is missing or not set to `true`, DataMiner will stop and log an error.
+
+To temporarily continue using MySQL, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` and restart DataMiner:
+
+```xml
+<EndOfSupport.MySQL>true</EndOfSupport.MySQL>
+```
+
+Consider migrating to Cassandra Cluster or Storage as a Service (STaaS) instead.
+
+#### Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, Atlassian Crowd authentication is no longer supported by default. This includes authenticating users against a Crowd server and importing users and groups from a Crowd server.
+
+If Crowd is configured as the external authentication method in *DataMiner.xml* (`<ExternalAuthentication type="CROWD">`) and the `EndOfSupport.Crowd` soft-launch option is not set to `true`, the DataMiner Agent will log the reason and stop during startup. Without this override, saving Crowd external authentication settings will also be rejected.
+
+To temporarily continue using Atlassian Crowd, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` on every DataMiner Agent that uses Crowd, and restart DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.Crowd>true</EndOfSupport.Crowd>
+</SLNet>
+```
+
 #### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
@@ -266,6 +317,30 @@ DataMiner upgrades will now remove the following unused DLL files from `C:\Skyli
 - *Skyline.DataMiner.Core.StorageModule.dll*
 
 These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
+
+#### Security: RADIUS authentication is no longer supported by default [ID 47018]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, RADIUS authentication is no longer supported by default. This includes authenticating users against a RADIUS server.
+
+If RADIUS is configured as the external authentication method in *DataMiner.xml* (`<ExternalAuthentication type="RADIUS">`) and the `EndOfSupport.RADIUS` soft-launch option is not set to `true`, the DataMiner Agent will log the reason and stop during startup. Without this override, saving RADIUS external authentication settings will also be rejected.
+
+To temporarily continue using RADIUS, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` on every DataMiner Agent that uses RADIUS, and restart DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.RADIUS>true</EndOfSupport.RADIUS>
+</SLNet>
+```
+
+#### Remaining legacy Annotations reference removed [ID 47122]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+The following remaining reference to the legacy Annotations module, which has reached end of life, have been removed:
+
+- ISAPI filtering no longer takes `/annotations/` into account.
 
 ### Fixes
 
@@ -396,6 +471,17 @@ When initialization of `CCAEndpointManager` failed, the initialization alarm cou
 
 An initialization alarm will now only be generated if all initialization retries fail.
 
+#### Automation: Script Runner could load an incorrect assembly version [ID 47069]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Previously, Script Runner searched the protocol scripts folders by default. An assembly in one of these folders could be loaded instead of the version explicitly referenced by a script.
+
+From now on, Script Runner will no longer add `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\ProtocolScripts\DllImport` as default assembly hint paths. Script-specific references will take priority, with `C:\Skyline DataMiner\Files` remaining the fallback.
+
+> [!IMPORTANT]
+> If a script executed by Script Runner needs a DLL from either protocol scripts folder, you must add an explicit reference to that DLL in the script. These folders will no longer be searched automatically.
+
 #### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
@@ -403,3 +489,11 @@ An initialization alarm will now only be generated if all initialization retries
 Previously, a DataMiner upgrade would install the CloudFeed DxM even on DataMiner Agents where it was not installed or had previously been uninstalled.
 
 From now on, the CloudFeed DxM will only be upgraded if it is already installed. It will be updated to the version included in the DataMiner upgrade package. This prevents unnecessary resource consumption on DataMiner Agents that do not need the CloudFeed DxM.
+
+#### SLSNMPAgent: SNMP requests could fail after Failover or network changes [ID 47106]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+After a Failover switch, IP address recreation, or a network interface card (NIC) state change, SLSNMPAgent could fail to recreate its SNMP listener. As a result, the DataMiner Agent could stop responding to SNMP requests on the configured port.
+
+The previous listener will now be released before its replacement binds to the configured SNMP port, preventing an internal UDP port conflict.
