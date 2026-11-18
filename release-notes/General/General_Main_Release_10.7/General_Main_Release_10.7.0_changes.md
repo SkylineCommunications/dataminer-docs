@@ -15,6 +15,7 @@ The following changes may have an impact on your system, so please make sure to 
 - [SNMP trap binding values will now only display plain ASCII characters [ID 44527]](#snmp-trap-binding-values-will-now-only-display-plain-ascii-characters-id-44527)
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
 - [Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]](#scheduler-swarmed-tasks-could-execute-actions-configured-for-another-task-id-46728)
+- [GQI: GQI via SLHelper disabled by default [ID 46927]](#gqi-gqi-via-slhelper-disabled-by-default-id-46927)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
@@ -851,6 +852,22 @@ If an element explicitly lists a client's IP address as allowed, elements that d
 <!-- MR 10.7.0 - FR 10.7.1 -->
 
 From now on, SLScripting will no longer be able to run as a service. It will always run as a server instead.
+
+#### GQI: GQI via SLHelper disabled by default [ID 46927]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+GQI via SLHelper is now disabled by default in favor of the GQI DxM. Legacy GQI requests will return an error directing you to use the GQI DxM instead.
+
+As a temporary fallback, you can re-enable GQI via SLHelper by adding the following option to the `SLNet` section of `C:\Skyline DataMiner\SoftLaunchOptions.xml` and restarting DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.SLHelperGQI>true</EndOfSupport.SLHelperGQI>
+</SLNet>
+```
+
+The legacy GQI implementation in SLHelper will be removed completely in a later version.
 
 #### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
 
