@@ -34,7 +34,7 @@ Contains one of the predefined values detailed in the sections below.
 
 ### array
 
-A parameter of type ARRAY identifies a (dynamic) table parameter. These are used to retrieve SNMP or WMI tables. The different columns are specified using [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) tags inside the [ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) element.
+A parameter of type `array` identifies a (dynamic) table parameter. The different columns are specified using [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) tags inside the [ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) element.
 
 Example:
 
