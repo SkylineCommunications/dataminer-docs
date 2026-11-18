@@ -300,6 +300,14 @@ DataMiner upgrades will now remove the following unused DLL files from `C:\Skyli
 
 These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
 
+#### Remaining legacy Annotations reference removed [ID 47122]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+The following remaining reference to the legacy Annotations module, which has reached end of life, have been removed:
+
+- ISAPI filtering no longer takes `/annotations/` into account.
+
 ### Fixes
 
 #### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]

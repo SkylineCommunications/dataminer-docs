@@ -914,6 +914,14 @@ To temporarily continue using Atlassian Crowd, add the following case-sensitive 
 </SLNet>
 ```
 
+#### Remaining legacy Annotations reference removed [ID 47122]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+The following remaining reference to the legacy Annotations module, which has reached end of life, have been removed:
+
+- ISAPI filtering no longer takes `/annotations/` into account.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

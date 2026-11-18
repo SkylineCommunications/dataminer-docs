@@ -272,6 +272,12 @@ A header command must contain exactly one of `set` or `update`. The former array
 
 Clicking outside a context menu over the app's iframe dismisses the menu without activating the iframe content underneath. Custom controls are cleared when the host application model changes.
 
+#### Web apps: Remaining support for legacy Annotations removed [ID 47115]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The remaining support for the legacy Annotations module has been removed from the DataMiner web apps. This support had been retained for backward compatibility with DataMiner 10.5.0 servers, but the module has reached end of life.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
