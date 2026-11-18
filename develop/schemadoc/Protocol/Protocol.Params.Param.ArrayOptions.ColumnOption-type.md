@@ -141,15 +141,8 @@ Example:
 >   <Param id="1000" trending="false">
 >      <Name>NetworkInterfaces</Name>
 >      <Description>Network Interfaces</Description>
->      <Type>array</Type>
+>      <Type id="56;57;58;59;60;61;62">array</Type>
 >      <ArrayOptions index="0">
->         <ColumnOption idx="0" pid="56" type="retrieved" options="" />
->         <ColumnOption idx="1" pid="57" type="retrieved" options="" />
->         <ColumnOption idx="2" pid="58" type="retrieved" options="" />
->         <ColumnOption idx="3" pid="59" type="retrieved" options="" />
->         <ColumnOption idx="4" pid="60" type="retrieved" options="" />
->         <ColumnOption idx="5" pid="61" type="retrieved" options="" />
->         <ColumnOption idx="6" pid="62" type="retrieved" options="" />
 >         <ColumnOption idx="7" pid="63" type="retrieved" options="" />
 >         <ColumnOption idx="8" pid="64" type="state" options=";delete" />
 >      </ArrayOptions>
