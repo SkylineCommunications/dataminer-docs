@@ -27,7 +27,7 @@ When configuring a backup for a DataMiner Agent that is using an external Elasti
 
 ## Fix
 
-No fix is available yet.
+No fix is available yet. <!-- Task: 218221 & RN: 47026-->
 
 ## Description
 
