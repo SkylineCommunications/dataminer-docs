@@ -52,7 +52,7 @@ Example of a column write parameter:
 Example of a table parameter:
 
 ```xml
-<Param id="15" trending="false">
+<Param id="15">
    <Name>AccessibleIPs</Name>
    <Description>Accessible IPs</Description>
    <Type id="16;17;18;19">array</Type>

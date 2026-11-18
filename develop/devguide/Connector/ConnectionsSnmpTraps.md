@@ -136,7 +136,7 @@ In case the mapAlarm attribute is too limited, it is possible to use the TrapMap
 When a trap is received, all TrapMappings are checked top down until a bindingMatch is found. The parameter does not need to be activated in the alarm template.
 
 ```xml
-<Param id="10" trending="false">
+<Param id="10">
    <Name>TrapMappingTrapReceiver</Name>
    <Description>Trap Mapping Trap Receiver</Description>
    <Type>dummy</Type>
@@ -168,7 +168,7 @@ The user can choose the traps for which alarms have to be generated. Also, the s
 In the following example, the severity is user-definable. The severity attribute links to a discrete value. This discrete value will be visible in the alarm template allowing the user to select the severity.
 
 ```xml
-<Param id="20" trending="false">
+<Param id="20">
    <Name>TrapMappingCustomTrapReceiver</Name>
    <Description>Trap Mapping Custom Trap Receiver</Description>
    <Type>dummy</Type>

@@ -154,7 +154,7 @@ The same options can be used for write parameters on a column: use a wildcard on
 Table parameter:
 
 ```XML
-<Param id="15" trending="false">
+<Param id="15">
     <Name>AccessibleIPs</Name>
     <Description>Accessible IPs</Description>
     <Type id="16;17;18;19">array</Type>

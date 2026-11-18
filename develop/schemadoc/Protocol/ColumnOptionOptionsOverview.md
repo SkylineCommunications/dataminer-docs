@@ -265,7 +265,7 @@ For example, if a protocol contains coordinates to enable dynamic positioning, u
 Example:
 
 ```xml
-<Param template="auto" id="12400" trending="false">
+<Param template="auto" id="12400">
    <Name>Services</Name>
    <Description>Services</Description>
    <Type>array</Type>
@@ -382,7 +382,7 @@ If you do so, selecting a table row in a Visio parameter control will trigger a 
 Example:
 
 ```xml
-<Param id="101" trending="false">
+<Param id="101">
    <Name>IPAddresses</Name>
    <Description>IP Addresses</Description>
    <Type>array</Type>
@@ -451,7 +451,7 @@ See also [directView](xref:Protocol.Params.Param.ArrayOptions-options#directview
 Example:
 
 ```xml
-<ColumnOption idx="16" pid="533" type="retrieved" value="" options=";severity" />
+<ColumnOption idx="16" pid="533" type="retrieved" options=";severity" />
 <Param id="533" export="true">
    <Name>Items_Severity</Name>
    <Description>Severity (Items)</Description>

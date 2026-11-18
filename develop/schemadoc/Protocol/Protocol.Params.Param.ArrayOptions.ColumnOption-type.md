@@ -129,7 +129,7 @@ With this column type, you can extend the options attribute with the value "dele
 Example:
 
 ```xml
-<ColumnOption idx="0" pid="100" type="state" value="" options=";delete"/>
+<ColumnOption idx="0" pid="100" type="state" options=";delete"/>
 ```
 
 > [!NOTE]
@@ -138,7 +138,7 @@ Example:
 > To ensure this does not happen, you can add an additional state column. This will prevent the retrieved column data from being cleared on every WMI polling update.
 >
 >   ```xml
->   <Param id="1000" trending="false">
+>   <Param id="1000">
 >      <Name>NetworkInterfaces</Name>
 >      <Description>Network Interfaces</Description>
 >      <Type id="56;57;58;59;60;61;62">array</Type>

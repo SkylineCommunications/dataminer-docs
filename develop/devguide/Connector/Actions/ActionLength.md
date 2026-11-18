@@ -60,7 +60,7 @@ Example on response:
 Consider the following length parameter used in a response:
 
 ```xml
-<Param id="300" trending="false">
+<Param id="300">
    <Name>ResponseCLengthField</Name>
    <Description>Length Field</Description>
    <Type>length</Type>

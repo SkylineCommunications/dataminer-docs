@@ -24,7 +24,7 @@ If you specify this option in the ArrayOptions tag of a table parameter, when yo
 Example:
 
 ```xml
-<Param id="101" trending="false">
+<Param id="101">
   ...
   <Type>array</Type>
   <ArrayOptions index="0" options=";autoAdd">

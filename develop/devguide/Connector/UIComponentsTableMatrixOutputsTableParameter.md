@@ -19,7 +19,7 @@ For a typical outputs table, the following columns are configured:
 Example:
 
 ```xml
-<Param id="1200" trending="false">
+<Param id="1200">
    <Name>Outputs</Name>
    <Description>Outputs</Description>
    <Type>array</Type>
