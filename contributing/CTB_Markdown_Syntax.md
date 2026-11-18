@@ -32,6 +32,8 @@ My text.
 My additional text.
 ```
 
+Keep each prose paragraph on a single source line. Do not insert manual line breaks within a paragraph. Line breaks are still required where Markdown syntax needs them, such as in code blocks, lists, and tables.
+
 > [!NOTE]
 > Every page should also end in an empty line.
 

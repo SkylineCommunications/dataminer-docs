@@ -6933,6 +6933,8 @@ items:
         topicUid: github_reusable_workflows_connector_master_workflow
       - name: Update Catalog Details
         topicUid: github_reusable_workflows_update_catalog_details
+      - name: OKF Source Sync Review Workflow
+        topicUid: github_reusable_workflows_okf_source_sync_review_workflow
     - name: Tutorials
       items:
       - name: For any item
