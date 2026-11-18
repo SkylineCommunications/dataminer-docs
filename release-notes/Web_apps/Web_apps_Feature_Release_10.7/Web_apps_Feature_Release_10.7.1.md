@@ -187,6 +187,83 @@ DataMiner web-only upgrades will now install the DataMiner Assistant DxM on ever
 
 If a newer version of the DataMiner Assistant DxM is already installed, it will not be downgraded.
 
+#### DataMiner apps: Custom header buttons and menus for uploaded apps [ID 47099]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Uploaded DataMiner apps can now add buttons, nested menus, spacers, and separators to the application header through the `postMessage` API. Button labels, icons, tooltips, loading states, and disabled states can be updated without replacing the controls.
+
+##### Configuring header controls
+
+Send the following message from the app's iframe to configure its header controls:
+
+```json
+{
+  "header": {
+    "set": [
+      { "label": "Save", "icon": "save", "identifier": "save" },
+      { "type": "separator" },
+      { "icon": "refresh", "title": "Refresh data", "identifier": "refresh" },
+      { "type": "spacer" },
+      {
+        "label": "Export",
+        "children": [
+          { "label": "Export PDF", "identifier": "export-pdf" },
+          {
+            "label": "More formats",
+            "children": [
+              { "label": "Export CSV", "identifier": "export-csv" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Button and menu items support `label`, `title` (tooltip), `icon`, `identifier`, and `children`:
+
+- Top-level buttons require a non-blank label, or both an icon and a title. Child menu items always require a non-blank label.
+- Items without children require a non-blank identifier. Selecting them sends `{"header":{"identifier":"<selected identifier>"}}` back to the iframe.
+- Items with children open a menu without sending an action message. They can have an identifier for presentation updates.
+- Top-level buttons and leaf menu actions support the boolean fields `isLoading` and `isDisabled`. Either state prevents activation. Nested submenu parents do not support these fields.
+- Spacers and separators are supported only at the top level and cannot contain fields other than `type`.
+
+Each `set` replaces the previous custom controls and closes the active context menu. Send `{"header":{"set":[]}}` to remove custom controls without removing the framework header.
+
+##### Updating header controls
+
+To update existing controls, send an array of updates targeting controls by a unique identifier:
+
+```json
+{
+  "header": {
+    "update": [
+      { "identifier": "save", "label": "Saving", "isLoading": true },
+      { "identifier": "export-pdf", "isDisabled": true }
+    ]
+  }
+}
+```
+
+Updates can change `label`, `title`, `icon`, `isLoading`, and `isDisabled`, but not identifiers, children, or layout. Set a label, title, or icon to `null` to clear it, provided the resulting item still meets its presentation requirements. Set a loading or disabled state to `false` to clear it.
+
+Updates appear in place in the header and the first-level open menu. An already-open deeper submenu must be reopened to show its updated presentation or state.
+
+Update batches are applied atomically: an invalid update, or an unknown or duplicated identifier, leaves all controls unchanged. Repeated updates targeting the same uniquely identified control are merged in order, and each intermediate result must remain valid.
+
+##### Validation and menu interaction
+
+A header command must contain exactly one of `set` or `update`. The former array-only format, `{"header":[...]}`, is not accepted. Invalid requests return the following messages without changing existing controls:
+
+- Invalid commands: `{"message":"Invalid header command."}`
+- Invalid configurations: `{"message":"Invalid header configuration."}`
+- Invalid updates: `{"message":"Invalid header update."}`
+- Unknown or duplicated update identifiers: `{"message":"Unknown or ambiguous header button identifier."}`
+
+Clicking outside a context menu over the app's iframe dismisses the menu without activating the iframe content underneath. Custom controls are cleared when the host application model changes.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
