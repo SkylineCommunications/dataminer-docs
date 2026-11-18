@@ -20,7 +20,7 @@ uid: Data_Sources_Setup
 
 ## Installing the necessary DxMs
 
-The [Data API](xref:Overview_of_Soft_Launch_Options#dataapi) and [Data Aggregator](xref:Data_Aggregator_DxM) DxMs must be deployed on the same DMA.
+The [Data API](xref:DataMinerExtensionModules#dataapi) and [Data Aggregator](xref:Data_Aggregator_DxM) DxMs must be deployed on the same DMA.
 
 To do so:
 
