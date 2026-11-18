@@ -61,6 +61,15 @@ Two new options on the eligible resources request control which usage details ar
 
 Each request also has an identifier, which is returned as the context identifier in the result. This allows you to match results to their requests when running multiple lookups.
 
+### System capabilities can no longer be changed through the API [ID 47140]
+
+The DevPack now prevents direct API callers, such as the user-defined APIs, from creating, updating, or deleting built-in system capabilities, including the internal *Resource Type* capability (`RST_ResourceType`). Previously, the UI and GQI hid this capability, but consumers using the *Capabilities* repository could still modify or remove it.
+
+Operations on a system capability now fail with a `CapabilitySystemCapabilityError`. In bulk operations, only the system capability is marked unsuccessful; the other items are processed as before.
+
+> [!IMPORTANT]
+> Creating a system capability through the *Capabilities* repository is no longer allowed. Any external script that creates `RST_ResourceType` through the *Capabilities* repository must switch to `SystemCapabilities.ResourceType`. The setup script already uses this.
+
 ## Fixes
 
 ### Unavailable job resources reported without an error message [ID 47125]

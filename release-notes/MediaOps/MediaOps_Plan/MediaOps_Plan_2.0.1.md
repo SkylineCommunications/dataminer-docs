@@ -30,3 +30,9 @@ The *Resource Pools* category scope could be missing after an installation or up
 After deploying the solution elements, the installer now waits up to 5 minutes for the *MOP Lock Manager* and *PNO Lock Manager* elements to become active and respond to lock requests. If either element does not respond in time, the installation stops with an error message.
 
 The Resource Studio and Resource Scheduling setup scripts also run each setup step independently. A step that times out is retried up to 3 times, with 15 seconds between retries. All failed steps are reported together at the end.
+
+### Workflow node-edge graphs could show an incomplete state after node swaps [ID 47141]
+
+After a node swap triggered additional swaps through scripts running in parallel, the node-edge graph in the Scheduling and Workflow Designer low-code apps could show an in-between state, such as a missing connection. You previously had to refresh the page to see the correct graph.
+
+The `WorkflowDesigner_GQI_GetWorkflowNodesAndEdges` data source now supports real-time updates. It watches the displayed workflow instance and sends only the nodes and connections that were added, updated, or removed, so the graph shows the final state after multiple swaps. Changes made between the initial load and the start of updates are also picked up. Deleted or missing instances now return no rows instead of an error, and refresh errors are logged instead of being thrown.
