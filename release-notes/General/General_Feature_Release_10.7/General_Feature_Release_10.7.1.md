@@ -39,6 +39,7 @@ Before you upgrade to this DataMiner version:
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
 - [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
+- [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
 - [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
 
 ## Highlights
@@ -299,6 +300,22 @@ DataMiner upgrades will now remove the following unused DLL files from `C:\Skyli
 - *Skyline.DataMiner.Core.StorageModule.dll*
 
 These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
+
+#### Security: RADIUS authentication is no longer supported by default [ID 47018]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, RADIUS authentication is no longer supported by default. This includes authenticating users against a RADIUS server.
+
+If RADIUS is configured as the external authentication method in *DataMiner.xml* (`<ExternalAuthentication type="RADIUS">`) and the `EndOfSupport.RADIUS` soft-launch option is not set to `true`, the DataMiner Agent will log the reason and stop during startup. Without this override, saving RADIUS external authentication settings will also be rejected.
+
+To temporarily continue using RADIUS, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` on every DataMiner Agent that uses RADIUS, and restart DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.RADIUS>true</EndOfSupport.RADIUS>
+</SLNet>
+```
 
 #### Remaining legacy Annotations reference removed [ID 47122]
 
