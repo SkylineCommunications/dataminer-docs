@@ -80,15 +80,16 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 ### DataAPI
 
-Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+Enables Data API functionality and scripted connectors.
+
+When used together with the latest version of the [DataAggregator](xref:Data_Aggregator_DxM) and [DataAPI](xref:DataMinerExtensionModules#dataapi) DxMs, this displays the [Data Sources](xref:Data_Sources) module in DataMiner Cube.
+
+When used together with the [EdgeManager DxM](xref:Installing_EdgeManager_DxM) and DataAPI DxM, it allows the deployment of [Edge Nodes](xref:About_Edge_Nodes).
 
 This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
 - **Estimated release version**: To be determined
-
-> [!NOTE]
-> The latest version of the DataAggregator DxM and DataAPI DxM also have to be installed for this feature to work.
 
 ### Diagnostics
 
