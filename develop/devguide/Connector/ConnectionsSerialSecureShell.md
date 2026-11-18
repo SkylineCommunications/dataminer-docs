@@ -109,7 +109,7 @@ Accompanying write parameters can be added so the credentials can be entered fro
         </Positions>
     </Display>
     <Measurement>
-    <Type options="password">string</Type>
+        <Type options="password">string</Type>
     </Measurement>
 </Param>
 <Param id="1151" setter="true">
@@ -206,10 +206,10 @@ This parameter also needs to be defined in the port settings. Note that all conn
         <Disabled>true</Disabled>
     </PortTypeUDP>
     <SSH>
-       <Identity pid="1102"/>
-       <Credentials>
-          <Username pid="1100"/>
-       </Credentials>
+        <Identity pid="1102"/>
+        <Credentials>
+            <Username pid="1100"/>
+        </Credentials>
     </SSH>
 </PortSettings>
 ```
@@ -220,8 +220,8 @@ To give the user the choice how to connect, both methods of authentication are t
 
 ```xml
     <SSH>
-       <Identity pid="1102"/>
-       <Credentials>
+        <Identity pid="1102"/>
+        <Credentials>
             <Username pid="1100"/>
             <Password pid="1101"/>
         </Credentials>
@@ -406,8 +406,8 @@ To specify the key exchange algorithm to be used when connecting to an SSH serve
     <Type>serial</Type>
     <CommunicationOptions>
         <KexAlgorithms>
-        <KexAlgorithm>diffie-hellman-group1-sha1</KexAlgorithm>
-        <KexAlgorithm>diffie-hellman-group-exchange-sha1</KexAlgorithm>
+            <KexAlgorithm>diffie-hellman-group1-sha1</KexAlgorithm>
+            <KexAlgorithm>diffie-hellman-group-exchange-sha1</KexAlgorithm>
         </KexAlgorithms>
     </CommunicationOptions>
 </Connection>

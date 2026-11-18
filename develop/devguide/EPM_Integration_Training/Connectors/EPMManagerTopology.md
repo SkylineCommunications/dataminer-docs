@@ -14,24 +14,24 @@ For example:
 
 ```xml
 <Topologies>
-   <Topology>
-      <Cell name="Network" table="9500"></Cell>
-      <Cell name="Region" table="8500">
-         <Link source="1" dest="9501"/>
-      </Cell>
-      <Cell name="Sub-Region" table="7500">
-         <Link source="1" dest="8501"/>
-      </Cell>
-      <Cell name="Hub" table="6500">
-         <Link source="1" dest="7501"/>
-      </Cell>
-      <Cell name="Station" table="5500">
-         <Link source="1" dest="6501"/>
-      </Cell>
-      <Cell name="Device" table="2500">
-         <Link source="1" dest="5501"/>
-      </Cell>
-   </Topology>
+    <Topology>
+        <Cell name="Network" table="9500"></Cell>
+        <Cell name="Region" table="8500">
+            <Link source="1" dest="9501"/>
+        </Cell>
+        <Cell name="Sub-Region" table="7500">
+            <Link source="1" dest="8501"/>
+        </Cell>
+        <Cell name="Hub" table="6500">
+            <Link source="1" dest="7501"/>
+        </Cell>
+        <Cell name="Station" table="5500">
+            <Link source="1" dest="6501"/>
+        </Cell>
+        <Cell name="Device" table="2500">
+            <Link source="1" dest="5501"/>
+        </Cell>
+    </Topology>
 </Topologies>
 ```
 
@@ -111,22 +111,22 @@ Additionally, to map out the relations, a Relation table must be created. The fo
 
 ```xml
 <Param id="26000">
-   <Name>relationSpineLeafOverview</Name>
-   <Description>Relations Spine Leaf Overview Table</Description>
-   <Type>array</Type>
-   <ArrayOptions index="0" options=";volatile;naming=/26002" partial="true:200">
-      <ColumnOption idx="0" pid="26001" type="retrieved" options="" /><!-- Index of the row -->
-      <ColumnOption idx="1" pid="26002" type="retrieved" options="" /><!-- Name of the relation -->
-      <ColumnOption idx="2" pid="26003" type="retrieved" options=";foreignKey=24000" /><!-- Spine ID (Foreign Key to the Spine Local table) -->
-      <ColumnOption idx="3" pid="26004" type="retrieved" options="" /> <!-- Name of the Spine-->
-      <ColumnOption idx="4" pid="26005" type="retrieved" options=";foreignKey=25000" /><!-- Leaf ID (Foreign Key to the Leaf Local table) -->
-      <ColumnOption idx="5" pid="26006" type="retrieved" options="" /> <!-- Name of the Leaf-->
-   </ArrayOptions>
-   <Information>
-      <Subtext>This table displays the relations between the Spines and Leaves.</Subtext>
-   </Information>
-   <Display>...</Display>
-   <Measurement>...</Measurement>
+    <Name>SpineLeafRelations</Name>
+    <Description>Spine Leaf Relations</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0" options=";volatile;naming=/26002" partial="true:200">
+        <ColumnOption idx="0" pid="26001" type="retrieved" options="" /><!-- Index of the row -->
+        <ColumnOption idx="1" pid="26002" type="retrieved" options="" /><!-- Name of the relation -->
+        <ColumnOption idx="2" pid="26003" type="retrieved" options=";foreignKey=24000" /><!-- Spine ID (Foreign Key to the Spine Local table) -->
+        <ColumnOption idx="3" pid="26004" type="retrieved" options="" /> <!-- Name of the Spine-->
+        <ColumnOption idx="4" pid="26005" type="retrieved" options=";foreignKey=25000" /><!-- Leaf ID (Foreign Key to the Leaf Local table) -->
+        <ColumnOption idx="5" pid="26006" type="retrieved" options="" /> <!-- Name of the Leaf-->
+    </ArrayOptions>
+    <Information>
+        <Subtext>This table displays the relations between the Spines and Leaves.</Subtext>
+    </Information>
+    <Display>...</Display>
+    <Measurement>...</Measurement>
 </Param>
 ```
 
@@ -134,7 +134,7 @@ Finally, the foreign key relations must also be defined. In this example, 26000 
 
 ```xml
 <Relations>
-   <Relation path="25000;26000;24000"/>
+    <Relation path="25000;26000;24000"/>
 </Relations>
 ```
 
@@ -165,8 +165,8 @@ Next, to represent the recursive relation, it is essential to create a Relation 
 
 ```xml
 <Param id="23000">
-    <Name>relationAmplifierOverview</Name>
-    <Description>Relations Amplifier Overview Table</Description>
+    <Name>AmplifierRelations</Name>
+    <Description>Amplifier Relations</Description>
     <Type>array</Type>
     <ArrayOptions index="0" options=";volatile;naming=/23002" partial="true:200">
         <ColumnOption idx="0" pid="23001" type="retrieved" options="" /> <!-- Index of the row -->

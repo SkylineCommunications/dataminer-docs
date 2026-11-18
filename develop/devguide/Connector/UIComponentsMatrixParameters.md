@@ -11,26 +11,26 @@ For the **read parameter**, the child tags `RawType`, `LengthType`, and `Type` o
 
 ```xml
 <Param id="4000">
-  <Name>matrix</Name>
-  <Description>Matrix</Description>
-  <Type options="dimensions=64,64;columntypes=4001:0-63">array</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>double</Type>
-  </Interprete>
-  ...
-  <Measurement>
-     <Type link="ports.xml" options="matrix=64,64,0,1,0,64">matrix</Type>
-     <Discreets>
-        <Discreet>
-           <Display>Input 1</Display>
-           <Value>1</Value>
-        </Discreet>
-     ...
-     </Discreets>
-  </Measurement>
-  ...
+    <Name>Matrix</Name>
+    <Description>Matrix</Description>
+    <Type options="dimensions=64,64;columntypes=4001:0-63">array</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <LengthType>next param</LengthType>
+        <Type>double</Type>
+    </Interprete>
+    ...
+    <Measurement>
+        <Type link="ports.xml" options="matrix=64,64,0,1,0,64">matrix</Type>
+        <Discreets>
+            <Discreet>
+                <Display>Input 1</Display>
+                <Value>1</Value>
+            </Discreet>
+            ...
+        </Discreets>
+    </Measurement>
+    ...
 </Param>
 ```
 
@@ -38,18 +38,18 @@ For the **write parameter**, the child tags `RawType`, `LengthType`, and `Type` 
 
 ```xml
 <Param id="4010">
-  <Name>matrix</Name>
-  <Description>Matrix</Description>
-  <Type options="dimensions=64,64;columntypes=4001:0-63">write</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-  </Interprete>
-  ...
-  <Measurement>
-     <Type>matrix</Type>
-  </Measurement>
+    <Name>Matrix</Name>
+    <Description>Matrix</Description>
+    <Type options="dimensions=64,64;columntypes=4001:0-63">write</Type>
+    <Interprete>
+        <RawType>other</RawType>
+        <LengthType>next param</LengthType>
+        <Type>string</Type>
+    </Interprete>
+    ...
+    <Measurement>
+        <Type>matrix</Type>
+    </Measurement>
 </Param>
 ```
 
@@ -62,7 +62,7 @@ Two options are always specified:
 
   ```xml
   <Param id="4001" trending="false">
-      <Name>matrixColumnType</Name>
+      <Name>MatrixColumnType</Name>
       <Description>Matrix Column Type</Description>
       <Type>read</Type>
       <Interprete>
@@ -77,7 +77,7 @@ Two options are always specified:
 
   ```xml
   <Param id="4001" trending="false">
-      <Name>matrixColumnType</Name>
+      <Name>MatrixColumnType</Name>
       <Description>Matrix Column Type</Description>
       <Type>read</Type>
       <Interprete>

@@ -133,7 +133,7 @@ For example:
 
 ```xml
 <Param id="100">
-  <Name>mainButtonPanel</Name>
+  <Name>MainButtonPanel</Name>
   <Description>Main Button Panel</Description>
   <Type>array</Type>
   <ArrayOptions index="0" options=";naming=/101,102">

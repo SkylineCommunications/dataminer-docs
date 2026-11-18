@@ -106,18 +106,18 @@ Example:
 
 ```xml
 <Param id="120" trending="false">
-  ...
-  <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        ...
-        <Discreet iconRef="InputTransportStream">
-           <Display>Input TS</Display>
-           <Value>Input TS</Value>
-        </Discreet>
-        ...
-     </Discreets>
-  </Measurement>
+   ...
+   <Measurement>
+      <Type>discreet</Type>
+      <Discreets>
+         ...
+         <Discreet iconRef="InputTransportStream">
+            <Display>Input TS</Display>
+            <Value>Input TS</Value>
+         </Discreet>
+         ...
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 

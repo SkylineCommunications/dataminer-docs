@@ -15,10 +15,9 @@ To be able to mark items as dummy items in a particular EPM table, add an extra 
 
 ```xml
 <ArrayOptions index="0" displayColumn="1">
-  ...
-   <ColumnOption idx="9" pid="1616" type="retrieved" options=";save;disableHeaderSum;
-CPEDummyColumn"/>
-  ...
+   ...
+   <ColumnOption idx="9" pid="1616" type="retrieved" options=";save;disableHeaderSum;CPEDummyColumn"/>
+   ...
 </ArrayOptions>
 ```
 
@@ -44,8 +43,8 @@ This works as follows:
 Option 1:
 
   ```xml
-  <ColumnOption idx="3" pid="30804" type="retrieved" value="" options=";delta=4"/>
-  <ColumnOption idx="4" pid="30805" type="retrieved" value="" options=""/>
+  <ColumnOption idx="3" pid="30804" type="retrieved" options=";delta=4"/>
+  <ColumnOption idx="4" pid="30805" type="retrieved" options=""/>
   ```
 
   Every time parameter 30804 changes, the delta value is written in the column with index 4 (0-based).
@@ -55,11 +54,11 @@ Option 1:
 Option 2:
 
   ```xml
-  <ColumnOption idx="0" pid="30801" type="retrieved" value="" options=""/>
-  <ColumnOption idx="1" pid="30802" type="retrieved" value="" options=";foreignKey=20800"/>
-  <ColumnOption idx="2" pid="30803" type="retrieved" value="" options=""/>
-  <ColumnOption idx="3" pid="30804" type="retrieved" value="" options=";delta=4:20802"/>
-  <ColumnOption idx="4" pid="30805" type="retrieved" value="" options=""/>
+  <ColumnOption idx="0" pid="30801" type="retrieved" options=""/>
+  <ColumnOption idx="1" pid="30802" type="retrieved" options=";foreignKey=20800"/>
+  <ColumnOption idx="2" pid="30803" type="retrieved" options=""/>
+  <ColumnOption idx="3" pid="30804" type="retrieved" options=";delta=4:20802"/>
+  <ColumnOption idx="4" pid="30805" type="retrieved" options=""/>
   ```
 
 Each time parameter 30804 changes, the delta value with a reference value is written in the column with index 4 (0-based).
@@ -78,9 +77,9 @@ Example:
 
 ```xml
 <ArrayOptions index="0" displayColumn="1">
-  ...
-  <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayIcon"/>
-  ...
+   ...
+   <ColumnOption idx="5" pid="120" type="custom" options=";save;displayIcon"/>
+   ...
 ```
 
 When defining a discreet parameter of which the values have to be displayed as icons, make sure that every value of that parameter is associated with a particular icon.
@@ -89,18 +88,18 @@ Example:
 
 ```xml
 <Param id="120" trending="false">
-  ...
-  <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        ...
-        <Discreet iconRef="InputTransportStream">
-           <Display>Input TS</Display>
-           <Value>Input TS</Value>
-        </Discreet>
-        ...
-     </Discreets>
-  </Measurement>
+   ...
+   <Measurement>
+      <Type>discreet</Type>
+      <Discreets>
+         ...
+         <Discreet iconRef="InputTransportStream">
+            <Display>Input TS</Display>
+            <Value>Input TS</Value>
+         </Discreet>
+         ...
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 
@@ -128,7 +127,7 @@ Example:
 ```xml
 <ArrayOptions index="0" displayColumn="1">
    ...
-   <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayServiceAlarm"/>
+   <ColumnOption idx="5" pid="120" type="custom" options=";save;displayServiceAlarm"/>
 </ArrayOptions>
 ```
 
@@ -146,9 +145,8 @@ Example:
 
 ```xml
 <ArrayOptions index="0" displayColumn="1">
-  ...
-
-  <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayViewAlarm"/>
+   ...
+   <ColumnOption idx="5" pid="120" type="custom" options=";save;displayViewAlarm"/>
 ```
 
 Result: If the value in the displayViewAlarm column is a valid view ID, then that ID will be replaced by a view icon showing the view’s current alarm color. If the value is not a valid view ID, then the cell will be empty.
@@ -268,13 +266,12 @@ Example:
 
 ```xml
 <Param template="auto" id="12400" trending="false">
-  <Name>Service</Name>
-  <Description>Service</Description>
-  <Type>array</Type>
-  <ArrayOptions index="0" options=";naming=\12402;autoAdd">
-     <!-- id -->
-     <ColumnOption idx="0" pid="12401" type="autoincrement" value="" options=";HideSummaryColumn"/>
-     ...
+   <Name>Services</Name>
+   <Description>Services</Description>
+   <Type>array</Type>
+   <ArrayOptions index="0" options=";naming=\12402;autoAdd">
+      <ColumnOption idx="0" pid="12401" type="autoincrement" options=";HideSummaryColumn"/>
+      ...
 ```
 
 ## indexColumn
@@ -310,31 +307,25 @@ In case the column data will get updated frequently and you do not need to obtai
 /// <returns>The values of the column specified in <paramref name="returnedColumnIdx"/> for the rows that matches.</returns>
 public static IEnumerable<string> GetKeysForValue(this SLProtocol protocol, int tablePid, uint returnedColumnIdx, uint filterColumnIdx, string filterValue)
 {
-   object[] getColumns = (object[])protocol.NotifyProtocol((int)SLNetMessages.NotifyType.NT_GET_TABLE_COLUMNS, tablePid, new uint[] { returnedColumnIdx, filterColumnIdx });
-
-  if (getColumns != null && getColumns.Length > 1)
-  {
-      object[] getKeys = (object[])getColumns[0];
-      object[] getValues = (object[])getColumns[1];
+   object[] getColumns = protocol.GetColumns(tablePid, new uint[] { returnedColumnIdx, filterColumnIdx });
+   object[] getKeys = (object[])getColumns[0];
+   object[] getValues = (object[])getColumns[1];
  
-     if (getKeys != null && getValues != null)
-     {
-         int rowCount = getKeys.Length;
-
-        if (rowCount == getValues.Length)
-        {
-           for (int i = 0; i < rowCount; i++)
-           {
-               string getValue = Convert.ToString(getValues[i], CultureInfo.InvariantCulture);
-
-              if (getValue.Equals(filterValue))
-              {
-                  yield return Convert.ToString(getKeys[i]);
-              }
-           }
-        }
-     }
-  }
+   if (getKeys != null && getValues != null)
+   {
+      int rowCount = getKeys.Length;
+      if (rowCount == getValues.Length)
+      {
+         for (int i = 0; i < rowCount; i++)
+         {
+            string getValue = Convert.ToString(getValues[i], CultureInfo.InvariantCulture);
+            if (getValue.Equals(filterValue))
+            {
+               yield return Convert.ToString(getKeys[i]);
+            }
+         }
+      }
+   }
 }
 ```
 
@@ -392,20 +383,20 @@ Example:
 
 ```xml
 <Param id="101" trending="false">
-  <Name>ipAddrEntry</Name>
-  <Description>ipAddrEntry</Description>
-  <Type>ARRAY</Type>
-  <ArrayOptions index="0" displayColumn="1">
-     <ColumnOption idx="0" pid="111" type="custom" value="" options=";SelectionSetVar:Name"/>
-     <ColumnOption idx="1" pid="112" type="custom" value="" options=";save;SelectionSetVar:Description"/>
-     <ColumnOption idx="2" pid="114" type="custom" value="" options=";save;SelectionSetVar:Number"/>
-     <ColumnOption idx="3" pid="122" type="custom" value="" options=";save;displayViewAlarm;SelectionSetVar:Viewstate"/>
-     <ColumnOption idx="4" pid="116" type="custom" value="" options=";save;SelectionSetVar:Value"/>
-     <ColumnOption idx="5" pid="118" type="custom" value="" options=";save;SelectionSetVar:Discreet1"/>
-     <ColumnOption idx="6" pid="120" type="custom" value="" options=";save;displayIcon;SelectionSetVar:Ibt"/>
-     <ColumnOption idx="7" pid="124" type="custom" value="" options=";save;rowTextColoring;SelectionSetVar:RowTextColor"/>
-     <ColumnOption idx="8" pid="126" type="custom" value="" options=";save"/>
-  </ArrayOptions>
+   <Name>IPAddresses</Name>
+   <Description>IP Addresses</Description>
+   <Type>array</Type>
+   <ArrayOptions index="0" displayColumn="1">
+      <ColumnOption idx="0" pid="111" type="custom" options=";SelectionSetVar:Name"/>
+      <ColumnOption idx="1" pid="112" type="custom" options=";save;SelectionSetVar:Description"/>
+      <ColumnOption idx="2" pid="114" type="custom" options=";save;SelectionSetVar:Number"/>
+      <ColumnOption idx="3" pid="122" type="custom" options=";save;displayViewAlarm;SelectionSetVar:Viewstate"/>
+      <ColumnOption idx="4" pid="116" type="custom" options=";save;SelectionSetVar:Value"/>
+      <ColumnOption idx="5" pid="118" type="custom" options=";save;SelectionSetVar:Discreet1"/>
+      <ColumnOption idx="6" pid="120" type="custom" options=";save;displayIcon;SelectionSetVar:Ibt"/>
+      <ColumnOption idx="7" pid="124" type="custom" options=";save;rowTextColoring;SelectionSetVar:RowTextColor"/>
+      <ColumnOption idx="8" pid="126" type="custom" options=";save"/>
+   </ArrayOptions>
 </Param>
 ```
 
@@ -462,66 +453,66 @@ Example:
 ```xml
 <ColumnOption idx="16" pid="533" type="retrieved" value="" options=";severity" />
 <Param id="533" export="true">
-  <Name>Table1Severity</Name>
-  <Description>Table1Severity</Description>
-  <Type>read</Type>
-  <Interprete>
-     <RawType>unsigned number</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>4</Length>
-     <Type>double</Type>
-  </Interprete>
-  <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>
-        <Position>
-           <Page>General</Page>
-           <Row>14</Row>
-           <Column>0</Column>
-        </Position>
-     </Positions>
-  </Display>
-  <Measurement>
-     <Type>Discreet</Type>
-     <Discreets>
-        <Discreet>
-           <Display>Not monitored</Display>
-           <Value>0</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Normal</Display>
-           <Value>1</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Warning</Display>
-           <Value>2</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Minor</Display>
-           <Value>3</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Major</Display>
-           <Value>4</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Critical</Display>
-           <Value>5</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Timeout</Display>
-           <Value>7</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Masked</Display>
-           <Value>9</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Error</Display>
-           <Value>10</Value>
-        </Discreet>
-     </Discreets>
-  </Measurement>
+   <Name>Items_Severity</Name>
+   <Description>Severity (Items)</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>unsigned number</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>4</Length>
+      <Type>double</Type>
+   </Interprete>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>
+         <Position>
+            <Page>General</Page>
+            <Row>14</Row>
+            <Column>0</Column>
+         </Position>
+      </Positions>
+   </Display>
+   <Measurement>
+      <Type>Discreet</Type>
+      <Discreets>
+         <Discreet>
+            <Display>Not monitored</Display>
+            <Value>0</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Normal</Display>
+            <Value>1</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Warning</Display>
+            <Value>2</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Minor</Display>
+            <Value>3</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Major</Display>
+            <Value>4</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Critical</Display>
+            <Value>5</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Timeout</Display>
+            <Value>7</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Masked</Display>
+            <Value>9</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Error</Display>
+            <Value>10</Value>
+         </Discreet>
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 

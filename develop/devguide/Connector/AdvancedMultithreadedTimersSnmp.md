@@ -41,13 +41,13 @@ Suppose group 2000 has the following content:
 
 ```xml
 <Group id="2000" connection="0">
-   <Name>SNMP Poll Group</Name>
-   <Content multipleGet="true">
-      <Param>1000</Param>
-      <Param>1001</Param>
-      <Param>1002</Param>
-      <Param>1003:single</Param>
-   </Content>
+  <Name>SNMP Poll Group</Name>
+  <Content multipleGet="true">
+    <Param>1000</Param>
+    <Param>1001</Param>
+    <Param>1002</Param>
+    <Param>1003:single</Param>
+  </Content>
 </Group>
 ```
 
@@ -59,25 +59,25 @@ Param 1003 is then defined as follows:
 
 ```xml
 <Param id="1003" trending="false">
-   <Name>STB Svc. 1 Name</Name>
-   <Description>STB Svc. 1 Name</Description>
-   <Type options="loadOID">read</Type>
-   <Display>
-      <RTDisplay>true</RTDisplay>
-   </Display>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-   </Interprete>
-   <SNMP>
-      <Enabled>true</Enabled>
-      <Type>OctetStringASCII</Type>
-      <OID type="complete">1.3.6.1.4.1.23423.3.2.1.1.1.0</OID>
-   </SNMP>
-   <Measurement>
-      <Type>string</Type>
-   </Measurement>
+  <Name>STBService1Name</Name>
+  <Description>STB Svc. 1 Name</Description>
+  <Type options="loadOID">read</Type>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Interprete>
+    <RawType>other</RawType>
+    <LengthType>next param</LengthType>
+    <Type>string</Type>
+  </Interprete>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <Type>OctetStringASCII</Type>
+    <OID type="complete">1.3.6.1.4.1.23423.3.2.1.1.1.0</OID>
+  </SNMP>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 ```
 
@@ -113,7 +113,7 @@ Suppose parameters 1023 and 33 are defined as follows:
 
 ```xml
 <Param id="1023" save="true">
-  <Name>CM Instance</Name>
+  <Name>CMInstance</Name>
   <Description>CM Instance</Description>
   <Type options="loadOID">read</Type>
   <Interprete>
@@ -133,8 +133,8 @@ Suppose parameters 1023 and 33 are defined as follows:
   </Measurement>
 </Param>
 <Param id="33" trending="false">
-  <Name>docsIfCmtsCmStatusUnerroreds</Name>
-  <Description>docsIfCmtsCmStatusUnerroreds</Description>
+  <Name>DocsIfCmtsCmStatusUnerroreds</Name>
+  <Description>Docs If CMTS CM Status Unerroreds</Description>
   <Type options="loadOID">read</Type>
   <Display>
     <RTDisplay>true</RTDisplay>
@@ -180,8 +180,8 @@ Where parameter 304 is defined as follows:
 
 ```xml
 <Param id="304" trending="false">
-  <Name>ifXTable</Name>
-  <Description>ifXTable</Description>
+  <Name>IfXTable</Name>
+  <Description>If X Table</Description>
   <Type options="loadOID">read</Type>
   <Interprete>
     <RawType>other</RawType>
@@ -216,19 +216,19 @@ For example, parameter 304 states that the columns with OID 1.3.6.1.2.1.31.1.1.1
 
 ```xml
 <Param id="304" trending="false">
-    <Name>ifXTable</Name>
-    <Description>ifXTable</Description>
-    <Type options="loadOID">read</Type>
-    <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-    </Interprete>
-    <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete">1.3.6.1.2.1.31.1.1.1.6;1.3.6.1.2.1.31.1.1.1.10</OID>
-    </SNMP>
-  </Param>
+  <Name>IfXTable</Name>
+  <Description>If X Table</Description>
+  <Type options="loadOID">read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <LengthType>next param</LengthType>
+    <Type>string</Type>
+  </Interprete>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <OID type="complete">1.3.6.1.2.1.31.1.1.1.6;1.3.6.1.2.1.31.1.1.1.10</OID>
+  </SNMP>
+</Param>
 ```
 
 This results in a number of getBulkRequest operations being performed.

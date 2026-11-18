@@ -9,15 +9,15 @@ It is possible to let users dynamically change the names of matrix inputs/output
 
 ```xml
 <Param id="400" trending="false">
-...
-  <Type>array</Type>
-  <ArrayOptions index="0" displayColumn="1" options="discreetDestination=ports.xml">
+   ...
+   <Type>array</Type>
+   <ArrayOptions index="0" displayColumn="1" options="discreetDestination=ports.xml">
       <!-- ID -->
-     <ColumnOption idx="0" pid="401" type="retrieved" value="" options=";save"/>
+      <ColumnOption idx="0" pid="401" type="retrieved" value="" options=";save"/>
       <!-- Name -->
-     <ColumnOption idx="1" pid="402" type="retrieved" value="" options=";save"/>
-  </ArrayOptions>
-  ...
+      <ColumnOption idx="1" pid="402" type="retrieved" value="" options=";save"/>
+   </ArrayOptions>
+   ...
 </Param>
 ```
 
@@ -33,15 +33,15 @@ The XML file will contain the following, where the content of Value tags corresp
 
 ```xml
 <Discreets>
-  <Discreet>
-     <Display>Input 1</Display>
-     <Value>1</Value>
-  </Discreet>
-  <Discreet>
-     <Display>Input 2</Display>
-     <Value>2</Value>
-  </Discreet>
-  ...
+   <Discreet>
+      <Display>Input 1</Display>
+      <Value>1</Value>
+   </Discreet>
+   <Discreet>
+      <Display>Input 2</Display>
+      <Value>2</Value>
+   </Discreet>
+   ...
 </Discreets>
 ```
 
@@ -49,17 +49,17 @@ The matrix parameter must also refer to this file in order to use the informatio
 
 ```xml
 <Param id="100">
-  <Name>basicMatrix</Name>
-  <Description>Basic Matrix</Description>
-  <Type options="…">array</Type>
-  <Interprete>…</Interprete>
-  <Display>
-     <RTDisplay>true</RTDisplay>
-     <Positions>…</Positions>
-  </Display>
-  <Measurement>
-     <Type link="ports.xml" options="matrix=16,16,0,1,0,16;tab=lines:20,filter:false">matrix</Type>
-     <Discreets>…</Discreets>
-  </Measurement>
+   <Name>BasicMatrix</Name>
+   <Description>Basic Matrix</Description>
+   <Type options="…">array</Type>
+   <Interprete>…</Interprete>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+      <Positions>…</Positions>
+   </Display>
+   <Measurement>
+      <Type link="ports.xml" options="matrix=16,16,0,1,0,16;tab=lines:20,filter:false">matrix</Type>
+      <Discreets>…</Discreets>
+   </Measurement>
 </Param>
 ```

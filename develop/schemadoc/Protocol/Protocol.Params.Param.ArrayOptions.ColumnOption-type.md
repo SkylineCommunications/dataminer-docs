@@ -139,20 +139,20 @@ Example:
 >
 >   ```xml
 >   <Param id="1000" trending="false">
->     <Name>networkInterfaces</Name>
->     <Description>Network Interfaces</Description>
->     <Type id="56;57;58;59;60;61;62">array</Type>
->     <ArrayOptions index="0">
->        <ColumnOption idx="7" pid="63" type="retrieved" options="" />
->        <ColumnOption idx="8" pid="64" type="state" options=";delete" />
->     </ArrayOptions>
->     <Interprete>
->        <RawType>other</RawType>
->        <Type>double</Type>
->        <LengthType>next param</LengthType>
->     </Interprete>
->     ...
-> </Param>
+>      <Name>NetworkInterfaces</Name>
+>      <Description>Network Interfaces</Description>
+>      <Type id="56;57;58;59;60;61;62">array</Type>
+>      <ArrayOptions index="0">
+>         <ColumnOption idx="7" pid="63" type="retrieved" options="" />
+>         <ColumnOption idx="8" pid="64" type="state" options=";delete" />
+>      </ArrayOptions>
+>      <Interprete>
+>         <RawType>other</RawType>
+>         <Type>double</Type>
+>         <LengthType>next param</LengthType>
+>      </Interprete>
+>      ...
+>   </Param>
 >   ```
 
 ### viewTableKey

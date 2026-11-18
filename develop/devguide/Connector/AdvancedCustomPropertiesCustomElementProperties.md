@@ -18,8 +18,8 @@ Add `<Params loadSequence="15000">` at the beginning of protocol so the properti
 <Params loadSequence="15000">
     …
     <Param id="15000" trending="false">
-        <Name>Custom Generic Properties Table</Name>
-        <Description>Custom Generic Properties Table</Description>
+        <Name>CustomGenericProperties</Name>
+        <Description>Custom Generic Properties</Description>
         <Type>array</Type>
         <ArrayOptions index="0" options=";propertyTable=15002,15003,15004,15005">
             <ColumnOption idx="0" pid="15001" type="autoincrement" value=""/><!--Index-->
@@ -35,97 +35,97 @@ Add `<Params loadSequence="15000">` at the beginning of protocol so the properti
         </Interprete>
         <Display>
             <RTDisplay>true</RTDisplay>
-        <Positions>
-            <Position>
-                <Page>Properties Information</Page>
-                <Row>1</Row>
-                <Column>0</Column>
-            </Position>
-        </Positions>
+            <Positions>
+                <Position>
+                    <Page>Properties Information</Page>
+                    <Row>1</Row>
+                    <Column>0</Column>
+                </Position>
+            </Positions>
         </Display>
         <Measurement>
             <Type options="tab=columns:15001|0-15002|1-15003|2-15004|3-15005|4,lines:25,width:100-200-200-200-200,sort:INT-STRING-STRING-STRING-STRING,filter:true">table</Type>
         </Measurement>
     </Param>
     <Param id="15001" trending="false">
-    <Name>Custom Generic Property Index</Name>
-    <Description>Custom Generic Property Index</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+        <Name>CustomGenericProperties_Index</Name>
+        <Description>Index (Custom Generic Properties)</Description>
+        <Type>read</Type>
+        <Interprete>
+            <RawType>other</RawType>
+            <LengthType>next param</LengthType>
+            <Type>string</Type>
+        </Interprete>
+        <Display>
+            <RTDisplay>true</RTDisplay>
+        </Display>
+        <Measurement>
+            <Type>string</Type>
+        </Measurement>
     </Param>
     <Param id="15002" trending="false">
-    <Name>Custom Generic Property Equipment Id</Name>
-    <Description>Custom Generic Property Equipment Id</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+        <Name>CustomGenericProperties_EquipmentID</Name>
+        <Description>Equipment ID (Custom Generic Properties)</Description>
+        <Type>read</Type>
+        <Interprete>
+            <RawType>other</RawType>
+            <LengthType>next param</LengthType>
+            <Type>string</Type>
+        </Interprete>
+        <Display>
+            <RTDisplay>true</RTDisplay>
+        </Display>
+        <Measurement>
+            <Type>string</Type>
+        </Measurement>
     </Param>
     <Param id="15003" trending="false">
-    <Name>Custom Generic Property Name</Name>
-    <Description>Custom Generic Property Name</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+        <Name>CustomGenericProperties_Name</Name>
+        <Description>Name (Custom Generic Properties)</Description>
+        <Type>read</Type>
+        <Interprete>
+            <RawType>other</RawType>
+            <LengthType>next param</LengthType>
+            <Type>string</Type>
+        </Interprete>
+        <Display>
+            <RTDisplay>true</RTDisplay>
+        </Display>
+        <Measurement>
+            <Type>string</Type>
+        </Measurement>
     </Param>
     <Param id="15004" trending="false">
-    <Name>Custom Generic Property Type</Name>
-    <Description>Custom Generic Property Type</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+        <Name>CustomGenericProperties_Type</Name>
+        <Description>Type (Custom Generic Properties)</Description>
+        <Type>read</Type>
+        <Interprete>
+            <RawType>other</RawType>
+            <LengthType>next param</LengthType>
+            <Type>string</Type>
+        </Interprete>
+        <Display>
+            <RTDisplay>true</RTDisplay>
+        </Display>
+        <Measurement>
+            <Type>string</Type>
+        </Measurement>
     </Param>
     <Param id="15005" trending="false">
-    <Name>Custom Generic Property Value</Name>
-    <Description>Custom Generic Property Value</Description>
-    <Type>read</Type>
-    <Interprete>
-        <RawType>other</RawType>
-        <LengthType>next param</LengthType>
-        <Type>string</Type>
-    </Interprete>
-    <Display>
-        <RTDisplay>true</RTDisplay>
-    </Display>
-    <Measurement>
-        <Type>string</Type>
-    </Measurement>
+        <Name>CustomGenericProperties_Value</Name>
+        <Description>Value (Custom Generic Properties)</Description>
+        <Type>read</Type>
+        <Interprete>
+            <RawType>other</RawType>
+            <LengthType>next param</LengthType>
+            <Type>string</Type>
+        </Interprete>
+        <Display>
+            <RTDisplay>true</RTDisplay>
+        </Display>
+        <Measurement>
+            <Type>string</Type>
+        </Measurement>
     </Param>
     ...
 </Params>

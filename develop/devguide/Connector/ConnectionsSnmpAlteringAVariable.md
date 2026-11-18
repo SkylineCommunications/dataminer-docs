@@ -15,7 +15,7 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 
    ```xml
    <Param id="13" options="snmpSet">
-       <Name>sysContact</Name>
+       <Name>SysContact</Name>
        <Description>System Contact</Description>
        <Type>write</Type>
        <Interprete>
@@ -48,7 +48,7 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 
    ```xml
    <Param id="13">
-       <Name>sysContact</Name>
+       <Name>SysContact</Name>
        <Description>System Contact</Description>
        <Type>write</Type>
        <Interprete>
@@ -136,8 +136,8 @@ The same options can be used for write parameters on a column: use a wildcard on
 
 ```XML
 <Param id="20" options="snmpSetAndGetwithwait">
-    <Name>IP Address</Name>
-    <Description>IP Address</Description>
+    <Name>AccessibleIPs_IPAddress</Name>
+    <Description>IP Address (Accessible IPs)</Description>
     <Type>write</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -155,7 +155,8 @@ Table parameter:
 
 ```XML
 <Param id="15" trending="false">
-    <Name>Accessible IP List</Name>
+    <Name>AccessibleIPs</Name>
+    <Description>Accessible IPs</Description>
     <Type id="16;17;18;19">array</Type>
     <ArrayOptions index="0"/>
     <SNMP>

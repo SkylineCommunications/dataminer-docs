@@ -23,7 +23,7 @@ In order to capture traps in a protocol, define a parameter that will capture th
 ```xml
 <Param id="21">
    <Name>TrapReceiver</Name>
-   <Description>TrapReceiver</Description>
+   <Description>Trap Receiver</Description>
    <Type>dummy</Type>
    <Display>
       <RTDisplay>false</RTDisplay>
@@ -113,21 +113,21 @@ In case this behavior is not desired, the use of a group ID (negative number) be
       <Enabled>true</Enabled>
       <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received '[1]' [2]' '[3]'|Link:2,3" type="wildcard">1.3.6.1.4.1.31961.0.1.*</TrapOID>
    </SNMP>
-  ...
+   ...
 </Param>
 <Param id="2">
    <SNMP>
       <Enabled>true</Enabled>
       <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received2 '[1]' [2]' '[3]'|Link:2,3" type="wildcard">1.3.6.1.4.1.31961.0.2.*</TrapOID>
    </SNMP>
-  ...
+   ...
 </Param>
 <Param id="3">
    <SNMP>
       <Enabled>true</Enabled>
       <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received2 '[1]' [2]' '[3]'|Link:-1,2,3" type="wildcard">1.3.6.1.4.1.31961.0.3.*</TrapOID>
    </SNMP>
-  ...
+   ...
 </Param>
 ```
 
@@ -137,8 +137,8 @@ When a trap is received, all TrapMappings are checked top down until a bindingMa
 
 ```xml
 <Param id="10" trending="false">
-   <Name>TrapMapping Trap Receiver</Name>
-   <Description>TrapMapping Trap Receiver</Description>
+   <Name>TrapMappingTrapReceiver</Name>
+   <Description>Trap Mapping Trap Receiver</Description>
    <Type>dummy</Type>
    <Display>
       <RTDisplay>true</RTDisplay>
@@ -148,7 +148,7 @@ When a trap is received, all TrapMappings are checked top down until a bindingMa
    </Alarm>
    <SNMP>
       <Enabled>true</Enabled>
-      <TrapOID  mapAlarm="TRUE|Link:3,4,5" type="wildcard" checkBindings="1=id:2">1.3.6.1.4.1.31961.0.10.*</TrapOID>
+      <TrapOID mapAlarm="TRUE|Link:3,4,5" type="wildcard" checkBindings="1=id:2">1.3.6.1.4.1.31961.0.10.*</TrapOID>
       <TrapMappings>
          <TrapMapping bindingMatch="1:5" severity="Normal"></TrapMapping>
          <TrapMapping bindingMatch="3:TS Sync Loss" severity="Critical" value="[4]:[3]:[5]"></TrapMapping>
@@ -169,8 +169,8 @@ In the following example, the severity is user-definable. The severity attribute
 
 ```xml
 <Param id="20" trending="false">
-   <Name>TrapMapping Custom Trap Receiver</Name>
-   <Description>TrapMapping Custom Trap Receiver</Description>
+   <Name>TrapMappingCustomTrapReceiver</Name>
+   <Description>Trap Mapping Custom Trap Receiver</Description>
    <Type>dummy</Type>
    <Display>
       <RTDisplay>true</RTDisplay>
@@ -224,16 +224,16 @@ It is possible that a QAction is required to process an incoming trap. When the 
 
 ```xml
 <Param id="1">
-  <Name>Trap Receiver</Name>
-  <Description>Trap Received</Description>
-  <Type>read</Type>
-  <Interprete>
-     <Type>string</Type>
-  </Interprete>
-  <SNMP>
-     <Enabled>true</Enabled>
-     <TrapOID setBindings="allBindingInfo" type="wildcard" ipid="100">...</TrapOID>
-  </SNMP>
+   <Name>TrapReceiver</Name>
+   <Description>Trap Received</Description>
+   <Type>read</Type>
+   <Interprete>
+      <Type>string</Type>
+   </Interprete>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID setBindings="allBindingInfo" type="wildcard" ipid="100">...</TrapOID>
+   </SNMP>
 </Param>
 ```
 

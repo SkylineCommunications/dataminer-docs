@@ -89,7 +89,7 @@ Below you can find the structure of the referenced parameters:
 ```xml
 <Param id="53" trending="false">
    <Name>S101ResponseData</Name>
-   <Description>S101 Reponse Data</Description>
+   <Description>S101 Response Data</Description>
    <Type>read</Type>
    <Interprete>
       <RawType>other</RawType>

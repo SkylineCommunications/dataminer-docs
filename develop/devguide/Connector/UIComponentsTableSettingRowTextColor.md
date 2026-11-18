@@ -9,8 +9,8 @@ It is possible to change the text color of table rows. To use this feature, the 
 
 ```xml
 <Param id="100" trending="false">
-  <Name>Table</Name>
-  <Description>Table</Description>
+  <Name>Items</Name>
+  <Description>Items</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
     <ColumnOption idx="0" pid="101" type="retrieved" options="" />
@@ -22,8 +22,8 @@ It is possible to change the text color of table rows. To use this feature, the 
   </Display>
 </Param>
 <Param id="103" trending="false">
-  <Name>RowColor</Name>
-  <Description>RowColor</Description>
+  <Name>Items_RowColor</Name>
+  <Description>Row Color (Items)</Description>
   <Type>read</Type>
   <Measurement>
     <Type>discreet</Type>

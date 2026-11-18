@@ -145,11 +145,11 @@ If you select the *Disable C# syntax highlighting in XML documents* option, the 
 
 Select this option if you want the *DIS Tree* window to display parameter descriptions instead of parameter names.
 
-See the following example. If you select the *DIS tree view: Show description instead of name* option, the *DIS Tree* window will display the parameter in question as "System Name" instead of "sysName".
+See the following example. If you select the *DIS tree view: Show description instead of name* option, the *DIS Tree* window will display the parameter in question as "System Name" instead of "SysName".
 
 ```xml
 <Param>
-  <Name>sysName</Name>
+  <Name>SysName</Name>
   <Description>System Name</Description>
   ...
 </Param>

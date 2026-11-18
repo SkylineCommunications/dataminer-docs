@@ -13,7 +13,7 @@ For example, the following parameter, defined on the parent element, will send t
 
 ```xml
 <Param id="100" trending="false">
-   <Name>distributedParameter</Name>
+   <Name>DistributedParameter</Name>
    <Description>Distributed Parameter</Description>
    <Type distribution="protocol:Tandberg;pid:100;remote:true">read</Type>
    <Interprete>
