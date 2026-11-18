@@ -39,6 +39,7 @@ Before you upgrade to this DataMiner version:
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
 - [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
+- [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
 
 ## Highlights
 
@@ -427,6 +428,17 @@ Deleted service templates will now remain absent after switching back.
 When initialization of `CCAEndpointManager` failed, the initialization alarm could remain active even after a subsequent retry succeeded.
 
 An initialization alarm will now only be generated if all initialization retries fail.
+
+#### Automation: Script Runner could load an incorrect assembly version [ID 47069]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Previously, Script Runner searched the protocol scripts folders by default. An assembly in one of these folders could be loaded instead of the version explicitly referenced by a script.
+
+From now on, Script Runner will no longer add `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\ProtocolScripts\DllImport` as default assembly hint paths. Script-specific references will take priority, with `C:\Skyline DataMiner\Files` remaining the fallback.
+
+> [!IMPORTANT]
+> If a script executed by Script Runner needs a DLL from either protocol scripts folder, you must add an explicit reference to that DLL in the script. These folders will no longer be searched automatically.
 
 #### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
 
