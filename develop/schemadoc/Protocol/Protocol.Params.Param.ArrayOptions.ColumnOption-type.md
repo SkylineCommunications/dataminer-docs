@@ -175,7 +175,6 @@ Example:
 ```xml
 <ArrayOptions index="1" partial="true" options=";volatile;view=1500,remoteId;
 directView=5361;filterChange=19901-1501,19902-1502,19903-1503,19904-1504,19905-1505">
-   <NamingFormat>,19906</NamingFormat>
    <ColumnOption idx="0" pid="19901" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
    <ColumnOption idx="1" pid="19906" type="viewTableKey" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
    <ColumnOption idx="2" pid="19902" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>

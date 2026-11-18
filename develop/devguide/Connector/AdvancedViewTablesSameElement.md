@@ -29,12 +29,12 @@ The following example illustrates the definition of a view table that refers to 
    <Description>View_Services</Description>
    <Type>array</Type>
    <ArrayOptions index="0" options=";volatile;view=200">
-      <ColumnOption idx="0" pid="501" type="custom" options=";view=201" /><!-- ID -->
-      <ColumnOption idx="1" pid="502" type="custom" options=";view=202" /><!-- Name -->
-      <ColumnOption idx="2" pid="503" type="custom" options=";view=204" /><!-- Category -->
-      <ColumnOption idx="3" pid="504" type="custom" options=";view=205" /><!-- Status -->
-      <ColumnOption idx="4" pid="505" type="custom" options=";view=203:104" /><!-- Stream Transport Protocol -->
-      <ColumnOption idx="5" pid="506" type="custom" options=";view=203:105" /><!-- Stream Type -->
+      <ColumnOption idx="0" pid="501" type="retrieved" options=";view=201" /><!-- ID -->
+      <ColumnOption idx="1" pid="502" type="retrieved" options=";view=202" /><!-- Name -->
+      <ColumnOption idx="2" pid="503" type="retrieved" options=";view=204" /><!-- Category -->
+      <ColumnOption idx="3" pid="504" type="retrieved" options=";view=205" /><!-- Status -->
+      <ColumnOption idx="4" pid="505" type="retrieved" options=";view=203:104" /><!-- Stream Transport Protocol -->
+      <ColumnOption idx="5" pid="506" type="retrieved" options=";view=203:105" /><!-- Stream Type -->
    </ArrayOptions>
    <Information>
       <Subtext>The list of services.</Subtext>

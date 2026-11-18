@@ -667,7 +667,6 @@ To be able to mark items as dummy items in a particular CPE table, add an extra 
 
 ```xml
 <ArrayOptions index="0">
-  <NamingFormat>,1602</NamingFormat>
   ...
   <ColumnOption idx="9" pid="1616" type="retrieved" options=";save;disableHeaderSum;CPEDummyColumn"/>
   ...

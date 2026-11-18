@@ -95,9 +95,8 @@ Example:
 
 ```xml
 <ArrayOptions index="0">
-  <NamingFormat>,112</NamingFormat>
   ...
-  <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayIcon"/>
+  <ColumnOption idx="5" pid="120" type="retrieved" value="" options=";save;displayIcon"/>
   ...
 ```
 
@@ -135,9 +134,8 @@ Example:
 
 ```xml
 <ArrayOptions index="0">
-  <NamingFormat>,112</NamingFormat>
   ...
-  <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayViewAlarm"/>
+  <ColumnOption idx="5" pid="120" type="retrieved" value="" options=";save;displayViewAlarm"/>
 ```
 
 Result: If the value in the displayViewAlarm column is a valid view ID, then that ID will be replaced by a view icon showing the view’s current alarm color. If the value is not a valid view ID, then the cell will be empty.

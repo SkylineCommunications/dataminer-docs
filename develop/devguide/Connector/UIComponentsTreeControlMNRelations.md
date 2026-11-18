@@ -133,7 +133,6 @@ Suppose we want to create a tree control that lists all services and the audio a
         <Description>Services to Link Types Relations</Description>
         <Type>array</Type>
         <ArrayOptions index="0">
-          <NamingFormat>,7001</NamingFormat>
           <ColumnOption idx="0" pid="7001" type="autoincrement" options=""/>
           <ColumnOption idx="1" pid="7002" type="retrieved" options=";foreignKey=1000"/>
           <ColumnOption idx="2" pid="7003" type="retrieved" options=";foreignKey=2000"/>

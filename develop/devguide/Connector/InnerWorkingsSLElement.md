@@ -102,12 +102,12 @@ The column processing order can be overruled in the protocol with the [processin
    <Type>array</Type>
    <ArrayOptions index="0" options=";processingOrder=0,4,5,1,2,3">
       <NamingFormat>,401,_,404</NamingFormat>
-      <ColumnOption idx="0" pid="401" type="custom" options=";save"/>
-      <ColumnOption idx="1" pid="403" type="custom" options=";save"/>
-      <ColumnOption idx="2" pid="404" type="custom" options=";save"/>
-      <ColumnOption idx="3" pid="406" type="custom" options=";save"/>
-      <ColumnOption idx="4" pid="416" type="custom" options=";save;foreignKey=1200"/>
-      <ColumnOption idx="5" pid="417" type="custom" options=";save;foreignKey=1300"/>
+      <ColumnOption idx="0" pid="401" type="retrieved" options=";save"/>
+      <ColumnOption idx="1" pid="403" type="retrieved" options=";save"/>
+      <ColumnOption idx="2" pid="404" type="retrieved" options=";save"/>
+      <ColumnOption idx="3" pid="406" type="retrieved" options=";save"/>
+      <ColumnOption idx="4" pid="416" type="retrieved" options=";save;foreignKey=1200"/>
+      <ColumnOption idx="5" pid="417" type="retrieved" options=";save;foreignKey=1300"/>
    </ArrayOptions>
    <Interprete>
       <RawType>other</RawType>

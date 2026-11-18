@@ -15,7 +15,6 @@ To be able to mark items as dummy items in a particular EPM table, add an extra 
 
 ```xml
 <ArrayOptions index="0">
-   <NamingFormat>,1602</NamingFormat>
    ...
    <ColumnOption idx="9" pid="1616" type="retrieved" options=";save;disableHeaderSum;CPEDummyColumn"/>
    ...
@@ -78,9 +77,8 @@ Example:
 
 ```xml
 <ArrayOptions index="0">
-   <NamingFormat>,112</NamingFormat>
    ...
-   <ColumnOption idx="5" pid="120" type="custom" options=";save;displayIcon"/>
+   <ColumnOption idx="5" pid="120" type="retrieved" options=";save;displayIcon"/>
    ...
 ```
 
@@ -128,9 +126,8 @@ Example:
 
 ```xml
 <ArrayOptions index="0">
-   <NamingFormat>,112</NamingFormat>
    ...
-   <ColumnOption idx="5" pid="120" type="custom" options=";save;displayServiceAlarm"/>
+   <ColumnOption idx="5" pid="120" type="retrieved" options=";save;displayServiceAlarm"/>
 </ArrayOptions>
 ```
 
@@ -148,9 +145,8 @@ Example:
 
 ```xml
 <ArrayOptions index="0">
-   <NamingFormat>,112</NamingFormat>
    ...
-   <ColumnOption idx="5" pid="120" type="custom" options=";save;displayViewAlarm"/>
+   <ColumnOption idx="5" pid="120" type="retrieved" options=";save;displayViewAlarm"/>
 ```
 
 Result: If the value in the displayViewAlarm column is a valid view ID, then that ID will be replaced by a view icon showing the view’s current alarm color. If the value is not a valid view ID, then the cell will be empty.
@@ -274,7 +270,6 @@ Example:
    <Description>Services</Description>
    <Type>array</Type>
    <ArrayOptions index="0" options=";autoAdd">
-      <NamingFormat>,12402</NamingFormat>
       <ColumnOption idx="0" pid="12401" type="autoincrement" options=";HideSummaryColumn"/>
       ...
 ```
@@ -393,15 +388,15 @@ Example:
    <Type>array</Type>
    <ArrayOptions index="0">
       <NamingFormat>,112</NamingFormat>
-      <ColumnOption idx="0" pid="111" type="custom" options=";SelectionSetVar:Name"/>
-      <ColumnOption idx="1" pid="112" type="custom" options=";save;SelectionSetVar:Description"/>
-      <ColumnOption idx="2" pid="114" type="custom" options=";save;SelectionSetVar:Number"/>
-      <ColumnOption idx="3" pid="122" type="custom" options=";save;displayViewAlarm;SelectionSetVar:Viewstate"/>
-      <ColumnOption idx="4" pid="116" type="custom" options=";save;SelectionSetVar:Value"/>
-      <ColumnOption idx="5" pid="118" type="custom" options=";save;SelectionSetVar:Discreet1"/>
-      <ColumnOption idx="6" pid="120" type="custom" options=";save;displayIcon;SelectionSetVar:Ibt"/>
-      <ColumnOption idx="7" pid="124" type="custom" options=";save;rowTextColoring;SelectionSetVar:RowTextColor"/>
-      <ColumnOption idx="8" pid="126" type="custom" options=";save"/>
+      <ColumnOption idx="0" pid="111" type="retrieved" options=";SelectionSetVar:Name"/>
+      <ColumnOption idx="1" pid="112" type="retrieved" options=";save;SelectionSetVar:Description"/>
+      <ColumnOption idx="2" pid="114" type="retrieved" options=";save;SelectionSetVar:Number"/>
+      <ColumnOption idx="3" pid="122" type="retrieved" options=";save;displayViewAlarm;SelectionSetVar:Viewstate"/>
+      <ColumnOption idx="4" pid="116" type="retrieved" options=";save;SelectionSetVar:Value"/>
+      <ColumnOption idx="5" pid="118" type="retrieved" options=";save;SelectionSetVar:Discreet1"/>
+      <ColumnOption idx="6" pid="120" type="retrieved" options=";save;displayIcon;SelectionSetVar:Ibt"/>
+      <ColumnOption idx="7" pid="124" type="retrieved" options=";save;rowTextColoring;SelectionSetVar:RowTextColor"/>
+      <ColumnOption idx="8" pid="126" type="retrieved" options=";save"/>
    </ArrayOptions>
 </Param>
 ```
@@ -608,7 +603,7 @@ The column must be of type string. Multiple view IDs have to be separated by sem
 Example:
 
 ```xml
-<ColumnOption idx="2" pid="104" type="custom" options=";save;viewImpact"/>
+<ColumnOption idx="2" pid="104" type="retrieved" options=";save;viewImpact"/>
 ```
 
 This option is also supported for EPM tables.<!-- RN 21401 -->
