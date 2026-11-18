@@ -100,7 +100,8 @@ The column processing order can be overruled in the protocol with the [processin
    <Name>Alarms</Name>
    <Description>Alarms</Description>
    <Type>array</Type>
-   <ArrayOptions index="0" options=";naming=_401,404;processingOrder=0,4,5,1,2,3">
+   <ArrayOptions index="0" options=";processingOrder=0,4,5,1,2,3">
+      <NamingFormat>,401,_,404</NamingFormat>
       <ColumnOption idx="0" pid="401" type="custom" options=";save"/>
       <ColumnOption idx="1" pid="403" type="custom" options=";save"/>
       <ColumnOption idx="2" pid="404" type="custom" options=";save"/>

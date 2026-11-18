@@ -666,7 +666,8 @@ CPE tables often contain dummy items, i.e., virtual items that merely act as a l
 To be able to mark items as dummy items in a particular CPE table, add an extra column of type “double”, and specify the “CPEDummyColumn” option in its column definition. See the following example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
+  <NamingFormat>,1602</NamingFormat>
   ...
   <ColumnOption idx="9" pid="1616" type="retrieved" options=";save;disableHeaderSum;CPEDummyColumn"/>
   ...

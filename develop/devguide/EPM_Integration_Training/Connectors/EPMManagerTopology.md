@@ -114,7 +114,8 @@ Additionally, to map out the relations, a Relation table must be created. The fo
     <Name>SpineLeafRelations</Name>
     <Description>Spine Leaf Relations</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";volatile;naming=/26002" partial="true:200">
+    <ArrayOptions index="0" options=";volatile" partial="true:200">
+        <NamingFormat>,26002</NamingFormat>
         <ColumnOption idx="0" pid="26001" type="retrieved" options="" /><!-- Index of the row -->
         <ColumnOption idx="1" pid="26002" type="retrieved" options="" /><!-- Name of the relation -->
         <ColumnOption idx="2" pid="26003" type="retrieved" options=";foreignKey=24000" /><!-- Spine ID (Foreign Key to the Spine Local table) -->
@@ -168,7 +169,8 @@ Next, to represent the recursive relation, it is essential to create a Relation 
     <Name>AmplifierRelations</Name>
     <Description>Amplifier Relations</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";volatile;naming=/23002" partial="true:200">
+    <ArrayOptions index="0" options=";volatile" partial="true:200">
+        <NamingFormat>,23002</NamingFormat>
         <ColumnOption idx="0" pid="23001" type="retrieved" options="" /> <!-- Index of the row -->
         <ColumnOption idx="1" pid="23002" type="retrieved" options="" /> <!-- Name of the relation [Source/Destination] -->
         <ColumnOption idx="2" pid="23003" type="retrieved" options=";foreignKey=21000" />  <!-- Source Amplifier ID (Foreign Key to the Amplifier Local table) -->

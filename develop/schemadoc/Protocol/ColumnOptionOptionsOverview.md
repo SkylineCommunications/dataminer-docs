@@ -14,7 +14,8 @@ EPM tables often contain dummy items, i.e., virtual items that merely act as a l
 To be able to mark items as dummy items in a particular EPM table, add an extra column of type "double", and specify the "CPEDummyColumn" option in its column definition, as illustrated in the following example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
+   <NamingFormat>,1602</NamingFormat>
    ...
    <ColumnOption idx="9" pid="1616" type="retrieved" options=";save;disableHeaderSum;CPEDummyColumn"/>
    ...
@@ -76,7 +77,8 @@ When defining the table columns, add the displayIcon option to the columns that 
 Example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
+   <NamingFormat>,112</NamingFormat>
    ...
    <ColumnOption idx="5" pid="120" type="custom" options=";save;displayIcon"/>
    ...
@@ -125,7 +127,8 @@ The value of the cell should be the ID of the service in the format "DMA ID/serv
 Example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
+   <NamingFormat>,112</NamingFormat>
    ...
    <ColumnOption idx="5" pid="120" type="custom" options=";save;displayServiceAlarm"/>
 </ArrayOptions>
@@ -144,7 +147,8 @@ When defining the table columns, add the displayViewAlarm option to the column t
 Example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
+   <NamingFormat>,112</NamingFormat>
    ...
    <ColumnOption idx="5" pid="120" type="custom" options=";save;displayViewAlarm"/>
 ```
@@ -269,7 +273,8 @@ Example:
    <Name>Services</Name>
    <Description>Services</Description>
    <Type>array</Type>
-   <ArrayOptions index="0" options=";naming=\12402;autoAdd">
+   <ArrayOptions index="0" options=";autoAdd">
+      <NamingFormat>,12402</NamingFormat>
       <ColumnOption idx="0" pid="12401" type="autoincrement" options=";HideSummaryColumn"/>
       ...
 ```
@@ -386,7 +391,8 @@ Example:
    <Name>IPAddresses</Name>
    <Description>IP Addresses</Description>
    <Type>array</Type>
-   <ArrayOptions index="0" displayColumn="1">
+   <ArrayOptions index="0">
+      <NamingFormat>,112</NamingFormat>
       <ColumnOption idx="0" pid="111" type="custom" options=";SelectionSetVar:Name"/>
       <ColumnOption idx="1" pid="112" type="custom" options=";save;SelectionSetVar:Description"/>
       <ColumnOption idx="2" pid="114" type="custom" options=";save;SelectionSetVar:Number"/>

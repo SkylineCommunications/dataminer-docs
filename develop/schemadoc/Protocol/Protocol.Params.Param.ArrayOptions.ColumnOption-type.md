@@ -141,8 +141,15 @@ Example:
 >   <Param id="1000" trending="false">
 >      <Name>NetworkInterfaces</Name>
 >      <Description>Network Interfaces</Description>
->      <Type id="56;57;58;59;60;61;62">array</Type>
+>      <Type>array</Type>
 >      <ArrayOptions index="0">
+>         <ColumnOption idx="0" pid="56" type="retrieved" options="" />
+>         <ColumnOption idx="1" pid="57" type="retrieved" options="" />
+>         <ColumnOption idx="2" pid="58" type="retrieved" options="" />
+>         <ColumnOption idx="3" pid="59" type="retrieved" options="" />
+>         <ColumnOption idx="4" pid="60" type="retrieved" options="" />
+>         <ColumnOption idx="5" pid="61" type="retrieved" options="" />
+>         <ColumnOption idx="6" pid="62" type="retrieved" options="" />
 >         <ColumnOption idx="7" pid="63" type="retrieved" options="" />
 >         <ColumnOption idx="8" pid="64" type="state" options=";delete" />
 >      </ArrayOptions>
@@ -166,8 +173,9 @@ This allows the retrieval of the correct data from a direct view table if the ta
 Example:
 
 ```xml
-<ArrayOptions index="1" displayColumn="1" partial="true" options=";volatile;view=1500,remoteId;
+<ArrayOptions index="1" partial="true" options=";volatile;view=1500,remoteId;
 directView=5361;filterChange=19901-1501,19902-1502,19903-1503,19904-1504,19905-1505">
+   <NamingFormat>,19906</NamingFormat>
    <ColumnOption idx="0" pid="19901" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
    <ColumnOption idx="1" pid="19906" type="viewTableKey" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
    <ColumnOption idx="2" pid="19902" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
