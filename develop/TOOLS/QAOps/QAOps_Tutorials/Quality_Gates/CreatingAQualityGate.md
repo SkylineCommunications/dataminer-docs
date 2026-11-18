@@ -15,11 +15,12 @@ Expected duration: 10 minutes.
 
 - A basic understanding of [QAOps quality gates](xref:QAOps_Quality_Gates).
 
-Use sandbox throughout this tutorial. Do not copy configuration IDs or tokens from production or staging into the exercise. The screenshots were captured on staging; create your own gate in sandbox.
+> [!IMPORTANT]
+> While the screenshots show staging, it is important that you **use the sandbox** throughout this tutorial. Do not copy configuration IDs or tokens from production or staging into the exercise.
 
 ## Step 1: Create the gate
 
-1. Open the sandbox Quality Gates app.
+1. Open the [sandbox Quality Gates](https://qaops-sandbox.skyline.be/public/qaops-quality-gates/index.html) app.
 
 1. Click *Create gate*.
 

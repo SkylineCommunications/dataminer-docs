@@ -15,7 +15,8 @@ Expected duration: 10 minutes, excluding the duration of a new test run.
 
 - An existing sandbox [configuration](xref:QAOps_Configuration) with an allowed [test suite](xref:QAOps_Test_Suite).
 
-The screenshots use the staging configuration *Run-Scoped RC* and suite *Run-Scoped*. Select the pair appropriate for your own sandbox tests; available names and IDs can differ.
+> [!IMPORTANT]
+> While the screenshots show the staging configuration *Run-Scoped RC* and suite *Run-Scoped*, you will need to **use the sandbox** throughout this tutorial. Select the pair appropriate for your own sandbox tests; available names and IDs can differ.
 
 ## Step 1: Add a QAOps check
 

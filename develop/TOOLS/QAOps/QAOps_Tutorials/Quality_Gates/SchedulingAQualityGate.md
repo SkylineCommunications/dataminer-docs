@@ -20,7 +20,8 @@ Expected duration: 15 minutes.
 
 - For email, configured DataMiner SMTP. For Teams, a supported Teams Workflow URL and the required QAOps notification configuration.
 
-The screenshots show a paused example to avoid sending practice messages. Use your own destination, not the example address.
+> [!IMPORTANT]
+> The screenshots show a paused example to avoid sending practice messages. Use your own notification destination, not the example address.
 
 ## Step 1: Create a digest notification rule
 
