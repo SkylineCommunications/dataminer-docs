@@ -187,6 +187,14 @@ DataMiner web-only upgrades will now install the DataMiner Assistant DxM on ever
 
 If a newer version of the DataMiner Assistant DxM is already installed, it will not be downgraded.
 
+#### Web apps: Clearer sign-in screens and improved connection recovery [ID 47070]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The sign-in and application authorization screens now show the target system and application more clearly. More compact sign-in dialogs are used when applications request API access.
+
+Also, expired connections will now trigger connection recovery. Access-denied responses will no longer unnecessarily interrupt an otherwise valid session.
+
 #### DataMiner apps: Custom header buttons and menus for uploaded apps [ID 47099]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
