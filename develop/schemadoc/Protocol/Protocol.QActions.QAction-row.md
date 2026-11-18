@@ -19,10 +19,10 @@ If set to *true*, the QAction will be executed when a row of a table has changed
 
 A QAction with `row="true"` can be triggered by a write column parameter, a read column parameter, or an SNMP table parameter, or executed via [multithreaded timer](xref:AdvancedMultiThreadedTimers) options (`qaction`, `qactionBefore`, or `qactionAfter`).
 
+When a read column parameter is used as a trigger on a QAction with `row="true"`, make sure that if you for example fill in tables via QActions and you trigger on the read parameter, the QAction you then execute does not attempt to edit the same table. This will not work as it is locked, which will cause a deadlock.<!-- RN 14050, RN 15531 -->
+
 > [!IMPORTANT]
 > A QAction with `row="true"` cannot be used with single parameters. Do not specify single parameters in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute of a QAction that has `row="true"` enabled.
-
-When a read column parameter is used as a trigger on a QAction with `row="true"`, make sure that if you for example fill in tables via QActions and you trigger on the read parameter, the QAction you then execute does not attempt to edit the same table. This will not work as it is locked, which will cause a deadlock.<!-- RN 14050, RN 15531 -->
 
 > [!NOTE]
 > When multiple values change (for example, via SetRow), multiple triggers can go off (per read column trigger defined) but each with the new values in the protocol.NewRow() object.
