@@ -12,7 +12,7 @@ To implement a logger table, perform the following steps:
    Note that once the database option is used, all columns of the table are saved in the database, so it is not required to use the save option explicitly.
 
    ```xml
-   <Param id="5200" trending="false">
+   <Param id="5200">
       <Name>LoggedTraps</Name>
       <Description>Logged Traps</Description>
       <Type>array</Type>
@@ -28,7 +28,7 @@ To implement a logger table, perform the following steps:
    In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. If the [Param.Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag is used, the primary key (i.e., index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
 
    ```xml
-   <Param id="5200" trending="false">
+   <Param id="5200">
       <Name>LoggedTraps</Name>
       <Description>Logged Traps</Description>
       <Type>array</Type>

@@ -61,7 +61,7 @@ Two options are always specified:
   For example:
 
   ```xml
-  <Param id="4001" trending="false">
+  <Param id="4001">
       <Name>MatrixColumnType</Name>
       <Description>Matrix Column Type</Description>
       <Type>read</Type>
@@ -76,7 +76,7 @@ Two options are always specified:
   Or:
 
   ```xml
-  <Param id="4001" trending="false">
+  <Param id="4001">
       <Name>MatrixColumnType</Name>
       <Description>Matrix Column Type</Description>
       <Type>read</Type>

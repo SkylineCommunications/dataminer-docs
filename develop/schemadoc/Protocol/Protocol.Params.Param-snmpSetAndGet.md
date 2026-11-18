@@ -37,7 +37,7 @@ For a list of possible values, see [dynamicSnmpGet](xref:Protocol.Params.Param.T
 ## Examples
 
 ```xml
-<Param id="4" trending="false" snmpSetAndGet="true">
+<Param id="4" snmpSetAndGet="true">
   <Name>SysContact</Name>
   <Description>System Contact</Description>
   <Type>write</Type>
@@ -51,7 +51,7 @@ Example:
 In the example below, param 100 is the table using the instance option, and param 203 is the Write column using a Get of the row after the Set. The group that will do the Get is added to the queue via an executeNext.
 
 ```xml
-<Param id="100" trending="false">
+<Param id="100">
   <Name>Items</Name>
   <Description>Items</Description>
   <Type>array</Type>

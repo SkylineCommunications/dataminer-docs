@@ -64,7 +64,7 @@ In the table you can define a pathFormat for the row in the column options of th
 Example:
 
 ```xml
-<ColumnOption idx="0" pid="111" type="custom" value=""
+<ColumnOption idx="0" pid="111" type="custom"
   options="[Sep:;|]PathFormat=M [Param:114],
     [Param:122] L [Param:116],[Param:124] L [Param:118],
     [Param:126] L [Param:120],[Param:128];DarkGray;

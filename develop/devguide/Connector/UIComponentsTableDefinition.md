@@ -12,7 +12,7 @@ To define a table, create a parameter of type [array](xref:Protocol.Params.Param
 Example:
 
 ```xml
-<Param id="1000" trending="false">
+<Param id="1000">
   <Name>Items</Name>
   <Description>Items</Description>
   <Type>array</Type>
@@ -64,7 +64,7 @@ For each table column, an additional parameter is defined which is referred to v
     <Type>number</Type>
   </Measurement>
 </Param>
-<Param id="1003" trending="false">
+<Param id="1003">
   <Name>Items_Column3</Name>
   <Description>Column 3 (Items)</Description>
   <Type>write</Type>

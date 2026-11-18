@@ -14,7 +14,7 @@ Suppose we want to create a tree control that lists all services and the audio a
     - Services (ID 1000): Contains the services
 
       ```xml
-      <Param id="1000" trending="false">
+      <Param id="1000">
         <Name>Services</Name>
         <Description>Services</Description>
         <Type>array</Type>
@@ -31,7 +31,7 @@ Suppose we want to create a tree control that lists all services and the audio a
     - Audio (ID 4000): Contains the audio streams
 
       ```xml
-      <Param id="4000" trending="false">
+      <Param id="4000">
         <Name>Audio</Name>
         <Description>Audio</Description>
         <Type>array</Type>
@@ -49,7 +49,7 @@ Suppose we want to create a tree control that lists all services and the audio a
     - Video (ID 6000): Contains the video streams
 
       ```xml
-      <Param id="6000" trending="false">
+      <Param id="6000">
         <Name>Video</Name>
         <Description>Video</Description>
         <Type>array</Type>
@@ -69,7 +69,7 @@ Suppose we want to create a tree control that lists all services and the audio a
     - Audio Links (ID: 3000): Links the audio streams to the services they are part of.
 
       ```xml
-      <Param id="3000" trending="false">
+      <Param id="3000">
         <Name>AudioLinks</Name>
         <Description>Audio Links</Description>
         <Type>array</Type>
@@ -87,7 +87,7 @@ Suppose we want to create a tree control that lists all services and the audio a
     - Video Links (ID: 5000): Links the video streams to the services they are part of.
 
       ```xml
-      <Param id="5000" trending="false">
+      <Param id="5000">
         <Name>VideoLinks</Name>
         <Description>Video Links</Description>
         <Type>array</Type>
@@ -107,7 +107,7 @@ Suppose we want to create a tree control that lists all services and the audio a
    - Link Types (ID: 2000): Contains the different child node options for the services (Audio/Video).
 
       ```xml
-      <Param id="2000" trending="false">
+      <Param id="2000">
         <Name>LinkTypes</Name>
         <Description>Link Types</Description>
         <Type>array</Type>
@@ -125,7 +125,7 @@ Suppose we want to create a tree control that lists all services and the audio a
    - Services to Link Types Relations (ID: 7000): Links the services with the correct link type.
 
       ```xml
-      <Param id="7000" trending="false">
+      <Param id="7000">
         <Name>ServicesToLinkTypesRelations</Name>
         <Description>Services to Link Types Relations</Description>
         <Type>array</Type>

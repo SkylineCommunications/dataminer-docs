@@ -16,7 +16,7 @@ For a typical inputs table, the following columns are configured:
 Example:
 
 ```xml
-<Param id="1000" trending="false">
+<Param id="1000">
    <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>

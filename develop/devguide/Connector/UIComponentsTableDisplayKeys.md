@@ -33,7 +33,7 @@ Only one approach should be used at a time and new protocols should avoid using 
 It is possible to define a column of type "displaykey", which shows the display key:
 
 ```xml
-<ColumnOption idx="1" pid="1502" type="displaykey" value="" options=""/>
+<ColumnOption idx="1" pid="1502" type="displaykey" options=""/>
 ```
 
 It is not allowed to set values to this column. The column will automatically be filled in by the SLElement process. This column also does not support alarming or trending. When a column of type "displaykey" is used in a table, it must be defined as the last column of that table.
@@ -43,7 +43,7 @@ It is not allowed to set values to this column. The column will automatically be
 Another way to define a display key using naming is by using the *NamingFormat* tag:
 
 ```xml
-<Param id="2000" trending="false">
+<Param id="2000">
   <Name>TransportStreams</Name>
   <Description>Transport Streams</Description>
   <Type>array</Type>
@@ -74,7 +74,7 @@ In the example above, the semicolon separates the static text from the dynamic p
 Naming can be used to define a display key for a table. The example below defines a display key using a combination of parameters from three different tables (table 1000, 2000, and 3000).
 
 ```xml
-<Param id="3000" trending="false">
+<Param id="3000">
   <Name>PIDs</Name>
   <Description>PIDs</Description>
   <Type>array</Type>

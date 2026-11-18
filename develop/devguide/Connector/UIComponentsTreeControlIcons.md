@@ -112,7 +112,7 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 |![VSAT](~/develop/images/VSAT.png)|VSAT|VSAT.|
 
 ```xml
-<Param id="1000" trending="false">
+<Param id="1000">
   <Name>PIDs</Name>
   <Description>PIDs</Description>
   <Type>array</Type>

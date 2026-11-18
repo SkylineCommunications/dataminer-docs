@@ -8,14 +8,14 @@ description: "Let users rename standard matrix inputs and outputs through a disc
 It is possible to let users dynamically change the names of matrix inputs/outputs by implementing a table that uses the option "discreetDestination". The table contains two columns, one holding the input/output number and one holding the input/output name. The column holding the names of the inputs/outputs acts as the display key.
 
 ```xml
-<Param id="400" trending="false">
+<Param id="400">
    ...
    <Type>array</Type>
    <ArrayOptions index="0" displayColumn="1" options="discreetDestination=ports.xml">
       <!-- ID -->
-      <ColumnOption idx="0" pid="401" type="retrieved" value="" options=";save"/>
+      <ColumnOption idx="0" pid="401" type="retrieved" options=";save"/>
       <!-- Name -->
-      <ColumnOption idx="1" pid="402" type="retrieved" value="" options=";save"/>
+      <ColumnOption idx="1" pid="402" type="retrieved" options=";save"/>
    </ArrayOptions>
    ...
 </Param>
