@@ -286,6 +286,19 @@ A header command must contain exactly one of `set` or `update`. The former array
 
 Clicking outside a context menu over the app's iframe dismisses the menu without activating the iframe content underneath. Custom controls are cleared when the host application model changes.
 
+#### GQI DxM: 'Get alarms' data source now includes alarm focus information [ID 47109]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+The *Get alarms* data source now includes two additional columns with alarm focus information:
+
+- *Alarm likelihood*: The likelihood estimated by alarm focus, displayed as a percentage. A low likelihood indicates an unexpected alarm. This is unrelated to the alarm's severity.
+- *Is focus alarm*: True when the alarm likelihood is below 70%, indicating an unexpected alarm that deserves your attention. False when the likelihood is 70% or higher. This 70% limit is also the limit used by Cube.
+
+Alarm focus information is only available for active alarms. All alarms in an alarm tree show the current alarm focus information for that tree. The columns are empty for cleared alarms and alarms without an assigned likelihood, such as correlation alarms. They are also empty when alarm focus is disabled or not supported on the DataMiner System.
+
+Filtering the *Get alarms* data source on *Is focus alarm* equal to true retrieves only active alarms from the DataMiner System.
+
 #### Web apps: Remaining support for legacy Annotations removed [ID 47115]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
