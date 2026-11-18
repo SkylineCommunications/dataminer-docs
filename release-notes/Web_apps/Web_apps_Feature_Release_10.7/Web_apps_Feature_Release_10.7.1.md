@@ -195,6 +195,20 @@ The sign-in and application authorization screens now show the target system and
 
 Also, expired connections will now trigger connection recovery. Access-denied responses will no longer unnecessarily interrupt an otherwise valid session.
 
+#### Web apps: System-wide DataMiner Intelligence setting [ID 47084]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+A new *DataMiner Intelligence* setting in the web apps' *System settings* allows you to enable or disable DataMiner Intelligence for the entire DataMiner System.
+
+- Changing the setting requires both the *Access* permission under *DataMiner Intelligence* and the *Admin tools* permission. Without both permissions, the setting is read-only.
+- Enabling the setting requires DataMiner server version 10.7 or higher and a dataminer.services connection. If either requirement is not met, you cannot enable the setting, and a tooltip explains why.
+- The setting and permission labels use your configured product name.
+
+Changes take effect immediately, without reloading the page. Disabling DataMiner Intelligence removes the Assistant app from the app menu and apps overview. If the Assistant app is already open, it displays a "page not found" message. Enabling DataMiner Intelligence makes the app available again.
+
+The *Specialized agents* setting in the Assistant app now also saves changes immediately, without reloading the page. The chat, agent overview, and agent editor update right away. If the selected agent becomes unavailable, the chat switches to the default agent. Changing this setting requires the *Admin tools* permission.
+
 #### DataMiner apps: Custom header buttons and menus for uploaded apps [ID 47099]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
