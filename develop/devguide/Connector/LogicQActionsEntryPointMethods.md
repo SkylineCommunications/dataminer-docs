@@ -97,7 +97,7 @@ When DataMiner is about to execute a QAction, a new instance of SLProtocol or SL
 
 If the QAction is triggered on a row, additional information is passed along:
 
-- The IDX ([RowIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.RowIndex))
+- The IDX ([RowIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.RowIndex) – deprecated, use [RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey) instead)
 - The primary key ([RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey))
 - Old row data ([OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow))
 - New row data ([NewRow](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow))
