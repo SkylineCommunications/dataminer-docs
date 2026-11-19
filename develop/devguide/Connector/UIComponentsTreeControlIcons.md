@@ -117,8 +117,8 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
   <Description>PIDs</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
-    <ColumnOption idx="0" pid="1001" type="custom" options=";"/>
-    <ColumnOption idx="1" pid="1002" type="custom" options=";"/>
+    <ColumnOption idx="0" pid="1001" type="retrieved" options=";"/>
+    <ColumnOption idx="1" pid="1002" type="retrieved" options=";"/>
   </ArrayOptions>
   <Display>
     <RTDisplay>true</RTDisplay>

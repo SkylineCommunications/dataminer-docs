@@ -63,7 +63,7 @@ description: "Review answers to connector development questions about SNMP table
 1. *What is the meaning of this piece of code taken from a parameter with ID 200? Is there something missing in order for this code to work? If so, what is missing?*
 
     ```xml
-    <ColumnOption idx="9" pid="210" type="custom" options=";foreignKey=100"/>
+    <ColumnOption idx="9" pid="210" type="retrieved" options=";foreignKey=100"/>
     ```
 
     The use of the option "foreignKey=100" puts an integrity constraint on the values of this column. It states that the values of this column refer to values from the primary key column of table with ID 100.
@@ -113,7 +113,7 @@ description: "Review answers to connector development questions about SNMP table
     - An additional column needs to be created that has the option "element". This column will contain the global element ID ("DMA ID/element ID") values of the virtual elements that will be created. On the ColumnOption tag of the table, you define the option "element".
 
       ```xml
-      <ColumnOption idx="11" pid="112" type="custom" options=";element"/>
+      <ColumnOption idx="11" pid="112" type="retrieved" options=";element"/>
       ```
 
     - On the parameters you want to export to the DVE, define the attribute `export="true"` or `export="table id"` for a specific export when using multiple exports. When working with a referenced table, do not forget to use the foreignKey option and define relations. If you put the export attribute only on the columns, they will be exported as standalone parameters (possible in 1-1 relation).

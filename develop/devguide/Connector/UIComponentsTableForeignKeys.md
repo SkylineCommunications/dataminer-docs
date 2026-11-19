@@ -12,13 +12,13 @@ Consider for example two tables where table 1 lists different modulators (e.g., 
 One column of table 2 has to contain references (keys) to information stored in table 1. In the following example, column 2010 contains key values from table 1000. The link between the two tables is established using the foreignKey option.
 
 ```xml
-<ColumnOption idx="9" pid="2010" type="custom" options=";foreignKey=1000"/>
+<ColumnOption idx="9" pid="2010" type="retrieved" options=";foreignKey=1000"/>
 ```
 
 It is possible to have multiple columns in a table that are foreign keys to the same table, but referencing a different key. Based on the previous example, you can add another column with a foreign key to table 1000.
 
 ```xml
-<ColumnOption idx="10" pid="2011" type="custom" options=";foreignKey=1000"/>
+<ColumnOption idx="10" pid="2011" type="retrieved" options=";foreignKey=1000"/>
 ```
 
 It is also possible to implement recursive linking, in which case the table will have a column with a foreign key to itself. This can be required for specific aggregate actions in EPM environments, for example in case there is a list of amplifiers in a table, but all amplifiers are connected to each other, and a count needs to be done for the number of amplifiers connected from a certain starting point.

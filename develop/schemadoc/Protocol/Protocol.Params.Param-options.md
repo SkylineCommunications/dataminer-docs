@@ -55,8 +55,13 @@ Example of a table parameter:
 <Param id="15">
    <Name>AccessibleIPs</Name>
    <Description>Accessible IPs</Description>
-   <Type id="16;17;18;19">array</Type>
-   <ArrayOptions index="0"/>
+   <Type>array</Type>
+   <ArrayOptions index="0">
+      <ColumnOption idx="0" pid="16" type="snmp" options="" />
+      <ColumnOption idx="1" pid="17" type="snmp" options="" />
+      <ColumnOption idx="2" pid="18" type="snmp" options="" />
+      <ColumnOption idx="3" pid="19" type="snmp" options="" />
+   </ArrayOptions>
    <SNMP>
       <Enabled>true</Enabled>
       <OID type="complete" options="instance;multipleGetNext"></OID>

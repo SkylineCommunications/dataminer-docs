@@ -23,7 +23,8 @@ Example:
    <Information>
       <Subtext>Table representation of the matrix. This table will contain the information of the inputs.</Subtext>
    </Information>
-   <ArrayOptions index="0" options=";naming=/1002">
+   <ArrayOptions index="0">
+      <NamingFormat>,1002</NamingFormat>
       <ColumnOption idx="0" pid="1001" type="retrieved" options="" />
       <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
       <ColumnOption idx="2" pid="1003" type="retrieved" options=";save" />

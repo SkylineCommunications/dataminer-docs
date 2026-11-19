@@ -41,7 +41,8 @@ The table definition in the connector for the *SAP Base Info Hidden* table:
     <Name>SAPBaseInfoHidden</Name>
     <Description>Hidden SAP Base Info</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";naming=:4605">
+    <ArrayOptions index="0">
+        <NamingFormat>,4605</NamingFormat>
         <ColumnOption idx="0" pid="4601" type="snmp" options=""/>
         <ColumnOption idx="1" pid="4602" type="snmp" options=""/>
         <ColumnOption idx="2" pid="4603" type="snmp" options=""/>
@@ -136,7 +137,8 @@ With this in mind, your table definition should look something like this:
     <Name>SAPBaseInfo</Name>
     <Description>SAP Base Info</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";naming=:4199">
+    <ArrayOptions index="0">
+        <NamingFormat>,4199</NamingFormat>
         <ColumnOption idx="0" pid="4200" type="snmp" options="" />
         <ColumnOption idx="1" pid="4134" type="snmp" options="" />
         <ColumnOption idx="2" pid="4101" type="snmp" options=";foreignKey=8300" />

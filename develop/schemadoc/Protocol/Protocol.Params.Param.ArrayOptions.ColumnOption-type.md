@@ -166,7 +166,7 @@ This allows the retrieval of the correct data from a direct view table if the ta
 Example:
 
 ```xml
-<ArrayOptions index="1" displayColumn="1" partial="true" options=";volatile;view=1500,remoteId;
+<ArrayOptions index="1" partial="true" options=";volatile;view=1500,remoteId;
 directView=5361;filterChange=19901-1501,19902-1502,19903-1503,19904-1504,19905-1505">
    <ColumnOption idx="0" pid="19901" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
    <ColumnOption idx="1" pid="19906" type="viewTableKey" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>

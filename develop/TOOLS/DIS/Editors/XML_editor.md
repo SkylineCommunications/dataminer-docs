@@ -466,7 +466,8 @@ For example, next to `<Param>30</Param>`, you can see `<!-- Systems -->` because
     <Name>Systems</Name>
     <Description>Systems</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";naming=/33">
+    <ArrayOptions index="0">
+        <NamingFormat>,33</NamingFormat>
         <ColumnOption idx="0" pid="31" type="snmp" options=";save" /><!-- Index (Systems) -->
         <ColumnOption idx="1" pid="32" type="snmp" options=";save" /><!-- ID (Systems) -->
         <ColumnOption idx="2" pid="33" type="snmp" options=";save" /><!-- Description (Systems) -->

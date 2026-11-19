@@ -18,7 +18,8 @@ Suppose we want to create a tree control that lists all services and the audio a
         <Name>Services</Name>
         <Description>Services</Description>
         <Type>array</Type>
-        <ArrayOptions index="0" options=";naming=/1002">
+        <ArrayOptions index="0">
+          <NamingFormat>,1002</NamingFormat>
           <ColumnOption idx="0" pid="1001" type="autoincrement" options="" />
           <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
         </ArrayOptions>
@@ -35,7 +36,8 @@ Suppose we want to create a tree control that lists all services and the audio a
         <Name>Audio</Name>
         <Description>Audio</Description>
         <Type>array</Type>
-        <ArrayOptions index="0" displayColumn="1">
+        <ArrayOptions index="0">
+          <NamingFormat>,4002</NamingFormat>
           <ColumnOption idx="0" pid="4001" type="autoincrement" options="" />
           <ColumnOption idx="1" pid="4002" type="retrieved" options=";save" />
           <ColumnOption idx="2" pid="4003" type="retrieved" options=";save" />
@@ -53,7 +55,8 @@ Suppose we want to create a tree control that lists all services and the audio a
         <Name>Video</Name>
         <Description>Video</Description>
         <Type>array</Type>
-        <ArrayOptions index="0" options=";naming=/6002">
+        <ArrayOptions index="0">
+          <NamingFormat>,6002</NamingFormat>
           <ColumnOption idx="0" pid="6001" type="autoincrement" options="" />
           <ColumnOption idx="1" pid="6002" type="retrieved" options=";save" />
           <ColumnOption idx="2" pid="6003" type="retrieved" options=";save" />
@@ -129,7 +132,7 @@ Suppose we want to create a tree control that lists all services and the audio a
         <Name>ServicesToLinkTypesRelations</Name>
         <Description>Services to Link Types Relations</Description>
         <Type>array</Type>
-        <ArrayOptions index="0" displayColumn="0">
+        <ArrayOptions index="0">
           <ColumnOption idx="0" pid="7001" type="autoincrement" options=""/>
           <ColumnOption idx="1" pid="7002" type="retrieved" options=";foreignKey=1000"/>
           <ColumnOption idx="2" pid="7003" type="retrieved" options=";foreignKey=2000"/>

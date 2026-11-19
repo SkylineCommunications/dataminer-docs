@@ -182,7 +182,7 @@ By default, the order is as follows:
 Example:
 
 ```xml
-<ArrayOptions index="0" options=";naming=/1002;processingOrder=0,1,2,3,4,6,7,10,12,14,15,16,19,20,21,22,27,29,31,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,5,8,9,11,13,17,18,23,24,25,26,28,30,32,33,34">
+<ArrayOptions index="0" options=";processingOrder=0,1,2,3,4,6,7,10,12,14,15,16,19,20,21,22,27,29,31,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,5,8,9,11,13,17,18,23,24,25,26,28,30,32,33,34">
 ```
 
 See also: [Column processing order in tables](xref:InnerWorkingsSLElement#column-processing-order-in-tables)

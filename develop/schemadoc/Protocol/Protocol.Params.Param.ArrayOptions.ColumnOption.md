@@ -94,9 +94,9 @@ When defining the table columns, add the displayIcon option to the columns that 
 Example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
   ...
-  <ColumnOption idx="5" pid="120" type="custom" options=";save;displayIcon"/>
+  <ColumnOption idx="5" pid="120" type="retrieved" options=";save;displayIcon"/>
   ...
 ```
 
@@ -133,9 +133,9 @@ When defining the table columns, add the displayViewAlarm option to the column t
 Example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
   ...
-  <ColumnOption idx="5" pid="120" type="custom" options=";save;displayViewAlarm"/>
+  <ColumnOption idx="5" pid="120" type="retrieved" options=";save;displayViewAlarm"/>
 ```
 
 Result: If the value in the displayViewAlarm column is a valid view ID, then that ID will be replaced by a view icon showing the view’s current alarm color. If the value is not a valid view ID, then the cell will be empty.

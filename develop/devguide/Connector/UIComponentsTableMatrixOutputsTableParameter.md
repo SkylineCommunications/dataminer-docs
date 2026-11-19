@@ -26,7 +26,8 @@ Example:
    <Information>
       <Subtext>Table representation of the matrix. This table will contain the information of the outputs.</Subtext>
    </Information>
-   <ArrayOptions index="0" options=";naming=/1202">
+   <ArrayOptions index="0">
+      <NamingFormat>,1202</NamingFormat>
       <ColumnOption idx="0" pid="1201" type="retrieved" options="" />
       <ColumnOption idx="1" pid="1202" type="retrieved" options=";save" />
       <ColumnOption idx="2" pid="1203" type="retrieved" options=";save" />

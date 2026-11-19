@@ -30,7 +30,8 @@ Here is an **example** of a *directView* table:
     <Name>View_Regions</Name>
     <Description>View_Regions</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";volatile;naming=/8502;view=8000;directView=801;onlyFilteredDirectView" partial="true:200">
+    <ArrayOptions index="0" options=";volatile;view=8000;directView=801;onlyFilteredDirectView" partial="true:200">
+        <NamingFormat>,8502</NamingFormat>
         <ColumnOption idx="0" pid="8501" type="retrieved" options=";view=8001"/>
         <ColumnOption idx="1" pid="8502" type="retrieved" options=";view=8002"/>
         <ColumnOption idx="2" pid="8503" type="retrieved" options=";view=8003"/>
@@ -55,7 +56,8 @@ In the example above, the information found in table 8000 is mapped to a view ta
     <Name>Regions</Name>
     <Description>Regions</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";naming=/8002" partial="true:200">
+    <ArrayOptions index="0" partial="true:200">
+        <NamingFormat>,8002</NamingFormat>
         <ColumnOption idx="0" pid="8001" type="retrieved" options=""/>
         <ColumnOption idx="1" pid="8002" type="retrieved" options=""/>
         <ColumnOption idx="2" pid="8003" type="retrieved" options=";foreignKey=9000"/>
