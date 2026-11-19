@@ -1,11 +1,11 @@
 ---
 uid: UD_APIs_UserDefinableApiEndpoint
-description: "Learn how the DataMiner UserDefinableApiEndpoint DxM routes API requests, maintains IIS rewrite rules, and reports routing health."
+description: "Learn how the DataMiner UserDefinableApiEndpoint DxM routes API requests, applies rate limits, configures HTTPS, and manages older IIS rewrite rules."
 ---
 
 # DataMiner UserDefinableApiEndpoint DxM
 
-*DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core web API. It handles the incoming API triggers over HTTP or HTTPS and sends the requests to the DataMiner Agent(s) in a round-robin way.
+*DataMiner UserDefinableApiEndpoint* is an extension module that runs an ASP.NET Core web API. It handles incoming API triggers and sends requests to DataMiner Agents in a round-robin manner.
 
 > [!CAUTION]
 > Although [rate limiting](xref:UD_APIs_Objects_ApiToken#ratelimit) is available, it is not a complete protection against unwanted traffic. You should also protect the endpoint with a firewall or other network security measure that allows requests only from trusted IP addresses or networks.
@@ -47,6 +47,7 @@ Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and
 | 3.7.0       | .NET 8                | 10.4.0+                            | 10.6.7                           |
 | 3.8.0       | .NET 8                | 10.4.0+                            | 10.6.8                           |
 | 3.11.0      | .NET 10               | 10.4.0+                            | 10.6.10                          |
+| 4.0.0       | .NET 10               | 10.5.0+ (with API Gateway 0.11)     | 10.7.0                           |
 
 > [!NOTE]
 >
@@ -67,9 +68,7 @@ The *UserDefinableAPIEndpoint* DxM uses **NATS** to communicate with DataMiner. 
 
 ## Configuring HTTPS
 
-Because API triggers contain a secret token, we **strongly recommend that you only allow HTTPS communication**. Using HTTP could expose these tokens.
-
-You will need to configure bindings in IIS, and the firewall needs to allow incoming requests on port 443 (HTTPS). In the IIS binding, you can choose the IP address to listen to. This can be used to only have requests coming from one network interface. Select *All Unassigned* to allow requests from all interfaces. You can also specify a specific hostname here.
+From DataMiner 10.7.0 onwards, HTTPS is the only officially supported protocol. Earlier versions of the *UserDefinableApiEndpoint* DxM support HTTP, and HTTP may continue to work for a limited time after an upgrade to DataMiner 10.7.0. However, HTTP exposes the bearer token and may be blocked in a future version.
 
 For more information on how to set this up, see [Setting up HTTPs on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
@@ -85,6 +84,7 @@ The default configuration file can be found in the following location: `%program
 In this file, add the setting or settings that you want to override, with your custom value. The following main blocks of settings are available:
 
 - [Kestrel](#kestrel)
+- [API Gateway registration](#api-gateway-registration)
 - [IIS rewrite rule](#iis-rewrite-rule)
 - [Serilog](#serilog)
 - [UserDefinableAPIs](#userdefinableapis)
@@ -138,12 +138,33 @@ For example, this is the default configuration:
 }
 ```
 
+### API Gateway registration
+
+From DataMiner 10.7.1/10.7.0 onwards<!-- RN 47107 -->, HTTPS requests are routed through the [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway) DxM. The API Gateway applies a rate limit to all user-defined API triggers.
+
+By default, the API Gateway allows up to 6,000 requests per minute across all `/api/custom` routes on a DataMiner Agent. When the limit is exceeded, the API Gateway returns an HTTP `429 Too Many Requests` response. This limit applies in addition to the per-token [rate limit](xref:UD_APIs_Objects_ApiToken#ratelimit).
+
+To customize this limit, set `RateLimitPerMinute` in *appsettings.custom.json* to a value greater than `0`:
+
+```json
+{
+  "ApiGatewayRegistration": {
+    "RateLimitPerMinute": 6000
+  }
+}
+```
+
 ### IIS rewrite rule
 
-> [!NOTE]
-> The service-side rewrite rule checks described in this section are available from DataMiner 10.6.10/10.7.0 onwards<!-- RN46143 -->. In earlier versions, the installer creates and validates the rule during installation or upgrade. If you change the Kestrel port on an earlier version, update the rewrite rule manually as described in [Configuring the rewrite rule for older versions](#configuring-the-rewrite-rule-for-older-versions).
+Older versions of the *UserDefinableApiEndpoint* DxM rely on an IIS rewrite rule to route incoming HTTP(S) requests. The rule's management depends on the DataMiner version:
 
-The *UserDefinableApiEndpoint* service owns the IIS rewrite rule named `Reroute User Definable APIs`. The rule is created when the service starts, and it is checked at a configurable interval while the service is running. If the rule is missing, disabled, duplicated, or altered, the service restores a single enabled rule with the expected configuration.
+- **From DataMiner 10.7.0 onwards**: No rewrite rule is required. Requests are routed through the API Gateway.
+- **From DataMiner 10.6.10 up to, but not including, 10.7.0**: The endpoint process managed the rewrite rule and automatically repaired any issues.
+- **Before DataMiner 10.6.10**: The installer created and repaired the rule during installation or upgrade.
+
+#### Automatic rewrite rule management
+
+For DataMiner versions from 10.6.10 up to, but not including, 10.7.0, the *UserDefinableApiEndpoint* service owns the IIS rewrite rule named `Reroute User Definable APIs`. The rule is created when the service starts and checked at a configurable interval while the service is running. If the rule is missing, disabled, duplicated, or altered, the service restores a single enabled rule with the expected configuration.
 
 The managed rule matches requests under `/api/custom` and forwards them to the local HTTP port configured for Kestrel. When you change the Kestrel HTTP port in *appsettings.custom.json*, restart the service. The service then updates the rewrite target automatically, so you do not need to edit the rule manually in IIS.
 
@@ -189,11 +210,11 @@ The service reports the current rewrite rule state in the logging and publishes 
 
 The service logs an informational message when the rule is first confirmed as healthy or when a problem is repaired. It logs an error when a check or repair fails. Repeated successful checks or repeated instances of the same failure use debug-level logging.
 
-Rewrite rule creation and repair are handled by the running endpoint service instead of an installer custom action. The installer removes the managed rule only during a real uninstall and leaves it in place during a major upgrade so the service can continue to maintain it.
+Before DataMiner 10.7.0, the running endpoint service created and repaired the rule instead of an installer custom action. During a major upgrade, the installer left the rule in place so the service could continue to maintain it. The installer removed the managed rule only during a full uninstall.
 
 #### Configuring the rewrite rule for older versions
 
-For DataMiner versions prior to 10.6.10/10.7.0, the installer does not maintain the rewrite rule while the service is running. If you specify a custom Kestrel port in *appsettings.custom.json*, update the rewrite target manually:
+For DataMiner versions prior to 10.6.10, the installer does not maintain the rewrite rule while the service is running. If you specify a custom Kestrel port in *appsettings.custom.json*, update the rewrite target manually:
 
 1. Open `Internet Information Services (IIS) Manager`.
 
@@ -261,7 +282,7 @@ This section contains options specific to this DxM module:
   > [!NOTE]
   > From DataMiner 10.3.7 onwards, NatsSubject is an optional setting.
 
-- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e., 1.5 minutes). If you increase the timeout value, you will also need to [increase the timeout in IIS](#changing-the-timeout).
+- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e., 1.5 minutes). If you increase this value, you may also need to [increase the timeout in IIS](#changing-the-timeout), depending on the DataMiner version.
 - **SessionConfigPath**: Optional. The path to the NATS config file. The default configuration will be used when this is not filled in.
 - **CredentialsConfigPath**: Optional. The path to the credentials file (.creds) used to connect to the NATS message bus. The default credentials will be used when this is not filled in.
 - **RateLimitNotificationIntervalSeconds**: Optional. The cooldown time before the endpoint will notify DataMiner when a rate limit is exceeded. Set to 60 seconds by default.
@@ -277,6 +298,10 @@ For example, this is the default configuration:
 ```
 
 #### Changing the timeout
+
+Before DataMiner 10.7.0, if you increased the `MessageBrokerTimeOutSeconds` setting, you also needed to increase the IIS timeout for proxied requests. From DataMiner 10.7.0 onwards, requests are no longer routed through IIS, so no additional IIS configuration is needed.
+
+##### Changing the IIS timeout in older versions
 
 IIS has a timeout set to 120 seconds (2 minutes). When you increase the **MessageBrokerTimeOutSeconds** as mentioned above, you will also need to increase this timeout in IIS.
 

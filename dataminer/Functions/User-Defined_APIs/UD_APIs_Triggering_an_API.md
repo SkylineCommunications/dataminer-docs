@@ -1,10 +1,14 @@
 ---
 uid: UD_APIs_Triggering_an_API
+description: "Learn how to send HTTPS requests to trigger user-defined APIs, including authentication, request bodies, responses, and errors."
 ---
 
 # Triggering a user-defined API
 
-To trigger an API, you can send an HTTP or HTTPS request to the *UserDefinableApiEndpoint* DxM.
+To trigger an API, you can send an HTTPS request to the *UserDefinableApiEndpoint* DxM.
+
+> [!IMPORTANT]
+> From DataMiner 10.7.0 onwards, HTTPS is the only officially supported protocol. Existing installations may still accept unsecured HTTP requests through the legacy IIS rewrite rule for a limited time, but these requests expose the bearer token and are not recommended.
 
 > [!NOTE]
 >
@@ -17,18 +21,15 @@ To test sending a request, you can use a tool like Postman.
 
 ### URL
 
-To send a request to *UserDefinableApiEndpoint*, use a URL in the format `http(s)://{hostname}/api/custom/{route}`. (See [Route](xref:UD_APIs_Define_New_API#route).)
+To send a request to *UserDefinableApiEndpoint*, use a URL in the format `https://{hostname}/api/custom/{route}`. (See [Route](xref:UD_APIs_Define_New_API#route).)
 
 > [!NOTE]
 > If your DataMiner System is connected to dataminer.services and [the setting for remote access to the User-Defined APIs](xref:Controlling_remote_access) is enabled, you can also call your user-defined API through dataminer.services. To do so, replace the `{hostname}` part of the URL with the remote access URL of your system (see [Remote access](xref:About_Remote_Access)).
 
-> [!WARNING]
-> Always use HTTPS when calling a user-defined API through dataminer.services. If you use the HTTP protocol, the call may fail, as the HTTP method will be set to GET by default and the request body will be cleared.
-
 Examples:
 
 ```
-http://staging-agent-b3/api/custom/switchers/status
+https://staging-agent-b3/api/custom/switchers/status
 https://production-agent-a1/api/custom/encoder/main/status
 https://ziine-skyline.on.dataminer.services/api/custom/encoder/main/status
 ```
