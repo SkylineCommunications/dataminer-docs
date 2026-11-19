@@ -209,7 +209,7 @@ Instead of executing a global script from the orchestration event, it is also po
        NodeLabel = "Label 1",
        OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
    });
-
+   
    orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
    {
        NodeId = "2",
@@ -233,7 +233,7 @@ Instead of executing a global script from the orchestration event, it is also po
    ```csharp
    VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
    VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
-
+   
    orchestrationEvent.Configuration.Connections.Add(new Connection
    {
        SourceNodeId = "1",
@@ -261,7 +261,7 @@ In this step, you will create connections between specific levels of the VSGs, i
    ```csharp
    VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
    VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
-
+   
    orchestrationEvent.Configuration.Connections.Add(new Connection
    {
        SourceNodeId = "1",
@@ -301,18 +301,18 @@ With this knowledge, you can now create a job with both a connect and disconnect
    private void RunSafe(IEngine engine)
    {
        var api = engine.GetMediaOpsLiveApi();
-
+   
        string jobReference = Guid.NewGuid().ToString();
        OrchestrationJobConfiguration orchestrationJob = api.Orchestration.GetOrCreateNewOrchestrationJobConfiguration(jobReference);
-
+   
        VirtualSignalGroup source = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("SRC-000001")).FirstOrDefault();
        VirtualSignalGroup destination = api.VirtualSignalGroups.Read(VirtualSignalGroupExposers.Name.Equal("DST-000001")).FirstOrDefault();
-
+   
        orchestrationJob.OrchestrationEvents.Add(CreateOrchestrationEvent(EventType.Start, EventState.Confirmed, DateTimeOffset.Now + TimeSpan.FromSeconds(10), source, destination));
        orchestrationJob.OrchestrationEvents.Add(CreateOrchestrationEvent(EventType.Stop, EventState.Confirmed, DateTimeOffset.Now + TimeSpan.FromSeconds(20), source, destination));
        api.Orchestration.SaveOrchestrationJobConfiguration(orchestrationJob);
    }
-
+   
    public OrchestrationEventConfiguration CreateOrchestrationEvent(EventType type, EventState state, DateTimeOffset eventTime, VirtualSignalGroup source, VirtualSignalGroup destination)
    {
        OrchestrationEventConfiguration orchestrationEvent = new OrchestrationEventConfiguration()
@@ -322,7 +322,7 @@ With this knowledge, you can now create a job with both a connect and disconnect
            EventType = type,
            Name = "A basic event",
        };
-
+   
        orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
        {
            NodeId = "1",
@@ -335,7 +335,7 @@ With this knowledge, you can now create a job with both a connect and disconnect
            NodeLabel = "Label 2",
            OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
        });
-
+   
        orchestrationEvent.Configuration.Connections.Add(new Connection
        {
            SourceNodeId = "1",
@@ -349,7 +349,7 @@ With this knowledge, you can now create a job with both a connect and disconnect
                new LevelMapping(new Level("Audio2", 2), new Level("Audio1", 1)),
            },
        });
-
+   
        return orchestrationEvent;
    }
    ```

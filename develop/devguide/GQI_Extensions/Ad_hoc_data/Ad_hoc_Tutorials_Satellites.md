@@ -80,11 +80,11 @@ Expected duration: 15 minutes.
                new GQICell() { Value = satellite.Latitude },
                new GQICell() { Value = satellite.Longitude }
            };
-
+   
            var row = new GQIRow(cells);
            rows.Add(row);
        }
-
+   
        return new GQIPage(rows.ToArray());
    }
    ```

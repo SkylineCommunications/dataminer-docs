@@ -50,7 +50,7 @@ protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/, tableID, tableContent);
       new object[] { protocol.Clear, protocol.Clear, protocol.Clear },
       new object[] { 30, 30, 30 },
   };
-
+  
   protocol.NotifyProtocol(193, tableInfo, tableData);
   ```
 
@@ -65,7 +65,7 @@ protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/, tableID, tableContent);
       new object[] { 10, 10, 10 },
       new object[] { 30, 30, 30 },
   };
-
+  
   protocol.NotifyProtocol(193, tableInfo, tableData);
   ```
 
@@ -75,11 +75,11 @@ protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/, tableID, tableContent);
 
   ```csharp
   int tableID = 2000;
-
+  
   object[] column1 = new object[] { "Row 1", "Row 2" };
   object[] column2 = new object[] { "A", new object[] { "B", DateTime.Now - TimeSpan.FromDays(11) } };
   object[] tableContent = new object[] { column1, column2 };
-
+  
   object result = protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/, tableID, tableContent);
   ```
 

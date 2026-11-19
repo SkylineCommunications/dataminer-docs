@@ -265,20 +265,20 @@ On the page of your GitHub fork (e.g., `https://github.com/YourGitHubHandle/Skyl
    public List<IValidationResult> Validate(ValidatorContext context)
    {
       List<IValidationResult> results = new List<IValidationResult>();
-
+   
       foreach (var param in context.EachParamWithValidId())
       {
          var displayTag = param.Display;
-
+   
          // Early return pattern. Only check when there is a Display tag.
          if (displayTag == null) continue;
-
+   
          // Only check number types.
          if (!param.IsNumber()) continue;
-
+   
          // Only check if date or datetime parameter
          if (!param.IsDateTime()) continue;
-
+   
          // Verify valid decimals.
          var decimalsTag = param.Display?.Decimals;
          if (decimalsTag?.Value != 8)
@@ -287,7 +287,7 @@ On the page of your GitHub fork (e.g., `https://github.com/YourGitHubHandle/Skyl
             results.Add(Error.InvalidTagForDateTime(this, param, positionNode, param.Id.RawValue));
          }
       }
-
+   
       return results;
    }
    ```

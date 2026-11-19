@@ -54,7 +54,7 @@ int result = (int)protocol.NotifyDataMiner(149, ids, rowData);
   int tableID = 1000;
   object rowData = new object[] { "Key 200", "S", "20.20" };
   DateTime timeStamp = DateTime.Now - TimeSpan.FromDays(2);
-
+  
   protocol.NotifyProtocol(149 /* NT_ADD_ROW */, tableId, new object[] { rowData, timeStamp });
   ```
 

@@ -38,9 +38,9 @@ protocol.NotifyDataMiner(50 /*NT_SET_PARAMETER*/, ids, value);
   ```csharp
   string primaryKey = "Row 1";
   int cellValue = 20;
-
+  
   object[] parameterDetails = new object[] { primaryKey, cellValue };
-
+  
   protocol.NotifyDataMiner(50, ids, parameterDetails);
   ```
 

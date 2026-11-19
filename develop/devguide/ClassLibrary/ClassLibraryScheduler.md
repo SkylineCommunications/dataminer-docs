@@ -110,7 +110,7 @@ Before creating a scheduled task, you first need to **define its intended recurr
    ```csharp
    var startRunTime = DateTime.Now;
    var endRunTime = startRunTime.AddHours(2);
-
+   
    var schedulerTask = new SchedulerTask("Name", "Description", startRunTime, endRunTime, scheduleRepetition);
    ```
 
@@ -124,9 +124,9 @@ Before creating a scheduled task, you first need to **define its intended recurr
      new AutomationScriptInputParameter("InputScriptParam1", "InputValue1"),
      new AutomationScriptInputParameter("InputScriptParam2", "InputValue2"),
    };
-
+   
    var automationScriptAction = new AutomationScriptAction("Script Name", inputScriptParams, checkSets: true, runAsync: false);
-
+   
    schedulerTask.ISchedulerAction = automationScriptAction;
    schedulerTask.ISchedulerFinalAction = automationScriptAction;
    ```
@@ -151,7 +151,7 @@ Before creating a scheduled task, you first need to **define its intended recurr
      schedulerTask2,
      schedulerTask3,
    };
-
+   
    scheduler.CreateOrUpdateSchedulerTasks(schedulerTasks, sendInBulk: true);
    ```
 

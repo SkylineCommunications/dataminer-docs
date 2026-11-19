@@ -26,17 +26,17 @@ In a C# block of an automation script, you can connect to the CMDB of the Invent
     string dbName = "db-name"; // Name must be identical to name defined in db.xml
     SLSql localConnection = null;
     SLConnectionManager manager = new SLConnectionManager();
-
+    
     if (manager != null)
     {
         localConnection = manager.GetConnection(dbName);
     }
-
+    
     if (localConnection == null)
     {
         engine.GenerateInformation("Database connection failed");
         return;
     }
-
+    
     DataSet result = localConnection.Query("SELECT * FROM table");
     ```

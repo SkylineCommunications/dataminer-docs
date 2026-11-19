@@ -144,6 +144,6 @@ If you want to run a script as if launched by a specific user, so no extra scrip
           $"USER:{userCookie}",
       }),
   };
-
+  
   connection.SendSingleResponseMessage(executeScriptMessage);
   ```

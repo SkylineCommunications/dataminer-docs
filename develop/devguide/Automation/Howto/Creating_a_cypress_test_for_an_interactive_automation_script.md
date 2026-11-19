@@ -70,7 +70,7 @@ description: "Set up Cypress and create an end-to-end test that validates an int
    using System;
    using Skyline.DataMiner.Automation;
    using Skyline.DataMiner.Utils.InteractiveAutomationScript;
-
+   
    /// <summary>
    /// Represents a DataMiner automation script.
    /// </summary>
@@ -88,15 +88,15 @@ description: "Set up Cypress and create an end-to-end test that validates an int
            // However, due to the NuGet package, this string can no longer be detected.
            // This comment is here as a temporary workaround until it has been fixed.
            //// engine.ShowUI(
-
+   
            try
            {
                // Controls the event loop and switch between dialogs
                var controller = new InteractiveController(engine);
-
+   
                // Create an instance of the dialog you wish to show.
                var helloWorldDialog = new HelloWorldDialog(engine);
-
+   
                // Starts the event loop and shows the first dialog.
                controller.ShowDialog(helloWorldDialog);
            }
@@ -128,29 +128,29 @@ description: "Set up Cypress and create an end-to-end test that validates an int
            }
        }
    }
-
+   
    public class HelloWorldDialog : Dialog
    {
        public HelloWorldDialog(IEngine engine) : base(engine)
        {
            // Create a label widget
            var label = new Label("Hello, World!") { Style = TextStyle.Title };
-
+   
            // Define the debug tag to be used in the cypress test
            label.DebugTag = "label";
-
+   
            // Add it to the dialog grid at position 0,0
            AddWidget(label, 0, 0);
-
+   
            // Create a button widget
            var button = new Button("OK");
-
+   
            // Define the debug tag to be used in the cypress test
            button.DebugTag = "button";
-
+   
            // Add it to the dialog just below the label
            AddWidget(button, 1, 0);
-
+   
            // Add an action to be performed whenever the button is clicked
            button.Pressed += (sender, args) => engine.ExitSuccess("Done");
        }
@@ -188,33 +188,33 @@ description: "Set up Cypress and create an end-to-end test that validates an int
        const password = ''; // Replace with password of the test user
        const buttonLabel = ''; // Replace with the button label
        const appId = ''; // Replace with the app ID
-
+   
        // Before running the tests, visit the low-code app
        before(() => cy.visit(`http://${dmaAddress}/app/${appId}`));
-
+   
        it('should log in, execute the Interactive Automation Script, check label and click the button', () => {
            // Check if the login component exists
            cy.get('dma-login').should('exist');
-
+   
            // Enter login credentials
            cy.get('[data-cy="login.username"]').type(username);
            cy.get('[data-cy="login.password"]').type(password);
-
+   
            // Click the login button
            cy.contains('dma-button', 'Log on').click();
-
+   
            // Verify successful login
            cy.get('dma-login').should('not.exist');
-
+   
            // Start the IAS by clicking the associated button
            cy.contains('dma-button', buttonLabel).click();
-
+   
            // Validate that the pop-up message appears with the correct title
            cy.get('[data-cy="popup"]').contains('Dialog').should('be.visible');
-
+   
            // Get the component with the debug tag 'label' and check if the component has the correct text
            cy.get('[data-cy="label"]').should('have.text', 'Hello, World!');
-
+   
            // Get the component with the debug tag 'button' and click the OK button
            cy.get('[data-cy="button"]').should('have.text', 'OK').click();
        });

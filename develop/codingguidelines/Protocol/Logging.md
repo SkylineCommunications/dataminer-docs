@@ -13,9 +13,9 @@ uid: Logging
 - Logging messages that should only be generated when debugging a protocol can be surrounded by preprocessor directives as follows:
 
     ```csharp
-	#if debug
-	protocol.Log($"QA{protocol.QActionID}|Method Name|Message", LogType.Error, LogLevel.NoLogging);
-	#endif
+    #if debug
+    protocol.Log($"QA{protocol.QActionID}|Method Name|Message", LogType.Error, LogLevel.NoLogging);
+    #endif
     ```
 
 - Only implement logging when required, e.g., logging exceptions.

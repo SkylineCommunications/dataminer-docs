@@ -33,7 +33,7 @@ int result = (int)protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, el
   ```csharp
   string elementName = "CISCO Meraki Main";
   string elementSettings = "…";
-
+  
   int result = (int)protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, elementName, elementSettings);
   ```
 
@@ -176,9 +176,9 @@ int result = (int)protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, el
           "9",              // 51: Protocol type
           String.Empty,     // 52: Library credential
        };
-
+    
        string elementConfigurationSettings = String.Join("|", settings);
-
+    
        protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, elementName, elementConfigurationSettings);
     }
     ```
@@ -190,9 +190,9 @@ int result = (int)protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, el
     ```csharp
     object elementID = null;
     DMSClass dms = new DMSClass();
-
+    
     dms.Notify(72 /* DMS_GET_ELEMENT_ID */, 0, elementName, null, out elementID);
-
+    
     protocol.Log($"QA{protocol.QActionID}|ID of element with name {elementName}: {elementID}", LogType.Error, LogLevel.NoLogging);
     ```
 
@@ -201,7 +201,7 @@ int result = (int)protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, el
     ```csharp
     object elementID = null;
     string[] connectionSettings = new string[] { ipAddress, busAddress };
-
+    
     dms.Notify(76, 0, connectionSettings, null, out elementID);
     protocol.Log($"QA{protocol.QActionID}|Element that has the same IP and bus: {elementID}", LogType.Error, LogLevel.NoLogging);
     ```

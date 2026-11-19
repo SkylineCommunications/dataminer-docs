@@ -28,11 +28,11 @@ To implement ticket synchronization:
            var rows = protocol.GetKeys(1000).Select(oneKey => protocol.GetRow(1000, oneKey));
            TicketingDriverSyncMessage syncMsg = new TicketingDriverSyncMessage();
            syncMsg.ElementID = new Skyline.DataMiner.Net.ElementID(protocol.DataMinerID, protocol.ElementID);
-
+   
            // The timestamp of the last polling cycle to the external ticketing system.
            syncMsg.TimeStamp = DateTime.UtcNow;
            syncMsg.ManagerObjects = new List<Tuple<DateTime, Ticket>>();
-
+   
            foreach (var row in rows)
            {
                object[] cells = row as object[];
@@ -42,7 +42,7 @@ To implement ticket synchronization:
                Ticket t = Ticket.FromJson(jsonTicket);
                syncMsg.ManagerObjects.Add(Tuple.Create(timeStamp, t));
            }
-
+   
            // Send the sync request
            var responses = protocol.SLNet.SendMessage(syncMsg);
            foreach (var response in responses)
@@ -52,7 +52,7 @@ To implement ticket synchronization:
                {
                    continue;
                }
-
+   
                // Handle the eventmessage
            }
        }

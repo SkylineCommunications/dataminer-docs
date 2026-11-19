@@ -42,7 +42,7 @@ The structure of an entry in the result array is as follows:
 
   ```csharp
   int parameterId = 1000;
-
+  
   object[] result = (object[])protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, parameterId);
   ```
 

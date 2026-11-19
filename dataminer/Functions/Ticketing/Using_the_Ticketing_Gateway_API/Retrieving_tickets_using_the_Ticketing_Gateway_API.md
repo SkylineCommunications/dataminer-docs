@@ -28,7 +28,7 @@ Tickets can be retrieved in a number of ways. See the following examples.
         {
             return null;
         }
-
+    
         return outputTickets.First();
     }
     ```
@@ -39,14 +39,14 @@ Tickets can be retrieved in a number of ways. See the following examples.
     public Ticket RetrieveTicketByState()
     {
         var outputTickets = Helper.GetTickets(filter: ReflectiveExposer.DictField<Ticket, object>("CustomTicketFields", "State").Equal(0));
-
+    
         // Alternatively:
         var alternative = Helper.GetTickets(filter: ReflectiveExposer.DictField<Ticket, object>("CustomTicketFields", "State").Equal(new GenericEnumEntry<int>() { Name = "Created", Value = 0 }));
         if (outputTickets.Count() != 1)
         {
             return null;
         }
-
+    
         return outputTickets.First();
     }
     ```
@@ -61,7 +61,7 @@ Tickets can be retrieved in a number of ways. See the following examples.
         {
             return null;
         }
-
+    
         return outputTickets.First();
     }
     ```
@@ -82,23 +82,23 @@ Tickets can be retrieved in a number of ways. See the following examples.
     private static long PagingCookie = -1;
     private static int PageSize = 2;
     private static int totalTickets = 10;
-
+    
     private IEnumerable<Ticket> RetrieveNextPage()
     {
         List<Ticket> result;
-
+    
         // The maximum number of tickets retrieved by this method is pageSize * amount of DMAs in the DMS
         if (PagingCookie == -1)
         {
             result = Helper.NewPagingRequest(PageSize, out PagingCookie, out totalTickets, filter: TicketingExposers.DataMinerID.Equal(123)).ToList();
         }
-
+    
         result = Helper.NextPagingRequest(PagingCookie).ToList();
         if (result.Count < PageSize)
         {
             PagingCookie = -1;
         }
-
+    
         return result;
     }
     ```

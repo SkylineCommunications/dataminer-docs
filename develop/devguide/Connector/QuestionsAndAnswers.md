@@ -104,7 +104,7 @@ description: "Review answers to connector development questions about SNMP table
 
     - On the Protocol.Type tag, specify `exportProtocol:[protocol name]:[tableID]"` in the options tag. Multiple exportProtocols can be separated with semicolons. The "noElementPrefix" option can be used to leave out the parent element name in the virtual element name.
 
-       ```xml
+      ```xml
       <Type options="exportProtocol:Workflow Server:100">snmp</Type>
       <Type options="exportProtocol:Workflow Server:100:noElementPrefix">snmp</Type>
       <Type options="exportProtocol:Workflow Server:100;exportProtocol:Workflow Server2:200">snmp</Type>
@@ -254,7 +254,7 @@ description: "Review answers to connector development questions about SNMP table
     {
         string key = Convert.ToString(protocol.GetParameterIndex(50, j, 1));
         int rowIndex = protocol.GetKeyPosition(50, key);
-
+    
         if (rowIndex != 0)
         {
             int parameterID = Convert.ToInt32(protocol.GetParameterIndex(50, j, 2));

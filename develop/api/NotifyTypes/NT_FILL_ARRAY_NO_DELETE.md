@@ -43,7 +43,7 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/, tableID, tableContent);
       new object[] { protocol.Clear, protocol.Clear, protocol.Clear },
       new object[] { 30, 30, 30 },
   };
-
+  
   protocol.NotifyProtocol(194, tableInfo, tableData);
   ```
 
@@ -58,7 +58,7 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/, tableID, tableContent);
       new object[] { 10, 10, 10 },
       new object[] { 30, 30, 30 },
   };
-
+  
   protocol.NotifyProtocol(194, tableInfo, tableData);
   ```
 
@@ -71,7 +71,7 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/, tableID, tableContent);
   object[] column1 = new object[] { "Row 1", "Row 2" };
   object[] column2 = new object[] { "A", new object[] { "B", DateTime.Now - TimeSpan.FromDays(11) } };
   object[] tableContent = new object[] { column1, column2 };
-
+  
   object result = protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/, tableID, tableContent);
   ```
 

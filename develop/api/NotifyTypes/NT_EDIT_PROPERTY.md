@@ -62,7 +62,7 @@ protocol.NotifyDataMiner(62 /*NT_EDIT_PROPERTY*/, viewIDs, propertyValues);
     {
         string sourceType = string.Empty;
         string sPropertyType = string.Empty;
-
+    
         switch (idType)
         {
             case IDType.Element:
@@ -78,7 +78,7 @@ protocol.NotifyDataMiner(62 /*NT_EDIT_PROPERTY*/, viewIDs, propertyValues);
                 sourceType = "alarm:";
                 break;
         }
-
+    
         switch (propertyType)
         {
             case PropertyType.ReadOnly:
@@ -91,12 +91,12 @@ protocol.NotifyDataMiner(62 /*NT_EDIT_PROPERTY*/, viewIDs, propertyValues);
                 sPropertyType = "read-write";
                 break;
         }
-
+    
         if (!string.IsNullOrEmpty(sourceType) && !string.IsNullOrEmpty(sPropertyType))
         {
             string propertyLocation = $"{sourceType}{id}";
             string[] propertyDetails = new string[] { propertyName, sPropertyType, propertyValue };
-
+    
             protocol.NotifyDataMinerQueued(62 /*NT_EDIT_PROPERTY*/, propertyLocation, propertyDetails);
         }
         else
@@ -111,7 +111,7 @@ protocol.NotifyDataMiner(62 /*NT_EDIT_PROPERTY*/, viewIDs, propertyValues);
             }
         }
     }
-
+    
     public enum IDType
     {
         Element = 0,
@@ -119,7 +119,7 @@ protocol.NotifyDataMiner(62 /*NT_EDIT_PROPERTY*/, viewIDs, propertyValues);
         Service,
         Alarm,
     }
-
+    
     public enum PropertyType
     {
         ReadOnly = 0,

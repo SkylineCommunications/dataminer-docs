@@ -219,7 +219,7 @@ The test sequence can be as simple as applying a profile instance to a single re
            .SetProfileInstance("HD Decoding")
            .SetProfileInstance("ASI Profile", InterfaceType.In, "ASI")
            .ApplyProfile(string.Empty);
-
+   
        // Apply the full 'START' state profile instance to the resource
        // With profile action 'START'
        this.SelectResource("MyResource")

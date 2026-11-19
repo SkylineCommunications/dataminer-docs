@@ -36,7 +36,7 @@ int delta = Convert.ToInt32(protocol.NotifyProtocol(269 /*NT_GET_BITRATE_DELTA*/
   ```csharp
   int parameterId = 100;
   string rowKey = "1";
-
+  
   object delta = protocol.NotifyProtocol(269 /*NT_GET_BITRATE_DELTA*/, parameterId, rowKey);
   ```
 

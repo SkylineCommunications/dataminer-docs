@@ -34,7 +34,7 @@ The following trend types can be defined in addition to the default average:
 - Min: Minimum value in the time span
 - Average: Average value in the time span (default when no trending tag is present)
 
- ```xml
+```xml
 <Display>
    <RTDisplay>true</RTDisplay>
    <Trending>

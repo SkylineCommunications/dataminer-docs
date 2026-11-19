@@ -94,12 +94,12 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   int columnID = 1002;
   bool allowClearAndLeave = true;
   DateTime timestamp = DateTime.Now;
-
+  
   object[] columnInfo = new object[] { tableID, columnID, new object[] { allowClearAndLeave, timestamp } };
   object[] primaryKeys = new object[] { "Row 1", "Row 2" };
   object[] columnValues = new object[] { "A", protocol.Clear };
   object[] values = new object[] { primaryKeys, columnValues };
-
+  
   protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   ```
 
@@ -110,12 +110,12 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   ```csharp
   int tableID = 1000;
   int columnID = 1002;
-
+  
   object[] columnInfo = new object[] { tableID, columnID };
   object[] primaryKeys = new object[] { "Row 1", "Row 2" };
   object[] columnValues = new object[] { "A", new object[] { "B", DateTime.Now - TimeSpan.FromDays(5) } };
   object[] values = new object[] { primaryKeys, columnValues };
-
+  
   protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   ```
 

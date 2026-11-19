@@ -27,20 +27,20 @@ As a first step, create a short automation script that will swarm a fixed elemen
    using Skyline.DataMiner.Automation;
    using Skyline.DataMiner.Net;
    using Skyline.DataMiner.Net.Swarming.Helper;
-
+   
    public class Script
    {
        public void Run(Engine engine)
        {
            ElementID element = ElementID.FromString("[element-key]");
            int targetAgentId = [target-agent-id];
-
+   
            var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
                .SwarmElement(element)
                .ToAgent(targetAgentId);
-
+   
            var swarmingResultForElement = swarmingResults.First();
-
+   
            if (!swarmingResultForElement.Success)
            {
                engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");

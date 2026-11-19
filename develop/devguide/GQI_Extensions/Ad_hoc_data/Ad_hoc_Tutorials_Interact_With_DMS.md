@@ -80,7 +80,7 @@ To retrieve the Agent information, the data source will have to communicate with
    public class AgentVersions : IGQIDataSource
    {
        private IDms _dms;
-
+   
        public OnInitOutputArgs OnInit(OnInitInputArgs args)
        {
            _dms = args.DMS.GetConnection().GetDms();
@@ -114,7 +114,7 @@ To retrieve the Agent information, the data source will have to communicate with
    public class ClientConnections : IGQIDataSource
    {
        private GQIDMS _dms;
-
+   
        public OnInitOutputArgs OnInit(OnInitInputArgs args)
        {
            _dms = args.DMS;
@@ -133,7 +133,7 @@ To retrieve the Agent information, the data source will have to communicate with
        // Retrieve the agents in the system.
        var agentsInfoRequest = new GetInfoMessage(InfoType.DataMinerInfo);
        var agentsInfo = _dms.SendMessages(agentsInfoRequest).OfType<GetDataMinerInfoResponseMessage>();
-
+   
        // Retrieve the build information for each agent.
        var agentsBuildInfoRequests = agentsInfo.Select(agentInfo => new GetAgentBuildInfo(agentInfo.ID));
        var agentsBuildInfo = _dms.SendMessages(agentsBuildInfoRequests.ToArray()).OfType<BuildInfoResponse>();

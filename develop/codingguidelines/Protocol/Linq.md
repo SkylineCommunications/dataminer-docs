@@ -14,7 +14,7 @@ uid: Linq
     XDocument xDocument = XDocument.Load(@"C:\...\Response.xml");
     var loopData = xDocument.Descendants().Where(p =>
         (p.Attribute("id")).Contains("i8"));
-
+    
     foreach (var v in loopData)
     {
         // Do something.
@@ -35,7 +35,7 @@ uid: Linq
     ```csharp
     IEnumerable<string> allKeysInXML = xDocument.Descendants("MonitorGroup").Select(p =>
         p.Attribute("DISPLAYNAME")).Distinct();
-
+    
     var keysToRemove = keysInOriginal.Except(allKeysInXML);
     var keysToAdd = allKeysInXML.Except(keysInOriginal);
     ```
