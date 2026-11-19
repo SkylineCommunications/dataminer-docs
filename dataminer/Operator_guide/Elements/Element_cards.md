@@ -1,5 +1,6 @@
 ---
 uid: Element_cards
+description: "Learn how to use element cards in DataMiner Cube to view and interact with elements in your DataMiner System."
 ---
 
 # Element cards
@@ -40,10 +41,7 @@ Element cards can look quite different depending on the element protocol. Howeve
 
   - **REPORTS**: A graphic representation of the alarm distribution, alarm events, alarm states, and a timeline. You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date. For more information, see [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card).
 
-  - **DASHBOARDS**: Links to the legacy DMS Dashboards module.
-
-    > [!NOTE]
-    > The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
+  - **DASHBOARDS**: Links to the [legacy DMS Dashboards module](xref:dashboards).
 
   - **DOCUMENTS**: Displays documents that have been made available either on the DMS in general or for this particular element protocol. See [Documents](xref:About_the_Documents_module).
 

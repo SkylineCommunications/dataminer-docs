@@ -76,7 +76,6 @@ The following features currently have the "End of Support" status. They will no 
 |------|---------|---------------|
 | Asset Manager | End of Support as of DataMiner 10.6.x. Module is being retired. | End of Life to be confirmed. |
 | Logger tables with autoincrement option | See [autoincrement](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-type#autoincrement). | End of Life as of DataMiner 10.8.x (Q4 2027). |
-| Legacy Reporter & Dashboards | Module is being retired and replaced with the new DataMiner Dashboards app. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | [postPonePortInitialisation](xref:Protocol.Type-communicationOptions#postponeportinitialisation) option | This feature does not work correctly and should no longer be used. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | Query executor | Tool is being retired. | End of Life as of DataMiner 10.7.x (Q4 2026). |
 | [SLScripting as a service](xref:Configuration_of_DataMiner_processes#running-slscripting-as-a-service) | This configuration is obsolete and should not be used. | End of Life as of DataMiner 10.7.x (Q4 2026). |
@@ -93,6 +92,7 @@ The following features currently have the "End of Life" status. They are no long
 | Child bookings | End of Life as of DataMiner 10.5.x. Child bookings have been retired, as the same functionality is supported with contributing bookings |
 | Jobs app | End of Life as of DataMiner 10.5.x. |
 | Legacy Correlation Engine | End of Life as of DataMiner 10.5.x. This only applies to the legacy System Display Correlation engine. |
+| Legacy Reporter & Dashboards | End of Life as of DataMiner 10.7.x.<!-- RN 47135+47136 --> See also: [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards). |
 | Legacy reservations | The legacy type of reservation used prior to DataMiner 9.5.3/9.6.0 (RN 15180) is obsolete and should no longer be used. |
 | OPC communication | OPC communication should no longer be used in DataMiner connectors. Instead, QActions should be used, for example like in the [Generic OPC Data Access](https://catalog.dataminer.services/details/f2642ea9-9eaa-42f3-880e-816470b06a61) connector. |
 | Recurring bookings | End of Life as of DataMiner 10.5.x. Recurring bookings have been retired. Instead, we suggest duplicating the previous occurrence of the booking. |
@@ -196,7 +196,7 @@ The overview below shows which lifecycle changes apply for each major DataMiner 
 - **End of Support – Elasticsearch 6.8**: As Elastic no longer supports Elasticsearch 6.8 (or lower), support for this will also end in DataMiner. We highly recommend switching to [STaaS](xref:STaaS). Though this is not recommended, you can also use [OpenSearch](xref:OpenSearch_database) instead.
 - **End of Engineering – Failover**: This feature will be replaced by [Swarming](xref:Swarming).
 - **End of Support – GQI in SLHelper**: The [GQI DxM](xref:GQI_DxM) should be used instead.
-- **End of Life – Legacy Reporter & Dashboards**: No longer available from this version onwards. Use the new DataMiner Dashboards app instead.
+- **End of Life – Legacy Reporter & Dashboards**: No longer available from this version onwards. Use the [new DataMiner Dashboards app](xref:newR_D) instead.
 - **End of Support – [Logger tables of type DirectConnection with a primary key](xref:AdvancedLoggerTablesDefiningDirectConnectionTable)**
 - **End of Engineering – Oracle offload database**: As an alternative, use file offloads together with a bespoke script or tool that offloads these to an Oracle database.
 - **End of Support – Pivot table and Group components**: These components are being retired in the Dashboards app and Low-Code Apps.

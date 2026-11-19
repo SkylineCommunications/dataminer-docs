@@ -1,5 +1,6 @@
 ---
 uid: View_Cards
+description: "Explore view cards in the Monitoring app, including visual pages, child items, alarms, histograms, notes, and direct navigation URLs."
 ---
 
 # View cards
@@ -14,7 +15,7 @@ The following pages are available:
 
 - *Alarms*: Displays the active alarms for the view.
 
-- *Reports*: Displays the DataMiner reports related to the view.
+- *Reports*: Displays reports related to the view in the [legacy Reporter module](xref:reporter).
 
 - *Histogram*: Allows you to display a histogram of a protocol parameter for all elements of this protocol in the view. The parameter can be selected in the sidebar on the right. Once a valid parameter has been selected, you can click *Show histogram* to show or refresh the histogram. The side panel also has a settings tab where you can apply the following options:
 
