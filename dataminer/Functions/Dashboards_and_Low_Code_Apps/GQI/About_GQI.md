@@ -41,14 +41,14 @@ When queries are executed, the rights and permissions of the current DataMiner u
 
 ## Architecture
 
-The GQI engine can run in two different ways.
+The GQI engine can run in two different ways:
 
-### GQI DxM
+- **GQI DxM**
 
-The [GQI DxM](xref:GQI_DxM) hosts the GQI engine in a separate process and can be updated independently from the DataMiner core software. It is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards<!-- RN 41811 -->, and it is used by default for DataMiner web apps from DataMiner 10.5.0 [CU10]/10.6.0/10.6.1 onwards.<!-- RN 44058 -->
+  The [GQI DxM](xref:GQI_DxM) hosts the GQI engine in a separate process and can be updated independently from the DataMiner core software. It is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards<!-- RN 41811 -->, and it is used by default for DataMiner web apps from DataMiner 10.5.0 [CU10]/10.6.0/10.6.1 onwards.<!-- RN 44058 -->
 
-### SLHelper (legacy)
+- **SLHelper (legacy)**
 
-GQI can also run within the SLHelper process, which starts on demand and remains active for 30 minutes before shutting down.
+  GQI can also run within the SLHelper process, which starts on demand and remains active for 30 minutes before shutting down.
 
-From DataMiner 10.7.0/10.7.1 onwards, this implementation is disabled by default and no longer supported.<!-- RN 46927 --> It can only be used if you enable the [EndOfSupport.SLHelperGQI soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportslhelpergqi).
+  From DataMiner 10.7.0/10.7.1 onwards, this implementation is disabled by default and no longer supported.<!-- RN 46927 --> It can only be used if you enable the [EndOfSupport.SLHelperGQI soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportslhelpergqi).

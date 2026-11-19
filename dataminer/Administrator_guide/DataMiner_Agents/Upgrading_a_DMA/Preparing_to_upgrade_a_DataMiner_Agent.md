@@ -137,6 +137,8 @@ When you upload a DataMiner upgrade, several prerequisite checks are automatical
 
 The following prerequisite checks are currently available:
 
+- [End of Support for SLHelper GQI](xref:EndOfSupport_SLHelperGQI): Verifies whether the DataMiner Agent still uses GQI via SLHelper, which is disabled by default from DataMiner 10.7.0/10.7.1 onwards. This prerequisite is available by default from DataMiner 10.7.0/10.7.1 onwards<!-- RN 46957 -->. It runs automatically when you upgrade from an earlier version.
+
 - [Verify BrokerGateway Migration](xref:VerifyBrokerGatewayMigration): Verifies whether the DataMiner System has migrated from the SLNet-managed NATS solution to the BrokerGateway-managed NATS solution. From DataMiner 10.6.0/10.6.1 onwards<!--RN 43861 -->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify Cloud DxM Version](xref:Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
@@ -166,8 +168,6 @@ The following prerequisite checks are currently available:
 - [Service Automatic Properties](xref:Service_Automatic_Properties): Verifies whether the installed SRM framework version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Validate Connectors](xref:Validate_Connectors): Scans the DataMiner System for any connectors that are known to be incompatible with the DataMiner version to which the DataMiner Agent is being upgraded. From DataMiner 10.3.4/10.4.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
-
-- [End Of Support for SLHelper GQI](xref:EndOfSupport_SLHelperGQI): Verifies whether the DataMiner Agent still uses GQI via SLHelper, which is disabled by default from DataMiner 10.7.0/10.7.1 onwards. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46957 -->, this prerequisite is available by default and runs automatically when you upgrade from an earlier version.
 
 > [!NOTE]
 > Though this is not recommended, you can bypass these checks by manually removing the *Prerequisites* folder from *Update.zip* in the upgrade package. However, you should only do so if there is a clear reason to assume that the prerequisites do not work because of a bug in the software and they are consequently failing without a proper reason. If you bypass these checks in any other circumstances, and this results in a DataMiner issue, this is **not covered by support**.

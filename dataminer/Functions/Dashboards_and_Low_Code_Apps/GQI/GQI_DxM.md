@@ -50,13 +50,13 @@ Whether DataMiner web apps use the GQI DxM depends on the DataMiner version and 
 
   The WebAPI process restarts automatically when you save this file. The setting applies to web apps accessed through that server; other servers use their own configuration.
 
-- **From DataMiner 10.7.0/10.7.1 onwards**<!-- RN 46927 -->: GQI via SLHelper has reached [End of Support](xref:Software_support_life_cycles) and is disabled by default. If `gqi:useDxM` is set to `false`, the [GQI in SLHelper upgrade prerequisite](xref:EndOfSupport_SLHelperGQI) blocks the upgrade to this version.<!-- RN 46957 --> Remove the setting so that the GQI DxM is used by default.
+- **From DataMiner 10.7.0/10.7.1 onwards**<!-- RN 46927 -->: GQI via SLHelper has reached [End of Support](xref:Software_support_life_cycles) and is disabled by default. If `gqi:useDxM` is set to `false`, the [End of Support for SLHelper GQI](xref:EndOfSupport_SLHelperGQI) prerequisite blocks the upgrade to this version.<!-- RN 46957 -->
 
 ## Checking the GQI DxM version
 
-From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!-- RN 42003 -->, you can check which version of the GQI DxM a web app uses by opening the user menu in the upper-right corner of the app and selecting *About*. The version is displayed next to *GQI*. If `No DxM` is displayed instead, the web app uses GQI via SLHelper.
+From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!-- RN 42003 -->, you can check which version of the GQI DxM a web app uses by opening the user menu in the upper-right corner of the app and selecting *About*. The version is displayed next to *GQI*. If *No DxM* is displayed, the web app uses GQI via SLHelper.
 
-If `No DxM` is displayed even though the GQI DxM is enabled, see [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair).
+If *No DxM* is displayed even though the GQI DxM is enabled, see [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair).
 
 ## Configuration
 
