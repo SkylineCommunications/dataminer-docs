@@ -9,35 +9,35 @@ Performs an SNMP SET request without requiring an SNMP connection to be defined 
 ```csharp
 object[] versionSpecificSettings = new object[]
 {
-    3, // SNMP version.
+    3, // 0: SNMP version.
     new object[]
     {
-        "User1",     // Username (String)
-        3,           // Security Level (Int32)
-        3,           // Authentication Algorithm (Int32)
-        "AuthAuth1", // Authentication Password (String)
-        2,           // Encryption Algorithm (Int32)
-        "PrivPriv1", // Encryption Passphrase (String)
+        "User1",     // 0: Username (String)
+        3,           // 1: Security Level (Int32)
+        3,           // 2: Authentication Algorithm (Int32)
+        "AuthAuth1", // 3: Authentication Password (String)
+        2,           // 4: Encryption Algorithm (Int32)
+        "PrivPriv1", // 5: Encryption Passphrase (String)
     },
 };
 
 object[] settings = new object[] // Object array, minimum length = 2
 {
-    versionSpecificSettings, // Version specific settings.
-    "127.0.0.2",             // Destination address (String, port is optional).
+    versionSpecificSettings, // 0: Version specific settings.
+    "127.0.0.2",             // 1: Destination address (String, port is optional).
     // Settings: Values with a default fallback when not provided.
-    1614,                    // Destination Port (String or Int32, will not overwrite the port specified with the IP address)
-    1490,                    // Timeout (Int32)
-    1,                       // Retries (Int32)
-    false,                   // Multiple Set (Boolean)
-    string.Empty,            // Instance (String)
+    1614,                    // 2: Destination Port (String or Int32, will not overwrite the port specified with the IP address)
+    1490,                    // 3: Timeout (Int32)
+    1,                       // 4: Retries (Int32)
+    false,                   // 5: Multiple Set (Boolean)
+    string.Empty,            // 6: Instance (String)
 };
 
 object[] oidToSet = new object[]
 {
-    "1.3.6.1.2.1.1.8.1.6.1", // OID.
-    Convert.ToDouble(20),    // Value to set.
-    1,                       // SNMP type indication (1: integer).
+    "1.3.6.1.2.1.1.8.1.6.1", // 0: OID.
+    Convert.ToDouble(20),    // 1: Value to set.
+    1,                       // 2: SNMP type indication (1: integer).
 };
 
 object[] oidInfo = new object[] { oidToSet };

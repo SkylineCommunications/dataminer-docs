@@ -122,59 +122,59 @@ int result = (int)protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, el
     {
        string[] settings = new string[]
        {
-          elementName,      // Element name
-          "Active",         // State
-          String.Empty,     // data
-          String.Empty,     // unique
-          protocolName,     // protocol name
-          protocolVersion,  // protocol version
-          String.Empty,     // template name
-          "IP",             // port type
-          "0",              // port number
-          String.Empty,     // port Baud rate
-          "HMAC-SHA",       // parity
-          "User0",          // data bits
-          "authPriv",       // stop bits
-          "DES",            // flow control
-          busAddress,       // port bus
-          "3",              // retries
-          String.Empty,     // slowPollBase
-          "1500",           // timeout
-          "30000",          // Slow poll value.
-          pollingIP,        // Polling IP
-          pollingPort,      // Polling IP port
-          "30000",          // Ping interval.
-          "127.0.0.2",      // SNMP Agent IP address
-          String.Empty,     // SNMP Agent subnet mask
-          "0",              // Telnet
-          "0",              // SNMP Agent
-          String.Empty,     // Description
-          "-1",             // Element timeout
-          "AuthAuth0",      // Get community
-          "PrivPriv0",      // Set community
-          String.Empty,     // Type
-          "False",          // Hidden
-          String.Empty,     // Trend template
-          "False",          // Service
-          String.Empty,     // Local IP port
-          String.Empty,     // read only
-          String.Empty,     // Replication: active
-          String.Empty,     // Replication: options
-          String.Empty,     // Replication: remote element
-          String.Empty,     // Replication: DataMiner IP
-          String.Empty,     // Replication: user name
-          String.Empty,     // Replication: password
-          String.Empty,     // Replication: domain
-          String.Empty,     // Keep online: true/false (failover)
-          String.Empty,     // Force agent: empty/IP address (failover)
-          String.Empty,     // Replication: DMP manager populated
-          String.Empty,     // DMA SNMP Agent get community string
-          String.Empty,     // DMA SNMP Agent set community string
-          String.Empty,     // DVE creation flag
-          String.Empty,     // Replication: max messages to buffer
-          String.Empty,     // Replication: max minutes to buffer
-          "9",              // Protocol type
-          String.Empty,     // Library credential
+          elementName,      // 0: Element name
+          "Active",         // 1: State
+          String.Empty,     // 2: data
+          String.Empty,     // 3: unique
+          protocolName,     // 4: protocol name
+          protocolVersion,  // 5: protocol version
+          String.Empty,     // 6: template name
+          "IP",             // 7: port type
+          "0",              // 8: port number
+          String.Empty,     // 9: port Baud rate
+          "HMAC-SHA",       // 10: parity
+          "User0",          // 11: data bits
+          "authPriv",       // 12: stop bits
+          "DES",            // 13: flow control
+          busAddress,       // 14: port bus
+          "3",              // 15: retries
+          String.Empty,     // 16: slowPollBase
+          "1500",           // 17: timeout
+          "30000",          // 18: Slow poll value.
+          pollingIP,        // 19: Polling IP
+          pollingPort,      // 20: Polling IP port
+          "30000",          // 21: Ping interval.
+          "127.0.0.2",      // 22: SNMP Agent IP address
+          String.Empty,     // 23: SNMP Agent subnet mask
+          "0",              // 24: Telnet
+          "0",              // 25: SNMP Agent
+          String.Empty,     // 26: Description
+          "-1",             // 27: Element timeout
+          "AuthAuth0",      // 28: Get community
+          "PrivPriv0",      // 29: Set community
+          String.Empty,     // 30: Type
+          "False",          // 31: Hidden
+          String.Empty,     // 32: Trend template
+          "False",          // 33: Service
+          String.Empty,     // 34: Local IP port
+          String.Empty,     // 35: read only
+          String.Empty,     // 36: Replication: active
+          String.Empty,     // 37: Replication: options
+          String.Empty,     // 38: Replication: remote element
+          String.Empty,     // 39: Replication: DataMiner IP
+          String.Empty,     // 40: Replication: user name
+          String.Empty,     // 41: Replication: password
+          String.Empty,     // 42: Replication: domain
+          String.Empty,     // 43: Keep online: true/false (failover)
+          String.Empty,     // 44: Force agent: empty/IP address (failover)
+          String.Empty,     // 45: Replication: DMP manager populated
+          String.Empty,     // 46: DMA SNMP Agent get community string
+          String.Empty,     // 47: DMA SNMP Agent set community string
+          String.Empty,     // 48: DVE creation flag
+          String.Empty,     // 49: Replication: max messages to buffer
+          String.Empty,     // 50: Replication: max minutes to buffer
+          "9",              // 51: Protocol type
+          String.Empty,     // 52: Library credential
        };
 
        string elementConfigurationSettings = String.Join("|", settings);

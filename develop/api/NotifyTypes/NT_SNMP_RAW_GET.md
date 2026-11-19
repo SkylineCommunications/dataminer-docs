@@ -9,21 +9,21 @@ Performs an SNMP GET request without requiring an SNMP connection to be defined 
 ```csharp
 var versionSpecificSettings = new object[]
 {
-    2,                      // SNMPv2
-    "myGetCommunityString", // Get community string
+    2,                      // 0: SNMPv2
+    "myGetCommunityString", // 1: Get community string
 };
 
 var settings = new object[] // Minimum length: 2
 {
-    versionSpecificSettings, // Version specific settings
-    "127.0.0.1",             // Destination IP address
-    1611,                    // Destination port (String or Int32, will not overwrite the port specified with the IP address)
-    1490,                    // Timeout (ms) (Int32)
-    2,                       // Retries (Int32)
-    false,                   // Multiple Get (Boolean)
-    string.Empty,            // Instance (String)
-    2,                       // Dynamic poll type: SingleGets (Int32)
-    false,                   // Split errors from values (Boolean)
+    versionSpecificSettings, // 0: Version specific settings
+    "127.0.0.1",             // 1: Destination IP address
+    1611,                    // 2: Destination port (String or Int32, will not overwrite the port specified with the IP address)
+    1490,                    // 3: Timeout (ms) (Int32)
+    2,                       // 4: Retries (Int32)
+    false,                   // 5: Multiple Get (Boolean)
+    string.Empty,            // 6: Instance (String)
+    2,                       // 7: Dynamic poll type: SingleGets (Int32)
+    false,                   // 8: Split errors from values (Boolean)
 };
 
 string[] oidInfo = new string[] { "1.3.6.1.2.1.1.8.1.6.1" }; // String array of OIDs.
