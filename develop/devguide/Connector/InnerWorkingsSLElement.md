@@ -109,11 +109,6 @@ The column processing order can be overruled in the protocol with the [processin
       <ColumnOption idx="4" pid="416" type="retrieved" options=";save;foreignKey=1200"/>
       <ColumnOption idx="5" pid="417" type="retrieved" options=";save;foreignKey=1300"/>
    </ArrayOptions>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>double</Type>
-   </Interprete>
    <Measurement>
       <Type options="tab-columns:401|0-403|1-404|2-406|3-416|4-417|5,lines:30,width:100-100-100-100-100-100,sort:STRING">table</Type>
    </Measurement>

@@ -146,11 +146,6 @@ Example:
 >         <ColumnOption idx="7" pid="63" type="retrieved" options="" />
 >         <ColumnOption idx="8" pid="64" type="state" options=";delete" />
 >      </ArrayOptions>
->      <Interprete>
->         <RawType>other</RawType>
->         <Type>double</Type>
->         <LengthType>next param</LengthType>
->      </Interprete>
 >      ...
 >   </Param>
 >   ```
