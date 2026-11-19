@@ -22,7 +22,7 @@ Add `<Params loadSequence="15000">` at the beginning of protocol so the properti
         <Description>Custom Generic Properties</Description>
         <Type>array</Type>
         <ArrayOptions index="0" options=";propertyTable=15002,15003,15004,15005">
-            <ColumnOption idx="0" pid="15001" type="autoincrement" value=""/><!--Index-->
+            <ColumnOption idx="0" pid="15001" type="autoincrement" /><!--Index-->
             <ColumnOption idx="1" pid="15002" type="retrieved" options=";save;foreignKey=11000"/><!-- Equip id-->
             <ColumnOption idx="2" pid="15003" type="retrieved" options=";save"/><!-- Property Name-->
             <ColumnOption idx="3" pid="15004" type="retrieved" options=";save"/><!--Property Type-->
