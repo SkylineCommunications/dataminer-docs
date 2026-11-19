@@ -179,6 +179,14 @@ When an app manages its own theme, the user settings now display the message "Th
 
 The message is not shown in apps that support this setting, such as Assistant, the DataMiner landing page, and uploaded DataMiner apps.
 
+#### GQI DxM: Legacy Ticketing data source removed [ID 47037]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+Following the end of life of Ticketing in DataMiner 10.6.0, the legacy Ticketing data source has been removed from the GQI DxM.
+
+Queries that still use this data source can no longer be executed. In low-code apps, for example, they will fail with the error `GQI error: An unknown error occurred in GQI: Failed parsing request: Invalid ID: 'Ticketing'.`.
+
 #### DataMiner upgrade: DataMiner Assistant DxM installed on every Agent [ID 47047]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
@@ -305,6 +313,20 @@ Filtering the *Get alarms* data source on *Is focus alarm* equal to true retriev
 
 The remaining support for the legacy Annotations module has been removed from the DataMiner web apps. This support had been retained for backward compatibility with DataMiner 10.5.0 servers, but the module has reached end of life.
 
+#### GQI DxM: More retries when loading locked extension libraries [ID 47120]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+The GQI DxM will now retry reading a locked extension DLL up to 7 times instead of 5. This increases the total time allowed for the assembly file to reach a stable state from 3.1 seconds to 12.7 seconds, allowing libraries that take longer to compile to be loaded correctly.
+
+#### GQI DxM: Annotation columns hidden from the query builder [ID 47144]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+As Annotations has been deprecated, the *HasAnnotations* columns in the *Get elements* and *Get services* data sources are now marked as legacy and hidden from the query builder. You can no longer select these columns when building queries.
+
+Existing queries that already select these columns will continue to work after upgrading. The selected columns will remain available in the results and for subsequent operations, such as column manipulations and filters.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
@@ -356,3 +378,11 @@ When a GQI table in a dashboard was opened before its WebSocket connection was r
 When live updates were enabled for a GQI table in a dashboard, duplicated data in row updates could cause the JSON size limit to be exceeded. As a result, the table could stop loading additional rows.
 
 Unnecessary duplication in table updates has now been removed, reducing the amount of data sent to the dashboard.
+
+#### GQI DxM: Live updates could overwrite unchanged cells in other rows [ID 47068]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When a real-time update affected multiple rows, values from an earlier row could be copied into subsequent rows, overwriting cells that had not changed. This could cause incorrect values in live query results or in rows retrieved on later pages.
+
+Real-time updates will now preserve unchanged cells in each row.

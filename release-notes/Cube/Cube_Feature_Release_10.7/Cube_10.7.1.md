@@ -135,3 +135,11 @@ Cube will now display a warning informing you that the import failed and that yo
 <!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
 
 When you panned a trend graph to an older time range, the corresponding trend data would not be loaded until you zoomed the graph.
+
+#### Trending: Incorrect diagonal lines in minimum and maximum curves [ID 47020]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you viewed a longer period, such as the last month, in a trend graph with *Show most detailed data* enabled, the minimum and maximum curves could contain incorrect diagonal lines.
+
+These curves will now be drawn correctly.

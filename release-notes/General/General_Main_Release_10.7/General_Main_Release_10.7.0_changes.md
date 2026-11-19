@@ -16,7 +16,9 @@ The following changes may have an impact on your system, so please make sure to 
 - [Service template definitions will no longer be stored alongside services [ID 45370]](#service-template-definitions-will-no-longer-be-stored-alongside-services-id-45370)
 - [Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]](#scheduler-swarmed-tasks-could-execute-actions-configured-for-another-task-id-46728)
 - [GQI: GQI via SLHelper disabled by default [ID 46927]](#gqi-gqi-via-slhelper-disabled-by-default-id-46927)
+- [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
+- [DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]](#dataminer-upgrade-prerequisite-check-for-the-end-of-slhelper-gqi-support-id-46957)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
 - [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
@@ -50,6 +52,25 @@ Up to now, text containing characters that were encoded in extended ASCII (i.e.,
 Up to now, service templates were stored alongside services in the `C:\Skyline DataMiner\Services` and `C:\Skyline DataMiner\RemoteServices` folders. Each service template also had exactly one DataMiner Agent actively hosting the service template.
 
 In preparation of service swarming, service template definitions have now been moved into a new `C:\Skyline DataMiner\ServiceTemplates` folder, which will be synchronized across the cluster. A service template no longer has a dedicated hosting agent, which means that they now remain available even if DataMiner Agents are down.
+
+#### Service & Resource Management: Support for legacy reservations removed [ID 46931]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Support for legacy Resource Manager reservations has been removed from the DataMiner server. From now on, use `ReservationInstance` objects instead of legacy reservations.
+
+The related types remain available in SLNetTypes so existing projects can still compile. However, the following API members have been marked as obsolete:
+
+- The create, read, update, and delete (CRUD) methods for all three features in `ResourceManagerHelper`.
+- The error data related to these features in `ResourceManagerErrorData`.
+- The messages for the CRUD operations.
+- The `ResourceManagerConfigInfoMessage.ConfigInfoType.ForceCleanup` enum value, which was only used to clean up reservation-related files.
+
+SLNet will now throw a `DataMinerException` for CRUD requests related to these features or for a `ForceCleanup` request.
+
+For compatibility with older DataMiner server versions, the legacy reservation methods in `ResourceManagerHelper` will still send requests to SLNet.
+
+See also: [Service & Resource Management: Legacy reservation support removed for DataMiner 10.6.0 and later [ID 46936]](xref:Cube_Feature_Release_10.7.1#service--resource-management-legacy-reservation-support-removed-for-dataminer-1060-and-later-id-46936)
 
 #### Document Intelligence: Assistant permission checks [ID 46944]
 
@@ -875,6 +896,19 @@ The legacy GQI implementation in SLHelper will be removed completely in a later 
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
+#### DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new upgrade prerequisite will check whether DataMiner Agents running a version older than 10.7.0 are ready for the end of support for GQI via SLHelper. It will check two independent requirements:
+
+- The Web API must use the GQI DxM. If the effective `gqi:useDxM` setting is `false`, the upgrade will be blocked.
+- There must be no GQI log activity within the last 30 days, unless the `EndOfSupport.SLHelperGQI` soft-launch option is enabled to temporarily allow continued use of GQI via SLHelper. Otherwise, the upgrade will be blocked.
+
+The prerequisite will report detected issues and inspection errors together with corrective actions. Enabling the soft-launch option will not bypass the Web API requirement.
+
+The check will be skipped on DataMiner Agents already running version 10.7.0 or higher.
+
 #### DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
@@ -947,6 +981,33 @@ To temporarily continue using RADIUS, add the following case-sensitive option to
   <EndOfSupport.RADIUS>true</EndOfSupport.RADIUS>
 </SLNet>
 ```
+
+#### User-Defined APIs: Requests now routed through API Gateway [ID 47107]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM now registers its `/api/custom` route with the API Gateway at startup. Requests to this route are now proxied through the API Gateway instead of relying on an IIS URL Rewrite rule.
+
+The DxM no longer creates, validates, or repairs the IIS rewrite rule. Existing rules are left unchanged and can still route unencrypted HTTP requests on existing deployments. New deployments do not receive a rewrite rule and only support triggering APIs over HTTPS.
+
+By default, the module registers with a module-specific rate limit of 6000 requests per minute. To configure a different limit:
+
+1. Add the following setting to *appsettings.custom.json*, adjusting the value as required:
+
+   ```json
+   {
+     "ApiGatewayRegistration": {
+       "RateLimitPerMinute": 3000
+     }
+   }
+   ```
+
+1. Restart the *DataMiner UserDefinableApiEndpoint* service.
+
+The API Gateway request inactivity timeout is set to the configured NATS timeout plus 5 seconds, allowing the endpoint's timeout error response to reach the caller.
+
+> [!IMPORTANT]
+> This UserDefinableApiEndpoint version requires API Gateway 0.11.0 or later, which supports module-specific rate limits. With an older API Gateway version, the default shared limit of 60 requests per minute will also apply to user-defined API triggers. Also, with an older API Gateway version, the API Gateway request inactivity timeout will be set to 100s.
 
 #### Remaining legacy Annotations reference removed [ID 47122]
 
@@ -1199,6 +1260,16 @@ During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was re
 After API Gateway restarted, requests to modules proxied through it could keep returning HTTP 404 errors. This could affect DataAPI, Orchestrator, Assistant, and EdgeManager.
 
 Concurrent module registrations could overwrite newer routing configuration with an older snapshot, leaving proxy routes missing. Routing configuration updates are now processed sequentially to prevent this.
+
+#### User-Defined APIs: Endpoint startup could be blocked when NATS was unavailable [ID 46997]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM could remain blocked during startup when the NATS service was unavailable. As a result, API callers would not receive a response explaining the connection failure.
+
+The endpoint will now start while its NATS connections are being established. API triggers received before the message broker is initialized will return HTTP 503 with error code 1006 and the message "Service not ready yet, try again later."
+
+Connection attempts will continue in the background. Once NATS is available and initialization succeeds, API triggers will be forwarded normally and cloud status reporting will resume.
 
 #### Automation: Script Runner could load an incorrect assembly version [ID 47069]
 

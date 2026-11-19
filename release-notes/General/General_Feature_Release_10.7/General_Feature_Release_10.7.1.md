@@ -37,10 +37,13 @@ Before you upgrade to this DataMiner version:
 - [GQI: GQI via SLHelper disabled by default [ID 46927]](#gqi-gqi-via-slhelper-disabled-by-default-id-46927)
 - [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
+- [DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]](#dataminer-upgrade-prerequisite-check-for-the-end-of-slhelper-gqi-support-id-46957)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
+- [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
 - [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
 - [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
+- [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
 - [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
 
 ## Highlights
@@ -75,7 +78,7 @@ A new *Intelligence App* user permission has now been added. This permission wil
 
 #### Service & Resource Management: Support for legacy reservations removed [ID 46931]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 Support for legacy Resource Manager reservations has been removed from the DataMiner server. From now on, use `ReservationInstance` objects instead of legacy reservations.
 
@@ -100,6 +103,16 @@ Each Document Intelligence request from SLNet now includes connection informatio
 
 > [!IMPORTANT]
 > Document Intelligence in DataMiner 10.6 is incompatible with Assistant versions that enforce these permission checks (i.e., Assistant 4.0.0 or newer).
+
+#### QActions: JScript and VBScript are no longer supported [ID 47010]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
+
+The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
+
+In addition, the SLSite COM component will be uninstalled during an upgrade.
 
 ### Enhancements
 
@@ -242,6 +255,19 @@ SLNet will now update large subscription sets more efficiently, particularly whe
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
+#### DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new upgrade prerequisite will check whether DataMiner Agents running a version older than 10.7.0 are ready for the end of support for GQI via SLHelper. It will check two independent requirements:
+
+- The Web API must use the GQI DxM. If the effective `gqi:useDxM` setting is `false`, the upgrade will be blocked.
+- There must be no GQI log activity within the last 30 days, unless the `EndOfSupport.SLHelperGQI` soft-launch option is enabled to temporarily allow continued use of GQI via SLHelper. Otherwise, the upgrade will be blocked.
+
+The prerequisite will report detected issues and inspection errors together with corrective actions. Enabling the soft-launch option will not bypass the Web API requirement.
+
+The check will be skipped on DataMiner Agents already running version 10.7.0 or higher.
+
 #### DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
@@ -333,6 +359,56 @@ To temporarily continue using RADIUS, add the following case-sensitive option to
   <EndOfSupport.RADIUS>true</EndOfSupport.RADIUS>
 </SLNet>
 ```
+
+#### Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+The following connector features have reached End of Support and are now disabled by default:
+
+- The `dllName` option in the `options` attribute of a QAction.
+- Logger tables of type `DirectConnection`.
+
+During a DataMiner upgrade, the new `VerifyEndOfSupportConnectors` prerequisite check will block the upgrade if it detects connector versions that use either feature, unless the corresponding soft-launch option is enabled.
+
+Before upgrading, configure affected elements to use connector versions that no longer contain these features, and remove detected connector versions that are no longer in use.
+
+If no compatible connector version is available, you can continue using an affected connector by activating the corresponding soft-launch option before upgrading:
+
+- `EndOfSupport.DllName` for the `dllName` option.
+- `EndOfSupport.DirectConnection` for logger tables of type `DirectConnection`.
+
+After the upgrade, uploading and using a connector with either feature will cause its elements to fail to start unless the corresponding soft-launch option is enabled.
+
+> [!NOTE]
+> The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
+
+#### User-Defined APIs: Requests now routed through API Gateway [ID 47107]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM now registers its `/api/custom` route with the API Gateway at startup. Requests to this route are now proxied through the API Gateway instead of relying on an IIS URL Rewrite rule.
+
+The DxM no longer creates, validates, or repairs the IIS rewrite rule. Existing rules are left unchanged and can still route unencrypted HTTP requests on existing deployments. New deployments do not receive a rewrite rule and only support triggering APIs over HTTPS.
+
+By default, the module registers with a module-specific rate limit of 6000 requests per minute. To configure a different limit:
+
+1. Add the following setting to *appsettings.custom.json*, adjusting the value as required:
+
+   ```json
+   {
+     "ApiGatewayRegistration": {
+       "RateLimitPerMinute": 3000
+     }
+   }
+   ```
+
+1. Restart the *DataMiner UserDefinableApiEndpoint* service.
+
+The API Gateway request inactivity timeout is set to the configured NATS timeout plus 5 seconds, allowing the endpoint's timeout error response to reach the caller.
+
+> [!IMPORTANT]
+> This UserDefinableApiEndpoint version requires API Gateway 0.11.0 or later, which supports module-specific rate limits. With an older API Gateway version, the default shared limit of 60 requests per minute will also apply to user-defined API triggers. Also, with an older API Gateway version, the API Gateway request inactivity timeout will be set to 100s.
 
 #### Remaining legacy Annotations reference removed [ID 47122]
 
@@ -462,6 +538,22 @@ Canceled reservations are now ignored when checking whether resource updates wou
 Previously, a deleted service template could reappear in SLNet after switching back to the original active Agent in a Failover setup. This could happen when the template existed on that Agent and was deleted after switching to the other Agent.
 
 Deleted service templates will now remain absent after switching back.
+
+#### User-Defined APIs: Endpoint startup could be blocked when NATS was unavailable [ID 46997]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM could remain blocked during startup when the NATS service was unavailable. As a result, API callers would not receive a response explaining the connection failure.
+
+The endpoint will now start while its NATS connections are being established. API triggers received before the message broker is initialized will return HTTP 503 with error code 1006 and the message "Service not ready yet, try again later."
+
+Connection attempts will continue in the background. Once NATS is available and initialization succeeds, API triggers will be forwarded normally and cloud status reporting will resume.
+
+#### SLSNMPAgent could crash on systems with many large services [ID 47031]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+On DataMiner Agents with many large services, SLSNMPAgent could crash during startup or when services were changed.
 
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 
