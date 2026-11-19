@@ -41,18 +41,7 @@ Three variations are possible:
 
 The DMS consists of only one DaaS node. A DaaS system always uses STaaS, which is hosted in the same dataminer.services cloud environment for low-latency storage access. Private equipment can be reached through [Edge](xref:DataMiner_Edge) or a site-to-site VPN; equipment does not need to be publicly accessible.
 
-```mermaid
-flowchart TB
-    Cloud@{ shape: cloud, label: "Same cloud environment<br/>DaaS: one DMA<br/>STaaS: system data storage<br/>Low-latency access" }
-    P["Public APIs and cloud services"]
-    subgraph Site["Private site network"]
-        G["Edge Gateway"]
-        E["Private equipment"]
-    end
-    Cloud <-->|"HTTPS / API calls"| P
-    Cloud <-->|"Edge tunnel"| G
-    G <-->|"Local network"| E
-```
+![Diagram of a cloud environment hosting one DaaS DMA and STaaS system data storage with low-latency access. A private site network containing an Edge Gateway connects to the cloud through an Edge tunnel, and the Edge Gateway connects to private equipment over a local network. The cloud also connects to public APIs and cloud services using HTTPS and API calls](~/dataminer/images/One-box_system_DaaS_node.png)
 
 The example above uses an Edge Gateway for visual clarity. A site-to-site VPN is another option for DaaS. An Edge Node can instead run compatible integrations locally (for details, refer to the [distributed topology](xref:Architecture_distributed_sites#architecture-variants)).
 

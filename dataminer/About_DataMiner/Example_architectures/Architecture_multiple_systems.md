@@ -28,26 +28,7 @@ Any of the following can justify independent systems; they are alternatives, not
 
 This example shows two independently operated DMSs and an optional central DMS. Each has its **own STaaS storage**; federation shares selected operational information, not a common database or a single cluster. Region 1 is self-managed, while region 2 and the central DMS run on DaaS, co-hosted with their STaaS storage. [Edge](xref:DataMiner_Edge) is the remote-access choice illustrated here.
 
-```mermaid
-flowchart TB
-    subgraph R1["Region 1: self-managed DMS"]
-        A["DMAs"]
-        EA["Local equipment"]
-        A <-->|"Local network"| EA
-    end
-    SA@{ shape: cloud, label: "STaaS for system 1" }
-    R2@{ shape: cloud, label: "Region 2: DaaS DMS<br/>DMAs and STaaS for system 2<br/>Same cloud environment" }
-    subgraph Remote["Remote site network"]
-        G["Edge Gateway"]
-        EB["Remote equipment"]
-        G <-->|"Local network"| EB
-    end
-    C@{ shape: cloud, label: "Optional central DaaS DMS<br/>DMAs and STaaS for central system<br/>Federated view" }
-    A <-->|"HTTPS"| SA
-    R2 <-->|"Edge tunnel"| G
-    A -.->|"Selected data: replication / API / connector"| C
-    R2 -.->|"Selected data: replication / API / connector"| C
-```
+![Diagram of two independent DMSs and an optional central DMS. Region 1 is a self-managed DMS whose DMAs connect to local equipment over a local network and to STaaS for system 1 over HTTPS. Region 2 is a DaaS DMS with its own STaaS in the same cloud environment, and connects through an Edge tunnel to an Edge Gateway in a remote site network, which connects to remote equipment over a local network. The optional central DaaS DMS has its own STaaS and a federated view. Dashed arrows from Region 1 and Region 2 to the central DMS show selected data being shared through replication, API, or connector](~/dataminer/images/Independent_and_federated_DMS_architecture.png)
 
 Solid lines show operational connections within each system or to its sources. Dashed arrows show the **direction of selected data toward the central view**, not who initiates a network connection. For element replication, the central DMS must be able to reach the source DMS. Without these optional data-sharing paths, the systems remain independent.
 
