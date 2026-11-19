@@ -15,11 +15,7 @@ int elementId = 669;
 int agentId = 346;
 string propertyLocation = $"element:{elementId}:{agentId}";
 
-string[] propertyDetails = new string[3];
-
-propertyDetails[0] = "Device Key";
-propertyDetails[1] = "read-write";
-propertyDetails[2] = "2100";
+string[] propertyDetails = new string[] { "Device Key", "read-write", "2100" };
 
 protocol.NotifyDataMinerQueued(62 /*NT_EDIT_PROPERTY*/, propertyLocation, propertyDetails);
 ```
@@ -99,11 +95,7 @@ protocol.NotifyDataMiner(62 /*NT_EDIT_PROPERTY*/, viewIDs, propertyValues);
         if (!string.IsNullOrEmpty(sourceType) && !string.IsNullOrEmpty(sPropertyType))
         {
             string propertyLocation = $"{sourceType}{id}";
-            string[] propertyDetails = new string[3];
-
-            propertyDetails[0] = propertyName;
-            propertyDetails[1] = sPropertyType;
-            propertyDetails[2] = propertyValue;
+            string[] propertyDetails = new string[] { propertyName, sPropertyType, propertyValue };
 
             protocol.NotifyDataMinerQueued(62 /*NT_EDIT_PROPERTY*/, propertyLocation, propertyDetails);
         }

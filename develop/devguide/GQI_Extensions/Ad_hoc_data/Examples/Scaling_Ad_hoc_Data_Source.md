@@ -142,7 +142,7 @@ public class Results : IGQIDataSource, IGQIOnInit
 
         var securityResponse = responses?.OfType<GetUserInfoResponseMessage>().FirstOrDefault();
         var userGroups = securityResponse?.Users?
-            .Where(u => string.Equals(u.Name, userName, StringComparison.InvariantCultureIgnoreCase))
+            .Where(u => String.Equals(u.Name, userName, StringComparison.InvariantCultureIgnoreCase))
             .FirstOrDefault()?.Groups?.OrderBy(x => x)?.ToArray() ?? new int[0];
         if (userGroups.Length == 0)
         {

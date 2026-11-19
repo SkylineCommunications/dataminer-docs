@@ -273,7 +273,7 @@ string? supplementaryFilesPath = Environment.GetEnvironmentVariable(
     "QAOPS_SUPPLEMENTARY_FILES",
     EnvironmentVariableTarget.Machine);
 
-if (string.IsNullOrWhiteSpace(supplementaryFilesPath) ||
+if (String.IsNullOrWhiteSpace(supplementaryFilesPath) ||
     !Directory.Exists(supplementaryFilesPath))
 {
     Assert.Fail(

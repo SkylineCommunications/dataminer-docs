@@ -68,7 +68,7 @@ Suppose that `string folder = Convert.ToString(person.Folder);` and *person.Fold
 Add an extra check to make sure the string is not null or empty before executing the method:
 
 ```csharp
-if (!string.IsNullOrEmpty(folder) && folder.EndsWith("\\"))
+if (!String.IsNullOrEmpty(folder) && folder.EndsWith("\\"))
 ```
 
 ### Solution 2.B

@@ -76,22 +76,24 @@ public class QAction
 
             int timeout = 100; // Timeout in ms.
 
-            string[] requestSettings = new string[6];
+            string[] requestSettings = new string[]
+            {
+                verb,
+                url,
+                userName,
+                password,
+                requestHeaders,
+                timeout.ToString(),
+            };
 
-            requestSettings[0] = verb;
-            requestSettings[1] = url;
-            requestSettings[2] = userName;
-            requestSettings[3] = password;
-            requestSettings[4] = requestHeaders;
-            requestSettings[5] = timeout.ToString();
+            string[] resourcePaths = new string[]
+            {
+                "resourceA.htm",
+                "resourceB.htm",
+                "resourceC.htm",
+            };
 
-            string[] resourcePaths = new string[3];
-
-            resourcePaths[0] = "resourceA.htm";
-            resourcePaths[1] = "resourceB.htm";
-            resourcePaths[2] = "resourceC.htm";
-
-            object[] httpRequestInfo = new object[3] { "http", requestSettings, resourcePaths };
+            object[] httpRequestInfo = new object[] { "http", requestSettings, resourcePaths };
 
             return httpRequestInfo;
         }

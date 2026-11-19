@@ -7,25 +7,26 @@ uid: NT_SNMP_RAW_GET
 Performs an SNMP GET request without requiring an SNMP connection to be defined in the protocol.<!-- RN 18369 -->
 
 ```csharp
-var settings = new object[9];    // Minimum length: 2
-var versionSpecificSettings = new object[2];
+var versionSpecificSettings = new object[]
+{
+    2,                      // SNMPv2
+    "myGetCommunityString", // Get community string
+};
 
-versionSpecificSettings[0] = 2; // SNMPv2
-versionSpecificSettings[1] = "myGetCommunityString";    // Get community string
+var settings = new object[] // Minimum length: 2
+{
+    versionSpecificSettings, // Version specific settings
+    "127.0.0.1",             // Destination IP address
+    1611,                    // Destination port (String or Int32, will not overwrite the port specified with the IP address)
+    1490,                    // Timeout (ms) (Int32)
+    2,                       // Retries (Int32)
+    false,                   // Multiple Get (Boolean)
+    string.Empty,            // Instance (String)
+    2,                       // Dynamic poll type: SingleGets (Int32)
+    false,                   // Split errors from values (Boolean)
+};
 
-settings[0] = versionSpecificSettings;    // Version specific settings
-settings[1] = "127.0.0.1";         // Destination IP address
-settings[2] = 1611;              // Destination port (String or Int32, will not overwrite the port specified with the IP address)
-settings[3] = 1490;              // Timeout (ms) (Int32)
-settings[4] = 2;                 // Retries (Int32)
-settings[5] = false;             // Multiple Get (Boolean)
-settings[6] = string.Empty;      // Instance (String)
-settings[7] = 2;                 // Dynamic poll type: SingleGets (Int32)
-settings[8] = false;             // Split errors from values (Boolean)
-
-string[] oidInfo = new string[1];       // String array of OIDs.
-
-oidInfo[0] = "1.3.6.1.2.1.1.8.1.6.1";
+string[] oidInfo = new string[] { "1.3.6.1.2.1.1.8.1.6.1" }; // String array of OIDs.
 
 object[] result = (object[])protocol.NotifyDataMiner(424 /*NT_SNMP_RAW_GET*/, settings, oidInfo);
 

@@ -10,7 +10,7 @@ Retrieves the user.
 var userCookie = protocol.UserCookie;
 var user = (string)protocol.NotifyDataMiner(108 /* NT_GET_USER */, userCookie, null);
 
-if (!string.IsNullOrEmpty(user))
+if (!String.IsNullOrEmpty(user))
 {
    // ...
 }

@@ -59,7 +59,7 @@ You now have an executor that can do what you want. It can access your received 
 ```csharp
 public override bool Validate()
 {
-    if (string.IsNullOrWhiteSpace(Message.MyProperty))
+    if (String.IsNullOrWhiteSpace(Message.MyProperty))
     {
         return false;
     }

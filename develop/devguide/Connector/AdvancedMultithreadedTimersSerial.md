@@ -51,15 +51,15 @@ public class QAction
         {
             int timeout = 1500; // Timeout in ms.
             
-            string[] commands = new string[2];
-            commands[0] = "MyCommand";
-            commands[1] = "MyCommand2";
+            string[] commands = new string[] { "MyCommand", "MyCommand2" };
             
-            string[] requestSettings = new string[2];
-            requestSettings[0] = timeout.ToString();
-            requestSettings[1] = "1,2";    // Comma-separated list of response IDs.
+            string[] requestSettings = new string[]
+            {
+                timeout.ToString(),
+                "1,2", // Comma-separated list of response IDs.
+            };
             
-            object[] requestInfo = new object[3] { "serial", requestSettings, commands };
+            object[] requestInfo = new object[] { "serial", requestSettings, commands };
             
             return requestInfo;
         }

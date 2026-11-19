@@ -26,10 +26,12 @@ int rowCount = (int)protocol.NotifyProtocol(156 /*NT_DELETE_ROW*/, tableID, prim
 Removing a row from a **remote element**:
 
 ```csharp
-uint[] ids = new uint[3];
-ids[0] = (uint)protocol.DataMinerID;
-ids[1] = (uint)protocol.ElementID;
-ids[2] = (uint)tableId;
+uint[] ids = new uint[]
+{
+    (uint)protocol.DataMinerID,
+    (uint)protocol.ElementID,
+    (uint)tableId,
+};
 
 string primaryKey = "Row 1";
 

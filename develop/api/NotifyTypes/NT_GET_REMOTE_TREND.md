@@ -9,7 +9,7 @@ Gets the real-time trend data of a view table column.
 ```csharp
 uint elementId = 1530;
 uint columnId = 5002;
-uint columnPos = uint.MaxValue; // Means not specified.
+uint columnPos = UInt32.MaxValue; // Means not specified.
 uint isDirectView; // 0=false, 1=true.
 uint agentId = 400;
 

@@ -64,22 +64,22 @@ public class QAction
             string responseTrailer = "<<EOT>>";
             int trailerResponseOccurrenceCount = 2;
 
-            if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password))
+            if (!String.IsNullOrWhiteSpace(userName) && !String.IsNullOrWhiteSpace(password))
             {
-                string[] sshSettings = new string[6];
-                sshSettings[0] = userName;
-                sshSettings[1] = password;
-                sshSettings[2] = sshOptions;
-                sshSettings[3] = Convert.ToString(timeout);
-                sshSettings[4] = responseTrailer;
-                sshSettings[5] = Convert.ToString(trailerResponseOccurrenceCount);
+                string[] sshSettings = new string[]
+                {
+                    userName,
+                    password,
+                    sshOptions,
+                    Convert.ToString(timeout),
+                    responseTrailer,
+                    Convert.ToString(trailerResponseOccurrenceCount),
+                };
 
                 string sshCommand = "show cable modems\r\n";
                 string[] sshCommands = new string[] { sshCommand };
 
-                object[] requestInfo = new object[2];
-                requestInfo[0] = sshSettings;
-                requestInfo[1] = sshCommands;
+                object[] requestInfo = new object[] { sshSettings, sshCommands };
 
                 return requestInfo;
             }

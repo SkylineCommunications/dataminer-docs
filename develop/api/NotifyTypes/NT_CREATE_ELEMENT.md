@@ -120,63 +120,64 @@ int result = (int)protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, el
     ```csharp
     private static void CreateElement(SLProtocol protocol, string elementName, string protocolName, string protocolVersion, string pollingIP, string pollingPort, string busAddress)
     {
-       string[] settings = new string[53];
+       string[] settings = new string[]
+       {
+          elementName,      // Element name
+          "Active",         // State
+          String.Empty,     // data
+          String.Empty,     // unique
+          protocolName,     // protocol name
+          protocolVersion,  // protocol version
+          String.Empty,     // template name
+          "IP",             // port type
+          "0",              // port number
+          String.Empty,     // port Baud rate
+          "HMAC-SHA",       // parity
+          "User0",          // data bits
+          "authPriv",       // stop bits
+          "DES",            // flow control
+          busAddress,       // port bus
+          "3",              // retries
+          String.Empty,     // slowPollBase
+          "1500",           // timeout
+          "30000",          // Slow poll value.
+          pollingIP,        // Polling IP
+          pollingPort,      // Polling IP port
+          "30000",          // Ping interval.
+          "127.0.0.2",      // SNMP Agent IP address
+          String.Empty,     // SNMP Agent subnet mask
+          "0",              // Telnet
+          "0",              // SNMP Agent
+          String.Empty,     // Description
+          "-1",             // Element timeout
+          "AuthAuth0",      // Get community
+          "PrivPriv0",      // Set community
+          String.Empty,     // Type
+          "False",          // Hidden
+          String.Empty,     // Trend template
+          "False",          // Service
+          String.Empty,     // Local IP port
+          String.Empty,     // read only
+          String.Empty,     // Replication: active
+          String.Empty,     // Replication: options
+          String.Empty,     // Replication: remote element
+          String.Empty,     // Replication: DataMiner IP
+          String.Empty,     // Replication: user name
+          String.Empty,     // Replication: password
+          String.Empty,     // Replication: domain
+          String.Empty,     // Keep online: true/false (failover)
+          String.Empty,     // Force agent: empty/IP address (failover)
+          String.Empty,     // Replication: DMP manager populated
+          String.Empty,     // DMA SNMP Agent get community string
+          String.Empty,     // DMA SNMP Agent set community string
+          String.Empty,     // DVE creation flag
+          String.Empty,     // Replication: max messages to buffer
+          String.Empty,     // Replication: max minutes to buffer
+          "9",              // Protocol type
+          String.Empty,     // Library credential
+       };
 
-       settings[0] = elementName;      // Element name
-       settings[1] = "Active";         // State
-       settings[2] = string.Empty;     // data
-       settings[3] = string.Empty;     // unique
-       settings[4] = protocolName;     // protocol name
-       settings[5] = protocolVersion;  // protocol version
-       settings[6] = string.Empty;     // template name
-       settings[7] = "IP";             // port type
-       settings[8] = "0";              // port number
-       settings[9] = string.Empty;     // port Baud rate
-       settings[10] = "HMAC-SHA";      // parity
-       settings[11] = "User0";         // data bits
-       settings[12] = "authPriv";      // stop bits
-       settings[13] = "DES";           // flow control
-       settings[14] = busAddress;      // port bus
-       settings[15] = "3";             // retries
-       settings[16] = string.Empty;    // slowPollBase
-       settings[17] = "1500";          // timeout
-       settings[18] = "30000";         // Slow poll value.
-       settings[19] = pollingIP;       // Polling IP
-       settings[20] = pollingPort;     // Polling IP port
-       settings[21] = "30000";         // Ping interval.
-       settings[22] = "127.0.0.2";     // SNMP Agent IP address
-       settings[23] = string.Empty;    // SNMP Agent subnet mask
-       settings[24] = "0";             // Telnet
-       settings[25] = "0";             // SNMP Agent
-       settings[26] = string.Empty;    // Description
-       settings[27] = "-1";            // Element timeout
-       settings[28] = "AuthAuth0";     // Get community
-       settings[29] = "PrivPriv0";     // Set community
-       settings[30] = string.Empty;    // Type
-       settings[31] = "False";         // Hidden
-       settings[32] = string.Empty;    // Trend template
-       settings[33] = "False";         // Service
-       settings[34] = string.Empty;    // Local IP port
-       settings[35] = string.Empty;    // read only
-       settings[36] = string.Empty;    // Replication: active
-       settings[37] = string.Empty;    // Replication: options
-       settings[38] = string.Empty;    // Replication: remote element
-       settings[39] = string.Empty;    // Replication: DataMiner IP
-       settings[40] = string.Empty;    // Replication: user name
-       settings[41] = string.Empty;    // Replication: password
-       settings[42] = string.Empty;    // Replication: domain
-       settings[43] = string.Empty;    // Keep online: true/false (failover)
-       settings[44] = string.Empty;    // Force agent: empty/IP address (failover)
-       settings[45] = string.Empty;    // Replication: DMP manager populated
-       settings[46] = string.Empty;    // DMA SNMP Agent get community string
-       settings[47] = string.Empty;    // DMA SNMP Agent set community string
-       settings[48] = string.Empty;    // DVE creation flag
-       settings[49] = string.Empty;    // Replication: max messages to buffer
-       settings[50] = string.Empty;    // Replication: max minutes to buffer
-       settings[51] = "9";             // Protocol type
-       settings[52] = string.Empty;    // Library credential
-
-       string elementConfigurationSettings = string.Join("|", settings);
+       string elementConfigurationSettings = String.Join("|", settings);
 
        protocol.NotifyDataMinerQueued(160 /* NT_CREATE_ELEMENT */, elementName, elementConfigurationSettings);
     }

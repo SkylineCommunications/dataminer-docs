@@ -448,7 +448,7 @@ public static object CustomRates(DataMinerConnectorRateArgs rateValues)
         return NotAvailable;
     }
 
-    if (rateValues.CurrentTimestampUtc <= rateValues.PreviousTimestampUtc || !ulong.TryParse(Convert.ToString(rateValues.CurrentValue), out ulong uiNewValue) || !ulong.TryParse(Convert.ToString(rateValues.PreviousValue), out ulong uiOldValue) || uiOldValue > uiNewValue)
+    if (rateValues.CurrentTimestampUtc <= rateValues.PreviousTimestampUtc || !UInt64.TryParse(Convert.ToString(rateValues.CurrentValue), out ulong uiNewValue) || !UInt64.TryParse(Convert.ToString(rateValues.PreviousValue), out ulong uiOldValue) || uiOldValue > uiNewValue)
     {
         return -1;
     }
@@ -483,10 +483,10 @@ public static object CreateDisplayKey(DataMinerConnectorTriggerValueArgs trigger
     }
     else
     {
-        description = string.Empty;
+        description = String.Empty;
     }
 
-    if (string.IsNullOrEmpty(description) || description == "-1")
+    if (String.IsNullOrEmpty(description) || description == "-1")
     {
         return pk;
     }

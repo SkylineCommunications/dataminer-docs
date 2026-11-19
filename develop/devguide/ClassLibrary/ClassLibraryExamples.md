@@ -178,7 +178,7 @@ var myElement = myAgent.GetElement(protocol.ElementName);
 string newServiceName = Convert.ToString(protocol.Newservicename_50);
 var serviceConfig = new ServiceConfiguration(myDms, newServiceName);
 var filter = new List<ElementParamFilterConfiguration>();
-filter.Add(new ElementParamFilterConfiguration(1, string.Empty, true));
+filter.Add(new ElementParamFilterConfiguration(1, String.Empty, true));
 
 serviceConfig.AddElement(myElement.DmsElementId, filter);
 serviceConfig.Views.Add(CreateSdfTestViewIfNotExists(myDms));

@@ -43,12 +43,13 @@ protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/, tableID, tableContent);
 
   ```csharp
   object tableInfo = new object[] { 10, true }; // Setting the second entry to true enables the use of the protocol.Clear and protocol.Leave functionality.
-  object[] tableData = new object[4];
-
-  tableData[0] = new object[3] { "1-Index", "2-Index", "3-Index" };
-  tableData[1] = new object[3] { 10, 10, 10 };
-  tableData[2] = new object[3] { protocol.Clear, protocol.Clear, protocol.Clear };
-  tableData[3] = new object[3] { 30, 30, 30 };
+  object[] tableData = new object[]
+  {
+      new object[] { "1-Index", "2-Index", "3-Index" },
+      new object[] { 10, 10, 10 },
+      new object[] { protocol.Clear, protocol.Clear, protocol.Clear },
+      new object[] { 30, 30, 30 },
+  };
 
   protocol.NotifyProtocol(193, tableInfo, tableData);
   ```
@@ -57,12 +58,13 @@ protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/, tableID, tableContent);
 
   ```csharp
   object tableInfo = new object[] { 10, false, DateTime.Now };
-  object[] tableData = new object[4];
-
-  tableData[0] = new object[3] { "1-Index", "2-Index", "3-Index" };
-  tableData[1] = new object[3] { 10, 10, 10 };
-  tableData[2] = new object[3] { 10, 10, 10 };
-  tableData[3] = new object[3] { 30, 30, 30 };
+  object[] tableData = new object[]
+  {
+      new object[] { "1-Index", "2-Index", "3-Index" },
+      new object[] { 10, 10, 10 },
+      new object[] { 10, 10, 10 },
+      new object[] { 30, 30, 30 },
+  };
 
   protocol.NotifyProtocol(193, tableInfo, tableData);
   ```

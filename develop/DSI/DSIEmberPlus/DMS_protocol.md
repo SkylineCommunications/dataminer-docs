@@ -138,7 +138,7 @@ public class QAction
         {
             protocol.Log(
                 $"QA{protocol.QActionID}|HandleResponse|ERR: Received data is invalid! Content:{Environment.NewLine}" +
-                $"{string.Join(".", objectArray.Select(x => Convert.ToString(x)))}",
+                $"{String.Join(".", objectArray.Select(x => Convert.ToString(x)))}",
                 LogType.Error,
                 LogLevel.NoLogging);
             return;

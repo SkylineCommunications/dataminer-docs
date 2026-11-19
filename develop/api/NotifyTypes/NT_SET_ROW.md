@@ -44,12 +44,7 @@ int dmaId = protocol.DataMinerID;
 int elementId = protocol.ElementID;
 int tableId = 6000;
 string primaryKey = "1";
-object[] rowDetails = new object[4];
-
-rowDetails[0] = dmaId;
-rowDetails[1] = elementId;
-rowDetails[2] = tableId;
-rowDetails[3] = primaryKey;
+object[] rowDetails = new object[] { dmaId, elementId, tableId, primaryKey };
 
 object[] rowData = new object[] { null, "test" };
 object[] result = (object[])protocol.NotifyDataMiner(225 /*NT_SET_ROW*/, rowDetails, rowData);

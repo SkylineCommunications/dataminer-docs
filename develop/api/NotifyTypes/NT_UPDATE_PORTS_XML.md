@@ -82,23 +82,17 @@ protocol.SendToDisplay(4000);
     uint changeType = 0;
     uint updateFileAtOnceNoDiscreetInfoTrigger = 1;
     
-    uint[] updateConfig = new uint[5];
+    uint[] updateConfig = new uint[]
+    {
+        changeType,
+        elementId,
+        parameterId,
+        agentId,
+        updateFileAtOnceNoDiscreetInfoTrigger,
+    };
     
-    updateConfig[0] = changeType;
-    updateConfig[1] = elementId;
-    updateConfig[2] = parameterId;
-    updateConfig[3] = agentId;
-    updateConfig[4] = updateFileAtOnceNoDiscreetInfoTrigger;
-    
-    string[] updateValue1 = new string[2];
-    
-    updateValue1[0] = "1";
-    updateValue1[1] = "In A";
-    
-    string[] updateValue2 = new string[2];
-    
-    updateValue2[0] = "2";
-    updateValue2[1] = "In B";
+    string[] updateValue1 = new string[] { "1", "In A" };
+    string[] updateValue2 = new string[] { "2", "In B" };
     
     object[] updateConfigs = new object[] { updateConfig, updateConfig };
     object[] updateValues = new object[] { updateValue1, updateValue2 };

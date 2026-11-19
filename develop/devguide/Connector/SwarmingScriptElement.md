@@ -100,7 +100,7 @@ In the example below, the script above is updated to use input variables instead
 
     ```csharp
     var element = ElementID.FromString(engine.GetScriptParam("Element Key").Value);
-    int targetAgentId = int.Parse(engine.GetScriptParam("Target Agent ID").Value);
+    int targetAgentId = Int32.Parse(engine.GetScriptParam("Target Agent ID").Value);
     ```
 
 You now have a script that can be invoked from anywhere, specifying an element and target DataMiner Agent.
@@ -119,7 +119,7 @@ public class Script
     public void Run(Engine engine)
     {
         var element = ElementID.FromString(engine.GetScriptParam("Element Key").Value);
-        int targetAgentId = int.Parse(engine.GetScriptParam("Target Agent ID").Value);
+        int targetAgentId = Int32.Parse(engine.GetScriptParam("Target Agent ID").Value);
 
         var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
             .SwarmElement(element)

@@ -40,10 +40,7 @@ Below is the provided code of that method.
 ```csharp
 private List<string> Process()
 {
-    string[] persons = new string[3];
-    persons[0] = "John.Doe";
-    persons[1] = "Jane.Doe";
-    persons[2] = "Leyla.Doe";
+    string[] persons = new string[] { "John.Doe", "Jane.Doe", "Leyla.Doe" };
     List<string> mails = new List<string>();
     MailServer server = new MailServer();
     for (int i = 0; i < persons.Length; i++)

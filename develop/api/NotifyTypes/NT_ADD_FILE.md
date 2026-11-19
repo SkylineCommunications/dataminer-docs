@@ -18,16 +18,18 @@ XDocument alarmTemplate = XDocument.Load(sFilePath);
 // Manipulate alarmTemplate to obtain a new template.
 // ...
 
-string[] protocolDetails = new string[3];
+string[] protocolDetails = new string[]
+{
+    protocolName, // protocolName for alarm | templateName for trend
+    protocolVersion, // protocolVersion for alarm | protocolName for trend
+    templateName, // templateName for alarm | protocolVersion for trend
+};
 
-protocolDetails[0] = protocolName; // protocolName for alarm | templateName for trend
-protocolDetails[1] = protocolVersion; // protocolVersion for alarm | protocolName for trend
-protocolDetails[2] = templateName; // templateName for alarm | protocolVersion for trend
-
-object[] templateDetails = new object[2];
-
-templateDetails[0] = 1; // 1 for alarm | 6 for trend
-templateDetails[1] = Convert.ToString(alarmTemplate);
+object[] templateDetails = new object[]
+{
+    1, // 1 for alarm | 6 for trend
+    Convert.ToString(alarmTemplate),
+};
 
 protocol.NotifyDataMiner(99 /*NT_ADD_FILE*/, protocolDetails, templateDetails);
 ```

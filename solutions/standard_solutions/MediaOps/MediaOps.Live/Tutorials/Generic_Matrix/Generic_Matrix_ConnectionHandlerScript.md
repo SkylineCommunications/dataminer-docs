@@ -153,7 +153,7 @@ public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEn
             var output = connectionEngine.Api.Endpoints.GetByRoleElementAndIdentifier(EndpointRole.Destination, elementId, outputIdentifier)
                 ?? throw new InvalidOperationException($"Destination endpoint '{outputIdentifier}' not found for element '{elementId}'.");
 
-            if (string.IsNullOrWhiteSpace(inputIdentifier))
+            if (String.IsNullOrWhiteSpace(inputIdentifier))
             {
                 // Connected input is empty, which means that the output is disconnected.
                 updatedConnections.Add(new ConnectionUpdate(output, isConnected: false));
@@ -218,7 +218,7 @@ public override void Connect(IEngine engine, IConnectionHandlerEngine connection
         foreach (var connection in group)
         {
             var rowKey = connection.DestinationEndpoint.Identifier;
-            var sourceIdentifier = connection.SourceEndpoint?.Identifier ?? string.Empty;
+            var sourceIdentifier = connection.SourceEndpoint?.Identifier ?? String.Empty;
 
             element.SetParameterByPrimaryKey("Connected Input (Router Control Outputs)", rowKey, sourceIdentifier);
         }
@@ -238,7 +238,7 @@ public override void Disconnect(IEngine engine, IConnectionHandlerEngine connect
         {
             var rowKey = destination.Identifier;
 
-            element.SetParameterByPrimaryKey("Connected Input (Router Control Outputs)", rowKey, string.Empty);
+            element.SetParameterByPrimaryKey("Connected Input (Router Control Outputs)", rowKey, String.Empty);
         }
     }
 }

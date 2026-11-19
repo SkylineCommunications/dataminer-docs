@@ -20,7 +20,7 @@ public string Rewrite(SLProtocol protocol, string path)
         throw new ArgumentNullException(nameof(path));
     }
 
-    if (string.IsNullOrWhiteSpace(path))
+    if (String.IsNullOrWhiteSpace(path))
     {
         throw new ArgumentException("Path is empty or white space.", nameof(path));
     }
@@ -49,7 +49,7 @@ public string Rewrite(SLProtocol protocol, string path)
         }
     }
 
-    return string.Join(@"\", abbreviatedPath);
+    return String.Join(@"\", abbreviatedPath);
 }
 ```
 
