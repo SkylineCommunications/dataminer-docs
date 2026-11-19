@@ -42,7 +42,7 @@ If a row is requested =(MultipleGetNext / MultipleGetBulk) on a table with State
 In the example below, param 100 is the table, and param 202 is the Write column using a Get of the cell after the Set. The group that will do the Get added to the queue via an executeNext.
 
 ```xml
-<Param id="100" trending="false">
+<Param id="100">
    <Name>Items</Name>
    <Description>Items</Description>
    <Type>array</Type>

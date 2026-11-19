@@ -11,6 +11,9 @@ From DataMiner CloudFeed 1.0.6, CloudGateway 2.7.0, and ArtifactDeployer 1.4.1 o
 
 The proxy server has to support both HTTP and WebSocket traffic.
 
+> [!NOTE]
+> Proxy handling for general dataminer.services traffic is separate from proxy handling for [Storage as a Service (STaaS)](xref:Setting_up_StaaS) storage traffic. Configuring a proxy here does not automatically fill in the proxy configuration for STaaS (or vice versa). This makes it possible to use independent proxies for general and storage traffic, route only storage traffic or only general traffic through a proxy, or have a node that only uses STaaS without general dataminer.services connectivity. To set up a proxy for STaaS storage traffic, see [Setting up STaaS](xref:Setting_up_StaaS#configuring-staas).
+
 To configure this:
 
 1. In the folder `C:\ProgramData\Skyline Communications\DxMs Shared\` on the DMA, create the file *appsettings.proxy.json* if it does not already exist, and configure the *ProxyOptions* as follows:

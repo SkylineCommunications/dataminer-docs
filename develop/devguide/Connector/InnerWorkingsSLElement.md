@@ -96,7 +96,7 @@ The column processing order can be overruled in the protocol with the [processin
 > Customizing the column processing order is not recommended.
 
 ```xml
-<Param id="400" trending="false" export="true">
+<Param id="400" export="true">
    <Name>Alarms</Name>
    <Description>Alarms</Description>
    <Type>array</Type>

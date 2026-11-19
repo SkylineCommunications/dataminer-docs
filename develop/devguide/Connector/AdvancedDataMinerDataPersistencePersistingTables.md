@@ -20,7 +20,7 @@ In order for a table column to persist in the database, one of the following mus
 For example, the following table parameter defines some columns to be saved. Column 1001 will also be saved, as this is the column holding the primary keys (as indicated by the [index](xref:Protocol.Params.Param.ArrayOptions-index) attribute).
 
 ```xml
-<Param id="1000" trending="false">
+<Param id="1000">
    <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>

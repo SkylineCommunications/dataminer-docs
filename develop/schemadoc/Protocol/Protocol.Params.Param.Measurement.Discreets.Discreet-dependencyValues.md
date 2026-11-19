@@ -50,7 +50,7 @@ This does not work for tables. However, there is one exception. When the column 
 In case of a ContextMenu parameter (of which the name is identical to that of the table with "_ContextMenu" suffix), the dependencyValues will first ask the user to enter the value of each parameter specified in this attribute.
 
 ```xml
-<Param id="1000" trending="false">
+<Param id="1000">
     <Name>Sites</Name>
     <Type>array</Type>
     ...

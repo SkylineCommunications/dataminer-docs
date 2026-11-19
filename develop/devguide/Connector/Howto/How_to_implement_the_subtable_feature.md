@@ -133,7 +133,7 @@ Another important point is that, because of the nature of the feature, there is 
 With this in mind, your table definition should look something like this:
 
 ```xml
-<Param id="4100" trending="false">
+<Param id="4100">
     <Name>SAPBaseInfo</Name>
     <Description>SAP Base Info</Description>
     <Type>array</Type>

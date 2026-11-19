@@ -36,8 +36,8 @@ In the following example, 2003 and 2004 are foreign keys inside and outside the 
      <Link source="1" dest="1001"/>
   </Cell>
 </Topology>
-<ColumnOption idx="0" pid="2001" type="index" value="" options=""/>
-<ColumnOption idx="1" pid="2002" type="retrieved" value="" options=";save"/>
-<ColumnOption idx="2" pid="2003" type="retrieved" value="" options=";save;foreignKey=3000"/>
-<ColumnOption idx="3" pid="2004" type="retrieved" value="" options=";save;foreignKey=2000"/>
+<ColumnOption idx="0" pid="2001" type="index" options=""/>
+<ColumnOption idx="1" pid="2002" type="retrieved" options=";save"/>
+<ColumnOption idx="2" pid="2003" type="retrieved" options=";save;foreignKey=3000"/>
+<ColumnOption idx="3" pid="2004" type="retrieved" options=";save;foreignKey=2000"/>
 ```

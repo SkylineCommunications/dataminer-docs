@@ -545,7 +545,7 @@ For example, suppose the instances of a table are 1.1; 1.2; 1.3; 2.1, 2.2, 2.3 e
 In the example below, table 1100 will retrieve a filtered set of rows for the column OID 1.2.3.4.* ,where the asterisk is replaced by the content of parameter with ID 1.
 
 ```xml
-<Param id="1100" trending="false">
+<Param id="1100">
     <Name>Ports</Name>
     <Description>Ports</Description>
     <Type>array</Type>

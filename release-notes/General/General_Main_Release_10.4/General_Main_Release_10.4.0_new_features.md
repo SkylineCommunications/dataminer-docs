@@ -37,7 +37,7 @@ For a typical inputs table, the following columns are configured:
 Example:
 
 ```xml
-<Param id="1000" trending="false">
+<Param id="1000">
    <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>
@@ -84,7 +84,7 @@ For a typical outputs table, the following columns are configured:
 Example:
 
 ```xml
-<Param id="2000" trending="false">
+<Param id="2000">
    <Name>Outputs</Name>
    <Description>Outputs</Description>
    <Type>array</Type>
@@ -145,7 +145,7 @@ In addition to the mappings, matrix options can also be configured, in the *Para
 Example:
 
 ```xml
-<Param id="3" trending="false">
+<Param id="3">
    <Name>DummyMatrixParam</Name>
    <Type>Matrix</Type>
    <Display>
