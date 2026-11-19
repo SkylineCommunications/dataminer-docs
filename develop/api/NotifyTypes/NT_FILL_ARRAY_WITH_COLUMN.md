@@ -7,15 +7,18 @@ keywords: FillArrayWithColumn
 
 Sets or updates one or more table columns with provided values.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(220, ...)` directly, we recommend using [SLProtocol.FillArrayWithColumn](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn(System.Int32,System.Int32,System.Object[],System.Object[])) for a single column, or the `SetColumns` extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package when updating one or more columns.
+
 ## Parameters
 
 ```csharp
 int tableID = 1000;
 int columnID = 1002;
 
-object[] columnInfo = new object[] { tableID, columnID};
-object[] primaryKeys = new object[]{"Row 1", "Row 2"};
-object[] columnValues = new object[] { "A", "B"};
+object[] columnInfo = new object[] { tableID, columnID };
+object[] primaryKeys = new object[] { "Row 1", "Row 2" };
+object[] columnValues = new object[] { "A", "B" };
 object[] values = new object[] { primaryKeys, columnValues };
 
 protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
@@ -34,9 +37,9 @@ In case the column data make use of the protocol.Clear and/or protocol.Leave pro
 int tableID = 1000;
 int columnID = 1002;
 
-object[] columnInfo = new object[] { tableID, columnID, true};
-object[] primaryKeys = new object[]{"Row 1", "Row 2"};
-object[] columnValues = new object[] { "A", protocol.Clear};
+object[] columnInfo = new object[] { tableID, columnID, true };
+object[] primaryKeys = new object[] { "Row 1", "Row 2" };
+object[] columnValues = new object[] { "A", protocol.Clear };
 object[] values = new object[] { primaryKeys, columnValues };
 
 protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
@@ -72,7 +75,7 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
 
 - The column type must be set to "retrieved".
 
-  ```csharp
+  ```xml
   <ColumnOption idx="0" pid="1001" type="retrieved" options="" />
   ```
 
@@ -81,7 +84,7 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
 - It is possible to specify a datetime that will be applied to all values passed in the parameter set.<!-- RN 21482 -->
 
   ```csharp
-  protocol.NotifyProtocol(220/*NT_FILL_ARRAY_WITH_COLUMN*/ , new object[] { <TablePid>, <ColumnPid>, new object[2] { <bOverrideBehaviour_bool>,<DateTime>}}, Values);
+  protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, new object[] { <TablePid>, <ColumnPid>, new object[2] { <bOverrideBehaviour_bool>, <DateTime> } }, Values);
   ```
 
   For example:
@@ -92,9 +95,9 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   bool allowClearAndLeave = true;
   DateTime timestamp = DateTime.Now;
 
-  object[] columnInfo = new object[] { tableID, columnID, new object[] { allowClearAndLeave, timestamp }};
-  object[] primaryKeys = new object[]{"Row 1", "Row 2"};
-  object[] columnValues = new object[] { "A", protocol.Clear};
+  object[] columnInfo = new object[] { tableID, columnID, new object[] { allowClearAndLeave, timestamp } };
+  object[] primaryKeys = new object[] { "Row 1", "Row 2" };
+  object[] columnValues = new object[] { "A", protocol.Clear };
   object[] values = new object[] { primaryKeys, columnValues };
 
   protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
@@ -107,12 +110,12 @@ protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   ```csharp
   int tableID = 1000;
   int columnID = 1002;
-  
+
   object[] columnInfo = new object[] { tableID, columnID };
   object[] primaryKeys = new object[] { "Row 1", "Row 2" };
-  object[] columnValues = new object[] { "A", new object[] { "B" , DateTime.Now - TimeSpan.FromDays(5) } };
+  object[] columnValues = new object[] { "A", new object[] { "B", DateTime.Now - TimeSpan.FromDays(5) } };
   object[] values = new object[] { primaryKeys, columnValues };
-  
+
   protocol.NotifyProtocol(220 /*NT_FILL_ARRAY_WITH_COLUMN*/, columnInfo, values);
   ```
 

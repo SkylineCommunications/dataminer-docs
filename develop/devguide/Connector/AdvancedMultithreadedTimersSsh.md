@@ -37,6 +37,7 @@ This QAction is used to create the request as illustrated in the following examp
 ```csharp
 using System;
 using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Utils.Protocol.Extension;
 
 /// <summary>
 /// Example of SSH before QAction.
@@ -52,18 +53,18 @@ public class QAction
     {
         try
         {
-            string rowkey = protocol.RowKey();
-            
-            protocol.SetParameterIndexByKey(1000, rowkey, 7, 3); // Put status of this row to busy.
-            
+            string rowKey = protocol.RowKey();
+
+            protocol.SetCell(1000, rowKey, 6, 3); // Put status of this row to busy.
+
             string userName = Convert.ToString(protocol.SshUsername);
             string password = Convert.ToString(protocol.SshPassword);
             string sshOptions = "";
             int timeout = 5000;
             string responseTrailer = "<<EOT>>";
             int trailerResponseOccurrenceCount = 2;
-            
-            if (!String.IsNullOrWhiteSpace(userName) && !String.IsNullOrWhiteSpace(password))
+
+            if (!string.IsNullOrWhiteSpace(userName) && !string.IsNullOrWhiteSpace(password))
             {
                 string[] sshSettings = new string[6];
                 sshSettings[0] = userName;
@@ -72,27 +73,27 @@ public class QAction
                 sshSettings[3] = Convert.ToString(timeout);
                 sshSettings[4] = responseTrailer;
                 sshSettings[5] = Convert.ToString(trailerResponseOccurrenceCount);
-                
+
                 string sshCommand = "show cable modems\r\n";
                 string[] sshCommands = new string[] { sshCommand };
-                
+
                 object[] requestInfo = new object[2];
                 requestInfo[0] = sshSettings;
                 requestInfo[1] = sshCommands;
-                
+
                 return requestInfo;
             }
             else
             {
-                protocol.Log("No SSH user name or password filled in.");
-            
+                protocol.Log($"QA{protocol.QActionID}|Run|No SSH user name or password filled in.", LogType.Error, LogLevel.NoLogging);
+
                 return null;
             }
         }
         catch (Exception e)
         {
-            protocol.Log("QA" + protocol.QActionID + "|Run|An exception occurred: " + e.ToString(), LogType.Error, LogLevel.NoLogging);
-        
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
+
             return null;
         }
     }
@@ -160,34 +161,34 @@ public class QAction
     {
         try
         {
-            string rowkey = protocol.RowKey();      
+            string rowKey = protocol.RowKey();
             object responseData = protocol.OldRow();
-        
+
             if (responseData == null)
             {
-                protocol.Log("Response data is null.");
+                protocol.Log($"QA{protocol.QActionID}|Run|Response data is null.", LogType.Error, LogLevel.NoLogging);
             }
             else if ((Convert.ToString(responseData) == "TIMEOUT") || (Convert.ToString(responseData) == "NO POLLING OCCURRED"))
             {
-                protocol.Log("Response data is " + Convert.ToString(responseData));
+                protocol.Log($"QA{protocol.QActionID}|Run|Response data is {Convert.ToString(responseData)}", LogType.Error, LogLevel.NoLogging);
             }
             else
             {
                 object[] responses = (object[])responseData;
-            
-                protocol.Log("QA" + protocol.QActionID + "|Number of lines ins response: " + responses.Length, LogType.Error, LogLevel.NoLogging);
-            
-                for(int i=0; i<responses.Length; i++)
+
+                protocol.Log($"QA{protocol.QActionID}|Run|Number of lines in response: {responses.Length}", LogType.Error, LogLevel.NoLogging);
+
+                for (int i = 0; i < responses.Length; i++)
                 {
                     string response = Convert.ToString(responses[i]);
-            
+
                     // Process response...
                 }
             }
         }
         catch (Exception e)
         {
-            protocol.Log("QA" + protocol.QActionID + "Run|An exception occurred: " + e.ToString(), LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
         }
     }
 }
@@ -223,12 +224,12 @@ public class QAction
         try
         {
             string rowKey = protocol.RowKey();
-            
+
             // Check if state is still "Sending". If this is the case, a timeout occurred and the state should be set accordingly.
         }
         catch (Exception e)
         {
-            protocol.Log("QA" + protocol.QActionID + "Run|An exception occurred: " + e.ToString(), LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
         }
     }
 }

@@ -43,20 +43,22 @@ The class *BackupInputData* contains the configuration type. It can be used by t
 ```csharp
 // This will load the automation script's parameter data.
 inputData = new BackupInputData(engine);
+
 // This method will communicate with the IDP solution, to provide the required feedback for the backup process.
 backupManager = new Backup(inputData);
 switch (backupManager.InputData.ConfigurationType)
 {
-  case ConfigurationType.StartUp:
-  // do something
-  break;
-  case ConfigurationType.Running:
-  // do something
-  break;
-  case ConfigurationType.Golden:
-  // do something
-  break;
-    default: throw new ArgumentException("Type not implemented");
+    case ConfigurationType.StartUp:
+        // do something
+        break;
+    case ConfigurationType.Running:
+        // do something
+        break;
+    case ConfigurationType.Golden:
+        // do something
+        break;
+    default:
+        throw new ArgumentException("Type not implemented");
 }
 ```
 
@@ -80,8 +82,7 @@ inputData = new BackupInputData(engine);
 backupManager = new Backup(inputData);
 backupManager.NotifyProcessStarted();
 
-string contents = "Contents of the backup which are typically read\n"
-                + "from one or more parameters from the corresponding element";
+string contents = "Contents of the backup which are typically read\nfrom one or more parameters from the corresponding element";
 backupManager.SendBackupContentToIdp(contents);
 
 backupManager.NotifyProcessSuccess();
@@ -135,10 +136,9 @@ inputData = new BackupInputData(engine);
 backupManager = new Backup(inputData);
 backupManager.NotifyProcessStarted();
 
-string fullContent = "Contents of the full backup which are typically read\n"
-                + "from one or more parameters from the corresponding element";
-int version = 1
-backupManager.SendBackupContentWithChangeDetectionToIdp(fullContent,version);
+string fullContent = "Contents of the full backup which are typically read\nfrom one or more parameters from the corresponding element";
+int version = 1;
+backupManager.SendBackupContentWithChangeDetectionToIdp(fullContent, version);
 
 backupManager.NotifyProcessSuccess();
 ```
@@ -150,12 +150,10 @@ inputData = new BackupInputData(engine);
 backupManager = new Backup(inputData);
 backupManager.NotifyProcessStarted();
 
-string fullContent = "Contents of the full backup which are typically read\n"
-                + "from one or more parameters from the corresponding element";
-string coreContent = "Contents of the core backup which is typically \n"
-                + "smaller then the full backup";
-int version = 1
-backupManager.SendBackupContentWithChangeDetectionToIdp(fullContent,coreContent, version);
+string fullContent = "Contents of the full backup which are typically read\nfrom one or more parameters from the corresponding element";
+string coreContent = "Contents of the core backup which is typically \nsmaller then the full backup";
+int version = 1;
+backupManager.SendBackupContentWithChangeDetectionToIdp(fullContent, coreContent, version);
 
 backupManager.NotifyProcessSuccess();
 ```
@@ -173,9 +171,9 @@ inputData = new BackupInputData(engine);
 backupManager = new Backup(inputData);
 backupManager.NotifyProcessStarted();
 
-string pathfull = @"\\WINSERVER1\backup\fullConfig.txt";
+string fullPath = @"\\WINSERVER1\backup\fullConfig.txt";
 int version = 1;
-backupManager.SendBackupFilePathWithChangeDetectionToIdp(fullPath,version);
+backupManager.SendBackupFilePathWithChangeDetectionToIdp(fullPath, version);
 
 backupManager.NotifyProcessSuccess();
 ```
@@ -190,7 +188,7 @@ backupManager.NotifyProcessStarted();
 string fullPath = @"\\WINSERVER1\backup\fullConfig.txt";
 string corePath = @"\\WINSERVER1\backup\coreConfig.txt";
 int version = 1;
-backupManager.SendBackupFilePathWithChangeDetectionToIdp(fullPath,corePath,version);
+backupManager.SendBackupFilePathWithChangeDetectionToIdp(fullPath, corePath, version);
 
 backupManager.NotifyProcessSuccess();
 ```

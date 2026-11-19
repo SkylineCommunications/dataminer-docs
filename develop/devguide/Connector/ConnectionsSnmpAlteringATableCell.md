@@ -142,25 +142,26 @@ This approach requires that you implement logic in the protocol to know which ro
 
 1. Create a QAction with the row attribute set to "true". This QAction will set the value of the parameter containing the dynamic part of the OID to the primary key of the row that triggered this QAction. (The primary key of the row that triggered the QAction is obtained via the RowKey method). The value that has been set in the write parameter (parameter with ID 117) is copied to the write parameter that will perform the SNMP set request (parameter with ID 127).
 
-     ```xml
+    ```xml
     <QAction id="117" name="Set Cell" encoding="csharp" triggers="117" row="true">
     <![CDATA[
-       using Skyline.DataMiner.Scripting;
-    
-       public class QAction{
-          public static void Run (SLProtocol protocol)
-          {
-             object value = protocol.GetParameter(117);
-             string primaryKey = protocol.RowKey();
-    
+    using Skyline.DataMiner.Scripting;
+
+    public class QAction
+    {
+        public static void Run(SLProtocol protocol)
+        {
+            object value = protocol.GetParameter(117);
+            string primaryKey = protocol.RowKey();
+
             // Set instance parameter.
             protocol.SetParameter(99, primaryKey);
             protocol.SetParameter(127, value);
-    
+
             // Refresh table.
             protocol.CheckTrigger(1);
-         }
-      }
+        }
+    }
     ]]>
     </QAction>
     ```

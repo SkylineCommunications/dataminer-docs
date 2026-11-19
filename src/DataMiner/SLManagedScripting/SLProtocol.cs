@@ -217,27 +217,27 @@ namespace Skyline.DataMiner.Scripting
 		/// <code>
 		/// try
 		/// {
-		///		string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO", "DEFER:TRUE" };
+		///     string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO", "DEFER:TRUE" };
 		///
-		///		 ExecuteScriptMessage message = new ExecuteScriptMessage
-		///		 {
-		///			ScriptName = "Automation script",
-		///			Options = new SA(scriptOptions),
-		///			DataMinerID = -1,
-		///			 HostingDataMinerID = -1
-		///		};
-		///		
-		///		var response = protocol.ExecuteScript(message);
-		///		bool succeeded = response != null &amp;&amp; !response.HadError;
-		///		
-		///		if (!succeeded)
-		///		{
-		///			// Script did not succeed.
-		///		}
+		///     ExecuteScriptMessage message = new ExecuteScriptMessage
+		///     {
+		///         ScriptName = "Automation script",
+		///         Options = new SA(scriptOptions),
+		///         DataMinerID = -1,
+		///         HostingDataMinerID = -1
+		///     };
+		///
+		///     var response = protocol.ExecuteScript(message);
+		///     bool succeeded = response != null &amp;&amp; !response.HadError;
+		///
+		///     if (!succeeded)
+		///     {
+		///         // Script did not succeed.
+		///     }
 		/// }
 		/// catch (Exception ex)
 		/// {
-		///		protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Exception thrown:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+		///     protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
 		/// }
 		/// </code>
 		/// <para>In the example above, note the use of the options "EXTENDED_ERROR_INFO" and "DEFER:TRUE".</para>
@@ -1724,7 +1724,7 @@ namespace Skyline.DataMiner.Scripting
 
 		/// <summary>
 		/// Retrieves the value of a cell in the table specified by the 1-based row and column position.<br/>
-		/// Note that this method should not be used. Using <see cref="GetParameterIndexByKey(int, string, int)"/> instead is highly recommended.
+		/// Note that this method should not be used. Using the <c>GetCell(int, string, int)</c> extension method from the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package (or <see cref="GetParameterIndexByKey(int, string, int)"/>) instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based position of the row.</param>
@@ -1752,7 +1752,7 @@ namespace Skyline.DataMiner.Scripting
 
 		/// <summary>
 		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.<br/>
-		/// Note that this method should not be used. Using <see cref="SetParameterIndexByKey(int, string, int, object, ValueType)"/> instead is highly recommended.
+		/// Note that this method should not be used. Using the <c>SetCell(int, string, int, object, DateTime?)</c> extension method from the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package (or <see cref="SetParameterIndexByKey(int, string, int, object, ValueType)"/>) instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based row position.</param>
@@ -1786,7 +1786,7 @@ namespace Skyline.DataMiner.Scripting
 
 		/// <summary>
 		/// Sets the value of a cell in a table, identified by its 1-based row and column position, with the specified value.<br/>
-		/// Note that this method should not be used. Using <see cref="SetParameterIndexByKey(int, string, int, object)"/> instead is highly recommended.
+		/// Note that this method should not be used. Using the <c>SetCell(int, string, int, object, DateTime?)</c> extension method from the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package (or <see cref="SetParameterIndexByKey(int, string, int, object)"/>) instead is highly recommended.
 		/// </summary>
 		/// <param name="iID">The ID of the table parameter.</param>
 		/// <param name="iX">The 1-based row position.</param>
@@ -1898,7 +1898,10 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value1">Depends on the type of message to send.</param>
 		/// <param name="value2">Depends on the type of message to send.</param>
 		/// <returns>Depends on the type of message that has been sent.</returns>
-		/// <remarks>Refer to [Notify Types overview](xref:NTNotifyTypesOverview) for an overview of the available Notify types.</remarks>
+		/// <remarks>
+		/// <para>Refer to [Notify Types overview](xref:NTNotifyTypesOverview) for an overview of the available Notify types.</para>
+		/// <note type="note">Before using a raw <c>NotifyProtocol</c> call, check whether a higher-level wrapper method is available on <see cref="SLProtocol"/> or in the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package (such as <c>GetColumns</c>, <c>GetColumn</c>, <c>GetCell</c>, <c>SetCell</c>, <c>SetColumns</c>, <c>DeleteRows</c>, or <c>RunAction</c>).</note>
+		/// </remarks>
 		object NotifyProtocol(int iType, object value1, object value2);
 
 		/// <summary>
@@ -1919,6 +1922,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="iY">The 1-based position of the column.</param>
 		/// <returns>The value of the cell.</returns>
 		/// <remarks>
+		///		<note type="note">Consider using the <c>GetCell(int tablePid, string rowPK, int columnIdx)</c> extension method from the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package instead. Unlike <c>GetParameterIndexByKey</c> (which expects a 1-based column position), <c>GetCell</c> uses a 0-based column index matching <c>Parameter.Table.Idx</c> constants directly.</note>
 		///		<list type = "bullet" >
 		///			<item>
 		///				<description>This is a wrapper method for the NotifyProtocol type 122 <see href="xref:NT_GET_PARAMETER_INDEX">NT_GET_PARAMETER_INDEX</see> call.</description>
@@ -1951,6 +1955,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="timeInfo">Timestamp.</param>
 		/// <returns>Whether the cell value has changed. <c>true</c> indicates change; otherwise, <c>false</c>.</returns>
 		/// <remarks>
+		///		<note type="note">Consider using the <c>SetCell(int tablePid, string rowPK, int columnIdx, object value, DateTime? dateTime = null)</c> extension method from the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package instead. Unlike <c>SetParameterIndexByKey</c> (which expects a 1-based column position), <c>SetCell</c> uses a 0-based column index matching <c>Parameter.Table.Idx</c> constants directly.</note>
 		///		<list type="bullet">
 		///			<item>
 		///				<description>The primary key can never be updated.</description>
@@ -1980,6 +1985,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <param name="value">The value to set.</param>
 		/// <returns>Whether the cell value has changed. <c>true</c> indicates change; otherwise, <c>false</c>.</returns>
 		/// <remarks>
+		///		<note type="note">Consider using the <c>SetCell(int tablePid, string rowPK, int columnIdx, object value, DateTime? dateTime = null)</c> extension method from the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package instead. Unlike <c>SetParameterIndexByKey</c> (which expects a 1-based column position), <c>SetCell</c> uses a 0-based column index matching <c>Parameter.Table.Idx</c> constants directly.</note>
 		///		<list type = "bullet" >
 		///			<item>
 		///				<description>The primary key can never be updated.</description>
@@ -2388,12 +2394,12 @@ namespace Skyline.DataMiner.Scripting
 		///	</remarks>
 		///	<example>
 		///		<code>
-		///			#if DBInfo
-		///				string databaseType = protocol.GetLocalDatabaseType();
-		///				protocol.Log("Local DB type is: " + databaseType);
-		///			#else
-		///				protocol.Log("This DataMiner version does not support requesting the type of the local database.");
-		///			#endif
+		/// #if DBInfo
+		///     string databaseType = protocol.GetLocalDatabaseType();
+		///     protocol.Log($"Local DB type is: {databaseType}");
+		/// #else
+		///     protocol.Log("This DataMiner version does not support requesting the type of the local database.");
+		/// #endif
 		///		</code>
 		///	</example>
 		string GetLocalDatabaseType();

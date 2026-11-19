@@ -18,20 +18,20 @@ In the example below, the Run method of the QAction class is defined as a static
 ```xml
 <QAction id="100" name="Count Executions" encoding="csharp" triggers="100">
 <![CDATA[
-    using System;
-    using Skyline.DataMiner.Scripting;
+using System;
+using Skyline.DataMiner.Scripting;
 
-    public static class QAction
+public static class QAction
+{
+    public static void Run(SLProtocol protocol)
     {
-        public static void Run(SLProtocol protocol)
-        {
-            int count = Convert.ToInt32(protocol.GetParameter(10));
-            count++;
-            protocol.SetParameter(10, count);
+        int count = Convert.ToInt32(protocol.GetParameter(10));
+        count++;
+        protocol.SetParameter(10, count);
 
-            protocol.Log("Number of times button was pressed on this element: " + count, LogType.Error, LogLevel.NoLogging);
-        }
+        protocol.Log($"QA{protocol.QActionID}|Run|Number of times button was pressed on this element: {count}", LogType.Error, LogLevel.NoLogging);
     }
+}
 ]]>
 </QAction>
 ```
@@ -49,17 +49,17 @@ The following example will count the number of times the button has been used fo
 ```xml
 <QAction id="100" name="Count Executions" encoding="csharp" triggers="100">
 <![CDATA[
-    using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Scripting;
 
-    public class QAction
+public class QAction
+{
+    private int executionCount = 0;
+
+    public void Run(SLProtocol protocol)
     {
-        private int executionCount = 0;
-
-        public void Run(SLProtocol protocol)
-        {
-            executionCount++;
-        }
+        executionCount++;
     }
+}
 ]]>
 </QAction>
 ```

@@ -15,7 +15,7 @@ uint[] ids = new uint[] { dmaID, elementID, parameterID };
 
 int value = 10;
 
-protocol.NotifyDataMiner(167 /*NT_SET_PARAMETER_WITH_WAIT*/ , ids, value);
+protocol.NotifyDataMiner(167 /*NT_SET_PARAMETER_WITH_WAIT*/, ids, value);
 ```
 
 ## Parameters

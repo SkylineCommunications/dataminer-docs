@@ -221,6 +221,7 @@ var domInstance = new DomInstance()
     DomDefinitionId = domDefinition.ID,
     StatusId = "new_status" // Can be left empty if it matches the initial status
 };
+
 domInstance.AddOrUpdateFieldValue(sectionDefinition, reporterNameFieldDescriptor, "John");
 var description = "One of the lights in the kitchen on the 2nd floor does not work";
 domInstance.AddOrUpdateFieldValue(sectionDefinition, issueTextFieldDescriptor, description);

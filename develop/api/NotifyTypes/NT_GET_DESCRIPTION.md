@@ -6,6 +6,9 @@ uid: NT_GET_DESCRIPTION
 
 Gets the description of the specified parameter.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(77, ...)` directly, we recommend using [SLProtocol.GetParameterDescription](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterDescription*).
+
 ```csharp
 int parameterID = 110;
 object result = protocol.NotifyProtocol(77, parameterID, null);

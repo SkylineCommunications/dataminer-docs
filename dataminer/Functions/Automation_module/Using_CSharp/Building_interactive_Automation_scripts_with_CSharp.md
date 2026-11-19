@@ -31,14 +31,14 @@ Notice that the programmer defined a number of columns and rows. This forms a gr
 
 Also notice that a height and a width have been defined for every dialog box item, and that the row heights and column widths have been set to “a” (i.e., automatic) instead of to a specific number of pixels. That way, the rows and columns will automatically be resized according to the size of the dialog box items.
 
-```cs
+```csharp
 // Create the dialog box
 UIBuilder uib = new UIBuilder();
 
 // Configure the dialog box
 uib.RequireResponse = true;
 uib.RowDefs = "a;a;a";
-uib.ColumnDefs="a;a;a";
+uib.ColumnDefs = "a;a;a";
 
 // Add a 'StaticText' item to the dialog box
 UIBlockDefinition blockStaticText = new UIBlockDefinition();
@@ -68,7 +68,7 @@ engine.ShowUI(uib);
 
 The following code displays a simple dialog box that shows a checkbox list. When you select one of the options in the list and you click *Next*, another dialog box will appear, showing the text of the option you selected.
 
-```cs
+```csharp
 // ------------------------ SCREEN 1 -----------------------------
 
 UIResults uir = null;
@@ -77,7 +77,7 @@ string selection = "";
 UIBuilder uib = new UIBuilder();
 uib.RequireResponse = true;
 uib.RowDefs = "50;*;*";
-uib.ColumnDefs="50;*;*";
+uib.ColumnDefs = "50;*;*";
 
 UIBlockDefinition blockCheckBoxList = new UIBlockDefinition();
 blockCheckBoxList.Type = UIBlockType.CheckBoxList;
@@ -103,6 +103,7 @@ uib.AppendBlock(blockButtonNext);
 
 uir = engine.ShowUI(uib);
 selection = uir.GetString("selectionDest");
+
 // ------------------------ SCREEN 2 -------------------------------
 // Create the dialog box
 UIBuilder uib2 = new UIBuilder();
@@ -110,12 +111,12 @@ UIBuilder uib2 = new UIBuilder();
 // Configure the dialog box
 uib2.RequireResponse = true;
 uib2.RowDefs = "50;*;*";
-uib2.ColumnDefs="50;*;*";
+uib2.ColumnDefs = "50;*;*";
 
 // Add a 'StaticText' item to the dialog box
 UIBlockDefinition blockStaticText = new UIBlockDefinition();
 blockStaticText.Type = UIBlockType.StaticText;
-blockStaticText.Text = "You chose " + selection;
+blockStaticText.Text = $"You chose {selection}";
 blockStaticText.Row = 1;
 blockStaticText.Column = 1;
 blockStaticText.Height = 50;
@@ -144,40 +145,40 @@ In the default table layout, pressing the TAB key moves the focus from left to r
 
 The following example arranges four time input fields in two columns. Because the blocks are added from top to bottom in the first column and then in the second column, pressing the TAB key moves down the first column before continuing in the second column.
 
-```cs
+```csharp
 var uiBuilder = new UIBuilder
 {
-  WebUILayout = WebUILayout.Grid,
-  RowDefs = "auto;auto",
-  ColumnDefs = "auto;auto"
+    WebUILayout = WebUILayout.Grid,
+    RowDefs = "auto;auto",
+    ColumnDefs = "auto;auto"
 };
 
 var firstColumnTop = new UIBlockDefinition
 {
-  Type = UIBlockType.Time,
-  Row = 1,
-  Column = 0
+    Type = UIBlockType.Time,
+    Row = 1,
+    Column = 0
 };
 
 var firstColumnBottom = new UIBlockDefinition
 {
-  Type = UIBlockType.Time,
-  Row = 2,
-  Column = 0
+    Type = UIBlockType.Time,
+    Row = 2,
+    Column = 0
 };
 
 var secondColumnTop = new UIBlockDefinition
 {
-  Type = UIBlockType.Time,
-  Row = 1,
-  Column = 1
+    Type = UIBlockType.Time,
+    Row = 1,
+    Column = 1
 };
 
 var secondColumnBottom = new UIBlockDefinition
 {
-  Type = UIBlockType.Time,
-  Row = 2,
-  Column = 1
+    Type = UIBlockType.Time,
+    Row = 2,
+    Column = 1
 };
 
 // The order of these calls determines the TAB order.

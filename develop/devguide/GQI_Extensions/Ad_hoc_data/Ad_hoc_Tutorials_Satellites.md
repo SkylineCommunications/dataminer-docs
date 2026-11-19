@@ -54,35 +54,39 @@ Expected duration: 15 minutes.
 1. Implement the *GetColumns* method to provide GQI with all the columns of the data source.
 
    ```csharp
-       public GQIColumn[] GetColumns()
+   public GQIColumn[] GetColumns()
+   {
+       return new GQIColumn[]
        {
-           return new GQIColumn[] {
-               new GQIStringColumn("Name"),
-               new GQIDoubleColumn("Latitude"),
-               new GQIDoubleColumn("Longitude")
-           };
-       }
+           new GQIStringColumn("Name"),
+           new GQIDoubleColumn("Latitude"),
+           new GQIDoubleColumn("Longitude")
+       };
+   }
    ```
 
 1. Implement the *GetNextPage* method to provide GQI with the actual data. Each row is one satellite.
 
    ```csharp
-       public GQIPage GetNextPage(GetNextPageInputArgs args)
+   public GQIPage GetNextPage(GetNextPageInputArgs args)
+   {
+       var satellites = _satellitesHelper.GetSatellites().Take(100);
+       var rows = new List<GQIRow>();
+       foreach (var satellite in satellites)
        {
-           var satellites = _satellitesHelper.GetSatellites().Take(100);
-           var rows = new List<GQIRow>();
-           foreach (var satellite in satellites) {
-               var cells = new GQICell[] {
-                   new GQICell(){ Value = satellite.Name },
-                   new GQICell(){ Value = satellite.Latitude},
-                   new GQICell() { Value = satellite.Longitude}
-               };
-               var row = new GQIRow(cells);
-               rows.Add(row);
-           }
+           var cells = new GQICell[]
+           {
+               new GQICell() { Value = satellite.Name },
+               new GQICell() { Value = satellite.Latitude },
+               new GQICell() { Value = satellite.Longitude }
+           };
 
-           return new GQIPage(rows.ToArray());
+           var row = new GQIRow(cells);
+           rows.Add(row);
        }
+
+       return new GQIPage(rows.ToArray());
+   }
    ```
 
    By implementing both methods provided by the *IGQIDataSource* interface, you have now successfully finished the data source.

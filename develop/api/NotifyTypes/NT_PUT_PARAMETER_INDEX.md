@@ -6,6 +6,9 @@ uid: NT_PUT_PARAMETER_INDEX
 
 Sets the value of a cell in a table, identified by the primary key (or row number) of the row and column position, with the specified value.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(121, ...)` or `SetParameterIndexByKey` directly, we recommend using the `SetCell` extension method (with a 0-based column index) or `SetColumns` (when updating multiple rows or columns) from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+
 ## Parameters
 
 Setting a **single cell**:
@@ -17,7 +20,7 @@ int columnNumber = 4;
 string value = "myValue";
 object[] cellIdentifier = new object[] { tableId, rowKey, columnNumber };
 
-bool result = (bool) protocol.NotifyProtocol(121, cellIdentifier, value);
+bool result = (bool)protocol.NotifyProtocol(121, cellIdentifier, value);
 ```
 
 - cellIdentifier (object[]):
@@ -29,13 +32,13 @@ bool result = (bool) protocol.NotifyProtocol(121, cellIdentifier, value);
 Setting **multiple cells**:
 
 ```csharp
-int[] tableIds = new int[] { 1000, 1000};
+int[] tableIds = new int[] { 1000, 1000 };
 string[] rowKeys = new string[] { "6", "8" };
 int[] columnNumbers = new int[] { 4, 4 };
 object[] cellIdentifiers = new object[] { tableIds, rowKeys, columnNumbers };
 object[] values = new object[] { new object[] { "Value X", "Value Y" } };
 
-uint[] result = (uint[]) protocol.NotifyProtocol(121, cellIdentifiers, values);
+uint[] result = (uint[])protocol.NotifyProtocol(121, cellIdentifiers, values);
 ```
 
 - cellIdentifiers (object[]):
@@ -68,12 +71,12 @@ Example:
 Setting multiple cell values with a time stamp:
 
 ```csharp
-int[] tableIds = new int[] { 1000, 1000};
+int[] tableIds = new int[] { 1000, 1000 };
 string[] rowKeys = new string[] { "6", "8" };
 int[] columnNumbers = new int[] { 4, 4 };
 object[] cellIdentifiers = new object[] { tableIds, rowKeys, columnNumbers };
 
 object[] values = new object[] { new object[] { "Value X", "Value Y" }, new object[] { DateTime.Now, DateTime.Now } };
 
-uint[] result = (uint[]) protocol.NotifyProtocol(121, cellIdentifiers, values);
+uint[] result = (uint[])protocol.NotifyProtocol(121, cellIdentifiers, values);
 ```

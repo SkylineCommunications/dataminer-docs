@@ -266,7 +266,7 @@ public void Run(SLProtocolExt protocol)
         
         if (communicationInfo != null)
         {
-            protocol.Log("QA" + protocol.QActionID + "|New Row Result was: " + communicationInfo, LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Run|New Row Result was: {communicationInfo}", LogType.Error, LogLevel.NoLogging);
             
             switch (communicationInfo)
             {
@@ -297,7 +297,7 @@ public void Run(SLProtocolExt protocol)
     }
     catch (Exception e)
     {
-        protocol.Log(8, 5, "An exception occurred:" + e);
+        protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
     }
     
     if (!timeout)
@@ -329,16 +329,16 @@ public static void ProcessResultData(SLProtocolExt protocol)
         if (newValues != null && newValues.Length == 3) // Number of items in group.
         {
             string myFirstParameter = Convert.ToString(newValues[0]);
-            //...
+            // ...
         }
         else
         {    
-            protocol.Log("QA" + protocol.QActionID + "|ProcessResultData|Unexpected result.", LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|ProcessResultData|Unexpected result.", LogType.Error, LogLevel.NoLogging);
         }
     }
     catch (Exception e)
     {
-        protocol.Log(8, 5, "Error while parsing data : " + e);
+        protocol.Log($"QA{protocol.QActionID}|ProcessResultData|Error while parsing data: {e}", LogType.Error, LogLevel.NoLogging);
     }
 }
 ```
@@ -355,7 +355,7 @@ public static void ProcessResultData(SLProtocolExt protocol)
     {
         object[] myTable = (object[])newValues[0];
         
-        protocol.Log("QA" + protocol.QActionID + "|myTable " + myTable.Length, LogType.Error, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|ProcessResultData|myTable {myTable.Length}", LogType.Error, LogLevel.NoLogging);
         
         object[] instanceColumn = (object[])myTable[0];
         object[] myFirstRequestedColumn = (object[])myTable[1];
@@ -363,7 +363,7 @@ public static void ProcessResultData(SLProtocolExt protocol)
     }
     else
     {
-        protocol.Log("QA" + protocol.QActionID + "|ProcessResultData|Unexpected result.", LogType.Error, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|ProcessResultData|Unexpected result.", LogType.Error, LogLevel.NoLogging);
     }
 }
 ```

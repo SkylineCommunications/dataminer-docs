@@ -12,18 +12,18 @@ int elementId = 806;
 int parameterId = 4000;
 int changeType = 9;
 
-string updateConfig = changeType + ";" + elementId + ";" + parameterId + ";" + agentId;
+string updateConfig = $"{changeType};{elementId};{parameterId};{agentId}";
 
 int inputs = 8;
 int outputs = 8;
 
-string updateValue = inputs + ";" + outputs;
+string updateValue = $"{inputs};{outputs}";
 
-int result = (int) protocol.NotifyDataMinerQueued(128, updateConfig, updateValue);
+int result = (int)protocol.NotifyDataMinerQueued(128, updateConfig, updateValue);
 
 if (result != 0)
 {
-    protocol.Log("QA" + protocol.QActionID + "|Port update failed: " + updateConfig + ", " + updateValue, LogType.Error, LogLevel.NoLogging);
+    protocol.Log($"QA{protocol.QActionID}|Port update failed: {updateConfig}, {updateValue}", LogType.Error, LogLevel.NoLogging);
 }
 
 protocol.SendToDisplay(4000);
@@ -111,49 +111,49 @@ protocol.SendToDisplay(4000);
 - Setting the label of input 1 to "Test":
 
   ```csharp
-  protocol.NotifyDataMinerQueued(128, "0;" +elementId+";"+parameterId+";"+agentId, "1;test");
+  protocol.NotifyDataMinerQueued(128, $"0;{elementId};{parameterId};{agentId}", "1;test");
   ```
 
 - Setting state of input 1 to disabled:
 
   ```csharp
-  protocol.NotifyDataMinerQueued(128, "1;" +elementId+";"+parameterId+";"+agentId, "1;disabled");
+  protocol.NotifyDataMinerQueued(128, $"1;{elementId};{parameterId};{agentId}", "1;disabled");
   ```
 
 - Setting input 1 to page "testpage":
 
   ```csharp
-  protocol.NotifyDataMinerQueued(128, "3;" +elementId+";"+parameterId+";"+agentId, "1;testpage");
+  protocol.NotifyDataMinerQueued(128, $"3;{elementId};{parameterId};{agentId}", "1;testpage");
   ```
 
 - Setting output 1 and 2 to not allowed for input 1:
 
   ```csharp
-  protocol.NotifyDataMinerQueued(128, "4;" +elementId+";"+parameterId+";"+agentId, "1;17,18");
+  protocol.NotifyDataMinerQueued(128, $"4;{elementId};{parameterId};{agentId}", "1;17,18");
   ```
 
 - Setting output 1 and 2 to allowed for input 1:
 
   ```csharp
-  protocol.NotifyDataMinerQueued(128, "5;" +elementId+";"+parameterId+";"+agentId, "1;17,18");
+  protocol.NotifyDataMinerQueued(128, $"5;{elementId};{parameterId};{agentId}", "1;17,18");
   ```
 
 - Locking output 8 (16x16 matrix):
 
   ```csharp
-  protocol.NotifyDataMinerQueued(128, "6;" +elementId+";"+parameterId+";"+agentId, "24;true");
+  protocol.NotifyDataMinerQueued(128, $"6;{elementId};{parameterId};{agentId}", "24;true");
   ```
 
 - Output 1 is master of output 10:
 
   ```csharp
-  protocol.NotifyDataMinerQueued(128, "7;" +elementId+";"+parameterId+";"+agentId, "17;23");
+  protocol.NotifyDataMinerQueued(128, $"7;{elementId};{parameterId};{agentId}", "17;23");
   ```
 
 - Enable follow mode on output 10 (16x16 matrix):
 
   ```csharp
-  protocol.NotifyDataMinerQueued(128, "8;" +elementId+";"+parameterId+";"+agentId, "26;true");
+  protocol.NotifyDataMinerQueued(128, $"8;{elementId};{parameterId};{agentId}", "26;true");
   ```
 
 - Setting the matrix layout:

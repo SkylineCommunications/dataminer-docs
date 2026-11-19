@@ -155,7 +155,6 @@ namespace HelloWorldAPI_1
 
     public class Script
     {
-
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
         public ApiTriggerOutput OnApiTrigger(IEngine engine, ApiTriggerInput requestData)
         {

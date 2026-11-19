@@ -105,56 +105,57 @@ Responses can be processed by a QAction that triggers on change of the "Response
 
 Processing is done by assigning actions to different glowReader handlers, then parsing the incoming data using the glowReader that will trigger the right event.
 
-```cs
-public class QAction
+```csharp
+public class QAction
 {
-  private GlowReader glowReader;
-  public void Run(SLProtocol protocol)
-  {
-    if (glowReader == null)
+    private GlowReader glowReader;
+
+    public void Run(SLProtocol protocol)
     {
-      glowReader = new GlowReader((_, e) => GlowReceived(protocol, e.Root), (_, e) => KeepAliveRequestReceived(protocol, e));
-      glowReader.PackageReceived += (_, e) => PackageReceived(protocol, e);
-      glowReader.FramingError += (_, e) => GlowFramingError(protocol, e.Message);
-      glowReader.Error += (_, e) => GlowError(protocol, e.Message);
+        if (glowReader == null)
+        {
+            glowReader = new GlowReader((_, e) => GlowReceived(protocol, e.Root), (_, e) => KeepAliveRequestReceived(protocol, e));
+            glowReader.PackageReceived += (_, e) => PackageReceived(protocol, e);
+            glowReader.FramingError += (_, e) => GlowFramingError(protocol, e.Message);
+            glowReader.Error += (_, e) => GlowError(protocol, e.Message);
+        }
+
+        HandleResponse(protocol);
     }
 
-    HandleResponse(protocol);
-  }
+    private void HandleResponse(SLProtocol protocol)
+    {
+        object receivedData = protocol.GetData("PARAMETER", HdCoreRavenna.ResponseDataPid);
 
-  private void HandleResponse(SLProtocol protocol)
-  {
-    object receivedData = protocol.GetData("PARAMETER", HdCoreRavenna.ResponseDataPid);
+        if (receivedData == null)
+        {
+            protocol.Log($"QA{protocol.QActionID}|HandleResponse|ERR: Received data is invalid!", LogType.Error, LogLevel.NoLogging);
+            return;
+        }
 
-    if (receivedData == null)
-    {
-      protocol.Log("QA" + protocol.QActionID + "|HandleResponse|ERR: Received data is invalid!", LogType.Error, LogLevel.NoLogging);
-      return;
-    }
+        object[] objectArray = (object[])receivedData;
+        if (objectArray.Length == 0)
+        {
+            protocol.Log($"QA{protocol.QActionID}|HandleResponse|ERR: Received data is invalid! Content:\n{string.Join(".", objectArray.Select(x => Convert.ToString(x)))}", LogType.Error, LogLevel.NoLogging);
+            return;
+        }
 
-    object[] objectArray = (object[])receivedData;
-    if (objectArray.Length == 0)
-    {
-      protocol.Log("QA" + protocol.QActionID + "|HandleResponse|ERR: Received data is invalid! Content:\n" + String.Join(".", objectArray.Select(x => Convert.ToString(x))), LogType.Error, LogLevel.NoLogging);
-      return;
-    }
+        try
+        {
+            byte[] data = objectArray.Select(Convert.ToByte).ToArray();
 
-    try
-    {
-      byte[] data = objectArray.Select(Convert.ToByte).ToArray();
+            byte[] framedData = new byte[data.Length + 2];
+            framedData[0] = 0xFE;
+            Array.Copy(data, 0, framedData, 1, data.Length);
+            framedData[framedData.Length - 1] = 0xFF;
 
-      byte[] framedData = new byte[data.Length + 2];
-      framedData[0] = 0xFE;
-      Array.Copy(data, 0, framedData, 1, data.Length);
-      framedData[framedData.Length - 1] = 0xFF;
-
-      glowReader.ReadBytes(framedData);
-    }
-    catch (Exception e)
-    {
-      protocol.Log("QA" + protocol.QActionID + "|HandleResponse|Error" + Environment.NewLine + e, LogType.Error, LogLevel.NoLogging);
-    }
-  }
+            glowReader.ReadBytes(framedData);
+        }
+        catch (Exception e)
+        {
+            protocol.Log($"QA{protocol.QActionID}|HandleResponse|Error{Environment.NewLine}{e}", LogType.Error, LogLevel.NoLogging);
+        }
+    }
 }
 ```
 
@@ -162,44 +163,44 @@ public class QAction
 
 This works by first selecting the right node in the tree of data and then performing a specific command on that location. To then have the API create the frame, you perform encoding and finishing. To then grab that encoded frame and set it on the protocol, you can assign an action to the handler: PackageReady. The action can then be e.g., GlowPackageReady that will set the data on the "Request Data" parameter and perform a checktrigger to initiate the sending of a command.
 
-```cs
-internal static void SendGetDirectoryRequest(SLProtocol protocol, int[][] path)
+```csharp
+internal static void SendGetDirectoryRequest(SLProtocol protocol, int[][] path)
 {
-  GlowRootElementCollection root = GlowRootElementCollection.CreateRoot();
-  GlowCommand command = new GlowCommand(GlowCommandType.GetDirectory);
+    GlowRootElementCollection root = GlowRootElementCollection.CreateRoot();
+    GlowCommand command = new GlowCommand(GlowCommandType.GetDirectory);
 
-  if (path == null || (path.Length == 1 && path[0] == null))
-  {
-    root.Insert(command);
-  }
-  else
-  {
-    foreach (int[] subPath in path)
-    {
-       GlowQualifiedNode qnode1 = new GlowQualifiedNode(subPath);
-       qnode1.Children = new GlowElementCollection(GlowTags.QualifiedNode.Children);
-       qnode1.Children.Insert(command);
-       root.Insert(qnode1);
-    }
-  }
+    if (path == null || (path.Length == 1 && path[0] == null))
+    {
+        root.Insert(command);
+    }
+    else
+    {
+        foreach (int[] subPath in path)
+        {
+            GlowQualifiedNode qnode1 = new GlowQualifiedNode(subPath);
+            qnode1.Children = new GlowElementCollection(GlowTags.QualifiedNode.Children);
+            qnode1.Children.Insert(command);
+            root.Insert(qnode1);
+        }
+    }
 
-  SendGlow(protocol, root);
+    SendGlow(protocol, root);
 }
 
 internal static void SendGlow(SLProtocol protocol, GlowContainer glow)
 {
-  var glowOutPut = new GlowOutput(true, 1024, 0x00, (_, e) => GlowPackageReady(protocol, e.FramedPackage));
-  using (glowOutPut)
-  {
-    glow.Encode(glowOutPut);
-    glowOutPut.Finish();
-  }
+    var glowOutPut = new GlowOutput(true, 1024, 0x00, (_, e) => GlowPackageReady(protocol, e.FramedPackage));
+    using (glowOutPut)
+    {
+        glow.Encode(glowOutPut);
+        glowOutPut.Finish();
+    }
 }
 
-internal static void GlowPackageReady(SLProtocol protocol, byte[] framedPackage)
+internal static void GlowPackageReady(SLProtocol protocol, byte[] framedPackage)
 {
-  protocol.SetParameterBinary(HdCoreRavenna.RequestDataPid, framedPackage);
-  protocol.CheckTrigger(HdCoreRavenna.SendRequestTrigger);
+    protocol.SetParameterBinary(HdCoreRavenna.RequestDataPid, framedPackage);
+    protocol.CheckTrigger(HdCoreRavenna.SendRequestTrigger);
 }
 ```
 

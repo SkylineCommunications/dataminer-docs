@@ -52,7 +52,7 @@ public static class QAction
     /// <param name="timespan">Timespan in which the errors occurred.</param>
     public static void Run(SLProtocol protocol, object errors, object timespan)
     {
-        //// ...
+        // ...
     }
 }
 ]]>
@@ -75,7 +75,7 @@ public static class QAction
     public static void Run(SLProtocol protocol)
     {
         string errors = Convert.ToString(protocol.GetInputParameter(0));
-        //// ...
+        // ...
     }
 }
 ]]>
@@ -115,10 +115,10 @@ The example above could be improved by using the `GetParameters` method to obtai
 ```csharp
 public static void Run(SLProtocol protocol)
 {
-   object[] parameters = (object[]) protocol.GetParameters(new uint[] { 10, 12 });
+    object[] parameters = (object[])protocol.GetParameters(new uint[] { 10, 12 });
 
-   string errors = Convert.ToString(parameters[0]);
-   int timespan = Convert.ToInt32(parameters[1]);
+    string errors = Convert.ToString(parameters[0]);
+    int timespan = Convert.ToInt32(parameters[1]);
 }
 ```
 

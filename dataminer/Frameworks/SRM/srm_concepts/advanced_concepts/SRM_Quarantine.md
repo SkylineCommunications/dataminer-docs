@@ -106,11 +106,11 @@ foreach (var error in errors)
         var booking = toQuarantine.ReservationInstance;
         errorBuilder.AppendLine($"{booking.Name} ({booking.ID}):");
 
-        foreach(var quarantinedUsage in toQuarantine.QuarantinedUsages)
+        foreach (var quarantinedUsage in toQuarantine.QuarantinedUsages)
         {
             var resourceUsage = quarantinedUsage.QuarantinedResourceUsage;
             errorBuilder.AppendLine($"\tresource with ID '{resourceUsage.GUID}' will be quarantined because:");
-                
+
             // The 'QuarantineTriggers' contains information about why this usage was moved to quarantine
             foreach (var trigger in quarantinedUsage.QuarantineTriggers)
             {
@@ -122,6 +122,7 @@ foreach (var error in errors)
                 {
                     errorBuilder.Append($"Conflict reason: {trigger.ReservationConflictType}");
                 }
+
                 errorBuilder.AppendLine();
             }
         }
@@ -162,7 +163,7 @@ foreach (var warning in traceData.WarningData)
     }
 
     var bookingIds = string.Join(", ", resourceManagerWarning.SubjectIds);
-    var warningString = "The following bookings were moved to quarantine: {bookingIds}";
+    var warningString = $"The following bookings were moved to quarantine: {bookingIds}";
     
     // Example value of 'warningString': 
     // The following bookings were moved to quarantine: 54add931-66fc-44f5-a76e-95ad0317f6af, 69958b9b-5704-4532-bb08-b021c5437084
@@ -337,6 +338,7 @@ foreach (var booking in quarantinedBookings)
                     existingUsage.RequiredCapacities.Add(requiredCapacity);
                 }
             }
+
             existingUsage.QuarantineReference = Guid.Empty;
         }
         else
@@ -391,13 +393,14 @@ foreach (var booking in quarantinedBookings)
                     usage.RequiredCapacities.Add(quarantinedCapacity);
                 }
             }
+
             foreach (var quarantinedCapability in quarantinedUsage.RequiredCapabilities)
             {
                 // Capabilities are moved completely so they can copied over
                 usage.RequiredCapabilities.Add(quarantinedCapability);
             }
         }
-        else 
+        else
         {
             usage = quarantinedResource.QuarantinedResourceUsage;
         }
@@ -451,7 +454,8 @@ foreach (var booking in quarantinedBookings)
         usage.QuarantineReference = Guid.Empty;
         booking.ResourcesInReservationInstance.Add(usage);
     }
-    booking.QuarantinedResources.Clear();    
+
+    booking.QuarantinedResources.Clear();
 
     // 'FindBookingManager' and 'RemoveFromQuarantine' is an extension method provided by the SRM framework
     var bookingManager = booking.FindBookingManager();

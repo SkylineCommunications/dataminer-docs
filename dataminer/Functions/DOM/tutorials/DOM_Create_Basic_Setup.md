@@ -45,7 +45,7 @@ Use the code below to accomplish the following:
 
 - A DOM instance is created with a value for each `FieldDescriptor`.
 
-```C#
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using Skyline.DataMiner.Automation;

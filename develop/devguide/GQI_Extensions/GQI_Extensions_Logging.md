@@ -137,9 +137,9 @@ The instance-specific minimum log level can be configured at runtime in the exte
 ```csharp
 public OnInitOutputArgs OnInit(OnInitInputArgs args)
 {
-  _logger = args.Logger;
-  _logger.MinimumLogLevel = GQILogLevel.Debug;
-  ...
+    _logger = args.Logger;
+    _logger.MinimumLogLevel = GQILogLevel.Debug;
+    ...
 }
 ```
 
@@ -150,12 +150,12 @@ The **default** minimum log level for extensions is determined by the global min
 You can overwrite the default minimum log level at runtime for each individual extension instance by modifying the [MinimumLogLevel](xref:GQI_IGQILogger#properties) property of the logger. For example:
 
 ```csharp
-  public OnInitOutputArgs OnInit(OnInitInputArgs args)
-  {
+public OnInitOutputArgs OnInit(OnInitInputArgs args)
+{
     _logger = args.Logger;
     _logger.MinimumLogLevel = GQILogLevel.Debug;
     ...
-  }
+}
 ```
 
 ***

@@ -8,7 +8,7 @@ In a C# block of an automation script, you can connect to the CMDB of the Invent
 
 1. Refer to the following namespaces:
 
-    ```cs
+    ```csharp
     Skyline.DataMiner.SLDatabaseSystem.Data
     ```
 
@@ -22,17 +22,17 @@ In a C# block of an automation script, you can connect to the CMDB of the Invent
 
 1. Copy the following snippet in the C# block and make sure the database name matches the name that is specified in *DB.xml*:
 
-    ```cs
-    String dbName = "db-name"; //Name must be identical to name defined in db.xml
+    ```csharp
+    string dbName = "db-name"; // Name must be identical to name defined in db.xml
     SLSql localConnection = null;
     SLConnectionManager manager = new SLConnectionManager();
 
-    if(manager != null)
+    if (manager != null)
     {
         localConnection = manager.GetConnection(dbName);
     }
 
-    if(localConnection == null)
+    if (localConnection == null)
     {
         engine.GenerateInformation("Database connection failed");
         return;

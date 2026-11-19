@@ -173,7 +173,7 @@ description: "Create resource tasks for Process Automation with profiles, SRM fu
 
       Example: for the “Ping IP” task, the script could look like this:
 
-      ```cs
+      ```csharp
       public void Run(Engine engine)
       {
           var helper = new PaProfileLoadDomHelper(engine);

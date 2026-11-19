@@ -69,19 +69,19 @@ In these examples, `timeoutSeconds` is the number of seconds to wait, for exampl
 - Example: Attach immediately to users **in specified groups**.
 
   ```csharp
-  engine.FindInteractiveClient(String.Empty, timeoutSeconds, "Operators;PowerUsers", AutomationScriptAttachOptions.AttachImmediately);
+  engine.FindInteractiveClient(string.Empty, timeoutSeconds, "Operators;PowerUsers", AutomationScriptAttachOptions.AttachImmediately);
   ```
 
 - Example: Attach immediately to a **specific user by username**.
 
   ```csharp
-  engine.FindInteractiveClient(String.Empty, timeoutSeconds, "user:JohnSmith", AutomationScriptAttachOptions.AttachImmediately);
+  engine.FindInteractiveClient(string.Empty, timeoutSeconds, "user:JohnSmith", AutomationScriptAttachOptions.AttachImmediately);
   ```
 
 - Example: Attach immediately to a **specific Cube session by user cookie**.
 
   ```csharp
-  engine.FindInteractiveClient(String.Empty, timeoutSeconds, "userCookie:C57D3BEFAD4F445B9BC37B9FAFB84ADB", AutomationScriptAttachOptions.AttachImmediately);
+  engine.FindInteractiveClient(string.Empty, timeoutSeconds, "userCookie:C57D3BEFAD4F445B9BC37B9FAFB84ADB", AutomationScriptAttachOptions.AttachImmediately);
   ```
 
   > [!Note]
@@ -120,13 +120,13 @@ If you want to run a script as if launched by a specific user, so no extra scrip
 - Attach to the same user:
 
   ```csharp
-  engine.FindInteractiveClient(String.Empty, timeoutSeconds, $"user:{engine.UserLoginName}", AutomationScriptAttachOptions.AttachImmediately);
+  engine.FindInteractiveClient(string.Empty, timeoutSeconds, $"user:{engine.UserLoginName}", AutomationScriptAttachOptions.AttachImmediately);
   ```
 
 - Attach via cookie:
 
   ```csharp
-  engine.FindInteractiveClient(String.Empty, timeoutSeconds, $"userCookie:{engine.UserCookie}", AutomationScriptAttachOptions.AttachImmediately);
+  engine.FindInteractiveClient(string.Empty, timeoutSeconds, $"userCookie:{engine.UserCookie}", AutomationScriptAttachOptions.AttachImmediately);
   ```
 
 - Start the script via SLNet and pass the user cookie:

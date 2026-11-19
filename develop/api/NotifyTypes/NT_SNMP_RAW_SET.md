@@ -11,14 +11,15 @@ object[] versionSpecificSettings = new object[2];
 
 versionSpecificSettings[0] = 3; // SNMP version.
 
-versionSpecificSettings[1] =
-    new object[] {
-       "User1",         // Username (String)
-        3,               // Security Level (Int32)
-        3,               // Authentication Algorithm (Int32)
-       "AuthAuth1",     // Authentication Password (String)
-        2,               // Encryption Algorithm (Int32)
-       "PrivPriv1" };   // Encryption Passphrase (String)
+versionSpecificSettings[1] = new object[]
+{
+    "User1",     // Username (String)
+    3,           // Security Level (Int32)
+    3,           // Authentication Algorithm (Int32)
+    "AuthAuth1", // Authentication Password (String)
+    2,           // Encryption Algorithm (Int32)
+    "PrivPriv1", // Encryption Passphrase (String)
+};
 
 object[] settings = new object[7];     // Object array, minimum length = 2
 
@@ -29,7 +30,7 @@ settings[2] = 1614;                    // Destination Port (String or Int32, wil
 settings[3] = 1490;                    // Timeout (Int32)
 settings[4] = 1;                       // Retries (Int32)
 settings[5] = false;                   // Multiple Set (Boolean)
-settings[6] = "";                      // Instance  (String)
+settings[6] = string.Empty;            // Instance (String)
 
 object[] oidToSet = new object[3];
 
@@ -41,23 +42,23 @@ object[] oidInfo = new object[] { oidToSet };
 
 var result = (object[])protocol.NotifyDataMiner(425 /*NT_SNMP_RAW_SET*/, settings, oidInfo);
 
-protocol.Log("QA" + protocol.QActionID + "|result: " + result.Length, LogType.Error, LogLevel.NoLogging);
+protocol.Log($"QA{protocol.QActionID}|result: {result.Length}", LogType.Error, LogLevel.NoLogging);
 
 if (result != null && result.Length >= 1)
 {
-   if(result[0].Equals(""))
-   {
+    if (result[0].Equals(string.Empty))
+    {
         // Set request succeeded.
-   }
-   else
-   {
+    }
+    else
+    {
         // Set request failed.
-   }
+    }
 }
 else
 {
-   protocol.Log("QA" + protocol.QActionID + "|Run|Retrieval failed.", LogType.Error, LogLevel.NoLogging);
-   protocol.SetParameter(20, "Failed");
+    protocol.Log($"QA{protocol.QActionID}|Run|Retrieval failed.", LogType.Error, LogLevel.NoLogging);
+    protocol.SetParameter(20, "Failed");
 }
 ```
 

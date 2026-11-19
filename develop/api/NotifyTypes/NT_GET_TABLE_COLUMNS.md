@@ -6,6 +6,9 @@ uid: NT_GET_TABLE_COLUMNS
 
 Retrieves the selected columns of a table.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(321, ...)` directly, we recommend using the `GetColumns` or `GetColumn` extension methods from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+
 ```csharp
 int tablePid = 1000;
 uint[] columnsToGetIdx = new uint[] { 0, 1 };

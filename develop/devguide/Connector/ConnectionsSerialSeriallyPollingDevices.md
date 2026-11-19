@@ -156,12 +156,12 @@ Optionally, an additional check could be done on the type of device (in case dif
 
 ```csharp
 // Set dynamic polling IP.
-protocol.SetParameter(39999, ip + ":" + portnr);
+protocol.SetParameter(39999, $"{ip}:{portnr}");
 
 // Trigger group to get data.
 if (type.Contains("type1"))
 {
-    if (timerl)
+    if (timer1)
     {
         protocol.CheckTrigger(39103);
     }
@@ -176,7 +176,7 @@ if (type.Contains("type1"))
 }
 else if (type.Contains("type2"))
 {
-    if (timerl)
+    if (timer1)
     {
         protocol.CheckTrigger(39104);
     }

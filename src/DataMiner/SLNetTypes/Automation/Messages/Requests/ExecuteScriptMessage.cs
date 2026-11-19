@@ -11,27 +11,27 @@ namespace Skyline.DataMiner.Net.Messages
 	/// <code>
 	/// try
 	/// {
-	///		string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO", "DEFER:TRUE" };
+	///     string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO", "DEFER:TRUE" };
 	///
-	///		ExecuteScriptMessage message = new ExecuteScriptMessage
-	///		{
-	///			ScriptName = "Automation script",
-	///			Options = new SA(scriptOptions),
-	///		};
+	///     ExecuteScriptMessage message = new ExecuteScriptMessage
+	///     {
+	///         ScriptName = "Automation script",
+	///         Options = new SA(scriptOptions),
+	///     };
 	///
-	///		var response = protocol.ExecuteScript(message);
-	///		bool succeeded = response != null &amp;&amp; !response.HadError;
+	///     var response = protocol.ExecuteScript(message);
+	///     bool succeeded = response != null &amp;&amp; !response.HadError;
 	///
-	///		if (!succeeded)
-	///		{
-	///			// Script did not succeed.
-	///		}
-	///	}
-	///	catch (Exception ex)
-	///	{
-	///		protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Exception thrown:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+	///     if (!succeeded)
+	///     {
+	///         // Script did not succeed.
+	///     }
 	/// }
-	///	</code>
+	/// catch (Exception ex)
+	/// {
+	///     protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
+	/// }
+	/// </code>
 	/// </example>
 	[Serializable]
 	//[DataMinerSecurity(PermissionFlags.AutomationExecuteScripts)]

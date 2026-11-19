@@ -6,12 +6,15 @@ uid: NT_SET_ROW
 
 Sets the data of the specified row to the specified values.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(225, ...)` directly, we recommend using [SLProtocol.SetRow](xref:Skyline.DataMiner.Scripting.SLProtocol.SetRow(System.Int32,System.Int32,System.Object)).
+
 ## Parameters
 
 Preforming a set on the **local element**:
 
 ```csharp
-object[] rowDetails = new object[]{1000, "Row 5"};
+object[] rowDetails = new object[] { 1000, "Row 5" };
 object[] rowData = new object[] { null, 4, "Main" };
 object result = protocol.NotifyProtocol(225, rowDetails, rowData);
 
@@ -19,11 +22,11 @@ if (result != null)
 {
     object[] res = (object[])result;
 
-    ////...
+    // ...
 }
 else
 {
-    ////...
+    // ...
 }
 ```
 
@@ -49,7 +52,7 @@ rowDetails[2] = tableId;
 rowDetails[3] = primaryKey;
 
 object[] rowData = new object[] { null, "test" };
-object[] result = (object[]) protocol.NotifyDataMiner(225 /*NT_SET_ROW*/, rowDetails, rowData);
+object[] result = (object[])protocol.NotifyDataMiner(225 /*NT_SET_ROW*/, rowDetails, rowData);
 ```
 
 - rowDetails (object[]): The details specifying the row.

@@ -52,6 +52,7 @@ public class ImportTests
         // Assert
         actual.Should().BeEquivalentTo(expected);
     }
+
     [TestMethod]
     [DeploymentItem(@"Import Test Files\unexpected whitespace.json")]
     public void ModifiedWithWhitespaceTest()
@@ -88,6 +89,7 @@ public class ImportTests
         // Assert
         actual.Should().BeEquivalentTo(expected);
     }
+
     [TestMethod]
     public void ModifiedWithWhitespaceTest()
     {

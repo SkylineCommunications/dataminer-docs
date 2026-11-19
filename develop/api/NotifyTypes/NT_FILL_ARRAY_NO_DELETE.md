@@ -6,13 +6,16 @@ uid: NT_FILL_ARRAY_NO_DELETE
 
 Adds the provided content to the specified table.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(194, ...)` directly, we recommend using [SLProtocol.FillArrayNoDelete](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayNoDelete*) or `FillArray` with `SaveOption.Partial`.
+
 ```csharp
 int tableID = 1000;
 object[] column1 = new object[] { "Row 1", "Row 2" };
 object[] column2 = new object[] { "E", "F" };
-object[] tableContent = new object[]{column1, column2};
+object[] tableContent = new object[] { column1, column2 };
 
-protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent);
+protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/, tableID, tableContent);
 ```
 
 ## Parameters
@@ -65,10 +68,10 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent)
   ```csharp
   int tableID = 2000;
   object[] column1 = new object[] { "Row 1", "Row 2" };
-  object[] column2 = new object[] { "A", new object[] { "B" , DateTime.Now - TimeSpan.FromDays(11) } };
+  object[] column2 = new object[] { "A", new object[] { "B", DateTime.Now - TimeSpan.FromDays(11) } };
   object[] tableContent = new object[] { column1, column2 };
 
-  object result = protocol.NotifyProtocol(194/*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent);
+  object result = protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/, tableID, tableContent);
   ```
 
 ## See also

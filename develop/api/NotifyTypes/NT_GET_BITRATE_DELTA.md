@@ -6,10 +6,13 @@ uid: NT_GET_BITRATE_DELTA
 
 Retrieves the time between two consecutive executions of the specified SNMP group (in ms).<!-- RN 2906 -->
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(269, ...)` directly, we recommend using `SnmpDeltaHelper` and the [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol) NuGet package (`using Skyline.DataMiner.Utils.Rates.Protocol;`).
+
 ```csharp
 int groupID = 10;
 
-int delta = Convert.ToInt32(protocol.NotifyProtocol(269/*NT_GET_BITRATE_DELTA*/, groupID, null));
+int delta = Convert.ToInt32(protocol.NotifyProtocol(269 /*NT_GET_BITRATE_DELTA*/, groupID, null));
 ```
 
 ## Parameters
@@ -58,8 +61,8 @@ int delta = Convert.ToInt32(protocol.NotifyProtocol(269/*NT_GET_BITRATE_DELTA*/,
 ## Example
 
 ```csharp
-using System.IO;
 using System;
+using System.IO;
 using System.Text;
 using Skyline.DataMiner.Scripting;
 
@@ -71,8 +74,10 @@ public class QAction
         object[] oldData = (object[])protocol.OldRow();
         object[] newData = (object[])protocol.NewRow();
 
-        if (oldData == null || oldData.Length < 5 || newData == null || newData.Length < 5)       
+        if (oldData == null || oldData.Length < 5 || newData == null || newData.Length < 5)
+        {
             return;
+        }
 
         // Total rate is in column 4.
         uint oldRate = Convert.ToUInt32(((object[])oldData[4])[0]);
@@ -82,7 +87,7 @@ public class QAction
         int groupId = 100;
 
         // Delta between the 2 retrievals in ms.
-        int delta = Convert.ToInt32(protocol.NotifyProtocol(269/*NT_GET_BITRATE_DELTA*/, groupId, null));
+        int delta = Convert.ToInt32(protocol.NotifyProtocol(269 /*NT_GET_BITRATE_DELTA*/, groupId, null));
 
         // Bit rate in seconds.
         double ratePerSecond = ((newRate - oldRate) / delta) * 1000;

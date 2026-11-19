@@ -121,8 +121,8 @@ Before creating a scheduled task, you first need to **define its intended recurr
    ```csharp
    var inputScriptParams = new List<AutomationScriptInputParameter>
    {
-     new AutomationScriptInputParameter("InputScriptParam1", "InputValue1"),
-     new AutomationScriptInputParameter("InputScriptParam2", "InputValue2"),
+       new AutomationScriptInputParameter("InputScriptParam1", "InputValue1"),
+       new AutomationScriptInputParameter("InputScriptParam2", "InputValue2"),
    };
 
    var automationScriptAction = new AutomationScriptAction("Script Name", inputScriptParams, checkSets: true, runAsync: false);
@@ -147,9 +147,9 @@ Before creating a scheduled task, you first need to **define its intended recurr
    ```csharp
    var schedulerTasks = new List<SchedulerTask>
    {
-     schedulerTask1,
-     schedulerTask2,
-     schedulerTask3,
+       schedulerTask1,
+       schedulerTask2,
+       schedulerTask3,
    };
 
    scheduler.CreateOrUpdateSchedulerTasks(schedulerTasks, sendInBulk: true);
@@ -160,7 +160,7 @@ Before creating a scheduled task, you first need to **define its intended recurr
 To initialize a new instance of the `Scheduler` class by retrieving the Scheduler tasks according to the given selector:
 
 ```csharp
-public Scheduler(Func<Net.Messages.SchedulerTask, bool> selector = null)` 
+public Scheduler(Func<Net.Messages.SchedulerTask, bool> selector = null)
 ```
 
 - `selector`: A selector applied to the retrieved Scheduler tasks. If left null, no Scheduler tasks are retrieved.

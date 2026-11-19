@@ -6,12 +6,15 @@ uid: NT_GET_PK_FOR_DISPLAY
 
 Gets the primary key that corresponds with the specified display key.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(162, ...)` directly, we recommend using [SLProtocol.GetKey](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKey(System.Int32,System.String)).
+
 ```csharp
 int displayColumnID = 1002;
 
 string displayKey = "Device A";
 
-string primaryKey = (string)protocol.NotifyProtocol(162/*NT_GET_PK_FOR_DISPLAY*/ , displayColumnID, displayKey);
+string primaryKey = (string)protocol.NotifyProtocol(162 /*NT_GET_PK_FOR_DISPLAY*/, displayColumnID, displayKey);
 ```
 
 ## Parameters

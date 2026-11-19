@@ -65,7 +65,7 @@ public class QAction
         }
         catch (Exception e)
         {
-            protocol.Log("An exception occurred: " + e.ToString());
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
             return null;
         }
     }
@@ -167,24 +167,24 @@ public class QAction
                             }
                             else
                             {
-                                protocol.Log("QA" + protocol.QActionID + "|Response data is null.", LogType.Error, LogLevel.NoLogging);
+                                protocol.Log($"QA{protocol.QActionID}|Run|Response data is null.", LogType.Error, LogLevel.NoLogging);
                             }
                         }
                     }
                 }
                 else
                 {
-                    protocol.Log("Result: " + Convert.ToString(result));
+                    protocol.Log($"QA{protocol.QActionID}|Run|Result: {Convert.ToString(result)}", LogType.Error, LogLevel.NoLogging);
                 }
             }
             else
             {
-                protocol.Log("Result is null.");
+                protocol.Log($"QA{protocol.QActionID}|Run|Result is null.", LogType.Error, LogLevel.NoLogging);
             }
         }
         catch (Exception e)
         {
-            protocol.Log("QA" + protocol.QActionID + "|Run|An exception occurred: " + e.ToString(), LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
         }
     }
 }

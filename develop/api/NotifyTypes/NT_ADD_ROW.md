@@ -6,6 +6,9 @@ uid: NT_ADD_ROW
 
 Adds a row to a table.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(149, ...)` directly, we recommend using [SLProtocol.AddRow](xref:Skyline.DataMiner.Scripting.SLProtocol.AddRow(System.Int32,System.Object[])).
+
 ## Parameters
 
 Adding a row to the **local element**:
@@ -14,7 +17,7 @@ Adding a row to the **local element**:
 int tableID = 1000;
 string primaryKey = "Row 1";
 
-int rowPosition = (int) protocol.NotifyProtocol(149/*NT_ADD_ROW*/ , tableID, primaryKey);
+int rowPosition = (int)protocol.NotifyProtocol(149 /*NT_ADD_ROW*/, tableID, primaryKey);
 ```
 
 - tableID (int): ID of the table parameter.
@@ -29,7 +32,7 @@ uint tableId = 6000;
 uint[] ids = new uint[] { dmaId, elementId, tableId };
 object[] rowData = new object[] { "Row 2", 100 };
 
-int result = (int) protocol.NotifyDataMiner(149, ids, rowData);
+int result = (int)protocol.NotifyDataMiner(149, ids, rowData);
 ```
 
 - ids (uint[])

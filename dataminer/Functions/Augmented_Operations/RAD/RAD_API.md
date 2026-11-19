@@ -83,7 +83,7 @@ namespace AddRADParameterGroupWithAPI
             }
             catch (Exception e)
             {
-                engine.ExitFail("Run|Something went wrong: " + e);
+                engine.ExitFail($"Run|Something went wrong: {e}");
             }
         }
 

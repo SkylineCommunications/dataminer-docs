@@ -141,13 +141,13 @@ By calling [Connect](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.Gnmi
 
 ```csharp
 var client = new GnmiClient((uint)protocol.DataMinerID, (uint)protocol.ElementID, protocol.ElementName, config, logger);
-client.Connect()
+client.Connect();
 ```
 
 In case you want to get notified when the connection state changes, you can register on the [ConnectionStateChanged](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.ConnectionStateChanged) event.
 
 ```csharp
-client.ConnectionStateChanged += OnConnectionStateChanged
+client.ConnectionStateChanged += OnConnectionStateChanged;
 
 private void OnConnectionStateChanged(object sender, EventArgs e)
 {
@@ -167,24 +167,24 @@ To disconnect when the element has stopped, you can use the QAction's Dispose.
 ```csharp
 public class QAction : IDisposable
 {
-   private bool disposed;
-   private GnmiClient gnmiClient;
+    private bool disposed;
+    private GnmiClient gnmiClient;
 
-   public void Dispose()
-   {
-      Dispose(true);
-      GC.SuppressFinalize(this);
-   }
+    public void Dispose()
+    {
+        Dispose(true);
+        GC.SuppressFinalize(this);
+    }
 
-   protected virtual void Dispose(bool disposing)
-   {
-      if (disposing && !disposed)
-      {
-         disposed = true;
-         gnmiClient?.Dispose();
-         gnmiClient = null;
-      }
-   }
+    protected virtual void Dispose(bool disposing)
+    {
+        if (disposing && !disposed)
+        {
+            disposed = true;
+            gnmiClient?.Dispose();
+            gnmiClient = null;
+        }
+    }
 }
 ```
 
@@ -202,7 +202,7 @@ For more info on the `Capabilities` RPC, see [About OpenConfig: Capabilities](xr
 var capabilities = client.Capabilities();
 
 protocol.Log($"The gNMI version is: {capabilities.GNMIVersion}");
-foreach(var model in capabilities.SupportedModels)
+foreach (var model in capabilities.SupportedModels)
 {
     protocol.Log($"Model name is {model.Name}");
     protocol.Log($"Model organization is {model.Organization}");
@@ -417,6 +417,7 @@ public static object ConvertEpochTimeUtcTicksToOleAutomationTime(DataMinerConnec
         double convertedDate = Epoch.AddSeconds(secondsSinceEpoch).ToOADate();
         return convertedDate;
     }
+
     return "Not Available";
 }
 ```
@@ -447,7 +448,7 @@ public static object CustomRates(DataMinerConnectorRateArgs rateValues)
         return NotAvailable;
     }
 
-    if (rateValues.CurrentTimestampUtc <= rateValues.PreviousTimestampUtc || !UInt64.TryParse(Convert.ToString(rateValues.CurrentValue), out ulong uiNewValue) || !UInt64.TryParse(Convert.ToString(rateValues.PreviousValue), out ulong uiOldValue) || uiOldValue > uiNewValue)
+    if (rateValues.CurrentTimestampUtc <= rateValues.PreviousTimestampUtc || !ulong.TryParse(Convert.ToString(rateValues.CurrentValue), out ulong uiNewValue) || !ulong.TryParse(Convert.ToString(rateValues.PreviousValue), out ulong uiOldValue) || uiOldValue > uiNewValue)
     {
         return -1;
     }
@@ -482,17 +483,16 @@ public static object CreateDisplayKey(DataMinerConnectorTriggerValueArgs trigger
     }
     else
     {
-        description = String.Empty;
+        description = string.Empty;
     }
 
-    if (String.IsNullOrEmpty(description) || description == "-1")
+    if (string.IsNullOrEmpty(description) || description == "-1")
     {
         return pk;
     }
 
     return $"{pk}/{description}";
 }
-
 ```
 
 #### Adding a state column

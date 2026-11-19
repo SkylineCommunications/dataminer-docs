@@ -15,12 +15,12 @@ Consider, for example, the following method:
 ```csharp
 public string Rewrite(SLProtocol protocol, string path)
 {
-    if(path == null)
+    if (path == null)
     {
         throw new ArgumentNullException(nameof(path));
     }
 
-    if(String.IsNullOrWhiteSpace(path))
+    if (string.IsNullOrWhiteSpace(path))
     {
         throw new ArgumentException("Path is empty or white space.", nameof(path));
     }
@@ -35,7 +35,7 @@ public string Rewrite(SLProtocol protocol, string path)
         if (part == "Generic")
         {
             abbreviatedPath[i] = "SLCGeneric";
-            protocol.Log("QA" + protocol.QActionID + "|Rewrite|Path '" + path + "' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.", LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Rewrite|Path '{path}' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.", LogType.Error, LogLevel.NoLogging);
             continue;
         }
 
@@ -49,7 +49,7 @@ public string Rewrite(SLProtocol protocol, string path)
         }
     }
 
-    return String.Join(@"\", abbreviatedPath);
+    return string.Join(@"\", abbreviatedPath);
 }
 ```
 

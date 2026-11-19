@@ -34,56 +34,57 @@ When creating a [data source](xref:GQI_Ad_hoc_data_sources) that interacts with 
 
 More details and code examples like the one below can be found in the [documentation of the code repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan/tree/main/Documentation).
 
-```cs
+```csharp
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Solutions.MediaOps.Plan.API;
 using Skyline.DataMiner.Solutions.MediaOps.Plan.Automation;
 
 public class Script
 {
-   public void Run(IEngine engine)
-   {
-      var planApi = engine.GetMediaOpsPlanApi();
+    public void Run(IEngine engine)
+    {
+        var planApi = engine.GetMediaOpsPlanApi();
 
-      // Create Capability
-      var decodingCapability = new Capability()
-      {
-         Name = "Decoding",
-      }
-      .SetDiscretes(new[] { "AVC/H.264", "HEVC/H.265" });
-      planApi.Capabilities.Create(decodingCapability);
+        // Create Capability
+        var decodingCapability = new Capability()
+        {
+            Name = "Decoding",
+        }.SetDiscretes(new[] { "AVC/H.264", "HEVC/H.265" });
 
-      // Create Resource Pool and move to complete state
-      var decodersResourcePool = new ResourcePool
-      {
-         Name = "Decoders",
-      };
-      planApi.ResourcePools.Create(decodersResourcePool);
-      planApi.ResourcePools.Complete(decodersResourcePool.Id);
+        planApi.Capabilities.Create(decodingCapability);
 
-      // Create unmanaged Resources using decoding capability, assign to resource pool and move to complete state
-      var decodingCapabilitySetting = new CapabilitySetting(decodingCapability.Id)
-         .SetDiscretes(new[] { "AVC/H.264", "HEVC/H.265" });
+        // Create Resource Pool and move to complete state
+        var decodersResourcePool = new ResourcePool
+        {
+            Name = "Decoders",
+        };
 
-      var decoder1 = new UnmanagedResource
-      {
-         Name = "Makito X4-001",
-         Concurrency = 1,
-      }
-      .AddCapability(decodingCapabilitySetting)
-      .AssignToPool(decodersResourcePool.Id);
+        planApi.ResourcePools.Create(decodersResourcePool);
+        planApi.ResourcePools.Complete(decodersResourcePool.Id);
 
-      var decoder2 = new UnmanagedResource
-      {
-         Name = "Makito X4-002",
-         Concurrency = 1,
-      }
-      .AddCapability(decodingCapabilitySetting)
-      .AssignToPool(decodersResourcePool.Id);
+        // Create unmanaged Resources using decoding capability, assign to resource pool and move to complete state
+        var decodingCapabilitySetting = new CapabilitySetting(decodingCapability.Id)
+            .SetDiscretes(new[] { "AVC/H.264", "HEVC/H.265" });
 
-      planApi.Resources.Create(new[] { decoder1, decoder2 });
-      planApi.Resources.Complete(new[] { decoder1.Id, decoder2.Id });
-   }
+        var decoder1 = new UnmanagedResource
+        {
+            Name = "Makito X4-001",
+            Concurrency = 1,
+        }
+            .AddCapability(decodingCapabilitySetting)
+            .AssignToPool(decodersResourcePool.Id);
+
+        var decoder2 = new UnmanagedResource
+        {
+            Name = "Makito X4-002",
+            Concurrency = 1,
+        }
+            .AddCapability(decodingCapabilitySetting)
+            .AssignToPool(decodersResourcePool.Id);
+
+        planApi.Resources.Create(new[] { decoder1, decoder2 });
+        planApi.Resources.Complete(new[] { decoder1.Id, decoder2.Id });
+    }
 }
 ```
 
@@ -91,49 +92,49 @@ public class Script
 
 More details and code examples like the one below can be found in the [documentation of the code repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations/tree/main/Documentation).
 
-```cs
+```csharp
 using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Solutions.PeopleAndOrganizations.API;
 using Skyline.DataMiner.Solutions.MediaOps.Plan.Automation;
+using Skyline.DataMiner.Solutions.PeopleAndOrganizations.API;
 
 public class Script
 {
-   public void Run(IEngine engine)
-   {
-      var api = engine.GetPeopleAndOrganizationsApi();
-   
-      // Create an organization
-      var organization = api.Organizations.Create(new Organization
-      {
-         Name = "Skyline Communications",
-      });
-   
-      // Define a new experience
-      var experience = api.Experience.Create(new Experience
-      {
-         Name = "Senior System Developer",
-      });
-   
-      // Create a person
-      var person = api.People.Create(new Person
-      {
-         Name = "John Doe",
-         Email = "john.doe@example.com",
-         Phone = "+1 555 0100",
-         StreetAddress = "123 Main St",
-         City = "Ghent",
-         Country = Country.Belgium,
-         ZipCode = "9000",
-         OrganizationId = organization.Id,
-         ExperienceId = experience.Id,
-      });
-   
-      // Update person
-      person.Email = "john.updated@skyline.be";
-      person = api.People.Update(person);
-   
-      // Delete person
-      api.People.Delete(person.Id);
-   }
+    public void Run(IEngine engine)
+    {
+        var api = engine.GetPeopleAndOrganizationsApi();
+
+        // Create an organization
+        var organization = api.Organizations.Create(new Organization
+        {
+            Name = "Skyline Communications",
+        });
+
+        // Define a new experience
+        var experience = api.Experience.Create(new Experience
+        {
+            Name = "Senior System Developer",
+        });
+
+        // Create a person
+        var person = api.People.Create(new Person
+        {
+            Name = "John Doe",
+            Email = "john.doe@example.com",
+            Phone = "+1 555 0100",
+            StreetAddress = "123 Main St",
+            City = "Ghent",
+            Country = Country.Belgium,
+            ZipCode = "9000",
+            OrganizationId = organization.Id,
+            ExperienceId = experience.Id,
+        });
+
+        // Update person
+        person.Email = "john.updated@skyline.be";
+        person = api.People.Update(person);
+
+        // Delete person
+        api.People.Delete(person.Id);
+    }
 }
 ```

@@ -6,6 +6,9 @@ uid: NT_DELETE_ROW
 
 Removes a row from a table.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(156, ...)` directly, we recommend using [SLProtocol.DeleteRow](xref:Skyline.DataMiner.Scripting.NotifyProtocol.DeleteRow*) or the `DeleteRows` extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+
 ## Parameters
 
 Removing a row from the **local element**:
@@ -14,7 +17,7 @@ Removing a row from the **local element**:
 int tableID = 1000;
 string primaryKey = "Row 1";
 
-int rowCount = (int)protocol.NotifyProtocol(156/*NT_DELETE_ROW*/ , tableID, primaryKey);
+int rowCount = (int)protocol.NotifyProtocol(156 /*NT_DELETE_ROW*/, tableID, primaryKey);
 ```
 
 - tableID (int): ID of the table parameter.

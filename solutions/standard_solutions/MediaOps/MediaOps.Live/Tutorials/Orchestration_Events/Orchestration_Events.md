@@ -166,7 +166,7 @@ One type of action that can be performed by an orchestration event is the execut
    Name the script `Tutorial-OrchestrationEvents-DummyScript` and let the script print a log message when executed, by adding the following line in the `RunSafe` method:
 
    ```csharp
-   engine.GenerateInformation($"Dummy script executed.");
+   engine.GenerateInformation("Dummy script executed.");
    ```
 
 1. Save the script on the DMA.
@@ -209,6 +209,7 @@ Instead of executing a global script from the orchestration event, it is also po
        NodeLabel = "Label 1",
        OrchestrationScriptName = "Tutorial-OrchestrationEvents-DummyScript",
    });
+
    orchestrationEvent.Configuration.NodeConfigurations.Add(new NodeConfiguration
    {
        NodeId = "2",
@@ -297,7 +298,7 @@ With this knowledge, you can now create a job with both a connect and disconnect
    You can copy the following code to achieve this:
 
    ```csharp
-    private void RunSafe(IEngine engine)
+   private void RunSafe(IEngine engine)
    {
        var api = engine.GetMediaOpsLiveApi();
 

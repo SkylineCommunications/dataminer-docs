@@ -551,17 +551,17 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <code>
 		/// string allowedGroups = "grpA;grpB";
-		/// bool ok = engine.FindInteractiveClient("Hello world", 100 , allowedGroups, AutomationScriptAttachOptions.None);
+		/// bool ok = engine.FindInteractiveClient("Hello world", 100, allowedGroups, AutomationScriptAttachOptions.None);
 		/// 
-		/// if(!ok)
+		/// if (!ok)
 		/// {
-		///		engine.GenerateInformation("Could not attach");
+		///     engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
-		///		engine.ShowProgress("A message");
-		///		engine.ShowUI("Another message", true);
+		///     engine.GenerateInformation($"Attached! As {engine.UserDisplayName}");
+		///     engine.ShowProgress("A message");
+		///     engine.ShowUI("Another message", true);
 		/// }
 		/// </code>
 		/// </example>
@@ -584,21 +584,21 @@ namespace Skyline.DataMiner.Automation
 		/// </list>
 		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see <see href="xref:AutomationActionFindInteractiveClient">Find interactive client</see>.</note>
 		/// <para>From DataMiner 9.6.9 (RN 22227) onwards, it is possible to find an interactive client by user cookie instead of by user name.</para>
-		/// <code>bool ok = engine.FindInteractiveClient("Some text", 100, "userCookie:" + connection.ConnectionID);</code>
+		/// <code>bool ok = engine.FindInteractiveClient("Some text", 100, $"userCookie:{connection.ConnectionID}");</code>
 		/// </remarks>
 		/// <example>
 		/// <code>
 		/// string allowedGroups = "grpA;grpB";
-		/// bool ok = engine.FindInteractiveClient("Hello world", 100 , allowedGroups, AutomationScriptAttachOptions.None);
+		/// bool ok = engine.FindInteractiveClient("Hello world", 100, allowedGroups, AutomationScriptAttachOptions.None);
 		/// if (!ok)
 		/// {
-		///		engine.GenerateInformation("Could not attach");
+		///     engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
-		///		engine.ShowProgress("A message");
-		///		engine.ShowUI("Another message", true);
+		///     engine.GenerateInformation($"Attached! As {engine.UserDisplayName}");
+		///     engine.ShowProgress("A message");
+		///     engine.ShowUI("Another message", true);
 		/// }
 		/// </code>
 		/// </example>
@@ -622,21 +622,21 @@ namespace Skyline.DataMiner.Automation
 		/// </list>
 		/// <note type="note">In DataMiner Cube, you can also use the script action Find interactive client, instead of using C#. For more information, see Find interactive client.</note>
 		/// <para>From DataMiner 9.6.9 (RN 22227) onwards, it is possible to find an interactive client by user cookie instead of by user name.</para>
-		/// <code>bool ok = engine.FindInteractiveClient("Some text", 100, "userCookie:" + connection.ConnectionID, AutomationScriptAttachOptions.None);</code>
+		/// <code>bool ok = engine.FindInteractiveClient("Some text", 100, $"userCookie:{connection.ConnectionID}", AutomationScriptAttachOptions.None);</code>
 		/// </remarks>
 		/// <example>
 		/// <code>
 		/// string allowedGroups = "grpA;grpB";
-		/// bool ok = engine.FindInteractiveClient("Hello world", 100 , allowedGroups, AutomationScriptAttachOptions.None);
+		/// bool ok = engine.FindInteractiveClient("Hello world", 100, allowedGroups, AutomationScriptAttachOptions.None);
 		/// if (!ok)
 		/// {
-		///		engine.GenerateInformation("Could not attach");
+		///     engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
-		///		engine.ShowProgress("A message");
-		///		engine.ShowUI("Another message", true);
+		///     engine.GenerateInformation($"Attached! As {engine.UserDisplayName}");
+		///     engine.ShowProgress("A message");
+		///     engine.ShowUI("Another message", true);
 		/// }
 		/// </code>
 		/// </example>

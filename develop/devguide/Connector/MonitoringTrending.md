@@ -94,6 +94,8 @@ In some cases, it is undesired that the window is automatically closed, as some 
 
 In such cases, the [historySet](xref:Protocol.Params.Param-historySet) attribute can be used. When this attribute is set to true, the window will no longer be automatically closed. Instead, it will be closed when either a data point is provided with a timestamp that falls outside the window or a specific request is made to close the window.
 
+The [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package also provides `SetCell`, `SetColumns`, and dictionary-based `SetParameters` extension methods with an optional `DateTime? dateTime = null` parameter for performing history sets.
+
 The DataMiner class library (DCL) provides some methods that allow the performing of a history set. The following methods defined in the SLProtocol interface allow history settings:
 
 - <xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameter(System.Int32,System.Object,System.ValueType)>
@@ -154,42 +156,41 @@ public class QAction
     /// QAction entry point.
     /// </summary>
     /// <param name="protocol">Link with SLProtocol process.</param>
-    
     public static void Run(SLProtocol protocol)
     {
         int dmaID = protocol.DataMinerID;
         int elementID = protocol.ElementID;
         int parameterID = 100;
-        
+
         GetTrendDataMessage message = new GetTrendDataMessage(dmaID, elementID, parameterID)
         {
             TrendingType = TrendingType.Realtime,
-            ReturnAsObjects = true   
+            ReturnAsObjects = true,
         };
-        
+
         DMSMessage[] response = protocol.SLNet.SendMessage(message);
-        
+
         GetTrendDataResponseMessage resultMessage = (GetTrendDataResponseMessage)response[0];
-        
+
         var records = resultMessage.Records;
-        
+
         if (records != null)
         {
             foreach (string key in records.Keys)
             {
                 var trendRecords = records[key];
-        
+
                 foreach (TrendRecord trendRecord in trendRecords)
                 {
                     RealtimeTrendRecord realtimeTrendRecord = trendRecord as RealtimeTrendRecord;
-        
+
                     if (realtimeTrendRecord != null)
                     {
                         string value = realtimeTrendRecord.Value;
                         DateTime time = realtimeTrendRecord.Time;
                         int status = realtimeTrendRecord.Status;
-                
-                        ////...
+
+                        // ...
                     }
                 }
             }
@@ -201,6 +202,9 @@ public class QAction
 ### Retrieving average trend data of a column parameter
 
 ```csharp
+using System;
+using Skyline.DataMiner.Net.Messages;
+using Skyline.DataMiner.Net.Trending;
 using Skyline.DataMiner.Scripting;
 
 /// <summary>
@@ -218,44 +222,43 @@ public class QAction
         int elementID = protocol.ElementID;
         int columnID = 2004;
         string primaryKey = "1";
-        
-        GetTrendDataMessage message = new GetTrendDataMessage()
+
+        GetTrendDataMessage message = new GetTrendDataMessage
         {
             DataMinerID = dmaID,
             ElementID = elementID,
-            Parameters = new ParameterIndexPair[] { new ParameterIndexPair(columnID, primaryKey)
-            ,
+            Parameters = new ParameterIndexPair[] { new ParameterIndexPair(columnID, primaryKey) },
             StartTime = new DateTime(2017, 1, 14),
             EndTime = DateTime.Now,
             TrendingType = TrendingType.Average,
-            ReturnAsObjects = true
+            ReturnAsObjects = true,
         };
-            
+
         DMSMessage[] response = protocol.SLNet.SendMessage(message);
-            
-        GetTrendDataResponseMessage trendDataResponseMessage = (GetTrendDataResponseMessage) response[0];
-            
+
+        GetTrendDataResponseMessage trendDataResponseMessage = (GetTrendDataResponseMessage)response[0];
+
         var records = trendDataResponseMessage.Records;
-            
+
         if (records != null)
         {
             foreach (string key in records.Keys)
             {
                 var trendRecords = records[key];
-            
+
                 foreach (TrendRecord trendRecord in trendRecords)
                 {
                     AverageTrendRecord averageTrendRecord = trendRecord as AverageTrendRecord;
-            
+
                     if (averageTrendRecord != null)
-                    {         
+                    {
                         double average = averageTrendRecord.AverageValue;
                         double maximum = averageTrendRecord.MaximumValue;
                         double minimum = averageTrendRecord.MinimumValue;
                         DateTime time = averageTrendRecord.Time;
                         int status = averageTrendRecord.Status;
-            
-                        protocol.Log("QA" + protocol.QActionID + "|time: " + time + ", maximum: " + maximum + ", minimum: " + minimum, LogType.Error, LogLevel.NoLogging);
+
+                        protocol.Log($"QA{protocol.QActionID}|Run|time: {time}, maximum: {maximum}, minimum: {minimum}", LogType.Error, LogLevel.NoLogging);
                     }
                 }
             }

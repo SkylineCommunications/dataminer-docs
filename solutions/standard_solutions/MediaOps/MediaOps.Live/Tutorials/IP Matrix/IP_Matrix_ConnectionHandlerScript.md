@@ -66,7 +66,6 @@ using Skyline.DataMiner.Solutions.MediaOps.Live.Automation.Mediation.ConnectionH
 
 public class Script : ConnectionHandlerScript
 {
-
 }
 ```
 
@@ -86,7 +85,6 @@ public class Script
 
 public class IPMatrix_ConnectionHandler : ConnectionHandler
 {
-
 }
 ```
 
@@ -158,7 +156,7 @@ public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEn
 
     if (update.UpdatedRows != null)
     {
-        var row = update.UpdatedRows.Values.FirstOrDefault(x => String.Equals(x[1], "IP In"));
+        var row = update.UpdatedRows.Values.FirstOrDefault(x => string.Equals(x[1], "IP In"));
         if (row == null)
         {
             // No 'IP In' row found in the updated rows.
@@ -166,7 +164,7 @@ public override void ProcessParameterUpdate(IEngine engine, IConnectionHandlerEn
         }
 
         var multicastIp = Convert.ToString(row[4]);
-        var isConnected = !String.IsNullOrWhiteSpace(multicastIp);
+        var isConnected = !string.IsNullOrWhiteSpace(multicastIp);
 
         if (isConnected)
         {
@@ -245,7 +243,7 @@ public override void Disconnect(IEngine engine, IConnectionHandlerEngine connect
         foreach (var destination in group)
         {
             // Disconnect by clearing the multicast IP
-            element.SetParameter("Text Value (Entries)", "IP In", String.Empty);
+            element.SetParameter("Text Value (Entries)", "IP In", string.Empty);
         }
     }
 }

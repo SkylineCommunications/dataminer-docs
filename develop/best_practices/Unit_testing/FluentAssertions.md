@@ -36,12 +36,14 @@ Now suppose that the returned collection is a collection of a custom type `Path`
 ```csharp
 public struct Path
 {
-public Path(string item)
+    public Path(string item)
     {
         this.Item = item;
     }
+
     public string Item { get; set; }
 }
+
 // Arrange
 List<Path> expected = new List<Path>() { new Path("A"), new Path("B"), new Path("C") };
 // Act
@@ -61,11 +63,13 @@ Now this message is not that useful for debugging. You could solve this by overr
 ```csharp
 public struct Path
 {
-public Path(string item)
+    public Path(string item)
     {
         this.Item = item;
     }
+
     public string Item { get; set; }
+
     public override string ToString()
     {
         return Item;

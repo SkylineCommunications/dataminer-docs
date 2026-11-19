@@ -57,18 +57,20 @@ namespace Skyline.Protocol.Model
 {
     public class Probe
     {
-        public string Name { get; set; }
-        public int State { get; set; }
-        public double Capacity { get; set; }
-    
         public Probe(string name, int state, double capacity)
         {
-            this.Name = name;
-            this.State = state;
-            this.Capacity = capacity;
+            Name = name;
+            State = state;
+            Capacity = capacity;
         }
-    
-        ////...
+
+        public string Name { get; set; }
+
+        public int State { get; set; }
+
+        public double Capacity { get; set; }
+
+        // ...
     }
 }
 ]]>
@@ -83,12 +85,12 @@ using Skyline.Protocol.Model;
 
 public static class QAction
 {
-  public static void Run(SLProtocol protocol)
-  {
-     Probe probe = new Probe("Probe 1", 0, 1000);
+    public static void Run(SLProtocol protocol)
+    {
+        Probe probe = new Probe("Probe 1", 0, 1000);
 
-      ////...
-  }
+        // ...
+    }
 }
 ]]>
 </QAction>
@@ -119,8 +121,8 @@ DataMiner compiles QActions with the following preprocessor directives:
   ```csharp
   #if DBInfo
   string databaseType = protocol.GetLocalDatabaseType();
-  protocol.Log("Local DB type is: " + databaseType);
+  protocol.Log($"QA{protocol.QActionID}|Run|Local DB type is: {databaseType}", LogType.Information, LogLevel.NoLogging);
   #else
-  protocol.Log("This version cannot check local DB.");
+  protocol.Log($"QA{protocol.QActionID}|Run|This version cannot check local DB.", LogType.Information, LogLevel.NoLogging);
   #endif
   ```

@@ -19,17 +19,17 @@ using Skyline.DataMiner.Net.ResourceManager.Objects;
 
 public class Script
 {
-   public static void Run(Engine engine)
-   {
-      // Replace with reservation guid
-      var reservationGuid = Guid.NewGuid();
+    public static void Run(Engine engine)
+    {
+        // Replace with reservation guid
+        var reservationGuid = Guid.NewGuid();
 
-      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid) as ServiceReservationInstance;
-      var logger = reservation.GetCachedLogger();
-      var bookingManager = reservation.FindBookingManager();
+        var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid) as ServiceReservationInstance;
+        var logger = reservation.GetCachedLogger();
+        var bookingManager = reservation.FindBookingManager();
 
-      var srmContext = new SrmManagersContext(engine, bookingManager, reservation, logger);
-      ServiceManagement.CreateReservationService(srmContext);
-   }
+        var srmContext = new SrmManagersContext(engine, bookingManager, reservation, logger);
+        ServiceManagement.CreateReservationService(srmContext);
+    }
 }
 ```

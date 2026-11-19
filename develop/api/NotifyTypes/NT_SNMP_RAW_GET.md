@@ -19,7 +19,7 @@ settings[2] = 1611;              // Destination port (String or Int32, will not 
 settings[3] = 1490;              // Timeout (ms) (Int32)
 settings[4] = 2;                 // Retries (Int32)
 settings[5] = false;             // Multiple Get (Boolean)
-settings[6] = "";                // Instance (String)
+settings[6] = string.Empty;      // Instance (String)
 settings[7] = 2;                 // Dynamic poll type: SingleGets (Int32)
 settings[8] = false;             // Split errors from values (Boolean)
 
@@ -31,13 +31,14 @@ object[] result = (object[])protocol.NotifyDataMiner(424 /*NT_SNMP_RAW_GET*/, se
 
 if (result != null && result.Length >= 1)
 {
-   // Request succeeded, process result.
+    // Request succeeded, process result.
     int value = Convert.ToInt32(result[0]);
-   // ...
+
+    // ...
 }
 else
 {
-   // Request failed.
+    // Request failed.
 }
 ```
 

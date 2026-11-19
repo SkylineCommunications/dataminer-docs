@@ -11,12 +11,12 @@ string templateName = "Custom Template";
 string protocolName = protocol.ProtocolName;
 string protocolVersion = protocol.ProtocolVersion;
 string baseTemplateName = "Base Template";
-string sFilePath = @"C:\Skyline DataMiner\Protocols\" + protocolName + @"\" + protocolVersion + @"\" + baseTemplateName + ".xml";
+string sFilePath = $@"C:\Skyline DataMiner\Protocols\{protocolName}\{protocolVersion}\{baseTemplateName}.xml";
 
 XDocument alarmTemplate = XDocument.Load(sFilePath);
 
 // Manipulate alarmTemplate to obtain a new template.
-/////....
+// ...
 
 string[] protocolDetails = new string[3];
 
@@ -26,7 +26,7 @@ protocolDetails[2] = templateName; // templateName for alarm | protocolVersion f
 
 object[] templateDetails = new object[2];
 
-templateDetails[0] = 1; //1 for alarm | 6 for trend
+templateDetails[0] = 1; // 1 for alarm | 6 for trend
 templateDetails[1] = Convert.ToString(alarmTemplate);
 
 protocol.NotifyDataMiner(99 /*NT_ADD_FILE*/, protocolDetails, templateDetails);

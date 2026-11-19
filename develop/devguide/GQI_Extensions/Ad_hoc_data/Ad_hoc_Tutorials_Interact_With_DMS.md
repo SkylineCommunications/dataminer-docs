@@ -130,14 +130,14 @@ To retrieve the Agent information, the data source will have to communicate with
    ```csharp
    public GQIPage GetNextPage(GetNextPageInputArgs args)
    {
-        // Retrieve the agents in the system.
-        var agentsInfoRequest = new GetInfoMessage(InfoType.DataMinerInfo);
-        var agentsInfo = _dms.SendMessages(agentsInfoRequest).OfType<GetDataMinerInfoResponseMessage>();
+       // Retrieve the agents in the system.
+       var agentsInfoRequest = new GetInfoMessage(InfoType.DataMinerInfo);
+       var agentsInfo = _dms.SendMessages(agentsInfoRequest).OfType<GetDataMinerInfoResponseMessage>();
 
-        // Retrieve the build information for each agent.
-        var agentsBuildInfoRequests = agentsInfo.Select(agentInfo => new GetAgentBuildInfo(agentInfo.ID));
-        var agentsBuildInfo = _dms.SendMessages(agentsBuildInfoRequests.ToArray()).OfType<BuildInfoResponse>();
-        return default;
+       // Retrieve the build information for each agent.
+       var agentsBuildInfoRequests = agentsInfo.Select(agentInfo => new GetAgentBuildInfo(agentInfo.ID));
+       var agentsBuildInfo = _dms.SendMessages(agentsBuildInfoRequests.ToArray()).OfType<BuildInfoResponse>();
+       return default;
    }
    ```
 
@@ -184,7 +184,7 @@ public GQIPage GetNextPage(GetNextPageInputArgs args)
     var agentsBuildInfo = _dms.SendMessages(agentsBuildInfoRequests.ToArray()).OfType<BuildInfoResponse>();
 
     var rows = new List<GQIRow>();
-    foreach(var buildInfo in agentsBuildInfo)
+    foreach (var buildInfo in agentsBuildInfo)
     {
         rows.Add(new GQIRow(buildInfo.Agents[0].DataMinerID.ToString(), new GQICell[]
         {

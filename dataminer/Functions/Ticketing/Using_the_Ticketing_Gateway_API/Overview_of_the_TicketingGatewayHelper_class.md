@@ -15,7 +15,7 @@ Below, you can find an overview of all methods, properties and events of the *Ti
 
 Synchronizes the ticketing protocol with DataMiner.
 
-```cs
+```csharp
 IEnumerable<TicketingGatewayEventMessage> DriverSync(ElementID ElementID, DateTime TimeStamp, params Tuple<DateTime, Ticket>[] ChangedTickets)
 ```
 
@@ -35,7 +35,7 @@ Returns:
 
 Retrieves the masked resolvers corresponding to one or more filters.
 
-```cs
+```csharp
 IEnumerable<TicketFieldResolver> GetMaskedTicketFieldResolvers(params TicketFieldResolver[] filters);
 ```
 
@@ -51,13 +51,13 @@ Example:
 
 - If the following is specified within a script, any resolvers that are masked will be retrieved and an information event will be generated with information about them:
 
-    ```cs
+    ```csharp
     private void ShowMaskedResolvers(Engine engine)
     {
         var maskedTicketFieldResolvers = helper.GetMaskedTicketFieldResolvers();
         foreach (TicketFieldResolver maskedTicketFieldResolver in maskedTicketFieldResolvers)
         {
-            engine.GenerateInformation(string.Format("Resolver \"{0}\", which is configured to be linked to \"{1}\", is masked.", maskedTicketFieldResolver.Name, maskedTicketFieldResolver.ElementUsingResolver.ToString()));
+            engine.GenerateInformation($"Resolver \"{maskedTicketFieldResolver.Name}\", which is configured to be linked to \"{maskedTicketFieldResolver.ElementUsingResolver}\", is masked.");
         }
     }
     ```
@@ -66,7 +66,7 @@ Example:
 
 Retrieves the non-masked ticket field resolvers corresponding to one or more filters.
 
-```cs
+```csharp
 IEnumerable<TicketFieldResolver> GetTicketFieldResolvers(params TicketFieldResolver[] filters)
 ```
 
@@ -82,7 +82,7 @@ Returns:
 
 Retrieves the history for one or more tickets.
 
-```cs
+```csharp
 IEnumerable<TicketHistory> GetTicketHistory(params TicketID[] ticketIDs)
 ```
 
@@ -98,7 +98,7 @@ Returns:
 
 Retrieves the tickets matching the given filter and links.
 
-```cs
+```csharp
 IEnumerable<Ticket> GetTickets(IEnumerable<TicketLink> links = null, FilterElement<Ticket> filter = null, bool CacheOnly = false)
 ```
 
@@ -118,7 +118,7 @@ Returns:
 
 Use this method to retrieve tickets in a paged fashion. This method requests a new page.
 
-```cs
+```csharp
 IEnumerable<Ticket> NewPagingRequest(int pagesize, out long pagingCookie, out int totalTickets, int pageNumber = 0, IEnumerable<TicketLink> links = null, FilterElement<Ticket> filter = null, bool CacheOnly = false)
 ```
 
@@ -149,7 +149,7 @@ Returns:
 
 Request the next page of a previously requested set of pages (retrieved via NewPagingRequest).
 
-```cs
+```csharp
 IEnumerable<Ticket> NextPagingRequest(long pagingCookie)
 ```
 
@@ -165,7 +165,7 @@ Returns
 
 Removes one or more ticket field resolvers.
 
-```cs
+```csharp
 bool RemoveTicketFieldResolvers(out string error, params TicketFieldResolver[] resolvers)
 ```
 
@@ -183,7 +183,7 @@ Returns
 
 Removes one or more tickets.
 
-```cs
+```csharp
 bool RemoveTickets(out string error, params Ticket[] tickets)
 ```
 
@@ -201,7 +201,7 @@ Returns
 
 Adds or edits a ticket.
 
-```cs
+```csharp
 bool SetTicket(out string error, ref Ticket ticket)
 ```
 
@@ -221,7 +221,7 @@ Example: see[Creating tickets with the Ticketing Gateway API](xref:Creating_tick
 
 Adds or edits a ticket field resolver.
 
-```cs
+```csharp
 bool SetTicketFieldResolver(out string error, ref TicketFieldResolver resolver)
 ```
 
@@ -241,7 +241,7 @@ Example: see[Creating tickets with the Ticketing Gateway API](xref:Creating_tick
 
 Adds or edits multiple ticket field resolvers
 
-```cs
+```csharp
 bool SetTicketFieldResolvers(out string error, ref TicketFieldResolver[] resolvers)
 ```
 
@@ -259,7 +259,7 @@ Returns
 
 Adds or edits multiple tickets.
 
-```cs
+```csharp
 bool SetTickets(out string error, ref Ticket[] tickets)
 ```
 
@@ -279,7 +279,7 @@ Returns:
 
 Checks with the server whether a valid Ticketing license is present.
 
-```cs
+```csharp
 bool IsLicensed
 ```
 
@@ -289,6 +289,6 @@ bool IsLicensed
 
 Event that is called when the Helper wants to send a message to the server and expects a response.
 
-```cs
+```csharp
 event EventHandler<IManagerRequestResponseEventArgs> RequestResponseEvent
 ```

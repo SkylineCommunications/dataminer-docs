@@ -45,8 +45,8 @@ bool result = executor.Validate();
 
 if (result)
 {
-   executor.Modify();
-   executor.DataSets(dataDestination);
+    executor.Modify();
+    executor.DataSets(dataDestination);
 }
 
 optionalReturnMessage = executor.CreateReturnMessage();
@@ -57,9 +57,9 @@ return result;
 You now have an executor that can do what you want. It can access your received message by calling the `Message` property.
 
 ```csharp
-public override bool Validate ()
+public override bool Validate()
 {
-    if (String.IsNullOrWhiteSpace(Message.MyProperty))
+    if (string.IsNullOrWhiteSpace(Message.MyProperty))
     {
         return false;
     }

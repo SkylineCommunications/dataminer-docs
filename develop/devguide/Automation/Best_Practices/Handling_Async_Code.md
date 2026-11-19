@@ -16,7 +16,7 @@ The automation script entry point is synchronous: use `void Run(IEngine engine)`
 
 If an external library only exposes an async method, call it synchronously from the entry point thread. Do not pass the Engine object or objects obtained from it into the asynchronous operation.
 
-```cs
+```csharp
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;
@@ -24,19 +24,19 @@ using Skyline.DataMiner.Automation;
 
 public class Script
 {
-  public void Run(IEngine engine)
-  {
-    string url = "https://jsonplaceholder.typicode.com/todos/1"; // Example API
-    string result = GetDataSync(url);
-    engine.GenerateInformation(result);
-  }
-
-  public static string GetDataSync(string url)
-  {
-    using (HttpClient client = new HttpClient())
+    public void Run(IEngine engine)
     {
-      return client.GetStringAsync(url).GetAwaiter().GetResult(); // Synchronous execution
+        string url = "https://jsonplaceholder.typicode.com/todos/1"; // Example API
+        string result = GetDataSync(url);
+        engine.GenerateInformation(result);
     }
-  }
+
+    public static string GetDataSync(string url)
+    {
+        using (HttpClient client = new HttpClient())
+        {
+            return client.GetStringAsync(url).GetAwaiter().GetResult(); // Synchronous execution
+        }
+    }
 }
 ```

@@ -56,7 +56,7 @@ var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservation
 var bookingManager = reservation.FindBookingManager();
 using (var logging = SrmLogHandler.Create(Engine, bookingManager, reservation))
 {
-   logging.BufferMessage("Log debug information", LogFileType.Debug);
+    logging.BufferMessage("Log debug information", LogFileType.Debug);
 }
 ```
 
@@ -67,15 +67,15 @@ From within a Profile-Load Script, you can add custom records to the action logs
 Example:
 
 ```csharp
-helper.LogFailure("An issue occurred"); 
-   // generate a log record with ‘Normal’ severity
+// Generate a log record with 'Normal' severity
+helper.LogFailure("An issue occurred");
 
+// Generate a log record with 'Critical' severity
 helper.LogSuccess("Configuration was successful");
-   // generate a log record with ‘Critical severity
 
+// Generate a log record with a custom severity
+// Namespace Skyline.DataMiner.Library.Solutions.SRM.Logging.Orchestration is needed, or Skyline.DataMiner.Core.SRM.Logging.Orchestration from version 2.0.1 of the SRM feature release onwards.
 helper.Log("Report a warning", LogEntryType.Warning);
-   // generate a log record with a custom severity
-   // Namespace Skyline.DataMiner.Library.Solutions.SRM.Logging.Orchestration is needed, or Skyline.DataMiner.Core.SRM.Logging.Orchestration from version 2.0.1 of the SRM feature release onwards.
 ```
 
 ### Adding custom log records from an LSO script

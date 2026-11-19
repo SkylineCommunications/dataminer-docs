@@ -123,24 +123,24 @@ In this step, you will focus on the extra code that should be executed when the 
    1. Change the content of the *Install* method to the following:
 
       ```csharp
-         try
-         {
-            engine.Timeout = new TimeSpan(0, 10, 0);
-            engine.GenerateInformation("Starting installation");
-            var installer = new AppInstaller(Engine.SLNetRaw, context);
-            installer.InstallDefaultContent();
-   
-            string setupContentPath = installer.GetSetupContentDirectory();
-   
-            // Custom installation logic can be added here for each individual install package.
-            string pathToConfig = System.IO.Path.Combine(setupContentPath, "MyConfig.txt");
-            var config = System.IO.File.ReadAllText(pathToConfig);
-            engine.GenerateInformation($"Tutorial installation ran with config: {config}");
-         }
-         catch (Exception e)
-         {
-            engine.ExitFail($"Exception encountered during installation: {e}");
-         }
+      try
+      {
+          engine.Timeout = new TimeSpan(0, 10, 0);
+          engine.GenerateInformation("Starting installation");
+          var installer = new AppInstaller(Engine.SLNetRaw, context);
+          installer.InstallDefaultContent();
+
+          string setupContentPath = installer.GetSetupContentDirectory();
+
+          // Custom installation logic can be added here for each individual install package.
+          string pathToConfig = System.IO.Path.Combine(setupContentPath, "MyConfig.txt");
+          var config = System.IO.File.ReadAllText(pathToConfig);
+          engine.GenerateInformation($"Tutorial installation ran with config: {config}");
+      }
+      catch (Exception e)
+      {
+          engine.ExitFail($"Exception encountered during installation: {e}");
+      }
       ```
 
    1. Save the changes

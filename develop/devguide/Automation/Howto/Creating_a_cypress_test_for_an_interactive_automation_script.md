@@ -82,80 +82,80 @@ description: "Set up Cypress and create an end-to-end test that validates an int
        /// <param name="engine">Link with SLAutomation process.</param>
        public void Run(IEngine engine)
        {
-          // DO NOT REMOVE THE COMMENTED OUT CODE BELOW OR THE SCRIPT WILL NOT RUN!
-          // Interactive scripts need to be launched differently.
-          // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
-          // However, due to the NuGet package, this string can no longer be detected.
-          // This comment is here as a temporary workaround until it has been fixed.
-          //// engine.ShowUI(
+           // DO NOT REMOVE THE COMMENTED OUT CODE BELOW OR THE SCRIPT WILL NOT RUN!
+           // Interactive scripts need to be launched differently.
+           // This is determined by a simple string search looking for "engine.ShowUI" in the source code.
+           // However, due to the NuGet package, this string can no longer be detected.
+           // This comment is here as a temporary workaround until it has been fixed.
+           //// engine.ShowUI(
 
-          try
-          {
-             // Controls the event loop and switch between dialogs
-             var controller = new InteractiveController(engine);
+           try
+           {
+               // Controls the event loop and switch between dialogs
+               var controller = new InteractiveController(engine);
 
-             // Create an instance of the dialog you wish to show.
-             var helloWorldDialog = new HelloWorldDialog(engine);
-             
-             // Starts the event loop and shows the first dialog.
-             controller.ShowDialog(helloWorldDialog);
-          }
-          catch (ScriptAbortException)
-          {
-             // Catch normal abort exceptions (engine.ExitFail or engine.ExitSuccess)
-             throw; // Comment if it should be treated as a normal exit of the script.
-          }
-          catch (ScriptForceAbortException)
-          {
-             // Catch forced abort exceptions, caused via external maintenance messages.
-             throw;
-          }
-          catch (ScriptTimeoutException)
-          {
-             // Catch timeout exceptions for when a script has been running for too long.
-             throw;
-          }
-          catch (InteractiveUserDetachedException)
-          {
-             // Catch a user detaching from the interactive script by closing the window.
-             // Only applicable for interactive scripts, can be removed for non-interactive scripts.
-             throw;
-          }
-          catch (Exception e)
-          {
-             engine.Log(e.ToString());
-             engine.ExitFail("The interactive script failed. See the Automation log for details.");
-          }
+               // Create an instance of the dialog you wish to show.
+               var helloWorldDialog = new HelloWorldDialog(engine);
+
+               // Starts the event loop and shows the first dialog.
+               controller.ShowDialog(helloWorldDialog);
+           }
+           catch (ScriptAbortException)
+           {
+               // Catch normal abort exceptions (engine.ExitFail or engine.ExitSuccess)
+               throw; // Comment if it should be treated as a normal exit of the script.
+           }
+           catch (ScriptForceAbortException)
+           {
+               // Catch forced abort exceptions, caused via external maintenance messages.
+               throw;
+           }
+           catch (ScriptTimeoutException)
+           {
+               // Catch timeout exceptions for when a script has been running for too long.
+               throw;
+           }
+           catch (InteractiveUserDetachedException)
+           {
+               // Catch a user detaching from the interactive script by closing the window.
+               // Only applicable for interactive scripts, can be removed for non-interactive scripts.
+               throw;
+           }
+           catch (Exception e)
+           {
+               engine.Log(e.ToString());
+               engine.ExitFail("The interactive script failed. See the Automation log for details.");
+           }
        }
    }
 
    public class HelloWorldDialog : Dialog
    {
-      public HelloWorldDialog(IEngine engine) : base(engine)
-      {
-          // Create a label widget
-          var label = new Label("Hello, World!") { Style = TextStyle.Title };
-          
-          // Define the debug tag to be used in the cypress test
-          label.DebugTag = "label";
-          
-          // Add it to the dialog grid at position 0,0
-          AddWidget(label, 0, 0);
-          
-          // Create a button widget
-          var button = new Button("OK");
-          
-          // Define the debug tag to be used in the cypress test
-          button.DebugTag = "button";
-          
-          // Add it to the dialog just below the label
-          AddWidget(button, 1, 0);
-          
-          // Add an action to be performed whenever the button is clicked
-          button.Pressed += (sender, args) => engine.ExitSuccess("Done");
-      }
-    }
-    ```
+       public HelloWorldDialog(IEngine engine) : base(engine)
+       {
+           // Create a label widget
+           var label = new Label("Hello, World!") { Style = TextStyle.Title };
+
+           // Define the debug tag to be used in the cypress test
+           label.DebugTag = "label";
+
+           // Add it to the dialog grid at position 0,0
+           AddWidget(label, 0, 0);
+
+           // Create a button widget
+           var button = new Button("OK");
+
+           // Define the debug tag to be used in the cypress test
+           button.DebugTag = "button";
+
+           // Add it to the dialog just below the label
+           AddWidget(button, 1, 0);
+
+           // Add an action to be performed whenever the button is clicked
+           button.Pressed += (sender, args) => engine.ExitSuccess("Done");
+       }
+   }
+   ```
 
 ## Setting up the web environment
 

@@ -228,8 +228,8 @@ description: "Review answers to connector development questions about SNMP table
     To retrieve the delta between two consecutive group executions (in ms) from within a QAction:
 
     ```csharp
-    int delta = Convert.ToInt32(protocol.NotifyProtocol(269/*NT_GET_BITRATE_DELTA*/, 1500, null));
-    protocol.Log("QA" + protocol.QActionID + "|" + string.Format("Delta on group 1500:{0}", delta), LogType.Error, LogLevel.NoLogging);
+    int delta = Convert.ToInt32(protocol.NotifyProtocol(269 /*NT_GET_BITRATE_DELTA*/, 1500, null));
+    protocol.Log($"QA{protocol.QActionID}|Delta on group 1500:{delta}", LogType.Error, LogLevel.NoLogging);
     ```
 
 1. *What is the purpose of "name resolution"? What else can you say about it?*
@@ -254,13 +254,15 @@ description: "Review answers to connector development questions about SNMP table
     {
         string key = Convert.ToString(protocol.GetParameterIndex(50, j, 1));
         int rowIndex = protocol.GetKeyPosition(50, key);
-    
+
         if (rowIndex != 0)
         {
             int parameterID = Convert.ToInt32(protocol.GetParameterIndex(50, j, 2));
+        }
+    }
     ```
 
-    First the key is retrieved from a row, then there is a check if the key actually exist in the table before a cell is retrieved. This is unnecessary code.
+    First the key is retrieved from a row, then there is a check if the key actually exists in the table before a cell is retrieved. This is unnecessary code. Moreover, retrieving cells row by row in a loop using `GetParameterIndex` causes excessive inter-process communication; instead, retrieve the required columns in bulk using `protocol.GetColumns(50, new uint[] { 0, 1 })` from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
 
 1. *What is the main difference between a serial and a smart serial connector?*
 

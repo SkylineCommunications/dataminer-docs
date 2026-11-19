@@ -23,7 +23,7 @@ object[] elementInfo = new object[] { elementId, ipPort, multipleGet, instance, 
 string systemContactOid = "1.3.6.1.2.1.1.4.0";
 string[] oidInfo = new string[] { systemContactOid };
 
-object[] result = (object[])protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, oidInfo);
+object[] result = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/, elementInfo, oidInfo);
 
 string oidValue = Convert.ToString(result[0]);
 ```
@@ -43,7 +43,7 @@ int agentId = protocol.DataMinerID; // For DELT compatibility.
 object[] elementInfo = new object[] { elementID, ipPort, multipleGet, instancePart, connectionID, getCommunityString, splitErrors, agentId };
 
 string[] oidInfo = new string[] { "1.3.6.1.2.1.10.127.7.1.11.1.3:tablev2" };
-object[] response = (object[]) protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, oidInfo);
+object[] response = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/, elementInfo, oidInfo);
 object[] result = null;
 
 if (response.Length == 1)
@@ -179,7 +179,7 @@ string sysLocationOid = "1.3.6.1.2.1.1.6.0:SINGLE";
 
 string[] oidInfo = new[] { sysContactOid, sysNameOid, sysLocationOid };
 
-object[] result = (object[])protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, oidInfo);
+object[] result = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/, elementInfo, oidInfo);
 
 string sysContactOidValue = Convert.ToString(result[0]);
 string sysNameOidValue = Convert.ToString(result[1]);
@@ -212,19 +212,20 @@ string ifType = "1.3.6.1.2.1.2.2.1.3";
 
 string[] oidInfo = new string[] { $"{ifEntry};{ifDescr};{ifType}:TABLE" };
 
-var result = (object[])protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, oidInfo);
+var result = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/, elementInfo, oidInfo);
 
 object[] table = (object[])result[0];
 
-for(int i=0; i<table.Length; i++)
+for (int i = 0; i < table.Length; i++)
 {
-  var column = (object[])table[i];
+    var column = (object[])table[i];
 
-  for(int j=0; j<column.Length; j++)
-  {
-    var cellValue = Convert.ToString(column[j]);
-    //// ...
-  }
+    for (int j = 0; j < column.Length; j++)
+    {
+        var cellValue = Convert.ToString(column[j]);
+
+        // ...
+    }
 }
 ```
 
@@ -252,19 +253,20 @@ string ifType = "1.3.6.1.2.1.2.2.1.3";
 
 string[] oidInfo = new string[] { $"{ifDescr};{ifType}:TABLEV2" };
 
-var result = (object[])protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, oidInfo);
+var result = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/, elementInfo, oidInfo);
 
 object[] table = (object[])result[0];
 
-for(int i=0; i<table.Length; i++)
+for (int i = 0; i < table.Length; i++)
 {
-  var column = (object[])table[i];
+    var column = (object[])table[i];
 
-  for(int j=0; j<column.Length; j++)
-  {
-    var cellValue = Convert.ToString(column[j]);
-    //// ...
-  }
+    for (int j = 0; j < column.Length; j++)
+    {
+        var cellValue = Convert.ToString(column[j]);
+
+        // ...
+    }
 }
 ```
 
@@ -300,7 +302,7 @@ string columnOid = "1.3.6.1.2.1.2.2.1.7"; // ifAdminStatus column.
 
 string[] oidInfo = new[] { instanceOid, columnOid };
 
-object[] result = (object[])protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, oidInfo);
+object[] result = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/, elementInfo, oidInfo);
 
 string instanceValue = Convert.ToString(result[0]);
 string ifAdminStatusValue = Convert.ToString(result[1]);
@@ -326,7 +328,7 @@ string sysContactOid = "1.3.6.1.2.1.1.4.0:GETNEXT";
 
 string[] oidInfo = new[] { sysContactOid };
 
-object[] result = (object[])protocol.NotifyProtocol(295/*NT_SNMP_GET*/, elementInfo, oidInfo);
+object[] result = (object[])protocol.NotifyProtocol(295 /*NT_SNMP_GET*/, elementInfo, oidInfo);
 
 string sysNameOidValue = Convert.ToString(result[0]);
 ```

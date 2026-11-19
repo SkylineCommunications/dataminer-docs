@@ -15,14 +15,14 @@ Creates or updates a service on a local DMA.
 
   string serviceXml = "<Service version=\"2\" id=\"-1\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\"><Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Triggers></Triggers></Service>";
 
-  object result = protocol.NotifyDataMiner(75 /*NT_SERVICE*/ , new uint[] { (uint)serviceID, dataminerID }, serviceXml);
+  object result = protocol.NotifyDataMiner(75 /*NT_SERVICE*/, new uint[] { (uint)serviceID, dataminerID }, serviceXml);
 
   if (result != null)
   {
-      uint[] resultDetails = (uint[]) result;
+      uint[] resultDetails = (uint[])result;
       uint createdServiceID = resultDetails[0];
 
-      ////...
+      // ...
   }
   ```
 
@@ -36,14 +36,14 @@ Creates or updates a service on a local DMA.
 
   string serviceXml = "<Service version=\"2\" id=\"-1\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\"><Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Triggers></Triggers></Service>";
 
-  object result = protocol.NotifyDataMiner(75 /*NT_SERVICE*/ , serviceID, serviceXml);
+  object result = protocol.NotifyDataMiner(75 /*NT_SERVICE*/, serviceID, serviceXml);
 
   if (result != null)
   {
-      uint[] resultDetails = (uint[]) result;
+      uint[] resultDetails = (uint[])result;
       uint createdServiceID = resultDetails[0];
 
-      ////...
+      // ...
   }
   ```
 

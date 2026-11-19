@@ -14,7 +14,7 @@ if (result != null)
 {
     string value = (string)result;
 
-    ////...
+    // ...
 }
 ```
 

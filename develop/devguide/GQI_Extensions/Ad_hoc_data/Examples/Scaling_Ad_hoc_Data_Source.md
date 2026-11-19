@@ -47,8 +47,8 @@ public class Results : IGQIDataSource, IGQIOnInit
     {
         return new GQIColumn[]
         {
-                _nameColumn,
-                _kpiColumn,
+            _nameColumn,
+            _kpiColumn,
         };
     }
 
@@ -62,6 +62,7 @@ public class Results : IGQIDataSource, IGQIOnInit
                 new GQICell() { Value = v.Identifier },
                 new GQICell() { Value = v.Name },
             };
+
             return new GQIRow(v.Identifier, cells);
         }).ToArray();
 
@@ -141,7 +142,7 @@ public class Results : IGQIDataSource, IGQIOnInit
 
         var securityResponse = responses?.OfType<GetUserInfoResponseMessage>().FirstOrDefault();
         var userGroups = securityResponse?.Users?
-            .Where(u => String.Equals(u.Name, userName, StringComparison.InvariantCultureIgnoreCase))
+            .Where(u => string.Equals(u.Name, userName, StringComparison.InvariantCultureIgnoreCase))
             .FirstOrDefault()?.Groups?.OrderBy(x => x)?.ToArray() ?? new int[0];
         if (userGroups.Length == 0)
         {

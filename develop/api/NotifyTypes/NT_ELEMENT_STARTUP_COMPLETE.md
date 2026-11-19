@@ -10,11 +10,11 @@ Checks if element startup is completed.
 uint dmaID = 346;
 uint elementID = 806;
 uint[] ids = new uint[] { dmaID, elementID };
-object result = protocol.NotifyDataMiner(377/*NT_ELEMENT_STARTUP_COMPLETE*/, ids, null);
+object result = protocol.NotifyDataMiner(377 /*NT_ELEMENT_STARTUP_COMPLETE*/, ids, null);
 
 if (result != null)
 {
-   bool hasStartupCompleted = Convert.ToBoolean(result);
+    bool hasStartupCompleted = Convert.ToBoolean(result);
 }
 ```
 

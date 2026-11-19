@@ -13,18 +13,18 @@ public static void Run(SLProtocol protocol)
     try
     {
         string[] scriptOptions = { "OPTIONS:0", "CHECKSETS:TRUE", "EXTENDED_ERROR_INFO", "DEFER:TRUE" };
-        
+
         ExecuteScriptMessage message = new ExecuteScriptMessage
         {
             ScriptName = "Automation script",
             Options = new SA(scriptOptions),
             DataMinerID = -1,
-            HostingDataMinerID = -1
+            HostingDataMinerID = -1,
         };
-        
+
         var response = protocol.ExecuteScript(message) as ExecuteScriptResponseMessage;
         bool succeeded = response != null && !response.HadError;
-        
+
         if (!succeeded)
         {
             // Script did not succeed.
@@ -32,7 +32,7 @@ public static void Run(SLProtocol protocol)
     }
     catch (Exception ex)
     {
-        protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Exception thrown:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
     }
 }
 ```

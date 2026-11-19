@@ -19,36 +19,41 @@ To implement ticket synchronization:
 
    Example of a synchronization routine:
 
-   ```cs
+   ```csharp
    public class QAction
    {
        public static void Run(SLProtocol protocol)
        {
-           //Assuming the tickets are saved in a table with paramid 1000
+           // Assuming the tickets are saved in a table with paramid 1000
            var rows = protocol.GetKeys(1000).Select(oneKey => protocol.GetRow(1000, oneKey));
            TicketingDriverSyncMessage syncMsg = new TicketingDriverSyncMessage();
            syncMsg.ElementID = new Skyline.DataMiner.Net.ElementID(protocol.DataMinerID, protocol.ElementID);
-           //The timestamp of the last polling cycle to the external ticketing system.
+
+           // The timestamp of the last polling cycle to the external ticketing system.
            syncMsg.TimeStamp = DateTime.UtcNow;
            syncMsg.ManagerObjects = new List<Tuple<DateTime, Ticket>>();
 
-           foreach(var row in rows) {
+           foreach (var row in rows)
+           {
                object[] cells = row as object[];
-               string jsonTicket = cells[1] as string; //The ticket saved as a json string (see: Ticket.ToJson())
-               string timestamp = cells[0] as string; //The timestamp of when this ticket was added/changed
-               DateTime TimeStamp = DateTime.Parse(timestamp);
+               string jsonTicket = cells[1] as string; // The ticket saved as a json string (see: Ticket.ToJson())
+               string timestamp = cells[0] as string; // The timestamp of when this ticket was added/changed
+               DateTime timeStamp = DateTime.Parse(timestamp);
                Ticket t = Ticket.FromJson(jsonTicket);
-               syncMsg.ManagerObjects.Add(Tuple.Create(TimeStamp, t));
+               syncMsg.ManagerObjects.Add(Tuple.Create(timeStamp, t));
            }
 
-           //Send the sync request
+           // Send the sync request
            var responses = protocol.SLNet.SendMessage(syncMsg);
-           foreach(var response in responses)
+           foreach (var response in responses)
            {
                var evt = response as TicketingGatewayEventMessage;
-               if (evt == null) continue;
+               if (evt == null)
+               {
+                   continue;
+               }
 
-               //Handle the eventmessage
+               // Handle the eventmessage
            }
        }
    }

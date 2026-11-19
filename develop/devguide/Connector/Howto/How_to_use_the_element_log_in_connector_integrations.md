@@ -107,7 +107,7 @@ public static void Run(SLProtocol protocol)
     }
     catch (Exception ex)
     {
-        string logLine = string.Format("QA{0}|{1}|Run|Exception thrown:{2}", protocol.QActionID, protocol.GetTriggerParameter(), Environment.NewLine + ex);
+        string logLine = $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}";
         protocol.Log(logLine, LogType.Error, LogLevel.NoLogging);
     }
 }
@@ -134,10 +134,9 @@ For example:
 ```csharp
 public static void WriteDebugLog(this SLProtocol protocol, bool debugMode, string message)
 {
-    if(debugMode)
+    if (debugMode)
     {
-        protocol.Log(
-        string.Format("QA{0}|{1}", protocol.QActionID, message), LogType.DebugInfo, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|{message}", LogType.DebugInfo, LogLevel.NoLogging);
     }
 }
 ```

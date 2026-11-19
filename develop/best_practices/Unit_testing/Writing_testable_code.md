@@ -15,19 +15,22 @@ public sealed class PathCache
 {
     private readonly HashSet<string> cachedPaths;
     private readonly PathRewriter pathRewriter;
+
     public PathCache()
     {
         pathRewriter = new PathRewriter();
         cachedPaths = new HashSet<string>();
     }
+
     public void AddPath(string path)
     {
         string rewrittenPath = pathRewriter.RewritePath(path);
         cachedPaths.Add(rewrittenPath);
     }
+
     public IEnumerable<string> CachedItems
     {
-        get { return cachedPaths.ToList().AsReadOnly();}
+        get { return cachedPaths.ToList().AsReadOnly(); }
     }
 }
 ```
@@ -95,11 +98,13 @@ public sealed class PathCache
 {
     private readonly HashSet<string> cachedPaths;
     private readonly IPathRewriter pathRewriter;
+
     public PathCache(IPathRewriter rewriter)
     {
         pathRewriter = rewriter;
         cachedPaths = new HashSet<string>();
     }
+
     ...
 }
 ```
