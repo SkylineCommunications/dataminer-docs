@@ -383,6 +383,17 @@ After the upgrade, uploading and using a connector with either feature will caus
 > [!NOTE]
 > The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
 
+#### API Gateway: Per-module rate limits and request timeouts [ID 47105]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+Modules registering with the API Gateway DxM can now specify their own rate limit and request inactivity timeout:
+
+- `rateLimitPerMinute`: A positive value sets an independent requests-per-minute quota for the module, shared across its paths. Requests to that module will not consume the existing shared quota of 60 requests per minute or affect other modules' quotas.
+- `requestTimeoutSeconds`: A positive value overrides the default 100-second request inactivity timeout for the module. This is not a limit on the total request duration.
+
+If either setting is omitted, zero, or negative, the existing behavior for that setting will be retained. Re-registering a module updates or removes its overrides without affecting other modules.
+
 #### Remaining legacy Annotations reference removed [ID 47122]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->

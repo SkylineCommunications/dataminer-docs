@@ -115,6 +115,17 @@ SLNet will now update large subscription sets more efficiently, particularly whe
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
 
+#### API Gateway: Per-module rate limits and request timeouts [ID 47105]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+Modules registering with the API Gateway DxM can now specify their own rate limit and request inactivity timeout:
+
+- `rateLimitPerMinute`: A positive value sets an independent requests-per-minute quota for the module, shared across its paths. Requests to that module will not consume the existing shared quota of 60 requests per minute or affect other modules' quotas.
+- `requestTimeoutSeconds`: A positive value overrides the default 100-second request inactivity timeout for the module. This is not a limit on the total request duration.
+
+If either setting is omitted, zero, or negative, the existing behavior for that setting will be retained. Re-registering a module updates or removes its overrides without affecting other modules.
+
 ### Fixes
 
 #### SLNet: Array index errors when retrieving alarm filter, trend filter, or redundancy group information [ID 46607]
