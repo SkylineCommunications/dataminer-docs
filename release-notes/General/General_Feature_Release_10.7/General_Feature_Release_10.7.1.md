@@ -104,6 +104,16 @@ Each Document Intelligence request from SLNet now includes connection informatio
 > [!IMPORTANT]
 > Document Intelligence in DataMiner 10.6 is incompatible with Assistant versions that enforce these permission checks (i.e., Assistant 4.0.0 or newer).
 
+#### QActions: JScript and VBScript are no longer supported [ID 47010]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
+
+The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
+
+In addition, the SLSite COM component will be uninstalled during an upgrade.
+
 ### Enhancements
 
 #### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
@@ -306,16 +316,6 @@ To temporarily continue using MySQL, add the following case-sensitive option to 
 ```
 
 Consider migrating to Cassandra Cluster or Storage as a Service (STaaS) instead.
-
-#### QActions: JScript and VBScript are no longer supported [ID 47010]
-
-<!-- MR 10.8.0 - FR 10.7.1 -->
-
-Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
-
-The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
-
-In addition, the SLSite COM component will be uninstalled during an upgrade.
 
 #### Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]
 

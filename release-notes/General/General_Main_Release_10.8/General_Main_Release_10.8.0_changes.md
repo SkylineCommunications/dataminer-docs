@@ -15,6 +15,18 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 
 ## Changes
 
+### Breaking changes
+
+#### QActions: JScript and VBScript are no longer supported [ID 47010]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
+
+The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
+
+In addition, the SLSite COM component will be uninstalled during an upgrade.
+
 ### Enhancements
 
 #### SLProtocol: Support for postPonePortInitialisation option removed [ID 46588]
@@ -99,16 +111,6 @@ As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.
 When an automation script fails to compile, DataMiner will now report the `SL_AUTOMATION_SCRIPT_COMPILATION_FAILED` error, including the compiler diagnostics, when loading the script. Previously, the script would fail at runtime with a "No Assembly found for cookie" error and be retried 100 times.
 
 The compilation error will be displayed when you execute the script in DataMiner Cube and returned when you execute it through code.
-
-#### QActions: JScript and VBScript are no longer supported [ID 47010]
-
-<!-- MR 10.8.0 - FR 10.7.1 -->
-
-Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
-
-The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
-
-In addition, the SLSite COM component will be uninstalled during an upgrade.
 
 #### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
 
