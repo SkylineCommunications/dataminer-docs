@@ -45,8 +45,10 @@ public void AddPath_ValidPath_PathPresentInCache()
     PathCache cache = new PathCache();
     string path = @"Visios\Customers\Skyline\Protocols\Test";
     string expectedPath = @"V\C\Skyline\P\Test";
+
     // Act
     cache.AddPath(path);
+
     // Assert
     CollectionAssert.Contains(cache.CachedItems.ToList(), expectedPath);
 }
@@ -121,8 +123,10 @@ public void AddPath_ValidPath_PathPresentInCache()
     pathRewriter.Setup(p => p.Rewrite(It.IsAny<string>())).Returns(expectedPath);
     PathCache cache = new PathCache(pathRewriter.Object);
     string path = @"Visios\Customers\Skyline\Protocols\Test";
+
     // Act
     cache.AddPath(path);
+
     // Assert
     CollectionAssert.Contains(cache.CachedItems.ToList(), expectedPath);
 }

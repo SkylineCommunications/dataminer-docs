@@ -138,6 +138,7 @@ public class HelloWorldDialog : Dialog
     {
         // Set title
         Title = "Hello World";
+
         // Init widgets
         label = new Label("Name");
         TextBox = new TextBox();
@@ -164,10 +165,12 @@ public class HelloWorldDialog : Dialog
     {
         // Set title
         Title = "Hello World";
+
         // Init widgets
         label = new Label("Name");
         TextBox = new TextBox();
         Button = new Button("Update Name");
+
         // Define layout
         AddWidget(label, 0, 0);
         AddWidget(TextBox, 0, 1);

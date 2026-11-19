@@ -345,6 +345,7 @@ foreach (var booking in quarantinedBookings)
         {
             // The entire usage is in quarantine, nothing is assigned to the booking anymore for this resource.
             quarantinedResource.QuarantinedResourceUsage.QuarantineReference = Guid.Empty;
+
             // Re-assign the old resource usage
             booking.ResourcesInReservationInstance.Add(quarantinedResource.QuarantinedResourceUsage);
         }

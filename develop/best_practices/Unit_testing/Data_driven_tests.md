@@ -26,8 +26,10 @@ public class CalculatorTests
     {
         // Arrange
         Calculator myCalculator = new Calculator();
+
         // Act
         var result = myCalculator.Multiply(multiplicand, multiplier);
+
         // Assert
         Assert.AreEqual(product, result);
     }
@@ -75,8 +77,10 @@ public void MultiplyTest(int multiplicand, int multiplier, int product)
 {
     // Arrange
     Calculator myCalculator = new Calculator();
+
     // Act
     var result = myCalculator.Multiply(multiplicand, multiplier);
+
     // Assert
     Assert.AreEqual(product, result);
 }
@@ -112,6 +116,7 @@ public void MultiplyTest()
     int multiplicand = Convert.ToInt32(TestContext.DataRow["Multiplicand"]);
     int multiplier = Convert.ToInt32(TestContext.DataRow["Multiplier"]);
     int product = Convert.ToInt32(TestContext.DataRow["Product"]);
+
     // Act
     var result = myCalculator.Multiply(multiplicand, multiplier);
     Assert.AreEqual(product, result,
@@ -217,8 +222,10 @@ public void MultiplyTest(int multiplicand, int multiplier, int product)
 {
     // Arrange
     Calculator myCalculator = new Calculator();
+
     // Act
     var result = myCalculator.Multiply(multiplicand, multiplier);
+
     // Assert
     Assert.AreEqual(product, result);
 }

@@ -25,6 +25,7 @@ object[] settings = new object[] // Object array, minimum length = 2
 {
     versionSpecificSettings, // 0: Version specific settings.
     "127.0.0.2",             // 1: Destination address (String, port is optional).
+
     // Settings: Values with a default fallback when not provided.
     1614,                    // 2: Destination Port (String or Int32, will not overwrite the port specified with the IP address)
     1490,                    // 3: Timeout (Int32)

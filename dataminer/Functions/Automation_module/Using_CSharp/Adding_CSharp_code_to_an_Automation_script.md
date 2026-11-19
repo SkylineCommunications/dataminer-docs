@@ -97,6 +97,7 @@ engine.SetFlag(RunTimeFlags.AllowUndef);
     using Skyline.DataMiner.Net.Exceptions;
     using Skyline.DataMiner.Net.Messages;
     using Skyline.DataMiner.Net.AutomationUI;
+
     // Other using statements as defined in the Namespace references field.
 
     public class Script

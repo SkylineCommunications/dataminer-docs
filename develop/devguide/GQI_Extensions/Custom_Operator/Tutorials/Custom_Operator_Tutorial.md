@@ -160,6 +160,7 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
     private string ObfuscateName(string name)
     {
         var obfuscatedName = "";
+
         // Apply an obfuscation transformation
         foreach (var part in name.Split())
             obfuscatedName += $"{part[0]}.";

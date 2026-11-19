@@ -36,12 +36,14 @@ public class Script
             TargetNodeLabel = "DEC1",
             NewResourceId = Guid.Parse("4d4c6525-8fbc-419c-9250-7e8b59dd2fcb")
          },
+
          // Unassign a resource (update with relevant data)
          new AssignResourceRequest
          {
             TargetNodeLabel = "DEC2",
             NewResourceId = Guid.Empty
          },
+
          // Assign a profile instance (update with relevant data)
          new AssignResourceRequest
          {

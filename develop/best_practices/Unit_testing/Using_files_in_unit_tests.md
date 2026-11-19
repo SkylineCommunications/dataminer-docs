@@ -47,8 +47,10 @@ public class ImportTests
     {
         // Arrange
         var expected = ...
+
         // Act
         QAction_1.KpiConfig.ImportFromFile("default.json");
+
         // Assert
         actual.Should().BeEquivalentTo(expected);
     }
@@ -59,8 +61,10 @@ public class ImportTests
     {
         // Arrange
         var expected = ...
+
         // Act
         QAction_1.KpiConfig.ImportFromFile("unexpected whitespace.json");
+
         // Assert
         actual.Should().BeEquivalentTo(expected);
     }
@@ -84,8 +88,10 @@ public class ImportTests
     {
         // Arrange
         var expected = ...
+
         // Act
         var actual = QAction_1.KpiConfig.ImportFromFile(@"Import Test Files\default.json");
+
         // Assert
         actual.Should().BeEquivalentTo(expected);
     }
@@ -95,8 +101,10 @@ public class ImportTests
     {
         // Arrange
         var expected = ...
+
         // Act
         var actual = QAction_1.KpiConfig.ImportFromFile(@"Import Test Files\unexpected whitespace.json");
+
         // Assert
         actual.Should().BeEquivalentTo(expected);
     }

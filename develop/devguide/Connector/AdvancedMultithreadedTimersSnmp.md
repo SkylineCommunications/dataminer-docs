@@ -329,6 +329,7 @@ public static void ProcessResultData(SLProtocolExt protocol)
         if (newValues != null && newValues.Length == 3) // Number of items in group.
         {
             string myFirstParameter = Convert.ToString(newValues[0]);
+
             // ...
         }
         else
@@ -359,6 +360,7 @@ public static void ProcessResultData(SLProtocolExt protocol)
         
         object[] instanceColumn = (object[])myTable[0];
         object[] myFirstRequestedColumn = (object[])myTable[1];
+
         // ...
     }
     else

@@ -185,6 +185,7 @@ var resourcePager = helper.PrepareResourcePaging(resourceFilter.ToQuery(), prefe
 while (resourcePager.MoveToNextPage())
 {
     var resources = resourcePager.GetCurrentPage();
+
     // Do something with the resources on this page.
 }
 
@@ -194,6 +195,7 @@ var reservationInstancePager = helper.PrepareReservationInstancePaging(reservati
 while (reservationInstancePager.MoveToNextPage())
 {
     var reservationInstances = reservationInstancePager.GetCurrentPage();
+
     // Do something with the ReservationInstances on this page.
 }
 ```
@@ -208,6 +210,7 @@ var resourcePager = helper.PrepareResourcePaging(resourceFilter.OrderBy(Resource
 while (resourcePager.MoveToNextPage())
 {
     var resources = resourcePager.GetCurrentPage();
+
     // Do something with the resources on this page.
 }
 
@@ -217,6 +220,7 @@ var reservationInstancePager = helper.PrepareReservationInstancePaging(reservati
 while (reservationInstancePager.MoveToNextPage())
 {
     var reservationInstances = reservationInstancePager.GetCurrentPage();
+
     // Do something with the ReservationInstances on this page.
 }
 ```

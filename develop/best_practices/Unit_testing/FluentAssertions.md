@@ -15,8 +15,10 @@ Consider the following example where you call a method and expect a collection w
 ```csharp
 // Arrange
 List<string> expected = new List<string>() { "A", "B", "C" };
+
 // Act
 ICollection<string> returned = …
+
 // Assert
 CollectionAssert.AreEquivalent(expected, returned.ToList());
 ```
@@ -46,8 +48,10 @@ public struct Path
 
 // Arrange
 List<Path> expected = new List<Path>() { new Path("A"), new Path("B"), new Path("C") };
+
 // Act
 ICollection<Path> returned = …
+
 // Assert
 CollectionAssert.AreEquivalent(expected, returned.ToList());
 ```
@@ -98,8 +102,10 @@ Using *FluentAssertions*, the assertion can be rewritten as follows:
 ```csharp
 // Arange
 List<Path> expected = new List<Path>() { new Path("A"), new Path("B"), new Path("C") };
+
 // Act
 ICollection<Path> returned = …
+
 // Assert
 returned.Should().BeEquivalentTo(expected);
 ```
