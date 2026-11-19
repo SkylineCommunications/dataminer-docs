@@ -512,6 +512,16 @@ Previously, a deleted service template could reappear in SLNet after switching b
 
 Deleted service templates will now remain absent after switching back.
 
+#### User-Defined APIs: Endpoint startup could be blocked when NATS was unavailable [ID 46997]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM could remain blocked during startup when the NATS service was unavailable. As a result, API callers would not receive a response explaining the connection failure.
+
+The endpoint will now start while its NATS connections are being established. API triggers received before the message broker is initialized will return HTTP 503 with error code 1006 and the message "Service not ready yet, try again later."
+
+Connection attempts will continue in the background. Once NATS is available and initialization succeeds, API triggers will be forwarded normally and cloud status reporting will resume.
+
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
