@@ -115,7 +115,7 @@ If the IP address for your region or geo-redundancy pair region is not listed ab
       </DataBases>
       ```
 
-   - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required. Make sure to configure the proxy for storage here even if a general proxy is already active for CloudGateway:
+   - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required. Make sure to configure the proxy for storage here even if a [general proxy](xref:Connect_to_cloud_via_proxy) is already active for dataminer.services:
 
       ```xml
       <?xml version="1.0"?>
@@ -133,10 +133,10 @@ If the IP address for your region or geo-redundancy pair region is not listed ab
 
       > [!NOTE]
       >
-      > - Proxy handling for STaaS storage traffic is separate from proxy handling for general cloud traffic (such as DataMiner CloudGateway). Even if a general proxy is already active for CloudGateway, those proxy settings are not automatically filled in for STaaS (or vice versa), so you must still configure the proxy for storage in *DB.xml*. This makes it possible to use independent proxies for general and storage traffic, route only storage traffic or only general traffic through a proxy, or have a node that only uses STaaS without general cloud connectivity. To set up a proxy for general cloud traffic, see [Connecting to dataminer.services via proxy server](xref:Connect_to_cloud_via_proxy).
+      > - Proxy handling for STaaS storage traffic is separate from proxy handling for general dataminer.services traffic (such as DataMiner CloudGateway). Even if a general proxy is already active for dataminer.services, those proxy settings are not automatically filled in for STaaS (or vice versa), so you must still configure the proxy for storage in *DB.xml*. This makes it possible to use independent proxies for general and storage traffic, route only storage traffic or only general traffic through a proxy, or have a node that only uses STaaS without general dataminer.services connectivity. To set up a proxy for general dataminer.services traffic, see [Connecting to dataminer.services via proxy server](xref:Connect_to_cloud_via_proxy).
       > - If the proxy does not require authentication, you can leave the *UserName* and *Password* fields blank or remove them.
 
 1. Restart DataMiner to begin using STaaS.
 
-> [!NOTE]
+> [!TIP]
 > If you experience any issues during setup or while using Storage as a Service, refer to [Troubleshooting - STaaS](xref:Troubleshooting_STaaS).
