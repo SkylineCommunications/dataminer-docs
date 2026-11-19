@@ -364,3 +364,11 @@ When a GQI table in a dashboard was opened before its WebSocket connection was r
 When live updates were enabled for a GQI table in a dashboard, duplicated data in row updates could cause the JSON size limit to be exceeded. As a result, the table could stop loading additional rows.
 
 Unnecessary duplication in table updates has now been removed, reducing the amount of data sent to the dashboard.
+
+#### GQI DxM: Live updates could overwrite unchanged cells in other rows [ID 47068]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When a real-time update affected multiple rows, values from an earlier row could be copied into subsequent rows, overwriting cells that had not changed. This could cause incorrect values in live query results or in rows retrieved on later pages.
+
+Real-time updates will now preserve unchanged cells in each row.
