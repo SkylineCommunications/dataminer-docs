@@ -205,6 +205,12 @@ The endpoint will now start while its NATS connections are being established. AP
 
 Connection attempts will continue in the background. Once NATS is available and initialization succeeds, API triggers will be forwarded normally and cloud status reporting will resume.
 
+#### SLSNMPAgent could crash on systems with many large services [ID 47031]
+
+<!-- MR 10.6.0 [CU10] - FR TBD -->
+
+On DataMiner Agents with many large services, SLSNMPAgent could crash during startup or when services were changed.
+
 #### BPA test 'DataMiner Agent Minimum Requirements' could fail with an execution error [ID 47078]
 
 <!-- MR 10.6.0 [CU10] - FR TBD -->
