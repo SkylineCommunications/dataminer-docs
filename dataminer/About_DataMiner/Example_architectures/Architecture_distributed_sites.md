@@ -39,42 +39,13 @@ The examples below show two approaches: distributing DMAs across sites and using
 
 These self-managed DMAs belong to one DMS and use STaaS in the cloud. The unlabeled arrow indicates cluster communication over a routed WAN. Each DMA accesses STaaS independently and polls its local equipment.
 
-```mermaid
-flowchart TB
-    subgraph Central["Central site network"]
-        D["DMA 1"]
-    end
-    S@{ shape: cloud, label: "STaaS<br/>Managed cloud storage" }
-    subgraph A["Remote site network"]
-        DA["DMA 2"]
-        EA["Local equipment"]
-        DA <-->|"Local network / interface"| EA
-    end
-    D <--> DA
-    D <-->|"HTTPS"| S
-    DA <-->|"HTTPS"| S
-```
+![Diagram of DMA 1 in a central site network and DMA 2 in a remote site network, which communicate with each other. Both DMAs connect to STaaS managed cloud storage over HTTPS. DMA 2 also connects to local equipment in the remote site over a local network or interface](~/dataminer/images/Self-managed_DMAs_at_multiple_sites.png)
 
 ### DaaS with remote collection through Edge
 
 In this example, the DMS runs on DaaS, co-hosted with STaaS in the same cloud environment. The Edge Node runs compatible integrations locally, while the Gateway provides a tunnel for centrally running integrations. A self-managed DMS can use Edge in the same way. Note that the Edge components are not DMAs and do not access system data storage directly.
 
-```mermaid
-flowchart TB
-    Cloud@{ shape: cloud, label: "Same cloud environment<br/>DaaS: DMAs<br/>STaaS: system data storage<br/>Low-latency access" }
-    subgraph B["Site B: local integration execution"]
-        N["Edge Node"]
-        EB["Local equipment"]
-        N <-->|"Local network / interface"| EB
-    end
-    subgraph C["Site C: centrally running integrations"]
-        G["Edge Gateway"]
-        EC["Local equipment"]
-        G <-->|"Local network"| EC
-    end
-    N <-->|"Integration management and data"| Cloud
-    Cloud <-->|"Edge tunnel"| G
-```
+![Diagram of a cloud environment hosting DaaS DMAs and STaaS system data storage with low-latency access. Site B runs integrations locally: an Edge Node exchanges integration management and data with the cloud and connects to local equipment over a local network or interface. Site C runs integrations centrally: an Edge Gateway connects to the cloud through an Edge tunnel and to local equipment over a local network](~/dataminer/images/DaaS_with_remote_collection_through_Edge.png)
 
 STaaS requires outbound HTTPS from each self-managed DMA, directly or via a supported proxy. Edge Nodes can connect to the DMS directly or through dataminer.services. A DaaS system can also reach remote equipment through a [site-to-site VPN](xref:Connecting_to_private_data_sources#about-the-site-to-site-vpn-connection).
 

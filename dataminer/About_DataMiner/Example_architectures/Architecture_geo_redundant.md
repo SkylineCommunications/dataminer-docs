@@ -18,25 +18,7 @@ Recovery requires more than geographically separated machines. Remaining compute
 
 The following example uses self-managed DMAs at two locations in one DMS, with STaaS in the cloud. Each location has its own storage connection. The unlabelled arrow between DMAs indicates cluster communication. Cross-site equipment access uses the routed WAN: moving a workload only helps when the recovery DMAs can still reach its data sources.
 
-```mermaid
-flowchart TB
-    subgraph A["Location A"]
-        DA["DMAs"]
-        EA["Equipment at site A"]
-        DA <-->|"Local network"| EA
-    end
-    subgraph B["Location B"]
-        DB["DMAs<br/>With recovery capacity"]
-        EB["Equipment at site B"]
-        DB <-->|"Local network"| EB
-    end
-    S@{ shape: cloud, label: "STaaS<br/>ZRS or optional GRS" }
-    DA <--> DB
-    DA <-->|"HTTPS"| S
-    DB <-->|"HTTPS"| S
-    DA <-->|"Recovery access over WAN"| EB
-    DB <-->|"Recovery access over WAN"| EA
-```
+![Diagram of DMAs in Location A and DMAs with recovery capacity in Location B, which communicate with each other. Each location has equipment connected to its DMAs over a local network, and each location's DMAs connect to STaaS cloud storage, with zone-redundant or optional geo-redundant storage, over HTTPS. Recovery access over the WAN lets the DMAs in each location reach the equipment in the other location](~/dataminer/images/Compute_and_storage_placement.png)
 
 The two location boxes do not imply a two-node cluster: size and place the nodes for the selected recovery mechanism. Equipment at a failed site may itself be unavailable; the recovery paths apply only to sources that remain operational and reachable.
 
@@ -54,31 +36,7 @@ For a geo-redundant on-premises deployment, configure Cassandra with a data cent
 
 This storage variation replaces STaaS in the previous example. Both compute locations need connections to the database nodes they use, including the paths required during recovery. The drawing groups database nodes by site and does not specify node counts.
 
-```mermaid
-flowchart TB
-    subgraph A["Location A"]
-        DA["DMAs"]
-        CA[("Cassandra data center A")]
-        OA[("OpenSearch data nodes A")]
-        DA <-->|"Database connections"| CA
-        DA <-->|"Database connections"| OA
-    end
-    subgraph B["Location B"]
-        DB["DMAs"]
-        CB[("Cassandra data center B")]
-        OB[("OpenSearch data nodes B")]
-        DB <-->|"Database connections"| CB
-        DB <-->|"Database connections"| OB
-    end
-    subgraph Third["Third voting location"]
-        T["OpenSearch tie-breaker<br/>No stored data"]
-    end
-    DA <--> DB
-    CA <-->|"Cassandra replication"| CB
-    OA <--> OB
-    OA <--> T
-    OB <--> T
-```
+![Diagram of DMAs in Location A and Location B that communicate with each other. In each location, the DMAs have database connections to OpenSearch data nodes and to a Cassandra data center in that same location. A third voting location contains an OpenSearch tie-breaker that stores no data and is linked to the OpenSearch data nodes of both locations](~/dataminer/images/Compute_and_storage_placement_with_self-managed_databases.png)
 
 Unlabelled links between OpenSearch components indicate database cluster communication and voting. Cross-site DMA-to-database paths are omitted to keep the drawing readable, but must be available where required by the recovery design. The tie-breaker is not another database containing a copy of operational data. All database components run on Linux; replication, shard placement, voting, and network requirements must follow the storage configuration guidance.
 

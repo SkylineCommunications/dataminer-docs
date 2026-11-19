@@ -38,29 +38,7 @@ Alternatively, [DataMiner Edge](xref:DataMiner_Edge) can be used. An Edge Gatewa
 
 This example places self-managed DMAs and dedicated Linux database machines in the same site network. An [Edge Gateway](xref:About_Edge_Gateways), which is not a DMA, gives the DMS access to equipment at a remote site, such as a headend or distant teleport. The arrows between DMAs indicate cluster communication.
 
-```mermaid
-flowchart TB
-    subgraph Site["Central site network"]
-        subgraph DMS["One DMS"]
-            A["DMA 1"]
-            B["DMA 2"]
-            C["DMA 3"]
-            A <--> B
-            B <--> C
-            A <--> C
-        end
-        DB[("Cassandra and OpenSearch<br/>Dedicated Linux machines")]
-        Local["Local equipment"]
-    end
-    subgraph Remote["Remote site network"]
-        G["Edge Gateway"]
-        RE["Remote equipment"]
-    end
-    DMS <-->|"Database access from every DMA"| DB
-    DMS <-->|"Local network"| Local
-    DMS <-->|"Edge tunnel"| G
-    G <-->|"Local network"| RE
-```
+![Diagram of a central site network with one DMS of three DMAs that communicate with each other, using dedicated Linux machines running Cassandra and OpenSearch for database access from every DMA, and connecting to local equipment over the local network. An Edge tunnel links the DMS to an Edge Gateway in a remote site network, which connects to remote equipment over a local network](~/dataminer/images/Self-managed_with_Edge_connectivity.png)
 
 While the example above uses self-managed storage, self-managed DMAs could also use [STaaS](xref:DM_selfhosted_and_StaaS), with outbound HTTPS from every DMA.
 
