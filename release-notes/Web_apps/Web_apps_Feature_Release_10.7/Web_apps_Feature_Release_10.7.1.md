@@ -313,6 +313,12 @@ Filtering the *Get alarms* data source on *Is focus alarm* equal to true retriev
 
 The remaining support for the legacy Annotations module has been removed from the DataMiner web apps. This support had been retained for backward compatibility with DataMiner 10.5.0 servers, but the module has reached end of life.
 
+#### GQI DxM: More retries when loading locked extension libraries [ID 47120]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+The GQI DxM will now retry reading a locked extension DLL up to 7 times instead of 5. This increases the total time allowed for the assembly file to reach a stable state from 3.1 seconds to 12.7 seconds, allowing libraries that take longer to compile to be loaded correctly.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
