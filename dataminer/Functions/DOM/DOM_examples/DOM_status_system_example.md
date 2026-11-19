@@ -234,7 +234,7 @@ domInstance = _domHelper.DomInstances.Update(domInstance);
 
 // Bob confirms the issue but also sees that this is one of those special new LED lights he has no experience with.
 // He updates the issue description and assigns it to his colleague, Roger.
-description += "\r\n";
+description += Environment.NewLine;
 description += "Note from Bob: It is one of the LED lights. I assigned it to Roger";
 domInstance.AddOrUpdateFieldValue(sectionDefinition, issueTextFieldDescriptor, description);
 domInstance.AddOrUpdateFieldValue(sectionDefinition, technicianNameFieldDescriptor, "Roger");

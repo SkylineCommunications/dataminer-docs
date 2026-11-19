@@ -120,18 +120,18 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
    Before:
 
    ```csharp
-   var maskRequest = new SetAlarmStateMessage();
-   maskRequest.DataMinerID = alarm.DataMinerID;
-   maskRequest.AlarmId = alarm.AlarmID;
-   maskRequest.DesiredStatus = AlarmUserStatus.Mask;
-   maskRequests.Add(maskRequest);
+      var maskRequest = new SetAlarmStateMessage();
+      maskRequest.DataMinerID = alarm.DataMinerID;
+      maskRequest.AlarmId = alarm.AlarmID;
+      maskRequest.DesiredStatus = AlarmUserStatus.Mask;
+      maskRequests.Add(maskRequest);
    ```
 
    After:
 
    ```csharp
-   var maskRequest = new SetAlarmStateMessage(alarm.TreeID, AlarmUserStatus.Mask, string.Empty);
-   maskRequests.Add(maskRequest);
+      var maskRequest = new SetAlarmStateMessage(alarm.TreeID, AlarmUserStatus.Mask, string.Empty);
+      maskRequests.Add(maskRequest);
    ```
 
 1. Click *Validate* again to see if all warnings and errors are gone.

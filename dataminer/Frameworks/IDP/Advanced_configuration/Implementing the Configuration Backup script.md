@@ -82,7 +82,8 @@ inputData = new BackupInputData(engine);
 backupManager = new Backup(inputData);
 backupManager.NotifyProcessStarted();
 
-string contents = "Contents of the backup which are typically read\nfrom one or more parameters from the corresponding element";
+string contents = $"Contents of the backup which are typically read{Environment.NewLine}"
+                + "from one or more parameters from the corresponding element";
 backupManager.SendBackupContentToIdp(contents);
 
 backupManager.NotifyProcessSuccess();
@@ -136,7 +137,8 @@ inputData = new BackupInputData(engine);
 backupManager = new Backup(inputData);
 backupManager.NotifyProcessStarted();
 
-string fullContent = "Contents of the full backup which are typically read\nfrom one or more parameters from the corresponding element";
+string fullContent = $"Contents of the full backup which are typically read{Environment.NewLine}"
+                   + "from one or more parameters from the corresponding element";
 int version = 1;
 backupManager.SendBackupContentWithChangeDetectionToIdp(fullContent, version);
 
@@ -150,8 +152,10 @@ inputData = new BackupInputData(engine);
 backupManager = new Backup(inputData);
 backupManager.NotifyProcessStarted();
 
-string fullContent = "Contents of the full backup which are typically read\nfrom one or more parameters from the corresponding element";
-string coreContent = "Contents of the core backup which is typically \nsmaller then the full backup";
+string fullContent = $"Contents of the full backup which are typically read{Environment.NewLine}"
+                   + "from one or more parameters from the corresponding element";
+string coreContent = $"Contents of the core backup which is typically{Environment.NewLine}"
+                   + "smaller then the full backup";
 int version = 1;
 backupManager.SendBackupContentWithChangeDetectionToIdp(fullContent, coreContent, version);
 

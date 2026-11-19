@@ -25,30 +25,30 @@ For the example script, dummy methods will be used with arbitrary `Thread.Sleep`
 ```csharp
 public static void Connect()
 {
-    Thread.Sleep(100);
+  Thread.Sleep(100);
 }
 
 public static List<string> Fetch()
 {
-    Thread.Sleep(500);
-    var data = new List<string>() { string.Empty, string.Empty, string.Empty };
+  Thread.Sleep(500);
+  var data = new List<string>() { string.Empty, string.Empty, string.Empty };
 
-    return data;
+  return data;
 }
 
 public static void Process(string item)
 {
-    Thread.Sleep(300);
+  Thread.Sleep(300);
 }
 
 public static void Store(List<string> data)
 {
-    Thread.Sleep(1000);
+  Thread.Sleep(1000);
 }
 
 public static void Log(string message)
 {
-    Console.WriteLine(message);
+  Console.WriteLine(message);
 }
 ```
 
@@ -59,21 +59,21 @@ The simplest approach is to call `DateTime.Now` at the start and end of the scri
 ```csharp
 public static void Solution()
 {
-    var startTime = DateTime.Now;
+  var startTime = DateTime.Now;
 
-    Connect();
+  Connect();
 
-    var data = Fetch();
+  var data = Fetch();
 
-    foreach (var item in data)
-    {
-        Process(item);
-    }
+  foreach (var item in data)
+  {
+    Process(item);
+  }
 
-    Store(data);
+  Store(data);
 
-    var executionTime = DateTime.Now - startTime;
-    Log($"Execution time: {executionTime}");
+  var executionTime = DateTime.Now - startTime;
+  Log($"Execution time: {executionTime}");
 }
 ```
 
@@ -84,34 +84,34 @@ While you could track arbitrary code sections for this, a more intuitive approac
 ```csharp
 public static void Solution()
 {
-    var scriptStartTime = DateTime.Now;
+  var scriptStartTime = DateTime.Now;
 
-    var connectStartTime = DateTime.Now;
-    Connect();
-    var connectExecutionTime = DateTime.Now - connectStartTime;
+  var connectStartTime = DateTime.Now;
+  Connect();
+  var connectExecutionTime = DateTime.Now - connectStartTime;
 
-    var fetchStartTime = DateTime.Now;
-    var data = Fetch();
-    var fetchExecutionTime = DateTime.Now - fetchStartTime;
+  var fetchStartTime = DateTime.Now;
+  var data = Fetch();
+  var fetchExecutionTime = DateTime.Now - fetchStartTime;
 
-    TimeSpan processExecutionTime = default;
-    foreach (var item in data)
-    {
-        var processStartTime = DateTime.Now;
-        Process(item);
-        processExecutionTime = DateTime.Now - processStartTime;
-    }
+  TimeSpan processExecutionTime = default;
+  foreach (var item in data)
+  {
+    var processStartTime = DateTime.Now;
+    Process(item);
+    processExecutionTime = DateTime.Now - processStartTime;
+  }
 
-    var storeStartTime = DateTime.Now;
-    Store(data);
-    var storeExecutionTime = DateTime.Now - storeStartTime;
+  var storeStartTime = DateTime.Now;
+  Store(data);
+  var storeExecutionTime = DateTime.Now - storeStartTime;
 
-    var scriptExecutionTime = DateTime.Now - scriptStartTime;
+  var scriptExecutionTime = DateTime.Now - scriptStartTime;
 
-    Log($"Script execution time: {scriptExecutionTime}");
-    Log($"Connect execution time: {connectExecutionTime}");
-    Log($"Fetch execution time: {fetchExecutionTime}");
-    Log($"Process execution time: {process}");
+  Log($"Script execution time: {scriptExecutionTime}");
+  Log($"Connect execution time: {connectExecutionTime}");
+  Log($"Fetch execution time: {fetchExecutionTime}");
+  Log($"Process execution time: {process}");
 }
 ```
 
@@ -127,30 +127,30 @@ First, define the tracker and apply it in your methods.
 ```csharp
 public class Tracker : IDisposable
 {
-    private DateTime startTime;
+  private DateTime startTime;
 
-    public Tracker()
-    {
-        startTime = DateTime.Now;
-    }
+  public Tracker()
+  {
+    startTime = DateTime.Now;
+  }
 
-    public TimeSpan ExecutionTime { get; private set; }
+  public TimeSpan ExecutionTime { get; private set; }
 
-    public void Dispose()
-    {
-        ExecutionTime = DateTime.Now - startTime;
-    }
+  public void Dispose()
+  {
+    ExecutionTime = DateTime.Now - startTime;
+  }
 }
 
 public static void Connect(out TimeSpan executionTime)
 {
-    Tracker tracker;
-    using (tracker = new Tracker())
-    {
-        Thread.Sleep(100);
-    }
+  Tracker tracker;
+  using (tracker = new Tracker())
+  {
+    Thread.Sleep(100);
+  }
 
-    executionTime = tracker.ExecutionTime;
+  executionTime = tracker.ExecutionTime;
 }
 ```
 
@@ -159,31 +159,31 @@ Now update the script to use the `Tracker` you have just defined.
 ```csharp
 public static void Solution()
 {
-    Tracker tracker;
-    TimeSpan connectExecutionTime;
-    TimeSpan fetchExecutionTime;
-    TimeSpan processExecutionTime = default;
-    TimeSpan storeExecutionTime;
+  Tracker tracker;
+  TimeSpan connectExecutionTime;
+  TimeSpan fetchExecutionTime;
+  TimeSpan processExecutionTime = default;
+  TimeSpan storeExecutionTime;
 
-    using (tracker = new Tracker())
+  using (tracker = new Tracker())
+  {
+    Connect(out connectExecutionTime);
+
+    var data = Fetch(out fetchExecutionTime);
+
+    foreach (var item in data)
     {
-        Connect(out connectExecutionTime);
-
-        var data = Fetch(out fetchExecutionTime);
-
-        foreach (var item in data)
-        {
-            Process(item, out processExecutionTime);
-        }
-
-        Store(data, out storeExecutionTime);
+      Process(item, out processExecutionTime);
     }
 
-    Log($"Script execution time: {tracker.ExecutionTime}");
-    Log($"Connect execution time: {connectExecutionTime}");
-    Log($"Fetch execution time: {fetchExecutionTime}");
-    Log($"Process execution time: {processExecutionTime}");
-    Log($"Store execution time: {storeExecutionTime}");
+    Store(data, out storeExecutionTime);
+  }
+
+  Log($"Script execution time: {tracker.ExecutionTime}");
+  Log($"Connect execution time: {connectExecutionTime}");
+  Log($"Fetch execution time: {fetchExecutionTime}");
+  Log($"Process execution time: {processExecutionTime}");
+  Log($"Store execution time: {storeExecutionTime}");
 }
 ```
 
@@ -199,35 +199,35 @@ public static Dictionary<string, TimeSpan> Collector = new Dictionary<string, Ti
 
 public class Tracker : IDisposable
 {
-    private readonly DateTime startTime = DateTime.Now;
+  private readonly DateTime startTime = DateTime.Now;
 
-    public Tracker()
-    {
-    }
+  public Tracker()
+  {
+  }
 
-    public TimeSpan ExecutionTime { get; private set; }
+  public TimeSpan ExecutionTime { get; private set; }
 
-    public void Dispose()
-    {
-        ExecutionTime = DateTime.Now - startTime;
-        Collector.Add(GenerateMethodName(), ExecutionTime);
-    }
+  public void Dispose()
+  {
+    ExecutionTime = DateTime.Now - startTime;
+    Collector.Add(GenerateMethodName(), ExecutionTime);
+  }
 
-    private string GenerateMethodName()
-    {
-        MethodBase methodMemberInfo = new StackTrace().GetFrames().Skip(2).FirstOrDefault()?.GetMethod();
-        return methodMemberInfo.Name != "ProcessD"
-            ? methodMemberInfo.Name
-            : $"{methodMemberInfo.Name}{Guid.NewGuid()}";
-    }
+  private string GenerateMethodName()
+  {
+    MethodBase methodMemberInfo = new StackTrace().GetFrames().Skip(2).FirstOrDefault()?.GetMethod();
+    return methodMemberInfo.Name != "ProcessD"
+      ? methodMemberInfo.Name
+      : $"{methodMemberInfo.Name}{Guid.NewGuid()}";
+  }
 }
 
 public static void Connect()
 {
-    using (new Tracker())
-    {
-        Thread.Sleep(100);
-    }
+  using (new Tracker())
+  {
+    Thread.Sleep(100);
+  }
 }
 ```
 
@@ -236,24 +236,24 @@ Because there are multiple calls to the `Process` method, `GenerateMethodName` h
 ```csharp
 public static void Solution()
 {
-    using (new Tracker())
+  using (new Tracker())
+  {
+    Connect();
+
+    var data = Fetch();
+
+    foreach (var item in data)
     {
-        Connect();
-
-        var data = Fetch();
-
-        foreach (var item in data)
-        {
-            Process(item);
-        }
-
-        Store(data);
+      Process(item);
     }
 
-    foreach (var result in Collector)
-    {
-        Log($"{result.Key} execution time: {result.Value}");
-    }
+    Store(data);
+  }
+
+  foreach (var result in Collector)
+  {
+    Log($"{result.Key} execution time: {result.Value}");
+  }
 }
 ```
 
@@ -264,52 +264,52 @@ To address this issue, the collector logic must be expanded, as a dictionary alo
 ```csharp
 public class Collector : IDisposable
 {
-    public Dictionary<string, TimeSpan> Results { get; private set; } = new Dictionary<string, TimeSpan>();
+  public Dictionary<string, TimeSpan> Results { get; private set; } = new Dictionary<string, TimeSpan>();
 
-    public int TrackersCount { get; set; }
+  public int TrackersCount { get; set; }
 
-    public void Dispose()
+  public void Dispose()
+  {
+    TrackersCount--;
+    if (TrackersCount == 0)
     {
-        TrackersCount--;
-        if (TrackersCount == 0)
-        {
-            foreach (var result in Results)
-            {
-                Log($"{result.Key} execution time: {result.Value}");
-            }
-        }
+      foreach (var result in Results)
+      {
+        Log($"{result.Key} execution time: {result.Value}");
+      }
     }
+  }
 }
 
 public class Tracker : IDisposable
 {
-    private readonly DateTime startTime = DateTime.Now;
-    private readonly Collector collector;
+  private readonly DateTime startTime = DateTime.Now;
+  private readonly Collector collector;
 
-    public Tracker(Collector collector)
-    {
-        this.collector = collector;
-        collector.TrackersCount++;
-    }
+  public Tracker(Collector collector)
+  {
+    this.collector = collector;
+    collector.TrackersCount++;
+  }
 
-    public TimeSpan ExecutionTime { get; private set; }
+  public TimeSpan ExecutionTime { get; private set; }
 
-    public void Dispose()
-    {
-        ExecutionTime = DateTime.Now - startTime;
-        collector.Results.Add(GenerateMethodName(), ExecutionTime);
-        collector.Dispose();
-    }
+  public void Dispose()
+  {
+    ExecutionTime = DateTime.Now - startTime;
+    collector.Results.Add(GenerateMethodName(), ExecutionTime);
+    collector.Dispose();
+  }
 }
 
 public static Collector CollectorInstance { get; set; } = new Collector();
 
 public static void Connect()
 {
-    using (new Tracker(CollectorInstance))
-    {
-        Thread.Sleep(100);
-    }
+  using (new Tracker(CollectorInstance))
+  {
+    Thread.Sleep(100);
+  }
 }
 ```
 
@@ -318,19 +318,19 @@ Here, the `Collector` instance is a static object to keep it simple. Note that t
 ```csharp
 public static void Solution()
 {
-    using (new Tracker(CollectorInstance))
+  using (new Tracker(CollectorInstance))
+  {
+    Connect();
+
+    var data = Fetch();
+
+    foreach (var item in data)
     {
-        Connect();
-
-        var data = Fetch();
-
-        foreach (var item in data)
-        {
-            Process(item);
-        }
-
-        Store(data);
+      Process(item);
     }
+
+    Store(data);
+  }
 }
 ```
 
@@ -354,10 +354,10 @@ public static PerformanceCollector Collector { get; set; } = new PerformanceColl
 
 public static void Connect()
 {
-    using (new PerformanceTracker(Collector))
-    {
-        Thread.Sleep(100);
-    }
+  using (new PerformanceTracker(Collector))
+  {
+    Thread.Sleep(100);
+  }
 }
 ```
 
@@ -366,19 +366,19 @@ By default, the file, *results.json* in this case, will be created in the folder
 ```csharp
 public static void Solution()
 {
-    using (new PerformanceTracker(Collector))
+  using (new PerformanceTracker(Collector))
+  {
+    Connect();
+
+    var data = Fetch();
+
+    foreach (var item in data)
     {
-        Connect();
-
-        var data = Fetch();
-
-        foreach (var item in data)
-        {
-            Process(item);
-        }
-
-        Store(data);
+      Process(item);
     }
+
+    Store(data);
+  }
 }
 ```
 
@@ -391,14 +391,14 @@ public static IPerformanceLogger Logger { get; set; } = new PerformanceFileLogge
 
 public static List<string> Fetch()
 {
-    var data = new List<string>() { string.Empty, string.Empty, string.Empty };
+  var data = new List<string>() { string.Empty, string.Empty, string.Empty };
 
-    using (new PerformanceTracker(Collector).AddMetadata("Count", $"{data.Count}"))
-    {
-        Thread.Sleep(500);
-    }
+  using (new PerformanceTracker(Collector).AddMetadata("Count", $"{data.Count}"))
+  {
+    Thread.Sleep(500);
+  }
 
-    return data;
+  return data;
 }
 ```
 
@@ -407,22 +407,22 @@ With context added, it will now be a lot easier to interpret the results accurat
 ```csharp
 public static void Solution()
 {
-    using (var parentTracker = new PerformanceTracker(Collector))
+  using (var parentTracker = new PerformanceTracker(Collector))
+  {
+    Connect();
+
+    var data = Fetch();
+
+    Parallel.ForEach(data, (item) =>
     {
-        Connect();
+      using (new PerformanceTracker(parentTracker))
+      {
+        Process(item);
+      }
+    });
 
-        var data = Fetch();
-
-        Parallel.ForEach(data, (item) =>
-        {
-            using (new PerformanceTracker(parentTracker))
-            {
-                Process(item);
-            }
-        });
-
-        Store(data);
-    }
+    Store(data);
+  }
 }
 ```
 

@@ -45,7 +45,7 @@ var domInstances = domHelper.DomInstances.Read(filter);
 // Update the field value on those DomInstances.
 foreach (var domInstance in domInstances)
 {
-    domInstance.AddOrUpdateFieldValue<string>(sectionDefinitionId, fieldDescriptorId, newValue);
+  domInstance.AddOrUpdateFieldValue<string>(sectionDefinitionId, fieldDescriptorId, newValue);
 }
 
 // Save them to the database.
@@ -59,18 +59,18 @@ For some of the `DomInstances`, the creation or update might not succeed. When `
 ```csharp
 try
 {
-    // Update the DomInstances in a way similar to the example above.
+  // Update the DomInstances in a way similar to the example above.
 
-    // Save them to the database.
-    var updateResult = domHelper.DomInstances.CreateOrUpdate(domInstances);
+  // Save them to the database.
+  var updateResult = domHelper.DomInstances.CreateOrUpdate(domInstances);
 
-    // Log which items were successfully updated.
-    Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
+  // Log which items were successfully updated.
+  Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
 }
 catch (Exception e)
 {
-    // Log that the operation failed and use info included in the exception for a generic message of what failed.
-    Log($"An unexpected issue occurred while updating: {e}");
+  // Log that the operation failed and use info included in the exception for a generic message of what failed.
+  Log($"An unexpected issue occurred while updating: {e}");
 }
 ```
 
@@ -97,24 +97,24 @@ var updateSucceeded = domHelper.DomInstances.TryCreateOrUpdate(domInstances, out
 
 if (updateResult)
 {
-    // Log which items were successfully removed.
-    Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
+  // Log which items were successfully removed.
+  Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
 }
 else
 {
-    if (updateResult != null)
-    {
-        // Log the number of DomInstances that were not updated.
-        // Also log the TraceData for all failing DomInstances. The TraceData contains all errors and warnings.
-        Log($"Could not perform the update for {updateResult.UnsuccessfulIds.Count} items: {updateResult.GetTraceData()}");
-    }
-    else
-    {
-        // No updateResult is available because the complete request failed.
-        // Log the issue that occurs.
-        var traceData = domHelper.DomInstances.GetTraceDataLastCall();
-        Log($"Could not perform the update because of the following issue: {traceData}");
-    }
+  if (updateResult != null)
+  {
+    // Log the number of DomInstances that were not updated.
+    // Also log the TraceData for all failing DomInstances. The TraceData contains all errors and warnings.
+    Log($"Could not perform the update for {updateResult.UnsuccessfulIds.Count} items: {updateResult.GetTraceData()}");
+  }
+  else
+  {
+    // No updateResult is available because the complete request failed.
+    // Log the issue that occurs.
+    var traceData = domHelper.DomInstances.GetTraceDataLastCall();
+    Log($"Could not perform the update because of the following issue: {traceData}");
+  }
 }
 ```
 

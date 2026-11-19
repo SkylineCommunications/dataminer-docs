@@ -237,7 +237,11 @@ namespace Skyline.DataMiner.Scripting
 		/// }
 		/// catch (Exception ex)
 		/// {
-		///     protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
+		///     protocol.Log(
+		///         $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}" +
+		///         $"{ex}",
+		///         LogType.Error,
+		///         LogLevel.NoLogging);
 		/// }
 		/// </code>
 		/// <para>In the example above, note the use of the options "EXTENDED_ERROR_INFO" and "DEFER:TRUE".</para>

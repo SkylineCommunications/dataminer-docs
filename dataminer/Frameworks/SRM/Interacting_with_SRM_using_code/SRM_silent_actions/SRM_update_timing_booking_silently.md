@@ -21,32 +21,32 @@ using Skyline.DataMiner.Core.SRM.Model.ReservationAction;
 
 public class Script
 {
-    public static void Run(Engine engine)
-    {
-        // Replace with reservation guid
-        var reservationId = Guid.NewGuid();
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationId = Guid.NewGuid();
 
-        // Replace with expected timing
-        var start = DateTime.Now.AddHours(2);
-        var end = start.AddHours(4);
-        var preRoll = TimeSpan.FromMinutes(5);
-        var postRoll = TimeSpan.FromMinutes(5);
+      // Replace with expected timing
+      var start = DateTime.Now.AddHours(2);
+      var end = start.AddHours(4);
+      var preRoll = TimeSpan.FromMinutes(5);
+      var postRoll = TimeSpan.FromMinutes(5);
 
-        var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationId);
 
-        var bookingManager = reservation.FindBookingManager();
+      var bookingManager = reservation.FindBookingManager();
 
-        var newTiming = new ChangeTimeInputData
-        {
-            StartDate = start,
-            EndDate = end,
-            PreRoll = preRoll,
-            PostRoll = postRoll,
-            IsSilent = true,
-        };
+      var newTiming = new ChangeTimeInputData
+      {
+         StartDate = start,
+         EndDate = end,
+         PreRoll = preRoll,
+         PostRoll = postRoll,
+         IsSilent = true,
+      };
 
-        var result = bookingManager.TryChangeTime(engine, ref reservation, newTiming);
-    }
+      var result = bookingManager.TryChangeTime(engine, ref reservation, newTiming);
+   }
 }
 ```
 

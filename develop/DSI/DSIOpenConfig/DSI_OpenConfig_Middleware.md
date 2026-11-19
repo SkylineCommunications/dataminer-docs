@@ -167,24 +167,24 @@ To disconnect when the element has stopped, you can use the QAction's Dispose.
 ```csharp
 public class QAction : IDisposable
 {
-    private bool disposed;
-    private GnmiClient gnmiClient;
+   private bool disposed;
+   private GnmiClient gnmiClient;
 
-    public void Dispose()
-    {
-        Dispose(true);
-        GC.SuppressFinalize(this);
-    }
+   public void Dispose()
+   {
+      Dispose(true);
+      GC.SuppressFinalize(this);
+   }
 
-    protected virtual void Dispose(bool disposing)
-    {
-        if (disposing && !disposed)
-        {
-            disposed = true;
-            gnmiClient?.Dispose();
-            gnmiClient = null;
-        }
-    }
+   protected virtual void Dispose(bool disposing)
+   {
+      if (disposing && !disposed)
+      {
+         disposed = true;
+         gnmiClient?.Dispose();
+         gnmiClient = null;
+      }
+   }
 }
 ```
 

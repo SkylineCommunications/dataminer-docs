@@ -21,22 +21,22 @@ using Skyline.DataMiner.Core.SRM.Extensions.Reservations;
 
 public class Script
 {
-    public void Run(Engine engine)
-    {
-        // Update with relevant data
-        var reservationGuid = Guid.NewGuid();
-        var resourceGuid = Guid.NewGuid();
-        var nodeLabel = "Decoder";
+   public void Run(Engine engine)
+   {
+      // Update with relevant data
+      var reservationGuid = Guid.NewGuid();
+      var resourceGuid = Guid.NewGuid();
+      var nodeLabel = "Decoder";
 
-        var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
-        var bookingManager = reservation.FindBookingManager();
+      var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservationGuid);
+      var bookingManager = reservation.FindBookingManager();
 
-        bookingManager.TryAddResource(engine, ref reservation, resourceGuid, nodeLabel);
+      bookingManager.TryAddResource(engine, ref reservation, resourceGuid, nodeLabel);
 
-        // Example of passing a service definition template as an extra parameter to the TryAddResource method
-        var existingServiceDefinitionGuid = Guid.Parse(engine.GetScriptParam("ServiceDefinitionGuid").Value);
-        bookingManager.TryAddResource(engine, ref reservation, resourceGuid, nodeLabel, existingServiceDefinitionGuid);
-    }
+      // Example of passing a service definition template as an extra parameter to the TryAddResource method
+      var existingServiceDefinitionGuid = Guid.Parse(engine.GetScriptParam("ServiceDefinitionGuid").Value);
+      bookingManager.TryAddResource(engine, ref reservation, resourceGuid, nodeLabel, existingServiceDefinitionGuid);
+   }
 }
 ```
 

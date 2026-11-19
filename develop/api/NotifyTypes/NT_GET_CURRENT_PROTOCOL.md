@@ -13,11 +13,11 @@ string protocolVersion = (string)protocol.NotifyDataMiner(56 /*NT_GET_CURRENT_PR
 
 if (protocolVersion != null)
 {
-    // The value will be e.g., "1.0.1.1".
+   // The value will be e.g., "1.0.1.1".
 }
 else
 {
-    // The production version of the specified protocol not found.
+   // The production version of the specified protocol not found.
 }
 ```
 

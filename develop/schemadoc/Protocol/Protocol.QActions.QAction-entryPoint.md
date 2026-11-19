@@ -33,19 +33,19 @@ using Skyline.DataMiner.Scripting;
 
 public class QAction
 {
-    private int instanceVariable = 0;
+	private int instanceVariable = 0;
 
-    public void Method1(SLProtocolExt protocol)
-    {
-        protocol.Qaction2Result = $"Executed Method1: {instanceVariable}";
-        instanceVariable++;
-    }
+	public void Method1(SLProtocolExt protocol)
+	{
+		protocol.Qaction2Result = $"Executed Method1: {instanceVariable}";
+		instanceVariable++;
+	}
 
-    public void Method2(SLProtocolExt protocol)
-    {
-        protocol.Qaction2Result = $"Executed Method2: {instanceVariable}";
-        instanceVariable++;
-    }
+	public void Method2(SLProtocolExt protocol)
+	{
+		protocol.Qaction2Result = $"Executed Method2: {instanceVariable}";
+		instanceVariable++;
+	}
 }
 ]]>
 </QAction>

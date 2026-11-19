@@ -83,7 +83,11 @@ public static class QAction
         }
         catch (Exception e)
         {
-            protocol.Log($"QA{protocol.QActionID}|Run|Exception while sending message:{Environment.NewLine}{e}", LogType.Error, LogLevel.NoLogging);
+            protocol.Log(
+                $"QA{protocol.QActionID}|Run|Exception while sending message:{Environment.NewLine}" +
+                $"{e}",
+                LogType.Error,
+                LogLevel.NoLogging);
         }
     }
 }
@@ -119,7 +123,11 @@ public class QAction
         }
         catch (Exception e)
         {
-            protocol.Log($"QA{protocol.QActionID}|Run|Exception while sending message:{Environment.NewLine}{e}", LogType.Error, LogLevel.NoLogging);
+            protocol.Log(
+                $"QA{protocol.QActionID}|Run|Exception while sending message:{Environment.NewLine}" +
+                $"{e}",
+                LogType.Error,
+                LogLevel.NoLogging);
         }
     }
 

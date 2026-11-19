@@ -218,14 +218,14 @@ object[] table = (object[])result[0];
 
 for (int i = 0; i < table.Length; i++)
 {
-    var column = (object[])table[i];
+  var column = (object[])table[i];
 
-    for (int j = 0; j < column.Length; j++)
-    {
-        var cellValue = Convert.ToString(column[j]);
+  for (int j = 0; j < column.Length; j++)
+  {
+    var cellValue = Convert.ToString(column[j]);
 
-        // ...
-    }
+    // ...
+  }
 }
 ```
 
@@ -259,14 +259,14 @@ object[] table = (object[])result[0];
 
 for (int i = 0; i < table.Length; i++)
 {
-    var column = (object[])table[i];
+  var column = (object[])table[i];
 
-    for (int j = 0; j < column.Length; j++)
-    {
-        var cellValue = Convert.ToString(column[j]);
+  for (int j = 0; j < column.Length; j++)
+  {
+    var cellValue = Convert.ToString(column[j]);
 
-        // ...
-    }
+    // ...
+  }
 }
 ```
 

@@ -45,8 +45,8 @@ bool result = executor.Validate();
 
 if (result)
 {
-    executor.Modify();
-    executor.DataSets(dataDestination);
+   executor.Modify();
+   executor.DataSets(dataDestination);
 }
 
 optionalReturnMessage = executor.CreateReturnMessage();

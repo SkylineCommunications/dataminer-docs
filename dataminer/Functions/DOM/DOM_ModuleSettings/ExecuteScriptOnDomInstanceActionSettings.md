@@ -218,7 +218,7 @@ var insuranceId = new FieldDescriptorID(Guid.Parse("7cd4366c-983c-46d2-aa92-e030
 
 moduleSettings.DomManagerSettings.ScriptSettings.OnUpdateTriggerConditions = new List<IDomCrudScriptTriggerCondition>
 {
-    new FieldValueUpdatedTriggerCondition(licensePlate),
-    new FieldValueUpdatedTriggerCondition(insuranceId)
+   new FieldValueUpdatedTriggerCondition(licensePlate),
+   new FieldValueUpdatedTriggerCondition(insuranceId)
 };
 ```

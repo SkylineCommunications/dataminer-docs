@@ -146,7 +146,7 @@ When IDP is installed it comes with an example script on how to retrieve the con
           StringBuilder builder = new StringBuilder();
 
           builder.Append(Convert.ToString(element.GetParameter(502)));
-          builder.Append("\n");
+          builder.Append(Environment.NewLine);
           builder.Append(Convert.ToString(element.GetParameter(504)));
 
           return builder.ToString();

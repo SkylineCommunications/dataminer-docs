@@ -31,7 +31,7 @@ Example:
 [AutomationEntryPoint(AutomationEntryPointType.Types.InstallAppPackage)]
 public void Install(Engine engine, AppInstallContext context)
 {
-    ...
+   ...
 }
 ```
 
@@ -50,8 +50,8 @@ The example below will install all (by default supported) content of the package
 [AutomationEntryPoint(AutomationEntryPointType.Types.InstallAppPackage)]
 public void Install(Engine engine, AppInstallContext context)
 {
-    AppInstaller installer = new AppInstaller(Engine.SLNetRaw, context);
-    installer.InstallDefaultContent();
+   AppInstaller installer = new AppInstaller(Engine.SLNetRaw, context);
+   installer.InstallDefaultContent();
 }
 ```
 

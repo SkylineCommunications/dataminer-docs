@@ -16,7 +16,7 @@ object[] result = (object[])protocol.NotifyDataMiner(69 /*NT_GET_VALUE*/, elemen
 
 if (result != null && result.Length > 4)
 {
-    // string value = Convert.ToString(result[4]);
+   // string value = Convert.ToString(result[4]);
 }
 ```
 

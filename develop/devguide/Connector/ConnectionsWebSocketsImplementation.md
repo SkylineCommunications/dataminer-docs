@@ -124,7 +124,7 @@ object[] bytestream = websocketResponse as object[];
 byte[] response = new byte[bytestream.Length];
 for (int i = 0; i < response.Length; i++)
 {
-    response[i] = (byte)bytestream[i];
+   response[i] = (byte)bytestream[i];
 }
 
 string data = System.Text.Encoding.UTF8.GetString(response);

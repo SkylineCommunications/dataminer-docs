@@ -14,7 +14,7 @@ object result = protocol.NotifyDataMiner(377 /*NT_ELEMENT_STARTUP_COMPLETE*/, id
 
 if (result != null)
 {
-    bool hasStartupCompleted = Convert.ToBoolean(result);
+   bool hasStartupCompleted = Convert.ToBoolean(result);
 }
 ```
 

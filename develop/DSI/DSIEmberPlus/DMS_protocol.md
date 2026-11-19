@@ -136,7 +136,11 @@ public class QAction
         object[] objectArray = (object[])receivedData;
         if (objectArray.Length == 0)
         {
-            protocol.Log($"QA{protocol.QActionID}|HandleResponse|ERR: Received data is invalid! Content:\n{string.Join(".", objectArray.Select(x => Convert.ToString(x)))}", LogType.Error, LogLevel.NoLogging);
+            protocol.Log(
+                $"QA{protocol.QActionID}|HandleResponse|ERR: Received data is invalid! Content:{Environment.NewLine}" +
+                $"{string.Join(".", objectArray.Select(x => Convert.ToString(x)))}",
+                LogType.Error,
+                LogLevel.NoLogging);
             return;
         }
 
@@ -153,7 +157,11 @@ public class QAction
         }
         catch (Exception e)
         {
-            protocol.Log($"QA{protocol.QActionID}|HandleResponse|Error{Environment.NewLine}{e}", LogType.Error, LogLevel.NoLogging);
+            protocol.Log(
+                $"QA{protocol.QActionID}|HandleResponse|Error{Environment.NewLine}" +
+                $"{e}",
+                LogType.Error,
+                LogLevel.NoLogging);
         }
     }
 }

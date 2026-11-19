@@ -24,19 +24,19 @@ using Skyline.DataMiner.Automation;
 
 public class Script
 {
-    public void Run(IEngine engine)
-    {
-        string url = "https://jsonplaceholder.typicode.com/todos/1"; // Example API
-        string result = GetDataSync(url);
-        engine.GenerateInformation(result);
-    }
+  public void Run(IEngine engine)
+  {
+    string url = "https://jsonplaceholder.typicode.com/todos/1"; // Example API
+    string result = GetDataSync(url);
+    engine.GenerateInformation(result);
+  }
 
-    public static string GetDataSync(string url)
+  public static string GetDataSync(string url)
+  {
+    using (HttpClient client = new HttpClient())
     {
-        using (HttpClient client = new HttpClient())
-        {
-            return client.GetStringAsync(url).GetAwaiter().GetResult(); // Synchronous execution
-        }
+      return client.GetStringAsync(url).GetAwaiter().GetResult(); // Synchronous execution
     }
+  }
 }
 ```

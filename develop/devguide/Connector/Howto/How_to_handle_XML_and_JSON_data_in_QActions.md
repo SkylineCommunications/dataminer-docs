@@ -148,7 +148,11 @@ public static void Run(SLProtocol protocol)
     }
     catch (Exception ex)
     {
-        protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Deserializing JSON text failed due to:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
+        protocol.Log(
+            $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Deserializing JSON text failed due to:{Environment.NewLine}" +
+            $"{ex}",
+            LogType.Error,
+            LogLevel.NoLogging);
     }
 }
 ```
@@ -417,7 +421,8 @@ public static class QAction
         catch (Exception ex)
         {
             protocol.Log(
-                $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Deserializing Json text failed due to:{Environment.NewLine}{ex}",
+                $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Deserializing Json text failed due to:{Environment.NewLine}" +
+                $"{ex}",
                 LogType.Error,
                 LogLevel.NoLogging);
         }

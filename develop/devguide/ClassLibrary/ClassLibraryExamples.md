@@ -43,7 +43,11 @@ public static void Run(SLProtocol protocol)
     }
     catch (Exception ex)
     {
-        protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
+        protocol.Log(
+            $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}" +
+            $"{ex}",
+            LogType.Error,
+            LogLevel.NoLogging);
     }
 }
 

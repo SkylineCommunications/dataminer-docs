@@ -56,7 +56,7 @@ var reservation = SrmManagers.ResourceManager.GetReservationInstance(reservation
 var bookingManager = reservation.FindBookingManager();
 using (var logging = SrmLogHandler.Create(Engine, bookingManager, reservation))
 {
-    logging.BufferMessage("Log debug information", LogFileType.Debug);
+   logging.BufferMessage("Log debug information", LogFileType.Debug);
 }
 ```
 

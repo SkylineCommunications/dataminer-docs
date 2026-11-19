@@ -74,7 +74,7 @@ var swarmingResultForElement = swarmingResults.First();
 
 if (!swarmingResultForElement.Success)
 {
-    engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
+  engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
 }
 ```
 

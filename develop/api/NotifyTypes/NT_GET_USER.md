@@ -12,7 +12,7 @@ var user = (string)protocol.NotifyDataMiner(108 /* NT_GET_USER */, userCookie, n
 
 if (!string.IsNullOrEmpty(user))
 {
-    // ...
+   // ...
 }
 ```
 

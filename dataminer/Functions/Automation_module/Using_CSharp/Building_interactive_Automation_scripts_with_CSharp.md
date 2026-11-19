@@ -148,37 +148,37 @@ The following example arranges four time input fields in two columns. Because th
 ```csharp
 var uiBuilder = new UIBuilder
 {
-    WebUILayout = WebUILayout.Grid,
-    RowDefs = "auto;auto",
-    ColumnDefs = "auto;auto"
+  WebUILayout = WebUILayout.Grid,
+  RowDefs = "auto;auto",
+  ColumnDefs = "auto;auto"
 };
 
 var firstColumnTop = new UIBlockDefinition
 {
-    Type = UIBlockType.Time,
-    Row = 1,
-    Column = 0
+  Type = UIBlockType.Time,
+  Row = 1,
+  Column = 0
 };
 
 var firstColumnBottom = new UIBlockDefinition
 {
-    Type = UIBlockType.Time,
-    Row = 2,
-    Column = 0
+  Type = UIBlockType.Time,
+  Row = 2,
+  Column = 0
 };
 
 var secondColumnTop = new UIBlockDefinition
 {
-    Type = UIBlockType.Time,
-    Row = 1,
-    Column = 1
+  Type = UIBlockType.Time,
+  Row = 1,
+  Column = 1
 };
 
 var secondColumnBottom = new UIBlockDefinition
 {
-    Type = UIBlockType.Time,
-    Row = 2,
-    Column = 1
+  Type = UIBlockType.Time,
+  Row = 2,
+  Column = 1
 };
 
 // The order of these calls determines the TAB order.

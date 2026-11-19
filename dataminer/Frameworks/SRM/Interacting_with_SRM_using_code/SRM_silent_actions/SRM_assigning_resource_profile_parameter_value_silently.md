@@ -21,87 +21,87 @@ using Skyline.DataMiner.Net.ResourceManager.Objects;
 
 public class Script
 {
-    public static void Run(Engine engine)
-    {
-        // Replace with reservation guid
-        var reservationId = Guid.NewGuid();
+   public static void Run(Engine engine)
+   {
+      // Replace with reservation guid
+      var reservationId = Guid.NewGuid();
 
-        var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId) as ServiceReservationInstance;
+      var reservationInstance = SrmManagers.ResourceManager.GetReservationInstance(reservationId) as ServiceReservationInstance;
 
-        var requests = new[]
-        {
-            // Assign a resource (update with relevant data)
-            new AssignResourceRequest
-            {
-                TargetNodeLabel = "DEC1",
-                NewResourceId = Guid.Parse("4d4c6525-8fbc-419c-9250-7e8b59dd2fcb")
-            },
-            // Unassign a resource (update with relevant data)
-            new AssignResourceRequest
-            {
-                TargetNodeLabel = "DEC2",
-                NewResourceId = Guid.Empty
-            },
-            // Assign a profile instance (update with relevant data)
-            new AssignResourceRequest
-            {
-                TargetNodeLabel = "DEC3",
-                ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
-                ByReference = false
-            },
-        };
-
-        reservationInstance.AssignResources(engine, requests);
-
-        // Assign a profile parameter value (update with relevant data)
-        var request = new AssignResourceRequest
-        {
+      var requests = new[]
+      {
+         // Assign a resource (update with relevant data)
+         new AssignResourceRequest
+         {
+            TargetNodeLabel = "DEC1",
+            NewResourceId = Guid.Parse("4d4c6525-8fbc-419c-9250-7e8b59dd2fcb")
+         },
+         // Unassign a resource (update with relevant data)
+         new AssignResourceRequest
+         {
+            TargetNodeLabel = "DEC2",
+            NewResourceId = Guid.Empty
+         },
+         // Assign a profile instance (update with relevant data)
+         new AssignResourceRequest
+         {
             TargetNodeLabel = "DEC3",
             ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
             ByReference = false
-        };
+         },
+      };
 
-        var param = new Parameter
-        {
-            Id = Guid.Parse("7f8bd260-0d26-46c1-9093-08b16a5f7dcf"),
-            Value = "abc"
-        };
+      reservationInstance.AssignResources(engine, requests);
 
-        request.OverriddenParameters.Add(param);
-        reservationInstance.AssignResources(engine, request);
+      // Assign a profile parameter value (update with relevant data)
+      var request = new AssignResourceRequest
+      {
+         TargetNodeLabel = "DEC3",
+         ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
+         ByReference = false
+      };
 
-        // Replace by the correct Guid of the resource
-        var resourceId = Guid.NewGuid();
+      var param = new Parameter
+      {
+         Id = Guid.Parse("7f8bd260-0d26-46c1-9093-08b16a5f7dcf"),
+         Value = "abc"
+      };
 
-        // Assign an unmapped resource (update with relevant data)
-        var unmappedAssignRequest = new AssignResourceRequest
-        {
-            NewResourceId = resourceId
-        };
+      request.OverriddenParameters.Add(param);
+      reservationInstance.AssignResources(engine, request);
 
-        reservationInstance.AssignResources(engine, unmappedAssignRequest);
+      // Replace by the correct Guid of the resource
+      var resourceId = Guid.NewGuid();
 
-        // Assign a profile instance to an unmapped node (update with relevant data)
-        var unmappedAssignProfileRequest = new AssignResourceRequest
-        {
-            NewResourceId = resourceId,
-            ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
-            ByReference = true
-        };
+      // Assign an unmapped resource (update with relevant data)
+      var unmappedAssignRequest = new AssignResourceRequest
+      {
+         NewResourceId = resourceId
+      };
 
-        reservationInstance.AssignResources(engine, unmappedAssignProfileRequest);
+      reservationInstance.AssignResources(engine, unmappedAssignRequest);
 
-        // Unassign an unmapped resource (update with relevant data)
-        var unmappedUnassignRequest = new AssignResourceRequest
-        {
-            NewResourceId = resourceId
-        };
+      // Assign a profile instance to an unmapped node (update with relevant data)
+      var unmappedAssignProfileRequest = new AssignResourceRequest
+      {
+         NewResourceId = resourceId,
+         ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
+         ByReference = true
+      };
 
-        reservationInstance.UnassignResources(engine, unmappedUnassignRequest);
+      reservationInstance.AssignResources(engine, unmappedAssignProfileRequest);
 
-        // PLEASE USE VISUAL STUDIO TO SEE ALL OPTIONS ON AssignResourceRequest,
-        // including manipulating parameters and instance on interface level
-    }
+      // Unassign an unmapped resource (update with relevant data)
+      var unmappedUnassignRequest = new AssignResourceRequest
+      {
+         NewResourceId = resourceId
+      };
+
+      reservationInstance.UnassignResources(engine, unmappedUnassignRequest);
+
+      // PLEASE USE VISUAL STUDIO TO SEE ALL OPTIONS ON AssignResourceRequest,
+      // including manipulating parameters and instance on interface level
+   }
 }
 ```
 

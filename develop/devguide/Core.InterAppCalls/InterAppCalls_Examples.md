@@ -11,58 +11,58 @@ In this example, the QAction receives a message to fill in a table.
 ### Data classes
 
 ```csharp
-public class TableDataMessage : Message
-{
-    /// <summary>
-    /// Gets or sets the table parameter id.
-    /// </summary>
-    public int TablePid { get; set; }
+    public class TableDataMessage : Message
+    {
+        /// <summary>
+        /// Gets or sets the table parameter id.
+        /// </summary>
+        public int TablePid { get; set; }
 
-    /// <summary>
-    /// Gets or sets the rows for the table.
-    /// </summary>
-    public List<object[]> Rows { get; set; }
+        /// <summary>
+        /// Gets or sets the rows for the table.
+        /// </summary>
+        public List<object[]> Rows { get; set; }
 
-    /// <summary>
-    /// Gets or sets a value indicating whether the table needs to be overwritten or appended to.
-    /// </summary>
-    public bool OverwriteTable { get; set; }
-}
+        /// <summary>
+        /// Gets or sets a value indicating whether the table needs to be overwritten or appended to.
+        /// </summary>
+        public bool OverwriteTable { get; set; }
+    }
 
-public class TableDataResponse : Message
-{
-    /// <summary>
-    /// Gets or sets a value indicating whether the table was set.
-    /// </summary>
-    public bool Success { get; set; }
-}
+    public class TableDataResponse : Message
+    {
+        /// <summary>
+        /// Gets or sets a value indicating whether the table was set.
+        /// </summary>
+        public bool Success { get; set; }
+    }
 ```
 
 ### Executor
 
 ```csharp
-public class TableDataExecutor : SimpleMessageExecutor<TableDataMessage>
-{
-    public TableDataExecutor(TableDataMessage message) : base(message)
+    public class TableDataExecutor : SimpleMessageExecutor<TableDataMessage>
     {
-    }
-
-    public override bool TryExecute(object dataSource, object dataDestination, out Message optionalReturnMessage)
-    {
-        if (!(dataSource is SLProtocol protocol))
+        public TableDataExecutor(TableDataMessage message) : base(message)
         {
-            optionalReturnMessage = null;
-            return false;
         }
 
-        NotifyProtocol.SaveOption option = Message.OverwriteTable ? NotifyProtocol.SaveOption.Full : NotifyProtocol.SaveOption.Partial;
+        public override bool TryExecute(object dataSource, object dataDestination, out Message optionalReturnMessage)
+        {
+            if (!(dataSource is SLProtocol protocol))
+            {
+                optionalReturnMessage = null;
+                return false;
+            }
 
-        protocol.FillArray(Message.TablePid, Message.Rows, option);
+            NotifyProtocol.SaveOption option = Message.OverwriteTable ? NotifyProtocol.SaveOption.Full : NotifyProtocol.SaveOption.Partial;
 
-        optionalReturnMessage = new TableDataResponse { Success = true };
-        return true;
+            protocol.FillArray(Message.TablePid, Message.Rows, option);
+
+            optionalReturnMessage = new TableDataResponse { Success = true };
+            return true;
+        }
     }
-}
 ```
 
 ### QAction
@@ -105,7 +105,11 @@ public static class QAction
         }
         catch (Exception ex)
         {
-            protocol.Log($"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}{ex}", LogType.Error, LogLevel.NoLogging);
+            protocol.Log(
+                $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}" +
+                $"{ex}",
+                LogType.Error,
+                LogLevel.NoLogging);
         }
     }
 

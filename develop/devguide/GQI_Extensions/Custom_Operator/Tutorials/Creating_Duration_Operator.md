@@ -75,7 +75,7 @@ This is the first step to implement the custom operator.
    ```csharp
    public GQIArgument[] GetInputArguments()
    {
-       return new GQIArgument[] { _startColumnArg, _endColumnArg };
+      return new GQIArgument[] { _startColumnArg, _endColumnArg };
    }
    ```
 
@@ -84,9 +84,9 @@ This is the first step to implement the custom operator.
    ```csharp
    public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
    {
-       _startColumn = args.GetArgumentValue(_startColumnArg);
-       _endColumn = args.GetArgumentValue(_endColumnArg);
-       return default;
+      _startColumn = args.GetArgumentValue(_startColumnArg);
+      _endColumn = args.GetArgumentValue(_endColumnArg);
+      return default;
    }
    ```
 
@@ -103,7 +103,7 @@ This is the first step to implement the custom operator.
    ```csharp
    public void HandleColumns(GQIEditableHeader header)
    {
-       header.AddColumns(_durationColumn);
+      header.AddColumns(_durationColumn);
    }
    ```
 
@@ -120,10 +120,10 @@ This is the first step to implement the custom operator.
    ```csharp
    public void HandleRow(GQIEditableRow row)
    {
-       var start = row.GetValue<DateTime>(_startColumn);
-       var end = row.GetValue<DateTime>(_endColumn);
-       var duration = end - start;
-       row.SetValue(_durationColumn, duration);
+      var start = row.GetValue<DateTime>(_startColumn);
+      var end = row.GetValue<DateTime>(_endColumn);
+      var duration = end - start;
+      row.SetValue(_durationColumn, duration);
    }
    ```
 

@@ -31,26 +31,26 @@ using Skyline.DataMiner.Scripting;
 
 public class Utility
 {
-    public static List<string> GetFileData(string file)
-    {
-        List<string> lines = new List<string>();
+   public static List<string> GetFileData(string file)
+   {
+      List<string> lines = new List<string>();
 
-        if (File.Exists(file))
-        {
-            using (FileStream logReader = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+      if (File.Exists(file))
+      {
+         using (FileStream logReader = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+         {
+            using (StreamReader sr = new StreamReader(logReader, Encoding.Default))
             {
-                using (StreamReader sr = new StreamReader(logReader, Encoding.Default))
-                {
-                    while (!sr.EndOfStream)
-                    {
-                        lines.Add(sr.ReadLine());
-                    }
-                }
+               while (!sr.EndOfStream)
+               {
+                  lines.Add(sr.ReadLine());
+               }
             }
-        }
+         }
+      }
 
-        return lines;
-    }
+      return lines;
+   }
 }
 ```
 
@@ -198,24 +198,24 @@ using Skyline.DataMiner.Scripting;
 
 public static class QAction
 {
-    public static void Run(SLProtocol protocol)
-    {
-        var serializer = new JavaScriptSerializer();
-        try
-        {
-            string data = Convert.ToString(protocol.GetParameter(10));
-            var deserializedResult = serializer.Deserialize(data, typeof(object)) as Dictionary<string, object>;
+   public static void Run(SLProtocol protocol)
+   {
+      var serializer = new JavaScriptSerializer();
+      try
+      {
+         string data = Convert.ToString(protocol.GetParameter(10));
+         var deserializedResult = serializer.Deserialize(data, typeof(object)) as Dictionary<string, object>;
 
-            if (deserializedResult != null)
-            {
-                string portNumber = Convert.ToString(deserializedResult["port_number"]);
-            }
-        }
-        catch (Exception e)
-        {
-            protocol.Log($"QA{protocol.QActionID}|Run|An unexpected error occurred during deserialization of JSON data: {e}", LogType.Error, LogLevel.NoLogging);
-        }
-    }
+         if (deserializedResult != null)
+         {
+            string portNumber = Convert.ToString(deserializedResult["port_number"]);
+         }
+      }
+      catch (Exception e)
+      {
+         protocol.Log($"QA{protocol.QActionID}|Run|An unexpected error occurred during deserialization of JSON data: {e}", LogType.Error, LogLevel.NoLogging);
+      }
+   }
 }
 ```
 
@@ -241,27 +241,33 @@ string filePath = Convert.ToString(protocol.GetParameter(10));
 
 try
 {
-    XmlDocument document = new XmlDocument();
+   XmlDocument document = new XmlDocument();
 
-    document.Load(filePath);
+   document.Load(filePath);
 
-    string content = document.InnerXml;
-    string boundary = "------------Ij5KM7KM7Ij5gL6Ij5GI3GI3Ef1ae0\r\n";
-    string multipart1 = "Content-Disposition: form-data; name=\"Filename\"\r\n\r\n'";
-    string[] data1 = filePath.Split(Convert.ToChar("\\"));
-    string dataFile = data1[data1.Length - 1];
-    string multipart2 = $"Content-Disposition: form-data; name=\"{dataFile}\"3 filename=\"{dataFile}\" \r\nContent-Type: application/octet-stream\r\n\r\n";
-    string multipart3 = "Content-Disposition: form-data; name=\"Upload\"\r\n\r\n";
-    string data3 = "Submit Query";
-    string endBoundary = "\r\n------------Ij5KM7KM7Ij5gL6Ij5GI3GI3Ef1ae0-- ";
+   string content = document.InnerXml;
+   string boundary = "------------Ij5KM7KM7Ij5gL6Ij5GI3GI3Ef1ae0\r\n";
+   string multipart1 = "Content-Disposition: form-data; name=\"Filename\"\r\n\r\n'";
+   string[] data1 = filePath.Split(Convert.ToChar("\\"));
+   string dataFile = data1[data1.Length - 1];
+   string multipart2 = $"Content-Disposition: form-data; name=\"{dataFile}\"3 " +
+      $"filename=\"{dataFile}\" \r\nContent-Type: application/octet-stream\r\n\r\n";
+   string multipart3 = "Content-Disposition: form-data; name=\"Upload\"\r\n\r\n";
+   string data3 = "Submit Query";
+   string endBoundary = "\r\n------------Ij5KM7KM7Ij5gL6Ij5GI3GI3Ef1ae0-- ";
 
-    content = $"{boundary}{multipart1}{dataFile}\r\n{boundary}{multipart2}{content}\r\n{boundary}{multipart3}{data3}{endBoundary}";
+   content = $"{boundary}{multipart1}{dataFile}\r\n{boundary}{multipart2}{content}\r\n{boundary}{multipart3}{data3}{endBoundary}";
 
-    protocol.SetParameters(new int[] { 3100, 3103 }, new object[] { content, "Import Started" });
+   protocol.SetParameters(new int[] { 3100, 3103 }, new object[] { content, "Import Started" });
 }
 catch (Exception e)
 {
-    protocol.Log($"QA{protocol.QActionID}|ProcessMime|Load configuration XML-file failed (Check the correct format of the XML-file):{Environment.NewLine}{filePath}{Environment.NewLine}{e}", LogType.Error, LogLevel.NoLogging);
+   protocol.Log(
+      $"QA{protocol.QActionID}|ProcessMime|Load configuration XML-file failed (Check the correct format of the XML-file):{Environment.NewLine}" +
+      $"{filePath}{Environment.NewLine}" +
+      $"{e}",
+      LogType.Error,
+      LogLevel.NoLogging);
 }
 ```
 
@@ -285,72 +291,72 @@ using Skyline.DataMiner.Scripting;
 /// </summary>
 public static class QAction
 {
-    /// <summary>
-    /// QAction entry point.
-    /// </summary>
-    /// <param name="protocol">Link with SLProtocol process.</param>
-    public static void Run(SLProtocol protocol)
-    {
-        Array bytes = (Array)protocol.GetData("PARAMETER", 307);
-        byte[] bytesToParse = new byte[bytes.Length];
+   /// <summary>
+   /// QAction entry point.
+   /// </summary>
+   /// <param name="protocol">Link with SLProtocol process.</param>
+   public static void Run(SLProtocol protocol)
+   {
+      Array bytes = (Array)protocol.GetData("PARAMETER", 307);
+      byte[] bytesToParse = new byte[bytes.Length];
 
-        for (int i = 0; i < bytes.Length; i++)
-        {
-            bytesToParse[i] = Convert.ToByte(bytes.GetValue(i));
-        }
+      for (int i = 0; i < bytes.Length; i++)
+      {
+         bytesToParse[i] = Convert.ToByte(bytes.GetValue(i));
+      }
 
-        byte[] decompressedBytes = Decompress(bytesToParse, protocol);
+      byte[] decompressedBytes = Decompress(bytesToParse, protocol);
 
-        if (decompressedBytes.Length > 1)
-        {
-            UTF8Encoding encoding = new UTF8Encoding();
-            string xmlDocument = encoding.GetString(decompressedBytes);
+      if (decompressedBytes.Length > 1)
+      {
+         UTF8Encoding encoding = new UTF8Encoding();
+         string xmlDocument = encoding.GetString(decompressedBytes);
 
-            // Code processing the XML document...
-        }
-    }
+         // Code processing the XML document...
+      }
+   }
 
-    /// <summary>
-    /// Decompresses gzip compressed data.
-    /// </summary>
-    /// <param name="compressedData">The compressed data.</param>
-    /// <param name="protocol">Link with SLProtocol process.</param>
-    /// <returns>The decompressed data.</returns>
-    public static byte[] Decompress(byte[] compressedData, SLProtocol protocol)
-    {
-        try
-        {
-            using (GZipStream stream = new GZipStream(new MemoryStream(compressedData), CompressionMode.Decompress))
+   /// <summary>
+   /// Decompresses gzip compressed data.
+   /// </summary>
+   /// <param name="compressedData">The compressed data.</param>
+   /// <param name="protocol">Link with SLProtocol process.</param>
+   /// <returns>The decompressed data.</returns>
+   public static byte[] Decompress(byte[] compressedData, SLProtocol protocol)
+   {
+      try
+      {
+         using (GZipStream stream = new GZipStream(new MemoryStream(compressedData), CompressionMode.Decompress))
+         {
+            const int Size = 4096;
+            byte[] buffer = new byte[Size];
+
+            using (MemoryStream memory = new MemoryStream())
             {
-                const int Size = 4096;
-                byte[] buffer = new byte[Size];
+               int count = 0;
 
-                using (MemoryStream memory = new MemoryStream())
-                {
-                    int count = 0;
+               do
+               {
+                  count = stream.Read(buffer, 0, Size);
 
-                    do
-                    {
-                        count = stream.Read(buffer, 0, Size);
+                  if (count > 0)
+                  {
+                     memory.Write(buffer, 0, count);
+                  }
+               }
+               while (count > 0);
 
-                        if (count > 0)
-                        {
-                            memory.Write(buffer, 0, count);
-                        }
-                    }
-                    while (count > 0);
-
-                    return memory.ToArray();
-                }
+               return memory.ToArray();
             }
-        }
-        catch (Exception e)
-        {
-            protocol.Log($"QA{protocol.QActionID}|Decompress|An unexpected error occurred: {e}", LogType.Error, LogLevel.NoLogging);
+         }
+      }
+      catch (Exception e)
+      {
+         protocol.Log($"QA{protocol.QActionID}|Decompress|An unexpected error occurred: {e}", LogType.Error, LogLevel.NoLogging);
 
-            return new byte[] { 0 };
-        }
-    }
+         return new byte[] { 0 };
+      }
+   }
 }
 ```
 

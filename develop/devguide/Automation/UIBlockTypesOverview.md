@@ -78,9 +78,9 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.Button,
-    Text = "Enter",
-    DestVar = "ButtonVar"
+  Type = UIBlockType.Button,
+  Text = "Enter",
+  DestVar = "ButtonVar"
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -91,7 +91,7 @@ var results = engine.ShowUI(uiBuilder);
 
 if (results.WasButtonPressed("ButtonVar"))
 {
-    // Do something
+  // Do something
 }
 ```
 
@@ -106,11 +106,11 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.Calendar,
-    InitialValue = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
-    DestVar = "InputCalendar",
-    Row = 1,
-    Column = 0,
+  Type = UIBlockType.Calendar,
+  InitialValue = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss"),
+  DestVar = "InputCalendar",
+  Row = 1,
+  Column = 0,
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -132,10 +132,10 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.CheckBox,
-    Text = "Option1",
-    Row = 1,
-    Column = 1
+  Type = UIBlockType.CheckBox,
+  Text = "Option1",
+  Row = 1,
+  Column = 1
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -159,10 +159,10 @@ Example:
 ```csharp
 var checkBoxList = new UIBlockDefinition
 {
-    Type = UIBlockType.CheckBoxList,
-    Row = 0,
-    Column = 3,
-    DestVar = "list"
+  Type = UIBlockType.CheckBoxList,
+  Row = 0,
+  Column = 3,
+  DestVar = "list"
 };
 
 checkBoxList.AddCheckBoxListOption("Option1");
@@ -194,19 +194,19 @@ Example:
 ```csharp
 var downloadButtonOptions = new AutomationDownloadButtonOptions()
 {
-    Url = @"/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf", // The URL to the file, which can be an absolute URL or a relative URL to the DMA hostname.
-    StartDownloadImmediately = false, // If set to true (the default is false), the download will start immediately when the component is displayed.
-    ReturnWhenDownloadIsStarted = false, // If set to true (the default is false), the engine.ShowUI() method will return as soon as the download is started.
-    FileNameToSave = "Report.PDF", // The file name that will be saved. By default, this is the same as the file name of the document.
+   Url = @"/Documents/DMA_COMMON_DOCUMENTS/DailyReport.pdf", // The URL to the file, which can be an absolute URL or a relative URL to the DMA hostname.
+   StartDownloadImmediately = false, // If set to true (the default is false), the download will start immediately when the component is displayed.
+   ReturnWhenDownloadIsStarted = false, // If set to true (the default is false), the engine.ShowUI() method will return as soon as the download is started.
+   FileNameToSave = "Report.PDF", // The file name that will be saved. By default, this is the same as the file name of the document.
 };
 
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.DownloadButton,
-    Width = 125,
-    Text = "Get report of today",
-    Style = Style.Button.CallToAction,
-    ConfigOptions = downloadButtonOptions,
+   Type = UIBlockType.DownloadButton,
+   Width = 125,
+   Text = "Get report of today",
+   Style = Style.Button.CallToAction,
+   ConfigOptions = downloadButtonOptions,
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -230,17 +230,17 @@ var dropDownOptions = new List<string> { "1", "2", "3", "4", "5" };
 var initialValue = "--Select--";
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.DropDown,
-    Text = "DropDown1",
-    InitialValue = initialValue,
-    Row = 1,
-    Column = 1,
-    Width = 200
+  Type = UIBlockType.DropDown,
+  Text = "DropDown1",
+  InitialValue = initialValue,
+  Row = 1,
+  Column = 1,
+  Width = 200
 };
 
 foreach (string dropDownOption in dropDownOptions)
 {
-    blockItem.AddDropDownOption(dropDownOption);
+  blockItem.AddDropDownOption(dropDownOption);
 }
 
 uiBuilder.AppendBlock(blockItem);
@@ -294,10 +294,10 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.FileSelector,
-    DestVar = "varUserUploadedFile",
-    Row = 1,
-    Column = 1
+  Type = UIBlockType.FileSelector,
+  DestVar = "varUserUploadedFile",
+  Row = 1,
+  Column = 1
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -333,14 +333,14 @@ Example of a number range between 0 and 100 with step size of 1 and an initial v
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.Numeric,
-    DestVar = "NumericVariable",
-    InitialValue = "5",
-    RangeHigh = 100,
-    RangeLow = 0,
-    RangeStep = 1,
-    Row = 1,
-    Column = 1
+  Type = UIBlockType.Numeric,
+  DestVar = "NumericVariable",
+  InitialValue = "5",
+  RangeHigh = 100,
+  RangeLow = 0,
+  RangeStep = 1,
+  Row = 1,
+  Column = 1
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -411,12 +411,12 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.Parameter,
-    DestVar = "Input",
-    InitialValue = initialValue,
-    WantsOnChange = true,
-    DisplayFilter = true,
-    Extra = $"{dmaID}/{elementID}:{parameterID}"
+  Type = UIBlockType.Parameter,
+  DestVar = "Input",
+  InitialValue = initialValue,
+  WantsOnChange = true,
+  DisplayFilter = true,
+  Extra = $"{dmaID}/{elementID}:{parameterID}"
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -431,11 +431,11 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.PasswordBox,
-    DestVar = "Password",
-    HasPeekIcon = true,
-    Row = 1,
-    Column = 1
+  Type = UIBlockType.PasswordBox,
+  DestVar = "Password",
+  HasPeekIcon = true,
+  Row = 1,
+  Column = 1
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -460,17 +460,17 @@ var radioButtonListItems = new List<string> { "Option 1", "Option 2", "Option 3"
 
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.RadioButtonList,
-    DestVar = "ChoiceOption",
-    Row = 1,
-    Column = 1,
-    WantsOnChange = true,
-    DisplayFilter = true,
+  Type = UIBlockType.RadioButtonList,
+  DestVar = "ChoiceOption",
+  Row = 1,
+  Column = 1,
+  WantsOnChange = true,
+  DisplayFilter = true,
 };
 
 foreach (string item in radioButtonListItems)
 {
-    blockItem.AddRadioButtonListOption(item);
+  blockItem.AddRadioButtonListOption(item);
 }
 
 blockItem.AddRadioButtonListOption("4", "Option4"); // (raw value, display value)
@@ -500,10 +500,10 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.StaticText,
-    Text = "Static Text",
-    Row = 1,
-    Column = 1
+  Type = UIBlockType.StaticText,
+  Text = "Static Text",
+  Row = 1,
+  Column = 1
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -522,11 +522,11 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.TextBox,
-    DestVar = "InputText",
-    InitialValue = "Default text",
-    Row = 1,
-    Column = 1
+  Type = UIBlockType.TextBox,
+  DestVar = "InputText",
+  InitialValue = "Default text",
+  Row = 1,
+  Column = 1
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -548,16 +548,16 @@ In this example, a time span block is created with a minimum of 1 hour and a max
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.Time,
-    DestVar = "InputText",
-    InitialValue = "12:25:30",
-    Row = 1,
-    Column = 1,
-    ConfigOptions = new AutomationTimeUpDownOptions()
-    {
-        Minimum = TimeSpan.FromHours(1),
-        Maximum = TimeSpan.FromDays(2)
-    }
+  Type = UIBlockType.Time,
+  DestVar = "InputText",
+  InitialValue = "12:25:30",
+  Row = 1,
+  Column = 1,
+  ConfigOptions = new AutomationTimeUpDownOptions()
+  {
+    Minimum = TimeSpan.FromHours(1),
+    Maximum = TimeSpan.FromDays(2)
+  }
 };
 
 uiBuilder.AppendBlock(blockItem);
@@ -630,33 +630,33 @@ Example:
 ```csharp
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
-    Type = UIBlockType.TreeView,
-    DestVar = "TreeVar",
-    Row = 1,
-    Column = 1,
-    TreeViewItems = new List<TreeViewItem>
+  Type = UIBlockType.TreeView,
+  DestVar = "TreeVar",
+  Row = 1,
+  Column = 1,
+  TreeViewItems = new List<TreeViewItem>
+  {
+    new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
     {
-        new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
-        {
-            new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
-            {
-                new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                new TreeViewItem("John", "1/1/2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                new TreeViewItem("Kevin", "1/1/3", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                new TreeViewItem("David", "1/1/4") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                new TreeViewItem("Joe", "1/1/5", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-            }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-            new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
-            {
-                new TreeViewItem("Jane", "1/2/1") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                new TreeViewItem("Sarah", "1/2/2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                new TreeViewItem("Emely", "1/2/3") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                new TreeViewItem("Anne", "1/2/4") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-                new TreeViewItem("Florence", "1/2/5") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-            }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-        }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-        new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-    }
+      new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
+      {
+        new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("John", "1/1/2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Kevin", "1/1/3", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("David", "1/1/4") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Joe", "1/1/5", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+      }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+      new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
+      {
+        new TreeViewItem("Jane", "1/2/1") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Sarah", "1/2/2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Emely", "1/2/3") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Anne", "1/2/4") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Florence", "1/2/5") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+      }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+    }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+    new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+  }
 };
 
 uiBuilder.AppendBlock(blockItem);

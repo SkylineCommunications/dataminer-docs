@@ -57,7 +57,9 @@ Example:
         var maskedTicketFieldResolvers = helper.GetMaskedTicketFieldResolvers();
         foreach (TicketFieldResolver maskedTicketFieldResolver in maskedTicketFieldResolvers)
         {
-            engine.GenerateInformation($"Resolver \"{maskedTicketFieldResolver.Name}\", which is configured to be linked to \"{maskedTicketFieldResolver.ElementUsingResolver}\", is masked.");
+            engine.GenerateInformation(
+                $"Resolver \"{maskedTicketFieldResolver.Name}\", " +
+                $"which is configured to be linked to \"{maskedTicketFieldResolver.ElementUsingResolver}\", is masked.");
         }
     }
     ```

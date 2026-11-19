@@ -307,25 +307,25 @@ In case the column data will get updated frequently and you do not need to obtai
 /// <returns>The values of the column specified in <paramref name="returnedColumnIdx"/> for the rows that matches.</returns>
 public static IEnumerable<string> GetKeysForValue(this SLProtocol protocol, int tablePid, uint returnedColumnIdx, uint filterColumnIdx, string filterValue)
 {
-    object[] getColumns = protocol.GetColumns(tablePid, new uint[] { returnedColumnIdx, filterColumnIdx });
-    object[] getKeys = (object[])getColumns[0];
-    object[] getValues = (object[])getColumns[1];
+   object[] getColumns = protocol.GetColumns(tablePid, new uint[] { returnedColumnIdx, filterColumnIdx });
+   object[] getKeys = (object[])getColumns[0];
+   object[] getValues = (object[])getColumns[1];
 
-    if (getKeys != null && getValues != null)
-    {
-        int rowCount = getKeys.Length;
-        if (rowCount == getValues.Length)
-        {
-            for (int i = 0; i < rowCount; i++)
+   if (getKeys != null && getValues != null)
+   {
+      int rowCount = getKeys.Length;
+      if (rowCount == getValues.Length)
+      {
+         for (int i = 0; i < rowCount; i++)
+         {
+            string getValue = Convert.ToString(getValues[i], CultureInfo.InvariantCulture);
+            if (getValue.Equals(filterValue))
             {
-                string getValue = Convert.ToString(getValues[i], CultureInfo.InvariantCulture);
-                if (getValue.Equals(filterValue))
-                {
-                    yield return Convert.ToString(getKeys[i]);
-                }
+               yield return Convert.ToString(getKeys[i]);
             }
-        }
-    }
+         }
+      }
+   }
 }
 ```
 
