@@ -234,7 +234,7 @@ Connection attempts will continue in the background. Once NATS is available and 
 
 #### SLSNMPAgent could crash on systems with many large services [ID 47031]
 
-<!-- MR 10.6.0 [CU10] - FR TBD -->
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
 On DataMiner Agents with many large services, SLSNMPAgent could crash during startup or when services were changed.
 

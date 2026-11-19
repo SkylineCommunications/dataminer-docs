@@ -549,6 +549,12 @@ The endpoint will now start while its NATS connections are being established. AP
 
 Connection attempts will continue in the background. Once NATS is available and initialization succeeds, API triggers will be forwarded normally and cloud status reporting will resume.
 
+#### SLSNMPAgent could crash on systems with many large services [ID 47031]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+On DataMiner Agents with many large services, SLSNMPAgent could crash during startup or when services were changed.
+
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
