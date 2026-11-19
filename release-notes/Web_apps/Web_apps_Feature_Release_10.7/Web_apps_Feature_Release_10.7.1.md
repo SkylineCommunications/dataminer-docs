@@ -179,6 +179,14 @@ When an app manages its own theme, the user settings now display the message "Th
 
 The message is not shown in apps that support this setting, such as Assistant, the DataMiner landing page, and uploaded DataMiner apps.
 
+#### GQI DxM: Legacy Ticketing data source removed [ID 47037]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+Following the end of life of Ticketing in DataMiner 10.6.0, the legacy Ticketing data source has been removed from the GQI DxM.
+
+Queries that still use this data source can no longer be executed. In low-code apps, for example, they will fail with the error `GQI error: An unknown error occurred in GQI: Failed parsing request: Invalid ID: 'Ticketing'.`.
+
 #### DataMiner upgrade: DataMiner Assistant DxM installed on every Agent [ID 47047]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
