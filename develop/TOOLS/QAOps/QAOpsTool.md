@@ -1,6 +1,6 @@
 ---
 uid: QAOps_Tool
-description: "Install the QAOps CLI tool, authenticate with a token, and run automated test suites against DataMiner configurations. Explore commands and examples."
+description: "Use the QAOps .NET tool to run DataMiner test suites remotely, retrieve results, work with quality gates, and report external check evidence."
 ---
 
 # QAOps tool
@@ -23,6 +23,8 @@ Key capabilities:
 - Retrieve detailed test results in JSON format.
 
 - Integrate with CI/CD pipelines for automated testing.
+
+- Inspect and execute [quality gates](xref:QAOps_Quality_Gates), and [report external check results](xref:QAOps_Tutorials_External_Quality_Gate_Checks) with versions that expose the Quality Gates commands.
 
 This tool is available on Skyline's private NuGet store. For more information, refer to the [internal Skyline documentation](https://internaldocs.skyline.be/DevDocs/Skyline%20Software%20Development%20Toolkit/Private%20NuGet%20Store.html) (link accessible for Skyline employees only).
 
@@ -111,6 +113,10 @@ The tool validates that every file exists and uploads the files as a single arch
 For information about accessing these files from PowerShell or C# test code, see [Accessing supplementary files](xref:QAOps_Test_Package#accessing-supplementary-files).
 
 ## Commands reference
+
+For Quality Gates, use `quality-gate-details`, `quality-gate-status`, `quality-gate-run-and-wait`, `quality-gate-wait`, and `report-external-check`. Check `dataminer-qaops <command> --help` for the installed version's options. The `report-external-check` command also has the alias `quality-gate-report`.
+
+The parameters below describe the test-suite commands, not the Quality Gates commands.
 
 - `dataminer-qaops test-run`
 
