@@ -10,31 +10,9 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 
 ## Important changes
 
-- [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
 
 ## Changes
-
-### Breaking changes
-
-#### Service & Resource Management: Support for legacy reservations removed [ID 46931]
-
-<!-- MR 10.8.0 - FR 10.7.1 -->
-
-Support for legacy Resource Manager reservations has been removed from the DataMiner server. From now on, use `ReservationInstance` objects instead of legacy reservations.
-
-The related types remain available in SLNetTypes so existing projects can still compile. However, the following API members have been marked as obsolete:
-
-- The create, read, update, and delete (CRUD) methods for all three features in `ResourceManagerHelper`.
-- The error data related to these features in `ResourceManagerErrorData`.
-- The messages for the CRUD operations.
-- The `ResourceManagerConfigInfoMessage.ConfigInfoType.ForceCleanup` enum value, which was only used to clean up reservation-related files.
-
-SLNet will now throw a `DataMinerException` for CRUD requests related to these features or for a `ForceCleanup` request.
-
-For compatibility with older DataMiner server versions, the legacy reservation methods in `ResourceManagerHelper` will still send requests to SLNet.
-
-See also: [Service & Resource Management: Legacy reservation support removed for DataMiner 10.6.0 and later [ID 46936]](xref:Cube_Feature_Release_10.7.1#service--resource-management-legacy-reservation-support-removed-for-dataminer-1060-and-later-id-46936)
 
 ### Enhancements
 

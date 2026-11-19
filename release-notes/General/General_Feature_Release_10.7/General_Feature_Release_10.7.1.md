@@ -77,7 +77,7 @@ A new *Intelligence App* user permission has now been added. This permission wil
 
 #### Service & Resource Management: Support for legacy reservations removed [ID 46931]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 Support for legacy Resource Manager reservations has been removed from the DataMiner server. From now on, use `ReservationInstance` objects instead of legacy reservations.
 
