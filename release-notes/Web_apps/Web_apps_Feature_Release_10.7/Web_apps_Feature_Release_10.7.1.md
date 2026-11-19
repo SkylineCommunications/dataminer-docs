@@ -319,6 +319,14 @@ The remaining support for the legacy Annotations module has been removed from th
 
 The GQI DxM will now retry reading a locked extension DLL up to 7 times instead of 5. This increases the total time allowed for the assembly file to reach a stable state from 3.1 seconds to 12.7 seconds, allowing libraries that take longer to compile to be loaded correctly.
 
+#### GQI DxM: Annotation columns hidden from the query builder [ID 47144]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+As Annotations has been deprecated, the *HasAnnotations* columns in the *Get elements* and *Get services* data sources are now marked as legacy and hidden from the query builder. You can no longer select these columns when building queries.
+
+Existing queries that already select these columns will continue to work after upgrading. The selected columns will remain available in the results and for subsequent operations, such as column manipulations and filters.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
