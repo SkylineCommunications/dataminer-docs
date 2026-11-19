@@ -16,13 +16,15 @@ Expected duration: 10 minutes.
 - A basic understanding of [QAOps quality gates](xref:QAOps_Quality_Gates).
 
 > [!IMPORTANT]
-> While the screenshots show staging, it is important that you **use the sandbox** throughout this tutorial. Do not copy configuration IDs or tokens from production or staging into the exercise.
+> It is important that you **use the sandbox** throughout this tutorial. Do not copy configuration IDs or tokens from production or staging into the exercise.
 
-## Step 1: Create the gate
+## Step 1: Start creating the gate
 
 1. Open the [sandbox Quality Gates](https://qaops-sandbox.skyline.be/public/qaops-quality-gates/index.html) app.
 
 1. Click *Create gate*.
+
+   ![Button to start creating a quality gate in the Sandbox app](~/develop/images/QAOps_QualityGates_CreateGate_button.png)
 
 1. In *Gate name*, enter `Example release readiness`, or another name you can recognize.
 
@@ -42,7 +44,7 @@ Expected duration: 10 minutes.
 
    Evidence will be considered outdated after 48 hours. In a real gate, choose a freshness window that fits how often your checks actually produce results.
 
-1. Keep *Require proven result completeness* selected.
+1. Select *Require proven result completeness*.
 
    This helps prevent an apparently successful run with missing results from being treated as sufficient evidence.
 
@@ -50,7 +52,7 @@ Expected duration: 10 minutes.
 
 1. Click *Create gate* at the bottom of the form.
 
-1. Wait until the app opens the saved gate.
+1. Wait until the app opens the saved gate and shows its details.
 
    If the app says the server accepted the save and is verifying the saved state, do not submit it again. Use *Check saved gate* when available if verification takes longer.
 
@@ -60,13 +62,13 @@ Expected duration: 10 minutes.
 
 ## Step 4: Review who can maintain the gate
 
-1. Open *Configure gate*.
+1. On the page showing the details for the gate, click *Configure gate*.
+
+   ![Button to configure a quality gate in the Sandbox app](~/develop/images/QAOps_QualityGates_ConfigureGate.png)
 
 1. Go to *People and permissions*.
 
-1. If someone else should maintain the gate, enter their name in *Find people to add as editors*.
-
-1. Click *Search people*.
+1. If someone else should maintain the gate, enter their name under *Find people to add as editors*, and click *Search people*.
 
 1. Select the intended editor from the results.
 
