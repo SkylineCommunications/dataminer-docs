@@ -337,6 +337,12 @@ As Annotations has been deprecated, the *HasAnnotations* columns in the *Get ele
 
 Existing queries that already select these columns will continue to work after upgrading. The selected columns will remain available in the results and for subsequent operations, such as column manipulations and filters.
 
+#### Web apps: Updated loading indicator design [ID 47176]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The design of the loading indicator used in various places throughout the DataMiner web apps has been updated.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
