@@ -5,6 +5,9 @@ description: "Learn how you can configure NATS manually, especially in scenarios
 
 # Disabling automatic NATS configuration
 
+> [!IMPORTANT]
+> When automatic NATS configuration is disabled, you must first add the corresponding NATS node to the NATS cluster before adding the DMA to the DMS. Before removing the DMA from the DMS, you must first remove its NATS node from the NATS cluster. For details, see [Adding a DMA with disabled automatic NATS configuration](xref:Adding_a_DMA_with_disabled_automatic_NATS_config) and [Removing a node from a DataMiner cluster](xref:Removing_a_DataMiner_Agent_from_a_DataMiner_System).
+
 ## BrokerGateway-managed NATS
 
 > [!IMPORTANT]
