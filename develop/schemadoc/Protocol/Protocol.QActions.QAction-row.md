@@ -25,9 +25,9 @@ When a read column parameter is used as a trigger on a QAction with `row="true"`
 > A QAction with `row="true"` cannot be used with single parameters. Do not specify single parameters in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute of a QAction that has `row="true"` enabled.
 
 > [!NOTE]
-> When multiple values change (for example, via SetRow), multiple triggers can go off (per read column trigger defined) but each with the new values in the protocol.NewRow() object.
+> When multiple values change (for example, via SetRow), multiple triggers can go off (per read column trigger defined) but each with the new values in the [protocol.NewRow()](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow) object.
 >
-> There are two exceptions when the protocol.NewRow() object will not have the up-to-date data; this will be triggered in a separate run of the QAction:
+> There are two exceptions when the [protocol.NewRow()](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow) object will not have the up-to-date data; this will be triggered in a separate run of the QAction:
 >
 > - Default values (for merge results)
 > - Deleted rows on a state column

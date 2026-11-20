@@ -60,7 +60,7 @@ This name will then replace the QAction.[QActionID] part:
 
 ### group
 
-When you specify this option, the "OldRow()" method will return the values retrieved by that group.
+When you specify this option, the [OldRow()](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow) method will return the values retrieved by that group.
 
 > [!CAUTION]
 > This option can be used in case of high-volume polling. Use with care!
