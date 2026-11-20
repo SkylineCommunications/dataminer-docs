@@ -48,6 +48,7 @@ Before you upgrade to this DataMiner version:
 - [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
 - [DataMiner startup: Elasticsearch requires an explicit End of Support override [ID 47033]](#dataminer-startup-elasticsearch-requires-an-explicit-end-of-support-override-id-47033)
 - [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
+- [Legacy Reports and Dashboards: Upgrade prerequisite and IIS cleanup [ID 47135]](#legacy-reports-and-dashboards-upgrade-prerequisite-and-iis-cleanup-id-47135)
 
 ## Highlights
 
@@ -116,6 +117,23 @@ Support for JScript and VBScript in QActions has reached End of Life and has bee
 The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
 
 In addition, the SLSite COM component will be uninstalled during an upgrade.
+
+#### Legacy Reports and Dashboards: Upgrade prerequisite and IIS cleanup [ID 47135]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Legacy Reports and Dashboards are no longer available from DataMiner 10.7.0/10.7.1 onwards. The `VerifyNoLegacyReportsDashboards` upgrade prerequisite will now block an upgrade from a version earlier than 10.7.0 if these modules are enabled.
+
+The check reads the effective `LegacyReportsAndDashboards` soft-launch option from the `SLNet` section of `C:\Skyline DataMiner\SoftLaunchOptions.xml`. An explicit setting takes precedence over `all`. If neither option is present, the modules are considered disabled.
+
+Before retrying the upgrade, migrate any required legacy functionality and do one of the following:
+
+- Set `LegacyReportsAndDashboards` to `false`.
+- Remove `LegacyReportsAndDashboards`, provided `all` is not enabled.
+
+Malformed XML or file-access errors will also block the upgrade. The prerequisite will not modify the configuration automatically. The configuration check will be skipped if the currently installed DataMiner version is already 10.7.0 or later.
+
+In addition, IIS configuration will now remove existing legacy `/Reports` and `/Dashboards` application entries and will no longer create or restore them, regardless of the soft-launch settings. Physical folders and customer-authored content will not be deleted. The modern `/Dashboard` application and modern reporting/PDF functionality will remain unaffected.
 
 ### Enhancements
 
