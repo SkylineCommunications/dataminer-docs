@@ -49,26 +49,7 @@ The example above uses an Edge Gateway for visual clarity. A site-to-site VPN is
 
 The DMA is in your own network and uses STaaS in the cloud. This example uses an Edge Gateway to reach equipment at a remote site.
 
-```mermaid
-flowchart TB
-    subgraph Site["Your site network"]
-        subgraph Box["One Windows machine: DMS"]
-            D["DMA"]
-        end
-        L["Equipment in the same network"]
-    end
-    S@{ shape: cloud, label: "STaaS<br/>Managed cloud storage" }
-    subgraph Remote["Remote site network"]
-        G["Edge Gateway"]
-        R["Remote equipment"]
-    end
-    P["Public APIs and cloud services"]
-    D <-->|"Local network / local interface"| L
-    D <-->|"Edge tunnel"| G
-    G <-->|"Local network"| R
-    D <-->|"HTTPS / API calls"| P
-    D <-->|"HTTPS: directly or via a proxy"| S
-```
+![Diagram of your site network with one Windows machine running a DMS that contains a single DMA. The DMA connects to STaaS managed cloud storage over HTTPS, directly or via a proxy, to public APIs and cloud services using HTTPS and API calls, and to equipment in the same network over a local network or local interface. An Edge tunnel links the DMA to an Edge Gateway in a remote site network, which connects to remote equipment over a local network](~/dataminer/images/Self-managed_one-box_DMS_with_STaaS.png)
 
 STaaS keeps the local footprint to one DMA, without local database servers.
 
@@ -76,18 +57,7 @@ STaaS keeps the local footprint to one DMA, without local database servers.
 
 For **limited non-production** use, both the DMA and Linux databases can run on one Windows machine. Unlike the previous [variation with STaaS](#self-managed-one-box-dms-with-staas), in this case the storage shares the machine's resources and failure domain with the DMA. This should not be used for production systems.
 
-```mermaid
-flowchart TB
-    subgraph Site["Your site network"]
-        subgraph Box["One Windows machine: DMS"]
-            D["DMA"]
-            W[("Cassandra and OpenSearch<br/>Linux on WSL")]
-            D <-->|"Local database access"| W
-        end
-        L["Local equipment"]
-    end
-    D <-->|"Local network / interface"| L
-```
+![Diagram of your site network with one Windows machine running a DMS. Inside the machine, a DMA has local database access to Cassandra and OpenSearch running on Linux on WSL. Outside the machine, the DMA connects to local equipment over a local network or interface](~/dataminer/images/Self-managed_one-box_DMS_with_local_WSL_databases.png)
 
 The example above shows local equipment only; remote access can be added if needed.
 
