@@ -396,3 +396,11 @@ Unnecessary duplication in table updates has now been removed, reducing the amou
 When a real-time update affected multiple rows, values from an earlier row could be copied into subsequent rows, overwriting cells that had not changed. This could cause incorrect values in live query results or in rows retrieved on later pages.
 
 Real-time updates will now preserve unchanged cells in each row.
+
+#### Web API: GQI heartbeats could prevent idle connections from timing out [ID 47164]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a Web API connection had open GQI sessions, the heartbeats exchanged between the Web API and GQI could be recorded as client activity. As a result, an otherwise idle Web API connection and its GQI sessions could remain open instead of timing out.
+
+GQI heartbeats and session cleanup will no longer be recorded as client activity, allowing idle connections and their GQI sessions to close normally.
