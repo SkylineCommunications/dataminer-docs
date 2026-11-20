@@ -244,13 +244,17 @@ On DataMiner Agents with many large services, SLSNMPAgent could crash during sta
 
 After upgrading to certain DataMiner 10.6 builds, the *DataMiner Agent Minimum Requirements* BPA test could fail with an execution error instead of evaluating the system requirements.
 
-#### DataMiner Installer: CloudGateway was not restarted after silent configuration [ID 47079]
+#### DataMiner Installer: Cloud setup issues during silent configuration [ID 47079]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
 
-When the initial DataMiner configuration tool (FirstStartupChoice) was run in silent mode, CloudGateway was not restarted after the cloud tokens had been copied to the correct folder.
+When the initial DataMiner configuration tool (FirstStartupChoice) was run in silent mode, a running CloudGateway service could keep using stale or missing cloud tokens because it was not restarted after the tokens were written.
 
-CloudGateway will now be restarted after the tokens have been copied.
+The following changes have now been made:
+
+- After the cloud tokens are written, the *DataMiner CloudGateway* service will be restarted to pick up the new tokens. The restart will be skipped if the service is not installed. If configuration is canceled, an in-progress restart will still complete so the service is not left stopped.
+- On an existing DataMiner installation, API Gateway will be installed, or repaired if its certificate is missing or stale. On a fresh installation, only the certificate will be trusted.
+- The cloud registration and redirect flow has been reworked to reliably write the tokens needed by the CloudGateway restart step.
 
 #### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
 
