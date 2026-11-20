@@ -10,22 +10,9 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 
 ## Important changes
 
-- [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
 - [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
 
 ## Changes
-
-### Breaking changes
-
-#### QActions: JScript and VBScript are no longer supported [ID 47010]
-
-<!-- MR 10.8.0 - FR 10.7.1 -->
-
-Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
-
-The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
-
-In addition, the SLSite COM component will be uninstalled during an upgrade.
 
 ### Enhancements
 
@@ -144,7 +131,7 @@ If no compatible connector version is available, you can continue using an affec
 After the upgrade, uploading and using a connector with either feature will cause its elements to fail to start unless the corresponding soft-launch option is enabled.
 
 > [!NOTE]
-> The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
+> The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](xref:General_Main_Release_10.7.0_changes#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
 
 ### Fixes
 

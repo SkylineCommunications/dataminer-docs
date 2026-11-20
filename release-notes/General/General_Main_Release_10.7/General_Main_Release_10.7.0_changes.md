@@ -21,6 +21,7 @@ The following changes may have an impact on your system, so please make sure to 
 - [DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]](#dataminer-upgrade-prerequisite-check-for-the-end-of-slhelper-gqi-support-id-46957)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
+- [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
 - [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
 - [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
 - [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
@@ -80,6 +81,16 @@ Each Document Intelligence request from SLNet now includes connection informatio
 
 > [!IMPORTANT]
 > Document Intelligence in DataMiner 10.6 is incompatible with Assistant versions that enforce these permission checks (i.e., Assistant 4.0.0 or newer).
+
+#### QActions: JScript and VBScript are no longer supported [ID 47010]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
+
+The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
+
+In addition, the SLSite COM component will be uninstalled during an upgrade.
 
 ### Enhancements
 
