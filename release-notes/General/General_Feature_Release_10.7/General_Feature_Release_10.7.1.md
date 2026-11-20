@@ -375,7 +375,7 @@ To temporarily continue using RADIUS, add the following case-sensitive option to
 
 #### Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 The following connector features have reached End of Support and are now disabled by default:
 

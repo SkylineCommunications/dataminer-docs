@@ -8,10 +8,6 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 > [!IMPORTANT]
 > We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
 
-## Important changes
-
-- [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
-
 ## Changes
 
 ### Enhancements
@@ -109,29 +105,6 @@ DataMiner upgrades will now remove the following unused DLL files from `C:\Skyli
 - *Skyline.DataMiner.Core.StorageModule.dll*
 
 These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
-
-#### Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]
-
-<!-- MR 10.8.0 - FR 10.7.1 -->
-
-The following connector features have reached End of Support and are now disabled by default:
-
-- The `dllName` option in the `options` attribute of a QAction.
-- Logger tables of type `DirectConnection`.
-
-During a DataMiner upgrade, the new `VerifyEndOfSupportConnectors` prerequisite check will block the upgrade if it detects connector versions that use either feature, unless the corresponding soft-launch option is enabled.
-
-Before upgrading, configure affected elements to use connector versions that no longer contain these features, and remove detected connector versions that are no longer in use.
-
-If no compatible connector version is available, you can continue using an affected connector by activating the corresponding soft-launch option before upgrading:
-
-- `EndOfSupport.DllName` for the `dllName` option.
-- `EndOfSupport.DirectConnection` for logger tables of type `DirectConnection`.
-
-After the upgrade, uploading and using a connector with either feature will cause its elements to fail to start unless the corresponding soft-launch option is enabled.
-
-> [!NOTE]
-> The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](xref:General_Main_Release_10.7.0_changes#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
 
 ### Fixes
 
