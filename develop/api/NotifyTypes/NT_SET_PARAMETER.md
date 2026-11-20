@@ -7,7 +7,7 @@ uid: NT_SET_PARAMETER
 Sets a parameter.
 
 > [!NOTE]
-> To set parameters on the local element, we recommend using [SLProtocol.SetParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameter(System.Int32,System.Object)), [SLProtocol.SetParameters](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameters(System.Int32[],System.Object[])), or `SetParameters(IDictionary<int, object>)` / `SetCell(int, string, int, object)` from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package (`using Skyline.DataMiner.Utils.Protocol.Extension;`).
+> To set parameters on the local element, we recommend using [SLProtocol.SetParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameter(System.Int32,System.Object)), [SLProtocol.SetParameters](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameters(System.Int32[],System.Object[])), or [SetParameters(IDictionary&lt;int, object&gt;)](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetParameters*) / [SetCell(int, string, int, object)](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetCell*) from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package (`using Skyline.DataMiner.Utils.Protocol.Extension;`).
 
 ```csharp
 uint dmaID = 346;

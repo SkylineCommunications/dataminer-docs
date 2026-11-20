@@ -6,9 +6,6 @@ uid: NT_GET_DISPLAY_FOR_PK
 
 Gets the display key that corresponds with the specified primary key.
 
-> [!NOTE]
-> Rather than calling `NotifyProtocol(161, ...)` directly, we recommend using [SLProtocol.GetDisplayKey](xref:Skyline.DataMiner.Scripting.SLProtocol.GetDisplayKey(System.Int32,System.String)).
-
 ```csharp
 int displayColumnID = 1002;
 

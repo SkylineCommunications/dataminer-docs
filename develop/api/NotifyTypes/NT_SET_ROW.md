@@ -7,7 +7,7 @@ uid: NT_SET_ROW
 Sets the data of the specified row to the specified values.
 
 > [!NOTE]
-> Rather than calling `NotifyProtocol(225, ...)` directly, we recommend using [SLProtocol.SetRow](xref:Skyline.DataMiner.Scripting.SLProtocol.SetRow(System.Int32,System.Int32,System.Object)).
+> Rather than calling `NotifyProtocol(225, ...)` directly, we recommend using [SLProtocol.SetRow](xref:Skyline.DataMiner.Scripting.SLProtocol.SetRow*).
 
 ## Parameters
 

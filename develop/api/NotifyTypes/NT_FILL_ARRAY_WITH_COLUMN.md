@@ -8,7 +8,7 @@ keywords: FillArrayWithColumn
 Sets or updates one or more table columns with provided values.
 
 > [!NOTE]
-> Rather than calling `NotifyProtocol(220, ...)` directly, we recommend using [SLProtocol.FillArrayWithColumn](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn(System.Int32,System.Int32,System.Object[],System.Object[])) for a single column, or the `SetColumns` extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package when updating one or more columns.
+> Rather than calling `NotifyProtocol(220, ...)` directly, we recommend using [SLProtocol.FillArrayWithColumn](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn(System.Int32,System.Int32,System.Object[],System.Object[])) for a single column, or the [SetColumns](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetColumns*) extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package when updating one or more columns.
 
 ## Parameters
 

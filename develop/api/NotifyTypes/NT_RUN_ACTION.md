@@ -7,7 +7,7 @@ uid: NT_RUN_ACTION
 Runs an action.
 
 > [!NOTE]
-> Rather than calling `NotifyProtocol(221, ...)` directly, we recommend using the `RunAction` extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+> Rather than calling `NotifyProtocol(221, ...)` directly, we recommend using the [RunAction](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.RunAction*) extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
 
 ```csharp
 int actionID = 1;

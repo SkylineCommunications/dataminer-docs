@@ -7,7 +7,7 @@ uid: NT_PUT_PARAMETER_INDEX
 Sets the value of a cell in a table, identified by the primary key (or row number) of the row and column position, with the specified value.
 
 > [!NOTE]
-> Rather than calling `NotifyProtocol(121, ...)` or `SetParameterIndexByKey` directly, we recommend using the `SetCell` extension method (with a 0-based column index) or `SetColumns` (when updating multiple rows or columns) from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+> Rather than calling `NotifyProtocol(121, ...)` or `SetParameterIndexByKey` directly, we recommend using the [SetCell](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetCell*) extension method (with a 0-based column index) or [SetColumns](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetColumns*) (when updating multiple rows or columns) from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
 
 ## Parameters
 

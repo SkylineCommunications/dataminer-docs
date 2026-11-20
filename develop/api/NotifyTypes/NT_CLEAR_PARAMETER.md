@@ -11,7 +11,7 @@ Clears a parameter and its display value. If the parameter is saved, the change 
 This notify can be used on a standalone parameter or a table parameter, but it cannot clear the contents of a column of a table.
 
 > [!NOTE]
-> Rather than calling `NotifyProtocol(474, ...)` directly, we recommend using `SLProtocol.ClearParameter` (or [SLProtocol.ClearAllKeys](xref:Skyline.DataMiner.Scripting.SLProtocol.ClearAllKeys(System.Int32)) to clear all rows of a table).
+> Rather than calling `NotifyProtocol(474, ...)` directly, we recommend using [SLProtocol.ClearParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.ClearParameter(System.Int32)) (or [SLProtocol.ClearAllKeys](xref:Skyline.DataMiner.Scripting.SLProtocol.ClearAllKeys(System.Int32)) to clear all rows of a table).
 
 ```csharp
 int parameterId = 20;

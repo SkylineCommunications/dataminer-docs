@@ -7,7 +7,7 @@ uid: NT_DELETE_ROW
 Removes a row from a table.
 
 > [!NOTE]
-> Rather than calling `NotifyProtocol(156, ...)` directly, we recommend using [SLProtocol.DeleteRow](xref:Skyline.DataMiner.Scripting.NotifyProtocol.DeleteRow*) or the `DeleteRows` extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+> Rather than calling `NotifyProtocol(156, ...)` directly, we recommend using [SLProtocol.DeleteRow](xref:Skyline.DataMiner.Scripting.SLProtocol.DeleteRow*) or the [DeleteRows](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.DeleteRows*) extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
 
 ## Parameters
 

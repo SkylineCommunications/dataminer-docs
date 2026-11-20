@@ -7,7 +7,7 @@ uid: NT_GET_BITRATE_DELTA
 Retrieves the time between two consecutive executions of the specified SNMP group (in ms).<!-- RN 2906 -->
 
 > [!NOTE]
-> Rather than calling `NotifyProtocol(269, ...)` directly, we recommend using `SnmpDeltaHelper` and the [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol) NuGet package (`using Skyline.DataMiner.Utils.Rates.Protocol;`).
+> Rather than calling `NotifyProtocol(269, ...)` directly, we recommend using [SnmpDeltaHelper](xref:Skyline.DataMiner.Utils.SNMP.SnmpDeltaHelper) and the [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol) NuGet package (`using Skyline.DataMiner.Utils.Rates.Protocol;`).
 
 ```csharp
 int groupID = 10;

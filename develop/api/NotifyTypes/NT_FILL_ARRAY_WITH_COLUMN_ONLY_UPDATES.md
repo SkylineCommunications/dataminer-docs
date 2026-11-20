@@ -5,7 +5,7 @@ uid: NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES
 # NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336)
 
 > [!NOTE]
-> To update columns on the local element, we recommend using `SetColumn` or `SetColumns` with `onlyUpdate: true` from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package (`using Skyline.DataMiner.Utils.Protocol.Extension;`), or [SLProtocol.FillArrayWithColumn](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn*).
+> To update columns on the local element, we recommend using the [SetColumns](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetColumns*) extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package (`using Skyline.DataMiner.Utils.Protocol.Extension;`), or [SLProtocol.FillArrayWithColumn](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn*).
 
 ## Parameters
 

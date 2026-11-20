@@ -7,7 +7,7 @@ uid: NT_GET_PARAMETER_INDEX
 Gets the value of the specified cell in the specified table.
 
 > [!NOTE]
-> Rather than calling `NotifyProtocol(122, ...)` or `GetParameterIndexByKey` directly, we recommend using the `GetCell` extension method (with a 0-based column index) or `GetColumns` / `GetColumn` (when retrieving multiple values) from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
+> Rather than calling `NotifyProtocol(122, ...)` or `GetParameterIndexByKey` directly, we recommend using the [GetCell](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.GetCell*) extension method (with a 0-based column index) or [GetColumns](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.GetColumns*) / [GetColumn](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.GetColumn*) (when retrieving multiple values) from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
 
 ```csharp
 uint tableID = 1000;
