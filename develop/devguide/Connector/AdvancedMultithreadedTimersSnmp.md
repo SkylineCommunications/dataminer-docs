@@ -244,9 +244,9 @@ To process the responses, create a QAction that triggers on the group of the mul
 <QAction id="2000" name="SNMP Data" encoding="csharp" row="true" triggers="2000" options="group">
 ```
 
-Note the "group" option, which allows the use of the OldRow method (SLProtocol) to retrieve the result data.
+Note the ["group" option](xref:Protocol.QActions.QAction-options#group), which allows the use of the [OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow) method (SLProtocol) to retrieve the result data.
 
-Via the NewRow method (SLProtocol), you can verify whether the request succeeded:
+Via the [NewRow](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow) method (SLProtocol), you can verify whether the request succeeded:
 
 ```csharp
 /// <summary>
@@ -307,7 +307,7 @@ public void Run(SLProtocolExt protocol)
 }
 ```
 
-In case the request succeeded, the result data can be obtained via the OldRow method (SLProtocol).
+In case the request succeeded, the result data can be obtained via the [OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow) method (SLProtocol).
 
 Format of the result data:
 
