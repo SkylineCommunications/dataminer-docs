@@ -172,3 +172,22 @@ These curves will now be drawn correctly.
 When deleting an element failed on the DataMiner Agent, the element would remain in place, but DataMiner Cube would not display a warning.
 
 Cube will now display a warning indicating that the element could not be deleted and that you should check the logging for more details. The failure details will be logged.
+
+#### Data Display: Saved table layouts could override updated connector defaults [ID 47091]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+After a connector update, saved table layouts could prevent tables in DataMiner Cube from reflecting changes to default column widths, visibility, and positions.
+
+Cube will now distinguish your explicit layout changes from automatic adjustments. After a connector update:
+
+- Columns you have resized, hidden, or moved will retain your settings.
+- Unchanged columns will follow the updated connector defaults.
+- New columns will appear in the expected order.
+
+The *Reset* option will now be available when the table differs from its defaults, and resetting will immediately update the table.
+
+When you switch to another table, Cube will also stop receiving updates from the previous table. This prevents the previous table from being kept in memory unnecessarily or sending updates to the wrong table.
+
+> [!NOTE]
+> If your table layout was saved by an older version of Cube, you may need to reset it once to see all the updated connector defaults.
