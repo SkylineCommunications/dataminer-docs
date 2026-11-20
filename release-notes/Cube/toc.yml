@@ -123,7 +123,7 @@ items:
             topicUid: Cube_Main_Release_10.5.0_CU20
           - name: DataMiner Cube Main Release 10.5.0 CU21
             topicUid: Cube_Main_Release_10.5.0_CU21
-          - name: DataMiner Cube Main Release 10.5.0 CU22 - Preview
+          - name: DataMiner Cube Main Release 10.5.0 CU22
             topicUid: Cube_Main_Release_10.5.0_CU22
       - name: Feature Release
         items:
