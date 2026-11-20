@@ -21,9 +21,15 @@ The following changes may have an impact on your system, so please make sure to 
 - [DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]](#dataminer-upgrade-prerequisite-check-for-the-end-of-slhelper-gqi-support-id-46957)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
+- [SLNet: Support for .NET Remoting removed [ID 47004]](#slnet-support-for-net-remoting-removed-id-47004)
+- [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
 - [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
 - [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
+- [DataMiner start-up: Cassandra 3.x and earlier require an End of Support override [ID 47024]](#dataminer-start-up-cassandra-3x-and-earlier-require-an-end-of-support-override-id-47024)
+- [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
+- [DataMiner startup: Elasticsearch requires an explicit End of Support override [ID 47033]](#dataminer-startup-elasticsearch-requires-an-explicit-end-of-support-override-id-47033)
 - [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
+- [Legacy Reports and Dashboards: Upgrade prerequisite and IIS cleanup [ID 47135]](#legacy-reports-and-dashboards-upgrade-prerequisite-and-iis-cleanup-id-47135)
 
 ## Changes
 
@@ -80,6 +86,33 @@ Each Document Intelligence request from SLNet now includes connection informatio
 
 > [!IMPORTANT]
 > Document Intelligence in DataMiner 10.6 is incompatible with Assistant versions that enforce these permission checks (i.e., Assistant 4.0.0 or newer).
+
+#### QActions: JScript and VBScript are no longer supported [ID 47010]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
+
+The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
+
+In addition, the SLSite COM component will be uninstalled during an upgrade.
+
+#### Legacy Reports and Dashboards: Upgrade prerequisite and IIS cleanup [ID 47135]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Legacy Reports and Dashboards are no longer available from DataMiner 10.7.0/10.7.1 onwards. The `VerifyNoLegacyReportsDashboards` upgrade prerequisite will now block an upgrade from a version earlier than 10.7.0 if these modules are enabled.
+
+The check reads the effective `LegacyReportsAndDashboards` soft-launch option from the `SLNet` section of `C:\Skyline DataMiner\SoftLaunchOptions.xml`. An explicit setting takes precedence over `all`. If neither option is present, the modules are considered disabled.
+
+Before retrying the upgrade, migrate any required legacy functionality and do one of the following:
+
+- Set `LegacyReportsAndDashboards` to `false`.
+- Remove `LegacyReportsAndDashboards`, provided `all` is not enabled.
+
+Malformed XML or file-access errors will also block the upgrade. The prerequisite will not modify the configuration automatically. The configuration check will be skipped if the currently installed DataMiner version is already 10.7.0 or later.
+
+In addition, IIS configuration will now remove existing legacy `/Reports` and `/Dashboards` application entries and will no longer create or restore them, regardless of the soft-launch settings. The modern `/Dashboard` application and modern reporting/PDF functionality will remain unaffected.
 
 ### Enhancements
 
@@ -950,6 +983,18 @@ To temporarily continue using MySQL, add the following case-sensitive option to 
 
 Consider migrating to Cassandra Cluster or Storage as a Service (STaaS) instead.
 
+#### SLNet: Support for .NET Remoting removed [ID 47004]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Support for .NET Remoting, which has reached End of Life, has been removed from SLNet.
+
+The legacy .NET Remoting connection option has also been removed from the SLNetClientTest tool.
+
+In SLNetTypes, related settings and methods have been marked as obsolete. They remain available for clients that need to connect to older DataMiner servers that still support .NET Remoting.
+
+See also: [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
+
 #### Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
@@ -981,6 +1026,55 @@ To temporarily continue using RADIUS, add the following case-sensitive option to
   <EndOfSupport.RADIUS>true</EndOfSupport.RADIUS>
 </SLNet>
 ```
+
+#### DataMiner start-up: Cassandra 3.x and earlier require an End of Support override [ID 47024]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, a DataMiner Agent using Cassandra 3.x or earlier as its main database will no longer start unless the `EndOfSupport.Cassandra3` soft-launch option is set to `true`. If the option is missing or not set to `true`, DataMiner will stop and log an error. Creating a migration target that uses a Cassandra 3.x or earlier will also be blocked without this override.
+
+To temporarily continue using a Cassandra 3.x or earlier, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` and restart DataMiner:
+
+```xml
+<EndOfSupport.Cassandra3>true</EndOfSupport.Cassandra3>
+```
+
+#### Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+The following connector features have reached End of Support and are now disabled by default:
+
+- The `dllName` option in the `options` attribute of a QAction.
+- Logger tables of type `DirectConnection`.
+
+During a DataMiner upgrade, the new `VerifyEndOfSupportConnectors` prerequisite check will block the upgrade if it detects connector versions that use either feature, unless the corresponding soft-launch option is enabled.
+
+Before upgrading, configure affected elements to use connector versions that no longer contain these features, and remove detected connector versions that are no longer in use.
+
+If no compatible connector version is available, you can continue using an affected connector by activating the corresponding soft-launch option before upgrading:
+
+- `EndOfSupport.DllName` for the `dllName` option.
+- `EndOfSupport.DirectConnection` for logger tables of type `DirectConnection`.
+
+After the upgrade, uploading and using a connector with either feature will cause its elements to fail to start unless the corresponding soft-launch option is enabled.
+
+> [!NOTE]
+> The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
+
+#### DataMiner startup: Elasticsearch requires an explicit End of Support override [ID 47033]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, a DataMiner Agent using Elasticsearch as its search database will no longer start unless the `EndOfSupport.Elastic` soft-launch option is set to `true`. If the option is missing or not set to `true`, DataMiner will stop and log an error. Creating a migration target that uses Elasticsearch as its search database will also be blocked without this override.
+
+To temporarily continue using Elasticsearch, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` and restart DataMiner:
+
+```xml
+<EndOfSupport.Elastic>true</EndOfSupport.Elastic>
+```
+
+Consider migrating to OpenSearch or Storage as a Service (STaaS) instead.
 
 #### User-Defined APIs: Requests now routed through API Gateway [ID 47107]
 

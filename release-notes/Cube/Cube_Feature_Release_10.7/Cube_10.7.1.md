@@ -35,6 +35,21 @@ Both permissions are enabled by the limited administrator and full administrator
 > [!NOTE]
 > These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.7.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
 
+### Alarm Console: Configurable default columns [ID 46958]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+You can now save a default column configuration for Alarm Console tabs and reuse it across tabs.
+
+To manage default columns, right-click a column header and select *Add/remove column > Default columns*. The following options are available:
+
+- *Use current columns as the new default*: Saves the visible columns, their order, widths, and alignment.
+- *Apply default column set to this list*: Applies the saved configuration to the current tab.
+
+New alarm tabs will automatically use your saved defaults, including tabs added through general or card-specific *Settings*. Existing tabs will retain their configuration unless you explicitly apply the defaults.
+
+*Information* and *Suggestion* tabs will retain their standard columns and will not display the *Default columns* menu.
+
 ## Changes
 
 ### Breaking changes
@@ -68,6 +83,12 @@ From now on, DataMiner Cube will handle elements used in element connections as 
 
 > [!NOTE]
 > If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
+
+#### Security enhancements [ID 46985]
+
+<!-- 46985: MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -143,3 +164,30 @@ When you panned a trend graph to an older time range, the corresponding trend da
 When you viewed a longer period, such as the last month, in a trend graph with *Show most detailed data* enabled, the minimum and maximum curves could contain incorrect diagonal lines.
 
 These curves will now be drawn correctly.
+
+#### Element deletion could fail without a warning [ID 47081]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When deleting an element failed on the DataMiner Agent, the element would remain in place, but DataMiner Cube would not display a warning.
+
+Cube will now display a warning indicating that the element could not be deleted and that you should check the logging for more details. The failure details will be logged.
+
+#### Data Display: Saved table layouts could override updated connector defaults [ID 47091]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+After a connector update, saved table layouts could prevent tables in DataMiner Cube from reflecting changes to default column widths, visibility, and positions.
+
+Cube will now distinguish your explicit layout changes from automatic adjustments. After a connector update:
+
+- Columns you have resized, hidden, or moved will retain your settings.
+- Unchanged columns will follow the updated connector defaults.
+- New columns will appear in the expected order.
+
+The *Reset* option will now be available when the table differs from its defaults, and resetting will immediately update the table.
+
+When you switch to another table, Cube will also stop receiving updates from the previous table. This prevents the previous table from being kept in memory unnecessarily or sending updates to the wrong table.
+
+> [!NOTE]
+> If your table layout was saved by an older version of Cube, you may need to reset it once to see all the updated connector defaults.

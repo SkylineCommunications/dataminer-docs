@@ -100,6 +100,16 @@ This update also resolves the following issues:
 
 ## Changes
 
+### Breaking changes
+
+#### Legacy Reports and Dashboards are no longer available [ID 47136]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+The legacy Reports and Dashboards applications are no longer available, and their pages have been removed from the Monitoring app.
+
+For details about the associated upgrade prerequisite check, see [Legacy Reports and Dashboards: Upgrade prerequisite and IIS cleanup [ID 47135]](xref:General_Feature_Release_10.7.1#legacy-reports-and-dashboards-upgrade-prerequisite-and-iis-cleanup-id-47135).
+
 ### Enhancements
 
 #### GQI DxM: Improved performance for inter-element table parameter queries [ID 46078]
@@ -327,6 +337,12 @@ As Annotations has been deprecated, the *HasAnnotations* columns in the *Get ele
 
 Existing queries that already select these columns will continue to work after upgrading. The selected columns will remain available in the results and for subsequent operations, such as column manipulations and filters.
 
+#### Web apps: Updated loading indicator design [ID 47176]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The design of the loading indicator used in various places throughout the DataMiner web apps has been updated.
+
 ### Fixes
 
 #### Web API: GetUsers could return an empty user list [ID 46942]
@@ -386,3 +402,11 @@ Unnecessary duplication in table updates has now been removed, reducing the amou
 When a real-time update affected multiple rows, values from an earlier row could be copied into subsequent rows, overwriting cells that had not changed. This could cause incorrect values in live query results or in rows retrieved on later pages.
 
 Real-time updates will now preserve unchanged cells in each row.
+
+#### Web API: GQI heartbeats could prevent idle connections from timing out [ID 47164]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a Web API connection had open GQI sessions, the heartbeats exchanged between the Web API and GQI could be recorded as client activity. As a result, an otherwise idle Web API connection and its GQI sessions could remain open instead of timing out.
+
+GQI heartbeats and session cleanup will no longer be recorded as client activity, allowing idle connections and their GQI sessions to close normally.
