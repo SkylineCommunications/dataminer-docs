@@ -164,3 +164,11 @@ When you panned a trend graph to an older time range, the corresponding trend da
 When you viewed a longer period, such as the last month, in a trend graph with *Show most detailed data* enabled, the minimum and maximum curves could contain incorrect diagonal lines.
 
 These curves will now be drawn correctly.
+
+#### Element deletion could fail without a warning [ID 47081]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When deleting an element failed on the DataMiner Agent, the element would remain in place, but DataMiner Cube would not display a warning.
+
+Cube will now display a warning indicating that the element could not be deleted and that you should check the logging for more details. The failure details will be logged.
