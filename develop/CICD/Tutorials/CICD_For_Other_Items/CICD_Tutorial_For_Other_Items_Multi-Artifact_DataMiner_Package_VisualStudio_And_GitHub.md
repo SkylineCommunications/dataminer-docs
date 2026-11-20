@@ -129,9 +129,9 @@ In this step, you will focus on the extra code that should be executed when the 
             engine.GenerateInformation("Starting installation");
             var installer = new AppInstaller(Engine.SLNetRaw, context);
             installer.InstallDefaultContent();
-   
+      
             string setupContentPath = installer.GetSetupContentDirectory();
-   
+      
             // Custom installation logic can be added here for each individual install package.
             string pathToConfig = System.IO.Path.Combine(setupContentPath, "MyConfig.txt");
             var config = System.IO.File.ReadAllText(pathToConfig);

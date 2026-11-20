@@ -355,7 +355,7 @@ namespace Skyline.DataMiner.Automation
 		/// 
 		/// var uir = engine.ShowUI(uibDialogBox);
 		/// string result = uir.GetString("selectionVar");
-		/// engine.GenerateInformation("selectionVar: " + result);	// In case "Semi-automatic" was selected, selectionVar will contain "2".
+		/// engine.GenerateInformation($"selectionVar: {result}"); // In case "Semi-automatic" was selected, selectionVar will contain "2".
 		/// </code>
 		/// </example>
 		public UIBuilder AppendDropDown(string destVar, params string[] options) { return null; }

@@ -110,9 +110,12 @@ For more information about XPath, refer to:
   The following snippet shows how to create an HtmlDocument instance from an HTML document string that is stored in a protocol parameter.
 
     ```csharp
-    string html = protocol.GetParameter(id);
-    HtmlDocument htmlTree = new HtmlDocument()
-    { OptionFixNestedTags = true, OptionEmptyCollection = true };
+    string html = Convert.ToString(protocol.GetParameter(id));
+    HtmlDocument htmlTree = new HtmlDocument
+    {
+        OptionFixNestedTags = true,
+        OptionEmptyCollection = true,
+    };
     
     htmlTree.LoadHtml(html);
     ```
@@ -131,7 +134,7 @@ For more information about XPath, refer to:
     ```csharp
     foreach (HtmlNode item in hapDoc.DocumentNode.Descendants())
     {
-
+        // Process node.
     }
     ```
 
@@ -180,28 +183,22 @@ For more information about XPath, refer to:
 
     ```csharp
     IEnumerable<HtmlNode> itemList = from node in htmlTree.DocumentNode.Descendants()
-
-    where node.Name.Equals("tr") && node.InnerText.Contains("PSU")
-
-    select node;
+        where node.Name.Equals("tr") && node.InnerText.Contains("PSU")
+        select node;
     ```
 
   - All TR elements related to the module summary
 
     ```csharp
     IEnumerable<HtmlNode> itemList = from node in htmlTree.DocumentNode.Descendants()
-
-    where node.Name == "tr" && (node.Descendants().Select(x => x.Name.Equals("input")).Contains(true))
-
-    select node;
+        where node.Name == "tr" && node.Descendants().Select(x => x.Name.Equals("input")).Contains(true)
+        select node;
     ```
 
   - Obtain the status of the vFlex module
 
     ```csharp
     IEnumerable<HtmlNode> itemList = from node in htmlTree.DocumentNode.Descendants()
-    
-    where node.Name == "tr" && (node.Descendants().Select(x => x.Name.Equals("input") && x.Attributes.Select(y => y.Value.Equals("vFlex")).Contains(true)).Contains(true))
-    
-    select node;
+        where node.Name == "tr" && node.Descendants().Select(x => x.Name.Equals("input") && x.Attributes.Select(y => y.Value.Equals("vFlex")).Contains(true)).Contains(true)
+        select node;
     ```

@@ -6,12 +6,15 @@ uid: NT_GET_KEYS_FOR_INDEX
 
 Gets the primary keys of all rows that have the specified value for the specified column.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(196, ...)` directly, we recommend using [SLProtocol.GetKeysForIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeysForIndex*).
+
 ```csharp
 int columnID = 1010;
 
 string value = "Value 1";
 
-string[] primaryKeys = (string[])protocol.NotifyProtocol(196/*NT_GET_KEYS_FOR_INDEX*/ , columnID, value);
+string[] primaryKeys = (string[])protocol.NotifyProtocol(196 /*NT_GET_KEYS_FOR_INDEX*/, columnID, value);
 ```
 
 ## Parameters

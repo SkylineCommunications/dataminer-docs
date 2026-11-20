@@ -34,7 +34,7 @@ When creating a [data source](xref:GQI_Ad_hoc_data_sources) that interacts with 
 
 More details and code examples like the one below can be found in the [documentation of the code repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.MediaOps.Plan/tree/main/Documentation).
 
-```cs
+```csharp
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Solutions.MediaOps.Plan.API;
 using Skyline.DataMiner.Solutions.MediaOps.Plan.Automation;
@@ -49,8 +49,8 @@ public class Script
       var decodingCapability = new Capability()
       {
          Name = "Decoding",
-      }
-      .SetDiscretes(new[] { "AVC/H.264", "HEVC/H.265" });
+      }.SetDiscretes(new[] { "AVC/H.264", "HEVC/H.265" });
+
       planApi.Capabilities.Create(decodingCapability);
 
       // Create Resource Pool and move to complete state
@@ -58,6 +58,7 @@ public class Script
       {
          Name = "Decoders",
       };
+
       planApi.ResourcePools.Create(decodersResourcePool);
       planApi.ResourcePools.Complete(decodersResourcePool.Id);
 
@@ -70,16 +71,16 @@ public class Script
          Name = "Makito X4-001",
          Concurrency = 1,
       }
-      .AddCapability(decodingCapabilitySetting)
-      .AssignToPool(decodersResourcePool.Id);
+         .AddCapability(decodingCapabilitySetting)
+         .AssignToPool(decodersResourcePool.Id);
 
       var decoder2 = new UnmanagedResource
       {
          Name = "Makito X4-002",
          Concurrency = 1,
       }
-      .AddCapability(decodingCapabilitySetting)
-      .AssignToPool(decodersResourcePool.Id);
+         .AddCapability(decodingCapabilitySetting)
+         .AssignToPool(decodersResourcePool.Id);
 
       planApi.Resources.Create(new[] { decoder1, decoder2 });
       planApi.Resources.Complete(new[] { decoder1.Id, decoder2.Id });
@@ -91,29 +92,29 @@ public class Script
 
 More details and code examples like the one below can be found in the [documentation of the code repository](https://github.com/SkylineCommunications/Skyline.DataMiner.Dev.Utils.Solutions.PeopleAndOrganizations/tree/main/Documentation).
 
-```cs
+```csharp
 using Skyline.DataMiner.Automation;
-using Skyline.DataMiner.Solutions.PeopleAndOrganizations.API;
 using Skyline.DataMiner.Solutions.MediaOps.Plan.Automation;
+using Skyline.DataMiner.Solutions.PeopleAndOrganizations.API;
 
 public class Script
 {
    public void Run(IEngine engine)
    {
       var api = engine.GetPeopleAndOrganizationsApi();
-   
+
       // Create an organization
       var organization = api.Organizations.Create(new Organization
       {
          Name = "Skyline Communications",
       });
-   
+
       // Define a new experience
       var experience = api.Experience.Create(new Experience
       {
          Name = "Senior System Developer",
       });
-   
+
       // Create a person
       var person = api.People.Create(new Person
       {
@@ -127,11 +128,11 @@ public class Script
          OrganizationId = organization.Id,
          ExperienceId = experience.Id,
       });
-   
+
       // Update person
       person.Email = "john.updated@skyline.be";
       person = api.People.Update(person);
-   
+
       // Delete person
       api.People.Delete(person.Id);
    }

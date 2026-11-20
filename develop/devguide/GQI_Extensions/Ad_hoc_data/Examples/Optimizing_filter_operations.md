@@ -106,6 +106,7 @@ using Skyline.DataMiner.Analytics.GenericInterface.Operators;
 public sealed class EventDataSource : IGQIDataSource, IGQIOnPrepareFetch, IGQIOptimizableDataSource
 {
     ...
+
     // Field to store the event ID that should be filtered on
     private string _filterEventId;
     ...

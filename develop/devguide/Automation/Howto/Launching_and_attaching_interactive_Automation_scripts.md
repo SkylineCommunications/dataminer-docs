@@ -93,6 +93,7 @@ A QAction that was triggered by a user clicking on a button parameter will know 
 
 ```csharp
 string id = protocol.UserCookie;
+
 // Formats may vary, e.g.:
 // C57D3BEFAD4F445B9BC37B9FAFB84ADB
 // 39D49F3E377C4B6D94AF5F4731C8052D:NO_INFORMATION
@@ -109,6 +110,7 @@ From an SLNet connection:
 
 ```csharp
 Guid id = protocol.GetUserConnection().ConnectionID;
+
 // example: 448BB4B8-4E55-4CB7-BCC3-848923BD19DA
 // Note: protocol.SLNet and Engine.SLNetRaw cookies are process-associated, not user-associated.
 ```
@@ -142,6 +144,6 @@ If you want to run a script as if launched by a specific user, so no extra scrip
           $"USER:{userCookie}",
       }),
   };
-
+  
   connection.SendSingleResponseMessage(executeScriptMessage);
   ```

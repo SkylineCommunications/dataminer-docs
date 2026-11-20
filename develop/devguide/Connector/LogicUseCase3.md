@@ -116,8 +116,10 @@ Imagine the C# code run via parameter 10 (create folder) looks like this:
 
 ```csharp
 CreateFolder(folderName);
+
 // Force sync.
 protocol.SetParameter(11, "Run");
+
 // Validate.
 ValidateSync();
 ```

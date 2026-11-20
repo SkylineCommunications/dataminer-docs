@@ -43,12 +43,12 @@ int elementId = 200;
 int parameterId = 4000;
 int changeType = 9;
 
-string updateConfig = changeType + ";" + elementId + ";" + parameterId + ";" + agentId;
+string updateConfig = $"{changeType};{elementId};{parameterId};{agentId}";
 
 int inputCount = 8;
 int outputCount = 8;
 
-string updateValue = inputCount + ";" + outputCount;
+string updateValue = $"{inputCount};{outputCount}";
 
 protocol.NotifyDataMinerQueued(128, updateConfig, updateValue);
 protocol.SendToDisplay(parameterId);

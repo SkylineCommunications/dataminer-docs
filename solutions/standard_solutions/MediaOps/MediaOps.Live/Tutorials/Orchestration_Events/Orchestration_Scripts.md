@@ -62,7 +62,6 @@ The base class will call the appropriate methods that you will implement in the 
 ```csharp
 public class Script : OrchestrationScript
 {
-
 }
 ```
 
@@ -116,7 +115,7 @@ The orchestration script class exposes methods to execute the node configuration
    public override void Orchestrate(IEngine engine)
    {
        engine.GenerateInformation("Orchestration script triggered.");
-
+   
        if (TryGetNodeConfiguration("Label 1", out NodeConfiguration configuration))
        {
            OrchestrateNode(configuration);
@@ -137,12 +136,12 @@ The orchestration script class exposes methods to execute the node configuration
 
    ```csharp
    engine.GenerateInformation("Orchestration script triggered.");
-
+   
    if (TryGetNodeConfiguration("Label 1", out NodeConfiguration configuration))
    {
        OrchestrateNode(configuration);
    }
-
+   
    OrchestrateAllConnections();
    ```
 
@@ -183,27 +182,27 @@ To pass data to an orchestration script, usually input parameters are added to t
 
    ```csharp
    engine.GenerateInformation("Orchestration script triggered.");
-
+   
    if (TryGetNodeConfiguration("Label 1", out NodeConfiguration configuration))
    {
        OrchestrateNode(configuration);
    }
-
+   
    OrchestrateAllConnections();
-
+   
    if (TryGetMetadataValue("Metadata 1", out string value1))
    {
-       engine.GenerateInformation($"Value for metadata 1 is { value1 }");
+       engine.GenerateInformation($"Value for metadata 1 is {value1}");
    }
-
+   
    if (TryGetMetadataValue("Metadata 2", out string value2))
    {
-       engine.GenerateInformation($"Value for metadata 2 is { value2 }");
+       engine.GenerateInformation($"Value for metadata 2 is {value2}");
    }
-
+   
    if (TryGetMetadataValue("Metadata 3", out string value3))
    {
-       engine.GenerateInformation($"Value for metadata 3 is { value3 }");
+       engine.GenerateInformation($"Value for metadata 3 is {value3}");
    }
    ```
 

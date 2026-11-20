@@ -36,12 +36,14 @@ public class Script
             TargetNodeLabel = "DEC1",
             NewResourceId = Guid.Parse("4d4c6525-8fbc-419c-9250-7e8b59dd2fcb")
          },
+
          // Unassign a resource (update with relevant data)
          new AssignResourceRequest
          {
             TargetNodeLabel = "DEC2",
             NewResourceId = Guid.Empty
          },
+
          // Assign a profile instance (update with relevant data)
          new AssignResourceRequest
          {
@@ -50,6 +52,7 @@ public class Script
             ByReference = false
          },
       };
+
       reservationInstance.AssignResources(engine, requests);
 
       // Assign a profile parameter value (update with relevant data)
@@ -59,11 +62,13 @@ public class Script
          ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
          ByReference = false
       };
+
       var param = new Parameter
       {
          Id = Guid.Parse("7f8bd260-0d26-46c1-9093-08b16a5f7dcf"),
          Value = "abc"
       };
+
       request.OverriddenParameters.Add(param);
       reservationInstance.AssignResources(engine, request);
 
@@ -75,15 +80,17 @@ public class Script
       {
          NewResourceId = resourceId
       };
+
       reservationInstance.AssignResources(engine, unmappedAssignRequest);
 
-      // Assign a profile instance to an unmapped node  (update with relevant data)
+      // Assign a profile instance to an unmapped node (update with relevant data)
       var unmappedAssignProfileRequest = new AssignResourceRequest
       {
          NewResourceId = resourceId,
          ProfileInstanceId = Guid.Parse("c4130041-21c5-4693-bbe5-ef1efe78ff04"),
          ByReference = true
       };
+
       reservationInstance.AssignResources(engine, unmappedAssignProfileRequest);
 
       // Unassign an unmapped resource (update with relevant data)
@@ -91,6 +98,7 @@ public class Script
       {
          NewResourceId = resourceId
       };
+
       reservationInstance.UnassignResources(engine, unmappedUnassignRequest);
 
       // PLEASE USE VISUAL STUDIO TO SEE ALL OPTIONS ON AssignResourceRequest,

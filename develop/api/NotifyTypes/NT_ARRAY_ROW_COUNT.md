@@ -6,10 +6,13 @@ uid: NT_ARRAY_ROW_COUNT
 
 Gets the number of rows in a table.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(195, ...)` directly, we recommend using [SLProtocol.RowCount](xref:Skyline.DataMiner.Scripting.SLProtocol.RowCount(System.Object)).
+
 ```csharp
 int tableID = 2000;
 
-int numberOfRows = (int) protocol.NotifyProtocol(195/*NT_ARRAY_ROW_COUNT*/ , tableID, null);
+int numberOfRows = (int)protocol.NotifyProtocol(195 /*NT_ARRAY_ROW_COUNT*/, tableID, null);
 ```
 
 ## Parameters

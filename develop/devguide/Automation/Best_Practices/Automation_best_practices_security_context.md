@@ -29,7 +29,7 @@ When sending a direct SLNet message, the method you use determines the security 
 
 The following example applies a parameter set through different API paths and labels the security context used by each path. It assumes that the IDs and helper methods shown, including `RunPath` and `CreateSetParameterMessage`, are defined elsewhere in the script.
 
-```cs
+```csharp
 // 1. DataMinerSystem class library
 
 // System account

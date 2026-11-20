@@ -11,7 +11,7 @@ int displayColumnID = 1002;
 
 string primaryKey = "Row 1";
 
-string displayKey = (string)protocol.NotifyProtocol(161/*NT_GET_DISPLAY_FOR_PK*/ , displayColumnID, primaryKey);
+string displayKey = (string)protocol.NotifyProtocol(161 /*NT_GET_DISPLAY_FOR_PK*/, displayColumnID, primaryKey);
 ```
 
 ## Parameters

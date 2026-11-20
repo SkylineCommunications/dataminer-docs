@@ -75,12 +75,14 @@ The script now looks like this:
 using System;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Utils.InteractiveAutomationScript;
+
 /// <summary>
 /// DataMiner Script Class.
 /// </summary>
 public class Script
 {
     private InteractiveController controller;
+
     /// <summary>
     /// The Script entry point.
     /// </summary>
@@ -131,16 +133,20 @@ Next, set the title of the dialog using the *Title* property, and define the dif
 public class HelloWorldDialog : Dialog
 {
     private Label label;
+
     public HelloWorldDialog(IEngine engine) : base(engine)
     {
         // Set title
         Title = "Hello World";
+
         // Init widgets
         label = new Label("Name");
         TextBox = new TextBox();
         Button = new Button("Update Name");
     }
+
     public TextBox TextBox { get; private set; }
+
     public Button Button { get; private set; }
 }
 ```
@@ -154,20 +160,25 @@ In order to display the widgets, you will need to add them to your dialog using 
 public class HelloWorldDialog : Dialog
 {
     private Label label;
+
     public HelloWorldDialog(Engine engine) : base(engine)
     {
         // Set title
         Title = "Hello World";
+
         // Init widgets
         label = new Label("Name");
         TextBox = new TextBox();
         Button = new Button("Update Name");
+
         // Define layout
         AddWidget(label, 0, 0);
         AddWidget(TextBox, 0, 1);
         AddWidget(Button, 1, 0);
     }
+
     public TextBox TextBox { get; private set; }
+
     public Button Button { get; private set; }
 }
 ```
@@ -198,6 +209,7 @@ Do not infer the method for a version that is not listed in this table. Verify t
 public class Script
 {
     private InteractiveController controller;
+
     /// <summary>
     /// The Script entry point.
     /// </summary>
@@ -261,6 +273,7 @@ To make sure something actually happens when a user clicks the button in the scr
 public class Script
 {
     private InteractiveController controller;
+
     /// <summary>
     /// The Script entry point.
     /// </summary>

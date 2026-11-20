@@ -36,15 +36,15 @@ The action you provide to the StartMonitor can be written as:
 - A lambda expression. For example:
 
     ```csharp
-    element.StartAlarmLevelMonitor( 
-    protocol,
-    (change) =>
-    {
-        var dms = change.Dms;
-        var myElement = dms.GetElement(new DmsElementId(change.MonitorSource));
-        var detectedElementAlarmParam = myElement.GetStandaloneParameter<string>(303);
-        detectedElementAlarmParam.SetValue(change.Alarm.ToString());
-    });
+    element.StartAlarmLevelMonitor(
+        protocol,
+        (change) =>
+        {
+            var dms = change.Dms;
+            var myElement = dms.GetElement(new DmsElementId(change.MonitorSource));
+            var detectedElementAlarmParam = myElement.GetStandaloneParameter<string>(303);
+            detectedElementAlarmParam.SetValue(change.Alarm.ToString());
+        });
     ```
 
 - A separate method with the correct method parameters. For example:
@@ -52,7 +52,7 @@ The action you provide to the StartMonitor can be written as:
     ```csharp
     thisDms.StartElementStateMonitor(protocol, OnStateChange);
     
-     public static void OnStateChange(ElementStateChange change)
+    public static void OnStateChange(ElementStateChange change)
     {
         var dms = change.Dms;
         var localElement = dms.GetElement(new DmsElementId(change.MonitorSource));

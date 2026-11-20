@@ -83,40 +83,49 @@ public class MyTestClass : IDisposable
     public MyTestClass()
     {
     }
+
     [TestMethod()]
     public void MyTestMethod()
     {
         // AAA
     }
+
     [TestMethod()]
     public void MyOtherTestMethod()
     {
         // AAA
     }
+
     [AssemblyInitialize]
     public static void MyAssemblyInitialize(TestContext context)
     {
     }
+
     [AssemblyCleanup]
     public static void MyAssemblyCleanup()
     {
     }
+
     [ClassInitialize]
     public static void MyClassInitialize(TestContext context)
     {
     }
+
     [ClassCleanup]
     public static void MyClassCleanup()
     {
     }
+
     [TestInitialize]
     public void MyTestInitialize()
     {
     }
+
     [TestCleanup]
     public void MyTestCleanup()
     {
     }
+
     public void Dispose()
     {
     }

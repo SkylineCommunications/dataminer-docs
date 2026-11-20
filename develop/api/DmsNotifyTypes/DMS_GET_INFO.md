@@ -153,8 +153,10 @@ foreach (object element in retrievedElements)
         string secondConnectionPortSslTlsEnabled = additionalPortSettings[22]; // "True" or "False".
         string secondConnectionPortAllowedIpAddresses = additionalPortSettings[23]; // Semicolon-separated list of allowed IP addresses for this port.
         string secondConnectionPortConnectTimeoutTime = additionalPortSettings[24];
+
         // Second additional connection port settings (if present).
         string thirdConnectionPortType = additionalPortSettings[25];
+
         // ...
     }
 }

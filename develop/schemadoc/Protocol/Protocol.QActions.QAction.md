@@ -51,15 +51,14 @@ For information on how to use C# in protocols, see <xref:LogicQActions>.
 <![CDATA[
 using System;
 using System.IO;
-
 using Skyline.DataMiner.Scripting;
 
-public class Qaction
+public static class QAction
 {
-	public static void Run(SLProtocol protocol)
+    public static void Run(SLProtocol protocol)
     {
-		...
-	}
+        ...
+    }
 }
 ]]>
 </QAction>

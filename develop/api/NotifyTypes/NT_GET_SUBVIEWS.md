@@ -8,7 +8,7 @@ Gets the names and IDs of all child views of a view.
 
 ```csharp
 int viewID = 10008;
-object[] childViews = (object[])protocol.NotifyDataMiner(203/*NT_GET_SUBVIEWS*/, viewID, null);
+object[] childViews = (object[])protocol.NotifyDataMiner(203 /*NT_GET_SUBVIEWS*/, viewID, null);
 string[] childViewNames = (string[])childViews[0];
 int[] childViewIDs = (int[])childViews[1];
 
@@ -17,7 +17,7 @@ for (int i = 0; i < childViewNames.Length; i++)
     string childViewName = childViewNames[i];
     int childViewID = childViewIDs[i];
 
-    ////...
+    // ...
 }
 ```
 

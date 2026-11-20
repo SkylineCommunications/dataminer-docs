@@ -57,6 +57,7 @@ var traceData = docIntelHelper.GetTraceDataLastCall();
 if (!traceData.HasSucceeded())
 {
     var errors = traceData.GetErrorDataOfType<DocumentIntelligenceError>();
+
     // Handle errors
 }
 ```

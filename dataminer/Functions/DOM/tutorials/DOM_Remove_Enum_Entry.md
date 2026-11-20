@@ -47,7 +47,7 @@ The provided code below accomplishes the following:
 
 - The `SectionDefinition` is updated.
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using Skyline.DataMiner.Automation;
@@ -57,9 +57,9 @@ using Skyline.DataMiner.Net.Sections;
 
 namespace Tutorial
 {
-    ///<summary>
+    /// <summary>
     /// This script will set the "IsSoftDeleted" property of the enum entry "Director" of the SectionDefinition to "true".
-    ///</summary>
+    /// </summary>
     public class Script
     {
         public void Run(Engine engine)
@@ -107,7 +107,7 @@ The provided code below accomplishes the following:
 
 1. The instances are updated.
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using Skyline.DataMiner.Automation;
@@ -117,9 +117,9 @@ using Skyline.DataMiner.Net.Sections;
 
 namespace Tutorial
 {
-    ///<summary>
+    /// <summary>
     /// This script will remove the enum value "0" (int value of "Director") from all existing instances.
-    ///</summary>
+    /// </summary>
     public class Script
     {
         public void Run(Engine engine)
@@ -183,7 +183,7 @@ The provided code below accomplishes the following:
 
 1. The DOM definition is updated.
 
-```C#
+```csharp
 using System;
 using System.Linq;
 using Skyline.DataMiner.Automation;
@@ -194,9 +194,9 @@ using Skyline.DataMiner.Net.Sections;
 
 namespace Tutorial
 {
-    ///<summary>
+    /// <summary>
     /// This script will remove the enum entry "Director" from the DomDefinition.
-    ///</summary>
+    /// </summary>
     public class Script
     {
         public void Run(Engine engine)
@@ -224,6 +224,7 @@ namespace Tutorial
             {
                 newEnum.AddEntry(entry.DisplayName, (int)entry.Value);
             }
+
             fieldDescriptor.GenericEnumInstance = newEnum;
 
             domHelper.SectionDefinitions.Update(sectionDefinition);

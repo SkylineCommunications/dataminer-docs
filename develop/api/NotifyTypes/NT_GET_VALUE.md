@@ -12,11 +12,11 @@ uint elementId = 200;
 uint[] elementDetails = new uint[] { agentId, elementId };
 int parameterId = 120;
 
-object[] result = (object[]) protocol.NotifyDataMiner(69 /*NT_GET_VALUE*/, elementDetails, parameterId);
+object[] result = (object[])protocol.NotifyDataMiner(69 /*NT_GET_VALUE*/, elementDetails, parameterId);
 
 if (result != null && result.Length > 4)
 {
-   // string result = Convert.ToString(result[4]);
+   // string value = Convert.ToString(result[4]);
 }
 ```
 
@@ -53,22 +53,22 @@ uint agentId = 400;
 uint elementId = 200;
 uint[] elementDetails = new uint[] { agentId, elementId };
 int parameterId = 1000;
-object[] result = (object[]) protocol.NotifyDataMiner(69 /*NT_GET_VALUE*/, elementDetails, parameterId);
+object[] result = (object[])protocol.NotifyDataMiner(69 /*NT_GET_VALUE*/, elementDetails, parameterId);
 
 if (result != null && result.Length > 4)
 {
-    object[] tableColumns = ((object[])result[4]);
+    object[] tableColumns = (object[])result[4];
 
     for (int j = 0; j < tableColumns.Length; j++)
     {
         object[] tableColumn = (object[])tableColumns[j];
-        
+
         for (int k = 0; k < tableColumn.Length; k++)
         {
             object[] tableCell = (object[])tableColumn[k];
-            
-            protocol.Log("QA" + protocol.QActionID + "|table["+j+","+k+"]: " + tableCell[0], LogType.Error, LogLevel.NoLogging);
-        }      
-    }         
+
+            protocol.Log($"QA{protocol.QActionID}|table[{j},{k}]: {tableCell[0]}", LogType.Error, LogLevel.NoLogging);
+        }
+    }
 }
 ```

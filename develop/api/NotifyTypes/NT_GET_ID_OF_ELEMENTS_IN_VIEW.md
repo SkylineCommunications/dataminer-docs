@@ -8,11 +8,11 @@ Retrieves the IDs of all elements included in the view.
 
 ```csharp
 int viewID = -1;
-string[] elementIDs = (string[])protocol.NotifyDataMiner(178/*GET_ID_OF_ELEMENTS_IN_VIEW*/ , viewID, null);
+string[] elementIDs = (string[])protocol.NotifyDataMiner(178 /*GET_ID_OF_ELEMENTS_IN_VIEW*/, viewID, null);
 
 foreach (string elementID in elementIDs)
 {
-    //// ...
+    // ...
 }
 ```
 

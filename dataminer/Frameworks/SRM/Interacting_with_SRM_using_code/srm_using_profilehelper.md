@@ -97,6 +97,7 @@ var profileDefinition = new ProfileDefinition(Guid.NewGuid())
     Name = "Decoding Definition",
     Description = "Profile definition for decoding settings",
 };
+
 profileDefinition.ParameterIDs.Add(symbolRateParameter.ID);
 profileDefinition.ParameterIDs.Add(modulationTypeParameter.ID);
 

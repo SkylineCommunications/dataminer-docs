@@ -12,7 +12,7 @@ uint elementId = 527643;
 uint[] elementInfo = new uint[] { dmaId, elementId };
 uint[] parameterIds = new uint[] { 100, 300 };
 
-object[] result = (object[]) protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, parameterIds);
+object[] result = (object[])protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, parameterIds);
 ```
 
 ## Parameters
@@ -27,7 +27,7 @@ object[] result = (object[]) protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */
 - (object[]): Object array containing an uint[] array for each parameter.
 
 ```csharp
-uint[] entry = (uint[]) result[i];
+uint[] entry = (uint[])result[i];
 ```
 
 The structure of an entry in the result array is as follows:
@@ -42,12 +42,12 @@ The structure of an entry in the result array is as follows:
 
   ```csharp
   int parameterId = 1000;
-
-  object[] result = (object[]) protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, parameterId);
+  
+  object[] result = (object[])protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, parameterId);
   ```
 
 - In case you want to retrieve the alarm info of all monitored standalone parameters, you can specify a null reference for the second argument. For example:
 
   ```csharp
-  object[] result = (object[]) protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, null);
+  object[] result = (object[])protocol.NotifyDataMiner(48 /* NT_GET_ALARM_INFO */, elementInfo, null);
   ```

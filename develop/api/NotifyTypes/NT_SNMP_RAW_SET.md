@@ -7,57 +7,61 @@ uid: NT_SNMP_RAW_SET
 Performs an SNMP SET request without requiring an SNMP connection to be defined in the protocol.<!-- RN 18369 -->
 
 ```csharp
-object[] versionSpecificSettings = new object[2];
+object[] versionSpecificSettings = new object[]
+{
+    3, // 0: SNMP version.
+    new object[]
+    {
+        "User1",     // 0: Username (String)
+        3,           // 1: Security Level (Int32)
+        3,           // 2: Authentication Algorithm (Int32)
+        "AuthAuth1", // 3: Authentication Password (String)
+        2,           // 4: Encryption Algorithm (Int32)
+        "PrivPriv1", // 5: Encryption Passphrase (String)
+    },
+};
 
-versionSpecificSettings[0] = 3; // SNMP version.
+object[] settings = new object[] // Object array, minimum length = 2
+{
+    versionSpecificSettings, // 0: Version specific settings.
+    "127.0.0.2",             // 1: Destination address (String, port is optional).
 
-versionSpecificSettings[1] =
-    new object[] {
-       "User1",         // Username (String)
-        3,               // Security Level (Int32)
-        3,               // Authentication Algorithm (Int32)
-       "AuthAuth1",     // Authentication Password (String)
-        2,               // Encryption Algorithm (Int32)
-       "PrivPriv1" };   // Encryption Passphrase (String)
+    // Settings: Values with a default fallback when not provided.
+    1614,                    // 2: Destination Port (String or Int32, will not overwrite the port specified with the IP address)
+    1490,                    // 3: Timeout (Int32)
+    1,                       // 4: Retries (Int32)
+    false,                   // 5: Multiple Set (Boolean)
+    string.Empty,            // 6: Instance (String)
+};
 
-object[] settings = new object[7];     // Object array, minimum length = 2
-
-settings[0] = versionSpecificSettings; // Version specific settings.
-settings[1] = "127.0.0.2";             // Destination address (String, port is optional).
-// Settings: Values with a default fallback when not provided.
-settings[2] = 1614;                    // Destination Port (String or Int32, will not overwrite the port specified with the IP address)
-settings[3] = 1490;                    // Timeout (Int32)
-settings[4] = 1;                       // Retries (Int32)
-settings[5] = false;                   // Multiple Set (Boolean)
-settings[6] = "";                      // Instance  (String)
-
-object[] oidToSet = new object[3];
-
-oidToSet[0] = "1.3.6.1.2.1.1.8.1.6.1";  // OID.
-oidToSet[1] = Convert.ToDouble(20);     // Value to set.
-oidToSet[2] = 1;                        // SNMP type indication (1: integer).
+object[] oidToSet = new object[]
+{
+    "1.3.6.1.2.1.1.8.1.6.1", // 0: OID.
+    Convert.ToDouble(20),    // 1: Value to set.
+    1,                       // 2: SNMP type indication (1: integer).
+};
 
 object[] oidInfo = new object[] { oidToSet };
 
 var result = (object[])protocol.NotifyDataMiner(425 /*NT_SNMP_RAW_SET*/, settings, oidInfo);
 
-protocol.Log("QA" + protocol.QActionID + "|result: " + result.Length, LogType.Error, LogLevel.NoLogging);
+protocol.Log($"QA{protocol.QActionID}|result: {result.Length}", LogType.Error, LogLevel.NoLogging);
 
 if (result != null && result.Length >= 1)
 {
-   if(result[0].Equals(""))
-   {
+    if (result[0].Equals(string.Empty))
+    {
         // Set request succeeded.
-   }
-   else
-   {
+    }
+    else
+    {
         // Set request failed.
-   }
+    }
 }
 else
 {
-   protocol.Log("QA" + protocol.QActionID + "|Run|Retrieval failed.", LogType.Error, LogLevel.NoLogging);
-   protocol.SetParameter(20, "Failed");
+    protocol.Log($"QA{protocol.QActionID}|Run|Retrieval failed.", LogType.Error, LogLevel.NoLogging);
+    protocol.SetParameter(20, "Failed");
 }
 ```
 

@@ -20,11 +20,11 @@ string destination = "127.0.0.1";
 object returnValue;
 
 object[] generalInfo = new object[] { elementID, -1, destination, "", "" };
-object[] bindings = new object[] { new object[]{"1.3.6.1.4.1.2509.5.5.1.5.1", "value", "OctetString"}};
+object[] bindings = new object[] { new object[] { "1.3.6.1.4.1.2509.5.5.1.5.1", "value", "OctetString" } };
 
 dms.Notify(type, messageType, generalInfo, bindings, out returnValue);
 
-protocol.Log("QA" + protocol.QActionID + "|Return value: " + returnValue, LogType.Error, LogLevel.NoLogging);
+protocol.Log($"QA{protocol.QActionID}|Return value: {returnValue}", LogType.Error, LogLevel.NoLogging);
 ```
 
 ## Parameters

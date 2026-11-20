@@ -242,10 +242,11 @@ The QAction triggers on the trap receiver parameter and the trap information is 
 ```csharp
 public class QAction
 {
-   public static void Run(SLProtocol protocol, object trapInfo)
-  {
-      // ...
-  }
+    public static void Run(SLProtocol protocol, object trapInfo)
+    {
+        // ...
+    }
+}
 ```
 
 trapInfo (object[]):
