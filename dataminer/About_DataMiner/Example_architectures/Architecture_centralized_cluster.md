@@ -30,7 +30,7 @@ Each example shows one DMS consisting of three DMAs. Three DMAs illustrate a clu
 
 With DaaS, the DMAs and STaaS are co-hosted in the same dataminer.services cloud environment, providing low-latency storage access. STaaS is the only storage option for DaaS. The example below uses a site-to-site VPN to reach private equipment.
 
-![DaaS with site-to-site VPN connectivity](~/dataminer/images/DaaS_with_site-to-site_VPN_connectivity.png)
+![Diagram of a cloud environment hosting the DaaS DMAs DMA 1, DMA 2, and DMA 3, and STaaS as shared system data storage with low-latency access. The cloud connects through a site-to-site VPN to private equipment in a private network, and connects to public APIs and cloud services using HTTPS and API calls](~/dataminer/images/DaaS_with_site-to-site_VPN_connectivity.png)
 
 Alternatively, [DataMiner Edge](xref:DataMiner_Edge) can be used. An Edge Gateway lets centrally running integrations reach remote equipment, and an Edge Node runs compatible integrations at the site.
 
