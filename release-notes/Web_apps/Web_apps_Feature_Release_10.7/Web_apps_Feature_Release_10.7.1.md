@@ -100,6 +100,16 @@ This update also resolves the following issues:
 
 ## Changes
 
+### Breaking changes
+
+#### Legacy Reports and Dashboards are no longer available [ID 47136]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+The legacy Reports and Dashboards applications are no longer available, and their pages have been removed from the Monitoring app.
+
+For details about the associated upgrade prerequisite check, see [Legacy Reports and Dashboards: Upgrade prerequisite and IIS cleanup [ID 47135]](xref:General_Feature_Release_10.7.1#legacy-reports-and-dashboards-upgrade-prerequisite-and-iis-cleanup-id-47135).
+
 ### Enhancements
 
 #### GQI DxM: Improved performance for inter-element table parameter queries [ID 46078]
