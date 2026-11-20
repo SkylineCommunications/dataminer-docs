@@ -5,32 +5,28 @@ description: "Learn about DataMiner storage options and why Storage as a Service
 
 # About storage
 
-Each DataMiner System requires its own system data storage. This data storage serves as a repository for configuration data, historical parameter information, and alarm data.
+Each DataMiner System requires its own system data storage. This serves as a repository for configuration data, historical parameter information, and alarm data.
 
-The recommended system data storage architecture is **Storage as a Service** [(STaaS)](xref:STaaS) on dataminer.services. With STaaS, you do not need to maintain the databases yourself, and all the scaling and complexity is taken care of for you.
+The recommended system data storage architecture is [Storage as a Service (STaaS)](xref:STaaS) on dataminer.services. With STaaS, you do not need to maintain the databases yourself, and Skyline manages database capacity, redundancy, and storage backups.
 
-<br/>
+## Choosing system data storage
 
-| | self-managed | Skyline-hosted (SaaS) | all features available | scalable | easy installation | automatic backups | effortless maintenance |
-|--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Storage as a Service (STaaS)** | | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: | :heavy_check_mark: |
-| **Dedicated clustered storage** | :heavy_check_mark: | | :heavy_check_mark: | :heavy_check_mark: | | | |
-| **Storage per DMA** | :heavy_check_mark: | | | | | | |
+For a comparison of the available architectures and their support status, see [Storage options overview](xref:Supported_system_data_storage_architectures). Check [STaaS features and limitations](xref:STaaS_features) against the functionality your solution uses, especially when migrating an existing system.
 
-<br/>
+Though this is **not recommended**, you can also host and manage the DataMiner storage yourself. In that case, use [dedicated clustered storage](xref:Dedicated_clustered_storage), consisting of a Cassandra cluster and an OpenSearch cluster on dedicated Linux machines. You are responsible for capacity, database maintenance, redundancy, and backups.
 
-Though this is **not recommended**, you can also host and manage the DataMiner storage yourself. In that case, you will need to configure a **dedicated clustered storage** setup, using a [Cassandra-compatible database service](xref:Cassandra_database) and an [indexing database](xref:Indexing_Database) (i.e., a Search Cluster). While all features are also available with this setup, managing and maintaining it is a great deal **more complex**.
+Older systems can still use **storage per DMA** with Cassandra or (prior to DataMiner 10.6) MySQL. These architectures are obsolete and do not support all DataMiner features, including Swarming. Plan a migration using [Migrating existing data to STaaS](xref:Migrating_existing_data_to_STaaS), and check the prerequisites for your current storage architecture. Direct migration from MySQL to STaaS is not supported; see [STaaS migration limitations](xref:STaaS_features#limitations).
 
-Instead of a dedicated clustered storage setup, older systems often still use **storage per DMA** with [Cassandra](xref:Migrating_the_general_database_to_Cassandra) or (prior to DataMiner 10.6) [MySQL](xref:MySQL_database), but this is setup is considered **obsolete** and **not all DataMiner features are available** if it is used. We highly recommend [migrating to a STaaS setup](xref:Migrating_existing_data_to_STaaS) instead. Note that this requires a [migration to Cassandra](xref:Migrating_the_general_database_to_Cassandra) first, which must be done using a DataMiner version prior to 10.3.0 [CU6]/10.3.6, as this migration is no longer supported from these DataMiner versions onwards.<!-- RN 36095 -->
+## Storage availability and offloading
+
+When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the size of these offloads in [DB.xml](xref:DB_xml#configuring-a-size-limit-for-file-offloads). File offloads do not replace database redundancy or backups.
+
+You can also configure [data offloads to a separate database or to files](xref:Offload_database), for example to produce reports without interfering with the live DataMiner System.
 
 > [!TIP]
 > See also:
 >
-> - [DataMiner Hosting and High Availability](xref:Overview_hosting)
+> - [DataMiner System architecture and components](xref:Overview_Architecture_and_components)
+> - [DataMiner deployment models](xref:Overview_hosting)
 > - [Securing the DataMiner databases](xref:Cassandra_authentication)
 > - [Third-party software support lifecycle](xref:Software_support_life_cycles#third-party-software-support-lifecycle)
-
-> [!NOTE]
->
-> - When the main database is offline, file offloads are used to store write/delete operations. You can configure a limit for the file size of these offloads in the file [DB.xml](xref:DB_xml#configuring-a-size-limit-for-file-offloads).
-> - You can also configure [data offloads to a separate database or to files](xref:Offload_database), for example in order to produce all kinds of reports without interfering with the live DataMiner System.

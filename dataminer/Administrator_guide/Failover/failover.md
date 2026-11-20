@@ -12,3 +12,6 @@ Each DataMiner Agent in a DataMiner system can be teamed up with a dedicated bac
 
 > [!NOTE]
 > This feature is not available if [Swarming](xref:Swarming) is enabled.
+
+> [!IMPORTANT]
+> Failover has reached [End of Engineering](xref:Software_support_life_cycles) and is being replaced by [Swarming](xref:Swarming). For new systems, we recommend using Swarming in combination with [Node Recovery](xref:NodeRecovery_About) instead. See [Redundancy](xref:Overview_Architecture_and_components#redundancy).
