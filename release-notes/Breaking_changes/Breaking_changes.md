@@ -8,6 +8,7 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | <div style="width:120px">Release note ID</div> | Release version(s) | Description |
 |--|--|--|
+| [47136](xref:Web_apps_Feature_Release_10.7.1#legacy-reports-and-dashboards-are-no-longer-available-id-47136) | DataMiner 10.7.0/10.7.1 | The legacy Reports and Dashboards applications are no longer available, and their pages have been removed from the Monitoring app. |
 | [47010](xref:General_Feature_Release_10.7.1#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010) | DataMiner 10.7.0/10.7.1 | Support for JScript and VBScript in QActions has reached End of Life and has been removed. |
 | [46944](xref:General_Feature_Release_10.7.1#document-intelligence-assistant-permission-checks-id-46944) | DataMiner 10.7.0/10.7.1 | Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission. |
 | [46936](xref:Cube_Feature_Release_10.7.1#service--resource-management-legacy-reservation-support-removed-for-dataminer-1060-and-later-id-46936) | DataMiner Cube 10.6.0 [CU10]/10.7.0/10.7.1 | When DataMiner Cube connects to a DataMiner Agent running version 10.6.0 or later, legacy reservations will no longer be available in the Resource Manager booking view and timeline/scheduler, in dynamic lists, and in *Reservation* shapes in Visual Overview. |
