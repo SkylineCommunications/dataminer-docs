@@ -40,6 +40,7 @@ Before you upgrade to this DataMiner version:
 - [DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]](#dataminer-upgrade-prerequisite-check-for-the-end-of-slhelper-gqi-support-id-46957)
 - [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 - [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
+- [SLNet: Support for .NET Remoting removed [ID 47004]](#slnet-support-for-net-remoting-removed-id-47004)
 - [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
 - [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
 - [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
@@ -316,6 +317,18 @@ To temporarily continue using MySQL, add the following case-sensitive option to 
 ```
 
 Consider migrating to Cassandra Cluster or Storage as a Service (STaaS) instead.
+
+#### SLNet: Support for .NET Remoting removed [ID 47004]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Support for .NET Remoting, which has reached End of Life, has been removed from SLNet.
+
+The legacy .NET Remoting connection option has also been removed from the SLNetClientTest tool.
+
+In SLNetTypes, related settings and methods have been marked as obsolete. They remain available for clients that need to connect to older DataMiner servers that still support .NET Remoting.
+
+See also: [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
 
 #### Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]
 
