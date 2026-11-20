@@ -86,6 +86,20 @@ Because of a number of enhancements, overall performance of the VerifyNatsCluste
 
 ### Fixes
 
+#### MessageBroker client could get stuck while trying to fetch information from BrokerGateway [ID 43832]
+
+<!-- MR 10.5.0 [CU9] / 10.6.0 [CU4] - FR 10.5.12 -->
+
+When, on systems using the BrokerGateway-managed NATS solution, BrokerGateway is not running the local DataMiner Agent, the MessageBroker client could get stuck while trying to fetch information from BrokerGateway.
+
+#### Problem when generating a default MessageBrokerConfig.json file [ID 44155]
+
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU4] - FR 10.6.2 -->
+
+When neither an *SLCloud.xml* file nor a *MessageBrokerConfig.json* file could not be found on a DataMiner Agent, up to now, any process using MessageBroker would fail to generate a default *MessageBrokerConfig.json* file. As a result, it would not be possible to connect to NATS.
+
+From now on, when neither a *SLCloud.xml* file nor a *MessageBrokerConfig.json* file can be found, a default *MessageBrokerConfig.json* file will be generated.
+
 #### Elements incorrectly moved to root view after moving view with service containing those elements to view containing the original elements [ID 45286]
 
 <!-- MR 10.5.0 [CU16] / 10.6.0 [CU4] - FR 10.6.6 -->

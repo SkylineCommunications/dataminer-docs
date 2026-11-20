@@ -434,7 +434,7 @@ In addition, if you change your own role to a role with fewer rights, a warning 
 
 #### 30 August 2024 - Enhancement - Admin - DxM .NET 8 warning when installing DataAggregator 3.0.6 [ID 40478]
 
-When you install the DataAggregator DxM version 3.0.6, a warning will now be shown that .NET 8 is required.
+When you install the DataAggregator DxM version 3.3.1, a warning will now be shown that .NET 8 is required.
 
 #### 30 August 2024 - Fix - Catalog - Organization field not filled in when registering item [ID 40472]
 
