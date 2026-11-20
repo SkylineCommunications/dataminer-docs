@@ -27,6 +27,7 @@ For more details about what each workflow does, you can check one of the links b
 - [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow)
 - [DataMiner App Package Master Workflow](xref:github_reusable_workflows_dataminer_app_packages_master_workflow)
 - [Update Catalog Details](xref:github_reusable_workflows_update_catalog_details)
+- [OKF Source Sync Review Workflow](xref:github_reusable_workflows_okf_source_sync_review_workflow)
 
 > [!IMPORTANT]
 > As of 2 November 2026, the Automation workflows and the legacy connector pipeline are no longer available. Use the Master Workflow for solutions using `Skyline.DataMiner.Sdk` and the Connector Master Workflow for SDK-style connector solutions. See [Automation workflow migration](xref:github_reusable_workflows_automation_master_workflow) and [Connector Master Workflow](xref:github_reusable_workflows_connector_master_workflow) for details.

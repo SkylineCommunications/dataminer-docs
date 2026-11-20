@@ -33,8 +33,18 @@ Before you upgrade to this DataMiner version:
 
 ## Important changes
 
+- [Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]](#scheduler-swarmed-tasks-could-execute-actions-configured-for-another-task-id-46728)
+- [GQI: GQI via SLHelper disabled by default [ID 46927]](#gqi-gqi-via-slhelper-disabled-by-default-id-46927)
 - [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 - [Document Intelligence: Assistant permission checks [ID 46944]](#document-intelligence-assistant-permission-checks-id-46944)
+- [DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]](#dataminer-upgrade-prerequisite-check-for-the-end-of-slhelper-gqi-support-id-46957)
+- [DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]](#dataminer-upgrade-prerequisite-checks-for-end-of-support-and-end-of-life-features-id-46984)
+- [DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]](#dataminer-startup-mysql-requires-an-explicit-end-of-support-override-id-47000)
+- [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
+- [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
+- [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
+- [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
+- [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
 
 ## Highlights
 
@@ -68,7 +78,7 @@ A new *Intelligence App* user permission has now been added. This permission wil
 
 #### Service & Resource Management: Support for legacy reservations removed [ID 46931]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 Support for legacy Resource Manager reservations has been removed from the DataMiner server. From now on, use `ReservationInstance` objects instead of legacy reservations.
 
@@ -93,6 +103,16 @@ Each Document Intelligence request from SLNet now includes connection informatio
 
 > [!IMPORTANT]
 > Document Intelligence in DataMiner 10.6 is incompatible with Assistant versions that enforce these permission checks (i.e., Assistant 4.0.0 or newer).
+
+#### QActions: JScript and VBScript are no longer supported [ID 47010]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
+
+The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
+
+In addition, the SLSite COM component will be uninstalled during an upgrade.
 
 ### Enhancements
 
@@ -207,11 +227,73 @@ The `ScheduledTaskDetails` class, which is used only to migrate scheduled tasks 
 
 As a result, SLNetTypes no longer depends on *Skyline.DataMiner.Core.DMAObjects.Config.dll*.
 
+#### GQI: GQI via SLHelper disabled by default [ID 46927]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+GQI via SLHelper is now disabled by default in favor of the GQI DxM. Legacy GQI requests will return an error directing you to use the GQI DxM instead.
+
+As a temporary fallback, you can re-enable GQI via SLHelper by adding the following option to the `SLNet` section of `C:\Skyline DataMiner\SoftLaunchOptions.xml` and restarting DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.SLHelperGQI>true</EndOfSupport.SLHelperGQI>
+</SLNet>
+```
+
+The legacy GQI implementation in SLHelper will be removed completely in a later version.
+
+#### SLNet: Faster updates of large subscription sets [ID 46934]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+SLNet will now update large subscription sets more efficiently, particularly when replacing a subscription set with one that contains only a few added or removed subscriptions.
+
 #### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
 
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
+#### DataMiner upgrade: Prerequisite check for the end of SLHelper GQI support [ID 46957]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new upgrade prerequisite will check whether DataMiner Agents running a version older than 10.7.0 are ready for the end of support for GQI via SLHelper. It will check two independent requirements:
+
+- The Web API must use the GQI DxM. If the effective `gqi:useDxM` setting is `false`, the upgrade will be blocked.
+- There must be no GQI log activity within the last 30 days, unless the `EndOfSupport.SLHelperGQI` soft-launch option is enabled to temporarily allow continued use of GQI via SLHelper. Otherwise, the upgrade will be blocked.
+
+The prerequisite will report detected issues and inspection errors together with corrective actions. Enabling the soft-launch option will not bypass the Web API requirement.
+
+The check will be skipped on DataMiner Agents already running version 10.7.0 or higher.
+
+#### DataMiner upgrade: Prerequisite checks for End of Support and End of Life features [ID 46984]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner upgrades to version 10.7.x will now check for features that have reached End of Support or End of Life.
+
+##### End of Support features
+
+If any of the following features is in use, the upgrade will be blocked unless its corresponding case-sensitive soft-launch option is set to `true` in *SoftLaunchOptions.xml*:
+
+| Feature | Soft-launch option |
+|---------|--------------------|
+| MySQL as the main database | `EndOfSupport.MySQL` |
+| Elasticsearch 6.8 or earlier | `EndOfSupport.Elastic` |
+| Cassandra 3.x or earlier | `EndOfSupport.Cassandra3` |
+| Atlassian Crowd authentication or user and group management | `EndOfSupport.Crowd` |
+| RADIUS authentication | `EndOfSupport.RADIUS` |
+
+##### End of Life features
+
+The upgrade will be blocked if either of the following configurations is present:
+
+- .NET Remoting explicitly enabled in *MaintenanceSettings.xml* for communication between DataMiner Agents or between DataMiner Cube and SLNet.
+- A two-site redundant indexing cluster (EMCO).
+
+These checks have no soft-launch override. Remove or migrate these configurations before upgrading.
 
 #### Automation: Clearer error messages when script compilation fails [ID 46989]
 
@@ -220,6 +302,36 @@ The fixed timeout for the BrokerGateway `applymanualconfig` call has been increa
 When an automation script fails to compile, DataMiner will now report the `SL_AUTOMATION_SCRIPT_COMPILATION_FAILED` error, including the compiler diagnostics, when loading the script. Previously, the script would fail at runtime with a "No Assembly found for cookie" error and be retried 100 times.
 
 The compilation error will be displayed when you execute the script in DataMiner Cube and returned when you execute it through code.
+
+#### DataMiner startup: MySQL requires an explicit End of Support override [ID 47000]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, a DataMiner Agent using MySQL as its main database will no longer start unless the `EndOfSupport.MySQL` soft-launch option is set to `true`. If the option is missing or not set to `true`, DataMiner will stop and log an error.
+
+To temporarily continue using MySQL, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` and restart DataMiner:
+
+```xml
+<EndOfSupport.MySQL>true</EndOfSupport.MySQL>
+```
+
+Consider migrating to Cassandra Cluster or Storage as a Service (STaaS) instead.
+
+#### Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, Atlassian Crowd authentication is no longer supported by default. This includes authenticating users against a Crowd server and importing users and groups from a Crowd server.
+
+If Crowd is configured as the external authentication method in *DataMiner.xml* (`<ExternalAuthentication type="CROWD">`) and the `EndOfSupport.Crowd` soft-launch option is not set to `true`, the DataMiner Agent will log the reason and stop during startup. Without this override, saving Crowd external authentication settings will also be rejected.
+
+To temporarily continue using Atlassian Crowd, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` on every DataMiner Agent that uses Crowd, and restart DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.Crowd>true</EndOfSupport.Crowd>
+</SLNet>
+```
 
 #### DataMiner upgrade: Removal of unused SLScripting DLL files [ID 47015]
 
@@ -231,6 +343,80 @@ DataMiner upgrades will now remove the following unused DLL files from `C:\Skyli
 - *Skyline.DataMiner.Core.StorageModule.dll*
 
 These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
+
+#### Security: RADIUS authentication is no longer supported by default [ID 47018]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+From now on, RADIUS authentication is no longer supported by default. This includes authenticating users against a RADIUS server.
+
+If RADIUS is configured as the external authentication method in *DataMiner.xml* (`<ExternalAuthentication type="RADIUS">`) and the `EndOfSupport.RADIUS` soft-launch option is not set to `true`, the DataMiner Agent will log the reason and stop during startup. Without this override, saving RADIUS external authentication settings will also be rejected.
+
+To temporarily continue using RADIUS, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml` on every DataMiner Agent that uses RADIUS, and restart DataMiner:
+
+```xml
+<SLNet>
+  <EndOfSupport.RADIUS>true</EndOfSupport.RADIUS>
+</SLNet>
+```
+
+#### Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]
+
+<!-- MR 10.8.0 - FR 10.7.1 -->
+
+The following connector features have reached End of Support and are now disabled by default:
+
+- The `dllName` option in the `options` attribute of a QAction.
+- Logger tables of type `DirectConnection`.
+
+During a DataMiner upgrade, the new `VerifyEndOfSupportConnectors` prerequisite check will block the upgrade if it detects connector versions that use either feature, unless the corresponding soft-launch option is enabled.
+
+Before upgrading, configure affected elements to use connector versions that no longer contain these features, and remove detected connector versions that are no longer in use.
+
+If no compatible connector version is available, you can continue using an affected connector by activating the corresponding soft-launch option before upgrading:
+
+- `EndOfSupport.DllName` for the `dllName` option.
+- `EndOfSupport.DirectConnection` for logger tables of type `DirectConnection`.
+
+After the upgrade, uploading and using a connector with either feature will cause its elements to fail to start unless the corresponding soft-launch option is enabled.
+
+> [!NOTE]
+> The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
+
+#### User-Defined APIs: Requests now routed through API Gateway [ID 47107]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM now registers its `/api/custom` route with the API Gateway at startup. Requests to this route are now proxied through the API Gateway instead of relying on an IIS URL Rewrite rule.
+
+The DxM no longer creates, validates, or repairs the IIS rewrite rule. Existing rules are left unchanged and can still route unencrypted HTTP requests on existing deployments. New deployments do not receive a rewrite rule and only support triggering APIs over HTTPS.
+
+By default, the module registers with a module-specific rate limit of 6000 requests per minute. To configure a different limit:
+
+1. Add the following setting to *appsettings.custom.json*, adjusting the value as required:
+
+   ```json
+   {
+     "ApiGatewayRegistration": {
+       "RateLimitPerMinute": 3000
+     }
+   }
+   ```
+
+1. Restart the *DataMiner UserDefinableApiEndpoint* service.
+
+The API Gateway request inactivity timeout is set to the configured NATS timeout plus 5 seconds, allowing the endpoint's timeout error response to reach the caller.
+
+> [!IMPORTANT]
+> This UserDefinableApiEndpoint version requires API Gateway 0.11.0 or later, which supports module-specific rate limits. With an older API Gateway version, the default shared limit of 60 requests per minute will also apply to user-defined API triggers. Also, with an older API Gateway version, the API Gateway request inactivity timeout will be set to 100s.
+
+#### Remaining legacy Annotations reference removed [ID 47122]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+The following remaining reference to the legacy Annotations module, which has reached end of life, have been removed:
+
+- ISAPI filtering no longer takes `/annotations/` into account.
 
 ### Fixes
 
@@ -247,6 +433,27 @@ Up to now, when a service was deleted, the generated deleted-service information
 SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filter, trend filter, or redundancy group information if an SLXML query returned an array with unexpected dimensions.
 
 SLNet will now retry failed redundancy group queries once after a short delay. Array index errors will also be logged in *SLNet.txt* with the variable name, the exact array index, and the complete query response array in compressed form to help diagnose the issue.
+
+#### Scheduler: Swarmed tasks could execute actions configured for another task [ID 46728]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Previously, editing a scheduled task that had been swarmed could cause action IDs to be reused. As a result, multiple scheduled tasks could reference the same action, causing one task to execute actions configured for another task.
+
+Newly assigned actions will now be stored in the database using their complete IDs (DataMiner ID + action ID), ensuring that each action is uniquely identified. The legacy action ID columns will continue to be updated for downgrade compatibility.
+
+> [!CAUTION]
+>
+> - To correct scheduled tasks that were swarmed and edited in a version without this fix, recreate them in a version that includes the fix. Editing them again will not resolve the issue.
+> - This fix is **not rolling compatible**. Upgrade all DataMiner Agents to a version that includes this fix. Until all Agents have been upgraded, avoid editing scheduled tasks swarmed across Agents running older versions, as this could cause action IDs to be reused.
+
+#### Visual Overview in web apps: SLHelper could stop responding after a session startup failure [ID 46744]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+Previously, when Windows failed to create a window while SLHelper was starting a Cube session for a mobile visual overview, the automatic startup retry could leave the session in an invalid state. Cleaning up that session could then cause SLHelper to stop responding, blocking all mobile visual overview requests for all dashboards and users until SLHelper was restarted.
+
+Each startup retry will now use a new, isolated environment, and a session will only be considered started once it is running. Cleaning up a failed or unresponsive session will no longer block SLHelper. If a session cannot be started after several attempts, only the mobile visual overview requesting that session will fail; other sessions will remain unaffected.
 
 #### STaaS: Incomplete state-change history after migrating from Cassandra [ID 46769]
 
@@ -277,6 +484,16 @@ When a StorageModule insert operation was retried after a NATS timeout, it could
 
 During paged read operations, retries when fetching pages after the first page could cause data to be missed following a timeout. These requests will no longer be retried. If a read operation fails, an error will be returned instead.
 
+#### SLDataMiner could stop responding when recovering from an SLScripting process crash [ID 46849]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When an SLScripting process disappeared while elements were starting, SLDataMiner could stop responding because of a deadlock. Elements could no longer be started or stopped, and the DataMiner Agent had to be restarted.
+
+From now on, elements that used the disappeared SLScripting process will be restarted without blocking other elements that are starting at the same time. Each process disappearance will only be recovered once.
+
+While DataMiner is stopping, no SLScripting or SLProtocol processes will be recovered or started.
+
 #### Failover: Memory and CPU spikes on offline Agents when updating services or elements [ID 46875]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
@@ -287,9 +504,15 @@ Both online and offline Agents will now keep their XML-based services in memory 
 
 #### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
 
-<!-- MR 10.8.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 -->
 
 During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
+
+#### SLNet: Initial parameter event could be missing after updating a subscription set [ID 46913]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a parameter was removed from a subscription set and then added again, SLNet could fail to send the initial event for that parameter after the subscription update.
 
 #### DataMiner upgrade: DxMs installed under a previous product name could be skipped [ID 46938]
 
@@ -307,6 +530,31 @@ Resources could not be updated when they were used by a canceled reservation. Th
 
 Canceled reservations are now ignored when checking whether resource updates would cause reservations to enter quarantine.
 
+#### Failover: Deleted service templates could reappear after switching back [ID 46990]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+<!-- Not added to MR 10.7.0 - Introduced by RN 45370 -->
+
+Previously, a deleted service template could reappear in SLNet after switching back to the original active Agent in a Failover setup. This could happen when the template existed on that Agent and was deleted after switching to the other Agent.
+
+Deleted service templates will now remain absent after switching back.
+
+#### User-Defined APIs: Endpoint startup could be blocked when NATS was unavailable [ID 46997]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM could remain blocked during startup when the NATS service was unavailable. As a result, API callers would not receive a response explaining the connection failure.
+
+The endpoint will now start while its NATS connections are being established. API triggers received before the message broker is initialized will return HTTP 503 with error code 1006 and the message "Service not ready yet, try again later."
+
+Connection attempts will continue in the background. Once NATS is available and initialization succeeds, API triggers will be forwarded normally and cloud status reporting will resume.
+
+#### SLSNMPAgent could crash on systems with many large services [ID 47031]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+On DataMiner Agents with many large services, SLSNMPAgent could crash during startup or when services were changed.
+
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
@@ -315,6 +563,17 @@ When initialization of `CCAEndpointManager` failed, the initialization alarm cou
 
 An initialization alarm will now only be generated if all initialization retries fail.
 
+#### Automation: Script Runner could load an incorrect assembly version [ID 47069]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Previously, Script Runner searched the protocol scripts folders by default. An assembly in one of these folders could be loaded instead of the version explicitly referenced by a script.
+
+From now on, Script Runner will no longer add `C:\Skyline DataMiner\ProtocolScripts` or `C:\Skyline DataMiner\ProtocolScripts\DllImport` as default assembly hint paths. Script-specific references will take priority, with `C:\Skyline DataMiner\Files` remaining the fallback.
+
+> [!IMPORTANT]
+> If a script executed by Script Runner needs a DLL from either protocol scripts folder, you must add an explicit reference to that DLL in the script. These folders will no longer be searched automatically.
+
 #### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
@@ -322,3 +581,11 @@ An initialization alarm will now only be generated if all initialization retries
 Previously, a DataMiner upgrade would install the CloudFeed DxM even on DataMiner Agents where it was not installed or had previously been uninstalled.
 
 From now on, the CloudFeed DxM will only be upgraded if it is already installed. It will be updated to the version included in the DataMiner upgrade package. This prevents unnecessary resource consumption on DataMiner Agents that do not need the CloudFeed DxM.
+
+#### SLSNMPAgent: SNMP requests could fail after Failover or network changes [ID 47106]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+After a Failover switch, IP address recreation, or a network interface card (NIC) state change, SLSNMPAgent could fail to recreate its SNMP listener. As a result, the DataMiner Agent could stop responding to SNMP requests on the configured port.
+
+The previous listener will now be released before its replacement binds to the configured SNMP port, preventing an internal UDP port conflict.

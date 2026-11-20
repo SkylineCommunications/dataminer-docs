@@ -18,7 +18,7 @@ To define a page button:
 
 ```xml
 <Param id="220">
-  <Name>settingsPageButton</Name>
+  <Name>SettingsPageButton</Name>
   <Description></Description>
   <Type>write</Type>
   <Interprete>

@@ -44,7 +44,7 @@ Response format:
 Below you can find the structure of the referenced parameters:
 
 ```xml
-<Param id="50" trending="false">
+<Param id="50">
    <Name>S101BOF</Name>
    <Description>S101 BOF</Description>
    <Type options="headerTrailerLink=1">header</Type>
@@ -59,7 +59,7 @@ Below you can find the structure of the referenced parameters:
 ```
 
 ```xml
-<Param id="51" trending="false">
+<Param id="51">
    <Name>S101EOF</Name>
    <Description>S101 EOF</Description>
    <Type options="headerTrailerLink=1">trailer</Type>
@@ -89,7 +89,7 @@ Below you can find the structure of the referenced parameters:
 ```xml
 <Param id="53" trending="false">
    <Name>S101ResponseData</Name>
-   <Description>S101 Reponse Data</Description>
+   <Description>S101 Response Data</Description>
    <Type>read</Type>
    <Interprete>
       <RawType>other</RawType>

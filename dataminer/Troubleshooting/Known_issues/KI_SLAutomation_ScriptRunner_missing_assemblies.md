@@ -17,7 +17,7 @@ However, dependencies that are not anticipated may be omitted from this folder. 
 
 ## Fix
 
-No fix is available yet.<!-- RN 46443 -->
+Install DataMiner 10.6.11/10.7.0.<!-- RN 46443 -->
 
 ## Description
 

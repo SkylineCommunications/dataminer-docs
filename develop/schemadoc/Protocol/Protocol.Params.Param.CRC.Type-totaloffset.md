@@ -24,7 +24,7 @@ unsignedInt
 
 ```xml
 <Param>
-  <CRC>
-     <Type totaloffset="32">
-     ...
+   <CRC>
+      <Type totaloffset="32">
+      ...
 ```

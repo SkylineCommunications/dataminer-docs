@@ -40,7 +40,12 @@ Existing fixed issues already use `<!-- RN 12345 -->` after the fix version. Ign
 1. Never edit files without confirmation. If the user asks to apply the changes, do so for **Fixed and released** issues only, following [publish-known-issue](../publish-known-issue/SKILL.md) and the style of existing fixed known issues:
    - In the page, replace "No fix is available yet." with all fix versions from the release note (Main Release, Feature Release, and CU versions where applicable, e.g., "10.7.0/10.6.11"), keeping the `<!-- RN <ID> -->` comment.
    - In `Known_issues.md`, fill in *Resolved in* with all those versions, using the same notation as the other rows (Main Release before Feature Release).
-   - Keep the existing row order.
+   - In `Known_issues.md`, move the row from the unresolved rows to the resolved rows of the same table, so that all unresolved issues stay listed first. Resolved rows are ordered by *Date added*, newest first, and the resolved group stays together.
+   - In `dataminer/Troubleshooting/toc.yml`, move the issue's entry from *Current issues* to the top of *Resolved issues*. The most recently resolved issues come first, so the date added does not matter here.
+   - Keep the order of all other rows and entries.
+   - Always list versions from earliest to latest (e.g., 10.6.11/10.7.0).
+   - A release note that is not published in this repository yet may still be documented if the user confirms its versions.
+   - Scan the complete overview (all tables, such as 10.6.x, 10.5.x, 10.4.x, 10.3.x, and Other) for unresolved rows and for pages that are missing from the overview. Do not rely on truncated search output.
 
 ## Constraints
 

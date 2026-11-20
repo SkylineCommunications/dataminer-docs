@@ -24,7 +24,7 @@ If you specify this option in the ArrayOptions tag of a table parameter, when yo
 Example:
 
 ```xml
-<Param id="101" trending="false">
+<Param id="101">
   ...
   <Type>array</Type>
   <ArrayOptions index="0" options=";autoAdd">
@@ -182,7 +182,7 @@ By default, the order is as follows:
 Example:
 
 ```xml
-<ArrayOptions index="0" options=";naming=/1002;processingOrder=0,1,2,3,4,6,7,10,12,14,15,16,19,20,21,22,27,29,31,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,5,8,9,11,13,17,18,23,24,25,26,28,30,32,33,34">
+<ArrayOptions index="0" options=";processingOrder=0,1,2,3,4,6,7,10,12,14,15,16,19,20,21,22,27,29,31,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,5,8,9,11,13,17,18,23,24,25,26,28,30,32,33,34">
 ```
 
 See also: [Column processing order in tables](xref:InnerWorkingsSLElement#column-processing-order-in-tables)
@@ -240,17 +240,17 @@ Example
 
 ```xml
 <Param id="11600">
-  <Name>CPE Frequencies</Name>
+  <Name>CPEFrequencies</Name>
   <Description>CPE Frequencies</Description>
   <Type>array</Type>
   <ArrayOptions index="0" partial=";true:1000" options=";volatile;view=90000,remoteId;
 directView=3301;onlyFilteredDirectView;filterChange=11601-9001,11602-9002,11603-9003,11604-9004">
-     <ColumnOption idx="0" pid="11601" type="retrieved" options=";"/>
-     <ColumnOption idx="1" pid="11602" type="retrieved" options=";"/>
-     <ColumnOption idx="2" pid="11603" type="retrieved" Options=";"/>
-     <ColumnOption idx="3" pid="11604" type="retrieved" Options=";"/>
-   </ArrayOptions>
-   ...
+    <ColumnOption idx="0" pid="11601" type="retrieved" options=";"/>
+    <ColumnOption idx="1" pid="11602" type="retrieved" options=";"/>
+    <ColumnOption idx="2" pid="11603" type="retrieved" Options=";"/>
+    <ColumnOption idx="3" pid="11604" type="retrieved" Options=";"/>
+  </ArrayOptions>
+  ...
 ```
 
 ### volatile

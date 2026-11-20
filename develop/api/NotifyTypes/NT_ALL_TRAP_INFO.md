@@ -9,9 +9,9 @@ Can be used to trigger a custom context menu item.
 For example, suppose the following context menu item has been defined:
 
 ```xml
-<Param id="3210" trending="false">
-   <Name>Functional Units_ContextMenu</Name>
-   <Description>Functional Units_ContextMenu</Description>
+<Param id="3210">
+   <Name>FunctionalUnits_ContextMenu</Name>
+   <Description>Context Menu (Functional Units)</Description>
    <Type>write</Type>
    <Interprete>
       <RawType>other</RawType>

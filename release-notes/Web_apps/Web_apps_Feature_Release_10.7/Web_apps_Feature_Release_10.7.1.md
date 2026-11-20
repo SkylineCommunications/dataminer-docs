@@ -165,7 +165,7 @@ Cross-origin resource sharing (CORS) now allows the `Authorization` header for s
 
 #### Web DcM: Updated PuppeteerSharp and bundled Chromium [ID 46955]
 
-<!-- MR 10.7.0 / 10.6.0 [CU10] - FR 10.7.1 -->
+<!-- MR 10.5.0 [CU22] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The Web DcM, which generates PDF reports, now uses PuppeteerSharp 25.15.0 instead of 21.1.1.
 
@@ -178,6 +178,154 @@ This update also includes Chromium 155.0.8059.84.
 When an app manages its own theme, the user settings now display the message "Theme setting is managed by the app." above the *Theme* setting. This clarifies why your selected theme does not affect that app.
 
 The message is not shown in apps that support this setting, such as Assistant, the DataMiner landing page, and uploaded DataMiner apps.
+
+#### GQI DxM: Legacy Ticketing data source removed [ID 47037]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+Following the end of life of Ticketing in DataMiner 10.6.0, the legacy Ticketing data source has been removed from the GQI DxM.
+
+Queries that still use this data source can no longer be executed. In low-code apps, for example, they will fail with the error `GQI error: An unknown error occurred in GQI: Failed parsing request: Invalid ID: 'Ticketing'.`.
+
+#### DataMiner upgrade: DataMiner Assistant DxM installed on every Agent [ID 47047]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner web-only upgrades will now install the DataMiner Assistant DxM on every DataMiner Agent being upgraded, even if the DxM was not previously installed. Previously, upgrades would only update the DxM on Agents where it was already installed.
+
+If a newer version of the DataMiner Assistant DxM is already installed, it will not be downgraded.
+
+#### Web apps: Clearer sign-in screens and improved connection recovery [ID 47070]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The sign-in and application authorization screens now show the target system and application more clearly. More compact sign-in dialogs are used when applications request API access.
+
+Also, expired connections will now trigger connection recovery. Access-denied responses will no longer unnecessarily interrupt an otherwise valid session.
+
+#### Web apps: System-wide DataMiner Intelligence setting [ID 47084]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+A new *DataMiner Intelligence* setting in the web apps' *System settings* allows you to enable or disable DataMiner Intelligence for the entire DataMiner System.
+
+- Changing the setting requires both the *Access* permission under *DataMiner Intelligence* and the *Admin tools* permission. Without both permissions, the setting is read-only.
+- Enabling the setting requires DataMiner server version 10.7 or higher and a dataminer.services connection. If either requirement is not met, you cannot enable the setting, and a tooltip explains why.
+- The setting and permission labels use your configured product name.
+
+Changes take effect immediately, without reloading the page. Disabling DataMiner Intelligence removes the Assistant app from the app menu and apps overview. If the Assistant app is already open, it displays a "page not found" message. Enabling DataMiner Intelligence makes the app available again.
+
+The *Specialized agents* setting in the Assistant app now also saves changes immediately, without reloading the page. The chat, agent overview, and agent editor update right away. If the selected agent becomes unavailable, the chat switches to the default agent. Changing this setting requires the *Admin tools* permission.
+
+#### DataMiner apps: Custom header buttons and menus for uploaded apps [ID 47099]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Uploaded DataMiner apps can now add buttons, nested menus, spacers, and separators to the application header through the `postMessage` API. Button labels, icons, tooltips, loading states, and disabled states can be updated without replacing the controls.
+
+##### Configuring header controls
+
+Send the following message from the app's iframe to configure its header controls:
+
+```json
+{
+  "header": {
+    "set": [
+      { "label": "Save", "icon": "save", "identifier": "save" },
+      { "type": "separator" },
+      { "icon": "refresh", "title": "Refresh data", "identifier": "refresh" },
+      { "type": "spacer" },
+      {
+        "label": "Export",
+        "children": [
+          { "label": "Export PDF", "identifier": "export-pdf" },
+          {
+            "label": "More formats",
+            "children": [
+              { "label": "Export CSV", "identifier": "export-csv" }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
+```
+
+Button and menu items support `label`, `title` (tooltip), `icon`, `identifier`, and `children`:
+
+- Top-level buttons require a non-blank label, or both an icon and a title. Child menu items always require a non-blank label.
+- Items without children require a non-blank identifier. Selecting them sends `{"header":{"identifier":"<selected identifier>"}}` back to the iframe.
+- Items with children open a menu without sending an action message. They can have an identifier for presentation updates.
+- Top-level buttons and leaf menu actions support the boolean fields `isLoading` and `isDisabled`. Either state prevents activation. Nested submenu parents do not support these fields.
+- Spacers and separators are supported only at the top level and cannot contain fields other than `type`.
+
+Each `set` replaces the previous custom controls and closes the active context menu. Send `{"header":{"set":[]}}` to remove custom controls without removing the framework header.
+
+##### Updating header controls
+
+To update existing controls, send an array of updates targeting controls by a unique identifier:
+
+```json
+{
+  "header": {
+    "update": [
+      { "identifier": "save", "label": "Saving", "isLoading": true },
+      { "identifier": "export-pdf", "isDisabled": true }
+    ]
+  }
+}
+```
+
+Updates can change `label`, `title`, `icon`, `isLoading`, and `isDisabled`, but not identifiers, children, or layout. Set a label, title, or icon to `null` to clear it, provided the resulting item still meets its presentation requirements. Set a loading or disabled state to `false` to clear it.
+
+Updates appear in place in the header and the first-level open menu. An already-open deeper submenu must be reopened to show its updated presentation or state.
+
+Update batches are applied atomically: an invalid update, or an unknown or duplicated identifier, leaves all controls unchanged. Repeated updates targeting the same uniquely identified control are merged in order, and each intermediate result must remain valid.
+
+##### Validation and menu interaction
+
+A header command must contain exactly one of `set` or `update`. The former array-only format, `{"header":[...]}`, is not accepted. Invalid requests return the following messages without changing existing controls:
+
+- Invalid commands: `{"message":"Invalid header command."}`
+- Invalid configurations: `{"message":"Invalid header configuration."}`
+- Invalid updates: `{"message":"Invalid header update."}`
+- Unknown or duplicated update identifiers: `{"message":"Unknown or ambiguous header button identifier."}`
+
+Clicking outside a context menu over the app's iframe dismisses the menu without activating the iframe content underneath. Custom controls are cleared when the host application model changes.
+
+#### GQI DxM: 'Get alarms' data source now includes alarm focus information [ID 47109]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+The *Get alarms* data source now includes two additional columns with alarm focus information:
+
+- *Alarm likelihood*: The likelihood estimated by alarm focus, displayed as a percentage. A low likelihood indicates an unexpected alarm. This is unrelated to the alarm's severity.
+- *Is focus alarm*: True when the alarm likelihood is below 70%, indicating an unexpected alarm that deserves your attention. False when the likelihood is 70% or higher. This 70% limit is also the limit used by Cube.
+
+Alarm focus information is only available for active alarms. All alarms in an alarm tree show the current alarm focus information for that tree. The columns are empty for cleared alarms and alarms without an assigned likelihood, such as correlation alarms. They are also empty when alarm focus is disabled or not supported on the DataMiner System.
+
+Filtering the *Get alarms* data source on *Is focus alarm* equal to true retrieves only active alarms from the DataMiner System.
+
+#### Web apps: Remaining support for legacy Annotations removed [ID 47115]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+The remaining support for the legacy Annotations module has been removed from the DataMiner web apps. This support had been retained for backward compatibility with DataMiner 10.5.0 servers, but the module has reached end of life.
+
+#### GQI DxM: More retries when loading locked extension libraries [ID 47120]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+The GQI DxM will now retry reading a locked extension DLL up to 7 times instead of 5. This increases the total time allowed for the assembly file to reach a stable state from 3.1 seconds to 12.7 seconds, allowing libraries that take longer to compile to be loaded correctly.
+
+#### GQI DxM: Annotation columns hidden from the query builder [ID 47144]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+As Annotations has been deprecated, the *HasAnnotations* columns in the *Get elements* and *Get services* data sources are now marked as legacy and hidden from the query builder. You can no longer select these columns when building queries.
+
+Existing queries that already select these columns will continue to work after upgrading. The selected columns will remain available in the results and for subsequent operations, such as column manipulations and filters.
 
 ### Fixes
 
@@ -230,3 +378,11 @@ When a GQI table in a dashboard was opened before its WebSocket connection was r
 When live updates were enabled for a GQI table in a dashboard, duplicated data in row updates could cause the JSON size limit to be exceeded. As a result, the table could stop loading additional rows.
 
 Unnecessary duplication in table updates has now been removed, reducing the amount of data sent to the dashboard.
+
+#### GQI DxM: Live updates could overwrite unchanged cells in other rows [ID 47068]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When a real-time update affected multiple rows, values from an earlier row could be copied into subsequent rows, overwriting cells that had not changed. This could cause incorrect values in live query results or in rows retrieved on later pages.
+
+Real-time updates will now preserve unchanged cells in each row.

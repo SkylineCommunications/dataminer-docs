@@ -20,7 +20,7 @@ In order for a table column to persist in the database, one of the following mus
 For example, the following table parameter defines some columns to be saved. Column 1001 will also be saved, as this is the column holding the primary keys (as indicated by the [index](xref:Protocol.Params.Param.ArrayOptions-index) attribute).
 
 ```xml
-<Param id="1000" trending="false">
+<Param id="1000">
    <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>
@@ -34,7 +34,7 @@ For example, the following table parameter defines some columns to be saved. Col
       <ColumnOption idx="5" pid="1006" type="retrieved" options="" />
       <ColumnOption idx="6" pid="1007" type="retrieved" options=";save" />
    </ArrayOptions>
-  ...
+   ...
 </Param>
 ```
 
@@ -46,7 +46,7 @@ For example, the following table parameter defines some columns to be saved. Col
 In case you do not want anything to be kept in the database, you can use the [volatile](xref:Protocol.Params.Param.ArrayOptions-options#volatile) option.
 
 ```xml
-<ArrayOptions index="0" displayColumn="1" options=";volatile;">
+<ArrayOptions index="0" options=";volatile">
 ```
 
 The *volatile* option can also be applied on a specific column in the [options](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-options) attribute of the [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) tag (except for columns using the element option or referred to by the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute).

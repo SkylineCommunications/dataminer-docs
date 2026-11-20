@@ -10,30 +10,22 @@ description: "Changes in DataMiner General Main Release 10.8.0, including breaki
 
 ## Important changes
 
-- [Service & Resource Management: Support for legacy reservations removed [ID 46931]](#service--resource-management-support-for-legacy-reservations-removed-id-46931)
+- [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
+- [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
 
 ## Changes
 
 ### Breaking changes
 
-#### Service & Resource Management: Support for legacy reservations removed [ID 46931]
+#### QActions: JScript and VBScript are no longer supported [ID 47010]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
 
-Support for legacy Resource Manager reservations has been removed from the DataMiner server. From now on, use `ReservationInstance` objects instead of legacy reservations.
+Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
 
-The related types remain available in SLNetTypes so existing projects can still compile. However, the following API members have been marked as obsolete:
+The default `*.js` and `*.vbs` files in `C:\Skyline DataMiner\ProtocolScripts` are no longer included in upgrade packages and will be removed during an upgrade.
 
-- The create, read, update, and delete (CRUD) methods for all three features in `ResourceManagerHelper`.
-- The error data related to these features in `ResourceManagerErrorData`.
-- The messages for the CRUD operations.
-- The `ResourceManagerConfigInfoMessage.ConfigInfoType.ForceCleanup` enum value, which was only used to clean up reservation-related files.
-
-SLNet will now throw a `DataMinerException` for CRUD requests related to these features or for a `ForceCleanup` request.
-
-For compatibility with older DataMiner server versions, the legacy reservation methods in `ResourceManagerHelper` will still send requests to SLNet.
-
-See also: [Service & Resource Management: Legacy reservation support removed for DataMiner 10.6.0 and later [ID 46936]](xref:Cube_Feature_Release_10.7.1#service--resource-management-legacy-reservation-support-removed-for-dataminer-1060-and-later-id-46936)
+In addition, the SLSite COM component will be uninstalled during an upgrade.
 
 ### Enhancements
 
@@ -131,13 +123,30 @@ DataMiner upgrades will now remove the following unused DLL files from `C:\Skyli
 
 These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
 
-### Fixes
-
-#### DataMiner upgrade: SLNet garbage collection settings could be overwritten [ID 46905]
+#### Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]
 
 <!-- MR 10.8.0 - FR 10.7.1 -->
 
-During a DataMiner upgrade, the `<runtime>` section of *SLNet.exe.config* was replaced with the version from the upgrade package. This could overwrite the machine-specific `gcServer` and `GCHeapCount` settings.
+The following connector features have reached End of Support and are now disabled by default:
+
+- The `dllName` option in the `options` attribute of a QAction.
+- Logger tables of type `DirectConnection`.
+
+During a DataMiner upgrade, the new `VerifyEndOfSupportConnectors` prerequisite check will block the upgrade if it detects connector versions that use either feature, unless the corresponding soft-launch option is enabled.
+
+Before upgrading, configure affected elements to use connector versions that no longer contain these features, and remove detected connector versions that are no longer in use.
+
+If no compatible connector version is available, you can continue using an affected connector by activating the corresponding soft-launch option before upgrading:
+
+- `EndOfSupport.DllName` for the `dllName` option.
+- `EndOfSupport.DirectConnection` for logger tables of type `DirectConnection`.
+
+After the upgrade, uploading and using a connector with either feature will cause its elements to fail to start unless the corresponding soft-launch option is enabled.
+
+> [!NOTE]
+> The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
+
+### Fixes
 
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
 

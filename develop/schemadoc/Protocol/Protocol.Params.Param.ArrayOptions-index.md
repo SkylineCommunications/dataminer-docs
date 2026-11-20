@@ -23,9 +23,9 @@ The column containing the primary keys must be of type “String”. Once a row 
 
 ```xml
 <ArrayOptions index="0">
-  <ColumnOption idx="0" pid="1001" type="custom"/>
-  <ColumnOption idx="1" pid="1002" type="custom"/>
-  <ColumnOption idx="2" pid="1003" type="custom"/>
+  <ColumnOption idx="0" pid="1001" type="retrieved"/>
+  <ColumnOption idx="1" pid="1002" type="retrieved"/>
+  <ColumnOption idx="2" pid="1003" type="retrieved"/>
 </ArrayOptions>
 ```
 

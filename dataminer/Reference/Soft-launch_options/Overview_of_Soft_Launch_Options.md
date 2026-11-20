@@ -80,15 +80,16 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 ### DataAPI
 
-Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+Enables Data API functionality and scripted connectors.
+
+When used together with the latest version of the [DataAggregator](xref:Data_Aggregator_DxM) and [DataAPI](xref:DataMinerExtensionModules#dataapi) DxMs, this displays the [Data Sources](xref:Data_Sources) module in DataMiner Cube.
+
+When used together with the [EdgeManager DxM](xref:Installing_EdgeManager_DxM) and DataAPI DxM, it allows the deployment of [Edge Nodes](xref:About_Edge_Nodes).
 
 This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
 - **Estimated release version**: To be determined
-
-> [!NOTE]
-> The latest version of the DataAggregator DxM and DataAPI DxM also have to be installed for this feature to work.
 
 ### Diagnostics
 
@@ -134,6 +135,17 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 - **Minimum version**: 10.0.12
 - **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:Cube_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
+
+### EndOfSupport.SLHelperGQI
+
+Enables GQI via SLHelper, which is disabled by default from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 46927 -->
+
+If your system still uses GQI via SLHelper, enable this option before upgrading from a version older than 10.7.0/10.7.1. Otherwise, the [End of Support for SLHelper GQI](xref:EndOfSupport_SLHelperGQI) prerequisite blocks the upgrade when it detects recent GQI activity.<!-- RN 46957 -->
+
+> [!CAUTION]
+> GQI via SLHelper has reached [End of Support](xref:Software_support_life_cycles) and will be removed in a future DataMiner version. Only use this option to ease the transition to the [GQI DxM](xref:GQI_DxM).
+
+- **Minimum version**: 10.7.0/10.7.1
 
 ### Functions
 
