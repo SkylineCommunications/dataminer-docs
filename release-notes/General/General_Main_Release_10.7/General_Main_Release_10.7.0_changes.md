@@ -25,6 +25,7 @@ The following changes may have an impact on your system, so please make sure to 
 - [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010)
 - [Security: Atlassian Crowd authentication is no longer supported by default [ID 47014]](#security-atlassian-crowd-authentication-is-no-longer-supported-by-default-id-47014)
 - [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
+- [Databases: Cassandra 3.x and earlier require an End of Support override [ID 47024]](#databases-cassandra-3x-and-earlier-require-an-end-of-support-override-id-47024)
 - [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
 - [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
 
@@ -1006,6 +1007,16 @@ To temporarily continue using RADIUS, add the following case-sensitive option to
   <EndOfSupport.RADIUS>true</EndOfSupport.RADIUS>
 </SLNet>
 ```
+
+#### Databases: Cassandra 3.x and earlier require an End of Support override [ID 47024]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner will now reject Cassandra 3.x or earlier during main database initialization and when creating a database migration target unless the `EndOfSupport.Cassandra3` soft-launch option is set to `true` in *SoftLaunchOptions.xml*.
+
+The check runs after connecting to Cassandra, before creating or using the application keyspace. It checks known cluster-host versions and performs a live version query to cover mixed-version clusters. Unknown versions do not cause the check to fail.
+
+The minimum supported Cassandra version for migration remains 3.11.
 
 #### Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]
 
