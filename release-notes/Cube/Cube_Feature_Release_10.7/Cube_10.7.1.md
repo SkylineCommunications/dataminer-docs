@@ -84,6 +84,12 @@ From now on, DataMiner Cube will handle elements used in element connections as 
 > [!NOTE]
 > If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
 
+#### Security enhancements [ID 46985]
+
+<!-- 46985: MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+A number of security enhancements have been made.
+
 ### Fixes
 
 #### Visual Overview: Parameter shapes would stop updating after a remote DMA restart or Failover switch [ID 46800]
