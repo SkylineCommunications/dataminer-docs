@@ -27,6 +27,7 @@ The following changes may have an impact on your system, so please make sure to 
 - [Security: RADIUS authentication is no longer supported by default [ID 47018]](#security-radius-authentication-is-no-longer-supported-by-default-id-47018)
 - [Databases: Cassandra 3.x and earlier require an End of Support override [ID 47024]](#databases-cassandra-3x-and-earlier-require-an-end-of-support-override-id-47024)
 - [Connectors: dllName and DirectConnection are no longer supported by default [ID 47028]](#connectors-dllname-and-directconnection-are-no-longer-supported-by-default-id-47028)
+- [Databases: Elasticsearch requires an End of Support override [ID 47033]](#databases-elasticsearch-requires-an-end-of-support-override-id-47033)
 - [Automation: Script Runner could load an incorrect assembly version [ID 47069]](#automation-script-runner-could-load-an-incorrect-assembly-version-id-47069)
 
 ## Changes
@@ -1040,6 +1041,22 @@ After the upgrade, uploading and using a connector with either feature will caus
 
 > [!NOTE]
 > The prerequisite check also detects JScript and VBScript QActions. These have reached End of Life and have no soft-launch override. See also [QActions: JScript and VBScript are no longer supported [ID 47010]](#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010).
+
+#### Databases: Elasticsearch requires an End of Support override [ID 47033]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+Elasticsearch is no longer supported by default as the search database. If Elasticsearch is detected as the search database and the `EndOfSupport.Elastic` soft-launch option is not set to `true`, the DataMiner Agent will log an error and stop during startup. Creating a migration target that uses Elasticsearch as its search database will also be blocked without this override.
+
+To temporarily continue using Elasticsearch, add the following case-sensitive option to `C:\Skyline DataMiner\SoftLaunchOptions.xml`:
+
+```xml
+<EndOfSupport.Elastic>true</EndOfSupport.Elastic>
+```
+
+For startup, restart DataMiner after enabling the option. For a migration target, retry the migration after enabling the option; no DataMiner restart is required.
+
+Consider migrating to OpenSearch or Storage as a Service (STaaS) instead.
 
 #### User-Defined APIs: Requests now routed through API Gateway [ID 47107]
 
