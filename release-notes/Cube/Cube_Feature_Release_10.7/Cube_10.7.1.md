@@ -35,6 +35,21 @@ Both permissions are enabled by the limited administrator and full administrator
 > [!NOTE]
 > These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.7.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
 
+### Alarm Console: Configurable default columns [ID 46958]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+You can now save a default column configuration for Alarm Console tabs and reuse it across tabs.
+
+To manage default columns, right-click a column header and select *Add/remove column > Default columns*. The following options are available:
+
+- *Use current columns as the new default*: Saves the visible columns, their order, widths, and alignment.
+- *Apply default column set to this list*: Applies the saved configuration to the current tab.
+
+New alarm tabs will automatically use your saved defaults, including tabs added through general or card-specific *Settings*. Existing tabs will retain their configuration unless you explicitly apply the defaults.
+
+*Information* and *Suggestion* tabs will retain their standard columns and will not display the *Default columns* menu.
+
 ## Changes
 
 ### Breaking changes
