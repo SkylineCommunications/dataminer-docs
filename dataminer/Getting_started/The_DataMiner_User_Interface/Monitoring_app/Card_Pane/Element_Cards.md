@@ -1,5 +1,6 @@
 ---
 uid: Element_Cards
+description: "Learn how to use element cards in the Monitoring app to view and interact with elements in your DataMiner System."
 ---
 
 # Element cards
@@ -22,12 +23,9 @@ The following pages are available:
 
 - *Alarms*: Displays the active alarms for the element.
 
-- *Reports*: Displays a page where you can view several different reports related to the element.
+- *Reports*: Displays reports related to the element in the [legacy Reporter module](xref:reporter).
 
-- *Dashboards*: Displays the legacy dashboards module.
-
-  > [!NOTE]
-  > The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
+- *Dashboards*: Displays dashboards related to the element in the [legacy Dashboards module](xref:dashboards).
 
 - *Notes*: Allows you to add and view notes related to the element.
 

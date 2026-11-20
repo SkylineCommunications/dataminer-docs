@@ -1,5 +1,6 @@
 ---
 uid: Service_Cards
+description: "Explore service cards in the Monitoring app, including visual pages, child elements and services, alarms, notes, and direct navigation URLs."
 ---
 
 # Service cards
@@ -14,7 +15,7 @@ The following pages are available:
 
 - *Alarms*: Displays the active alarms for the service.
 
-- *Reports*: Displays the DataMiner reports related to the service.
+- *Reports*: Displays reports related to the service in the [legacy Reporter module](xref:reporter).
 
 - *Notes*: Allows you to add and view notes for the service.
 

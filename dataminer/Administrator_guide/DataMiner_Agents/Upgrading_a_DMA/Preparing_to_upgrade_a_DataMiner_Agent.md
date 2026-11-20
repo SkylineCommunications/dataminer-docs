@@ -159,7 +159,7 @@ The following prerequisite checks are currently available:
 
 - [Verify No Legacy Correlation](xref:VerifyNoLegacyCorrelation): Scans the DataMiner System for any legacy correlation rules. From DataMiner 10.5.1/10.6.0 onwards<!--RN 40834-->, this prerequisite is available by default and runs automatically when you upgrade.
 
-- [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards): Scans the DataMiner System for any legacy reports and legacy dashboards. From DataMiner 10.4.0/10.4.1 onwards<!--RN 37922-->, this prerequisite is available by default and runs automatically when you upgrade.
+- [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards): From DataMiner 10.4.0/10.4.1 onwards<!-- RN 37922 -->, this prerequisite is available by default and runs automatically when you upgrade. It scans for existing legacy reports and dashboards. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47135 -->, it checks whether the *LegacyReportsAndDashboards* soft-launch option is disabled instead.
 
 - [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed): Verifies whether the obsolete *APIDeployment* [soft-launch option](xref:SoftLaunchOptions) is enabled and obsolete APIs are deployed. From DataMiner 10.4.0 onwards<!--RN 37825-->, this prerequisite is available by default and runs automatically when you upgrade.
 

@@ -1,5 +1,6 @@
 ---
 uid: Service_card_pages
+description: "Learn about the pages available on service cards in DataMiner Cube and how to use them to work with services."
 ---
 
 # Service card pages
@@ -64,10 +65,7 @@ A graphic representation of the alarm distribution, alarm events, alarm states, 
 
 ### DASHBOARDS
 
-This page links to the DMS Dashboards module.
-
-> [!NOTE]
-> The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
+This page links to the [legacy DMS Dashboards module](xref:dashboards).
 
 ### DOCUMENTS
 

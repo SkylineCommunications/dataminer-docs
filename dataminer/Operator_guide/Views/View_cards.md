@@ -1,5 +1,6 @@
 ---
 uid: View_cards
+description: "Learn how to use view cards in DataMiner Cube to navigate and interact with the items in your DataMiner System."
 ---
 
 # View cards
@@ -192,10 +193,7 @@ A graphic representation of the alarm distribution, alarm events and alarm state
 
 ### DASHBOARDS
 
-This page links to the legacy DMS Dashboards module.
-
-> [!NOTE]
-> The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
+This page links to the [legacy DMS Dashboards module](xref:dashboards).
 
 ### AGGREGATION
 
