@@ -176,7 +176,7 @@ DataAPI now removes a connector from its local cache when the connector is delet
 
 DataAPI has been updated to use the latest MessageBroker NuGet version.
 
-### 14 November 2024 - Fix - DataAPI 1.2.4 - Soft-launch verification incompatible with DataMiner 10.5.x and higher [ID 41286]
+### 14 November 2024 - Fix - DataAPI 3.3.1 - Soft-launch verification incompatible with DataMiner 10.5.x and higher [ID 41286]
 
 Previously, the soft-launch verification, which checks whether Data API is running on a compatible DataMiner version, verified only 10.4.x versions. Now 10.5.x versions and higher will be included in the check.
 
@@ -355,7 +355,7 @@ In addition, the Node ID is now also used as an identifier when registering with
 
 Data API has now been upgraded to use .NET 8 instead of .NET 6. This means .NET 8 Runtime now has to be installed in order to run Data API.
 
-#### 14 March 2024 - Enhancement - DataAPI 1.0.2 - Improved installer robustness [ID 38981]
+#### 14 March 2024 - Enhancement - DataAPI 3.3.1 - Improved installer robustness [ID 38981]
 
 The Data API installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
 

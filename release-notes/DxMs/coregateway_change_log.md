@@ -102,7 +102,7 @@ When a local DataMiner Agent was up- or downgraded, it could occur that the Core
 
 #### 21 September 2023 - New feature - CoreGateway 2.13.1 - Support new GQI queries [ID 37302]
 
-Support has been added for the latest GQI queries introduced with DataAggregator 2.1.0 and DataMiner 10.3.9.
+Support has been added for the latest GQI queries introduced with DataAggregator 3.3.1 and DataMiner 10.3.9.
 
 #### 21 September 2023 - Fix - CoreGateway 2.13.1 - Resolved memory leak [ID 37393]
 

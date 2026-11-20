@@ -4,22 +4,22 @@ uid: DataAggregator_change_log
 
 # Data Aggregator change log
 
-#### 21 August 2026 - Enhancement - DataAggregator 3.3.0 - Update to .NET 10 [ID 44801]
+#### 21 August 2026 - Enhancement - DataAggregator 3.3.1 - Update to .NET 10 [ID 44801]
 
 Data Aggregator has been updated to use .NET 10.
 
-#### 21 August 2026 - Enhancement - DataAggregator 3.3.0 - Enhanced script execution logic [ID 43719]
+#### 21 August 2026 - Enhancement - DataAggregator 3.3.1 - Enhanced script execution logic [ID 43719]
 
 The script execution logic used by Data Aggregator has been improved to make it more robust:
 
 - **Dynamic cancellation token**: The cancellation mechanism now uses a dynamic timestamp tied to the next scheduled execution time, ensuring more accurate and timely job termination.
 - **Improved logging**: Logging has been refined to clearly distinguish between cancellations due to timeouts and those triggered externally. This provides better traceability and debugging capabilities.
 
-#### 21 August 2026 - Fix - DataAggregator 3.3.0 - Script termination issue [ID 43719]
+#### 21 August 2026 - Fix - DataAggregator 3.3.1 - Script termination issue [ID 43719]
 
 It could occur that Python and PowerShell scripts continued running even after a cancellation request. These scripts are now properly terminated, preventing resource leaks and unintended side effects.
 
-#### 7 July 2025 - Enhancement - DataAggregator 3.2.0 - BrokerGateway support [ID 43238]
+#### 7 July 2025 - Enhancement - DataAggregator 3.3.1 - BrokerGateway support [ID 43238]
 
 The DataAggregator DxM now supports [BrokerGateway](xref:BrokerGateway_Migration). In case your Data Aggregator setup connects to multiple DataMiner Systems and BrokerGateway is enabled, you will need to configure the *BrokerOptions.Clusters* setting in *appsettings.custom.json* with the following fields:
 
@@ -49,15 +49,15 @@ For example:
   },
 ```
 
-#### 2 June 2025 - Enhancement - DataAggregator 3.1.1 - Error logging in case helper.json could not be read [ID 43094]
+#### 2 June 2025 - Enhancement - DataAggregator 3.3.1 - Error logging in case helper.json could not be read [ID 43094]
 
 When manual changes cause the JSON configuration within the helper.json to be invalid, up to now the configuration was ignored without giving any reason. Now an error will be logged in the log file that will indicate what went wrong. JSON deserialization errors will contain the line number.
 
-#### 20 May 2025 - Enhancement - DataAggregator 3.1.0 - Use of GQI DxM [ID 39216] [ID 42831]
+#### 20 May 2025 - Enhancement - DataAggregator 3.3.1 - Use of GQI DxM [ID 39216] [ID 42831]
 
 The DataAggregator DxM is now capable of communicating directly with the GQI DxM. This will improve performance, as data will no longer have to flow through CoreGateway, SLNet, and SLHelper. To make use of the GQI DxM, the following manual configuration is required:
 
-1. Update the DataAggregator DxM to version 3.1.0.
+1. Update the DataAggregator DxM to version 3.3.1.
 
 1. In the *appsettings.custom.json* file, add the following setting:
 
@@ -76,41 +76,41 @@ The DataAggregator DxM is now capable of communicating directly with the GQI DxM
 > [!NOTE]
 > At present, the *MigratorToGQIDxM* tool is only available on demand by sending a request to <support@dataminer.services>.
 
-#### 6 September 2024 - Fix - DataAggregator 3.0.7 - Old CSV exports not removed [ID 40623]
+#### 6 September 2024 - Fix - DataAggregator 3.3.1 - Old CSV exports not removed [ID 40623]
 
 If Data Aggregator was configured to export data to CSV for multiple jobs, storing the CSV export files in separate folders according to the configured paths, it could occur that the old CSV files did not get removed after the number of days configured with the *DeleteAfterXDays* setting, which could eventually cause the system to run out of disk space. This has now been fixed: the old CSV files of every job will be deleted as configured.
 
-#### 27 August 2024 - Enhancement - DataAggregator 3.0.6 - MessageBroker dependency updated [ID 40491]
+#### 27 August 2024 - Enhancement - DataAggregator 3.3.1 - MessageBroker dependency updated [ID 40491]
 
 The DataMiner MessageBroker dependency in the DataAggregator DxM has been updated to version 3.0.1.
 
-#### 27 August 2024 - Enhancement - DataAggregator 3.0.6 - Update to .NET 8 [ID 40478]
+#### 27 August 2024 - Enhancement - DataAggregator 3.3.1 - Update to .NET 8 [ID 40478]
 
 Data Aggregator has been updated to use .NET 8.
 
-#### 22 March 2024 - Enhancement - DataAggregator 3.0.5 - Debug UI also shows jobs when DataAPI soft-launch option is not enabled [ID 39159]
+#### 22 March 2024 - Enhancement - DataAggregator 3.3.1 - Debug UI also shows jobs when DataAPI soft-launch option is not enabled [ID 39159]
 
 The debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) now also shows the jobs even when the *DataAPI* soft-launch option is not enabled.
 
-#### 15 March 2024 - New feature - DataAggregator 3.0.4 - Cloud Node ID used to identify DxM instance and report DxM status [ID 39086]
+#### 15 March 2024 - New feature - DataAggregator 3.3.1 - Cloud Node ID used to identify DxM instance and report DxM status [ID 39086]
 
 The Cloud Node ID is now used to uniquely identify each DxM instance in a cluster and report back DxM health stats for remote monitoring of systems connected to dataminer.services.
 
 In addition, the Node ID is now also used as an identifier when registering with APIGateway.
 
-#### 01 March 2024 - Enhancement - DataAggregator 3.0.3 -  Improved installer robustness [ID 38981]
+#### 01 March 2024 - Enhancement - DataAggregator 3.3.1 -  Improved installer robustness [ID 38981]
 
 The DataAggregator installer has been updated to mitigate a Windows DLL redirection vulnerability and to improve its robustness.
 
-#### 13 February 2024 - Enhancement - DataAggregator 3.0.2 - Debug UI shows job names instead of job IDs [ID 38697]
+#### 13 February 2024 - Enhancement - DataAggregator 3.3.1 - Debug UI shows job names instead of job IDs [ID 38697]
 
 In the debug UI of Data Aggregator (accessible via `http://<hostname or IP>:<Data Aggregator port>/debug/`) the different tab pages will now show the job name instead of the job ID, so that it is easier to find a specific job.
 
-#### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Include bs4 Python library with DataAggregator installer [ID 38654]
+#### 07 February 2024 - Enhancement - DataAggregator 3.3.1 - Include bs4 Python library with DataAggregator installer [ID 38654]
 
 Beautiful Soup is a commonly used library that makes it easy to scrape information from webpages and as such it has been made part of the installer. The DataAggregator installer now includes the bs4 pip package and its dependencies.
 
-#### 07 February 2024 - Enhancement - DataAggregator 3.0.1 - Improve DataAggregator Migrator [ID 38682]
+#### 07 February 2024 - Enhancement - DataAggregator 3.3.1 - Improve DataAggregator Migrator [ID 38682]
 
 Improvements have been made to the [migrator tool](xref:Data_Aggregator_Migrators#upgrading-from-version-2xx) to better allow converting GQI queries from the [previous syntax to the new one](xref:Data_Aggregator_settings#gqi-queries).
 
@@ -119,7 +119,7 @@ This includes:
 - Extra information added to the Help command (*-h* or *--help*).
 - Change of how the [DataAPI soft-launch](xref:Overview_of_Soft_Launch_Options#dataapi) verification is applied in order to facilitate the migration process for users already using it.
 
-#### 31 January 2024 - New feature - DataAggregator 3.0.0 - Support for Data Sources and integration with DataAPI [ID 38234] [ID 38307] [ID 38404] [ID 38496] [ID 38560]
+#### 31 January 2024 - New feature - DataAggregator 3.3.1 - Support for Data Sources and integration with DataAPI [ID 38234] [ID 38307] [ID 38404] [ID 38496] [ID 38560]
 
 Data Aggregator has been extended with support for the [Data Sources](xref:Data_Sources) module and scripted connectors. This module offers an easy solution to access data from diverse sources and swiftly integrate new products with DataMiner.
 
@@ -155,11 +155,11 @@ To make it easier to find out which DMA handled a GQI request, the DataAggregato
 
 The CoreGateway DxM has also been modified to include this information when it creates a new GQI session.
 
-#### 9 June 2023 - Enhancement - DataAggregator 2.0.0 - Upgrade to .NET 6 [ID 36408]
+#### 9 June 2023 - Enhancement - DataAggregator 3.3.1 - Upgrade to .NET 6 [ID 36408]
 
 Data Aggregator has now been upgraded to use .NET 6 instead of .NET 5. This means .NET 6 Runtime now has to be installed in order to run Data Aggregator.
 
-#### 3 February 2023 - New feature - DataAggregator 1.0.0 - New Data Aggregator module [ID 34725] [ID 34825] [ID 34914] [ID 34986] [ID 35047] [ID 35072] [ID 35450] [ID 35495]
+#### 3 February 2023 - New feature - DataAggregator 3.3.1 - New Data Aggregator module [ID 34725] [ID 34825] [ID 34914] [ID 34986] [ID 35047] [ID 35072] [ID 35450] [ID 35495]
 
 A new Data Aggregator module is now available as a DxM (DataMiner Extension Module). It can be used to schedule GQI queries to run periodically at fixed times, dates, or intervals. It can connect to multiple DataMiner Systems and combine the results of the GQI queries executed per DMS into one result. This result can then be exported to a CSV file or made available over a WebSocket connection.
 
