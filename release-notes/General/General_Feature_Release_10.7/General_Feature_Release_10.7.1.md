@@ -615,6 +615,14 @@ From now on, Script Runner will no longer add `C:\Skyline DataMiner\ProtocolScri
 > [!IMPORTANT]
 > If a script executed by Script Runner needs a DLL from either protocol scripts folder, you must add an explicit reference to that DLL in the script. These folders will no longer be searched automatically.
 
+#### DataMiner Installer: CloudGateway was not restarted after silent configuration [ID 47079]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When the initial DataMiner configuration tool (FirstStartupChoice) was run in silent mode, CloudGateway was not restarted after the cloud tokens had been copied to the correct folder.
+
+CloudGateway will now be restarted after the tokens have been copied.
+
 #### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
