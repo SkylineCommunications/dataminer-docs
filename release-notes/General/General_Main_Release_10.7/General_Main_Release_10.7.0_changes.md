@@ -112,7 +112,7 @@ Before retrying the upgrade, migrate any required legacy functionality and do on
 
 Malformed XML or file-access errors will also block the upgrade. The prerequisite will not modify the configuration automatically. The configuration check will be skipped if the currently installed DataMiner version is already 10.7.0 or later.
 
-In addition, IIS configuration will now remove existing legacy `/Reports` and `/Dashboards` application entries and will no longer create or restore them, regardless of the soft-launch settings. Physical folders and customer-authored content will not be deleted. The modern `/Dashboard` application and modern reporting/PDF functionality will remain unaffected.
+In addition, IIS configuration will now remove existing legacy `/Reports` and `/Dashboards` application entries and will no longer create or restore them, regardless of the soft-launch settings. The modern `/Dashboard` application and modern reporting/PDF functionality will remain unaffected.
 
 ### Enhancements
 
