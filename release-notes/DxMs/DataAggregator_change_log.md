@@ -1,8 +1,13 @@
 ---
 uid: DataAggregator_change_log
+description: "Review Data Aggregator releases, including enhancements, fixes, installation changes, and query execution updates."
 ---
 
 # Data Aggregator change log
+
+#### 19 November 2026 - Enhancement - DataAggregator 3.3.1 - GQI DxM enabled by default [ID 47072]
+
+Data Aggregator now uses the [GQI DxM](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) as its default query executor. During installation, upgrade, or repair, the MSI [automatically migrates existing CoreGateway queries](xref:Data_Aggregator_Migrators#automatic-migration-from-data-aggregator-331-onwards).
 
 #### 21 August 2026 - Enhancement - DataAggregator 3.3.0 - Update to .NET 10 [ID 44801]
 
@@ -55,7 +60,7 @@ When manual changes cause the JSON configuration within the helper.json to be in
 
 #### 20 May 2025 - Enhancement - DataAggregator 3.1.0 - Use of GQI DxM [ID 39216] [ID 42831]
 
-The DataAggregator DxM is now capable of communicating directly with the GQI DxM. This will improve performance, as data will no longer have to flow through CoreGateway, SLNet, and SLHelper. To make use of the GQI DxM, the following manual configuration is required:
+The DataAggregator DxM is now capable of communicating directly with the GQI DxM. This will improve performance, as data will no longer have to flow through CoreGateway, SLNet, and SLHelper. In Data Aggregator 3.1.0 through 3.3.0, the following manual configuration is required to use the GQI DxM:
 
 1. Update the DataAggregator DxM to version 3.1.0.
 
@@ -71,7 +76,7 @@ The DataAggregator DxM is now capable of communicating directly with the GQI DxM
 
 1. Restart the *DataAggregator* service.
 
-1. In case your setup already contains queries, run the *MigratorToGQIDxM* tool to migrate these to the format supported by the GQI DxM.
+1. In case your setup already contains queries, run the [*MigratorToGQIDxM* tool](xref:Data_Aggregator_Migrators#manual-migration-in-data-aggregator-310-to-330) to migrate these to the format supported by the GQI DxM.
 
 > [!NOTE]
 > At present, the *MigratorToGQIDxM* tool is only available on demand by sending a request to <support@dataminer.services>.

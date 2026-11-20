@@ -1,10 +1,19 @@
 ---
 uid: Data_Aggregator_troubleshooting
+description: "Troubleshoot Data Aggregator startup and GQI query migration issues using configuration and installer log files."
 ---
 
 # Troubleshooting
 
 If you encounter any issues, first check the Data Aggregator log files for errors. By default, you can find these in the folder `C:\ProgramData\Skyline Communications\DataMiner DataAggregator\Logs`.
+
+## Installation, upgrade, or repair fails during GQI query migration
+
+From Data Aggregator 3.3.1 onwards, installation, upgrade, or repair can fail if Windows Installer rollback is disabled, a registered legacy query is missing or invalid, migration folder permissions are unsafe, or an earlier migration is incomplete.<!-- RN 47072 -->
+
+Check `%ProgramData%\Skyline Communications\DataMiner DataAggregator\Migrations\Migration.log` for the specific error. Administrator permissions are required. If the migration log could not be created, check the Windows Installer log instead.
+
+If an earlier migration is incomplete, do not delete the *Pending* folder or [migration backups](xref:Data_Aggregator_Migrators#automatic-migration-from-data-aggregator-331-onwards) to bypass the check. Recovery refuses to overwrite externally changed files or use corrupt backups. Contact <support@dataminer.services> if recovery is blocked.
 
 ## The DataMiner DataAggregator process is not starting up
 
