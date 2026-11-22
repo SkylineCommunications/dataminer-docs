@@ -78,7 +78,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 (e) any applicable commercial schedule;
 (f) any applicable Service Description or usage policy;
 (g) any applicable SLA or Maintenance and Support Terms;
-(h) the End User License Agreement (EULA) embedded in the Software.
+(h) the [End User License Agreement (EULA)](xref:End_User_License_Agreement) embedded in or accompanying the Software.
 
 ### 3. Ordering and Payment
 
