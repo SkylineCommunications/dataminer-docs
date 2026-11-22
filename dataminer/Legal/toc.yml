@@ -9,7 +9,7 @@ items:
         topicUid: Community_Edition_Terms
       - name: Partner Terms
         topicUid: Partner_Terms
-  - name: Support terms
+  - name: Support & SLA terms
     items:
       - name: On premises
         topicUid: Support_Terms_On_Premises
