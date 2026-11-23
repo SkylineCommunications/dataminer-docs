@@ -6,7 +6,7 @@ description: "Learn how to create, configure, and manage user-defined specialize
 # Specialized agents
 
 > [!IMPORTANT]
-> Specialized agents are an experimental feature. Using them requires DataMiner 10.7.0 or later, the system-wide *DataMiner Intelligence* setting to be enabled, and the *General > DataMiner Intelligence > Access* permission. An administrator must also enable the *Specialized agents* setting in *Settings* > *System*.
+> Specialized agents are an experimental feature. Using them requires DataMiner 10.7.1/10.7.0 or later, the system-wide *DataMiner Intelligence* setting to be enabled, and the *General > DataMiner Intelligence > Access* permission. An administrator must also enable the *Specialized agents* setting in *Settings* > *System*.
 
 A specialized agent is a user-configured agent that bundles a name, description, instructions, and a curated set of references into a reusable entity. When invoked, the agent operates according to its instructions and has access only to the references assigned to it, making it focused and predictable.
 

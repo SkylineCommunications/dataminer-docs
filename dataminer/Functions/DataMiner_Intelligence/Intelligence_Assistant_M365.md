@@ -19,7 +19,7 @@ The DataMiner Assistant for Microsoft 365 lets you chat with any agent available
   > [!TIP]
   > See also: [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node)
 
-- The DataMiner System must run DataMiner 10.7.0 or later, have the system-wide *DataMiner Intelligence* setting enabled, and your user profile must have the *General > DataMiner Intelligence > Access* permission. See [DataMiner user permissions](xref:DataMiner_user_permissions).
+- The DataMiner System must run DataMiner 10.7.1/10.7.0 or later, have the system-wide *DataMiner Intelligence* setting enabled, and your user profile must have the *General > DataMiner Intelligence > Access* permission. See [DataMiner user permissions](xref:DataMiner_user_permissions).
 
 - To ensure that you have access to a DataMiner System from your Microsoft account, [your Microsoft account must be linked to your DataMiner account](xref:Linking_your_DataMiner_and_dataminer_services_account).
 

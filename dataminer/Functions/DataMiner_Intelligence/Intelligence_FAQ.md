@@ -107,15 +107,15 @@ No. Install the DataMiner Assistant DxM on a few suitable Agents to provide redu
 
 ### Is installation required on a DaaS system?
 
-DataMiner 10.7.0 is the minimum version for the DataMiner Assistant app on DaaS. On DaaS systems running DataMiner 10.7.0 or later, no DxM installation is needed because the DataMiner Assistant DxM is already installed and running. The app also requires the system-wide *DataMiner Intelligence* setting and applicable user permissions. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) for details.
+DataMiner 10.7.1/10.7.0 is the minimum version for the DataMiner Assistant app on DaaS. On DaaS systems running DataMiner 10.7.1/10.7.0 or later, no DxM installation is needed because the DataMiner Assistant DxM is already installed and running. The app also requires the system-wide *DataMiner Intelligence* setting and applicable user permissions. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) for details.
 
 ### Why is the Assistant app not visible?
 
-Ask your DataMiner administrator to confirm that the DataMiner System runs DataMiner 10.7.0 or later, is connected to dataminer.services, the DataMiner Assistant DxM is running, and the system-wide *DataMiner Intelligence* setting is enabled. Your user profile must have both the *General > DataMiner Intelligence > Access* and *Assistant app* permissions. If the app remains unavailable after these checks, contact [ai@skyline.be](mailto:ai@skyline.be) for assistance.
+Ask your DataMiner administrator to confirm that the DataMiner System runs DataMiner 10.7.1/10.7.0 or later, is connected to dataminer.services, the DataMiner Assistant DxM is running, and the system-wide *DataMiner Intelligence* setting is enabled. Your user profile must have both the *General > DataMiner Intelligence > Access* and *Assistant app* permissions. If the app remains unavailable after these checks, contact [ai@skyline.be](mailto:ai@skyline.be) for assistance.
 
 ### Why is the DataMiner Intelligence setting disabled or read-only?
 
-You can enable the *DataMiner Intelligence* setting only when the DataMiner System runs DataMiner 10.7.0 or later and is connected to dataminer.services. If either requirement is missing, the toggle is disabled; hover over it to see the reason. To change the setting, your user profile must have both the *General > DataMiner Intelligence > Access* and [*Modules > System configuration > Tools > Admin tools*](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) permissions. Otherwise, the setting is read-only.
+You can enable the *DataMiner Intelligence* setting only when the DataMiner System runs DataMiner 10.7.1/10.7.0 or later and is connected to dataminer.services. If either requirement is missing, the toggle is disabled; hover over it to see the reason. To change the setting, your user profile must have both the *General > DataMiner Intelligence > Access* and [*Modules > System configuration > Tools > Admin tools*](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) permissions. Otherwise, the setting is read-only.
 
 ### Do I need to reload after changing the DataMiner Intelligence or Specialized agents setting?
 

@@ -6,8 +6,7 @@ description: "Discover DataMiner Intelligence, the agentic AI capabilities of Da
 
 # About DataMiner Intelligence
 
-> [!IMPORTANT]
-> DataMiner Intelligence is currently a prerelease feature. Its official release is expected in DataMiner 10.7.1. The functionality is ready to be deployed and tested in production environments, but there may still be significant changes and improvements before the official release. We welcome your feedback at [ai@skyline.be](mailto:ai@skyline.be).
+DataMiner Intelligence is officially available from DataMiner 10.7.1/10.7.0 onwards.<!--RN 47196-->
 
 DataMiner Intelligence covers all agentic AI capabilities of DataMiner. It consists of:
 
@@ -46,11 +45,11 @@ In addition to chat interaction, it will soon be possible to trigger DataMiner I
 
 ## Access and prerequisites
 
-The DataMiner Intelligence user permissions and system-wide setting are available in DataMiner 10.7.0 and later. On earlier supported DataMiner versions, Document Intelligence can still be used through the DataMiner Assistant DxM, but it is not guarded by the DataMiner Intelligence permissions.
+The DataMiner Intelligence user permissions and system-wide setting are available from DataMiner 10.7.1/10.7.0 onwards. On earlier supported DataMiner versions, Document Intelligence can still be used through the DataMiner Assistant DxM, but it is not guarded by the DataMiner Intelligence permissions.
 
-To enable the *DataMiner Intelligence* setting in *Settings* > *System*, the DataMiner System must run DataMiner 10.7.0 or later and be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+To enable the *DataMiner Intelligence* setting in *Settings* > *System*, the DataMiner System must run DataMiner 10.7.1/10.7.0 or later and be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-On DataMiner 10.7.0 or later, you need the *General > DataMiner Intelligence > Access* user permission to use DataMiner Intelligence capabilities, including DataMiner Assistant, Document Intelligence, and natural language to GQI. On earlier supported versions, Document Intelligence is not guarded by this permission. To access the DataMiner Assistant app from the landing page, you also need the *Assistant app* permission. For details, see [DataMiner user permissions](xref:DataMiner_user_permissions).
+From DataMiner 10.7.1/10.7.0 onwards, you need the *General > DataMiner Intelligence > Access* user permission to use DataMiner Intelligence capabilities, including DataMiner Assistant, Document Intelligence, and natural language to GQI. On earlier supported versions, Document Intelligence is not guarded by this permission. To access the DataMiner Assistant app from the landing page, you also need the *Assistant app* permission. For details, see [DataMiner user permissions](xref:DataMiner_user_permissions).
 
 The DataMiner Assistant DxM provides the AI capabilities, while the DataMiner Assistant app provides the chat interface to the agents. For the steps to enable DataMiner Intelligence and start exploring it, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 

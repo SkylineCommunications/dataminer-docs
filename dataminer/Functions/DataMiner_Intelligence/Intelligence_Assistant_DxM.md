@@ -22,9 +22,9 @@ Once it has been installed, DataMiner Assistant is upgraded automatically when y
 
 For DataMiner Assistant to run correctly, the following **prerequisites** must be met:
 
-- **DataMiner version**: DataMiner 10.7.0 or later is required for the DataMiner Intelligence user permissions and system-wide setting. On earlier supported versions, Document Intelligence can still be used through the Assistant DxM, but it is not guarded by a DataMiner Intelligence permission.
+- **DataMiner version**: DataMiner 10.7.1/10.7.0 or later is required for the DataMiner Intelligence user permissions and system-wide setting. On earlier supported versions, Document Intelligence can still be used through the Assistant DxM, but it is not guarded by a DataMiner Intelligence permission.
 
-- **DataMiner Intelligence access**: On DataMiner 10.7.0 or later, the system-wide *DataMiner Intelligence* setting must be enabled, and users must have the *General > DataMiner Intelligence > Access* permission. To access the Assistant app from the landing page, they also need the *Assistant app* permission. For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
+- **DataMiner Intelligence access**: From DataMiner 10.7.1/10.7.0 onwards, the system-wide *DataMiner Intelligence* setting must be enabled, and users must have the *General > DataMiner Intelligence > Access* permission. To access the Assistant app from the landing page, they also need the *Assistant app* permission. For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 - **Connection to dataminer.services**: The DataMiner System [must be connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
@@ -32,7 +32,7 @@ For DataMiner Assistant to run correctly, the following **prerequisites** must b
 
 ### DataMiner as a Service (DaaS)
 
-DataMiner 10.7.0 is the minimum version for the DataMiner Assistant app on DaaS. On DaaS systems running DataMiner 10.7.0 or later, the DataMiner Assistant DxM is already installed and running, so no installation is needed. The app also requires the applicable system setting and user permissions; see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started). Some optional capabilities may not be available by default. To request preview access for those capabilities, contact [ai@skyline.be](mailto:ai@skyline.be).
+DataMiner 10.7.1/10.7.0 is the minimum version for the DataMiner Assistant app on DaaS. On DaaS systems running DataMiner 10.7.1/10.7.0 or later, the DataMiner Assistant DxM is already installed and running, so no installation is needed. The app also requires the applicable system setting and user permissions; see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started). Some optional capabilities may not be available by default. To request preview access for those capabilities, contact [ai@skyline.be](mailto:ai@skyline.be).
 
 ### On-premises systems
 

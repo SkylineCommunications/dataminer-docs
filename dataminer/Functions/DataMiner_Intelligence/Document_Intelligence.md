@@ -7,7 +7,7 @@ description: "Learn how the DataMiner Assistant DxM uses Document Intelligence t
 
 Starting from version 2.0.7, the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) can analyze documents based on instructions you provide. This functionality is available through the Document Intelligence API and can be used in DataMiner Automation.
 
-On DataMiner 10.7.0 or later, using Document Intelligence requires the system-wide *DataMiner Intelligence* setting to be enabled and the user to have the *General > DataMiner Intelligence > Access* permission. On earlier supported DataMiner versions, Document Intelligence can still be used, but it is not guarded by a DataMiner Intelligence permission. The *Assistant app* permission controls access to the Assistant app on the landing page and is not required to use the Document Intelligence API. For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) and [DataMiner user permissions](xref:DataMiner_user_permissions).
+From DataMiner 10.7.1/10.7.0 onwards, using Document Intelligence requires the system-wide *DataMiner Intelligence* setting to be enabled and the user to have the *General > DataMiner Intelligence > Access* permission. On earlier supported DataMiner versions, Document Intelligence can still be used, but it is not guarded by a DataMiner Intelligence permission. The *Assistant app* permission controls access to the Assistant app on the landing page and is not required to use the Document Intelligence API. For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) and [DataMiner user permissions](xref:DataMiner_user_permissions).
 
 Typical use cases include:
 
