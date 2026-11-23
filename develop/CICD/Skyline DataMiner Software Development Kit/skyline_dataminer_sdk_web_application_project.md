@@ -23,6 +23,9 @@ Any *.esproj* or *.csproj* project can be used as a web application project, as 
 <DataMinerType>WebApplication</DataMinerType>
 ```
 
+> [!TIP]
+> For information on how to upload the resulting web application to a DataMiner System, see [Uploading and publishing a new app](xref:Uploading_a_new_app).
+
 ## App.info.json
 
 Each web application project needs an *App.info.json* file in the root of the project. This file describes the web application:

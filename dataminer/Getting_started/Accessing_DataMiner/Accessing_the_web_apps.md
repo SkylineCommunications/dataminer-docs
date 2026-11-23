@@ -110,6 +110,8 @@ The landing page provides access to the following web apps:
 
   - From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can use the quick filter box in the upper-left corner of the Low-Code Apps section to quickly search for apps by name.
 
+  - From DataMiner 10.6.0 [CU10]/10.7.0 [CU0]/10.7.1 onwards<!--RN 45878-->, apps created in the low-code editor and apps added through the [New DataMiner Apps experience](xref:New_apps) are both shown here and are both part of DataMiner Apps. To add an app, click the arrow next to the *Add* button. The menu allows you to [upload a new app](xref:Uploading_a_new_app), browse the Catalog, or create an app in the low-code editor. Clicking the *Add* button itself will create a low-code app.
+
 To access a **compact overview of all available web apps**:
 
 - On the landing page: Click the DataMiner icon or waffle icon (depending on your DataMiner version<!--RN 43024-->) in the upper-left corner of the landing page.

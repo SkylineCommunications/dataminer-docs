@@ -1373,20 +1373,20 @@ Permission to delete API definitions for [user-defined APIs](xref:UD_APIs).
 
 #### Modules \> User-definable apps \> View apps
 
-Permission to view custom DataMiner apps created using the [DataMiner Low-Code Apps](xref:Application_framework) and to access the framework itself. You need to have this permission to be able to use any of the other "User-definable apps" permissions.
+Permission to view DataMiner apps, such as apps created using the [DataMiner Low-Code Apps](xref:Application_framework) and to access the framework itself. You need to have this permission to be able to use any of the other "User-definable apps" permissions.
 
 #### Modules \> User-definable apps \> Add
 
-Permission to add custom DataMiner apps using the [DataMiner Low-Code Apps](xref:Application_framework).
+Permission to add DataMiner apps, such as apps created using the [DataMiner Low-Code Apps](xref:Application_framework), or [New Apps](xref:New_apps) that you upload.
 
 #### Modules \> User-definable apps \> Edit
 
-Permission to edit custom DataMiner apps created using the [DataMiner Low-Code Apps](xref:Application_framework).
+Permission to edit DataMiner apps, such as apps created using the [DataMiner Low-Code Apps](xref:Application_framework).
 
 #### Modules \> User-definable apps \> Delete
 
-Permission to delete custom DataMiner apps created using the [DataMiner Low-Code Apps](xref:Application_framework).
+Permission to delete DataMiner apps, such as apps created using the [DataMiner Low-Code Apps](xref:Application_framework).
 
 #### Modules \> User-definable apps \> Publish
 
-Permission to publish custom DataMiner apps created using the [DataMiner Low-Code Apps](xref:Application_framework).
+Permission to publish DataMiner apps, such as apps created using the [DataMiner Low-Code Apps](xref:Application_framework).

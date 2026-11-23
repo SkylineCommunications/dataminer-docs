@@ -346,7 +346,7 @@ items:
             topicUid: Viewing_aggregation_information
           - name: Managing aggregation rules
             topicUid: Managing_aggregation_rules
-  - name: Dashboards and Low-Code Apps
+  - name: Dashboards and Apps
     topicUid: Dashboards_and_Low_Code_Apps
     items:
       - name: Dashboards app
@@ -401,76 +401,84 @@ items:
                 topicUid: Creating_a_parameter_table_connected_to_an_element_feed
               - name: Creating an alarm dashboard for a daily DMS health check
                 topicUid: Tutorial_Alarm_Dashboard_for_your_daily_DMS_health_check
-      - name: Low-Code Apps
-        topicUid: Application_framework
+      - name: DataMiner Apps
+        topicUid: DataMiner_Apps
         items:
-          - name: Overview of the Low-Code Apps UI
-            topicUid: LCA_UI
-          - name: Creating apps
-            topicUid: Creating_custom_apps
-          - name: Editing an app
-            topicUid: Editing_custom_apps
-          - name: Configuring apps
+          - name: New Apps
+            topicUid: New_apps
             items:
-              - name: Configuring the app layout
-                topicUid: LowCodeApps_Layout
-              - name: Configuring an app page
-                topicUid: LowCodeApps_page_config
-              - name: Configuring an app panel
-                topicUid: LowCodeApps_panel_config
-              - name: Changing app settings
-                topicUid: Changing_low-code_app_settings
-              - name: Configuring the app header bar
-                topicUid: LowCodeApps_header_config
-              - name: Configuring app events
-                topicUid: LowCodeApps_event_config
-              - name: Configuring app security
-                topicUid: LowCodeApps_security_config
-              - name: Organizing the apps on the landing page in sections
-                topicUid: LowCodeApps_organizing_landing_page
-          - name: Retrieving an earlier app version
-            topicUid: LowCodeApps_earlier_version
-          - name: Deleting an app
-            topicUid: Deleting_custom_apps
-          - name: Configuring app actions and behavior via the URL
-            topicUid: Configuring_app_actions_and_behavior_via_URL
-          - name: Tutorials
-            topicUid: Tutorial_Apps
+              - name: Uploading and publishing a new app
+                topicUid: Uploading_a_new_app
+          - name: Low-Code Apps
+            topicUid: Application_framework
             items:
-              - name: Creating and publishing an app
-                topicUid: Tutorial_Apps_Creating_And_Publishing
-              - name: Editing an existing app
-                topicUid: Tutorial_Apps_Edit_Existing_App
-              - name: Managing the pages in an app
-                topicUid: Tutorial_Apps_Managing_Pages
-              - name: Creating and showing a panel
-                topicUid: Tutorial_Apps_Panel
-              - name: Using a header bar
-                topicUid: Tutorial_Apps_Headerbar
-              - name: Running a script when a page opens
-                topicUid: Tutorial_Apps_Script_Upon_Page_Load
-              - name: Chaining actions
-                topicUid: Tutorial_Apps_Chaining_Actions
-              - name: Using the stepper component in a low-code app
-                topicUid: TutorialStepper
-              - name: Styling a table component
-                topicUid: Tutorial_Apps_Style_A_Table
-              - name: Using the maps component in a low-code app
-                topicUid: MapsTutorial
-              - name: Getting started with the grid component
-                topicUid: Tutorial_Apps_Grid
-              - name: Leveraging feeds in a web component
-                topicUid: Tutorial_Dashboards_Feeds_Web_Component
-              - name: Creating a visually appealing and user-friendly low-code app
-                topicUid: Tutorial_App_Design
-              - name: Using flows in a low-code app
-                topicUid: Tutorial_Apps_Flows
-              - name: Using variables in a low-code app
-                topicUid: Tutorial_Apps_Variables
-              - name: Creating a custom event scheduler low-code app
-                topicUid: Tutorial_Custom_Event_Scheduler_LCA
-              - name: Visualizing the Starlink location history in DataMiner
-                topicUid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
+              - name: Overview of the Low-Code Apps UI
+                topicUid: LCA_UI
+              - name: Creating apps
+                topicUid: Creating_custom_apps
+              - name: Editing an app
+                topicUid: Editing_custom_apps
+              - name: Configuring apps
+                items:
+                  - name: Configuring the app layout
+                    topicUid: LowCodeApps_Layout
+                  - name: Configuring an app page
+                    topicUid: LowCodeApps_page_config
+                  - name: Configuring an app panel
+                    topicUid: LowCodeApps_panel_config
+                  - name: Changing app settings
+                    topicUid: Changing_low-code_app_settings
+                  - name: Configuring the app header bar
+                    topicUid: LowCodeApps_header_config
+                  - name: Configuring app events
+                    topicUid: LowCodeApps_event_config
+              - name: Retrieving an earlier app version
+                topicUid: LowCodeApps_earlier_version
+              - name: Deleting an app
+                topicUid: Deleting_custom_apps
+              - name: Configuring app actions and behavior via the URL
+                topicUid: Configuring_app_actions_and_behavior_via_URL
+              - name: Tutorials
+                topicUid: Tutorial_Apps
+                items:
+                  - name: Creating and publishing an app
+                    topicUid: Tutorial_Apps_Creating_And_Publishing
+                  - name: Editing an existing app
+                    topicUid: Tutorial_Apps_Edit_Existing_App
+                  - name: Managing the pages in an app
+                    topicUid: Tutorial_Apps_Managing_Pages
+                  - name: Creating and showing a panel
+                    topicUid: Tutorial_Apps_Panel
+                  - name: Using a header bar
+                    topicUid: Tutorial_Apps_Headerbar
+                  - name: Running a script when a page opens
+                    topicUid: Tutorial_Apps_Script_Upon_Page_Load
+                  - name: Chaining actions
+                    topicUid: Tutorial_Apps_Chaining_Actions
+                  - name: Using the stepper component in a low-code app
+                    topicUid: TutorialStepper
+                  - name: Styling a table component
+                    topicUid: Tutorial_Apps_Style_A_Table
+                  - name: Using the maps component in a low-code app
+                    topicUid: MapsTutorial
+                  - name: Getting started with the grid component
+                    topicUid: Tutorial_Apps_Grid
+                  - name: Leveraging feeds in a web component
+                    topicUid: Tutorial_Dashboards_Feeds_Web_Component
+                  - name: Creating a visually appealing and user-friendly low-code app
+                    topicUid: Tutorial_App_Design
+                  - name: Using flows in a low-code app
+                    topicUid: Tutorial_Apps_Flows
+                  - name: Using variables in a low-code app
+                    topicUid: Tutorial_Apps_Variables
+                  - name: Creating a custom event scheduler low-code app
+                    topicUid: Tutorial_Custom_Event_Scheduler_LCA
+                  - name: Visualizing the Starlink location history in DataMiner
+                    topicUid: Tutorial_Visualizing_Starlink_Location_History_in_DataMiner
+          - name: Configuring app security
+            topicUid: LowCodeApps_security_config
+          - name: Organizing the apps on the landing page in sections
+            topicUid: LowCodeApps_organizing_landing_page
       - name: Configuring components
         topicUid: Configuring_components
         items:

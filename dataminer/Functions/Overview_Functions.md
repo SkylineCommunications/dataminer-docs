@@ -25,7 +25,7 @@ description: A DataMiner System can have several additional modules or apps, e.g
     <a href="/dataminer/Functions/Correlation/About_DMS_Correlation.html" title="Correlation" target="_self"><img src="~/dataminer/images/Correlation.svg" style="width:100%"></a>
   </div>  
   <div class="column">
-    <a href="/dataminer/Functions/Dashboards_and_Low_Code_Apps/Dashboards_and_Low_Code_Apps.html" title="Dashboards and Low-Code Apps" target="_self"><img src="~/dataminer/images/Dashboards_Low_Code_Apps.svg" style="width:100%"></a>
+    <a href="/dataminer/Functions/Dashboards_and_Low_Code_Apps/Dashboards_and_Low_Code_Apps.html" title="Dashboards and Apps" target="_self"><img src="~/dataminer/images/Dashboards_Apps.svg" style="width:100%"></a>
   </div>
 </div>
 
