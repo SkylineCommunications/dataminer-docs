@@ -218,7 +218,7 @@ public class Tracker : IDisposable
     MethodBase methodMemberInfo = new StackTrace().GetFrames().Skip(2).FirstOrDefault()?.GetMethod();
     return methodMemberInfo.Name != "ProcessD"
       ? methodMemberInfo.Name
-      : methodMemberInfo.Name + Guid.NewGuid();
+      : $"{methodMemberInfo.Name}{Guid.NewGuid()}";
   }
 }
 
@@ -265,6 +265,7 @@ To address this issue, the collector logic must be expanded, as a dictionary alo
 public class Collector : IDisposable
 {
   public Dictionary<string, TimeSpan> Results { get; private set; } = new Dictionary<string, TimeSpan>();
+
   public int TrackersCount { get; set; }
 
   public void Dispose()

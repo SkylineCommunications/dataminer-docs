@@ -127,14 +127,17 @@ using Skyline.DataMiner.Net.Apps.DocumentIntelligence;
 using Skyline.DataMiner.Net.Apps.DocumentIntelligence.Objects;
 
 public void Run(IEngine engine)
-{   
+{
     // Read file content
     var filepath = "C://myFolder//myFile.pdf";
     var fileBytes = File.ReadAllBytes(filepath);
+
     // Write instructions
     var instructions = "Extract the start and end time of my streaming event";
+
     // Create Document Intelligence helper
     var docIntelHelper = new DocumentIntelligenceHelper(engine.SendSLNetMessages);
+
     // Request Document Intelligence analysis
     var result = docIntelHelper.AnalyzeDocuments(instructions, new List<Document>()
     {
@@ -144,16 +147,18 @@ public void Run(IEngine engine)
             Content = fileBytes
         },
     });
+
     // Check for errors
     var traceData = docIntelHelper.GetTraceDataLastCall();
     if (!traceData.HasSucceeded())
     {
         var errors = traceData.GetErrorDataOfType<DocumentIntelligenceError>();
-        engine.ExitFail("Document Intelligence analysis failed: " + string.Join(", ", errors.ConvertAll(e => e.Message)));
+        engine.ExitFail($"Document Intelligence analysis failed: {string.Join(", ", errors.ConvertAll(e => e.Message))}");
         return;
     }
+
     // Use the analysis result
-    engine.GenerateInformation("Analysis result: " + result);
+    engine.GenerateInformation($"Analysis result: {result}");
 }
 ```
 

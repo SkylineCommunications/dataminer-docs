@@ -32,11 +32,11 @@ namespace NodeRecovery_Local_Action_Example
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnNodeRecoveryLocalStateChange)]
         public LocalStateChangeOutput OnNodeRecoveryLocalStateChange(IEngine engine, LocalStateChangeInput input)
         {
-          engine.GenerateInformation($"Hello From OnNodeRecoveryLocalStateChange, " 
-                                    + $"executing dma: {input.LocalNodeId}, "
-                                    + $"local state: {input.ClusterState[input.LocalNodeId]}");
-        
-          return new LocalStateChangeOutput();
+            engine.GenerateInformation("Hello From OnNodeRecoveryLocalStateChange, " +
+                $"executing dma: {input.LocalNodeId}, " +
+                $"local state: {input.ClusterState[input.LocalNodeId]}");
+
+            return new LocalStateChangeOutput();
         }
     }
 }
@@ -80,11 +80,11 @@ namespace NodeRecovery_Global_Action_Example
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnNodeRecoveryGlobalStateChange)]
         public GlobalStateChangeOutput OnNodeRecoveryGlobalStateChange(IEngine engine, GlobalStateChangeInput input)
         {
-          engine.GenerateInformation($"Hello From OnNodeRecoveryGlobalStateChange, " 
-                                    + $"executing on leader node: {input.LeaderNodeId}, "
-                                    + $"global cluster state has changed");
-        
-          return new GlobalStateChangeOutput();
+            engine.GenerateInformation("Hello From OnNodeRecoveryGlobalStateChange, " +
+                $"executing on leader node: {input.LeaderNodeId}, " +
+                "global cluster state has changed");
+
+            return new GlobalStateChangeOutput();
         }
     }
 }

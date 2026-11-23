@@ -77,6 +77,7 @@ var request = new ResourceManagerConfigInfoMessage(ResourceManagerConfigInfoMess
         InitialLoadDays = TimeSpan.FromDays(1)
     }
 };
+
 var response = engine.SendSLNetSingleResponseMessage(request) as ResourceManagerConfigInfoResponseMessage;
 ```
 

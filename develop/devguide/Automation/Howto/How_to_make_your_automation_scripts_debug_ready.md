@@ -28,18 +28,22 @@ class Script
         CustomClass myCustomClass = InitCustomClass();
         LogStringValue(engine, myCustomClass);
     }
+
     private void LogStringValue(IEngine engine, CustomClass customClass)
     {
         engine.GenerateInformation(customClass.StringValue);
     }
+
     private CustomClass InitCustomClass()
     {
         return null;
     }
 }
+
 public class CustomClass
 {
     public string StringValue { get; set; }
+
     public double DoubleValue { get; set; }
 }
 ```
@@ -91,6 +95,7 @@ public void Run(IEngine engine)
         engine.ExitFail("The script failed. See the Automation log for details.");
     }
 }
+
 private void RunSafe(IEngine engine)
 {
     CustomClass myCustomClass = InitCustomClass();

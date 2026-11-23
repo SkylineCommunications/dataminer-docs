@@ -6,6 +6,9 @@ uid: NT_CHECK_TRIGGER
 
 Triggers the trigger with the specified ID.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(134, ...)` directly, we recommend using [SLProtocol.CheckTrigger](xref:Skyline.DataMiner.Scripting.SLProtocol.CheckTrigger(System.Int32)).
+
 ```csharp
 int triggerId = 20;
 

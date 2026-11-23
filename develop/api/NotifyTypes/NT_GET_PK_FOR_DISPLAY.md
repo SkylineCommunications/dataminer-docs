@@ -11,7 +11,7 @@ int displayColumnID = 1002;
 
 string displayKey = "Device A";
 
-string primaryKey = (string)protocol.NotifyProtocol(162/*NT_GET_PK_FOR_DISPLAY*/ , displayColumnID, displayKey);
+string primaryKey = (string)protocol.NotifyProtocol(162 /*NT_GET_PK_FOR_DISPLAY*/, displayColumnID, displayKey);
 ```
 
 ## Parameters

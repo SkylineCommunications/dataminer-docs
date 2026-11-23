@@ -31,7 +31,7 @@ for (int i = 0; i < members.Length; i++)
 Use a *foreach* loop. This means that you do not have to explicitly address the item in the array. The downside of this is that it is harder if you need to know whether inside the loop it is the first item or the last item in the iteration.
 
 ```csharp
-foreach(string member in members)
+foreach (string member in members)
 {
     if (member == "fail")
 ```
@@ -57,7 +57,7 @@ You can easily avoid accessing members outside of the array. While you could add
 Instead, you can add a verification of the object that is being returned. For example:
 
 ```csharp
-if(currentParam == null || currentIds.Length != currentParam.Length)
+if (currentParam == null || currentIds.Length != currentParam.Length)
 ```
 
 Add the appropriate logging in that if clause and then exit that method. The code will not be able to fix the problem, but at least you will know where it goes wrong and the root cause might be something external.

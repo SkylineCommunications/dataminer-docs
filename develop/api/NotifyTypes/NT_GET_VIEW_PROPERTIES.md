@@ -14,6 +14,7 @@ object[] viewProperties = (object[])protocol.NotifyDataMiner(316 /*NT_GET_VIEW_P
 foreach (string[] viewProperty in viewProperties)
 {
     string propertyKey = viewProperty[0];
+
     // The value of viewProperty[1] always equals 46, indicating this is a view property.
     string propertyValue = viewProperty[2];
     string accesType = viewProperty[3];

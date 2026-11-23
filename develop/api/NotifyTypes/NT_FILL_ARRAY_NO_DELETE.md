@@ -6,13 +6,16 @@ uid: NT_FILL_ARRAY_NO_DELETE
 
 Adds the provided content to the specified table.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(194, ...)` directly, we recommend using [SLProtocol.FillArrayNoDelete](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayNoDelete*) or `FillArray` with `SaveOption.Partial`.
+
 ```csharp
 int tableID = 1000;
 object[] column1 = new object[] { "Row 1", "Row 2" };
 object[] column2 = new object[] { "E", "F" };
-object[] tableContent = new object[]{column1, column2};
+object[] tableContent = new object[] { column1, column2 };
 
-protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent);
+protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/, tableID, tableContent);
 ```
 
 ## Parameters
@@ -33,13 +36,14 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent)
 
   ```csharp
   object tableInfo = new object[] { 10, true }; // Setting the second entry to true enables the use of the protocol.Clear and protocol.Leave functionality.
-  object[] tableData = new object[4];
-
-  tableData[0] = new object[3] { "1-Index", "2-Index", "3-Index" };
-  tableData[1] = new object[3] { 10, 10, 10 };
-  tableData[2] = new object[3] { protocol.Clear, protocol.Clear, protocol.Clear };
-  tableData[3] = new object[3] { 30, 30, 30 };
-
+  object[] tableData = new object[]
+  {
+      new object[] { "1-Index", "2-Index", "3-Index" },
+      new object[] { 10, 10, 10 },
+      new object[] { protocol.Clear, protocol.Clear, protocol.Clear },
+      new object[] { 30, 30, 30 },
+  };
+  
   protocol.NotifyProtocol(194, tableInfo, tableData);
   ```
 
@@ -47,14 +51,14 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent)
 
   ```csharp
   object tableInfo = new object[] { 10, false, DateTime.Now };
-
-  object[] tableData = new object[4];
-
-  tableData[0] = new object[3] { "1-Index", "2-Index", "3-Index" };
-  tableData[1] = new object[3] { 10, 10, 10 };
-  tableData[2] = new object[3] { 10, 10, 10 };
-  tableData[3] = new object[3] { 30, 30, 30 };
-
+  object[] tableData = new object[]
+  {
+      new object[] { "1-Index", "2-Index", "3-Index" },
+      new object[] { 10, 10, 10 },
+      new object[] { 10, 10, 10 },
+      new object[] { 30, 30, 30 },
+  };
+  
   protocol.NotifyProtocol(194, tableInfo, tableData);
   ```
 
@@ -65,10 +69,10 @@ protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent)
   ```csharp
   int tableID = 2000;
   object[] column1 = new object[] { "Row 1", "Row 2" };
-  object[] column2 = new object[] { "A", new object[] { "B" , DateTime.Now - TimeSpan.FromDays(11) } };
+  object[] column2 = new object[] { "A", new object[] { "B", DateTime.Now - TimeSpan.FromDays(11) } };
   object[] tableContent = new object[] { column1, column2 };
-
-  object result = protocol.NotifyProtocol(194/*NT_FILL_ARRAY_NO_DELETE*/ , tableID, tableContent);
+  
+  object result = protocol.NotifyProtocol(194 /*NT_FILL_ARRAY_NO_DELETE*/, tableID, tableContent);
   ```
 
 ## See also

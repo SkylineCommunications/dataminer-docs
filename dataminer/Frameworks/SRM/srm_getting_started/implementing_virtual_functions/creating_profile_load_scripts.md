@@ -79,10 +79,10 @@ The example below shows how to access the parameter values:
 
 ```csharp
 foreach (var config in parametersConfiguration)
-   {
-       string value = config.Value.Type == ParameterValue.ValueType.Double ? Convert.ToString(config.Value.DoubleValue) : config.Value.StringValue;
-       engine.GenerateInformation($"Parameter configuration {config.ProfileParameterName} with table key {config.ResourceKey}, parameter Id {config.ProtocolParameterId} and value {value}.");
-   }
+{
+    string value = config.Value.Type == ParameterValue.ValueType.Double ? Convert.ToString(config.Value.DoubleValue) : config.Value.StringValue;
+    engine.GenerateInformation($"Parameter configuration {config.ProfileParameterName} with table key {config.ResourceKey}, parameter Id {config.ProtocolParameterId} and value {value}.");
+}
 ```
 
 > [!NOTE]
@@ -102,15 +102,15 @@ dummyDve.SetParameter(dummyDve.GetWriteParameterIDFromRead(config.ProtocolParame
 From within a Profile-Load Script, custom records can be added to the action logs, together with a severity indication: <!-- RN 30488 -->
 
 ```csharp
-helper.LogFailure("An issue occurred"); 
-   // generate a log record with ‘Normal’ severity
+// Generate a log record with 'Normal' severity
+helper.LogFailure("An issue occurred");
 
+// Generate a log record with 'Critical' severity
 helper.LogSuccess("Configuration was successful");
-   // generate a log record with ‘Critical severity
 
+// Generate a log record with a custom severity
+// Namespace Skyline.DataMiner.Library.Solutions.SRM.Logging.Orchestration is needed
 helper.Log("Report a warning", LogEntryType.Warning);
-   // generate a log record with a custom severity
-   // Namespace Skyline.DataMiner.Library.Solutions.SRM.Logging.Orchestration is needed
 ```
 
 ### Returning data
@@ -212,21 +212,19 @@ The test sequence can be as simple as applying a profile instance to a single re
    For example:
 
    ```csharp
+   protected override void ExecuteTestCase(Engine engine)
    {
-      protected override void ExecuteTestCase(Engine engine)
-      {
-         // Apply profile instances to the resource
-         this.SelectResource("MyResource")
-             .SetProfileInstance("HD Decoding")
-             .SetProfileInstance("ASI Profile", InterfaceType.In, "ASI")
-             .ApplyProfile(string.Empty);
-         
-         // Apply the full 'START' state profile instance to the resource
-         // With profile action 'START'
-         this.SelectResource("MyResource")
-             .SetProfileInstance("07A - A03 - NS3")
-             .ApplyCombinedProfile("START", "START");
-      }
+       // Apply profile instances to the resource
+       this.SelectResource("MyResource")
+           .SetProfileInstance("HD Decoding")
+           .SetProfileInstance("ASI Profile", InterfaceType.In, "ASI")
+           .ApplyProfile(string.Empty);
+   
+       // Apply the full 'START' state profile instance to the resource
+       // With profile action 'START'
+       this.SelectResource("MyResource")
+           .SetProfileInstance("07A - A03 - NS3")
+           .ApplyCombinedProfile("START", "START");
    }
    ```
 

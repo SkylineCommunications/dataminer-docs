@@ -9,10 +9,10 @@ Retrieves the raw counter information of the last two iterations.<!-- RN 2906 --
 ```csharp
 int groupID = 10;
 
-object[] rawData = (object[])protocol.NotifyProtocol(270/*NT_GET_BITRATE_DATA*/ , groupID, null);
+object[] rawData = (object[])protocol.NotifyProtocol(270 /*NT_GET_BITRATE_DATA*/, groupID, null);
 
-object[] previousData = (object[]) rawData[0];
-object[] currentData = (object[]) rawData[1];
+object[] previousData = (object[])rawData[0];
+object[] currentData = (object[])rawData[1];
 ```
 
 ## Parameters
@@ -45,49 +45,46 @@ object[] currentData = (object[]) rawData[1];
 ```csharp
 int groupId = 1500;
 
-object[] rawData = (object[])protocol.NotifyProtocol(270/*NT_GET_BITRATE_DATA*/, groupId, null);
+object[] rawData = (object[])protocol.NotifyProtocol(270 /*NT_GET_BITRATE_DATA*/, groupId, null);
 object[] previousData = (object[])rawData[0];
 
-protocol.Log(8, 5, string.Format(
-    @"
+protocol.Log(
+    $@"QA{protocol.QActionID}|
     Previous raw data:
-    Ticks when request enters SLSNMPManager: {0} ms
-    Ticks when request leaves SLSNMPManager: {1} ms
-    Ticks when first SNMP Request is sent: {2} ms
-    Ticks when last SNMP Response is received: {3} ms
-    Avg RTT between packets: {4} ms
-    Min RTT between packets: {5} ms
-    Max RTT between packets: {6} ms
-    Number of iterations: {7}
-    Bytes sent: {8} B
-    Bytes received: {9} B
-    Total RTT: {10} ms
-    Number of timeouts: {11}",
-    previousData[0], previousData[1], previousData[2], previousData[3], previousData[4], previousData[5],
-    previousData[6], previousData[7], previousData[8], previousData[9], previousData[10], previousData[11]
-    ));
+    Ticks when request enters SLSNMPManager: {previousData[0]} ms
+    Ticks when request leaves SLSNMPManager: {previousData[1]} ms
+    Ticks when first SNMP Request is sent: {previousData[2]} ms
+    Ticks when last SNMP Response is received: {previousData[3]} ms
+    Avg RTT between packets: {previousData[4]} ms
+    Min RTT between packets: {previousData[5]} ms
+    Max RTT between packets: {previousData[6]} ms
+    Number of iterations: {previousData[7]}
+    Bytes sent: {previousData[8]} B
+    Bytes received: {previousData[9]} B
+    Total RTT: {previousData[10]} ms
+    Number of timeouts: {previousData[11]}",
+    LogType.DebugInfo,
+    LogLevel.NoLogging);
 
-    object[] currentData = (object[])rawData[1];
+object[] currentData = (object[])rawData[1];
 
-    protocol.Log(8, 5, string.Format(
-    @"
+protocol.Log(
+    $@"QA{protocol.QActionID}|
     Current raw data:
-    Ticks when request enters SLSNMPManager: {0} ms
-    Ticks when request leaves SLSNMPManager: {1} ms
-    Ticks when first SNMP Request is sent: {2} ms
-    Ticks when last SNMP Response is received: {3} ms
-    Avg RTT between packets: {4} ms
-    Min RTT between packets: {5} ms
-    Max RTT between packets: {6} ms
-    Number of iterations: {7}
-    Bytes sent: {8} B
-    Bytes received: {9} B
-    Total RTT: {10} ms
-    Number of timeouts: {11}
-     ",
-    currentData[0], currentData[1], currentData[2], currentData[3], currentData[4], currentData[5],
-    currentData[6], currentData[7], currentData[8], currentData[9], currentData[10], currentData[11]
-    ));
+    Ticks when request enters SLSNMPManager: {currentData[0]} ms
+    Ticks when request leaves SLSNMPManager: {currentData[1]} ms
+    Ticks when first SNMP Request is sent: {currentData[2]} ms
+    Ticks when last SNMP Response is received: {currentData[3]} ms
+    Avg RTT between packets: {currentData[4]} ms
+    Min RTT between packets: {currentData[5]} ms
+    Max RTT between packets: {currentData[6]} ms
+    Number of iterations: {currentData[7]}
+    Bytes sent: {currentData[8]} B
+    Bytes received: {currentData[9]} B
+    Total RTT: {currentData[10]} ms
+    Number of timeouts: {currentData[11]}",
+    LogType.DebugInfo,
+    LogLevel.NoLogging);
 ```
 
 ## See also

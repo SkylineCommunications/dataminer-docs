@@ -40,17 +40,15 @@ Below is the provided code of that method.
 ```csharp
 private List<string> Process()
 {
-    string[] persons = new string[3];
-    persons[0] = "John.Doe";
-    persons[1] = "Jane.Doe";
-    persons[2] = "Leyla.Doe";
+    string[] persons = new string[] { "John.Doe", "Jane.Doe", "Leyla.Doe" };
     List<string> mails = new List<string>();
     MailServer server = new MailServer();
     for (int i = 0; i < persons.Length; i++)
     {
-        string mailAddress = persons[i] + server.Address;
+        string mailAddress = $"{persons[i]}{server.Address}";
         mails.Add(mailAddress);
     }
+
     return mails;
 }
 ```
@@ -63,11 +61,13 @@ A `MailServer` class object is used in the `Process` method. The code of that cl
 public class MailServer
 {
     private readonly string[] domains;
+
     public MailServer()
     {
         domains = new string[1];
         domains[0] = "@testdomain.com";
     }
+
     public string Address
     {
         get
@@ -75,6 +75,7 @@ public class MailServer
             return RetrieveCustomDomain();
         }
     }
+
     private string RetrieveCustomDomain()
     {
         return domains[1];
@@ -82,7 +83,7 @@ public class MailServer
 }
 ```
 
-When the `Process()` method executes `string mailAddress = persons[i] + server.Address;`, it is accessing the *Address* property and the getter of that property executes the `RetrieveCustomDomain()` method. In that method, `domains[1]` is accessed, while domains only contains one member. That is the actual location of the problem. The logged stack trace shows the wrong information in case the exception comes from a property.
+When the `Process()` method executes `string mailAddress = $"{persons[i]}{server.Address}";`, it is accessing the *Address* property and the getter of that property executes the `RetrieveCustomDomain()` method. In that method, `domains[1]` is accessed, while domains only contains one member. That is the actual location of the problem. The logged stack trace shows the wrong information in case the exception comes from a property.
 
 However, if you change the code of the getter of the Address to this:
 
@@ -91,7 +92,7 @@ try
 {
     return RetrieveCustomDomain();
 }
-catch(Exception ex)
+catch (Exception ex)
 {
     throw ex;
 }

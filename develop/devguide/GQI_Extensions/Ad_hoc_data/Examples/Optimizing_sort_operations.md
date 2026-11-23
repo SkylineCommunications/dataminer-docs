@@ -94,6 +94,7 @@ using Skyline.DataMiner.Analytics.GenericInterface.Operators;
 public sealed class EventDataSource : IGQIDataSource, IGQIOnPrepareFetch, IGQIOptimizableDataSource
 {
     ...
+
     // Field to store the sort operator that should be optimized
     private IGQISortOperator _sortOperator;
     ...

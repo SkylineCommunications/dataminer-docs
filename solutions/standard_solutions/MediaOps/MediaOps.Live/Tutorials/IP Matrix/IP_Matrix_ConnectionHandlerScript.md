@@ -66,7 +66,6 @@ using Skyline.DataMiner.Solutions.MediaOps.Live.Automation.Mediation.ConnectionH
 
 public class Script : ConnectionHandlerScript
 {
-
 }
 ```
 
@@ -86,7 +85,6 @@ public class Script
 
 public class IPMatrix_ConnectionHandler : ConnectionHandler
 {
-
 }
 ```
 

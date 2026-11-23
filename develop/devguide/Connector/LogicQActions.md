@@ -16,20 +16,20 @@ For example, the following QAction runs when a button (with parameter ID 100) is
 ```xml
 <QAction id="100" name="Count Executions" encoding="csharp" triggers="100">
 <![CDATA[
-    using System;
-    using Skyline.DataMiner.Scripting;
+using System;
+using Skyline.DataMiner.Scripting;
 
-    public static class QAction
+public static class QAction
+{
+    public static void Run(SLProtocol protocol)
     {
-        public static void Run(SLProtocol protocol)
-        {
-            int count = Convert.ToInt32(protocol.GetParameter(10));
-            count++;
-            protocol.SetParameter(10, count);
+        int count = Convert.ToInt32(protocol.GetParameter(10));
+        count++;
+        protocol.SetParameter(10, count);
 
-            protocol.Log("Number of times button was pressed on this element: " + count, LogType.Error, LogLevel.NoLogging);
-        }
+        protocol.Log($"QA{protocol.QActionID}|Run|Number of times button was pressed on this element: {count}", LogType.Error, LogLevel.NoLogging);
     }
+}
 ]]>
 </QAction>
 ```

@@ -15,7 +15,7 @@ Alarm alarm = new Alarm();
 
 string[] alarmDetails = alarm.NewAlarm(elementID, parameterID, information, AlarmSeverity.WARNING.ToString());
 
-int alarmID = (int) protocol.NotifyDataMiner(106 /*NT_MAKE_ALARM*/, 0, alarmDetails);
+int alarmID = (int)protocol.NotifyDataMiner(106 /*NT_MAKE_ALARM*/, 0, alarmDetails);
 ```
 
 ## Parameters
@@ -31,5 +31,13 @@ int alarmID = (int) protocol.NotifyDataMiner(106 /*NT_MAKE_ALARM*/, 0, alarmDeta
 - The Alarm (Skyline.DataMiner.ProtocolScripts) class is defined in the SLProtocolScripts.dll assembly. Alternatively, the [Skyline.DataMiner.Utils.Alarms.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Alarms.Protocol) NuGet can be used. It acts as a replacement for the SLProtocolScripts DLL, and you can use it without having a local DMA installed.
 
   ```csharp
-  enum AlarmSeverity { Informational = -1, Normal, Warning, Minor, Major, Critical };
+  enum AlarmSeverity
+  {
+      Informational = -1,
+      Normal,
+      Warning,
+      Minor,
+      Major,
+      Critical,
+  }
   ```

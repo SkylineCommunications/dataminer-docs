@@ -18,19 +18,19 @@ string protocolVersion = "Production";
 int type = 102;
 int subType = 0;
 
-string[] protocolDetails = new string[]{protocolName, protocolVersion};
+string[] protocolDetails = new string[] { protocolName, protocolVersion };
 bool activeOnly = true;
 
 DMS dms = new DMS();
-dms.Notify(type/* DMS_GET_ELEMENTS_USING_PROTOCOL */, subType, protocolDetails, activeOnly, out result);
+dms.Notify(type /* DMS_GET_ELEMENTS_USING_PROTOCOL */, subType, protocolDetails, activeOnly, out result);
 
 if (result != null)
 {
     string[] globalElementIDs = (string[])result;
-    
+
     foreach (string globalElementID in globalElementIDs)
     {
-        ////....
+        // ...
     }
 }
 ```

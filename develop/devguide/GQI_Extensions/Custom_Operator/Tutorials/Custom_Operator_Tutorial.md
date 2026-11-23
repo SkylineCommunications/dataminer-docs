@@ -99,11 +99,13 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
             IsRequired = true,
             Types = new GQIColumnType[] { GQIColumnType.Int }
         };
+
         _expensesColumnArgument = new GQIColumnDropdownArgument("Expenses")
         {
             IsRequired = true,
             Types = new GQIColumnType[] { GQIColumnType.Int }
         };
+
         _nameColumnArgument = new GQIColumnDropdownArgument("Name")
         {
             IsRequired = true,
@@ -117,7 +119,8 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
     public GQIArgument[] GetInputArguments()
     {
         // Tell the framework what your input arguments are
-        return new[] {
+        return new[]
+        {
             _incomeColumnArgument,
             _expensesColumnArgument,
             _nameColumnArgument
@@ -157,6 +160,7 @@ public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArgument
     private string ObfuscateName(string name)
     {
         var obfuscatedName = "";
+
         // Apply an obfuscation transformation
         foreach (var part in name.Split())
             obfuscatedName += $"{part[0]}.";
@@ -201,12 +205,12 @@ This is an example of an implementation that leaves the order of operations unto
 ```csharp
 public class MyOperator : IGQIColumnOperator, IGQIRowOperator, IGQIInputArguments, IGQIOptimizableOperator
 {
-   ...
+    ...
 
-   public IGQIQueryNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nextOperator)
-   {
-       return currentNode.Append(nextOperator);
-   }
+    public IGQIQueryNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nextOperator)
+    {
+        return currentNode.Append(nextOperator);
+    }
 }
 ```
 
@@ -330,7 +334,7 @@ public IGQIQueryNode Optimize(IGQIOperatorNode currentNode, IGQICoreOperator nex
     {
         _balanceColumn,
         _nameColumn,
-    }
+    };
 
     return currentNode.OptimizeForFilter(filterOperator, affectedColumns);
 }
