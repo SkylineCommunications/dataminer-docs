@@ -84,8 +84,9 @@ These are the folders that should contain files like *SLDatabase.dll*, *SLProtoc
 
 If you are working on a local DMA, you can keep the following default folders:
 
-- `C:\Skyline DataMiner\Files`
+- `C:\Skyline DataMiner\ProtocolScripts\DllImport`
 - `C:\Skyline DataMiner\ProtocolScripts`
+- `C:\Skyline DataMiner\Files`
 
 ## Solutions
 
