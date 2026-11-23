@@ -52,31 +52,7 @@ Before you upgrade to this DataMiner version:
 
 ## Highlights
 
-*No highlights have been selected yet.*
-
-## New features
-
-#### Security: New 'Intelligence Usage' user permission [ID 46765]
-
-<!-- MR 10.7.0 - FR 10.7.1 -->
-
-A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
-
-> [!NOTE]
-> The first time a system is upgraded to DataMiner 10.7.1/10.7.0 or later, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
-
-#### Security: New 'Intelligence App' user permission [ID 46817]
-
-<!-- MR 10.7.0 - FR 10.7.1 -->
-
-A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
-
-> [!NOTE]
->
-> - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
-> - The first time a system is upgraded to DataMiner 10.7.1/10.7.0 or later, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
-
-#### DataMiner Intelligence official release [ID 47196]
+#### Introducing DataMiner Intelligence [ID 47196]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
 
@@ -100,13 +76,33 @@ The built-in [DataMiner Docs agent](xref:Intelligence_Assistant_DocumentationAge
 
 You can create [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) for an operational domain or workflow, with tailored instructions and a chosen set of capabilities. Reusable [skills](xref:Intelligence_Assistant_Skills) provide domain knowledge and step-by-step procedures. [Data tools](xref:Intelligence_Assistant_DataTools) give agents access to selected information sources; custom tools can expose supported Object Manager data or registered GQI data sources.
 
-When a workflow needs to do more than retrieve information, [script tools](xref:Intelligence_Assistant_ScriptTools) let a specialized agent run selected DataMiner Automation scripts, for example to start maintenance or apply a configuration. A tool can be configured to request user confirmation before it runs. DataMiner permissions continue to govern access and actions.
+When a workflow needs to do more than retrieve information, [script tools](xref:Intelligence_Assistant_ScriptTools) let a specialized agent run selected DataMiner automation scripts, for example to start maintenance or apply a configuration. A tool can be configured to request user confirmation before it runs. DataMiner permissions continue to govern access and actions.
 
 ##### Availability
 
 A DataMiner System must be connected to dataminer.services, and DataMiner Intelligence must be enabled. Specialized agents are experimental and may require administrator enablement. For setup and availability details, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started), [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM), and the [FAQ](xref:Intelligence_FAQ).
 
-For the related documentation changes, see [PR #7157](https://github.com/SkylineCommunications/dataminer-docs/pull/7157).
+## New features
+
+#### Security: New 'Intelligence Usage' user permission [ID 46765]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
+
+> [!NOTE]
+> The first time a system is upgraded to DataMiner 10.7.1/10.7.0 or later, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+
+#### Security: New 'Intelligence App' user permission [ID 46817]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
+
+> [!NOTE]
+>
+> - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
+> - The first time a system is upgraded to DataMiner 10.7.1/10.7.0 or later, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
 
 ## Changes
 
