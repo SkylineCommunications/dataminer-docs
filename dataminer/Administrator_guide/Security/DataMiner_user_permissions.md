@@ -37,6 +37,16 @@ Permission to access the DataMiner web apps.
 >[!NOTE]
 > To access the Monitoring app, from DataMiner 10.2.0/10.2.2 onwards, the permission [Modules > Monitoring web app](#modules--monitoring-web-app) is needed.
 
+### General \> DataMiner Intelligence
+
+#### General \> DataMiner Intelligence \> Access
+
+Available in DataMiner 10.7.0 and later. Permission to use DataMiner Intelligence capabilities, including DataMiner Assistant, Document Intelligence, and natural language to GQI. On earlier supported DataMiner versions, Document Intelligence can still be used, but it is not guarded by this permission. This permission is also required, together with the *Modules > System configuration > Tools > Admin tools* permission, to change the system-wide *DataMiner Intelligence* setting.
+
+#### General \> DataMiner Intelligence \> Assistant app
+
+Available in DataMiner 10.7.0 and later. Permission to access the DataMiner Assistant app from the landing page. To use AI capabilities in the app, the *Access* permission and the system-wide *DataMiner Intelligence* setting must also be enabled.
+
 ### General \> Elements
 
 #### General \> Elements \> Access

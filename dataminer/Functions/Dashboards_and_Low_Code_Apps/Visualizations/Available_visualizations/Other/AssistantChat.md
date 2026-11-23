@@ -10,11 +10,13 @@ The assistant chat component allows you to **interact with the [DataMiner Assist
 
 The DataMiner Assistant is currently in development and available as a preview feature upon request. When preview access is enabled, the assistant chat component also becomes available.
 
-![Assistant chat component displayed in a DataMiner low-code app](~/dataminer/images/AssistantChat.png)<br>*Assistant chat component in DataMiner 10.6.9*
+To use the assistant chat component, your DataMiner System must run DataMiner 10.7.0 or later, the system-wide *DataMiner Intelligence* setting must be enabled, and your user profile must have the *General > DataMiner Intelligence > Access* permission. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) and [DataMiner user permissions](xref:DataMiner_user_permissions).
+
+![Assistant chat component displayed in a DataMiner low-code app](~/dataminer/images/AssistantChat.png)<br>*Assistant chat component in DataMiner Web 10.6.9.*
 
 ## Interacting with the assistant chat component
 
-![Assistant chat component UI showing question input, response mode selector, AI model selector, microphone, and send button](~/dataminer/images/Assistant_Chat_UI.png)<br>*Assistant chat component in DataMiner 10.6.9*
+![Assistant chat component UI showing question input, response mode selector, AI model selector, microphone, and send button](~/dataminer/images/Assistant_Chat_UI.png)<br>*Assistant chat component in DataMiner Web 10.6.9.*
 
 To interact with the DataMiner Assistant, use the following areas of the assistant chat component:
 
@@ -58,4 +60,4 @@ For the assistant chat component, the following component action is available:
 
   When the action is triggered, the value is sent to the Assistant as a query.
 
-  ![Assistant chat starting a new conversation from a button using text input value](~/dataminer/images/AssistantChat.gif)<br>*Assistant chat component started through a 'Start new conversation' component action when the button component is clicked, using the value entered in the text input component (DataMiner 10.6.9)*
+  ![Assistant chat starting a new conversation from a button using text input value](~/dataminer/images/AssistantChat.gif)<br>*Assistant chat component started through a "Start new conversation" component action using the value entered in a text input (DataMiner Web 10.6.9).*

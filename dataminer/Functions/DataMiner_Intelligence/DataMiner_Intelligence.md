@@ -44,14 +44,15 @@ You can interact with the agents through the following DataMiner Assistant chat 
 
 In addition to chat interaction, it will soon be possible to trigger DataMiner Intelligence from DataMiner Automation. This will allow you to launch agentic workflows from any automated workflow, for example when a new alarm is generated.
 
-## Getting started
+## Access and prerequisites
 
-DataMiner Intelligence requires a [connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and relies on two components that each need to be enabled separately:
+The DataMiner Intelligence user permissions and system-wide setting are available in DataMiner 10.7.0 and later. On earlier supported DataMiner versions, Document Intelligence can still be used through the DataMiner Assistant DxM, but it is not guarded by the DataMiner Intelligence permissions.
 
-- The **DataMiner Assistant DxM**, which provides the AI capabilities in DataMiner.
-- The **DataMiner Assistant app**, the chat interface that allows you to interact with the agents.
+To enable the *DataMiner Intelligence* setting in *Settings* > *System*, the DataMiner System must run DataMiner 10.7.0 or later and be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-For the steps to enable both components and start exploring DataMiner Intelligence, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
+On DataMiner 10.7.0 or later, you need the *General > DataMiner Intelligence > Access* user permission to use DataMiner Intelligence capabilities, including DataMiner Assistant, Document Intelligence, and natural language to GQI. On earlier supported versions, Document Intelligence is not guarded by this permission. To access the DataMiner Assistant app from the landing page, you also need the *Assistant app* permission. For details, see [DataMiner user permissions](xref:DataMiner_user_permissions).
+
+The DataMiner Assistant DxM provides the AI capabilities, while the DataMiner Assistant app provides the chat interface to the agents. For the steps to enable DataMiner Intelligence and start exploring it, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 ## Other AI capabilities
 

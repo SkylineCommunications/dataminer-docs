@@ -50,11 +50,13 @@ No data is used for training foundation models or shared outside the Skyline Com
 
 ## User permissions
 
-Access to the DataMiner Assistant and the actions you can perform are controlled through your existing DataMiner user permissions:
+Access to DataMiner Intelligence is controlled through DataMiner user permissions and a system-wide setting:
 
-- Only users with appropriate DataMiner credentials can access the Assistant. The DataMiner Assistant web application, when enabled, is currently available for all users with permissions to use the web apps. This broad access is temporary during the current rollout phase. At this point in time, no additional Assistant-specific permissions are required.
+- In DataMiner 10.7.0 and later, the *General > DataMiner Intelligence > Access* permission is required to use DataMiner Intelligence capabilities, including DataMiner Assistant, Document Intelligence, and natural language to GQI. On earlier supported versions, Document Intelligence can still be used, but it is not guarded by a DataMiner Intelligence permission.
+- The *General > DataMiner Intelligence > Assistant app* permission controls whether you can access the Assistant app from the landing page. You also need the *Access* permission to use AI capabilities in the app.
+- In DataMiner 10.7.0 and later, the system-wide *DataMiner Intelligence* setting in *Settings* > *System* controls whether DataMiner Intelligence is available throughout the DataMiner System. Changing this setting requires both the *Access* permission and the [*Modules > System configuration > Tools > Admin tools* permission](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools). Other users see the setting as read-only.
 - The Assistant respects your role-based access control (RBAC) configuration, meaning you can only view and interact with data that your DataMiner permissions allow you to access.
-- Access to the Documentation tab in the DataMiner Assistant app for retrieving information from the DataMiner documentation is typically available to all authenticated users.
+- The DataMiner Docs agent and Documentation tab are DataMiner Assistant capabilities and require the *Access* permission. Documentation lookup is typically available to all users who have access to the Assistant app.
 
 For more information on managing DataMiner user permissions, see [User management](xref:User_management).
 

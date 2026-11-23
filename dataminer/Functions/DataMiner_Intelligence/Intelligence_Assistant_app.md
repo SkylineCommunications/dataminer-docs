@@ -5,27 +5,21 @@ description: "Discover the DataMiner Assistant app, an integrated AI assistant w
 
 # DataMiner Assistant app
 
-> [!IMPORTANT]
-> The DataMiner Assistant app is an upcoming feature that is not yet available in current DataMiner versions. The information below provides a preview of what will be available in a future release and may be subject to change.
-
 The Assistant app is an AI assistant integrated within DataMiner. It has access to various sources of information within the DataMiner System and leverages Large Language Models (LLMs) to integrate this information and extract useful insights.
 
 ## Accessing the Assistant app
 
-When this preview feature has been enabled, you can access the Assistant app via the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
+To access the Assistant app from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), the system-wide *DataMiner Intelligence* setting must be enabled and your user profile must have both the *General > DataMiner Intelligence > Access* and *Assistant app* permissions. The *Assistant app* permission controls access to the app from the landing page; it does not replace the *Access* permission. See [DataMiner user permissions](xref:DataMiner_user_permissions).
 
-![Assistant app icon on the DataMiner landing page](~/dataminer/images/AssistantDxM_AssistantIcon.png)
+![Assistant app icon on the DataMiner landing page](~/dataminer/images/AssistantDxM_AssistantIcon.png)<br>*DataMiner Assistant app icon on the DataMiner landing page.*
 
 Alternatively, the app is also available from Microsoft Teams or Microsoft Copilot. See [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
-
-> [!NOTE]
-> To enable the Assistant app in preview in your DataMiner System, contact [ai@skyline.be](mailto:ai@skyline.be).
 
 ## Assistant app user interface
 
 When you open the app, a welcome screen is displayed with the following elements:
 
-![Assistant app welcome screen, including suggestion cards, agent selector, model selector, and chat input box](~/dataminer/images/Assistant.png)
+![Assistant app welcome screen, including suggestion cards, agent selector, model selector, and chat input box](~/dataminer/images/Assistant.png)<br>*DataMiner Assistant welcome screen.*
 
 - **Left sidebar**: Allows you to start a new session at any time by clicking *+ New session*. Below that, you can access your sessions, [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools).
 

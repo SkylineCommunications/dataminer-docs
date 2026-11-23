@@ -7,9 +7,11 @@ description: "Learn how to use the natural language to GQI feature in DataMiner 
 
 Starting from version 1.0.0, the [DataMiner Assistant](xref:Intelligence_Assistant_DxM) DxM will translate requests in human language into ready-to-execute GQI queries making use of an underlying Large Language Model (LLM).
 
+To use this feature, your DataMiner System must run DataMiner 10.7.0 or later, the system-wide *DataMiner Intelligence* setting must be enabled, and your user profile must have the *General > DataMiner Intelligence > Access* permission. The *Assistant app* permission only controls access to the Assistant app on the landing page. For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) and [DataMiner user permissions](xref:DataMiner_user_permissions).
+
 You can use this feature when [configuring queries in dashboards or low-code apps](xref:Letting_DataMiner_Assistant_create_a_query).
 
-![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.6.1*
+![Natural language to GQI query generation in a DataMiner dashboard](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner Web 10.6.1.*
 
 Examples of such natural languages request could be:
 
