@@ -107,19 +107,29 @@ No. Install the DataMiner Assistant DxM on a few suitable Agents to provide redu
 
 ### Is installation required on a DaaS system?
 
-DataMiner 10.7.0/10.7.1 is the minimum version for the DataMiner Assistant app on DaaS. On DaaS systems running DataMiner 10.7.0/10.7.1 or later, no DxM installation is needed because the DataMiner Assistant DxM is already installed and running. The app also requires the system-wide *DataMiner Intelligence* setting and applicable user permissions. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) for details.
+DataMiner 10.7.0/10.7.1 is the minimum version for the DataMiner Assistant app on DaaS. On DaaS systems running DataMiner 10.7.0/10.7.1 or higher, no DxM installation is needed because the DataMiner Assistant DxM is already installed and running.
+
+The app also requires the system-wide *DataMiner Intelligence* web apps setting and applicable user permissions. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) for details.
 
 ### Why is the Assistant app not visible?
 
-Ask your DataMiner administrator to confirm that the DataMiner System runs DataMiner 10.7.0/10.7.1 or later, is connected to dataminer.services, the DataMiner Assistant DxM is running, and the system-wide *DataMiner Intelligence* setting is enabled. Your user profile must have both the *General > DataMiner Intelligence > Access* and *Assistant app* permissions. If the app remains unavailable after these checks, contact [ai@skyline.be](mailto:ai@skyline.be) for assistance.
+Ask your DataMiner administrator to confirm that [all requirements are met](xref:Intelligence_Getting_Started#requirements) and your user profile has both the [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) and [Assistant app](xref:DataMiner_user_permissions#general--dataminer-intelligence--assistant-app) permissions.
+
+If the app remains unavailable even though the requirements are met and you have the necessary permissions, contact [ai@skyline.be](mailto:ai@skyline.be) for assistance.
 
 ### Why is the DataMiner Intelligence setting disabled or read-only?
 
-You can enable the *DataMiner Intelligence* setting only when the DataMiner System runs DataMiner 10.7.0/10.7.1 or later and is connected to dataminer.services. If either requirement is missing, the toggle is disabled; hover over it to see the reason. To change the setting, your user profile must have both the *General > DataMiner Intelligence > Access* and [*Modules > System configuration > Tools > Admin tools*](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) permissions. Otherwise, the setting is read-only.
+The *DataMiner Intelligence* setting in the web apps can only be enabled if the DataMiner System runs DataMiner 10.7.0/10.7.1 or higher and is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud). If either requirement is missing, the toggle button is disabled. Hovering over the button will show the reason.
+
+In addition, to change the setting, your user profile must have both the [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) and [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) permissions. Otherwise, the setting is read-only.
 
 ### Do I need to reload after changing the DataMiner Intelligence or Specialized agents setting?
 
-No. Changes are saved when you click the toggle and take effect immediately. Turning off DataMiner Intelligence removes the Assistant app from the app menu and apps overview. If the app is already open, it displays a "page not found" message. Turning DataMiner Intelligence on again restores the app. Changes to the *Specialized agents* setting immediately update the Assistant chat, the *Agents* page, and the agent editor. If the selected agent is no longer available, the chat switches to the default agent.
+No. Changes are saved when you click the toggle button and take effect immediately.
+
+Turning off DataMiner Intelligence removes the Assistant app from the app menu and apps overview. If the app is already open, it displays a "page not found" message. Turning DataMiner Intelligence on again restores the app.
+
+Changes to the *Specialized agents* setting immediately update the Assistant chat, the *Agents* page, and the agent editor. If the selected agent is no longer available, the chat switches to the default agent.
 
 ### Why can I view an agent, skill, or tool but not edit it?
 

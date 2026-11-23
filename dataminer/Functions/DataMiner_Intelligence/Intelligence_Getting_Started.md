@@ -6,6 +6,8 @@ description: "Learn the requirements and steps to enable DataMiner Intelligence 
 
 # Getting started with DataMiner Intelligence
 
+## Requirements
+
 [DataMiner Intelligence](xref:DataMiner_Intelligence) has the following requirements:
 
 - **DataMiner version**: The DataMiner Intelligence user permissions and system-wide setting require DataMiner 10.7.0/10.7.1 or later. On earlier supported versions, Document Intelligence can still be used, but it is not guarded by a DataMiner Intelligence permission.
