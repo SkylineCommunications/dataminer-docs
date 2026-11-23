@@ -2,10 +2,7 @@
 uid: MediaOps_Plan_2.0.1
 ---
 
-# MediaOps Plan 2.0.1 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Plan 2.0.1
 
 ## Fixes
 
@@ -36,3 +33,16 @@ The Resource Studio and Resource Scheduling setup scripts also run each setup st
 After a node swap triggered additional swaps through scripts running in parallel, the node-edge graph in the Scheduling and Workflow Designer low-code apps could show an in-between state, such as a missing connection. You previously had to refresh the page to see the correct graph.
 
 The `WorkflowDesigner_GQI_GetWorkflowNodesAndEdges` data source now supports real-time updates. It watches the displayed workflow instance and sends only the nodes and connections that were added, updated, or removed, so the graph shows the final state after multiple swaps. Changes made between the initial load and the start of updates are also picked up. Deleted or missing instances now return no rows instead of an error, and refresh errors are logged instead of being thrown.
+
+### Parent-child links in node graphs could be lost after a linked child node was modified [ID 47174]
+
+In job, workflow, and recurring job node graphs, parent-child links could be lost after a linked child node was modified (for example, by changing its alias, icon, or orchestration settings).
+
+This could cause several problems:
+
+- Looking up the parent of a modified child returned nothing, even though the parent still listed the child.
+- Unlinking a modified child and linking it to a new parent left it with two parents, and both were saved.
+- Removing a modified child left a dangling link, so saving failed with a "Child node ... does not exist in the graph" error.
+- Swapping a modified node left the link on the swapped-out node. Copying orchestration settings onto the replacement afterwards also lost the replacement's parent.
+
+To resolve this issue, links are now tracked by node identity instead of node content, so they stay reachable regardless of how a node changes.
