@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.FlushPerDatagram
+description: "Use the FlushPerDatagram element in a DataMiner protocol to forward each received UDP datagram to SLProtocol immediately."
 ---
 
 # FlushPerDatagram element

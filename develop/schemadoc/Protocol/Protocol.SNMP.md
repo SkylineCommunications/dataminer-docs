@@ -1,5 +1,6 @@
 ---
 uid: Protocol.SNMP
+description: "Learn how the protocol-level SNMP element controls MIB generation, including automatic parameter OIDs and page submaps."
 ---
 
 # SNMP element

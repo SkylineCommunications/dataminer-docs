@@ -6,6 +6,9 @@ uid: NT_SET_BITRATE_DELTA_INDEX_TRACKING
 
 Enables or disables the bitrate delta tracking for the specified table parameters.<!-- RN 29445 -->
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(448, ...)` directly, we recommend using [SnmpDeltaHelper](xref:Skyline.DataMiner.Utils.SNMP.SnmpDeltaHelper) and the [Skyline.DataMiner.Utils.Rates.Protocol](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Rates.Protocol) NuGet package (`using Skyline.DataMiner.Utils.Rates.Protocol;`).
+
 ```csharp
 int[] parameterIds = new int[] { 100, 200 };
 bool isTrackingEnabled = true;

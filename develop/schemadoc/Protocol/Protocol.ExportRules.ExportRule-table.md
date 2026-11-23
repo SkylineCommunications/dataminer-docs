@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-table
+description: "Use the ExportRule table attribute in a DataMiner protocol to select one DVE-generating table or all such tables for a rule."
 ---
 
 # table attribute

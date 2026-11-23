@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication-domain
+description: "Use the domain attribute in a DataMiner protocol to identify the domain of the DataMiner Agent hosting the element to replicate from."
 ---
 
 # domain attribute

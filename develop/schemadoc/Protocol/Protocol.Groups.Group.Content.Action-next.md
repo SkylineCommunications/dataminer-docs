@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Action-next
+description: "Use the Action next attribute in a DataMiner protocol to set the delay after an action response before the next item executes."
 ---
 
 # next attribute

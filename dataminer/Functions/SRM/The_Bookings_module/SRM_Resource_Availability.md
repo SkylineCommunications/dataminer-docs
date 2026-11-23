@@ -39,6 +39,7 @@ resource.AvailabilityWindow = new BasicAvailabilityWindow()
 {
     AvailableFrom = DateTimeOffset.Now.AddDays(1),  // Resource available starting from tomorrow
     AvailableUntil = DateTimeOffset.Now.AddDays(100), // Resource available for the next 100 days
+
     // RollingWindow can be left as 'null' if no rolling window is configured
     RollingWindowConfiguration = new RollingWindowConfiguration(TimeSpan.FromDays(30)) // 30-day rolling window
 };

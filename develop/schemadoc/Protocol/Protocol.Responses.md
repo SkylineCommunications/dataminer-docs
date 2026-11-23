@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Responses
+description: "Learn how the Responses element contains uniquely identified response definitions that DataMiner matches against device messages."
 ---
 
 # Responses element

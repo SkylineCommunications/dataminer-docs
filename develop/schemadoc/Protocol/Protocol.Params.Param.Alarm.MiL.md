@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Alarm.MiL
+description: "Use the MiL element in a DataMiner protocol to set the default minor-low threshold in a parameter alarm template."
 ---
 
 # MiL element

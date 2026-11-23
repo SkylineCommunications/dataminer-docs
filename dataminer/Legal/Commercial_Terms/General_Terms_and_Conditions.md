@@ -5,7 +5,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 # Skyline General Terms and Conditions
 
-*Last updated: 20 October 2026*
+*Last updated: 22 October 2026*
 
 ## Part A — General Terms and Conditions
 
@@ -216,7 +216,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 14.3 Either Party may terminate the Agreement by written notice if the other Party: (a) materially breaches the Agreement and fails to cure such breach within thirty (30) days of receiving written notice thereof; or (b) becomes insolvent, files for bankruptcy, or ceases to operate in the ordinary course.
 
-14.4 Upon termination or expiration, Customer may request export of Customer Data within thirty (30) days. After such period, Skyline shall delete Customer Data in accordance with its data retention policies, unless retention is required by applicable law.
+14.4 Upon termination or expiration, Customer may request export of Customer Data within seven (7) days. After such period, Skyline shall delete Customer Data in accordance with its data retention policies, unless retention is required by applicable law.
 
 14.5 Unless expressly stated otherwise in the Quotation, any remaining Usage-Based Entitlements, including credits, allowances, committed usage, or prepaid amounts, shall be forfeited without refund or compensation upon termination or expiration.
 

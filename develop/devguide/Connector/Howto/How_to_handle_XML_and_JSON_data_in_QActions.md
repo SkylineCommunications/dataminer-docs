@@ -1,5 +1,6 @@
 ---
 uid: How_to_handle_XML_and_JSON_data_in_QActions
+description: "Serialize and deserialize XML and JSON data in QActions using generated C# classes, DataMiner-compatible libraries, and recommended settings."
 ---
 
 # How to handle XML and JSON data in QActions
@@ -80,12 +81,17 @@ public class Rootobject
 {
     public Instance[] Instances { get; set; }
 }
+
 public class Instance
 {
     public long Instance { get; set; }
+
     public string Name { get; set; }
+
     public string IPAddress { get; set; }
+
     public bool CreatedFromTemplate { get; set; }
+
     public string Status { get; set; }
 }
 ```
@@ -110,6 +116,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using QAction_3.Json;
 using Skyline.DataMiner.Scripting;
+
 /// <summary>
 /// The QAction entry point.
 /// </summary>
@@ -120,9 +127,11 @@ public static void Run(SLProtocol protocol)
     {
         // Get Text based json data as a string.
         string source = Convert.ToString(protocol.GetParameter(Parameter.JSONdata_3));
+
         // Deserialize Json contents
         Rootobject rootObjects = JsonConvert.DeserializeObject<Rootobject>(source);
         List<object[]> instances = new List<object[]>();
+
         // Convert Generated class into Connector Row data.
         foreach (Instance instance in rootObjects.Instances)
         {
@@ -131,14 +140,19 @@ public static void Run(SLProtocol protocol)
                 Instancesid_101 = instance.Id,
                 Instancesname_102 = instance.Name,
                 Instancesipaddress_103 = instance.IPAddress,
-                Instancescreatedfromtemplate_104 = instance.CreatedFromTemplate
+                Instancescreatedfromtemplate_104 = instance.CreatedFromTemplate,
             }.ToObjectArray());
         }
+
         protocol.FillArray(Parameter.Instances.tablePid, instances, NotifyProtocol.SaveOption.Full);
     }
     catch (Exception ex)
     {
-        protocol.Log("QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() + "|Run|Deserializing JSON text failed due to:" + Environment.NewLine + ex, LogType.Error, LogLevel.NoLogging);
+        protocol.Log(
+            $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Deserializing JSON text failed due to:{Environment.NewLine}" +
+            $"{ex}",
+            LogType.Error,
+            LogLevel.NoLogging);
     }
 }
 ```
@@ -241,6 +255,7 @@ The resulting generated classes:
 public partial class ListInstances
 {
     private ListInstancesInstance[] instanceField;
+
     /// <remarks/>
     [System.Xml.Serialization.XmlElementAttribute("Instance")]
     public ListInstancesInstance[] Instance
@@ -249,12 +264,14 @@ public partial class ListInstances
         {
             return this.instanceField;
         }
+
         set
         {
             this.instanceField = value;
         }
     }
 }
+
 /// <remarks/>
 [System.SerializableAttribute()]
 [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -266,6 +283,7 @@ public partial class ListInstancesInstance
     private ulong idField;
     private bool createdFromTemplateField;
     private string statusField;
+
     /// <remarks/>
     public string Name
     {
@@ -273,11 +291,13 @@ public partial class ListInstancesInstance
         {
             return this.nameField;
         }
+
         set
         {
             this.nameField = value;
         }
     }
+
     /// <remarks/>
     public string IPAddress
     {
@@ -285,11 +305,13 @@ public partial class ListInstancesInstance
         {
             return this.iPAddressField;
         }
+
         set
         {
             this.iPAddressField = value;
         }
     }
+
     /// <remarks/>
     public ulong Id
     {
@@ -297,11 +319,13 @@ public partial class ListInstancesInstance
         {
             return this.idField;
         }
+
         set
         {
             this.idField = value;
         }
     }
+
     /// <remarks/>
     public bool CreatedFromTemplate
     {
@@ -309,11 +333,13 @@ public partial class ListInstancesInstance
         {
             return this.createdFromTemplateField;
         }
+
         set
         {
             this.createdFromTemplateField = value;
         }
     }
+
     /// <remarks/>
     public string Status
     {
@@ -321,6 +347,7 @@ public partial class ListInstancesInstance
         {
             return this.statusField;
         }
+
         set
         {
             this.statusField = value;
@@ -352,9 +379,10 @@ This procedure can be summarized with the following code snippet:
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml;
 using System.Xml.Serialization;
 using Skyline.DataMiner.Scripting;
-using System.Xml;
+
 /// <summary>
 /// DataMiner QAction Class: Deserialize Xml Text.
 /// </summary>
@@ -370,9 +398,11 @@ public static class QAction
         {
             // Get Text based xml data as a string.
             string textData = Convert.ToString(protocol.GetParameter(Parameter.xmltexttodeserialize_7));
+
             // Deserialize Xml contents
             QAction_6.Xml.ListInstances listInstances = XmlDeserializeFromString<QAction_6.Xml.ListInstances>(textData);
-            // Convert C# Generated Classes into Qaction Rows.
+
+            // Convert C# Generated Classes into QAction Rows.
             List<object[]> instances = new List<object[]>();
             foreach (ListInstancesInstance instance in listInstances.Instance)
             {
@@ -382,19 +412,22 @@ public static class QAction
                     Instancesxmlname_202 = instance.Name,
                     Instancesxmlipaddress_203 = instance.IPAddress,
                     Instancesxmlcreatedfromtemplate_204 = instance.CreatedFromTemplate,
-                    Instancesxmlstatus_205 = instance.Status
+                    Instancesxmlstatus_205 = instance.Status,
                 }.ToObjectArray());
             }
+
             protocol.FillArray(Parameter.Instancesxml.tablePid, instances, NotifyProtocol.SaveOption.Full);
         }
         catch (Exception ex)
         {
             protocol.Log(
-                "QA" + protocol.QActionID + "|" + protocol.GetTriggerParameter() +
-                "|Run|Deserializing Json text failed due to:" + Environment.NewLine + ex, LogType.Error,
+                $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Deserializing Json text failed due to:{Environment.NewLine}" +
+                $"{ex}",
+                LogType.Error,
                 LogLevel.NoLogging);
         }
     }
+
     public static T XmlDeserializeFromString<T>(this string xmlTextData)
     {
         object result;
@@ -405,7 +438,8 @@ public static class QAction
                 var serializer = new XmlSerializer(typeof(T));
                 result = serializer.Deserialize(reader);
             }
-            return (T) result;
+
+            return (T)result;
         }
         catch
         {
@@ -489,9 +523,13 @@ Generated class:
 public class Rootobject
 {
     public int Id { get; set; }
+
     public string Name { get; set; }
+
     public string IPAddress { get; set; }
+
     public bool CreatedFromTemplate { get; set; }
+
     public string Status { get; set; }
 }
 ```
@@ -514,9 +552,13 @@ Generated class:
 public class Rootobject
 {
     public int Id { get; set; }
+
     public object Name { get; set; }
+
     public string IPAddress { get; set; }
+
     public object CreatedFromTemplate { get; set; }
+
     public string Status { get; set; }
 }
 ```
@@ -535,7 +577,7 @@ If an API replies to your request with a parameter named *Instance-Id*, you will
 
     ```csharp
     [JsonProperty("Instance-Id")]
-    public string InstanceId { get; set;}
+    public string InstanceId { get; set; }
     ```
 
 - Deserializing with System.Xml.dll

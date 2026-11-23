@@ -1,5 +1,6 @@
 ---
 uid: FAQ_DataMiner_Cube_languages
+description: "Check DataMiner Cube core languages, including Spanish and Portuguese (Portugal), and ask about paid implementation for other languages."
 ---
 
 # Which languages are available in the DataMiner Cube client?

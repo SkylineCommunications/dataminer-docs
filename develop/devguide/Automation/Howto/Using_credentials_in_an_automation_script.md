@@ -1,5 +1,6 @@
 ---
 uid: Using_credentials_in_an_automation_script
+description: "Declare Credentials Library entries as automation script variables and retrieve current usernames, passwords, or tokens securely at runtime."
 ---
 
 # Using credentials in an automation script

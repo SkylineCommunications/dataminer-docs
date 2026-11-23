@@ -1,6 +1,6 @@
 ---
 uid: Tutorial_Register_Catalog_Version
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 description: "Learn how to register a new connector version in the Catalog with a POST API request, organization key, and multipart .dmprotocol package."
 ---
 

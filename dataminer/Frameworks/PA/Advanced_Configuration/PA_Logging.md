@@ -1,5 +1,6 @@
 ---
 uid: PA_Logging
+description: "Find out how Process Automation is configured to generate one log file per main token pushed into a process."
 ---
 
 # Logging

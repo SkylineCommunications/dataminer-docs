@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication-uid
+description: "Use the uid attribute in a DataMiner protocol to set the username used to log on to the DataMiner Agent hosting the element to replicate from."
 ---
 
 # uid attribute

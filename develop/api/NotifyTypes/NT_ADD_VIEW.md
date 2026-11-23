@@ -8,7 +8,7 @@ Creates a new view.
 
 ```csharp
 string name = "HeadQuarter";
-string parentViewID = " 10060";
+string parentViewID = "10060";
 string[] viewDetails = new string[] { name, parentViewID };
 string[] elementIDs = new string[] { "346/661", "346/660" };
 

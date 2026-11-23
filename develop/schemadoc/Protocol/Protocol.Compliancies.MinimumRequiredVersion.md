@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Compliancies.MinimumRequiredVersion
+description: "Use the MinimumRequiredVersion element in a DataMiner protocol to set the earliest DataMiner version the protocol can be uploaded to."
 ---
 
 # MinimumRequiredVersion element

@@ -3,10 +3,7 @@ uid: MediaOps_Live_1.2.0
 description: Highlights of the features, enhancements, and fixes included in the MediaOps Live 1.2.0 release, including improved CSV encoding.
 ---
 
-# MediaOps Live 1.2.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Live 1.2.0
 
 > [!NOTE]
 > This version requires:
@@ -69,6 +66,12 @@ The values configured for an orchestration event are stored with that event:
 Existing orchestration scripts continue to work without any changes.
 
 To get started, take a look at the *MediaOps_Live_Example_DynamicOrchestration* example script, which is included in the MediaOps Live demo package. For more information on how to create a script with dynamic inputs, refer to the [orchestration script documentation](xref:MediaOpsLive_OrchestrationScript).
+
+### DevPack: Paged reading of orchestration events [ID 47041]
+
+The MediaOps Live DevPack now lets you read orchestration events page by page instead of loading every matching event at once. Use the new `OrchestrationHelper.ReadEventsPaged` method with a filter and an optional page size (default 500) to retrieve matching events in pages.
+
+This also resolves slow loading or timeouts when opening the search page of the Orchestration Events app.
 
 ## Fixes
 

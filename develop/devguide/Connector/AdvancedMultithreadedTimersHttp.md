@@ -1,5 +1,6 @@
 ---
 uid: AdvancedMultiThreadedTimersHttp
+description: "Implement multithreaded HTTP requests by building request objects in one QAction and processing responses and post-response logic in subsequent QActions."
 ---
 
 # HTTP
@@ -46,6 +47,10 @@ To build the request, create a QAction triggered by a multithreaded timer (using
 This QAction is used to create the request as illustrated in the following example:
 
 ```csharp
+using System;
+using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Utils.Protocol.Extension;
+
 /// <summary>
 /// Example HTTP before.
 /// </summary>
@@ -60,40 +65,42 @@ public class QAction
     {
         try
         {
-            string rowkey = protocol.RowKey();
-            
+            string rowKey = protocol.RowKey();
+
             // Note: In this QAction you will typically set the status of the current row to, for example, "Sending".
             string verb = "GET";
-            string url = Convert.ToString(protocol.GetParameterIndexByKey(1000, rowkey, 2)) + "/";
+            string url = $"{Convert.ToString(protocol.GetCell(1000, rowKey, 1))}/";
             string userName = Convert.ToString(protocol.HttpUsername);
             string password = Convert.ToString(protocol.HttpPassword);
-            string requestHeaders = "Accept-Encoding|gzip, deflate";    // Use pipe character ('|') to separate the header from the header value. Use semicolon to provide multiple request headers.
-            
+            string requestHeaders = "Accept-Encoding|gzip, deflate"; // Use pipe character ('|') to separate the header from the header value. Use semicolon to provide multiple request headers.
+
             int timeout = 100; // Timeout in ms.
-            
-            string[] requestSettings = new string[6];
-            
-            requestSettings[0] = verb;
-            requestSettings[1] = url;
-            requestSettings[2] = userName;
-            requestSettings[3] = password;
-            requestSettings[4] = requestHeaders;
-            requestSettings[5] = timeout.ToString();
-            
-            string[] resourcePaths = new string[3];
-            
-            resourcePaths[0] = "resourceA.htm";
-            resourcePaths[1] = "resourceB.htm";
-            resourcePaths[2] = "resourceC.htm";
-            
-            object[] httpRequestInfo = new object[3] { "http", requestSettings, resourcePaths };
-            
+
+            string[] requestSettings = new string[]
+            {
+                verb,
+                url,
+                userName,
+                password,
+                requestHeaders,
+                timeout.ToString(),
+            };
+
+            string[] resourcePaths = new string[]
+            {
+                "resourceA.htm",
+                "resourceB.htm",
+                "resourceC.htm",
+            };
+
+            object[] httpRequestInfo = new object[] { "http", requestSettings, resourcePaths };
+
             return httpRequestInfo;
         }
         catch (Exception e)
         {
-            protocol.Log("An exception occurred: " + e.ToString());
-        
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
+
             return null;
         }
     }
@@ -146,7 +153,7 @@ In this QAction, typically you will also set the state of the corresponding row 
 To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
+> Whereas typically you provide a parameter ID in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="Process HTTP Responses" encoding="csharp" options="group" triggers="1011" row="true">
@@ -165,7 +172,7 @@ using System;
 using Skyline.DataMiner.Scripting;
 
 /// <summary>
-/// Example HTTP data..
+/// Example HTTP data.
 /// </summary>
 public class QAction
 {
@@ -179,25 +186,25 @@ public class QAction
         {
             string rowKey = protocol.RowKey();
             object result = protocol.OldRow();
-            
+
             if (result != null)
             {
                 string communicationState = Convert.ToString(result);
-                
+
                 if (communicationState != "TIMEOUT" && communicationState != "NO POLLING OCCURED")
                 {
                     object[] responses = (object[])result;
-                
-                    if(responses.Length > 1)
+
+                    if (responses.Length > 1)
                     {
-                        object[] statusLines = (object[]) responses[0];
+                        object[] statusLines = (object[])responses[0];
                         object[] messageBodies = (object[])responses[1];
-                
+
                         for (int i = 0; i < statusLines.Length; i++)
                         {
                             string statusLine = Convert.ToString(statusLines[i]);
                             string response = Convert.ToString(messageBodies[i]);
-                
+
                             if (statusLine == "HTTP/1.1 200 OK")
                             {
                                 // Process response (e.g., process data and update status column to OK).
@@ -211,17 +218,17 @@ public class QAction
                 }
                 else
                 {
-                    protocol.Log("Result: " + Convert.ToString(result));
+                    protocol.Log($"QA{protocol.QActionID}|Run|Result: {Convert.ToString(result)}", LogType.Error, LogLevel.NoLogging);
                 }
             }
             else
             {
-                protocol.Log("Result is null.");
+                protocol.Log($"QA{protocol.QActionID}|Run|Result is null.", LogType.Error, LogLevel.NoLogging);
             }
         }
         catch (Exception e)
         {
-            protocol.Log("QA" + protocol.QActionID + "|Run|An exception occurred: " + e.ToString(), LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
         }
     }
 }

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session-proxyServer
+description: "Use the proxyServer attribute in a DataMiner protocol to specify a fixed proxy server address or parameter ID for the HTTP connection."
 ---
 
 # proxyServer attribute

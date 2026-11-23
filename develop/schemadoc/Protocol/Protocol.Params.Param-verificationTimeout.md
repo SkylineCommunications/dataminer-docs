@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-verificationTimeout
+description: "Use the verificationTimeout attribute in a DataMiner protocol to override the timeout for verifying a parameter set operation."
 ---
 
 # verificationTimeout attribute
@@ -35,9 +36,9 @@ With the hex attribute, it is possible to display a number in HEX format:
 
 ```xml
 <Param>
-  <Measurement>
-     <Type hex="true">NUMBER</Type>
-  </Measurement>
+   <Measurement>
+      <Type hex="true">number</Type>
+   </Measurement>
 ```
 
 In this case, the WRITE is of type STRING (write in HEX format)

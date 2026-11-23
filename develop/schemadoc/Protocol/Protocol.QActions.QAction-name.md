@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-name
+description: "Learn how the QAction name attribute assigns the required non-empty name used to identify the QAction."
 ---
 
 # name attribute

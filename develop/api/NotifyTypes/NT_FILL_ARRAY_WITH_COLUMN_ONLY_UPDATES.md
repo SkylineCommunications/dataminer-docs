@@ -4,6 +4,9 @@ uid: NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES
 
 # NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES (336)
 
+> [!NOTE]
+> To update columns on the local element, we recommend using the [SetColumns](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetColumns*) extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package (`using Skyline.DataMiner.Utils.Protocol.Extension;`), or [SLProtocol.FillArrayWithColumn](xref:Skyline.DataMiner.Scripting.SLProtocol.FillArrayWithColumn*).
+
 ## Parameters
 
 To set a column on the **local element**, performing an NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES via NotifyProtocol behaves in the exact same way as [NT_FILL_ARRAY_WITH_COLUMN (220)](xref:NT_FILL_ARRAY_WITH_COLUMN).
@@ -23,7 +26,7 @@ object[] columnValues = new object[] { "X", "Y" };
 
 object[] values = new object[] { primaryKeys, columnValues };
 
-protocol.NotifyDataMiner(336 /*NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES*/, ids, values);/
+protocol.NotifyDataMiner(336 /*NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES*/, ids, values);
 ```
 
 - ids (uint[]):
@@ -51,7 +54,7 @@ object[] column2Values = new object[] { "A", "B" };
 
 object[] values = new object[] { primaryKeys, columnValues, column2Values };
 
-protocol.NotifyDataMiner(336 /*NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES*/, ids, values);/
+protocol.NotifyDataMiner(336 /*NT_FILL_ARRAY_WITH_COLUMN_ONLY_UPDATES*/, ids, values);
 ```
 
 ## See also

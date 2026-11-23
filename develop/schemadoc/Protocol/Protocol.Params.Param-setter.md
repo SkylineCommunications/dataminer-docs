@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-setter
+description: "Use the setter attribute in a DataMiner protocol to automatically copy a write parameter value to its corresponding read parameter."
 ---
 
 # setter attribute

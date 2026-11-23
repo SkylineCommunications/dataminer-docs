@@ -12,17 +12,20 @@ Creates or updates a service on a remote DMA.
   int dmaID = 346;
   int serviceID = -1;
   int targetDmaID = 123;
-
-  string serviceXml = "<Service version=\"2\" dmaid=\""+dmaID+"\" id=\""+serviceID+"\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\"><Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Triggers></Triggers></Service>";
-
-  object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/ , new object[] { targetDmaID, new uint[] { serviceID, dmaID} }, serviceXml);
-
+  
+  string serviceXml = $"<Service version=\"2\" dmaid=\"{dmaID}\" id=\"{serviceID}\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\">" +
+      "<Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element>" +
+      "<Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element>" +
+      "<Triggers></Triggers></Service>";
+  
+  object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/, new object[] { targetDmaID, new int[] { serviceID, dmaID } }, serviceXml);
+  
   if (result != null)
   {
       uint[] resultDetails = (uint[])result;
       uint createdServiceID = resultDetails[0];
-
-       ////...
+  
+      // ...
   }
   ```
 
@@ -35,17 +38,20 @@ Creates or updates a service on a remote DMA.
   int dmaID = 346;
   int serviceID = -1;
   int targetDmaID = 123;
-
-  string serviceXml = "<Service version=\"2\" dmaid=\""+dmaID+"\" id=\""+serviceID+"\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\"><Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element><Triggers></Triggers></Service>";
-
-  object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/ , new object[] { targetDmaID, serviceID }, serviceXml);
-
+  
+  string serviceXml = $"<Service version=\"2\" dmaid=\"{dmaID}\" id=\"{serviceID}\" name=\"test remote service\" description=\"\" vdxfile=\"\" ignoreTimeouts=\"false\" isTemplate=\"false\" generatedFromTemplate=\"\" type=\"\" timestamp=\"635723913806993291\">" +
+      "<Element idx=\"0\" dmaid=\"1\" eid=\"21\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element>" +
+      "<Element idx=\"1\" dmaid=\"2\" eid=\"3\" alias=\"\" group=\"-1\" notUsedCapped=\"\" includedCapped=\"\" service=\"false\" serviceElement=\"False\" includeTrigger=\"\" excludeTrigger=\"\" notUsedTrigger=\"\" state=\"\" description=\"\" templateOptions=\"\"></Element>" +
+      "<Triggers></Triggers></Service>";
+  
+  object result = protocol.NotifyDataMiner(282 /*NT_SERVICE_REMOTE*/, new object[] { targetDmaID, serviceID }, serviceXml);
+  
   if (result != null)
   {
       uint[] resultDetails = (uint[])result;
       uint createdServiceID = resultDetails[0];
-
-       ////...
+  
+      // ...
   }
   ```
 

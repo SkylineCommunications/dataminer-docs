@@ -43,7 +43,7 @@ A `string` containing the analysis result produced by the LLM based on the uploa
 
 ### TraceData GetTraceDataLastCall()
 
-Returns the `TraceData` from the most recent `AnalyzeDocuments` call. Use `HasSucceeded()` to check whether the call succeeded, and `GetErrorDataOfType<`[DocumentIntelligenceError](xref:DocIntel_DocumentIntelligenceError)`>()` to retrieve detailed error information.
+Returns the `TraceData` from the most recent `AnalyzeDocuments` call. Use [HasSucceeded()](xref:Skyline.DataMiner.Net.TraceData.HasSucceeded) to check whether the call succeeded, and `GetErrorDataOfType<`[DocumentIntelligenceError](xref:DocIntel_DocumentIntelligenceError)`>()` to retrieve detailed error information.
 
 #### Returns
 
@@ -57,6 +57,7 @@ var traceData = docIntelHelper.GetTraceDataLastCall();
 if (!traceData.HasSucceeded())
 {
     var errors = traceData.GetErrorDataOfType<DocumentIntelligenceError>();
+
     // Handle errors
 }
 ```

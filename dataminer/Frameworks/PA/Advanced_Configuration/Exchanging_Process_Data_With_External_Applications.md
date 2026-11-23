@@ -1,5 +1,6 @@
 ---
 uid: Exchanging_Process_Data_With_External_Applications
+description: "Exchange process data with external applications using process DOM instances. Implement custom logic to access and process data from each run."
 ---
 
 # Exchanging process data with external applications

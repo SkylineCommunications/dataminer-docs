@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Topologies
+description: "Use the Topologies element in a DataMiner protocol to define topology connections and diagrams displayed in an EPM element."
 ---
 
 # Topologies element

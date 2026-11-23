@@ -6,13 +6,16 @@ uid: NT_GET_PARAMETER_BY_NAME
 
 Gets the value of the parameter with the specified name.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(85, ...)` directly, we recommend using [SLProtocol.GetParameterByName](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterByName*).
+
 ```csharp
 string name = "OperationalStatus";
 object result = protocol.NotifyProtocol(85, name, null);
 
 if (result != null)
 {
-    ////...
+    // ...
 }
 ```
 

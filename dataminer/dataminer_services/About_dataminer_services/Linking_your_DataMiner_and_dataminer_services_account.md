@@ -2,7 +2,7 @@
 uid: Linking_your_DataMiner_and_dataminer_services_account
 description: "Link your DataMiner account to your dataminer.services account to make use of certain dataminer.services functionality."
 keywords: cloud account
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Linking your DataMiner account to your dataminer.services account
@@ -18,7 +18,7 @@ To link your accounts:
    > [!NOTE]
    > If this option is not available, and "..." is shown in the upper-right corner of the pane, your accounts have already been linked. In that case, you can remove the link again by selecting ... > *Unlink account*.
 
-1. In the new tab, if the displayed dataminer.services account and DataMiner System are correct, click *Continue to log on*.
+1. In the new tab, if the displayed dataminer.services account and DataMiner System are correct, click *Continue to sign in*.
 
 1. Log on with the DataMiner account you want to link to your dataminer.services account.
 

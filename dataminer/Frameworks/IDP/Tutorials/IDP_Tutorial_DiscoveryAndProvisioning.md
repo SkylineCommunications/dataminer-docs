@@ -1,5 +1,6 @@
 ---
 uid: IDP_Tutorial_DiscoveryAndProvisioning
+description: "Follow this 15-minute IDP tutorial to deploy IDP, configure a scan range, and discover and provision your Microsoft server running DataMiner."
 keywords: idp tutorial, idp kata
 ---
 

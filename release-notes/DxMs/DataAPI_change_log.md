@@ -7,6 +7,25 @@ uid: DataAPI_change_log
 > [!IMPORTANT]
 > At present, the Data API feature is only available in preview, if the soft-launch option *DataAPI* is enabled. For more information, see [Getting started with the Data Sources module](xref:Data_Sources_Setup).
 
+### 3 November 2026 - Enhancement - DataAPI 1.5.1 - Large amounts of connector data can now be exchanged with DataMiner [ID 46777]
+
+Previously, communication between Data API and DataMiner could fail when a message was too big to send in one go. This could happen with a single very large connector, but also when Data API retrieved all its connectors from DataMiner and their combined size was too big.
+
+Now, Data API uses NATS message chunking for this communication, if the DataMiner Agent supports it. If it does not, Data API works as before.
+
+### 3 November 2026 - Fix - DataAPI 1.5.1 - Pushing data to a table of an existing element could fail [ID 46613]
+
+When data was pushed to a table of an existing element using a regular connector, this could fail if the parameter ID of the table's index column was not the table's parameter ID plus one (e.g., a table with ID 1000 and an index column with ID 1005).
+
+### 3 November 2026 - Enhancement - DataAPI 1.5.1 - Pushing data to an existing element can now add new parameters [ID 46405]
+
+When data is pushed to an existing element using a regular connector, the data can now also include parameters that the connector does not have yet. Data API will add these parameters to the connector if both of the following conditions are met:
+
+- The connector allows dynamic parameter creation (i.e., its protocol.xml contains `<AllowDynamicParameterCreation>true</AllowDynamicParameterCreation>`).
+- All parameters of the connector have an ID between 10000000 and 10999999.
+
+Existing parameters remain unchanged. If a connector does not meet these conditions, data can only be pushed to the parameters it already has.
+
 ### 17 September 2026 - New feature - DataAPI 1.5.0 - Added support for pushing data to existing elements [ID 45976]
 
 Data API can now push data directly to an existing element, including a specific sub-target of that element. This allows data to be sent to elements that use an existing connector, rather than requiring Data API to create an auto-generated connector and element.

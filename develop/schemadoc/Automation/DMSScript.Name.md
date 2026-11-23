@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Name
+description: "Use the DMSScript Name element to assign a unique automation script name that does not include any of the unsupported characters."
 ---
 
 # Name element
@@ -21,4 +22,4 @@ Specifies the name of the automation script.
 
 - The name of the script must be unique.
 - The following characters are prohibited: \ / : * ? " < > | ° ;
-- Automation scripts are saved in the Scripts folder of DataMiner. The name of the automation script file is as follows: Script_[Name].xml, where [Name] is the specified name.
+- Automation scripts are saved in the *Scripts* folder of DataMiner. The name of the automation script file is as follows: Script_[Name].xml, where [Name] is the specified name.

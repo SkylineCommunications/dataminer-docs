@@ -3,10 +3,10 @@ uid: General_Main_Release_10.6.0_CU9
 description: "Release notes for General Main Release 10.6.0 CU9, including prerequisites, enhancements, and fixes planned for this preview release."
 ---
 
-# General Main Release 10.6.0 CU9 - Preview
+# General Main Release 10.6.0 CU9
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -58,6 +58,20 @@ BrokerGateway now takes redirects configured in *DMS.xml* into account when comm
 > [!NOTE]
 > NATS communication does not take redirects into account.
 
+#### DxM upgrades: Improved rollback when an upgrade fails or is canceled [ID 46715]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+For the following DataMiner Extension Modules (DxMs), uninstalling the previous version is now part of the upgrade transaction:
+
+- ArtifactDeployer
+- CloudGateway
+- CoreGateway
+- Orchestrator
+- SupportAssistant
+
+If an upgrade fails or is canceled after the previous version has been uninstalled, that version will now be restored.
+
 #### SLLogCollector packages now include the configuration files of ResourceManager, ProtocolFunctionManager, and Scheduler [ID 46753]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -67,6 +81,14 @@ SLLogCollector packages now include the following configuration files:
 - `C:\Skyline DataMiner\ResourceManager\Config.xml`
 - `C:\Skyline DataMiner\ProtocolFunctionManager\Config.xml`
 - `C:\Skyline DataMiner\Scheduler\Config.xml` (if it exists)
+
+#### Security enhancements [ID 46848] [ID 46850] [ID 47075]
+
+<!-- 46848: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+<!-- 46850: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+<!-- 47075: MR 10.4.0 [CU23] / 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 [CU0] -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -84,11 +106,11 @@ When multiple polling groups were executed concurrently, results from SNMP GET r
 
 The group ID is now passed along with each SNMP GET request so that the result is matched to the correct group.
 
-#### VerifyNatsCluster could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
+#### NATS cluster verification BPA could skip NATS checks when NATSForceManualConfig was enabled [ID 46547]
 
 <!-- MR 10.6.0 [CU9] - FR 10.6.12 -->
 
-On systems where DataMiner BrokerGateway manages NATS, the `VerifyNatsCluster` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
+On systems where DataMiner BrokerGateway manages NATS, the `NATS cluster verification` BPA could skip its checks when the `NATSForceManualConfig` flag was enabled, even if NATS was not manually configured. The BPA now checks `appsettings.runtime.json` for the BrokerGateway configuration instead of relying on the obsolete flag.
 
 #### DataMiner memory usage could keep increasing during frequent GQI queries [ID 46560]
 
@@ -121,6 +143,14 @@ From now on, these registrations will be cleared when they are no longer needed.
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 In certain cases, exceptions were wrapped in another exception even though they should have been handled or left unwrapped.
+
+#### Crash dumps of native processes will now be captured earlier when a process crashes [ID 46696]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+From now on, crash dumps of native processes will be captured earlier when a process crashes, to help gather more useful diagnostic information.
+
+Also, a number of minor issues have been fixed in SLDMS. For example, up to now, memory handling issues could occur in notification threads for DataMiner Agents.
 
 #### Remote DELT export and migration failures did not show the failure reason [ID 46699]
 

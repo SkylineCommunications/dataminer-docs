@@ -2,7 +2,7 @@
 uid: DataMiner_Cloud_Pack
 description: "Download the DataMiner Cloud Pack with or without .NET 10 for a standard, proxy, or DMZ setup and enable dataminer.services capabilities."
 keywords: dxm
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # DataMiner Cloud Pack

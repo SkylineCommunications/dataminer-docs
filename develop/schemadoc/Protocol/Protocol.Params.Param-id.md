@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-id
+description: "Use the id attribute of the Param element in a DataMiner protocol to assign a stable parameter ID within the supported normal or spectrum range."
 ---
 
 # id attribute

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.Display.Selection.Visibility-default
+description: "Use the Visibility default attribute in a DataMiner protocol to set field selection visibility when no standalone condition is met."
 ---
 
 # default attribute

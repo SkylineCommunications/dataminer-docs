@@ -1,5 +1,6 @@
 ---
 uid: AdvancedMultiThreadedTimersSnmp
+description: "Implement multithreaded SNMP polling with the required timer, group suffixes, parameter options, and a response-processing QAction."
 ---
 
 # SNMP
@@ -40,13 +41,13 @@ Suppose group 2000 has the following content:
 
 ```xml
 <Group id="2000" connection="0">
-   <Name>SNMP Poll Group</Name>
-   <Content multipleGet="true">
-      <Param>1000</Param>
-      <Param>1001</Param>
-      <Param>1002</Param>
-      <Param>1003:single</Param>
-   </Content>
+  <Name>SNMP Poll Group</Name>
+  <Content multipleGet="true">
+    <Param>1000</Param>
+    <Param>1001</Param>
+    <Param>1002</Param>
+    <Param>1003:single</Param>
+  </Content>
 </Group>
 ```
 
@@ -58,25 +59,25 @@ Param 1003 is then defined as follows:
 
 ```xml
 <Param id="1003" trending="false">
-   <Name>STB Svc. 1 Name</Name>
-   <Description>STB Svc. 1 Name</Description>
-   <Type options="loadOID">read</Type>
-   <Display>
-      <RTDisplay>true</RTDisplay>
-   </Display>
-   <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-   </Interprete>
-   <SNMP>
-      <Enabled>true</Enabled>
-      <Type>OctetStringASCII</Type>
-      <OID type="complete">1.3.6.1.4.1.23423.3.2.1.1.1.0</OID>
-   </SNMP>
-   <Measurement>
-      <Type>string</Type>
-   </Measurement>
+  <Name>STBService1Name</Name>
+  <Description>STB Svc. 1 Name</Description>
+  <Type options="loadOID">read</Type>
+  <Display>
+    <RTDisplay>true</RTDisplay>
+  </Display>
+  <Interprete>
+    <RawType>other</RawType>
+    <LengthType>next param</LengthType>
+    <Type>string</Type>
+  </Interprete>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <Type>OctetStringASCII</Type>
+    <OID type="complete">1.3.6.1.4.1.23423.3.2.1.1.1.0</OID>
+  </SNMP>
+  <Measurement>
+    <Type>string</Type>
+  </Measurement>
 </Param>
 ```
 
@@ -112,7 +113,7 @@ Suppose parameters 1023 and 33 are defined as follows:
 
 ```xml
 <Param id="1023" save="true">
-  <Name>CM Instance</Name>
+  <Name>CMInstance</Name>
   <Description>CM Instance</Description>
   <Type options="loadOID">read</Type>
   <Interprete>
@@ -132,8 +133,8 @@ Suppose parameters 1023 and 33 are defined as follows:
   </Measurement>
 </Param>
 <Param id="33" trending="false">
-  <Name>docsIfCmtsCmStatusUnerroreds</Name>
-  <Description>docsIfCmtsCmStatusUnerroreds</Description>
+  <Name>DocsIfCmtsCmStatusUnerroreds</Name>
+  <Description>Docs If CMTS CM Status Unerroreds</Description>
   <Type options="loadOID">read</Type>
   <Display>
     <RTDisplay>true</RTDisplay>
@@ -179,8 +180,8 @@ Where parameter 304 is defined as follows:
 
 ```xml
 <Param id="304" trending="false">
-  <Name>ifXTable</Name>
-  <Description>ifXTable</Description>
+  <Name>IfXTable</Name>
+  <Description>If X Table</Description>
   <Type options="loadOID">read</Type>
   <Interprete>
     <RawType>other</RawType>
@@ -215,19 +216,19 @@ For example, parameter 304 states that the columns with OID 1.3.6.1.2.1.31.1.1.1
 
 ```xml
 <Param id="304" trending="false">
-    <Name>ifXTable</Name>
-    <Description>ifXTable</Description>
-    <Type options="loadOID">read</Type>
-    <Interprete>
-      <RawType>other</RawType>
-      <LengthType>next param</LengthType>
-      <Type>string</Type>
-    </Interprete>
-    <SNMP>
-      <Enabled>true</Enabled>
-      <OID type="complete">1.3.6.1.2.1.31.1.1.1.6;1.3.6.1.2.1.31.1.1.1.10</OID>
-    </SNMP>
-  </Param>
+  <Name>IfXTable</Name>
+  <Description>If X Table</Description>
+  <Type options="loadOID">read</Type>
+  <Interprete>
+    <RawType>other</RawType>
+    <LengthType>next param</LengthType>
+    <Type>string</Type>
+  </Interprete>
+  <SNMP>
+    <Enabled>true</Enabled>
+    <OID type="complete">1.3.6.1.2.1.31.1.1.1.6;1.3.6.1.2.1.31.1.1.1.10</OID>
+  </SNMP>
+</Param>
 ```
 
 This results in a number of getBulkRequest operations being performed.
@@ -237,7 +238,7 @@ This results in a number of getBulkRequest operations being performed.
 To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
+> Whereas typically you provide a parameter ID in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="2000" name="SNMP Data" encoding="csharp" row="true" triggers="2000" options="group">
@@ -265,7 +266,7 @@ public void Run(SLProtocolExt protocol)
         
         if (communicationInfo != null)
         {
-            protocol.Log("QA" + protocol.QActionID + "|New Row Result was: " + communicationInfo, LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Run|New Row Result was: {communicationInfo}", LogType.Error, LogLevel.NoLogging);
             
             switch (communicationInfo)
             {
@@ -296,7 +297,7 @@ public void Run(SLProtocolExt protocol)
     }
     catch (Exception e)
     {
-        protocol.Log(8, 5, "An exception occurred:" + e);
+        protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
     }
     
     if (!timeout)
@@ -328,16 +329,17 @@ public static void ProcessResultData(SLProtocolExt protocol)
         if (newValues != null && newValues.Length == 3) // Number of items in group.
         {
             string myFirstParameter = Convert.ToString(newValues[0]);
-            //...
+
+            // ...
         }
         else
         {    
-            protocol.Log("QA" + protocol.QActionID + "|ProcessResultData|Unexpected result.", LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|ProcessResultData|Unexpected result.", LogType.Error, LogLevel.NoLogging);
         }
     }
     catch (Exception e)
     {
-        protocol.Log(8, 5, "Error while parsing data : " + e);
+        protocol.Log($"QA{protocol.QActionID}|ProcessResultData|Error while parsing data: {e}", LogType.Error, LogLevel.NoLogging);
     }
 }
 ```
@@ -354,15 +356,16 @@ public static void ProcessResultData(SLProtocolExt protocol)
     {
         object[] myTable = (object[])newValues[0];
         
-        protocol.Log("QA" + protocol.QActionID + "|myTable " + myTable.Length, LogType.Error, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|ProcessResultData|myTable {myTable.Length}", LogType.Error, LogLevel.NoLogging);
         
         object[] instanceColumn = (object[])myTable[0];
         object[] myFirstRequestedColumn = (object[])myTable[1];
+
         // ...
     }
     else
     {
-        protocol.Log("QA" + protocol.QActionID + "|ProcessResultData|Unexpected result.", LogType.Error, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|ProcessResultData|Unexpected result.", LogType.Error, LogLevel.NoLogging);
     }
 }
 ```

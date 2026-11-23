@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.PortTypeIP
+description: "Use the PortTypeIP element in a DataMiner protocol to configure settings related to the TCP/IP port type for a connection."
 ---
 
 # PortTypeIP element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.Hierarchy-path
+description: "Use the path attribute of the Hierarchy element in a DataMiner protocol to define simple table links for a tree control hierarchy."
 ---
 
 # path attribute

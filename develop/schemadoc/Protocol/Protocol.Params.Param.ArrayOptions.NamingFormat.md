@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.NamingFormat
+description: "Use the NamingFormat element in a DataMiner protocol to build a table row's display key from column values and static text."
 ---
 
 # NamingFormat element

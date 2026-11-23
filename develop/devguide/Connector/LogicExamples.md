@@ -1,5 +1,6 @@
 ---
 uid: LogicExamples
+description: "See how timers, groups, parameters, triggers, and actions work together to poll an SNMP variable, increment a value, or run a startup QAction."
 ---
 
 # Examples
@@ -128,51 +129,57 @@ flowchart LR
 ```
 
 ```xml
-<Protocol>
-  <Params>
-	<Param id="2">
-		<Name>AfterStartup</Name>
-		<Description>After Startup</Description>
-		<Type>dummy</Type>
-	</Param>
-  </Params>
-  <Triggers>
-	<Trigger id="1">
-		<Name>After Startup</Name>
-		<On>protocol</On>
-		<Time>after startup</Time>
-		<Type>action</Type>
-		<Content>
-			<Id>1</Id>
-		</Content>
-	</Trigger>
-  </Triggers>
-  <Actions>
-	<Action id="1">
-		<Name>After Startup Group</Name>
-		<On id="2">group</On>
-		<Type>execute next</Type>
-	</Action>
-	<Action id="2">
-		<Name>After Startup QAction</Name>
-		<On id="2">parameter</On>
-		<Type>run actions</Type>
-	</Action>
-  </Actions>
-  <Groups>
-	<Group id="2">
-		<Name>After Startup</Name>
-		<Description>After Startup</Description>
-		<Type>poll action</Type>
-		<Content>
-			<Action>2</Action>
-		</Content>
-	</Group>
-  </Groups>
-  <QActions>
-    <QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
-        ...
-    </QAction>
-  </QActions>
+<Protocol xmlns="http://www.skyline.be/protocol">
+
+   <Params>
+      <Param id="2">
+         <Name>AfterStartup</Name>
+         <Description>After Startup</Description>
+         <Type>dummy</Type>
+      </Param>
+   </Params>
+
+   <Triggers>
+      <Trigger id="1">
+         <Name>After Startup</Name>
+         <On>protocol</On>
+         <Time>after startup</Time>
+         <Type>action</Type>
+         <Content>
+            <Id>1</Id>
+         </Content>
+      </Trigger>
+   </Triggers>
+
+   <Actions>
+      <Action id="1">
+         <Name>After Startup Group</Name>
+         <On id="2">group</On>
+         <Type>execute next</Type>
+      </Action>
+      <Action id="2">
+         <Name>After Startup QAction</Name>
+         <On id="2">parameter</On>
+         <Type>run actions</Type>
+      </Action>
+   </Actions>
+
+   <Groups>
+      <Group id="2">
+         <Name>After Startup</Name>
+         <Description>After Startup</Description>
+         <Type>poll action</Type>
+         <Content>
+            <Action>2</Action>
+         </Content>
+      </Group>
+   </Groups>
+
+   <QActions>
+      <QAction id="2" name="After Startup" encoding="csharp" triggers="2" />
+         ...
+      </QAction>
+   </QActions>
+
 </Protocol>
 ```

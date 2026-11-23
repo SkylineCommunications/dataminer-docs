@@ -6,6 +6,9 @@ uid: NT_GET_INDEXES
 
 Gets the primary keys and display keys of a table.
 
+> [!NOTE]
+> If only the primary keys of a local table are needed, we recommend using [SLProtocol.GetKeys](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeys*).
+
 ## Parameters
 
 Retrieving the indexes of a table from the **local element**:
@@ -14,14 +17,14 @@ Retrieving the indexes of a table from the **local element**:
 int tableID = 1000;
 object[] result = (object[])protocol.NotifyProtocol(168, tableID, null);
 
-if (result != null && result.Length == 2 )
+if (result != null && result.Length == 2)
 {
     if (result[0] != null)
     {
         string[] primaryKeys = (string[])result[0];
     }
 
-    if(result[1] != null)
+    if (result[1] != null)
     {
         string[] displayKeys = (string[])result[1];
     }
@@ -35,21 +38,21 @@ Retrieving the indexes of a table from a **remote element**:
 ```csharp
 uint agentID = 1000;
 uint elementID = 1000;
-uint[] elementDetails = new uint[] { agentId, elementId };
+uint[] elementDetails = new uint[] { agentID, elementID };
 int tableID = 1000;
 object[] result = (object[])protocol.NotifyDataMiner(168, elementDetails, tableID);
 
-if (result != null && result.Length == 2 )
+if (result != null && result.Length == 2)
 {
-  if (result[0] != null)
-  {
-     string[] primaryKeys = (string[])result[0];
-  }
+    if (result[0] != null)
+    {
+        string[] primaryKeys = (string[])result[0];
+    }
 
-  if(result[1] != null)
-  {
-     string[] displayKeys = (string[])result[1];
-  }
+    if (result[1] != null)
+    {
+        string[] displayKeys = (string[])result[1];
+    }
 }
 ```
 

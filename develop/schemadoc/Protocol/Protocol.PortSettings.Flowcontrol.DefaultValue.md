@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Flowcontrol.DefaultValue
+description: "Use the DefaultValue element in a DataMiner protocol to specify the default flow control value or SNMPv3 encryption algorithm."
 ---
 
 # DefaultValue element

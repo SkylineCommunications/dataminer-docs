@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsSLScripting
+description: "Understand how SLScripting executes QActions and how triggers, specific method calls, queued groups, and the queued option affect execution flow."
 ---
 
 # SLScripting

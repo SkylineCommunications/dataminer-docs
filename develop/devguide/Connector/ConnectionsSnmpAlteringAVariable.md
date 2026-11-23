@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpAlteringAVariable
+description: "Implement an SNMP Set request for a standalone variable with snmpSet or a trigger and action, then verify the value with an SNMP Get."
 ---
 
 # Altering a variable
@@ -14,7 +15,7 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 
    ```xml
    <Param id="13" options="snmpSet">
-       <Name>sysContact</Name>
+       <Name>SysContact</Name>
        <Description>System Contact</Description>
        <Type>write</Type>
        <Interprete>
@@ -47,7 +48,7 @@ There are two ways to implement an SNMP set request for a standalone parameter.
 
    ```xml
    <Param id="13">
-       <Name>sysContact</Name>
+       <Name>SysContact</Name>
        <Description>System Contact</Description>
        <Type>write</Type>
        <Interprete>
@@ -135,8 +136,8 @@ The same options can be used for write parameters on a column: use a wildcard on
 
 ```XML
 <Param id="20" options="snmpSetAndGetwithwait">
-    <Name>IP Address</Name>
-    <Description>IP Address</Description>
+    <Name>AccessibleIPs_IPAddress</Name>
+    <Description>IP Address (Accessible IPs)</Description>
     <Type>write</Type>
     <Interprete>
         <RawType>other</RawType>
@@ -153,10 +154,16 @@ The same options can be used for write parameters on a column: use a wildcard on
 Table parameter:
 
 ```XML
-<Param id="15" trending="false">
-    <Name>Accessible IP List</Name>
-    <Type id="16;17;18;19">array</Type>
-    <ArrayOptions index="0"/>
+<Param id="15">
+    <Name>AccessibleIPs</Name>
+    <Description>Accessible IPs</Description>
+    <Type>array</Type>
+    <ArrayOptions index="0">
+        <ColumnOption idx="0" pid="16" type="snmp" options="" />
+        <ColumnOption idx="1" pid="17" type="snmp" options="" />
+        <ColumnOption idx="2" pid="18" type="snmp" options="" />
+        <ColumnOption idx="3" pid="19" type="snmp" options="" />
+    </ArrayOptions>
     <SNMP>
         <Enabled>true</Enabled>
         <OID type="complete" options="instance;multipleGetNext"></OID>

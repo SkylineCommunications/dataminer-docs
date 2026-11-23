@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Range.Low
+description: "Use the Low element in a DataMiner protocol to set the minimum display range value or minimum string length for a write parameter."
 ---
 
 # Low element

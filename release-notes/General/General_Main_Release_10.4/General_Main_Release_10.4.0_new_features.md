@@ -37,14 +37,15 @@ For a typical inputs table, the following columns are configured:
 Example:
 
 ```xml
-<Param id="1000" trending="false">
-   <Name>tblInputs</Name>
+<Param id="1000">
+   <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>
    <Information>
       <Subtext>Table representation of the matrix. This table will contain the information of the inputs.</Subtext>
    </Information>
-   <ArrayOptions index="0" options=";naming=/1002">
+   <ArrayOptions index="0">
+      <NamingFormat>,1002</NamingFormat>
       <ColumnOption idx="0" pid="1001" type="autoincrement" options=";save" />
       <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
       <ColumnOption idx="2" pid="1003" type="retrieved" options=";save" />
@@ -83,14 +84,15 @@ For a typical outputs table, the following columns are configured:
 Example:
 
 ```xml
-<Param id="2000" trending="false">
-   <Name>tblOutputs</Name>
+<Param id="2000">
+   <Name>Outputs</Name>
    <Description>Outputs</Description>
    <Type>array</Type>
    <Information>
       <Subtext>Table representation of the matrix. This table will contain the information of the outputs.</Subtext>
    </Information>
-   <ArrayOptions index="0" options=";naming=/2002">
+   <ArrayOptions index="0">
+      <NamingFormat>,2002</NamingFormat>
       <ColumnOption idx="0" pid="2001" type="autoincrement" options=";save" />
       <ColumnOption idx="1" pid="2002" type="retrieved" options=";save" />
       <ColumnOption idx="2" pid="2003" type="retrieved" options=";save" />
@@ -143,7 +145,7 @@ In addition to the mappings, matrix options can also be configured, in the *Para
 Example:
 
 ```xml
-<Param id="3" trending="false">
+<Param id="3">
    <Name>DummyMatrixParam</Name>
    <Type>Matrix</Type>
    <Display>

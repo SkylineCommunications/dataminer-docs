@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraTabs.Tab-type
+description: "Use the type attribute of the Tab element in a DataMiner protocol to select the behavior and content of an additional tree control tab."
 ---
 
 # type attribute

@@ -21,7 +21,7 @@ The Automation API also uses the System account for operations such as setting a
 
 When sending a direct SLNet message, the method you use determines the security context:
 
-- `engine.SendSLNetSingleResponseMessage` uses the user account.
+- [engine.SendSLNetSingleResponseMessage](xref:Skyline.DataMiner.Automation.Engine.SendSLNetSingleResponseMessage(Skyline.DataMiner.Net.Messages.DMSMessage)) uses the user account.
 - `engine.GetUserConnection().HandleSingleResponseMessage` uses the user account.
 - `Engine.SLNetRaw.HandleMessage` uses the System account.
 
@@ -29,7 +29,7 @@ When sending a direct SLNet message, the method you use determines the security 
 
 The following example applies a parameter set through different API paths and labels the security context used by each path. It assumes that the IDs and helper methods shown, including `RunPath` and `CreateSetParameterMessage`, are defined elsewhere in the script.
 
-```cs
+```csharp
 // 1. DataMinerSystem class library
 
 // System account

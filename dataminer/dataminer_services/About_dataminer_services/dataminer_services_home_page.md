@@ -2,7 +2,7 @@
 uid: dataminer_services_home_page
 description: "Open the dataminer.services home page to access cloud apps, install DataMiner Cube, and monitor your DataMiner Systems and connection states."
 keywords: cloud home page
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # The dataminer.services home page

@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsWebSocketsDynamicIp
+description: "Dynamically change a WebSocket IP address or port with a dynamic IP parameter that gracefully replaces the existing connection."
 ---
 
 # Dynamically changing the IP address and port number

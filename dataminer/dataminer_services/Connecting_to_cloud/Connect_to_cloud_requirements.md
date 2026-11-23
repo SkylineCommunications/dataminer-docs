@@ -2,7 +2,7 @@
 uid: Connect_to_cloud_requirements
 description: "Before connecting your DataMiner System to dataminer.services, verify that the requirements are met."
 keywords: cloud requirements, cloud connection
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Requirements for connection to dataminer.services

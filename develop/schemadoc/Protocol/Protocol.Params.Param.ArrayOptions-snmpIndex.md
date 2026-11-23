@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions-snmpIndex
+description: "Use the snmpIndex attribute in a DataMiner protocol to select one or more columns used to retrieve a table through SNMP."
 ---
 
 # snmpIndex attribute
@@ -16,7 +17,7 @@ Defines the columns that are used when retrieving the table via SNMP.
 
 ## Remarks
 
-If you want a concatenation of multiple columns, you can separate them with semicolons (”;”).
+If you want a concatenation of multiple columns, you can separate them with semicolons (";").
 
 > [!NOTE]
 > This option cannot be used together with the ‘naming’ option.

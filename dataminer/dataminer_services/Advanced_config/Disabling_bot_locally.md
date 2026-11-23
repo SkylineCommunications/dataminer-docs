@@ -1,7 +1,7 @@
 ---
 uid: Disabling_bot_locally
 description: "Disable DataMiner ChatOps on a specific server by updating the FieldControl app settings and restarting the service to apply the change."
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Disabling DataMiner ChatOps locally

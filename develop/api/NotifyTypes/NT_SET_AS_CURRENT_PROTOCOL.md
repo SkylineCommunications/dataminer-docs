@@ -10,10 +10,7 @@ Sets the specified protocol as the production version.
 string protocolName = "Nevion TNS4200";
 string protocolVersion = "1.0.1.1";
 
-string[] protocolInfo = new string[2];
-
-protocolInfo[0] = protocolName;
-protocolInfo[1] = protocolVersion;
+string[] protocolInfo = new string[] { protocolName, protocolVersion };
 
 bool isProduction = true;
 

@@ -1,5 +1,6 @@
 ---
 uid: ChangeToPartialTable
+description: "Review how converting a table to a partial table affects custom reports, automation scripts, and dynamic alarm thresholds."
 ---
 
 # Change to partial table

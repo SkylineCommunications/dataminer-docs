@@ -54,4 +54,4 @@ In the message above, the exception message is included (e.g., "Access Denied").
 ## Limitations
 
 - NATS info is collected, and the connection tests for the NATS client are performed using the address *localhost:8222*. If the local NATS node is not part of the setup, the BPA test will not be able to verify the results.
-- This BPA test does not work for setups that have the *NATSForceManualConfig* option enabled.
+- Prior to DataMiner 10.6.0 [CU9]/10.6.12<!--RN 46547-->, this BPA test does not work for setups where BrokerGateway manages NATS and the *NATSForceManualConfig* option is enabled.

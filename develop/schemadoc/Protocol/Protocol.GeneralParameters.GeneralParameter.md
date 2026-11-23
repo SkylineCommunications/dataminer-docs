@@ -1,5 +1,6 @@
 ---
 uid: Protocol.GeneralParameters.GeneralParameter
+description: "Use the GeneralParameter element in a DataMiner protocol to enable or disable loading for a selected general parameter group."
 ---
 
 # GeneralParameter element

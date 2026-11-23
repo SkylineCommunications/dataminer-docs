@@ -1,5 +1,6 @@
 ---
 uid: LogicQActionsExecution
+description: "Understand what triggers QAction execution, how to retrieve triggering row data, and how the queued option affects concurrency and ordering."
 ---
 
 # QAction execution
@@ -11,7 +12,7 @@ A change event is initiated when:
 - the value of a parameter changes.
 - a value is set to a parameter of type "write", even if the value is the same as the previous value.
 - an action of type "run actions" is performed on a parameter.
-- a parameter is set from a QAction using an instance of the SLProtocol(Ext) class, e.g., SetParameter.
+- a parameter is set from a QAction using an instance of the SLProtocol(Ext) interface, e.g., SetParameter.
 
    > [!NOTE]
    > This will also trigger the QAction even if the set value is the same as the current value.
@@ -28,12 +29,13 @@ You can trigger on a row change by using the [row](xref:Protocol.QActions.QActio
 <QAction id="..." encoding="..." triggers="1052" row="true">
 ```
 
-In the example above, the triggers attribute is set to the parameter ID of the write parameter for a column in the table. This means the QAction will be triggered by any change made to this write parameter for every row.
+In the example above, the [triggers](xref:Protocol.QActions.QAction-triggers) attribute is set to the parameter ID of the write parameter for a column in the table. This means the QAction will be triggered by any change made to this write parameter for every row.
 
 > [!NOTE]
 >
-> - In recent DataMiner versions, you can use a read column parameter as a trigger on a QAction with row=true option. In legacy versions prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible.<!-- RN 15040 & 15531 -->
+> - In recent DataMiner versions, you can use a read column parameter as a trigger on a QAction with `row="true"`. In legacy versions prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible.<!-- RN 15040 & 15531 -->
 > - For SNMP tables, it is also possible to provide the ID of a table parameter. In this case, the QAction will trigger every time a row has been updated.
+> - A QAction with `row="true"` cannot be used with single parameters.
 
 In a QAction, the following methods are available to retrieve information about the row that triggered the execution of the QAction:
 
@@ -51,4 +53,5 @@ In a QAction, the following methods are available to retrieve information about 
 
 A QAction can be defined with the option [queued](xref:Protocol.QActions.QAction-options#queued). Using the option `queued`, the QAction will be executed asynchronously: the QAction is triggered and set in the background. This means that it will not wait until it is finished before another QAction can run.
 
-This option should only be used if really needed and care must be taken during implementation. For example, make sure to implement locking when needed.
+> [!NOTE]
+> We recommend only using `queued` when asynchronous execution is required. It changes completion and ordering behavior, but it is not a guaranteed throughput increase. Protect shared state with appropriate locking.

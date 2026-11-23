@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab.Display.Visibility.Standalone.Value
+description: "Use the Value element in a DataMiner protocol to define a trigger value that reverses default search tab visibility."
 ---
 
 # Value element

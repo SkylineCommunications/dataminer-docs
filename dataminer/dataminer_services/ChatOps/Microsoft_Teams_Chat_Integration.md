@@ -1,7 +1,7 @@
 ---
 uid: Microsoft_Teams_Chat_Integration
 description: "Learn about the deprecated Microsoft Teams chat integration, which used DataMiner Automation to integrate DataMiner with Microsoft Teams."
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Chat integration with Microsoft Teams

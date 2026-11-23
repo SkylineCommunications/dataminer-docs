@@ -1,5 +1,6 @@
 ---
 uid: Protocol.HTTP.Session-keepAlive
+description: "Use the keepAlive attribute in a DataMiner protocol to keep an HTTP session open from its first request until the element stops."
 ---
 
 # keepAlive attribute

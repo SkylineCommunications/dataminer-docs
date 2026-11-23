@@ -9,6 +9,7 @@ DataMiner open monitoring and orchestration software is a transformational platf
 
 - [Commercial and deploy models summary](xref:Pricing_Commercial_Models)
 - [Usage-based services](xref:Pricing_Usage_based_service)
+- [DataMiner Intelligence](xref:Pricing_DataMiner_Intelligence)
 - [Perpetual-Use Licensing](xref:Pricing_Perpetual_Use_Licensing)
 - [Professional Service credits](xref:Professional_service_credits)
 - [Maximizing your azure investments with MACC and DataMiner credits](xref:MACC_and_DataMiner_credits)

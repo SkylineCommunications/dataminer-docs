@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpProtocolInnterWorkings
+description: "Understand how SNMP Set requests are queued and processed, how SLProtocol handles table updates, and how to preserve display column values."
 ---
 
 # Protocol inner workings

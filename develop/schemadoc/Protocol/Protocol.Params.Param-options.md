@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-options
+description: "Learn how to use the options attribute to configure SNMP set and get behavior for a parameter in a DataMiner protocol."
 ---
 
 # options attribute
@@ -33,31 +34,37 @@ Example of a column write parameter:
 
 ```xml
 <Param id="20" options="snmpSetAndGetWithWait">
-  <Name>IP Address</Name>
-  <Description>IP Address</Description>
-  <Type>write</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-  </Interprete>
-  <SNMP>
-     <Enabled>true</Enabled>
-     <OID type="complete">1.3.6.1.4.1.8691.2.8.1.5.1.1.2.1.3.*</OID>
-  </SNMP>
-  ...
+   <Name>AccessibleIPs_IPAddress</Name>
+   <Description>IP Address (Accessible IPs)</Description>
+   <Type>write</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <OID type="complete">1.3.6.1.4.1.8691.2.8.1.5.1.1.2.1.3.*</OID>
+   </SNMP>
+   ...
 ```
 
 Example of a table parameter:
 
 ```xml
-<Param id="15" trending="false">
-  <Name>Accessible IP List</Name>
-  <Type id="16;17;18;19">array</Type>
-  <ArrayOptions index="0"/>
-  <SNMP>
-     <Enabled>true</Enabled>
-     <OID type="complete" options="instance;multipleGetNext"></OID>
-  </SNMP>
-  ...
+<Param id="15">
+   <Name>AccessibleIPs</Name>
+   <Description>Accessible IPs</Description>
+   <Type>array</Type>
+   <ArrayOptions index="0">
+      <ColumnOption idx="0" pid="16" type="snmp" options="" />
+      <ColumnOption idx="1" pid="17" type="snmp" options="" />
+      <ColumnOption idx="2" pid="18" type="snmp" options="" />
+      <ColumnOption idx="3" pid="19" type="snmp" options="" />
+   </ArrayOptions>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <OID type="complete" options="instance;multipleGetNext"></OID>
+   </SNMP>
+   ...
 ```

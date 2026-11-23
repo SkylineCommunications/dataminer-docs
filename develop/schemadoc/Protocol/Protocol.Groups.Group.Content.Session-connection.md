@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Content.Session-connection
+description: "Use the Session connection attribute in a DataMiner protocol to select the connection to execute within an HTTP session."
 ---
 
 # connection attribute

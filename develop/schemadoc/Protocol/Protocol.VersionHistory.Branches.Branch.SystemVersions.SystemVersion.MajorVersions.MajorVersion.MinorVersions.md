@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions
+description: "Use the MinorVersions element under MajorVersion in a DataMiner protocol to list minor versions within a major version."
 ---
 
 # MinorVersions element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-trending
+description: "Use the trending attribute in a DataMiner protocol to enable or disable trending support for an eligible displayed parameter."
 ---
 
 # trending attribute

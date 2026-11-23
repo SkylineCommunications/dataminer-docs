@@ -1,10 +1,11 @@
 ---
 uid: Protocol.Params.Param.Type-alarmRegistration
+description: "Use the alarmRegistration attribute in a DataMiner protocol to trigger a QAction when specified parameters enter an alarm state."
 ---
 
 # alarmRegistration attribute
 
-Allows to trigger a QAction when specific parameters go into alarm.
+Allows you to trigger a QAction when specific parameters go into alarm.
 
 ## Content Type
 
@@ -18,11 +19,10 @@ string
 
 In the following example, the parameter with ID 500 will trigger the QAction when the parameters with ID 1001, 1002 or 1501 are in alarm:
 
-
 ```xml
 <Param id="500" trending="false">
-    <Name>alarmRegistration</Name>
-    <Description>alarmRegistration</Description>
+    <Name>AlarmRegistration</Name>
+    <Description>Alarm Registration</Description>
     <Type alarmRegistration="1001;1002;1501">read</Type>
     ...
     <QAction id="500" encoding="csharp" inputParameters="500" triggers="500">
@@ -30,7 +30,7 @@ In the following example, the parameter with ID 500 will trigger the QAction whe
 
 The value of the parameter with ID 500 has the following format: PID/level/index
 
-|Level|Description
+|Level|Description|
 |--- |--- |
 |0|Undefined|
 |1|Normal|

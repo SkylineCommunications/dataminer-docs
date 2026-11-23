@@ -2,7 +2,7 @@
 uid: Cloud_data_storage_policies
 description: "Review the cloud data storage policies for dataminer.services to learn which DataMiner data is stored and where it may be processed."
 keywords: cloud storage
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Cloud data storage policies

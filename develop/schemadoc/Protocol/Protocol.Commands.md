@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Commands
+description: "Learn how the Commands element in a DataMiner protocol contains the uniquely identified and named commands sent to a data source."
 ---
 
 # Commands element

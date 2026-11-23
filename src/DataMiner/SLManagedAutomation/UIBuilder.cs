@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Skyline.DataMiner.Automation
 {
@@ -207,6 +207,22 @@ namespace Skyline.DataMiner.Automation
 		public int Width { get; set; }
 
 		/// <summary>
+		/// Gets or sets the layout used to render the dialog box in DataMiner web apps.
+		/// </summary>
+		/// <value>The layout of the dialog box. Default: <see cref="WebUILayout.Default"/>.</value>
+		/// <remarks>
+		/// <para>This layout is applied only when the script runs in a web app and the DataMiner Agent supports this property. Otherwise, the table layout is used. For more information, see <see href="xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps-to-control-the-tab-behavior">Using the grid layout in web apps</see>.</para>
+		/// <para>Feature introduced in DataMiner 10.6.12/10.7.0 (RN 46602 / RN 46716).</para>
+		/// </remarks>
+		/// <example>
+		/// <code>
+		/// UIBuilder uib = new UIBuilder();
+		/// uib.WebUILayout = WebUILayout.Grid;
+		/// </code>
+		/// </example>
+		public WebUILayout WebUILayout { get; set; }
+
+		/// <summary>
  		/// Gets or sets a value indicating whether the confirmation pop-up window when aborting a script should be shown or not.
 		/// </summary>
 		/// <value><c>true</c> if you want the confirmation window to not be shown when aborting a script; otherwise, <c>false</c>.</value>
@@ -339,7 +355,7 @@ namespace Skyline.DataMiner.Automation
 		/// 
 		/// var uir = engine.ShowUI(uibDialogBox);
 		/// string result = uir.GetString("selectionVar");
-		/// engine.GenerateInformation("selectionVar: " + result);	// In case "Semi-automatic" was selected, selectionVar will contain "2".
+		/// engine.GenerateInformation($"selectionVar: {result}"); // In case "Semi-automatic" was selected, selectionVar will contain "2".
 		/// </code>
 		/// </example>
 		public UIBuilder AppendDropDown(string destVar, params string[] options) { return null; }

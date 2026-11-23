@@ -40,7 +40,7 @@ To swarm elements in DataMiner Cube:
 
 ## Swarming elements via Automation
 
-To swarm elements via an automation script, call the SwarmingHelper.Create method and indicate the elements that need to be swarmed and the ID of the node they need to be swarmed to.
+To swarm elements via an automation script, call the [SwarmingHelper.Create](xref:Skyline.DataMiner.Net.Swarming.Helper.SwarmingHelper.Create*) method and indicate the elements that need to be swarmed and the ID of the node they need to be swarmed to.
 
 For example:
 

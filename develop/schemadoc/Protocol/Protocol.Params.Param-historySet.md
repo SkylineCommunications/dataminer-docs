@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param-historySet
+description: "Use the historySet attribute in a DataMiner protocol to enable history sets so historical parameter values are stored accurately."
 ---
 
 # historySet attribute

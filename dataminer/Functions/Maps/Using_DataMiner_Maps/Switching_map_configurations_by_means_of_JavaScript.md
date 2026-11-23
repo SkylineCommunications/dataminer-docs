@@ -26,18 +26,22 @@ If the parent page contains the following script ...
   function doOpenConfig(name, vars)
   {
     var e = document.getElementById('mapFrame');
+    
     if (!e || !e.contentWindow)
-    return false; // frame contents not found
+      return false; // frame contents not found
+    
     if (!e.contentWindow.selectConfig)
-    return false; // frame is not a maps app
+      return false; // frame is not a maps app
+    
     try
     {
-    e.contentWindow.selectConfig(name, vars);
+      e.contentWindow.selectConfig(name, vars);
     }
     catch (e)
     {
-    alert('Error switching map: ' + e.message);
+      alert('Error switching map: ' + e.message);
     }
+    
     return false;
   }
 </script>

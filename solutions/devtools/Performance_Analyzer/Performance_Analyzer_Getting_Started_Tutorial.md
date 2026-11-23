@@ -181,13 +181,13 @@ As the Performance Analyzer has now been implemented in the solution, you will n
 
 1. Update the `DatabaseController.Process` method:
 
-   ```c#
+   ```csharp
    private List<Employee> Process(List<Employee> employees)
    {
       using (var tracker = new PerformanceTracker(collector))
       {
          var processedEmployees = new ConcurrentBag<Employee>();
-
+   
          Parallel.ForEach(employees, employee =>
          {
             using (var threadTracker = new PerformanceTracker(tracker, nameof(MockExecution), nameof(MockExecution.Process)))
@@ -196,13 +196,13 @@ As the Performance Analyzer has now been implemented in the solution, you will n
                   .AddMetadata("Thread Id", Convert.ToString(Thread.CurrentThread.ManagedThreadId))
                   .AddMetadata("Employee Id", employee.Id)
                   .AddMetadata("Employee Name", employee.Name);
-
+   
                var processedEmployee = MockExecution.Process(employee);
-
+   
                processedEmployees.Add(processedEmployee);
             }
          });
-
+   
          return processedEmployees.ToList();
       }
    }

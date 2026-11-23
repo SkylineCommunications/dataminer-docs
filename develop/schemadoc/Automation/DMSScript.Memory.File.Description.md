@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Memory.File.Description
+description: "Use the memory File Description element to specify the non-empty name of a memory file in a DataMiner automation script."
 ---
 
 # Description element

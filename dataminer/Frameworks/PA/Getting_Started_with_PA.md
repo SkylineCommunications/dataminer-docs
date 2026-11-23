@@ -1,5 +1,6 @@
 ---
 uid: Getting_Started_With_PA
+description: "Get started with the PA framework in DataMiner. Deploy and configure the framework, create activities, and build process definitions."
 ---
 
 # Getting started with PA

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display-pageOptions
+description: "Use the Display pageOptions attribute in a DataMiner protocol to prevent users from opening an EPM element Data Display page."
 ---
 
 # pageOptions attribute

@@ -16,6 +16,19 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ## New features
 
+### User-Defined APIs: Rate limit notices can now be enabled for API tokens [ID 46336]
+
+<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
+
+When you configure a rate limit for a User-Defined API token, you can now enable notice generation when that rate limit is reached. By default, this option is disabled.
+
+![Option to notify when rate limit is reached](~/release-notes/images/API_token_creation_rate_limit.png)
+
+The tokens overview now includes a *Rate Limit Notices* column indicating whether these notices are enabled for each token.
+
+> [!NOTE]
+> This feature requires a DataMiner System version that supports notice generation for User-Defined API token rate limits. On systems without this capability, the existing token configuration remains unchanged.
+
 ### Element wizard now supports number, IP address, and IP port connector settings [ID 46390]
 
 <!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
@@ -59,17 +72,6 @@ You cannot save the script until both a credentials type and a set of credential
 
 > [!IMPORTANT]
 > This feature will only work in conjunction with DataMiner server version 10.6.10/10.7.0 or higher.
-
-### User-Defined APIs: Rate limit notices can now be enabled for API tokens [ID 46336]
-
-<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
-
-When you configure a rate limit for a User-Defined API token, you can now enable notice generation when that rate limit is reached. By default, this option is disabled.
-
-The tokens overview now includes a *Rate Limit Notices* column indicating whether these notices are enabled for each token.
-
-> [!NOTE]
-> This feature requires a DataMiner System version that supports notice generation for User-Defined API token rate limits. On systems without this capability, the existing token configuration remains unchanged.
 
 #### Cluster upgrade status is now shown in the Cube header [ID 46504]
 

@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Frameworks
+description: "Explore the DataMiner frameworks — Infrastructure Discovery and Provisioning (IDP), Process Automation (PA), and Service and Resource Management (SRM)."
 ---
 
 # Frameworks

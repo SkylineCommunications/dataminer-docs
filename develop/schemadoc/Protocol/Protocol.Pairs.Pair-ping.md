@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair-ping
+description: "Use the ping attribute of a Pair element in a DataMiner protocol to run a pair during device timeout when slow polling is active."
 ---
 
 # ping attribute

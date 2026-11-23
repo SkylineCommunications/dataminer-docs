@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion
+description: "Use the SystemVersion element under Branch SystemVersions in a DataMiner protocol to define a system version entry and its major versions."
 ---
 
 # SystemVersion element

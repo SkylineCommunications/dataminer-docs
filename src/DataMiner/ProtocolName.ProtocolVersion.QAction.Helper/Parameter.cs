@@ -11,24 +11,24 @@ namespace Skyline.DataMiner.Scripting
 	///		<item><description>For example, suppose a protocol defines a parameter of type "read" with ID 108 and name "Status Code", then the Parameter class will define the following two fields:</description></item>
 	///		</list>
 	///		<code language="c#">
-	///	public static class Parameter
-	///	{
-	///		public const int statusCode_108 = 108;
-	///		public const int statusCode = 108;
+	/// public static class Parameter
+	/// {
+	///     public const int statusCode_108 = 108;
+	///     public const int statusCode = 108;
 	/// }
 	/// </code> 
 	/// <para>For write parameters, a public inner Write class is defined in the Parameter class. This class then defines two fields for each parameter of type "write", just like for parameters of type read. Suppose there is a parameter of type "write" with ID 158 and name "Status Code", then the Write class will define the following two fields for the write parameter:</para>
 	/// <code language="c#">
 	/// public static class Parameter
 	/// {
-	///		...
-	///		public class Write
-	///		{
-	///			public const int statusCode_158 = 158;
-	///			public const int statusCode = 158;
-	///			...
-	///		}
-	///	}
+	///     ...
+	///     public class Write
+	///     {
+	///         public const int statusCode_158 = 158;
+	///         public const int statusCode = 158;
+	///         ...
+	///     }
+	/// }
 	/// </code>
 	/// <para>Additionally, the Parameter class defines a class for every table defined in the protocol. The table class takes the name of the table parameter (parameter of type array) and defines three constant fields:</para>
 	/// <list type="bullet">
@@ -41,42 +41,43 @@ namespace Skyline.DataMiner.Scripting
 	/// <code language="c#">
 	/// public static class Parameter
 	/// {
-	///		public class MasterTable
-	///		{
-	///			public const int tablePid = 2000;
-	///			public const int indexColumn = 0;
-	///			public const int indexColumnPid = 2001;
+	///     public class MasterTable
+	///     {
+	///         public const int tablePid = 2000;
+	///         public const int indexColumn = 0;
+	///         public const int indexColumnPid = 2001;
 	///
-	///			public class Pid
-	///			{
-	///				public const int masterIndex_2001 = 2001;
-	///				public const int masterIndex = 2001;
-	///				public const int masterDescription_2002 = 2002;
-	///				public const int masterDescription = 2002;
-	///				public class Write
-	///				{
-	///				}
-	///			}
+	///         public class Pid
+	///         {
+	///             public const int masterIndex_2001 = 2001;
+	///             public const int masterIndex = 2001;
+	///             public const int masterDescription_2002 = 2002;
+	///             public const int masterDescription = 2002;
 	///
-	///			public class Idx
-	///			{
-	///				public const int masterIndex_2001 = 0;
-	///				public const int masterIndex = 0;
-	///				public const int masterDescription_2002 = 1;
-	///				public const int masterDescription = 1;
-	///			}
-	///		}
-	///	}
+	///             public class Write
+	///             {
+	///             }
+	///         }
+	///
+	///         public class Idx
+	///         {
+	///             public const int masterIndex_2001 = 0;
+	///             public const int masterIndex = 0;
+	///             public const int masterDescription_2002 = 1;
+	///             public const int masterDescription = 1;
+	///         }
+	///     }
+	/// }
 	/// </code>
-	/// <para>The parameter class allows to produce more readable code. For example, parameter ID or index positions often need to be provided in a method call of the SLProtocol class as in the examples below:</para>
+	/// <para>The parameter class allows to produce more readable code. For example, parameter ID or index positions often need to be provided in a method call of the SLProtocol class (or its extension methods in the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package) as in the examples below:</para>
 	/// <code language="c#">
 	/// protocol.SetParameter(Parameter.requestCounter, 1);
-	/// protocol.SetParameterIndexByKey(Parameter.MasterTable.tablePid, "1", Parameter.MasterTable.Idx.masterDescription + 1, "Main");
+	/// protocol.SetCell(Parameter.MasterTable.tablePid, "1", Parameter.MasterTable.Idx.masterDescription, "Main");
 	/// </code>
 	/// <para>It is clear that the above lines of code result in code that is easer to interpret than the following lines:</para>
 	/// <code language="c#">
 	/// protocol.SetParameter(120, 1);
-	/// protocol.SetParameterIndexByKey(4000, "1", 6, "Main");
+	/// protocol.SetCell(4000, "1", 5, "Main");
 	/// </code>
 	/// </remarks>
 	public static class Parameter
@@ -87,10 +88,10 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		/// <para>This class defines for each parameter of type “write” two fields, just like for parameters of type read in the <see cref="Parameter"/> class. Suppose there is a parameter of type “write” with ID 158 and name “Status Code”, then the Write class will define the following two fields for the write parameter:</para>
 		///	<code language="c#">
-		///	public class Write
+		/// public class Write
 		/// {
-		///		public const int statusCode_158 = 158;
-		///		public const int statusCode = 158;
+		///     public const int statusCode_158 = 158;
+		///     public const int statusCode = 158;
 		/// }
 		/// </code> 
 		/// </remarks>

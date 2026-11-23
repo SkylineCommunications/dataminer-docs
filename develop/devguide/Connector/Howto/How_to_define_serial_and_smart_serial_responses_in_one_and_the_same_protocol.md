@@ -1,5 +1,6 @@
 ---
 uid: How_to_define_serial_and_smart_serial_responses_in_one_and_the_same_protocol
+description: "Learn how to deal with incoming data when one protocol combines serial and smart-serial connections, making sure each response specifies the connection ID."
 ---
 
 # How to define serial and smart-serial responses in one and the same protocol
@@ -83,7 +84,7 @@ To prevent any issue with protocols that have serial as well as smart-serial con
       <Description>Ask Config Subscription</Description>
       <Content>
          <Param>205</Param>
-        <Param>53</Param>
+         <Param>53</Param>
       </Content>
    </Response>
    <Response id="106" options="Connection:1">

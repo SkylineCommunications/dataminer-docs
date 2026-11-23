@@ -1,5 +1,6 @@
 ---
 uid: LogicQActionsExamples
+description: "Use C# QAction examples to read files and shared folders, process JSON, MIME, and gzip data, and create alarms from connector logic."
 ---
 
 # QAction examples
@@ -36,7 +37,6 @@ public class Utility
 
       if (File.Exists(file))
       {
-
          using (FileStream logReader = new FileStream(file, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
          {
             using (StreamReader sr = new StreamReader(logReader, Encoding.Default))
@@ -71,6 +71,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Runtime.InteropServices;
+using System.Text;
 using Skyline.DataMiner.Scripting;
 
 using DWORD = System.UInt32;
@@ -79,101 +80,103 @@ using NET_API_STATUS = System.UInt32;
 
 public static class QAction
 {
-   /// <summary>
-   /// Quick Action example.
-   /// </summary>
-   /// <param name="protocol">Link with SLProtocol process.</param>
-   public static void Run(SLProtocol protocol)
-   {
-      uint[] ids = new uint[] { 1, 8, 3, 6, 10 };
-      object[] parameters = (object[]) protocol.GetParameters(ids);
+    /// <summary>
+    /// Quick Action example.
+    /// </summary>
+    /// <param name="protocol">Link with SLProtocol process.</param>
+    public static void Run(SLProtocol protocol)
+    {
+        uint[] ids = new uint[] { 1, 8, 3, 6, 10 };
+        object[] parameters = (object[])protocol.GetParameters(ids);
 
-      object userName = parameters[0];
-      object domainName = parameters[1];
-      object password = parameters[2];
-      object share = parameters[3];
-      object filename= parameters[4];
+        object userName = parameters[0];
+        object domainName = parameters[1];
+        object password = parameters[2];
+        object share = parameters[3];
+        object filename = parameters[4];
 
-      List<string> lines = SharedFile.ReadFromSharedFile(protocol, userName, domainName, password, share, filename);
-   }
+        List<string> lines = SharedFile.ReadFromSharedFile(protocol, userName, domainName, password, share, filename);
+    }
 
-   public class SharedFile
-   {
-      [DllImport("NetApi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
-      internal static extern NET_API_STATUS NetUseAdd(
-      LPWSTR UncServerName,
-      DWORD Level,
-      ref USE_INFO_2 Buf,
-      out DWORD ParmError);
+    public class SharedFile
+    {
+        [DllImport("NetApi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+        internal static extern NET_API_STATUS NetUseAdd(
+            LPWSTR UncServerName,
+            DWORD Level,
+            ref USE_INFO_2 Buf,
+            out DWORD ParmError);
 
-      [DllImport("NetApi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
-      internal static extern NET_API_STATUS NetUseDel(
-      LPWSTR UncServerName,
-      LPWSTR UseName,
-      DWORD ForceCond);
+        [DllImport("NetApi32.dll", SetLastError = true, CharSet = CharSet.Unicode)]
+        internal static extern NET_API_STATUS NetUseDel(
+            LPWSTR UncServerName,
+            LPWSTR UseName,
+            DWORD ForceCond);
 
-      [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
-      internal struct USE_INFO_2
-      {
-         internal LPWSTR ui2_local;
-         internal LPWSTR ui2_remote;
-         internal LPWSTR ui2_password;
-         internal DWORD ui2_status;
-         internal DWORD ui2_asg_type;
-         internal DWORD ui2_refcount;
-         internal DWORD ui2_usecount;
-         internal LPWSTR ui2_username;
-         internal LPWSTR ui2_domainname;
-      }
+        [StructLayout(LayoutKind.Sequential, CharSet = CharSet.Unicode)]
+        internal struct USE_INFO_2
+        {
+            internal LPWSTR ui2_local;
+            internal LPWSTR ui2_remote;
+            internal LPWSTR ui2_password;
+            internal DWORD ui2_status;
+            internal DWORD ui2_asg_type;
+            internal DWORD ui2_refcount;
+            internal DWORD ui2_usecount;
+            internal LPWSTR ui2_username;
+            internal LPWSTR ui2_domainname;
+        }
 
-      public static List<string> ReadFromSharedFile(SLProtocol protocol, object userName, object domainName, object password, object share, object filename)
-      {
-         List<string> lines = new List<string>();
+        public static List<string> ReadFromSharedFile(SLProtocol protocol, object userName, object domainName, object password, object share, object filename)
+        {
+            List<string> lines = new List<string>();
 
-         USE_INFO_2 useInfo = new USE_INFO_2();
-         useInfo.ui2_remote = Convert.ToString(share);
-         useInfo.ui2_password = Convert.ToString(password);
-         useInfo.ui2_username = Convert.ToString(userName);
-         useInfo.ui2_domainname = Convert.ToString(domainName);
-         useInfo.ui2_asg_type = 0xFFFFFFFF;
-         useInfo.ui2_usecount = 1;
-         uint paramErrorIndex;
-         uint returnCode = NetUseAdd(null, 2, ref useInfo, out paramErrorIndex);
-
-         if (returnCode != 0)
-         {
-         protocol.Log(8, -1, "NetUseAdd failed " + Convert.ToString(returnCode) +  ".");
-         }
-         else
-         {
-            protocol.Log(8, -1, "NetUseAdd succeeded.");
-
-            using (StreamReader sr = new StreamReader(Convert.ToString(share) + "\\" + Convert.ToString(filename), System.Text.Encoding.Default))
+            USE_INFO_2 useInfo = new USE_INFO_2
             {
-               string line = sr.ReadLine();
+                ui2_remote = Convert.ToString(share),
+                ui2_password = Convert.ToString(password),
+                ui2_username = Convert.ToString(userName),
+                ui2_domainname = Convert.ToString(domainName),
+                ui2_asg_type = 0xFFFFFFFF,
+                ui2_usecount = 1,
+            };
 
-               while (line != null)
-               {
-                  lines.Add(line);
-                  line = sr.ReadLine();
-               }
+            uint returnCode = NetUseAdd(null, 2, ref useInfo, out uint paramErrorIndex);
+
+            if (returnCode != 0)
+            {
+                protocol.Log($"QA{protocol.QActionID}|ReadFromSharedFile|NetUseAdd failed {returnCode}.", LogType.Error, LogLevel.NoLogging);
             }
-         }
+            else
+            {
+                protocol.Log($"QA{protocol.QActionID}|ReadFromSharedFile|NetUseAdd succeeded.", LogType.Information, LogLevel.NoLogging);
 
-         returnCode = NetUseDel(null, Convert.ToString(share), 2);
+                using (StreamReader sr = new StreamReader($@"{Convert.ToString(share)}\{Convert.ToString(filename)}", Encoding.Default))
+                {
+                    string line = sr.ReadLine();
 
-         if (returnCode != 0)
-         {
-            protocol.Log(8, -1, "NetUseDel failed " + Convert.ToString(returnCode));
-         }
-         else
-         {
-            protocol.Log(8, -1, "NetUseDel Succeeded.");
-         }
+                    while (line != null)
+                    {
+                        lines.Add(line);
+                        line = sr.ReadLine();
+                    }
+                }
+            }
 
-         return lines;
-      }
-   }
+            returnCode = NetUseDel(null, Convert.ToString(share), 2);
+
+            if (returnCode != 0)
+            {
+                protocol.Log($"QA{protocol.QActionID}|ReadFromSharedFile|NetUseDel failed {returnCode}.", LogType.Error, LogLevel.NoLogging);
+            }
+            else
+            {
+                protocol.Log($"QA{protocol.QActionID}|ReadFromSharedFile|NetUseDel succeeded.", LogType.Information, LogLevel.NoLogging);
+            }
+
+            return lines;
+        }
+    }
 }
 ```
 
@@ -201,7 +204,7 @@ public static class QAction
       try
       {
          string data = Convert.ToString(protocol.GetParameter(10));
-         var deserializedResult = serializer.Deserialize((string)data, typeof(object)) as Dictionary<string, object>;
+         var deserializedResult = serializer.Deserialize(data, typeof(object)) as Dictionary<string, object>;
 
          if (deserializedResult != null)
          {
@@ -210,7 +213,7 @@ public static class QAction
       }
       catch (Exception e)
       {
-         protocol.Log("QA" + protocol.QActionID + "|Run|An unexpected error occurred during deserialization of JSON data: " + e.ToString(), LogType.Error, LogLevel.NoLogging);
+         protocol.Log($"QA{protocol.QActionID}|Run|An unexpected error occurred during deserialization of JSON data: {e}", LogType.Error, LogLevel.NoLogging);
       }
    }
 }
@@ -244,22 +247,27 @@ try
 
    string content = document.InnerXml;
    string boundary = "------------Ij5KM7KM7Ij5gL6Ij5GI3GI3Ef1ae0\r\n";
-   string multipartl = "Content-Disposition: form-data; name=\"Filename\"\r\n\r\n'";
-   string[] datal = filePath.Split(Convert.ToChar("\\"));
-   string dataFile = datal[datal.Length - 1];
-   string multipart2 = "Content-Disposition: form-data; name=\"" + dataFile +
-   "\"3 filename=\"" + dataFile + "\" \r\nContent-Type: application/octet-stream\r\n\r\n";
+   string multipart1 = "Content-Disposition: form-data; name=\"Filename\"\r\n\r\n'";
+   string[] data1 = filePath.Split(Convert.ToChar("\\"));
+   string dataFile = data1[data1.Length - 1];
+   string multipart2 = $"Content-Disposition: form-data; name=\"{dataFile}\"3 " +
+      $"filename=\"{dataFile}\" \r\nContent-Type: application/octet-stream\r\n\r\n";
    string multipart3 = "Content-Disposition: form-data; name=\"Upload\"\r\n\r\n";
    string data3 = "Submit Query";
    string endBoundary = "\r\n------------Ij5KM7KM7Ij5gL6Ij5GI3GI3Ef1ae0-- ";
 
-   content = boundary + multipartl + dataFile + "\r\n" + boundary + multipart2 + content + "\r\n" + boundary + multipart3 + data3 + endBoundary;
+   content = $"{boundary}{multipart1}{dataFile}\r\n{boundary}{multipart2}{content}\r\n{boundary}{multipart3}{data3}{endBoundary}";
 
    protocol.SetParameters(new int[] { 3100, 3103 }, new object[] { content, "Import Started" });
 }
 catch (Exception e)
 {
-   protocol.Log(protocol.QActionID + "|ProcessMime|Load configuration XML-file failed (Check the correct format of the XML-file):" + Environment.NewLine + filePath + Environment.NewLine + e.ToString(),LogType.Error, LogLevel.NoLogging);
+   protocol.Log(
+      $"QA{protocol.QActionID}|ProcessMime|Load configuration XML-file failed (Check the correct format of the XML-file):{Environment.NewLine}" +
+      $"{filePath}{Environment.NewLine}" +
+      $"{e}",
+      LogType.Error,
+      LogLevel.NoLogging);
 }
 ```
 
@@ -304,7 +312,7 @@ public static class QAction
          UTF8Encoding encoding = new UTF8Encoding();
          string xmlDocument = encoding.GetString(decompressedBytes);
 
-         //// Code processing the XML document...
+         // Code processing the XML document...
       }
    }
 
@@ -326,11 +334,11 @@ public static class QAction
             using (MemoryStream memory = new MemoryStream())
             {
                int count = 0;
-               
+
                do
                {
                   count = stream.Read(buffer, 0, Size);
-                  
+
                   if (count > 0)
                   {
                      memory.Write(buffer, 0, count);
@@ -344,7 +352,7 @@ public static class QAction
       }
       catch (Exception e)
       {
-         protocol.Log("QA" + protocol.QActionID + "|Decompress|An unexpected error occurred: " + e.ToString(), LogType.Error, LogLevel.NoLogging);
+         protocol.Log($"QA{protocol.QActionID}|Decompress|An unexpected error occurred: {e}", LogType.Error, LogLevel.NoLogging);
 
          return new byte[] { 0 };
       }
@@ -370,7 +378,7 @@ protocol.NotifyDataMiner(106, 0, alarmData);   // NT_MAKE_ALARM call.
 
 ```xml
 <Param id="20" trending="false">
-   <Name>a1armReceiver</Name>
+   <Name>AlarmReceiver</Name>
    <Description>Alarm Receiver</Description>
    <Type options="linkAlarmValue=..">read</Type>
    <Interprete>

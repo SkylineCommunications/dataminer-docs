@@ -1,19 +1,21 @@
 ---
 uid: SwarmingSmartSerialServerMode
+description: "Enable Swarming for eligible smart-serial server-mode elements by adding the exact bypass check and ensuring startup can redirect the data source."
 ---
 
 # Enabling Swarming for elements with smart-serial connection in server mode
 
-For elements with smart-serial connections configured in server mode, Swarming is disabled by default. However, from DataMiner 10.6.6/10.7.0 onwards<!--RN 45173-->, if an element can communicate with its data source at startup to specify where data should be sent, you can enable Swarming by adding the following configuration to the *Protocol.xml* file:
+For elements with smart-serial connections configured in server mode, Swarming is disabled by default. However, from DataMiner 10.6.6/10.7.0 onwards<!--RN 45173-->, if an element can communicate with its data source at startup to specify where data should be sent, you can enable Swarming by setting the `Swarming.BypassChecks.Check` value in the *Protocol.xml* file to the value [smartSerialAsServer](xref:Protocol-EnumSwarmingBypassCheck):
 
 ```xml
-
 <Swarming>
     <BypassChecks>
         <Check>smartSerialAsServer</Check>
     </BypassChecks>
 </Swarming>
-
 ```
 
-With this configuration in place, at startup, the element can send a message to the data source to indicate where data should be sent. As a result, the fact that the smart-serial connection is in server mode will no longer be considered a valid reason to prevent the element from being swarmed.
+With this configuration in place, at startup, the element can send a message to the data source to indicate where data should be sent. As a result, the fact that the smart-serial connection is in server mode will no longer be considered a valid reason to prevent the element from being swarmed. See [Protocol.Swarming](xref:Protocol.Swarming) for the generated schema.
+
+> [!IMPORTANT]
+> Use this bypass only when the element can send a startup message that configures the data source's destination. The setting does not make an otherwise unconfigurable server-mode connection safe to swarm.

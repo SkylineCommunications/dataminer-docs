@@ -3,25 +3,17 @@ uid: Cube_Feature_Release_10.6.12
 description: "Release notes for DataMiner Cube Feature Release 10.6.12, with new features, enhancements, and fixes planned for this preview release."
 ---
 
-# DataMiner Cube Feature Release 10.6.12 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.12
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU9].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.12](xref:General_Feature_Release_10.6.12).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.12](xref:Web_apps_Feature_Release_10.6.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
 
 ## Changes
 
@@ -43,6 +35,8 @@ From now on, changes to measurement point selections will immediately be pushed 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 When a user changed the configuration of a Spectrum component in shared mode, up to now, the changes were not immediately reflected in other clients. From now on, the user can right-click the *x clients* button and select *Push changes to other users*. Other users will then receive a banner where they can apply or ignore the changes. Closing the Spectrum card also triggers the banner.
+
+![Banner shown when another uses pushes changes to the spectrum analyzer](~/release-notes/images/Sharing_spectrum_session.png)
 
 The *Spectrum card behavior upon last session preset modification in shared mode* setting, under *Settings* > *Card*, will control how other clients handle pushed changes:
 
@@ -81,7 +75,7 @@ Preset loading options now behave more consistently:
 
 The checkbox labels have also been clarified: *Trace* is now *Reference trace*, *Threshold* is now *Thresholds*, and *Measurement cycle* is now *Measurement points*.
 
-#### Cluster update status: Possible statuses have changed [ID 46504]
+#### Cluster update status: Possible statuses have changed [ID 46843]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
@@ -203,6 +197,14 @@ When you loaded a preset containing a threshold in a Spectrum component, in some
 
 The threshold will now be displayed when the preset is loaded.
 
+#### Spectrum component would remain blank after an element restart [ID 46646]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you restarted an element while a Spectrum component was open, the component would remain blank because it did not create a new session.
+
+From now on, the Spectrum component will create a new session when the element is restarted.
+
 #### System Center - Agents: Migration window could remain open after an element export failed [ID 46657]
 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
@@ -210,6 +212,14 @@ The threshold will now be displayed when the preset is loaded.
 When an element export failed during migration, up to now, the Element migration window could continue to show "Migration has started." indefinitely without indicating that an error had occurred.
 
 From now on, the window will indicate that the migration finished with errors.
+
+#### Services: Exclude conditions on groups could be saved incorrectly [ID 46658]
+
+<!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
+
+When you configured a service with a group of child elements and applied an exclude condition to that group, Cube would incorrectly save the condition as both an include and an exclude trigger, and when you reopened the service in the editor, the exclude condition would be shown as an include condition. Saving the service again could then change its behavior.
+
+Cube will now save these conditions correctly and correct affected configurations when you open the service editor.
 
 #### Spectrum: Banner text was unclear after a Last Session Preset change [ID 46668]
 

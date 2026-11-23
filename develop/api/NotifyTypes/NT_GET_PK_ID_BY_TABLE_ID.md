@@ -9,7 +9,7 @@ Retrieves the column index of the column that contains the primary keys of the t
 ```csharp
 int tableId = 1000;
 
-int primaryKeyColumnId = (int) protocol.NotifyProtocol(193 /*NT_FILL_ARRAY*/, tableId, null);
+int primaryKeyColumnId = (int)protocol.NotifyProtocol(394 /*NT_GET_PK_ID_BY_TABLE_ID*/, tableId, null);
 ```
 
 ## Parameters
