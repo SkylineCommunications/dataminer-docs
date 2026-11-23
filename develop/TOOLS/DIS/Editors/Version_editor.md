@@ -47,7 +47,9 @@ To add a generic reference, do the following:
 1. In the *Reference type* column, add the type of information to which you referred in the *Reference* column. For example, if *Reference* contains an ID of a Jira ticket, you could set *Reference type* to "Jira".
 
 To go to the information referred to by a reference, click the *Link* button.
+
 To open the reference in the DoD app, click the DoD icon.
+
 To remove a reference, click the *Remove* button.
 
 > [!NOTE]
