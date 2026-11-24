@@ -10,33 +10,46 @@ description: "Learn the requirements and steps to enable DataMiner Intelligence 
 
 [DataMiner Intelligence](xref:DataMiner_Intelligence) has the following requirements:
 
-- **DataMiner version**: The DataMiner Intelligence user permissions and system-wide setting require DataMiner 10.7.0/10.7.1 or later. On earlier supported versions, Document Intelligence can still be used, but it is not guarded by a DataMiner Intelligence permission.
+- **DataMiner version**: DataMiner Intelligence requires DataMiner 10.7.0/10.7.1 or higher. Document Intelligence is already available in earlier DataMiner versions.
+
+  For the best results, we recommend using the latest available DataMiner version.
 
 - **dataminer.services connection**: Your DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
 - **DataMiner Assistant DxM**: This [DataMiner Extension Module](xref:DataMinerExtensionModules) provides the AI capabilities in DataMiner, including the agent framework, [natural language to GQI](xref:Intelligence_NL2GQI), and [Document Intelligence](xref:docintel).
 
-- **System setting**: The *DataMiner Intelligence* setting must be enabled in *Settings* > *System*. You can only enable it when the DataMiner System runs DataMiner 10.7.0/10.7.1 or later and is connected to dataminer.services.
+- **System setting**: The *DataMiner Intelligence* web apps setting must be enabled. See [Enabling DataMiner Intelligence](#enabling-dataminer-intelligence).
 
-- **User permissions**: From DataMiner 10.7.0/10.7.1 onwards, you need the *General > DataMiner Intelligence > Access* permission to use DataMiner Intelligence capabilities, including Document Intelligence and natural language to GQI. On earlier supported versions, Document Intelligence can still be used without this permission. To access the DataMiner Assistant app from the landing page, you also need the *Assistant app* permission. See [DataMiner user permissions](xref:DataMiner_user_permissions).
+- **User permissions**: To use any of the DataMiner Intelligence capabilities, you need the [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) user permission. On DataMiner versions prior to 10.7.0/10.7.1 that already support Document Intelligence, this permission is not yet required to use Document Intelligence.
 
-For the best results, we recommend using the latest available DataMiner version.
+  To access the DataMiner Assistant app from the landing page, you also need the [Assistant app](xref:DataMiner_user_permissions#general--dataminer-intelligence--assistant-app) permission.
+
+- **GQI**: To use the [natural language to GQI](xref:Intelligence_NL2GQI) feature, the [GQI DxM](xref:GQI_DxM) needs to be installed.
 
 ## Enabling DataMiner Intelligence
 
-1. For the system-wide setting and permission controls, make sure your DataMiner System runs DataMiner 10.7.0/10.7.1 or later and is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
+1. Make sure your DataMiner System runs DataMiner 10.7.0/10.7.1 or higher and is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-1. Make sure the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is installed.
+1. If you have a self-managed DataMiner System, make sure the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is installed.
 
-1. Grant users the *General > DataMiner Intelligence > Access* permission. To allow them to open the DataMiner Assistant app from the landing page, also grant them the *Assistant app* permission.
+   On DaaS systems running DataMiner 10.7.0/10.7.1 or higher, this DxM is installed and running by default.
 
-1. In *Settings* > *System*, enable *DataMiner Intelligence*.
+1. In DataMiner Cube, grant users (including yourself) the following user permissions:
 
-   ![System settings showing the DataMiner Intelligence and Specialized agents toggles](~/dataminer/images/DataMiner_Intelligence_System_Settings.png)<br>*DataMiner Intelligence and Specialized agents toggles in system settings.*
+   - To be able to use DataMiner Intelligence: [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access).
+   - To be able to open the DataMiner Assistant app from the landing page: [General > DataMiner Intelligence > Assistant app](xref:DataMiner_user_permissions#general--dataminer-intelligence--assistant-app).
 
-   To change this setting, you need both the *General > DataMiner Intelligence > Access* permission and the [*Modules > System configuration > Tools > Admin tools* permission](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools). Without both permissions, the setting is read-only. If the DataMiner System does not meet the version or cloud connection requirements, the toggle is disabled; hover over it to see the reason.
+   For details on how to assign user permissions, see [Configuring a user group](xref:Configuring_a_user_group).
 
-   The change takes effect immediately without reloading the page. When DataMiner Intelligence is turned off, the Assistant app is removed from the app menu and apps overview. If the app is already open, it displays a "page not found" message. The app returns when DataMiner Intelligence is turned on again.
+1. Enable the *DataMiner Intelligence* system setting:
+
+   1. Open a DataMiner web app (e.g., Dashboards, Monitoring, etc.) or the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
+
+   1. In the user menu in the upper-right corner, select *Settings* > *System*.
+
+   1. Enable the *DataMiner Intelligence* toggle button.
+
+   ![System settings showing the DataMiner Intelligence and Specialized agents toggle buttons](~/dataminer/images/DataMiner_Intelligence_System_Settings.png)<br>*DataMiner Intelligence and Specialized agents toggles in system settings.*
 
 1. Open the DataMiner Assistant app from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
 
@@ -51,4 +64,4 @@ For the best results, we recommend using the latest available DataMiner version.
 - Learn which [agents](xref:Intelligence_Assistant_Agents) are available and how to create your own [specialized agents](xref:Intelligence_Assistant_Specialized_Agents).
 - Extend the agents with your own [skills](xref:Intelligence_Assistant_Skills) and [tools](xref:Intelligence_Assistant_Tools).
 - Access the agents from Microsoft Teams or Microsoft Copilot with the [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
-- Learn how DataMiner Intelligence handles your data in [Data privacy and security](xref:Intelligence_Data_Privacy_Security).
+- Learn how DataMiner Intelligence handles [data privacy and security](xref:Intelligence_Data_Privacy_Security).
