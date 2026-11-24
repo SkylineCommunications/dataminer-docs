@@ -55,8 +55,8 @@ Uploaded apps are deployed in `C:\Skyline DataMiner\applications` and hosted thr
 
 The app assets run in an iframe with an isolated, opaque origin, which restricts access to browser resources. Apps can use the `postMessage` API to communicate with the hosting app framework:
 
-- **Request API access**: Send `{"tokens":[{"endpoint":"/API/v1/Json.asmx"}]}`. The response contains the token under `tokens["/API/v1/Json.asmx"]`. Pass this token as the connection parameter or in the `Authorization: Bearer <token>` header in Web API calls.
-- **Update the browser URL**: Send `{"url":newURL}`. No response is returned.
+- **Request API access**: Use the framework's HTTP and WebSocket bridge. See [API access through the application framework [ID 47153]](#dataminer-apps-api-access-through-the-application-framework-id-47153).
+- **Update the browser URL**: Send `{"url":{"set":newURL}}` to update the address bar without navigation. The URL must remain within the current app. To open a page through the hosting framework, send `{"url":{"open":"...","target":"_blank"}}` or use `"_self"` as the target. Browser cookie and pop-up policies still apply.
 - **Store client-side data**: Send `{"storage":{"write":{"key":key,"data":data}}}`.
 - **Read stored client-side data**: Send `{"storage":{"read":{"key":key}}}`. The response is `{"storage":{"data":data,"key":key}}`.
 
@@ -150,28 +150,6 @@ The following changes have also been made:
 Following its end of life, the legacy Ticketing app and its Web API implementation have been removed. Ticketing is now reported as unavailable.
 
 For compatibility with existing WSDL-based clients, the Ticketing methods in the [public web services](xref:Using_the_Web_Services_v1) retain their existing signatures and remain in the WSDL. However, these methods are no longer functional. Calls will now throw an `ObsoleteMethodWebApiException`.
-
-#### DataMiner apps and Web API: Endpoint-based tokens and Authorization header support [ID 46953]
-
-<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
-
-Uploaded DataMiner apps can now request authentication tokens for multiple API endpoints in a single `postMessage` request to their parent window. For example:
-
-```json
-{"tokens":[{"endpoint":"/API/v1/Json.asmx"}]}
-```
-
-Each supported endpoint receives a separate response, with the token keyed by the requested endpoint. In this example, the token is returned under `tokens["/API/v1/Json.asmx"]`.
-
-Currently, only relative endpoints starting with `/api/v1/` are supported, regardless of casing. Unsupported endpoints, including absolute URLs, return the error message `This endpoint is not supported.`. This contract prepares for future support for user-defined APIs, which are not yet supported by these token requests.
-
-The Web API now also accepts a connection string in the HTTP header `Authorization: Bearer <connection string>`. Authentication is handled as follows:
-
-- A non-empty connection parameter takes precedence over the Bearer header.
-- When the connection parameter is empty or omitted, Bearer credentials are used. Invalid Bearer credentials cause authentication to fail, even if a valid authentication cookie is present.
-- Existing cookie-based authentication remains available when no Bearer credentials are supplied.
-
-Cross-origin resource sharing (CORS) now allows the `Authorization` header for sandboxed uploaded apps.
 
 #### Web DcM: Updated PuppeteerSharp and bundled Chromium [ID 46955]
 
@@ -348,6 +326,22 @@ The GQI DxM will now retry reading a locked extension DLL up to 7 times instead 
 As Annotations has been deprecated, the *HasAnnotations* columns in the *Get elements* and *Get services* data sources are now marked as legacy and hidden from the query builder. You can no longer select these columns when building queries.
 
 Existing queries that already select these columns will continue to work after upgrading. The selected columns will remain available in the results and for subsequent operations, such as column manipulations and filters.
+
+#### DataMiner apps: API access through the application framework [ID 47153]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 - FR 10.7.1 -->
+
+Uploaded DataMiner apps can now make authenticated API requests and receive live updates through the application framework, using the signed-in session without handling connection tokens.
+
+The framework provides an HTTP and WebSocket bridge through a connected `MessagePort`, with support for:
+
+- Sending and aborting HTTP requests.
+- Opening, sending messages through, and closing WebSocket connections.
+- Correlating replies with requests and transferring binary data.
+
+Requests use the hosting framework's cookie context. For JSON ASMX calls, the framework supplies `connection: Guid.EMPTY`.
+
+Bridge requests are restricted to same-origin URLs under `/API/v1/`. Password changes, connection methods, and Bulk calls are blocked. SOAP and redirect restrictions, quotas, and timeouts also apply. Opening a second WebSocket connection to the same endpoint returns `InvalidStateError`; reuse the original socket ID instead.
 
 #### Web apps: Updated loading indicator design [ID 47176]
 
