@@ -8,11 +8,10 @@ keywords: AI assistant, chat component, AI component, DataMiner Assistant, Copil
 
 The assistant chat component allows you to **interact with the [DataMiner Assistant](xref:Intelligence_Assistant_app) directly from a dashboard or low-code app**, without leaving the page. You can submit questions using text or voice input and, depending on the available configuration, choose a response mode and AI model before sending your request.
 
-The DataMiner Assistant is currently in development and available as a preview feature upon request. When preview access is enabled, the assistant chat component also becomes available.
-
-To use the assistant chat component, your DataMiner System must run DataMiner 10.7.0/10.7.1 or later, the system-wide *DataMiner Intelligence* setting must be enabled, and your user profile must have the *General > DataMiner Intelligence > Access* permission. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) and [DataMiner user permissions](xref:DataMiner_user_permissions).
-
 ![Assistant chat component displayed in a DataMiner low-code app](~/dataminer/images/AssistantChat.png)<br>*Assistant chat component in DataMiner Web 10.6.9.*
+
+> [!NOTE]
+> To use the assistant chat component, you need to have the necessary user permissions and your system must meet the requirements for DataMiner Intelligence. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements).
 
 ## Interacting with the assistant chat component
 
