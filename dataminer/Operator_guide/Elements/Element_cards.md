@@ -41,7 +41,10 @@ Element cards can look quite different depending on the element protocol. Howeve
 
   - **REPORTS**: A graphic representation of the alarm distribution, alarm events, alarm states, and a timeline. You can set the period for which data are shown to the last 24 hours, one week to date, or one month to date. For more information, see [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card).
 
-  - **DASHBOARDS**: Links to the [legacy DMS Dashboards module](xref:dashboards).
+  - **DASHBOARDS**: Deprecated. Links to the [legacy DMS Dashboards module](xref:dashboards).
+
+    > [!NOTE]
+    > This page is no longer available from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 47135+47136 --> Starting from DataMiner 10.4.0/10.4.1, the legacy module is disabled by default, but you can enable it in versions before its removal with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).<!-- RN 37786 -->
 
   - **DOCUMENTS**: Displays documents that have been made available either on the DMS in general or for this particular element protocol. See [Documents](xref:About_the_Documents_module).
 

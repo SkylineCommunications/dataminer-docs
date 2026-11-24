@@ -63,9 +63,12 @@ A graphic representation of the alarm distribution, alarm events, alarm states, 
 > [!TIP]
 > See also: [Viewing the reports page on a card](xref:Viewing_the_reports_page_on_a_card)
 
-### DASHBOARDS
+### DASHBOARDS (deprecated)
 
 This page links to the [legacy DMS Dashboards module](xref:dashboards).
+
+> [!NOTE]
+> This page is no longer available from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 47135+47136 --> Starting from DataMiner 10.4.0/10.4.1, the legacy module is disabled by default, but you can enable it in versions before its removal with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).<!-- RN 37786 -->
 
 ### DOCUMENTS
 
