@@ -14,7 +14,7 @@ Tools can be assigned as references to [specialized agents](xref:Intelligence_As
 The following types of tools are available:
 
 - **[Data tools](xref:Intelligence_Assistant_DataTools)**: These allow agents to discover and query supported GQI data sources, including standard sources, DOM instances, and ad hoc data sources. Several native data tools are available, and it is also possible to create custom data tools.
-- **[Script tools](xref:Intelligence_Assistant_ScriptTools)**: These allow [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) to execute explicitly assigned DataMiner Automation scripts.
+- **[Script tools](xref:Intelligence_Assistant_ScriptTools)**: These allow [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) to execute explicitly assigned DataMiner automation scripts.
 
 ## Creating and managing tools
 
