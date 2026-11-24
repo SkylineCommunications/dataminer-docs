@@ -7,7 +7,7 @@ description: Learn why the NATSForceManualConfig setting can be ignored after a 
 
 ## Affected versions
 
-From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards.
+From DataMiner 10.5.0 [CU1]/10.5.4 onwards.
 
 ## Cause
 
@@ -19,7 +19,7 @@ No fix is available yet. <!-- Task 312586 -->
 
 ## Workaround
 
-Before you start a BrokerGateway migration, preferably save a backup of `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`. If the migration is rolled back, you can then restore this backup and restart NATS.
+Before you start a BrokerGateway migration, preferably save a backup of `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config` on **every DataMiner Agent in the cluster**. If the migration is rolled back, you can then restore this backup on each Agent and restart NATS.
 
 If no backup is available, do the following on **every DataMiner Agent in the cluster**:
 
