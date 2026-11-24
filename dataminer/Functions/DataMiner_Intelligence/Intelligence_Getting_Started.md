@@ -24,8 +24,6 @@ description: "Learn the requirements and steps to enable DataMiner Intelligence 
 
   To access the DataMiner Assistant app from the landing page, you also need the [Assistant app](xref:DataMiner_user_permissions#general--dataminer-intelligence--assistant-app) permission.
 
-- **GQI**: To use the [natural language to GQI](xref:Intelligence_NL2GQI) feature, the [GQI DxM](xref:GQI_DxM) needs to be installed.
-
 ## Enabling DataMiner Intelligence
 
 1. Make sure your DataMiner System runs DataMiner 10.7.0/10.7.1 or higher and is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
