@@ -189,6 +189,18 @@ When an app manages its own theme, the user settings now display the message "Th
 
 The message is not shown in apps that support this setting, such as Assistant, the DataMiner landing page, and uploaded DataMiner apps.
 
+#### Web apps: Improved theme support on error pages and during loading [ID 47021]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Error pages for missing apps and uploaded DataMiner apps that you cannot access now use the theme selected in the user settings (*Light*, *Dark*, or *System*). Error pages for apps created in the low-code editor remain light-themed.
+
+The following improvements have also been made:
+
+- Error-page headers now include the shared *Help* menu.
+- Uploaded DataMiner apps, the DataMiner landing page, and the DataMiner Assistant apply the saved theme earlier during loading to reduce flicker.
+- DOM and Nodes now also follow the selected theme.
+
 #### GQI DxM: Legacy Ticketing data source removed [ID 47037]
 
 <!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
