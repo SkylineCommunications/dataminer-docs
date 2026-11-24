@@ -37,60 +37,7 @@ To access the DataMiner landing page:
 
    ![Landing page](~/dataminer/images/DataMiner_Landing_Page2.png)<br>*DataMiner landing page in DataMiner 10.5.11*
 
-### The landing page header bar
-
-![Landing page header bar](~/dataminer/images/Landing_page_header_bar.png)<br>*Landing page header bar in DataMiner 10.5.12*
-
-The landing page header bar contains the following items, from left to right:
-
-- DataMiner icon or waffle icon (depending on your DataMiner version<!--RN 43024-->): Opens a compact overview of the available web apps.
-
-- DataMiner System name: Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->. The name of the DMS is displayed. In the case of a standalone DMA, the DMA name is shown instead. Click this name to refresh the landing page.
-
-- ![Help](~/dataminer/images/Landing_page_help_icon.png) icon: Provides access to several handy pages (from DataMiner web 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- 43583 -->):
-
-  - *Community*: Links to the DataMiner Dojo blog, a page where you can suggest new DataMiner features, and our Q&A forum.
-
-  - *Documentation*: Links to the main page of the DataMiner documentation.
-
-  - *Status*: Displays the current status of the various DataMiner services.
-
-  - *Feedback*: Allows you to provide direct feedback on your experience with DataMiner. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45853-->, this option can also be used to report an issue.
-
-  - *Support*: Displays contact information for DataMiner Support.
-
-- User button: A button with the initials or an image of the current user. Click this button to open a menu that provides access to the following options:
-
-  - *About*: Displays information about DataMiner and your installed versions, e.g., web version and server version.
-
-  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to user-specific configuration options:
-
-    - *Theme*: Only available when the *showAdvancedSettings=true* argument has been added to the URL. Select one of the available themes:
-
-      - *Light* (Default)
-
-      - *Dark*
-
-      - *System*
-
-    - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
-
-      The following options are available:
-
-      - *From client OS*: Use the time zone configured in the client operating system.
-
-      - *Custom*: Select a custom time zone from the dropdown list.
-
-    - *Password*: Allows users to change their password without needing to access Cube.
-
-      > [!NOTE]
-      > This setting is only available if the following conditions are met:
-      >
-      > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
-      > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
-      > - The user must not be logged in with external or delegated authentication.
-
-  - *Sign out*: Logs you out and returns you to the logon screen.
+The landing page shows the standard [web app header bar](#web-app-header-bar).
 
 ### Available web apps
 
@@ -106,35 +53,98 @@ The landing page provides access to the following web apps:
 
   - You can access any of the available low-code apps by clicking the relevant app icon, or [create a new low-code app](xref:Creating_custom_apps).
 
-  - Draft apps are not shown by default. To view them, click the cogwheel button and activate *Show draft applications*.
+  - Draft apps are not shown by default. To view them, enable the *Show drafts* toggle next to the search bar. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, click the cogwheel button and activate *Show draft applications*.
 
   - From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can use the quick filter box in the upper-left corner of the Low-Code Apps section to quickly search for apps by name.
 
   - From DataMiner 10.6.0 [CU10]/10.7.0 [CU0]/10.7.1 onwards<!--RN 45878-->, apps created in the low-code editor and apps added through the [New DataMiner Apps experience](xref:New_apps) are both shown here and are both part of DataMiner Apps. To add an app, click the arrow next to the *Add* button. The menu allows you to [upload a new app](xref:Uploading_a_new_app), browse the Catalog, or create an app in the low-code editor. Clicking the *Add* button itself will create a low-code app.
 
-To access a **compact overview of all available web apps**:
+## Web app header bar
 
-- On the landing page: Click the DataMiner icon or waffle icon (depending on your DataMiner version<!--RN 43024-->) in the upper-left corner of the landing page.
+The DataMiner landing page and the DataMiner web apps all show the same header bar at the top of the page. This header bar gives you access to the same general functionality everywhere, in addition to any buttons or menus that are specific to the app you have opened.
 
-- From within a web app: Click the waffle icon in the upper-left corner of the app.
+![Landing page header bar](~/dataminer/images/Landing_page_header_bar.png)<br>*Landing page header bar in DataMiner 10.5.12*
 
-This overview allows you to easily switch between web apps. Additionally, from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, a quick filter box is available to help you narrow down the apps, and a *dataminer.services* button provides direct access to the dataminer.services home page.
+The header bar contains the following items, from left to right:
 
-### Customizing the landing page theme
+- **App overview icon**: Opens a [compact overview of all available web apps and DataMiner Apps](#switching-between-apps).
 
-From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, you can customize the DataMiner landing page theme:
+  Depending on the app you have opened and your DataMiner version<!--RN 43024-->, this icon is displayed as a DataMiner icon, a waffle icon, or the icon of the app itself. It always has the same function.
 
-1. Add the argument `?showAdvancedSettings=true` to the landing page URL.
+- **DataMiner System name**: Available from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->. The name of the DMS is displayed. In the case of a standalone DMA, the DMA name is shown instead.
 
-1. Click the user button in the upper-right corner of the page and select *User settings*. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, click the cogwheel button in the upper-right corner of the page.
+  Click this name to go to the [DataMiner landing page](#dataminer-landing-page). If you are already on the landing page, the page will be refreshed.
 
-1. Select one of the available themes:
+- **App-specific items**: Depending on the app, the header bar can contain additional buttons and menus, for example to edit or publish the app, or a search box.  A [new app](xref:New_apps) can also add its own buttons and menus.
 
-   - *Light* (Default)
+- ![Help](~/dataminer/images/Landing_page_help_icon.png) **Help icon**: Provides access to several handy pages (from DataMiner web 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- 43583 -->):
 
-   - *Dark*
+  - *Community*: Links to the DataMiner Dojo blog, a page where you can suggest new DataMiner features, and our Q&A forum.
 
-   - *System*
+  - *Documentation*: Links to the main page of the DataMiner documentation.
+
+  - *Status*: Displays the current status of the various DataMiner services.
+
+  - *Feedback*: Allows you to provide direct feedback on your experience with DataMiner. From DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 onwards<!--RN 45853-->, this option can also be used to report an issue.
+
+  - *Support*: Displays contact information for DataMiner Support.
+
+- **User button**: A button with the initials or an image of the current user. Click this button to open a menu that provides access to the following options:
+
+  - *About*: Displays information about DataMiner and your installed versions, e.g., web version and server version. In an app, this option displays information about the app instead.
+
+  - *Help*: Available up to DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10. Opens the DataMiner documentation.
+
+  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to [user-specific configuration options](#user-settings).
+
+  - *Sign out*: Logs you out and returns you to the logon screen.
+
+  Some apps add their own entries to this menu, for example an app-specific settings option.
+
+### Switching between apps
+
+To open a compact overview of all available web apps, click the app overview icon in the upper-left corner of the header bar.
+
+This overview allows you to easily switch between apps. Additionally, from DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards<!--RN 43226-->, a quick filter box is available to help you narrow down the apps, and a *dataminer.services* button provides direct access to the dataminer.services home page.
+
+### User settings
+
+The *(User) Settings* option in the user menu provides access to the following options:
+
+- *Theme*: Select one of the available themes:
+
+  - *Light* (Default)
+
+  - *Dark*
+
+  - *System*
+
+  Prior to DataMiner 10.6.0 [CU10]/10.7.1<!--RN 46917-->, this option is only available when the *showAdvancedSettings=true* argument has been added to the URL.
+
+  If an app manages its own theme, the message "Theme setting is managed by the app." is displayed above this setting, and your selected theme will not affect that app.
+
+- *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
+
+  The following options are available:
+
+  - *From client OS*: Use the time zone configured in the client operating system.
+
+  - *Custom*: Select a custom time zone from the dropdown list.
+
+- *Password*: Allows users to change their password without needing to access Cube.
+
+  > [!NOTE]
+  > This setting is only available if the following conditions are met:
+  >
+  > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
+  > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
+  > - The user must not be logged in with external or delegated authentication.
+
+Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, the user settings are accessible via the cogwheel button in the upper-right corner of the page instead.
+
+### Hiding the header bar
+
+If you add `?embed` to the URL of a [DataMiner App](xref:DataMiner_Apps), the header bar is hidden. This is useful when you want to embed the app in another page.
 
 ## Installing a web app as a standalone app
 

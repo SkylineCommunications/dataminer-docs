@@ -13,18 +13,16 @@ DataMiner Apps are the apps that you can open from the DataMiner landing page, f
 
 Individual apps of both types look and behave in the same way. They share the same header bar and the same sign-in, so you do not need to log in again when you open an app. This page describes what applies to all DataMiner Apps.
 
-> [!NOTE]
-> Dashboards are not DataMiner Apps. They are created and managed in the [Dashboards app](xref:newR_D).
-
 To decide which type of app best suits your needs, see [Choosing between New Apps and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps#choosing-between-new-apps-and-low-code-apps).
 
 ## Opening an app
 
 To open a DataMiner app, do any of the following:
 
-- On the DataMiner landing page, click the app.
+- On the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), click the app.
 
-  Draft apps are not shown by default. To show them, click the cogwheel button and activate *Show draft applications*.
+  > [!NOTE]
+  > Draft apps are not shown by default. To show them, enable the *Show drafts* toggle next to the search bar. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, click the cogwheel button on the landing page and activate *Show draft applications*.
 
 - In DataMiner Cube, open the [*Apps* pane](xref:DataMiner_Cube_sidebar#apps-pane) in the sidebar and select the app.
 
@@ -42,7 +40,7 @@ To open a DataMiner app, do any of the following:
 
 ## Header bar, theme, and embedding
 
-All DataMiner Apps show the DataMiner header bar.
+All DataMiner Apps show the standard [web app header bar](xref:Accessing_the_web_apps#web-app-header-bar). The following points are specific to DataMiner Apps:
 
 - For apps created in the low-code editor, the header bar uses the accent color of the app.
 

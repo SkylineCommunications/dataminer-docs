@@ -20,9 +20,9 @@ Note that the sidebar may be absent if the app consists of only one page.
 
 ![Low-Code Apps header bar](~/dataminer/images/LCA_Header_Bar.png)<br>*Low-Code Apps header bar in DataMiner 10.6.4*
 
-The header bar contains the following items, from left to right:
+The look and functionality of the Low-Code Apps header bar are aligned with the [standard web app header bar](xref:Accessing_the_web_apps#web-app-header-bar).
 
-- Apps button: The button in the upper-left corner provides quick access to other DataMiner web apps.
+Specific to low-code apps, the header bar contains the following items:
 
 - App name: The name of the app. Clicking this name will remove any arguments from the app URL.
 
@@ -35,39 +35,6 @@ The header bar contains the following items, from left to right:
   - *Permissions* / *Settings*: Allows you to [configure app security](xref:LowCodeApps_security_config), determining which users and groups are allowed to view and/or edit the app.
 
   - *Duplicate app*: Allows you to create a copy of the currently opened low-code app. After clicking this option, the newly created app will automatically be opened in a new browser tab.
-
-- User button: A button with the initials or an image of the current user is displayed in the upper-right corner. Click this button to open a menu that provides access to the following options:
-
-  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to the following user-specific configuration options:
-
-    - *Theme*: Only available when the *showAdvancedSettings=true* argument has been added to the URL. Select one of the available themes:
-
-      - *Light* (Default)
-
-      - *Dark*
-
-      - *System*
-
-    - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
-
-      The following options are available:
-
-      - *From client OS*: Use the time zone configured in the client operating system.
-
-      - *Custom*: Select a custom time zone from the dropdown list.
-
-    - *Password*: Allows users to change their password from within an app, without needing to access Cube.
-
-      > [!NOTE]
-      > This setting is only available if the following conditions are met:
-      >
-      > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
-      > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
-      > - The user must not be logged in with external or delegated authentication.
-
-  - *About*: Displays information about the app.
-
-  - *Sign out*: Logs you out of the app and returns you to the logon screen.
 
 ## The Low-Code Apps sidebar
 

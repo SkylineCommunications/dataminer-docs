@@ -32,11 +32,7 @@ When you open the app, a welcome screen is displayed with the following elements
   > [!NOTE]
   > The *Agents* button is always visible in the sidebar. However, you can only create a new agent on that page if the *Specialized agents* setting is enabled. See [specialized agents](xref:Intelligence_Assistant_Specialized_Agents).
 
-- **Header bar**: The header bar is similar to other native DataMiner apps, with a button to return to the landing page on the left, and a user icon on the right. Clicking the user icon opens a menu with the following options:
-
-  - *About*: Provides access to information about the app, including the version of the app and all of its components.
-  - *Settings*: Allows you to select whether the time zone configured in the client operating system is used or a custom time zone.
-  - *Sign out*: Logs you out of the app and returns you to the logon screen.
+- **Header bar**: The header bar is the standard [web app header bar](xref:Accessing_the_web_apps#web-app-header-bar), with a button to return to the landing page on the left and the user button on the right.
 
 - **Suggestion cards**: A set of predefined prompts to help you get started quickly. These are only available for native AI agents and are unique to the selected agent, providing relevant starting points tailored to that agent's capabilities.
 

@@ -407,6 +407,8 @@ items:
           - name: New Apps
             topicUid: New_apps
             items:
+              - name: Creating a new app
+                topicUid: Creating_a_new_app
               - name: Uploading and publishing a new app
                 topicUid: Uploading_a_new_app
           - name: Low-Code Apps
