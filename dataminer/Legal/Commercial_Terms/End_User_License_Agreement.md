@@ -7,7 +7,7 @@ keywords: End User License Agreement, EULA, software license terms
 
 *Last updated: 22 November 2026*
 
-This End User License Agreement ("**EULA**") governs the installation, access, and use of the DataMiner software platform, client and companion applications, drivers, connectors, tools, Updates, and Upgrades, and, where applicable, access to the SaaS Service made available by Skyline (collectively, the "**Software**") and the accompanying Documentation. It supplements and incorporates the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions) ("**General Terms and Conditions**"). Capitalized terms not defined here have the meaning given in the General Terms and Conditions or the [Maintenance and Support Terms](xref:Support_Terms_On_Premises). Where End User does not have a separate direct Agreement with Skyline, references to "Customer" and "Agreement" in the General Terms and Conditions apply as references to "End User" and this "EULA", respectively.
+This End User License Agreement ("**EULA**") governs the installation, access, and use of the DataMiner software platform, client and companion applications, connectors, tools, Updates, and Upgrades, and, where applicable, access to the SaaS Service made available by Skyline (collectively, the "**Software**") and the accompanying Documentation. It supplements and incorporates the [Skyline General Terms and Conditions](xref:General_Terms_and_Conditions) ("**General Terms and Conditions**"). Capitalized terms not defined here have the meaning given in the General Terms and Conditions or the [Maintenance and Support Terms](xref:Support_Terms_On_Premises). Where End User does not have a separate direct Agreement with Skyline, references to "Customer" and "Agreement" in the General Terms and Conditions apply as references to "End User" and this "EULA", respectively.
 
 ## 1. Acceptance and Scope
 
@@ -30,7 +30,7 @@ Where End User acquires rights to the Software through an authorized Skyline par
 
 ## 4. Evaluation, Lab, and Free-of-Charge Use
 
-Where Skyline makes Software available for evaluation, trial, demonstration, proof-of-concept, lab, beta, or pre-release purposes without a paid commercial production entitlement (excluding the Community Edition, which is governed by the [Skyline Community Edition Terms](xref:Community_Edition_Terms)), End User may use that Software solely for internal, non-production purposes during the period specified by Skyline (or thirty (30) days from initial access if none is specified). Free-of-charge client or companion tools may be used solely in connection with a validly licensed DataMiner system. Skyline may modify, suspend, or revoke any evaluation, lab, pre-release, or free-of-charge access at any time without liability.
+Where Skyline makes Software available for evaluation, trial, demonstration, proof-of-concept, lab, beta, or pre-release purposes without a paid commercial production entitlement (excluding the Community Edition, which is governed by the [Skyline Community Edition Terms](xref:Community_Edition_Terms)), End User may use that Software solely for internal, non-production purposes during the period specified by Skyline (or thirty (30) days from initial access if none is specified). Free-of-charge client or companion tools may be used solely in connection with a validly licensed DataMiner System. Skyline may modify, suspend, or revoke any evaluation, lab, pre-release, or free-of-charge access at any time without liability.
 
 ## 5. Support, Warranty, and Indemnification
 
