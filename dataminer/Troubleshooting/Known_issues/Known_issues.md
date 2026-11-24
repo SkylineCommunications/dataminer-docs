@@ -8,6 +8,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [NATSForceManualConfig ignored after BrokerGateway migration rollback](xref:KI_NATSForceManualConfig_ignored_after_BrokerGateway_migration_rollback) | From DataMiner 10.5.0 [CU1]/10.5.4 onwards | | November 24, 2026 |
 | [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.10 onwards | | October 8, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -45,6 +46,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [NATSForceManualConfig ignored after BrokerGateway migration rollback](xref:KI_NATSForceManualConfig_ignored_after_BrokerGateway_migration_rollback) | From DataMiner 10.5.0 [CU1]/10.5.4 onwards | | November 24, 2026 |
 | [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.10 onwards | | October 8, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
