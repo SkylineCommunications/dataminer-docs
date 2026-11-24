@@ -45,7 +45,7 @@ For example:
 
 ## Using the GQI DxM for queries
 
-From Data Aggregator 3.3.1 onwards, queries are executed using the [GQI DxM](xref:GQI_DxM) by default. There is no automatic fallback to CoreGateway if the GQI DxM is unavailable.<!-- RN 47072 -->
+From Data Aggregator 3.4.0 onwards, queries are executed using the [GQI DxM](xref:GQI_DxM) by default. There is no automatic fallback to CoreGateway if the GQI DxM is unavailable.<!-- RN 47072+47201 -->
 
 For the required DxMs, see the [installation prerequisites](xref:Data_Aggregator_install_setup#prerequisites).
 

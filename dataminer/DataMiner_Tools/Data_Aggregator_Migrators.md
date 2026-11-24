@@ -9,7 +9,7 @@ Select the migrations that apply to your upgrade path and query configuration:
 
 - [Upgrading from version 2.x.x](#upgrading-from-version-2xx)
 - [Migrating queries to the GQI DxM format](#migrating-queries-to-the-gqi-dxm-format)
-  - [Automatic migration from Data Aggregator 3.3.1 onwards](#automatic-migration-from-data-aggregator-331-onwards)
+  - [Automatic migration from Data Aggregator 3.4.0 onwards](#automatic-migration-from-data-aggregator-340-onwards)
     - [Reverting an automatic migration](#reverting-an-automatic-migration)
   - [Manual migration in Data Aggregator 3.1.0 to 3.3.0](#manual-migration-in-data-aggregator-310-to-330)
     - [Reverting a manual migration](#reverting-a-manual-migration)
@@ -53,15 +53,15 @@ The Data Aggregator Migrator should be used **after** upgrading the Data Aggrega
 
    - The JSON files containing the queries are present in `C:\Program Files\Skyline Communications\DataMiner DataAggregator\Data Sources\Scripted Connectors`.
 
-1. If you upgraded directly to Data Aggregator 3.3.1 or later, run an [MSI repair](#automatic-migration-from-data-aggregator-331-onwards) to convert the imported queries. These are registered after installation and are not included in the initial migration.
+1. If you upgraded directly to Data Aggregator 3.4.0 or later, run an [MSI repair](#automatic-migration-from-data-aggregator-340-onwards) to convert the imported queries. These are registered after installation and are not included in the initial migration.
 
 ## Migrating queries to the GQI DxM format
 
 The migration method depends on your Data Aggregator version.
 
-### Automatic migration from Data Aggregator 3.3.1 onwards
+### Automatic migration from Data Aggregator 3.4.0 onwards
 
-From Data Aggregator 3.3.1 onwards, the MSI installer migrates all CoreGateway queries configured in *Helper.json* to the GQI DxM format during installation, upgrade, or repair. Queries already in GQI DxM format are left unchanged.<!-- RN 47072 -->
+From Data Aggregator 3.4.0 onwards, the MSI installer migrates CoreGateway queries registered in *Helper.json* to the GQI DxM format during installation, upgrade, or repair. Queries already in GQI DxM format are left unchanged.<!-- RN 47072+47201 -->
 
 The installer also removes `false` or `null` overrides for `QueryExecutorOptions:UseGQIDxM` from *appsettings.custom.json*. Modified configuration files may be reformatted and lose their comments; the originals are backed up.
 
@@ -119,7 +119,7 @@ If you need to switch back to using CoreGateway and SLHelper, you can restore th
 In Data Aggregator 3.1.0 through 3.3.0, follow the procedure below to manually migrate existing CoreGateway queries when you enable the GQI DxM.
 
 > [!NOTE]
-> From Data Aggregator 3.3.1 onwards, existing query data sources are [automatically migrated](#automatic-migration-from-data-aggregator-331-onwards) during installation, upgrade, or repair, so this manual procedure is not needed.
+> From Data Aggregator 3.4.0 onwards, existing query data sources are [automatically migrated](#automatic-migration-from-data-aggregator-340-onwards) during installation, upgrade, or repair, so this manual procedure is not needed.
 
 1. Make sure Data Aggregator version 3.1.0 or higher is installed.
 

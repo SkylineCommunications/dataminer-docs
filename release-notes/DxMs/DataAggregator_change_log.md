@@ -5,9 +5,9 @@ description: "Review Data Aggregator releases, including enhancements, fixes, in
 
 # Data Aggregator change log
 
-#### 19 November 2026 - Enhancement - DataAggregator 3.3.1 - GQI DxM enabled by default [ID 47072]
+#### 23 November 2026 - Enhancement - DataAggregator 3.4.0 - GQI DxM enabled by default [ID 47072] [ID 47201]
 
-Data Aggregator now uses the [GQI DxM](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) as its default query executor. During installation, upgrade, or repair, the MSI [automatically migrates existing CoreGateway queries](xref:Data_Aggregator_Migrators#automatic-migration-from-data-aggregator-331-onwards).
+Data Aggregator now uses the [GQI DxM](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) as its default query executor. During installation, upgrade, or repair, the MSI [automatically migrates existing CoreGateway queries](xref:Data_Aggregator_Migrators#automatic-migration-from-data-aggregator-340-onwards).
 
 #### 21 August 2026 - Enhancement - DataAggregator 3.3.0 - Update to .NET 10 [ID 44801]
 
