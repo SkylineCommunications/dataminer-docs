@@ -16,6 +16,8 @@ Expected duration: 10 minutes.
 
 - Operator access to the [QAOps Operator app](xref:QAOps_Main_UI#qaops-operator-app) (the blue app).
 
+- Access to the [QAOps Sandbox](https://qaops-sandbox.skyline.be). Use this environment for every QAOps tutorial. Email <support.boost@skyline.be> to request a username and password.
+
 - An existing configuration you are allowed to change. If you do not have one, first follow the [Creating a QAOps configuration](xref:QAOps_Tutorials_Operator_Tutorials_How_To_Create_A_Configuration) tutorial.
 
 ## Overview
