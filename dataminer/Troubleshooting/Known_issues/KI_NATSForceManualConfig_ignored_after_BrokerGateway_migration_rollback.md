@@ -11,7 +11,7 @@ From DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards.
 
 ## Cause
 
-When a BrokerGateway migration is rolled back, the BrokerGateway flag is switched back to `false`. NATSCustodian then resets the NATS configuration without checking `NATSForceManualConfig`. As a result, leaf node Agents end up with cluster routes and a cluster name, causing the central brokers to reject them.
+When a BrokerGateway migration is rolled back, the BrokerGateway flag is switched back to `false`. NATSCustodian then resets the NATS configuration without checking `NATSForceManualConfig`. As a result, an automatically generated NATS configuration may end up mixed together with the original manual configuration, causing the central brokers to reject them.
 
 ## Fix
 
