@@ -19,7 +19,9 @@ No fix is available yet. <!-- Task 312586 -->
 
 ## Workaround
 
-On **every DataMiner Agent in the cluster**:
+Before you start a BrokerGateway migration, preferably save a backup of `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`. If the migration is rolled back, you can then restore this backup and restart NATS.
+
+If no backup is available, do the following on **every DataMiner Agent in the cluster**:
 
 1. Remove the routes from `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`.
 
