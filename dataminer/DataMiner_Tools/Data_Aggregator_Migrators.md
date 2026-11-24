@@ -81,6 +81,9 @@ For installation failures and incomplete migrations, see [Data Aggregator troubl
 
 If you need to switch back to using CoreGateway and SLHelper, you can restore the original query files from the migration backups and change the query executor. This affects all queries, not just those migrated.
 
+> [!IMPORTANT]
+> Before you revert the migration, make sure you can still use GQI via SLHelper on all target clusters. See [EndOfSupport.SLHelperGQI](xref:Overview_of_Soft_Launch_Options#endofsupportslhelpergqi).
+
 > [!CAUTION]
 > Restoring a backup overwrites any changes made to that file after the migration.
 
