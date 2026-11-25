@@ -37,7 +37,7 @@ Below you can find an overview of the main features that have been added to Data
 | [BrokerGateway DxM](xref:BrokerGateway_Migration) | DataMiner 10.5.0 [CU2]/10.5.5/10.6.0<br>DataMiner 10.5.0/10.5.2 with [soft-launch option](xref:Overview_of_Soft_Launch_Options#brokergateway) <!-- [ID 42573] --> |
 | [Cache for SNMP inform messages](xref:Adjusting_the_SNMP_inform_message_cache_size) | DataMiner 10.1.4/10.2.0 <!-- [ID 29034] -->|
 | Client-server communication: gRPC connections between [Cube and DMAs](xref:ConnectionSettings_txt#connectionsettingstxt-options) and [between DMAs](xref:DMS_xml#redirects-subtag) | DataMiner 10.3.0/10.3.2 <!-- [ID 34797] [ID 34983] --> |
-| Correlation: [*Group alarms* rule action](xref:Grouping_Alarms) | DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 <!-- [ID 44973] --> |
+| Correlation: [*Group alarms* rule action](xref:Grouping_Alarms) | DataMiner 10.6.7/10.7.0 <!-- [ID 44395] [ID 44973-->] |
 | Cube: [BPA tests in System Center](xref:Running_BPA_tests) | DataMiner 10.1.2/10.2.0 <!-- [ID 28516] --> |
 | Cube: [DataMiner Agent Versions](xref:BPA_DataMiner_Agent_Versions) BPA test | DataMiner 10.6.12/10.7.0 <!-- [ID 46808] --> |
 | Cube: [Duplicating a resource](xref:Configuring_pools_of_resources#duplicating-a-resource-from-a-pool) | DataMiner Cube 10.3.7/10.4.0 <!-- [ID 36308] -->|
