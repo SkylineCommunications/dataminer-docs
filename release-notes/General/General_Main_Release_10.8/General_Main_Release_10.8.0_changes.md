@@ -106,6 +106,19 @@ DataMiner upgrades will now remove the following unused DLL files from `C:\Skyli
 
 These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
 
+#### Service & Resource Management: Reduced memory usage when serializing properties [ID 47100]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+Serialization of booking properties and other Service & Resource Management (SRM) property collections has been optimized. SLNet now reuses JSON serialization settings instead of recreating them for each conversion and writes property dictionaries as compact JSON, without indentation or line breaks outside string values.
+
+These changes reduce temporary memory usage when bookings are created, updated, exchanged between DataMiner Agents, or read from or written to the database, especially during bursts of booking property updates.
+
+Property values, JSON structure, and type information remain unchanged. Existing data, including data written by earlier DataMiner versions, remains readable. No data migration is required.
+
+> [!NOTE]
+> Custom scripts or integrations that compare the exact JSON text returned by `JSONSerializableDictionary.ToJson()` or `ToElasticJson()` may need to account for the removed whitespace.
+
 ### Fixes
 
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
