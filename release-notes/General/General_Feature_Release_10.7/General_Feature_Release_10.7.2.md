@@ -45,6 +45,18 @@ Before you upgrade to this DataMiner version:
 
 ### Enhancements
 
+#### Clustering: Additional compatibility checks when adding a DataMiner Agent [ID 47019]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+When you add a DataMiner Agent to a cluster, DataMiner will now perform the following additional compatibility checks:
+
+- The Agent must be standalone, i.e., not already part of another cluster.
+- The Agent must not be part of a Failover pair.
+- The Agent must run the same DataMiner version as at least one Agent already in the cluster.
+
+If any of these checks fail, the Agent will not be added, and SLNet will log the reason. The existing compatibility checks also remain in effect.
+
 #### Service & Resource Management: Reduced memory usage when serializing properties [ID 47100]
 
 <!-- MR 10.8.0 - FR 10.7.2 -->
