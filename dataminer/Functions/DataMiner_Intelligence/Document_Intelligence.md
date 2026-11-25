@@ -5,7 +5,7 @@ description: "Use Document Intelligence, a DataMiner Intelligence capability, to
 
 # Document Intelligence
 
-Document Intelligence is a [DataMiner Intelligence](xref:DataMiner_Intelligence) capability that analyzes documents and extracts structured information based on instructions you provide. You can use the Document Intelligence API in DataMiner Automation with version 2.0.7 or later of the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
+Document Intelligence is a [DataMiner Intelligence](xref:DataMiner_Intelligence) capability that analyzes documents and extracts structured information based on instructions you provide. You can use the Document Intelligence API in DataMiner Automation with version 2.0.7 or later of the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM). This feature is supported from DataMiner 10.6.0/10.6.1 onwards<!-- RN 44016 -->.
 
 Typical use cases include:
 
