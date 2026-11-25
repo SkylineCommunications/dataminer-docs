@@ -50,13 +50,19 @@ No data is used for training foundation models or shared outside the Skyline Com
 
 ## User permissions
 
-Access to DataMiner Intelligence is controlled through DataMiner user permissions and a system-wide setting:
+Starting from its initial release in DataMiner 10.7.0/10.7.1, access to DataMiner Intelligence is controlled through DataMiner user permissions and a system-wide setting:
 
-- From DataMiner 10.7.0/10.7.1 onwards, the *General > DataMiner Intelligence > Access* permission is required to use DataMiner Intelligence capabilities, including DataMiner Assistant, Document Intelligence, and natural language to GQI. On earlier supported versions, Document Intelligence can still be used, but it is not guarded by a DataMiner Intelligence permission.
-- The *General > DataMiner Intelligence > Assistant app* permission controls whether you can access the Assistant app from the landing page. You also need the *Access* permission to use AI capabilities in the app.
-- From DataMiner 10.7.0/10.7.1 onwards, the system-wide *DataMiner Intelligence* setting in *Settings* > *System* controls whether DataMiner Intelligence is available throughout the DataMiner System. Changing this setting requires both the *Access* permission and the [*Modules > System configuration > Tools > Admin tools* permission](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools). Other users see the setting as read-only.
-- The Assistant respects your role-based access control (RBAC) configuration, meaning you can only view and interact with data that your DataMiner permissions allow you to access.
-- The DataMiner Docs agent and Documentation tab are DataMiner Assistant capabilities and require the *Access* permission. Documentation lookup is typically available to all users who have access to the Assistant app.
+- The [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) user permission is required to be able to use any of the DataMiner Intelligence capabilities
+
+  On DataMiner versions prior to 10.7.0/10.7.1 that already support Document Intelligence, this permission is not yet required to use Document Intelligence.
+
+- The [General > DataMiner Intelligence > Assistant app](xref:DataMiner_user_permissions#general--dataminer-intelligence--assistant-app) user permission is required to access the Assistant app from the landing page.
+
+- The system-wide *DataMiner Intelligence* web apps setting (see [Enabling DataMiner Intelligence](xref:Intelligence_Getting_Started#enabling-dataminer-intelligence)) controls whether DataMiner Intelligence is available throughout the DataMiner System.
+
+  Changing this setting requires both the [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) and the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission. Users who do not have these permissions see the setting as read-only.
+
+- The Assistant respects your role-based access control (RBAC) configuration, meaning you can only view and interact with data that your DataMiner permissions allow you to access. Documentation lookup with the DataMiner Docs agent is typically available to all users who have access to the Assistant app.
 
 For more information on managing DataMiner user permissions, see [User management](xref:User_management).
 
