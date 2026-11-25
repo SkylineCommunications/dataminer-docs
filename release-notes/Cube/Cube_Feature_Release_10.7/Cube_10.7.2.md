@@ -50,3 +50,11 @@ From now on, this field can be left empty.
 The information pane below an EPM topology diagram did not use the correct background and foreground colors for the DataMiner Cube theme.
 
 The pane will now use the correct colors in both light and dark mode.
+
+#### EPM: Histogram windows did not match the Cube theme [ID 47179]
+
+<!-- MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+When you opened a histogram in an EPM environment, the histogram window did not match the DataMiner Cube theme.
+
+The window will now use the correct styling in both light and dark mode.
