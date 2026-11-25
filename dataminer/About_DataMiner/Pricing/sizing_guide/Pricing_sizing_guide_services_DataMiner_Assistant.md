@@ -1,9 +1,9 @@
 ---
-uid: Pricing_sizing_guide_services_DataMiner_Assistant
-description: "Use this DataMiner Assistant sizing guide to estimate Document Intelligence page volumes and plan monthly processing needs."
+uid: Pricing_sizing_guide_services_DataMiner_Intelligence
+description: "Estimate Document Intelligence page volumes and monthly processing needs with this DataMiner Intelligence sizing guide."
 ---
 
-# Sizing guide: DataMiner Assistant
+# Sizing guide: DataMiner Intelligence
 
 Document Intelligence is charged **per page processed**, not per document or per workflow run.
 
@@ -13,7 +13,7 @@ For information about the metering of the other DataMiner Intelligence capabilit
 
 | Category | Service | Metering unit | Calculation method |
 |----------|---------|:-------------:|---------------------|
-| DataMiner Assistant | Document Intelligence | Sum of processed document pages, priced per 100 | Count the total number of pages across all documents processed through the Document Intelligence tool in DataMiner Automation. Supported formats: PDF, Word, Excel, images. |
+| DataMiner Intelligence | Document Intelligence | Sum of processed document pages, priced per 100 | Count the total number of pages across all documents processed through the Document Intelligence tool in DataMiner Automation. Supported formats: PDF, Word, Excel, images. |
 
 ## Examples
 

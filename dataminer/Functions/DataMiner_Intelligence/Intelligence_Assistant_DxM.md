@@ -1,16 +1,16 @@
 ---
 uid: Intelligence_Assistant_DxM
 keywords: DataMiner Copilot
-description: "Learn how to install and upgrade the DataMiner Assistant DxM, which powers the Assistant app and Document Intelligence API."
+description: "Learn how to install and upgrade the DataMiner Assistant DxM, the extension module that powers DataMiner Intelligence capabilities."
 ---
 
 # DataMiner Assistant DxM
 
-DataMiner Intelligence makes use of the DataMiner Assistant DxM ([DataMiner Extension Module](xref:DataMinerExtensionModules)), which provides the AI capabilities in DataMiner.
+The DataMiner Assistant DxM is the [DataMiner Extension Module](xref:DataMinerExtensionModules) that powers [DataMiner Intelligence](xref:DataMiner_Intelligence) capabilities, including the agent framework, natural language to GQI, and Document Intelligence. The DxM is separate from the [DataMiner Assistant app](xref:Intelligence_Assistant_app), which provides a chat interface for the agents.
 
 ## Installation
 
-DataMiner Assistant is included in DataMiner web upgrade packages, but it is not activated automatically in all systems:
+The DataMiner Assistant DxM is included in DataMiner web upgrade packages, but it is not activated automatically in all systems:
 
 - On [**DataMiner as a Service (DaaS)**](xref:DaaS_hosting) systems, the DataMiner Assistant DxM is enabled by default starting from DataMiner 10.7.0/10.7.1.
 
@@ -18,10 +18,10 @@ DataMiner Assistant is included in DataMiner web upgrade packages, but it is not
 
   You do not need to install the DataMiner Assistant DxM on every node in a DataMiner cluster. We recommend installing it on a few suitable Agents to provide redundancy.
 
-Once it has been installed, DataMiner Assistant is upgraded automatically when you install DataMiner web upgrades.
+Once installed, the DxM is upgraded automatically when you install DataMiner web upgrades.
 
 > [!TIP]
-> For information on how to make sure DataMiner assistant runs correctly and on how to get started with the Assistant app, refer to [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
+> For the system settings and permissions required to use these capabilities, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 ## Logging
 

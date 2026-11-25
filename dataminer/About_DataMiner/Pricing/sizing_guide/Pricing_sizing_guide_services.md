@@ -14,5 +14,5 @@ The service guides below will help you size individual DataMiner service categor
 | [Data Plane](xref:Pricing_sizing_guide_services_data_plane) | Standard Managed Objects, Light Managed Objects, Unmanaged Objects |
 | [Data Sources](xref:Pricing_sizing_guide_services_data_sources) | Connector Services |
 | [DataMiner as a Service](xref:Pricing_sizing_guide_services_DaaS) | Hosted Managed Objects, Hosted Nodes |
-| [DataMiner Assistant](xref:Pricing_sizing_guide_services_DataMiner_Assistant) | Document Intelligence |
+| [DataMiner Intelligence](xref:Pricing_sizing_guide_services_DataMiner_Intelligence) | Document Intelligence |
 | [Storage as a Service](xref:Pricing_sizing_guide_services_StaaS) | Alarm Updates, Information Events, Trend Data Points, Element Data |

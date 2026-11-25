@@ -47,7 +47,7 @@ This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communic
 
 ### DataMiner Assistant
 
-The DataMiner Assistant module extends DataMiner with conversational AI. For more information, see [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
+The DataMiner Assistant DxM powers [DataMiner Intelligence](xref:DataMiner_Intelligence) capabilities, including the agent framework, natural language to GQI, and Document Intelligence. For installation details, see [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
 
 > [!NOTE]
 > Prior to version 2.0.0, this DxM is called "Copilot".
