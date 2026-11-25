@@ -110,7 +110,7 @@ Each Document Intelligence request from SLNet now includes connection informatio
 
 #### QActions: JScript and VBScript are no longer supported [ID 47010]
 
-<!-- MR 10.7.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 [CU0] -->
 
 Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
 
