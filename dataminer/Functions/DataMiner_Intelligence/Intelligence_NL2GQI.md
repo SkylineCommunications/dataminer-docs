@@ -9,7 +9,7 @@ The [DataMiner Assistant](xref:Intelligence_Assistant_DxM) DxM can translate req
 
 You can use this feature when [configuring queries in dashboards or low-code apps](xref:Letting_DataMiner_Assistant_create_a_query).
 
-![Natural language to GQI query generation in a DataMiner dashboard](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner Web 10.6.1.*
+![Natural language to GQI query generation in a DataMiner dashboard](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner Web 10.6.2*
 
 Examples of such natural languages request could be:
 
@@ -23,6 +23,7 @@ The result will be a GQI query that you can use to fetch the requested data.
 - Your DataMiner System must run DataMiner 10.7.0/10.7.1 or later.
 - The system-wide *DataMiner Intelligence* web apps setting must be enabled.
 - You must have the [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) user permission.
+- The feature must be [enabled in the app settings](#enabling-this-feature).
 
 > [!TIP]
 > For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started)
@@ -51,9 +52,9 @@ DataMiner Assistant is able to automatically detect all [GQI data sources](xref:
 > [!IMPORTANT]
 > While DataMiner Assistant is able to enrich the underlying LLM with fundamental DataMiner context, it is important to keep in mind that the LLM has no information about the data actually contained in the many data sources. For this reason, it might have a hard time picking the perfect operator every time. You can usually overcome this by rephrasing your initial request with more specific instructions.
 
-## Enabling this feature in preview
+## Enabling this feature
 
-If you are running a DataMiner version prior to DataMiner 10.7.0/10.7.1, you can enable this feature in preview starting from DataMiner 10.5.0 [CU11]/10.6.2<!-- RN 44342 -->. To do so, create the file `C:\Program Files\Skyline Communications\DataMiner Assistant\appsettings.custom.json` with the following content:
+To enable this feature, create the file `C:\Program Files\Skyline Communications\DataMiner Assistant\appsettings.custom.json` with the following content:
 
 ```json
 {   
@@ -64,3 +65,6 @@ If you are running a DataMiner version prior to DataMiner 10.7.0/10.7.1, you can
 ```
 
 This file needs to be created on every Agent in the DataMiner System where the DxM is installed.
+
+> [!NOTE]
+> Prior to DataMiner 10.7.0/10.7.1, it is possible to enable this feature in preview. This is possible starting from DataMiner 10.5.0 [CU11]/10.6.2<!-- RN 44342 -->

@@ -22,7 +22,7 @@ You can create and manage tools on the *Tools* page of the Assistant app. This p
 
 In the data tools list, tags indicate native data tools, custom data tools based on DOM, and custom data tools based on an ad hoc data source.
 
-![DataMiner Assistant tools overview listing available data and script tools](~/dataminer/images/Assistant_Tools_page.png)<br>*Tools page listing the available data and script tools.*
+![DataMiner Assistant tools overview listing available data and script tools](~/dataminer/images/Assistant_Tools_page.png)<br>*Tools page in DataMiner 10.7.1, listing the available data and script tools*
 
 From this page, you can:
 
@@ -38,4 +38,4 @@ From this page, you can:
 > For details about the tool editor, see [Creating or editing custom data tools](xref:Intelligence_Assistant_custom_data_tools#creating-or-editing-custom-data-tools-in-the-assistant-app) and [Creating or editing script tools](xref:Intelligence_Assistant_ScriptTools#creating-or-editing-script-tools-in-the-assistant-app).
 
 > [!NOTE]
-> The [*Modules > System configuration > Tools > Admin tools* permission](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) is not required to view existing tools, but it is required to create or edit tools.
+> The [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is not required to view existing tools, but it is required to create or edit tools.

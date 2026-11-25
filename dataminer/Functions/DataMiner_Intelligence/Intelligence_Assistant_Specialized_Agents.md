@@ -14,7 +14,18 @@ Unlike [native agents](xref:Intelligence_Assistant_Agents#native-agents), which 
 
 ## Enabling specialized agents
 
-In *Settings* > *System*, click the *Specialized agents* toggle to enable or disable specialized agents. The change is saved immediately without reloading the page. The Assistant chat, the *Agents* page, and the agent editor update immediately. If the selected agent is no longer available, the chat switches to the default agent.
+1. Open the user menu in the upper-right corner of the Assistant app.
+
+1. Select *Settings* > *System*.
+
+1. Enable the *Specialized agents* toggle button.
+
+   ![System settings showing the DataMiner Intelligence and Specialized agents toggle buttons](~/dataminer/images/DataMiner_Intelligence_System_Settings.png)<br>*DataMiner Intelligence and Specialized agents toggles in system settings*
+
+The change will be saved immediately without reloading the page. The Assistant chat, the *Agents* page, and the agent editor update immediately.
+
+> [!NOTE]
+> If you disable this setting and the selected agent is no longer available because of this, the chat will switch to the default agent.
 
 ## Why use specialized agents
 
@@ -67,7 +78,7 @@ Note that specialized agents can also select built-in **native tools** directly,
 
 You can create specialized agents on the *Agents* page of the Assistant app. This page displays all available agents in a searchable list.
 
-![Agents page in the Assistant app showing available agents and the new agent button](~/dataminer/images/Assistant_Agents_List.png)<br>*Agents page showing available agents in the Assistant app.*
+![Agents page in the Assistant app showing available agents and the new agent button](~/dataminer/images/Assistant_Agents_List.png)<br>*Agents page in DataMiner 10.7.1 showing available agents in the Assistant app*
 
 From this page, you can:
 
@@ -80,7 +91,7 @@ From this page, you can:
 - **Duplicate or delete a specialized agent** by clicking the ellipsis button (...) next to the agent in the list. Selecting *Duplicate* creates a copy of the agent, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the agent entirely.
 
 > [!NOTE]
-> The [*Modules > System configuration > Tools > Admin tools* permission](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) is not required to view existing agents, but it is required to create or edit specialized agents.
+> The [*Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is not required to view existing agents, but it is required to create or edit specialized agents.
 
 ### Using agent context files
 

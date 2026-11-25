@@ -7,7 +7,7 @@ description: "Learn how to deploy and use DataMiner Assistant for Microsoft 365 
 
 The DataMiner Assistant for Microsoft 365 lets you chat with any agent available on your DataMiner System, including [specialized agents](xref:Intelligence_Assistant_Specialized_Agents), from Microsoft Teams or Microsoft Copilot. You can switch agents at any time by asking for it in natural language. If you have the necessary permissions, you can request information from your DataMiner System from any location, even without direct access to DataMiner.
 
-![Welcome screen of the DataMiner Assistant agent in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)<br>*DataMiner Assistant welcome screen in Microsoft Teams.*
+![Welcome screen of the DataMiner Assistant agent in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)<br>*DataMiner Assistant welcome screen in Microsoft Teams*
 
 ## Prerequisites
 
@@ -19,7 +19,7 @@ The DataMiner Assistant for Microsoft 365 lets you chat with any agent available
   > [!TIP]
   > See also: [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node)
 
-- The DataMiner System must run DataMiner 10.7.0/10.7.1 or later, have the system-wide *DataMiner Intelligence* setting enabled, and your user profile must have the *General > DataMiner Intelligence > Access* permission. See [DataMiner user permissions](xref:DataMiner_user_permissions).
+- All [requirements for DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements) must be met.
 
 - To ensure that you have access to a DataMiner System from your Microsoft account, [your Microsoft account must be linked to your DataMiner account](xref:Linking_your_DataMiner_and_dataminer_services_account).
 
@@ -31,21 +31,15 @@ You can download the DataMiner Assistant for Microsoft 365 directly from the [Mi
 
 1. In the filter box at the top, specify DataMiner Assistant.
 
-   <p><img src="~/dataminer/images/DataMinerAssistant_look_up_in_Teams.png" alt="Looking up DataMiner Assistant in Microsoft Teams" width="50%" /></p>
-
-   *Searching for DataMiner Assistant in the Microsoft Teams app catalog.*
+   <p><img src="~/dataminer/images/DataMinerAssistant_look_up_in_Teams.png" alt="Looking up DataMiner Assistant in Microsoft Teams" width="50%" /><br><em>Searching for DataMiner Assistant in the Microsoft Teams app catalog</em></p>
 
 1. In the pop-up window, click *Add*.
 
-   <p><img src="~/dataminer/images/Assistant_installation_in_Teams.png" alt="Pop-up window to add DataMiner Assistant in Microsoft Teams" width="50%" /></p>
-
-   *Dialog for adding DataMiner Assistant in Microsoft Teams.*
+   <p><img src="~/dataminer/images/Assistant_installation_in_Teams.png" alt="Pop-up window to add DataMiner Assistant in Microsoft Teams" width="50%" /><br><em>Dialog for adding DataMiner Assistant in Microsoft Teams</em></p>
 
 1. When DataMiner Assistant has successfully been added, either click *Open* to open it in a Teams chat, or click *Open with Copilot* to open it in a Copilot chat.
 
-   <p><img src="~/dataminer/images/Assistant_installed_window.png" alt="Pop-up window shown after successful installation of DataMiner Assistant in Teams" width="50%" /></p>
-
-   *Confirmation that DataMiner Assistant has been added in Microsoft Teams.*
+   <p><img src="~/dataminer/images/Assistant_installed_window.png" alt="Pop-up window shown after successful installation of DataMiner Assistant in Teams" width="50%" /><br><em>Confirmation that DataMiner Assistant has been added in Microsoft Teams</em></p>
 
 ## Key features
 
