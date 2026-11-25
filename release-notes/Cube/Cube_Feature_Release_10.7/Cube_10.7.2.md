@@ -42,3 +42,11 @@ A number of security enhancements have been made.
 In *System Center > Backup*, up to now, you could not leave the *Indexing Engine backup location* empty, even when Elasticsearch or OpenSearch was hosted externally and DataMiner was not responsible for backing it up.
 
 From now on, this field can be left empty.
+
+#### EPM: Information pane below topology diagrams did not match the Cube theme [ID 47171]
+
+<!-- MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+The information pane below an EPM topology diagram did not use the correct background and foreground colors for the DataMiner Cube theme.
+
+The pane will now use the correct colors in both light and dark mode.
