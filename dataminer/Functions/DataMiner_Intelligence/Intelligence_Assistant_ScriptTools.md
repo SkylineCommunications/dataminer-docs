@@ -53,7 +53,7 @@ If a synchronous script does not finish within 30 minutes, it continues running 
 ## Interaction and resource limits
 
 - A maximum of 50 scripts can run in parallel for the same user.
-- Canceling a chat or closing DataMiner Assistant stops the wait for an in-progress script. The automation script itself can continue running on the DataMiner System.
+- Canceling a chat or closing the DataMiner Assistant app stops the wait for an in-progress script. The automation script itself can continue running on the DataMiner System.
 - A timeout or cancellation does not roll back changes already made by the automation script, so if you design scripts that perform important changes, make sure these handle partial completion safely.
 
 ## Designing reliable script tools
