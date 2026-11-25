@@ -7,7 +7,7 @@ description: "Learn why SLCCMigrator fails to finalize a Cassandra Cluster migra
 
 ## Affected versions
 
-- Main Release versions from DataMiner 10.6.0 [CU8] onwards.
+- Main Release versions from DataMiner 10.5.0 [CU20]/10.6.0 [CU8] onwards.
 - Feature Release versions from DataMiner 10.6.11 onwards.
 
 ## Cause
