@@ -67,3 +67,11 @@ Property values, JSON structure, and type information remain unchanged. Existing
 When SLDMS, SLDataMiner, or SLElement stopped the queue for asynchronous notifications to SLDataMiner, for example during process shutdown, the thread processing that queue could continue running after the queue had been removed. This could cause the process to crash.
 
 From now on, stopping the queue will also stop its processing thread. DataMiner will wait up to 10 seconds for the thread to stop and discard any notifications still in the queue.
+
+#### SLAnalytics: Problem when processing delayed DVE child elements [ID 47157]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+When SLAnalytics received a DVE child element before its parent element, it would keep the child element on hold until the parent arrived. If the parent then arrived but had not yet been stored, SLAnalytics could stop working while processing the child elements.
+
+This could happen, for example, during the weekly alarm template cache cleanup.

@@ -128,3 +128,11 @@ Property values, JSON structure, and type information remain unchanged. Existing
 When initialization of `CCAEndpointManager` failed, the initialization alarm could remain active even after a subsequent retry succeeded.
 
 An initialization alarm will now only be generated if all initialization retries fail.
+
+#### SLAnalytics: Problem when processing delayed DVE child elements [ID 47157]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+When SLAnalytics received a DVE child element before its parent element, it would keep the child element on hold until the parent arrived. If the parent then arrived but had not yet been stored, SLAnalytics could stop working while processing the child elements.
+
+This could happen, for example, during the weekly alarm template cache cleanup.
