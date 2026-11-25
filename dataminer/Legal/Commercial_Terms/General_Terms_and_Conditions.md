@@ -5,7 +5,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 # Skyline General Terms and Conditions
 
-*Last updated: 22 October 2026*
+*Last updated: 24 November 2026*
 
 ## Part A — General Terms and Conditions
 
@@ -210,7 +210,7 @@ keywords: General Terms and Conditions, Terms and Conditions
 
 ### 14. Term and Termination
 
-14.1 The term of the Agreement and the Subscription Term (where applicable) are set out in the Quotation.
+14.1 The term of the Agreement and the Subscription Term (where applicable) are set out in the Quotation. Except as expressly permitted under clause 14.3 or in the Quotation, subscriptions and committed-usage arrangements are non-cancelable during the applicable Subscription Term or commitment period. In the event of any early termination or cancellation by Customer (other than for Skyline's uncured material breach or insolvency under clause 14.3), or termination by Skyline under clause 3.7 or 14.3, all unpaid fees for the remainder of the then-current Subscription Term or commitment period shall become immediately due and payable.
 
 14.2 Unless either Party provides written notice of non-renewal at least thirty (30) days before the end of the then-current Subscription Term or commitment period, any subscription or committed-usage arrangement under this Agreement shall automatically renew for successive periods equal to the initial Subscription Term or commitment period, as applicable. Skyline may change the fees applicable to any renewal term. If Skyline notifies Customer of a fee change less than thirty (30) days before the renewal date, Customer may decline the renewal by written notice within thirty (30) days after Skyline's notice.
 
