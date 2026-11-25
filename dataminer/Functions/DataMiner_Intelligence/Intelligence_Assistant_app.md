@@ -9,9 +9,11 @@ The Assistant app is an AI assistant integrated within DataMiner. It has access 
 
 ## Accessing the Assistant app
 
-To access the Assistant app from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), the system-wide *DataMiner Intelligence* setting must be enabled and your user profile must have both the *General > DataMiner Intelligence > Access* and *Assistant app* permissions. The *Assistant app* permission controls access to the app from the landing page; it does not replace the *Access* permission. See [DataMiner user permissions](xref:DataMiner_user_permissions).
+You can access the Assistant app from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
 
-![Assistant app icon on the DataMiner landing page](~/dataminer/images/AssistantDxM_AssistantIcon.png)<br>*DataMiner Assistant app icon on the DataMiner landing page.*
+If you cannot see the app there, make sure DataMiner Intelligence has been fully set up. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
+
+![Assistant app icon on the DataMiner landing page](~/dataminer/images/AssistantDxM_AssistantIcon.png)<br>*DataMiner Assistant app icon on the DataMiner landing page in DataMiner 10.7.1.*
 
 Alternatively, the app is also available from Microsoft Teams or Microsoft Copilot. See [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
 
@@ -19,7 +21,7 @@ Alternatively, the app is also available from Microsoft Teams or Microsoft Copil
 
 When you open the app, a welcome screen is displayed with the following elements:
 
-![Assistant app welcome screen, including suggestion cards, agent selector, model selector, and chat input box](~/dataminer/images/Assistant.png)<br>*DataMiner Assistant welcome screen.*
+![Assistant app welcome screen, including suggestion cards, agent selector, model selector, and chat input box](~/dataminer/images/Assistant.png)<br>*DataMiner Assistant welcome screen in DataMiner 10.7.1.*
 
 - **Left sidebar**: Allows you to start a new session at any time by clicking *+ New session*. Below that, you can access your sessions, [agents](xref:Intelligence_Assistant_Agents), [skills](xref:Intelligence_Assistant_Skills), and [tools](xref:Intelligence_Assistant_Tools).
 
