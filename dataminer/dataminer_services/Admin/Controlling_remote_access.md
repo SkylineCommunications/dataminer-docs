@@ -51,9 +51,12 @@ If you have the Owner or Admin role on dataminer.services for a DMS, you can ena
 
      - *User-Defined APIs*: Enable or disable remote access to the DataMiner System(s) via User-Defined APIs.
 
-   - If you want remote access to be restricted based on IP address for a specific DataMiner features, when you have enabled a feature as detailed above, also switch on the *Restrict by IP address* option, click *Manage*, and specify the public IP addresses for which remote access should be allowed.
+   - If you want remote access to be restricted based on IP address for a specific DataMiner feature, when you have enabled a feature as detailed above, also select the *Restrict by IP address* option for that feature and specify the public IP addresses for which remote access should be allowed. To add more IP addresses, click *Add IP address*.
 
-     ![Managing IP addresses](~/dataminer/images/Managing_IP_Addresses.png)
+     ![Restrict by IP address](~/dataminer/images/Managing_IP_Addresses.png)
+
+     > [!IMPORTANT]
+     > For the *DataMiner Cube (desktop app)* feature, the *Restrict by IP address* option applies to all gRPC connections that dataminer.services forwards to the [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway), not just to connections from DataMiner Cube. Any other client application that connects to the DMS via gRPC through dataminer.services will therefore also only be able to connect from the IP addresses you specify for this feature.
 
      > [!NOTE]
      >
