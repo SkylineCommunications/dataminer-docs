@@ -1,20 +1,20 @@
 ---
 uid: Intelligence_Assistant_M365
-description: "Learn how to deploy and use DataMiner Assistant for Microsoft 365 to interact with your DataMiner System directly from Microsoft Teams or Copilot."
+description: "Deploy DataMiner Assistant for Microsoft 365 to chat with DataMiner Intelligence agents from Microsoft Teams or Microsoft Copilot."
 ---
 
 # DataMiner Assistant for Microsoft 365
 
-The DataMiner Assistant for Microsoft 365 lets you chat with any agent available on your DataMiner System, including [specialized agents](xref:Intelligence_Assistant_Specialized_Agents), from Microsoft Teams or Microsoft Copilot. You can switch agents at any time by asking for it in natural language. If you have the necessary permissions, you can request information from your DataMiner System from any location, even without direct access to DataMiner.
+DataMiner Assistant for Microsoft 365 lets you chat with any [DataMiner Intelligence agent](xref:Intelligence_Agents) available on your DataMiner System, including [specialized agents](xref:Intelligence_Specialized_Agents), from Microsoft Teams or Microsoft Copilot. You can switch agents at any time by asking for it in natural language. If you have the necessary permissions, you can request information from your DataMiner System from any location, even without direct access to DataMiner.
 
-![Welcome screen of the DataMiner Assistant agent in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)<br>*DataMiner Assistant welcome screen in Microsoft Teams*
+![Welcome screen for DataMiner Assistant in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)<br>*DataMiner Assistant welcome screen in Microsoft Teams*
 
 ## Prerequisites
 
-- To interact with a DataMiner System via the DataMiner Assistant, the DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and the following [DxMs](xref:DataMinerExtensionModules) must be installed:
+- To interact with a DataMiner System via DataMiner Assistant for Microsoft 365, the DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and the following [DxMs](xref:DataMinerExtensionModules) must be installed:
 
-  - Assistant (version 3.11.2.51719 or higher)
-  - CloudGateway (version 4.0.0.0 or higher)
+  - [DataMiner Assistant](xref:Intelligence_Assistant_DxM) (version 3.11.2.51719 or higher)
+  - [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (version 4.0.0.0 or higher)
 
   > [!TIP]
   > See also: [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node)

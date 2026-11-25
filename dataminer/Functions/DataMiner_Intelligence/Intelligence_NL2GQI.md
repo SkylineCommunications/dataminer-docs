@@ -1,17 +1,17 @@
 ---
 uid: Intelligence_NL2GQI
-description: "Learn how to use the natural language to GQI feature in DataMiner Assistant to generate ready-to-execute GQI queries from human-language requests."
+description: "Use the natural language to GQI capability in DataMiner Intelligence to generate GQI queries from plain-language requests in dashboards and low-code apps."
 ---
 
 # Natural language to GQI
 
-The [DataMiner Assistant](xref:Intelligence_Assistant_DxM) DxM can translate requests in human language into ready-to-execute GQI queries making use of an underlying Large Language Model (LLM).
+Natural language to GQI is a [DataMiner Intelligence](xref:DataMiner_Intelligence) capability that uses a large language model (LLM) to turn plain-language requests into ready-to-execute GQI queries. The [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) powers this capability.
 
-You can use this feature when [configuring queries in dashboards or low-code apps](xref:Letting_DataMiner_Assistant_create_a_query).
+You can use this feature when [configuring queries in dashboards or low-code apps](xref:Generating_a_GQI_query_with_natural_language).
 
 ![Natural language to GQI query generation in a DataMiner dashboard](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner Web 10.6.2*
 
-Examples of such natural languages request could be:
+Examples of natural-language requests include:
 
 - "Show me all the critical alarms from last week"
 - "Sort elements by their name"
@@ -26,11 +26,11 @@ The result will be a GQI query that you can use to fetch the requested data.
 - The feature must be [enabled in the app settings](#enabling-this-feature).
 
 > [!TIP]
-> For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started)
+> For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 ## Supported GQI operators
 
-The following GQI operators are supported by DataMiner Assistant:
+Natural language to GQI supports the following operators:
 
 - [Aggregate](xref:GQI_Aggregate)
 - [Filter](xref:GQI_Filter)
@@ -40,17 +40,17 @@ The following GQI operators are supported by DataMiner Assistant:
 - [Top X](xref:GQI_Top_X)
 
 > [!NOTE]
-> At present, DataMiner Assistant does not provide any support for [column manipulations](xref:GQI_Column_manipulations) and [custom operators](xref:GQI_Custom_Operator).
+> This feature does not currently support [column manipulations](xref:GQI_Column_manipulations) or [custom operators](xref:GQI_Custom_Operator).
 
 ## Supported GQI data sources
 
-DataMiner Assistant is able to automatically detect all [GQI data sources](xref:Query_data_sources) available in the system, including [ad hoc data sources](xref:Get_ad_hoc_data) and [object manager instances](xref:Get_object_manager_instances). However, data sources requiring the selection of a parameter are not supported. For example, it is not possible to use data sources like [Get parameter table by ID](xref:Get_parameter_table_by_ID), which requires the selection of an element ID.
+Natural language to GQI automatically detects [GQI data sources](xref:Query_data_sources) available in your DataMiner System, including [ad hoc data sources](xref:Get_ad_hoc_data) and [object manager instances](xref:Get_object_manager_instances). However, data sources requiring the selection of a parameter are not supported. For example, it is not possible to use data sources like [Get parameter table by ID](xref:Get_parameter_table_by_ID), which requires the selection of an element ID.
 
 > [!NOTE]
-> For performance reasons, DataMiner Assistant caches all the information about GQI data sources. This cache is refreshed once a day at a random time. Therefore, newly added data sources might be unavailable for a short time after creation.
+> For performance reasons, the feature caches information about GQI data sources. This cache is refreshed once a day at a random time. Therefore, newly added data sources might be unavailable for a short time after creation.
 
 > [!IMPORTANT]
-> While DataMiner Assistant is able to enrich the underlying LLM with fundamental DataMiner context, it is important to keep in mind that the LLM has no information about the data actually contained in the many data sources. For this reason, it might have a hard time picking the perfect operator every time. You can usually overcome this by rephrasing your initial request with more specific instructions.
+> The model receives DataMiner context but cannot see the data contained in the data sources. If it selects an unsuitable operator, try rephrasing your request with more specific instructions.
 
 ## Enabling this feature
 

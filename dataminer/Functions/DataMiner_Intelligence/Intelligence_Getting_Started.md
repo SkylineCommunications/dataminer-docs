@@ -16,7 +16,7 @@ description: "Learn the requirements and steps to enable DataMiner Intelligence 
 
 - **dataminer.services connection**: Your DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-- **DataMiner Assistant DxM**: This [DataMiner Extension Module](xref:DataMinerExtensionModules) provides the AI capabilities in DataMiner, including the agent framework, [natural language to GQI](xref:Intelligence_NL2GQI), and [Document Intelligence](xref:docintel).
+- **DataMiner Assistant DxM**: The [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) powers the DataMiner Intelligence agent framework, [natural language to GQI](xref:Intelligence_NL2GQI), and [Document Intelligence](xref:docintel).
 
 - **System setting**: The *DataMiner Intelligence* web apps setting must be enabled. See [Enabling DataMiner Intelligence](#enabling-dataminer-intelligence).
 
@@ -47,9 +47,11 @@ description: "Learn the requirements and steps to enable DataMiner Intelligence 
 
    1. Enable the *DataMiner Intelligence* toggle button.
 
-   ![System settings showing the DataMiner Intelligence and Specialized agents toggle buttons](~/dataminer/images/DataMiner_Intelligence_System_Settings.png)<br>*DataMiner Intelligence and Specialized agents toggle buttons in the system settings in DataMiner 10.7.1*
+      ![System settings showing the DataMiner Intelligence and Specialized agents toggle buttons](~/dataminer/images/DataMiner_Intelligence_System_Settings.png)<br>*DataMiner Intelligence and Specialized agents toggle buttons in the system settings in DataMiner Web 10.7.1*
 
-1. Open the DataMiner Assistant app from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
+## Starting a chat with DataMiner Assistant
+
+1. Open the [DataMiner Assistant app](xref:Intelligence_Assistant_app) from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
 
 1. In the lower-left corner of the chat input box, select the agent you want to use, e.g., *DataMiner Insights*.
 
@@ -59,7 +61,7 @@ description: "Learn the requirements and steps to enable DataMiner Intelligence 
 
 ## Next steps
 
-- Learn which [agents](xref:Intelligence_Assistant_Agents) are available and how to create your own [specialized agents](xref:Intelligence_Assistant_Specialized_Agents).
-- Extend the agents with your own [skills](xref:Intelligence_Assistant_Skills) and [tools](xref:Intelligence_Assistant_Tools).
+- Learn which [agents](xref:Intelligence_Agents) are available and how to create your own [specialized agents](xref:Intelligence_Specialized_Agents).
+- Extend the agents with your own [skills](xref:Intelligence_Skills) and [tools](xref:Intelligence_Tools).
 - Access the agents from Microsoft Teams or Microsoft Copilot with the [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
 - Learn how DataMiner Intelligence handles [data privacy and security](xref:Intelligence_Data_Privacy_Security).

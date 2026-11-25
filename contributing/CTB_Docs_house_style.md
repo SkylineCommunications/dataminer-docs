@@ -55,6 +55,12 @@ This page describes general rules for DataMiner documentation, including spellin
 
 - When referring to a UI option that ends with an ellipsis (`...`), omit the ellipsis.
 
+- Image captions should not end in a period. For example:
+
+  ```md
+  ![Alt text of the image](~/dataminer/images/MyImage.png)<br>*Image caption describing the image*
+  ```
+
 ## Procedure formatting
 
 - Write procedures as numbered lists.
@@ -70,3 +76,7 @@ This page describes general rules for DataMiner documentation, including spellin
 - Put the result of a step in an indented paragraph below that step, and use future tense (e.g., "A new window will open" instead of "A new window opens").
 
 - If a step contains an image, indent it correctly so that list numbering does not restart.
+
+## DataMiner version notation
+
+- When mentioning DataMiner versions, mention both Main Release version(s) and Feature Release version when applicable, starting with the lowest number (e.g. "DataMiner 10.7.0/10.7.1", "DataMiner 10.7.2/10.8.0", "DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11", etc.). Possible exceptions to this are when there is no corresponding Main or Feature Release version, when writing in a release notes document, or when mentioning the DataMiner version in an image caption.

@@ -9,13 +9,13 @@ description: "Find answers to common questions about DataMiner Intelligence, inc
 
 ### What is DataMiner Intelligence, and what is the DataMiner Assistant?
 
-DataMiner Intelligence is the overarching term for the AI-powered capabilities delivered by the DataMiner Assistant DxM. These capabilities include agents, skills, and tools, as well as features such as [Document Intelligence](xref:docintel) and [natural language to GQI](xref:Intelligence_NL2GQI). They use Large Language Models (LLMs) to help you retrieve and interpret information, create queries, and perform guided actions.
+DataMiner Intelligence is the umbrella term for AI capabilities in DataMiner. It includes the agent framework, with agents, skills, and tools, and capabilities such as [Document Intelligence](xref:docintel) and [natural language to GQI](xref:Intelligence_NL2GQI).
 
-The DataMiner Assistant is the conversational interface to DataMiner Intelligence. For an overview, see [About DataMiner Intelligence](xref:DataMiner_Intelligence).
+DataMiner Assistant is the name for the chat integrations that let you interact with DataMiner Intelligence agents, including the [DataMiner Assistant app](xref:Intelligence_Assistant_app) and [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365). The [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is the extension module that powers both the agent framework and the non-chat capabilities. For an overview, see [About DataMiner Intelligence](xref:DataMiner_Intelligence).
 
 ### Does DataMiner Intelligence support languages other than English?
 
-Yes. The underlying models are multilingual and respond in the language used in the question.
+Yes. When you chat with an agent in DataMiner Assistant, the underlying model can respond in the language you use to ask the question.
 
 ### Can DataMiner Intelligence answer questions that require DataMiner context?
 
@@ -55,11 +55,11 @@ flowchart LR
 
 Avoid creating a separate agent just because a reusable function exists, such as "get service" or "query alarms". Those are tools or skills.
 
-For more information, see [Agents](xref:Intelligence_Assistant_Agents), [Skills](xref:Intelligence_Assistant_Skills), and [Tools](xref:Intelligence_Assistant_Tools).
+For more information, see [Agents](xref:Intelligence_Agents), [Skills](xref:Intelligence_Skills), and [Tools](xref:Intelligence_Tools).
 
 ### Do I need a specialized agent for every use case?
 
-No. The [native agents](xref:Intelligence_Assistant_Agents#native-agents) are intended to answer general questions about the data in your DataMiner System without requiring separate agents. [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents) are useful when you need to narrow the scope or add specialized domain context, for example for a particular network segment.
+No. The [native agents](xref:Intelligence_Agents#native-agents) are intended to answer general questions about the data in your DataMiner System without requiring separate agents. [Specialized agents](xref:Intelligence_Specialized_Agents) are useful when you need to narrow the scope or add specialized domain context, for example for a particular network segment.
 
 ### When should I create a specialized agent instead of a skill or tool?
 
@@ -89,13 +89,13 @@ Often, yes. When context is substantial and only relevant in certain situations,
 
 ### What is the best way to make documentation available to agents?
 
-For a small documentation set, create one [skill](xref:Intelligence_Assistant_Skills) with multiple resource files. Organize the documentation as text-based files in the skill folder or in nested subfolders, and reference each resource explicitly in the skill instructions. Specify each path relative to the skill folder, including every nested folder. Agents will load the resources progressively when they are relevant. For the supported folder structure and `SKILL.md` requirements, see [Using skill files](xref:Intelligence_Assistant_Skills#using-skill-files).
+For a small documentation set, create one [skill](xref:Intelligence_Skills) with multiple resource files. Organize the documentation as text-based files in the skill folder or in nested subfolders, and reference each resource explicitly in the skill instructions. Specify each path relative to the skill folder, including every nested folder. Agents will load the resources progressively when they are relevant. For the supported folder structure and `SKILL.md` requirements, see [Using skill files](xref:Intelligence_Skills#using-skill-files).
 
 For a larger documentation set, use an indexed search tool to retrieve relevant content on demand, and make that tool available to the agent through a tool call.
 
 ### Why must script input descriptions be defined in the script tool?
 
-Agents use the descriptions defined in the [script tool](xref:Intelligence_Assistant_ScriptTools) to understand how to interact with the script, which values to provide, and how to validate user input. This ensures that each tool has consistent, AI-friendly metadata, regardless of how the underlying script is documented.
+Agents use the descriptions defined in the [script tool](xref:Intelligence_ScriptTools) to understand how to interact with the script, which values to provide, and how to validate user input. This ensures that each tool has consistent, AI-friendly metadata, regardless of how the underlying script is documented.
 
 The description will generally be the same for a given script, but defining it in the script tool also allows the same script to be used in different operational contexts. Multiple tools can provide different instructions, examples, or validation requirements without modifying the underlying script.
 
@@ -147,13 +147,13 @@ In the DataMiner web apps, click the user icon in the top-right corner and selec
 
 ### How does DataMiner Intelligence handle very large datasets?
 
-DataMiner Intelligence normally limits raw data sent directly to the LLM to approximately 100 rows. For larger datasets, it can export the data to a CSV file and provide metadata and a sample so that Python can analyze the full dataset in a cloud execution environment or sandbox.
+DataMiner Intelligence agents normally send only about 100 rows of raw data directly to the model. For larger datasets, an agent can export the data to a CSV file and provide metadata and a sample so that Python can analyze the full dataset in a cloud execution environment or sandbox.
 
 ### How are data queries executed and scaled?
 
 Tool execution and data fetching are load-balanced across the DataMiner Agents in the cluster.
 
-DataMiner Intelligence uses GQI to fetch data efficiently. GQI uses bulk parameter fetching, paging, and optimized query lifecycles to reduce the impact on DataMiner System operations. Queries are load-balanced across DataMiner Agents through the NATS message broker, which supports scalability and resilience.
+DataMiner Intelligence agents use GQI to fetch data efficiently. GQI uses bulk parameter fetching, paging, and optimized query lifecycles to reduce the impact on DataMiner System operations. Queries are load-balanced across DataMiner Agents through the NATS message broker, which supports scalability and resilience.
 
 Queries on very large tables can be expensive. In that case, we recommend instructing the agent to filter specific columns using relevant keywords.
 

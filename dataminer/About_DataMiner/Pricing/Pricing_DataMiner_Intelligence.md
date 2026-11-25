@@ -19,7 +19,7 @@ Usage of DataMiner Intelligence is metered using the following metrics:
 
 Like other usage-based services, metering is done at the organization level. See [Billing and metering](xref:Pricing_billing_and_metering).
 
-For page-volume estimates, see [Sizing guide: DataMiner Assistant](xref:Pricing_sizing_guide_services_DataMiner_Assistant).
+For page-volume estimates, see [Sizing guide: DataMiner Intelligence](xref:Pricing_sizing_guide_services_DataMiner_Intelligence).
 
 ## Usage-based commercial model
 

@@ -1,17 +1,20 @@
 ---
 uid: DataMiner_Intelligence
 keywords: DataMiner Intelligence, agentic AI, AI agents, DataMiner Assistant
-description: "Discover DataMiner Intelligence, the agentic AI capabilities of DataMiner, its main components, and how to get started with the DataMiner Assistant."
+description: "Explore DataMiner Intelligence, the AI capabilities in DataMiner, including DataMiner Assistant chat, natural language to GQI, and Document Intelligence."
 ---
 
 # About DataMiner Intelligence
 
-DataMiner Intelligence covers all agentic AI capabilities of DataMiner. It is available from DataMiner 10.7.0/10.7.1 onwards.<!--RN 47196-->
+**DataMiner Intelligence** is the umbrella term for AI capabilities in DataMiner. It includes the agent framework, the DataMiner Assistant chat interfaces, and features such as natural language to GQI and Document Intelligence.
+
+DataMiner Intelligence is introduced in DataMiner 10.7.0/10.7.1.<!--RN 47196--> Some capabilities, such as [Document Intelligence](xref:docintel), are also available in earlier versions. The [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is the extension module that powers the DataMiner Intelligence capabilities.
 
 DataMiner Intelligence consists of:
 
 - The [**DataMiner Intelligence agent framework**](#dataminer-intelligence-agent-framework), with AI agents that help you **understand**, **act**, and **create** on the DataMiner platform.
-- [**Other integrated AI capabilities**](#other-ai-capabilities), such as [natural language to GQI] and Document Intelligence.
+- [**DataMiner Assistant**](#interacting-with-the-agents), the chat integrations for interacting with those agents.
+- [**Other integrated AI capabilities**](#other-ai-capabilities), such as natural language to GQI and Document Intelligence.
 
 > [!NOTE]
 > In the context of DataMiner Intelligence, "agents" refers to AI agents. These are not to be confused with DataMiner Agents, i.e., DataMiner nodes. See [DataMiner System architecture and components](xref:Overview_Architecture_and_components).
@@ -29,26 +32,25 @@ The DataMiner Intelligence agent framework is an agentic framework in which AI a
 
 ### Agents, context, and tools
 
-The framework comes with out-of-the-box [native agents](xref:Intelligence_Assistant_Agents#native-agents), such as the [DataMiner Insights](xref:Intelligence_Assistant_InsightsAgent) and [DataMiner Docs](xref:Intelligence_Assistant_DocumentationAgent) agents.
+The framework comes with out-of-the-box [native agents](xref:Intelligence_Agents#native-agents), such as the [DataMiner Insights](xref:Intelligence_InsightsAgent) and [DataMiner Docs](xref:Intelligence_DocumentationAgent) agents.
 
 It is also extensible, so that you can tailor it to your own environment and workflows:
 
-- Add your own context and domain-specific workflows with [skills](xref:Intelligence_Assistant_Skills).
-- Add your own [tools](xref:Intelligence_Assistant_Tools), such as [custom data tools](xref:Intelligence_Assistant_custom_data_tools) to query data and [script tools](xref:Intelligence_Assistant_ScriptTools) to execute automation scripts.
-- Add entire agents of your own with [specialized agents](xref:Intelligence_Assistant_Specialized_Agents), which bundle instructions, skills, and tools into a reusable, purpose-built agent.
+- Add your own context and domain-specific workflows with [skills](xref:Intelligence_Skills).
+- Add your own [tools](xref:Intelligence_Tools), such as [custom data tools](xref:Intelligence_custom_data_tools) to query data and [script tools](xref:Intelligence_ScriptTools) to execute automation scripts.
+- Add entire agents of your own with [specialized agents](xref:Intelligence_Specialized_Agents), which bundle instructions, skills, and tools into a reusable, purpose-built agent.
 
 ### Interacting with the agents
 
-You can interact with the agents through the following DataMiner Assistant chat interfaces:
+**DataMiner Assistant** is the name for the chat integrations that let you interact with DataMiner Intelligence agents:
 
 - The [DataMiner Assistant app](xref:Intelligence_Assistant_app), which is integrated within DataMiner and available from the DataMiner landing page.
 - The [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365), which gives you access to the agents from Microsoft Teams or Microsoft Copilot.
-
-In addition to chat interaction, it will soon be possible to trigger DataMiner Intelligence from DataMiner Automation. This will allow you to launch agentic workflows from any automated workflow, for example when a new alarm is generated.
+- The [Assistant chat component](xref:DashboardAssistantChat), which lets you interact with the agents from a dashboard or low-code app.
 
 ## Other AI capabilities
 
-Next to the agent framework, the DataMiner Assistant DxM also powers the following integrated AI capabilities:
+DataMiner Intelligence also includes capabilities that do not require a chat interface:
 
-- [Natural language to GQI](xref:Intelligence_NL2GQI): Describe the data you need in human language, and let DataMiner Assistant create the corresponding GQI query for you in dashboards and low-code apps.
+- [Natural language to GQI](xref:Intelligence_NL2GQI): Describe the data you need in natural language to generate the corresponding GQI query in dashboards and low-code apps.
 - [Document Intelligence](xref:docintel): Extract structured information from unstructured documents, such as PDF files, based on instructions you provide, for example as part of an automated workflow.
