@@ -1,6 +1,6 @@
 ---
 uid: Intelligence_Assistant_ScriptTools
-description: "Script tools let specialized agents run approved DataMiner Automation scripts with defined inputs, controlled execution, and user-visible results."
+description: "Script tools let specialized agents run approved DataMiner automation scripts with defined inputs, controlled execution, and user-visible results."
 ---
 
 # Script tools

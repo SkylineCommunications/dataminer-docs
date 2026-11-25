@@ -12,31 +12,16 @@ DataMiner Intelligence makes use of the DataMiner Assistant DxM ([DataMiner Exte
 
 DataMiner Assistant is included in DataMiner web upgrade packages, but it is not activated automatically in all systems:
 
-- On [DataMiner as a Service (DaaS)](xref:Creating_a_DMS_in_the_cloud) systems, the DataMiner Assistant DxM is enabled by default.
+- On [**DataMiner as a Service (DaaS)**](xref:DaaS_hosting) systems, the DataMiner Assistant DxM is enabled by default starting from DataMiner 10.7.0/10.7.1.
 
-- On on-premises systems, you need to install the DxM initially to activate it. To do so, run the DataMiner Assistant MSI installer from the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\Web` on the DataMiner Agent. Local installers for DataMiner 10.6.x or newer include the DataMiner Assistant DxM by default.
+- On **self-managed DataMiner Systems**, you need to install the DxM initially to activate it. To do so, run the DataMiner Assistant MSI installer from the folder `C:\Skyline DataMiner\Tools\ModuleInstallers\Web` on the DataMiner Agent. Local installers include the DataMiner Assistant DxM by default starting from DataMiner 10.6.x.
 
   You do not need to install the DataMiner Assistant DxM on every node in a DataMiner cluster. We recommend installing it on a few suitable Agents to provide redundancy.
 
-Once it has been installed, DataMiner Assistant is upgraded automatically when you install DataMiner upgrades. From DataMiner 10.5.7/10.6.0 onwards, it is upgraded with full DataMiner upgrade packages.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
+Once it has been installed, DataMiner Assistant is upgraded automatically when you install DataMiner web upgrades.
 
-For DataMiner Assistant to run correctly, the following **prerequisites** must be met:
-
-- **Connection to dataminer.services**: The DataMiner System [must be connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
-
-- **GQI**: For the "natural language to GQI" feature to work, the [GQI DxM](xref:GQI_DxM) needs to be installed.
-
-### DataMiner as a Service (DaaS)
-
-For DaaS systems running DataMiner 10.6 or newer, no installation is needed. The DataMiner Assistant DxM is already installed and running. The Assistant app and some optional capabilities may not be available by default. To request preview access, contact [ai@skyline.be](mailto:ai@skyline.be).
-
-### On-premises systems
-
-For on-premises installation and getting-started instructions, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
-
-## Upgrading
-
-Once DataMiner Assistant has been deployed, it is upgraded when you install DataMiner upgrades from DataMiner 10.5.7/10.6.0 onwards.<!-- RN 42896 --> Starting from DataMiner 10.6.0 [CU7]/10.6.2, it is sufficient to install a web upgrade instead of a full DataMiner upgrade.<!-- RN 44291 -->
+> [!TIP]
+> For information on how to make sure DataMiner assistant runs correctly and on how to get started with the Assistant app, refer to [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 ## Logging
 

@@ -50,7 +50,7 @@ A skill consists of the following components:
 
 You can create and manage skills on the *Skills* page of the Assistant app. This page displays all available skills in a searchable list.
 
-![Skills page in the Assistant app](~/dataminer/images/AssistantDxM_SkillsOverview.png)
+![Skills page in the Assistant app showing available skills in a searchable list](~/dataminer/images/AssistantDxM_SkillsOverview.png)<br>*Skills page in DataMiner 10.7.1, listing available skills in the Assistant app*
 
 From this page, you can:
 
@@ -63,7 +63,7 @@ From this page, you can:
 - **Duplicate or delete a skill** by clicking the ellipsis button (...) next to a skill in the list. Selecting *Duplicate* creates a copy of the skill, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the skill entirely.
 
 > [!NOTE]
-> While no specific permissions are required to view existing skills, creating or editing skills requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.
+> The [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is not required to view existing skills, but it is required to create or edit skills.
 
 ### Using skill files
 

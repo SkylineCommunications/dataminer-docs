@@ -18,7 +18,7 @@ AI agents operate by combining:
 
 ### Native agents
 
-Native agents are built-in agents that ship with the DataMiner Assistant DxM. They are available as soon as the DxM has been installed and the Assistant app has been enabled. They have access to all available tools and skills, and they combine multiple DataMiner Intelligence capabilities to autonomously investigate questions, retrieve information, and perform guided actions.
+Native agents are built-in agents that ship with the DataMiner Assistant DxM. They are available when the [requirements for DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements) are met. They combine multiple DataMiner Intelligence capabilities to autonomously investigate questions, retrieve information, and perform guided actions.
 
 The following native agents are available:
 
@@ -27,7 +27,7 @@ The following native agents are available:
 
 On the agents overview page, native agents are labeled with a "Native" tag. You can use the *Native only* toggle button to filter the list and show only native agents. Native agents open in read-only mode, so editing and deleting is not possible for them.
 
-![Agents overview showing native and specialized agents. Native agents are marked with a "Native" tag.](~/dataminer/images/Assistant_Agents_List.png)
+![Agents overview showing native and specialized agents. Native agents are marked with a "Native" tag.](~/dataminer/images/Assistant_Agents_List.png)<br>*Agents overview in the Assistant app in DataMiner 10.7.1*
 
 ### Specialized agents
 
@@ -36,7 +36,7 @@ On the agents overview page, native agents are labeled with a "Native" tag. You 
 Specialized agents only have access to the specific tools and skills assigned to them.
 
 > [!IMPORTANT]
-> Specialized agents are an experimental feature. They only become available once the specialized agents feature has been enabled by an administrator. For more information, see [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents).
+> Specialized agents are an experimental feature. They are available when the system-wide *DataMiner Intelligence* and *Specialized agents* web app settings have both been enabled. For more information, see [Specialized agents](xref:Intelligence_Assistant_Specialized_Agents).
 
 ## Agent context
 

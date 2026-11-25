@@ -5,11 +5,11 @@ description: "Learn how to use the natural language to GQI feature in DataMiner 
 
 # Natural language to GQI
 
-Starting from version 1.0.0, the [DataMiner Assistant](xref:Intelligence_Assistant_DxM) DxM will translate requests in human language into ready-to-execute GQI queries making use of an underlying Large Language Model (LLM).
+The [DataMiner Assistant](xref:Intelligence_Assistant_DxM) DxM can translate requests in human language into ready-to-execute GQI queries making use of an underlying Large Language Model (LLM).
 
 You can use this feature when [configuring queries in dashboards or low-code apps](xref:Letting_DataMiner_Assistant_create_a_query).
 
-![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.6.1*
+![Natural language to GQI query generation in a DataMiner dashboard](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner Web 10.6.2*
 
 Examples of such natural languages request could be:
 
@@ -18,20 +18,15 @@ Examples of such natural languages request could be:
 
 The result will be a GQI query that you can use to fetch the requested data.
 
-Starting from DataMiner version 10.5.0 [CU11]/10.6.2<!-- RN 44342 -->, the option to let the DataMiner Assistant create a query is disabled by default. To enable the feature, create the file `C:\Program Files\Skyline Communications\DataMiner Assistant\appsettings.custom.json` with the following content:
+## Requirements
 
-```json
-{   
-  "NL2GQIOptions": {
-    "ShowUserInterface": true
-  }
-}    
-```
+- Your DataMiner System must run DataMiner 10.7.0/10.7.1 or later.
+- The system-wide *DataMiner Intelligence* web apps setting must be enabled.
+- You must have the [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) user permission.
+- The feature must be [enabled in the app settings](#enabling-this-feature).
 
-This file needs to be created on every Agent in the DataMiner System where the DxM is installed.
-
-> [!NOTE]
-> Prior to version 2.0.0, the DataMiner Assistant DxM is called "Copilot" instead.
+> [!TIP]
+> For more information, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started)
 
 ## Supported GQI operators
 
@@ -56,3 +51,20 @@ DataMiner Assistant is able to automatically detect all [GQI data sources](xref:
 
 > [!IMPORTANT]
 > While DataMiner Assistant is able to enrich the underlying LLM with fundamental DataMiner context, it is important to keep in mind that the LLM has no information about the data actually contained in the many data sources. For this reason, it might have a hard time picking the perfect operator every time. You can usually overcome this by rephrasing your initial request with more specific instructions.
+
+## Enabling this feature
+
+To enable this feature, create the file `C:\Program Files\Skyline Communications\DataMiner Assistant\appsettings.custom.json` with the following content:
+
+```json
+{   
+  "NL2GQIOptions": {
+    "ShowUserInterface": true
+  }
+}    
+```
+
+This file needs to be created on every Agent in the DataMiner System where the DxM is installed.
+
+> [!NOTE]
+> Prior to DataMiner 10.7.0/10.7.1, it is possible to enable this feature in preview. This is possible starting from DataMiner 10.5.0 [CU11]/10.6.2<!-- RN 44342 -->

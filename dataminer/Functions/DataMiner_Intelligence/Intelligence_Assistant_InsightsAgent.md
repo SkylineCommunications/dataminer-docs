@@ -7,7 +7,7 @@ description: "Learn about the DataMiner Insights native agent, which investigate
 
 DataMiner Insights is a read-only, insight-focused native agent in the [Assistant app](xref:Intelligence_Assistant_app). It answers questions and surfaces insights from system data without performing any actions on the DataMiner System.
 
-![DataMiner Insights agent in the Assistant app, showing native references and an empty custom references panel](~/dataminer/images/Assistant_Native_Agent_Insights.png)
+![DataMiner Insights agent in the Assistant app, showing the knowledge tab, with only native references](~/dataminer/images/Assistant_Native_Agent_Insights.png)<br>*DataMiner Insights agent in DataMiner 10.7.1, showing native references only*
 
 ## Customization
 

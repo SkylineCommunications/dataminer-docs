@@ -6,16 +6,18 @@ description: "Discover DataMiner Intelligence, the agentic AI capabilities of Da
 
 # About DataMiner Intelligence
 
-> [!IMPORTANT]
-> DataMiner Intelligence is currently a prerelease feature. Its official release is expected in DataMiner 10.7.1. The functionality is ready to be deployed and tested in production environments, but there may still be significant changes and improvements before the official release. We welcome your feedback at [ai@skyline.be](mailto:ai@skyline.be).
+DataMiner Intelligence covers all agentic AI capabilities of DataMiner. It is available from DataMiner 10.7.0/10.7.1 onwards.<!--RN 47196-->
 
-DataMiner Intelligence covers all agentic AI capabilities of DataMiner. It consists of:
+DataMiner Intelligence consists of:
 
-- The **DataMiner Intelligence agent framework**, with AI agents that help you **understand**, **act**, and **create** on the DataMiner platform.
-- **Other integrated AI capabilities**, such as natural language to GQI and Document Intelligence.
+- The [**DataMiner Intelligence agent framework**](#dataminer-intelligence-agent-framework), with AI agents that help you **understand**, **act**, and **create** on the DataMiner platform.
+- [**Other integrated AI capabilities**](#other-ai-capabilities), such as [natural language to GQI] and Document Intelligence.
 
 > [!NOTE]
 > In the context of DataMiner Intelligence, "agents" refers to AI agents. These are not to be confused with DataMiner Agents, i.e., DataMiner nodes. See [DataMiner System architecture and components](xref:Overview_Architecture_and_components).
+
+> [!TIP]
+> For information about how to access DataMiner Intelligence and about its prerequisites, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 ## DataMiner Intelligence agent framework
 
@@ -43,15 +45,6 @@ You can interact with the agents through the following DataMiner Assistant chat 
 - The [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365), which gives you access to the agents from Microsoft Teams or Microsoft Copilot.
 
 In addition to chat interaction, it will soon be possible to trigger DataMiner Intelligence from DataMiner Automation. This will allow you to launch agentic workflows from any automated workflow, for example when a new alarm is generated.
-
-## Getting started
-
-DataMiner Intelligence requires a [connection to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) and relies on two components that each need to be enabled separately:
-
-- The **DataMiner Assistant DxM**, which provides the AI capabilities in DataMiner.
-- The **DataMiner Assistant app**, the chat interface that allows you to interact with the agents.
-
-For the steps to enable both components and start exploring DataMiner Intelligence, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
 ## Other AI capabilities
 

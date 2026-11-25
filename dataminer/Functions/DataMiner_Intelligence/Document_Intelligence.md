@@ -15,6 +15,9 @@ Typical use cases include:
 
 - Extracting order data from a bill of materials (BOM) Excel document.
 
+> [!TIP]
+> Starting from DataMiner 10.7.0/10.7.1, the general requirements and user permissions for DataMiner Intelligence are needed for the Document Intelligence feature. For details, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
+
 ## Processing documents
 
 The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (Large Language Models) to analyze your files according to your instructions. The process consists of the following steps:
@@ -54,7 +57,7 @@ The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (L
 
 1. The model's output is returned as the Document Intelligence response.
 
-![DataMiner Document Intelligence](~/dataminer/images/documentintelligence_diagram.png)<br>*Using the Document Intelligence API in DataMiner automation scripts*
+![Document Intelligence process from document upload through OCR and LLM analysis to a structured response](~/dataminer/images/documentintelligence_diagram.png)<br>*Using the Document Intelligence API in DataMiner automation scripts*
 
 ## Writing effective instructions
 

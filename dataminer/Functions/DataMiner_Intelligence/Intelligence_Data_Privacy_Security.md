@@ -50,11 +50,19 @@ No data is used for training foundation models or shared outside the Skyline Com
 
 ## User permissions
 
-Access to the DataMiner Assistant and the actions you can perform are controlled through your existing DataMiner user permissions:
+Starting from its initial release in DataMiner 10.7.0/10.7.1, access to DataMiner Intelligence is controlled through DataMiner user permissions and a system-wide setting:
 
-- Only users with appropriate DataMiner credentials can access the Assistant. The DataMiner Assistant web application, when enabled, is currently available for all users with permissions to use the web apps. This broad access is temporary during the current rollout phase. At this point in time, no additional Assistant-specific permissions are required.
-- The Assistant respects your role-based access control (RBAC) configuration, meaning you can only view and interact with data that your DataMiner permissions allow you to access.
-- Access to the Documentation tab in the DataMiner Assistant app for retrieving information from the DataMiner documentation is typically available to all authenticated users.
+- The [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) user permission is required to be able to use any of the DataMiner Intelligence capabilities
+
+  On DataMiner versions prior to 10.7.0/10.7.1 that already support Document Intelligence, this permission is not yet required to use Document Intelligence.
+
+- The [General > DataMiner Intelligence > Assistant app](xref:DataMiner_user_permissions#general--dataminer-intelligence--assistant-app) user permission is required to access the Assistant app from the landing page.
+
+- The system-wide *DataMiner Intelligence* web apps setting (see [Enabling DataMiner Intelligence](xref:Intelligence_Getting_Started#enabling-dataminer-intelligence)) controls whether DataMiner Intelligence is available throughout the DataMiner System.
+
+  Changing this setting requires both the [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) and the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission. Users who do not have these permissions see the setting as read-only.
+
+- The Assistant respects your role-based access control (RBAC) configuration, meaning you can only view and interact with data that your DataMiner permissions allow you to access. Documentation lookup with the DataMiner Docs agent is typically available to all users who have access to the Assistant app.
 
 For more information on managing DataMiner user permissions, see [User management](xref:User_management).
 

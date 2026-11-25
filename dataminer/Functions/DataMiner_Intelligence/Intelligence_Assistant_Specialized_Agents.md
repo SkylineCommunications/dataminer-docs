@@ -6,11 +6,26 @@ description: "Learn how to create, configure, and manage user-defined specialize
 # Specialized agents
 
 > [!IMPORTANT]
-> This is an experimental feature that is currently still being further developed. If you are using DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 or higher<!-- 46562 -->, specialized agents are only available if this has been enabled by an administrator.
+> Specialized agents are an experimental feature. Using them requires DataMiner 10.7.0/10.7.1 or later, the system-wide *DataMiner Intelligence* setting to be enabled, and the *General > DataMiner Intelligence > Access* permission. An administrator must also enable the *Specialized agents* setting in *Settings* > *System*.
 
 A specialized agent is a user-configured agent that bundles a name, description, instructions, and a curated set of references into a reusable entity. When invoked, the agent operates according to its instructions and has access only to the references assigned to it, making it focused and predictable.
 
 Unlike [native agents](xref:Intelligence_Assistant_Agents#native-agents), which are built-in, specialized agents are fully user-defined and tailored to specific use cases or workflows.
+
+## Enabling specialized agents
+
+1. Open the user menu in the upper-right corner of the Assistant app.
+
+1. Select *Settings* > *System*.
+
+1. Enable the *Specialized agents* toggle button.
+
+   ![System settings showing the DataMiner Intelligence and Specialized agents toggle buttons](~/dataminer/images/DataMiner_Intelligence_System_Settings.png)<br>*DataMiner Intelligence and Specialized agents toggles in system settings*
+
+The change will be saved immediately without reloading the page. The Assistant chat, the *Agents* page, and the agent editor update immediately.
+
+> [!NOTE]
+> If you disable this setting and the selected agent is no longer available because of this, the chat will switch to the default agent.
 
 ## Why use specialized agents
 
@@ -63,7 +78,7 @@ Note that specialized agents can also select built-in **native tools** directly,
 
 You can create specialized agents on the *Agents* page of the Assistant app. This page displays all available agents in a searchable list.
 
-![Agents page in the Assistant app](~/dataminer/images/Assistant_Agents_List.png)
+![Agents page in the Assistant app showing available agents and the new agent button](~/dataminer/images/Assistant_Agents_List.png)<br>*Agents page in DataMiner 10.7.1 showing available agents in the Assistant app*
 
 From this page, you can:
 
@@ -76,7 +91,7 @@ From this page, you can:
 - **Duplicate or delete a specialized agent** by clicking the ellipsis button (...) next to the agent in the list. Selecting *Duplicate* creates a copy of the agent, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the agent entirely.
 
 > [!NOTE]
-> While no specific permissions are required to view existing agents, creating or editing specialized agents requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.
+> The [*Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is not required to view existing agents, but it is required to create or edit specialized agents.
 
 ### Using agent context files
 

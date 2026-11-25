@@ -14,7 +14,7 @@ Tools can be assigned as references to [specialized agents](xref:Intelligence_As
 The following types of tools are available:
 
 - **[Data tools](xref:Intelligence_Assistant_DataTools)**: These allow agents to discover and query supported GQI data sources, including standard sources, DOM instances, and ad hoc data sources. Several native data tools are available, and it is also possible to create custom data tools.
-- **[Script tools](xref:Intelligence_Assistant_ScriptTools)**: These allow [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) to execute explicitly assigned DataMiner Automation scripts.
+- **[Script tools](xref:Intelligence_Assistant_ScriptTools)**: These allow [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) to execute explicitly assigned DataMiner automation scripts.
 
 ## Creating and managing tools
 
@@ -22,7 +22,7 @@ You can create and manage tools on the *Tools* page of the Assistant app. This p
 
 In the data tools list, tags indicate native data tools, custom data tools based on DOM, and custom data tools based on an ad hoc data source.
 
-![Tools overview page](~/dataminer/images/Assistant_Tools_page.png)
+![DataMiner Assistant tools overview listing available data and script tools](~/dataminer/images/Assistant_Tools_page.png)<br>*Tools page in DataMiner 10.7.1, listing the available data and script tools*
 
 From this page, you can:
 
@@ -38,4 +38,4 @@ From this page, you can:
 > For details about the tool editor, see [Creating or editing custom data tools](xref:Intelligence_Assistant_custom_data_tools#creating-or-editing-custom-data-tools-in-the-assistant-app) and [Creating or editing script tools](xref:Intelligence_Assistant_ScriptTools#creating-or-editing-script-tools-in-the-assistant-app).
 
 > [!NOTE]
-> While no specific permissions are required to view existing tools, creating or editing tools requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.
+> The [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is not required to view existing tools, but it is required to create or edit tools.
