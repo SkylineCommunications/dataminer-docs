@@ -3,11 +3,13 @@ items:
     items:
       - name: General Terms and Conditions
         topicUid: General_Terms_and_Conditions
+      - name: End User License Agreement
+        topicUid: End_User_License_Agreement
       - name: Community Edition Terms
         topicUid: Community_Edition_Terms
       - name: Partner Terms
         topicUid: Partner_Terms
-  - name: Support terms
+  - name: Support & SLA terms
     items:
       - name: On premises
         topicUid: Support_Terms_On_Premises
