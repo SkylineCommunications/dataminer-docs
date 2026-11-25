@@ -53,7 +53,8 @@ When you add a DataMiner Agent to a cluster, DataMiner will now perform the foll
 
 - The Agent must be standalone, i.e., not already part of another cluster.
 - The Agent must not be part of a Failover pair.
-- The Agent must run the same DataMiner version as at least one Agent already in the cluster.
+- All Agents already in the cluster must run the same DataMiner version.
+- The Agent being added must run the same DataMiner version as the cluster.
 
 If any of these checks fail, the Agent will not be added, and SLNet will log the reason. The existing compatibility checks also remain in effect.
 
