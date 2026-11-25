@@ -260,6 +260,8 @@ items:
     items:
       - name: Current issues
         items:
+          - name: Cassandra Cluster migration finalizer fails with TypeLoadException
+            topicUid: KI_Cassandra_Cluster_migration_finalizer_TypeLoadException
           - name: NATSForceManualConfig ignored after BrokerGateway migration rollback
             topicUid: KI_NATSForceManualConfig_ignored_after_BrokerGateway_migration_rollback
           - name: Engine location is mandatory when configuring a backup of an external database
