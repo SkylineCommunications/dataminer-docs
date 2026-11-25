@@ -14,6 +14,8 @@ description: "Learn why SLCCMigrator fails to finalize a Cassandra Cluster migra
 
 The affected releases include an updated System.Memory library, but the release package does not include *SLCCMigrationFinalizer.exe.config*. Without the binding redirect in this file, when a migration is attempted from a setup using a Cassandra database per DMA to a Cassandra Cluster setup, the migration finalizer fails with a `TypeLoadException` and is unable to respond to the migration tool's ping requests. The finalizer process is terminated after 5 minutes.
 
+Attempting to run the migration again does not resolve this, as this happens for every migration attempt.
+
 ## Fix
 
 No fix is available yet. <!-- Task 314380 -->
