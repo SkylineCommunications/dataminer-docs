@@ -27,7 +27,11 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### Security enhancements [ID 46995]
+
+<!-- 46995: MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
