@@ -8,7 +8,7 @@ description: "Explore DataMiner Intelligence, the AI capabilities in DataMiner, 
 
 **DataMiner Intelligence** is the umbrella term for AI capabilities in DataMiner. It includes the agent framework, the DataMiner Assistant chat interfaces, and features such as natural language to GQI and Document Intelligence.
 
-DataMiner Intelligence was introduced in DataMiner 10.7.0/10.7.1.<!--RN 47196--> Some capabilities, such as [Document Intelligence](xref:docintel), are also available in earlier versions. The [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is the extension module that powers the capabilities described here.
+DataMiner Intelligence is introduced in DataMiner 10.7.0/10.7.1.<!--RN 47196--> Some capabilities, such as [Document Intelligence](xref:docintel), are also available in earlier versions. The [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is the extension module that powers the DataMiner Intelligence capabilities.
 
 DataMiner Intelligence consists of:
 

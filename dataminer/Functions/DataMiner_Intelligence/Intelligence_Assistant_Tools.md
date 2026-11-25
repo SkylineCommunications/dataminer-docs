@@ -22,7 +22,7 @@ You can create and manage tools on the *Tools* page of the [DataMiner Assistant 
 
 In the data tools list, tags indicate native data tools, custom data tools based on DOM, and custom data tools based on an ad hoc data source.
 
-![DataMiner Assistant tools overview listing available data and script tools](~/dataminer/images/Assistant_Tools_page.png)<br>*Data and script tools in the DataMiner Assistant app in DataMiner Web 10.7.1.*
+![DataMiner Assistant tools overview listing available data and script tools](~/dataminer/images/Assistant_Tools_page.png)<br>*Data and script tools in the DataMiner Assistant app in DataMiner Web 10.7.1*
 
 From this page, you can:
 

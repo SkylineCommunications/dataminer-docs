@@ -50,7 +50,7 @@ A skill consists of the following components:
 
 You can create and manage skills on the *Skills* page of the Assistant app. This page displays all available skills in a searchable list.
 
-![Skills page in the Assistant app showing available skills in a searchable list](~/dataminer/images/AssistantDxM_SkillsOverview.png)<br>*Searchable skills list in the DataMiner Assistant app in DataMiner Web 10.7.1.*
+![Skills page in the Assistant app showing available skills in a searchable list](~/dataminer/images/AssistantDxM_SkillsOverview.png)<br>*Searchable skills list in the DataMiner Assistant app in DataMiner Web 10.7.1*
 
 From this page, you can:
 

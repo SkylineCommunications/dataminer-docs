@@ -20,7 +20,7 @@ Unlike [native agents](xref:Intelligence_Agents#native-agents), which are built-
 
 1. Enable the *Specialized agents* toggle button.
 
-   ![System settings showing the DataMiner Intelligence and Specialized agents toggle buttons](~/dataminer/images/DataMiner_Intelligence_System_Settings.png)<br>*DataMiner Intelligence and Specialized agents toggle buttons in the system settings in DataMiner Web 10.7.1.*
+   ![System settings showing the DataMiner Intelligence and Specialized agents toggle buttons](~/dataminer/images/DataMiner_Intelligence_System_Settings.png)<br>*DataMiner Intelligence and Specialized agents toggle buttons in the system settings in DataMiner Web 10.7.1*
 
 The change will be saved immediately without reloading the page. The Assistant chat, the *Agents* page, and the agent editor update immediately.
 
@@ -78,7 +78,7 @@ Note that specialized agents can also select built-in **native tools** directly,
 
 You can create specialized agents on the *Agents* page of the Assistant app. This page displays all available agents in a searchable list.
 
-![Agents page in the Assistant app showing available agents and the new agent button](~/dataminer/images/Assistant_Agents_List.png)<br>*Available agents and the New agent button in the DataMiner Assistant app in DataMiner Web 10.7.1.*
+![Agents page in the Assistant app showing available agents and the new agent button](~/dataminer/images/Assistant_Agents_List.png)<br>*Available agents and the New agent button in the DataMiner Assistant app in DataMiner Web 10.7.1*
 
 From this page, you can:
 

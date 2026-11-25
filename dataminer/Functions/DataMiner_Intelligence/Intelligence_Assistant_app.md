@@ -13,7 +13,7 @@ You can access the Assistant app from the [DataMiner landing page](xref:Accessin
 
 If you cannot see the app there, make sure DataMiner Intelligence has been fully set up. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
 
-![Assistant app icon on the DataMiner landing page](~/dataminer/images/AssistantDxM_AssistantIcon.png)<br>*DataMiner Assistant app icon on the DataMiner landing page in DataMiner Web 10.7.1.*
+![Assistant app icon on the DataMiner landing page](~/dataminer/images/AssistantDxM_AssistantIcon.png)<br>*DataMiner Assistant app icon on the DataMiner landing page in DataMiner Web 10.7.1*
 
 You can also chat with DataMiner Intelligence agents from Microsoft Teams or Microsoft Copilot using [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
 
@@ -21,7 +21,7 @@ You can also chat with DataMiner Intelligence agents from Microsoft Teams or Mic
 
 When you open the app, a welcome screen is displayed with the following elements:
 
-![Assistant app welcome screen, including suggestion cards, agent selector, model selector, and chat input box](~/dataminer/images/Assistant.png)<br>*DataMiner Assistant welcome screen in DataMiner Web 10.7.1.*
+![Assistant app welcome screen, including suggestion cards, agent selector, model selector, and chat input box](~/dataminer/images/Assistant.png)<br>*DataMiner Assistant welcome screen in DataMiner Web 10.7.1*
 
 - **Left sidebar**: Allows you to start a new session at any time by clicking *+ New session*. Below that, you can access your sessions, [agents](xref:Intelligence_Agents), [skills](xref:Intelligence_Skills), and [tools](xref:Intelligence_Tools).
 

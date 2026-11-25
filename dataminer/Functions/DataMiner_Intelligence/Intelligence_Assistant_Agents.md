@@ -27,7 +27,7 @@ The following native agents are available:
 
 On the agents overview page, native agents are labeled with a "Native" tag. You can use the *Native only* toggle button to filter the list and show only native agents. Native agents open in read-only mode, so editing and deleting is not possible for them.
 
-![DataMiner Assistant Agents page showing native and specialized agents, with a Native tag on built-in agents](~/dataminer/images/Assistant_Agents_List.png)<br>*Native and specialized agents listed in the DataMiner Assistant app in DataMiner Web 10.7.1.*
+![DataMiner Assistant Agents page showing native and specialized agents, with a Native tag on built-in agents](~/dataminer/images/Assistant_Agents_List.png)<br>*Native and specialized agents listed in the DataMiner Assistant app in DataMiner Web 10.7.1*
 
 ### Specialized agents
 

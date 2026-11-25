@@ -57,7 +57,7 @@ Document Intelligence combines optical character recognition (OCR) and large lan
 
 1. The model's output is returned as the Document Intelligence response.
 
-![Document Intelligence process from document upload through OCR and LLM analysis to a structured response](~/dataminer/images/documentintelligence_diagram.png)<br>*Document processing workflow for the Document Intelligence API.*
+![Document Intelligence process from document upload through OCR and LLM analysis to a structured response](~/dataminer/images/documentintelligence_diagram.png)<br>*Document processing workflow for the Document Intelligence API*
 
 ## Writing effective instructions
 
