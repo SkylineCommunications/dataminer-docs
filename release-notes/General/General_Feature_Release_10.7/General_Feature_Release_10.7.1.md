@@ -1,6 +1,6 @@
 ---
 uid: General_Feature_Release_10.7.1
-description: "Release notes for General Feature Release 10.7.1, including prerequisites, new features, enhancements, and fixes planned for this preview release."
+description: "Release notes for General Feature Release 10.7.1, including prerequisites, new features, enhancements, and fixes planned for this release."
 ---
 
 # General Feature Release 10.7.1 - Preview

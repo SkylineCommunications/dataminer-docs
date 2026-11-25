@@ -1,6 +1,6 @@
 ---
 uid: Cube_Main_Release_10.6.0_CU9
-description: "Release notes for DataMiner Cube Main Release 10.6.0 CU9, with features, enhancements, and fixes planned for this preview release."
+description: "Release notes for DataMiner Cube Main Release 10.6.0 CU9, with features, enhancements, and fixes planned for this release."
 ---
 
 # DataMiner Cube Main Release 10.6.0 CU9
