@@ -38,7 +38,7 @@ When a workflow needs to do more than retrieve information, [script tools](xref:
 
 ##### Availability
 
-A DataMiner System must be connected to dataminer.services, and DataMiner Intelligence must be enabled. Specialized agents are experimental and may require administrator enablement. For setup and availability details, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started), [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM), and the [FAQ](xref:Intelligence_FAQ).
+A DataMiner System must be connected to dataminer.services, and DataMiner Intelligence must be enabled. Specialized agents are experimental and may require administrator enablement. For setup and availability details, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) and the [FAQ](xref:Intelligence_FAQ).
 
 ## New features
 

@@ -5,7 +5,7 @@ description: "Use the natural language to GQI capability in DataMiner Intelligen
 
 # Natural language to GQI
 
-Natural language to GQI is a [DataMiner Intelligence](xref:DataMiner_Intelligence) capability that uses a large language model (LLM) to turn plain-language requests into ready-to-execute GQI queries. The [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) powers this capability.
+Natural language to GQI is a [DataMiner Intelligence](xref:DataMiner_Intelligence) capability that uses a large language model (LLM) to turn plain-language requests into ready-to-execute GQI queries. The [DataMiner Assistant module](xref:DataMinerExtensionModules#dataminer-assistant) powers this capability.
 
 You can use this feature when [configuring queries in dashboards or low-code apps](xref:Generating_a_GQI_query_with_natural_language).
 

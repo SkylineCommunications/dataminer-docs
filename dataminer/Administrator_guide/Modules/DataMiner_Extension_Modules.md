@@ -47,10 +47,9 @@ This DxM exists in tandem with service-specific [middleware](xref:Nuget_Communic
 
 ### DataMiner Assistant
 
-The DataMiner Assistant DxM powers [DataMiner Intelligence](xref:DataMiner_Intelligence) capabilities, including the agent framework, natural language to GQI, and Document Intelligence. For installation details, see [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
+The DataMiner Assistant module powers [DataMiner Intelligence](xref:DataMiner_Intelligence) capabilities, including the agent framework, natural language to GQI, and Document Intelligence. It is installed automatically on every node in the cluster by both standard DataMiner upgrade packages and DataMiner web upgrade packages.
 
-> [!NOTE]
-> Prior to version 2.0.0, this DxM is called "Copilot".
+Errors and warnings are logged to log files in the `C:\ProgramData\Skyline Communications\DataMiner Assistant\Logs` folder. This folder stores a maximum of two log files. When the current file exceeds a predefined size, a new log file is created and the oldest file is removed if necessary.
 
 ### DataAggregator
 

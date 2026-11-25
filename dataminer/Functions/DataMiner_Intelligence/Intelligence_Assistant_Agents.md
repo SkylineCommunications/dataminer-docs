@@ -18,7 +18,7 @@ AI agents operate by combining:
 
 ### Native agents
 
-Native agents are built-in agents that ship with the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM). They are available when the [requirements for DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements) are met.
+Native agents are built-in [DataMiner Intelligence](xref:DataMiner_Intelligence) agents. They are available when the [requirements for DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements) are met.
 
 The following native agents are available:
 
