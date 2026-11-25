@@ -57,4 +57,4 @@ The pane will now use the correct colors in both light and dark mode.
 
 When you opened a histogram in an EPM environment, the histogram window did not match the DataMiner Cube theme.
 
-The window will now use the correct styling in both light and dark mode.
+The window will now use the correct colors in both light and dark mode.

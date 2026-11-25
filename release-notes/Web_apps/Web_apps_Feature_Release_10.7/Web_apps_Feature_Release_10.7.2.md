@@ -31,4 +31,18 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### Web API: Error logged when reading settings for apps saved in an older format [ID 47193]
+
+<!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
+
+When the Web API read settings for an app saved in an older format, for example when you opened the apps list, DataMiner could log a parsing error.
+
+These settings will now be read without logging this error.
+
+#### DataMiner apps: Duplicate backup errors during upgrades [ID 47216]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+During a DataMiner upgrade, the web backup tool could log an "already exists" error when an app's published and draft versions pointed to the same folder. The tool would try to copy that folder twice. This could affect older apps that retained these settings after an upgrade.
+
+From now on, when the published and draft versions point to the same folder, that folder will be backed up only once. Apps with a separate draft will still have both versions backed up.
