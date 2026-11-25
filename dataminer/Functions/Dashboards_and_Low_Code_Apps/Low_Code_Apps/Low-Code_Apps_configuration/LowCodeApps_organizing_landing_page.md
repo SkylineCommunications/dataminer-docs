@@ -26,7 +26,7 @@ To add an app to an existing section on the DataMiner landing page:
 
      - *Upload App*: Upload a [new app](xref:Uploading_a_new_app).
 
-     - *From Catalog*:
+     - *From Catalog*: Deploy an app from the DataMiner Catalog.
 
      The app will be added to the selected section automatically. A new app that specifies other sections itself will be placed in those sections instead.
 

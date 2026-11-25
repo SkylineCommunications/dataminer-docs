@@ -11,7 +11,7 @@ DataMiner Apps are the apps that you can open from the DataMiner landing page, f
 
 - [New Apps](xref:New_apps): Apps that are built outside DataMiner, for example with AI-assisted tooling, and then uploaded to your DataMiner System. Available from DataMiner 10.6.0 [CU10]/10.7.0 [CU0]/10.7.1 onwards<!-- RN 45878 -->.
 
-Individual apps of both types look and behave in the same way. They share the same header bar and the same sign-in, so you do not need to log in again when you open an app. This page describes what applies to all DataMiner Apps.
+Apps of both types share a similar experience. You can find them on the DataMiner landing page and access them using the same sign-in.
 
 To decide which type of app best suits your needs, see [Choosing between New Apps and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps#choosing-between-new-apps-and-low-code-apps).
 
@@ -40,7 +40,7 @@ To open a DataMiner app, do any of the following:
 
 ## Header bar, theme, and embedding
 
-All DataMiner Apps show the standard [web app header bar](xref:Accessing_the_web_apps#web-app-header-bar). The following points are specific to DataMiner Apps:
+DataMiner apps can use the standard [web app header bar](xref:Accessing_the_web_apps#web-app-header-bar). A new app can also use its own header bar or hide the standard header bar. The following points apply to the standard header bar:
 
 - For apps created in the low-code editor, the header bar uses the accent color of the app.
 

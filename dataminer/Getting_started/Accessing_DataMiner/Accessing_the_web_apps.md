@@ -75,7 +75,9 @@ The header bar contains the following items, from left to right:
 
   Click this name to go to the [DataMiner landing page](#dataminer-landing-page). If you are already on the landing page, the page will be refreshed.
 
-- **App-specific items**: Depending on the app, the header bar can contain additional buttons and menus, for example to edit or publish the app, or a search box.  A [new app](xref:New_apps) can also add its own buttons and menus.
+- **App name**: Many web apps display their name in the header bar. Click it to return to the app's main page. In a low-code app or the Comparison tool, clicking the name instead removes any arguments from the app URL.
+
+- **App-specific items**: Depending on the app, the header bar can contain additional buttons and menus, for example to edit or publish the app, or a search box. A [new app](xref:New_apps) can also add its own buttons and menus.
 
 - ![Help](~/dataminer/images/Landing_page_help_icon.png) **Help icon**: Provides access to several handy pages (from DataMiner web 10.4.0 [CU20]/10.5.0 [CU8]/10.5.11 onwards<!-- 43583 -->):
 

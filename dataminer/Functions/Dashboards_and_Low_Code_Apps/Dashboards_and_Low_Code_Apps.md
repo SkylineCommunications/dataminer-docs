@@ -7,7 +7,7 @@ description: With the Dashboards app, Low-Code Apps, and New Apps, you can conso
 
 With the [Dashboards app](xref:newR_D), [Low-Code Apps](xref:Application_framework), and [New Apps](xref:New_apps), you can consolidate any data from your monitored system, so you can access it on any device.
 
-Apps created using the Low-Code Apps module and apps added through the New DataMiner Apps experience are both part of [DataMiner Apps](xref:DataMiner_Apps). These apps are accessible from the same places and share the same header bar, sign-in, and user permissions.
+Apps created using the Low-Code Apps module and apps added through the New DataMiner Apps experience are both part of [DataMiner Apps](xref:DataMiner_Apps). You can access both types of apps from the same place, and they share sign-in and user permissions.
 
 ## New Apps
 
@@ -31,7 +31,7 @@ The main difference between a dashboard and a low-code app is that the latter ca
 
 |  | Low-Code Apps | New Apps |
 |---|---|---|
-| **How to create them** | In the DataMiner low-code editor, by configuring pages, components, and actions. | Outside DataMiner, for example with AI-assisted tooling. The finished app is then uploaded. |
+| **How to create them** | In the DataMiner low-code editor, by configuring pages, components, and actions. | Describe the app you want to the DataMiner App Builder, or build it yourself. Then upload it to your DataMiner System. See [Creating a new app](xref:Creating_a_new_app). |
 | **Typical use** | Apps that you want to build and adjust directly in DataMiner, without writing code. | Apps that need a custom look and feel or functionality that goes beyond what the low-code editor offers. |
 | **Editing** | In the low-code editor in DataMiner. | Outside DataMiner. You upload the updated app again. |
 

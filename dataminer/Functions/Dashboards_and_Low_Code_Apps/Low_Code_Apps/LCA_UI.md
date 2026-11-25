@@ -24,8 +24,6 @@ The look and functionality of the Low-Code Apps header bar are aligned with the 
 
 Specific to low-code apps, the header bar contains the following items:
 
-- App name: The name of the app. Clicking this name will remove any arguments from the app URL.
-
 - Pencil icon: Click this button to access the app's edit mode. See [Editing an app](xref:Editing_custom_apps).
 
 - Ellipsis button: Click this button to open a context menu that provides access to the following options:

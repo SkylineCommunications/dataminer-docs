@@ -11,10 +11,6 @@ New Apps are a type of [DataMiner Apps](xref:DataMiner_Apps). Once an app has be
 
 ## Adding and updating a new app
 
-You first [create a new app](xref:Creating_a_new_app), and then [upload it from the DataMiner landing page](xref:Uploading_a_new_app). New apps are first available as a draft version. When the app is ready, you can publish it.
+You can [create a new app](xref:Creating_a_new_app) and then [upload it from the DataMiner landing page](xref:Uploading_a_new_app), or deploy an existing app from the Catalog. Uploaded apps are first available as a draft version. When an app is ready, you can publish it.
 
 New apps cannot be edited in DataMiner. To change an app, update it outside DataMiner and upload it again.
-
-## Header bar buttons and menus
-
-A new app can add its own buttons and menus to the standard [web app header bar](xref:Accessing_the_web_apps#web-app-header-bar). If you do not see the buttons or menus you expect, check with the developer of the app.

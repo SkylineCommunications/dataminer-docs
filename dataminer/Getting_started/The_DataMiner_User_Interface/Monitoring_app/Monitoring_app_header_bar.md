@@ -13,8 +13,6 @@ The look and functionality of the Monitoring app header bar are aligned with the
 
 Specific to the Monitoring app, the header bar contains the following items:
 
-- *Monitoring* button: Click this button to return to the main page of the app at any time.
-
 - Search box: The box in the middle of the header bar allows you to search the app. When you activate the box, a list of suggestions is displayed below it, based on the recent items list. This list of suggestions gets updated with search results as soon as you type in the box. Select a suggestion in the list to open the corresponding card.
 
 - WebSocket connection status: Available from DataMiner 10.3.0 [CU13]/10.4.0 [CU1]/10.4.4<!--RN 38676--> up to DataMiner 10.4.0 [CU10]/10.5.1. This indicator shows the current status of your WebSocket connection. The available statuses include:
