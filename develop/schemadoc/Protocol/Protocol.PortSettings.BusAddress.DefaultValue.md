@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.BusAddress.DefaultValue
+description: "Use the DefaultValue element in a DataMiner protocol to set the default bus address value for a connection or GPIB device."
 ---
 
 # DefaultValue element

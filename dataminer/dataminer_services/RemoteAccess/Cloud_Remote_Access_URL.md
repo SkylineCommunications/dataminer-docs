@@ -2,7 +2,7 @@
 uid: Cloud_Remote_Access_URL
 description: "Find the remote access URL for remote DataMiner access by opening dataminer.services, selecting your DMS, and clicking Home in the correct organization."
 keywords: cloud connection, cloud url
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Finding the remote access URL

@@ -1,5 +1,6 @@
 ---
 uid: IDs_of_views_elements_services_redundancy_groups_and_parameters
+description: "Find DataMiner IDs for views, elements, services, redundancy groups, and parameters in Cube, and understand the two-part ID format."
 ---
 
 # Frequently asked questions about IDs of views, elements, services, redundancy groups and parameters

@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsTableMatrixInputsTableParameter
+description: "Configure the inputs table for a table-based matrix with required index, label, state, and lock columns plus an optional page column."
 ---
 
 # Inputs Table
@@ -15,14 +16,15 @@ For a typical inputs table, the following columns are configured:
 Example:
 
 ```xml
-<Param id="1000" trending="false">
-   <Name>tblInputs</Name>
+<Param id="1000">
+   <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>
    <Information>
       <Subtext>Table representation of the matrix. This table will contain the information of the inputs.</Subtext>
    </Information>
-   <ArrayOptions index="0" options=";naming=/1002">
+   <ArrayOptions index="0">
+      <NamingFormat>,1002</NamingFormat>
       <ColumnOption idx="0" pid="1001" type="retrieved" options="" />
       <ColumnOption idx="1" pid="1002" type="retrieved" options=";save" />
       <ColumnOption idx="2" pid="1003" type="retrieved" options=";save" />

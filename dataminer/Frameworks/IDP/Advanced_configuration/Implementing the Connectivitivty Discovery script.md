@@ -1,5 +1,6 @@
 ---
 uid: ConnectivityDiscoveryScript
+description: "Implement a Connectivity Discovery script in DataMiner IDP to report LLDP or CDP neighbors and enable DCF connection provisioning."
 ---
 
 # Implementing the Connectivity Discovery script

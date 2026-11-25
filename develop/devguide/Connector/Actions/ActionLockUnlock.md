@@ -1,5 +1,6 @@
 ---
 uid: LogicActionLockUnlock
+description: "Use lock and unlock actions to protect an atomic sequence of connector operations from interference by other elements sharing a connection."
 ---
 
 # lock/unlock

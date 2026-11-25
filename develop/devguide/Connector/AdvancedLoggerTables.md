@@ -1,5 +1,6 @@
 ---
 uid: AdvancedLoggerTables
+description: "Learn how to work with logger tables to store large data volumes, for example for logging or for DataMiner applications."
 ---
 
 # Logger tables

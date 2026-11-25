@@ -47,7 +47,7 @@ Use the code provided below to accomplish the following:
 
 - The `SectionDefinition` is updated.
 
-```C#
+```csharp
 using System.Linq;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
@@ -56,9 +56,9 @@ using Skyline.DataMiner.Net.Sections;
 
 namespace Tutorial
 {
-    ///<summary>
-    /// This script will set the "IsSoftDeleted" property of the "Phone number" FieldDescriptor of the SectionDefinition to true. 
-    ///</summary>
+    /// <summary>
+    /// This script will set the "IsSoftDeleted" property of the "Phone number" FieldDescriptor of the SectionDefinition to true.
+    /// </summary>
     public class Script
     {
         // DOM object names are declared here, you can easily update this to your desired ones without having to update the actual script. 
@@ -114,20 +114,20 @@ Use the code provided below to accomplish the following:
 
 - The instances are updated.
 
-```C#
+```csharp
 using System.Collections.Generic;
 using System.Linq;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
+using Skyline.DataMiner.Net.Helper;
 using Skyline.DataMiner.Net.Messages.SLDataGateway;
 using Skyline.DataMiner.Net.Sections;
-using Skyline.DataMiner.Net.Helper;
 
 namespace Tutorial
 {
-    ///<summary>
+    /// <summary>
     /// This script will get all instances using the SectionDefinition and delete the fields for the "Phone number" FieldDescriptor.
-    ///</summary>
+    /// </summary>
     public class Script
     {
         private readonly string _moduleName = "people_app";
@@ -190,7 +190,7 @@ Use the code provided below to accomplish the following:
 
 - The `SectionDefinition` is updated.
 
-```C#
+```csharp
 using System.Linq;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Apps.DataMinerObjectModel;
@@ -199,9 +199,9 @@ using Skyline.DataMiner.Net.Sections;
 
 namespace Tutorial
 {
-    ///<summary>
-    /// This script will remove the FieldDescriptor and update the SectionDefinition. 
-    ///</summary>
+    /// <summary>
+    /// This script will remove the FieldDescriptor and update the SectionDefinition.
+    /// </summary>
     public class Script
     {
         private readonly string _moduleName = "people_app";

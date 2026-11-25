@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsPingGroup
+description: "See how DataMiner selects the ping group used to test whether an element in slow poll mode has recovered, including serial and SNMP fallback rules."
 ---
 
 # Slow poll mode ping group

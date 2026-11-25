@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.ExtraDetails.LinkedDetails-detailsTableId
+description: "Use the detailsTableId attribute of the LinkedDetails element in a DataMiner protocol to identify the table providing extra tree item details."
 ---
 
 # detailsTableId attribute

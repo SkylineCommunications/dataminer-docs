@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsSlider
+description: "Define a slider with numeric parameters, range, and step size, and learn how to combine sliders with checkboxes or dropdown lists."
 ---
 
 # Slider
@@ -8,7 +9,7 @@ A slider allows the user to set a value by moving an indicator.
 
 ## Creating a slider
 
-To define a slider, provide a numeric range using the Range tag.
+To define a slider, provide a numeric range using the `Range` tag.
 
 ```xml
 <Param id="160">
@@ -131,7 +132,7 @@ If you provide multiple discrete entries with state "disabled", a dropdown list 
 
 ```xml
 <Param id="174">
-  <Name>throughput</Name>
+  <Name>Throughput</Name>
   <Description>Throughput</Description>
   <Type>read</Type>
   <Interprete>
@@ -162,7 +163,7 @@ If you provide multiple discrete entries with state "disabled", a dropdown list 
   </Measurement>
 </Param>
 <Param id="175" setter="true">
-  <Name>throughput</Name>
+  <Name>Throughput</Name>
   <Description>Throughput</Description>
   <Type>write</Type>
   <Interprete>

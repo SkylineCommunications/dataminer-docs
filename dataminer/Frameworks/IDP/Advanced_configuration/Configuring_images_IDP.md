@@ -1,5 +1,6 @@
 ---
 uid: Configuring_images_IDP
+description: "Configure IDP Facilities images for rack equipment and locations, upload plans up to 2 MB, and set Visio front panels."
 ---
 
 # Configuring the images shown in the Facilities section

@@ -1,5 +1,6 @@
 ---
 uid: AdvancedLoggerTablesQuerying
+description: "Query logger table data through database-compatible queries or a GetPartialTableMessage SLNet message instead of SLProtocol table access methods."
 ---
 
 # Querying logger tables

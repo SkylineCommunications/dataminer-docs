@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params-loadSequence
+description: "Use the loadSequence attribute in a DataMiner protocol to load selected saved table data before other parameters at element startup."
 ---
 
 # loadSequence attribute

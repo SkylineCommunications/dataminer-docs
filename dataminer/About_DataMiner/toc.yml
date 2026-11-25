@@ -7,8 +7,6 @@ items:
     topicUid: Overview_Standardized_Foundation
   - name: Digital transformation
     topicUid: Digital_transformation
-  - name: Open software platform
-    topicUid: Overview_Platform_Open_Platform
   - name: References and use cases
     topicUid: Overview_References_and_use_cases
   - name: Security
@@ -125,10 +123,14 @@ items:
             - name: Solutions
               topicUid: Pricing_sizing_guide_solutions
               items:
+                - name: Cost & Billing
+                  topicUid: Pricing_sizing_guide_solutions_Cost_Billing
                 - name: InfraOps
                   topicUid: Pricing_sizing_guide_solutions_InfraOps
                 - name: MediaOps Plan
                   topicUid: Pricing_sizing_guide_solutions_MediaOps_Plan
+                - name: SLA Manager
+                  topicUid: Pricing_sizing_guide_solutions_SLA_Manager
                 - name: Starlink
                   topicUid: Pricing_sizing_guide_solutions_Starlink
                 - name: Ticketing
@@ -138,6 +140,8 @@ items:
               items:
               - name: GV AMPP
                 topicUid: Pricing_sizing_guide_use_cases_GV_AMPP
+    - name: DataMiner Intelligence
+      topicUid: Pricing_DataMiner_Intelligence
     - name: Perpetual-Use Licensing
       topicUid: Pricing_Perpetual_Use_Licensing
     - name: Professional Service credits

@@ -1,5 +1,6 @@
 ---
 uid: PA_Token
+description: "Explore main and child tokens in Process Automation and learn how each completed activity generates one token for the next queue element."
 ---
 
 # Token

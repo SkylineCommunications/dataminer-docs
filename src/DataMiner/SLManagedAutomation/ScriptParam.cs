@@ -3,6 +3,11 @@
 	/// <summary>
 	/// Represents a script parameter.
 	/// </summary>
+	/// <remarks>
+	/// Script parameters are supplied by DataMiner through <see cref="IEngine.GetScriptParam(string)"/> or
+	/// <see cref="IEngine.GetScriptParam(int)"/>. Their values are strings. Do not construct a
+	/// <see cref="ScriptParam"/> in script code to represent input.
+	/// </remarks>
 	public class ScriptParam
 	{
 		/// <summary>
@@ -21,6 +26,7 @@
 		/// Gets the value of the script parameter.
 		/// </summary>
 		/// <value>The value of the script parameter.</value>
+		/// <remarks>The value is supplied as a string from the script input.</remarks>
 		/// <example>
 		/// <code>
 		/// // Retrieving the value by using the parameter ID.

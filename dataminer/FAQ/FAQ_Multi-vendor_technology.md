@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Multivendor_technology
+description: "Explore the DataMiner multivendor technology to connect systems across vendors using standard or proprietary protocols, from SNMP and APIs to RS232."
 ---
 
 # What do you mean with multivendor technology?

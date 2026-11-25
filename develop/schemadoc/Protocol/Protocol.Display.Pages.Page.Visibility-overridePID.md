@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Display.Pages.Page.Visibility-overridePID
+description: "Use the overridePID attribute in a DataMiner protocol to identify the parameter that overrides page visibility."
 ---
 
 # overridePID attribute

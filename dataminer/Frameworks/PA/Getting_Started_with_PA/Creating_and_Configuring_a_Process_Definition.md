@@ -1,5 +1,6 @@
 ---
 uid: PA_Creating_and_Configuring_a_Process_Definition
+description: "Create and configure a process definition in Process Automation with DOM definitions, activities, profile instances, and activation windows."
 ---
 
 # Creating and configuring a process definition

@@ -95,6 +95,7 @@ DocumentHub works together seamlessly with other DataMiner applications:
 - **Asset Manager**: Store and display asset images and documentation.
 - **Scheduling**: Link job documents and attachments.
 - **Custom Applications**: Use the [DocumentHub DevPack](xref:DH_Development) to integrate with your own low-code apps.
+- **Custom integrations**: Use the [DocumentHub user-defined APIs](xref:DH_UDAPI) to integrate with DocumentHub over HTTP.
 
 Document usage is handled by the consuming application, allowing each app to control how documents are displayed and managed within its context.
 

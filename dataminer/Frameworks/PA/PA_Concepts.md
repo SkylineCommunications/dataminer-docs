@@ -1,5 +1,6 @@
 ---
 uid: PA_Concepts
+description: "Explore Process Automation concepts, including activities, process definitions, DOM instances, queue elements, tokens, and the PA app."
 ---
 
 # Process Automation concepts

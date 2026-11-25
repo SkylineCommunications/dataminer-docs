@@ -8,9 +8,8 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes](xref:KI_SLAutomation_ScriptRunner_missing_assemblies) | Feature Release versions from DataMiner 10.6.9 onwards | | September 16, 2026 |
-| [Swarmed scheduled task executes incorrect action after editing](xref:KI_Swarmed_scheduled_task_executes_incorrect_action) | Feature Release versions from DataMiner 10.6.3 onwards | | September 7, 2026 |
-| [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
+| [NATSForceManualConfig ignored after BrokerGateway migration rollback](xref:KI_NATSForceManualConfig_ignored_after_BrokerGateway_migration_rollback) | From DataMiner 10.5.0 [CU1]/10.5.4 onwards | | November 24, 2026 |
+| [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.10 onwards | | October 8, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
@@ -23,9 +22,14 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
+| [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 | October 9, 2026 |
+| [Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes](xref:KI_SLAutomation_ScriptRunner_missing_assemblies) | Feature Release versions from DataMiner 10.6.9 onwards | DataMiner 10.6.11/10.7.0 | September 16, 2026 |
+| [Swarmed scheduled task executes incorrect action after editing](xref:KI_Swarmed_scheduled_task_executes_incorrect_action) | Feature Release versions from DataMiner 10.6.3 onwards | DataMiner 10.7.0/10.7.1 | September 7, 2026 |
 | [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | DataMiner 10.6.0 [CU8]/10.6.11 | August 12, 2026 |
 | [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
+| [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | DataMiner 10.6.8/10.7.0 | July 2, 2026 |
 | [Alarm storm prevention user settings not visualized correctly](xref:KI_Cube_Alarm_storm_prevention) | DataMiner Cube 10.5.0 [CU13]/10.6.0 [CU1]/10.6.4 | DataMiner Cube 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5 | 15 April, 2026 |
 | [GQI DxM unavailable because of missing Newtonsoft.Json assembly](xref:KI_GQI_DxM_unavailable_missing_Newtonsoft_Json) | DataMiner web 10.5.0 [CU1]/10.5.4 or higher | DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 | 25 March, 2026 |
 | [SLNet handle leak caused by SAML authentication and SLHelper startup](xref:KI_SLNet_handle_leak_caused_by_SAML_authentication_and_SLHelper_startup) | DataMiner 10.5.0 [CU12], 10.6.0, and 10.6.3 [CU0] | DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 [CU1] | February 25, 2026 |
@@ -42,6 +46,8 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [NATSForceManualConfig ignored after BrokerGateway migration rollback](xref:KI_NATSForceManualConfig_ignored_after_BrokerGateway_migration_rollback) | From DataMiner 10.5.0 [CU1]/10.5.4 onwards | | November 24, 2026 |
+| [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.10 onwards | | October 8, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
 | [Upgrade fails because of VerifyGRPCConnection.dll prerequisite](xref:KI_Upgrade_fails_VerifyGRPCConnection_prerequisite) | From DataMiner 10.5.10 onwards | | August 11, 2025 |
@@ -55,6 +61,8 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
+| [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 | October 9, 2026 |
 | [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 | September 7, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | DataMiner 10.6.0 [CU8]/10.6.11 | August 12, 2026 |
 | [Not possible to change Failover configuration after migration to BrokerGateway](xref:KI_Failover_configuration_cannot_be_changed_with_BrokerGateway) | From DataMiner 10.5.0 [CU4]/10.5.7 onwards after migration to BrokerGateway | DataMiner 10.6.0 [CU5]/10.6.8 | July 13, 2026 |
@@ -101,6 +109,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.10 onwards | | October 8, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [SLProtocol crash when restarting elements used by enhanced services](xref:KI_SLProtocol_Crash_Enhanced_Services) | All DataMiner versions | | November 8, 2024 |
@@ -112,6 +121,8 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
+| [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 | October 9, 2026 |
 | [Data loss after Elasticsearch to OpenSearch migration](xref:KI_Data_loss_after_ES_to_OS_migration) | DataMiner Systems with dedicated clustered storage that have performed an Elasticsearch to OpenSearch migration | DataMiner 10.6.0 [CU8]/10.6.11 | August 12, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [QActions fail for element after uploading new protocol version](xref:KI_QActions_fail_after_upload_protocol_version) | From DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9 onwards | DataMiner 10.5.0 [CU11]/10.6.2 | November 19, 2025 |
@@ -165,6 +176,7 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
+| [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.10 onwards | | October 8, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
 | [User locked out after single failed login attempt](xref:KI_user_locked_out_after_single_failed_attempt) | From DataMiner 9.5.0 [CU12]/9.6.3 onwards | | May 20, 2025 |
 | [Sticky element alarm state caused by correlation rules](xref:KI_sticky_element_alarm_state_caused_by_correlation_rules) | From DataMiner 10.2.0 onwards | | October 25, 2024 |
@@ -173,6 +185,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
 | [Blank page shown when opening web applications directly in Chromium-based browsers](xref:KI_Blank_page_shown_when_opening_web_apps_in_Chromium-based_Browsers) | All DataMiner versions | Chromium version M143 | December 10, 2025 |
 | [SLDataGateway memory leak caused by excessive Cassandra query timeout](xref:KI_SLDataGateway_memory_leak_excessive_Cassandra_timeout) | From DataMiner 10.3.0 [CU6]/10.3.6 onwards | DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 | October 21, 2025 |
 | [gRPC-connected Cube not responding when Automation module is used](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation) | See [detailed page](xref:KI_gRPC_connected_Cube_stuck_when_using_Automation). | DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10 | September 17, 2025 |

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.VersionHistory.Branches.Branch.SystemVersions.SystemVersion.MajorVersions.MajorVersion.MinorVersions.MinorVersion
+description: "Use the MinorVersion element in a DataMiner protocol to define a minor version along with its release date, provider, and changes."
 ---
 
 # MinorVersion element

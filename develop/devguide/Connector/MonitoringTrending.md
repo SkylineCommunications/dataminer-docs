@@ -1,5 +1,6 @@
 ---
 uid: MonitoringTrending
+description: "Configure parameter trending in DataMiner connectors, understand real-time and average calculations, manage history sets, and retrieve trend data."
 ---
 
 # Trending
@@ -8,7 +9,7 @@ DataMiner provides the possibility to show trend graphs of parameters indicating
 
 In a protocol, it is possible to define whether or not a parameter should support trending. If trending is not supported for a parameter, the parameter will not be included in the trend template.
 
-By default, trending is supported when RTDisplay of the parameter is set to true. Use the trending attribute of the Param tag to disable trend support:
+By default, trending is supported when RTDisplay of the parameter is set to true. Use the [trending](xref:Protocol.Params.Param-trending) attribute of the Param tag to disable trend support:
 
 ```xml
 <Param id="100" trending="false">
@@ -33,7 +34,7 @@ The following trend types can be defined in addition to the default average:
 - Min: Minimum value in the time span
 - Average: Average value in the time span (default when no trending tag is present)
 
- ```xml
+```xml
 <Display>
    <RTDisplay>true</RTDisplay>
    <Trending>
@@ -92,6 +93,8 @@ Below is a graphical representation of how an average trend graph is constructed
 In some cases, it is undesired that the window is automatically closed, as some data points that belong to a particular window are only received after the window has passed. For example, the window 10:35 to 10:40 closes at 10:40, but at 10:41:12 we obtain a data point with a corresponding timestamp of 10:39:00. As the window has already automatically closed, the average value has been calculated and therefore this data point was not used in the calculation of the average value of this window although this data point belongs to this window.
 
 In such cases, the [historySet](xref:Protocol.Params.Param-historySet) attribute can be used. When this attribute is set to true, the window will no longer be automatically closed. Instead, it will be closed when either a data point is provided with a timestamp that falls outside the window or a specific request is made to close the window.
+
+The [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package also provides `SetCell`, `SetColumns`, and dictionary-based `SetParameters` extension methods with an optional `DateTime? dateTime = null` parameter for performing history sets.
 
 The DataMiner class library (DCL) provides some methods that allow the performing of a history set. The following methods defined in the SLProtocol interface allow history settings:
 
@@ -153,42 +156,41 @@ public class QAction
     /// QAction entry point.
     /// </summary>
     /// <param name="protocol">Link with SLProtocol process.</param>
-    
     public static void Run(SLProtocol protocol)
     {
         int dmaID = protocol.DataMinerID;
         int elementID = protocol.ElementID;
         int parameterID = 100;
-        
+
         GetTrendDataMessage message = new GetTrendDataMessage(dmaID, elementID, parameterID)
         {
             TrendingType = TrendingType.Realtime,
-            ReturnAsObjects = true   
+            ReturnAsObjects = true,
         };
-        
+
         DMSMessage[] response = protocol.SLNet.SendMessage(message);
-        
+
         GetTrendDataResponseMessage resultMessage = (GetTrendDataResponseMessage)response[0];
-        
+
         var records = resultMessage.Records;
-        
+
         if (records != null)
         {
             foreach (string key in records.Keys)
             {
                 var trendRecords = records[key];
-        
+
                 foreach (TrendRecord trendRecord in trendRecords)
                 {
                     RealtimeTrendRecord realtimeTrendRecord = trendRecord as RealtimeTrendRecord;
-        
+
                     if (realtimeTrendRecord != null)
                     {
                         string value = realtimeTrendRecord.Value;
                         DateTime time = realtimeTrendRecord.Time;
                         int status = realtimeTrendRecord.Status;
-                
-                        ////...
+
+                        // ...
                     }
                 }
             }
@@ -200,6 +202,9 @@ public class QAction
 ### Retrieving average trend data of a column parameter
 
 ```csharp
+using System;
+using Skyline.DataMiner.Net.Messages;
+using Skyline.DataMiner.Net.Trending;
 using Skyline.DataMiner.Scripting;
 
 /// <summary>
@@ -217,44 +222,43 @@ public class QAction
         int elementID = protocol.ElementID;
         int columnID = 2004;
         string primaryKey = "1";
-        
-        GetTrendDataMessage message = new GetTrendDataMessage()
+
+        GetTrendDataMessage message = new GetTrendDataMessage
         {
             DataMinerID = dmaID,
             ElementID = elementID,
-            Parameters = new ParameterIndexPair[] { new ParameterIndexPair(columnID, primaryKey)
-            ,
+            Parameters = new ParameterIndexPair[] { new ParameterIndexPair(columnID, primaryKey) },
             StartTime = new DateTime(2017, 1, 14),
             EndTime = DateTime.Now,
             TrendingType = TrendingType.Average,
-            ReturnAsObjects = true
+            ReturnAsObjects = true,
         };
-            
+
         DMSMessage[] response = protocol.SLNet.SendMessage(message);
-            
-        GetTrendDataResponseMessage trendDataResponseMessage = (GetTrendDataResponseMessage) response[0];
-            
+
+        GetTrendDataResponseMessage trendDataResponseMessage = (GetTrendDataResponseMessage)response[0];
+
         var records = trendDataResponseMessage.Records;
-            
+
         if (records != null)
         {
             foreach (string key in records.Keys)
             {
                 var trendRecords = records[key];
-            
+
                 foreach (TrendRecord trendRecord in trendRecords)
                 {
                     AverageTrendRecord averageTrendRecord = trendRecord as AverageTrendRecord;
-            
+
                     if (averageTrendRecord != null)
-                    {         
+                    {
                         double average = averageTrendRecord.AverageValue;
                         double maximum = averageTrendRecord.MaximumValue;
                         double minimum = averageTrendRecord.MinimumValue;
                         DateTime time = averageTrendRecord.Time;
                         int status = averageTrendRecord.Status;
-            
-                        protocol.Log("QA" + protocol.QActionID + "|time: " + time + ", maximum: " + maximum + ", minimum: " + minimum, LogType.Error, LogLevel.NoLogging);
+
+                        protocol.Log($"QA{protocol.QActionID}|Run|time: {time}, maximum: {maximum}, minimum: {minimum}", LogType.Error, LogLevel.NoLogging);
                     }
                 }
             }
@@ -264,4 +268,4 @@ public class QAction
 ```
 
 > [!NOTE]
-> In the *ParameterIndexPair*, provide the key that is used to store the trend record. This is the primary key, except when the displayColumn attribute is used. In that case, provide the display key as this is the key used to store the trend record.
+> In the *ParameterIndexPair*, provide the key that is used to store the trend record. This is the primary key, except when the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute is used. In that case, provide the display key as this is the key used to store the trend record.

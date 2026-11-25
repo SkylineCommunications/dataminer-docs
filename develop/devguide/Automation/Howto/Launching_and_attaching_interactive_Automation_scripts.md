@@ -1,5 +1,6 @@
 ---
 uid: Launching_and_attaching_interactive_Automation_scripts
+description: "Launch interactive automation scripts from Cube or non-UI contexts, attach them to eligible users, and run them under a specific user."
 ---
 
 # Launching and attaching interactive automation scripts
@@ -19,7 +20,7 @@ If you want a script to show the UI when user interaction is required:
   - *Auto* (default): Automatic detection is used.
 
     > [!NOTE]
-    > The `Interactivity` element is supported from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 --> Older versions always use automatic detection.
+    > The [Interactivity](xref:DMSScript.Interactivity) element is supported from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 --> Older versions always use automatic detection.
 
 - If you rely on automatic detection:
 
@@ -38,11 +39,15 @@ This is why:
 If you want to show the UI to an active Cube user when prompted, use the following configuration:
 
 ```csharp
+const int timeoutSeconds = 90;
+
 if (!engine.FindInteractiveClient("Scheduled task requires operator input to proceed.", timeoutSeconds))
 {
     engine.ExitFail("No interactive client attached within the timeout. Aborting.");
 }
 ```
+
+The `FindInteractiveClient` timeout is specified in seconds. When it expires, the method returns `false`, so handle that result before continuing.
 
 This is why:
 
@@ -57,7 +62,9 @@ This is why:
 
 ## Auto-attaching a script to specific users from non-UI contexts
 
-If you want a script to automatically attach to specific users without prompting, there are several possibilities, as illustrated by the following examples:
+If you want a script to automatically attach to specific users without prompting, there are several possibilities, as illustrated by the following examples.
+
+In these examples, `timeoutSeconds` is the number of seconds to wait, for example `const int timeoutSeconds = 90;`.
 
 - Example: Attach immediately to users **in specified groups**.
 
@@ -86,6 +93,7 @@ A QAction that was triggered by a user clicking on a button parameter will know 
 
 ```csharp
 string id = protocol.UserCookie;
+
 // Formats may vary, e.g.:
 // C57D3BEFAD4F445B9BC37B9FAFB84ADB
 // 39D49F3E377C4B6D94AF5F4731C8052D:NO_INFORMATION
@@ -102,6 +110,7 @@ From an SLNet connection:
 
 ```csharp
 Guid id = protocol.GetUserConnection().ConnectionID;
+
 // example: 448BB4B8-4E55-4CB7-BCC3-848923BD19DA
 // Note: protocol.SLNet and Engine.SLNetRaw cookies are process-associated, not user-associated.
 ```
@@ -135,6 +144,6 @@ If you want to run a script as if launched by a specific user, so no extra scrip
           $"USER:{userCookie}",
       }),
   };
-
+  
   connection.SendSingleResponseMessage(executeScriptMessage);
   ```

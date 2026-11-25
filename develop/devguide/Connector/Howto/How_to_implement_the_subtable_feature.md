@@ -1,5 +1,6 @@
 ---
 uid: How_to_implement_the_subtable_feature
+description: "Implement the SNMP Subtable feature to poll only selected rows, using a hidden source table, filter table, and index parameters."
 ---
 
 # How to implement the Subtable feature
@@ -37,10 +38,11 @@ The table definition in the connector for the *SAP Base Info Hidden* table:
 
 ```xml
 <Param id="4600">
-    <Name>sapBaseInfoHiddenTable</Name>
-    <Description>SAP Base Info Hidden</Description>
+    <Name>SAPBaseInfoHidden</Name>
+    <Description>Hidden SAP Base Info</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";naming=:4605">
+    <ArrayOptions index="0">
+        <NamingFormat>,4605</NamingFormat>
         <ColumnOption idx="0" pid="4601" type="snmp" options=""/>
         <ColumnOption idx="1" pid="4602" type="snmp" options=""/>
         <ColumnOption idx="2" pid="4603" type="snmp" options=""/>
@@ -78,7 +80,7 @@ First, you need a dropdown list containing all the different available rows. In 
 
 ```xml
 <Param id="4673" trending="false">
-    <Name>sapFilterSelect</Name>
+    <Name>SAPFilterSelect</Name>
     <Description>Select SAP Filter</Description>
     <Information>
         <Subtext><![CDATA[Selecting a SAP from this list and adding it to the filter, will add this SAP to the SAP polling filter. The SAP will then be polled in the SAP tables.]]></Subtext>
@@ -131,11 +133,12 @@ Another important point is that, because of the nature of the feature, there is 
 With this in mind, your table definition should look something like this:
 
 ```xml
-<Param id="4100" trending="false">
-    <Name>sapBaseInfoTable</Name>
+<Param id="4100">
+    <Name>SAPBaseInfo</Name>
     <Description>SAP Base Info</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";naming=:4199">
+    <ArrayOptions index="0">
+        <NamingFormat>,4199</NamingFormat>
         <ColumnOption idx="0" pid="4200" type="snmp" options="" />
         <ColumnOption idx="1" pid="4134" type="snmp" options="" />
         <ColumnOption idx="2" pid="4101" type="snmp" options=";foreignKey=8300" />

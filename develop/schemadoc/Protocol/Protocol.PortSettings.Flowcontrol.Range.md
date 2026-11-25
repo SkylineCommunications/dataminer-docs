@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Flowcontrol.Range
+description: "Use the Range element in a DataMiner protocol to define an allowed range of flow control values for an element connection."
 ---
 
 # Range element

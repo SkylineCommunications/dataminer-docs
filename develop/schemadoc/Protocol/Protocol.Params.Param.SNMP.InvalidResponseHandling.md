@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.InvalidResponseHandling
+description: "Use the InvalidResponseHandling element in a DataMiner protocol to configure the response handling strategy for invalid SNMP responses."
 ---
 
 # InvalidResponseHandling element

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.SNMP.TrapMappings.TrapMapping-value
+description: "Use the value attribute in a DataMiner protocol to define the alarm value text for an SNMP TrapMapping element."
 ---
 
 # value attribute

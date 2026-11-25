@@ -20,8 +20,8 @@ uid: Exception_handling
 
 - The ToString method of the exception object should be used when exception-related information is logged (instead of the Message property).
 
-	```txt
-	protocol.Log("QA" + protocol.QActionID + "|Method Name|" + e.ToString(), LogType.Error, LogLevel.NoLogging);
-	```
+    ```csharp
+    protocol.Log($"QA{protocol.QActionID}|Method Name|{e}", LogType.Error, LogLevel.NoLogging);
+    ```
 
  - An unhandled exception in a thread that outlasts the QAction that initiated it causes the SLScripting process to crash. See [Multithreading](xref:Multithreading1) for more information. 

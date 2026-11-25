@@ -2,10 +2,10 @@
 uid: General_Main_Release_10.5.0_CU20
 ---
 
-# General Main Release 10.5.0 CU20 - Preview
+# General Main Release 10.5.0 CU20
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!IMPORTANT]
 > Before you upgrade to this DataMiner version:
@@ -60,12 +60,6 @@ From now on, the `VerifyDotNetVersion` prerequisite check will no longer check w
 Microsoft .NET 10 remains required.
 
 ### Fixes
-
-#### Deleted-service information events would no longer have the service impact of the deleted service [ID 46195]
-
-<!-- MR 10.5.0 [CU20] / 10.6.0 [CU8] - FR 10.6.11 -->
-
-Up to now, when a service was deleted, the generated deleted-service information event would incorrectly no longer have the service impact of that deleted service.
 
 #### Stopping an element with a logger table could cause SLProtocol to stop unexpectedly [ID 46299]
 

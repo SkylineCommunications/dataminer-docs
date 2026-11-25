@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.SearchChain.Tabs.Tab
+description: "Use the Tab element in a DataMiner protocol to define a search result tab for a table, with optional naming, display, and fields."
 ---
 
 # Tab element

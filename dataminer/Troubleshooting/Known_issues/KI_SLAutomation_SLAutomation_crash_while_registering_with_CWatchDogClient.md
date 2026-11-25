@@ -14,7 +14,7 @@ When a DataMiner Agent starts up, the SLAutomation process registers with the CW
 
 ## Fix
 
-No fix is available yet.<!-- https://collaboration.dataminer.services/task/296159 -->
+Install DataMiner 10.6.8/10.7.0.<!-- RN 45651 -->
 
 ## Issue description
 

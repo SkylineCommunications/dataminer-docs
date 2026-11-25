@@ -1,17 +1,18 @@
 ---
 uid: UIComponentsTitle
+description: "Define a title in the DataMiner UI with a fixed parameter, the title measurement type, and an optional line below it."
 ---
 
 # Title
 
 Allows you to display a title in the UI.
 
-To define a title, create a parameter of type "fixed". In the Measurement tag, set Type to "title". To add a line below the title, use the options attribute.
+To define a title, create a parameter of type "fixed". In the `Measurement` tag, set `Type` to "title". To add a line below the title, use the `options` attribute.
 
 ```xml
-<Param id="280" trending="false">
-  <Name>TitleSoftwareManagement</Name>
-  <Description>TitleSoftwareManagement</Description>
+<Param id="280">
+  <Name>TitleBegin_SoftwareManagement</Name>
+  <Description>Software Management</Description>
   <Type>fixed</Type>
   <Display>
     <RTDisplay>true</RTDisplay>

@@ -12,7 +12,7 @@ For most script actions, variables are required. There are several kinds of vari
 
 - **Memory files**: Containers of values, typically provided by the script itself.
 
-- **Credentials**: These allow a script to use credentials stored in the [Credentials Library](xref:Credentials_Library). Available from DataMiner 10.7.0/10.6.10 onwards<!--RN 44282--><!--RN 46229-->.
+- **Credentials**: These allow a script to use credentials stored in the [Credentials Library](xref:Credentials_Library). Available from DataMiner 10.6.10/10.7.0 onwards (with Cube 10.6.11/10.7.0 or higher)<!--RN 44282--><!--RN 46229--><!--RN 46251-->.
 
 When you add a script action that contains a variable, a line will automatically be added in the section in question. However, depending on the script, it can be more convenient to make the variables first, and then create the script actions.
 
@@ -75,6 +75,8 @@ These files can be managed in DataMiner Cube, in the *memory files* tab of the A
 
 ## Creating a set of credentials
 
+Starting from DataMiner 10.6.10/10.7.0 (with Cube 10.6.11/10.7.0 or higher), you can add credentials from the [Credentials Library](xref:Credentials_Library) to a script:<!--RN 44282--><!--RN 46229--><!--RN 46251-->.
+
 1. Click *Add* in the *CREDENTIALS* section to add a new line in this section.
 
 1. Specify a name for the credentials next to *Name*.
@@ -84,7 +86,7 @@ These files can be managed in DataMiner Cube, in the *memory files* tab of the A
    The available types are:
 
    - *Username and password*: Credentials consisting of a username and password.
-   - *Token*: Credentials consisting of a token only. Available from DataMiner 10.6.11/10.7.0 onwards<!--RN 46251-->
+   - *Token*: Credentials consisting of a token only.
 
    > [!NOTE]
    > In the script XML, these types are stored as `UserNameAndPassword` and `Token`. See [Credential](xref:DMSScript.Credentials.Credential).

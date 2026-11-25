@@ -16,7 +16,7 @@ The certificate is available for download on our [Dojo Community platform](https
 Skyline Communications takes pride in the security of its products and wants to provide the necessary guarantees to its users. For this purpose, among others, an annual security assessment of DataMiner is carried out by a third-party security specialist. In these assessments, DataMiner's security posture has consistently been ranked as above average compared to other applications the security specialist assessed in recent years.
 
 > [!TIP]
-> For details on the 2025 security assessment, see [Annual DataMiner security assessment](https://community.dataminer.services/2025-dataminer-security-assessment/) on DataMiner Dojo.
+> For details on the 2026 security assessment, see [Annual DataMiner security assessment](https://community.dataminer.services/2026-dataminer-security-assessment/) on DataMiner Dojo.
 
 ## Microsoft Solutions Partner
 

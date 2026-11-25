@@ -1,5 +1,6 @@
 ---
 uid: FAQs_Support_Services
+description: "Explore DataMiner Support Services FAQs to review support fees, service credits, and renewal options."
 ---
 
 # Questions related to DataMiner Support Services

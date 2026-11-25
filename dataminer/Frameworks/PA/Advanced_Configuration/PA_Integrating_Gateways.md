@@ -1,5 +1,6 @@
 ---
 uid: PA_Integrating_Gateways
+description: "Find out how to integrate gateways into Process Automation. Configure JSON routing rules to control token flow across 5 inputs and 5 outputs."
 ---
 
 # Integrating gateways

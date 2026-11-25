@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-pollingRate
+description: "Use the pollingRate attribute in a DataMiner protocol to set a minimum polling interval for a specific SNMP table column."
 ---
 
 # pollingRate attribute
@@ -22,7 +23,7 @@ Use `pollingRate` to reduce the polling frequency for columns that change infreq
 
 > [!IMPORTANT]
 >
-> - The [`instance`](xref:ConnectionsSnmpRetrievingTables#instance-option) option must be enabled for the table.
+> - The [instance](xref:ConnectionsSnmpRetrievingTables#instance-option) option must be enabled for the table.
 > - When the [**GetNext**](xref:ConnectionsSnmpRetrievingTables#instance-option) polling method is used, all columns will still be polled, but the result will not be written to the column. Setting `pollingRate` has no practical effect in this case, so it is better not to use `pollingRate` with **GetNext**.
 
 > [!NOTE]

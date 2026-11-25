@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-cpeAlignment
+description: "Use the cpeAlignment attribute in a DataMiner protocol to align KPI values in EPM table columns to the left, center, or right."
 ---
 
 # cpeAlignment attribute
@@ -26,6 +27,6 @@ Default value: right.
 ## Examples
 
 ```xml
-<ColumnOption idx="6" pid="12507" type="custom" cpeAlignment="left" options=";view=2507 " />
-<ColumnOption idx="7" pid="12508" type="custom" cpeAlignment="center" options=";view=2508 " />
+<ColumnOption idx="6" pid="12507" type="retrieved" cpeAlignment="left" options=";view=2507 " />
+<ColumnOption idx="7" pid="12508" type="retrieved" cpeAlignment="center" options=";view=2508 " />
 ```

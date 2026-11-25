@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field-pid
+description: "Use the Field pid attribute in a DataMiner protocol to identify the parameter linked to a block in an EPM drill-down diagram."
 ---
 
 # pid attribute

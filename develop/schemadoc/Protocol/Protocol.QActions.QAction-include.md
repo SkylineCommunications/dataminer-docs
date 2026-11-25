@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-include
+description: "Learn how the QAction include attribute identifies legacy external JScript or VBScript files in ProtocolScripts for execution."
 ---
 
 # include attribute
@@ -16,4 +17,6 @@ string
 
 ## Remarks
 
-Use a semicolon as separator when multiple scripts are specified. The specified scripts must be present in the ProtocolScripts folder. Only applicable in case encoding is set to either JScript or VBScript (note that these are [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
+Use a semicolon as separator when multiple scripts are specified. The specified scripts must be present in the ProtocolScripts folder.
+
+Only applicable in case encoding is set to either JScript or VBScript. Note that these are [no longer supported](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement).

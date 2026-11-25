@@ -1,5 +1,6 @@
 ﻿---
 uid: BrokerGateway_Migration
+description: "Before upgrading to 10.6.0/10.6.1, make sure to migrate from the SLNet-managed NATS solution to the BrokerGateway-managed NATS solution."
 ---
 
 # Migrating to BrokerGateway
@@ -64,6 +65,8 @@ If you have disabled automatic NATS configuration via the [NATSForceManualConfig
 For example, applying manual configuration on only one DataMiner Agent in a 10‑Agent cluster will result in an inconsistent and incorrect setup. Applying the same manual configuration on all 10 Agents will correct this.
 
 #### Spaces in the NATS config
+
+This prerequisite is only relevant if you have disabled automatic NATS configuration via the [NATSForceManualConfig option](xref:Disabling_automatic_NATS_config).
 
 In `C:\Skyline DataMiner\NATS\nats-streaming-server\nats-server.config`, verify that the cluster name, gateway name, and server name do not contain spaces. For more information, see [NATS Documentation — System Errors](https://docs.nats.io/reference/system/errors#server-name-and-cluster-errors).
 
@@ -229,7 +232,9 @@ When recommended by Skyline, the migration can be run manually:
 
 ### Updating the Data Aggregator configuration
 
-[Data Aggregator](xref:Data_Aggregator_DxM) can connect to multiple DataMiner Systems. When a specific DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be manually updated by following the guide at [Data Aggregator Settings - DMS with BrokerGateway](xref:Data_Aggregator_settings#dms-with-brokergateway).
+This action is only relevant when [Data Aggregator](xref:Data_Aggregator_DxM) is in active use and it [connects to multiple DataMiner Systems](xref:Data_Aggregator_settings#multi-dms-connection).
+
+In this case, when a DMS is migrated to BrokerGateway, any Data Aggregator configuration that connects to this DMS must be manually updated by following the guide at [Data Aggregator Settings - DMS with BrokerGateway](xref:Data_Aggregator_settings#dms-with-brokergateway).
 
 > [!NOTE]
 > The Data Aggregator DxM does not work in combination with `ForcedEndpoints`.

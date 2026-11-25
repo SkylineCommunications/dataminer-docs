@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_exporting_data_to_csv
+description: "Learn how, using the SLNetClientTest tool, you can export data to a CSV file that is updated whenever the data is refreshed."
 ---
 
 # Exporting data to a CSV file

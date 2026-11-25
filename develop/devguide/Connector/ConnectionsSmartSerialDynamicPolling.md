@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSmartSerialDynamicPolling
+description: "Configure dynamic polling for a client smart-serial connection so you can change its IP address and port while the element remains active."
 ---
 
 # Dynamic polling
@@ -17,15 +18,15 @@ Create a parameter that has the [dynamic ip](xref:Protocol.Params.Param.Type-opt
 
 ```xml
 <Param id="400" trending="false" save="true">
-   <Name>Dynamic polling IP</Name>
-  ...
+   <Name>DynamicPollingIP</Name>
+   ...
    <Type options="dynamic ip 1">read</Type>
    <Interprete>
       <RawType>other</RawType>
       <LengthType>next param</LengthType>
       <Type>string</Type>
    </Interprete>
-  ...
+   ...
 </Param>
 ```
 

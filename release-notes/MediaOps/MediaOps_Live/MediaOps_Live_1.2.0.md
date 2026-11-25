@@ -3,10 +3,7 @@ uid: MediaOps_Live_1.2.0
 description: Highlights of the features, enhancements, and fixes included in the MediaOps Live 1.2.0 release, including improved CSV encoding.
 ---
 
-# MediaOps Live 1.2.0 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Live 1.2.0
 
 > [!NOTE]
 > This version requires:
@@ -70,6 +67,12 @@ Existing orchestration scripts continue to work without any changes.
 
 To get started, take a look at the *MediaOps_Live_Example_DynamicOrchestration* example script, which is included in the MediaOps Live demo package. For more information on how to create a script with dynamic inputs, refer to the [orchestration script documentation](xref:MediaOpsLive_OrchestrationScript).
 
+### DevPack: Paged reading of orchestration events [ID 47041]
+
+The MediaOps Live DevPack now lets you read orchestration events page by page instead of loading every matching event at once. Use the new `OrchestrationHelper.ReadEventsPaged` method with a filter and an optional page size (default 500) to retrieve matching events in pages.
+
+This also resolves slow loading or timeouts when opening the search page of the Orchestration Events app.
+
 ## Fixes
 
 ### CSV import and export could handle special characters incorrectly [ID 46381]
@@ -77,3 +80,9 @@ To get started, take a look at the *MediaOps_Live_Example_DynamicOrchestration* 
 When importing endpoint or virtual signal group data from CSV files, special characters such as the degree symbol (°) could be parsed incorrectly, especially in files saved using the legacy Microsoft Excel CSV format.
 
 CSV imports now support both UTF-8 and Windows-1252 encoding, preserving special characters during import and provisioning. CSV exports now use UTF-8 encoding with a byte order mark (BOM), allowing Microsoft Excel to detect the encoding correctly when opening exported files.
+
+### Orchestration failed when script used profile definition with capability or capacity parameters [ID 46686]
+
+When an orchestration script used a profile definition containing capability or capacity parameters, every scheduled or manual orchestration of that script failed with an "Object reference not set to an instance of an object" null reference exception, even when the parameter values were linked to the node's capabilities and capacities.
+
+Orchestration scripts now run as expected for these profile definitions. In addition, values stored in profile instances for capability and capacity parameters are now also picked up: they appear as preset values and are used when a profile instance is passed to the script as input.

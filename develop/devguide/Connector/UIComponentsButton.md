@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsButton
+description: "Define a button as a write parameter with discreet labels, a minimum width, and a QAction or trigger flow that runs when a user clicks it."
 ---
 
 # Button
@@ -8,10 +9,14 @@ A button is a write parameter used to invoke an action when it is activated.
 
 To define a button:
 
-1. Create a parameter of type "write" and set the Measurement Type to "button".
-1. Add a Discreets tag. Each Discreet tag that is added will introduce an additional button on the parameters row (e.g., putting two Discreet tags in the Discreets tag will result in two buttons). The Discreet Display text is the text that will appear on the button.
+1. Create a parameter of type "write" and set `Measurement.Type` to "button".
+
+1. Add a `Discreets` tag. Each `Discreet` tag that is added will introduce an additional button on the parameters row (e.g., putting two `Discreet` tags in the `Discreets` tag will result in two buttons). The `Discreet.Display` text is the text that will appear on the button.
+
 1. Define a button width (the value must be at least 110).
+
 1. When the button is pressed, an operation must be performed. Implement this by defining:
+
     - either a QAction that is executed each time the button is clicked,
     - or a trigger that triggers on a button parameter change and an action (or multiple actions) that get initiated by the trigger.
 
@@ -42,7 +47,7 @@ To define a button:
 > [!NOTE]
 >
 > - Typically, the description tag is left empty when a button is defined.
-> - A button is a write parameter with the intent to invoke an action when it is activated. Setting another parameter is not its goal, so it should not have a matching read parameter using the setter attribute.
+> - A button is a write parameter with the intent to invoke an action when it is activated. Setting another parameter is not its goal, so it should not have a matching read parameter using the [setter](xref:Protocol.Params.Param-setter) attribute.
 
 ![DataMiner Cube button](~/develop/images/uibutton.png)
 

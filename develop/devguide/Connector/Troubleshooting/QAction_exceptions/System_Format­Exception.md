@@ -1,5 +1,6 @@
 ---
 uid: System_FormatException
+description: "Learn to avoid System.FormatException during type conversion by using TryParse and checking whether parsing succeeds."
 ---
 
 # System.FormatException
@@ -21,7 +22,7 @@ Use a *TryParse* when trying to convert items.
 
 ```csharp
 int iTest;
-if(Int32.TryParse(test, out iTest))
+if (Int32.TryParse(test, out iTest))
 ```
 
 This can optionally be combined with the if clause. When the parsing fails, the method will return false, and the out value will be set to the default value (which is 0 in case of an integer).

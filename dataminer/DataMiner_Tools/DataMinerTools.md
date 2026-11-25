@@ -1,5 +1,6 @@
 ---
 uid: DataMinerTools
+description: "Explore the wide variety of DataMiner tools available, such as the DataMiner Taskbar Utility, the SLNetClientTest tool, and many others."
 ---
 
 # Tools

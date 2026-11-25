@@ -1,5 +1,6 @@
 ---
 uid: FAQ_Principal_advantages
+description: "Explore DataMiner's principal advantages to learn how the platform supports your operational requirements."
 ---
 
 # What are the principal advantages of DataMiner?

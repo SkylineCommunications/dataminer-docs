@@ -1,5 +1,6 @@
 ---
 uid: SwarmingPrepare
+description: "Update scripts and connectors for Swarming by replacing legacy alarm references with globally unique AlarmTreeID-based references and current APIs."
 ---
 
 # Preparing scripts and connectors for Swarming
@@ -191,7 +192,7 @@ Once the Swarming feature has been enabled, running enhanced services using non-
     ```xml
     <Param id="7">
       <Name>raw_alarmid_input</Name>
-      <Description>raw_alarmid_input</Description>
+      <Description>Raw Alarm ID Input</Description>
       <Type>read</Type>
       <Interprete>
         <RawType>other</RawType>

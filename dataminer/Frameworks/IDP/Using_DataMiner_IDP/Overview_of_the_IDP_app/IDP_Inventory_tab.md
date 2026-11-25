@@ -1,5 +1,6 @@
 ---
 uid: IDP_Inventory_tab
+description: "Use the IDP app's Inventory tab to manage elements, discover and provision devices, reapply or reassign CI Types, and recreate deleted elements."
 ---
 
 # Inventory tab

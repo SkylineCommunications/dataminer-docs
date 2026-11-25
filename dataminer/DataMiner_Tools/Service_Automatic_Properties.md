@@ -1,5 +1,6 @@
 ---
 uid: Service_Automatic_Properties
+description: "Find out how the Service Automatic Properties prerequisite check verifies whether the SRM version is compatible with the automatic service properties."
 ---
 
 # Service Automatic Properties

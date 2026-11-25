@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_consulting_connection_details
+description: "Learn how, using the SLNetClientTest tool, you can check the connection details for a specific client or process."
 ---
 
 # Consulting connection details

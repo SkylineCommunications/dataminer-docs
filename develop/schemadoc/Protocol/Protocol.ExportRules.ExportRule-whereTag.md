@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ExportRules.ExportRule-whereTag
+description: "Use the whereTag attribute in a DataMiner protocol to specify the XML element whose value is checked in an export rule condition."
 ---
 
 # whereTag attribute
@@ -22,7 +23,7 @@ Example:
 
   ```xml
   <Param id="1">
-      <Name>My param</Name>
+      <Name>MyParam</Name>
       <Positions>
           <Position>
               <Page>General</Page>
@@ -32,7 +33,7 @@ Example:
       </Positions>
   </Param>
   <Param id="2">
-      <Name>Other param</Name>
+      <Name>OtherParam</Name>
       <Positions>
           <Position>
               <Page>General</Page>
@@ -46,14 +47,14 @@ Example:
 - Export rule:
 
   ```xml
-  <ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Row" value="2" whereTag="Protocol/Params/Param/Name" whereValue="My param" />
+  <ExportRule table="*" tag="Protocol/Params/Param/Display/Positions/Position/Row" value="2" whereTag="Protocol/Params/Param/Name" whereValue="MyParam" />
   ```
 
 - Result:
 
   ```xml
   <Param id="1">
-      <Name>My param</Name>
+      <Name>MyParam</Name>
       <Positions>
           <Position>
               <Page>General</Page>
@@ -63,7 +64,7 @@ Example:
       </Positions>
   </Param>
   <Param id="2">
-      <Name>Other param</Name>
+      <Name>OtherParam</Name>
       <Positions>
           <Position>
               <Page>General</Page>

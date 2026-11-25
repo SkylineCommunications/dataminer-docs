@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SetCommunity
+description: "Use the SetCommunity element in a DataMiner protocol to configure the default value and editability of the SNMP set community string."
 ---
 
 # SetCommunity element

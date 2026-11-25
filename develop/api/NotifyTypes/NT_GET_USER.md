@@ -8,12 +8,11 @@ Retrieves the user.
 
 ```csharp
 var userCookie = protocol.UserCookie;
-var user = (string) protocol.NotifyDataMiner(108 /* NT_GET_USER */, userCookie, null);
+var user = (string)protocol.NotifyDataMiner(108 /* NT_GET_USER */, userCookie, null);
 
 if (!String.IsNullOrEmpty(user))
 {
-   //// ...
-
+   // ...
 }
 ```
 

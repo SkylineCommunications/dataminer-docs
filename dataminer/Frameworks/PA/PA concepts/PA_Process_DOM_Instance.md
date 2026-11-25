@@ -1,5 +1,6 @@
 ---
 uid: PA_Process_DOM_Instance
+description: "Use a process DOM instance to store and exchange data between activities and provide fields for gateway decisions, but not to update lists."
 ---
 
 # Process DOM instance

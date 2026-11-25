@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-inputParameters
+description: "Learn how the inputParameters attribute passes specified parameter values to functions inside a QAction script."
 ---
 
 # inputParameters attribute
@@ -16,4 +17,4 @@ Specifies the IDs of the parameters that will be passed to functions inside the 
 
 ## Remarks
 
-Multiple values have to be separated by semicolons (”;”).
+Multiple values have to be separated by semicolons (";").

@@ -1,5 +1,6 @@
 ---
 uid: QuestionsAndAnswers
+description: "Review answers to connector development questions about SNMP tables and instances, table searches, communication issues, and group execution actions."
 ---
 
 # Questions & Answers
@@ -62,7 +63,7 @@ uid: QuestionsAndAnswers
 1. *What is the meaning of this piece of code taken from a parameter with ID 200? Is there something missing in order for this code to work? If so, what is missing?*
 
     ```xml
-    <ColumnOption idx="9" pid="210" type="custom" value="" options=";foreignKey=100"/>
+    <ColumnOption idx="9" pid="210" type="retrieved" options=";foreignKey=100"/>
     ```
 
     The use of the option "foreignKey=100" puts an integrity constraint on the values of this column. It states that the values of this column refer to values from the primary key column of table with ID 100.
@@ -103,7 +104,7 @@ uid: QuestionsAndAnswers
 
     - On the Protocol.Type tag, specify `exportProtocol:[protocol name]:[tableID]"` in the options tag. Multiple exportProtocols can be separated with semicolons. The "noElementPrefix" option can be used to leave out the parent element name in the virtual element name.
 
-       ```xml
+      ```xml
       <Type options="exportProtocol:Workflow Server:100">snmp</Type>
       <Type options="exportProtocol:Workflow Server:100:noElementPrefix">snmp</Type>
       <Type options="exportProtocol:Workflow Server:100;exportProtocol:Workflow Server2:200">snmp</Type>
@@ -112,7 +113,7 @@ uid: QuestionsAndAnswers
     - An additional column needs to be created that has the option "element". This column will contain the global element ID ("DMA ID/element ID") values of the virtual elements that will be created. On the ColumnOption tag of the table, you define the option "element".
 
       ```xml
-      <ColumnOption idx="11" pid="112" type="custom" value="" options=";element"/>
+      <ColumnOption idx="11" pid="112" type="retrieved" options=";element"/>
       ```
 
     - On the parameters you want to export to the DVE, define the attribute `export="true"` or `export="table id"` for a specific export when using multiple exports. When working with a referenced table, do not forget to use the foreignKey option and define relations. If you put the export attribute only on the columns, they will be exported as standalone parameters (possible in 1-1 relation).
@@ -120,7 +121,7 @@ uid: QuestionsAndAnswers
 1. *Is there a mistake in the code below?*
 
    ```xml
-    <ColumnOption idx="1" pid="305" type="retrieved" value="" options="save"/>
+    <ColumnOption idx="1" pid="305" type="retrieved" options="save"/>
     ```
 
     There should be a semicolon (`;`) before the save.
@@ -227,8 +228,8 @@ uid: QuestionsAndAnswers
     To retrieve the delta between two consecutive group executions (in ms) from within a QAction:
 
     ```csharp
-    int delta = Convert.ToInt32(protocol.NotifyProtocol(269/*NT_GET_BITRATE_DELTA*/, 1500, null));
-    protocol.Log("QA" + protocol.QActionID + "|" + string.Format("Delta on group 1500:{0}", delta), LogType.Error, LogLevel.NoLogging);
+    int delta = Convert.ToInt32(protocol.NotifyProtocol(269 /*NT_GET_BITRATE_DELTA*/, 1500, null));
+    protocol.Log($"QA{protocol.QActionID}|Delta on group 1500:{delta}", LogType.Error, LogLevel.NoLogging);
     ```
 
 1. *What is the purpose of "name resolution"? What else can you say about it?*
@@ -257,9 +258,11 @@ uid: QuestionsAndAnswers
         if (rowIndex != 0)
         {
             int parameterID = Convert.ToInt32(protocol.GetParameterIndex(50, j, 2));
+        }
+    }
     ```
 
-    First the key is retrieved from a row, then there is a check if the key actually exist in the table before a cell is retrieved. This is unnecessary code.
+    First the key is retrieved from a row, then there is a check if the key actually exists in the table before a cell is retrieved. This is unnecessary code. Moreover, retrieving cells row by row in a loop using `GetParameterIndex` causes excessive inter-process communication; instead, retrieve the required columns in bulk using `protocol.GetColumns(50, new uint[] { 0, 1 })` from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package.
 
 1. *What is the main difference between a serial and a smart serial connector?*
 
@@ -334,7 +337,7 @@ uid: QuestionsAndAnswers
 
 1. *Under which circumstances can `row=true` work and when not?*
 
-    `row=true` will work when the QAction triggers on a write column parameter, a read column parameter, or a table parameter (for SNMP tables). It is useless on a QAction that does not trigger on table-related parameters.
+    `row="true"` works when the QAction triggers on a write column parameter, a read column parameter, or a table parameter (for SNMP tables), or when it is executed via [multithreaded timer](xref:AdvancedMultiThreadedTimers) options. A QAction with `row="true"` cannot be used with single parameters.
 
 1. *Is it OK to have an "After Startup" trigger to run a "Run Actions" action?*
 

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.ParametersView-options
+description: "Use the options attribute in a DataMiner protocol to set the chart height in pixels for a parameter displayed as a chart."
 ---
 
 # options attribute
@@ -26,7 +27,7 @@ In the following example, Parameter 40 displays the CPU values of all SL* proces
 
 ```xml
 <Param id="40">
-    <Name>DataMiner CPU</Name>
+    <Name>DataMinerCPU</Name>
     <Description>DataMiner CPU</Description>
     <Type>read</Type>
     <Display>

@@ -1,5 +1,6 @@
 ---
 uid: DMSScript.Script.Exe.Condition
+description: "Define a Condition element for an automation script if action, including its operands, comparison operator, logical combination, and referenced IDs."
 ---
 
 # Condition element
@@ -22,15 +23,15 @@ string
 |[compare](xref:DMSScript.Script.Exe.Condition-compare)|string||Specifies the operator to use in the Boolean expression.|
 |[pid](xref:DMSScript.Script.Exe.Condition-pid)|positiveInteger||Specifies the ID of the parameter that is referred to.|
 |[protocol](xref:DMSScript.Script.Exe.Condition-protocol)|positiveInteger||Specifies the ID of the dummy script variable that is referred to.|
-|[ref](xref:DMSScript.Script.Exe.Condition-ref)|string||In case the right hand operand is a script variable, this attribute specifies the script variable that is referred to.|
-|[type](xref:DMSScript.Script.Exe.Condition-type)|string||Specifies whether the left hand operand of the Boolean expression is a script variable or a parameter value.|
+|[ref](xref:DMSScript.Script.Exe.Condition-ref)|string||In case the right-hand operand is a script variable, this attribute specifies the script variable that is referred to.|
+|[type](xref:DMSScript.Script.Exe.Condition-type)|string||Specifies whether the left-hand operand of the Boolean expression is a script variable or a parameter value.|
 |[var](xref:DMSScript.Script.Exe.Condition-var)|string||Specifies the name of the script variable.|
 
 ## Remarks
 
 Used in a script action of type "if".
 
-In case the right operand of the Boolean expression is a condition that uses a specific value, the content of Condition specifies the value (In case the right hand operand of the Boolean expression is a script variable, the ref attribute specifies the script variable).
+In case the right operand of the Boolean expression is a condition that uses a specific value, the content of Condition specifies the value (In case the right operand of the Boolean expression is a script variable, the `ref` attribute specifies the script variable).
 
 ## Examples
 

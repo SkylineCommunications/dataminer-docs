@@ -1,5 +1,6 @@
 ---
 uid: FAQ_DataMiner_roadmap
+description: "Explore the four DataMiner roadmap pillars, from multivendor integration and service orchestration to OSS/NMS workflows and AI-driven operations."
 ---
 
 # What is the DataMiner roadmap?

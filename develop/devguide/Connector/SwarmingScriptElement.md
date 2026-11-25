@@ -1,5 +1,6 @@
 ---
 uid: SwarmingScriptElement
+description: "Build an automation script with SwarmingHelper to swarm elements using fixed values or input parameters to a target DataMiner Agent."
 ---
 
 # Configuring a script to swarm elements
@@ -26,25 +27,25 @@ As a first step, create a short automation script that will swarm a fixed elemen
    using Skyline.DataMiner.Automation;
    using Skyline.DataMiner.Net;
    using Skyline.DataMiner.Net.Swarming.Helper;
-
+   
    public class Script
    {
-     public void Run(Engine engine)
-     {
-       ElementID element = ElementID.FromString("[element-key]");
-       int targetAgentId = [target-agent-id];
-
-       var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
-           .SwarmElement(element)
-           .ToAgent(targetAgentId);
-
-       var swarmingResultForElement = swarmingResults.First();  
-
-       if (!swarmingResultForElement.Success)
+       public void Run(Engine engine)
        {
-         engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
+           ElementID element = ElementID.FromString("[element-key]");
+           int targetAgentId = [target-agent-id];
+   
+           var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
+               .SwarmElement(element)
+               .ToAgent(targetAgentId);
+   
+           var swarmingResultForElement = swarmingResults.First();
+   
+           if (!swarmingResultForElement.Success)
+           {
+               engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
+           }
        }
-      }
    }
    ```
 
@@ -69,7 +70,7 @@ var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
 The lines above communicate with SLNet to request a swarming action for a given element. As part of this action, the element will first be unloaded from the Agent where it was previously hosted and then loaded onto the new host.
 
 ```csharp
-var swarmingResultForElement = swarmingResults.First();  
+var swarmingResultForElement = swarmingResults.First();
 
 if (!swarmingResultForElement.Success)
 {
@@ -115,21 +116,21 @@ using Skyline.DataMiner.Net.Swarming.Helper;
 
 public class Script
 {
-  public void Run(Engine engine)
-  {
-    var element = ElementID.FromString(engine.GetScriptParam("Element Key").Value);
-    int targetAgentId = Int32.Parse(engine.GetScriptParam("Target Agent ID").Value);
-    
-    var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
-        .SwarmElement(element)
-        .ToAgent(targetAgentId);
-
-    var swarmingResultForElement = swarmingResults.First();  
-
-    if (!swarmingResultForElement.Success)
+    public void Run(Engine engine)
     {
-      engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
+        var element = ElementID.FromString(engine.GetScriptParam("Element Key").Value);
+        int targetAgentId = Int32.Parse(engine.GetScriptParam("Target Agent ID").Value);
+
+        var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
+            .SwarmElement(element)
+            .ToAgent(targetAgentId);
+
+        var swarmingResultForElement = swarmingResults.First();
+
+        if (!swarmingResultForElement.Success)
+        {
+            engine.ExitFail($"Swarming failed: {swarmingResultForElement?.Message}");
+        }
     }
-  }
 }
 ```

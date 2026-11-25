@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group-type
+description: "Use the type attribute in a DataMiner protocol to set a parameter group DCF interface type to in, out, or inout."
 ---
 
 # type attribute

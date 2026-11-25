@@ -4,6 +4,9 @@ uid: General_Feature_Release_10.6.10
 
 # General Feature Release 10.6.10
 
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
+
 > [!TIP]
 >
 > - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.6.10](xref:Cube_Feature_Release_10.6.10).
@@ -32,7 +35,6 @@ Before you upgrade to this DataMiner version:
 The following changes may have an impact on your system, so please make sure to check these before you upgrade:
 
 - [DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]](#dataminer-key-vault-id-44075-id-44349-id-44350-id-44351-id-44352-id-44353-id-44354-id-44701-id-44702-id-44911-id-46047-id-46061)
-- [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Highlights
 
@@ -145,12 +147,6 @@ Because of a number of enhancements, overall performance has increased when reca
 
 The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
 
-#### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
-
 #### Automation: GetAvailableAutomationScripts now returns additional script information [ID 46140]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -189,15 +185,6 @@ The CloudStorageMigrationFinalize script, which should be run when [migrating ex
 On `ApiToken` objects, you can now enable notice generation when a token reaches its configured rate limit by setting `ApiTokenRateLimit.GenerateNotice` to `true`.
 
 When enabled, one notice can be generated per token when its rate limit is reached. Notices are not cleared automatically. If you clear a notice manually and the token hits its rate limit again, a new notice can be generated.
-
-#### Security enhancements [ID 46368] [ID 46411] [ID 46510] [ID 46515]
-
-<!-- 46368: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
-<!-- 46411: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
-<!-- 46510: MR 10.4.0 [CU22] / 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
-<!-- 46515: MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
-
-A number of security enhancements have been made.
 
 ### Fixes
 
@@ -297,14 +284,6 @@ This fixes the issue for paged DOM reads with a configured limit, ensuring the r
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 Up to now, the spectrum preset update event on parameter `SPA_SPARAM_PRESET_UPDATE` (PID 64216) could fail when the preset name contained a dot (`.`).
-
-#### Service property updates through class libraries could create invalid duplicate system-managed properties [ID 46370]
-
-<!-- MR 10.7.0 - FR 10.6.10 [CU0] -->
-
-When a class library incorrectly sent system-managed service properties as read-write, duplicate invalid properties could be created while preserving the original read-only properties, causing DataMiner to block the properties update.
-
-From now on, a compatibility safeguard removes invalid read-write duplicates before restoring the correct read-only system-managed properties. Custom service properties remain unaffected.
 
 #### Persistent element timeout caused by failed WMI actions [ID 46396]
 

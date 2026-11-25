@@ -6,7 +6,7 @@ keywords: AI assistant, chat component, AI component, DataMiner Assistant, Copil
 
 # Assistant chat
 
-The assistant chat component allows you to **interact with the [DataMiner Assistant](xref:DataMinerAssistant) directly from a dashboard or low-code app**, without leaving the page. You can submit questions using text or voice input and, depending on the available configuration, choose a response mode and AI model before sending your request.
+The assistant chat component allows you to **interact with the [DataMiner Assistant](xref:Intelligence_Assistant_app) directly from a dashboard or low-code app**, without leaving the page. You can submit questions using text or voice input and, depending on the available configuration, choose a response mode and AI model before sending your request.
 
 The DataMiner Assistant is currently in development and available as a preview feature upon request. When preview access is enabled, the assistant chat component also becomes available.
 

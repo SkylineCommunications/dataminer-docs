@@ -1,5 +1,6 @@
 ---
 uid: Standalone_Cassandra_Cluster_Installer
+description: "Find out how the deprecated Standalone Cassandra Cluster installer was used to install Cassandra 3.11.8 on Windows."
 ---
 
 # Standalone Cassandra Cluster installer

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Threads.Thread-connection
+description: "Learn how the Thread connection attribute assigns one or more connection IDs to an additional protocol execution thread."
 ---
 
 # connection attribute

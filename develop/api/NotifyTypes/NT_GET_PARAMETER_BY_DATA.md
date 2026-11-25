@@ -6,6 +6,9 @@ uid: NT_GET_PARAMETER_BY_DATA
 
 Gets the parameter value corresponding with the parameter that has the specified data stored in the ElementData.xml file.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(87, ...)` directly, we recommend using [SLProtocol.GetParameterByData](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameterByData(System.String)).
+
 ```csharp
 string data = "Data";
 object result = protocol.NotifyProtocol(87, data, null);
@@ -14,11 +17,11 @@ if (result != null)
 {
     double value = (double)result;
 
-    ////...
+    // ...
 }
 else
 {
-    ////...
+    // ...
 }
 ```
 

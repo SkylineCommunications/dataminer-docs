@@ -1,5 +1,6 @@
 ---
 uid: Overview_adding_third_party_connectors
+description: "Find out how third-party connectors can be added to the DataMiner Catalog. Compare free publication with paid CI/CD validation and quality gate checks."
 ---
 
 # How are third-party connectors added?
@@ -20,6 +21,7 @@ On request, anyone can add a connector to the [Catalog](xref:About_the_Catalog_a
    - Goal: pass the CI/CD process without errors.
    - Visualization: Skyline visually identifies the owner as the third-party provider, and optionally, the column on the right in the Catalog can display the following status info: "SLC Quality Gate Pass: Yes".
    - Benefits:
+
      - The third-party customer has a verified connector available for download.
      - The third-party customer has access to Catalog benefits.
 

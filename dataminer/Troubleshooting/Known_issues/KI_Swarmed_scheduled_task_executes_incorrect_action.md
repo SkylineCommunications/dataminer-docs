@@ -15,7 +15,7 @@ When a [scheduled task is swarmed](xref:SwarmingScheduledTasks) and subsequently
 
 ## Fix
 
-No fix is available yet.
+Install DataMiner 10.7.0/10.7.1<!-- RN 46728 -->.
 
 ## Workaround
 

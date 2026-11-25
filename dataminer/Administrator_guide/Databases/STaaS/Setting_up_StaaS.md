@@ -1,7 +1,7 @@
 ---
 uid: Setting_up_StaaS
 description: "To set up STaaS on a self-managed DMS, connect the system to dataminer.services, register, edit DB.xml on each DMA, and restart DataMiner."
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Setting up STaaS
@@ -34,12 +34,54 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
 
 - All Agents in your DataMiner System must have internet access, either directly or through a proxy.
 
-  For specific endpoints or IPs to whitelist, contact <support@dataminer.services>. The configuration depends on the region you will register your system for.
+  If a firewall restricts outbound traffic, you can whitelist STaaS based on hostnames or based on IP addresses. See [Hostnames and IP addresses to whitelist](#hostnames-and-ip-addresses-to-whitelist).
 
   > [!NOTE]
   > All communication for STaaS happens through HTTPS. The DataMiner System initiates all outbound connections.
 
 - DataMiner CloudGateway version 2.8.0 or higher. See [Upgrading nodes to the latest DxM versions](xref:Managing_cloud-connected_nodes#upgrading-nodes-to-the-latest-dxm-versions).
+
+## Hostnames and IP addresses to whitelist
+
+If a firewall restricts outbound traffic from your DataMiner Agents, make sure STaaS traffic is allowed. You can whitelist this traffic either [based on hostnames](#whitelisting-based-on-hostnames) or [based on IP addresses](#whitelisting-based-on-ip-addresses). In both cases, what you need to whitelist depends on your DataMiner version.
+
+> [!TIP]
+> From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46570 -->, the whitelisting configuration is much simpler, as no additional hostnames or Microsoft Azure IP addresses need to be requested from support. We therefore recommend [upgrading DataMiner](xref:Upgrading_a_DataMiner_Agent) to version 10.6.12/10.7.0 or higher.
+
+### Whitelisting based on hostnames
+
+The hostnames to whitelist depend on your DataMiner version:
+
+| DataMiner version | Hostnames to whitelist |
+|--|--|
+| DataMiner 10.6.12/10.7.0 or higher<!-- RN 46570 --> | Only `https://*.dataminer.services/`. No other hostnames are needed. |
+| Earlier DataMiner versions | `https://*.dataminer.services/`, **and in addition** some extra hostnames, which depend on the region your system is registered for (and, for a geo-replicated (GRS) setup, its geo-redundancy pair region). These additional hostnames are not listed in this documentation. To get them, contact <support@dataminer.services>. |
+
+> [!NOTE]
+> `https://*.dataminer.services/` is also required to [connect your system to dataminer.services](xref:Connect_to_cloud_requirements), so you may already have whitelisted it.
+
+### Whitelisting based on IP addresses
+
+The IP addresses to whitelist depend on your DataMiner version:
+
+| DataMiner version | IP addresses to whitelist |
+|--|--|
+| DataMiner 10.6.12/10.7.0 or higher<!-- RN 46570 --> | Only the region IP address(es) listed below. No other IP addresses are needed. |
+| Earlier DataMiner versions | The region IP address(es) listed below, **and in addition** the Microsoft Azure IP addresses for your region (and, for a GRS setup, its geo-redundancy pair region). These Microsoft Azure IP addresses are not listed in this documentation. To get them, contact <support@dataminer.services>. |
+
+The region IP address is determined by the region your system is registered for. For a **geo-replicated (GRS)** setup, you must whitelist **two region IP addresses**: the IP address of the primary region and the IP address of its geo-redundancy pair region.
+
+In the table below, you can find the region IP address corresponding with each region:
+
+| Region         | Region IP address |
+|----------------|-------------------|
+| West Europe    | 20.76.71.123      |
+| UK South       | 20.162.131.128    |
+| Central US     | 64.236.64.187     |
+| Southeast Asia | 20.247.192.226    |
+| Australia East | 4.147.198.192     |
+
+If the IP address for your region or geo-redundancy pair region is not listed above, contact <support@dataminer.services>.
 
 ## Configuring STaaS
 
@@ -73,7 +115,7 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
       </DataBases>
       ```
 
-   - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required:
+   - For setups **with proxy** (this **requires DataMiner 10.4.5 or higher**<!-- RN 39221 -->), use the following configuration, filling in the fields as required. Make sure to configure the proxy for storage here even if a [general proxy](xref:Connect_to_cloud_via_proxy) is already active for dataminer.services:
 
       ```xml
       <?xml version="1.0"?>
@@ -90,9 +132,11 @@ For a self-managed DataMiner System, follow the steps below to set up STaaS.
       ```
 
       > [!NOTE]
-      > If the proxy does not require authentication, you can leave the *UserName* and *Password* fields blank or remove them.
+      >
+      > - Proxy handling for STaaS storage traffic is separate from proxy handling for general dataminer.services traffic (such as DataMiner CloudGateway). Even if a general proxy is already active for dataminer.services, those proxy settings are not automatically filled in for STaaS (or vice versa), so you must still configure the proxy for storage in *DB.xml*. This makes it possible to use independent proxies for general and storage traffic, route only storage traffic or only general traffic through a proxy, or have a node that only uses STaaS without general dataminer.services connectivity. To set up a proxy for general dataminer.services traffic, see [Connecting to dataminer.services via proxy server](xref:Connect_to_cloud_via_proxy).
+      > - If the proxy does not require authentication, you can leave the *UserName* and *Password* fields blank or remove them.
 
 1. Restart DataMiner to begin using STaaS.
 
-> [!NOTE]
+> [!TIP]
 > If you experience any issues during setup or while using Storage as a Service, refer to [Troubleshooting - STaaS](xref:Troubleshooting_STaaS).

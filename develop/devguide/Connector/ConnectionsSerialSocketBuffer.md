@@ -1,13 +1,14 @@
 ---
 uid: ConnectionsSerialSocketBuffer
+description: "Learn how DataMiner flushes buffered socket data before each serial command by default, and how late responses could affect reads under legacy behavior."
 ---
 
 # Socket buffer
 
-In a protocol with a serial interface, if a command is being sent, DataMiner typically waits for the configured timeout or stops reading when it knows all data is received (e.g., configured trailer).
+By default, before sending each command over a serial connection, DataMiner flushes any data already available in the socket.<!-- RN 26513 -->
 
-If data comes in after the configured timeout, this will not be made available to the protocol as a response but will nonetheless still be available in the socket buffer for the next readout.
+## Legacy behavior
 
-This means that when e.g., a retry occurs, and the same response comes in again after the configured timeout, we will read out the response of the command that was sent out the first time. This also means that on another different command, there could still be data in the socket buffer of a previous command.
+Previously, DataMiner typically waited for the configured timeout or stopped reading when it knew all data had arrived, for example when a configured trailer was received. Data arriving after the timeout was not made available to the protocol as a response, but remained in the socket buffer for the next readout.
 
-As this is not desired, a change in behavior has been implemented in DataMiner 10.0.10 (RN 26513): Just before every command that is being sent out, the data that is available in the socket will now be flushed.
+As a result, a retry could read the late response to the earlier command, or data from a previous command could remain in the buffer when a different command was sent.

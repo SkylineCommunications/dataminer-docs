@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_tool
+description: "Explore the DataMiner SLNetClientTest tool, an advanced system administration tool with a multitude of functionalities."
 ---
 
 # SLNetClientTest tool

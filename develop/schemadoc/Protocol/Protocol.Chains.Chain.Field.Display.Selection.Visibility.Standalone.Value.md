@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Field.Display.Selection.Visibility.Standalone.Value
+description: "Use the Value element in a DataMiner protocol to define a trigger value that reverses default field selection visibility."
 ---
 
 # Value element

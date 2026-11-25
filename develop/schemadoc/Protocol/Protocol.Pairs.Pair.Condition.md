@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair.Condition
+description: "Use the Condition element in a DataMiner protocol to define when DataMiner should execute a command and response pair."
 ---
 
 # Condition element

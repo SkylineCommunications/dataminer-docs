@@ -1,10 +1,11 @@
 ---
 uid: Protocol.Pairs.Pair-options
+description: "Use the options attribute of the Pair element in a DataMiner protocol to set port, retry, timeout, and byte transmission options for a pair."
 ---
 
 # options attribute
 
-Specifies a number of options, separated by semicolons (”;”).
+Specifies a number of options, separated by semicolons (";").
 
 ## Content Type
 

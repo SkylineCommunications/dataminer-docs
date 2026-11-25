@@ -1,5 +1,6 @@
 ---
 uid: FAQs_General
+description: "Browse general DataMiner FAQs on GDPR, system requirements, capacity, integrations, clustering, user access, bandwidth, roadmap, and language options."
 ---
 
 # General questions

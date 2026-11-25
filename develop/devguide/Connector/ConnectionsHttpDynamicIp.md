@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsHttpDynamicIp
+description: "Use the dynamic IP option to dynamically change the polling IP and optionally also the port used by an HTTP connection."
 ---
 
 # Dynamically changing the IP address and port number
@@ -10,15 +11,15 @@ Create a parameter that has the "dynamic ip" option defined.
 
 ```xml
 <Param id="400" trending="false" save="true">
-   <Name>Dynamic polling IP</Name>
-  ...
+   <Name>DynamicPollingIP</Name>
+   ...
    <Type options="dynamic ip 1">read</Type>
    <Interprete>
       <RawType>other</RawType>
       <LengthType>next param</LengthType>
       <Type>string</Type>
    </Interprete>
-  ...
+   ...
 </Param>
 ```
 
@@ -31,4 +32,4 @@ For example, if you specify "10.12.0.63:4000", then all communication will be do
 > [!NOTE]
 >
 > - To dynamically poll using the HTTPS protocol, make sure the IP is prefixed with "https://". For example, specifying `https://10.12.0.63` will poll using HTTPS, while `10.12.0.63` will poll using HTTP. This happens regardless of the IP and the port configured in the element editor.
-> - "bypassProxy" will be taken from the connection settings from the element wizard.
+> - `bypassProxy` will be taken from the connection settings from the element wizard.

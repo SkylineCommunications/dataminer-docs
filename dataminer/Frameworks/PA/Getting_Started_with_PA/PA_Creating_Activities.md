@@ -1,5 +1,6 @@
 ---
 uid: PA_Creating_Activities
+description: "Create Process Automation activities using script tasks, user tasks, or resource tasks to meet your workflow and resource management needs."
 ---
 
 # Creating activities

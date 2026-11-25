@@ -6,11 +6,14 @@ uid: NT_EXISTS_ROW
 
 Checks if a row with the provided primary key exists in the table.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(265, ...)` directly, we recommend using [SLProtocol.Exists](xref:Skyline.DataMiner.Scripting.SLProtocol.Exists(System.Int32,System.String)).
+
 ```csharp
 int tableID = 1000;
 string primaryKey = "Row 1";
 
-bool rowExists = Convert.ToBoolean(protocol.NotifyProtocol(265/*NT_EXISTS_ROW*/, tableID, primaryKey));
+bool rowExists = Convert.ToBoolean(protocol.NotifyProtocol(265 /*NT_EXISTS_ROW*/, tableID, primaryKey));
 ```
 
 ## Parameters

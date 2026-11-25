@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_info_pending_incoming_events
+description: "Learn how, using the SLNetClientTest tool, you can retrieve information on the number of events being passed from one DMA to another."
 ---
 
 # Requesting information about pending incoming events

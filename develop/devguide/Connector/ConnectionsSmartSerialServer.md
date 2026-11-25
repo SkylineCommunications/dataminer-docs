@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSmartSerialServer
+description: "Configure a smart-serial connection as a server, manage connected clients and allowed IP addresses, and understand message queue limits."
 ---
 
 # Configuring a smart-serial connection as a server
@@ -12,6 +13,10 @@ When a regular IP address is specified, the connection will act as a client and 
 
 > [!NOTE]
 > In case you want two smart-serial elements to communicate with each other on the same DMA, one element, which will act as a server, should have as IP address "any", whereas the other element should have as IP address "127.0.0.2". This will be interpreted by DataMiner as a remote IP address and this element will act as client.
+
+## Smart-serial connections and Swarming
+
+A smart-serial connection in server mode prevents [Swarming](xref:Swarming) by default. If the connector can configure where the data source sends its data during startup, you can bypass this default behavior. For more information, see [Enabling Swarming for elements with smart-serial connection in server mode](xref:SwarmingSmartSerialServerMode).
 
 ## Obtaining information about the connected clients
 
@@ -28,6 +33,8 @@ See [smartIpHeader](xref:Protocol.Type-communicationOptions#smartipheader).
 ## Specifying the allowed IP addresses
 
 For each smart-serial server port of type TCP, elements can have a list of IP addresses configured from which they will accept incoming messages and to which they will forward messages.<!-- RN 23592, RN 23673, RN 23694, RN 23739 -->
+
+From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46784 -->, when multiple elements listen on the same TCP server port and explicitly list the same client's IP address, all those elements receive data from that client. Only one element can respond to the client. Other elements that listen to the same server port but do not explicitly list the client's IP address do not receive its data. In earlier versions, only one of the elements received the data. This behavior allows multiple elements to receive the same data without responding.
 
 - When, for a particular smart-serial server port, an element has a list of allowed IP addresses configured, it will
   - accept messages only from those IP addresses, and

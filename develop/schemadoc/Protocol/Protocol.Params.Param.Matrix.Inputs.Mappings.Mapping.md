@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Inputs.Mappings.Mapping
+description: "Use the Mapping element in a DataMiner protocol to link an input table column to a matrix column and define its mapping role and value type."
 ---
 
 # Mapping element
@@ -23,6 +24,6 @@ Specifies the link between the column and the matrix column.
 
 ## Constraints
 
-|Type|Description|Selector|Fields
+|Type|Description|Selector|Fields|
 |--- |--- |--- |--- |
 |Unique |No duplicate values must occur for the name attribute. |Mapping |@name |

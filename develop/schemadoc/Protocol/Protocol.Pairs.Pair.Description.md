@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair.Description
+description: "Use the Pair.Description element in a DataMiner protocol to document the purpose of a command and response pair."
 ---
 
 # Description element

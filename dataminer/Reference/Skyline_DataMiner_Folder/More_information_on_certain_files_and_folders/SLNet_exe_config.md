@@ -45,5 +45,7 @@ It contains among others the following settings:
   </appSettings>
   ```
 
+- .NET runtime settings for the SLNet process, configured in the *runtime* section. See [Configuring .NET Runtime settings for SLNet](xref:Configuration_of_DataMiner_processes#configuring-net-runtime-settings-for-slnet).
+
 > [!NOTE]
-> Any changes to these settings will only take effect after a full DMA restart.
+> Any changes to the settings in this file will only take effect after a full restart of the DataMiner Agent.

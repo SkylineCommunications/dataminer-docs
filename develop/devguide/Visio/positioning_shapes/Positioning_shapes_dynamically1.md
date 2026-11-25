@@ -161,25 +161,25 @@ In the protocol, check the definition of the table parameter that will supply th
 - The column containing the X coordinates has to be marked as the "xpos" column:
 
   ```xml
-  <ColumnOption idx="..." pid="..." type="..." value="" options=";xpos" />
+  <ColumnOption idx="..." pid="..." type="..." options=";xpos" />
   ```
 
 - The column containing the Y coordinates has to be marked as the "ypos" column:
 
   ```xml
-  <ColumnOption idx="..." pid="..." type="..." value="" options=";ypos" />
+  <ColumnOption idx="..." pid="..." type="..." options=";ypos" />
   ```
 
 - Columns that should always be hidden in a Details pane have to be marked with "HideKPI":
 
   ```xml
-  <ColumnOption idx="..." pid="..." type="..." value="" options=";HideKPI" />
+  <ColumnOption idx="..." pid="..." type="..." options=";HideKPI" />
   ```
 
 - Columns that should only be hidden in a Details pane if the value is "Not Initialized" have to be marked with "HideKPIWhenNotInitialized":
 
   ```xml
-  <ColumnOption idx="..." pid="..." type="..." value="" options=";HideKPIWhenNotInitialized" />
+  <ColumnOption idx="..." pid="..." type="..." options=";HideKPIWhenNotInitialized" />
   ```
 
 ### Applying a row filter before dynamically positioned shapes are generated

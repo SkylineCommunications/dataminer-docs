@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Chains.Chain.Display
+description: "Use the Display element in a DataMiner protocol to configure the visibility settings of an EPM or Service Overview Manager chain."
 ---
 
 # Display element

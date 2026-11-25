@@ -18,7 +18,7 @@ The folders will be searched in the following order:
 
 1. `C:\Skyline DataMiner\ProtocolScripts`
 
-1. A subfolder of `C:\Skyline DataMiner\ProtocolScripts\DllImport` corresponding with the folders mentioned in the `dllImport` attribute
+1. A subfolder of `C:\Skyline DataMiner\ProtocolScripts\DllImport` corresponding with the folders mentioned in the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute
 
    Example: In case `dllImport` contains `newtonsoft.json\13.0.3\lib\net45\Newtonsoft.Json.dll`, the `C:\Skyline DataMiner\ProtocolScripts\DllImport\newtonsoft.json\13.0.3\lib\net45` folder is added as a hint path.
 

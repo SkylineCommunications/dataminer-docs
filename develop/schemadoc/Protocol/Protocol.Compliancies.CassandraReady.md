@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Compliancies.CassandraReady
+description: "Use the CassandraReady element in a DataMiner protocol to indicate whether the protocol is compatible with a Cassandra database."
 ---
 
 # CassandraReady element

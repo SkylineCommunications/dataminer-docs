@@ -9,7 +9,7 @@ By default, a DataMiner Agent always takes the name of its host server. However,
 
 If an alias has been configured in *DataMiner.xml*, changing the DMA name in Cube will change that alias. Otherwise, changing the DMA name in Cube will change the actual server name, which will require a reboot (which can be triggered in Cube).
 
-Users of a DaaS system do not have access to the *DataMiner.xml* file and cannot configure an alias that way. However, for recently deployed DaaS systems<!--RN 45327-->, the *mode* attribute in *DataMiner.xml* is set to "manual" by default, so changing the DMA name in System Center in Cube updates the alias instead of the server name.
+Users of a DaaS system do not have access to the *DataMiner.xml* file and cannot configure an alias that way. However, for recently deployed DaaS systems<!--RN 45327-->, the [mode](xref:DataMiner.DMA.DMAName-mode) attribute in *DataMiner.xml* is set to "manual" by default, so changing the DMA name in System Center in Cube updates the alias instead of the server name.
 
 ## Configuring an alias in DataMiner.xml
 
@@ -19,7 +19,7 @@ To configure an alias in *DataMiner.xml*, you will need to activate "manual" mod
 
 1. Open the file `C:\Skyline Dataminer\DataMiner.xml`.
 
-1. In the [DMAName](xref:DataMiner.DMA.DMAName) opening tag, add a *mode* attribute, and set its value to “manual”.
+1. In the [DMAName](xref:DataMiner.DMA.DMAName) opening tag, add a [mode](xref:DataMiner.DMA.DMAName-mode) attribute, and set its value to “manual”.
 
 1. In the `<DMAName>` element, specify the custom name of the DataMiner Agent. For example:
 

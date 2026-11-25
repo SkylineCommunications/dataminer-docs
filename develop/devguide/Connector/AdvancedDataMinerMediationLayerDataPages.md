@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDataMinerMediationLayerDataPages
+description: "Understand how a mediation protocol controls page order, the default page, wide-column display, and inclusion of device protocol webpages."
 ---
 
 # Data pages

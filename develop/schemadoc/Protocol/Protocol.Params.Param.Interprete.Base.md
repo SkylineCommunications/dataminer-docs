@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Interprete.Base
+description: "Use the Base element in a DataMiner protocol to select the numeral system used to interpret parameter values, from base 2 through base 36."
 ---
 
 # Base element

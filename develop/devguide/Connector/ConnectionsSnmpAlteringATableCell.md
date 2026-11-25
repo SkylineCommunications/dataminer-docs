@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpAlteringATableCell
+description: "Compare different ways to alter an SNMP table cell: snmpSetAndGet, a parameter holding the instance, or SLScripting logic."
 ---
 
 # Altering a table cell
@@ -15,43 +16,43 @@ Different approaches are possible to implement this functionality in a protocol.
 
 To implement an SNMP table set using [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet), you must use the "instance" option. This way, DataMiner will be able to know which row and column have been set. The table must also be displayed, as a user interaction is needed to perform the write (performing a set via a QAction will not work as the corresponding primary key will not be found).
 
-Define a write parameter for the column and use the `snmpSetAndGet` attribute by setting it to `true`.
+Define a write parameter for the column and use the [snmpSetAndGet](xref:Protocol.Params.Param-snmpSetAndGet) attribute by setting it to `true`.
 
 ```xml
 <Param id="157" snmpSetAndGet="true">
-   <Name>ifAdminStatus</Name>
-   <Description>Admin Status (Interface)</Description>
+   <Name>Interfaces_AdminStatus</Name>
+   <Description>Admin Status (Interfaces)</Description>
    <Type>write</Type>
    <Interprete>
       <RawType>numeric text</RawType>
       <LengthType>next param</LengthType>
       <Type>double</Type>
    </Interprete>
-  <SNMP>
-     <Enabled>true</Enabled>
-     <OID type="complete">1.3.6.1.2.1.2.2.1.7</OID>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <OID type="complete">1.3.6.1.2.1.2.2.1.7</OID>
       <Type>integer</Type>
-  </SNMP>
-  <Display>
-     <RTDisplay>true</RTDisplay>
-  </Display>
-  <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        <Discreet>
-           <Display>Up</Display>
-           <Value>1</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Down</Display>
-           <Value>2</Value>
-        </Discreet>
-        <Discreet>
-           <Display>Testing</Display>
-           <Value>3</Value>
-        </Discreet>
-     </Discreets>
-  </Measurement>
+   </SNMP>
+   <Display>
+      <RTDisplay>true</RTDisplay>
+   </Display>
+   <Measurement>
+      <Type>discreet</Type>
+      <Discreets>
+         <Discreet>
+            <Display>Up</Display>
+            <Value>1</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Down</Display>
+            <Value>2</Value>
+         </Discreet>
+         <Discreet>
+            <Display>Testing</Display>
+            <Value>3</Value>
+         </Discreet>
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 
@@ -63,34 +64,34 @@ This approach requires that you implement logic in the protocol to know which ro
 
     ```xml
     <Param id="117">
-       <Name>ifAdminStatus</Name>
-       <Description>Admin Status (Interface)</Description>
+       <Name>Interfaces_AdminStatus</Name>
+       <Description>Admin Status (Interfaces)</Description>
        <Type>write</Type>
        <Interprete>
           <RawType>numeric text</RawType>
           <LengthType>next param</LengthType>
           <Type>double</Type>
        </Interprete>
-      <Display>
-         <RTDisplay>true</RTDisplay>
-      </Display>
-      <Measurement>
-         <Type>discreet</Type>
-         <Discreets>
-            <Discreet>
-               <Display>Up</Display>
-               <Value>1</Value>
-            </Discreet>
-            <Discreet>
-               <Display>Down</Display>
-               <Value>2</Value>
-            </Discreet>
-            <Discreet>
-               <Display>Testing</Display>
-               <Value>3</Value>
-            </Discreet>
-         </Discreets>
-      </Measurement>
+       <Display>
+          <RTDisplay>true</RTDisplay>
+       </Display>
+       <Measurement>
+          <Type>discreet</Type>
+          <Discreets>
+             <Discreet>
+                <Display>Up</Display>
+                <Value>1</Value>
+             </Discreet>
+             <Discreet>
+                <Display>Down</Display>
+                <Value>2</Value>
+             </Discreet>
+             <Discreet>
+                <Display>Testing</Display>
+                <Value>3</Value>
+             </Discreet>
+          </Discreets>
+       </Measurement>
     </Param>
     ```
 
@@ -101,9 +102,9 @@ This approach requires that you implement logic in the protocol to know which ro
 
 1. Create a parameter of type "write" to execute the SET with a dynamic OID (Note: this parameter should not be displayed on a page).
 
-     ```xml
+    ```xml
     <Param id="127" options="snmpSet">
-       <Name>ifAdminStatusSNMPSet</Name>
+       <Name>InterfaceAdminStatusSNMPSet</Name>
        <Description>Interface Admin Status SNMP Set</Description>
        <Type>write</Type>
        <Interprete>
@@ -123,10 +124,10 @@ This approach requires that you implement logic in the protocol to know which ro
 
 1. Create a parameter of type "read" that will contain the dynamic part of the OID. This is the parameter that the write parameter defined in step 2 will link to. (Note that this parameter should not be displayed on a page.)
 
-     ```xml
+    ```xml
     <Param id="99">
-       <Name>ifTableInstance</Name>
-       <Description>Interface Table Instance</Description>
+       <Name>InterfacesInstance</Name>
+       <Description>Interfaces Instance</Description>
        <Type>read</Type>
        <Interprete>
           <RawType>other</RawType>
@@ -141,25 +142,26 @@ This approach requires that you implement logic in the protocol to know which ro
 
 1. Create a QAction with the row attribute set to "true". This QAction will set the value of the parameter containing the dynamic part of the OID to the primary key of the row that triggered this QAction. (The primary key of the row that triggered the QAction is obtained via the RowKey method). The value that has been set in the write parameter (parameter with ID 117) is copied to the write parameter that will perform the SNMP set request (parameter with ID 127).
 
-     ```xml
+    ```xml
     <QAction id="117" name="Set Cell" encoding="csharp" triggers="117" row="true">
     <![CDATA[
        using Skyline.DataMiner.Scripting;
     
-       public class QAction{
-          public static void Run (SLProtocol protocol)
+       public class QAction
+       {
+          public static void Run(SLProtocol protocol)
           {
              object value = protocol.GetParameter(117);
              string primaryKey = protocol.RowKey();
     
-            // Set instance parameter.
-            protocol.SetParameter(99, primaryKey);
-            protocol.SetParameter(127, value);
+             // Set instance parameter.
+             protocol.SetParameter(99, primaryKey);
+             protocol.SetParameter(127, value);
     
-            // Refresh table.
-            protocol.CheckTrigger(1);
-         }
-      }
+             // Refresh table.
+             protocol.CheckTrigger(1);
+          }
+       }
     ]]>
     </QAction>
     ```

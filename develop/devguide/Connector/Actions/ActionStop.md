@@ -1,5 +1,6 @@
 ---
 uid: LogicActionStop
+description: "Use the stop action to stop one or more timers identified by their IDs in a DataMiner connector definition."
 ---
 
 # stop

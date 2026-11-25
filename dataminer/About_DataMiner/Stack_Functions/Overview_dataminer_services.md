@@ -126,9 +126,9 @@ Combining knowledge of your DataMiner environment with DataMiner documentation, 
 > [!TIP]
 > See also:
 >
-> - [DataMiner Assistant DxM](xref:Assistant_DxM)
-> - [DataMiner Assistant app](xref:DataMinerAssistant)
-> - [DataMiner Assistant for Microsoft 365](xref:Assistant_M365)
+> - [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM)
+> - [DataMiner Assistant app](xref:Intelligence_Assistant_app)
+> - [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365)
 
 ### Storage as a Service (STaaS)
 

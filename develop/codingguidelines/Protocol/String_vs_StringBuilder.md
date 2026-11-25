@@ -30,4 +30,4 @@ Consider using the StringBuilder class under the following conditions:
 Also note that string literals can be split in order to improve readability. The compiler will concatenate the parts into a single string, so there is no runtime performance cost.
 
 > [!NOTE]
-> Often, code is needed in a protocol to generate a string that represents a list of items that are separated by a character or string (e.g., when using a parameter that uses the dependencyId attribute). An alternative implementation is to collect all items in a list (List\<T>) and then use the String.Join method (e.g., *string sDevices = string.Join(";", lsDevices);* ).
+> Often, code is needed in a protocol to generate a string that represents a list of items that are separated by a character or string (e.g., when using a parameter that uses the [dependencyId](xref:Protocol.Params.Param.Measurement.Discreets-dependencyId) attribute). An alternative implementation is to collect all items in a list (List\<T>) and then use the String.Join method (e.g., *string sDevices = string.Join(";", lsDevices);* ).

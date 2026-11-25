@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Triggers.Trigger.Content
+description: "Use the Content element under Trigger in a DataMiner protocol to list the actions to execute or triggers to activate."
 ---
 
 # Content element

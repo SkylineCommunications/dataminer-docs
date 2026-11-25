@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Type-overrideTimeoutDVE
+description: "Use the Type overrideTimeoutDVE attribute in a DataMiner protocol to make DVEs go into timeout when their parent element is in timeout."
 ---
 
 # overrideTimeoutDVE attribute

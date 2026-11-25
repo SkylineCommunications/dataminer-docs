@@ -1,5 +1,6 @@
 ---
 uid: QAOps_Tool
+description: "Install the QAOps CLI tool, authenticate with a token, and run automated test suites against DataMiner configurations. Explore commands and examples."
 ---
 
 # QAOps tool
@@ -35,14 +36,11 @@ dotnet tool install -g Skyline.DataMiner.QAOps
 
 ## Quick start
 
-To run a test suite and wait for results:
+To run a test suite and wait for results, provide your authentication token with the `--token` argument. Replace the placeholders with your token, test suite ID, and configuration ID:
 
 ```bash
-# Set your authentication token
-export QAOPS_TOKEN=<your-token>
-
-# Run a test suite and save results
 dataminer-qaops test-run-and-wait \
+  --token <your-token> \
   --testsuite-id <your-testsuite-id> \
   --configuration-id <your-configuration-id> \
   --result-filepath ./test-results.json
@@ -225,13 +223,22 @@ The tool returns specific exit codes to indicate the outcome of an operation:
 
 - **0**: Success. Test suite completed successfully.
 
-- **1**: Test failure. One or more tests failed.
+- **1**: Run failed. The test run could not be started or did not complete, for example because the token is missing or the request was refused.
 
 - **2**: Timeout. The test suite did not complete within the specified timeout.
+
+- **3**: Tests failed. The test run completed, but one or more tests failed.
+
+- **4**: Canceled. The test run was canceled.
 
 - **-1**: Unexpected exception. An error occurred during execution.
 
 - **-2**: Not implemented. Feature is not yet implemented.
+
+> [!NOTE]
+>
+> - Older versions of the tool do not return exit codes 3 and 4. They return 1 when one or more tests fail. If your pipeline checks for exit code 1 to detect failed tests, also check for exit code 3.
+> - On Linux, negative exit codes are reported as unsigned values: -1 becomes 255 and -2 becomes 254.
 
 > [!TIP]
 > These exit codes are useful for integrating the tool into CI/CD pipelines where you need to determine the success or failure of test runs programmatically.

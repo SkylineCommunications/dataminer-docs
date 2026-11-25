@@ -51,7 +51,7 @@ Only outgoing traffic needs to be allowed through for the domain *.dataminer.ser
 
 > [!NOTE]
 >
-> - If your DataMiner System uses [Storage as a Service (STaaS)](xref:Setting_up_StaaS), **additional Skyline-managed storage endpoints** must be reachable on top of the dataminer.services endpoints listed above. These depend on the region your system is registered for. For the STaaS network requirements, refer to the [STaaS prerequisites](xref:Setting_up_StaaS#prerequisites).
+> - If your DataMiner System uses [Storage as a Service (STaaS)](xref:Setting_up_StaaS), additional hostnames or IP addresses may need to be whitelisted on top of the dataminer.services endpoints and IP addresses listed above, depending on your DataMiner version. For more information, refer to [Hostnames and IP addresses to whitelist](xref:Setting_up_StaaS#hostnames-and-ip-addresses-to-whitelist).
 > - Technical details of this implementation may be subject to change, as we regularly review our security implementations.
 > - Users can disconnect their system from dataminer.services at any given time. For more information, please refer to [Connecting your DataMiner System to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 

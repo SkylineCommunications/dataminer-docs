@@ -77,7 +77,6 @@ namespace UserDefinableApiScripts.Examples.ExistingWithEntryPoint
 {
     public class Script
     {
-        
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnApiTrigger)]
         public ApiTriggerOutput OnApiTrigger(IEngine engine, ApiTriggerInput requestData)
         {
@@ -91,7 +90,7 @@ namespace UserDefinableApiScripts.Examples.ExistingWithEntryPoint
                 return new ApiTriggerOutput()
                 {
                     ResponseBody = "Could not parse 'DMAID' parameter to int.",
-                    ResponseCode = (int) StatusCode.BadRequest
+                    ResponseCode = (int)StatusCode.BadRequest
                 };
             }
 
@@ -100,7 +99,7 @@ namespace UserDefinableApiScripts.Examples.ExistingWithEntryPoint
                 return new ApiTriggerOutput()
                 {
                     ResponseBody = "Could not parse 'ELEMENTID' parameter to int.",
-                    ResponseCode = (int) StatusCode.BadRequest
+                    ResponseCode = (int)StatusCode.BadRequest
                 };
             }
 
@@ -110,7 +109,7 @@ namespace UserDefinableApiScripts.Examples.ExistingWithEntryPoint
             return new ApiTriggerOutput()
             {
                 ResponseBody = "Successfully stopped element",
-                ResponseCode = (int) StatusCode.Ok
+                ResponseCode = (int)StatusCode.Ok
             };
         }
 

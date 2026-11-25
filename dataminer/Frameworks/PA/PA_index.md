@@ -1,5 +1,6 @@
 ---
 uid: PA_index
+description: "Get started with the Process Automation framework in DataMiner. Explore its architecture, development, deployment, and configuration."
 ---
 
 # Process Automation framework

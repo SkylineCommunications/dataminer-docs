@@ -23,7 +23,7 @@ In addition to the CRUD methods, the following special methods are also supporte
 The stitching functionality makes it easier to work with a `DomInstance`. With this, there is no need to use the helper each time and retrieve the linked objects using an ID filter. When a `DomInstance` is stitched, it is possible to:
 
 - Retrieve the full `DomDefinition` object that the `DomInstance` is linked to, by calling `GetDomDefinition()` on the instance.
-- Retrieve the full `SectionDefinition` object that a `Section` is linked to, by calling `GetSectionDefinition()` on the `Section`
+- Retrieve the full `SectionDefinition` object that a `Section` is linked to, by calling [GetSectionDefinition()](xref:Skyline.DataMiner.Net.Sections.Section.GetSectionDefinition) on the `Section`
 - Retrieve the full `FieldDescriptor` object that a `FieldValue` is linked to, by calling `GetFieldDescriptor()` on the `FieldValue`.
 
 > [!NOTE]

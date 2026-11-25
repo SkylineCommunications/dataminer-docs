@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSerial
+description: "Learn how DataMiner serial connections exchange commands and responses over TCP/IP, UDP, or serial cables, and which communication protocols are used."
 ---
 
 # Serial

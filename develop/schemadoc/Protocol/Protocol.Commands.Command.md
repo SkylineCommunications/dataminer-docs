@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Commands.Command
+description: "Use the Command element in a DataMiner protocol to configure a command sent to a data source, including its parameters, ID, and formatting."
 ---
 
 # Command element
