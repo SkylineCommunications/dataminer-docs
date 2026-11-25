@@ -4,7 +4,7 @@ uid: Grouping_Alarms
 
 # Grouping alarms
 
-This action is available from DataMiner 10.5.0 [CU16]/10.6.0 [CU4]/10.6.7 onwards<!--RN 44973-->.
+This action is available from DataMiner 10.7 Main and 10.6.7 Feature onwards<!--Combination of RN44395 and RN 44973-->.
 
 Use this action in a correlation rule to generate a group alarm that combines all base alarms matching the rule.
 
