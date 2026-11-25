@@ -11,7 +11,7 @@ DataMiner Apps are the apps that you can open from the DataMiner landing page, f
 
 - [New Apps](xref:New_apps): Apps that are built outside DataMiner, for example with AI-assisted tooling, and then uploaded to your DataMiner System. Available from DataMiner 10.6.0 [CU10]/10.7.0 [CU0]/10.7.1 onwards<!-- RN 45878 -->.
 
-Apps of both types share a similar experience. You can find them on the DataMiner landing page and access them using the same sign-in.
+Apps of both types share a similar experience. You can access them from the Surveyor in DataMiner Cube, and find or remove them on the DataMiner landing page. You can use the same sign-in for both.
 
 To decide which type of app best suits your needs, see [Choosing between New Apps and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps#choosing-between-new-apps-and-low-code-apps).
 

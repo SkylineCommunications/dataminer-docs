@@ -14,7 +14,7 @@ At present, it is only possible to [create new sections](#adding-an-app-to-a-new
 
 To add an app to an existing section on the DataMiner landing page:
 
-- From DataMiner 10.6.0 [CU10]/10.7.0 [CU0]/10.7.1 onwards<!--RN 45878-->:
+- From DataMiner 10.5.0 [CU22]/10.6.0 [CU10]/10.7.1 onwards<!--RN 45878-->:
 
   1. Open the tab in which you want the app to appear.
 

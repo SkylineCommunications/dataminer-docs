@@ -46,7 +46,9 @@ To view, add, edit, delete, or publish low-code applications, you need to have t
 
      - If no apps exist yet, click *Create your first app*.
 
-     - Otherwise, select the tab where you want the app to appear, and click *Create app*. To add the app without assigning it to a specific section, open the *All apps* tab or the *Other apps* tab before creating the app.
+     - Otherwise, select the tab where you want the app to appear and click *Add* in the upper-right corner. Prior to DataMiner 10.5.0 [CU22]/10.6.0 [CU10]/10.7.1, click *Create app*.
+
+       To add the app without assigning it to a specific section, open the *All apps* tab or the *Other apps* tab before creating the app.
 
    - Prior to DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9:
 
