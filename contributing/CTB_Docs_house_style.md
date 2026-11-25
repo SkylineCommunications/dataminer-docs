@@ -79,4 +79,4 @@ This page describes general rules for DataMiner documentation, including spellin
 
 ## DataMiner version notation
 
-- When mentioning DataMiner versions, mention both Main Release version(s) and Feature Release version when applicable, starting with the lowest number (e.g. "DataMiner 10.7.0/10.7.1", "DataMiner 10.7.2/10.8.0", "DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11" etc.). Possible exceptions to this are when there is no corresponding Main or Feature Release version, when writing in a release notes document, or when mentioning the DataMiner version in an image caption.
+- When mentioning DataMiner versions, mention both Main Release version(s) and Feature Release version when applicable, starting with the lowest number (e.g. "DataMiner 10.7.0/10.7.1", "DataMiner 10.7.2/10.8.0", "DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11", etc.). Possible exceptions to this are when there is no corresponding Main or Feature Release version, when writing in a release notes document, or when mentioning the DataMiner version in an image caption.
