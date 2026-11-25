@@ -119,7 +119,7 @@ The front matter must include the following fields:
   - `true`: The agent waits for the script result. The wait is limited to 30 minutes. If the script does not finish in time, it continues in the background.
   - `false`: Trigger-and-forget execution. The Assistant returns a queued message while the script runs in the background. Execution errors are still detected and reported.
 
-- `requiresUserValidation`: Optional. When `true`, DataMiner Assistant prompts for confirmation in chat before the script runs. Defaults to `true` when omitted. Set this to `false` only for scripts that do not need user confirmation.
+- `requiresUserValidation`: Optional. When `true`, the agent prompts for confirmation in chat before the script runs. Defaults to `true` when omitted. Set this to `false` only for scripts that do not need user confirmation.
 
 - `inputArguments`: Optional. A list of input arguments. Each argument should be described by the following fields:
 
