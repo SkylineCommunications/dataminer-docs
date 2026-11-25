@@ -60,4 +60,10 @@ Property values, JSON structure, and type information remain unchanged. Existing
 
 ### Fixes
 
-*No fixes have been added yet.*
+#### SLGlobal: Process crash when stopping an asynchronous notification queue [ID 47131]
+
+<!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
+
+When SLDMS, SLDataMiner, or SLElement stopped the queue for asynchronous notifications to SLDataMiner, for example during process shutdown, the thread processing that queue could continue running after the queue had been removed. This could cause the process to crash.
+
+From now on, stopping the queue will also stop its processing thread. DataMiner will wait up to 10 seconds for the thread to stop and discard any notifications still in the queue.
