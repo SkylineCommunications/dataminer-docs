@@ -9,7 +9,7 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 
 ### 1.2.1.3
 
-#### New feature - GetDmsAsUser method added for Automation scripts [ID 46916]
+#### New feature - GetDmsAsUser method added for automation scripts [ID 46916]
 
 The DataMinerSystem Automation library now provides a new `GetDmsAsUser()` extension method on `Engine` and `IEngine`. It returns an object implementing `IDms` and executes `DMSMessage` requests in the security context of the user running the automation script.
 
