@@ -121,7 +121,7 @@ After the node bootstraps, remove the *replace-address* parameter from the *Cass
 
 This step is only necessary if the node has been down for longer than the time configured for the *max_hint_window_in_ms* setting in the *cassandra.yaml* file. By default, this is 3 hours.
 
-In this case, use *nodetool* to run a repair. For more information, see <https://cassandra.apache.org/doc/latest/tools/nodetool/repair.html>.
+In this case, use *nodetool* to run a repair. For more information, see <https://cassandra.apache.org/doc/4.0/cassandra/operating/repair.html>.
 
 ### Update DataMiner
 

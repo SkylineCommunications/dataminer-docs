@@ -6,15 +6,16 @@ keywords: AI assistant, chat component, AI component, DataMiner Assistant, Copil
 
 # Assistant chat
 
-The assistant chat component allows you to **interact with the [DataMiner Assistant](xref:DataMinerAssistant) directly from a dashboard or low-code app**, without leaving the page. You can submit questions using text or voice input and, depending on the available configuration, choose a response mode and AI model before sending your request.
+The assistant chat component lets you use **DataMiner Assistant to chat with [DataMiner Intelligence agents](xref:Intelligence_Agents) directly from a dashboard or low-code app**. You can submit questions using text or voice input and, depending on the available configuration, choose a response mode and AI model before sending your request.
 
-The DataMiner Assistant is currently in development and available as a preview feature upon request. When preview access is enabled, the assistant chat component also becomes available.
+![Assistant chat component displayed in a DataMiner low-code app](~/dataminer/images/AssistantChat.png)<br>*Assistant chat component in DataMiner Web 10.6.9.*
 
-![Assistant chat component displayed in a DataMiner low-code app](~/dataminer/images/AssistantChat.png)<br>*Assistant chat component in DataMiner 10.6.9*
+> [!NOTE]
+> To use the assistant chat component, you need to have the necessary user permissions and your system must meet the requirements for DataMiner Intelligence. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements).
 
 ## Interacting with the assistant chat component
 
-![Assistant chat component UI showing question input, response mode selector, AI model selector, microphone, and send button](~/dataminer/images/Assistant_Chat_UI.png)<br>*Assistant chat component in DataMiner 10.6.9*
+![Assistant chat component UI showing question input, response mode selector, AI model selector, microphone, and send button](~/dataminer/images/Assistant_Chat_UI.png)<br>*Assistant chat component in DataMiner Web 10.6.9.*
 
 To interact with the DataMiner Assistant, use the following areas of the assistant chat component:
 
@@ -36,7 +37,7 @@ Additionally, the *Settings* pane provides the following options:
 
 | Section | Option | Description |
 |--|--|--|
-| General | Agent | Select the assistant agent that will handle chat conversations. For example, select *DataMiner Docs* to get information based on the official documentation. |
+| General | Agent | Select the DataMiner Intelligence agent that will handle chat conversations. For example, select *DataMiner Docs* to get answers based on the official documentation. |
 | General | Title | Specify the text displayed at the top of the component. |
 | General | Subtitle | Specify the text displayed below the title. |
 
@@ -58,4 +59,4 @@ For the assistant chat component, the following component action is available:
 
   When the action is triggered, the value is sent to the Assistant as a query.
 
-  ![Assistant chat starting a new conversation from a button using text input value](~/dataminer/images/AssistantChat.gif)<br>*Assistant chat component started through a 'Start new conversation' component action when the button component is clicked, using the value entered in the text input component (DataMiner 10.6.9)*
+  ![Assistant chat starting a new conversation from a button using text input value](~/dataminer/images/AssistantChat.gif)<br>*Assistant chat component started through a "Start new conversation" component action using the value entered in a text input (DataMiner Web 10.6.9).*

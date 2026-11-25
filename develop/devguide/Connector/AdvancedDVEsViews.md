@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDVEsViews
+description: "Configure the view column of a DVE table to place each generated DVE in one or more specified DataMiner views."
 ---
 
 # Views

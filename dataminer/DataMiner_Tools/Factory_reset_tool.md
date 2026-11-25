@@ -1,5 +1,6 @@
 ---
 uid: Factory_reset_tool
+description: "Use the factory reset tool SLReset.exe to fully reset a DataMiner Agent to its default state from immediately after installation."
 keywords: SLReset
 ---
 

@@ -23,18 +23,18 @@ protocol.NotifyProtocol(89, paramName, paramValue);
 Setting **multiple values**:
 
 ```csharp
-string[] paramNames =  new string[] { "ExampleParameter" };
+string[] paramNames = new string[] { "ExampleParameter" };
 string[] paramValues = new string[] { "Data" };
 
 object result = protocol.NotifyProtocol(89, paramNames, paramValues);
 
 if (result != null)
 {
-    ////...
+    // ...
 }
 else
 {
-    ////...
+    // ...
 }
 ```
 

@@ -1,5 +1,6 @@
 ---
 uid: Accessing_the_DataMiner_Taskbar_Utility
+description: "Access the DataMiner Taskbar Utility from the Windows Start menu or system tray, then use its functions on a DataMiner Agent server."
 ---
 
 # Accessing the DataMiner Taskbar Utility

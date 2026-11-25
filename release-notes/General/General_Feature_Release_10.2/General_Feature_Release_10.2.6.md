@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Feature_Release_10.2.6
+status: archived
 ---
 
-# General Feature Release 10.2.6
+# General Feature Release 10.2.6 [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).

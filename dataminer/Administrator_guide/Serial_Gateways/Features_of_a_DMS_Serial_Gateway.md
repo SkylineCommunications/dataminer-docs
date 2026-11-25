@@ -1,5 +1,6 @@
 ---
 uid: Features_of_a_DMS_Serial_Gateway
+description: "Explore DMS Serial Gateway features and use its 16 RS-232 ports to plan reliable serial connectivity."
 ---
 
 # Features of a DMS Serial Gateway

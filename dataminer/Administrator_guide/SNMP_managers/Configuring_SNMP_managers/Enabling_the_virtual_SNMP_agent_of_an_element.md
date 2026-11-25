@@ -1,5 +1,6 @@
 ---
 uid: Enabling_the_virtual_SNMP_agent_of_an_element
+description: "Learn how to enable the virtual SNMP agent of an element to forward SNMP traps to every activated SNMP manager."
 ---
 
 # Enabling the virtual SNMP agent of an element

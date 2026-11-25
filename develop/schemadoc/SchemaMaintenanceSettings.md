@@ -6,6 +6,10 @@ uid: SchemaMaintenanceSettings
 
 MaintenanceSettings XML schema.
 
+## Namespace
+
+`http://www.skyline.be/config/maintenancesettings`
+
 ## Root element
 
 [MaintenanceSettings](xref:MaintenanceSettings)

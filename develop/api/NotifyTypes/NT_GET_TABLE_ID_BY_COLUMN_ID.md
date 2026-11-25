@@ -9,7 +9,7 @@ Retrieves the ID of the table parameter to which the column with the specified I
 ```csharp
 int columnId = 1001;
 
-int tableId =  (int) protocol.NotifyProtocol(393 /* NT_GET_TABLE_ID_BY_COLUMN_ID */, columnId, null);
+int tableId = (int)protocol.NotifyProtocol(393 /* NT_GET_TABLE_ID_BY_COLUMN_ID */, columnId, null);
 ```
 
 ## Parameters

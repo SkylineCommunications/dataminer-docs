@@ -300,7 +300,12 @@ The headers listed below are **blocked** and will result in an error if you try 
 
    - Window (2): Sliding time window during which the limit applies (from 1 second to 1 day).
 
-   ![*Create API token* pop-up window](~/dataminer/images/Create_API_Token.png)<br>*Create API token window in DataMiner 10.6.9*
+   - Notice generation (3): Available from DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards<!--RN 46336-->. Enables a notice when the token reaches its configured rate limit. This option is disabled by default.
+
+     > [!NOTE]
+     > In earlier versions, this setting is not available in the UI. Where supported, configure `GenerateNotice` through the C# API instead. See [RateLimit](xref:UD_APIs_Objects_ApiToken#ratelimit).
+
+   ![*Create API token* pop-up window](~/dataminer/images/Create_API_Token.png)<br>*Create API token window in DataMiner 10.6.11*
 
    New tokens are created with a default rate limit of 60 requests per minute.
 

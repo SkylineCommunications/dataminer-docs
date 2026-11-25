@@ -2,7 +2,7 @@
 uid: NT_GET_KEYS_FOR_INDEX_CASED
 ---
 
-# NT_GET_KEYS_FOR_INDEX_CASED  (411)
+# NT_GET_KEYS_FOR_INDEX_CASED (411)
 
 Gets the primary keys of all rows that have the specified value (case sensitive) for the specified column.<!-- RN 15333 -->
 
@@ -10,7 +10,7 @@ Gets the primary keys of all rows that have the specified value (case sensitive)
 int columnID = 1010;
 string valueToFind = "Value 1";
 
-string[] primaryKeys = (string[])protocol.NotifyProtocol(411 /*NT_GET_KEYS_FOR_INDEX_CASED*/ , columnID, valueToFind);
+string[] primaryKeys = (string[])protocol.NotifyProtocol(411 /*NT_GET_KEYS_FOR_INDEX_CASED*/, columnID, valueToFind);
 ```
 
 ## Parameters

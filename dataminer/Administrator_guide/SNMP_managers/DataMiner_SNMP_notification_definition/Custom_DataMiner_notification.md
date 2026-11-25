@@ -1,5 +1,6 @@
 ---
 uid: Custom_DataMiner_notification
+description: "Explore the custom DataMiner notification OID syntax and custom bindings, including alarm ID, severity, and RCA level values."
 ---
 
 # Custom DataMiner notification

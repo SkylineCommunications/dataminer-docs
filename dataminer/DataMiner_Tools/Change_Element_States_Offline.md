@@ -1,5 +1,6 @@
 ---
 uid: Change_Element_States_Offline
+description: "Use the Change Element States Offline tool to change element states while a DataMiner Agent is not running."
 ---
 
 # Change Element States Offline

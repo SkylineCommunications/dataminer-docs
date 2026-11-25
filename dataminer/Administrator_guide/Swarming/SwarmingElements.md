@@ -1,5 +1,6 @@
 ---
 uid: SwarmingElements
+description: "Swarm elements to a different DataMiner Agent within a cluster using DataMiner Cube or an automation script."
 ---
 
 # Swarming elements
@@ -39,7 +40,7 @@ To swarm elements in DataMiner Cube:
 
 ## Swarming elements via Automation
 
-To swarm elements via an automation script, call the SwarmingHelper.Create method and indicate the elements that need to be swarmed and the ID of the node they need to be swarmed to.
+To swarm elements via an automation script, call the [SwarmingHelper.Create](xref:Skyline.DataMiner.Net.Swarming.Helper.SwarmingHelper.Create*) method and indicate the elements that need to be swarmed and the ID of the node they need to be swarmed to.
 
 For example:
 
@@ -71,7 +72,7 @@ At present, Swarming is not yet supported for the following types of elements:
 
 - Elements polling localhost.
 - Elements receiving SNMP traps in a DMS with [trap distribution](xref:DataMiner.SnmpTrapDistribution) disabled on at least one DMA.
-- Elements with active [element connections](xref:Virtual_elements#configuring-virtual-elements-with-the-element-connections-module).
+- Elements with active [element connections](xref:Element_Connections_module).
 - Elements with smart-serial connections configured in server mode, except if this is [explicitly enabled in the protocol.xml](xref:SwarmingSmartSerialServerMode) (supported in specific cases from DataMiner 10.6.6/10.7.0 onwards).
 
 > [!TIP]

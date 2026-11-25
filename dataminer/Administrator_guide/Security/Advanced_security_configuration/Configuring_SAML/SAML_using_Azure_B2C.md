@@ -1,5 +1,6 @@
 ---
 uid: SAML_using_Azure_B2C
+description: "Configure SAML with Azure B2C for DataMiner by setting up the enterprise app, metadata, policies, and automatic user creation for secure external access."
 ---
 
 # Configuring SAML with Azure B2C as identity provider
@@ -33,4 +34,4 @@ To configure this:
    > [!NOTE]
    >
    > - If you use Azure B2C, users can only be provisioned automatically. Provisioning users by importing them is not possible.
-   > - To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a `<PreferredLoginClaim>` element to the `<AutomaticUserCreation>` element in *DataMiner.xml* that refers to a claim containing a valid email address.
+   > - To create SAML users in DataMiner using Azure B2C, a domain is required in the usernames. For this reason, email addresses must be used as the usernames. If the default username of the identity provider is not a valid email address, add a [PreferredLoginClaim](xref:DataMiner.ExternalAuthentication.AutomaticUserCreation.PreferredLoginClaim) element to the [AutomaticUserCreation](xref:DataMiner.ExternalAuthentication.AutomaticUserCreation) element in *DataMiner.xml* that refers to a claim containing a valid email address.

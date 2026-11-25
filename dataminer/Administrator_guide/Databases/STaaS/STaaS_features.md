@@ -1,7 +1,7 @@
 ---
 uid: STaaS_features
 description: "Explore the many STaaS features. STaaS takes care of data redundancy, data resilience, data security, and data availability out of the box."
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # STaaS features
@@ -23,7 +23,7 @@ If your preferred storage region is not available in the options yet, please con
 | Central US       | Iowa, USA            | Live                                                       | East US 2 (Virginia)             |
 | Southeast Asia   | Singapore            | Live                                                       | East Asia (Hong Kong SAR)        |
 | UAE North        | Dubai, UAE           | [On request](mailto:support@dataminer.services?Subject=UAE%20North%20for%20STaaS) (no extra charge) | UAE Central (Abu Dhabi) |
-| Australia East   | New South Wales, AUS | [On request](mailto:support@dataminer.services?Subject=Australia%20East%20for%20STaaS) (no extra charge) | Australia Southeast (Victoria) |
+| Australia East   | New South Wales, AUS | Live                                                       | Australia Southeast (Victoria) |
 | Other Regions    | [See full list](https://learn.microsoft.com/en-us/azure/reliability/regions-list) | Supported [on request](mailto:support@dataminer.services?Subject=Other%20region%20for%20STaaS) (extra cost) | [See full list](https://learn.microsoft.com/en-us/azure/reliability/regions-list) |
 
 - **Zone-redundant storage (ZRS)** copies your data synchronously across three Azure availability zones in one region. Each availability zone is a separate physical location with independent power, cooling, and networking. By **default**, DataMiner STaaS uses ZRS.
@@ -113,6 +113,8 @@ In addition, the following **other limitations** currently apply:
 - DMZ setups are currently not supported.
 
 - Adding a DataMiner Agent to a DMS using STaaS requires [additional manual configuration steps](xref:Adding_a_DMA_to_a_DMS_running_STaaS).
+
+- An individual event sent to STaaS must not exceed 1 MB. This limit applies to the entire event, not only to the value it contains.
 
 - For element table data, the first 768 bytes of a table instance row key (768 ASCII characters, or as few as 192 in a worst-case UTF-8 scenario) must be unique to avoid conflicts in the database; longer keys are truncated.
 

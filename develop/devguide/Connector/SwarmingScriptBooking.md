@@ -1,5 +1,6 @@
 ---
 uid: SwarmingScriptBooking
+description: "Use an automation script and SwarmingHelper to swarm bookings to another DataMiner Agent, validate every result, and handle partial failures."
 ---
 
 # Configuring a script to swarm bookings
@@ -47,8 +48,10 @@ public class Script
             // 'ToString' of a SwarmingResult will contain the ID of the object, the message, and whether swarming succeeded for the object or not.
             var results = string.Join(", ", swarmingResults.Select(s => s.ToString()));
 
-            engine.ExitFail($"Did not receive enough swarming responses. Requested to swarm {bookingIds.Length} bookings, but got {swarmingResults.Length} responses.{Environment.NewLine}" +
-                            $"Sent ids: {sentIds}{Environment.NewLine}Results: {results}");
+            engine.ExitFail("Did not receive enough swarming responses. " +
+                $"Requested to swarm {bookingIds.Length} bookings, but got {swarmingResults.Length} responses.{Environment.NewLine}" +
+                $"Sent ids: {sentIds}{Environment.NewLine}" +
+                $"Results: {results}");
         }
 
         var unsuccessfulResults = swarmingResults.Where(s => !s.Success).ToList();

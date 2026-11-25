@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl.Hierarchy.Table-condition
+description: "Use the condition attribute of the Table element in a DataMiner protocol to limit a hierarchy table link to rows matching a value."
 ---
 
 # condition attribute

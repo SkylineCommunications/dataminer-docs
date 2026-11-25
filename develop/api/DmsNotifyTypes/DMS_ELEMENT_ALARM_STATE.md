@@ -4,7 +4,7 @@ uid: DMS_ELEMENT_ALARM_STATE
 
 # DMS_ELEMENT_ALARM_STATE (83)
 
-> [!WARNING]
+> [!IMPORTANT]
 > The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Gets the alarm state of an element.

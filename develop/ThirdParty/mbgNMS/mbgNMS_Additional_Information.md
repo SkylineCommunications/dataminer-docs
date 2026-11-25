@@ -34,7 +34,7 @@ Explore our series of short demonstration videos in our Dojo use case and video 
 
 - **Data Sheet**: [mbg-nms-datasheet.pdf (meinbergglobal.com)](https://www.meinbergglobal.com/download/docs/shortinfo/english/mbg-nms-datasheet.pdf)
 
-- **More Info**: detailed information is also available on the Meinberg [website](https://www.meinbergglobal.com/english/products/meinberg-network-management-system.html).
+- **More Info**: detailed information is also available on the Meinberg [website](https://www.meinbergglobal.com/english/products/meinberg-network-management-system.htm).
 
 ## Presentation
 

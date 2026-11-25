@@ -1,5 +1,6 @@
 ---
 uid: FAQ_2nd_3rd_party_connector_malfunctions
+description: "Review support and upgrade terms for second- or third-party DataMiner connectors, and agree on responsibilities with its provider before deployment."
 ---
 
 # What if a second- or third-party DataMiner connector malfunctions?

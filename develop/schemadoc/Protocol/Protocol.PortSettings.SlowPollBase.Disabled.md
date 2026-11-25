@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SlowPollBase.Disabled
+description: "Use the Disabled element in a DataMiner protocol to control whether users can change whether slow polling is based on count or duration."
 ---
 
 # Disabled element
@@ -18,7 +19,7 @@ Specifies whether the slow poll settings can be modified in the DataMiner user i
 
 Contains one of the following predefined values:
 
-|Value|Description
+|Value|Description|
 |--- |--- |
 |true|Users will not be able to modify the setting in the DataMiner user interface.|
 |false|Users will be able to modify the setting in the DataMiner user interface.|

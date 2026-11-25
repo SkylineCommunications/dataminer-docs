@@ -1,5 +1,6 @@
 ---
 uid: File_menu
+description: "Use the File menu to load PDML or CSV trap data, save and restore Trapconfig files, and configure SNMPv3 security for sending."
 ---
 
 # File menu

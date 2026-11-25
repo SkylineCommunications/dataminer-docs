@@ -9,14 +9,14 @@ Enables or disables the database cleaning and forwarding thread in the SLDataMin
 ```csharp
 protocol.NotifyDataMiner(385 /*NT_DB_CLEANING*/, false, null);
 
-//disable the thread
+// Disable the thread.
 try
 {
-   //// For example, create a large number of enhanced services.
+    // For example, create a large number of enhanced services.
 }
 finally
 {
-   // Enable the thread.
+    // Enable the thread.
     protocol.NotifyDataMiner(385 /*NT_DB_CLEANING*/, true, null);
 }
 ```

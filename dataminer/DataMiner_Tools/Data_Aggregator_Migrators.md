@@ -1,5 +1,6 @@
 ---
 uid: Data_Aggregator_Migrators
+description: "Use the Data Aggregator Migrator tools to adapt existing GQI queries either after switching to the GQI DxM or after upgrading the Data Aggregator DxM."
 ---
 
 # Data Aggregator Migrators
@@ -18,7 +19,7 @@ The Data Aggregator *MigratorToGQIDxM* tool should be used to migrate any existi
 
 1. Make sure Data Aggregator version 3.1.0 or higher is installed.
 
-1. Enable the [`UseGQIDxM`](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) setting.
+1. Enable the [UseGQIDxM](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) setting.
 
 1. Restart the `DataMiner DataAggregator` service.
 
@@ -46,7 +47,7 @@ To revert the GQI DxM migration:
 
 1. Stop the `DataMiner DataAggregator` service.
 
-1. Disable the [`UseGQIDxM`](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) setting.
+1. Disable the [UseGQIDxM](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries) setting.
 
 1. In `C:\Program Files\Skyline Communications\DataMiner DataAggregator`, replace the new `.json` files with their corresponding `.bak` file.
 

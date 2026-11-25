@@ -1,5 +1,6 @@
 ---
 uid: LogicConditions
+description: "Learn how to define conditions in DataMiner connectors using supported arithmetic, relational, equality, bitwise, and logical operators and operands."
 ---
 
 # Conditions
@@ -96,7 +97,7 @@ Parameter:
 
 ```xml
 <Param id="1">
-   <Name>exampleParameter</Name>
+   <Name>ExampleParameter</Name>
    <Description>Example Parameter</Description>
    <Type>read</Type>
    <Interprete>

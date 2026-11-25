@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.0.0_fixes_2
+status: archived
 ---
 
-# General Main Release 10.0.0 - Fixes (part 2)
+# General Main Release 10.0.0 - Fixes (part 2) [ARCHIVED]
 
 #### Service & Resource Management: First occurrence of a ReservationDefinition was incorrectly saved twice \[ID 23328\]
 

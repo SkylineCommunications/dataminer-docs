@@ -1,6 +1,6 @@
 ---
 uid: SAML_using_Entra_ID
-description: Microsoft Entra ID (known as Azure Active Directory prior to July 2023) is supported as an identity provider for external authentication via SAML.
+description: "Configure SAML with Microsoft Entra ID to set up authentication, create metadata, and provision users for secure DataMiner access."
 ---
 
 # Configuring SAML with Microsoft Entra ID as identity provider

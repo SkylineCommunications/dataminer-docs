@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Discreets.Discreet-dependencyValues
+description: "Use the dependencyValues attribute in a DataMiner protocol to list the other parameter values that make a discreet entry available."
 ---
 
 # dependencyValues attribute
@@ -49,8 +50,8 @@ This does not work for tables. However, there is one exception. When the column 
 In case of a ContextMenu parameter (of which the name is identical to that of the table with "_ContextMenu" suffix), the dependencyValues will first ask the user to enter the value of each parameter specified in this attribute.
 
 ```xml
-<Param id="1000" trending="false">
-    <Name>tblSites</Name>
+<Param id="1000">
+    <Name>Sites</Name>
     <Type>array</Type>
     ...
 ```
@@ -59,7 +60,7 @@ In the following example, after a right click in the table with parameter ID 100
 
 ```xml
 <Param id="1099">
-    <Name>tblSites_ContextMenu</Name>
+    <Name>Sites_ContextMenu</Name>
     <Type>write</Type>
     <Interprete>
         <RawType>other</RawType>

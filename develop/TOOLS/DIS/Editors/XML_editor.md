@@ -351,8 +351,8 @@ In the XML editor, you can click a small *Down* arrow in front of certain XML ta
 | Edit QAction | Create a temporary C# project containing the code of the QAction, and open the QAction in a new C# editor tab. |
 | Edit All QActions | For each of the available QActions, create a temporary C# project containing the code of that QAction, and open each QAction in a new C# editor tab. |
 | Change ID... | Change the ID of a QAction.<br>Note that when you change the ID of a QAction, the following items will be updated:<br>- The id attribute of the \<QAction> tag<br>- The name of the C# project ("QAction_ID")<br>- The name of the main C# file ("QAction_ID.cs")<br>- The name of the default namespace<br>- ("QAction_ID")<br>- The AssemblyInfo.cs file<br>- The name of the project folder on disk |
-| Delete QAction | Delete the entire QAction element as well as the associated C# project.<br> Note: This action cannot be undone as it will also remove all associated C# project files stored on disk. |
-| DLL Imports | Insert references to pre-compiled QActions into the dllImport attribute of the \<QAction> element.<br>The submenu will list<br>- all QActions of which the options attribute contains the "precompile" option,<br>- all QActions of which the C# project has a reference to another C# project in the solution that is not QAction_Helper, QAction_ClassLibrary or another QAction, and<br>- all commonly used system DLL files.<br>Note:<br>- In the submenu, all DLL files already inserted into the dllimport attribute of the \<QAction> element will be indicated by a check mark.<br>- If you want to override the path associated with a DLL import, see the note below. |
+| Delete QAction | Delete the entire [QAction](xref:Protocol.QActions.QAction) element as well as the associated C# project.<br> Note: This action cannot be undone as it will also remove all associated C# project files stored on disk. |
+| DLL Imports | Insert references to pre-compiled QActions into the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute of the \<QAction> element.<br>The submenu will list<br>- all QActions of which the options attribute contains the "precompile" option,<br>- all QActions of which the C# project has a reference to another C# project in the solution that is not QAction_Helper, QAction_ClassLibrary or another QAction, and<br>- all commonly used system DLL files.<br>Note:<br>- In the submenu, all DLL files already inserted into the dllimport attribute of the \<QAction> element will be indicated by a check mark.<br>- If you want to override the path associated with a DLL import, see the note below. |
 
 > [!NOTE]
 > To override the path associated with a DLL import, do the following:
@@ -451,26 +451,27 @@ When working in the XML editor, you will notice so-called "virtual comments" nex
 
 In the following example, there are "virtual comments" next to the referenced parameters. They contain the names found in the `<Description>` tags of those parameters.
 
-For example, next to `<Param>30</Param>`, you can see `<!-- System Table -->` because, in the parameter definition, the `<Description>` tag contains "System Table".
+For example, next to `<Param>30</Param>`, you can see `<!-- Systems -->` because, in the parameter definition, the `<Description>` tag contains "Systems".
 
 ```xml
 <Group id="2">
-    <Name>Table</Name>
-    <Description>Table</Description>
+    <Name>Systems Polling</Name>
+    <Description>Systems Polling</Description>
     <Content>
-        <Param>30</Param><!-- System Table -->
+        <Param>30</Param><!-- Systems -->
     </Content>
 </Group>
 
 <Param id="30">
-    <Name>systemTable</Name>
-    <Description>System Table</Description>
+    <Name>Systems</Name>
+    <Description>Systems</Description>
     <Type>array</Type>
-    <ArrayOptions index="0" options=";naming=/33">
-        <ColumnOption idx="0" pid="31" type="snmp" options=";save" /><!-- System Index -->
-        <ColumnOption idx="1" pid="32" type="snmp" options=";save" /><!-- System ID -->
-        <ColumnOption idx="2" pid="33" type="snmp" options=";save" /><!-- System Description -->
-        <ColumnOption idx="3" pid="34" type="snmp" options=";save" /><!-- System Up Time -->
+    <ArrayOptions index="0">
+        <NamingFormat>,33</NamingFormat>
+        <ColumnOption idx="0" pid="31" type="snmp" options=";save" /><!-- Index (Systems) -->
+        <ColumnOption idx="1" pid="32" type="snmp" options=";save" /><!-- ID (Systems) -->
+        <ColumnOption idx="2" pid="33" type="snmp" options=";save" /><!-- Description (Systems) -->
+        <ColumnOption idx="3" pid="34" type="snmp" options=";save" /><!-- Up Time (Systems) -->
     </ArrayOptions>
 </Param>
 ```

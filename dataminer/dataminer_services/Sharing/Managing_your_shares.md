@@ -1,6 +1,7 @@
 ---
 uid: Managing_your_shares
-reviewer: Alexander Verkest
+description: "Manage your shares in the Sharing app by filtering items, opening dashboards, reviewing details, or removing access to shared content."
+reviewer: Cloud Ecosystem
 ---
 
 # Managing your shares

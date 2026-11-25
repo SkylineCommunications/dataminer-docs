@@ -1,6 +1,7 @@
 ---
 uid: Creating_an_organization
-reviewer: Alexander Verkest
+description: "Create an organization on dataminer.services by specifying its name and a URL that uses lowercase letters and numbers only."
+reviewer: Cloud Ecosystem
 ---
 
 # Creating an organization

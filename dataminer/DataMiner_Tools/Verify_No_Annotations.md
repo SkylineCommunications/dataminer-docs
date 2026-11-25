@@ -1,5 +1,6 @@
 ---
 uid: Verify_No_Annotations
+description: "Find out how the Verify No Annotations check verifies that the LegacyAnnotations soft-launch option is disabled."
 ---
 
 # Verify No Annotations

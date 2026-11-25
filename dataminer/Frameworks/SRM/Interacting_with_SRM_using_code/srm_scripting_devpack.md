@@ -1,5 +1,6 @@
 ---
 uid: srm_scripting_devpack
+description: "Install the SRM Dev Pack with the Skyline.DataMiner.Core.SRM NuGet package and update namespaces to develop custom SRM automation scripts."
 ---
 
 # SRM scripting using the SRM Dev Pack

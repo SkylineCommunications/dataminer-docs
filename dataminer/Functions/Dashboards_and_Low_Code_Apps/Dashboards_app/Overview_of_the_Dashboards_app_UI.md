@@ -51,9 +51,9 @@ The header bar contains the following items, from left to right:
 
 - User button: A button with the initials or an image of the current user is displayed in the upper-right corner. Click this button to open a menu that provides access to the following options:
 
-  - *(Dashboard) settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
+  - *(Dashboards) settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
 
-    ![Dashboard settings](~/dataminer/images/DashboardSettings.png)<br>*Dashboard settings in DataMiner 10.4.10*
+    ![Dashboard settings](~/dataminer/images/DashboardSettings.png)<br>*Dashboard settings in DataMiner 10.6.11*
 
   - *About*: Displays information about the app.
 

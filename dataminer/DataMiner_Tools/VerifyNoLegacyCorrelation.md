@@ -1,5 +1,6 @@
 ---
 uid: VerifyNoLegacyCorrelation
+description: "Find out how the Verify No Legacy Correlation check verifies that no legacy correlation rules still exist on the DMS before upgrading."
 ---
 
 # Verify No Legacy Correlation

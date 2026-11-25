@@ -1,5 +1,6 @@
 ---
 uid: Changing_SNMP_agent_ports
+description: "Learn how to change SNMP agent ports and trap reception ports in DataMiner.xml to avoid conflicts with Windows SNMP."
 ---
 
 # Changing SNMP agent ports

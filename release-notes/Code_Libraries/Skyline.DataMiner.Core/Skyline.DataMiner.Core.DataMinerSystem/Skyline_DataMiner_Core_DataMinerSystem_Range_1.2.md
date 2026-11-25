@@ -7,6 +7,49 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 > [!NOTE]
 > Range 1.2.x.x is supported as from **DataMiner 10.4.0**.
 
+### 1.2.1.3
+
+#### New feature - GetDmsAsUser method added for automation scripts [ID 46916]
+
+The DataMinerSystem Automation library now provides a new `GetDmsAsUser()` extension method on `Engine` and `IEngine`. It returns an object implementing `IDms` and executes `DMSMessage` requests in the security context of the user running the automation script.
+
+`GetDmsAsUser()` is now the recommended way to get a DMS object in automation scripts. `GetDms()` executes actions with System account permissions, so only use it when system permissions are explicitly required.
+
+> [!NOTE]
+> Only `DMSMessage` requests are handled in the user context. Other flows, such as subscriptions (monitors), are not executed in the user context.
+
+### 1.2.1.2
+
+#### Fix - New scheduler tasks defaulted to zero repetitions instead of unlimited repetitions [ID 46858]
+
+When you created a scheduler task without specifying a repetition count, it defaulted to 0 instead of -1 (unlimited), so the task would not repeat. The default is now -1, ensuring that the task repeats indefinitely unless you configure a specific repetition count.
+
+### 1.2.1.1
+
+#### Fix - Daily scheduled task repetition intervals could be cleared when tasks were updated [ID 46561]
+
+When you updated a daily scheduled task that uses XML storage, its repetition interval in minutes could be cleared. The library now retains this interval when it retrieves and updates the task.
+
+### 1.2.1.0
+
+#### New feature - Creating and updating elements with additional connection types [ID 46400]
+
+The DataMinerSystem library now supports creating and updating elements with serial (single), smart-serial (single), WebSocket, GPIB, and SLA connections. Previously, only SNMP (v1/v2c and v3) and HTTP connections were supported.
+
+When you create an element for a protocol that requires connection-specific configuration, you must provide a connection that matches the type declared by that protocol. Protocols with virtual connections can still use the default configuration.
+
+For serial connections, only TCP and UDP are fully supported. For physical serial connections that use a COM port, the library only identifies the port as `ISerial`; it does not provide full configuration support.
+
+OPC connections are identified as `IOpcConnection`, but you cannot read or configure OPC-specific settings because DataMiner no longer supports this connection type.
+
+#### Breaking change - IUdp.IsSslTlsEnabled property removed [ID 46400]
+
+The `IsSslTlsEnabled` property has been removed from `IUdp` because SSL/TLS is not supported for UDP connections. Any code that accesses this property will need to be updated.
+
+#### Fix - Updating service property values changed their access type [ID 46488]
+
+When you updated a service property value through the DataMinerSystem library, the property's access type was changed to read-write. This could cause DataMiner to reject the update with an "Invalid data" error. The library now preserves the property's existing access type when you update its value.
+
 ### 1.2.0.3
 
 #### New feature - Editing elements and services included in a service [ID 46034]

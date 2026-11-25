@@ -11,7 +11,7 @@ string rootFolder = @"C:\Skyline DataMiner\Documents\";
 string folderName = "Config";
 string newFolderName = "Configuration";
 
-object returnValue = protocol.NotifyDataMiner(183/*NT_RENAME_FOLDER*/ , rootFolder + folderName, rootFolder + newFolderName);
+object returnValue = protocol.NotifyDataMiner(183 /*NT_RENAME_FOLDER*/, $"{rootFolder}{folderName}", $"{rootFolder}{newFolderName}");
 ```
 
 ## Parameters

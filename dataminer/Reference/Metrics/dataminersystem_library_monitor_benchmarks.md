@@ -18,7 +18,7 @@ uid: dataminersystem_library_monitor_benchmarks
 
 ### Parameter value monitor
 
-```C#
+```csharp
 StartValueMonitor<T>(this IDmsStandaloneParameter<T> parameter, SLProtocol protocol, Action<ParamValueChange<T>> onChange)
 ```
 
@@ -30,7 +30,7 @@ StartValueMonitor<T>(this IDmsStandaloneParameter<T> parameter, SLProtocol proto
 
 ### Cell value monitor
 
-```C#
+```csharp
 StartValueMonitor<T>(this IDmsColumn<T> column, string primaryKey, SLProtocol protocol, Action<CellValueChange<T>> onChange)
 ```
 
@@ -44,7 +44,7 @@ StartValueMonitor<T>(this IDmsColumn<T> column, string primaryKey, SLProtocol pr
 
 ### Column value monitor
 
-```C#
+```csharp
 StartValueMonitor<T>(this IDmsColumn<T> column, SLProtocol protocol, Action<ColumnValueChange<T>> onChange)
 ```
 
@@ -57,7 +57,7 @@ StartValueMonitor<T>(this IDmsColumn<T> column, SLProtocol protocol, Action<Colu
 
 ### Table value monitor
 
-```C#
+```csharp
 StartValueMonitor(this IDmsTable table, SLProtocol protocol, int primaryKeyColumnIdx, Action<TableValueChange> onChange)
 ```
 

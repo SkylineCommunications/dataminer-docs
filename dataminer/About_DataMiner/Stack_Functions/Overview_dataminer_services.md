@@ -117,18 +117,16 @@ In addition, when you connect your DataMiner Agents to dataminer.services, your 
 > - [Introducing your DataMiner co-pilot](https://community.dataminer.services/introducing-your-dataminer-co-pilot/)
 > - [Customer DataMiner Reporting (CDMR)](xref:CDMR)
 
-### DataMiner Assistant
+### DataMiner Intelligence
 
-The **DataMiner Assistant** is an integrated AI assistant that helps users **interact with their DataMiner System more efficiently**. It can answer DataMiner-related questions, assist in interpreting system data, and help users quickly find relevant information.
+Your DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) before you can enable and use DataMiner Intelligence. With DataMiner Intelligence, you can:
 
-Combining knowledge of your DataMiner environment with DataMiner documentation, the Assistant makes it easier to troubleshoot issues, analyze data, and work more efficiently.
+- Chat with AI agents through DataMiner Assistant to investigate alarms and trends or find answers in the DataMiner documentation.
+- Generate GQI queries for dashboards and low-code apps by describing the data you need in plain language.
+- Extract structured data from documents for use in DataMiner Automation workflows.
 
 > [!TIP]
-> See also:
->
-> - [DataMiner Assistant DxM](xref:Assistant_DxM)
-> - [DataMiner Assistant app](xref:DataMinerAssistant)
-> - [DataMiner Assistant for Microsoft 365](xref:Assistant_M365)
+> For an overview of the AI capabilities available in DataMiner, see [About DataMiner Intelligence](xref:DataMiner_Intelligence).
 
 ### Storage as a Service (STaaS)
 

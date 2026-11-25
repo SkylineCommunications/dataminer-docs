@@ -1,5 +1,6 @@
 ---
 uid: AdvancedDataMinerDataPersistencePersistingTables
+description: "Configure connector table columns to be stored in the database, understand the non-partial table row limit, and mark tables or columns as volatile."
 keywords: volatile
 ---
 
@@ -19,7 +20,7 @@ In order for a table column to persist in the database, one of the following mus
 For example, the following table parameter defines some columns to be saved. Column 1001 will also be saved, as this is the column holding the primary keys (as indicated by the [index](xref:Protocol.Params.Param.ArrayOptions-index) attribute).
 
 ```xml
-<Param id="1000" trending="false">
+<Param id="1000">
    <Name>Inputs</Name>
    <Description>Inputs</Description>
    <Type>array</Type>
@@ -33,19 +34,19 @@ For example, the following table parameter defines some columns to be saved. Col
       <ColumnOption idx="5" pid="1006" type="retrieved" options="" />
       <ColumnOption idx="6" pid="1007" type="retrieved" options=";save" />
    </ArrayOptions>
-  ...
+   ...
 </Param>
 ```
 
-> [!NOTE]
-> From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, The maximum number of rows in a non-partial table is limited to 105,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 85,000 rows to notify you that you are approaching this limit.
+> [!IMPORTANT]
+> **Runtime limit:** From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, the maximum number of rows in a non-partial table is 105,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 85,000 rows to notify you that you are approaching this limit. This is a row-count limit, not a throughput target.
 
 ## Volatile tables
 
 In case you do not want anything to be kept in the database, you can use the [volatile](xref:Protocol.Params.Param.ArrayOptions-options#volatile) option.
 
 ```xml
-<ArrayOptions index="0" displayColumn="1" options=";volatile;">
+<ArrayOptions index="0" options=";volatile">
 ```
 
 The *volatile* option can also be applied on a specific column in the [options](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-options) attribute of the [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) tag (except for columns using the element option or referred to by the [displayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute).
@@ -62,5 +63,5 @@ In general, make sure to only use it on tables that are only displayed in the UI
 
 > [!NOTE]
 >
-> - If alarm monitoring is needed even though the data is very volatile, check whether the number of rows added and deleted will remain low enough so that there are at most 7 changes per minute on the same element and at most 10 000 changes per day on the same element. If the number will be higher, this can have a severe impact on the read efficiency of the database, so the *volatile* option must be used. If the number will be low enough, you can remove the *volatile* option for the relevant alarm monitoring, but make sure that you do not add the *save* option to other columns.
-> - From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, The maximum number of rows in a volatile table is limited to 1,005,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 805,000 rows to notify you that you are approaching this limit.
+> - **Recommendation:** If alarm monitoring is needed even though the data is very volatile, keep row additions and deletions to at most 7 changes per minute and 10,000 changes per day on the same element. Higher rates can severely affect database read efficiency, so use the *volatile* option. These are performance guidelines, not validator thresholds.
+> - **Runtime limit:** From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, the maximum number of rows in a volatile table is 1,005,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 805,000 rows to notify you that you are approaching this limit.

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Groups.Group.Type
+description: "Use the Type element under Group in a DataMiner protocol to select whether a group contains actions, triggers, parameters, or pairs."
 ---
 
 # Type element

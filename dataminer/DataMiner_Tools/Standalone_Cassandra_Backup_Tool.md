@@ -1,8 +1,12 @@
 ---
 uid: Standalone_Cassandra_Backup_Tool
+description: "Find out how the deprecated StandaloneCassandraBackup.exe tool was used to take a backup of a Cassandra database (either a single node or a cluster)."
 ---
 
 # Standalone Cassandra Backup tool
+
+> [!IMPORTANT]
+> This tool is deprecated. It was designed to work with a version of Cassandra that is currently no longer supported.
 
 The *StandaloneCassandraBackup.exe* tool can be used by an administrator to take a backup of a Cassandra database (either a single node or a cluster).
 

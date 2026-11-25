@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.SSH
+description: "Learn how the SSH element configures password-based or public key authentication for a serial TCP connection."
 ---
 
 # SSH element

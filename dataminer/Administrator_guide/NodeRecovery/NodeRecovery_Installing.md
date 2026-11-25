@@ -27,3 +27,6 @@ description: "Install Node Recovery by enabling Swarming, deploying the DxM, and
 The DxM will start monitoring the cluster for outages right away. However, no further actions will happen unless you have configured a [trigger script](xref:NodeRecovery_Triggers).
 
 For example, the following trigger script is available in the Catalog: [NodeRecovery - Global State Change](https://catalog.dataminer.services/details/3de8405e-7156-4a0a-b8c5-80937de0f4ed). Once deployed, this script will execute a simple rebalancing algorithm whenever the global cluster state changes. Elements hosted on nodes that are in outage will be moved to healthy nodes, while load remains balanced across the cluster as much as possible. You can use this script as is if it fits your needs, or you can use it as a starting point for your own scripts.
+
+> [!NOTE]
+> Global state change scripts require a cluster of at least three DataMiner Agents. They will not execute in a two-node setup. For two-node redundancy, use a local state change script and consider the [network split risks](xref:NodeRecovery_Detection#network-splits).

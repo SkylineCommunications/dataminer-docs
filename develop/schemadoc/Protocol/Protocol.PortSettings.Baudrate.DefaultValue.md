@@ -1,5 +1,6 @@
 ---
 uid: Protocol.PortSettings.Baudrate.DefaultValue
+description: "Use the DefaultValue element under Baudrate in a DataMiner protocol to set the baud rate initially shown when users add an element."
 ---
 
 # DefaultValue element
@@ -16,16 +17,10 @@ unsignedInt
 
 ## Remarks
 
-Each time a user adds an element using the element wizard, the baud rate will by default be set to this value.
-
-
+When you add an element using the element wizard, the baud rate will by default be set to this value.
 
 ## Examples
-
 
 ```xml
 <DefaultValue>19200</DefaultValue>
 ```
-
-
-

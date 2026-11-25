@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Pairs.Pair.Name
+description: "Use the Pairs.Pair.Name element in a DataMiner protocol to assign a name to a command and response pair."
 ---
 
 # Name element

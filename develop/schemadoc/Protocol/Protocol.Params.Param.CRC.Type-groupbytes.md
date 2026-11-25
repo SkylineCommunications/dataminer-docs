@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.CRC.Type-groupbytes
+description: "Learn how to use the groupbytes attribute to group bytes as hexadecimal or binary values for supported CRC operations in a DataMiner protocol."
 ---
 
 # groupbytes attribute
@@ -22,9 +23,9 @@ If you set groupbytes to 2, 3130 will be interpreted as 10. See the following ex
 
 ```xml
 <Param>
-  <CRC>
-     <Type groupbytes="2">
-     ...
+   <CRC>
+      <Type groupbytes="2">
+      ...
 ```
 
 If, however, you want the grouped value to be interpreted as a binary value, add ”;binary” to the groupbytes value.
@@ -33,9 +34,9 @@ See the following example. If you set groupbytes to 2 and you add ”;binary”,
 
 ```xml
 <Param>
-  <CRC>
-     <Type groupbytes="2;binary">
-     ...
+   <CRC>
+      <Type groupbytes="2;binary">
+      ...
 ```
 
 Only valid if the CRC type is set to one of the following values:

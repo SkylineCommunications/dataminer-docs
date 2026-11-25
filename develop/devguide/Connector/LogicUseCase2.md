@@ -1,5 +1,6 @@
 ---
 uid: LogicUseCase2
+description: "Follow an element's startup flow through saved parameter loading, initial timer groups, after-startup triggers, and the transition to operation."
 ---
 
 # Use case: Internal flow – element startup
@@ -38,7 +39,7 @@ The parameter:
 
 ```xml
 <Param id="100" trending="true" save="true">
-    <Name>selectedConfiguration</Name>
+    <Name>SelectedConfiguration</Name>
     <Description>Configuration</Description>
     <Type>read</Type>
     <Information>

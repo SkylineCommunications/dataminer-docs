@@ -1,5 +1,6 @@
 ---
 uid: FAQ_dataminer_services
+description: "Connect to dataminer.services, and benefit from features like Storage as a Service, remote access, dashboard sharing, deployments from the Catalog, etc."
 ---
 
 # Questions related to dataminer.services

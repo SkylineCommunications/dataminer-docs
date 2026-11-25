@@ -1,5 +1,6 @@
 ---
 uid: Verify_No_Legacy_Reports_Dashboards
+description: "Find out how the Verify No Legacy Reports Dashboards check verifies that no legacy reports and dashboards still exist on your DMS before upgrading."
 ---
 
 # Verify No Legacy Reports Dashboards

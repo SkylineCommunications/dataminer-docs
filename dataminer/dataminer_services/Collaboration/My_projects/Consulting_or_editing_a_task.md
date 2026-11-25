@@ -1,5 +1,6 @@
 ---
 uid: Consulting_or_editing_a_task
+description: "Consult or edit a task in List or Board view, save permitted changes, and review its status, planning, and SLA limitations."
 ---
 
 # Consulting or editing a task

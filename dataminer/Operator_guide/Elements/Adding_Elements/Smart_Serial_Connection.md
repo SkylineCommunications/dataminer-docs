@@ -6,7 +6,7 @@ uid: Smart_Serial_Connection
 
 For smart-serial connections, you can specify the following connection settings while creating or editing an element:
 
-- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote locations are configured. For more information, refer to [Edge Manager](xref:EdgeManagerOverview). Note that a smart-serial element acting as a server is not supported in remote locations.
+- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the EdgeManager DxM is installed and remote locations are configured. For more information, refer to [Edge Gateways](xref:About_Edge_Gateways). Note that a smart-serial element acting as a server is not supported in remote locations.
 
 - **IP address/host**: The polling IP or URL of the destination.
 
@@ -22,6 +22,8 @@ For smart-serial connections, you can specify the following connection settings 
 - **Accepted IP address**: Available if a smart-serial server port of type TCP is used. Allows you to specify one or more allowed IP addresses for the connection. The element will then only communicate with those IP addresses. This configuration makes it possible for several elements to listen on the same port but communicate exclusively with a different set of IPs.
 
   To add another accepted IP address, below the box, click *Add*.
+
+  From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46784 -->, if multiple elements listen on the same TCP server port and explicitly list the same client IP address, all of them receive data sent by that client. Only one element can respond to the client. Other elements that listen to the same server port but do not explicitly list the client's IP address do not receive its data. In earlier versions, only one of the elements received the data. This behavior is useful when multiple elements need to receive the same data without responding.
 
   > [!NOTE]
   > If *AllowedIPAddresses.Disabled* is set to "true" in the user settings of the smart-serial connection in the protocol, this functionality will not be available. See [Specifying the allowed IP address](xref:ConnectionsSmartSerialServer#specifying-the-allowed-ip-addresses).

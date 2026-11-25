@@ -1,5 +1,6 @@
 ---
 uid: Setting_Alerter_alarm_filter
+description: "Set an Alerter alarm filter to control notifications with client-side severity, server-side filters, and options for new, acknowledged, or cleared alarms."
 ---
 
 # Setting an alarm filter in Alerter

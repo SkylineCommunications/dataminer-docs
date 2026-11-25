@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Type-options
+description: "Use the options attribute in a DataMiner protocol to set type-specific behavior for parameter displays, controls, dates, and tables."
 ---
 
 # options attribute
@@ -16,7 +17,7 @@ string
 
 ## Remarks
 
-In the options attribute, you can specify a number of options (separated by semicolons) depending on the measurement type. 
+In the options attribute, you can specify a number of options (separated by semicolons) depending on the measurement type.
 
 ### Options for measurement type "analog"
 
@@ -26,7 +27,7 @@ Possible options for measurement type "analog":
 
 Stretches the analog parameter vertically.
 
-#### vertificationDeviation=
+#### verificationDeviation=
 
 Allows you to specify a deviation on the command to be verified using Command Execution Verification (CEV or Confirm Sets):
 
@@ -103,10 +104,10 @@ or:
 
 ```xml
 <Param id="16" backup="true">
-    <Name>matrix 64*64</Name>
+    <Name>Matrix_64x64</Name>
     <Measurement>
         <!-- Sequence for matrix options COMin/COMax/CIMin/CIMax -->
-        <Type options="matrix=64,64,0,64,0,64,pages,noDisconnectsInBackup"link="port64.xml">matrix</Type>
+        <Type options="matrix=64,64,0,64,0,64,pages,noDisconnectsInBackup" link="port64.xml">matrix</Type>
         <Discreets>
         ...
 ```

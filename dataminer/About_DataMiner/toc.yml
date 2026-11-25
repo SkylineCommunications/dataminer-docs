@@ -7,8 +7,6 @@ items:
     topicUid: Overview_Standardized_Foundation
   - name: Digital transformation
     topicUid: Digital_transformation
-  - name: Open software platform
-    topicUid: Overview_Platform_Open_Platform
   - name: References and use cases
     topicUid: Overview_References_and_use_cases
   - name: Security
@@ -28,6 +26,8 @@ items:
         topicUid: DM_selfhosted_and_StaaS
       - name: Self-managed DataMiner nodes and storage nodes (not recommended)
         topicUid: DM_and_storage_selfhosted
+      - name: Hybrid clusters
+        topicUid: Hybrid_clusters
   - name: Stack functions
     topicUid: Overview_Stack_Functions
     items:
@@ -116,17 +116,21 @@ items:
                   topicUid: Pricing_sizing_guide_services_data_sources
                 - name: DataMiner as a Service
                   topicUid: Pricing_sizing_guide_services_DaaS
-                - name: DataMiner Assistant
-                  topicUid: Pricing_sizing_guide_services_DataMiner_Assistant
+                - name: DataMiner Intelligence
+                  topicUid: Pricing_sizing_guide_services_DataMiner_Intelligence
                 - name: Storage as a Service
                   topicUid: Pricing_sizing_guide_services_StaaS
             - name: Solutions
               topicUid: Pricing_sizing_guide_solutions
               items:
+                - name: Cost & Billing
+                  topicUid: Pricing_sizing_guide_solutions_Cost_Billing
                 - name: InfraOps
                   topicUid: Pricing_sizing_guide_solutions_InfraOps
                 - name: MediaOps Plan
                   topicUid: Pricing_sizing_guide_solutions_MediaOps_Plan
+                - name: SLA Manager
+                  topicUid: Pricing_sizing_guide_solutions_SLA_Manager
                 - name: Starlink
                   topicUid: Pricing_sizing_guide_solutions_Starlink
                 - name: Ticketing
@@ -136,6 +140,8 @@ items:
               items:
               - name: GV AMPP
                 topicUid: Pricing_sizing_guide_use_cases_GV_AMPP
+    - name: DataMiner Intelligence
+      topicUid: Pricing_DataMiner_Intelligence
     - name: Perpetual-Use Licensing
       topicUid: Pricing_Perpetual_Use_Licensing
     - name: Professional Service credits

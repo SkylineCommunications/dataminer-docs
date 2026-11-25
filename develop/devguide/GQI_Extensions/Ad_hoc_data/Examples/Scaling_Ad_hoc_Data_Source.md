@@ -47,8 +47,8 @@ public class Results : IGQIDataSource, IGQIOnInit
     {
         return new GQIColumn[]
         {
-                _nameColumn,
-                _kpiColumn,
+            _nameColumn,
+            _kpiColumn,
         };
     }
 
@@ -62,6 +62,7 @@ public class Results : IGQIDataSource, IGQIOnInit
                 new GQICell() { Value = v.Identifier },
                 new GQICell() { Value = v.Name },
             };
+
             return new GQIRow(v.Identifier, cells);
         }).ToArray();
 

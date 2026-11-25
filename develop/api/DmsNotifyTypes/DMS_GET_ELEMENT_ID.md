@@ -4,7 +4,7 @@ uid: DMS_GET_ELEMENT_ID
 
 # DMS_GET_ELEMENT_ID (72)
 
-> [!WARNING]
+> [!IMPORTANT]
 > The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Gets the ID of the element given the element name.
@@ -18,15 +18,15 @@ object result = new object();
 DMS dms = new DMS();
 dms.Notify(type, subType, elementName, null, out result);
 
-string globalElementID = (string) result;
+string globalElementID = (string)result;
 
-if(!string.IsNullOrEmpty(globalElementID))
+if (!string.IsNullOrEmpty(globalElementID))
 {
     string[] globalElementIDParts = globalElementID.Split('/');
     int dmaID = Convert.ToInt32(globalElementIDParts[0]);
     int elementID = Convert.ToInt32(globalElementIDParts[1]);
-    
-    ////...
+
+    // ...
 }
 ```
 

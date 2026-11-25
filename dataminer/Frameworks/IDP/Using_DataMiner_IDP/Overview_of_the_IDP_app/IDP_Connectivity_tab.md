@@ -1,5 +1,6 @@
 ---
 uid: IDP_Connectivity_tab
+description: "Use the IDP app's Connectivity tab to view managed connections, discover connectivity, inspect unresolved connections, and provision DCF connections."
 ---
 
 # Connectivity tab

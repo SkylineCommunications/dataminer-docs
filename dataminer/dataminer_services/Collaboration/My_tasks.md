@@ -1,5 +1,6 @@
 ---
 uid: My_tasks
+description: "Open the My tasks tab in the Collaboration app to review and edit tasks assigned to your account, without creating new tasks."
 ---
 
 # My tasks

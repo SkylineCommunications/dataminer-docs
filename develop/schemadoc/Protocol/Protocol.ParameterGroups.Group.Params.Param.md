@@ -1,5 +1,6 @@
 ---
 uid: Protocol.ParameterGroups.Group.Params.Param
+description: "Use the Param element in a DataMiner protocol to include a parameter and optional primary key column in a parameter group."
 ---
 
 # Param element

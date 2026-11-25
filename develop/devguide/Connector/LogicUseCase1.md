@@ -1,5 +1,6 @@
 ---
 uid: LogicUseCase1
+description: "Follow a connector's internal flow from an external parameter set through triggers, actions, group queues, communication, and response processing."
 ---
 
 # Use case: Internal flow – concept

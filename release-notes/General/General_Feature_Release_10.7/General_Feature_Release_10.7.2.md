@@ -1,0 +1,99 @@
+---
+uid: General_Feature_Release_10.7.2
+description: "Release notes for General Feature Release 10.7.2, including prerequisites, new features, enhancements, and fixes planned for this release."
+---
+
+# General Feature Release 10.7.2 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+> [!TIP]
+>
+> - For release notes related to DataMiner Cube, see [DataMiner Cube Feature Release 10.7.2](xref:Cube_Feature_Release_10.7.2).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.7.2](xref:Web_apps_Feature_Release_10.7.2).
+> - For information on how to upgrade DataMiner, see [Upgrading a DataMiner Agent](xref:Upgrading_a_DataMiner_Agent).
+
+## Prerequisites
+
+Before you upgrade to this DataMiner version:
+
+- Make sure **version 14.44.35211.0** or higher of the **Microsoft Visual C++ x86/x64 redistributables** is installed. Otherwise, the upgrade will trigger an **automatic reboot** of the DMA in order to complete the installation.
+
+  The latest version of the redistributables can be downloaded from the [Microsoft website](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170#latest-microsoft-visual-c-redistributable-version):
+
+  - [vc_redist.x86.exe](https://aka.ms/vs/17/release/vc_redist.x86.exe)
+  - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
+
+- Make sure all DataMiner Agents in the cluster have been migrated to the BrokerGateway-managed NATS solution.
+
+  For detailed information, see [Migrating to BrokerGateway](xref:BrokerGateway_Migration).
+
+  See also: [DataMiner Systems will now use the BrokerGateway-managed NATS solution by default [ID 43856] [ID 43861] [ID 44035] [ID 44050] [ID 44062]](xref:General_Feature_Release_10.6.1#dataminer-systems-will-now-use-the-brokergateway-managed-nats-solution-by-default-id-43856-id-43861-id-44035-id-44050-id-44062)
+
+## Important changes
+
+## Highlights
+
+*No highlights have been selected yet.*
+
+## New features
+
+*No new features have been added yet.*
+
+## Changes
+
+### Enhancements
+
+#### Clustering: Additional compatibility checks when adding a DataMiner Agent [ID 47019]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+When you add a DataMiner Agent to a cluster, DataMiner will now perform the following additional compatibility checks:
+
+- The Agent must be standalone, i.e., not already part of another cluster.
+- The Agent must not be part of a Failover pair.
+- All Agents already in the cluster must run the same DataMiner version.
+- The Agent being added must run the same DataMiner version as the cluster.
+
+If any of these checks fail, the Agent will not be added, and SLNet will log the reason. The existing compatibility checks also remain in effect.
+
+#### Service & Resource Management: Reduced memory usage when serializing properties [ID 47100]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+Serialization of booking properties and other Service & Resource Management (SRM) property collections has been optimized. SLNet now reuses JSON serialization settings instead of recreating them for each conversion and writes property dictionaries as compact JSON, without indentation or line breaks outside string values.
+
+These changes reduce temporary memory usage when bookings are created, updated, exchanged between DataMiner Agents, or read from or written to the database, especially during bursts of booking property updates.
+
+Property values, JSON structure, and type information remain unchanged. Existing data, including data written by earlier DataMiner versions, remains readable. No data migration is required.
+
+> [!NOTE]
+> Custom scripts or integrations that compare the exact JSON text returned by `JSONSerializableDictionary.ToJson()` or `ToElasticJson()` may need to account for the removed whitespace.
+
+#### DataMiner upgrade: Cleanup of DIS Inject folders [ID 47149]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+During a DataMiner upgrade, the following folders used by DIS Inject will now be cleared:
+
+- `Scripts\DISInject`, which contains injected automation script assemblies.
+- `ProtocolScripts\DISInject`, which contains injected protocol QActions.
+
+### Fixes
+
+#### SLGlobal: Process crash when stopping an asynchronous notification queue [ID 47131]
+
+<!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
+
+When SLDMS, SLDataMiner, or SLElement stopped the queue for asynchronous notifications to SLDataMiner, for example during process shutdown, the thread processing that queue could continue running after the queue had been removed. This could cause the process to crash.
+
+From now on, stopping the queue will also stop its processing thread. DataMiner will wait up to 10 seconds for the thread to stop and discard any notifications still in the queue.
+
+#### SLAnalytics: Problem when processing delayed DVE child elements [ID 47157]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+When SLAnalytics received a DVE child element before its parent element, it would keep the child element on hold until the parent arrived. If the parent then arrived but had not yet been stored, SLAnalytics could stop working while processing the child elements.
+
+This could happen, for example, during the weekly alarm template cache cleanup.

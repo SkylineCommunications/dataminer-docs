@@ -1,5 +1,6 @@
 ---
 uid: Testing_alarm_forwarding
+description: "Test alarm forwarding by connecting via telnet to the AlarmSocket TCP/IP port and verifying the raw alarm message."
 ---
 
 # Testing alarm forwarding

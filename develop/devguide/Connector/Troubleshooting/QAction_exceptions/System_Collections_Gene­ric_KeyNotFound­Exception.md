@@ -1,5 +1,6 @@
 ---
 uid: System_Collections_Generic_KeyNotFoundException
+description: "Avoid KeyNotFoundException in QAction dictionary access by checking for a key and preferably retrieving its value once with TryGetValue."
 ---
 
 # System.Collections.Generic.KeyNotFoundException

@@ -55,7 +55,7 @@ Config --- End
 ErrorYes --- End
 %% Define hyperlinks %%
 click Home "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html"
-click SLLogCollector "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html"
+click SLLogCollector "/dataminer/DataMiner_Tools/SLLogCollector.html"
 click Investigation "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Troubleshooting_Where_to_Start.html"
 click Config "#scheduled-taskevent-configuration-checklist"
 click ErrorYes "#check-the-respective-errors"

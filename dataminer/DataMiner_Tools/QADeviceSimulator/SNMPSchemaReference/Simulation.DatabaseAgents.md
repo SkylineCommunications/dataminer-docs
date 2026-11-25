@@ -1,5 +1,6 @@
 ---
 uid: DeviceSimulator_SNMP_Schema_Simulation_DatabaseAgents
+description: "Configure the DatabaseAgents element in an SNMP simulation file, define one database agent, and copy the simulation for different agents."
 ---
 
 # DatabaseAgents element

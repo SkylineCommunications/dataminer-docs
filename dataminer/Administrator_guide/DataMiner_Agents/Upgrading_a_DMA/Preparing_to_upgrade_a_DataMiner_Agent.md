@@ -137,6 +137,8 @@ When you upload a DataMiner upgrade, several prerequisite checks are automatical
 
 The following prerequisite checks are currently available:
 
+- [End of Support for SLHelper GQI](xref:EndOfSupport_SLHelperGQI): Verifies whether the DataMiner Agent still uses GQI via SLHelper, which is disabled by default from DataMiner 10.7.0/10.7.1 onwards. This prerequisite is available by default from DataMiner 10.7.0/10.7.1 onwards<!-- RN 46957 -->. It runs automatically when you upgrade from an earlier version.
+
 - [Verify BrokerGateway Migration](xref:VerifyBrokerGatewayMigration): Verifies whether the DataMiner System has migrated from the SLNet-managed NATS solution to the BrokerGateway-managed NATS solution. From DataMiner 10.6.0/10.6.1 onwards<!--RN 43861 -->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify Cloud DxM Version](xref:Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.

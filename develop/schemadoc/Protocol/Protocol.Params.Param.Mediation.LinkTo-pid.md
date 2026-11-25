@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Mediation.LinkTo-pid
+description: "Use the pid attribute in a DataMiner protocol to identify the parameter connected through a DataMiner Mediation Layer link."
 ---
 
 # pid attribute

@@ -13,4 +13,4 @@ You can download SoapUI from the [SoapUI website](https://www.soapui.org/).
 SoapUI also allows you to set up simulations.
 
 > [!TIP]
-> For more information, see [SOAP Service Mocking Overview](https://www.soapui.org/soap-mocking/service-mocking-overview.html).
+> For more information, see [SOAP Service Mocking Overview](https://www.soapui.org/docs/soap-mocking/overview/).

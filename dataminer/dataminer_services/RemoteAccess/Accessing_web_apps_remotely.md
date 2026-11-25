@@ -1,7 +1,8 @@
 ---
 uid: Accessing_web_apps_remotely
+description: "Access the DataMiner web apps remotely through the remote access URL after enabling access and granting permissions."
 keywords: cloud connection
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Accessing DataMiner web apps remotely

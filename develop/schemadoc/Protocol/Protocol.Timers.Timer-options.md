@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer-options
+description: "Use the options attribute of the Timer element in a DataMiner protocol to configure specialized timer execution options and behaviors."
 ---
 
 # options attribute

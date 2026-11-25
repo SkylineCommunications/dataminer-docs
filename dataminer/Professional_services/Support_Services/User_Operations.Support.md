@@ -4,89 +4,72 @@ uid: User_operations_support
 
 # Support application
 
-Our support application is designed to streamline your maintenance requests and keep you informed every step of the way. Through this portal, you can easily manage technical issues and track the progress of your tickets in real-time.
+Via the [Support application](https://admin.dataminer.services/support) on dataminer.services, you can report issues to Skyline Support and track the progress of your support tickets.
 
 Key features:
 
-- **Maintenance requests**: Create a new ticket within your dedicated maintenance support project using a step-by-step wizard designed to guide you through the entire reporting process effortlessly.
+- **Maintenance requests**: Create a new support ticket under your maintenance contract via a guided pop-up window.
 
-- **Real-time monitoring**: Access a comprehensive dashboard of all your submitted tickets.
+- **Real-time monitoring**: Access an overview of all tickets submitted for your organization.
 
-- **Status tracking**: Instantly see the status of a reported ticket.
-
-The application is available at <https://supportpreview.dataminer.services/>. You can log in in the [same way as for dataminer.services](xref:Logging_on_to_dataminer_services).
+- **Status tracking**: Instantly see the status of a reported ticket, including any tasks linked to it.
 
 > [!IMPORTANT]
-> Please note that this application is currently in a preview stage. While we strive for a seamless experience, you may encounter minor issues. If you experience any technical issues while using the portal, please contact the DataMiner Support team directly via email at <support@dataminer.services>.
+> If you experience any technical issues while using the portal, please contact the DataMiner Support team directly via email at <support@dataminer.services>.
 
-## Ticket Overview page
+## Accessing the support application
 
-The *Ticket Overview* page is the default page shown when you open the Support application. On this page, you can check existing tickets.
+The application is available at <https://admin.dataminer.services/support>.
 
-Several **filters** are available on this page:
+You can log in in the [same way as for dataminer.services](xref:Logging_on_to_dataminer_services).
 
-- You can use the filters in the upper-left corner to only show tickets with a specific **status**.
+To get access, you need to be part of an organization on dataminer.services (see [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features)).
 
-- With the time filter at the top, you can filter the tickets on **creation time**.
+## Support tickets overview
 
-The checkboxes right above the table allow you to show or hide specific columns. Below this, you can also select how many rows should be displayed at the same time.
+When you open the [Support application](https://admin.dataminer.services/support), an overview of the support tickets for your organization is shown. For each ticket, the following information is available:
 
-If you click a ticket ID in the table, the **ticket details** will be displayed. These include any **tasks** related to the ticket.
+- **ID**: The unique identifier of the ticket.
+- **Title**: A short description of the reported issue.
+- **State**: The current state of the ticket, e.g. *In Progress*, *Follow-up*, or *Closed*.
+- **Reported by**: The person who created the ticket.
+- **Created**: The date and time when the ticket was created.
 
-## Report Ticket page
+The following filters are available above the overview:
 
-The *Report Ticket* page allows you to report a new ticket:
+- **Created at**: A time filter that determines which tickets are shown based on their creation time. By default, only the tickets created in the last 30 days are shown. Select a wider range to retrieve older tickets.
+- **Include closed tickets**: Enable this toggle button to also include tickets that have already been closed.
 
-1. On the *Registration* tab, fill in the following information:
+## Creating a support ticket
 
-   - *Customer*: Mandatory field. The customer matching the logged-in user is selected by default.
+1. In the upper-right corner of the [Support application](https://admin.dataminer.services/support), click *Create support ticket*.
 
-   - *Order Type*: This field is used to filter the projects by type. In case there is a maintenance contract project available for the logged-in user, it will be selected by default.
+   This opens the *Create support ticket* pop-up window.
 
-   - *Order*: Mandatory field. In case there is a maintenance contract project available with status *In Progress*, it will be selected by default.
+1. Fill in the following information:
 
-   - *Additional Contacts*: Optional. In this field, you can add an email per line. When the ticket is created, the confirmation email will have the specified contacts in CC.
+   - **Maintenance contract**: Mandatory. Select the maintenance contract the ticket applies to.
+   - **Title**: Mandatory. A short explanation of the problem you are encountering.
+   - **Description**: Mandatory. A detailed explanation of the problem.
+   - **Contacts**: The person creating the ticket is automatically added here and will be included in the *To* field of the ticket creation email. Any other contacts you add will be included in the *Cc* field.
+   - **Cloud-connected DMS**: The DataMiner System connected to dataminer.services that the ticket applies to. Only the DataMiner Systems that your account has been added to will be listed (see [Controlling user access to dataminer.services features](xref:Giving_users_access_to_cloud_features)). If the relevant DataMiner System is not connected to dataminer.services, select the *Non-cloud-connected Agent (DMA)* option and provide the cluster name, the Agent name, and Agent ID.
+   - **Attachments (optional)**: Drag and drop files onto the box, or click *choose files* to select them. To upload a file with an unsupported extension, zip the file and upload the zip file instead.
 
-1. When all the necessary information is filled in, click *Next* in the lower-right corner.
+1. Click *Create*.
 
-1. On the *Ticket Details* tab, fill in the following information:
+   A confirmation pop-up window will be displayed, and a ticket creation email will be sent out.
 
-   - *Title*: Mandatory field. Specify a title for the ticket.
+   > [!NOTE]
+   > If the ticket includes large attachments, ticket creation can take a moment. Please be patient and do not close the window while the ticket is being created.
 
-   - *Description*: Mandatory field. Add a detailed description of the issue.
+## Viewing ticket details
 
-   - *Impact*: Mandatory field. Select the impact in the dropdown list. If you select *Other*, you will need to specify the impact details in an additional field.
+When you click a ticket in the overview, a side panel opens on the right with the details of that ticket:
 
-   - *This issue is affecting a Production System*: Select *Yes* or *No*.
+- The ticket title, its current state, and its creation time.
+- The full description of the reported issue.
+- The team the ticket is currently assigned to.
+- The project the ticket is linked to.
+- Any tasks linked to the ticket, with their current status.
 
-   - *Systems*:
-
-     - If the system is connected to dataminer.services, select the system and the relevant DMA in the dropdown boxes.
-
-     - If the system is not connected to dataminer.services, click the cloud toggle button and then specify the system details manually.
-
-     - To add more systems, click the *Add System* button.
-
-     - If you have accidentally added a system that should not be included for the ticket, you can remove it using the garbage can icon on the right.
-
-   - *Log Collection*: Select how logs will be collected for the ticket:
-
-     - *Automatic (via Cloud)*: Select this option if logs can be collected via dataminer.services. Only select this option if at least one of the systems specified under *Systems* is connected to dataminer.services.
-
-     - *Manual*: If you select this option, you will need to upload a [Log Collector package](xref:Collecting_data_to_report_an_issue_to_TechSupport). Requires the selection of at least one system.
-
-     - *None (not recommended)*: In most cases, a Log Collector package is crucial for the investigation. However, you could for example select this option when something causes the Log Collector package creation to fail.
-
-1. When all the necessary information is filled in, click *Next* in the lower-right corner.
-
-1. Optionally, on the *Attachments* tab, upload files related to the ticket.
-
-   If you need to upload more than one file, all files must be in the same folder.
-
-1. Click *Next* in the lower-right corner.
-
-   The *Finish* tab will be displayed, which will show a summary of the ticket that will be created.
-
-1. If all the information is correct, click *Submit* to initiate ticket creation. Otherwise, click *Back*, adjust the information, and click *Next* again until you can submit the ticket.
-
-   A progress bar will show the status of the ticket. In case the ticket contains attachments, this will also be reflected on the progress bar. Once the ticket creation is complete, the ticket details will be shown. A ticket creation email will also be sent out at this point.
+Every ticket also has a unique URL, so you can bookmark it or share a direct link with a colleague. Opening the ticket in the side panel will give you the URL for that ticket, ending with `?id=<ticket ID>`.

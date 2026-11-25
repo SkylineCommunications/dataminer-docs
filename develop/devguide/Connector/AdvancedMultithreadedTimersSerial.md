@@ -1,5 +1,6 @@
 ---
 uid: AdvancedMultiThreadedTimersSerial
+description: "Build multithreaded serial requests with qactionBefore, process responses in a group-triggered QAction, and run post-response logic with qactionAfter."
 ---
 
 # Serial
@@ -26,7 +27,7 @@ Assume the following multithreaded timer is defined:
 </Timer>
 ```
 
-To build the request, create a QAction triggered by a multithreaded timer (using the qactionBefore option), which creates the request object and returns this.
+To build the request, create a QAction triggered by a multithreaded timer (using the `qactionBefore` option), which creates the request object and returns this.
 
 ```xml
 <QAction id="1010" name="Serial Before" encoding="csharp" row="true">
@@ -50,21 +51,21 @@ public class QAction
         {
             int timeout = 1500; // Timeout in ms.
             
-            string[] commands = new string[2];
-            commands[0] = "MyCommand";
-            commands[1] = "MyCommand2";
+            string[] commands = new string[] { "MyCommand", "MyCommand2" };
             
-            string[] requestSettings = new string[2];
-            requestSettings[0] = timeout.ToString();
-            requestSettings[1] = "1,2";    // Comma-separated list of response IDs.
+            string[] requestSettings = new string[]
+            {
+                timeout.ToString(),
+                "1,2", // Comma-separated list of response IDs.
+            };
             
-            object[] requestInfo = new object[3] { "serial", requestSettings, commands };
+            object[] requestInfo = new object[] { "serial", requestSettings, commands };
             
             return requestInfo;
         }
         catch (Exception e)
         {
-            protocol.Log("An exception occurred: " + e.ToString());
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
             return null;
         }
     }
@@ -89,7 +90,7 @@ In this QAction, typically you will also set the state of the corresponding row 
 To process the responses, create a QAction that triggers on the group of the multithreaded timer.
 
 > [!NOTE]
-> Whereas typically you provide a parameter ID in the triggers attribute, here you need to specify the ID of the group of the multithreaded timer.
+> Whereas typically you provide a parameter ID in the [triggers](xref:Protocol.QActions.QAction-triggers) attribute, here you need to specify the ID of the group of the multithreaded timer.
 
 ```xml
 <QAction id="1011" name="Serial Data" encoding="csharp" options="group" triggers="1011" row="true">
@@ -166,24 +167,24 @@ public class QAction
                             }
                             else
                             {
-                                protocol.Log("QA" + protocol.QActionID + "|Response data is null.", LogType.Error, LogLevel.NoLogging);
+                                protocol.Log($"QA{protocol.QActionID}|Run|Response data is null.", LogType.Error, LogLevel.NoLogging);
                             }
                         }
                     }
                 }
                 else
                 {
-                    protocol.Log("Result: " + Convert.ToString(result));
+                    protocol.Log($"QA{protocol.QActionID}|Run|Result: {Convert.ToString(result)}", LogType.Error, LogLevel.NoLogging);
                 }
             }
             else
             {
-                protocol.Log("Result is null.");
+                protocol.Log($"QA{protocol.QActionID}|Run|Result is null.", LogType.Error, LogLevel.NoLogging);
             }
         }
         catch (Exception e)
         {
-            protocol.Log("QA" + protocol.QActionID + "|Run|An exception occurred: " + e.ToString(), LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Run|An exception occurred: {e}", LogType.Error, LogLevel.NoLogging);
         }
     }
 }
@@ -193,7 +194,7 @@ In this QAction, you will typically also update the state column of the correspo
 
 ## Step 3: Run the QAction after the response
 
-The last step runs the QAction specified in the *qactionAfter* option of the multithreaded timer.
+The last step runs the QAction specified in the `qactionAfter` option of the multithreaded timer.
 
 ```xml
 <QAction id="1012" name="Serial After" encoding="csharp" row="true">

@@ -1,19 +1,24 @@
 ---
-uid: Letting_DataMiner_Assistant_create_a_query
-keywords: DataMiner Assistant, NL2GQI, AI query creation, natural language, generate query, GQI query
-description: Use DataMiner Assistant to generate a GQI query from a natural-language request and automatically create a query definition.
+uid: Generating_a_GQI_query_with_natural_language
+keywords: DataMiner Intelligence, NL2GQI, AI query creation, natural language, generate query, GQI query
+description: "Generate a GQI query from a natural-language request in a dashboard or low-code app using DataMiner Intelligence, then review the result."
 ---
 
-# Letting DataMiner Assistant create a GQI query
+# Generating a GQI query with natural language
 
-From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 42234-->, you can use the DataMiner Assistant [natural language to GQI feature](xref:NL2GQI) to automatically create a GQI query based on a request in natural language.
+Use the DataMiner Intelligence [natural language to GQI capability](xref:Intelligence_NL2GQI) to generate a GQI query from a plain-language request.
 
-To do so, in a system where DataMiner Assistant has been deployed, when you click the "+" button to add a query, type your request in the textbox and click **Generate query**. DataMiner Assistant will then create the desired GQI query and generate a relevant query name.
+1. Click the *+* button to add a query.
 
-![NL2GQI](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner 10.6.1*
+1. Enter your request in the text box.
+
+1. Click *Generate query*.
+
+   DataMiner Intelligence will generate the query and suggest a name.
+
+![Natural language to GQI query generation in a DataMiner dashboard](~/dataminer/images/NL2GQI.png)<br>*Natural language to GQI feature in DataMiner Web 10.6.1.*
+
+**Review the generated query** and correct or extend it as needed. If you enter a new request and click *Generate query* again, the new query will replace the previous one, including any manual changes.
 
 > [!TIP]
-> For more information about how to deploy this feature, see [DataMiner Assistant DxM](xref:Assistant_DxM).
-
-> [!IMPORTANT]
-> DataMiner Assistant can make mistakes. We recommend manually checking the resulting queries and correcting or extending them to your liking when necessary. However, keep in mind that typing a new request and clicking the button a second time will override the query, causing all manual changes to be lost.
+> For information on the **requirements** for this feature, refer to [Natural language to GQI](xref:Intelligence_NL2GQI#requirements).

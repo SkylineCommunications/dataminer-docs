@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_comparing_views_on_two_dmas
+description: "Use the SLNetClientTest tool to compare in-memory views on two DataMiner Agents and detect synchronization differences in a DMS."
 ---
 
 # Comparing the views on two Agents in a DMS

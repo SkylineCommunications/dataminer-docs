@@ -1,12 +1,12 @@
 ---
 uid: UIBlockTypesOverview
+description: "Configure UIBlockType components for interactive automation scripts and understand the behavior and compatibility of the V1 and V2 UIs."
 ---
 
 # UIBlockType overview
 
 > [!TIP]
-> We highly recommend that you use the [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit).
-> For more information, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
+> We highly recommend that you use the [Interactive Automation Script Toolkit](xref:Interactive_Automation_Script_Toolkit). For more information, see [Getting started with the IAS Toolkit](xref:Getting_Started_with_the_IAS_Toolkit).
 
 The [UIBlockType](xref:Skyline.DataMiner.Automation.UIBlockType) enum defines different types of UI components.
 
@@ -53,17 +53,20 @@ To create these UI blocks, a UIBuilder should be defined with *Width*, *RowDefs*
 var uiBuilder = new UIBuilder() { Width = 800, RowDefs = "auto;auto", ColumnDefs = "auto;auto" };
 uiBuilder.RequireResponse = true;
 
-//Add UI blocks here
+// Add UI blocks here
 
 var results = engine.ShowUI(uiBuilder);
 ```
+
+> [!NOTE]
+> From DataMiner 10.6.12/10.7.0 onwards<!-- RN 46602 / RN 46716 -->, you can use the [WebUILayout](xref:Skyline.DataMiner.Automation.UIBuilder.WebUILayout) property of the UIBuilder to select the layout used in web apps. For an example of the grid layout, see [Using the grid layout in web apps](xref:Building_interactive_Automation_scripts_with_CSharp#using-the-grid-layout-in-web-apps-to-control-the-tab-behavior).
 
 ## Getting input
 
 Some of these UI blocks use the [DestVar](xref:Skyline.DataMiner.Automation.UIBlockDefinition.DestVar) property to read out input. To get the input of that property, use *GetString()*.
 
-```C#
-var input = results.GetString("destVarName")
+```csharp
+var input = results.GetString("destVarName");
 ```
 
 ## Button
@@ -79,6 +82,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Text = "Enter",
   DestVar = "ButtonVar"
 };
+
 uiBuilder.AppendBlock(blockItem);
 
 uiBuilder.RequireResponse = true;
@@ -87,7 +91,7 @@ var results = engine.ShowUI(uiBuilder);
 
 if (results.WasButtonPressed("ButtonVar"))
 {
-  //Do something
+  // Do something
 }
 ```
 
@@ -108,6 +112,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 0,
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -132,6 +137,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -158,9 +164,10 @@ var checkBoxList = new UIBlockDefinition
   Column = 3,
   DestVar = "list"
 };
+
 checkBoxList.AddCheckBoxListOption("Option1");
-checkBoxList.AddCheckBoxListOption("2", "Option2");  //(raw value, display value)
-checkBoxList.AddCheckBoxListOption("3", "Option3"); 
+checkBoxList.AddCheckBoxListOption("2", "Option2"); // (raw value, display value)
+checkBoxList.AddCheckBoxListOption("3", "Option3");
 checkBoxList.InitialValue = "2;3";
 uiBuilder.AppendBlock(checkBoxList);
 ```
@@ -171,7 +178,7 @@ uiBuilder.AppendBlock(checkBoxList);
 > ```csharp
 > var results = engine.ShowUI(uiBuilder);
 > 
-> bool ticked = results.GetChecked("list","2");
+> bool ticked = results.GetChecked("list", "2");
 > ```
 
 #### V1 vs. V2 UI differences
@@ -192,6 +199,7 @@ var downloadButtonOptions = new AutomationDownloadButtonOptions()
    ReturnWhenDownloadIsStarted = false, // If set to true (the default is false), the engine.ShowUI() method will return as soon as the download is started.
    FileNameToSave = "Report.PDF", // The file name that will be saved. By default, this is the same as the file name of the document.
 };
+
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
    Type = UIBlockType.DownloadButton,
@@ -200,6 +208,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
    Style = Style.Button.CallToAction,
    ConfigOptions = downloadButtonOptions,
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -217,7 +226,7 @@ Allows you to define a selection box.
 Example:
 
 ```csharp
-var dropDownOptions = new List<string>{ "1", "2", "3", "4", "5" };
+var dropDownOptions = new List<string> { "1", "2", "3", "4", "5" };
 var initialValue = "--Select--";
 UIBlockDefinition blockItem = new UIBlockDefinition
 {
@@ -225,7 +234,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Text = "DropDown1",
   InitialValue = initialValue,
   Row = 1,
-  Column = 1, 
+  Column = 1,
   Width = 200
 };
 
@@ -290,6 +299,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -332,6 +342,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -407,6 +418,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   DisplayFilter = true,
   Extra = $"{dmaID}/{elementID}:{parameterID}"
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -425,6 +437,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -460,7 +473,7 @@ foreach (string item in radioButtonListItems)
   blockItem.AddRadioButtonListOption(item);
 }
 
-blockItem.AddRadioButtonListOption("4", "Option4"); //(raw value, display value)
+blockItem.AddRadioButtonListOption("4", "Option4"); // (raw value, display value)
 blockItem.InitialValue = "4";
 
 uiBuilder.AppendBlock(blockItem);
@@ -473,7 +486,7 @@ uiBuilder.AppendBlock(blockItem);
 >   ```csharp
 >   var results = engine.ShowUI(uiBuilder);
 >   
->   bool ticked = results.GetChecked("ChoiceOption","4");
+>   bool ticked = results.GetChecked("ChoiceOption", "4");
 >   ```
 >
 > - If no initial value is passed to this list, no radio button will be selected by default.
@@ -492,6 +505,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -514,6 +528,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   Row = 1,
   Column = 1
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -544,6 +559,7 @@ UIBlockDefinition blockItem = new UIBlockDefinition
     Maximum = TimeSpan.FromDays(2)
   }
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```
 
@@ -618,30 +634,30 @@ UIBlockDefinition blockItem = new UIBlockDefinition
   DestVar = "TreeVar",
   Row = 1,
   Column = 1,
-  TreeViewItems =
-    new List<TreeViewItem>
+  TreeViewItems = new List<TreeViewItem>
+  {
+    new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
     {
-      new TreeViewItem("Core Teams", "1", new List<TreeViewItem>
+      new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
       {
-        new TreeViewItem("Team A", "1/1", new List<TreeViewItem>
-        {
-          new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-          new TreeViewItem("John", "1/1/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-          new TreeViewItem("Kevin", "1/1/3", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-          new TreeViewItem("David", "1/1/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-          new TreeViewItem("Joe", "1/1/5", true){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-        }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-        new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
-        {
-          new TreeViewItem("Jane", "1/2/1"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-          new TreeViewItem("Sarah", "1/2/2"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-          new TreeViewItem("Emely", "1/2/3"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-          new TreeViewItem("Anne", "1/2/4"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-          new TreeViewItem("Florence", "1/2/5"){ ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-        }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-      }){ ItemType = TreeViewItem.TreeViewItemType.CheckBox },
-      new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
-    }
+        new TreeViewItem("Brian", "1/1/1", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("John", "1/1/2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Kevin", "1/1/3", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("David", "1/1/4") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Joe", "1/1/5", true) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+      }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+      new TreeViewItem("Team B", "1/2", new List<TreeViewItem>
+      {
+        new TreeViewItem("Jane", "1/2/1") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Sarah", "1/2/2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Emely", "1/2/3") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Anne", "1/2/4") { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+        new TreeViewItem("Florence", "1/2/5") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+      }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+    }) { ItemType = TreeViewItem.TreeViewItemType.CheckBox },
+    new TreeViewItem("Team C", "2") { ItemType = TreeViewItem.TreeViewItemType.CheckBox }
+  }
 };
+
 uiBuilder.AppendBlock(blockItem);
 ```

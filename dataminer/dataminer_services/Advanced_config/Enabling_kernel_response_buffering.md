@@ -1,6 +1,7 @@
 ---
 uid: Enabling_kernel_response_buffering
-reviewer: Alexander Verkest
+description: "Enable kernel response buffering for DataMiner APIGateway to improve throughput and responsiveness over high-latency connections."
+reviewer: Cloud Ecosystem
 ---
 
 # Enabling kernel response buffering for DataMiner APIGateway

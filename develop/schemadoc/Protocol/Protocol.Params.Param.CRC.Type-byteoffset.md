@@ -1,10 +1,11 @@
 ---
 uid: Protocol.Params.Param.CRC.Type-byteoffset
+description: "Use the byteoffset attribute in a DataMiner protocol to add an offset to every byte before DataMiner calculates the CRC."
 ---
 
 # byteoffset attribute
 
-Allows to add an offset to every single byte of the CRC.
+Allows you to add an offset to every single byte of the CRC.
 
 ## Content Type
 
@@ -22,6 +23,6 @@ Can be used in combination with all possible CRC types.
 
 ```xml
 <Param>
-	<CRC>
-		<Type byteoffset="2">
+   <CRC>
+      <Type byteoffset="2">
 ```

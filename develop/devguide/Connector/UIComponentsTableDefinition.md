@@ -1,5 +1,6 @@
 ---
 uid: UIComponentsTableDefinition
+description: "Define a protocol table as an array parameter, map its columns with ArrayOptions, and create a parameter with the correct type for each column."
 ---
 
 # Defining a table
@@ -11,9 +12,9 @@ To define a table, create a parameter of type [array](xref:Protocol.Params.Param
 Example:
 
 ```xml
-<Param id="1000" trending="false">
-  <Name>Table</Name>
-  <Description>Table Description</Description>
+<Param id="1000">
+  <Name>Items</Name>
+  <Description>Items</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
     <ColumnOption idx="0" pid="1001" type="retrieved" options=""/>
@@ -32,8 +33,8 @@ For each table column, an additional parameter is defined which is referred to v
 
 ```xml
 <Param id="1001" trending="false">
-  <Name>Column1</Name>
-  <Description>Column 1 Description</Description>
+  <Name>Items_Column1</Name>
+  <Description>Column 1 (Items)</Description>
   <Type>read</Type>
   <Interprete>
     <RawType>other</RawType>
@@ -48,8 +49,8 @@ For each table column, an additional parameter is defined which is referred to v
   </Measurement>
 </Param>
 <Param id="1002" trending="false">
-  <Name>Column2</Name>
-  <Description>Column 2 Description</Description>
+  <Name>Items_Column2</Name>
+  <Description>Column 2 (Items)</Description>
   <Type>read</Type>
   <Interprete>
     <RawType>numeric text</RawType>
@@ -63,9 +64,9 @@ For each table column, an additional parameter is defined which is referred to v
     <Type>number</Type>
   </Measurement>
 </Param>
-<Param id="1003" trending="false">
-  <Name>Column3</Name>
-  <Description>Column 3 Description</Description>
+<Param id="1003">
+  <Name>Items_Column3</Name>
+  <Description>Column 3 (Items)</Description>
   <Type>write</Type>
   <Interprete>
     <RawType>numeric text</RawType>
@@ -93,7 +94,7 @@ For each table column, an additional parameter is defined which is referred to v
 The table parameter has an ArrayOptions tag that refers to the column parameters and defines the order of the columns through the [idx](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-idx) attribute.
 
 > [!NOTE]
-> The idx attribute defines the order in which the columns are stored. The order in which the columns are displayed can be different (this is defined in the options attribute of the Type tag in the Measurements tag).
+> The [idx](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-idx) attribute defines the order in which the columns are stored. The order in which the columns are displayed can be different (this is defined in the options attribute of the Type tag in the Measurements tag).
 
 ```xml
   <Measurement>
@@ -108,8 +109,8 @@ In order to create a writable column, create an additional parameter of type "wr
 
 ```xml
 <Param id="1102" setter="true">
-  <Name>Column2</Name>
-  <Description>Column 2 Description</Description>
+  <Name>Items_Column2</Name>
+  <Description>Column 2 (Items)</Description>
   <Type>write</Type>
   <Display>
     <RTDisplay>true</RTDisplay>
@@ -117,9 +118,11 @@ In order to create a writable column, create an additional parameter of type "wr
 </Param>
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 >
-> - Typically, a fixed offset is used between the parameter IDs of write parameters and the corresponding read parameters (e.g., 100 in the example above).
-> - For more information about executing a QAction on a row change of a table, see [Executing a QAction on a row change](xref:LogicQActionsExecution#executing-a-qaction-on-a-row-change).
-> - From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, the maximum number of rows in a volatile table is limited to 1,005,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 805,000 rows to notify you that you are approaching this limit. The maximum number of rows in a non-partial table is limited to 105,000. Beyond this limit, you will be unable to add new rows. A warning will be displayed at 85,000 rows to notify you that you are approaching this limit.
+> - Typically, a **fixed offset** is used between the parameter IDs of write parameters and the corresponding read parameters (e.g., 100 in the example above).
+> - **Runtime limit**: From DataMiner 10.4.9/10.5.0 onwards<!--RN 39836-->, the maximum number of rows in a volatile table is 1,005,000. The maximum number of rows in a non-partial table is 105,000. Beyond either limit, you will be unable to add new rows; warnings are displayed at 805,000 and 85,000 rows respectively. These are row-count limits, not throughput targets.
 > - The column containing the primary keys must be of Interprete/Type "string". Refer to [Primary keys](xref:UIComponentsTablePrimaryKeys).
+
+> [!TIP]
+> For more information about executing a QAction on a row change of a table, see [Executing a QAction on a row change](xref:LogicQActionsExecution#executing-a-qaction-on-a-row-change).

@@ -43,7 +43,7 @@ If the system has not yet been migrated to BrokerGateway, refer to [Legacy NAS/N
 
 ## Check if ClusterEndpointsManager is enabled
 
-The ClusterEndpointsManager soft-launch option must be enabled for BrokerGateway to manage NATS clustering properly.
+If you are using a DataMiner version prior to 10.6.0 [CU9]/10.6.12<!-- RN 46538 -->, the ClusterEndpointsManager soft-launch option must be enabled for BrokerGateway to manage NATS clustering properly. From DataMiner 10.6.0 [CU9]/10.6.12 onwards, the option is always enabled regardless of the soft-launch configuration, so you can skip this check.
 
 To verify and resolve this:
 
@@ -59,7 +59,7 @@ To verify and resolve this:
 
    1. Do this on all DataMiner Agents in the system.
 
-   1. When all DataMiner are fully started up, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) on a singular DataMiner agent.
+   1. When all DataMiner Agents are fully started up, run [NATSRepair.exe](#resettingrepairing-the-brokergateway-nats-cluster) on a singular DataMiner Agent.
 
 For more information about soft-launch options, see [Activating Soft-Launch Options](xref:Activating_Soft_Launch_Options).
 
@@ -259,7 +259,7 @@ If `TcpTestSucceeded` is `False`, this indicates that there is a firewall issue 
 Ensure the following ports are open between all DataMiner Agents:
 
 - **Port 4222**: NATS client connections
-- **Port 6222**: NATS cluster communication (not required in a standalone agent setup)
+- **Port 6222**: NATS cluster communication (not required in a standalone Agent setup)
 
 ## Resetting/repairing the BrokerGateway NATS cluster
 

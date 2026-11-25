@@ -1,5 +1,6 @@
 ---
 uid: DMSScript
+description: "Review the DMSScript root element, options, child elements, and unique ID constraint for a DataMiner automation script."
 ---
 
 # DMSScript element
@@ -19,6 +20,7 @@ The root element of a DataMiner automation script.
 |***All***|||
 |&nbsp;&nbsp;[Author](xref:DMSScript.Author)||Specifies the author of the script.|
 |&nbsp;&nbsp;[CheckSets](xref:DMSScript.CheckSets)||Specifies whether to check sets.|
+|&nbsp;&nbsp;[Credentials](xref:DMSScript.Credentials)||Contains the credentials defined in the script.|
 |&nbsp;&nbsp;[Description](xref:DMSScript.Description)||Specifies the description of the automation script.|
 |&nbsp;&nbsp;[Folder](xref:DMSScript.Folder)||Specifies the folder in which this automation script is saved.|
 |&nbsp;&nbsp;[Interactivity](xref:DMSScript.Interactivity)||Specifies if the script requires user interaction.|

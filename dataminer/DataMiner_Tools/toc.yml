@@ -74,6 +74,8 @@ items:
     topicUid: Multi_Threaded_Timer_Polling_Rate_Calculator
   - name: Prerequisite checks
     items:
+      - name: End of Support for SLHelper GQI
+        topicUid: EndOfSupport_SLHelperGQI
       - name: Service Automatic Properties
         topicUid: Service_Automatic_Properties
       - name: Validate connectors
@@ -250,6 +252,8 @@ items:
             topicUid: SLNetClientTest_info_on_open_gqi_sessions
           - name: Retrieving live information about the mapping between elements and the processes they use
             topicUid: SLNetClientTest_retrieving_mapping_info
+          - name: Retrieving scheduled task information
+            topicUid: SLNetClientTest_retrieving_scheduled_task_info
           - name: Tracking DMA communication
             topicUid: SLNetClientTest_tracking_dma_communication
           - name: Verifying sync rules

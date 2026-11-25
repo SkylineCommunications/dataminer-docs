@@ -1,7 +1,8 @@
 ---
 uid: Connect_to_cloud_via_proxy
+description: "Learn how to connect to dataminer.services via a proxy server, through which all outgoing traffic will then be routed."
 keywords: cloud connection, cloud proxy
-reviewer: Alexander Verkest
+reviewer: Cloud Ecosystem
 ---
 
 # Connecting to dataminer.services via proxy server
@@ -9,6 +10,9 @@ reviewer: Alexander Verkest
 From DataMiner CloudFeed 1.0.6, CloudGateway 2.7.0, and ArtifactDeployer 1.4.1 onwards, proxy support is available for these DxMs. This means that you can enable a proxy server so that all outgoing traffic towards the public internet will pass through that proxy server.
 
 The proxy server has to support both HTTP and WebSocket traffic.
+
+> [!NOTE]
+> Proxy handling for general dataminer.services traffic is separate from proxy handling for [Storage as a Service (STaaS)](xref:Setting_up_StaaS) storage traffic. Configuring a proxy here does not automatically fill in the proxy configuration for STaaS (or vice versa). This makes it possible to use independent proxies for general and storage traffic, route only storage traffic or only general traffic through a proxy, or have a node that only uses STaaS without general dataminer.services connectivity. To set up a proxy for STaaS storage traffic, see [Setting up STaaS](xref:Setting_up_StaaS#configuring-staas).
 
 To configure this:
 

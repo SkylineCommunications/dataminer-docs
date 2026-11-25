@@ -1,10 +1,12 @@
 ---
 uid: Standalone_Elasticsearch_Cluster_Installer
+description: "Find out how the deprecated Standalone Elasticsearch Cluster Installer was used to install Elasticsearch 6.8.23 on Windows."
 ---
+
 # Standalone Elasticsearch Cluster Installer
 
-> [!NOTE]
-> Elasticsearch is **only supported up to version 6.8**, which is no longer supported by Elastic. We therefore recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-managed storage even though this is not recommended, using [OpenSearch](xref:OpenSearch_database).
+> [!IMPORTANT]
+> This tool is deprecated. Support for Elasticsearch ends in DataMiner 10.7.x. We recommend using [Storage as a Service](xref:STaaS) instead, or if you do want to continue using self-managed storage even though this is not recommended, using [OpenSearch](xref:OpenSearch_database).
 
 ## About this tool
 

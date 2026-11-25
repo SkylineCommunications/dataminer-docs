@@ -1,5 +1,6 @@
 ---
 uid: Process_Automation_App_Concept
+description: "Use the Process Automation app to view running and future processes, activation windows, and main tokens being processed, waiting, or recently completed."
 ---
 
 # Process Automation app

@@ -32,11 +32,11 @@ namespace NodeRecovery_Local_Action_Example
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnNodeRecoveryLocalStateChange)]
         public LocalStateChangeOutput OnNodeRecoveryLocalStateChange(IEngine engine, LocalStateChangeInput input)
         {
-          engine.GenerateInformation($"Hello From OnNodeRecoveryLocalStateChange, " 
-                                    + $"executing dma: {input.LocalNodeId}, "
-                                    + $"local state: {input.ClusterState[input.LocalNodeId]}");
-        
-          return new LocalStateChangeOutput();
+            engine.GenerateInformation("Hello From OnNodeRecoveryLocalStateChange, " +
+                $"executing dma: {input.LocalNodeId}, " +
+                $"local state: {input.ClusterState[input.LocalNodeId]}");
+
+            return new LocalStateChangeOutput();
         }
     }
 }
@@ -51,7 +51,7 @@ Make sure your script logic is aware of the following:
 - The script will be executed when nodes enter or leave maintenance mode, even if no other state changes occur.
 - One script execution can correspond with multiple node state changes at once.
 - Even if a node is marked as being in maintenance mode, the state for this node will still be reported as *Healthy*, *Outage*, or *Unknown*. It is up to the script to check the maintenance state if needed and to decide how to handle it.
-- If your script requires information about elements hosted on an Agent that is unreachable, it needs to request this info from SLNet via SLNet messages (`engine.GetUserConnection().HandleMessage()`) and not via SLAutomation (~~`engine.FindElement()`~~) as the latter only has access to elements that are currently running and reachable.
+- If your script requires information about elements hosted on an Agent that is unreachable, it needs to request this info from SLNet via SLNet messages ([Engine.GetUserConnection()](xref:Skyline.DataMiner.Automation.Engine.GetUserConnection)[IConnection.HandleMessage()](xref:Skyline.DataMiner.Net.IConnection.HandleMessage(Skyline.DataMiner.Net.Messages.DMSMessage))) and not via SLAutomation (~~[Engine.FindElement()](xref:Skyline.DataMiner.Automation.Engine.FindElement*)~~) as the latter only has access to elements that are currently running and reachable.
 
 We also highly recommend that you have your script check the incoming node IDs, states, and maintenance states before starting any actions.
 
@@ -80,11 +80,11 @@ namespace NodeRecovery_Global_Action_Example
         [AutomationEntryPoint(AutomationEntryPointType.Types.OnNodeRecoveryGlobalStateChange)]
         public GlobalStateChangeOutput OnNodeRecoveryGlobalStateChange(IEngine engine, GlobalStateChangeInput input)
         {
-          engine.GenerateInformation($"Hello From OnNodeRecoveryGlobalStateChange, " 
-                                    + $"executing on leader node: {input.LeaderNodeId}, "
-                                    + $"global cluster state has changed");
-        
-          return new GlobalStateChangeOutput();
+            engine.GenerateInformation("Hello From OnNodeRecoveryGlobalStateChange, " +
+                $"executing on leader node: {input.LeaderNodeId}, " +
+                "global cluster state has changed");
+
+            return new GlobalStateChangeOutput();
         }
     }
 }
@@ -102,15 +102,16 @@ Make sure your script logic is aware of the following:
 - Nodes start out in the *Unknown* state when added to the cluster. They will switch to *Healthy* as soon as nodes start seeing them as such.
 - In network split scenarios, only the partition that contains a strict majority of the nodes (i.e., more than half of all nodes in the cluster) will have a leader that can execute this script.
 - One script execution can correspond with multiple node state changes at once in the global view.
-- If your script requires information about elements hosted on an Agent that is unreachable, it needs to request this info from SLNet via SLNet messages (`engine.GetUserConnection().HandleMessage()`) and not via SLAutomation (~~`engine.FindElement()`~~) as the latter only has access to elements that are currently running and reachable.
+- If your script requires information about elements hosted on an Agent that is unreachable, it needs to request this info from SLNet via SLNet messages ([Engine.GetUserConnection()](xref:Skyline.DataMiner.Automation.Engine.GetUserConnection)[IConnection.HandleMessage()](xref:Skyline.DataMiner.Net.IConnection.HandleMessage(Skyline.DataMiner.Net.Messages.DMSMessage))) and not via SLAutomation (~~[Engine.FindElement()](xref:Skyline.DataMiner.Automation.Engine.FindElement*)~~) as the latter only has access to elements that are currently running and reachable.
 
 ## Differences between local and global state changes
 
 | Aspect | Local State Change | Global State Change |
 | ------ | ------------------ | ------------------- |
+| Required minimum number of Agents | 2 | 3 |
 | Script execution location | On every node that detects a change. | Only on the leader node. |
 | Perspective | Individual node's view of the cluster. | Cluster-wide consensus. |
 | Trigger frequency | Multiple times (once per observing node). | Once per global state change. |
 | Use case | Node-specific actions. | Centralized cluster management, rebalancing. |
-| Network splits | Can detect partial failures. | Only works within the partition having cluster majority (see [Network splits](xref:NodeRecovery_Detection#network-splits)). |
+| Network splits | A network partition can cause conflicting actions (see [Network splits](xref:NodeRecovery_Detection#network-splits)). | The leader can make decisions in the majority partition, if that exists. |
 | Broken links between nodes | Each node may have a different view. | The leader aggregates views to determine consensus. |

@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions.ColumnOption-options
+description: "Use the options attribute in a DataMiner protocol to apply one or more column options using the required leading separator."
 ---
 
 # options attribute

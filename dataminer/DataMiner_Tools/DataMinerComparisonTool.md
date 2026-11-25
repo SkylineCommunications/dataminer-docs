@@ -1,5 +1,6 @@
 ---
 uid: DataMinerComparisonTool
+description: "Use the DataMiner Comparison tool to compare the values of two string parameters on a character-by-character basis and to immediately spot the differences."
 ---
 
 # DataMiner Comparison tool

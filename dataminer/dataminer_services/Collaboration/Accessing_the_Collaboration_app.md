@@ -1,5 +1,6 @@
 ---
 uid: Accessing_the_Collaboration_app
+description: "Access the Collaboration app by signing in to dataminer.services and selecting Collaboration from the landing page."
 ---
 
 # Accessing the Collaboration app

@@ -1,5 +1,6 @@
 ---
 uid: SRM_apply_service_state_transitions_silently
+description: "Find out how you can apply service state transitions or force the same service state without user interaction by means of an automation script."
 ---
 
 # Silently applying service state transitions

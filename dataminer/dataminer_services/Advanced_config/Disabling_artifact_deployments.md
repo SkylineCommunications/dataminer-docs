@@ -1,6 +1,7 @@
 ---
 uid: Disabling_artifact_deployments
-reviewer: Alexander Verkest
+description: "Learn how to disable artifact deployments to a particular server by updating the settings of the ArtifactDeployer DxM."
+reviewer: Cloud Ecosystem
 ---
 
 # Disabling artifact deployments locally

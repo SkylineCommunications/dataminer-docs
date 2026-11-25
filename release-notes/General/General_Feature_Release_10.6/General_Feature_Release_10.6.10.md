@@ -2,10 +2,10 @@
 uid: General_Feature_Release_10.6.10
 ---
 
-# General Feature Release 10.6.10 – Preview
+# General Feature Release 10.6.10
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -35,13 +35,8 @@ Before you upgrade to this DataMiner version:
 The following changes may have an impact on your system, so please make sure to check these before you upgrade:
 
 - [DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]](#dataminer-key-vault-id-44075-id-44349-id-44350-id-44351-id-44352-id-44353-id-44354-id-44701-id-44702-id-44911-id-46047-id-46061)
-- [Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]](#load-save-and-delete-actions-for-services-have-been-rerouted-from-slxml-to-the-storagemodule-dcm-id-46134)
 
 ## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
 
 #### DataMiner key vault [ID 44075] [ID 44349] [ID 44350] [ID 44351] [ID 44352] [ID 44353] [ID 44354] [ID 44701] [ID 44702] [ID 44911] [ID 46047] [ID 46061]
 
@@ -89,23 +84,14 @@ See the following example:
 | Credential | id | ID of the credential (integer, unique per script) |
 | Name | - | Name of the credential (string, unique per script) |
 | CredentialId | - | GUID of the linked credential from the Credentials Library |
-| Type | - | Type of credential: `UserNamePassword` or `Token` |
+| Type | - | Type of credential: `UserNameAndPassword` or `Token` |
 
 > [!NOTE]
 >
 > - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
-> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNamePassword` and `Token` credentials stored in the Credentials Library.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
-#### SLNet will now listen for connection ticket requests over NATS [ID 46057]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-From now on, SLNet will listen on the `SLNet.Authentication.Ticket` NATS topic to process connection tickets and return the username associated with the ticket.
-
-This allows APIGateway to authenticate requests via the NATS-based connection flow.
-
-> [!NOTE]
-> Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
+## New features
 
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
@@ -137,19 +123,17 @@ Because of a number of enhancements, overall performance has increased when upgr
 
 The ModelHost DxM has been upgraded to Microsoft .NET 10.
 
-#### UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10 [ID 46066]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
-
 #### APIGateway: SLNet authentication [ID 46055]
 
 <!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 -->
 
 A new REST endpoint, `/APIGateway/api/authentication/ticket`, can be used to authenticate a session with APIGateway using an SLNet connection ticket. You can then use this session to access DxM endpoints in an authenticated way, with APIGateway acting as a reverse proxy.
 
-This requires [SLNet to listen for connection ticket requests over NATS](#slnet-will-now-listen-for-connection-ticket-requests-over-nats-id-46057).
+#### UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10 [ID 46066]
+
+<!-- MR 10.7.0 - FR 10.6.10 -->
+
+The UserDefinableApiEndpoint DxM has been upgraded to Microsoft .NET 10.
 
 #### Enhanced performance when recalculating security keys [ID 46077]
 
@@ -162,12 +146,6 @@ Because of a number of enhancements, overall performance has increased when reca
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 The colors used by the DataMiner Taskbar Utility for upgrade events now align with the colors used by DataMiner Cube. This makes it easier to identify the status of events such as `Finished`, `Success`, `LocalComplete`, `UploadComplete`, `UpgradeComplete`, `Notice`, and `Error`.
-
-#### Load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM [ID 46134]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-In preparation of service swarming, all load, save, and delete actions for services have been rerouted from SLXml to the StorageModule DcM.
 
 #### Automation: GetAvailableAutomationScripts now returns additional script information [ID 46140]
 
@@ -306,3 +284,9 @@ This fixes the issue for paged DOM reads with a configured limit, ensuring the r
 <!-- MR 10.7.0 - FR 10.6.10 -->
 
 Up to now, the spectrum preset update event on parameter `SPA_SPARAM_PRESET_UPDATE` (PID 64216) could fail when the preset name contained a dot (`.`).
+
+#### Persistent element timeout caused by failed WMI actions [ID 46396]
+
+<!-- MR 10.5.0 [CU19] / 10.6.0 [CU7] - FR 10.6.10 [CU0] -->
+
+Up to now, a WMI action that was not included in a poll group could fail. For example, this could occur when a QAction updated a parameter, and a trigger on that parameter executed a WMI action. As a result, the element would go into timeout and be unable to recover from the timeout status. This issue has now been fixed.

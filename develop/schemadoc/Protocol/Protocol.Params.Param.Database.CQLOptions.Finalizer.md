@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Database.CQLOptions.Finalizer
+description: "Use the Finalizer element in a DataMiner protocol to run a CQL query after logger table creation to preload data or create indexes."
 ---
 
 # Finalizer element
@@ -18,7 +19,7 @@ string
 
 The following placeholders can be defined:
 
-|Placeholder|Description
+|Placeholder|Description|
 |--- |--- |
 |[TABLE]|Sets the table name.|
 |[PID:#]|Sets the parameter name of the parameter with ID #.|

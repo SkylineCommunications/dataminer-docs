@@ -15,19 +15,22 @@ public sealed class PathCache
 {
     private readonly HashSet<string> cachedPaths;
     private readonly PathRewriter pathRewriter;
+
     public PathCache()
     {
         pathRewriter = new PathRewriter();
         cachedPaths = new HashSet<string>();
     }
+
     public void AddPath(string path)
     {
         string rewrittenPath = pathRewriter.RewritePath(path);
         cachedPaths.Add(rewrittenPath);
     }
+
     public IEnumerable<string> CachedItems
     {
-        get { return cachedPaths.ToList().AsReadOnly();}
+        get { return cachedPaths.ToList().AsReadOnly(); }
     }
 }
 ```
@@ -42,8 +45,10 @@ public void AddPath_ValidPath_PathPresentInCache()
     PathCache cache = new PathCache();
     string path = @"Visios\Customers\Skyline\Protocols\Test";
     string expectedPath = @"V\C\Skyline\P\Test";
+
     // Act
     cache.AddPath(path);
+
     // Assert
     CollectionAssert.Contains(cache.CachedItems.ToList(), expectedPath);
 }
@@ -95,11 +100,13 @@ public sealed class PathCache
 {
     private readonly HashSet<string> cachedPaths;
     private readonly IPathRewriter pathRewriter;
+
     public PathCache(IPathRewriter rewriter)
     {
         pathRewriter = rewriter;
         cachedPaths = new HashSet<string>();
     }
+
     ...
 }
 ```
@@ -116,8 +123,10 @@ public void AddPath_ValidPath_PathPresentInCache()
     pathRewriter.Setup(p => p.Rewrite(It.IsAny<string>())).Returns(expectedPath);
     PathCache cache = new PathCache(pathRewriter.Object);
     string path = @"Visios\Customers\Skyline\Protocols\Test";
+
     // Act
     cache.AddPath(path);
+
     // Assert
     CollectionAssert.Contains(cache.CachedItems.ToList(), expectedPath);
 }

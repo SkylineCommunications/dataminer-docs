@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_Java_updating
+description: "Update Cassandra Java to a supported OpenJDK 8 runtime, replace the bundled JRE, and keep DataMiner storage secure and compatible."
 ---
 
 # Updating Java for Cassandra

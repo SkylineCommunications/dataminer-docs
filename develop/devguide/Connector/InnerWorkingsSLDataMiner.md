@@ -1,5 +1,6 @@
 ---
 uid: InnerWorkingsSLDataMiner
+description: "Understand how each element's SLDataMiner SetParameterThread queues external sets and forwards them to SLProtocol when protocol processing allows."
 ---
 
 # SLDataMiner

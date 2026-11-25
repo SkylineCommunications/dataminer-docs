@@ -1,5 +1,6 @@
 ---
 uid: Trap_receiver
+description: "Use the trap receiver to monitor SNMPv1, v2, and v3 traps, acknowledge v2 and v3 informs, and configure an IP, port, and SNMPv3 security."
 ---
 
 # Trap receiver

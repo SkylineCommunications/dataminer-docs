@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_authentication
+description: "Configure Cassandra authentication by strengthening default passwords, creating a dedicated DataMiner user, and securing access with a role setup."
 ---
 
 # Cassandra authentication

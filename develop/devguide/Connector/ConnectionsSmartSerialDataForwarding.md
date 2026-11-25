@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSmartSerialDataForwarding
+description: "Understand how SLPort forwards smart-serial data to SLProtocol and how stuffing, packetInfo, and headers or trailers affect processing."
 ---
 
 # Data forwarding
@@ -14,10 +15,10 @@ There are multiple configuration options for a smart-serial connection that infl
 1. Using headers/trailers with the headerTrailerLink option
 1. Using none of the above options
 
-SLPort only considers the first applicable option when processing incoming data, in the order mentioned above. For example, if stuffing is configured, then SLPort will just perform unstuffing and then forward the data to SLProtocol. If no stuffing is configured, but the packetInfo option is used, SLPort will only consider this information.
+SLPort only considers the **first applicable option** when processing incoming data, in the order mentioned above. For example, if stuffing is configured, then SLPort will just perform unstuffing and then forward the data to SLProtocol. If no stuffing is configured, but the packetInfo option is used, SLPort will only consider this information.
 
 > [!NOTE]
-> Only in case none of the options above is used, prior to forwarding the data to SLProtocol, SLport will check if the smartIpHeader was used. In case it is used, it will prefix the data with the smart IP header information. This means that the smartIpHeader option cannot be used together with the packetInfo option, with stuffing or with headers and trailers.
+> Only in case none of the options above is used, prior to forwarding the data to SLProtocol, SLPort will check if the `smartIpHeader` option was used. In case it is used, it will prefix the data with the smart IP header information. This means that the `smartIpHeader` option cannot be used together with the packetInfo option, with stuffing or with headers and trailers.
 
 ## Length Identifier
 
@@ -39,24 +40,24 @@ When SLProtocol wants to connect to a smart-serial port in SLPort, it will first
 
     > [!NOTE]
     >
-    > - If you use a smart-serial connection in combination with other connections that make use of headers/trailers (e.g., serial), make sure to always use the connection attribute to denote to which connection this header/trailer belongs.
+    > - If you use a smart-serial connection in combination with other connections that make use of headers/trailers (e.g., serial), make sure to always use the `connection=x` option to denote to which connection this header/trailer belongs.
     > - For a smart-serial connection, SLPort only knows about the relevant headers and trailers (and which header and trailer belong together) but it has no information about which/if any command/response it is used in. Therefore, for a smart-serial connection, a header/trailer that is not used in any command or response in a protocol can still influence the behavior in SLPort. Therefore, do not define header or trailer parameters that are not used in the protocol.
 
     ```xml
-    <Param id="10" trending="false">
-      <Name>.</Name>
-      <Description>.</Description>
-      <Type options="headerTrailerLink=1;connection=1">trailer</Type>
-      <Interprete>
-         <RawType>other</RawType>
-         <LengthType>fixed</LengthType>
-         <Length>1</Length>
-         <Type>string</Type>
-         <Value>.</Value>
-      </Interprete>
-      <Measurement>
-         <Type>string</Type>
-      </Measurement>
+    <Param id="10">
+       <Name>Trailer_Dot</Name>
+       <Description>Trailer Dot</Description>
+       <Type options="headerTrailerLink=1;connection=1">trailer</Type>
+       <Interprete>
+          <RawType>other</RawType>
+          <LengthType>fixed</LengthType>
+          <Length>1</Length>
+          <Type>string</Type>
+          <Value>.</Value>
+       </Interprete>
+       <Measurement>
+          <Type>string</Type>
+       </Measurement>
     </Param>
     ```
 
@@ -70,67 +71,67 @@ When SLProtocol wants to connect to a smart-serial port in SLPort, it will first
 The headerTrailerLink option allows you to use multiple headers/trailers. This option links a trailer with the corresponding header (if present). This allows the SLPort process to know which header and trailer belong together.
 
 ```xml
-<Param id="10" trending="false">
-  <Name>.</Name>
-  <Description>.</Description>
-  <Type options="headerTrailerLink=1">trailer</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>1</Length>
-     <Type>string</Type>
-     <Value>.</Value>
-  </Interprete>
-  <Measurement>
-     <Type>string</Type>
-  </Measurement>
+<Param id="10">
+   <Name>Trailer_Dot</Name>
+   <Description>Trailer Dot</Description>
+   <Type options="headerTrailerLink=1">trailer</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>1</Length>
+      <Type>string</Type>
+      <Value>.</Value>
+   </Interprete>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
  
-<Param id="11" trending="false">
-  <Name>?</Name>
-  <Description>?</Description>
-  <Type options="headerTrailerLink=1">header</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>1</Length>
-     <Type>string</Type>
-     <Value>?</Value>
-  </Interprete>
-  <Measurement>
-     <Type>string</Type>
-  </Measurement>
+<Param id="11">
+   <Name>Header_QuestionMark</Name>
+   <Description>Header Question Mark</Description>
+   <Type options="headerTrailerLink=1">header</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>1</Length>
+      <Type>string</Type>
+      <Value>?</Value>
+   </Interprete>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
  
-<Param id="13" trending="false">
-  <Name>-</Name>
-  <Description>-</Description>
-  <Type options="headerTrailerLink=2">header</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>1</Length>
-     <Type>string</Type>
-     <Value>-</Value>
-  </Interprete>
-  <Measurement>
-     <Type>string</Type>
-  </Measurement>
+<Param id="13">
+   <Name>Header_Hyphen</Name>
+   <Description>Header Hyphen</Description>
+   <Type options="headerTrailerLink=2">header</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>1</Length>
+      <Type>string</Type>
+      <Value>-</Value>
+   </Interprete>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
  
-<Param id="12" trending="false">
-  <Name>+</Name>
-  <Description>+</Description>
-  <Type options="headerTrailerLink=2">trailer</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>fixed</LengthType>
-     <Length>1</Length>
-     <Type>string</Type>
-     <Value>+</Value>
-  </Interprete>
-  <Measurement>
-     <Type>string</Type>
-  </Measurement>
+<Param id="12">
+   <Name>Trailer_Plus</Name>
+   <Description>Trailer Plus</Description>
+   <Type options="headerTrailerLink=2">trailer</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>fixed</LengthType>
+      <Length>1</Length>
+      <Type>string</Type>
+      <Value>+</Value>
+   </Interprete>
+   <Measurement>
+      <Type>string</Type>
+   </Measurement>
 </Param>
 ```

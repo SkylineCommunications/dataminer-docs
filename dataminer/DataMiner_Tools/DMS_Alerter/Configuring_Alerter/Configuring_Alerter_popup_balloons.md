@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Alerter_popup_balloons
+description: "Configure Alerter pop-up balloons to also show alarm properties such as service impact and services for clearer notifications."
 ---
 
 # Configuring Alerter pop-up balloons

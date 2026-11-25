@@ -1,5 +1,6 @@
 ---
 uid: Creating_HTTP_simulations
+description: "Create HTTP simulations from Wireshark PDML captures by configuring HTTPAgent IP addresses and ports, including simulation ports 1024 or higher."
 ---
 
 # Creating HTTP simulations

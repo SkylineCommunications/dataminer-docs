@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Ownership.Elements.Element.Properties
+description: "Use the Properties element in a DataMiner protocol to group ownership declarations for selected properties of an element."
 ---
 
 # Properties element

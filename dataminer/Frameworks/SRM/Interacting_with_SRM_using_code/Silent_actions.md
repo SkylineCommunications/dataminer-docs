@@ -1,5 +1,6 @@
 ---
 uid: Silent_actions
+description: "Use SRM silent actions to automate booking creation, edits, resource assignments, and state transitions in scripts without user interaction."
 ---
 
 # Silent actions

@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_grace_period_SLNetCom_notification
+description: "Learn how, using the SLNetClientTest tool, you can changing the grace period for the SLNetCom Notification thread."
 ---
 
 # Changing the grace period for the SLNetCom Notification thread

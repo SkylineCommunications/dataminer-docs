@@ -1,5 +1,6 @@
 ---
 uid: ConnectionsSnmpRetrievingAVariable
+description: "Learn how to retrieve an SNMP variable in a DataMiner protocol by defining its parameter and OID, adding it to a group, and scheduling that group."
 ---
 
 # Retrieving a variable
@@ -10,7 +11,7 @@ First, a parameter must be defined in the protocol that will hold the received v
 
 ```xml
 <Param id="1" trending="false">
-   <Name>sysUptime</Name>
+   <Name>SysUptime</Name>
    <Description>System Uptime</Description>
    <Information>
       <Subtext>Displays the time since the network management portion of the system was last re-initialized.</Subtext>
@@ -59,12 +60,12 @@ Finally, a timer is defined which has the defined group as its content. This tim
 
 ```xml
 <Timer id="1">
-  <Name>Fast timer</Name>
-  <Time>10000</Time>
-  <Interval>75</Interval>
-  <Content>
-     <Group>1</Group>
-  </Content>
+   <Name>Fast timer</Name>
+   <Time>10000</Time>
+   <Interval>75</Interval>
+   <Content>
+      <Group>1</Group>
+   </Content>
 </Timer>
 ```
 

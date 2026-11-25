@@ -1,5 +1,6 @@
 ---
 uid: Protocol.App
+description: "Learn how the App element in a DataMiner protocol tags elements based on the protocol as apps so they are included in the DataMiner Cube Apps list."
 ---
 
 # App element

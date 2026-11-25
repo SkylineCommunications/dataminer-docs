@@ -1,5 +1,6 @@
 ---
 uid: TCP-IP_socket_message_reference
+description: "Look up the exact TCP/IP socket message format for commands like Get_Parameter and Get_Alarm_Level to query DataMiner data."
 ---
 
 # TCP-IP socket message reference
@@ -266,7 +267,7 @@ Each command or response must have a fixed header character and a fixed trailer 
   \[8\] Current alarm severity level of the parameter (see [Alarm states](#alarm-states))
 
   > [!NOTE]
-  > If you requested crosspoint values from a matrix parameter, \[4\] will be a pair of x,y values for each connected crosspoint. Multiple pairs are separated by semicolons (”;”).
+  > If you requested crosspoint values from a matrix parameter, \[4\] will be a pair of x,y values for each connected crosspoint. Multiple pairs are separated by semicolons (";").
 
 - **Example**
 

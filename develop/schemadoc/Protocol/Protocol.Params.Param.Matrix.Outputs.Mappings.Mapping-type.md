@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Matrix.Outputs.Mappings.Mapping-type
+description: "Use the type attribute in a DataMiner protocol to specify the value type used by an output table-to-matrix mapping."
 ---
 
 # type attribute

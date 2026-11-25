@@ -1,5 +1,6 @@
 ---
 uid: Protocol.TreeControls.TreeControl
+description: "Use the TreeControl element in a DataMiner protocol to define a hierarchical table view with extra details, tabs, and column settings."
 ---
 
 # TreeControl element

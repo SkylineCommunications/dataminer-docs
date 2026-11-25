@@ -1,6 +1,6 @@
 ---
 uid: Configuring_a_page_to_execute_a_script_automatically
-description: Learn how to configure a Visio page to run an Automation script automatically when values change or page events occur.
+description: "Learn how to configure a Visio page to run an automation script automatically when values change or page events occur."
 ---
 
 # Configuring a page to execute a script automatically

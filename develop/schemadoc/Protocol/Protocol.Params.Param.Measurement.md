@@ -1,12 +1,13 @@
 ---
 uid: Protocol.Params.Param.Measurement
+description: "Use the Measurement element in a DataMiner protocol to define how a parameter is displayed on the user interface, including its type and discrete values."
 ---
 
 # Measurement element
 
 Specifies how the parameter has to be displayed on the user interface (depending on the parameter type).
 
-By default, try to follow the following guidelines for specifying values for the Interprete and Measurement subtags:
+By default, try to follow the following guidelines for specifying values for the `Interprete` and `Measurement` subtags:
 
 - **For strings**:
 
@@ -30,8 +31,7 @@ By default, try to follow the following guidelines for specifying values for the
 
 - **For discreets**:
 
-  If all the values in a discreet are numbers, it is better to use Interprete.Type and Interprete.RawType as specified above in "For numbers".
-
+  If all the values in a discreet are numbers, it is better to use `Interprete.Type` and `Interprete.RawType` as specified above in "For numbers".
 
 ## Parent
 
@@ -48,4 +48,4 @@ By default, try to follow the following guidelines for specifying values for the
 
 ## Remarks
 
-This tag must always contain a Protocol.Params.Param.Measurement.Type tag, and can optionally contain a Protocol.Params.Param.Measurement.Discreets tag (depending on the contents of the Protocol.Params.Param.Measurement.Type tag).
+This tag must always contain a Protocol.Params.Param.Measurement.Type tag, and can optionally contain a `Protocol.Params.Param.Measurement.Discreets` tag (depending on the contents of the Protocol.Params.Param.Measurement.Type tag).

@@ -1,5 +1,6 @@
 ---
 uid: Configuring_Alerter_acknowledging_options
+description: "Configure Alerter acknowledging options to hide comment prompts and mark alarms as read in DataMiner Cube after you acknowledge them."
 ---
 
 # Configuring options related to acknowledging alarms

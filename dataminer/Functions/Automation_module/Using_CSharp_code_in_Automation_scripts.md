@@ -18,5 +18,7 @@ The following sections provide more information on using C# code in DataMiner Au
 
 - [Compiling a C# code block as a library](xref:Compiling_a_CSharp_code_block_as_a_library)
 
+- [Using credentials in an automation script](xref:Using_credentials_in_an_automation_script)
+
 > [!TIP]
 > See also: [Skyline.DataMiner.Automation](xref:Skyline.DataMiner.Automation)

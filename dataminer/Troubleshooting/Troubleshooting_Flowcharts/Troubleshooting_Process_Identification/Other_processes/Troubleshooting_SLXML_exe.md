@@ -42,7 +42,7 @@ Crash --- CrashdumpDetected
 click D1 "#are-the-conditions-above-met"
 click CrashdumpDetected "#crash-dump-found-at-issue-time"
 click StartPage "/dataminer/Troubleshooting/Troubleshooting_Flowcharts/Finding_a_Root_Cause.html" "Go to Start Page"
-click LogCollector "/dataminer/Reference/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
+click LogCollector "/dataminer/DataMiner_Tools/SLLogCollector.html" "SLLogCollector"
 click Leak "#memory-leak"
 %% Apply styles to blocks %%
 class START,N2,N1,Y2,MinidumpNo,N3,Y3 DarkBlue;

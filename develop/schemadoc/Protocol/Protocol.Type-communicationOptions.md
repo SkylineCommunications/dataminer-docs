@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Type-communicationOptions
+description: "Use the Type communicationOptions attribute in a DataMiner protocol to specify various communication options."
 ---
 
 # communicationOptions attribute
@@ -16,7 +17,7 @@ string
 
 ## Remarks
 
-The following options are available:
+The options listed below are available.
 
 ### asyncWMI
 
@@ -148,6 +149,9 @@ In the following example, the length identifier starts at position 4, it is 2 by
 > - [Data forwarding from SLPort to SLProtocol](xref:ConnectionsSmartSerialDataForwarding)
 
 ### postPonePortInitialisation
+
+> [!IMPORTANT]
+> This option is no longer supported as of DataMiner 10.6.x.
 
 At DMA restart, the initialization of the ports is postponed until all elements are started. The restart of an element will then start with the port initialization (first action of the protocolThread).
 

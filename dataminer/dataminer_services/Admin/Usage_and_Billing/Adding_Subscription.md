@@ -1,5 +1,6 @@
 ---
 uid: Adding_Subscription
+description: "Add a subscription in the Admin app by selecting services, reservation volumes, duration, and auto-renewal settings."
 keywords: add subscription, purchase, buy, charge, consumption
 ---
 

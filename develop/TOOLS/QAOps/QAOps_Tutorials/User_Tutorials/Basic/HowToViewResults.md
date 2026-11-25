@@ -42,6 +42,9 @@ Expected duration: 5 minutes.
 
 1. In the navigation pane on the left, select *Configurations*.
 
+   > [!TIP]
+   > The *Results* page offers a more extensive results explorer, with run timing metrics and filterable results. See [QAOps User - Results](xref:QAOps_Main_UI#qaops-user---results). This tutorial uses the *Configurations* page.
+
 1. Select *Demo Configuration*.
 
 1. Select *Demo Test Suite*.

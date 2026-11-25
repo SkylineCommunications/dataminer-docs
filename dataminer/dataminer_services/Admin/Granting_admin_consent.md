@@ -1,6 +1,7 @@
 ---
 uid: Granting_admin_consent
-reviewer: Alexander Verkest
+description: "Grant admin consent for Teams Chat Integration in the Admin app, review requested permissions, and link your Microsoft tenant."
+reviewer: Cloud Ecosystem
 ---
 
 # Granting admin consent for Teams Chat Integration

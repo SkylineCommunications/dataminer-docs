@@ -1,5 +1,6 @@
 ---
 uid: List_of_projects
+description: "Use the list of projects to search by text, expand status groups, and open a project to review its linked tasks."
 ---
 
 # List of projects
@@ -12,4 +13,3 @@ The projects listed on this tab are grouped per project status. Each group can b
 
 > [!NOTE]
 > In the *My projects* tab, it is not possible to create new projects. A project is always automatically created by Skyline once a purchase order or a pre-sales activity is accepted and approved.
->

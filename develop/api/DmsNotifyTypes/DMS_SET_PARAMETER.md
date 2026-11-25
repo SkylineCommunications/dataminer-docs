@@ -4,7 +4,7 @@ uid: DMS_SET_PARAMETER
 
 # DMS_SET_PARAMETER (28)
 
-> [!WARNING]
+> [!IMPORTANT]
 > The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Sets the value of a specified parameter.
@@ -27,16 +27,16 @@ object[] valueDetails = new object[] { user, value };
 
 try
 {
-    dms.Notify(type/*DMS_SET_PARAMETER*/, subType, parameterDetails, valueDetails, out result);
-    
+    dms.Notify(type /*DMS_SET_PARAMETER*/, subType, parameterDetails, valueDetails, out result);
+
     if (result != null)
     {
-        protocol.Log("DMS Notify: " + result.ToString(), LogType.Allways, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|DMS Notify: {result}", LogType.Allways, LogLevel.NoLogging);
     }
 }
 catch (Exception ex)
 {
-    protocol.Log("Error: " + ex.Message + "\n\n" + ex.StackTrace, LogType.Allways, LogLevel.NoLogging);
+    protocol.Log($"QA{protocol.QActionID}|Error: {ex}", LogType.Allways, LogLevel.NoLogging);
 }
 ```
 

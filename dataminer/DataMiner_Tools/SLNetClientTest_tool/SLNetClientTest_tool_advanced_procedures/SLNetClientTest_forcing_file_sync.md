@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_forcing_file_sync
+description: "Learn how, using the SLNetClientTest tool, it is possible to force file synchronization between DataMiner Agents."
 ---
 
 # Forcing file synchronization between DMAs

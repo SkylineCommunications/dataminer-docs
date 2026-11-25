@@ -6,13 +6,13 @@ uid: HTTPS_Connection
 
 For HTTP(S) connections, you can specify the following connection settings while creating or editing an element:
 
-- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the SiteManager DxM is installed and remote locations are configured. For more information, refer to [Edge Manager](xref:EdgeManagerOverview).
+- **Site**: The remote location. Set to `<None>` if a direct connection needs to be set up instead of a tunnel. This dropdown is only visible if the EdgeManager DxM is installed and remote locations are configured. For more information, refer to [Edge Gateways](xref:About_Edge_Gateways).
 
 - **IP address/host**: The polling IP or URL of the destination.
 
 - **IP port**: The IP port of the destination. This is not always required. The default port for HTTPS communication is 443. If you specify a different port, also add the `https://` prefix in the IP address field.
 
-- **Bus address**: The bus address of the device. This is not always required. If the proxy server has to be bypassed, specify *bypassproxy*.
+- **Bus address**: The bus address of the device. This is not always required. If the proxy server has to be bypassed, specify *bypassProxy*.
 
 - **Network**: The network interface (NIC). If only one network interface is available on the DMA, it is automatically selected.
 
@@ -39,6 +39,6 @@ For HTTP(S) connections, you can specify the following connection settings while
 
   > [!NOTE]
   >
-  > - To skip SSL/TLS certificate validation for all elements that share the same *protocol.xml* file, set the `SkipCertificateVerification` element to true in the `PortSettings` element of the *protocol.xml* file.
+  > - To skip SSL/TLS certificate validation for all elements that share the same *protocol.xml* file, set the [SkipCertificateVerification](xref:Protocol.PortSettings.SkipCertificateVerification) element to true in the `PortSettings` element of the *protocol.xml* file.
   > - To enable SSL/TLS certificate validation when using multithreaded HTTP communication, set `requestSettings[6]` to false when building the HTTP request in a QAction. For more information, see [Setting up multithreaded HTTP communication in a QAction](xref:AdvancedMultiThreadedTimersHttp).
   > - For backward compatibility, the SSL/TLS certificate validation is skipped by default for all elements created before version 10.5.0/10.4.12.

@@ -43,7 +43,7 @@ In this example, a field gets updated on multiple `DomInstances`.
 var domInstances = domHelper.DomInstances.Read(filter);
 
 // Update the field value on those DomInstances.
-foreach(var domInstance in domInstances)
+foreach (var domInstance in domInstances)
 {
   domInstance.AddOrUpdateFieldValue<string>(sectionDefinitionId, fieldDescriptorId, newValue);
 }
@@ -67,7 +67,7 @@ try
   // Log which items were successfully updated.
   Log($"Could perform the update successfully for {updateResult.SuccessfulItems.Count} items");
 }
-catch(Exception e)
+catch (Exception e)
 {
   // Log that the operation failed and use info included in the exception for a generic message of what failed.
   Log($"An unexpected issue occurred while updating: {e}");

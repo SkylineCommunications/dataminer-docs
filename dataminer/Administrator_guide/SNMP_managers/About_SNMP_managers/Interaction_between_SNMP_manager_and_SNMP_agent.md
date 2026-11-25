@@ -1,5 +1,6 @@
 ---
 uid: Interaction_between_SNMP_manager_and_SNMP_agent
+description: "Discover how the SNMP manager and SNMP agent processes let DataMiner exchange SNMP messages with devices and external managers."
 ---
 
 # Interaction between SNMP manager and SNMP agent

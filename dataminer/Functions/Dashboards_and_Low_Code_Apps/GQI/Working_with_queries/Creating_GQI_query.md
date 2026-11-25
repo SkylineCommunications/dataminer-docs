@@ -16,7 +16,7 @@ The "Queries" data item allows you to construct a query in order to tap into the
 1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
 
    > [!TIP]
-   > If the DataMiner Assistant module has been deployed in your system, at this point you can [let DataMiner Assistant create a query for you](xref:Letting_DataMiner_Assistant_create_a_query).
+   > If the natural language to GQI capability is enabled, you can use DataMiner Intelligence to [generate a GQI query from a plain-language request](xref:Generating_a_GQI_query_with_natural_language).
 
 1. Specify a name for the query.
 
@@ -53,14 +53,16 @@ Please note the following regarding query data input:
 
 - It is not possible to retrieve data from a stopped element.
 
-- From DataMiner 10.1.0/10.1.3 onwards, dynamic units will automatically be used when applicable for the retrieved data if this is enabled in the dashboard settings. This means that parameter units will change dynamically based on their value and protocol definition. You can override the behavior configured for the dashboard in the settings for the component.
+- Dynamic units will automatically be used when applicable for the retrieved data if this is enabled in the app/dashboard settings. This means that parameter units will change dynamically based on their value and protocol definition. You can override the behavior configured for the app/dashboard in the settings for the component.
 
-- From DataMiner 10.2.0/10.1.4 onwards, if a row is selected in a table component that uses a query data source, any view, service, or element linked to that row is also exposed as a data source. In practice, this means that a data source will be available in the *Components* or *Feeds* section of the *Data* pane (depending on your DataMiner version) that will change based on the selection in the table.
+- If a row is selected in a table component that uses a query data source, any view, service, or element linked to that row is also exposed as a data source. In practice, this means that a data source will be available in the *Components* or *Feeds* section of the *Data* pane (depending on your DataMiner version) that will change based on the selection in the table.
 
   ![Selected rows](~/dataminer/images/Selected_Rows.png)<br>*Data pane in DataMiner 10.4.12*
 
-- From DataMiner 10.2.0/10.1.5 onwards, you can link GQI nodes that require a time range selection to a time range component by selecting the *From data* checkbox. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this setting is called "*From feed*".
+- You can link GQI nodes that require a time range selection to a time range component by selecting the *From data* checkbox. Prior to DataMiner 10.3.0 [CU21]/10.4.0 [CU9]/10.4.12<!--RN 41141-->, this setting is called "*From feed*".
 
 - From DataMiner 10.3.0 [CU9]/10.3.12 onwards<!--RN 37505-->, the culture used in your GQI query matches the client culture of the web app. Prior to DataMiner 10.3.0 [CU9]/10.3.12, the invariant culture is used.
 
 - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40370-->, a maximum of 30 GQI queries can be added to a dashboard, and a maximum of 200 GQI queries can be added to a low-code app. Once this limit has been reached, no additional GQI queries can be added, imported, or duplicated until one or multiple queries have been removed.
+
+- From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards, items marked as hidden by GQI (including write-only columns) are excluded from the query builder argument tree by default<!--RN 46246-->. Existing queries that already selected a hidden item can still be loaded and executed. If you deselect a hidden item, it will remain available until you close and reopen the query builder.

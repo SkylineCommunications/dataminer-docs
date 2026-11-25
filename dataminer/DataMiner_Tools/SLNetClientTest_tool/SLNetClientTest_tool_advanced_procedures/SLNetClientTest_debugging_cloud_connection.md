@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_debugging_cloud_connection
+description: "Use the SLNetClientTest tool CcaGateway window to inspect dataminer.services endpoints, session status, global state, and cloud connection errors."
 ---
 
 # Debugging the dataminer.services connection

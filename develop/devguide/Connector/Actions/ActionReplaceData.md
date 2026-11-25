@@ -1,5 +1,6 @@
 ---
 uid: LogicActionReplaceData
+description: "Use the 'replace data' action to substitute specified byte sequences in parameters, commands, or responses within optional start and end offsets."
 ---
 
 # replace data
@@ -22,7 +23,7 @@ Specifies the replacement(s). This is formatted using a semicolon as follows:
 
 *oldValue(s)*;*newValue(s)*
 
-Optionally, a third item can be provided, "use_offset" ("*oldValue(s)*;*newValue(s)*;use_offset"), to indicate that the replacement should be performed on the first x bytes (as denoted in the startoffset attribute) and the last y bytes (as denoted in the endoffset attribute) (see example below).
+Optionally, a third item can be provided, "use_offset" ("*oldValue(s)*;*newValue(s)*;use_offset"), to indicate that the replacement should be performed on the first x bytes (as denoted in the [startoffset](xref:Protocol.Actions.Action.Type-startoffset) attribute) and the last y bytes (as denoted in the [endoffset](xref:Protocol.Actions.Action.Type-endoffset) attribute) (see example below).
 
 It is also possible to specify multiple replacements. To specify multiple replacements, separate these by hyphens ("-").
 

@@ -1,5 +1,6 @@
 ---
 uid: How_to_use_multiple_protocol_threads_to_split_communication_and_parsing
+description: "Use multiple protocol threads to acknowledge incoming data promptly while parsing large responses independently on a separate connector thread."
 ---
 
 # How to use multiple protocol threads to split communication and parsing
@@ -34,6 +35,7 @@ QAction 1999 has 2 entry points. Alternatively, you can use an if or switch stru
 public class QAction
 {
     private readonly ConcurrentQueue<byte[]> queue = new ConcurrentQueue<byte[]>();
+
     public void ParseQueue(SLProtocol protocol)
     {
         try
@@ -49,6 +51,7 @@ public class QAction
             ...
         }
     }
+
     public void ReadResponse(SLProtocol protocol)
     {
         try

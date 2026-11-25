@@ -1,5 +1,6 @@
 ---
 uid: AutomationActionExit
+description: "Configure the Exit action to stop an automation script immediately, record a reason, and mark the execution as successful or failed."
 ---
 
 # Exit

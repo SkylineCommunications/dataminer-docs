@@ -1,6 +1,7 @@
 ---
 uid: Disabling_Remote_Access_and_Live_Sharing
-reviewer: Alexander Verkest
+description: "Learn how you can disable Remote Access and Live Sharing locally in the app settings of the CloudGateway DxM."
+reviewer: Cloud Ecosystem
 ---
 
 # Disabling Remote Access and Live Sharing locally

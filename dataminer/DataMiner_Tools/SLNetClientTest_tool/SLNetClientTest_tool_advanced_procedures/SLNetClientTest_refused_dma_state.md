@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_refused_dma_state
+description: "Learn how, using the SLNetClientTest tool, you can check or modify the settings related to a Refused DMA state."
 ---
 
 # Checking or modifying the settings related to a Refused DMA state

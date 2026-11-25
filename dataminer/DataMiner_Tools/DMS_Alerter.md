@@ -1,5 +1,6 @@
 ---
 uid: Alerter
+description: "Use the Alerter tool to get notified whenever an alarm occurs in the DataMiner System to which you are connected."
 ---
 
 # Alerter

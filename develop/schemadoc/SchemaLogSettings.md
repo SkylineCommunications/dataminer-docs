@@ -8,6 +8,10 @@ DataMiner LogSettings XML schema.
 
 For more information about LogSettings, refer to [LogSettings.xml](xref:LogSettings_xml).
 
+## Namespace
+
+`http://www.skyline.be/config/log`
+
 ## Root element
 
 [Log](xref:LogSettingsLog)

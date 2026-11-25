@@ -1,5 +1,6 @@
 ---
 uid: IDP_Tutorial_TakeConfigurationBackup
+description: "Follow this 20-minute IDP configuration backup tutorial to set up an archive, customize a backup script, and retrieve device configurations."
 keywords: idp tutorial, idp kata, idp configuration backup
 ---
 
@@ -143,11 +144,11 @@ When IDP is installed it comes with an example script on how to retrieve the con
       private static string GetDeviceFullBackupAsText(IActionableElement element)
       {
           StringBuilder builder = new StringBuilder();
-
+      
           builder.Append(Convert.ToString(element.GetParameter(502)));
-          builder.Append("\n");
+          builder.Append(Environment.NewLine);
           builder.Append(Convert.ToString(element.GetParameter(504)));
-
+      
           return builder.ToString();
       }
       ```

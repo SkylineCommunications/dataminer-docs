@@ -1,5 +1,6 @@
 ---
 uid: LogicUseCase3
+description: "Explore how connector execution flows through SLProtocol and SLScripting, how QActions run, and how to design efficient scripting logic."
 ---
 
 # Use case: Internal flow – QActions
@@ -115,8 +116,10 @@ Imagine the C# code run via parameter 10 (create folder) looks like this:
 
 ```csharp
 CreateFolder(folderName);
+
 // Force sync.
 protocol.SetParameter(11, "Run");
+
 // Validate.
 ValidateSync();
 ```

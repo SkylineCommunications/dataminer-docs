@@ -1,5 +1,6 @@
 ---
 uid: AdvancedInterElementCommunicationElementConnections
+description: "Configure protocol parameters as sources or destinations for links between elements in the Element Connections app, independently of DCF connections."
 ---
 
 # Element connections
@@ -7,7 +8,7 @@ uid: AdvancedInterElementCommunicationElementConnections
 In case a parameter should receive or send its value from or to another parameter of another element, element connections can be used. Using the "Element Connections" app, links between elements can be defined.
 
 > [!NOTE]
-> For more information on the Element Connections app, refer to [Virtual elements used for element connections](xref:Virtual_elements#virtual-elements-used-for-element-connections). Note that this is not related to the [DCF element connections](xref:Viewing_element_connections) functionality, which is a completely different feature.
+> For more information on the Element Connections module, refer to [Element Connections module](xref:Element_Connections_module). Note that this is not related to the [DCF element connections](xref:Viewing_element_connections) functionality, which is a completely different feature.
 
 A parameter in a protocol can be defined as either a source or destination of an element connection. This is done via the attribute virtual of the Type tag.
 
@@ -15,7 +16,7 @@ For example, the following parameter indicates that this parameter can be used a
 
 ```xml
 <Param id="65" setter="true">
-   <Name>generalData_Total Bandwidth</Name>
+   <Name>TotalBandwidth</Name>
    <Description>Total Bandwidth</Description>
    <Type virtual="source">write</Type>
    <Interprete>
@@ -30,7 +31,7 @@ For example, the following parameter indicates that this parameter can be used a
 </Param>
 ```
 
-The virtual attribute allows you to further restrict to which protocols or parameters a connection can be established. For more information, see [virtual](xref:Protocol.Params.Param.Type-virtual).
+The [virtual](xref:Protocol.Params.Param.Type-virtual) attribute allows you to further restrict to which protocols or parameters a connection can be established. For more information, see [virtual](xref:Protocol.Params.Param.Type-virtual).
 
 In the Element Connections app, this parameter will be included in the overview of the elements running this protocol:
 

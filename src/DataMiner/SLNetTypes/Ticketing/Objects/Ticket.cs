@@ -27,25 +27,25 @@ namespace Skyline.DataMiner.Net.Ticketing
 	/// <code>
 	/// private Ticket CreateTicket(TicketFieldResolver resolver)
 	/// {
-	///		Ticket ticket = new Ticket();
-	///		ticket.CustomFieldResolverID = resolver.ID;
-	///		ticket.CustomTicketFields["State"] = new GenericEnumEntry&lt;int&gt;() { Name = "Created", Value = 0 };
-	///		ticket.CustomTicketFields["Status"] = "Created";
-	///		ticket.CustomTicketFields["User"] = "Geoffrey";
-	///		ticket.CustomTicketFields["Accnr"] = (long)789456123;
-	///		ticket.CustomTicketFields["Mail"] = "Geoffry@KingsLanding.gov";
-	///		ticket.CustomTicketFields["Addr"] = "789456123@internal.gov";
-	///		ticket.CustomTicketFields["Quality"] = 0.9;
-	///		ticket.CustomTicketFields["Score"] = 0x54;
-	///		ticket.Links.Add("Links", new TicketLink[]{ new TicketLink(new Skyline.DataMiner.Net.ElementID(123, 456)) });
+	///     Ticket ticket = new Ticket();
+	///     ticket.CustomFieldResolverID = resolver.ID;
+	///     ticket.CustomTicketFields["State"] = new GenericEnumEntry&lt;int&gt;() { Name = "Created", Value = 0 };
+	///     ticket.CustomTicketFields["Status"] = "Created";
+	///     ticket.CustomTicketFields["User"] = "Geoffrey";
+	///     ticket.CustomTicketFields["Accnr"] = (long)789456123;
+	///     ticket.CustomTicketFields["Mail"] = "Geoffry@KingsLanding.gov";
+	///     ticket.CustomTicketFields["Addr"] = "789456123@internal.gov";
+	///     ticket.CustomTicketFields["Quality"] = 0.9;
+	///     ticket.CustomTicketFields["Score"] = 0x54;
+	///     ticket.Links.Add("Links", new TicketLink[] { new TicketLink(new Skyline.DataMiner.Net.ElementID(123, 456)) });
 	/// 
-	///		string error;
-	///		if(!Helper.SetTicket(out error, ref ticket))
-	///		{
-	///			throw new DataMinerException("Something went wrong while creating the ticket: " + error);
-	///		}
-	///		
-	///		return ticket;
+	///     string error;
+	///     if (!Helper.SetTicket(out error, ref ticket))
+	///     {
+	///         throw new DataMinerException($"Something went wrong while creating the ticket: {error}");
+	///     }
+	///
+	///     return ticket;
 	/// }
 	/// </code>
 	/// <para>The code snippet shown in the example uses hard-coded values for the ticket fields. In real implementations, these values will be known either by user input or by polling the third-party ticketing system.</para>

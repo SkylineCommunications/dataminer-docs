@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Measurement.Type-lines
+description: "Use the lines attribute in a DataMiner protocol to set the number of lines displayed for a parameter with measurement type string."
 ---
 
 # lines attribute

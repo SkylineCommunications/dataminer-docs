@@ -1,5 +1,6 @@
 ---
 uid: Cassandra_Cluster_Validator
+description: "Use the Cassandra Cluster Validator tool for monitoring and trending of parameters of the Cassandra nodes in a DataMiner cluster."
 ---
 
 # Cassandra Cluster Validator

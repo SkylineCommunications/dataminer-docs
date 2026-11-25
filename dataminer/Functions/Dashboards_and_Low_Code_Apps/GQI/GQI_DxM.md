@@ -1,5 +1,6 @@
 ---
 uid: GQI_DxM
+description: "Learn how to configure the DataMiner GQI DxM, including session and CPU limits, logging, message handling, and idle child process termination."
 ---
 
 # GQI DxM
@@ -18,11 +19,6 @@ Running GQI as an extension module has several advantages:
 
 The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automatically gets installed and updated by upgrade packages from that version onwards. It also gets updated when you install a web-only upgrade package.<!-- RN 41811 --> Earlier DataMiner versions starting from 10.5.0/10.5.2 also include a preview version of the GQI DxM, but this should only be used on staging systems.
 
-> [!IMPORTANT]
-> From DataMiner 10.5.0 [CU10]/10.6.0/10.6.1 onwards<!--RN 44058-->, the GQI DxM is enabled by default for DataMiner web applications. In earlier versions, the GQI DxM is disabled by default and instead the SLHelper process is used for GQI operations.
->
-> To explicitly opt in to or out of the GQI DxM, see [Enabling or disabling the use of the GQI DxM](#enabling-or-disabling-the-use-of-the-gqi-dxm).
-
 > [!NOTE]
 >
 > - [Data Aggregator](xref:Data_Aggregator_DxM) supports queries via the GQI DxM from version 3.1.0 onwards. See [Using the GQI DxM for queries](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).
@@ -30,36 +26,46 @@ The GQI DxM is supported from DataMiner 10.5.0 [CU1]/10.5.4 onwards, and automat
 
 ## Enabling or disabling the use of the GQI DxM
 
-From DataMiner 10.5.0 [CU10]/10.6.0/10.6.1 onwards<!--RN 44058--> the GQI DxM is enabled for DataMiner web apps by default. To disable the use of the GQI DxM, add the following configuration to the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
+Whether DataMiner web apps use the GQI DxM depends on the DataMiner version and configuration:
 
-```xml
-<appSettings>
-    <add key="gqi:useDxM" value="false" />
-</appSettings>
-```
+- **Prior to DataMiner 10.5.0 [CU1]/10.5.4**: GQI queries always run in the [SLHelper process](xref:About_GQI#architecture).
 
-Prior to DataMiner 10.5.0 [CU10]/10.6.0/10.6.1<!--RN 44058-->, the GQI DxM is disabled for DataMiner web apps by default. To enable the use of the GQI DxM, add the following configuration to the `C:\Skyline DataMiner\Webpages\API\Web.config` file:
+- **From DataMiner 10.5.0 [CU1]/10.5.4 onwards**<!-- RN 41811 -->: You can explicitly enable the GQI DxM by setting `gqi:useDxM` to `true` in the *appSettings* section of `C:\Skyline DataMiner\Webpages\API\Web.config`:
 
-```xml
-<appSettings>
-    <add key="gqi:useDxM" value="true" />
-</appSettings>
-```
+  ```xml
+  <appSettings>
+      <add key="gqi:useDxM" value="true" />
+  </appSettings>
+  ```
 
-The WebAPI process will automatically restart when you save the file. For web applications accessed through the configured server, the setting will be applied. For web applications accessed via other servers, the configuration of those servers will be used, which may be different.
+  The WebAPI process restarts automatically when you save this file. The setting applies to web apps accessed through that server; other servers use their own configuration.
 
-From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!--RN 42003-->, to verify that the GQI DxM is enabled for a web app, open the user menu in the upper-right corner and select *About*. If the version of the GQI DxM is displayed next to *GQI*, the web app is using the GQI DxM. If `No DxM` is displayed, the web app is still using the SLHelper process.
+- **From DataMiner 10.5.0 [CU10]/10.6.0/10.6.1 onwards**<!-- RN 44058 -->: The GQI DxM is used by default. You can explicitly disable it by setting `gqi:useDxM` to `false` in the *appSettings* section of `C:\Skyline DataMiner\Webpages\API\Web.config`:
 
-![No DxM](~/dataminer/images/NoDxM.png)<br>*About DataMiner pop-up window in DataMiner 10.5.3*
+  ```xml
+  <appSettings>
+      <add key="gqi:useDxM" value="false" />
+  </appSettings>
+  ```
 
-> [!NOTE]
-> If you encounter issues when trying to enable the GQI DxM, refer to [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair).
+  The WebAPI process restarts automatically when you save this file. The setting applies to web apps accessed through that server; other servers use their own configuration.
+
+- **From DataMiner 10.7.0/10.7.1 onwards**<!-- RN 46927 -->: GQI via SLHelper has reached [End of Support](xref:Software_support_life_cycles) and is disabled by default. If `gqi:useDxM` is set to `false`, the [End of Support for SLHelper GQI](xref:EndOfSupport_SLHelperGQI) prerequisite blocks the upgrade to this version.<!-- RN 46957 -->
+
+## Checking the GQI DxM version
+
+From DataMiner 10.4.0 [CU12]/10.5.0/10.5.3 onwards<!-- RN 42003 -->, you can check which version of the GQI DxM a web app uses by opening the user menu in the upper-right corner of the app and selecting *About*. The version is displayed next to *GQI*. If *No DxM* is displayed, the web app uses GQI via SLHelper.
+
+If *No DxM* is displayed even though the GQI DxM is enabled, see [GQI DxM repair](xref:Investigating_Web_Issues#gqi-dxm-repair).
 
 ## Configuration
 
 The GQI DxM can be configured via JSON configuration files. The default configuration can be found in `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.json`. Do **not** use this file to change settings, because it will be overwritten whenever a new version of the GQI DxM is installed.
 
-To change configuration settings, use the configuration file named `appsettings.custom.json` in `C:\Program Files\Skyline Communications\DataMiner GQI\appsettings.json`. If this file does not exist yet, create it in the mentioned location.
+To change configuration settings, use the configuration file named `appsettings.custom.json` in `C:\Program Files\Skyline Communications\DataMiner GQI\`. If this file does not exist yet, create it in the mentioned location.
+
+> [!CAUTION]
+> Changing the configuration closes all existing query sessions on that GQI instance.
 
 Below you can find an overview of the settings that can be configured in this file.
 
@@ -82,6 +88,49 @@ See the following example. Idle child processes will be terminated within the co
   }
 }
 ```
+
+### CPU usage limits
+
+Available starting from DataMiner Web 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11.<!-- RN 46509 -->
+
+To prevent GQI from consuming all available CPU resources, you can configure limits for the GQI service and its child processes in the *appsettings.custom.json* file.
+
+```json
+{
+  "GQIOptions": {
+    "CpuLimitPercent": 80,
+    "Extensions": {
+      "ChildProcessesCpuLimitPercent": 80
+    }
+  }
+}
+```
+
+- **CpuLimitPercent**: Maximum percentage of the total CPU capacity that all GQI processes can use, including both the GQI core process and all extension workers. The default is 80%.
+- **ChildProcessesCpuLimitPercent**: Maximum percentage of the GQI CPU limit that all [extension workers](xref:GQI_Extensions_Architecture#extension-worker-processes) can use together. The default is 80%, which allows the extension workers to use up to 64% (i.e., 80% of 80%) of the total CPU capacity when the default values are used.
+
+Both settings accept integer values from 1 through 100. After changing either setting, restart the GQI service for the change to take effect.
+
+### Maximum number of concurrent sessions
+
+Available starting from DataMiner Web 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12.<!-- RN 46819 -->
+
+You can configure the maximum number of concurrent sessions per GQI instance with **MaxSessionCount** under `GQIOptions` in the *appsettings.custom.json* file.
+
+```json
+{
+  "GQIOptions": {
+    "MaxSessionCount": 500
+  }
+}
+```
+
+The default is 500. The setting accepts integer values from 1 through 10,000. When the limit is reached, new session requests will be rejected until existing sessions are closed or expire.
+
+Changes apply automatically when you save the configuration file, without restarting the GQI service.
+
+> [!CAUTION]
+> Change this setting at your own risk. Allowing too many resource-intensive query sessions can overload the system.
 
 ### Message handler configuration
 

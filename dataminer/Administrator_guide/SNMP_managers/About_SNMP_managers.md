@@ -1,5 +1,6 @@
 ---
 uid: About_SNMP_managers
+description: "Configure SNMP managers in your DataMiner System to forward SNMP notifications to third-party platforms and keep integrations updated."
 ---
 
 # About SNMP managers

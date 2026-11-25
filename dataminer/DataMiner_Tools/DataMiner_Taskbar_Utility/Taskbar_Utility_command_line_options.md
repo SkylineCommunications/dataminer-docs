@@ -1,5 +1,6 @@
 ---
 uid: Taskbar_Utility_command_line_options
+description: "Use Taskbar Utility command line options with SLTaskbarUtility.exe to upload, restore, back up, upgrade, or control DataMiner Agents."
 ---
 
 # Taskbar Utility command line options

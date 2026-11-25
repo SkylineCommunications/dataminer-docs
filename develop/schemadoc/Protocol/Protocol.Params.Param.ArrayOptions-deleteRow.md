@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.ArrayOptions-deleteRow
+description: "Use the deleteRow attribute in a DataMiner protocol to control how missing SNMP table rows are deleted or marked uninitialized."
 ---
 
 # deleteRow attribute
@@ -41,15 +42,15 @@ If a row is requested =(MultipleGetNext / MultipleGetBulk) on a table with State
 In the example below, param 100 is the table, and param 202 is the Write column using a Get of the cell after the Set. The group that will do the Get added to the queue via an executeNext.
 
 ```xml
-<Param id="100" trending="false">
-   <Name>Table 1</Name>
-   <Description>Table 1</Description>
+<Param id="100">
+   <Name>Items</Name>
+   <Description>Items</Description>
    <Type>array</Type>
    <ArrayOptions index="0" deleteRow="true">
    ...
  
 <Param id="202" snmpSetAndGet="executeNext">
-   <Name>snmpSetAndGet True (cell)</Name>
-   <Description>snmpSetAndGet Cell</Description>
+   <Name>Items_Cell</Name>
+   <Description>Cell (Items)</Description>
    <Type>write</Type>
 ```

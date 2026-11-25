@@ -1,10 +1,11 @@
 ---
 uid: Protocol.Display.Pages
+description: "Use the Pages element in a DataMiner protocol to contain Data Display page definitions and their visibility settings."
 ---
 
 # Pages element
 
-Allows to define pages and specify their configuration (e.g., configure the visibility).<!-- RN 12840 -->
+Allows you to define pages and specify their configuration (e.g., configure the visibility).<!-- RN 12840 -->
 
 ## Parent
 

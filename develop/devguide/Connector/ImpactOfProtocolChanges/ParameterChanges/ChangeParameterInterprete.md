@@ -1,5 +1,6 @@
 ---
 uid: ChangeParameterInterprete
+description: "Assess how changing a parameter's Interprete settings can alter stored values, alarming, trending, communication, and compatibility."
 ---
 
 # Change parameter Interprete

@@ -9,6 +9,70 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 8 October 2026 - Fix - Authentication - Clearer error message when sign-in provider cannot be reached
+
+When your browser could not reach the configured sign-in provider, for example because a firewall, proxy, or browser extension blocked the connection, the sign-in page incorrectly reported that the sign-in attempt had timed out. It now identifies the sign-in provider that could not be reached and advises you to ask your network administrator to allow access to it.
+
+### 8 October 2026 - Fix - Deployment - Reserved username accepted for DaaS deployments
+
+When deploying a DaaS system, it was possible to enter the reserved Windows username `DataMinerAdmin`. This caused the deployment to fail. This username is now no longer allowed, regardless of capitalization.
+
+### 8 October 2026 - New feature - Catalog - Search version history
+
+On the *Versions* tab of a Catalog item, you can now search the version history. The search is also available through the public and user APIs. When no versions match your search, the Catalog now displays this clearly. It also displays an error message if the search cannot be completed.
+
+### 8 October 2026 - Enhancement - Catalog - Improved filtering and organization of version history
+
+Version history filters now require a version to match all active filters. Recommended versions are also filtered based on the search results.
+
+In addition, the version history is now divided into supported and unsupported sections. Deprecated ranges are classified as unsupported. Ranges without a supported version that matches the active search or filters are hidden.
+
+### 8 October 2026 - Enhancement - Catalog - Version history state retained in the URL
+
+The selected tab, search value, filters, and option to show unsupported versions are now stored in the URL. This preserves your version history view when you use the browser back button or when authentication updates the URL. The Catalog resets this state when you open a different Catalog item.
+
+### 8 October 2026 - Enhancement - Catalog - Improved version history display
+
+The Catalog now keeps the selected version synchronized between version history sections and shows filter counts whether or not a filter is active. The search box, focus outlines, borders, and layout have also been improved, and Catalog item ranges and versions are now displayed more consistently on the details page.
+
+### 8 October 2026 - Fix - Catalog - Duplicate version custom tags could be added
+
+It was possible to add the same custom tag more than once to a version. This issue has been resolved.
+
+### 8 October 2026 - Fix - Catalog - Unwanted Markdown links and heading spacing in descriptions
+
+Embedded Catalog descriptions could display Markdown permalinks and incorrect spacing around headings. This issue has been resolved.
+
+### 22 September 2026 - Enhancement - Admin - Create support tickets for managed organizations
+
+You can now create support tickets on behalf of the organizations you manage. After a ticket is created, a confirmation notification will show the ticket number.
+
+The description limit for tickets has also been increased from 2,000 to 5,000 characters.
+
+### 22 September 2026 - Fix - Connection Management - DMS not registered for STaaS after cloud connection
+
+When you selected a STaaS region while connecting a DMS to dataminer.services in the Connection Management app, the DMS was connected to dataminer.services but was not registered for STaaS. This prevented the DMS from starting correctly. This issue has been resolved.
+
+### 22 September 2026 - Enhancement - Catalog - Improved clickability of versions
+
+The clickable area of a Catalog item version now covers the full version entry, making versions easier to select.
+
+### 22 September 2026 - Fix - Catalog - Double scrollbar on description tab
+
+On the description tab of a Catalog item, a second scrollbar could be displayed unnecessarily. This issue has been resolved.
+
+### 22 September 2026 - Fix - Admin - DMS upgrade events mixed up when switching between systems
+
+When switching between the DMS Overview pages of several DataMiner Systems in the Admin app during an upgrade, events from the previously selected systems could remain active and get mixed up with events from the newly selected system. This issue has been resolved.
+
+### 22 September 2026 - New feature - Catalog - Custom tags for individual versions
+
+Custom tags can now be added, updated, and removed for individual Catalog item versions. These tags are displayed alongside version range tags on recommended versions.
+
+### 22 September 2026 - Enhancement - Admin - Improved DxM version sorting
+
+DxM versions are now sorted according to semantic version precedence.
+
 ### 27 August 2026 - New feature - Catalog - API calls authenticated by organization key
 
 It is now possible to update Catalog metadata for a specific version or version range using two new API calls authenticated by organization key. For detailed API documentation, refer to the [Swagger UI](https://global.dataminer.services/swagger/catalogapi-web/index.html).

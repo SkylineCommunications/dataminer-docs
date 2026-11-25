@@ -87,14 +87,39 @@ From DataMiner 10.2.0 [CU3]/10.2.6 onwards, Cube can automatically update to a m
 
    - **Force the matching release version**: This will force users to always use the Cube version that was shipped with the current DataMiner upgrade package.
 
-   - **Force a specific version**: This will force users to always use a particular Cube version. When you select this option, a dialog will be displayed where you will need to select a *Cube.zip* and *versions.txt* file. You can obtain these files from the folder `/Webpages/DataMinerCubeStandAlone/` in an upgrade package or on another DataMiner Agent (e.g., a staging platform).
+   - **Force a specific version**: This will force users to always use a particular Cube version. Select the required *Cube.zip* file in the dialog.
+
+     Keep the accompanying *versions.txt* file in the same folder as *Cube.zip*. Cube reads this file automatically. If it is not found in that folder, a second dialog will prompt you to select the package information file.
+
+     You can find both files in the `Webpages\DataMinerCubeStandAlone` folder of an extracted upgrade package or on another DataMiner Agent (e.g., a staging platform). For a hotfix package, see [Using a hotfixed Cube version](#using-a-hotfixed-cube-version).
 
      > [!NOTE]
-     >
-     > - If you are using a hotfix package with a Cube fix, use the option *Force a specific version*. Otherwise, users connecting to the DMA may use a more recent Cube version, obtained through dataminer.services, that does not yet contain the fix.
-     > - If the machines where the Cube clients are deployed do not have any internet connectivity, and as an Administrator you want them to update to a higher DataMiner Cube version than is deployed on the server, there are two options. You can use the [MSI installer](xref:Installing_the_DataMiner_Cube_desktop_application), or you can extract the *Cube.zip* and *versions.txt* files from the *Update.zip\Webpages\DataMinerCubeStandalone* folder in the DataMiner upgrade package containing the Cube version you want, and enforce the use of this version.
+     > If the machines where the Cube clients are deployed do not have any internet connectivity, and as an Administrator you want them to update to a higher DataMiner Cube version than is deployed on the server, there are two options. You can use the [MSI installer](xref:Installing_the_DataMiner_Cube_desktop_application), or you can extract the *Cube.zip* and *versions.txt* files from the *Update.zip\Webpages\DataMinerCubeStandalone* folder in the DataMiner upgrade package containing the Cube version you want, and enforce the use of this version.
 
 > [!NOTE]
 >
 > - To access this configuration, you need the user permissions [Modules > Documents > Add](xref:DataMiner_user_permissions#modules--documents--add), [Modules > System configuration > System settings > System settings available](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--system-settings-available), and [Modules > System configuration > System settings > Manage client versions](xref:DataMiner_user_permissions#modules--system-configuration--system-settings--manage-client-versions).
 > - By default, this is configured for the entire DMS. If you select the checkbox *Allow individual agent configuration*, you can configure different client version settings per DMA instead. However, this is not recommended as users will end up using a different version of Cube depending on which DMA they connect to.
+
+### Using a hotfixed Cube version
+
+To use a hotfixed version of DataMiner Cube:
+
+1. Extract the hotfix *.dmupgrade* package using 7-Zip.
+
+   Alternatively, make a copy of the package, change the copy's extension to *.zip*, and extract it using Windows *Extract All*.
+
+1. Extract the *Update.zip* file inside the package.
+
+1. In the extracted contents, browse to `Webpages\DataMinerCubeStandAlone`.
+
+   Keep *Cube.zip* and *versions.txt* together in this folder.
+
+1. In DataMiner Cube, go to *System Center* > *System settings* > *Manage client versions*.
+
+1. Select *Force a specific version* and select that *Cube.zip*.
+
+   Selecting this option ensures that users connecting to the DMA will use this version even if a more recent version is available. Otherwise, users connecting to the DMA could receive a newer Cube version through dataminer.services that does not yet contain the fix.
+
+> [!IMPORTANT]
+> Use the supplied *Cube.zip* as is. Do not extract its contents and create a new ZIP. Repackaging can change the archive's byte size even when its contents are unchanged. If a package for the same Cube version already exists on an Agent with a different byte size, Cube reports "Error: file already exists but has incorrect size".

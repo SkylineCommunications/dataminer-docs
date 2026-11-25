@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Replication.Parameter-dynamic
+description: "Use the dynamic attribute in a DataMiner protocol to reference the parameter holding the ID of the source parameter to replicate."
 ---
 
 # dynamic attribute

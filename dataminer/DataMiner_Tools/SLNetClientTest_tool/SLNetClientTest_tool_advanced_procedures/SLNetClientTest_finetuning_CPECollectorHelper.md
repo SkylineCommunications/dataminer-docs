@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_finetuning_CPECollectorHelper
+description: "Use the SLNetClientTest tool to fine-tune the CPECollectorHelper API timeout, which is dynamically adjusted to the number of requested items."
 ---
 
 # Fine-tuning the CPECollectorHelper API timeout

@@ -1,5 +1,6 @@
 ---
 uid: FAQs_Connectors
+description: "Browse DataMiner connector FAQs for lead times, deployment, Generic SNMP limits, DIS training, and support for user-built and third-party connectors."
 ---
 
 # Questions related to connectors

@@ -1,5 +1,6 @@
 ---
 uid: General_Main_Release_10.7.0_new_features
+description: "New features in DataMiner General Main Release 10.7.0, including capabilities and BPA tests planned for this preview release."
 ---
 
 # General Main Release 10.7.0 – New features - Preview
@@ -9,7 +10,35 @@ uid: General_Main_Release_10.7.0_new_features
 
 ## Highlights
 
-*No highlights have been selected yet.*
+#### Introducing DataMiner Intelligence [ID 47196]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+DataMiner Intelligence brings conversational AI into DataMiner, helping teams explore operational data, find trusted insights and guidance, and carry out guided actions. It combines AI agents with DataMiner context and selectable capabilities to support different tasks and workflows.
+
+##### Meet the Assistant in your workflow
+
+- **In DataMiner**: Open the Assistant app from the DataMiner landing page to start a conversation or return to an earlier session. Choose a native or specialized agent, select an available AI model and reasoning level, or dictate a question with speech-to-text. Suggested prompts help you get started with native agents, and the chat shows the tools being used as it works. See [Assistant app](xref:Intelligence_Assistant_app) and [Agents](xref:Intelligence_Agents).
+
+- **In Microsoft Teams or Microsoft Copilot**: Chat with agents available on your DataMiner System without opening the DataMiner web interface. Sign in with your linked DataMiner account, select the organization and system you want to use, and ask questions about DataMiner or request live system information. You can change agents in natural language, configure the model, and follow links in responses to the relevant monitoring page. See [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
+
+- **In dashboards and low-code apps**: Add an Assistant chat component so you can ask questions without leaving your workflow. Depending on the configuration, select an agent and model, choose a response style, or use voice input. An app event can also start a conversation with a fixed prompt or a dynamic value, such as text entered in another component or a URL parameter. See [Assistant chat component](xref:DashboardAssistantChat).
+
+##### Explore system information and guidance
+
+The built-in [DataMiner Insights agent](xref:Intelligence_InsightsAgent) helps you understand and investigate operational data. It can summarize information and surface comparisons, trends, and patterns across alarms, elements, parameters, services, views, service-level agreements, connectivity, and anomalies. The available data depends on the configured sources, system setup, and your user permissions. DataMiner Insights is read-only and does not change the DataMiner System.
+
+The built-in [DataMiner Docs agent](xref:Intelligence_DocumentationAgent) searches the official DataMiner documentation to answer product questions and help you find feature, configuration, and troubleshooting guidance.
+
+##### Tailor agents for your workflows
+
+You can create [specialized agents](xref:Intelligence_Specialized_Agents) for an operational domain or workflow, with tailored instructions and a chosen set of capabilities. Reusable [skills](xref:Intelligence_Skills) provide domain knowledge and step-by-step procedures. [Data tools](xref:Intelligence_DataTools) give agents access to selected information sources; custom tools can expose supported Object Manager data or registered GQI data sources.
+
+When a workflow needs to do more than retrieve information, [script tools](xref:Intelligence_ScriptTools) let a specialized agent run selected DataMiner automation scripts, for example to start maintenance or apply a configuration. A tool can be configured to request user confirmation before it runs. DataMiner permissions continue to govern access and actions.
+
+##### Availability
+
+A DataMiner System must be connected to dataminer.services, and DataMiner Intelligence must be enabled. Specialized agents are experimental and may require administrator enablement. For setup and availability details, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started), [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM), and the [FAQ](xref:Intelligence_FAQ).
 
 ## New features
 
@@ -121,12 +150,12 @@ See the following example:
 | Credential | id | ID of the credential (integer, unique per script) |
 | Name | - | Name of the credential (string, unique per script) |
 | CredentialId | - | GUID of the linked credential from the Credentials Library |
-| Type | - | Type of credential: `UserNamePassword` or `Token` |
+| Type | - | Type of credential: `UserNameAndPassword` or `Token` |
 
 > [!NOTE]
 >
 > - If users add or import a script, and they do not have access to one or more of the specified credentials, those credentials will be cleared, and the script will becomes non-executable until valid credentials are assigned.
-> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNamePassword` and `Token` credentials stored in the Credentials Library.
+> - At runtime, automation scripts can now use the new `engine.GetCredential()` method to retrieve secrets from `UserNameAndPassword` and `Token` credentials stored in the Credentials Library.
 
 #### SLNet subscription logging [ID 44361]
 
@@ -504,17 +533,6 @@ Route conflicts are also detected across all existing definitions. Any two templ
 
 When a conflict is found, the API definition is rejected with `ApiDefinitionError.Reason.RouteInUse`, and the error includes both the conflicting definition ID and the route that was rejected.
 
-#### SLNet will now listen for connection ticket requests over NATS [ID 46057]
-
-<!-- MR 10.7.0 - FR 10.6.10 -->
-
-From now on, SLNet will listen on the `SLNet.Authentication.Ticket` NATS topic to process connection tickets and return the username associated with the ticket.
-
-This allows APIGateway to authenticate requests via the NATS-based connection flow.
-
-> [!NOTE]
-> Tickets can be requested with `connection.RequestCloneTicket()`. This feature does not currently support impersonation with `TicketType.AuthenticateAs`.
-
 #### Spectrum analysis: New measurement point cycle parameter and sync event [ID 46183]
 
 <!-- MR 10.7.0 - FR 10.6.10 -->
@@ -522,3 +540,64 @@ This allows APIGateway to authenticate requests via the NATS-based connection fl
 In order to notify client applications when the measurement point cycle changes, a new spectrum parameter has been added: `SPA_SPARAM_MEASPOINT_CYCLE` (PID 64227).
 
 This will especially improve synchronization in shared sessions, keeping measurement point cycle updates aligned across connected clients.
+
+### New GetCloudDmsInformationRequest message to retrieve information from a cloud-connected DMS [ID 46393]
+
+<!-- MR 10.7.0 - FR 10.6.11 -->
+
+The new `GetCloudDmsInformationRequest` SLNet message allows you to retrieve information from a cloud-connected DMS, including the organization name, DMS name, and remote-access URL.
+
+This request requires a CloudGateway version that supports it.
+
+### Interactive automation scripts: New WebUILayout property [ID 46602]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+From now on, you can select the web UI layout for each dialog in an interactive automation script using the `UIBuilder.WebUILayout` property.
+
+For example:
+
+```csharp
+var uiBuilder = new UIBuilder
+{
+    WebUILayout = WebUILayout.Grid
+};
+```
+
+The following values are supported:
+
+- `Default` and `Table`: Components are arranged in a table. TAB navigation proceeds from left to right across each row before moving to the next row.
+- `Grid`: Selects a CSS Grid layout that keeps visual placement independent of keyboard navigation. The order in which blocks are added to the `UIBuilder` determines the TAB order. To navigate through one column before continuing to the next, add the blocks from top to bottom in the first column, followed by the blocks in the next column.
+
+If you do not set this property, `Default` is used, preserving the existing table layout and navigation behavior. Existing scripts therefore continue to behave as before.
+
+> [!NOTE]
+> Support for the `Grid` layout in the DataMiner web apps will be introduced separately.
+
+#### Security: New 'Intelligence Usage' user permission [ID 46765]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
+
+> [!NOTE]
+> The first time a system is upgraded to DataMiner 10.7.0/10.7.1 or later, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+
+### New BPA test: DataMiner Agent Versions [ID 46808]
+
+<!-- MR 10.7.0 - FR 10.6.12 -->
+
+A new BPA test, *DataMiner Agent Versions*, now runs daily to check whether all DataMiner Agents in the cluster are running the same DataMiner version. The check also includes offline Failover Agents.
+
+The test fails if it detects different versions. If the information required for the check is missing or incomplete, the result is inconclusive. In both cases, the output includes details.
+
+#### Security: New 'Intelligence App' user permission [ID 46817]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
+
+> [!NOTE]
+>
+> - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
+> - The first time a system is upgraded to DataMiner 10.7.0/10.7.1 or later, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.

@@ -4,7 +4,7 @@ uid: DMS_GET_VALUE
 
 # DMS_GET_VALUE (87)
 
-> [!WARNING]
+> [!IMPORTANT]
 > The use of DMS Notify types has been deprecated. Use types from the [DataMinerSystem library](xref:ClassLibraryIntroduction) instead.
 
 Retrieves details about a parameter (including the value).
@@ -21,7 +21,7 @@ int parameterID = 5;
 
 DMS dms = new DMS();
 object result = new object();
-dms.Notify(type/*DMS_GET_VALUE*/ , subType, ids, parameterID, out result);
+dms.Notify(type /*DMS_GET_VALUE*/, subType, ids, parameterID, out result);
 
 object[] parameterDetails = (object[])result;
 ```
@@ -75,14 +75,14 @@ int parameterID = 110;
 
 DMS dms = new DMS();
 object result = new object();
-dms.Notify(87/*DMS_GET_VALUE*/ , 0, ids, parameterID, out result);
+dms.Notify(87 /*DMS_GET_VALUE*/, 0, ids, parameterID, out result);
 
 if (result != null)
 {
     object[] parameterDetails = (object[])result;
     string value = Convert.ToString(parameterDetails[4]);
 
-    ////...
+    // ...
 }
 ```
 
@@ -98,7 +98,7 @@ int parameterID = 1000;
 
 DMS dms = new DMS();
 object result = new object();
-dms.Notify(87/*DMS_GET_VALUE*/ , 0, ids, parameterID, out result);
+dms.Notify(87 /*DMS_GET_VALUE*/, 0, ids, parameterID, out result);
 
 object[] table = (object[])result;
 object[] columns = (object[])table[4];
@@ -114,12 +114,12 @@ if (columns != null)
             if (rows[r] != null) // Check if cell not initialized.
             {
                 object[] indexID = (object[])rows[r];
-                
-                ////...
+
+                // ...
             }
             else
             {
-                ////...
+                // ...
             }
         }
     }

@@ -1,5 +1,6 @@
 ---
 uid: LogicActionSet
+description: "Use the set action on parameters or groups to perform single or multiple SNMP set operations through a selected connector connection."
 ---
 
 # set
@@ -54,8 +55,8 @@ Example on group
   <Name>Sets</Name>
   <Description>Sets</Description>
   <Content>
-     <Param>2006</Param>
-     <Param>2007</Param>
+    <Param>2006</Param>
+    <Param>2007</Param>
   </Content>
 </Group>
 ```

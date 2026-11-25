@@ -12,13 +12,12 @@ Proceed as follows if you want to debug a QAction or an automation script locate
 
      `C:\Program Files\Microsoft Visual Studio\<version>\Professional\Common7\IDE\Remote Debugger\x86`
 
-     Example: `C:\Program Files\Microsoft Visual Studio\2022\Professional\Common7\IDE\Remote Debugger\x86`
+     Example: `C:\Program Files\Microsoft Visual Studio\18\Professional\Common7\IDE\Remote Debugger\x86`
 
      > [!NOTE]
      >
      > - Remote Debugging Monitor (msvsmon.exe) can run with any user account that has Administrator rights.
      > - Make sure that the version of Remote Debugging Monitor on the remote DataMiner Agent is the version supplied with the version of Visual Studio you are using on your local computer.
-     > - Always use the 32-bit version of Remote Debugging Monitor.
 
 1. On the remote DataMiner Agent, log on with an account that has Administrator rights, and start Remote Debugging Monitor as an Administrator.
 

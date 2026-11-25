@@ -4,7 +4,10 @@ uid: Scheduler_NuGet_Package
 
 # Using the Scheduler NuGet package
 
-The Scheduler NuGet package provides useful functionalities to interact with the Scheduler module using automation scripts. It enables the creation, updating, and deletion of scheduled tasks.
+The Scheduler NuGet prerelease package provides useful functionalities to interact with the Scheduler module using automation scripts. If you are not able to use version 1.1.3.7 of the DataMinerSystem library yet, you can use this package for the creation, updating, and deletion of scheduled tasks.
+
+> [!IMPORTANT]
+> The Scheduler API is included in the DataMinerSystem library as of version [1.1.3.7](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.1#1137). If this version is available in your system, we highly recommend using the [IDmsScheduler](xref:Skyline.DataMiner.Core.DataMinerSystem.Common.IDmsScheduler) interface from the library instead of the prerelease NuGet package. For details, refer to the [DataMinerSystem library release notes](xref:Skyline_DataMiner_Core_DataMinerSystem_Range_1.1#1137).
 
 ## Installing the Scheduler NuGet package
 
@@ -107,7 +110,7 @@ Before creating a scheduled task, you first need to **define its intended recurr
    ```csharp
    var startRunTime = DateTime.Now;
    var endRunTime = startRunTime.AddHours(2);
-
+   
    var schedulerTask = new SchedulerTask("Name", "Description", startRunTime, endRunTime, scheduleRepetition);
    ```
 
@@ -121,9 +124,9 @@ Before creating a scheduled task, you first need to **define its intended recurr
      new AutomationScriptInputParameter("InputScriptParam1", "InputValue1"),
      new AutomationScriptInputParameter("InputScriptParam2", "InputValue2"),
    };
-
+   
    var automationScriptAction = new AutomationScriptAction("Script Name", inputScriptParams, checkSets: true, runAsync: false);
-
+   
    schedulerTask.ISchedulerAction = automationScriptAction;
    schedulerTask.ISchedulerFinalAction = automationScriptAction;
    ```
@@ -148,7 +151,7 @@ Before creating a scheduled task, you first need to **define its intended recurr
      schedulerTask2,
      schedulerTask3,
    };
-
+   
    scheduler.CreateOrUpdateSchedulerTasks(schedulerTasks, sendInBulk: true);
    ```
 
@@ -157,7 +160,7 @@ Before creating a scheduled task, you first need to **define its intended recurr
 To initialize a new instance of the `Scheduler` class by retrieving the Scheduler tasks according to the given selector:
 
 ```csharp
-public Scheduler(Func<Net.Messages.SchedulerTask, bool> selector = null)` 
+public Scheduler(Func<Net.Messages.SchedulerTask, bool> selector = null)
 ```
 
 - `selector`: A selector applied to the retrieved Scheduler tasks. If left null, no Scheduler tasks are retrieved.

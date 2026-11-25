@@ -1,5 +1,6 @@
 ---
 uid: Default_DataMiner_notification
+description: "Explore the default DataMiner notification header data and default bindings sent to third-party SNMP managers."
 ---
 
 # Default DataMiner notification

@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.0.0_new_features_1
+status: archived
 ---
 
-# General Main Release 10.0.0 - New features (part 1)
+# General Main Release 10.0.0 - New features (part 1) [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
@@ -603,7 +604,7 @@ See the \<Replication> tag in the following example:
 
 ```xml
 <Param id="1">
-  <Name>Parameter 1</Name>
+  <Name>Parameter1</Name>
   <Description>Parameter 1</Description>
   <Type>read</Type>
   <Interprete>

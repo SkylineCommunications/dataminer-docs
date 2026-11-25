@@ -1,5 +1,6 @@
 ---
 uid: Protocol.QActions.QAction-entryPoint
+description: "Learn how the entryPoint attribute maps QAction trigger parameters to specific entry point methods and classes."
 ---
 
 # entryPoint attribute
@@ -25,25 +26,24 @@ Prior to DataMiner 10.2.9, only one instance was retained per QAction. The entry
 ```xml
 <QAction id="2" triggers="21;22" entryPoint="Method1;Method2" encoding="csharp">
 <![CDATA[
-using System.IO;
 using System;
+using System.IO;
 using System.Text;
-
 using Skyline.DataMiner.Scripting;
 
 public class QAction
 {
-	int _instanceVariable = 0;
-	
+	private int instanceVariable = 0;
+
 	public void Method1(SLProtocolExt protocol)
 	{
-		protocol.Qaction2Result = "Executed Methodl: " + _instanceVariable;
+		protocol.Qaction2Result = $"Executed Method1: {instanceVariable}";
 		instanceVariable++;
 	}
 
 	public void Method2(SLProtocolExt protocol)
 	{
-		protocol.Qaction2Result = "Executed Method2: " + _instanceVariable;
+		protocol.Qaction2Result = $"Executed Method2: {instanceVariable}";
 		instanceVariable++;
 	}
 }

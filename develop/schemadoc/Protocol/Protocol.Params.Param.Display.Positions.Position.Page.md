@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Params.Param.Display.Positions.Position.Page
+description: "Use the Page element in a DataMiner protocol to select the Data Display page where a parameter is shown and override its measurement type."
 ---
 
 # Page element

@@ -96,11 +96,11 @@ You can follow the steps below or watch this short video, which shows you how to
 
    - For a **WebSocket** connection, see [WebSocket connection](xref:WebSocket_Connection).
 
-   - For a connection from a DaaS Agent to a private data source via [Edge Manager](xref:EdgeManagerOverview), see [Creating an element that communicates with a data source through a tunnel](xref:EdgeManagerGettingStarted#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
+   - For a connection from a DaaS Agent to a private data source through an [Edge Gateway](xref:About_Edge_Gateways), see [Creating an element that communicates with a data source through a tunnel](xref:Getting_started_with_Edge_Gateways#creating-an-element-that-communicates-with-a-data-source-through-a-tunnel).
 
 1. If the protocol is [configured to allow you to test the connection](xref:Protocol.Groups.Group-ping), optionally click the button *Test connection* below the connection you want to test.
 
-   After you click the button, a message will display the results of the test. However, note that this button is not available for connections via [Edge Manager](xref:EdgeManagerOverview).
+   After you click the button, a message will display the results of the test. However, note that this button is not available for connections through an [Edge Gateway](xref:About_Edge_Gateways).
 
 1. Specify the timeout settings per connection:
 
@@ -116,12 +116,35 @@ You can follow the steps below or watch this short video, which shows you how to
      > [!NOTE]
      > Clearing the selection from this checkbox can for example be of use for an element with multiple connections. If a particular connection should not influence the timeout state of the element, then clear the checkbox for that connection. If the checkbox is selected for all connections, the element will be in timeout as soon as one of the connections fails.
 
-   - **The element goes into timeout state when it is not responding for (sec)**: When the element fails to respond to commands for longer than the number of seconds specified in this setting, the DMA will put the element in a timeout state. The specified number must be between 0 and 120.
+   - **The element goes into timeout state when it is not responding for (sec)**: When the connection fails to respond to commands for longer than the number of seconds specified in this setting, the DMA will put the element in a timeout state. The maximum value for this setting is 86400 (i.e., 24 hours).
 
      Note that this setting does not account for the number of retries. To ensure that the element has enough time to complete all retry attempts before declaring a timeout, you should therefore choose a value larger than **Timeout of a single command × (Number of retries + 1)**.
 
-     > [!NOTE]
-     > Prior to DataMiner 10.2.9/10.3.0, the maximum timeout value for this setting is 2 minutes (i.e., 120 seconds). From DataMiner 10.2.9/10.3.0 onwards, the maximum value is extended to 24 hours.
+     > [!IMPORTANT]
+     > When an element goes in timeout, it will remain in timeout until **all** its connections are responding again.
+
+1. If the connector contains [DataMiner Edge](xref:DataMiner_Edge) scripts, configure the necessary additional settings:<!--RN 46287 + 46037 + 46142-->
+
+   > [!NOTE]
+   > The exact scripts and settings depend on the connector.
+
+   - **Run details**: Select a compatible [DataMiner Edge Node](xref:DataMiner_Edge) as the target, and configure the interval for each script.
+
+   - **Settings**: Configure the connector-defined values for the element, such as a location, system environment, IP address, IP port<!--RN 46390-->, authentication credentials, and more.
+
+     Authentication settings can use the following credential types from the Credentials Library:
+
+     - Token credentials
+
+     - Username and password credentials
+
+     - Community credentials<!--RN 46398-->
+
+     - SNMPv3 credentials<!--RN 46398-->
+
+   > [!NOTE]
+   > - If you edit an element with saved credentials that you cannot access, select a set of credentials that you can access before saving the element.
+   > - When you [export or import an element](xref:Importing_and_exporting_elements), its DataMiner Edge scripts and connector settings are included, including in CSV files.
 
 1. Specify the following advanced element settings if necessary:
 
@@ -158,7 +181,7 @@ You can follow the steps below or watch this short video, which shows you how to
 
      If an element is read-only, its parameters cannot be updated.
 
-   - **Run in isolation mode**: Available from DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->. Select this checkbox if you want the element to be run in isolation mode. See [Adding elements in isolation mode](#adding-elements-in-isolation-mode).
+   - **Run in isolation mode**: Available from DataMiner 10.5.4/10.6.0 onwards<!--RN 41758-->. Select this checkbox if you want the element to be run in isolation mode. See [Adding elements in isolation mode](#adding-elements-in-isolation-mode).
 
    - **Block Swarming**: Available from 10.5.5/10.6.0 onwards<!--RN 42535 + 42536-->. See [Blocking elements from being swarmed](xref:SwarmingElements#blocking-elements-from-being-swarmed).
 
@@ -178,7 +201,7 @@ You can follow the steps below or watch this short video, which shows you how to
 
 ## Adding elements in isolation mode
 
-From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, you can configure an element to run in isolation mode using the *Run in isolation mode* option. If this option is activated, a separate SLProtocol and SLScripting process will be started only for this element. This way, you can isolate the element so that it cannot cause issues for other elements in case something goes wrong.
+From DataMiner 10.5.4/10.6.0 onwards<!--RN 41758-->, you can configure an element to run in isolation mode using the *Run in isolation mode* option. If this option is activated, a separate SLProtocol and SLScripting process will be started only for this element. This way, you can isolate the element so that it cannot cause issues for other elements in case something goes wrong.
 
 By default, a maximum of 50 SLProtocol processes can run at the same time, of which 10 are reserved for elements that are not running in isolation mode. This means a maximum of 40 elements can be run in isolation mode at any given time. If the maximum has been reached and you attempt to start an additional element in isolation mode, a message will appear to alert you of the 50-process limit, and the element will be hosted by an existing SLProtocol process and its matching SLScripting process.
 
@@ -195,4 +218,4 @@ For example, if 15 SLProtocol processes are configured in the *DataMiner.xml* fi
 > [!NOTE]
 >
 > - Isolation mode consumes more resources and should only be activated when really necessary.
-> - Prior to DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4, you can only configure an element to run in isolation mode by configuring this for all elements using a particular protocol in the [*ProcessOptions* section](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol) of the *DataMiner.xml* file or the [*RunInSeparateInstance* tag](xref:Protocol.SystemOptions.RunInSeparateInstance) of the *protocol.xml* file. From DataMiner 10.4.0 [CU13]/10.5.0 [CU1]/10.5.4 onwards<!--RN 41758-->, when you have forced an element to run in isolation mode via the *protocol.xml* or *DataMiner.xml* file, the *Run in isolation mode* option will be selected automatically, and clearing the option will not be possible when editing the element.
+> - Prior to DataMiner 10.5.4/10.6.0, you can only configure an element to run in isolation mode by configuring this for all elements using a particular protocol in the [*ProcessOptions* section](xref:Configuration_of_DataMiner_processes#configuring-separate-slprotocol-and-slscripting-instances-for-a-specific-protocol) of the *DataMiner.xml* file or the [*RunInSeparateInstance* tag](xref:Protocol.SystemOptions.RunInSeparateInstance) of the *protocol.xml* file. From DataMiner 10.5.4/10.6.0 onwards<!--RN 41758-->, when you have forced an element to run in isolation mode via the *protocol.xml* or *DataMiner.xml* file, the *Run in isolation mode* option will be selected automatically, and clearing the option will not be possible when editing the element.

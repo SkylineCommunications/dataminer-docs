@@ -19,7 +19,7 @@ Verify the prerequisites listed under [Adding a node to a DataMiner cluster](xre
 ### NATS
 
 - The DataMiner Agent you add must use the same NATS solution as the rest of the cluster. This means that if the cluster has been [migrated to BrokerGateway](xref:BrokerGateway_Migration), the DMA you add also needs to be migrated to BrokerGateway, but if the cluster still uses the SLNet-managed NATS solution, the DMA you add also has to use this solution.
-- If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config) with the *NATSForceManualConfig* option in *MaintenanceSettings.xml*, you will need to manually adjust your NATS configuration with the added DMA.<!-- RN 42019+42020 -->
+- If a [manual configuration was forced for NATS](xref:Disabling_automatic_NATS_config), you will need to manually adjust your NATS configuration with the added DMA.<!-- RN 42019+42020 -->
 
 ### Swarming
 

@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Taskbar_Utility
+description: "Use the DataMiner Taskbar Utility in the system tray to check whether your DataMiner Agent is started or stopped and to perform a variety of other tasks."
 ---
 
 # DataMiner Taskbar Utility

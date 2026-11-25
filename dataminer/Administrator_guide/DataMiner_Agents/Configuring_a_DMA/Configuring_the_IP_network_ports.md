@@ -21,14 +21,14 @@ A DataMiner System makes extensive use of TCP/IP communication. Below, you find 
 | .NET Remoting  | Configurable port<br> Default port: 8004/tcp | Inter-DMA communication ([unless gRPC is configured instead](xref:DMS_xml#redirects-subtag))<br> DataMiner Cube ([unless gRPC is configured instead](xref:ConnectionSettings_txt#connectionsettingstxt-options))<br> Alerter |
 | HTTP(S) | 80/tcp<br> 443/tcp | Inter-DMA communication ([if gRPC is configured](xref:DMS_xml#redirects-subtag))<br>DataMiner Cube<br> Alerter<br> Web apps (e.g., Monitoring, Jobs)<br> Dashboards, Reporter |
 | N/A     | 7000/tcp | Cassandra: non-TLS setup (inter-node communication in Failover setups) |
-| N/A     | 7001/tcp | Cassandra: TLS setup (available from DataMiner 10.1.3 onwards) |
+| N/A     | 7001/tcp | Cassandra: TLS setup |
 | N/A     | 7199/tcp | Cassandra: cluster backups |
 | N/A     | 9042/tcp | Cassandra: non-TLS and TLS setup (server listening for client requests) |
 | N/A     | 9200/tcp | OpenSearch/Elasticsearch |
 | N/A     | 9300/tcp | OpenSearch/Elasticsearch (inter-node communication) |
-| Multiple protocols | 4222/tcp<br> 6222/tcp | NATS (required from DataMiner 10.1.1 onwards) |
-| Multiple protocols | 8222/tcp | NATS Monitoring (relevant from DataMiner 10.1.1 onwards) |
-| NAS    | 9090/tcp  | NATS Account Server (required from DataMiner 10.1.1 onwards) |
+| Multiple protocols | 4222/tcp<br> 6222/tcp | NATS |
+| Multiple protocols | 8222/tcp | NATS Monitoring |
+| NAS    | 9090/tcp  | NATS Account Server. No longer needed from 10.6.0/10.6.1 onwards or after [migration to BrokerGateway](xref:BrokerGateway_Migration). |
 | HTTP(S) | 5100/tcp (internal) | [dataminer.services endpoint](xref:Custom_cloud_endpoint_configuration) hosted in [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (by default required from DataMiner 10.3.6/10.4.0/CloudGateway 2.10.0 onwards) |
 | Telnet | 23/tcp   | Stream (by default disabled) |
 

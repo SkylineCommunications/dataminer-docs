@@ -1,5 +1,6 @@
 ---
 uid: Protocol.RCA
+description: "Learn how the RCA element configures Root Cause Analysis by grouping link definitions that establish RCA chains between parameters."
 ---
 
 # RCA element

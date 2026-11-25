@@ -1,5 +1,6 @@
 ---
 uid: Protocol.Timers.Timer.Content
+description: "Use the Timer.Content element in a DataMiner protocol to specify all the groups that must be executed when a timer is triggered."
 ---
 
 # Content element

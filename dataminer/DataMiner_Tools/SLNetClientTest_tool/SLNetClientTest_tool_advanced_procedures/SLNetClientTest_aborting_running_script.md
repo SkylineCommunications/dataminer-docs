@@ -1,5 +1,6 @@
 ---
 uid: SLNetClientTest_aborting_running_script
+description: "Use the SLNetClientTest tool to find a running automation script in DataMiner and abort it from the Running Scripts tab."
 ---
 
 # Aborting a running automation script

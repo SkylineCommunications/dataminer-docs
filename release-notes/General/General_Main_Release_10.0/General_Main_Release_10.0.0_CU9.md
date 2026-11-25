@@ -1,8 +1,9 @@
----
+﻿---
 uid: General_Main_Release_10.0.0_CU9
+status: archived
 ---
 
-# General Main Release 10.0.0 CU9
+# General Main Release 10.0.0 CU9 [ARCHIVED]
 
 > [!NOTE]
 > For known issues with this version, refer to [Known issues](xref:Known_issues).
@@ -68,12 +69,12 @@ BPA tests can now be set to automatically run at specific intervals.
 When a table row is updated, the cells are handled according to the column's perceived priority unless overwritten. The processing order of columns has now been extended so that columns that are part of a threshold option (*Protocol.Params.Param.Alarm@Options*) within the same table definition get processed before columns that are part of a property definition and any other columns. This results in the following column processing order:
 
 1. Primary key (index)
-2. Display column
-3. Foreign key columns
-4. Columns part of the naming or namingformat definition
-5. Columns part of a conditional monitoring definition
-6. Columns part of a threshold definition (NEW)
-7. Columns part of a property definition
+1. Display column
+1. Foreign key columns
+1. Columns part of the naming or namingformat definition
+1. Columns part of a conditional monitoring definition
+1. Columns part of a threshold definition (NEW)
+1. Columns part of a property definition
 
 Any other columns are processed in the order defined in the table parameter
 

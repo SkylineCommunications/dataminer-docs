@@ -6,7 +6,7 @@ uid: How_do_I_parse_Correlation_Alarm_Info_data
 
 The following sample code shows how you can parse the information in a *\<Correlation Alarm Info>* string:
 
-```cs
+```csharp
 ScriptParam paramCorrelationAlarmInfo = engine.GetScriptParam(65006);
 string alarmInfo = paramCorrelationAlarmInfo.Value;
 string[] parts = alarmInfo.Split('|');
@@ -31,13 +31,13 @@ int userStatus = Tools.ToInt32(parts[17]);
 string owner = parts[18];
 string impactedServices = parts[19];
 int amountProperties = Tools.ToInt32(parts[20]);
-for (int i=0; i<amountProperties; i++)
+for (int i = 0; i < amountProperties; i++)
 {
-    string propertyName = parts[21 + i*2];
-    string propertyValue = parts[21 + i*2 + 1];
-    engine.GenerateInformation("Property " + propertyName + " == " + propertyValue);
+    string propertyName = parts[21 + (i * 2)];
+    string propertyValue = parts[21 + (i * 2) + 1];
+    engine.GenerateInformation($"Property {propertyName} == {propertyValue}");
 }
 
-// from DataMiner 10.4.9/10.5.0 onwards, use the ID below to refer to the alarm tree
+// From DataMiner 10.4.9/10.5.0 onwards, use the ID below to refer to the alarm tree
 AlarmTreeID treeId = new AlarmTreeID(dmaID, elementID, rootAlarmID);
 ```
