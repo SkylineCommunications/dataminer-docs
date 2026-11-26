@@ -52,7 +52,7 @@ Before you upgrade to this DataMiner version:
 
 ## Highlights
 
-#### Introducing DataMiner Intelligence [ID 47196]
+#### Introducing DataMiner Intelligence [ID 46765] [ID 46817] [ID 47196]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
 
@@ -80,29 +80,24 @@ When a workflow needs to do more than retrieve information, [script tools](xref:
 
 ##### Availability
 
-A DataMiner System must be connected to dataminer.services, and DataMiner Intelligence must be enabled. Specialized agents are experimental and may require administrator enablement. For setup and availability details, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started), [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM), and the [FAQ](xref:Intelligence_FAQ).
+DataMiner Intelligence is available when the following requirements are met:
 
-## New features
+- Your DataMiner System is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud).
 
-#### Security: New 'Intelligence Usage' user permission [ID 46765]
+- The *DataMiner Intelligence* system setting is enabled via the web apps user menu. To use specialized agents, the *Specialized agents* setting must also be enabled in the system settings of the Assistant app. (See [Web apps: System-wide DataMiner Intelligence setting [ID 47084]](xref:Web_apps_Feature_Release_10.7.1#web-apps-system-wide-dataminer-intelligence-setting-id-47084).)
 
-<!-- MR 10.7.0 - FR 10.7.1 -->
+> [!TIP]
+> For more details, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) and the [FAQ](xref:Intelligence_FAQ).
 
-A new *Intelligence Usage* user permission has now been added. This permission will grant users access to all features related to DataMiner Intelligence.
+#### User permissions
 
-> [!NOTE]
-> The first time a system is upgraded to DataMiner 10.7.0/10.7.1 or later, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+The following new user permissions control access to DataMiner Intelligence features:
 
-#### Security: New 'Intelligence App' user permission [ID 46817]
-
-<!-- MR 10.7.0 - FR 10.7.1 -->
-
-A new *Intelligence App* user permission has now been added. This permission will grant users access to the Intelligence app.
+- *General > DataMiner Intelligence > Access*: Grants access to DataMiner Intelligence features.
+- *General > DataMiner Intelligence > Assistant app*: Grants access to the Assistant app, if the *Access* permission mentioned above is also granted.
 
 > [!NOTE]
->
-> - This permission is independent of the *Intelligence Usage* permission, which grants users access to all features related to DataMiner Intelligence.
-> - The first time a system is upgraded to DataMiner 10.7.0/10.7.1 or later, DataMiner will automatically grant this new permission to all existing groups with the *Admin Tools* permission.
+> The first time a system is upgraded to DataMiner 10.7.0/10.7.1 or later, DataMiner will automatically grant these new permissions to all existing groups with the *Admin Tools* permission.
 
 ## Changes
 
