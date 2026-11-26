@@ -260,8 +260,6 @@ items:
     items:
       - name: Current issues
         items:
-          - name: Cassandra Cluster migration finalizer fails with TypeLoadException
-            topicUid: KI_Cassandra_Cluster_migration_finalizer_TypeLoadException
           - name: NATSForceManualConfig ignored after BrokerGateway migration rollback
             topicUid: KI_NATSForceManualConfig_ignored_after_BrokerGateway_migration_rollback
           - name: Engine location is mandatory when configuring a backup of an external database
@@ -304,6 +302,8 @@ items:
             topicUid: KI_Setting_a_protocol_to_production_takes_a_long_time
       - name: Resolved issues
         items:
+          - name: Cassandra Cluster migration finalizer fails with TypeLoadException
+            topicUid: KI_Cassandra_Cluster_migration_finalizer_TypeLoadException
           - name: Swarmed scheduled task executes incorrect action after editing
             topicUid: KI_Swarmed_scheduled_task_executes_incorrect_action
           - name: Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes
