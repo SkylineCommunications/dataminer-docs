@@ -27,7 +27,41 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner apps: Frame styling and header button types [ID 47180]
+
+<!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
+
+Uploaded DataMiner apps can now customize their iframe styling and header button appearance through the `postMessage` API.
+
+##### Frame styling
+
+Use `frameStyle.set` to replace previously supplied styles, or `frameStyle.update` to merge changes with existing styles. For example, send the following message to replace the frame styles:
+
+```json
+{
+  "frameStyle": {
+    "set": {
+      "borderRadius": "12px",
+      "overflow": "hidden",
+      "opacity": 0.9
+    }
+  }
+}
+```
+
+Set a property to `null` in an update to remove it, for example `{"frameStyle":{"update":{"opacity":null}}}`. Send `{"frameStyle":{"set":{}}}` to clear all previously supplied styles.
+
+##### Header button types
+
+Use the `buttonType` field in `header.set` or `header.update` to select one of the following header button types:
+
+- `cta`: Call-to-action.
+- `subtle`: Subtle.
+- `danger`: Danger.
+
+For example, send `{"header":{"update":[{"identifier":"save","buttonType":"cta"}]}}` to change an existing button to a call-to-action button.
+
+On mobile screens, header buttons with icons will hide their labels. Text-only buttons will retain their labels.
 
 ### Fixes
 
