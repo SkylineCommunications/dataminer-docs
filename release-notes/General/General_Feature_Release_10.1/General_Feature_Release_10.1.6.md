@@ -55,7 +55,7 @@ SimulationHelper(Func<DMSMessage[], DMSMessage[]> messageHandler)
 Example on how to use this in an automation script:
 
 ```csharp
-var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);
+var simulationHelper = new SimulationHelper(engine.GetUserConnection().HandleMessages);
 simulationHelper.LoadSimulations();
 ```
 

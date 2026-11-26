@@ -1549,42 +1549,24 @@ namespace Skyline.DataMiner.Automation
 		/// </code>
 		/// </example>
 		/// <remarks>
-		/// <para><see cref="SLProfileManager"/> is now obsolete. Use <see cref="ProfileManagerHelper"/> for an up-to-date API.</para>
+		/// <para><see cref="SLProfileManager"/> is now obsolete. Use <see cref="ProfileHelper"/> for an up-to-date API.</para>
 		/// <code>
 		/// using System;
 		/// using Skyline.DataMiner.Automation;
-		/// using Skyline.DataMiner.Net.IManager.Helper;
 		/// using Skyline.DataMiner.Net.Profiles;
-		/// using System.Linq;
 		/// 
 		/// public class Script
 		/// {
-		/// 	// We use the ProfileManagerHelper object to communicate with the ProfileManager module.
-		/// 	ProfileManagerHelper Helper;
-		/// 	
-		///		public Script()
-		///		{
-		///			// Initialize the ProfileManagerHelper
-		///			Helper = new ProfileManagerHelper();
-		///			
-		///			//Handling the RequestResponseEvent gives the ProfileManagerHelper connection with SLNet.
-		///			Helper.RequestResponseEvent += Helper_RequestResponseEvent;
-		///		}
-		///		
-		///		//Handles the RequestResponseEvent. Any server call the Helper makes behind the scenes calls this method.
-		///		private void Helper_RequestResponseEvent(object sender, IManagerRequestResponseEventArgs e)
-		///		{
-		///			e.responseMessage = Engine.SLNet.SendSingleResponseMessage(e.requestMessage);
-		///		}
-		///	
-		///		public void Run(IEngine engine)
-		///		{
-		///			// ...
-		///		}
-		///	}
+		/// 	public void Run(IEngine engine)
+		/// 	{
+		/// 		// Initialize the ProfileHelper
+		/// 		var helper = new ProfileHelper(engine.SendSLNetMessages);
+		/// 		// ...
+		/// 	}
+		/// }
 		/// </code>
 		/// </remarks>
-		[Obsolete("Please use the ProfileManagerHelper for an up-to-date API")]
+		[Obsolete("Please use the ProfileHelper for an up-to-date API")]
 		SLProfileManager ProfileManager { get; }
 
 		/// <summary>

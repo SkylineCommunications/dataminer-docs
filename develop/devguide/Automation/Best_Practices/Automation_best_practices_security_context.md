@@ -28,7 +28,6 @@ When sending a direct SLNet message, the method you use determines the security 
 
 - [engine.SendSLNetSingleResponseMessage](xref:Skyline.DataMiner.Automation.Engine.SendSLNetSingleResponseMessage(Skyline.DataMiner.Net.Messages.DMSMessage)) uses the user account.
 - `engine.GetUserConnection().HandleSingleResponseMessage` uses the user account.
-- `Engine.SLNetRaw.HandleMessage` uses the System account.
 
 ## Example: applying a parameter set
 
@@ -80,11 +79,5 @@ RunPath(engine, "SLNet messages - via Engine", delegate
 RunPath(engine, "SLNet messages - via GetUserConnection", delegate
 {
     engine.GetUserConnection().HandleSingleResponseMessage(CreateSetParameterMessage(5));
-});
-
-// System account
-RunPath(engine, "SLNet messages - via static Engine.SLNetRaw", delegate
-{
-    Engine.SLNetRaw.HandleMessage(CreateSetParameterMessage(6));
 });
 ```

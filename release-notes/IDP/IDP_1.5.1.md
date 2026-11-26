@@ -14,7 +14,7 @@ To start a discovery request, access the discovery message builders, create a di
 
 ```csharp
 var discoveryMessageBuilders = IdpInterApp.DiscoveryMessageBuilders;
-var messageBuilder = discoveryMessageBuilders.CreateDeviceDiscoveryMessageBuilder(Engine.SLNetRaw)
+var messageBuilder = discoveryMessageBuilders.CreateDeviceDiscoveryMessageBuilder(engine.GetUserConnection())
                                              .WithCiTypes("IDP Simulation - HTTP")
                                              .WithIpAddress("10.11.10.82")
                                              .WithElementCreation();
