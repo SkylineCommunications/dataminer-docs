@@ -34,7 +34,9 @@ An information event will be generated for every create, update, and delete acti
 
 Below, you can find the request flow when a trigger comes in. This may help you during troubleshooting.
 
-### From DataMiner 10.7.1/10.7.0 onwards
+### [From DataMiner 10.7.0/10.7.1 onwards](#tab/from-dataminer-1071)
+
+<!-- RN 47107 -->
 
 ```mermaid
 flowchart LR
@@ -51,7 +53,7 @@ subgraph "Core DataMiner"
 end
 ```
 
-### Prior to DataMiner 10.7.1/10.7.0
+### [In earlier DataMiner versions](#tab/earlier-dataminer-versions)
 
 ```mermaid
 flowchart LR
@@ -68,9 +70,11 @@ subgraph "Core DataMiner"
 end
 ```
 
+***
+
 ## IIS rewrite rule
 
-For DataMiner versions prior to 10.7.0, IIS uses a rewrite rule to route requests to the endpoint. If API requests fail on these versions, check `UserDefinableApiEndpoint.txt` for rewrite rule validation or repair errors. For details about the rule configuration and `RewriteRuleHealthInfo` statuses, see [IIS rewrite rule](xref:UD_APIs_UserDefinableApiEndpoint#iis-rewrite-rule). Common causes include:
+For DataMiner versions prior to 10.7.0, IIS uses a rewrite rule to route requests to the endpoint. If API requests fail for these versions, check `UserDefinableApiEndpoint.txt` for rewrite rule validation or repair errors. For details about the rule configuration and `RewriteRuleHealthInfo` statuses, see [IIS rewrite rule](xref:UD_APIs_UserDefinableApiEndpoint#iis-rewrite-rule). Common causes include:
 
 - The configured IIS site does not exist.
 - The Kestrel HTTP URL or the IIS configuration is invalid.
