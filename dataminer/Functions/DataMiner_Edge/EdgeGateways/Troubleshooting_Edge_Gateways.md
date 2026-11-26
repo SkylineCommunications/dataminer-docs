@@ -6,6 +6,9 @@ description: Troubleshoot Edge Gateway tunnel setup, connectivity, and logging i
 
 # Edge Gateway troubleshooting
 
+> [!IMPORTANT]
+> Support for the zrok architecture will be discontinued in 2027. Gateway mode will also be provided by Edge Nodes.
+
 ## FAQ
 
 ### I have created an element that connects to a data source in a remote location but the element goes into error state
