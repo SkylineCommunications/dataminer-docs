@@ -11,15 +11,7 @@ DataMiner Assistant for Microsoft 365 lets you chat with any [DataMiner Intellig
 
 ## Prerequisites
 
-- To interact with a DataMiner System via DataMiner Assistant for Microsoft 365, the DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and the following [DxMs](xref:DataMinerExtensionModules) must be installed:
-
-  - [DataMiner Assistant](xref:Intelligence_Assistant_DxM) (version 3.11.2.51719 or higher)
-  - [DataMiner CloudGateway](xref:DataMinerExtensionModules#cloudgateway) (version 4.0.0.0 or higher)
-
-  > [!TIP]
-  > See also: [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node)
-
-- All [requirements for DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements) must be met.
+- DataMiner Intelligence must be enabled on the target DataMiner System, and all [requirements for DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements) must be met.
 
 - To ensure that you have access to a DataMiner System from your Microsoft account, [your Microsoft account must be linked to your DataMiner account](xref:Linking_your_DataMiner_and_dataminer_services_account).
 

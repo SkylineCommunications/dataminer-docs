@@ -1041,8 +1041,6 @@ items:
         topicUid: DataMiner_Intelligence
       - name: Getting started with DataMiner Intelligence
         topicUid: Intelligence_Getting_Started
-      - name: DataMiner Assistant DxM
-        topicUid: Intelligence_Assistant_DxM
       - name: DataMiner Assistant app
         topicUid: Intelligence_Assistant_app
       - name: DataMiner Assistant for Microsoft 365

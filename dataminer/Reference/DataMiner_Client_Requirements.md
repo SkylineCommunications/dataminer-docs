@@ -19,11 +19,7 @@ Recommended DataMiner client configuration:
 
 ### Operating system
 
-- Microsoft Windows 10
-
 - Microsoft Windows 11
-
-- Windows Server 2016
 
 - Windows Server 2019
 
@@ -33,7 +29,7 @@ Recommended DataMiner client configuration:
 
 ### Microsoft .NET Framework
 
-Microsoft .NET Framework 4.7.2
+Microsoft .NET Framework 4.8
 
 > [!IMPORTANT]
 > We recommend always upgrading to the latest .NET Framework version.

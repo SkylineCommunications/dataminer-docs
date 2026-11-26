@@ -11,7 +11,7 @@ description: "Find answers to common questions about DataMiner Intelligence, inc
 
 DataMiner Intelligence is the umbrella term for AI capabilities in DataMiner. It includes the agent framework, with agents, skills, and tools, and capabilities such as [Document Intelligence](xref:docintel) and [natural language to GQI](xref:Intelligence_NL2GQI).
 
-DataMiner Assistant is the name for the chat integrations that let you interact with DataMiner Intelligence agents, including the [DataMiner Assistant app](xref:Intelligence_Assistant_app) and [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365). The [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) is the extension module that powers both the agent framework and the non-chat capabilities. For an overview, see [About DataMiner Intelligence](xref:DataMiner_Intelligence).
+DataMiner Assistant is the name for the chat integrations that let you interact with DataMiner Intelligence agents, including the [DataMiner Assistant app](xref:Intelligence_Assistant_app) and [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365). The [DataMiner Assistant module](xref:DataMinerCoreModules#assistant) powers both the agent framework and the non-chat capabilities. For an overview, see [About DataMiner Intelligence](xref:DataMiner_Intelligence).
 
 ### Does DataMiner Intelligence support languages other than English?
 
@@ -101,16 +101,6 @@ The description will generally be the same for a given script, but defining it i
 
 ## Access and setup
 
-### Do I need to install the DxM on every DataMiner Agent in the cluster?
-
-No. Install the DataMiner Assistant DxM on a few suitable Agents to provide redundancy. The installation and configuration only have to be performed on the Agents that host the DxM.
-
-### Is installation required on a DaaS system?
-
-DataMiner 10.7.0/10.7.1 is the minimum version for the DataMiner Assistant app on DaaS. On DaaS systems running DataMiner 10.7.0/10.7.1 or higher, no DxM installation is needed because the DataMiner Assistant DxM is already installed and running.
-
-The app also requires the system-wide *DataMiner Intelligence* web apps setting and applicable user permissions. See [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started) for details.
-
 ### Why is the Assistant app not visible?
 
 Ask your DataMiner administrator to confirm that [all requirements are met](xref:Intelligence_Getting_Started#requirements) and your user profile has both the [General > DataMiner Intelligence > Access](xref:DataMiner_user_permissions#general--dataminer-intelligence--access) and [Assistant app](xref:DataMiner_user_permissions#general--dataminer-intelligence--assistant-app) permissions.
@@ -139,9 +129,9 @@ Viewing agents, skills, and tools does not require the same permissions as manag
 
 No. Assigning tools and skills defines an agent's capabilities, but does not create an agent-specific permission boundary. Continue to manage access through your DataMiner user permissions. For more information, see [Data privacy and security](xref:Intelligence_Data_Privacy_Security).
 
-### Where can I find the DataMiner Assistant DxM version?
+### Where can I find the DataMiner Assistant module version?
 
-In the DataMiner web apps, click the user icon in the top-right corner and select *About*. The version of the DataMiner Assistant DxM is listed as *Assistant*, together with the versions of the other DataMiner components.
+In the DataMiner web apps, click the user icon in the top-right corner and select *About*. The version of the DataMiner Assistant module is listed as *Assistant*, together with the versions of the other DataMiner components.
 
 ## Performance and supported functionality
 
