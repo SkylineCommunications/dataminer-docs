@@ -1,5 +1,6 @@
 ---
 uid: SRM_custom_scripts
+description: "Find out how to configure custom scripts to replace default SRM wizards in the Booking Manager app and add up to five extra booking controls."
 ---
 
 # Using custom scripts instead of the default SRM wizards

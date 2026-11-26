@@ -1,5 +1,6 @@
 ---
 uid: SRM_custom_front_end
+description: "Find out how to create a custom frontend for the Booking Manager with Visual Overview. Also consider the increased development and maintenance costs."
 ---
 
 # Creating a custom frontend for the Booking Manager
