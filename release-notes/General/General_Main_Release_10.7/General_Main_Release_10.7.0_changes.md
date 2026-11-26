@@ -1129,6 +1129,15 @@ The following remaining reference to the legacy Annotations module, which has re
 
 - ISAPI filtering no longer takes `/annotations/` into account.
 
+#### DataMiner upgrade: Cleanup of DIS Inject folders [ID 47149]
+
+<!-- MR 10.7.0 - FR 10.7.2 -->
+
+During a DataMiner upgrade, the following folders used by DIS Inject will now be cleared:
+
+- `Scripts\DISInject`, which contains injected automation script assemblies.
+- `ProtocolScripts\DISInject`, which contains injected protocol QActions.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]

@@ -73,7 +73,7 @@ Property values, JSON structure, and type information remain unchanged. Existing
 
 #### DataMiner upgrade: Cleanup of DIS Inject folders [ID 47149]
 
-<!-- MR 10.8.0 - FR 10.7.2 -->
+<!-- MR 10.7.0 - FR 10.7.2 -->
 
 During a DataMiner upgrade, the following folders used by DIS Inject will now be cleared:
 
