@@ -1,5 +1,6 @@
 ---
 uid: SRM_logging
+description: "Use DataMiner SRM logging to investigate booking issues and review user and orchestration actions with Debug and Action logs in Booking Manager."
 ---
 
 # SRM logging
