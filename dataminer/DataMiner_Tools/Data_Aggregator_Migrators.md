@@ -1,6 +1,6 @@
 ---
 uid: Data_Aggregator_Migrators
-description: "Migrate Data Aggregator queries to the GQI DxM during installation or with the migrator tools, and restore a legacy setup."
+description: "Migrate Data Aggregator queries to the GQI DxM during installation or with the migrator tools, or restore a legacy setup."
 ---
 
 # Data Aggregator migrators
@@ -15,16 +15,13 @@ Select the migrations that apply to your upgrade path and query configuration:
     - [Reverting a manual migration](#reverting-a-manual-migration)
 
 > [!TIP]
-> For details on the GQI DxM and its query setting, see [Data Aggregator](xref:Data_Aggregator_DxM) and [Data Aggregator settings](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).
+> See also: [Data Aggregator](xref:Data_Aggregator_DxM) and [Data Aggregator settings](xref:Data_Aggregator_settings#using-the-gqi-dxm-for-queries).
 
 ## Upgrading from version 2.x.x
 
 The Data Aggregator Migrator should be used **after** upgrading the Data Aggregator DxM from version **2.x.x to 3.x.x** or higher. This **one-time migration process** is only necessary if the prior installation included [configured GQI queries](xref:Data_Aggregator_queries).
 
-> [!TIP]
-> You can download the tool from [DataMiner Dojo](https://community.dataminer.services/download/data-aggregator-migrator/).
-
-1. Install the Data Aggregator Migrator on a DMA.
+1. Download the Data Aggregator Migrator from [DataMiner Dojo](https://community.dataminer.services/download/data-aggregator-migrator/).
 
 1. After downloading the files, extract them to a local folder, and place them on the server hosting Data Aggregator.
 
@@ -91,7 +88,7 @@ If you need to switch back to using CoreGateway and SLHelper, you can restore th
 
 1. Back up the current `Data Sources` folder and *appsettings.custom.json* (if present) from the Data Aggregator installation folder.
 
-1. In the `Migrations` directory mentioned above, identify the migration folders to restore. Each folder's *manifest.json* lists its migrated query IDs under `Sources`.
+1. In the `%ProgramData%\Skyline Communications\DataMiner DataAggregator\Migrations` directory, identify the migration folders to restore. Each folder's *manifest.json* lists its migrated query IDs under `Sources`.
 
 1. Copy the files from each folder's *Backups* subfolder back to the Data Aggregator installation folder, keeping the same folder structure. If you restore several migrations, copy them from oldest to newest based on the folder creation date, so that the most recent backup of each file is kept.
 
@@ -115,7 +112,7 @@ If you need to switch back to using CoreGateway and SLHelper, you can restore th
 1. Verify the restored queries and scheduled jobs.
 
 > [!IMPORTANT]
-> A later installation, upgrade, or repair applies the automatic migration again.
+> A later installation, upgrade, or repair will apply the automatic migration again.
 
 ### Manual migration in Data Aggregator 3.1.0 to 3.3.0
 

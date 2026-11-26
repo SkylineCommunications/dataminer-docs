@@ -45,9 +45,7 @@ For example:
 
 ## Using the GQI DxM for queries
 
-From Data Aggregator 3.4.0 onwards, queries are executed using the [GQI DxM](xref:GQI_DxM) by default. There is no automatic fallback to CoreGateway if the GQI DxM is unavailable.<!-- RN 47072+47201 -->
-
-For the required DxMs, see the [installation prerequisites](xref:Data_Aggregator_install_setup#prerequisites).
+From Data Aggregator 3.4.0 onwards, queries are executed using the [GQI DxM](xref:GQI_DxM) by default. There is no automatic fallback to CoreGateway if the GQI DxM is unavailable.<!-- RN 47072+47201 --> For the required DxMs, see the [installation prerequisites](xref:Data_Aggregator_install_setup#prerequisites).
 
 In earlier versions, queries are executed using CoreGateway and SLHelper by default. From Data Aggregator 3.1.0 through 3.3.0, you can enable the GQI DxM by adding the following setting to *appsettings.custom.json*:
 
@@ -59,7 +57,7 @@ In earlier versions, queries are executed using CoreGateway and SLHelper by defa
 }
 ```
 
-For migrating existing CoreGateway queries, see [Data Aggregator migrators](xref:Data_Aggregator_Migrators).
+To migrate existing CoreGateway queries, see [Data Aggregator migrators](xref:Data_Aggregator_Migrators).
 
 > [!IMPORTANT]
 > From DataMiner 10.7.0/10.7.1 onwards, GQI via SLHelper is disabled by default. If Data Aggregator uses CoreGateway and SLHelper, queries will fail unless the [EndOfSupport.SLHelperGQI soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportslhelpergqi) is enabled on the DataMiner Agents.<!-- RN 46927 -->
