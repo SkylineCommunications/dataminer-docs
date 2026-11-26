@@ -80,3 +80,11 @@ These settings will now be read without logging this error.
 During a DataMiner upgrade, the web backup tool could log an "already exists" error when an app's published and draft versions pointed to the same folder. The tool would try to copy that folder twice. This could affect older apps that retained these settings after an upgrade.
 
 From now on, when the published and draft versions point to the same folder, that folder will be backed up only once. Apps with a separate draft will still have both versions backed up.
+
+#### Uploaded DataMiner apps: Incorrect missing-version warnings during upgrades [ID 47225]
+
+<!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
+
+During a DataMiner upgrade, the web backup tool could incorrectly log "Version folder not found" warnings for uploaded DataMiner apps.
+
+The web backup tool will now skip uploaded DataMiner apps instead of logging these unnecessary warnings. Low-code apps will still be backed up as before.
