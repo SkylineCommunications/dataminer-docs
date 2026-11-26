@@ -173,26 +173,26 @@ description: "Create resource tasks for Process Automation with profiles, SRM fu
 
       Example: for the “Ping IP” task, the script could look like this:
 
-      ```cs
+      ```csharp
       public void Run(Engine engine)
       {
           var helper = new PaProfileLoadDomHelper(engine);
-
+      
           try
           {
               helper.Log("Ping IP", PaLogLevel.Information);
-
+      
               var ipaddress = helper.GetParameterValue<string>("Ping - IP Address");
-
+      
               ScriptDummy element = engine.GetDummy("FunctionDve");
-
+      
               // custom logic to initiate the ping query on the element and retrieve the result
               // var result = ...
               // var rtt = ...
-
+      
               helper.UpdateField("Ping - RTT", rtt);
               helper.UpdateField("Ping - Result", result);
-
+      
               helper.ReturnSuccess();
               helper.Log("Successfully executed Ping query", PaLogLevel.Information);
           }

@@ -61,6 +61,7 @@ using System;
 using System.Text;
 using RabbitMQ.Client;
 using Skyline.DataMiner.Scripting;
+
 public static class QAction
 {
     public static void Run(SLProtocol protocol)
@@ -74,7 +75,7 @@ public static class QAction
                 // Create message
                 string message = "Test message";
                 var body = Encoding.UTF8.GetBytes(message);
-                
+
                 // Send message
                 string exchangeName = "demo-exchange";
                 channel.BasicPublish(exchangeName, "", null, body);
@@ -82,7 +83,11 @@ public static class QAction
         }
         catch (Exception e)
         {
-            protocol.Log("Exception while sending message:" + e);
+            protocol.Log(
+                $"QA{protocol.QActionID}|Run|Exception while sending message:{Environment.NewLine}" +
+                $"{e}",
+                LogType.Error,
+                LogLevel.NoLogging);
         }
     }
 }
@@ -100,6 +105,7 @@ using System.Text;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using Skyline.DataMiner.Scripting;
+
 public class QAction
 {
     public void Run(SLProtocol protocol)
@@ -109,23 +115,27 @@ public class QAction
             var factory = new ConnectionFactory { HostName = "[HOST]", UserName = "[USER NAME]", Password = "[PASSWORD]" };
             var connection = factory.CreateConnection();
             var channel = connection.CreateModel();
-            
+
             var consumer = new EventingBasicConsumer(channel);
             consumer.Received += MessageReceived;
-            
+
             channel.BasicConsume("demo-queue", false, consumer);
         }
         catch (Exception e)
         {
-            protocol.Log("Exception while sending message:" + e);
+            protocol.Log(
+                $"QA{protocol.QActionID}|Run|Exception while sending message:{Environment.NewLine}" +
+                $"{e}",
+                LogType.Error,
+                LogLevel.NoLogging);
         }
     }
-    
+
     private static void MessageReceived(object sender, BasicDeliverEventArgs e)
     {
         var bytes = e.Body;
         var message = Encoding.UTF8.GetString(bytes);
-        
+
         // Process message
     }
 }

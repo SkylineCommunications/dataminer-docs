@@ -9,7 +9,7 @@ Rebuilds the index of the specified column.
 ```csharp
 int columnID = 1002;
 
- protocol.NotifyProtocol(238/*NT_REBUILD_INDEX*/ , columnID, null);
+protocol.NotifyProtocol(238 /*NT_REBUILD_INDEX*/, columnID, null);
 ```
 
 ## Parameters

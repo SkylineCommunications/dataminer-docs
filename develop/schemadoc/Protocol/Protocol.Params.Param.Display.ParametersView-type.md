@@ -25,7 +25,7 @@ Specifies the chart type.
 
 ```xml
 <Param id="40">
-    <Name>DataMiner CPU</Name>
+    <Name>DataMinerCPU</Name>
     <Description>DataMiner CPU</Description>
     <Type>read</Type>
     <Display>

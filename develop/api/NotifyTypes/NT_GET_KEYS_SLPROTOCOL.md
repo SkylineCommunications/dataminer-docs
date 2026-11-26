@@ -6,13 +6,16 @@ uid: NT_GET_KEYS_SLPROTOCOL
 
 Retrieves the primary keys of a table from the SLProtocol process without interacting with the SLElement process.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(397, ...)` directly, we recommend using [SLProtocol.GetKeys](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeys*).
+
 ```csharp
 int tableID = 1000;
 string[] primaryKeys = (string[])protocol.NotifyProtocol(397, tableID, null);
 
 if (primaryKeys != null && primaryKeys.Length > 0)
 {
-    ////...
+    // ...
 }
 ```
 

@@ -353,13 +353,13 @@ From now on, when a web app is deleted, its info file will be deleted last.
 
 When in a *Line & area chart* component, the *Trend points* option was set to "Average (fixed interval)", in some cases, the trend graph would incorrectly display more data points than necessary.
 
-#### DataMiner web upgrade packages would incorrectly downgrade the DataMiner Assistant DxM when the installed version was more recent [ID 44441]
+#### DataMiner web upgrade packages would incorrectly downgrade the DataMiner Assistant module when the installed version was more recent [ID 44441]
 
 <!-- MR 10.7.0 - FR 10.6.3 -->
 
-When you installed a DataMiner web upgrade package, up to now, the DataMiner Assistant DxM would incorrectly be downgraded when the system found an installed version that was more recent than the one included in the package.
+When you installed a DataMiner web upgrade package, up to now, the DataMiner Assistant module would incorrectly be downgraded when the system found an installed version that was more recent than the one included in the package.
 
-From now on, a DataMiner web upgrade package will no longer be allowed to downgrade the DataMiner Assistant DxM. It will only be allowed to install a new DataMiner Assistant DxM if the installed version is older than the one included in the package.
+From now on, a DataMiner web upgrade package will no longer be allowed to downgrade the DataMiner Assistant module. It will only be allowed to install a new DataMiner Assistant module if the installed version is older than the one included in the package.
 
 #### Dashboards/Low-Code Apps -Timeline component: Scrolling could cause the groups to no longer be aligned with the timeline items [ID 44445]
 

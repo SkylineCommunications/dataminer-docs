@@ -125,12 +125,12 @@ Swarming has its own set of prerequisites. In this step, you will use a script f
       maskRequest.AlarmId = alarm.AlarmID;
       maskRequest.DesiredStatus = AlarmUserStatus.Mask;
       maskRequests.Add(maskRequest);
-    ```
+   ```
 
    After:
 
    ```csharp
-      var maskRequest = new SetAlarmStateMessage(alarm.TreeID, AlarmUserStatus.Mask, "");
+      var maskRequest = new SetAlarmStateMessage(alarm.TreeID, AlarmUserStatus.Mask, string.Empty);
       maskRequests.Add(maskRequest);
    ```
 

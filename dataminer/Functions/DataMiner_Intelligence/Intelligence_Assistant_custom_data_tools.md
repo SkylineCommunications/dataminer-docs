@@ -1,6 +1,6 @@
 ---
-uid: Intelligence_Assistant_custom_data_tools
-description: "Learn how to create and configure custom data tools for GQI ad hoc data sources and DOM definitions to extend DataMiner Assistant capabilities."
+uid: Intelligence_custom_data_tools
+description: "Create custom data tools that let DataMiner Intelligence agents query GQI ad hoc data sources and DataMiner Object Model (DOM) instances."
 ---
 
 # Custom data tools
@@ -9,13 +9,13 @@ You can define new data tools yourself to give an agent access to a data source 
 
 The following data sources are supported:
 
-- **GQI ad hoc data sources**: Any GQI data sources registered in your DataMiner System. Ad hoc data sources are defined by a C# class in an automation script library that implements specific interfaces. You select the data source from a list, without any need to know its underlying implementation details. If the data source accepts input parameters, provide example values and describe them so the Assistant knows how to use it.
+- **GQI ad hoc data sources**: Any GQI data sources registered in your DataMiner System. Ad hoc data sources are defined by a C# class in an automation script library that implements specific interfaces. You select the data source from a list, without any need to know its underlying implementation details. If the data source accepts input parameters, provide example values and descriptions so the agent knows how to use them.
 
 - **DOM instances of a DOM definition**: All instances of a specific DOM definition within a specific DOM module. The tool's output columns are derived automatically from the fields defined on that DOM definition.
 
 ## Creating or editing custom data tools in the Assistant app
 
-You can create custom data tools on the *Tools* page of the Assistant app with the *+ New tool* button or edit them using the pencil button next to the tool on that page (see [Creating and managing tools](xref:Intelligence_Assistant_Tools)).
+You can create custom data tools on the *Tools* page of the Assistant app with the *+ New tool* button or edit them using the pencil button next to the tool on that page (see [Creating and managing tools](xref:Intelligence_Tools)).
 
 When you create or edit a data tool, you will need to configure the following fields:
 
@@ -26,9 +26,9 @@ When you create or edit a data tool, you will need to configure the following fi
   - Cannot contain consecutive hyphens (`--`).
   - Maximum 128 characters.
 
-- **Type**: *Data*. For information about the *Script* type, refer to [Script tools](xref:Intelligence_Assistant_ScriptTools).
+- **Type**: *Data*. For information about the *Script* type, refer to [Script tools](xref:Intelligence_ScriptTools).
 
-- **Description**: A brief description of when the data source should be used. This helps the Assistant decide when to pick this tool. Maximum 1,024 characters.
+- **Description**: A brief description of when to use the data source. This helps the agent decide when to pick this tool. Maximum 1,024 characters.
 
 - **Source type**: The kind of data source the tool queries. Two options are available:
 
@@ -41,16 +41,16 @@ When you create or edit a data tool, you will need to configure the following fi
 
   - **Name**: The parameter name.
   - **Type**: The data type (e.g., string, Int32, DateTime).
-  - **Example**: A value used both to retrieve the columns for this data source and as an example that helps the Assistant understand the expected format.
-  - **Description**: A description that helps the Assistant determine the appropriate input value. Maximum 1,024 characters.
+  - **Example**: A value used to retrieve the columns for this data source and show the agent the expected format.
+  - **Description**: A description that helps the agent determine the appropriate input value. Maximum 1,024 characters.
 
 - **Columns**: The output columns returned by the data source. For each column, the following fields are available:
 
   - **Name**: The column name.
   - **Type**: The data type (e.g., string, Int32, DateTime).
-  - **Description**: A description that helps the Assistant interpret the returned data. Maximum 1,024 characters.
+  - **Description**: A description that helps the agent interpret the returned data. Maximum 1,024 characters.
 
-- **Context**: Additional instructions or context for the data source. This helps the Assistant understand the usage, data interpretation, and any important details. Maximum 8,192 characters.
+- **Context**: Additional instructions for the agent on how to use the data source and interpret the results. Maximum 8,192 characters.
 
 ## Configuring data tool files
 
@@ -73,9 +73,9 @@ Both ad hoc and DOM files share the following front matter fields:
 
 - `name`: Required. The data source name. Must be lowercase and may only contain letters, digits, and hyphens. Cannot start or end with a hyphen, and cannot contain consecutive hyphens (`--`). This is also used as the tool name and as the display name written in generated queries.
 
-- `description`: Required. A brief description of the data source. Helps the Assistant decide when to pick this tool.
+- `description`: Required. A brief description of the data source. Helps the agent decide when to pick this tool.
 
-- `columns`: Optional. A list of output columns, each described by a `name` and `type`, and optionally a `description`. This information helps the Assistant pick the appropriate data source and interpret the returned data.
+- `columns`: Optional. A list of output columns, each described by a `name` and `type`, and optionally a `description`. This information helps the agent pick the appropriate data source and interpret the returned data.
 
 ### Ad hoc data source files
 
@@ -87,7 +87,7 @@ For this source type, the front matter must contain the following additional fie
 
   This value is the stable, rename-proof identifier the tool is bound to; the `name` field is only the display name.
 
-- `inputArguments`: Required if the data source accepts parameters; otherwise omitted. A list of input arguments, each described by its `name`, `type`, and `description`. This information helps the Assistant determine appropriate input values. See [Input argument types](#input-argument-types) below.
+- `inputArguments`: Required if the data source accepts parameters; otherwise omitted. A list of input arguments, each described by its `name`, `type`, and `description`. This information helps the agent determine appropriate input values. See [Input argument types](#input-argument-types) below.
 
 #### Example: ad hoc data source file
 

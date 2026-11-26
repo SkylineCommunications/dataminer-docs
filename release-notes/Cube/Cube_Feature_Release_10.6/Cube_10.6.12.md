@@ -1,6 +1,6 @@
 ---
 uid: Cube_Feature_Release_10.6.12
-description: "Release notes for DataMiner Cube Feature Release 10.6.12, with new features, enhancements, and fixes planned for this preview release."
+description: "Release notes for DataMiner Cube Feature Release 10.6.12, with new features, enhancements, and fixes planned for this release."
 ---
 
 # DataMiner Cube Feature Release 10.6.12
@@ -35,6 +35,8 @@ From now on, changes to measurement point selections will immediately be pushed 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 When a user changed the configuration of a Spectrum component in shared mode, up to now, the changes were not immediately reflected in other clients. From now on, the user can right-click the *x clients* button and select *Push changes to other users*. Other users will then receive a banner where they can apply or ignore the changes. Closing the Spectrum card also triggers the banner.
+
+![Banner shown when another uses pushes changes to the spectrum analyzer](~/release-notes/images/Sharing_spectrum_session.png)
 
 The *Spectrum card behavior upon last session preset modification in shared mode* setting, under *Settings* > *Card*, will control how other clients handle pushed changes:
 

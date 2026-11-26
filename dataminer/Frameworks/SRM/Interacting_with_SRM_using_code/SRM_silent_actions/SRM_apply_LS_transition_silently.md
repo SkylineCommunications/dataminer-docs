@@ -28,10 +28,10 @@ public class Script
       var bookingManager = reservation.FindBookingManager();
 
       var result = bookingManager.TryChangeStateToConfirmed(engine, ref reservation);
-      //var result = bookingManager.TryFinish(engine, ref reservation);
-      //var result = bookingManager.TryChangeStateToOnHold(engine, ref reservation);
-      //var result = bookingManager.TryCancel(engine, ref reservation);
-      //var result = bookingManager.TryDelete(engine, reservation);
+      ////var result = bookingManager.TryFinish(engine, ref reservation);
+      ////var result = bookingManager.TryChangeStateToOnHold(engine, ref reservation);
+      ////var result = bookingManager.TryCancel(engine, ref reservation);
+      ////var result = bookingManager.TryDelete(engine, reservation);
    }
 }
 ```

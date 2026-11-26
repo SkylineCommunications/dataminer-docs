@@ -1,27 +1,27 @@
 ---
-uid: Intelligence_Assistant_Skills
-description: "Learn how to create and manage custom skills that provide DataMiner Assistant agents with domain-specific workflows, instructions, and companion files."
+uid: Intelligence_Skills
+description: "Create and manage custom skills that give DataMiner Intelligence agents domain-specific workflows, instructions, and companion resources."
 ---
 
 # Skills
 
-You can extend the Assistant's capabilities by adding custom skills. These are modular capabilities that package instructions, metadata, and optional resources (e.g., scripts, templates, and reference files). They let the Assistant reuse domain-specific workflows and best practices across conversations instead of relying only on one-off prompt instructions.
+Skills extend what DataMiner Intelligence agents can do. Each skill packages instructions, metadata, and optional resources (e.g., scripts, templates, and reference files). Skills let agents reuse domain-specific workflows and best practices across conversations instead of relying only on one-off prompts.
 
 ## Why use skills
 
 Skills are typically used for the following purposes:
 
-- Specialize the Assistant for domain-specific tasks and internal processes.
+- Adapt agents to domain-specific tasks and internal processes.
 - Reduce repetition by authoring guidance once and reusing it automatically.
 - Compose multiple skills to support more complex end-to-end workflows.
 
 ## How skills work
 
-Each skill corresponds with a folder containing a `SKILL.md` file and optional resource files. The assistant loads this information progressively:
+Each skill corresponds with a folder containing a `SKILL.md` file and optional resource files. The agent receives this information progressively:
 
 1. Metadata is always available for discovery.
 1. Instructions are loaded when a skill is triggered.
-1. Extra text-based resources are only read and passed along to the Assistant when needed.
+1. Extra text-based resources are only read and passed to the agent when needed.
 
 This progressive loading model keeps context usage efficient, because only relevant content is brought into the active context window.
 
@@ -50,7 +50,7 @@ A skill consists of the following components:
 
 You can create and manage skills on the *Skills* page of the Assistant app. This page displays all available skills in a searchable list.
 
-![Skills page in the Assistant app](~/dataminer/images/AssistantDxM_SkillsOverview.png)
+![Skills page in the Assistant app showing available skills in a searchable list](~/dataminer/images/AssistantDxM_SkillsOverview.png)<br>*Searchable skills list in the DataMiner Assistant app in DataMiner Web 10.7.1*
 
 From this page, you can:
 
@@ -63,7 +63,7 @@ From this page, you can:
 - **Duplicate or delete a skill** by clicking the ellipsis button (...) next to a skill in the list. Selecting *Duplicate* creates a copy of the skill, pre-filled with all the original data and an automatically generated unique name. Selecting *Delete* removes the skill entirely.
 
 > [!NOTE]
-> While no specific permissions are required to view existing skills, creating or editing skills requires the [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission.
+> The [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is not required to view existing skills, but it is required to create or edit skills.
 
 ### Using skill files
 
@@ -76,8 +76,8 @@ Inside each skill folder, additional text-based resources can be added. They can
 Please note:
 
 - Resources are always **scoped to the skill they belong to**. There is no shared or global resource folder; each skill is self-contained.
-- Resource files are **not discovered automatically**. To make a resource available to the Assistant, reference its path explicitly in the skill's `SKILL.md` file. Write the path relative to the skill folder. For a resource in a nested subfolder, include every folder in the path, such as `templates/rollout-checklist.md` or `playbooks/risk-evaluation.md`.
-- Different [specialized agents](xref:Intelligence_Assistant_Specialized_Agents) can reference the same skill. This means an agent can indirectly reuse a skill's resources by using that skill.
+- Resource files are **not discovered automatically**. To make a resource available to an agent, reference its path explicitly in the skill's `SKILL.md` file. Write the path relative to the skill folder. For a resource in a nested subfolder, include every folder in the path, such as `templates/rollout-checklist.md` or `playbooks/risk-evaluation.md`.
+- Different [specialized agents](xref:Intelligence_Specialized_Agents) can reference the same skill. This means an agent can indirectly reuse a skill's resources by using that skill.
 
 Folder structure example:
 

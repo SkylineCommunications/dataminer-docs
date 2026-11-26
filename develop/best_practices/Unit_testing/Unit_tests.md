@@ -57,7 +57,7 @@ A unit test is defined in a test project. During scaffolding of the Visual Studi
 
 1. Rename the file *Test1.cs* to *PathRewriterTests.cs* and replace the contents with the following:
 
-   ```cs
+   ```csharp
    namespace QAction_1Tests
    {
        [TestClass()]
@@ -165,11 +165,12 @@ In some cases, you may want to execute the same test but with different input. I
 [DataRow("pattern 2")]
 public void ValidatePattern_ValidInput_ReturnsTrue(string input)
 {
-// Arrange
-var myClass = new MyClass();
-    
-// Act
+    // Arrange
+    var myClass = new MyClass();
+
+    // Act
     bool isValid = myClass.ValidatePattern(input);
+
     // Assert
     Assert.IsTrue(isValid);
 }

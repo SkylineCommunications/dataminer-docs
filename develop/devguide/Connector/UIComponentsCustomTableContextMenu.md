@@ -21,8 +21,8 @@ To define a custom context menu, define a parameter with the same name as the ta
 
 ```xml
 <Param id="2099">
-  <Name>myTable_ContextMenu</Name>
-  <Description>Context Menu for My Table</Description>
+  <Name>MyTable_ContextMenu</Name>
+  <Description>Context Menu (My Table)</Description>
   <Type>write</Type>
   <Interprete>
     <RawType>other</RawType>
@@ -115,7 +115,9 @@ In the example above, contextMenuData[2] contains the provided value for paramet
 <![CDATA[
 using System;
 using System.Collections;
+using System.Linq;
 using Skyline.DataMiner.Scripting;
+using Skyline.DataMiner.Utils.Protocol.Extension;
 
 /// <summary>
 /// Process custom context menu action.
@@ -130,38 +132,34 @@ public class QAction
     public static void Run(SLProtocol protocol, object contextData)
     {
         var sa = contextData as string[];
-    
+
         if (sa == null || sa.Length < 2)
         {
             return;
         }
-    
+
         if (sa[1] == "add")
         {
             object[] tmpRow = new object[5];
-            
+
             for (int i = 0; i < 5; i++)
             {
                 tmpRow[i] = sa[i + 2];
             }
-    
-            protocol.NotifyProtocol(149 /*NT_ADD_ROW*/, 2000, (string)sa[2]);
-            protocol.SetRow(2000, (string)sa[2], tmpRow);
+
+            protocol.AddRow(2000, tmpRow);
         }
         else if (sa[1] == "delete")
         {
-            for (int i = 2; i < sa.Length; i++)
-            {
-                protocol.DeleteRow(2000, sa[i]);
-            }
+            protocol.DeleteRows(2000, sa.Skip(2));
         }
         else if (sa[1] == "clear")
         {
             string[] primaryKeys = protocol.GetKeys(2000, NotifyProtocol.KeyType.Index);
-        
+
             if (primaryKeys.Length > 0)
             {
-                protocol.DeleteRow(2000, primaryKeys);
+                protocol.DeleteRows(2000, primaryKeys);
             }
         }
     }

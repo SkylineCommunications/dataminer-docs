@@ -252,7 +252,7 @@ On the page of your GitHub fork (e.g., `https://github.com/YourGitHubHandle/Skyl
 1. Uncomment the following attribute:
 
    ```csharp
-   //[Test(CheckId.CheckDecimalTag, Category.Param)]
+   // [Test(CheckId.CheckDecimalTag, Category.Param)]
    ```
 
 1. Comment out `ICodeFix` and `ICompare`. Only `IValidate` will be used.
@@ -269,16 +269,16 @@ On the page of your GitHub fork (e.g., `https://github.com/YourGitHubHandle/Skyl
       foreach (var param in context.EachParamWithValidId())
       {
          var displayTag = param.Display;
-         
+   
          // Early return pattern. Only check when there is a Display tag.
          if (displayTag == null) continue;
-
+   
          // Only check number types.
          if (!param.IsNumber()) continue;
-    
+   
          // Only check if date or datetime parameter
          if (!param.IsDateTime()) continue;
-    
+   
          // Verify valid decimals.
          var decimalsTag = param.Display?.Decimals;
          if (decimalsTag?.Value != 8)
@@ -287,7 +287,7 @@ On the page of your GitHub fork (e.g., `https://github.com/YourGitHubHandle/Skyl
             results.Add(Error.InvalidTagForDateTime(this, param, positionNode, param.Id.RawValue));
          }
       }
-    
+   
       return results;
    }
    ```

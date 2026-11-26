@@ -82,6 +82,7 @@ var pagingHelper = helper.DomInstances.PreparePaging(filter); // Prepare with de
 while (pagingHelper.MoveToNextPage())
 {
     var currentPage = pagingHelper.GetCurrentPage();
+
     // Handle current page of data...
 }
 ```
@@ -287,6 +288,7 @@ var pagingSession = domHelper.DomInstances.PreparePaging(filter, selectedFields)
 while (pagingSession.MoveToNextPage())
 {
     var results = pagingSession.GetCurrentPage();
+
     // Handle current page of data...
 }
 ```

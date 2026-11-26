@@ -60,47 +60,47 @@ To enable this functionality:
 ### Example parameter
 
 ```xml
-   <Param id="301" trending="false" save="true">
-      <Name>chainVisibilityCustomer</Name>
-      <Description>Customer Topology</Description>
-      <Type>read</Type>
-      <Information>...</Information>
-      <Interprete>...</Interprete>
-      <Display>...</Display>
-      <Measurement>
-         <Type>discreet</Type>
-         <Discreets>
+<Param id="301" trending="false" save="true">
+    <Name>ChainVisibilityCustomer</Name>
+    <Description>Customer Topology</Description>
+    <Type>read</Type>
+    <Information>...</Information>
+    <Interprete>...</Interprete>
+    <Display>...</Display>
+    <Measurement>
+        <Type>discreet</Type>
+        <Discreets>
             <Discreet>
-               <Display>Disabled</Display>
-               <Value>1</Value>
+                <Display>Disabled</Display>
+                <Value>1</Value>
             </Discreet>
             <Discreet>
-               <Display>Enabled</Display>
-               <Value>2</Value>
+                <Display>Enabled</Display>
+                <Value>2</Value>
             </Discreet>
-         </Discreets>
-      </Measurement>
-   </Param>
-   <Param id="351" setter="true">
-      <Name>chainVisibilityCustomer</Name>
-      <Description>Customer Topology</Description>
-      <Type>write</Type>
-      <Interprete>...</Interprete>
-      <Display>...</Display>
-      <Measurement>
-         <Type>togglebutton</Type>
-         <Discreets>
+        </Discreets>
+    </Measurement>
+</Param>
+<Param id="351" setter="true">
+    <Name>ChainVisibilityCustomer</Name>
+    <Description>Customer Topology</Description>
+    <Type>write</Type>
+    <Interprete>...</Interprete>
+    <Display>...</Display>
+    <Measurement>
+        <Type>togglebutton</Type>
+        <Discreets>
             <Discreet>
-               <Display>Disabled</Display>
-               <Value>1</Value>
+                <Display>Disabled</Display>
+                <Value>1</Value>
             </Discreet>
             <Discreet>
-               <Display>Enabled</Display>
-               <Value>2</Value>
+                <Display>Enabled</Display>
+                <Value>2</Value>
             </Discreet>
-         </Discreets>
-      </Measurement>
-   </Param>
+        </Discreets>
+    </Measurement>
+</Param>
 ```
 
 ### Example chain
@@ -157,20 +157,20 @@ Example:
 
 ```xml
 <Protocol>
-  <Topologies>
-    <Topology>
-      <Cell name="Vendor" override="Manufacturer"/>
-      <Cell name="Station" override="Node"/>
-    </Topology>
-  </Topologies>
-  <Chains>
-    <Chain name="Vendor Topology" override="Manufacturer Topology">
-      <Field name="Vendor" override="Manufacturer"/>
-    </Chain>
-    <Chain name="Location Topology">
-      <Field name="Station" override="Node"/>
-    </Chain>
-  </Chains>
+    <Topologies>
+        <Topology>
+            <Cell name="Vendor" override="Manufacturer"/>
+            <Cell name="Station" override="Node"/>
+        </Topology>
+    </Topologies>
+    <Chains>
+        <Chain name="Vendor Topology" override="Manufacturer Topology">
+            <Field name="Vendor" override="Manufacturer"/>
+        </Chain>
+        <Chain name="Location Topology">
+            <Field name="Station" override="Node"/>
+        </Chain>
+    </Chains>
 </Protocol>
 ```
 

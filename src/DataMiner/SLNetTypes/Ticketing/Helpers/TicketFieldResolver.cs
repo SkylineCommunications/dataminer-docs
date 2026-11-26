@@ -25,160 +25,156 @@ namespace Skyline.DataMiner.Net.Ticketing.Helpers
 	/// <code>
 	/// private TicketFieldResolver CreateDefaultResolver()
 	/// {
-	///		var resolver = TicketFieldResolver.Factory.CreateDefaultResolver();
-	///		
-	///		string error;
-	///		
-	///		var success = Helper.SetTicketFieldResolver(out error, ref resolver);
-	///		if(!success)
-	///		{
-	///			throw new DataMinerException("Something went wrong during setting the TicketFieldResolver: " + error);	
-	///		}
-	///		
-	///		return resolver;
+	///     var resolver = TicketFieldResolver.Factory.CreateDefaultResolver();
+	///
+	///     string error;
+	///
+	///     var success = Helper.SetTicketFieldResolver(out error, ref resolver);
+	///     if (!success)
+	///     {
+	///         throw new DataMinerException($"Something went wrong during setting the TicketFieldResolver: {error}");
+	///     }
+	///
+	///     return resolver;
 	/// }
 	/// </code>
 	/// <para>Creating a custom resolver:</para>
 	/// <code>
-	///	private TicketFieldResolver CreateCustomResolver()
-	///	{
-	///		TicketFieldResolver resolver = TicketFieldResolver.Factory.CreateEmptyResolver("CustomResolver");
-	///		
-	///		// Specify the element that will use this ticket field resolver. Leave empty in case the resolver is not used by any element.
-	///		resolver.ElementUsingResolver = new Skyline.DataMiner.Net.ElementID(123, 456);
-	///		
-	///		// The generated empty resolver already contains a "State" field. Remove this in case this is undesired.
-	///		var fields = resolver.GetDataMinerFields2ThirdPartyFields();
-	///		
-	///		foreach(var fields in fields)
-	///		{
-	///			resolver.RemoveDataMinerField(field.Key);
-	///			resolver.RemoveThirdPartyField(field.Value);
-	///		}
-	///		
-	///		// Clear the custom states.
-	///		resolver.StateResolver.Clear();
-	///		
-	///		// Clear the link fields.
-	///		resolver.TicketLinkFields.Clear();
-	///		
-	///		// Add a "Links" field.
-	///		resolver.TicketLinkFields.Add("Links");
-	///		
-	///		// Create a state field.
-	///		// First, we create a StateEnum which contains the names and integer values of the states.
-	///		StateEnum dmaState = new StateEnum();
-	///		dmaState.EnumName = "MyStates";
-	///		dmaState.DynamicAdd("Created", 0);
-	///		dmaState.DynamicAdd("Started", 1);
-	///		dmaState.DynamicAdd("Paused", 2);
-	///		dmaState.DynamicAdd("Stopped", 3);
-	///		dmaState.DynamicAdd( "Closed", 4);
-	///		
-	///		// We now link our custom ticket states to a DataMiner <see cref="TicketState"/>.
-	///		// I.e., "Created" has value 0 and gets linked to <see cref="TicketState.Open"/>.
-	///		resolver.StateResolver.Add(0, TicketState.Open); // Created
-	///		resolver.StateResolver.Add(1, TicketState.Open); // Started
-	///		resolver.StateResolver.Add(2, TicketState.Open); // Paused
-	///		resolver.StateResolver.Add(3, TicketState.Closed); // Stopped
-	///		resolver.StateResolver.Add(4, TicketState.Closed); // Closed
-	///		
-	///		// Now we add a "State" field.
-	///		resolver.AddOrUpdateNames(
-	///			// Here, we add the descriptor for our "State" field.
-	///			new TicketFieldDescriptor()
-	///			{
-	///				FieldDisplayName = "State",
-	///				FieldName = "State",
-	///				FieldType = typeof(GenericEnumEntry&lt;int&gt;),
-	///				IsThirdParty = false,	// This is a DataMiner ticket field.
-	///				IsDataMinerMaster = true,	// When a clash of this field occurs, the value set by DataMiner is used.
-	///				Validator = new EnumValidator&lt;int&gt;(DmaState)
-	///			},
-	///			// And we link the "State" field to a third-party "Status" field.
-	///			new TicketFieldDescriptor()
-	///			{
-	///				FieldDisplayName = "Status",
-	///				FieldName = "Status",
-	///				FieldType = typeof(string),
-	///				IsThirdParty = true,	// This is a third-party ticket field.
-	///				Validator = new TypeValidator&lt;string&gt;
-	///			}
-	///		);
-	///		
-	///		// Add a "User Name" field.
-	///		resolver.AddOrUpdateNames(
-	///			new TicketFieldDescriptor()
-	///			{
-	///				FieldDisplayName = "User Name",
-	///				FieldName = "User",
-	///				FieldType = typeof(string),
-	///				IsThirdParty = false,	// This is a DataMiner ticket field.
-	///				Validator = new UserValidator() // We know this is a user.
-	///			},
-	///			new TicketFieldDescriptor()
-	///			{
-	///				FieldDisplayName = "Account Number",
-	///				FieldName = "Accnr",
-	///				FieldType = typeof(long),
-	///				IsThirdParty = true,	// This is a third-party ticket field.
-	///				Validator = new TypeValidator&lt;long&gt;	// The third-party system uses an account number instead of a user.
-	///			}
-	///		);
-	///		
-	///		// Create an email field.
-	///		resolver.AddOrUpdateNames(
-	///			new TicketFieldDescriptor()
-	///			{
-	///				FieldDisplayName = "Email Address",
-	///				FieldName = "Mail",
-	///				FieldType = typeof(string),
-	///				IsThirdParty = false,	// This is a DataMiner ticket field.
-	///				Validator = new EmailAddressValidator() // We know this has to be an email address.
-	///			},
-	///			new TicketFieldDescriptor()
-	///			{
-	///				FieldDisplayName = "Internal Address",
-	///				FieldName = "Addr",
-	///				FieldType = typeof(string),
-	///				IsThirdParty = true,	// This is a third-party ticket field.
-	///				Validator = new RegexValidator()	// The third-party system uses a string, but we can validate it with a regular expression.
-	///				{
-	///					RegexOptions = RegexOptions.IgnoreCase | RegexOptions.SingleLine,
-	///					RegexPattern = @"\A(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9]!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z"
-	///				}
-	///			}
-	///		);
-	///		
-	///		// Add a "Quality" field.
-	///		resolver.AddOrUpdateNames(
-	///			new TicketFieldDescriptor()
-	///			{
-	///				FieldDisplayName = "Quality",
-	///				FieldName = "Quality",
-	///				FieldType = typeof(double),
-	///				IsThirdParty = false,	// This is a DataMiner ticket field.
-	///				Validator = new TypeValidator&lt;double&gt;() // A quality score.
-	///			},
-	///			new TicketFieldDescriptor()
-	///			{
-	///				FieldDisplayName = "Score",
-	///				FieldName = "Score",
-	///				FieldType = typeof(byte),
-	///				IsThirdParty = true,	// This is a third-party ticket field.
-	///				Validator = new TypeValidator&lt;byte&gt;	// The third-party system uses a byte to store this.
-	///			}
-	///		);
-	///		
-	///		// Save our custom ticket field resolver.
-	///		string error;
-	///		
-	///		if(!Helper.SetTicketFieldResolver(out error, ref resolver))
-	///		{
-	///			throw new DataMinerException("Something went wrong during setting the TicketFieldResolver: " + error")	
-	///		}
-	///		
-	///		return resolver;
+	/// private TicketFieldResolver CreateCustomResolver()
+	/// {
+	///     TicketFieldResolver resolver = TicketFieldResolver.Factory.CreateEmptyResolver("CustomResolver");
+	///
+	///     // Specify the element that will use this ticket field resolver. Leave empty in case the resolver is not used by any element.
+	///     resolver.ElementUsingResolver = new Skyline.DataMiner.Net.ElementID(123, 456);
+	///
+	///     // The generated empty resolver already contains a "State" field. Remove this in case this is undesired.
+	///     var fields = resolver.GetDataMinerFields2ThirdPartyFields();
+	///
+	///     foreach (var field in fields)
+	///     {
+	///         resolver.RemoveDataMinerField(field.Key);
+	///         resolver.RemoveThirdPartyField(field.Value);
+	///     }
+	///
+	///     // Clear the custom states.
+	///     resolver.StateResolver.Clear();
+	///
+	///     // Clear the link fields.
+	///     resolver.TicketLinkFields.Clear();
+	///
+	///     // Add a "Links" field.
+	///     resolver.TicketLinkFields.Add("Links");
+	///
+	///     // Create a state field.
+	///     // First, we create a StateEnum which contains the names and integer values of the states.
+	///     StateEnum dmaState = new StateEnum();
+	///     dmaState.EnumName = "MyStates";
+	///     dmaState.DynamicAdd("Created", 0);
+	///     dmaState.DynamicAdd("Started", 1);
+	///     dmaState.DynamicAdd("Paused", 2);
+	///     dmaState.DynamicAdd("Stopped", 3);
+	///     dmaState.DynamicAdd("Closed", 4);
+	///
+	///     // We now link our custom ticket states to a DataMiner <see cref="TicketState"/>.
+	///     // I.e., "Created" has value 0 and gets linked to <see cref="TicketState.Open"/>.
+	///     resolver.StateResolver.Add(0, TicketState.Open); // Created
+	///     resolver.StateResolver.Add(1, TicketState.Open); // Started
+	///     resolver.StateResolver.Add(2, TicketState.Open); // Paused
+	///     resolver.StateResolver.Add(3, TicketState.Closed); // Stopped
+	///     resolver.StateResolver.Add(4, TicketState.Closed); // Closed
+	///
+	///     // Now we add a "State" field.
+	///     resolver.AddOrUpdateNames(
+	///         // Here, we add the descriptor for our "State" field.
+	///         new TicketFieldDescriptor()
+	///         {
+	///             FieldDisplayName = "State",
+	///             FieldName = "State",
+	///             FieldType = typeof(GenericEnumEntry&lt;int&gt;),
+	///             IsThirdParty = false,   // This is a DataMiner ticket field.
+	///             IsDataMinerMaster = true,   // When a clash of this field occurs, the value set by DataMiner is used.
+	///             Validator = new EnumValidator&lt;int&gt;(dmaState),
+	///         },
+	///         // And we link the "State" field to a third-party "Status" field.
+	///         new TicketFieldDescriptor()
+	///         {
+	///             FieldDisplayName = "Status",
+	///             FieldName = "Status",
+	///             FieldType = typeof(string),
+	///             IsThirdParty = true,    // This is a third-party ticket field.
+	///             Validator = new TypeValidator&lt;string&gt;(),
+	///         });
+	///
+	///     // Add a "User Name" field.
+	///     resolver.AddOrUpdateNames(
+	///         new TicketFieldDescriptor()
+	///         {
+	///             FieldDisplayName = "User Name",
+	///             FieldName = "User",
+	///             FieldType = typeof(string),
+	///             IsThirdParty = false,   // This is a DataMiner ticket field.
+	///             Validator = new UserValidator(), // We know this is a user.
+	///         },
+	///         new TicketFieldDescriptor()
+	///         {
+	///             FieldDisplayName = "Account Number",
+	///             FieldName = "Accnr",
+	///             FieldType = typeof(long),
+	///             IsThirdParty = true,    // This is a third-party ticket field.
+	///             Validator = new TypeValidator&lt;long&gt;(),  // The third-party system uses an account number instead of a user.
+	///         });
+	///
+	///     // Create an email field.
+	///     resolver.AddOrUpdateNames(
+	///         new TicketFieldDescriptor()
+	///         {
+	///             FieldDisplayName = "Email Address",
+	///             FieldName = "Mail",
+	///             FieldType = typeof(string),
+	///             IsThirdParty = false,   // This is a DataMiner ticket field.
+	///             Validator = new EmailAddressValidator(), // We know this has to be an email address.
+	///         },
+	///         new TicketFieldDescriptor()
+	///         {
+	///             FieldDisplayName = "Internal Address",
+	///             FieldName = "Addr",
+	///             FieldType = typeof(string),
+	///             IsThirdParty = true,    // This is a third-party ticket field.
+	///             Validator = new RegexValidator()    // The third-party system uses a string, but we can validate it with a regular expression.
+	///             {
+	///                 RegexOptions = RegexOptions.IgnoreCase | RegexOptions.SingleLine,
+	///                 RegexPattern = @"\A(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9]!#$%&amp;'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)\Z",
+	///             },
+	///         });
+	///
+	///     // Add a "Quality" field.
+	///     resolver.AddOrUpdateNames(
+	///         new TicketFieldDescriptor()
+	///         {
+	///             FieldDisplayName = "Quality",
+	///             FieldName = "Quality",
+	///             FieldType = typeof(double),
+	///             IsThirdParty = false,   // This is a DataMiner ticket field.
+	///             Validator = new TypeValidator&lt;double&gt;(), // A quality score.
+	///         },
+	///         new TicketFieldDescriptor()
+	///         {
+	///             FieldDisplayName = "Score",
+	///             FieldName = "Score",
+	///             FieldType = typeof(byte),
+	///             IsThirdParty = true,    // This is a third-party ticket field.
+	///             Validator = new TypeValidator&lt;byte&gt;(),  // The third-party system uses a byte to store this.
+	///         });
+	///
+	///     // Save our custom ticket field resolver.
+	///     string error;
+	///
+	///     if (!Helper.SetTicketFieldResolver(out error, ref resolver))
+	///     {
+	///         throw new DataMinerException($"Something went wrong during setting the TicketFieldResolver: {error}");
+	///     }
+	///
+	///     return resolver;
 	/// }
 	/// </code>
 	/// </example>

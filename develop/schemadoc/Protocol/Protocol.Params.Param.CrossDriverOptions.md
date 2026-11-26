@@ -38,14 +38,14 @@ Feature introduced in DataMiner 10.2.9/10.3.0 (RN 33253).
           <PIDTranslation local="50002" remote="30002"/>
           <PIDTranslation local="50004" remote="30005"/>
         </CrossDriverOption>
-          <CrossDriverOption protocol="Protocol2" remoteTablePID="20000">
-            <PIDTranslation local="50003" remote="20002"/>
-            <PIDTranslation local="50005" remote="20003"/>
-          </CrossDriverOption>
-        </CrossDriverOptions>
-      </Param>
-      ...
-   </Params>
-   ...
+        <CrossDriverOption protocol="Protocol2" remoteTablePID="20000">
+          <PIDTranslation local="50003" remote="20002"/>
+          <PIDTranslation local="50005" remote="20003"/>
+        </CrossDriverOption>
+      </CrossDriverOptions>
+    </Param>
+    ...
+  </Params>
+  ...
 </Protocol>
 ```

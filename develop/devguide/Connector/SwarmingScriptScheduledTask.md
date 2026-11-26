@@ -41,17 +41,20 @@ public class Script
         // There should be a result for each scheduled task.
         if (swarmingResults.Length != scheduledTaskIds.Count)
         {
-            var sentIds = string.Join(", ", scheduledTaskIds
+            var sentIds = string.Join(
+                ", ",
+                scheduledTaskIds
                     .OrderBy(t => t.DmaId)
                     .ThenBy(t => t.TaskId)
                     .Select(t => $"{t.DmaId}/{t.TaskId}"));
 
-
             // 'ToString' of a SwarmingResult will contain the ID of the object, the message and whether swarming succeeded for the object or not.
             var results = string.Join(", ", swarmingResults.Select(s => s.ToString()));
 
-            engine.ExitFail($"Did not receive enough swarming responses. Requested to swarm {scheduledTaskIds.Count} scheduled tasks, but got {swarmingResults.Length} responses.{Environment.NewLine}" +
-                            $"Sent ids: {sentIds}{Environment.NewLine}Results: {results}");
+            engine.ExitFail("Did not receive enough swarming responses. " +
+                $"Requested to swarm {scheduledTaskIds.Count} scheduled tasks, but got {swarmingResults.Length} responses.{Environment.NewLine}" +
+                $"Sent ids: {sentIds}{Environment.NewLine}" +
+                $"Results: {results}");
         }
 
         var unsuccessfulResults = swarmingResults.Where(s => !s.Success).ToList();

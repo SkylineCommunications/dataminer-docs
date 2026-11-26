@@ -90,16 +90,16 @@ public sealed class MatrixStorage
     /// <returns>Matrix object.</returns>
     public Matrix GetMatrix(SLProtocol protocol)
     {
-      if (matrix == null)
-      {
-          matrix = new Matrix(protocol);
-      }
-      else
-      {
-        matrix.SetProtocol(protocol);
-      }
-    
-      return matrix;
+        if (matrix == null)
+        {
+            matrix = new Matrix(protocol);
+        }
+        else
+        {
+            matrix.SetProtocol(protocol);
+        }
+
+        return matrix;
     }
 }
 ```
@@ -149,7 +149,8 @@ switch (triggerParameter)
     case Parameter.Write.routercontroloutputsvirtualsets_1160:
     case Parameter.Write.routercontroloutputsserializedsets_1161:
         _matrixStorage.GetMatrix(protocol).ProcessParameterSetFromUI(protocol, triggerParameter);
-    break;
+        break;
+}
 ```
 
 The overridden methods will handle all logic from crosspoint, label, lock or state sets from either the table or the matrix parameter.

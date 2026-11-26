@@ -1,6 +1,6 @@
 ---
 uid: General_Feature_Release_10.6.12
-description: "Release notes for General Feature Release 10.6.12, including prerequisites, new features, enhancements, and fixes planned for this preview release."
+description: "Release notes for General Feature Release 10.6.12, including prerequisites, new features, enhancements, and fixes planned for this release."
 ---
 
 # General Feature Release 10.6.12
@@ -83,6 +83,8 @@ You can now follow this setup flow:
    Community Edition requires acceptance of its terms.
 
 1. Choose Storage as a Service (STaaS), locally hosted storage, or externally hosted storage.
+
+   ![Storage options in the configuration wizard](~/release-notes/images/Installer_Configurator_Storage.png)
 
 1. Connect to dataminer.services when required.
 

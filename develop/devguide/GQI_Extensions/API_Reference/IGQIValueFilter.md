@@ -38,7 +38,9 @@ GQIStringColumn myColumn;
 IGQIValueFilter filter;
 ...
 if (filter.Column.Equals(myColumn))
-   // Do some filter optimizations for myColumn
+{
+    // Do some filter optimizations for myColumn
+}
 ```
 
 ### Filter method
@@ -59,7 +61,9 @@ The filter value is boxed as an `object` and can be type checked to extract the 
 IGQIValueFilter filter;
 ...
 if (filter.Value is string stringValue)
-   // Do something with the stringValue
+{
+    // Do something with the stringValue
+}
 ```
 
 Supported types:

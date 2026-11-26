@@ -119,7 +119,7 @@ inputParameters="[ID of the websocket response parameter]" options="binary"
 
 That way, the response can be encoded manually:
 
-```cs
+```csharp
 object[] bytestream = websocketResponse as object[];
 byte[] response = new byte[bytestream.Length];
 for (int i = 0; i < response.Length; i++)

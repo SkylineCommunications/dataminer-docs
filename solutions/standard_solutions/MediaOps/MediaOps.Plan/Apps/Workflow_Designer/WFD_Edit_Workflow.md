@@ -1,6 +1,6 @@
 ---
 uid: WFD_Edit_Workflow
-description: Edit a workflow by clicking the pencil icon for that workflow on the Home page of the Workflow Designer app.
+description: "Edit a workflow by clicking the pencil icon for that workflow on the Home page of the Workflow Designer app."
 ---
 
 # Editing a workflow
@@ -42,7 +42,7 @@ To edit the general workflow settings, click the pencil icon next to the title o
 
 ![The pencil icon to edit the general workflow settings](~/solutions/images/Workflow_Designer_Edit_Workflow.png)
 
-You will then be able to adjust the name and description of the workflow, configure its pre-roll and post-roll time, set its priority, and indicate whether it should be considered a favorite.
+You will then be able to adjust the name and description of the workflow, select its job type (which will be inherited by jobs created from this workflow)<!-- RN 46347 -->, configure its pre-roll and post-roll time, set its priority, and indicate whether it should be considered a favorite.
 
 ### Configuring the workflow orchestration settings
 
@@ -79,6 +79,8 @@ Once a node is available in the workflow, selecting the node will enable buttons
 If you have already customized a node (e.g., configuration, properties, etc.), but now you need a different pool or resource to be assigned to the node, you can swap it out.
 
 To do so, select the node and click *Swap To Pool* or *Swap to Resource*, depending on whether you want to swap it to another pool or resource, and then select the pool or resource to swap to.
+
+If the new pool has a different scheduling configuration, you will be prompted to choose whether to **Keep** the node's current configuration and automated actions, or **Revert** them to match the new pool.<!-- RN 45924 -->
 
 ![Buttons to swap the selected node to another pool or resource](~/solutions/images/Workflow_Designer_Swap_Node.png)
 
@@ -127,6 +129,11 @@ To insert a node between two already connected nodes, select the connection and 
 ### Editing the general connection settings
 
 To edit the general settings of a connection, select the connection and click the *Edit* button.
+
+When configuring level connections between nodes, you can select one of two options:<!-- RN 45884 -->
+
+- **All**: Connects all levels straight (for example, Audio1 to Audio1, Audio2 to Audio2).
+- **Shuffle**: Defines a custom shuffle by selecting the source level per destination level.
 
 ![Button to edit the settings of the selected connection](~/solutions/images/Workflow_Designer_Edit_Connection.png)
 

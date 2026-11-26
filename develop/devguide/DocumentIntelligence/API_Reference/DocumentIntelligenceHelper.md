@@ -9,7 +9,7 @@ uid: DocIntel_DocumentIntelligenceHelper
 - Namespace: `Skyline.DataMiner.Net.Apps.DocumentIntelligence`
 - Assembly: `SLNetTypes.dll`
 
-Provides helper methods to interact with the Document Intelligence feature of the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
+Provides helper methods to interact with the Document Intelligence feature of the [DataMiner Assistant module](xref:DataMinerCoreModules#assistant).
 
 Available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44016 -->
 
@@ -57,6 +57,7 @@ var traceData = docIntelHelper.GetTraceDataLastCall();
 if (!traceData.HasSucceeded())
 {
     var errors = traceData.GetErrorDataOfType<DocumentIntelligenceError>();
+
     // Handle errors
 }
 ```

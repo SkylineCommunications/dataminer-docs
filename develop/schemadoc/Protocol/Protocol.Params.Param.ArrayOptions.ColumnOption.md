@@ -45,9 +45,9 @@ See also:
 - [NT_GET_KEYS_FOR_INDEX (196)](xref:NT_GET_KEYS_FOR_INDEX)
 - [NT_GET_KEYS_FOR_INDEX_CASED (411)](xref:NT_GET_KEYS_FOR_INDEX_CASED)
 
-In case the column data will get updated frequently and you do not need to obtain the primary keys for a specific value often, an alternative is to not use the indexColumn. Instead you can retrieve the primary key column and the data column in a QAction and perform the filtering. This can be done using the *GetKeysForValue* snippet:
+In case the column data will get updated frequently and you do not need to obtain the primary keys for a specific value often, an alternative is to not use the indexColumn. Instead you can retrieve the primary key column and the data column in a QAction (using the `GetColumns` extension method from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package) and perform the filtering. This can be done using the *GetKeysForValue* snippet:
 
-```xml
+```csharp
 /// <summary>
 /// Gets the key (or another column) of the rows which have a specified value in a specified column.
 /// </summary>
@@ -59,31 +59,31 @@ In case the column data will get updated frequently and you do not need to obtai
 /// <returns>The values of the column specified in <paramref name="returnedColumnIdx"/> for the rows that matches.</returns>
 public static IEnumerable<string> GetKeysForValue(this SLProtocol protocol, int tablePid, uint returnedColumnIdx, uint filterColumnIdx, string filterValue)
 {
-   object[] getColumns = (object[])protocol.NotifyProtocol((int)SLNetMessages.NotifyType.NT_GET_TABLE_COLUMNS, tablePid, new uint[] { returnedColumnIdx, filterColumnIdx });
+    object[] getColumns = protocol.GetColumns(tablePid, new uint[] { returnedColumnIdx, filterColumnIdx });
 
-  if (getColumns != null && getColumns.Length > 1)
-  {
-      object[] getKeys = (object[])getColumns[0];
-      object[] getValues = (object[])getColumns[1];
+    if (getColumns != null && getColumns.Length > 1)
+    {
+        object[] getKeys = (object[])getColumns[0];
+        object[] getValues = (object[])getColumns[1];
 
-     if (getKeys != null && getValues != null)
-     {
-         int rowCount = getKeys.Length;
-
-        if (rowCount == getValues.Length)
+        if (getKeys != null && getValues != null)
         {
-           for (int i = 0; i < rowCount; i++)
-           {
-               string getValue = Convert.ToString(getValues[i], CultureInfo.InvariantCulture);
- 
-              if (getValue.Equals(filterValue))
-              {
-                  yield return Convert.ToString(getKeys[i]);
-              }
-           }
+            int rowCount = getKeys.Length;
+
+            if (rowCount == getValues.Length)
+            {
+                for (int i = 0; i < rowCount; i++)
+                {
+                    string getValue = Convert.ToString(getValues[i], CultureInfo.InvariantCulture);
+
+                    if (getValue.Equals(filterValue))
+                    {
+                        yield return Convert.ToString(getKeys[i]);
+                    }
+                }
+            }
         }
-     }
-  }
+    }
 }
 ```
 
@@ -94,9 +94,9 @@ When defining the table columns, add the displayIcon option to the columns that 
 Example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
   ...
-  <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayIcon"/>
+  <ColumnOption idx="5" pid="120" type="retrieved" options=";save;displayIcon"/>
   ...
 ```
 
@@ -106,18 +106,18 @@ Example:
 
 ```xml
 <Param id="120" trending="false">
-  ...
-  <Measurement>
-     <Type>discreet</Type>
-     <Discreets>
-        ...
-        <Discreet iconRef="InputTransportStream">
-           <Display>Input TS</Display>
-           <Value>Input TS</Value>
-        </Discreet>
-        ...
-     </Discreets>
-  </Measurement>
+   ...
+   <Measurement>
+      <Type>discreet</Type>
+      <Discreets>
+         ...
+         <Discreet iconRef="InputTransportStream">
+            <Display>Input TS</Display>
+            <Value>Input TS</Value>
+         </Discreet>
+         ...
+      </Discreets>
+   </Measurement>
 </Param>
 ```
 
@@ -133,9 +133,9 @@ When defining the table columns, add the displayViewAlarm option to the column t
 Example:
 
 ```xml
-<ArrayOptions index="0" displayColumn="1">
+<ArrayOptions index="0">
   ...
-  <ColumnOption idx="5" pid="120" type="custom" value="" options=";save;displayViewAlarm"/>
+  <ColumnOption idx="5" pid="120" type="retrieved" options=";save;displayViewAlarm"/>
 ```
 
 Result: If the value in the displayViewAlarm column is a valid view ID, then that ID will be replaced by a view icon showing the view’s current alarm color. If the value is not a valid view ID, then the cell will be empty.

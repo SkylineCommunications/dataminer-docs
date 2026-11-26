@@ -45,6 +45,7 @@ To update this file without the need to restart DataMiner, use the protocolFunct
 using System;
 using Skyline.DataMiner.Automation;
 using Skyline.DataMiner.Net.Messages;
+
 namespace Script
 {
     public class Script
@@ -53,6 +54,7 @@ namespace Script
         {
             var protocolFunctionHelper = new ProtocolFunctionHelper(engine.SendSLNetMessages);
             var currentConfig = protocolFunctionHelper.GetProtocolFunctionConfig();
+
             // Change to the desired values
             currentConfig.ActiveFunctionResourcesThreshold = 123;
             currentConfig.FunctionHysteresis = TimeSpan.FromHours(1);

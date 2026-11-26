@@ -6,6 +6,9 @@ uid: NT_ADD_ROW_RETURN_KEY
 
 Adds a row to a table and returns the primary key of the created row.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(240, ...)` directly, we recommend using [SLProtocol.AddRowReturnKey](xref:Skyline.DataMiner.Scripting.SLProtocol.AddRowReturnKey(System.Int32)).
+
 ```csharp
 int tableID = 1000;
 string primaryKey = "Row 1";

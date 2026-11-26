@@ -13,7 +13,7 @@ To define a dropdown list, create a parameter of type "write", set type to "disc
 
 ```xml
 <Param id="3105">
-  <Name>ethernetLinkMgmtSpeed</Name>
+  <Name>EthernetLinkMgmtSpeed</Name>
   <Description>Link Speed</Description>
   <Type>read</Type>
   <Interprete>
@@ -51,7 +51,7 @@ To define a dropdown list, create a parameter of type "write", set type to "disc
   </Measurement>
 </Param>
 <Param id="3135" setter="true">
-  <Name>ethernetLinkMgmtSpeed</Name>
+  <Name>EthernetLinkMgmtSpeed</Name>
   <Description>Link Speed</Description>
   <Type>write</Type>
   <Interprete>

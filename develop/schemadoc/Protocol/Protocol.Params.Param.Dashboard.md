@@ -29,10 +29,11 @@ Prior to DataMiner 10.3.9/10.4.0, the button panel component is only available i
 
 ```xml
 <Param id="100">
-   <Name>mainButtonPanel</Name>
+   <Name>MainButtonPanel</Name>
    <Description>Main Button Panel</Description>
    <Type>array</Type>
-   <ArrayOptions index="0" options=";naming=/101,102">
+   <ArrayOptions index="0">
+      <NamingFormat>,101,/,102</NamingFormat>
       <ColumnOption idx="0" pid="101" type="retrieved" options=""/>
       <ColumnOption idx="1" pid="102" type="retrieved" options=";save" />
       <ColumnOption idx="2" pid="103" type="retrieved" options=";save" />

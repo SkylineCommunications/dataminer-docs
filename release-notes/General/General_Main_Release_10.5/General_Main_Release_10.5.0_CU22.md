@@ -3,10 +3,10 @@ uid: General_Main_Release_10.5.0_CU22
 description: "Release notes for General Main Release 10.5.0 CU22, including prerequisites, enhancements, and fixes planned for this preview release."
 ---
 
-# General Main Release 10.5.0 CU22 - Preview
+# General Main Release 10.5.0 CU22
 
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
@@ -24,10 +24,6 @@ description: "Release notes for General Main Release 10.5.0 CU22, including prer
 >   - [vc_redist.x64.exe](https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 ## Changes
-
-### Enhancements
-
-*No enhancements have been added yet.*
 
 ### Fixes
 

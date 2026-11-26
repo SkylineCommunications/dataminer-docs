@@ -6,6 +6,9 @@ uid: NT_SET_DESCRIPTION
 
 Sets the description of the specified parameter.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(131, ...)` directly, we recommend using [SLProtocol.SetParameterDescription](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameterDescription*).
+
 ```csharp
 int parameterID = 110;
 string description = "Status Code";

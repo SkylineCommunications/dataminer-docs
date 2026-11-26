@@ -32,6 +32,8 @@ My text.
 My additional text.
 ```
 
+For readability in source files, write each prose paragraph as one continuous line, without line breaks.
+
 > [!NOTE]
 > Every page should also end in an empty line.
 

@@ -16,7 +16,7 @@ The automation script entry point is synchronous: use `void Run(IEngine engine)`
 
 If an external library only exposes an async method, call it synchronously from the entry point thread. Do not pass the Engine object or objects obtained from it into the asynchronous operation.
 
-```cs
+```csharp
 using System;
 using System.Net.Http;
 using System.Threading.Tasks;

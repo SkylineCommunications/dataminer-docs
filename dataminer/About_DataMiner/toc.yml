@@ -116,8 +116,8 @@ items:
                   topicUid: Pricing_sizing_guide_services_data_sources
                 - name: DataMiner as a Service
                   topicUid: Pricing_sizing_guide_services_DaaS
-                - name: DataMiner Assistant
-                  topicUid: Pricing_sizing_guide_services_DataMiner_Assistant
+                - name: DataMiner Intelligence
+                  topicUid: Pricing_sizing_guide_services_DataMiner_Intelligence
                 - name: Storage as a Service
                   topicUid: Pricing_sizing_guide_services_StaaS
             - name: Solutions
@@ -129,6 +129,8 @@ items:
                   topicUid: Pricing_sizing_guide_solutions_InfraOps
                 - name: MediaOps Plan
                   topicUid: Pricing_sizing_guide_solutions_MediaOps_Plan
+                - name: SLA Manager
+                  topicUid: Pricing_sizing_guide_solutions_SLA_Manager
                 - name: Starlink
                   topicUid: Pricing_sizing_guide_solutions_Starlink
                 - name: Ticketing
@@ -138,6 +140,8 @@ items:
               items:
               - name: GV AMPP
                 topicUid: Pricing_sizing_guide_use_cases_GV_AMPP
+    - name: DataMiner Intelligence
+      topicUid: Pricing_DataMiner_Intelligence
     - name: Perpetual-Use Licensing
       topicUid: Pricing_Perpetual_Use_Licensing
     - name: Professional Service credits

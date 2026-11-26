@@ -1,5 +1,6 @@
 ---
 uid: Data_Aggregator_settings
+description: "Configure Data Aggregator settings for GQI query execution, including the GQI DxM, multi-DMS connections, throttling, jobs, and export."
 ---
 
 # Data Aggregator settings
@@ -58,6 +59,7 @@ By default, queries are executed using CoreGateway and SLHelper. To execute the 
 >
 > - This setting is available from Data Aggregator version 3.1.0 onwards and can be used with DataMiner versions from DataMiner 10.5.0 [CU1]/10.5.4 onwards.
 > - When this setting is changed in an existing Data Aggregator setup where queries have been configured already, the existing queries will no longer work. Existing queries must be [migrated](xref:Data_Aggregator_Migrators#enabling-gqi-dxm).
+> - From DataMiner 10.7.0/10.7.1 onwards, GQI via SLHelper is disabled by default. Without this setting, queries will therefore fail unless the [EndOfSupport.SLHelperGQI soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportslhelpergqi) is enabled on the DataMiner Agents.<!-- RN 46927 -->
 
 ## Multi-DMS connection
 

@@ -470,12 +470,14 @@ namespace Skyline.DataMiner.Net.Ticketing
 		/// <code>
 		/// private void ShowMaskedResolvers(Engine engine)
 		/// {
-		///		var maskedTicketFieldResolvers = helper.GetMaskedTicketFieldResolvers();
-		///		foreach (TicketFieldResolver maskedTicketFieldResolver in maskedTicketFieldResolvers)
-		///		{
-		///			engine.GenerateInformation(string.Format("Resolver \"{0}\", which is configured to be linked to \"{1}\", is masked.", maskedTicketFieldResolver.Name, maskedTicketFieldResolver.ElementUsingResolver.ToString()));
-		///		}
-		///	}
+		///     var maskedTicketFieldResolvers = helper.GetMaskedTicketFieldResolvers();
+		///     foreach (TicketFieldResolver maskedTicketFieldResolver in maskedTicketFieldResolvers)
+		///     {
+		///         engine.GenerateInformation(
+		///             $"Resolver \"{maskedTicketFieldResolver.Name}\", " +
+		///             $"which is configured to be linked to \"{maskedTicketFieldResolver.ElementUsingResolver}\", is masked.");
+		///     }
+		/// }
 		/// </code>
 		/// </example>
 		public IEnumerable<TicketFieldResolver> GetMaskedTicketFieldResolvers(params TicketFieldResolver[] filters)

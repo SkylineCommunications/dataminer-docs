@@ -1,6 +1,6 @@
 ---
 uid: Cube_Feature_Release_10.7.1
-description: "Release notes for DataMiner Cube Feature Release 10.7.1, with new features, enhancements, and fixes planned for this preview release."
+description: "Release notes for DataMiner Cube Feature Release 10.7.1, with new features, enhancements, and fixes planned for this release."
 ---
 
 # DataMiner Cube Feature Release 10.7.1 - Preview
@@ -25,15 +25,30 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.6.0 [CU10]/10.7.0 [CU0] - FR 10.7.1 -->
 
-DataMiner Cube now displays the following permissions under *General* in the user group permissions configuration when the connected DataMiner Agent supports them:
+DataMiner Cube now displays the following permissions in the user group permissions configuration when the connected DataMiner Agent supports them:
 
-- *Intelligence Usage*: Grants access to all features related to DataMiner Intelligence.
-- *Intelligence App*: Grants access to the Intelligence app.
+- *General > DataMiner Intelligence > Access*: Grants access to DataMiner Intelligence features.
+- *General > DataMiner Intelligence > Assistant app*: Grants access to the Assistant app, if the *Access* permission mentioned above is also granted.
 
 Both permissions are enabled by the limited administrator and full administrator presets. They are hidden when the connected DataMiner Agent does not support them.
 
 > [!NOTE]
-> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.7.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
+> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.7.0/10.7.1 or higher. See [Introducing DataMiner Intelligence [ID 46765] [ID 46817] [ID 47196]](xref:General_Feature_Release_10.7.1#introducing-dataminer-intelligence-id-46765-id-46817-id-47196).
+
+### Alarm Console: Configurable default columns [ID 46958]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+You can now save a default column configuration for Alarm Console tabs and reuse it across tabs.
+
+To manage default columns, right-click a column header and select *Add/remove column > Default columns*. The following options are available:
+
+- *Use current columns as the new default*: Saves the visible columns, their order, widths, and alignment.
+- *Apply default column set to this list*: Applies the saved configuration to the current tab.
+
+New alarm tabs will automatically use your saved defaults, including tabs added through general or card-specific *Settings*. Existing tabs will retain their configuration unless you explicitly apply the defaults.
+
+*Information* and *Suggestion* tabs will retain their standard columns and will not display the *Default columns* menu.
 
 ## Changes
 
@@ -68,6 +83,12 @@ From now on, DataMiner Cube will handle elements used in element connections as 
 
 > [!NOTE]
 > If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
+
+#### Security enhancements [ID 46985]
+
+<!-- 46985: MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+A number of security enhancements have been made.
 
 ### Fixes
 
@@ -121,3 +142,52 @@ When you uploaded an element document to a subfolder in DataMiner Cube, the foll
 - If the destination file already existed in the subfolder, either as a complete document or as a partial file from an aborted upload, the uploaded data would be appended to that file instead of replacing it, resulting in a corrupt document.
 
 From now on, uploading an element document to a subfolder will no longer delete a document with the same file name in the root documents folder, and overwriting an existing document will replace its contents correctly.
+
+#### Automation: No warning when a script import failed because of invalid XML [ID 46970]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you imported an automation script containing invalid XML, the import would fail without displaying a warning. The failure would only be recorded in the Cube logging.
+
+Cube will now display a warning informing you that the import failed and that you should check the Cube logging.
+
+#### Trending: Older trend data would not load after panning [ID 46994]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you panned a trend graph to an older time range, the corresponding trend data would not be loaded until you zoomed the graph.
+
+#### Trending: Incorrect diagonal lines in minimum and maximum curves [ID 47020]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you viewed a longer period, such as the last month, in a trend graph with *Show most detailed data* enabled, the minimum and maximum curves could contain incorrect diagonal lines.
+
+These curves will now be drawn correctly.
+
+#### Element deletion could fail without a warning [ID 47081]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When deleting an element failed on the DataMiner Agent, the element would remain in place, but DataMiner Cube would not display a warning.
+
+Cube will now display a warning indicating that the element could not be deleted and that you should check the logging for more details. The failure details will be logged.
+
+#### Data Display: Saved table layouts could override updated connector defaults [ID 47091]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+After a connector update, saved table layouts could prevent tables in DataMiner Cube from reflecting changes to default column widths, visibility, and positions.
+
+Cube will now distinguish your explicit layout changes from automatic adjustments. After a connector update:
+
+- Columns you have resized, hidden, or moved will retain your settings.
+- Unchanged columns will follow the updated connector defaults.
+- New columns will appear in the expected order.
+
+The *Reset* option will now be available when the table differs from its defaults, and resetting will immediately update the table.
+
+When you switch to another table, Cube will also stop receiving updates from the previous table. This prevents the previous table from being kept in memory unnecessarily or sending updates to the wrong table.
+
+> [!NOTE]
+> If your table layout was saved by an older version of Cube, you may need to reset it once to see all the updated connector defaults.

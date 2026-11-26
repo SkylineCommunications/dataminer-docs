@@ -35,6 +35,7 @@ QAction 1999 has 2 entry points. Alternatively, you can use an if or switch stru
 public class QAction
 {
     private readonly ConcurrentQueue<byte[]> queue = new ConcurrentQueue<byte[]>();
+
     public void ParseQueue(SLProtocol protocol)
     {
         try
@@ -50,6 +51,7 @@ public class QAction
             ...
         }
     }
+
     public void ReadResponse(SLProtocol protocol)
     {
         try

@@ -22,9 +22,9 @@ Specifies the parameter ID of the tree control.
   ...
 </TreeControl>
 ...
-<Param id="4640" trending="false">
-  <Name>TreeControlParam</Name>
-  <Description>Parameter of the TreeControl</Description>
+<Param id="4640">
+  <Name>TreeControl</Name>
+  <Description>Tree Control</Description>
   <Type>read</Type>
   ...
 </Param>

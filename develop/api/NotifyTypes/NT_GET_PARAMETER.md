@@ -6,17 +6,20 @@ uid: NT_GET_PARAMETER
 
 Gets a parameter value.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(73, ...)` directly, we recommend using [SLProtocol.GetParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameter(System.Int32)) or [SLProtocol.GetParameters](xref:Skyline.DataMiner.Scripting.SLProtocol.GetParameters(System.Object)).
+
 ## Parameters
 
 To retrieve a **local parameter**:
 
 ```csharp
 int parameterId = 10;
-object result = protocol.NotifyProtocol(73/*NT_GET_PARAMETER*/, parameterId, null);
+object result = protocol.NotifyProtocol(73 /*NT_GET_PARAMETER*/, parameterId, null);
 
 if (result != null)
 {
-    ////...
+    // ...
 }
 ```
 
@@ -29,13 +32,13 @@ uint dmaID = 346;
 uint elementID = 193;
 uint parameterID = 1017;
 uint[] ids = new uint[] { dmaID, elementID, parameterID };
-object[] result = (object[])protocol.NotifyDataMiner(73/*NT_GET_PARAMETER*/, ids, null);
+object[] result = (object[])protocol.NotifyDataMiner(73 /*NT_GET_PARAMETER*/, ids, null);
 
 if (result != null && result.Length > 0)
 {
     string parameterValue = Convert.ToString(result[0]);
 
-    ////...
+    // ...
 }
 ```
 

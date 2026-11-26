@@ -161,7 +161,10 @@ The QAction that constructs the request object then has an entry point method th
 ```csharp
 public class QAction
 {
-  public static object[] Run(SLProtocolExt protocol){ ... }
+    public static object[] Run(SLProtocolExt protocol)
+    {
+        // ...
+    }
 }
 ```
 

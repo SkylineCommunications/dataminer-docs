@@ -16,7 +16,7 @@ uint agentId = 400;
 uint[] elementDetails = new uint[] { elementId, columnId, columnPos, isDirectView, agentId };
 
 string primaryKey = "1";
-string dateTime = "2017-01-20 00:00:00"; //YYYY-MM-DD HH:mm:SS);
+string dateTime = "2017-01-20 00:00:00"; // YYYY-MM-DD HH:mm:SS
 
 string[] options = new string[] { primaryKey, dateTime };
 

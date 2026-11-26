@@ -84,7 +84,7 @@ This is the first step to implement the custom operator.
    ```csharp
    public OnArgumentsProcessedOutputArgs OnArgumentsProcessed(OnArgumentsProcessedInputArgs args)
    {
-      _startColumn =  args.GetArgumentValue(_startColumnArg);
+      _startColumn = args.GetArgumentValue(_startColumnArg);
       _endColumn = args.GetArgumentValue(_endColumnArg);
       return default;
    }

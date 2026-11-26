@@ -34,12 +34,18 @@ Contains one of the predefined values detailed in the sections below.
 
 ### array
 
-A parameter of type ARRAY identifies a (dynamic) table parameter. These are used to retrieve SNMP or WMI tables. The different columns have to be specified in the id attribute.
+A parameter of type `array` identifies a (dynamic) table parameter. The different columns are specified using [ColumnOption](xref:Protocol.Params.Param.ArrayOptions.ColumnOption) tags inside the [ArrayOptions](xref:Protocol.Params.Param.ArrayOptions) element.
 
 Example:
 
 ```xml
-<Type id="110;111;115;116">array</Type>
+<Type>array</Type>
+<ArrayOptions index="0">
+   <ColumnOption idx="0" pid="110" type="snmp" options="" />
+   <ColumnOption idx="1" pid="111" type="snmp" options="" />
+   <ColumnOption idx="2" pid="115" type="snmp" options="" />
+   <ColumnOption idx="3" pid="116" type="snmp" options="" />
+</ArrayOptions>
 ```
 
 See also:

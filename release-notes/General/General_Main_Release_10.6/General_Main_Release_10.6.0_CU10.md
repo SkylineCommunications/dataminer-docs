@@ -1,6 +1,6 @@
 ---
 uid: General_Main_Release_10.6.0_CU10
-description: "Release notes for General Main Release 10.6.0 CU10, including prerequisites, enhancements, and fixes planned for this preview release."
+description: "Release notes for General Main Release 10.6.0 CU10, including prerequisites, enhancements, and fixes planned for this release."
 ---
 
 # General Main Release 10.6.0 CU10 - Preview
@@ -103,11 +103,44 @@ The incompatible connector versions reported, the message shown, and the require
 
 From now on, large ChunkingMessageBroker replies will use acknowledged chunks to avoid NATS slow consumer exceptions.
 
+#### SLNet: Faster updates of large subscription sets [ID 46934]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+SLNet will now update large subscription sets more efficiently, particularly when replacing a subscription set with one that contains only a few added or removed subscriptions.
+
 #### BrokerGateway: Increased timeout for applying manual configurations [ID 46949]
 
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
 
 The fixed timeout for the BrokerGateway `applymanualconfig` call has been increased from 5 minutes to 30 minutes.
+
+#### User-Defined APIs: Requests now routed through API Gateway [ID 47107]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM now registers its `/api/custom` route with the API Gateway at startup. Requests to this route are now proxied through the API Gateway instead of relying on an IIS URL Rewrite rule.
+
+The DxM no longer creates, validates, or repairs the IIS rewrite rule. Existing rules are left unchanged and can still route unencrypted HTTP requests on existing deployments. New deployments do not receive a rewrite rule and only support triggering APIs over HTTPS.
+
+By default, the module registers with a module-specific rate limit of 6000 requests per minute. To configure a different limit:
+
+1. Add the following setting to *appsettings.custom.json*, adjusting the value as required:
+
+   ```json
+   {
+     "ApiGatewayRegistration": {
+       "RateLimitPerMinute": 3000
+     }
+   }
+   ```
+
+1. Restart the *DataMiner UserDefinableApiEndpoint* service.
+
+The API Gateway request inactivity timeout is set to the configured NATS timeout plus 5 seconds, allowing the endpoint's timeout error response to reach the caller.
+
+> [!IMPORTANT]
+> This UserDefinableApiEndpoint version requires API Gateway 0.11.0 or later, which supports module-specific rate limits. With an older API Gateway version, the default shared limit of 60 requests per minute will also apply to user-defined API triggers. Also, with an older API Gateway version, the API Gateway request inactivity timeout will be set to 100s.
 
 ### Fixes
 
@@ -118,6 +151,14 @@ The fixed timeout for the BrokerGateway `applymanualconfig` call has been increa
 SLNet could throw an `IndexOutOfRangeException` when retrieving available alarm filter, trend filter, or redundancy group information if an SLXML query returned an array with unexpected dimensions.
 
 SLNet will now retry failed redundancy group queries once after a short delay. Array index errors will also be logged in *SLNet.txt* with the variable name, the exact array index, and the complete query response array in compressed form to help diagnose the issue.
+
+#### Visual Overview in web apps: SLHelper could stop responding after a session startup failure [ID 46744]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+Previously, when Windows failed to create a window while SLHelper was starting a Cube session for a mobile visual overview, the automatic startup retry could leave the session in an invalid state. Cleaning up that session could then cause SLHelper to stop responding, blocking all mobile visual overview requests for all dashboards and users until SLHelper was restarted.
+
+Each startup retry will now use a new, isolated environment, and a session will only be considered started once it is running. Cleaning up a failed or unresponsive session will no longer block SLHelper. If a session cannot be started after several attempts, only the mobile visual overview requesting that session will fail; other sessions will remain unaffected.
 
 #### STaaS: Incomplete state-change history after migrating from Cassandra [ID 46769]
 
@@ -141,6 +182,30 @@ When a StorageModule insert operation was retried after a NATS timeout, it could
 
 During paged read operations, retries when fetching pages after the first page could cause data to be missed following a timeout. These requests will no longer be retried. If a read operation fails, an error will be returned instead.
 
+#### SLDataMiner could stop responding when recovering from an SLScripting process crash [ID 46849]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When an SLScripting process disappeared while elements were starting, SLDataMiner could stop responding because of a deadlock. Elements could no longer be started or stopped, and the DataMiner Agent had to be restarted.
+
+From now on, elements that used the disappeared SLScripting process will be restarted without blocking other elements that are starting at the same time. Each process disappearance will only be recovered once.
+
+While DataMiner is stopping, no SLScripting or SLProtocol processes will be recovered or started.
+
+#### SLNet: Initial parameter event could be missing after updating a subscription set [ID 46913]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When a parameter was removed from a subscription set and then added again, SLNet could fail to send the initial event for that parameter after the subscription update.
+
+#### DataMiner upgrade: DxMs installed under a previous product name could be skipped [ID 46938]
+
+<!-- MR 10.7.0 / 10.6.0 [CU10] - FR 10.7.1 -->
+
+During a DataMiner upgrade, installed DxMs could fail to be recognized if their product name had changed. For example, an existing SiteManager installation could be skipped instead of being upgraded to EdgeManager.
+
+The upgrade process now uses MSI upgrade codes to detect related products and recognize installations made under a previous product name.
+
 #### Service & Resource Management: Canceled reservations could prevent resource updates [ID 46952]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
@@ -157,8 +222,52 @@ After API Gateway restarted, requests to modules proxied through it could keep r
 
 Concurrent module registrations could overwrite newer routing configuration with an older snapshot, leaving proxy routes missing. Routing configuration updates are now processed sequentially to prevent this.
 
+#### User-Defined APIs: Endpoint startup could be blocked when NATS was unavailable [ID 46997]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU10] - FR 10.7.1 -->
+
+The UserDefinableApiEndpoint DxM could remain blocked during startup when the NATS service was unavailable. As a result, API callers would not receive a response explaining the connection failure.
+
+The endpoint will now start while its NATS connections are being established. API triggers received before the message broker is initialized will return HTTP 503 with error code 1006 and the message "Service not ready yet, try again later."
+
+Connection attempts will continue in the background. Once NATS is available and initialization succeeds, API triggers will be forwarded normally and cloud status reporting will resume.
+
+#### SLSNMPAgent could crash on systems with many large services [ID 47031]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+On DataMiner Agents with many large services, SLSNMPAgent could crash during startup or when services were changed.
+
 #### BPA test 'DataMiner Agent Minimum Requirements' could fail with an execution error [ID 47078]
 
 <!-- MR 10.6.0 [CU10] - FR TBD -->
 
 After upgrading to certain DataMiner 10.6 builds, the *DataMiner Agent Minimum Requirements* BPA test could fail with an execution error instead of evaluating the system requirements.
+
+#### DataMiner Installer: Cloud setup issues during silent configuration [ID 47079]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+When the initial DataMiner configuration tool (FirstStartupChoice) was run in silent mode, a running CloudGateway service could keep using stale or missing cloud tokens because it was not restarted after the tokens were written.
+
+The following changes have now been made:
+
+- After the cloud tokens are written, the *DataMiner CloudGateway* service will be restarted to pick up the new tokens. The restart will be skipped if the service is not installed. If configuration is canceled, an in-progress restart will still complete so the service is not left stopped.
+- On an existing DataMiner installation, API Gateway will be installed, or repaired if its certificate is missing or stale. On a fresh installation, only the certificate will be trusted.
+- The cloud registration and redirect flow has been reworked to reliably write the tokens needed by the CloudGateway restart step.
+
+#### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+Previously, a DataMiner upgrade would install the CloudFeed DxM even on DataMiner Agents where it was not installed or had previously been uninstalled.
+
+From now on, the CloudFeed DxM will only be upgraded if it is already installed. It will be updated to the version included in the DataMiner upgrade package. This prevents unnecessary resource consumption on DataMiner Agents that do not need the CloudFeed DxM.
+
+#### SLSNMPAgent: SNMP requests could fail after Failover or network changes [ID 47106]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
+
+After a Failover switch, IP address recreation, or a network interface card (NIC) state change, SLSNMPAgent could fail to recreate its SNMP listener. As a result, the DataMiner Agent could stop responding to SNMP requests on the configured port.
+
+The previous listener will now be released before its replacement binds to the configured SNMP port, preventing an internal UDP port conflict.

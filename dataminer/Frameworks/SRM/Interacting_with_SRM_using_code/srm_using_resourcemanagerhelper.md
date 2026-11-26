@@ -156,6 +156,7 @@ var pool = new ResourcePool
 {
     Name = "Encoders"
 };
+
 var foundPool = helper.GetResourcePools(pool).FirstOrDefault();
 if (foundPool == null)
 {
@@ -184,6 +185,7 @@ var resourcePager = helper.PrepareResourcePaging(resourceFilter.ToQuery(), prefe
 while (resourcePager.MoveToNextPage())
 {
     var resources = resourcePager.GetCurrentPage();
+
     // Do something with the resources on this page.
 }
 
@@ -193,6 +195,7 @@ var reservationInstancePager = helper.PrepareReservationInstancePaging(reservati
 while (reservationInstancePager.MoveToNextPage())
 {
     var reservationInstances = reservationInstancePager.GetCurrentPage();
+
     // Do something with the ReservationInstances on this page.
 }
 ```
@@ -207,6 +210,7 @@ var resourcePager = helper.PrepareResourcePaging(resourceFilter.OrderBy(Resource
 while (resourcePager.MoveToNextPage())
 {
     var resources = resourcePager.GetCurrentPage();
+
     // Do something with the resources on this page.
 }
 
@@ -216,6 +220,7 @@ var reservationInstancePager = helper.PrepareReservationInstancePaging(reservati
 while (reservationInstancePager.MoveToNextPage())
 {
     var reservationInstances = reservationInstancePager.GetCurrentPage();
+
     // Do something with the ReservationInstances on this page.
 }
 ```
@@ -276,7 +281,8 @@ var requestedCapability = new ResourceCapabilityUsage()
     CapabilityProfileID = inputInterfaceProfileId,
     RequiredDiscreet = "IP"
 };
-context.RequiredCapabilities.Add(requestedCapability); 
+
+context.RequiredCapabilities.Add(requestedCapability);
 ```
 
 There is also the possibility to match resources that have one or more capabilities from a list of capabilities. In the example below, all resources that have either the *HD* or the *UHD* capability (or both) are requested.
@@ -288,13 +294,15 @@ var requestedCapabilityHD = new ResourceCapabilityUsage()
     CapabilityProfileID = encodingQualityProfileId,
     RequiredDiscreet = "HD"
 };
+
 var requestedCapabilityUHD = new ResourceCapabilityUsage()
 {
     CapabilityProfileID = encodingQualityProfileId,
     RequiredDiscreet = "UHD"
 };
-context.RequiredCapabilitiesOrFiltered.Add(requestedCapabilityHD); 
-context.RequiredCapabilitiesOrFiltered.Add(requestedCapabilityUHD); 
+
+context.RequiredCapabilitiesOrFiltered.Add(requestedCapabilityHD);
+context.RequiredCapabilitiesOrFiltered.Add(requestedCapabilityUHD);
 ```
 
 The *ReservationIdToIgnore* and *NodeIdToIgnore* properties can be used to exclude an already booked resource. This means that the resource assigned to that node might be included in the result set, since it will be treated as if it is not currently assigned to that booking. If the *TimeRange* property was not set on the context, the timing of the ignored booking will also be used to calculate the available resources. This can be useful in scenarios where the available resources for a node you want to swap need to be calculated.

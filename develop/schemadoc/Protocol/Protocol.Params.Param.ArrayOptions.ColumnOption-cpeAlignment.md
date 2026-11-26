@@ -27,6 +27,6 @@ Default value: right.
 ## Examples
 
 ```xml
-<ColumnOption idx="6" pid="12507" type="custom" cpeAlignment="left" options=";view=2507 " />
-<ColumnOption idx="7" pid="12508" type="custom" cpeAlignment="center" options=";view=2508 " />
+<ColumnOption idx="6" pid="12507" type="retrieved" cpeAlignment="left" options=";view=2507 " />
+<ColumnOption idx="7" pid="12508" type="retrieved" cpeAlignment="center" options=";view=2508 " />
 ```

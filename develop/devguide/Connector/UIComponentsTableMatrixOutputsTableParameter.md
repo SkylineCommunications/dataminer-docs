@@ -19,14 +19,15 @@ For a typical outputs table, the following columns are configured:
 Example:
 
 ```xml
-<Param id="1200" trending="false">
-   <Name>tblOutputs</Name>
+<Param id="1200">
+   <Name>Outputs</Name>
    <Description>Outputs</Description>
    <Type>array</Type>
    <Information>
       <Subtext>Table representation of the matrix. This table will contain the information of the outputs.</Subtext>
    </Information>
-   <ArrayOptions index="0" options=";naming=/1202">
+   <ArrayOptions index="0">
+      <NamingFormat>,1202</NamingFormat>
       <ColumnOption idx="0" pid="1201" type="retrieved" options="" />
       <ColumnOption idx="1" pid="1202" type="retrieved" options=";save" />
       <ColumnOption idx="2" pid="1203" type="retrieved" options=";save" />
