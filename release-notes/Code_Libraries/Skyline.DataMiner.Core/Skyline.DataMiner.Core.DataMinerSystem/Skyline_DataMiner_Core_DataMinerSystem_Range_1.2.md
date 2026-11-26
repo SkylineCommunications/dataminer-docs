@@ -11,11 +11,11 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 
 #### New feature - Creating views in bulk with IDms.CreateViews [ID 47064]
 
-The DataMinerSystem library now provides `IDms.CreateViews()` to create one or more views in a single call. Each `ExtendedViewConfiguration` specifies the view name and parent view ID, and can optionally specify which elements and services to add to the view.
+The DataMinerSystem library now provides the `IDms.CreateViews()` method to create one or more views in a single call. Each `ExtendedViewConfiguration` specifies the view name and parent view ID, and can optionally specify which elements and services to add to the view.
 
 The method skips views whose names already exist and returns only the IDs of newly created views. The returned IDs may not be in the same order as the configurations. Use `ViewExists()` or `GetView()` with the view name to check for a specific view.
 
-`IDms.CreateView()` has been marked obsolete because it can return an invalid ID when a view with the same name already exists. Use `CreateViews()` instead, even when creating a single view.
+The existing `IDms.CreateView()` method has been marked obsolete because it can return an invalid ID when a view with the same name already exists. Use `CreateViews()` instead, even when creating a single view.
 
 #### Fix - IDms.ServiceExists could throw an exception for a missing service [ID 47085]
 
