@@ -712,3 +712,11 @@ From now on, the CloudFeed DxM will only be upgraded if it is already installed.
 After a Failover switch, IP address recreation, or a network interface card (NIC) state change, SLSNMPAgent could fail to recreate its SNMP listener. As a result, the DataMiner Agent could stop responding to SNMP requests on the configured port.
 
 The previous listener will now be released before its replacement binds to the configured SNMP port, preventing an internal UDP port conflict.
+
+#### Cassandra Cluster migration could fail to finalize [ID 47230]
+
+<!-- MR 10.6.0 [CU10] - FR 10.7.1 [CU0] -->
+
+When finalizing a migration to Cassandra Cluster, the finalizer tool (*SLCCMigrationFinalizer.exe*) could fail to run because of a DLL conflict, preventing the migration from being finalized.
+
+The required binding redirect configuration file, *SLCCMigrationFinalizer.exe.config*, is now included in DataMiner upgrade packages.

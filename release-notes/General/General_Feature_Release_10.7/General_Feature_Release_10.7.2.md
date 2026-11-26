@@ -105,11 +105,3 @@ This could happen, for example, during the weekly alarm template cache cleanup.
 When you ran the factory reset tool *SLReset.exe* using the default reset settings, the `C:\Skyline DataMiner\Upgrades\VersionInfoWeb.json` file containing the web version information was incorrectly deleted.
 
 The default whitelist now preserves this file. Existing *ResetConfig.txt* files are not updated automatically.
-
-#### Cassandra Cluster migration could fail to finalize [ID 47230]
-
-<!-- MR 10.8.0 - FR 10.7.2 -->
-
-When finalizing a migration to Cassandra Cluster, the finalizer tool (*SLCCMigrationFinalizer.exe*) could fail to run because of a DLL conflict, preventing the migration from being finalized.
-
-The required binding redirect configuration file, *SLCCMigrationFinalizer.exe.config*, is now included in DataMiner upgrade packages.
