@@ -5,7 +5,7 @@ description: "Reference the schema 2.0 YAML fields, kebab-case names, body limit
 
 # Schema 2.0
 
-This reference describes Intelligence artifact schema 2.0. Compared with the 1.x schemas, it uses kebab-case names for declared frontmatter fields and adds the optional agent `user-facing` visibility field.
+This reference describes Intelligence artifact schema 2.0. Intelligence files require DataMiner 10.7.1 or later. Schema 2.0 additionally requires the DataMiner web upgrade package for 10.7.2 on DataMiner 10.7.1, or a full DataMiner 10.7.2 installation or later. Compared with the 1.x schemas, it uses kebab-case names for declared frontmatter fields and adds the optional agent `user-facing` visibility field.
 
 For compatibility and deployment behavior, see [Intelligence artifact schemas](xref:Intelligence_artifact_schemas).
 
@@ -94,7 +94,7 @@ Script input argument entries do not define a `type` field. Derive argument iden
 
 Input types are case-insensitive: `string`, `int`, `int32`, `double`, `float`, `boolean`, `bool`, `datetime`, and `dropdown`.
 
-The official item template's `data-source` JSON contains `DataSourceInterface`, `ScriptName`, `LibraryName`, `TypeFullName`, and `TypeName`. Preserve the exact reference supplied by GQI for the deployed implementation and store it as a string, for example by enclosing the JSON in YAML single quotes. These properties identify the implementation, not its input argument values. See [Adding tools to an intelligence agent](xref:Adding_tools_to_an_intelligence_agent) for the JSON structure and field explanations.
+The official item template's `data-source` JSON contains `DataSourceInterface`, `ScriptName`, `LibraryName`, `TypeFullName`, and `TypeName`. Preserve the exact reference supplied by GQI for the deployed implementation and store it as a string, for example by enclosing the JSON in YAML single quotes. These properties identify the implementation, not its input argument values. See [Authoring tools](xref:Adding_tools_to_an_intelligence_agent) for the JSON structure and field explanations.
 
 Match arguments and columns to the source declarations, including optional and conditional arguments. Source resolution and comparison with live GQI columns are service-side checks, not schema rules.
 

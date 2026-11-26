@@ -8,6 +8,8 @@ description: "Explore DataMiner Intelligence, the AI capabilities in DataMiner, 
 
 **DataMiner Intelligence** is the umbrella term for AI capabilities in DataMiner. It includes the agent framework, the DataMiner Assistant chat interfaces, and features such as natural language to GQI and Document Intelligence.
 
+This section is for people who want to understand or use DataMiner Intelligence through the native DataMiner web apps.
+
 DataMiner Intelligence is introduced in DataMiner 10.7.0/10.7.1.<!--RN 47196--> Some capabilities, such as [Document Intelligence](xref:docintel), are also available in earlier versions. The [DataMiner Assistant module](xref:DataMinerCoreModules#assistant) powers the DataMiner Intelligence capabilities.
 
 DataMiner Intelligence consists of:
@@ -54,3 +56,7 @@ DataMiner Intelligence also includes capabilities that do not require a chat int
 
 - [Natural language to GQI](xref:Intelligence_NL2GQI): Describe the data you need in natural language to generate the corresponding GQI query in dashboards and low-code apps.
 - [Document Intelligence](xref:docintel): Extract structured information from unstructured documents, such as PDF files, based on instructions you provide, for example as part of an automated workflow.
+
+## Developing DataMiner Intelligence
+
+For file-based authoring and deployment, start with [Getting started with Intelligence artifacts](xref:Creating_Intelligence_artifacts). For the Document Intelligence Automation API, see the [Document Intelligence developer documentation](xref:DocumentIntelligence).

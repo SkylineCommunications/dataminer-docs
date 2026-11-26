@@ -5,7 +5,7 @@ description: "Reference the schema 1.1 YAML fields, body limits, and validation 
 
 # Schema 1.1
 
-This reference describes Intelligence artifact schema 1.1. Compared with [Schema 1.0](xref:Intelligence_artifact_schema_1_0), it adds the optional agent `agents` list for delegation. Other artifact fields are unchanged.
+This reference describes Intelligence artifact schema 1.1. Intelligence files require DataMiner 10.7.1 or later. Compared with [Schema 1.0](xref:Intelligence_artifact_schema_1_0), it adds the optional agent `agents` list for delegation. Other artifact fields are unchanged.
 
 For compatibility and deployment behavior, see [Intelligence artifact schemas](xref:Intelligence_artifact_schemas).
 
@@ -91,7 +91,7 @@ Script input argument entries do not define a `type` field. Derive argument iden
 
 Input types are case-insensitive: `string`, `int`, `int32`, `double`, `float`, `boolean`, `bool`, `datetime`, and `dropdown`.
 
-The official item template's `dataSource` JSON contains `DataSourceInterface`, `ScriptName`, `LibraryName`, `TypeFullName`, and `TypeName`. Preserve the exact reference supplied by GQI for the deployed implementation and store it as a string, for example by enclosing the JSON in YAML single quotes. These properties identify the implementation, not its input argument values. See [Adding tools to an intelligence agent](xref:Adding_tools_to_an_intelligence_agent) for the JSON structure and field explanations.
+The official item template's `dataSource` JSON contains `DataSourceInterface`, `ScriptName`, `LibraryName`, `TypeFullName`, and `TypeName`. Preserve the exact reference supplied by GQI for the deployed implementation and store it as a string, for example by enclosing the JSON in YAML single quotes. These properties identify the implementation, not its input argument values. See [Authoring tools](xref:Adding_tools_to_an_intelligence_agent) for the JSON structure and field explanations.
 
 Match arguments and columns to the source declarations, including optional and conditional arguments. Source resolution and comparison with live GQI columns are service-side checks, not schema rules.
 

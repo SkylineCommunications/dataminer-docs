@@ -112,4 +112,4 @@ In an authorized target environment, test that the agent summarizes supplied evi
 
 ## Next steps
 
-Follow [Adding tools to an intelligence agent](xref:Adding_tools_to_an_intelligence_agent) to connect the agent to existing automation scripts, GQI sources, or DOM data. Consult the [schema reference](xref:Intelligence_artifact_schemas) for version rules and supported metadata.
+Follow [Authoring tools](xref:Adding_tools_to_an_intelligence_agent) to connect the agent to existing automation scripts, GQI sources, or DOM data. Consult the [schema reference](xref:Intelligence_artifact_schemas) for version rules and supported metadata.

@@ -1,9 +1,9 @@
 ---
 uid: Adding_tools_to_an_intelligence_agent
-description: "Connect an intelligence agent to existing automation scripts, GQI data sources, and DOM data using tool artifacts and verified metadata bindings."
+description: "Author tool artifacts that connect Intelligence agents to existing automation scripts, GQI data sources, and DOM data."
 ---
 
-# Adding tools to an intelligence agent
+# Authoring tools
 
 Tools describe access to existing capabilities. This guide extends the agent from [Getting started with Intelligence artifacts](xref:Creating_Intelligence_artifacts) with script, ad hoc data source, and DOM tools.
 

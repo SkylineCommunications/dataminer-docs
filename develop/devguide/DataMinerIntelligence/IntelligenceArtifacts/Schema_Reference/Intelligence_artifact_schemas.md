@@ -29,12 +29,12 @@ Two version fields apply to every artifact type:
 
 ## Schema versions
 
-| Schema version | Changes | Reference |
-|--|--|--|
-| 1.0 | Defines agent, skill, script tool, ad hoc data source tool, and DOM tool metadata. Also the compatibility fallback when `schema-version` is omitted. | [Schema 1.0](xref:Intelligence_artifact_schema_1_0) |
-| 1.1 | Adds the optional agent `agents` list for delegation. Other artifact fields are unchanged. | [Schema 1.1](xref:Intelligence_artifact_schema_1_1) |
-| 1.2 | Adds the optional agent `userFacing` visibility field. Other artifact fields are unchanged. | [Schema 1.2](xref:Intelligence_artifact_schema_1_2) |
-| 2.0 | Uses kebab-case names for declared frontmatter fields and adds the optional agent `user-facing` visibility field. | [Schema 2.0](xref:Intelligence_artifact_schema_2_0) |
+| Schema version | Changes | Minimum DataMiner availability | Reference |
+|--|--|--|--|
+| 1.0 | Defines agent, skill, script tool, ad hoc data source tool, and DOM tool metadata. Also the compatibility fallback when `schema-version` is omitted. | DataMiner 10.7.1 or later | [Schema 1.0](xref:Intelligence_artifact_schema_1_0) |
+| 1.1 | Adds the optional agent `agents` list for delegation. Other artifact fields are unchanged. | DataMiner 10.7.1 or later | [Schema 1.1](xref:Intelligence_artifact_schema_1_1) |
+| 1.2 | Adds the optional agent `userFacing` visibility field. Other artifact fields are unchanged. | DataMiner 10.7.1 with the DataMiner web upgrade package for 10.7.2, or DataMiner 10.7.2 or later | [Schema 1.2](xref:Intelligence_artifact_schema_1_2) |
+| 2.0 | Uses kebab-case names for declared frontmatter fields and adds the optional agent `user-facing` visibility field. | DataMiner 10.7.1 with the DataMiner web upgrade package for 10.7.2, or DataMiner 10.7.2 or later | [Schema 2.0](xref:Intelligence_artifact_schema_2_0) |
 
 Use the schema matching your artifact, or schema 2.0 for new artifacts. Check that the installed SDK and target Assistant support the selected schema; a schema newer than the validator's supported version is rejected. A schema version is not an SDK or Assistant release number.
 

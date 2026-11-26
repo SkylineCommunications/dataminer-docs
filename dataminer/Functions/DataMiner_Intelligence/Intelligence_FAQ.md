@@ -89,9 +89,7 @@ Often, yes. When context is substantial and only relevant in certain situations,
 
 ### What is the best way to make documentation available to agents?
 
-For a small documentation set, create one [skill](xref:Intelligence_Skills) with multiple resource files. Organize the documentation as text-based files in the skill folder or in nested subfolders, and reference each resource explicitly in the skill instructions. Specify each path relative to the skill folder, including every nested folder. Agents will load the resources progressively when they are relevant. For the supported folder structure and `SKILL.md` requirements, see [Using skill files](xref:Intelligence_Skills#using-skill-files).
-
-For a larger documentation set, use an indexed search tool to retrieve relevant content on demand, and make that tool available to the agent through a tool call.
+For a small documentation set, create a skill with companion resource files. For a larger documentation set, use an indexed search tool to retrieve relevant content on demand. To get started with file-based authoring, see [Getting started with Intelligence artifacts](xref:Creating_Intelligence_artifacts). For specific artifact guidance, see [Authoring skills](xref:Authoring_Intelligence_skills) and [Authoring tools](xref:Adding_tools_to_an_intelligence_agent).
 
 ### Why must script input descriptions be defined in the script tool?
 

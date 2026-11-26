@@ -1177,7 +1177,11 @@ items:
         items:
           - name: Getting started
             topicUid: Creating_Intelligence_artifacts
-          - name: Adding tools to an intelligence agent
+          - name: Authoring skills
+            topicUid: Authoring_Intelligence_skills
+          - name: Authoring specialized agents
+            topicUid: Authoring_Intelligence_specialized_agents
+          - name: Authoring tools
             topicUid: Adding_tools_to_an_intelligence_agent
           - name: Schema reference
             topicUid: Intelligence_artifact_schemas

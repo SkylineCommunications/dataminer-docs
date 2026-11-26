@@ -59,3 +59,4 @@ description: "Learn the requirements and steps to enable DataMiner Intelligence 
 - Extend the agents with your own [skills](xref:Intelligence_Skills) and [tools](xref:Intelligence_Tools).
 - Access the agents from Microsoft Teams or Microsoft Copilot with the [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365).
 - Learn how DataMiner Intelligence handles [data privacy and security](xref:Intelligence_Data_Privacy_Security).
+- To create file-based agents, skills, or tools, start with [Getting started with Intelligence artifacts](xref:Creating_Intelligence_artifacts) in the developer guide.
