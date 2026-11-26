@@ -23,18 +23,22 @@ For example, the following test assumes that the protocol defines parameters 100
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Skyline.DataMiner.Utils.UnitTestingFramework.Protocol;
 
-[TestMethod]
-public void Run_ValidInput_UpdatesStatus()
+[TestClass]
+public class QActionTests
 {
-    // Arrange
-    var mock = new SLProtocolMock();
-    mock.Object.SetParameter(100, "Online");
+    [TestMethod]
+    public void Run_ValidInput_UpdatesStatus()
+    {
+        // Arrange
+        var mock = new SLProtocolMock();
+        mock.Object.SetParameter(100, "Online");
 
-    // Act
-    QAction.Run(mock.Object);
+        // Act
+        QAction.Run(mock.Object);
 
-    // Assert
-    Assert.AreEqual("Online", mock.Object.GetParameter(101));
+        // Assert
+        Assert.AreEqual("Online", mock.Object.GetParameter(101));
+    }
 }
 ```
 
@@ -51,26 +55,30 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Skyline.DataMiner.Core.DataMinerSystem.Common;
 using Skyline.DataMiner.Utils.UnitTestingFramework.DataMinerSystem.Common;
 
-[TestMethod]
-public void IsElementActive_ActiveElement_ReturnsTrue()
+[TestClass]
+public class ElementStatusTests
 {
-    // Arrange
-    var dmsMock = new DmsMockBuilder()
-        .WithProtocol(name: "ExampleProtocol", configure: protocol => { })
-        .WithDma(id: 1, configure: agent => agent
-            .WithElement(id: 33, name: "Example element", protocolName: "ExampleProtocol"))
-        .Build();
+    [TestMethod]
+    public void IsElementActive_ActiveElement_ReturnsTrue()
+    {
+        // Arrange
+        var dmsMock = new DmsMockBuilder()
+            .WithProtocol(name: "ExampleProtocol", configure: protocol => { })
+            .WithDma(id: 1, configure: agent => agent
+                .WithElement(id: 33, name: "Example element", protocolName: "ExampleProtocol"))
+            .Build();
 
-    // Act
-    bool result = IsElementActive(dmsMock.Object);
+        // Act
+        bool result = IsElementActive(dmsMock.Object);
 
-    // Assert
-    Assert.IsTrue(result);
-}
+        // Assert
+        Assert.IsTrue(result);
+    }
 
-private static bool IsElementActive(IDms dms)
-{
-    return dms.GetAgent(1).GetElement("Example element").State == ElementState.Active;
+    private static bool IsElementActive(IDms dms)
+    {
+        return dms.GetAgent(1).GetElement("Example element").State == ElementState.Active;
+    }
 }
 ```
 
@@ -80,7 +88,7 @@ The builder registers a protocol and creates an Agent with an element that uses 
 
 The `Skyline.DataMiner.Utils.UnitTestingFramework.SLNetTypes` package provides `ConnectionMock` for code that sends SLNet messages. For example, you can test DOM interactions in automation scripts or GQI ad hoc data sources by attaching a `DomCache` to the mock. Pass the mock's `HandleMessages` method to a `DomHelper`, then inspect the cache or the results returned by the helper.
 
-The following MSTest example checks that a newly created module contains no DOM instance with a given ID:
+The following MSTest example adds a DOM instance to the cache and checks that it can be retrieved through `DomHelper`:
 
 ```csharp
 using System;
@@ -91,23 +99,28 @@ using Skyline.DataMiner.Net.Messages.SLDataGateway;
 using Skyline.DataMiner.Utils.UnitTestingFramework.SLNetTypes;
 using Skyline.DataMiner.Utils.UnitTestingFramework.SLNetTypes.Dom;
 
-[TestMethod]
-public void ReadInstances_NewModule_ReturnsNoMatchingInstance()
+[TestClass]
+public class DomTests
 {
-    // Arrange
-    const string moduleId = "TestModule";
-    var instanceId = Guid.NewGuid();
-    var connection = new ConnectionMock();
-    var cache = new DomCache();
-    cache.CreateDomModule(moduleId);
-    cache.AttachTo(connection);
-    var helper = new DomHelper(connection.Object.HandleMessages, moduleId);
+    [TestMethod]
+    public void ReadInstances_ExistingInstance_ReturnsInstance()
+    {
+        // Arrange
+        const string moduleId = "TestModule";
+        var instanceId = Guid.NewGuid();
+        var connection = new ConnectionMock();
+        var cache = new DomCache();
+        cache.CreateDomModule(moduleId);
+        cache.CreateOrUpdateDomInstance(moduleId, new DomInstance { ID = new DomInstanceId(instanceId) });
+        cache.AttachTo(connection);
+        var helper = new DomHelper(connection.Object.HandleMessages, moduleId);
 
-    // Act
-    var instances = helper.DomInstances.Read(DomInstanceExposers.Id.Equal(instanceId));
+        // Act
+        var instances = helper.DomInstances.Read(DomInstanceExposers.Id.Equal(instanceId));
 
-    // Assert
-    Assert.IsFalse(instances.Any());
+        // Assert
+        Assert.IsTrue(instances.Any(instance => instance.ID.Id == instanceId));
+    }
 }
 ```
 

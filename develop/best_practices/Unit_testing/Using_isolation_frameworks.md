@@ -59,8 +59,6 @@ For other UTF packages, see [Unit Testing Framework](xref:Unit_Testing_Framework
 
 ## [Prior to UTF](#tab/prior-to-utf)
 
-### Faking SLProtocol using Moq
-
 Consider, for example, the following method:
 
 ```csharp
@@ -112,7 +110,7 @@ One option is to create your own class that implements the `SLProtocol` interfac
 
 For this, you can for example use the [Moq library](https://github.com/moq/moq4). To start using the Moq library, select your test project in the *Solution Explorer*, right-click it, and then select *Manage NuGet Packages*. Click *Browse* and type "Moq". Select the package and click the *Install* button.
 
-![unittesting7.png](~/develop/images/unittesting7.png)
+![Moq selected in the NuGet Package Manager for a test project in Visual Studio](~/develop/images/unittesting7.png)
 
 The best way to explain how this framework works is by using it through an example.
 
