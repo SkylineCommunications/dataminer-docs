@@ -5,13 +5,18 @@ description: Choose a Unit Testing Framework package for testing DataMiner code 
 
 # Unit Testing Framework
 
+> [!IMPORTANT]
+> The linked repositories are currently private and can only be accessed with permission.
+
 The Unit Testing Framework provides in-memory mocks for testing code that uses DataMiner APIs without a running DataMiner System. Choose the package that matches the interfaces used by your code:
 
-- **Protocol** for connector code that uses `SLProtocol` or `SLProtocolExt`.
-- **DataMinerSystem.Common** for code that uses `IDms` and related DataMiner System interfaces.
-- **SLNetTypes** for code that sends SLNet messages, including DataMiner Object Model (DOM) interactions.
+- [Protocol](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.UnitTestingFramework.Protocol/blob/main/README.md) for connector code that uses `SLProtocol` or `SLProtocolExt`.
+- [DataMinerSystem.Common](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.UnitTestingFramework.DataMinerSystem.Common/blob/master/README.md) for code that uses `IDms` and related DataMiner System interfaces.
+- [SLNetTypes](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.UnitTestingFramework.SLNetTypes/blob/master/README.md) for code that sends SLNet messages, including DataMiner Object Model (DOM) interactions.
 
-Add the package you need to your test project, together with a test framework and a reference to the project containing the code under test. Supporting dependencies, such as the Shared package for protocol definitions and parameter and table models, are restored with the package. Package availability and supported APIs can differ between versions. The examples below use .NET Framework 4.8 and MSTest.
+Add the package you need to your test project, together with a test framework and a reference to the project containing the code under test. Supporting dependencies, such as the [Shared package](https://github.com/SkylineCommunications/Skyline.DataMiner.Utils.UnitTestingFramework.Shared/blob/master/README.md) for protocol definitions and parameter and table models, are restored with the package. Package availability and supported APIs can differ between versions. The examples below use .NET Framework 4.8 and MSTest.
+
+For more detailed technical information, see the linked repositories.
 
 Create a fresh mock for each test and arrange only the data the test needs. The Unit Testing Framework simulates selected DataMiner interfaces and behavior, not the entire DataMiner runtime. Use integration tests to verify behavior on a running DataMiner System.
 
