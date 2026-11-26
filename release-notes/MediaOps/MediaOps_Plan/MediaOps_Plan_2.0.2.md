@@ -5,9 +5,6 @@ description: "Read the release notes for MediaOps Plan 2.0.2, including faster r
 
 # MediaOps Plan 2.0.2
 
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
-
 > [!NOTE]
 > This version requires:
 >
