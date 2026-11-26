@@ -18,6 +18,7 @@ description: "Find resources for learning about DataMiner Automation, executing 
 - [Adding a scheduled task that executes an automation script at a specific time](xref:Manually_adding_a_scheduled_task)
 - [Adding a custom command to the Alarm Console shortcut menu that executes an automation script when clicked](xref:Adding_a_custom_command_to_the_Alarm_Console_shortcut_menu)
 - [Executing an automation script when a switchover occurs in a redundancy group](xref:Creating_a_redundancy_group)
+- [Tracking the progress of an automation script executed via SLNet](xref:Tracking_the_progress_of_automation_scripts)
 
 ## Basic script development
 
