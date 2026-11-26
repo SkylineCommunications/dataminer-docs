@@ -102,6 +102,21 @@ If Cube cannot retrieve the Orchestrator upgrade feature flag, it will display a
 
 A number of security enhancements have been made.
 
+#### Element wizard: Improved selection of local Edge Nodes [ID 47043]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+On a single-agent system with only one Edge Node, if that node is local, DataMiner Cube will now treat it as part of the DataMiner Agent. The element wizard will select it implicitly and hide the Edge Node selector.
+
+When multiple targets are available, the local node will be identified as "(DMA)" and remain selectable. On systems with multiple DataMiner Agents, the selector will remain available even if there is only one Edge Node.
+
+If no Edge Nodes are available, Cube will display a clear message. If an existing element's saved target is unavailable, Cube will not automatically move the element to another target. You must explicitly select a target instead.
+
+Identifying a local Edge Node relies on the server-provided `IsLocal` flag. If the connected DataMiner Agent does not provide this flag, all Edge Nodes will be listed with their own names and the selector will remain visible. On a single-agent system, an Edge Node will no longer be pre-selected for a new element based on the DataMiner Agent name.
+
+> [!IMPORTANT]
+> At present, the Edge Nodes feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi)soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 #### System Center: Improved rolling upgrade options [ID 47110]
 
 <!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
