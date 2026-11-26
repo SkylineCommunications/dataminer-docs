@@ -136,6 +136,15 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 - **Minimum version**: 10.0.12
 - **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:Cube_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
 
+### EndOfSupport.MySQL
+
+Allows a DataMiner Agent that uses MySQL as its main database to start. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47000 -->, a DataMiner Agent with a MySQL main database will not start unless this option is set to *true*. If the option is missing or not set to *true*, DataMiner stops and logs an error.
+
+> [!CAUTION]
+> MySQL has reached [End of Support](xref:Software_support_life_cycles#third-party-software-support-lifecycle). Only use this option temporarily, and migrate to [Storage as a Service (STaaS)](xref:STaaS) or [Cassandra](xref:Migrating_the_general_database_to_Cassandra) as soon as possible.
+
+- **Minimum version**: 10.7.0/10.7.1
+
 ### EndOfSupport.SLHelperGQI
 
 Enables GQI via SLHelper, which is disabled by default from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 46927 -->
