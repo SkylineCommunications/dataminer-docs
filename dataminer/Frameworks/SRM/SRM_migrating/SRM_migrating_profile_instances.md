@@ -1,5 +1,6 @@
 ---
 uid: SRM_migrating_profile_instances
+description: "Migrate DataMiner SRM profile instances using the PFM_ProfileInstancesImportExport script to export and import Excel files by profile definition."
 ---
 
 # Migrating profile instances

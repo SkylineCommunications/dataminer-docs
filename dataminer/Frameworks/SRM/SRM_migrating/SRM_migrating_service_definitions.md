@@ -1,5 +1,6 @@
 ---
 uid: SRM_migrating_service_definitions
+description: "Migrate DataMiner SRM service definitions using the SRM_ServiceDefinitionImportExport automation script to export and import JSON files."
 ---
 
 # Migrating service definitions

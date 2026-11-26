@@ -1,5 +1,6 @@
 ---
 uid: SRM_migrating_resources
+description: "Migrate DataMiner SRM resources using the SRM_DiscoverResources script and Excel files to update existing resources or create new ones."
 ---
 
 # Migrating resources
