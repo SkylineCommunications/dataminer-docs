@@ -1,5 +1,6 @@
 ---
 uid: Using_isolation_frameworks
+description: Learn how to isolate SLProtocol dependencies in connector unit tests using the Unit Testing Framework or Moq.
 ---
 
 # Using isolation frameworks
@@ -8,7 +9,57 @@ The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface is heavi
 
 Therefore, it is very likely you will end up in a situation where you want to test a method that has a dependency on the `SLProtocol` interface. Below, you can learn how to fake `SLProtocol` so you can easily create unit tests that have a dependency on this interface.
 
-## Faking SLProtocol using MOQ
+## [With UTF](#tab/with-utf)
+
+For connector unit tests that depend on `SLProtocol`, use the Unit Testing Framework (UTF). Its `SLProtocolMock` provides a mock that stores parameter and table data, so you can set up test data and check the resulting state instead of verifying individual `SLProtocol` calls.
+
+Add the `Skyline.DataMiner.Utils.UnitTestingFramework.Protocol` package to your test project. The following examples use the `Skyline.DataMiner.Utils.UnitTestingFramework.Protocol` namespace and MSTest.
+
+By default, `SLProtocolMock` finds the solution directory from the current working directory and loads the *protocol.xml* file from that directory. If the file is in a different location or the solution directory cannot be found, pass the path explicitly:
+
+```csharp
+var protocolMock = new SLProtocolMock(@"C:\MyConnector\protocol.xml");
+```
+
+Create a new mock for each test. Use its `Object` property to arrange values and pass the `SLProtocol` implementation to the code under test. The property remains available after the call, so you can also use it to inspect the resulting data.
+
+For example, the following method reads a parameter and updates a table row:
+
+```csharp
+public static void UpdateStreamName(SLProtocol protocol)
+{
+    object name = protocol.GetParameter(150);
+    protocol.SetParameterIndexByKey(1000, "PK1", 2, name);
+}
+```
+
+The test below assumes *protocol.xml* defines standalone parameter 150 and table 1000, with a primary key and a stream name as its first two columns:
+
+```csharp
+[TestMethod]
+public void UpdateStreamName_ExistingRow_UpdatesName()
+{
+    // Arrange
+    var protocolMock = new SLProtocolMock();
+    protocolMock.Object.SetParameter(150, "New name");
+    protocolMock.Object.AddRow(1000, new object[] { "PK1", "Old name" });
+
+    // Act
+    UpdateStreamName(protocolMock.Object);
+
+    // Assert
+    Assert.AreEqual("New name", protocolMock.Assert().Parameter(150).Value);
+    Assert.AreEqual("New name", protocolMock.Assert().Table(1000).Row("PK1")[1]);
+}
+```
+
+You can also use `protocolMock.Object.GetParameter(150)` or `protocolMock.Object.GetRow(1000, "PK1")` to retrieve data through `SLProtocol`. For code that depends on `SLProtocolExt`, use `SLProtocolMock<ConcreteSLProtocolExt>` with the generated `ConcreteSLProtocolExt` type.
+
+For other UTF packages, see [Unit Testing Framework](xref:Unit_Testing_Framework).
+
+## [Prior to UTF](#tab/prior-to-utf)
+
+### Faking SLProtocol using Moq
 
 Consider, for example, the following method:
 
@@ -132,6 +183,8 @@ public void AbbreviatePath_PathContainingGeneric_CallsLogMethod()
 Note the use of the `Setup` method on the mock object. This allows you to specify what should be returned when the QActionID property is called.
 
 The use of isolation frameworks like Moq allows you to easily create stubs and mocks. It allows you to perform advanced assertions on the mock objects such as verifying the number of times a method got invoked, etc.
+
+***
 
 ## Useful links
 
