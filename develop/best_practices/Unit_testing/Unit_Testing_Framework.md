@@ -5,7 +5,7 @@ description: Choose a Unit Testing Framework package for testing DataMiner code 
 
 # Unit Testing Framework
 
-The Unit Testing Framework (UTF) provides in-memory mocks for testing code that uses DataMiner APIs without a running DataMiner System. Choose the package that matches the interfaces used by your code:
+The Unit Testing Framework provides in-memory mocks for testing code that uses DataMiner APIs without a running DataMiner System. Choose the package that matches the interfaces used by your code:
 
 - **Protocol** for connector code that uses `SLProtocol` or `SLProtocolExt`.
 - **DataMinerSystem.Common** for code that uses `IDms` and related DataMiner System interfaces.
@@ -13,7 +13,7 @@ The Unit Testing Framework (UTF) provides in-memory mocks for testing code that 
 
 Add the package you need to your test project, together with a test framework and a reference to the project containing the code under test. Supporting dependencies, such as the Shared package for protocol definitions and parameter and table models, are restored with the package. Package availability and supported APIs can differ between versions. The examples below use .NET Framework 4.8 and MSTest.
 
-Create a fresh mock for each test and arrange only the data the test needs. UTF simulates selected DataMiner interfaces and behavior, not the entire DataMiner runtime. Use integration tests to verify behavior on a running DataMiner System.
+Create a fresh mock for each test and arrange only the data the test needs. The Unit Testing Framework simulates selected DataMiner interfaces and behavior, not the entire DataMiner runtime. Use integration tests to verify behavior on a running DataMiner System.
 
 ## Testing connector code
 
@@ -134,4 +134,4 @@ public class DomTests
 
 ## Feedback
 
-For feedback about UTF, contact [The Pioneers](mailto:squad.deploy-the.pioneers@skyline.be).
+For feedback about the Unit Testing Framework, contact [The Pioneers](mailto:squad.deploy-the.pioneers@skyline.be).

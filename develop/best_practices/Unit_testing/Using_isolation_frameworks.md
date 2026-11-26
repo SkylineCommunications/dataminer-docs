@@ -46,7 +46,7 @@ Moq can also verify calls to a mock, for example to check whether a method was i
 
 ## Using the Unit Testing Framework
 
-For connector tests that use parameter or table data, the recommended approach is to use the Unit Testing Framework (UTF). Its `SLProtocolMock` provides a ready-made alternative to configuring each `SLProtocol` call with Moq. Its in-memory models store data based on the connector's *protocol.xml*, so tests can arrange and check state. Use the `Skyline.DataMiner.Utils.UnitTestingFramework.Protocol` package in your test project.
+For connector tests that use parameter or table data, the recommended approach is to use the Unit Testing Framework. Its `SLProtocolMock` provides a ready-made alternative to configuring each `SLProtocol` call with Moq. Its in-memory models store data based on the connector's *protocol.xml*, so tests can arrange and check state. Use the `Skyline.DataMiner.Utils.UnitTestingFramework.Protocol` package in your test project.
 
 By default, `SLProtocolMock` finds the solution directory from the current working directory and loads the *protocol.xml* file from that directory. If the file is in a different location or the solution directory cannot be found, pass the path explicitly:
 
@@ -85,4 +85,4 @@ public void UpdateStreamName_ExistingRow_UpdatesName()
 
 Pass `protocolMock.Object` to the code under test. You can also use its `SLProtocol` methods to arrange or inspect data. For code that depends on `SLProtocolExt`, use `SLProtocolMock<ConcreteSLProtocolExt>` with the generated `ConcreteSLProtocolExt` type.
 
-For an overview of UTF and its packages, see [Unit Testing Framework](xref:Unit_Testing_Framework).
+For an overview of the available packages, see [Unit Testing Framework](xref:Unit_Testing_Framework).
