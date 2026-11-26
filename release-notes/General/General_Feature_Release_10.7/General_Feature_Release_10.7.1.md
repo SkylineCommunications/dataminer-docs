@@ -686,6 +686,17 @@ The following changes have now been made:
 - On an existing DataMiner installation, API Gateway will be installed, or repaired if its certificate is missing or stale. On a fresh installation, only the certificate will be trusted.
 - The cloud registration and redirect flow has been reworked to reliably write the tokens needed by the CloudGateway restart step.
 
+#### SLNet: Element deletion could leave schedules on offline Edge Nodes [ID 47080]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+When an element was deleted while its Edge Node was offline, its schedule could remain on that node. SLNet will now block element deletion until the Edge Node is reachable again.
+
+If you move a scripted connector to another Edge Node while the original Edge Node is offline, an error will now be returned. The element change will still be saved, but the schedule will not be deployed on the new Edge Node.
+
+> [!IMPORTANT]
+> At present, the Edge Nodes feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi)soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 #### DataMiner upgrade: CloudFeed DxM installed on Agents where it was not present [ID 47095]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->
