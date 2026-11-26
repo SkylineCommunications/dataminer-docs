@@ -5,12 +5,6 @@ description: "Release notes for the DataMiner Orchestrator DxM, including versio
 
 # Orchestrator change log
 
-#### 18 November 2026 - Fix - Orchestrator 1.15.2 - Rolling upgrades could fail when running inter-batch scripts [ID 47048]
-
-During a rolling upgrade, Orchestrator could trigger scripts between upgrade batches before all DataMiner Agents had returned to a normal connection state. This could cause the scripts to fail.
-
-Orchestrator will now verify that all DataMiner Agents have returned to a normal connection state before running these scripts. If this state is not reached within the timeout, the upgrade will fail with a clear error message.
-
 #### 22 May 2026 - Enhancement - Orchestrator 1.10.0 - Upgrade to .NET 10
 
 Orchestrator has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
