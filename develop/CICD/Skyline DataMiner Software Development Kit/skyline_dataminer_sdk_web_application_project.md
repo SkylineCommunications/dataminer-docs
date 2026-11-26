@@ -120,6 +120,8 @@ The root *App.info.json* from the project is used even if the output folder cont
 
 ## Installing web applications during installation
 
-The standard package installation script calls `AppInstaller.InstallDefaultContent()`, which installs the included ZIP content, including web applications. If you have custom installation code that installs content separately, call `AppInstaller.InstallZipFiles()` to install all ZIP content, not just web applications. Make sure an existing package project uses a compatible version of the installer package and does not rely on an older custom installation script that omits ZIP content.
+The standard package installation script calls `AppInstaller.InstallDefaultContent()`, which installs the included ZIP content, including web applications. You do not need to call `AppInstaller.InstallZipFiles()` separately if you use `InstallDefaultContent()`.
+
+If you have custom installation code that installs content separately, call `AppInstaller.InstallZipFiles()` to install all ZIP content, not just web applications. Make sure an existing package project uses a compatible version of the installer package and does not rely on an older custom installation script that omits ZIP content.
 
 You can access the app from the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page), depending on your DataMiner and app permissions.
