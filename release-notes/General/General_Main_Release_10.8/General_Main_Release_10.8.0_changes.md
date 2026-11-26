@@ -158,3 +158,11 @@ An initialization alarm will now only be generated if all initialization retries
 When SLAnalytics received a DVE child element before its parent element, it would keep the child element on hold until the parent arrived. If the parent then arrived but had not yet been stored, SLAnalytics could stop working while processing the child elements.
 
 This could happen, for example, during the weekly alarm template cache cleanup.
+
+#### Cassandra Cluster migration could fail to finalize [ID 47230]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+When finalizing a migration to Cassandra Cluster, the finalizer tool (*SLCCMigrationFinalizer.exe*) could fail to run because of a DLL conflict, preventing the migration from being finalized.
+
+The required binding redirect configuration file, *SLCCMigrationFinalizer.exe.config*, is now included in DataMiner upgrade packages.
