@@ -8,6 +8,7 @@ The following breaking changes have been introduced in recent DataMiner releases
 
 | <div style="width:120px">Release note ID</div> | Release version(s) | Description |
 |--|--|--|
+| [47213](xref:MediaOps_Plan_2.0.2#job-node-equality-now-includes-start-and-end-times-id-47213) [47224](xref:MediaOps_Plan_2.0.2#unassigning-resources-from-pools-now-checks-for-usage-id-47224) | MediaOps Plan 2.0.2 | Changes to `JobNode` equality affect hash-based collections, and resource pool unassignment can now return usage errors. Integrations may need updating; see the linked release notes for details. |
 | [47136](xref:Web_apps_Feature_Release_10.7.1#legacy-reports-and-dashboards-are-no-longer-available-id-47136) | DataMiner 10.7.0/10.7.1 | The legacy Reports and Dashboards applications are no longer available, and their pages have been removed from the Monitoring app. |
 | [47010](xref:General_Feature_Release_10.7.1#qactions-jscript-and-vbscript-are-no-longer-supported-id-47010) | DataMiner 10.7.0/10.7.1 | Support for JScript and VBScript in QActions has reached End of Life and has been removed. |
 | [46944](xref:General_Feature_Release_10.7.1#document-intelligence-assistant-permission-checks-id-46944) | DataMiner 10.7.0/10.7.1 | Each Document Intelligence request from SLNet now includes connection information so the Assistant can check the *Intelligence Usage* permission. |
