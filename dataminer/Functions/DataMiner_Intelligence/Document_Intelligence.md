@@ -1,11 +1,11 @@
 ---
 uid: docintel
-description: "Learn how the DataMiner Assistant DxM uses Document Intelligence to analyze documents and extract structured data in DataMiner automation scripts."
+description: "Use Document Intelligence, a DataMiner Intelligence capability, to extract structured data from documents in DataMiner automation scripts."
 ---
 
 # Document Intelligence
 
-Starting from version 2.0.7, the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM) can analyze documents based on instructions you provide. This functionality is available through the Document Intelligence API and can be used in DataMiner Automation.
+Document Intelligence is a [DataMiner Intelligence](xref:DataMiner_Intelligence) capability that analyzes documents and extracts structured information based on instructions you provide. You can use the Document Intelligence API in DataMiner Automation with version 2.0.7 or later of the [DataMiner Assistant module](xref:DataMinerCoreModules#assistant). This feature is supported from DataMiner 10.6.0/10.6.1 onwards<!-- RN 44016 -->.
 
 Typical use cases include:
 
@@ -15,9 +15,12 @@ Typical use cases include:
 
 - Extracting order data from a bill of materials (BOM) Excel document.
 
+> [!TIP]
+> Starting from DataMiner 10.7.0/10.7.1, the general requirements and user permissions for DataMiner Intelligence are needed for the Document Intelligence feature. For details, see [Getting started with DataMiner Intelligence](xref:Intelligence_Getting_Started).
+
 ## Processing documents
 
-The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (Large Language Models) to analyze your files according to your instructions. The process consists of the following steps:
+Document Intelligence combines optical character recognition (OCR) and large language models (LLMs) to analyze files according to your instructions. The process consists of the following steps:
 
 1. You upload a document.
 
@@ -54,7 +57,7 @@ The DataMiner Assistant combines OCR (Optical Character Recognition) and LLMs (L
 
 1. The model's output is returned as the Document Intelligence response.
 
-![DataMiner Document Intelligence](~/dataminer/images/documentintelligence_diagram.png)<br>*Using the Document Intelligence API in DataMiner automation scripts*
+![Document Intelligence process from document upload through OCR and LLM analysis to a structured response](~/dataminer/images/documentintelligence_diagram.png)<br>*Document processing workflow for the Document Intelligence API*
 
 ## Writing effective instructions
 

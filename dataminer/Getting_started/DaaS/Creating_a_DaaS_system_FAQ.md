@@ -118,6 +118,29 @@ As DaaS relies on DataMiner STaaS for data storage, the [limitations for STaaS](
 
 In addition, while the [Web Services API](xref:Using_the_Web_Services_v1) is accessible on DaaS systems once you have authenticated through the dataminer.services B2C layer, the additional security layer of dataminer.services makes it difficult to authenticate externally for integrations that are not hosted on the DMA itself.
 
+### Which soft-launch options are enabled on a DaaS system?
+
+On a DaaS system, the following [soft-launch options](xref:SoftLaunchOptions) are enabled by default:
+
+- *CorrectedDisplayKeyOnNaming*
+- *CPEIntegration*
+- *DataAPI*
+- *Diagnostics*
+- *DirectViewRemoteDataUpdates*
+- *DynamicUnits*
+- *Functions*
+- *PlannedMaintenance*
+- *ProtoBufSerialization*
+- *ReportsAndDashboardsDynamicVisuals*
+- *ReportsAndDashboardsGQIMaps*
+- *ReportsAndDashboardsScheduler*
+- *Swarming*
+
+For a description of each option, see [Overview of soft-launch options](xref:Overview_of_Soft_Launch_Options).
+
+> [!NOTE]
+> The exact set of enabled options can vary depending on the DataMiner version of your DaaS system. To change the soft-launch options, [contact Skyline](xref:Creating_a_DaaS_system_FAQ#how-can-i-make-changes-to-configuration-files-on-the-dataminer-server).
+
 ### Where is my DaaS system hosted?
 
 If you create a new DataMiner System via <https://dataminer.services>, it will by default be hosted in the West-Europe region.

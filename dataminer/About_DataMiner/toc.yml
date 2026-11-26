@@ -116,8 +116,8 @@ items:
                   topicUid: Pricing_sizing_guide_services_data_sources
                 - name: DataMiner as a Service
                   topicUid: Pricing_sizing_guide_services_DaaS
-                - name: DataMiner Assistant
-                  topicUid: Pricing_sizing_guide_services_DataMiner_Assistant
+                - name: DataMiner Intelligence
+                  topicUid: Pricing_sizing_guide_services_DataMiner_Intelligence
                 - name: Storage as a Service
                   topicUid: Pricing_sizing_guide_services_StaaS
             - name: Solutions

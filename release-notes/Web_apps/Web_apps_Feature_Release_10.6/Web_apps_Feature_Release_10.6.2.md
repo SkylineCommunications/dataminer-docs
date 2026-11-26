@@ -288,18 +288,18 @@ When all above-mentioned conditions are met, the partition join is executed as f
 > [!IMPORTANT]
 > Although the partition join strategy will enhance performance in most common scenarios that require the fastest possible query executions, this strategy can be up to twice as slow when the join has low selectivity. For these uncommon scenarios, we recommended manually enabling the *prefetch* option on the relevant join operator.
 
-#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
+#### DataMiner upgrade: DataMiner Assistant module will now be included in the DataMiner web upgrade packages [ID 44291]
 
 <!-- MR 10.6.0 [CU7] - FR 10.6.2 -->
 
-In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
+In order to upgrade the DataMiner Assistant module, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
 
-From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+From now on, the DataMiner Assistant module will be included in the DataMiner web upgrade packages instead.
 
-See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:General_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+See also: [DataMiner upgrade: DataMiner Assistant module will now be included in the DataMiner web upgrade packages [ID 44291]](xref:General_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-module-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
 
 > [!NOTE]
-> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
+> The DataMiner Assistant module will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
 
 #### Support for GQI DxM on Dashboard Gateway [ID 44344]
 

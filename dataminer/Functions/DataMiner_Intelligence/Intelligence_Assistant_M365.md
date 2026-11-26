@@ -1,23 +1,17 @@
 ---
 uid: Intelligence_Assistant_M365
-description: "Learn how to deploy and use DataMiner Assistant for Microsoft 365 to interact with your DataMiner System directly from Microsoft Teams or Copilot."
+description: "Deploy DataMiner Assistant for Microsoft 365 to chat with DataMiner Intelligence agents from Microsoft Teams or Microsoft Copilot."
 ---
 
 # DataMiner Assistant for Microsoft 365
 
-The DataMiner Assistant for Microsoft 365 lets you chat with any agent available on your DataMiner System, including [specialized agents](xref:Intelligence_Assistant_Specialized_Agents), from Microsoft Teams or Microsoft Copilot. You can switch agents at any time by asking for it in natural language. If you have the necessary permissions, you can request information from your DataMiner System from any location, even without direct access to DataMiner.
+DataMiner Assistant for Microsoft 365 lets you chat with any [DataMiner Intelligence agent](xref:Intelligence_Agents) available on your DataMiner System, including [specialized agents](xref:Intelligence_Specialized_Agents), from Microsoft Teams or Microsoft Copilot. You can switch agents at any time by asking for it in natural language. If you have the necessary permissions, you can request information from your DataMiner System from any location, even without direct access to DataMiner.
 
-![Welcome screen of the DataMiner Assistant agent in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)
+![Welcome screen for DataMiner Assistant in Microsoft Teams](~/dataminer/images/DataMinerAssistantM365.png)<br>*DataMiner Assistant welcome screen in Microsoft Teams*
 
 ## Prerequisites
 
-- To interact with a DataMiner System via the DataMiner Assistant, the DataMiner System must be [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud), and the following [DxMs](xref:DataMinerExtensionModules) must be installed:
-
-  - Assistant (version 3.11.2.51719 or higher)
-  - CloudGateway (version 4.0.0.0 or higher)
-
-  > [!TIP]
-  > See also: [Deploying a DxM on a DMS node](xref:Managing_cloud-connected_nodes#deploying-a-dxm-on-a-dms-node)
+- DataMiner Intelligence must be enabled on the target DataMiner System, and all [requirements for DataMiner Intelligence](xref:Intelligence_Getting_Started#requirements) must be met.
 
 - To ensure that you have access to a DataMiner System from your Microsoft account, [your Microsoft account must be linked to your DataMiner account](xref:Linking_your_DataMiner_and_dataminer_services_account).
 
@@ -29,15 +23,15 @@ You can download the DataMiner Assistant for Microsoft 365 directly from the [Mi
 
 1. In the filter box at the top, specify DataMiner Assistant.
 
-   <p><img src="~/dataminer/images/DataMinerAssistant_look_up_in_Teams.png" alt="Looking up DataMiner Assistant in Microsoft Teams" width="50%" /></p>
+   <p><img src="~/dataminer/images/DataMinerAssistant_look_up_in_Teams.png" alt="Looking up DataMiner Assistant in Microsoft Teams" width="50%" /><br><em>Searching for DataMiner Assistant in the Microsoft Teams app catalog</em></p>
 
 1. In the pop-up window, click *Add*.
 
-   <p><img src="~/dataminer/images/Assistant_installation_in_Teams.png" alt="Pop-up window to add DataMiner Assistant in Microsoft Teams" width="50%" /></p>
+   <p><img src="~/dataminer/images/Assistant_installation_in_Teams.png" alt="Pop-up window to add DataMiner Assistant in Microsoft Teams" width="50%" /><br><em>Dialog for adding DataMiner Assistant in Microsoft Teams</em></p>
 
 1. When DataMiner Assistant has successfully been added, either click *Open* to open it in a Teams chat, or click *Open with Copilot* to open it in a Copilot chat.
 
-   <p><img src="~/dataminer/images/Assistant_installed_window.png" alt="Pop-up window shown after successful installation of DataMiner Assistant in Teams" width="50%" /></p>
+   <p><img src="~/dataminer/images/Assistant_installed_window.png" alt="Pop-up window shown after successful installation of DataMiner Assistant in Teams" width="50%" /><br><em>Confirmation that DataMiner Assistant has been added in Microsoft Teams</em></p>
 
 ## Key features
 

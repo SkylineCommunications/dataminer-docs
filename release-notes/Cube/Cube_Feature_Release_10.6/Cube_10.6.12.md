@@ -1,6 +1,6 @@
 ---
 uid: Cube_Feature_Release_10.6.12
-description: "Release notes for DataMiner Cube Feature Release 10.6.12, with new features, enhancements, and fixes planned for this preview release."
+description: "Release notes for DataMiner Cube Feature Release 10.6.12, with new features, enhancements, and fixes planned for this release."
 ---
 
 # DataMiner Cube Feature Release 10.6.12

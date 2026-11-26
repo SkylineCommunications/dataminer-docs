@@ -36,13 +36,17 @@ IDms dms = slProtocol.GetDms();
 
 The GetDms method (see [SLProtocolExtensions.GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Protocol.SlProtocolExtensions.GetDms(Skyline.DataMiner.Scripting.SLProtocol)) method) is an extension method on the SLProtocol interface that returns an object that implements the IDms interface.
 
-To start using the DataMinerSystem library **from an automation script**, use the [GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.EngineExtensions.GetDms(Skyline.DataMiner.Automation.Engine)) extension method:
+To start using the DataMinerSystem library **from an automation script**, use the [GetDmsAsUser](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.IEngineExtensions.GetDmsAsUser(Skyline.DataMiner.Automation.IEngine)) extension method:
 
-```xml
-IDms dms = engine.GetDms();
+```csharp
+IDms dms = engine.GetDmsAsUser();
 ```
 
-The GetDms method (see [Engine.GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.EngineExtensions.GetDms(Skyline.DataMiner.Automation.Engine)) method) is an extension method on the Engine interface that returns an object that implements the IDms interface.
+The `GetDmsAsUser` method (see [IEngineExtensions.GetDmsAsUser](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.IEngineExtensions.GetDmsAsUser(Skyline.DataMiner.Automation.IEngine)) and [EngineExtensions.GetDmsAsUser](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.EngineExtensions.GetDmsAsUser(Skyline.DataMiner.Automation.Engine))) is an extension method on the `IEngine` interface (and `Engine` class) that returns an object implementing the `IDms` interface, executing actions in the security context of the user running the script.
+
+> [!NOTE]
+> - Only `DMSMessage` requests are handled in the user context when using `GetDmsAsUser`. Other flows, such as subscriptions (Monitors), are not executed in the user context.
+> - An alternative [GetDms](xref:Skyline.DataMiner.Core.DataMinerSystem.Automation.IEngineExtensions.GetDms(Skyline.DataMiner.Automation.IEngine)) extension method is also available, which executes actions with administrator permissions. However, we recommend using `GetDmsAsUser` instead so that the permissions of the user running the script are respected. For more information, see [Using the security context of the user running an automation script](xref:Automation_best_practices_security_context).
 
 Refer to [Examples](xref:ClassLibraryExamples) for some example use cases.
 

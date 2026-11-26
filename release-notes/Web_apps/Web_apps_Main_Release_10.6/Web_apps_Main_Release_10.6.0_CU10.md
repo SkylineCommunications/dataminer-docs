@@ -1,6 +1,6 @@
 ---
 uid: Web_apps_Main_Release_10.6.0_CU10
-description: "Release notes for DataMiner web apps Main Release 10.6.0 CU10, with features, enhancements, and fixes planned for this preview release."
+description: "Release notes for DataMiner web apps Main Release 10.6.0 CU10, with features, enhancements, and fixes planned for this release."
 ---
 
 # DataMiner web apps Main Release 10.6.0 CU10 - Preview

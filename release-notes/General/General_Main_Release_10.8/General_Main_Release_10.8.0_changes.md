@@ -106,6 +106,41 @@ DataMiner upgrades will now remove the following unused DLL files from `C:\Skyli
 
 These files are no longer required following changes to the dependencies of SLNetTypes. They will be removed during both legacy and orchestrator upgrades.
 
+#### Clustering: Additional compatibility checks when adding a DataMiner Agent [ID 47019]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+When you add a DataMiner Agent to a cluster, DataMiner will now perform the following additional compatibility checks:
+
+- The Agent must be standalone, i.e., not already part of another cluster.
+- The Agent must not be part of a Failover pair.
+- All Agents already in the cluster must run the same DataMiner version.
+- The Agent being added must run the same DataMiner version as the cluster.
+
+If any of these checks fail, the Agent will not be added, and SLNet will log the reason. The existing compatibility checks also remain in effect.
+
+#### Service & Resource Management: Reduced memory usage when serializing properties [ID 47100]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+Serialization of booking properties and other Service & Resource Management (SRM) property collections has been optimized. SLNet now reuses JSON serialization settings instead of recreating them for each conversion and writes property dictionaries as compact JSON, without indentation or line breaks outside string values.
+
+These changes reduce temporary memory usage when bookings are created, updated, exchanged between DataMiner Agents, or read from or written to the database, especially during bursts of booking property updates.
+
+Property values, JSON structure, and type information remain unchanged. Existing data, including data written by earlier DataMiner versions, remains readable. No data migration is required.
+
+> [!NOTE]
+> Custom scripts or integrations that compare the exact JSON text returned by `JSONSerializableDictionary.ToJson()` or `ToElasticJson()` may need to account for the removed whitespace.
+
+#### DataMiner upgrade: Cleanup of DIS Inject folders [ID 47149]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+During a DataMiner upgrade, the following folders used by DIS Inject will now be cleared:
+
+- `Scripts\DISInject`, which contains injected automation script assemblies.
+- `ProtocolScripts\DISInject`, which contains injected protocol QActions.
+
 ### Fixes
 
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]
@@ -115,3 +150,11 @@ These files are no longer required following changes to the dependencies of SLNe
 When initialization of `CCAEndpointManager` failed, the initialization alarm could remain active even after a subsequent retry succeeded.
 
 An initialization alarm will now only be generated if all initialization retries fail.
+
+#### SLAnalytics: Problem when processing delayed DVE child elements [ID 47157]
+
+<!-- MR 10.8.0 - FR 10.7.2 -->
+
+When SLAnalytics received a DVE child element before its parent element, it would keep the child element on hold until the parent arrived. If the parent then arrived but had not yet been stored, SLAnalytics could stop working while processing the child elements.
+
+This could happen, for example, during the weekly alarm template cache cleanup.

@@ -1,6 +1,6 @@
 ---
 uid: General_Main_Release_10.6.0_CU10
-description: "Release notes for General Main Release 10.6.0 CU10, including prerequisites, enhancements, and fixes planned for this preview release."
+description: "Release notes for General Main Release 10.6.0 CU10, including prerequisites, enhancements, and fixes planned for this release."
 ---
 
 # General Main Release 10.6.0 CU10 - Preview

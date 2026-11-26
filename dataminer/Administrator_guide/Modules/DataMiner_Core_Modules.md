@@ -29,6 +29,15 @@ The ArtifactDeployer module is responsible for allowing users to deploy differen
 
 This DcM is included in DataMiner upgrade packages from DataMiner 10.3.7/10.4.0 onwards.<!-- RN 36085 -->
 
+### Assistant
+
+The Assistant module powers [DataMiner Intelligence](xref:DataMiner_Intelligence) capabilities, including the agent framework, natural language to GQI, and Document Intelligence. As of DataMiner 10.7.0/10.7.1, it is installed automatically on every node in the cluster by both standard DataMiner upgrade packages and DataMiner web upgrade packages.
+
+Errors and warnings are logged to log files in the `C:\ProgramData\Skyline Communications\DataMiner Assistant\Logs` folder. This folder stores a maximum of two log files. When the current file exceeds a predefined size, a new log file is created and the oldest file is removed if necessary.
+
+> [!NOTE]
+> Prior to DataMiner 10.7.0/10.7.1, this module is not yet installed automatically and is therefore considered a DxM.
+
 ### BrokerGateway
 
 The BrokerGateway module is responsible for managing the NATS communication. It automatically updates the NATS cluster when the DataMiner cluster changes and provides clients with the required credentials.

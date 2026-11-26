@@ -89,7 +89,7 @@ Each Document Intelligence request from SLNet now includes connection informatio
 
 #### QActions: JScript and VBScript are no longer supported [ID 47010]
 
-<!-- MR 10.7.0 - FR 10.7.1 -->
+<!-- MR 10.7.0 - FR 10.7.1 [CU0] -->
 
 Support for JScript and VBScript in QActions has reached End of Life and has been removed. An element that uses a connector containing a QAction with JScript or VBScript encoding will now go into an error state.
 
@@ -1075,6 +1075,24 @@ To temporarily continue using Elasticsearch, add the following case-sensitive op
 ```
 
 Consider migrating to OpenSearch or Storage as a Service (STaaS) instead.
+
+#### EPM: Manage element-specific aliases using SLNet requests [ID 47096]
+
+<!-- MR 10.7.0 - FR 10.7.1 [CU0] -->
+
+You can now retrieve and update element-specific EPM aliases using SLNet requests. These aliases override system-level aliases for topology cells, chains, and search chains.
+
+The following requests are available:
+
+- `GetElementTopologyOverrides`: Retrieves the configuration for a specified DataMiner ID and element ID. The response contains an `ElementTopologyOverrides` object, or `null` if no element-specific configuration exists.
+- `UpdateElementTopologyOverrides`: Saves a complete replacement configuration, or removes it when `DeleteConfiguration` is set to `true`.
+
+Requests are routed to the DataMiner Agent hosting the element and support systems with Swarming enabled. After saving or deleting the configuration, DataMiner automatically requests an element restart. A successful response confirms that the configuration change has been persisted and the restart request has been accepted, not that the element has finished starting.
+
+> [!NOTE]
+> Saving custom EPM configuration overrides is not supported for derived elements (redundancy group virtual elements).
+
+This update also fixes an issue where an element's *EPMConfig.xml* configuration was not imported during a DELT import on systems with Swarming enabled.
 
 #### User-Defined APIs: Requests now routed through API Gateway [ID 47107]
 

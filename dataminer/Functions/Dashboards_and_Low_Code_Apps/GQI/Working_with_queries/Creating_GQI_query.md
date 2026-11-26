@@ -16,7 +16,7 @@ The "Queries" data item allows you to construct a query in order to tap into the
 1. In the *Data* pane, select *Queries* and click the + icon to add a new query.
 
    > [!TIP]
-   > If the DataMiner Assistant module has been deployed in your system, at this point you can [let DataMiner Assistant create a query for you](xref:Letting_DataMiner_Assistant_create_a_query).
+   > If the natural language to GQI capability is enabled, you can use DataMiner Intelligence to [generate a GQI query from a plain-language request](xref:Generating_a_GQI_query_with_natural_language).
 
 1. Specify a name for the query.
 
