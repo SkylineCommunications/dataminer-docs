@@ -7,6 +7,8 @@ description: "Install and configure a Cassandra cluster database if you choose n
 
 If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, typically, you will need to [deploy a Cassandra Cluster setup](xref:Installing_Cassandra). This is the first step in configuring self-managed dedicated clustered storage.
 
+From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47024 -->, a DataMiner Agent that uses Cassandra 3.x or earlier as its main database will no longer start unless the [EndOfSupport.Cassandra3 soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportcassandra3) is set to *true*.
+
 For information on how to **configure the settings** for your Cassandra Cluster setup in DataMiner Cube, see [Configuring the database settings in Cube](xref:Configuring_the_database_settings_in_Cube). For more information on how to **monitor your database, keep your nodes repaired, and keep your software up to date**, see [Maintaining a Cassandra cluster](xref:Maintain_Cassandra_Cluster).
 
 > [!NOTE]

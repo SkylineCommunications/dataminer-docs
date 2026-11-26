@@ -136,6 +136,15 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 - **Minimum version**: 10.0.12
 - **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:Cube_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
 
+### EndOfSupport.Cassandra3
+
+Allows a DataMiner Agent that uses Cassandra 3.x or earlier as its main database to start. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47024 -->, a DataMiner Agent with Cassandra 3.x or earlier as its main database will not start unless this option is set to *true*. If the option is missing or not set to *true*, DataMiner stops and logs an error. Creating a migration target that uses Cassandra 3.x or earlier is also blocked without this option.
+
+> [!CAUTION]
+> Cassandra 3.x has reached [End of Support](xref:Software_support_life_cycles). Only use this option temporarily, and migrate to [Storage as a Service (STaaS)](xref:STaaS) or to [dedicated clustered storage](xref:Dedicated_clustered_storage) with a more recent Cassandra version as soon as possible.
+
+- **Minimum version**: 10.7.0/10.7.1
+
 ### EndOfSupport.Elastic
 
 Allows a DataMiner Agent that uses Elasticsearch as its indexing database to start. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47033 -->, a DataMiner Agent with Elasticsearch as its indexing database will not start unless this option is set to *true*. If the option is missing or not set to *true*, DataMiner stops and logs an error. Creating a migration target that uses Elasticsearch as its indexing database is also blocked without this option.
