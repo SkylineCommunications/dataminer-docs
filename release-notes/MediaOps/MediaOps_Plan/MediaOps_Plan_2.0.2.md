@@ -3,10 +3,7 @@ uid: MediaOps_Plan_2.0.2
 description: "Read the release notes for MediaOps Plan 2.0.2, including faster reads, clearer job errors, and fixes for resource and job management."
 ---
 
-# MediaOps Plan 2.0.2 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Release notes may still be modified, added, or moved to a later release. Check back soon for updates!
+# MediaOps Plan 2.0.2
 
 ## Breaking changes
 
