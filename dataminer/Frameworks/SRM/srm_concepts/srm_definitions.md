@@ -1,5 +1,6 @@
 ---
 uid: srm_definitions
+description: "Explore DataMiner SRM definitions and learn how connectors, virtual functions, profiles, and service definitions support orchestration."
 ---
 
 # SRM definitions

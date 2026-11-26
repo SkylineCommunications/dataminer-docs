@@ -1,5 +1,6 @@
 ---
 uid: srm_instantiations
+description: "Explore DataMiner SRM instantiations, including elements, resources, profile instances, bookings, and virtual platforms, and learn their roles."
 ---
 
 # SRM instantiations

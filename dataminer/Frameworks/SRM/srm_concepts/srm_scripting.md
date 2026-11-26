@@ -1,5 +1,6 @@
 ---
 uid: srm_scripting
+description: "Explore DataMiner SRM scripting and learn how Profile-Load Scripts, orchestration scripts, and Data Transfer Rules support bookings."
 ---
 
 # SRM scripting

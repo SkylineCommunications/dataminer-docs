@@ -1,5 +1,6 @@
 ---
 uid: SRM_Quarantine
+description: "Learn how DataMiner SRM quarantine handles resource conflicts, prioritizes bookings, and lets you restore or replace quarantined resources."
 ---
 
 # Quarantine
