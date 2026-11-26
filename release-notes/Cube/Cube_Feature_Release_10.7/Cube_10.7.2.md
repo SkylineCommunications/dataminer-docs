@@ -1,0 +1,60 @@
+---
+uid: Cube_Feature_Release_10.7.2
+description: "Release notes for DataMiner Cube Feature Release 10.7.2, with new features, enhancements, and fixes planned for this release."
+---
+
+# DataMiner Cube Feature Release 10.7.2 - Preview
+
+> [!IMPORTANT]
+> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+
+This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU11].
+
+> [!TIP]
+>
+> - For release notes related to the general DataMiner release, see [General Feature Release 10.7.2](xref:General_Feature_Release_10.7.2).
+> - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.7.2](xref:Web_apps_Feature_Release_10.7.2).
+
+## Highlights
+
+*No highlights have been selected yet.*
+
+## New features
+
+*No new features have been added yet.*
+
+## Changes
+
+### Enhancements
+
+#### Security enhancements [ID 46995]
+
+<!-- 46995: MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+A number of security enhancements have been made.
+
+### Fixes
+
+#### System Center: Indexing engine backup location would incorrectly be mandatory for external databases [ID 47026]
+
+<!-- MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+In *System Center > Backup*, up to now, you could not leave the *Indexing Engine backup location* empty, even when Elasticsearch or OpenSearch was hosted externally and DataMiner was not responsible for backing it up.
+
+From now on, this field can be left empty.
+
+#### EPM: Information pane below topology diagrams did not match the Cube theme [ID 47171]
+
+<!-- MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+The information pane below an EPM topology diagram did not use the correct background and foreground colors for the DataMiner Cube theme.
+
+The pane will now use the correct colors in both light and dark mode.
+
+#### EPM: Histogram windows did not match the Cube theme [ID 47179]
+
+<!-- MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+When you opened a histogram in an EPM environment, the histogram window did not match the DataMiner Cube theme.
+
+The window will now use the correct colors in both light and dark mode.

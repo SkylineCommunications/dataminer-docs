@@ -1,6 +1,6 @@
 ---
 uid: General_Feature_Release_10.6.12
-description: "Release notes for General Feature Release 10.6.12, including prerequisites, new features, enhancements, and fixes planned for this preview release."
+description: "Release notes for General Feature Release 10.6.12, including prerequisites, new features, enhancements, and fixes planned for this release."
 ---
 
 # General Feature Release 10.6.12
