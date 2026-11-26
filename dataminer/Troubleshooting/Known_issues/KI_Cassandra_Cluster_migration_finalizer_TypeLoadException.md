@@ -18,7 +18,7 @@ Attempting to run the migration again does not resolve this, as this happens for
 
 ## Fix
 
-No fix is available yet. <!-- Task 314380 -->
+Install DataMiner 10.6.0 [CU10]/10.7.1.<!-- RN 47230 -->
 
 ## Workaround
 

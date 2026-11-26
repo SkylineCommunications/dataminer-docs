@@ -8,7 +8,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Cassandra Cluster migration finalizer fails with TypeLoadException](xref:KI_Cassandra_Cluster_migration_finalizer_TypeLoadException) | From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards | | November 25, 2026 |
 | [NATSForceManualConfig ignored after BrokerGateway migration rollback](xref:KI_NATSForceManualConfig_ignored_after_BrokerGateway_migration_rollback) | From DataMiner 10.5.0 [CU1]/10.5.4 onwards | | November 24, 2026 |
 | [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.10 onwards | | October 8, 2026 |
 | [Profile Manager fails to initialize after rollback to an earlier DataMiner version](xref:KI_profile_manager_fails_after_rollback) | DataMiner versions that support new Profile Manager features | | January 16, 2026 |
@@ -23,6 +22,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Cassandra Cluster migration finalizer fails with TypeLoadException](xref:KI_Cassandra_Cluster_migration_finalizer_TypeLoadException) | From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards | DataMiner 10.6.0 [CU10]/10.7.1 | November 25, 2026 |
 | [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
 | [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 | October 9, 2026 |
 | [Libraries unavailable to scripts running in separate SLAutomation.ScriptRunner processes](xref:KI_SLAutomation_ScriptRunner_missing_assemblies) | Feature Release versions from DataMiner 10.6.9 onwards | DataMiner 10.6.11/10.7.0 | September 16, 2026 |
@@ -47,7 +47,6 @@ uid: Known_issues
 
 | Issue | Affected versions | Resolved in | Date added |
 | -- | -- | -- | -- |
-| [Cassandra Cluster migration finalizer fails with TypeLoadException](xref:KI_Cassandra_Cluster_migration_finalizer_TypeLoadException) | From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards | | November 25, 2026 |
 | [NATSForceManualConfig ignored after BrokerGateway migration rollback](xref:KI_NATSForceManualConfig_ignored_after_BrokerGateway_migration_rollback) | From DataMiner 10.5.0 [CU1]/10.5.4 onwards | | November 24, 2026 |
 | [Engine location is mandatory when configuring a backup of an external database](xref:KI_Engine_location_mandatory_when_configuring_backup_of_external_database) | From DataMiner 10.2.0 [CU19]/10.3.0 [CU7]/10.3.10 onwards | | October 8, 2026 |
 | [SLAutomation crash during DataMiner startup](xref:KI_SLAutomation_SLAutomation_crash_while_registering_with_CWatchDogClient) | All DataMiner versions | | July 2, 2026 |
@@ -63,6 +62,7 @@ uid: Known_issues
 | [SLElement issues caused by parameter name overrides](xref:KI_SLElement_issues_caused_by_parameter_name_overrides) | TBD | | November 25, 2022 |
 | [NATS not starting if DMS name contains special characters](xref:KI_NATS_not_starting_special_chars) | From DataMiner 10.1.0/10.1.2 <br>onwards | | November 8, 2022 |
 | [Upgrade fails because of VerifyClusterPort.dll prerequisite](xref:KI_Upgrade_fails_VerifyClusterPorts_prerequisite) | From 10.2.0 [CU1] and 10.2.4 onwards | | September 2, 2022 |
+| [Cassandra Cluster migration finalizer fails with TypeLoadException](xref:KI_Cassandra_Cluster_migration_finalizer_TypeLoadException) | From DataMiner 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11 onwards | DataMiner 10.6.0 [CU10]/10.7.1 | November 25, 2026 |
 | [DxMs fail to start with .NET 10.0.12](xref:KI_DxM_startup_failure_NET_10_0_12) | Any DataMiner version with affected DxMs running on .NET 10.0.12 | .NET 10.0.13 | November 16, 2026 |
 | [DELT export of elements returns unfiltered data after a STaaS cost estimation](xref:KI_DELT_export_unfiltered_after_STaaS_cost_estimation) | From DataMiner 10.4.0 [CU17]/10.5.0 [CU5]/10.5.8 onwards | DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 | October 9, 2026 |
 | [Microsoft Platform 6.0.0.x elements remain in timeout](xref:KI_Microsoft_Platform_elements_in_timeout) | DataMiner 10.5.0 [CU18]/10.6.0 [CU6]/10.6.9 | DataMiner 10.5.0 [CU19]/10.6.0 [CU7]/10.6.10 | September 7, 2026 |
