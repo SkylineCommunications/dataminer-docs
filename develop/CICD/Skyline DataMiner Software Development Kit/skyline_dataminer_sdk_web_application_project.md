@@ -100,6 +100,31 @@ Updates are applied atomically. An invalid update or an unknown or duplicated id
 
 Updates appear in place in the header and any open first-level menu. Reopen a deeper submenu to see updates there. Clicking outside a menu over the app's iframe dismisses the menu without activating the iframe content underneath. Custom controls are cleared when the host application model changes.
 
+## Requesting authentication tokens
+
+From DataMiner 10.6.0 [CU10]/10.7.1 onwards<!--RN 46953-->, an uploaded web application can request authentication tokens for one or more API endpoints in a single `postMessage` request to its parent window:
+
+```json
+{ "tokens": [{ "endpoint": "/API/v1/Json.asmx" }] }
+```
+
+Each endpoint receives a separate response, in which the token is keyed by the requested endpoint. In the example above, the token is returned under `tokens["/API/v1/Json.asmx"]`.
+
+Currently, only relative endpoints starting with `/api/v1/` are supported, regardless of casing. Unsupported endpoints, including absolute URLs, return the error message `This endpoint is not supported.`, while supported endpoints in the same request still receive their token. This contract prepares for future support for user-defined APIs, which cannot be requested yet.
+
+> [!NOTE]
+> In earlier DataMiner versions, an app requests a single token using `{ request: "token" }` and receives it in a `{ token: "..." }` response. From DataMiner 10.6.0 [CU10]/10.7.1 onwards, apps must use the endpoint-based contract described above.
+
+### Using a token with the Web API
+
+From DataMiner 10.6.0 [CU10]/10.7.1 onwards<!--RN 46953-->, the Web API accepts the token (connection string) in the HTTP header `Authorization: Bearer <connection string>`. Authentication is handled as follows:
+
+- A non-empty connection parameter takes precedence over the `Bearer` header.
+- When the connection parameter is empty or omitted, the `Bearer` credentials are used. Invalid `Bearer` credentials cause authentication to fail, even if a valid authentication cookie is present.
+- Cookie-based authentication remains available when no `Bearer` credentials are supplied.
+
+Cross-origin resource sharing (CORS) allows the `Authorization` header for sandboxed uploaded apps.
+
 ## Deploying a web application
 
 A web application project does not produce its own DataMiner application package. To deploy it, include it in a [DataMiner Package Project](xref:skyline_dataminer_sdk_dataminer_package_project). By default, the [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) file of a package project includes all *.csproj* and *.esproj* projects of the solution.
