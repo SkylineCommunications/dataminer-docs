@@ -111,11 +111,11 @@ New input components have been implemented in dashboards and low-code apps, repl
 > - When a large number is fed to a numeric input, scientific notation is used (e.g., 1000000000000000000000 becomes 1e+21).
 > - When a number does not fit within the min and max values of the receiving component, the default value is used instead.
 
-#### Web apps: About box will now also show the version of the DataMiner Assistant DxM [ID 45833]
+#### Web apps: About box will now also show the version of the DataMiner Assistant module [ID 45833]
 
 <!-- MR 10.5.0 [CU18] / 10.6.0 [CU6] - FR 10.6.9 -->
 
-From now on, the About box will also show the version of the DataMiner Assistant DxM.
+From now on, the About box will also show the version of the DataMiner Assistant module.
 
 If this DxM is not installed or not enabled, "Not installed" will be displayed instead of the version.
 

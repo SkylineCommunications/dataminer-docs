@@ -32,7 +32,7 @@ Additionally, data at rest is encrypted using Azure-managed encryption keys, ens
 
 The Azure models used by the agent framework are **stateless**: the models do not store prompts or completions during inference. Prompts and completions are not used to train, retrain, or improve base models.
 
-The DataMiner Assistant DxM running on the DataMiner server stores conversation history in memory so you can continue the current chat. Later, the conversation details will also be stored in the DataMiner database so you can resume previous conversations and read earlier chat history. When this is available, you will be able to delete conversations in DataMiner Assistant.
+The DataMiner Assistant module running on the DataMiner server stores conversation history in memory so you can continue the current chat. Later, the conversation details will also be stored in the DataMiner database so you can resume previous conversations and read earlier chat history. When this is available, you will be able to delete conversations in DataMiner Assistant.
 
 In the cloud, Microsoft Azure applies the following data handling practices:
 
