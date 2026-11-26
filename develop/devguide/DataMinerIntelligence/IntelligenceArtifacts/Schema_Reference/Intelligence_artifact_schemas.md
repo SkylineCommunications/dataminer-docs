@@ -22,19 +22,21 @@ schema-version: '1.0'
 ---
 ```
 
-Two optional fields apply to every artifact type:
+Two version fields apply to every artifact type:
 
 - `version` identifies the artifact revision. Use `MAJOR.MINOR.PATCH`, with non-negative 32-bit integers and no leading zeros. Prerelease and build suffixes are not supported. If omitted, the default is `1.0.0`.
-- `schema-version` identifies the metadata contract, not the artifact revision or NuGet package version. Use a quoted `major.minor` value. If omitted, loading treats it as `1.0`.
+- `schema-version` identifies the metadata contract, not the artifact revision or NuGet package version. Use a quoted `major.minor` value and always declare it explicitly. If it is omitted in a legacy artifact, loading treats it as `1.0`.
 
 ## Schema versions
 
 | Schema version | Changes | Reference |
 |--|--|--|
-| 1.0 | Defines agent, skill, script tool, ad hoc data source tool, and DOM tool metadata. Also the fallback when `schema-version` is omitted. | [Schema 1.0](xref:Intelligence_artifact_schema_1_0) |
+| 1.0 | Defines agent, skill, script tool, ad hoc data source tool, and DOM tool metadata. Also the compatibility fallback when `schema-version` is omitted. | [Schema 1.0](xref:Intelligence_artifact_schema_1_0) |
 | 1.1 | Adds the optional agent `agents` list for delegation. Other artifact fields are unchanged. | [Schema 1.1](xref:Intelligence_artifact_schema_1_1) |
+| 1.2 | Adds the optional agent `userFacing` visibility field. Other artifact fields are unchanged. | [Schema 1.2](xref:Intelligence_artifact_schema_1_2) |
+| 2.0 | Uses kebab-case names for declared frontmatter fields and adds the optional agent `user-facing` visibility field. | [Schema 2.0](xref:Intelligence_artifact_schema_2_0) |
 
-Use schema 1.1 when authoring delegation metadata. Check that the installed SDK and target Assistant support the selected schema; a schema newer than the validator's supported version is rejected. A schema version is not an SDK or Assistant release number.
+Use the schema matching your artifact, or schema 2.0 for new artifacts. Check that the installed SDK and target Assistant support the selected schema; a schema newer than the validator's supported version is rejected. A schema version is not an SDK or Assistant release number.
 
 Each schema version has its own complete reference. Select the page matching the artifact's declared `schema-version` rather than assuming that the latest documented fields are available in every version.
 

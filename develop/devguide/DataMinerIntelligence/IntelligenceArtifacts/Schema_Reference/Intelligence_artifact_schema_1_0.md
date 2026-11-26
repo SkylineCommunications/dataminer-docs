@@ -11,10 +11,10 @@ For compatibility and deployment behavior, see [Intelligence artifact schemas](x
 
 ## Version fields
 
-These optional scalar fields apply to every artifact type:
+These version fields apply to every artifact type:
 
 - `version`: Artifact revision in `MAJOR.MINOR.PATCH` format, using non-negative 32-bit integers without leading zeros. Prerelease and build suffixes are not supported. Defaults to `1.0.0` when omitted.
-- `schema-version`: Use `'1.0'` for this contract. When omitted, loading interprets the artifact as schema 1.0. This value is independent of artifact and SDK package versions.
+- `schema-version`: Use `'1.0'` for this contract and declare it explicitly. If it is omitted in a legacy artifact, loading interprets the artifact as schema 1.0. This value is independent of artifact and SDK package versions.
 
 ## Artifact types and body limits
 

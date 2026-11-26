@@ -1186,6 +1186,10 @@ items:
                 topicUid: Intelligence_artifact_schema_1_0
               - name: Schema 1.1
                 topicUid: Intelligence_artifact_schema_1_1
+              - name: Schema 1.2
+                topicUid: Intelligence_artifact_schema_1_2
+              - name: Schema 2.0
+                topicUid: Intelligence_artifact_schema_2_0
       - name: Document Intelligence
         topicUid: DocumentIntelligence
         items:
