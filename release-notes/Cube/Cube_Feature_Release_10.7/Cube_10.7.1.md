@@ -102,6 +102,16 @@ If Cube cannot retrieve the Orchestrator upgrade feature flag, it will display a
 
 A number of security enhancements have been made.
 
+#### System Center: Improved rolling upgrade options [ID 47110]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When the Orchestrator-based upgrade flow is selected, the rolling upgrade options will now always be shown when available. You no longer need to expand a panel to view them.
+
+If the configured inter-batch script is found, its name will be displayed as a link under *Configured upgrade script*. Selecting the link will open the script in Automation. If no script is configured or the configured script cannot be found, a link to documentation explaining how to provide an inter-batch script will be displayed instead.
+
+Retrieving the configured script name requires Orchestrator DxM 1.15.0 or higher.
+
 #### System Center: Orchestrator-based upgrades unavailable over cloud relay [ID 47133]
 
 <!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
