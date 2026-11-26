@@ -102,6 +102,14 @@ If Cube cannot retrieve the Orchestrator upgrade feature flag, it will display a
 
 A number of security enhancements have been made.
 
+#### System Center: Orchestrator-based upgrades unavailable over cloud relay [ID 47133]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you connect to DataMiner through On.DataMiner.Services, Cube will no longer activate the Orchestrator-based upgrade flow, even if your saved preference enables it. Upgrades in these sessions will use the SLNet-based flow. Upgrade-flow eligibility for other connections remains unchanged.
+
+In addition, links in the upgrade window will now be disabled when their section is disabled.
+
 ### Fixes
 
 #### Visual Overview: Parameter shapes would stop updating after a remote DMA restart or Failover switch [ID 46800]
