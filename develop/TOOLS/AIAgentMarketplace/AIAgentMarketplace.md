@@ -31,7 +31,7 @@ To use the DataMiner App Builder, you also need:
 - A DataMiner System running DataMiner 10.5.0 or higher.
 - [Node.js](https://nodejs.org/en/download)
 - [Git](https://git-scm.com/install/)
-- [Assistant module](xref:DataMinerExtensionModules#dataminer-assistant)
+- [Assistant module](xref:DataMinerCoreModules#assistant)
 
 ## Getting started
 

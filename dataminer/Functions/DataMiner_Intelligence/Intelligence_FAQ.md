@@ -11,7 +11,7 @@ description: "Find answers to common questions about DataMiner Intelligence, inc
 
 DataMiner Intelligence is the umbrella term for AI capabilities in DataMiner. It includes the agent framework, with agents, skills, and tools, and capabilities such as [Document Intelligence](xref:docintel) and [natural language to GQI](xref:Intelligence_NL2GQI).
 
-DataMiner Assistant is the name for the chat integrations that let you interact with DataMiner Intelligence agents, including the [DataMiner Assistant app](xref:Intelligence_Assistant_app) and [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365). The [DataMiner Assistant module](xref:DataMinerExtensionModules#dataminer-assistant) powers both the agent framework and the non-chat capabilities. For an overview, see [About DataMiner Intelligence](xref:DataMiner_Intelligence).
+DataMiner Assistant is the name for the chat integrations that let you interact with DataMiner Intelligence agents, including the [DataMiner Assistant app](xref:Intelligence_Assistant_app) and [DataMiner Assistant for Microsoft 365](xref:Intelligence_Assistant_M365). The [DataMiner Assistant module](xref:DataMinerCoreModules#assistant) powers both the agent framework and the non-chat capabilities. For an overview, see [About DataMiner Intelligence](xref:DataMiner_Intelligence).
 
 ### Does DataMiner Intelligence support languages other than English?
 

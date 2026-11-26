@@ -187,13 +187,13 @@ Following the end of life of Ticketing in DataMiner 10.6.0, the legacy Ticketing
 
 Queries that still use this data source can no longer be executed. In low-code apps, for example, they will fail with the error `GQI error: An unknown error occurred in GQI: Failed parsing request: Invalid ID: 'Ticketing'.`.
 
-#### DataMiner upgrade: DataMiner Assistant DxM installed on every Agent [ID 47047]
+#### DataMiner upgrade: DataMiner Assistant module installed on every Agent [ID 47047]
 
 <!-- MR 10.7.0 - FR 10.7.1 -->
 
-DataMiner web-only upgrades will now install the DataMiner Assistant DxM on every DataMiner Agent being upgraded, even if the DxM was not previously installed. Previously, upgrades would only update the DxM on Agents where it was already installed.
+DataMiner web-only upgrades will now install the DataMiner Assistant module on every DataMiner Agent being upgraded, even if the DxM was not previously installed. Previously, upgrades would only update the DxM on Agents where it was already installed.
 
-If a newer version of the DataMiner Assistant DxM is already installed, it will not be downgraded.
+If a newer version of the DataMiner Assistant module is already installed, it will not be downgraded.
 
 #### Web apps: Clearer sign-in screens and improved connection recovery [ID 47070]
 
