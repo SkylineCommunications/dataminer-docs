@@ -109,7 +109,7 @@ The newly created duplicate will be assigned a unique name and will automaticall
 
    - To duplicate a different version:
 
-     1. In the upper-right corner, click the ellipsis button ("...") and select *Versions*.
+     1. In the upper-right corner, click the ellipsis button ("...") and select *History*. Prior to DataMiner 10.6.0 [CU10]/10.7.1<!--RN 46917-->, this option is named *Versions*.
 
      1. Select the desired version.
 

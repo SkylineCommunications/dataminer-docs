@@ -28,7 +28,7 @@ Specific to low-code apps, the header bar contains the following items:
 
 - Ellipsis button: Click this button to open a context menu that provides access to the following options:
 
-  - *Versions*: Allows you to [retrieve an earlier app version](xref:LowCodeApps_earlier_version).
+  - *History*: Allows you to [retrieve an earlier app version](xref:LowCodeApps_earlier_version). Prior to DataMiner 10.6.0 [CU10]/10.7.1<!--RN 46917-->, this option is named *Versions*.
 
   - *Permissions* / *Settings*: Allows you to [configure app security](xref:LowCodeApps_security_config), determining which users and groups are allowed to view and/or edit the app.
 

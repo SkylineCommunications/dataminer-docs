@@ -44,9 +44,9 @@ DataMiner apps can use the standard [web app header bar](xref:Accessing_the_web_
 
 - For apps created in the low-code editor, the header bar uses the accent color of the app.
 
-- For new apps, the theme you select in your user settings (*Light*, *Dark*, or *System*) is applied to the header bar and to any app content that supports both a light and a dark color scheme.
+- For new apps, the theme you select in your user settings (*Light*, *Dark*, or *System*) is applied to the header bar and to any app content that supports both a light and a dark color scheme<!--RN 46917-->.
 
-If an app manages its own theme, the user settings will show the message "Theme setting is managed by the app.", and your selected theme will not affect that app.
+If an app manages its own theme, the user settings will show the message "Theme setting is managed by the app.", and your selected theme will not affect that app<!--RN 46973-->.
 
 > [!TIP]
 > If you add `?embed` to the URL of an app, the header bar is hidden. This is useful when you want to embed the app in another page.

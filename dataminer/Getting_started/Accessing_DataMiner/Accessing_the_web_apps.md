@@ -123,7 +123,7 @@ The *(User) Settings* option in the user menu provides access to the following o
 
   Prior to DataMiner 10.6.0 [CU10]/10.7.1<!--RN 46917-->, this option is only available when the *showAdvancedSettings=true* argument has been added to the URL.
 
-  If an app manages its own theme, the message "Theme setting is managed by the app." is displayed above this setting, and your selected theme will not affect that app.
+  If an app manages its own theme, the message "Theme setting is managed by the app." is displayed above this setting, and your selected theme will not affect that app<!--RN 46973-->.
 
 - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
 
