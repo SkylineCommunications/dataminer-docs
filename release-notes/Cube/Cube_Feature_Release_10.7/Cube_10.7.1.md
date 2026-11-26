@@ -84,6 +84,18 @@ From now on, DataMiner Cube will handle elements used in element connections as 
 > [!NOTE]
 > If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
 
+#### System Center: Orchestrator-based upgrades selected by default [ID 46980]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+DataMiner Cube will now select the Orchestrator-based upgrade flow by default when the connected Orchestrator supports it.
+
+Existing upgrade-flow preferences will be migrated once to the new default, including preferences previously set to use the SLNet-based flow. After migration, your saved preference will be preserved.
+
+If the server does not support Orchestrator-based upgrades or the system is ineligible, for example because it contains DataMiner Probes, Cube will use the existing SLNet-based flow without overwriting your saved preference.
+
+If Cube cannot retrieve the Orchestrator upgrade feature flag, it will display a warning and block upgrade actions while the Orchestrator-based flow is selected. You can switch to the SLNet-based flow to continue upgrading. If Orchestrator availability changes while the upgrade window is open, close and reopen the window to refresh its status.
+
 #### Security enhancements [ID 46985]
 
 <!-- 46985: MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
