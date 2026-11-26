@@ -132,15 +132,6 @@ Property values, JSON structure, and type information remain unchanged. Existing
 > [!NOTE]
 > Custom scripts or integrations that compare the exact JSON text returned by `JSONSerializableDictionary.ToJson()` or `ToElasticJson()` may need to account for the removed whitespace.
 
-#### DataMiner upgrade: Cleanup of DIS Inject folders [ID 47149]
-
-<!-- MR 10.8.0 - FR 10.7.2 -->
-
-During a DataMiner upgrade, the following folders used by DIS Inject will now be cleared:
-
-- `Scripts\DISInject`, which contains injected automation script assemblies.
-- `ProtocolScripts\DISInject`, which contains injected protocol QActions.
-
 ### Fixes
 
 #### SLNet: CCA initialization alarm could remain active after a successful retry [ID 47046]

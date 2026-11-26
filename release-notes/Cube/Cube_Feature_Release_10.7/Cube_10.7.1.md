@@ -84,11 +84,56 @@ From now on, DataMiner Cube will handle elements used in element connections as 
 > [!NOTE]
 > If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
 
+#### System Center: Orchestrator-based upgrades selected by default [ID 46980]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+DataMiner Cube will now select the Orchestrator-based upgrade flow by default when the connected Orchestrator supports it.
+
+Existing upgrade-flow preferences will be migrated once to the new default, including preferences previously set to use the SLNet-based flow. After migration, your saved preference will be preserved.
+
+If the server does not support Orchestrator-based upgrades or the system is ineligible, for example because it contains DataMiner Probes, Cube will use the existing SLNet-based flow without overwriting your saved preference.
+
+If Cube cannot retrieve the Orchestrator upgrade feature flag, it will display a warning and block upgrade actions while the Orchestrator-based flow is selected. You can switch to the SLNet-based flow to continue upgrading. If Orchestrator availability changes while the upgrade window is open, close and reopen the window to refresh its status.
+
 #### Security enhancements [ID 46985]
 
 <!-- 46985: MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
 
 A number of security enhancements have been made.
+
+#### Element wizard: Improved selection of local Edge Nodes [ID 47043]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+On a single-agent system with only one Edge Node, if that node is local, DataMiner Cube will now treat it as part of the DataMiner Agent. The element wizard will select it implicitly and hide the Edge Node selector.
+
+When multiple targets are available, the local node will be identified as "(DMA)" and remain selectable. On systems with multiple DataMiner Agents, the selector will remain available even if there is only one Edge Node.
+
+If no Edge Nodes are available, Cube will display a clear message. If an existing element's saved target is unavailable, Cube will not automatically move the element to another target. You must explicitly select a target instead.
+
+Identifying a local Edge Node relies on the server-provided `IsLocal` flag. If the connected DataMiner Agent does not provide this flag, all Edge Nodes will be listed with their own names and the selector will remain visible. On a single-agent system, an Edge Node will no longer be pre-selected for a new element based on the DataMiner Agent name.
+
+> [!IMPORTANT]
+> At present, the Edge Nodes feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi)soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+#### System Center: Improved rolling upgrade options [ID 47110]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When the Orchestrator-based upgrade flow is selected, the rolling upgrade options will now always be shown when available. You no longer need to expand a panel to view them.
+
+If the configured inter-batch script is found, its name will be displayed as a link under *Configured upgrade script*. Selecting the link will open the script in Automation. If no script is configured or the configured script cannot be found, a link to documentation explaining how to provide an inter-batch script will be displayed instead.
+
+Retrieving the configured script name requires Orchestrator DxM 1.15.0 or higher.
+
+#### System Center: Orchestrator-based upgrades unavailable over cloud relay [ID 47133]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you connect to DataMiner through On.DataMiner.Services, Cube will no longer activate the Orchestrator-based upgrade flow, even if your saved preference enables it. Upgrades in these sessions will use the SLNet-based flow. Upgrade-flow eligibility for other connections remains unchanged.
+
+In addition, links in the upgrade window will now be disabled when their section is disabled.
 
 ### Fixes
 
@@ -164,6 +209,17 @@ When you panned a trend graph to an older time range, the corresponding trend da
 When you viewed a longer period, such as the last month, in a trend graph with *Show most detailed data* enabled, the minimum and maximum curves could contain incorrect diagonal lines.
 
 These curves will now be drawn correctly.
+
+#### System Center: Edge module could become unavailable on supported servers [ID 47058]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When obsolete Edge lifecycle messages were removed from a DataMiner server, the Edge module could become unavailable in Cube's System Center even though the server still supported it. The compatibility check relied on one of these obsolete messages.
+
+Cube will now use an updated compatibility check that does not rely on the obsolete lifecycle message. The existing connection and DataAPI soft-launch checks remain unchanged.
+
+> [!IMPORTANT]
+> At present, the Edge Nodes feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi)soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
 
 #### Element deletion could fail without a warning [ID 47081]
 

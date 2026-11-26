@@ -27,7 +27,41 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
-*No enhancements have been added yet.*
+#### DataMiner apps: Frame styling and header button types [ID 47180]
+
+<!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
+
+Uploaded DataMiner apps can now customize their iframe styling and header button appearance through the `postMessage` API.
+
+##### Frame styling
+
+Use `frameStyle.set` to replace previously supplied styles, or `frameStyle.update` to merge changes with existing styles. For example, send the following message to replace the frame styles:
+
+```json
+{
+  "frameStyle": {
+    "set": {
+      "borderRadius": "12px",
+      "overflow": "hidden",
+      "opacity": 0.9
+    }
+  }
+}
+```
+
+Set a property to `null` in an update to remove it, for example `{"frameStyle":{"update":{"opacity":null}}}`. Send `{"frameStyle":{"set":{}}}` to clear all previously supplied styles.
+
+##### Header button types
+
+Use the `buttonType` field in `header.set` or `header.update` to select one of the following header button types:
+
+- `cta`: Call-to-action.
+- `subtle`: Subtle.
+- `danger`: Danger.
+
+For example, send `{"header":{"update":[{"identifier":"save","buttonType":"cta"}]}}` to change an existing button to a call-to-action button.
+
+On mobile screens, header buttons with icons will hide their labels. Text-only buttons will retain their labels.
 
 ### Fixes
 
@@ -46,3 +80,11 @@ These settings will now be read without logging this error.
 During a DataMiner upgrade, the web backup tool could log an "already exists" error when an app's published and draft versions pointed to the same folder. The tool would try to copy that folder twice. This could affect older apps that retained these settings after an upgrade.
 
 From now on, when the published and draft versions point to the same folder, that folder will be backed up only once. Apps with a separate draft will still have both versions backed up.
+
+#### Uploaded DataMiner apps: Incorrect missing-version warnings during upgrades [ID 47225]
+
+<!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
+
+During a DataMiner upgrade, the web backup tool could incorrectly log "Version folder not found" warnings for uploaded DataMiner apps.
+
+The web backup tool will now skip uploaded DataMiner apps instead of logging these unnecessary warnings. Low-code apps will still be backed up as before.

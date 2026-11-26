@@ -1129,6 +1129,15 @@ The following remaining reference to the legacy Annotations module, which has re
 
 - ISAPI filtering no longer takes `/annotations/` into account.
 
+#### DataMiner upgrade: Cleanup of DIS Inject folders [ID 47149]
+
+<!-- MR 10.7.0 - FR 10.7.2 -->
+
+During a DataMiner upgrade, the following folders used by DIS Inject will now be cleared:
+
+- `Scripts\DISInject`, which contains injected automation script assemblies.
+- `ProtocolScripts\DISInject`, which contains injected protocol QActions.
+
 ### Fixes
 
 #### SLAnalytics would not receive 'swarming complete' notifications for swarmed DVE child elements [ID 43984]
@@ -1393,3 +1402,14 @@ From now on, Script Runner will no longer add `C:\Skyline DataMiner\ProtocolScri
 
 > [!IMPORTANT]
 > If a script executed by Script Runner needs a DLL from either protocol scripts folder, you must add an explicit reference to that DLL in the script. These folders will no longer be searched automatically.
+
+#### SLNet: Element deletion could leave schedules on offline Edge Nodes [ID 47080]
+
+<!-- MR 10.7.0 - FR 10.7.1 -->
+
+When an element was deleted while its Edge Node was offline, its schedule could remain on that node. SLNet will now block element deletion until the Edge Node is reachable again.
+
+If you move a scripted connector to another Edge Node while the original Edge Node is offline, an error will now be returned. The element change will still be saved, but the schedule will not be deployed on the new Edge Node.
+
+> [!IMPORTANT]
+> At present, the Edge Nodes feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi)soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).

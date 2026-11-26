@@ -409,6 +409,14 @@ When a real-time update affected multiple rows, values from an earlier row could
 
 Real-time updates will now preserve unchanged cells in each row.
 
+#### DataMiner Intelligence: Teaser could appear when Assistant was unavailable [ID 47146]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 - FR 10.7.1 -->
+
+The DataMiner Intelligence teaser on the DataMiner landing page could be displayed when the Assistant DxM was unavailable, even though DataMiner Intelligence was already enabled in *System settings*.
+
+The teaser will now also check the value of the *DataMiner Intelligence* setting and will no longer be displayed when the setting is enabled. The existing behavior when the setting is disabled remains unchanged.
+
 #### Web API: GQI heartbeats could prevent idle connections from timing out [ID 47164]
 
 <!-- MR 10.6.0 [CU10] - FR 10.7.1 -->

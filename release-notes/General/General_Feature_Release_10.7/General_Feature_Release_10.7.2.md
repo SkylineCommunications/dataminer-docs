@@ -73,7 +73,7 @@ Property values, JSON structure, and type information remain unchanged. Existing
 
 #### DataMiner upgrade: Cleanup of DIS Inject folders [ID 47149]
 
-<!-- MR 10.8.0 - FR 10.7.2 -->
+<!-- MR 10.7.0 - FR 10.7.2 -->
 
 During a DataMiner upgrade, the following folders used by DIS Inject will now be cleared:
 
@@ -97,3 +97,11 @@ From now on, stopping the queue will also stop its processing thread. DataMiner 
 When SLAnalytics received a DVE child element before its parent element, it would keep the child element on hold until the parent arrived. If the parent then arrived but had not yet been stored, SLAnalytics could stop working while processing the child elements.
 
 This could happen, for example, during the weekly alarm template cache cleanup.
+
+#### Factory reset tool: Web version information was deleted [ID 47226]
+
+<!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
+
+When you ran the factory reset tool *SLReset.exe* using the default reset settings, the `C:\Skyline DataMiner\Upgrades\VersionInfoWeb.json` file containing the web version information was incorrectly deleted.
+
+The default whitelist now preserves this file. Existing *ResetConfig.txt* files are not updated automatically.
