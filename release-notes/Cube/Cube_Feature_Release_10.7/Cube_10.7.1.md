@@ -210,6 +210,17 @@ When you viewed a longer period, such as the last month, in a trend graph with *
 
 These curves will now be drawn correctly.
 
+#### System Center: Edge module could become unavailable on supported servers [ID 47058]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When obsolete Edge lifecycle messages were removed from a DataMiner server, the Edge module could become unavailable in Cube's System Center even though the server still supported it. The compatibility check relied on one of these obsolete messages.
+
+Cube will now use an updated compatibility check that does not rely on the obsolete lifecycle message. The existing connection and DataAPI soft-launch checks remain unchanged.
+
+> [!IMPORTANT]
+> At present, the Edge Nodes feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi)soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
 #### Element deletion could fail without a warning [ID 47081]
 
 <!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
