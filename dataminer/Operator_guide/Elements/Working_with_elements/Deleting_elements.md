@@ -10,7 +10,7 @@ To delete an element:
 
 1. In the confirmation box, click *Yes*.
 
-From DataMiner 10.7.0/10.7.1 onwards<!--RN 47080-->, an element using an Edge Node cannot be deleted while that node is unreachable. Restore the connection before deleting the element.
+Note that in some cases deleting an element may not be possible:
 
-> [!NOTE]
-> Some elements may be created by a different parent element. In that case, deleting these elements may not be possible, except by an Administrator, or via the parent element.
+- Some elements may be created by a different parent element. In that case, deleting these elements may not be possible, except by an Administrator or via the parent element.
+- From DataMiner 10.7.0/10.7.1 onwards<!--RN 47080-->, an element using an [Edge Node](xref:About_Edge_Nodes) cannot be deleted while that node is unreachable. Restore the connection before deleting the element.
