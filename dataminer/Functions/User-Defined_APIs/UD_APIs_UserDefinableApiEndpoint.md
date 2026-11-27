@@ -29,26 +29,26 @@ Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and
 
 - **Installed with DataMiner version**: The DataMiner version where the installer for this DxM version was first available. You can use this to know what the best matching DxM version is for a DataMiner Agent.
 
-| DxM version | Required .NET version | Compatible with DataMiner versions | Installed with DataMiner feature release version | Installed with DataMiner main release version |
-|-------------|-----------------------|------------------------------------|--------------------------------------------------|---|
-| 1.0.2       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.5 (preview)                                 | N/A |
-| 1.1.0       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.6                                           | N/A |
-| 1.1.1       | .NET 6                | 10.3.6 to 10.3.7                   | 10.3.7                                           | N/A |
-| 2.0.0       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.8                                           | N/A |
-| 2.0.2       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.9                                           | N/A |
-| 3.1.0       | .NET 6                | 10.4.0+                            | 10.4.1                                           | N/A |
-| 3.2.0       | .NET 6                | 10.4.0+                            | 10.4.3                                           | 10.4.0 [CU0] |
-| 3.2.3       | .NET 8<!--RN 40303--> | 10.4.0+                            | 10.4.9                                           | N/A |
-| 3.2.4       | .NET 8                | 10.4.0+                            | 10.4.10                                          | N/A |
-| 3.3.0       | .NET 8                | 10.4.0+                            | 10.4.12<!--RN 40797--><!--RN 41466-->            | 10.5.0 [CU0] / 10.4.0 [CU10] |
-| 3.3.1       | .NET 8                | 10.4.0+                            | 10.5.6                                           | 10.5.0 [CU12] |
-| 3.5.0       | .NET 8                | 10.4.0+                            | 10.5.12                                          | 10.6.0 [CU0] |
-| 3.6.0       | .NET 8                | 10.4.0+                            | 10.6.1                                           | N/A |
-| 3.7.0       | .NET 8                | 10.4.0+                            | 10.6.7                                           | N/A |
-| 3.8.0       | .NET 8                | 10.4.0+                            | 10.6.8                                           | N/A |
-| 3.11.0      | .NET 10               | 10.4.0+                            | 10.6.10                                          | N/A |
-| 3.12.1      | .NET 10               | 10.4.0+                            | 10.6.11                                          | 10.6.0 [CU8] / 10.5.0 [CU20] |
-| 4.0.0       | .NET 10               | 10.5.0+ (with API Gateway 0.11)    | 10.7.1                                           | 10.7.0 [CU0] / 10.6.0 [CU10] |
+| DxM version | Required .NET version | Compatible with DataMiner versions | Installed with DataMiner version                           |
+|-------------|-----------------------|------------------------------------|------------------------------------------------------------|
+| 1.0.2       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.5 (preview - Feature Release only)                    |
+| 1.1.0       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.6 (Feature Release only)                              |
+| 1.1.1       | .NET 6                | 10.3.6 to 10.3.7                   | 10.3.7 (Feature Release only)                              |
+| 2.0.0       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.8 (Feature Release only)                              |
+| 2.0.2       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.9 (Feature Release only)                              |
+| 3.1.0       | .NET 6                | 10.4.0+                            | 10.4.1 (Feature Release only)                              |
+| 3.2.0       | .NET 6                | 10.4.0+                            | 10.4.0/10.4.3                                              |
+| 3.2.3       | .NET 8<!--RN 40303--> | 10.4.0+                            | 10.4.9 (Feature Release only)                              |
+| 3.2.4       | .NET 8                | 10.4.0+                            | 10.4.10 (Feature Release only)                             |
+| 3.3.0       | .NET 8                | 10.4.0+                            | 10.4.0 [CU10]/10.4.12/10.5.0<!--RN 40797--><!--RN 41466--> |
+| 3.3.1       | .NET 8                | 10.4.0+                            | 10.5.0 [CU12]/10.5.6                                       |
+| 3.5.0       | .NET 8                | 10.4.0+                            | 10.5.12/10.6.0                                             |
+| 3.6.0       | .NET 8                | 10.4.0+                            | 10.6.1 (Feature Release only)                              |
+| 3.7.0       | .NET 8                | 10.4.0+                            | 10.6.7 (Feature Release only)                              |
+| 3.8.0       | .NET 8                | 10.4.0+                            | 10.6.8 (Feature Release only)                              |
+| 3.11.0      | .NET 10               | 10.4.0+                            | 10.6.10 (Feature Release only)                             |
+| 3.12.1      | .NET 10               | 10.4.0+                            | 10.5.0 [CU20]/10.6.0 [CU8]/10.6.11                         |
+| 4.0.0       | .NET 10               | 10.5.0+ (with API Gateway 0.11)    | 10.6.0 [CU10]/10.7.0/10.7.1                                |
 
 > [!NOTE]
 >
@@ -69,7 +69,7 @@ The *UserDefinableAPIEndpoint* DxM uses **NATS** to communicate with DataMiner. 
 
 ## Configuring HTTPS
 
-From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards, HTTPS is the only officially supported protocol. Earlier versions of the *UserDefinableApiEndpoint* DxM support HTTP, and HTTP may continue to work for a limited time after an upgrade to one of these versions. However, HTTP exposes the bearer token and may be blocked in a future version.
+From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards<!-- RN 47107 -->, HTTPS is the only officially supported protocol. Earlier versions of the *UserDefinableApiEndpoint* DxM support HTTP, and HTTP may continue to work for a limited time after an upgrade to one of these versions. However, HTTP exposes the bearer token and may be blocked in a future version.
 
 For more information on how to set this up, see [Setting up HTTPs on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
@@ -211,7 +211,7 @@ The service reports the current rewrite rule state in the logging and publishes 
 
 The service logs an informational message when the rule is first confirmed as healthy or when a problem is repaired. It logs an error when a check or repair fails. Repeated successful checks or repeated instances of the same failure use debug-level logging.
 
-In Feature Release versions from DataMiner 10.6.10 up to, but not including, 10.7.1, the running endpoint service created and repaired the rule instead of an installer custom action. During a major upgrade, the installer left the rule in place so the service could continue to maintain it. The installer removed the managed rule only during a full uninstall.
+In Feature Release versions from DataMiner 10.6.10 up to, but not including, 10.7.1, the running endpoint service creates and repairs the rule instead of an installer custom action. During a major upgrade, the installer leaves the rule in place so the service can continue to maintain it. The installer removes the managed rule only during a full uninstall.
 
 #### Configuring the rewrite rule for older versions
 
@@ -283,9 +283,14 @@ This section contains options specific to this DxM module:
   > [!NOTE]
   > From DataMiner 10.3.7 onwards, NatsSubject is an optional setting.
 
-- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out. By default, this is set to 90 seconds (i.e., 1.5 minutes). If you increase this value, you may also need to [increase the timeout in IIS](#changing-the-timeout), depending on the DataMiner version.
+- **MessageBrokerTimeOutSeconds**: The time the message broker (sending the NATS trigger to SLNet) will wait for a response before it times out.
+
+  By default, this is set to 90 seconds (i.e., 1.5 minutes). If you increase this value and you are using a DataMiner version prior to 10.6.0 [CU10]/10.7.0/10.7.1, you will also need to [increase the timeout in IIS](#changing-the-timeout-prior-to-dataminer-1060-cu1010701071-only).
+
 - **SessionConfigPath**: Optional. The path to the NATS config file. The default configuration will be used when this is not filled in.
+
 - **CredentialsConfigPath**: Optional. The path to the credentials file (.creds) used to connect to the NATS message bus. The default credentials will be used when this is not filled in.
+
 - **RateLimitNotificationIntervalSeconds**: Optional. The cooldown time before the endpoint will notify DataMiner when a rate limit is exceeded. Set to 60 seconds by default.
 
 For example, this is the default configuration:
@@ -298,18 +303,16 @@ For example, this is the default configuration:
 }
 ```
 
-#### Changing the timeout
+#### Changing the timeout (prior to DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 only)
 
-Before DataMiner 10.6.0 [CU10]/10.7.0/10.7.1, if you increased the `MessageBrokerTimeOutSeconds` setting, you also needed to increase the IIS timeout for proxied requests. From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards, requests are no longer routed through IIS, so no additional IIS configuration is needed.
-
-##### Changing the IIS timeout in older versions
+Prior to DataMiner 10.6.0 [CU10]/10.7.0/10.7.1, if you increase the `MessageBrokerTimeOutSeconds` setting, you also need to increase the IIS timeout for proxied requests. From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards, requests are no longer routed through IIS, so no additional IIS configuration is needed.
 
 IIS has a timeout set to 120 seconds (2 minutes). When you increase the **MessageBrokerTimeOutSeconds** as mentioned above, you will also need to increase this timeout in IIS.
 
 > [!NOTE]
 > The timeout in IIS should be longer than the **MessageBrokerTimeOutSeconds**, so that there is a margin.
 
-You can change the time-out in IIS as follows:
+You can change the timeout in IIS as follows:
 
 1. Open the *Internet Information Services (IIS) Manager* app in Windows.
 

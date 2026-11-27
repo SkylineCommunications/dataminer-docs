@@ -8,7 +8,7 @@ description: "Learn how to send HTTPS requests to trigger user-defined APIs, inc
 To trigger an API, you can send an HTTPS request to the *UserDefinableApiEndpoint* DxM.
 
 > [!IMPORTANT]
-> From DataMiner 10.7.0 onwards, HTTPS is the only officially supported protocol. Existing installations may still accept unsecured HTTP requests through the legacy IIS rewrite rule for a limited time, but these requests expose the bearer token and are not recommended.
+> From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards, HTTPS is the only officially supported protocol. Existing installations may still accept unsecured HTTP requests through the legacy IIS rewrite rule for a limited time, but these requests expose the bearer token and are not recommended.
 
 > [!NOTE]
 >

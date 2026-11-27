@@ -74,16 +74,16 @@ end
 
 ## IIS rewrite rule
 
-For DataMiner versions prior to 10.6.0 [CU10]/10.7.0/10.7.1, IIS uses a rewrite rule to route requests to the endpoint. If API requests fail for these versions, check `UserDefinableApiEndpoint.txt` for rewrite rule validation or repair errors. For details about the rule configuration and `RewriteRuleHealthInfo` statuses, see [IIS rewrite rule](xref:UD_APIs_UserDefinableApiEndpoint#iis-rewrite-rule). Common causes include:
+For DataMiner versions prior to 10.6.0 [CU10]/10.7.0/10.7.1<!-- RN 47107 -->, IIS uses a rewrite rule to route requests to the endpoint. If API requests fail for these versions, check `UserDefinableApiEndpoint.txt` for rewrite rule validation or repair errors. For details about the rule configuration and `RewriteRuleHealthInfo` statuses, see [IIS rewrite rule](xref:UD_APIs_UserDefinableApiEndpoint#iis-rewrite-rule). Common causes include:
 
 - The configured IIS site does not exist.
 - The Kestrel HTTP URL or the IIS configuration is invalid.
 - The service account does not have the required access.
 - The API folder `web.config` cannot be read or updated.
 
-### Installer-based checks in older versions
+## Installer-based checks in older versions
 
-In older DataMiner versions that still use IIS and predate service-side rewrite rule checks (Feature Release versions before 10.6.10 and Main Release versions before 10.7.0), the installer creates and validates the IIS rewrite rule during installation or upgrade. It does not continue checking the rule while the endpoint service is running. If you change the Kestrel port, you have to update the rewrite rule manually. See [Configuring the rewrite rule for older versions](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-rewrite-rule-for-older-versions).
+In DataMiner versions prior to 10.6.10 on the Feature Release track or 10.6.0 [CU10]//10.7.0 on the Main Release track<!-- RN 46143 --><!-- RN 47107: 10.6.0 CU10 -->, the installer creates and validates the IIS rewrite rule during installation or upgrade. It does not continue checking the rule while the endpoint service is running. If you change the Kestrel port, you have to update the rewrite rule manually. See [Configuring the rewrite rule for older versions](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-rewrite-rule-for-older-versions).
 
 - **Found rewrite rule, but it has inconsistencies:**
 
