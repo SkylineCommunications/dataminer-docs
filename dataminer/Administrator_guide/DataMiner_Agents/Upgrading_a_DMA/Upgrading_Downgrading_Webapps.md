@@ -17,7 +17,7 @@ From DataMiner 10.5.x onwards, web apps can only be upgraded to the next major v
 
 - To install a 10.6.x web upgrade, the server must first be upgraded to at least version 10.5.0<!--RN 44103-->.
 
-- To install a 10.7.x web upgrade, the server must first be upgraded to at least version 10.9.0<!--RN 46910-->.
+- To install a 10.7.x web upgrade, the server must first be upgraded to at least version 10.8.0<!--RN 46910-->.
 
 > [!NOTE]
 >
