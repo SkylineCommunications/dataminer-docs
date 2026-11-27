@@ -9,6 +9,10 @@ The dataminer.services platform gets updated continuously. This change log can h
 > [!NOTE]
 > Many features on dataminer.services are dependent on DxMs. You can find the change logs for these under [DxM release notes](xref:DxM_RNs_index).
 
+### 27 October 2026 - Fix - Status page - Incidents from the last 30 days not shown
+
+The status page no longer displayed the list of incidents from the last 30 days. This has now been fixed.
+
 ### 8 October 2026 - Fix - Authentication - Clearer error message when sign-in provider cannot be reached
 
 When your browser could not reach the configured sign-in provider, for example because a firewall, proxy, or browser extension blocked the connection, the sign-in page incorrectly reported that the sign-in attempt had timed out. It now identifies the sign-in provider that could not be reached and advises you to ask your network administrator to allow access to it.
