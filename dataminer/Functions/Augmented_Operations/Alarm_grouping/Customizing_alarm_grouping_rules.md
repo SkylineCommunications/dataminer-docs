@@ -1,5 +1,6 @@
 ---
 uid: Customizing_alarm_grouping_rules
+description: "Customize alarm grouping rules in DataMiner by editing configuration.xml to enable rules, adjust thresholds, and define custom properties."
 ---
 
 # Customizing alarm grouping rules

@@ -1,5 +1,6 @@
 ---
 uid: Editing_a_pattern_definition
+description: "Edit a pattern definition in DataMiner to rename patterns, with version-specific instructions for alarm monitoring and changing pattern boundaries."
 ---
 
 # Editing a pattern definition

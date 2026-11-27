@@ -1,5 +1,6 @@
 ---
 uid: RAD_Manager_install
+description: "Install the RAD Manager app from the Catalog to configure relational anomaly detection, view anomaly scores, and visualize detected anomalies."
 ---
 
 # Installing the RAD Manager

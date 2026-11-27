@@ -1,5 +1,6 @@
 ---
 uid: Monitoring_of_trend_patterns
+description: "Enable monitoring of trend patterns in DataMiner to trigger suggestion events, and review pattern size limits, memory usage, and load restrictions."
 ---
 
 # Monitoring patterns

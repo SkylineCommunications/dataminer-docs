@@ -1,5 +1,6 @@
 ---
 uid: Managing_pattern_definitions
+description: "Manage pattern definitions in DataMiner with the Pattern Overview window. Edit names, descriptions, detection settings, and scope, or delete patterns."
 ---
 
 # Managing pattern definitions

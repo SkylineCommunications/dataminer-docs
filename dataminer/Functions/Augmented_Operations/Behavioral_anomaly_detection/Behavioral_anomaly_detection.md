@@ -1,5 +1,6 @@
 ---
 uid: Behavioral_anomaly_detection
+description: "Use behavioral anomaly detection in DataMiner to identify unexpected changes in trends and monitor suggestion events or alarms in the Alarm Console."
 ---
 
 # Behavioral anomaly detection

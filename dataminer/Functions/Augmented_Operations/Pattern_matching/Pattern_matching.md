@@ -1,5 +1,6 @@
 ---
 uid: Pattern_matching
+description: "Use pattern matching in DataMiner to detect recurring patterns across one or more trended parameters, view matches, and configure memory usage."
 ---
 
 # Pattern matching

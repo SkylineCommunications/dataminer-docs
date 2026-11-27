@@ -1,5 +1,6 @@
 ---
 uid: Overview_Augmented_Operations
+description: "Explore DataMiner augmented operations features, including alarm focus, anomaly detection, pattern matching, and trend prediction."
 ---
 
 # Augmented operations

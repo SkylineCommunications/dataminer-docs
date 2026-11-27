@@ -1,5 +1,6 @@
 ---
 uid: Proactive_cap_detection
+description: "Use proactive cap detection in DataMiner to predict threshold breaches and receive suggestion events or alarms."
 ---
 
 # Proactive cap detection

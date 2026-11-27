@@ -1,5 +1,6 @@
 ---
 uid: RAD_API
+description: "Use the RAD API to configure Relational Anomaly Detection through DataMiner automation scripts, manage groups, and retrieve historical anomaly data."
 ---
 
 # Working with the RAD API

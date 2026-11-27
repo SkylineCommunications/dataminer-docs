@@ -1,5 +1,6 @@
 ---
 uid: Manually_creating_or_updating_alarm_groups
+description: "Manually create and update alarm groups in the DataMiner Alarm Console by adding, removing, or moving alarms and using drag-and-drop editing."
 ---
 
 # Manually creating or updating an alarm group
