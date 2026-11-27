@@ -24,7 +24,7 @@ The Automation API also uses the System account for operations such as setting a
 
 ## Direct SLNet messages
 
-When sending a direct SLNet message, using the methods below, the security context used is the user account:
+When a direct SLNet message is sent using the methods below, the security context used is the user account:
 
 - [engine.SendSLNetSingleResponseMessage](xref:Skyline.DataMiner.Automation.Engine.SendSLNetSingleResponseMessage(Skyline.DataMiner.Net.Messages.DMSMessage)).
 - `engine.GetUserConnection().HandleSingleResponseMessage`.

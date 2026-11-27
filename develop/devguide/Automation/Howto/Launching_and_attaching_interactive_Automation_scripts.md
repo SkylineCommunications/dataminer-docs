@@ -112,7 +112,7 @@ From an SLNet connection:
 Guid id = protocol.GetUserConnection().ConnectionID;
 
 // example: 448BB4B8-4E55-4CB7-BCC3-848923BD19DA
-// Note: the protocol.SLNet cookie is process-associated, not user-associated.
+// Note: The protocol.SLNet cookie is process-associated, not user-associated.
 ```
 
 ## Launching a script as a specific user
