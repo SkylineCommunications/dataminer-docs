@@ -1,5 +1,6 @@
 ---
 uid: SRM_migrating_service_definitions
+description: "Learn how to migrate DataMiner SRM service definitions by exporting and importing JSON files with the required identifiers and folders."
 ---
 
 # Migrating service definitions

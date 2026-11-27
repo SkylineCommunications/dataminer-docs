@@ -1,5 +1,6 @@
 ---
 uid: SRM_migrating
+description: "Migrate an SRM configuration between DMAs by importing virtual function definitions, profile instances, resources, and service definitions in order."
 ---
 
 # Migrating an SRM configuration from one DMA to another

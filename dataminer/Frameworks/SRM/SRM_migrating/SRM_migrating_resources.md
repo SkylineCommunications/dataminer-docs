@@ -1,5 +1,6 @@
 ---
 uid: SRM_migrating_resources
+description: "Learn how to migrate DataMiner SRM resources by exporting and importing Excel files to update existing resources or create new ones."
 ---
 
 # Migrating resources

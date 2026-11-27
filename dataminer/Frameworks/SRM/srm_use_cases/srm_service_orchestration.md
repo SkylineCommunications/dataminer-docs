@@ -1,5 +1,6 @@
 ---
 uid: srm_service_orchestration
+description: "Explore Service Orchestration in DataMiner SRM to automate service lifecycles, configure connected resources, and manage custom lifecycle states."
 ---
 
 # Service Orchestration

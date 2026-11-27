@@ -1,5 +1,6 @@
 ---
 uid: SRM_migrating_functions
+description: "Migrate virtual function definitions and associated objects between DataMiner Systems using the SRM export and import scripts and .dmapp packages."
 ---
 
 # Migrating virtual function definitions

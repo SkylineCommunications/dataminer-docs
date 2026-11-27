@@ -1,5 +1,6 @@
 ---
 uid: srm_use_cases
+description: "Explore DataMiner SRM use cases and choose the right mix of resource scheduling, automation, and orchestration for your workflows."
 ---
 
 # SRM use cases

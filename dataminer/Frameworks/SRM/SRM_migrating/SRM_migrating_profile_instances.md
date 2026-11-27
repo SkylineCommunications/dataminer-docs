@@ -1,5 +1,6 @@
 ---
 uid: SRM_migrating_profile_instances
+description: "Learn how to migrate DataMiner SRM profile instances by exporting and importing Excel files for specific profile definitions."
 ---
 
 # Migrating profile instances

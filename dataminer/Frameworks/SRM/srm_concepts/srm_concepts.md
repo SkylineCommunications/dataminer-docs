@@ -1,5 +1,6 @@
 ---
 uid: srm_concepts
+description: "Explore DataMiner SRM framework concepts and compare definitions, instantiations, and scripting components for resource and service orchestration."
 ---
 
 # SRM framework concepts
@@ -15,7 +16,7 @@ The tables below summarize the components and their scope.
 - [SRM definitions](xref:srm_definitions)
 
   | | Resource Automation | Resource Scheduling | Resource Orchestration | Service Orchestration |
-  |--|---------------------|---------------------|------------------------|-----------------------|
+  |---|---|---|---|---|
   | [Connector](xref:srm_definitions#connector) | Yes | Yes | Yes | Yes |
   | [Virtual function](xref:srm_definitions#virtual-function) | Yes | Yes | Yes | Yes |
   | [Profile parameter](xref:srm_definitions#profile-parameter) | Yes | Yes | Yes | Yes |
@@ -26,7 +27,7 @@ The tables below summarize the components and their scope.
 - [SRM instantiations](xref:srm_instantiations)
 
   | | Resource Automation | Resource Scheduling | Resource Orchestration | Service Orchestration |
-  |--|---------------------|---------------------|------------------------|-----------------------|
+  |---|---|---|---|---|
   | [Element](xref:srm_instantiations#element) | Yes | Yes | Yes | Yes |
   | [Virtual function resource](xref:srm_instantiations#virtual-function-resource) | Yes | Yes | Yes | Yes |
   | [Resource pool](xref:srm_instantiations#resource-pool) | Yes | Yes | Yes | Yes |
@@ -39,7 +40,7 @@ The tables below summarize the components and their scope.
 - [SRM scripting](xref:srm_scripting)
 
   | | Resource Automation | Resource Scheduling | Resource Orchestration | Service Orchestration |
-  |--|---------------------|---------------------|------------------------|-----------------------|
+  |---|---|---|---|---|
   | [Profile-Load Script (PLS)](xref:srm_scripting#profile-load-script-pls) | Yes | Yes | Yes | Yes |
   | [Lifecycle Service Orchestration (LSO) script](xref:srm_scripting#lifecycle-service-orchestration-lso-script) | No | No | No | Yes |
   | [Data Transfer Rules (DTR)](xref:srm_scripting#data-transfer-rules-dtr) | No | No | No | Yes |

@@ -1,5 +1,6 @@
 ---
 uid: srm_resource_scheduling
+description: "Explore Resource Scheduling in DataMiner to book resources ahead of events, track availability, and prevent resource conflicts."
 ---
 
 # Resource Scheduling
