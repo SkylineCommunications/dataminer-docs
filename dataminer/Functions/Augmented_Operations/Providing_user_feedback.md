@@ -1,5 +1,6 @@
 ---
 uid: Providing_user_feedback
+description: "Learn how to provide user feedback in the DataMiner Alarm Console to improve behavioral anomaly detection and proactive cap detection."
 ---
 
 # Providing user feedback
