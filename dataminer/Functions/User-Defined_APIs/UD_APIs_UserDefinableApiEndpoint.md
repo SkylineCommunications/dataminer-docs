@@ -29,25 +29,26 @@ Below you can find a list of all the *UserDefinableApiEndpoint* DxM versions and
 
 - **Installed with DataMiner version**: The DataMiner version where the installer for this DxM version was first available. You can use this to know what the best matching DxM version is for a DataMiner Agent.
 
-| DxM version | Required .NET version | Compatible with DataMiner versions | Installed with DataMiner version |
-|-------------|-----------------------|------------------------------------|----------------------------------|
-| 1.0.2       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.5 (preview)                 |
-| 1.1.0       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.6                           |
-| 1.1.1       | .NET 6                | 10.3.6 to 10.3.7                   | 10.3.7                           |
-| 2.0.0       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.8                           |
-| 2.0.2       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.9                           |
-| 3.1.0       | .NET 6                | 10.4.0+                            | 10.4.1                           |
-| 3.2.0       | .NET 6                | 10.4.0+                            | 10.4.3/10.4.0 (prior to [CU10])  |
-| 3.2.3       | .NET 8<!--RN 40303--> | 10.4.0+                            | 10.4.9                           |
-| 3.2.4       | .NET 8                | 10.4.0+                            | 10.4.10                          |
-| 3.3.0       | .NET 8                | 10.4.0+                            | 10.4.0 [CU10]/10.4.12<!--RN 40797--><!--RN 41466-->    |
-| 3.3.1       | .NET 8                | 10.4.0+                            | 10.5.6                           |
-| 3.5.0       | .NET 8                | 10.4.0+                            | 10.5.12                          |
-| 3.6.0       | .NET 8                | 10.4.0+                            | 10.6.1                           |
-| 3.7.0       | .NET 8                | 10.4.0+                            | 10.6.7                           |
-| 3.8.0       | .NET 8                | 10.4.0+                            | 10.6.8                           |
-| 3.11.0      | .NET 10               | 10.4.0+                            | 10.6.10                          |
-| 4.0.0       | .NET 10               | 10.5.0+ (with API Gateway 0.11)     | 10.7.0                           |
+| DxM version | Required .NET version | Compatible with DataMiner versions | Installed with DataMiner feature release version | Installed with DataMiner main release version |
+|-------------|-----------------------|------------------------------------|--------------------------------------------------|---|
+| 1.0.2       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.5 (preview)                                 | N/A |
+| 1.1.0       | .NET 5                | 10.3.6 to 10.3.7                   | 10.3.6                                           | N/A |
+| 1.1.1       | .NET 6                | 10.3.6 to 10.3.7                   | 10.3.7                                           | N/A |
+| 2.0.0       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.8                                           | N/A |
+| 2.0.2       | .NET 6                | 10.3.8 to 10.3.12                  | 10.3.9                                           | N/A |
+| 3.1.0       | .NET 6                | 10.4.0+                            | 10.4.1                                           | N/A |
+| 3.2.0       | .NET 6                | 10.4.0+                            | 10.4.3                                           | 10.4.0 [CU0] |
+| 3.2.3       | .NET 8<!--RN 40303--> | 10.4.0+                            | 10.4.9                                           | N/A |
+| 3.2.4       | .NET 8                | 10.4.0+                            | 10.4.10                                          | N/A |
+| 3.3.0       | .NET 8                | 10.4.0+                            | 10.4.12<!--RN 40797--><!--RN 41466-->            | 10.5.0 [CU0] / 10.4.0 [CU10] |
+| 3.3.1       | .NET 8                | 10.4.0+                            | 10.5.6                                           | 10.5.0 [CU12] |
+| 3.5.0       | .NET 8                | 10.4.0+                            | 10.5.12                                          | 10.6.0 [CU0] |
+| 3.6.0       | .NET 8                | 10.4.0+                            | 10.6.1                                           | N/A |
+| 3.7.0       | .NET 8                | 10.4.0+                            | 10.6.7                                           | N/A |
+| 3.8.0       | .NET 8                | 10.4.0+                            | 10.6.8                                           | N/A |
+| 3.11.0      | .NET 10               | 10.4.0+                            | 10.6.10                                          | N/A |
+| 3.12.1      | .NET 10               | 10.4.0+                            | 10.6.11                                          | 10.6.0 [CU8] / 10.5.0 [CU20] |
+| 4.0.0       | .NET 10               | 10.5.0+ (with API Gateway 0.11)    | 10.7.1                                           | 10.7.0 [CU0] / 10.6.0 [CU10] |
 
 > [!NOTE]
 >
@@ -68,7 +69,7 @@ The *UserDefinableAPIEndpoint* DxM uses **NATS** to communicate with DataMiner. 
 
 ## Configuring HTTPS
 
-From DataMiner 10.7.0 onwards, HTTPS is the only officially supported protocol. Earlier versions of the *UserDefinableApiEndpoint* DxM support HTTP, and HTTP may continue to work for a limited time after an upgrade to DataMiner 10.7.0. However, HTTP exposes the bearer token and may be blocked in a future version.
+From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards, HTTPS is the only officially supported protocol. Earlier versions of the *UserDefinableApiEndpoint* DxM support HTTP, and HTTP may continue to work for a limited time after an upgrade to one of these versions. However, HTTP exposes the bearer token and may be blocked in a future version.
 
 For more information on how to set this up, see [Setting up HTTPs on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
@@ -140,7 +141,7 @@ For example, this is the default configuration:
 
 ### API Gateway registration
 
-From DataMiner 10.7.1/10.7.0 onwards<!-- RN 47107 -->, HTTPS requests are routed through the [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway) DxM. The API Gateway applies a rate limit to all user-defined API triggers.
+From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards<!-- RN 47107 -->, HTTPS requests are routed through the [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway) DxM. The API Gateway applies a rate limit to all user-defined API triggers.
 
 By default, the API Gateway allows up to 6,000 requests per minute across all `/api/custom` routes on a DataMiner Agent. When the limit is exceeded, the API Gateway returns an HTTP `429 Too Many Requests` response. This limit applies in addition to the per-token [rate limit](xref:UD_APIs_Objects_ApiToken#ratelimit).
 
@@ -158,13 +159,13 @@ To customize this limit, set `RateLimitPerMinute` in *appsettings.custom.json* t
 
 Older versions of the *UserDefinableApiEndpoint* DxM rely on an IIS rewrite rule to route incoming HTTP(S) requests. The rule's management depends on the DataMiner version:
 
-- **From DataMiner 10.7.0 onwards**: No rewrite rule is required. Requests are routed through the API Gateway.
-- **From DataMiner 10.6.10 up to, but not including, 10.7.0**: The endpoint process managed the rewrite rule and automatically repaired any issues.
-- **Before DataMiner 10.6.10**: The installer created and repaired the rule during installation or upgrade.
+- **From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards**: No rewrite rule is required. Requests are routed through the API Gateway.
+- **In Feature Release versions from DataMiner 10.6.10 up to, but not including, 10.7.1**: The endpoint process managed the rewrite rule and automatically repaired any issues.
+- **In earlier versions that use an IIS rewrite rule**: The installer created and repaired the rule during installation or upgrade.
 
 #### Automatic rewrite rule management
 
-For DataMiner versions from 10.6.10 up to, but not including, 10.7.0, the *UserDefinableApiEndpoint* service owns the IIS rewrite rule named `Reroute User Definable APIs`. The rule is created when the service starts and checked at a configurable interval while the service is running. If the rule is missing, disabled, duplicated, or altered, the service restores a single enabled rule with the expected configuration.
+In Feature Release versions from DataMiner 10.6.10 up to, but not including, 10.7.1, the *UserDefinableApiEndpoint* service owns the IIS rewrite rule named `Reroute User Definable APIs`. The rule is created when the service starts and checked at a configurable interval while the service is running. If the rule is missing, disabled, duplicated, or altered, the service restores a single enabled rule with the expected configuration.
 
 The managed rule matches requests under `/api/custom` and forwards them to the local HTTP port configured for Kestrel. When you change the Kestrel HTTP port in *appsettings.custom.json*, restart the service. The service then updates the rewrite target automatically, so you do not need to edit the rule manually in IIS.
 
@@ -210,11 +211,11 @@ The service reports the current rewrite rule state in the logging and publishes 
 
 The service logs an informational message when the rule is first confirmed as healthy or when a problem is repaired. It logs an error when a check or repair fails. Repeated successful checks or repeated instances of the same failure use debug-level logging.
 
-Before DataMiner 10.7.0, the running endpoint service created and repaired the rule instead of an installer custom action. During a major upgrade, the installer left the rule in place so the service could continue to maintain it. The installer removed the managed rule only during a full uninstall.
+In Feature Release versions from DataMiner 10.6.10 up to, but not including, 10.7.1, the running endpoint service created and repaired the rule instead of an installer custom action. During a major upgrade, the installer left the rule in place so the service could continue to maintain it. The installer removed the managed rule only during a full uninstall.
 
 #### Configuring the rewrite rule for older versions
 
-For DataMiner versions prior to 10.6.10, the installer does not maintain the rewrite rule while the service is running. If you specify a custom Kestrel port in *appsettings.custom.json*, update the rewrite target manually:
+In versions where the installer manages the rewrite rule, the installer does not maintain the rule while the service is running. If you specify a custom Kestrel port in *appsettings.custom.json*, update the rewrite target manually:
 
 1. Open `Internet Information Services (IIS) Manager`.
 
@@ -299,7 +300,7 @@ For example, this is the default configuration:
 
 #### Changing the timeout
 
-Before DataMiner 10.7.0, if you increased the `MessageBrokerTimeOutSeconds` setting, you also needed to increase the IIS timeout for proxied requests. From DataMiner 10.7.0 onwards, requests are no longer routed through IIS, so no additional IIS configuration is needed.
+Before DataMiner 10.6.0 [CU10]/10.7.0/10.7.1, if you increased the `MessageBrokerTimeOutSeconds` setting, you also needed to increase the IIS timeout for proxied requests. From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards, requests are no longer routed through IIS, so no additional IIS configuration is needed.
 
 ##### Changing the IIS timeout in older versions
 
