@@ -159,7 +159,7 @@ Allows a DataMiner Agent that uses Elasticsearch as its indexing database to sta
 Allows a DataMiner Agent that uses MySQL as its main database to start. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47000 -->, a DataMiner Agent with a MySQL main database will not start unless this option is set to *true*. If the option is missing or not set to *true*, DataMiner stops and logs an error.
 
 > [!CAUTION]
-> MySQL has reached [End of Support](xref:Software_support_life_cycles#third-party-software-support-lifecycle). Only use this option temporarily, and migrate to [Storage as a Service (STaaS)](xref:STaaS) or [Cassandra](xref:Migrating_the_general_database_to_Cassandra) as soon as possible.
+> MySQL has reached [End of Support](xref:Software_support_life_cycles#third-party-software-support-lifecycle). Only use this option temporarily, and migrate to [Storage as a Service (STaaS)](xref:STaaS) or a [Cassandra cluster](xref:Migrating_the_general_database_to_Cassandra) as soon as possible.
 
 - **Minimum version**: 10.7.0/10.7.1
 
