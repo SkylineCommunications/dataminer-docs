@@ -7,6 +7,8 @@ description: "Learn about the legacy Elasticsearch indexing database setup for s
 
 If you choose self-managed storage instead of the recommended [Storage as a Service (STaaS)](xref:STaaS) setup, you need an indexing database in order to have access to all DataMiner features. While [OpenSearch](xref:OpenSearch_database) is the recommended indexing database, this is not supported prior to DataMiner 10.3.0/10.3.3. In earlier DataMiner versions, Elasticsearch is used, but as Elasticsearch is only supported up to version 6.8, which is no longer supported by Elastic, this is **not recommended**.
 
+From DataMiner 10.7.0/10.7.1 onwards, a DataMiner Agent that uses Elasticsearch as its indexing database will no longer start unless the [EndOfSupport.Elastic soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportelastic) is set to *true*.<!-- RN 47033 -->
+
 In a **dedicated clustered storage** setup, once you have configured a Cassandra-compatible database service, you need to set up the indexing database cluster to complete your setup. If you use Elasticsearch, we recommend installing [Elasticsearch database on a Linux machine](xref:Installing_Elasticsearch_on_separate_Linux_machine).
 
 In a setup with **storage per DMA**, setting up an indexing database is not mandatory, but it is highly recommended, as otherwise you will not have access to several DataMiner features.
