@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_bookings_advanced
+description: "Find out how to configure bookings with persistent services, custom enhanced elements, and node labels as service element aliases."
 ---
 
 # Service Orchestration: bookings configuration

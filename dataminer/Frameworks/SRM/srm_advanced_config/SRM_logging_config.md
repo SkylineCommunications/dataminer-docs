@@ -1,5 +1,6 @@
 ---
 uid: SRM_logging_config
+description: "Find out how to configure SRM logging on a network share, set log levels and cleanup options, and add custom log records from Profile-Load and LSO scripts."
 ---
 
 # Configuring SRM logging

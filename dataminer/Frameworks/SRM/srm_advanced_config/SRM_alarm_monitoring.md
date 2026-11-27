@@ -1,5 +1,6 @@
 ---
 uid: SRM_alarm_monitoring
+description: "Find out how to configure SRM alarm monitoring with the Skyline Booking Monitoring protocol to track booking failures."
 ---
 
 # Configuring SRM alarm monitoring

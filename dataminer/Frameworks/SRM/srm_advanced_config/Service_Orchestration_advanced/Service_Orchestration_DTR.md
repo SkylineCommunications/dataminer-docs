@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_DTR
+description: "Find out how to configure regular and service profile Data Transfer Rules using custom automation scripts and JSON configuration properties."
 ---
 
 # Service Orchestration: Data Transfer Rules configuration

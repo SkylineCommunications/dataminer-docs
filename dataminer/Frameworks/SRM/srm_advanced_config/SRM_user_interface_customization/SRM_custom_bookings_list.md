@@ -1,5 +1,6 @@
 ---
 uid: SRM_custom_bookings_list
+description: "Find out how to customize the Bookings list in the Booking Manager app by adding or removing columns and displaying custom booking properties."
 ---
 
 # Customizing the columns of the Bookings list

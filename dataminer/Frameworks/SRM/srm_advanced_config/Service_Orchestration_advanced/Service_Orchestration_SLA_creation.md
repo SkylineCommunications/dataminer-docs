@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_SLA_creation
+description: "Find out how to configure automatic SLA creation to monitor booked services using predefined SLA configurations."
 ---
 
 # Service Orchestration: configuring SLA creation

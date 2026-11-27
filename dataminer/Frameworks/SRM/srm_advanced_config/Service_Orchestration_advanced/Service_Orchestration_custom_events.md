@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_custom_events
+description: "Find out how to configure custom events in the Booking Manager app to set event timing, scripts, and visibility in the Booking Wizard."
 ---
 
 # Service Orchestration: custom events configuration
