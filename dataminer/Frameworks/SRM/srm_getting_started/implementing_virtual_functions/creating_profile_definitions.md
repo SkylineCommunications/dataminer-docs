@@ -1,5 +1,6 @@
 ---
 uid: creating_profile_definitions
+description: "Create profile definitions in the Profiles module for virtual functions and their interfaces, and add the related profile parameters."
 ---
 
 # Creating profile definitions

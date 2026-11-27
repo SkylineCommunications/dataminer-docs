@@ -1,5 +1,6 @@
 ---
 uid: creating_profile_instances
+description: "Create profile instances in the Profiles module during setup, with at least one instance for each virtual function."
 ---
 
 # Creating profile instances
