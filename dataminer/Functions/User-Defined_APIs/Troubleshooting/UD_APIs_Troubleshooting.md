@@ -1,6 +1,6 @@
 ---
 uid: UD_APIs_Troubleshooting
-description: "Troubleshoot User-Defined APIs by checking endpoint logs, IIS routing, service health, NATS communication, and DxM compatibility."
+description: "Troubleshoot User-Defined APIs by checking endpoint logs, request routing, service health, NATS communication, and DxM compatibility."
 ---
 # Troubleshooting User-Defined APIs
 
@@ -15,6 +15,7 @@ In case you get an error while triggering an API, defining an API, or installing
   - *UserDefinableApiEndpoint.txt* contains logs from the UserDefinableApiEndpoint DxM. This could include why it was unable to handle an HTTP request and forward it to the manager in SLNet. There may be multiple files with a number appended to them. The file with the highest number is the latest.
   - *UserDefinableApiEndpointInstaller.txt* contains logs from the installation of the DxM if it is installed by a DataMiner upgrade package or via the command line. This will not contain additional logs when you use the dedicated installer for the DxM. A small subset of these log lines will also be available in the *progress.log* DataMiner upgrade package log file and will be displayed during the upgrade.
 - The file *SLUserDefinableApiManager.txt* in the `C:\Skyline DataMiner\Logging\` folder contains logging related to the manager in SLNet that manages the CRUD actions on API tokens/definitions and the API triggers.
+- From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards<!-- RN 47107 -->, logs for [DataMiner APIGateway](xref:DataMinerCoreModules#apigateway) are available in the folder `C:\ProgramData\Skyline Communications\DataMiner APIGateway\Logs\`. This DxM routes HTTPS requests to the endpoint.
 
 > [!TIP]
 > You can also find these log files (except the *UserDefinableApiEndpointInstaller* log file) on the [*Logging* > *DataMiner* page](xref:DataMiner_logging) in the DataMiner Cube System Center.
@@ -33,13 +34,34 @@ An information event will be generated for every create, update, and delete acti
 
 Below, you can find the request flow when a trigger comes in. This may help you during troubleshooting.
 
+### [From DataMiner 10.6.0 \[CU10\]/10.7.0/10.7.1 onwards](#tab/from-dataminer-1071)
+
+<!-- RN 47107 -->
+
+```mermaid
+flowchart LR
+client("User") -- "HTTPS request" --> a
+subgraph "Core Module"
+    a("DataMiner APIGateway")
+end
+subgraph "Core Module"
+    a -- "HTTP request" --> c("UserDefinableApiEndpoint\nDxM")
+end
+subgraph "Core DataMiner"
+    c -- NATS --> d("UserDefinableApiManager\n(SLNet.exe)")
+    d -- IPC --> e("SLAutomation.exe")
+end
+```
+
+### [In earlier DataMiner versions](#tab/earlier-dataminer-versions)
+
 ```mermaid
 flowchart LR
 client("User") -- "HTTP(S) request" --> a
 subgraph "IIS"
     a("IIS") --> b("Rewrite Rule")
 end
-subgraph "Extension"
+subgraph "Core Module"
     b -- HTTP request --> c("UserDefinableApiEndpoint\nDxM")
 end
 subgraph "Core DataMiner"
@@ -48,21 +70,20 @@ subgraph "Core DataMiner"
 end
 ```
 
-## IIS rewrite rule checks
+***
 
-> [!NOTE]
-> The service-side rewrite rule checks described in this section are available from DataMiner 10.6.10/10.7.0 onwards<!-- RN46143 -->. In earlier DataMiner versions, the installer performs these checks during installation or upgrade instead. See [Installer-based checks in older versions](#installer-based-checks-in-older-versions) for the corresponding messages and behavior.
+## IIS rewrite rule
 
-If API requests fail, check `UserDefinableApiEndpoint.txt` for errors related to rewrite rule validation or repair. For the rewrite rule configuration and `RewriteRuleHealthInfo` statuses, see [IIS rewrite rule](xref:UD_APIs_UserDefinableApiEndpoint#iis-rewrite-rule). Common causes include:
+For DataMiner versions prior to 10.6.0 [CU10]/10.7.0/10.7.1<!-- RN 47107 -->, IIS uses a rewrite rule to route requests to the endpoint. If API requests fail for these versions, check `UserDefinableApiEndpoint.txt` for rewrite rule validation or repair errors. For details about the rule configuration and `RewriteRuleHealthInfo` statuses, see [IIS rewrite rule](xref:UD_APIs_UserDefinableApiEndpoint#iis-rewrite-rule). Common causes include:
 
 - The configured IIS site does not exist.
 - The Kestrel HTTP URL or the IIS configuration is invalid.
 - The service account does not have the required access.
 - The API folder `web.config` cannot be read or updated.
 
-### Installer-based checks in older versions
+## Installer-based checks in older versions
 
-In DataMiner versions prior to 10.6.10/10.7.0, the installer creates and validates the IIS rewrite rule during installation or upgrade. It does not continue checking the rule while the endpoint service is running. If you change the Kestrel port, you have to update the rewrite rule manually. See [Configuring the rewrite rule for older versions](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-rewrite-rule-for-older-versions).
+In DataMiner versions prior to 10.6.10 on the Feature Release track or 10.6.0 [CU10]//10.7.0 on the Main Release track<!-- RN 46143 --><!-- RN 47107: 10.6.0 CU10 -->, the installer creates and validates the IIS rewrite rule during installation or upgrade. It does not continue checking the rule while the endpoint service is running. If you change the Kestrel port, you have to update the rewrite rule manually. See [Configuring the rewrite rule for older versions](xref:UD_APIs_UserDefinableApiEndpoint#configuring-the-rewrite-rule-for-older-versions).
 
 - **Found rewrite rule, but it has inconsistencies:**
 
@@ -124,13 +145,17 @@ The errors in this section can be generated when the UserDefinableApiEndpoint Dx
 
   If your request returns a 400 Bad Request after about 29 seconds, this is likely to be caused by the cloud URL proxy aborting calls that run longer than this limit. When the `.on.dataminer.services` cloud host URL is used, API calls have a maximum execution time of 29 seconds. Make sure your API script completes well within this window to allow enough time for processing and data transfer overhead.
 
+- **Plain HTTP requests fail, but HTTPS requests succeed.**
+
+  From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards, HTTPS is the only officially supported protocol. Existing installations may still accept unsecured HTTP requests through the legacy IIS rewrite rule for a limited time, but these requests expose the bearer token and are not recommended.
+
 ### General checks
 
 If issues occur when you trigger a user-defined API, follow the steps below to resolve them.
 
-1. Check the [IIS rewrite rule checks](#iis-rewrite-rule-checks) and `UserDefinableApiEndpoint.txt` for validation or repair errors.
+1. For DataMiner versions prior to 10.6.0 [CU10]/10.7.0/10.7.1, check the [IIS rewrite rule section](#iis-rewrite-rule) and `UserDefinableApiEndpoint.txt` for validation or repair errors.
 
-1. Make sure **bindings are created in IIS**.
+1. For DataMiner versions prior to 10.6.0 [CU10]/10.7.0/10.7.1, make sure **bindings are created in IIS**.
 
    To be able to trigger a user-defined API, you need to make sure one or more bindings are defined in IIS alongside the rewrite rule:
 
@@ -142,7 +167,7 @@ If issues occur when you trigger a user-defined API, follow the steps below to r
 
    1. In the pop-up window, check the bindings. If necessary, create a binding for HTTP and/or HTTPS, and select the certificate, IP address, or hostname. For more information, see [Setting up HTTPs on a DMA](xref:Setting_up_HTTPS_on_a_DMA).
 
-1. Make sure **proxy is enabled in IIS**.
+1. For DataMiner versions prior to 10.6.0 [CU10]/10.7.0/10.7.1, make sure **proxy is enabled in IIS**.
 
    1. Open the *Internet Information Services (IIS) Manager* app in Windows.
 
@@ -153,6 +178,8 @@ If issues occur when you trigger a user-defined API, follow the steps below to r
    1. In the pane on the right, under *Proxy*, click *Server Proxy Settings*.
 
    1. Make sure that the top checkbox *Enable proxy* is selected.
+
+1. From DataMiner 10.6.0 [CU10]/10.7.0/10.7.1 onwards, make sure the *DataMiner APIGateway* service is running.
 
 1. Make sure the **UserDefinableApiEndpoint DxM is running**.
 
