@@ -354,7 +354,7 @@ Before you send a call, you have to define the alarm template of which you want 
 See the following example:
 
 ```csharp
-AlarmTemplateHelper helper =new AlarmTemplateHelper(Engine.SLNetRaw.HandleMessages);
+AlarmTemplateHelper helper =new AlarmTemplateHelper(engine.GetUserConnection().HandleMessages);
 var id = new AlarmTemplateID("AlarmTemplate", "Protocol", "1.0.0.0");
 var rowId = new AlarmTemplateRowID(1, "condition", "filter");
 var rowList = new List<AlarmTemplateRowID> {rowId};

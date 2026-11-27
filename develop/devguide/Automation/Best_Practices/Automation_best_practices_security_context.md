@@ -24,11 +24,10 @@ The Automation API also uses the System account for operations such as setting a
 
 ## Direct SLNet messages
 
-When sending a direct SLNet message, the method you use determines the security context:
+When a direct SLNet message is sent using the methods below, the security context used is the user account:
 
-- [engine.SendSLNetSingleResponseMessage](xref:Skyline.DataMiner.Automation.Engine.SendSLNetSingleResponseMessage(Skyline.DataMiner.Net.Messages.DMSMessage)) uses the user account.
-- `engine.GetUserConnection().HandleSingleResponseMessage` uses the user account.
-- `Engine.SLNetRaw.HandleMessage` uses the System account.
+- [engine.SendSLNetSingleResponseMessage](xref:Skyline.DataMiner.Automation.Engine.SendSLNetSingleResponseMessage(Skyline.DataMiner.Net.Messages.DMSMessage)).
+- `engine.GetUserConnection().HandleSingleResponseMessage`.
 
 ## Example: applying a parameter set
 
@@ -80,11 +79,5 @@ RunPath(engine, "SLNet messages - via Engine", delegate
 RunPath(engine, "SLNet messages - via GetUserConnection", delegate
 {
     engine.GetUserConnection().HandleSingleResponseMessage(CreateSetParameterMessage(5));
-});
-
-// System account
-RunPath(engine, "SLNet messages - via static Engine.SLNetRaw", delegate
-{
-    Engine.SLNetRaw.HandleMessage(CreateSetParameterMessage(6));
 });
 ```

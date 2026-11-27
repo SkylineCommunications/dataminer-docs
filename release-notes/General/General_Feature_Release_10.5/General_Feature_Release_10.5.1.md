@@ -188,7 +188,7 @@ public class Script
     var element = ElementID.FromString(engine.GetScriptParam("Element Key").Value);
     int targetAgentId = Int32.Parse(engine.GetScriptParam("Target Agent ID").Value);
     
-    var swarmingResults = SwarmingHelper.Create(Engine.SLNetRaw)
+    var swarmingResults = SwarmingHelper.Create(engine.GetUserConnection())
         .SwarmElement(element)
         .ToAgent(targetAgentId);
 

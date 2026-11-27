@@ -11,7 +11,7 @@ namespace Skyline.DataMiner.Net.SimulationHelper
 	/// <example>
 	/// <para>This example shows how you can use this in an automation script.</para>
 	/// <code>
-	/// var simulationHelper = new SimulationHelper(Engine.SLNet.SendMessages);
+	/// var simulationHelper = new SimulationHelper(engine.GetUserConnection().HandleMessages);
 	/// simulationHelper.LoadSimulations();
 	/// </code>
 	/// </example>
