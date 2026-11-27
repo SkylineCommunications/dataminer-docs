@@ -96,3 +96,11 @@ From now on, when the published and draft versions point to the same folder, tha
 During a DataMiner upgrade, the web backup tool could incorrectly log "Version folder not found" warnings for uploaded DataMiner apps.
 
 The web backup tool will now skip uploaded DataMiner apps instead of logging these unnecessary warnings. Low-code apps will still be backed up as before.
+
+#### GQI DxM: Query failure when aggregate columns were not used [ID 47246]
+
+<!-- MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+When using the GQI DxM, a query could fail if it used an aggregation without grouping and none of the aggregate columns were needed in the final result.
+
+The aggregation will now preserve a single row for subsequent operators, even when the input is empty.
