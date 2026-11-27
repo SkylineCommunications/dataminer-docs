@@ -1,5 +1,6 @@
 ---
 uid: Service_Orch_creating_LSO_scripts
+description: "Create LSO scripts from SRM_LSOTemplate and link them to service definition actions to run Profile-Load Scripts at specific lifecycle stages."
 ---
 
 # Creating LSO scripts

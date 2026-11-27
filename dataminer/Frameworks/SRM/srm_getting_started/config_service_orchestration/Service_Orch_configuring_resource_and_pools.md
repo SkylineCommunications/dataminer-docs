@@ -1,5 +1,6 @@
 ---
 uid: Service_Orch_configuring_resource_and_pools
+description: "Configure resources and resource pools for SRM Service Orchestration by defining interface capabilities and pool names for booking selection."
 ---
 
 # Configuring resources and resource pools
