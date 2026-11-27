@@ -16,7 +16,7 @@ From DataMiner 10.5.10/10.6.0 onwards, Cube uses gRPC by default to communicate 
 
 ## Inter-DMA communication
 
-From DataMiner 10.5.10/10.6.0 onwards, gRPC is used by default for communication between DataMiner Agents. Prior to this, .NET Remoting is used by default prior to 10.5.10/10.6.0, or it can be enabled manually. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47004 -->, only gRPC is available.
+From DataMiner 10.5.10/10.6.0 onwards, gRPC is used by default for communication between DataMiner Agents. Prior to this, .NET Remoting is used by default, or it can be enabled manually. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47004 -->, only gRPC is available.
 
 > [!TIP]
 > For details on when which type of communication is enabled and on how you can harden security, refer to [Secure server-server communication](xref:DataMiner_hardening_guide#secure-server-server-communication).
