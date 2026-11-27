@@ -86,7 +86,7 @@ During a DataMiner upgrade, the following folders used by DIS Inject will now be
 
 <!-- MR 10.7.0 [CU0] / 10.6.0 [CU11] - FR 10.7.2 -->
 
-Applying a manual BrokerGateway configuration using `applymanualconfig` could time out because too many `ForceRemoveNode` calls were sent. Each call notified all known nodes that the calling node should be removed.
+On large clusters, applying a manual BrokerGateway configuration using `applymanualconfig` could time out because too many `ForceRemoveNode` calls were sent. Each call notified all known nodes that the calling node should be removed.
 
 From now on, only added, removed, or inconsistent nodes will call `ForceRemoveNode`. These actions will also be logged.
 
