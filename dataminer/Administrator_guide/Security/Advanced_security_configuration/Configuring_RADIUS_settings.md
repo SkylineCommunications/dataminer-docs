@@ -5,6 +5,9 @@ description: "Configure RADIUS authentication in DataMiner.xml with a server hos
 
 # Configuring RADIUS settings
 
+> [!IMPORTANT]
+> Upgrading to DataMiner version 10.7.x or higher is blocked while RADIUS authentication is configured, unless the [EndOfSupport.RADIUS soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportradius) is set to *true*<!-- RN 46984 -->.
+
 DataMiner users can be authenticated using a RADIUS server. However, note that this is no longer recommended (see [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
 
 If a RADIUS server has been configured, the DataMiner Agent acts as a RADIUS client and passes the user credentials along to the RADIUS server, which will then authenticate the user. DataMiner also supports RADIUS challenges (see below).

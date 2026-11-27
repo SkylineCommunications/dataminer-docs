@@ -7,6 +7,8 @@ description: "Learn about the deprecated Atlassian Crowd setup for user manageme
 
 > [!IMPORTANT]
 > This setup is deprecated. For details, see [Software support lifecycles](xref:Software_support_life_cycles).
+>
+> Upgrading to DataMiner version 10.7.x or higher is blocked while Atlassian Crowd is configured, unless the [EndOfSupport.Crowd soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportcrowd) is set to *true*<!-- RN 46984 -->.
 
 DataMiner can import users and groups from an Atlassian Crowd server and can also rely on this type of server for user authentication. However, note that the latter is no longer recommended (see [Software support lifecycles](xref:Software_support_life_cycles#dataminer-functionality-evolution-and-retirement)).
 

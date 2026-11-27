@@ -86,12 +86,22 @@ items:
         topicUid: Verify_Cloud_DxM_Version
       - name: VerifyClusterPorts.dmupgrade
         topicUid: VerifyClusterPortsdmupgrade
+      - name: Verify .NET Remoting End of Life
+        topicUid: VerifyDotNetRemotingEndOfLife
       - name: Verify .NET Version
         topicUid: Verify_ASP_Net_Version
       - name: VerifyGRPCConnection.dmupgrade
         topicUid: VerifyGRPCConnectiondmupgrade
+      - name: Verify Cassandra End of Support
+        topicUid: VerifyCassandraEndOfSupport
+      - name: Verify Crowd End of Support
+        topicUid: VerifyCrowdEndOfSupport
+      - name: Verify Elastic End of Support
+        topicUid: VerifyElasticEndOfSupport
       - name: Verify Elastic Storage Type
         topicUid: Verify_Elastic_Storage_Type
+      - name: Verify EMCO End of Life
+        topicUid: VerifyEMCOEndOfLife
       - name: Verify NATS Cluster
         topicUid: VerifyNatsCluster
       - name: Verify NATS is Running
@@ -106,8 +116,12 @@ items:
         topicUid: Verify_No_Obsolete_API_Deployed
       - name: Verify No Amazon Keyspaces
         topicUid: Verify_No_Amazon_Keyspaces
+      - name: Verify MySQL End of Support
+        topicUid: VerifyMySQLEndOfSupport
       - name: Verify OS Version
         topicUid: Verify_OS_Version
+      - name: Verify RADIUS End of Support
+        topicUid: VerifyRadiusEndOfSupport
   - name: Protocol debug tools
     topicUid: Protocol_Debug_Tools
   - name: Skyline Device Simulator
