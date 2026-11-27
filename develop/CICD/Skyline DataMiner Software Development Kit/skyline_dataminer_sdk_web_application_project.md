@@ -88,7 +88,7 @@ When the package project is built, the SDK does the following for each included 
 
 1. It builds the web application project. For *.esproj* projects, the *Build* target is used (e.g., `npm run build`). For other projects, the *Publish* target is used.
 
-1. It zips the output folder of the web application, together with the *App.info.json* file, into a file named *\<ProjectName>_\<ID>.zip*.
+1. It creates a file named *\<ProjectName>_\<ID>.zip* with the same layout as an app export from DataMiner. This zip file contains a *content.zip* file, which holds a *version.json* file and an *Apps\\\<ID>* folder with the content of the output folder and the *App.info.json* file.
 
 1. It adds this zip file to the package, in the *AppInstallContent\ZipFiles\WebApp* folder.
 
@@ -96,7 +96,7 @@ The resulting *.dmapp* is written to the package project's output folder, typica
 
 ### Output folder
 
-The folder that is zipped is determined as follows:
+The folder that is added to the package is determined as follows:
 
 1. The *BuildOutputFolder* property, if specified in the web application project. A relative path is resolved from the project directory.
 
@@ -104,7 +104,7 @@ The folder that is zipped is determined as follows:
 
 The output folder must exist and contain files, or the package build will fail.
 
-For example, to zip the *build* folder instead:
+For example, to use the *build* folder instead:
 
 ```xml
 <PropertyGroup>
