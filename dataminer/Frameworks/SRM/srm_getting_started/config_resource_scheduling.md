@@ -1,5 +1,6 @@
 ---
 uid: config_resource_scheduling
+description: "Configure Resource Scheduling in Booking Manager, book resource capacity with the default wizard, and launch it from a custom frontend."
 ---
 
 # Additional configuration for Resource Scheduling

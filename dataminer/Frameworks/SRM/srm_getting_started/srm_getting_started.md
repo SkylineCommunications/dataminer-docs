@@ -1,5 +1,6 @@
 ---
 uid: srm_getting_started
+description: "Get started with DataMiner SRM by deploying the framework, provisioning resources, implementing virtual functions, and configuring orchestration."
 ---
 
 # Getting started with SRM

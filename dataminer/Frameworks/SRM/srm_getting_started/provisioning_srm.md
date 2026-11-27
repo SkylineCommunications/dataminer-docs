@@ -1,5 +1,6 @@
 ---
 uid: provisioning_srm
+description: "Provision the data acquisition and control plane for SRM by installing connectors and creating DataMiner elements for all products in your service."
 ---
 
 # Provisioning the data acquisition and control plane

@@ -1,5 +1,6 @@
 ---
 uid: config_service_orchestration
+description: "Set up Service Orchestration with service definitions, resources and resource pools, LSO scripts, and optional Data Transfer Rules (DTR)."
 ---
 
 # Additional configuration for Service Orchestration
