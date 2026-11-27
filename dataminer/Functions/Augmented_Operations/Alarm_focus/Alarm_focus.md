@@ -1,5 +1,6 @@
 ---
 uid: Alarm_focus
+description: "Use alarm focus in DataMiner to filter out recurring or long-standing alarms and identify unexpected alarms in the Alarm Console."
 ---
 
 # Alarm focus
