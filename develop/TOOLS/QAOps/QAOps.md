@@ -1,5 +1,6 @@
 ---
 uid: QAOps
+description: Learn how QAOps orchestrates DataMiner regression tests, combines test packages and configurations, and summarizes evidence with quality gates.
 ---
 
 # QAOps
@@ -48,6 +49,8 @@ The QAOps system consists of the following components:
 - [QAOps test suites](xref:QAOps_Test_Suite), which specify the type of testing to execute. Each test suite includes one or more test packages.
 
 - [QAOps test packages](xref:QAOps_Test_Package), which contain collections of tests. Each test can send one or more test results.
+
+- [QAOps quality gates](xref:QAOps_Quality_Gates), which combine QAOps test evidence and external reports into a shared verdict, with failure ownership and scheduled status digests.
 
 ![QAOps overview](~/develop/images/QAOps_UserOverview.png)
 

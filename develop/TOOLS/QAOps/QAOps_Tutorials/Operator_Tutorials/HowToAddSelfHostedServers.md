@@ -18,6 +18,8 @@ Expected duration: 20 minutes.
 
 - Operator access to the [QAOps Operator app](xref:QAOps_Main_UI#qaops-operator-app) (the blue app).
 
+- Access to the [QAOps Sandbox](https://qaops-sandbox.skyline.be). Use this environment for every QAOps tutorial. Email <support.boost@skyline.be> to request a username and password.
+
 - At least one existing [test suite](xref:QAOps_Test_Suite).
 
 - Access to the DataMiner server(s) you want to connect, so you can install the generated installer package on them.

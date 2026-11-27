@@ -1,5 +1,6 @@
 ---
 uid: QAOps_Main_UI
+description: Explore the QAOps User, Operator, and Quality Gates apps to inspect test results, manage configurations, and follow up quality evidence.
 ---
 
 # QAOps main UI
@@ -13,13 +14,15 @@ You can access the QAOps system at Skyline Communications by using the following
 
 - [QAOps staging](https://qaopsstaging-skyline.on.dataminer.services/root/)
 
-Three applications are available, listed in order of increasing security level:
+The following applications provide access to QAOps:
 
 - [QAOps User](#qaops-user-app) (green app)
 
 - [QAOps Operator](#qaops-operator-app) (blue app)
 
 - QAOps Administrator (red app)
+
+- [QAOps Quality Gates](xref:QAOps_Quality_Gates), a web app for combining checks, following up failures, and scheduling status digests.
 
 ## QAOps User app
 

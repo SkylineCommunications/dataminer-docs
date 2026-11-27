@@ -16,6 +16,8 @@ Expected duration: 15 minutes.
 
 - Operator access to the [QAOps Operator app](xref:QAOps_Main_UI#qaops-operator-app) (the blue app).
 
+- Access to the [QAOps Sandbox](https://qaops-sandbox.skyline.be). Use this environment for every QAOps tutorial. Email <support.boost@skyline.be> to request a username and password.
+
 - The Catalog ID of at least one test package published in the [DataMiner Catalog](https://catalog.dataminer.services/browse?t=Test%20Package). To create your own test package, see [Creating a test package](xref:QAOps_Tutorials_User_Tutorials_Advanced_Creating_Test_Packages).
 
 ## Overview
