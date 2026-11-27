@@ -1,5 +1,6 @@
 ---
 uid: creating_profile_parameters
+description: "Create profile parameters in the Profiles module to configure SRM virtual functions and define resource capacities and capabilities."
 ---
 
 # Creating profile parameters

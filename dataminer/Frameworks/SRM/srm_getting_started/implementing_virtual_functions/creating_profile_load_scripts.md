@@ -1,5 +1,6 @@
 ---
 uid: creating_profile_load_scripts
+description: "Create and test Profile-Load Scripts to configure SRM virtual functions using the script template, helper methods, and PLS Tester."
 ---
 
 # Creating Profile-Load Scripts

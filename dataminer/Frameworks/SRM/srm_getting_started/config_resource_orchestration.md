@@ -1,5 +1,6 @@
 ---
 uid: config_resource_orchestration
+description: "Configure Resource Orchestration in Booking Manager, create bookings with the default wizard, and launch it from Visual Overview or a low-code app."
 ---
 
 # Additional configuration for Resource Orchestration

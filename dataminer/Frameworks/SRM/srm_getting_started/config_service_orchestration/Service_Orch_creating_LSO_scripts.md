@@ -1,5 +1,6 @@
 ---
 uid: Service_Orch_creating_LSO_scripts
+description: "Learn how to create LSO scripts for Service Orchestration and link them to service definition actions at specific lifecycle stages."
 ---
 
 # Creating LSO scripts

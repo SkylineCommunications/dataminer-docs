@@ -1,5 +1,6 @@
 ---
 uid: deploying_srm
+description: "Deploy the SRM framework by checking DataMiner and storage requirements, installing the package, and configuring views and the Booking Manager."
 ---
 
 # Deploying the SRM framework

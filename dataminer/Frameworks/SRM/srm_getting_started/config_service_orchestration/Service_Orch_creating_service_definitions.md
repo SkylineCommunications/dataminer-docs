@@ -1,5 +1,6 @@
 ---
 uid: Service_Orch_creating_service_definitions
+description: "Create service definitions in the Services module by connecting virtual functions, assigning unique labels, and setting the virtual platform."
 ---
 
 # Creating service definitions

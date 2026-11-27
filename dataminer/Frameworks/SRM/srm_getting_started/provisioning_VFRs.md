@@ -1,5 +1,6 @@
 ---
 uid: provisioning_VFRs
+description: "Provision virtual function resources in SRM by creating resource pools and configuring input and output interfaces, capacities, and capabilities."
 ---
 
 # Provisioning virtual function resources

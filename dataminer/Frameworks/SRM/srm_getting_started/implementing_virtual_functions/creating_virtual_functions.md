@@ -1,5 +1,6 @@
 ---
 uid: creating_virtual_functions
+description: "Create virtual functions with DataMiner Integration Studio 2.37 or later, then upload and activate the functions file in your DataMiner System."
 ---
 
 # Creating virtual functions

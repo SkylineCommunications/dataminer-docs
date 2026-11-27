@@ -1,5 +1,6 @@
 ---
 uid: config_resource_automation
+description: "Configure Resource Automation to apply profiles and state transitions with the default wizard, and launch it from Visual Overview or a low-code app."
 ---
 
 # Additional configuration for Resource Automation

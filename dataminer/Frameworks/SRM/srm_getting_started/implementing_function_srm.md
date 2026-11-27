@@ -1,5 +1,6 @@
 ---
 uid: implementing_function_srm
+description: "Implement virtual functions in SRM with profile parameters, profile definitions, profile instances, and Profile-Load Scripts."
 ---
 
 # Implementing virtual functions
