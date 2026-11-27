@@ -28,7 +28,7 @@ The following pages are available:
 - *Dashboards*: Deprecated. Displays dashboards related to the element in the [legacy Dashboards module](xref:dashboards).
 
   > [!NOTE]
-  > The *Reports* and *Dashboards* pages are no longer available from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 47135+47136 --> Starting from DataMiner 10.4.0/10.4.1, the legacy modules are disabled by default, but you can enable them in versions before their removal with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).<!-- RN 37786 -->
+  > The *Reports* and *Dashboards* pages are no longer available from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 47135+47136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1, the legacy Dashboards and Reports modules are already disabled by default, but they can still be enabled if necessary using the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).<!-- RN 37786 -->
 
 - *Notes*: Allows you to add and view notes related to the element.
 
