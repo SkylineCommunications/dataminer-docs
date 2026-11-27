@@ -141,11 +141,21 @@ The following prerequisite checks are currently available:
 
 - [Verify BrokerGateway Migration](xref:VerifyBrokerGatewayMigration): Verifies whether the DataMiner System has migrated from the SLNet-managed NATS solution to the BrokerGateway-managed NATS solution. From DataMiner 10.6.0/10.6.1 onwards<!--RN 43861 -->, this prerequisite is available by default and runs automatically when you upgrade.
 
+- [Verify Cassandra End of Support](xref:VerifyCassandraEndOfSupport): Verifies whether the DataMiner Agent uses a database running Cassandra 3.x or earlier. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46984 -->, this prerequisite is available by default and runs automatically when you upgrade.
+
 - [Verify Cloud DxM Version](xref:Verify_Cloud_DxM_Version): Verifies whether the minimum required version is installed for all DxMs in the system. From DataMiner 10.2.0 [CU6]/10.2.8 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
 - Verify Cluster Ports: Verifies whether the ports used by DataMiner can be reached in between DataMiner Agents. If this check fails, you will need to install the [VerifyClusterPorts.dmupgrade](xref:VerifyClusterPortsdmupgrade) package. From DataMiner 10.2.0 [CU2]/10.2.5 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
+- [Verify Crowd End of Support](xref:VerifyCrowdEndOfSupport): Verifies whether the DataMiner Agent uses Atlassian Crowd for authentication or user and group management. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46984 -->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify .NET Remoting End of Life](xref:VerifyDotNetRemotingEndOfLife): Verifies whether .NET Remoting is explicitly enabled for communication between DataMiner Agents or between DataMiner Cube and SLNet. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46984 -->, this prerequisite is available by default and runs automatically when you upgrade. If .NET Remoting is enabled, the upgrade is blocked.
+
 - [Verify .NET Version](xref:Verify_ASP_Net_Version): Verifies whether the required Microsoft .NET versions are installed, necessary for guaranteeing DataMiner's access to all requisite security updates. From DataMiner 10.3.0 [CU12]/10.4.0/10.4.3 onwards<!--RN 37969-->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify Elastic End of Support](xref:VerifyElasticEndOfSupport): Verifies whether the DataMiner Agent uses Elasticsearch as its indexing database. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46984 -->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify EMCO End of Life](xref:VerifyEMCOEndOfLife): Verifies whether the DataMiner Agent uses a two-site redundant indexing cluster (EMCO). From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46984 -->, this prerequisite is available by default and runs automatically when you upgrade. If such a cluster is configured, the upgrade is blocked.
 
 - [Verify Elastic Storage Type](xref:Verify_Elastic_Storage_Type): Verifies whether the system has successfully switched to an [indexing database](xref:Indexing_Database). From DataMiner 10.4.0/10.4.1 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 
@@ -164,6 +174,10 @@ The following prerequisite checks are currently available:
 - [Verify No Obsolete API Deployed](xref:Verify_No_Obsolete_API_Deployed): Verifies whether the obsolete *APIDeployment* [soft-launch option](xref:SoftLaunchOptions) is enabled and obsolete APIs are deployed. From DataMiner 10.4.0 onwards<!--RN 37825-->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Verify OS Version](xref:Verify_OS_Version): Verifies whether the DataMiner version in the upgrade package supports the version of the operating system that is installed on the DataMiner Agent. From DataMiner 10.5.12/10.6.0 onwards<!--RN 43356-->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify MySQL End of Support](xref:VerifyMySQLEndOfSupport): Verifies whether the DataMiner Agent uses MySQL as its main database. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46984 -->, this prerequisite is available by default and runs automatically when you upgrade.
+
+- [Verify RADIUS End of Support](xref:VerifyRadiusEndOfSupport): Verifies whether the DataMiner Agent uses RADIUS authentication. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 46984 -->, this prerequisite is available by default and runs automatically when you upgrade.
 
 - [Service Automatic Properties](xref:Service_Automatic_Properties): Verifies whether the installed SRM framework version is up to date. From DataMiner 10.2.3/10.3.0 onwards, this prerequisite is available by default and runs automatically when you upgrade.
 

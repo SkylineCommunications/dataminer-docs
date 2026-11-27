@@ -140,14 +140,27 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 Allows a DataMiner Agent that uses Cassandra 3.x or earlier as its main database to start. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47024 -->, a DataMiner Agent with Cassandra 3.x or earlier as its main database will not start unless this option is set to *true*. If the option is missing or not set to *true*, DataMiner stops and logs an error. Creating a migration target that uses Cassandra 3.x or earlier is also blocked without this option.
 
+If you are upgrading to DataMiner 10.7.0/10.7.1 or higher, the [Verify Cassandra End of Support](xref:VerifyCassandraEndOfSupport) prerequisite blocks the upgrade unless this option is set to *true*.<!-- RN 46984 -->
+
 > [!CAUTION]
 > Cassandra 3.x has reached [End of Support](xref:Software_support_life_cycles). Only use this option temporarily, and migrate to [Storage as a Service (STaaS)](xref:STaaS) or to [dedicated clustered storage](xref:Dedicated_clustered_storage) with a more recent Cassandra version as soon as possible.
+
+- **Minimum version**: 10.7.0/10.7.1
+
+### EndOfSupport.Crowd
+
+Allows upgrading to DataMiner 10.7.0/10.7.1 or higher while Atlassian Crowd authentication or user and group management is configured<!--RN 46984-->. Otherwise, the [Verify Crowd End of Support](xref:VerifyCrowdEndOfSupport) prerequisite blocks the upgrade.
+
+> [!CAUTION]
+> Atlassian Crowd authentication has reached [End of Support](xref:Software_support_life_cycles). Only use this option temporarily, and switch to a different type of authentication as soon as possible.
 
 - **Minimum version**: 10.7.0/10.7.1
 
 ### EndOfSupport.Elastic
 
 Allows a DataMiner Agent that uses Elasticsearch as its indexing database to start. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47033 -->, a DataMiner Agent with Elasticsearch as its indexing database will not start unless this option is set to *true*. If the option is missing or not set to *true*, DataMiner stops and logs an error. Creating a migration target that uses Elasticsearch as its indexing database is also blocked without this option.
+
+If you are upgrading to DataMiner 10.7.0/10.7.1 or higher, the [Verify Elastic End of Support](xref:VerifyElasticEndOfSupport) prerequisite blocks the upgrade unless this option is set to *true*.<!-- RN 46984 -->
 
 > [!CAUTION]
 > Elasticsearch has reached [End of Support](xref:Software_support_life_cycles). Only use this option temporarily, and migrate to [OpenSearch](xref:Migrating_from_Elasticsearch_to_OpenSearch) or [Storage as a Service (STaaS)](xref:STaaS) as soon as possible.
@@ -158,8 +171,19 @@ Allows a DataMiner Agent that uses Elasticsearch as its indexing database to sta
 
 Allows a DataMiner Agent that uses MySQL as its main database to start. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47000 -->, a DataMiner Agent with a MySQL main database will not start unless this option is set to *true*. If the option is missing or not set to *true*, DataMiner stops and logs an error.
 
+If you are upgrading to DataMiner 10.7.0/10.7.1 or higher, the [Verify MySQL End of Support](xref:VerifyMySQLEndOfSupport) prerequisite blocks the upgrade unless this option is set to *true*.<!-- RN 46984 -->
+
 > [!CAUTION]
 > MySQL has reached [End of Support](xref:Software_support_life_cycles#third-party-software-support-lifecycle). Only use this option temporarily, and migrate to [Storage as a Service (STaaS)](xref:STaaS) or a [Cassandra cluster](xref:Migrating_the_general_database_to_Cassandra) as soon as possible.
+
+- **Minimum version**: 10.7.0/10.7.1
+
+### EndOfSupport.RADIUS
+
+Allows upgrading to DataMiner 10.7.0/10.7.1 or higher while RADIUS authentication is configured<!-- RN 46984 -->. Otherwise, the [Verify RADIUS End of Support](xref:VerifyRadiusEndOfSupport) prerequisite blocks the upgrade.
+
+> [!CAUTION]
+> RADIUS authentication has reached [End of Support](xref:Software_support_life_cycles). Only use this option temporarily, and switch to a different type of authentication as soon as possible.
 
 - **Minimum version**: 10.7.0/10.7.1
 
