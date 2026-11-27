@@ -1,5 +1,6 @@
 ---
 uid: RAD_manager_old_layout
+description: "Use RAD Manager versions before 4.0.0 to manage relational anomaly groups, inspect anomaly scores, and retrain models with custom time ranges."
 ---
 
 # Working with the RAD Manager (versions before 4.0.0)

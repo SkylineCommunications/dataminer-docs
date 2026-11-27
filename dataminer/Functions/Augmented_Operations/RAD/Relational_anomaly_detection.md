@@ -1,5 +1,6 @@
 ---
 uid: Relational_anomaly_detection
+description: "Use relational anomaly detection in DataMiner to monitor parameter relationships, configure anomaly groups, and detect deviations from normal behavior."
 ---
 
 # Relational anomaly detection

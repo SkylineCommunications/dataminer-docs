@@ -1,5 +1,6 @@
 ---
 uid: RAD_manager
+description: "Use RAD Manager 4.0.0 or later to manage single and shared model groups, inspect anomaly scores and historical anomalies, and configure model training."
 ---
 
 # Working with the RAD Manager

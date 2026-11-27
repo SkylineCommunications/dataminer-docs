@@ -1,5 +1,6 @@
 ---
 uid: Relational_anomaly_detection_xml
+description: "Learn how, for DataMiner versions prior to 10.5.9/10.6.0, you can configure RAD parameter groups in RelationalAnomalyDetection.xml."
 ---
 
 # Configuring RAD through the configuration XML file
