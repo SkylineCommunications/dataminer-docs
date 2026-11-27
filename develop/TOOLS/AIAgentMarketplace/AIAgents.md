@@ -9,11 +9,12 @@ AI agents help you develop DataMiner solutions using task-specific instructions,
 
 Skyline distributes them through use-case-specific plugins in the [AI Agent marketplace](xref:AIAgentMarketplace). They run in your AI client, such as GitHub Copilot or Claude Code. They should not be confused with "DataMiner Agents", i.e., DataMiner nodes.
 
-## Agents, skills, and plugins
+## Agents, skills, plugins and marketplaces
 
 - An **agent** has a specialized role, such as implementing, investigating, or reviewing changes.
 - A **skill** provides guidance and resources for a specific task.
 - A **plugin** bundles the agents and skills needed for a use case.
+- A **marketplace** bundles plugins.
 
 A plugin can contain one agent or several cooperating agents. An orchestrator can coordinate the workflow and delegate tasks to specialized agents.
 
