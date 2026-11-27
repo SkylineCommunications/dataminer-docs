@@ -45,7 +45,9 @@ For example:
 
 ## Using the GQI DxM for queries
 
-By default, queries are executed using CoreGateway and SLHelper. To execute the queries using the [GQI DxM](xref:GQI_DxM), enable the following setting in *appsettings.custom.json* (see [GQI DxM configuration](xref:GQI_DxM#configuration)):
+From Data Aggregator 3.4.0 onwards, queries are executed using the [GQI DxM](xref:GQI_DxM) by default. There is no automatic fallback to CoreGateway if the GQI DxM is unavailable.<!-- RN 47072+47201 --> For the required DxMs, see the [installation prerequisites](xref:Data_Aggregator_install_setup#prerequisites).
+
+In earlier versions, queries are executed using CoreGateway and SLHelper by default. From Data Aggregator 3.1.0 through 3.3.0, you can enable the GQI DxM by adding the following setting to *appsettings.custom.json*:
 
 ```json
 {
@@ -55,11 +57,10 @@ By default, queries are executed using CoreGateway and SLHelper. To execute the 
 }
 ```
 
+To migrate existing CoreGateway queries, see [Data Aggregator migrators](xref:Data_Aggregator_Migrators).
+
 > [!IMPORTANT]
->
-> - This setting is available from Data Aggregator version 3.1.0 onwards and can be used with DataMiner versions from DataMiner 10.5.0 [CU1]/10.5.4 onwards.
-> - When this setting is changed in an existing Data Aggregator setup where queries have been configured already, the existing queries will no longer work. Existing queries must be [migrated](xref:Data_Aggregator_Migrators#enabling-gqi-dxm).
-> - From DataMiner 10.7.0/10.7.1 onwards, GQI via SLHelper is disabled by default. Without this setting, queries will therefore fail unless the [EndOfSupport.SLHelperGQI soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportslhelpergqi) is enabled on the DataMiner Agents.<!-- RN 46927 -->
+> From DataMiner 10.7.0/10.7.1 onwards, GQI via SLHelper is disabled by default. If Data Aggregator uses CoreGateway and SLHelper, queries will fail unless the [EndOfSupport.SLHelperGQI soft-launch option](xref:Overview_of_Soft_Launch_Options#endofsupportslhelpergqi) is enabled on the DataMiner Agents.<!-- RN 46927 -->
 
 ## Multi-DMS connection
 
@@ -195,6 +196,7 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
          "Id": "c93178b7-537e-47ab-9786-f052694b6380", // The GUID of the GQI query.
          "Name": "My New Query", //A human-readable description for the query.
          "Type": 0, // GQI queries require value 0.
+         "Contract": 1 // Use 1 for the GQI DxM query format or 0 for the CoreGateway query format.
        }
        ]
    }
@@ -205,8 +207,10 @@ The GQI queries themselves should be configured in separate JSON files. See [Con
    > - Do **NOT** configure the `LastUpdated` or the `Arguments` fields as these are managed by DataMiner DataAggregator itself.
    > - When setting the `Contract` value:
    >
-   >   - Use `"Contract": 0` for queries that should be executed via CoreGateway and SLHelper.
-   >   - Use `"Contract": 1` for queries that should be executed via the GQI DxM.
+   >   - Use `"Contract": 0`, or omit the property, for queries that should be executed via CoreGateway and SLHelper.
+   >   - Use `"Contract": 1` for queries that should be executed via the GQI DxM. You must specify this explicitly even when the GQI DxM is the default executor.
+   >
+   >   The query file must use the format for the specified contract, and the contract must match the configured executor.
 
 1. After modifying *Helper.json*, restart the DataMiner DataAggregator service (e.g., using Windows Task Manager).
 
