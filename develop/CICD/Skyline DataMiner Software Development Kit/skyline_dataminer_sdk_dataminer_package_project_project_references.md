@@ -7,7 +7,7 @@ keywords: Skyline.DataMiner.Sdk, Package Project, ProjectReferences
 
 Inside the Skyline DataMiner Package Project, under the *PackageContent* directory, you can find the *ProjectReferences.xml* file. This file is used to decide which DataMiner projects are included in the package. This is based on the *ProjectReference* tags that you can find in .csproj files.
 
-By default, all .csproj and .esproj projects of the solution are included. Projects without a supported *DataMinerType* (e.g., unit test projects) are skipped. Web application projects are typically .esproj projects. See [DataMiner Web Application Project](xref:skyline_dataminer_sdk_web_application_project).
+By default, supported projects matching `..\*\*.csproj` or `..\*\*.esproj` are included in the .dmapp, including [web application projects](xref:skyline_dataminer_sdk_web_application_project). The package project itself is skipped, but including another package project is not supported. Projects without a supported *DataMinerType* (e.g., unit test projects) are skipped.
 
 For most scenarios, this file can be used as it is. However, in case you want to create multiple packages by adding multiple package projects, you will need to tweak the file to get the correct content for each package.
 
@@ -117,6 +117,7 @@ Alternatively, you can include all projects, but exclude the ones that you do no
 <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
   <!-- Default include all -->
   <ProjectReference Include="..\*\*.csproj" />
+  <ProjectReference Include="..\*\*.esproj" />
 
   <ProjectReference Exclude="..\PrefixA_AutomationScriptProject1\PrefixA_AutomationScriptProject1.csproj" />
   <ProjectReference Exclude="..\PrefixA_AutomationScriptProject2\PrefixA_AutomationScriptProject2.csproj" />
@@ -141,8 +142,10 @@ The alternative approach can also be used:
 <ProjectReferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.skyline.be/projectReferences">
   <!-- Default include all -->
   <ProjectReference Include="..\*\*.csproj" />
+  <ProjectReference Include="..\*\*.esproj" />
 
   <ProjectReference Exclude="..\PrefixA_*\PrefixA_*.csproj" />
+  <ProjectReference Exclude="..\PrefixA_*\PrefixA_*.esproj" />
 </ProjectReferences>
 ```
 
