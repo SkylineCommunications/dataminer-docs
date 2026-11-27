@@ -41,13 +41,13 @@ In a QAction, the following methods are available to retrieve information about 
 
 |Method  |Description  |
 |---------|---------|
-|[RowIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.RowIndex)     |Gets the 1-based row position of the row that triggered the execution of the QAction. Deprecated: should not be used anymore; use [RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey) instead.         |
+|[RowIndex](xref:Skyline.DataMiner.Scripting.SLProtocol.RowIndex)     |Deprecated. Use [RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey) instead. Gets the 1-based row position of the row that triggered the execution of the QAction. |
 |[RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey)     |Gets the primary key of the row that triggered the execution of the QAction.         |
 |[OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow)     |Gets information about the previous cell values before the row was updated.         |
 |[NewRow](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow)     |Gets information about the updated cells in a row.         |
 
-> [!WARNING]
-> The `RowIndex` method should not be used anymore. Using [RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey) instead is highly recommended.
+> [!IMPORTANT]
+> The `RowIndex` method should no longer be used. Using [RowKey](xref:Skyline.DataMiner.Scripting.SLProtocol.RowKey) instead is highly recommended.
 
 > [!NOTE]
 > For more information about how to implement SNMP tables, see [Retrieving tables](xref:ConnectionsSnmpRetrievingTables).

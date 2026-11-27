@@ -2539,7 +2539,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <returns>The position of the row.</returns>
 		/// <remarks>
 		///		<note type="warning">
-		///		This method should not be used anymore. Using <see cref="RowKey()"/> instead is highly recommended.
+		///		This method should no longer be used. Using <see cref="RowKey()"/> instead is highly recommended.
 		///		</note>
 		///		<list type = "bullet" >
 		///			<item>
@@ -2579,7 +2579,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///				<description>This method can only be used in QActions that have the <see href="xref:Protocol.QActions.QAction-row">row</see> attribute set to “true” and the <see href="xref:Protocol.Params.Param.ArrayOptions-options#preserve-state">preserve state</see> option is enabled for this table.</description>
+		///				<description>This method can only be used in QActions where the <see href="xref:Protocol.QActions.QAction-row">row</see> attribute is set to “true” and the <see href="xref:Protocol.Params.Param.ArrayOptions-options#preserve-state">preserve state</see> option is enabled for this table.</description>
 		///			</item>
 		///			<item>
 		///				<description>If this method is used in a QAction for which the “group” option is specified, the method will instead return the values retrieved by the group that triggered the QAction. See <see href="xref:Protocol.QActions.QAction-options#group">group</see>.</description>
