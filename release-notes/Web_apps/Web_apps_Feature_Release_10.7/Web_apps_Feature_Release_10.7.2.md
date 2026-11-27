@@ -27,6 +27,14 @@ This Feature Release of the DataMiner web applications contains the same new fea
 
 ### Enhancements
 
+#### GQI DxM: Improved column selection for joined queries [ID 46791]
+
+<!-- MR 10.6.0 [CU11] / 10.7.0 [CU0] - FR 10.7.2 -->
+
+When using the GQI DxM, queries containing joins now retrieve only the columns needed to produce the requested result from both sides of the join. This reduces unnecessary data retrieval and processing, which can improve performance for data sources with many columns.
+
+Non-default columns from joined queries are now also available for selection in the query builder.
+
 #### DataMiner apps: Frame styling and header button types [ID 47180]
 
 <!-- MR 10.6.0 [CU11] - FR 10.7.2 -->
