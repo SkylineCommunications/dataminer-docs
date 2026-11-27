@@ -1,140 +1,88 @@
 ---
 uid: Using_isolation_frameworks
+description: Learn how to isolate SLProtocol dependencies in connector unit tests using the Unit Testing Framework or Moq.
 ---
 
 # Using isolation frameworks
 
-The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface is heavily used in protocols as it acts as the interface between *SLScripting* (the process executing QActions) and *SLProtocol* (the process executing the protocol logic).
+The [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) interface connects QActions to protocol logic. To unit test code that depends on `SLProtocol` without a running element, you can replace that dependency with a fake.
 
-Therefore, it is very likely you will end up in a situation where you want to test a method that has a dependency on the `SLProtocol` interface. Below, you can learn how to fake `SLProtocol` so you can easily create unit tests that have a dependency on this interface.
+## Faking SLProtocol with Moq
 
-## Faking SLProtocol using MOQ
+An isolation framework such as [Moq](https://github.com/moq/moq4) can create a fake implementation of `SLProtocol`. Configure the methods your test needs, pass the fake to the code under test, and check the result.
 
-Consider, for example, the following method:
+Add the Moq NuGet package to your test project. You may also need a reference to the *SLManagedScripting* DLL.
+
+![Moq selected in the NuGet Package Manager for a test project in Visual Studio](~/develop/images/unittesting7.png)
+
+For example, consider a method that reads a status parameter:
 
 ```csharp
-public string Rewrite(SLProtocol protocol, string path)
+public static object GetStatus(SLProtocol protocol)
 {
-    if (path == null)
-    {
-        throw new ArgumentNullException(nameof(path));
-    }
-
-    if (String.IsNullOrWhiteSpace(path))
-    {
-        throw new ArgumentException("Path is empty or white space.", nameof(path));
-    }
-
-    string[] pathParts = path.Split('\\');
-    string[] abbreviatedPath = new string[pathParts.Length];
-
-    for (int i = 0; i < pathParts.Length; i++)
-    {
-        string part = pathParts[i];
-
-        if (part == "Generic")
-        {
-            abbreviatedPath[i] = "SLCGeneric";
-            protocol.Log($"QA{protocol.QActionID}|Rewrite|Path '{path}' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.", LogType.Error, LogLevel.NoLogging);
-            continue;
-        }
-
-        if (itemsToAbbreviate.Contains(part))
-        {
-            abbreviatedPath[i] = Convert.ToString(part[0]);
-        }
-        else
-        {
-            abbreviatedPath[i] = part;
-        }
-    }
-
-    return String.Join(@"\", abbreviatedPath);
+    return protocol.GetParameter(100);
 }
 ```
 
-This method is very similar to the method shown in [Creating unit tests](xref:Unit_tests). However, note that the method now has an additional parameter of type `SLProtocol`.
-
-Suppose you now want to create a unit test for this method. When calling the `Rewrite` method in the *Act* step of your test method, you should pass along something that implements *SLProtocol*.
-
-One option is to create your own class that implements the `SLProtocol` interface. However, an easier alternative is to make use of an isolation framework.
-
-For this, you can for example use the [Moq library](https://github.com/moq/moq4). To start using the Moq library, select your test project in the *Solution Explorer*, right-click it, and then select *Manage NuGet Packages*. Click *Browse* and type "Moq". Select the package and click the *Install* button.
-
-![unittesting7.png](~/develop/images/unittesting7.png)
-
-The best way to explain how this framework works is by using it through an example.
-
-In the *Arrange* step, you create a new instance of Mock specifying *SLProtocol* for the type parameter (Note that you may need to add a reference to the *SLManagedScripting* DLL file in your test project first). Then in the *Act* step, you pass *fakeSLProtocol.Object* as the object that implements *SLProtocol*.
+The following test configures `GetParameter` to return a value and passes the fake `SLProtocol` through the mock's `Object` property:
 
 ```csharp
-[TestMethod()]
-public void Rewrite_PathWithItemsToAbbreviate_ReturnsAbbreviatedPath()
+[TestMethod]
+public void GetStatus_ParameterIsOnline_ReturnsOnline()
 {
     // Arrange
-    PathRewriter pathRewriter = new PathRewriter();
-    string path = @"Visios\Customers\Skyline\Protocols\Test";
-    string expected = @"V\C\Skyline\P\Test";
-    var fakeSlProtocol = new Mock<SLProtocol>();
+    var mock = new Mock<SLProtocol>();
+    mock.Setup(protocol => protocol.GetParameter(100)).Returns("Online");
 
     // Act
-    string result = pathRewriter.Rewrite(fakeSlProtocol.Object, path);
+    object result = GetStatus(mock.Object);
 
     // Assert
-    Assert.AreEqual(expected, result);
+    Assert.AreEqual("Online", result);
 }
 ```
 
-In this example, the object implementing the `SLProtocol` interface is used as a stub, i.e., it just acts as a replacement for the dependency we had. This is all it takes to create an *SLProtocol* fake.
+Moq can also verify calls to a mock, for example to check whether a method was invoked. See the [Moq quickstart](https://github.com/Moq/moq4/wiki/Quickstart) for more examples.
 
-In some tests, you may want to verify or assert something on the fake object (e.g., whether a specific method was called). Whenever this is the case, your fake is referred to as a mock.
+## Using the Unit Testing Framework
 
-For example, suppose you want to create an additional unit test to ensure that the [Log](xref:Skyline.DataMiner.Scripting.SLProtocol.Log(System.String,Skyline.DataMiner.Scripting.LogType,Skyline.DataMiner.Scripting.LogLevel)) method gets called whenever "Generic" is part of the specified path. This can be done as follows:
+For connector tests that use parameter or table data, the recommended approach is to use the Unit Testing Framework. Its `SLProtocolMock` provides a ready-made alternative to configuring each `SLProtocol` call with Moq. Its in-memory models store data based on the connector's *protocol.xml*, so tests can arrange and check state. Use the `Skyline.DataMiner.Utils.UnitTestingFramework.Protocol` package in your test project.
+
+By default, `SLProtocolMock` finds the solution directory from the current working directory and loads the *protocol.xml* file from that directory. If the file is in a different location or the solution directory cannot be found, pass the path explicitly:
 
 ```csharp
-[TestMethod()]
-public void AbbreviatePath_PathContainingGeneric_CallsLogMethod()
-{
-    // Arrange
-    PathRewriter pathRewriter = new PathRewriter();
-    string path = @"Visios\Customers\Generic";
-    var slProtocolMock = new Mock<SLProtocol>();
-
-    // Act
-    pathRewriter.Rewrite(slProtocolMock.Object, path);
-
-    // Assert
-    slProtocolMock.Verify(p => p.Log(It.IsAny<string>(), It.IsAny<LogType>(), It.IsAny<LogLevel>()));
-}
+var protocolMock = new SLProtocolMock(@"C:\MyConnector\protocol.xml");
 ```
 
-By calling the `Verify` method on the `slProtocolMock` object, you can verify whether the `Log` method has been called. In this case, the values that were provided when the `Log` method was invoked are not important (hence the use of `It.IsAny<T>`). However, it is possible to also verify the values if this is needed. The following example verifies the message:
+For example, the following method reads a parameter and updates a table row:
 
 ```csharp
-[TestMethod()]
-public void AbbreviatePath_PathContainingGeneric_CallsLogMethod()
+public static void UpdateStreamName(SLProtocol protocol)
 {
-    // Arrange
-    PathRewriter pathRewriter = new PathRewriter();
-    string path = @"Visios\Customers\Generic";
-    var slProtocolMock = new Mock<SLProtocol>();
-    slProtocolMock.Setup(p => p.QActionID).Returns(10);
-    string expectedMessage = $"QA10|Rewrite|Path '{path}' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.";
-
-    // Act
-    pathRewriter.Rewrite(slProtocolMock.Object, path);
-
-    // Assert
-    slProtocolMock.Verify(p => p.Log(expectedMessage, It.IsAny<LogType>(), It.IsAny<LogLevel>()));
+    object name = protocol.GetParameter(150);
+    protocol.SetParameterIndexByKey(1000, "PK1", 2, name);
 }
 ```
 
-Note the use of the `Setup` method on the mock object. This allows you to specify what should be returned when the QActionID property is called.
+The test below assumes *protocol.xml* defines standalone parameter 150 and table 1000, with a primary key and a stream name as its first two columns:
 
-The use of isolation frameworks like Moq allows you to easily create stubs and mocks. It allows you to perform advanced assertions on the mock objects such as verifying the number of times a method got invoked, etc.
+```csharp
+[TestMethod]
+public void UpdateStreamName_ExistingRow_UpdatesName()
+{
+    // Arrange
+    var protocolMock = new SLProtocolMock();
+    protocolMock.GetParameter(150).Update("New name");
+    protocolMock.GetTable(1000).SetRow(new object[] { "PK1", "Old name" });
 
-## Useful links
+    // Act
+    UpdateStreamName(protocolMock.Object);
 
-For more information on the Moq framework, see:
+    // Assert
+    Assert.AreEqual("New name", protocolMock.GetTable(1000).GetRow("PK1")[1]);
+}
+```
 
-- [Quickstart](https://github.com/Moq/moq4/wiki/Quickstart)
+Pass `protocolMock.Object` to the code under test. You can also use its `SLProtocol` methods to arrange or inspect data. For code that depends on `SLProtocolExt`, use `SLProtocolMock<ConcreteSLProtocolExt>` with the generated `ConcreteSLProtocolExt` type.
+
+For an overview of the available packages, see [Unit Testing Framework](xref:Unit_Testing_Framework).
