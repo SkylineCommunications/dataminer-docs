@@ -5,19 +5,9 @@ description: DataMiner soft-launch options activate features that are not yet av
 
 # Overview of soft-launch options
 
-The list below contains an overview of all available soft-launch options. Unless otherwise specified, an option must be set to "true" to activate the feature.
+The list below contains an overview of all available soft-launch options. Unless otherwise specified, an option must be set to "true" to activate the feature. For details on how to set these options, refer to [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
 
 The list also details the minimum DataMiner version to start using each option and, in case the feature has already been officially released in a later DataMiner version, the "Release version" when it becomes available. From that "Release version" onwards, the feature is active by default and any soft-launch configuration for the feature is ignored. As such, it is not necessary to remove a tag from *SoftLaunchOptions.xml* when the corresponding feature is officially released.
-
-## Setting soft-launch options
-
-For most soft-launch options, you can configure `C:\Skyline DataMiner\SoftLaunchOptions.xml` manually on each DataMiner Agent in the cluster. If the file does not exist, create it. For the required XML structure and other configuration details, see [Activating soft-launch options](xref:Activating_Soft_Launch_Options).
-
-Alternatively, install the [SLC-AS-SoftlaunchOptions package](https://catalog.dataminer.services/details/2ec1f7c0-25d8-4aeb-8e9f-8956904f9320) and run the *SLC-AS-SoftlaunchOptionsInteractive* automation script without parameters in DataMiner Cube. The interactive editor lets you compare settings across the cluster and set or remove an option across the cluster without editing each Agent's file. It also shows whether the update succeeded on each target Agent.
-
-The package requires DataMiner Cube and permission to execute automation scripts. Deployment from the Catalog also requires permission to install app packages on a cloud-connected DataMiner System. Installing the package does not change any soft-launch settings.
-
-Changes typically require a DataMiner restart on each affected Agent before they take effect. The interactive editor does not restart Agents. Some options also require an IIS restart.
 
 ## Available soft-launch options
 
