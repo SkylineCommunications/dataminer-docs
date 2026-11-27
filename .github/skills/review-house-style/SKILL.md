@@ -3,6 +3,7 @@ name: review-house-style
 description: "Use when asked to Review a DataMiner Docs page or section for house style, Markdown syntax, image alt text, metadata descriptions, and logical structure."
 argument-hint: "Provide one or more file paths, or paste the page/section text to review."
 ---
+
 # Review house style
 
 Review a documentation page or section and report whether it follows the house style. Use the supplied paths or text, or the current editor page/selection. Ask for a target if none is available.

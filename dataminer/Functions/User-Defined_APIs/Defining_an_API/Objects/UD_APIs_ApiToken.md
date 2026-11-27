@@ -1,6 +1,7 @@
 ---
 uid: UD_APIs_Objects_ApiToken
 ---
+
 # ApiToken object
 
 An `ApiToken` is an object that defines which secret string can be used to access an API.

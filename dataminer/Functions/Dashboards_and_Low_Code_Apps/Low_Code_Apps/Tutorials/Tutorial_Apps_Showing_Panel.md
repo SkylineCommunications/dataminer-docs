@@ -1,6 +1,7 @@
 ---
 uid: Tutorial_Apps_Panel
 ---
+
 # Creating and showing a panel
 
 This tutorial explains how you can add and display a panel in an app.

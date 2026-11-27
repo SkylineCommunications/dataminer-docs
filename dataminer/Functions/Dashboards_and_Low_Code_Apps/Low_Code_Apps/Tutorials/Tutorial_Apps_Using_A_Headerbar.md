@@ -1,6 +1,7 @@
 ---
 uid: Tutorial_Apps_Headerbar
 ---
+
 # Using a header bar
 
 This tutorial explains how you can add a header bar to your pages and panels.

@@ -2,6 +2,7 @@
 uid: UD_APIs_Troubleshooting
 description: "Troubleshoot User-Defined APIs by checking endpoint logs, request routing, service health, NATS communication, and DxM compatibility."
 ---
+
 # Troubleshooting User-Defined APIs
 
 > [!TIP]

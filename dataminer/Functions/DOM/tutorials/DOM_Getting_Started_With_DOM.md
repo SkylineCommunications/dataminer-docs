@@ -1,6 +1,7 @@
 ---
 uid: DOM_Getting_Started_With_DOM
 ---
+
 # Getting started with DOM
 
 This tutorial shows how you can create a simple DOM model using the DOM Editor and then use it in a low-code app.
