@@ -17,17 +17,32 @@ items:
     topicUid: evolution_vs_optimization
   - name: Architecture and components
     topicUid: Overview_Architecture_and_components
-  - name: Deployment models
-    topicUid: Overview_hosting
     items:
-      - name: DataMiner as a Service
-        topicUid: DaaS_hosting
-      - name: Self-managed DataMiner nodes with Storage as a Service
-        topicUid: DM_selfhosted_and_StaaS
-      - name: Self-managed DataMiner nodes and storage nodes (not recommended)
-        topicUid: DM_and_storage_selfhosted
-      - name: Hybrid clusters
-        topicUid: Hybrid_clusters
+      - name: Deployment models
+        topicUid: Overview_hosting
+        items:
+          - name: DataMiner as a Service
+            topicUid: DaaS_hosting
+          - name: Self-managed DataMiner nodes with Storage as a Service
+            topicUid: DM_selfhosted_and_StaaS
+          - name: Self-managed DataMiner nodes and storage nodes (not recommended)
+            topicUid: DM_and_storage_selfhosted
+          - name: Hybrid clusters
+            topicUid: Hybrid_clusters
+      - name: Example architectures
+        items:
+          - name: One-box system
+            topicUid: Architecture_single_agent
+          - name: Centralized cluster
+            topicUid: Architecture_centralized_cluster
+          - name: Distributed multi-site system
+            topicUid: Architecture_distributed_sites
+          - name: Geo-redundant system
+            topicUid: Architecture_geo_redundant
+          - name: Independent and federated DataMiner Systems
+            topicUid: Architecture_multiple_systems
+      - name: Architecture design considerations
+        topicUid: Architecture_design_considerations
   - name: Stack functions
     topicUid: Overview_Stack_Functions
     items:

@@ -10,11 +10,11 @@ description: "Explore how to configure dedicated clustered storage if you chose 
 
 If you choose not to use the recommended [Storage as a Service (STaaS)](xref:STaaS) setup but instead choose self-managed storage, typically, you will need to configure a dedicated clustered storage setup.
 
-For this setup, both a Cassandra Cluster and indexing database (also known as Search Cluster) are required. This setup can be either on premises or in the cloud, or a mix of both.
+For this setup, both a Cassandra cluster and an OpenSearch indexing cluster are required. Host both on dedicated Linux machines, on premises or in the cloud. Follow the [dedicated clustered storage design guidance](xref:Dedicated_clustered_storage) before distributing database nodes across locations.
 
 First install a [Cassandra Cluster](xref:Cassandra_database) (i.e., a Cassandra cluster used for all DMAs in a DMS, as opposed to [a Cassandra cluster per DMA](xref:Configuring_storage_per_DMA)), as this is a prerequisite for installing an indexing database afterwards.
 
-Then install the [indexing database](xref:Indexing_Database). We recommend an on-premises OpenSearch cluster (supported from DataMiner 10.3.0/10.3.3 onwards). While an Elasticsearch cluster can also be used, Elasticsearch is only supported up to version 6.8. As this version is no longer supported by Elastic, this is not recommended.
+Then [install OpenSearch on dedicated Linux machines](xref:Installing_OpenSearch_database). OpenSearch is supported from DataMiner 10.3.0/10.3.3 onwards. Elasticsearch is documented for existing systems only; its support ends in DataMiner 10.7.x. See [Software support lifecycles](xref:Software_support_life_cycles).
 
 ![dedicated clustered storage](~/dataminer/images/Dedicated_clustered_storage.svg)
 
