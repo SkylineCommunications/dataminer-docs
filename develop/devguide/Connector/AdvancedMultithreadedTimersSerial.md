@@ -96,7 +96,7 @@ To process the responses, create a QAction that triggers on the group of the mul
 <QAction id="1011" name="Serial Data" encoding="csharp" options="group" triggers="1011" row="true">
 ```
 
-Note the "group" option, which allows the use of the OldRow method (SLProtocol) to retrieve the result data.
+Note the [group](xref:Protocol.QActions.QAction-options#group) option, which allows the use of the [OldRow](xref:Skyline.DataMiner.Scripting.SLProtocol.OldRow) method (SLProtocol) to retrieve the result data.
 
 Format of the result data:
 

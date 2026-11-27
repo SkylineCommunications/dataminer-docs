@@ -59,9 +59,15 @@ Another way to define a display key using naming is by using the *NamingFormat* 
 </Param>
 ```
 
-The first character defines the separator and can be freely chosen. It will be replaced by an empty string when the display key is formed. The use of the CDATA block allows the use of characters like "<", ">", and "&", which are otherwise encoded in XML.
+The first character defines the separator and can be freely chosen. `SLElement` evaluates `NamingFormat` token by token using this separator: numeric tokens that match a column parameter ID in the table (or in a parent table linked via a [foreign key](xref:UIComponentsTableForeignKeys) and [relation](xref:UIComponentsTableRelations), such as parameter `1005` from table `1000` in the example above) are replaced by that cell's display value, while all other tokens are rendered verbatim as static text. Using a CDATA block allows you to include characters such as `<`, `>`, and `&`, which would otherwise need to be XML-encoded.
 
 In the example above, the semicolon separates the static text from the dynamic parameter values. A display key for this table will look as follows: "Input2TS3".
+
+Keep the following runtime behavior in mind when you design a `NamingFormat` definition:
+
+- **Static text tokens are rendered unconditionally**: Static text tokens (such as `:`, ` / `, or `Input`) are never omitted when adjacent local or foreign-key columns are empty or uninitialized. For example, in `<NamingFormat>,15601,:,15620, / ,15653,:,10002</NamingFormat>`, if columns `15653` and `10002` are empty on a row, the display key will end with the literal string `" / :"`.
+- **Cross-table column references depend on foreign-key resolution**: When `NamingFormat` references a column parameter ID from a parent table linked via `foreignKey`, an empty, delayed, or unmatched foreign key causes the parent column to resolve to an empty string while surrounding static text tokens are still rendered. If a matching parent row is not guaranteed for every child row (for example, when the parent table only monitors a subset of items or is populated asynchronously), we recommend referencing a populated local column in `NamingFormat` so that rows remain identifiable in the Alarm Console.
+- **Use a `retrieved` column for optional or conditional segments**: Because `SLElement` automatically populates and recomputes columns of type `displaykey`, you must never write to a `displaykey` column from a QAction to construct conditional display keys. Instead, when a display key requires an optional or mutually exclusive segment, format that segment in a QAction (including its leading separator when present, such as `" / 10:Channel A"`, or an empty string `""` when not applicable), store it in a normal string column of type `retrieved`, and reference that column's parameter ID in `NamingFormat` without hardcoded surrounding literals.
 
 > [!NOTE]
 > When referencing a parameter ID, take care not to add spaces before or after the number. For example:

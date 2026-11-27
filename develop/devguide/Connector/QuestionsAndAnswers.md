@@ -213,7 +213,7 @@ description: "Review answers to connector development questions about SNMP table
 
 1. *What is the best way to check if a cell from an SNMP table has changed?*
 
-    You should use `row="true"` in combination with the NewRow method defined in the SLProtocol interface.
+    You should use [`row="true"`](xref:Protocol.QActions.QAction-row) in combination with the [NewRow](xref:Skyline.DataMiner.Scripting.SLProtocol.NewRow) method defined in the SLProtocol interface.
 
 1. *The Transfer-Encoding header of an HTTP message can sometimes be set to "chunked". What is the meaning of this type and how do we process this in DataMiner?*
 

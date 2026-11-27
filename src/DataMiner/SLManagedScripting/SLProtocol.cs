@@ -2544,14 +2544,16 @@ namespace Skyline.DataMiner.Scripting
 		object Row(object theArray, int iRow);
 
 		/// <summary>
-		/// Gets the 1-based row position of the row that triggered the execution of the QAction.<br/>
-		/// Note that this method should not be used. Using <see cref="RowKey()"/> instead is highly recommended.
+		/// Gets the 1-based row position of the row that triggered the execution of the QAction.
 		/// </summary>
 		/// <returns>The position of the row.</returns>
 		/// <remarks>
+		///		<note type="warning">
+		///		This method should no longer be used. Using <see cref="RowKey()"/> instead is highly recommended.
+		///		</note>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<description>This method can only be used in QActions that have the attribute row set to “true”.</description>
+		///				<description>This method can only be used in QActions that have the <see href="xref:Protocol.QActions.QAction-row">row</see> attribute set to “true”.</description>
 		///			</item>
 		///		</list>
 		///	</remarks>
@@ -2561,7 +2563,7 @@ namespace Skyline.DataMiner.Scripting
 		/// Gets the primary key of the row that triggered the execution of the QAction.
 		/// </summary>
 		/// <returns>The primary key of the row that triggered the execution of the QAction.</returns>
-		/// <remarks>This method can only be used in QActions that have the attribute row set to “true”.</remarks>
+		/// <remarks>This method can only be used in QActions that have the <see href="xref:Protocol.QActions.QAction-row">row</see> attribute set to “true”.</remarks>
 		///	<example>
 		///	<code>
 		///	string rowKey = protocol.RowKey();
@@ -2587,7 +2589,7 @@ namespace Skyline.DataMiner.Scripting
 		/// <remarks>
 		///		<list type = "bullet">
 		///			<item>
-		///				<description>This method can only be used in QActions that have the attribute row set to “true” and the “preserve state” option is enabled for this table.</description>
+		///				<description>This method can only be used in QActions where the <see href="xref:Protocol.QActions.QAction-row">row</see> attribute is set to “true” and the <see href="xref:Protocol.Params.Param.ArrayOptions-options#preserve-state">preserve state</see> option is enabled for this table.</description>
 		///			</item>
 		///			<item>
 		///				<description>If this method is used in a QAction for which the “group” option is specified, the method will instead return the values retrieved by the group that triggered the QAction. See <see href="xref:Protocol.QActions.QAction-options#group">group</see>.</description>
@@ -2615,7 +2617,7 @@ namespace Skyline.DataMiner.Scripting
 		///<remarks>
 		///		<list type = "bullet" >
 		///			<item>
-		///				<para>This method can only be used in QActions that have the attribute row set to “true”.</para>
+		///				<para>This method can only be used in QActions that have the <see href="xref:Protocol.QActions.QAction-row">row</see> attribute set to “true”.</para>
 		///			</item>
 		///		</list>
 		///	</remarks>
