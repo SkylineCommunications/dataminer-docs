@@ -1,5 +1,6 @@
 ---
 uid: srm_resource_automation
+description: "Explore Resource Automation in DataMiner to apply resource configurations on demand, automate SecOps procedures, and streamline network operations."
 ---
 
 # Resource Automation

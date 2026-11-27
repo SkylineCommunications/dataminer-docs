@@ -1,5 +1,6 @@
 ---
 uid: srm_resource_orchestration
+description: "Explore Resource Orchestration in DataMiner to schedule resources, apply settings when bookings start, and reset resources to default states afterward."
 ---
 # Resource Orchestration
 
