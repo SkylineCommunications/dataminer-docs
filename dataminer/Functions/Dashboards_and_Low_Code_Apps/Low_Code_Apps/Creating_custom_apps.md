@@ -46,7 +46,9 @@ To view, add, edit, delete, or publish low-code applications, you need to have t
 
      - If no apps exist yet, click *Create your first app*.
 
-     - Otherwise, select the tab where you want the app to appear, and click *Create app*. To add the app without assigning it to a specific section, open the *All apps* tab or the *Other apps* tab before creating the app.
+     - Otherwise, select the tab where you want the app to appear and click *Add* in the upper-right corner. Prior to DataMiner 10.5.0 [CU22]/10.6.0 [CU10]/10.7.1, click *Create app*.
+
+       To add the app without assigning it to a specific section, open the *All apps* tab or the *Other apps* tab before creating the app.
 
    - Prior to DataMiner 10.4.0 [CU18]/10.5.0 [CU6]/10.5.9:
 
@@ -76,7 +78,7 @@ To view, add, edit, delete, or publish low-code applications, you need to have t
 > Once an app has been published, it is not possible to revert it to a draft.
 
 > [!NOTE]
-> When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to save it as a draft. However, draft apps are not shown by default on the landing page. To view them, enable the *Show drafts* toggle next to the search bar. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->,click the cogwheel button and activate *Show draft applications*.
+> When you close a draft app you have been working on, it is saved automatically. As such, if you do not want to publish your app immediately, you can just close it to save it as a draft. However, draft apps are not shown by default on the landing page. To view them, enable the *Show drafts* toggle next to the search bar. Prior to DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12<!--RN 43966-->, click the cogwheel button and activate *Show draft applications*.
 
 ## Duplicating an existing low-code app
 
@@ -107,7 +109,7 @@ The newly created duplicate will be assigned a unique name and will automaticall
 
    - To duplicate a different version:
 
-     1. In the upper-right corner, click the ellipsis button ("...") and select *Versions*.
+     1. In the upper-right corner, click the ellipsis button ("...") and select *History*. Prior to DataMiner 10.6.0 [CU10]/10.7.1<!--RN 46917-->, this option is named *Versions*.
 
      1. Select the desired version.
 

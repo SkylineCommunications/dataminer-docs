@@ -18,11 +18,9 @@ The main page of the Dashboards app consists of the following main components:
 
 ![Header bar](~/dataminer/images/Dashboards_app_headerbar.png)<br>*Dashboards app header bar in DataMiner 10.5.2*
 
-The header bar contains the following items, from left to right:
+The look and functionality of the Dashboards app header bar are aligned with the [standard web app header bar](xref:Accessing_the_web_apps#web-app-header-bar).
 
-- Apps button: The button in the upper-left corner provides quick access to other DataMiner web apps.
-
-- *Dashboards* button: Click this button to return to the main page of the app at any time.
+Specific to the Dashboards app, the header bar contains the following items:
 
 - Search box: The box in the middle of the header bar allows you to search the app. As soon as you activate the box, a list of suggestions is displayed below it. The list gets updated with new suggestions as you type. Select a suggestion in the list to open the corresponding dashboard or dashboard folder.
 
@@ -49,44 +47,9 @@ The header bar contains the following items, from left to right:
 
   - The connection has been re-established: A green banner with the message `Connection recovered` is displayed.
 
-- User button: A button with the initials or an image of the current user is displayed in the upper-right corner. Click this button to open a menu that provides access to the following options:
+- *(Dashboards) settings*: An additional option in the user menu that allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
 
-  - *(Dashboards) settings*: Allows you to manage any available [dashboard theme](xref:Configuring_the_dashboard_layout) (1) and configure whether [specific actions](#the-dashboards-app-details-pane) are pinned to the dashboard header bar (2).
-
-    ![Dashboard settings](~/dataminer/images/DashboardSettings.png)<br>*Dashboard settings in DataMiner 10.6.11*
-
-  - *About*: Displays information about the app.
-
-  - *Help*: Available up to DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10. Opens the DataMiner documentation.
-
-  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to user-specific configuration options:
-
-    - *Theme*: Only available when the *showAdvancedSettings=true* argument has been added to the URL. Select one of the available themes:
-
-      - *Light* (Default)
-
-      - *Dark*
-
-      - *System*
-
-    - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
-
-      The following options are available:
-
-      - *From client OS*: Use the time zone configured in the client operating system.
-
-      - *Custom*: Select a custom time zone from the dropdown list.
-
-    - *Password*: Allows users to change their password within a dashboard, without needing to access Cube.
-
-      > [!NOTE]
-      > This setting is only available if the following conditions are met:
-      >
-      > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
-      > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
-      > - The user must not be logged in with external or delegated authentication.
-
-  - *Sign out*: Logs you out of the app and returns you to the logon screen.
+  ![Dashboard settings](~/dataminer/images/DashboardSettings.png)<br>*Dashboard settings in DataMiner 10.6.11*
 
 ## The Dashboards app sidebar
 

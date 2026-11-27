@@ -4,7 +4,7 @@ uid: LowCodeApps_security_config
 
 # Configuring app security
 
-When you configure a low-code app, you can specify which users can access and/or edit the app. Unlike other app settings, this is a setting that is not version-specific, which means that if you configure it for one version of the app, it will apply for all versions.
+When you configure an app, you can specify which users can access and/or edit the app. Unlike other app settings, this is a setting that is not version-specific, which means that if you configure it for one version of the app, it will apply for all versions.
 
 ## [From DataMiner 10.3.0 [CU19]/10.4.0 [CU7]/10.4.10 onwards](#tab/tabid-1)
 
@@ -22,11 +22,11 @@ When you configure a low-code app, you can specify which users can access and/or
 
    The available access levels are:
 
-   - *No access*: Users cannot view or edit the low-code app. The app will be hidden from the DataMiner landing page and will be inaccessible even with a direct link. This option is only available in the dropdown menu next to *Everyone*.
+   - *No access*: Users cannot view or edit the app. The app will be hidden from the DataMiner landing page and will be inaccessible even with a direct link. This option is only available in the dropdown menu next to *Everyone*.
 
-   - *Viewer*: Users can view the low-code app. They can interact with the app components, but they cannot make any modifications.
+   - *Viewer*: Users can view the app. They can interact with the app components, but they cannot make any modifications.
 
-   - *Editor*: Users can view and edit the low-code app. They can modify the app, including renaming and deleting it.
+   - *Editor*: Users can view and edit the app. They can modify the app, including renaming and deleting it.
 
    > [!NOTE]
    >
@@ -50,9 +50,9 @@ When you configure a low-code app, you can specify which users can access and/or
 
 ***
 
-Keep this in mind when you configure security for the Low-Code Apps module:
+Keep this in mind when you configure security for DataMiner Apps:
 
-- Security also needs to be configured on DataMiner level. To view, add, edit, delete, or publish low-code applications, users need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission.
+- Security also needs to be configured on DataMiner level. To view, add, edit, delete, or publish apps, users need to have the necessary user permissions under [Modules > User-definable apps](xref:DataMiner_user_permissions#modules--user-definable-apps) as well as the [DataMiner web apps](xref:DataMiner_user_permissions#general--dataminer-web-apps) user permission.
 
 - If you do not configure security on app level, everyone with the necessary permissions on DataMiner level will be able to view the app, and you, as the creator of the app, will be able to edit it. If you do not configure security on app level for apps created prior to DataMiner 10.5.0 [CU14]/10.6.0 [CU2]/10.6.5<!--RN 45017-->, everyone with the necessary permissions on DataMiner level will be able to view and edit the app.
 

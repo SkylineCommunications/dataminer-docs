@@ -16,4 +16,4 @@ description: "Browse frequently asked questions about DataMiner for answers abou
 - [Questions about Node Recovery](xref:NodeRecovery_FAQ)
 - [Questions about user group settings](xref:Frequently_asked_questions_about_user_group_settings)
 - [Questions about DataMiner Automation](xref:Frequently_asked_questions_about_DMS_Automation)
-- [Questions about Dashboards and Low-Code Apps](xref:Dashboards_and_Low_Code_Apps_FAQ)
+- [Questions about Dashboards and Apps](xref:Dashboards_and_Low_Code_Apps_FAQ)

@@ -22,13 +22,7 @@ http(s)://[DMA name]/Comparison
 
 ![Comparison tool header bar](~/dataminer/images/Comparison_tool_header_bar.png)<br>*Comparison tool header bar in DataMiner 10.5.12*
 
-From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43837-->, the look and functionality of the Comparison tool header bar are aligned with the [standard web apps header bar](xref:Accessing_the_web_apps#the-landing-page-header-bar) as seen on the DataMiner landing page.
-
-Specific to the Comparison tool, the header bar includes:
-
-- DataMiner logo and DMS name: Redirects you to the [DataMiner landing page](xref:Accessing_the_web_apps#dataminer-landing-page).
-
-- *Comparison* button: Removes any arguments from the Comparison app URL.
+From DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43837-->, the look and functionality of the Comparison tool header bar are aligned with the [standard web app header bar](xref:Accessing_the_web_apps#web-app-header-bar).
 
 ### [Earlier DataMiner versions](#tab/tabid-4)
 

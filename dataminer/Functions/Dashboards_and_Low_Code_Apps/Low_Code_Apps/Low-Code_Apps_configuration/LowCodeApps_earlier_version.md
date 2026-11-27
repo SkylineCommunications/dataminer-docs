@@ -12,7 +12,9 @@ To go back to a previous version of a low-code app:
 
 1. Access the version history of the app:
 
-   - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 onwards<!--RN 40077-->, click the ellipsis button ("...") in the upper-right corner and select *Versions*.
+   - Click the ellipsis button ("...") in the upper-right corner and select *History*<!--RN 46917>.
+
+   - From DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9 up to DataMiner 10.6.0 [CU9]/10.7.0, click the ellipsis button ("...") in the upper-right corner and select *Versions*<!--RN 40077-->.
 
    - Prior to DataMiner 10.3.0 [CU18]/10.4.0 [CU6]/10.4.9, click the user icon in the upper-right corner and select *Versions*.
 

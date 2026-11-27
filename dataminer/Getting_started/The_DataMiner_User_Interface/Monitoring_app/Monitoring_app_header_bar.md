@@ -7,13 +7,11 @@ uid: Monitoring_app_header_bar
 > [!NOTE]
 > If the app is used on a mobile device, to make optimal use of the available space on the screen, the app layout may be different from what is described in this section.
 
-The Monitoring app header bar contains the following items, from left to right:
-
 ![Monitoring app header bar](~/dataminer/images/Monitoring_app_Header_Bar.png)<br>*Monitoring app header bar in DataMiner 10.4.4*
 
-- Apps button: The button in the upper-left corner provides quick access to other DataMiner web apps.
+The look and functionality of the Monitoring app header bar are aligned with the [standard web app header bar](xref:Accessing_the_web_apps#web-app-header-bar).
 
-- *Monitoring* button: Click this button to return to the main page of the app at any time.
+Specific to the Monitoring app, the header bar contains the following items:
 
 - Search box: The box in the middle of the header bar allows you to search the app. When you activate the box, a list of suggestions is displayed below it, based on the recent items list. This list of suggestions gets updated with search results as soon as you type in the box. Select a suggestion in the list to open the corresponding card.
 
@@ -40,42 +38,7 @@ The Monitoring app header bar contains the following items, from left to right:
 
   - The connection has been re-established: A green banner with the message `Connection recovered` is displayed.
 
-- User button: A button with the initials or picture of the current user is displayed in the upper-right corner. Click this button to open a menu that provides access to the following options:
+- *(Monitoring) settings*: An additional option in the user menu that allows you to configure the default page that is displayed when you open an element or a view card.
 
-  - *(Monitoring) settings*: Allows you to configure the default page that is displayed when you open an element or a view card.
-
-    > [!NOTE]
-    > Setting the Visual page as the default page can cause reduced performance.
-
-  - *About*: Displays information about the app.
-
-  - *Help*: Available up to DataMiner 10.4.0 [CU19]/10.5.0 [CU7]/10.5.10. Opens the DataMiner Help.
-
-  - *(User) Settings*: Available from DataMiner 10.4.0 [CU21]/10.5.0 [CU9]/10.5.12 onwards<!--RN 43803-->. Provides access to user-specific configuration options:
-
-    - *Theme*: Only available when the *showAdvancedSettings=true* argument has been added to the URL. Select one of the available themes:
-
-      - *Light* (Default)
-
-      - *Dark*
-
-      - *System*
-
-    - *Time zone*: Available from DataMiner 10.5.0 [CU15]/10.6.0 [CU3]/10.6.6 onwards<!--RN 45170-->. This option is only configurable when no [default time zone](xref:ClientSettings_json#setting-the-default-time-zone-for-dataminer-web-apps) has been configured for the DataMiner web apps.
-
-      The following options are available:
-
-      - *From client OS*: Use the time zone configured in the client operating system.
-
-      - *Custom*: Select a custom time zone from the dropdown list.
-
-    - *Password*: Allows users to change their password within a dashboard, without needing to access Cube.
-
-      > [!NOTE]
-      > This setting is only available if the following conditions are met:
-      >
-      > - In *System Center* > *Users*, the user's *User cannot change password* setting must be disabled.
-      > - The user must have the [*Modules* > *System configuration* > *Security* > *Specific* > *Limited administrator* permission](xref:DataMiner_user_permissions#modules--system-configuration--security--specific--limited-administrator).
-      > - The user must not be logged in with external or delegated authentication.
-
-  - *Sign out*: Logs you out of the app and returns you to the logon screen.
+  > [!NOTE]
+  > Setting the Visual page as the default page can cause reduced performance.
