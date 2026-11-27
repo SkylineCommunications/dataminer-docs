@@ -1,5 +1,6 @@
 ---
 uid: View_Cards
+description: "Explore view cards in the Monitoring app, including visual pages, child items, alarms, histograms, notes, and direct navigation URLs."
 ---
 
 # View cards
@@ -14,7 +15,10 @@ The following pages are available:
 
 - *Alarms*: Displays the active alarms for the view.
 
-- *Reports*: Displays the DataMiner reports related to the view.
+- *Reports*: Deprecated. Displays reports related to the view in the [legacy Reporter module](xref:reporter).
+
+  > [!NOTE]
+  > This page is no longer available from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 47135+47136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1, the legacy Reports module is already disabled by default, but it can still be enabled if necessary using the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).<!-- RN 37786 -->
 
 - *Histogram*: Allows you to display a histogram of a protocol parameter for all elements of this protocol in the view. The parameter can be selected in the sidebar on the right. Once a valid parameter has been selected, you can click *Show histogram* to show or refresh the histogram. The side panel also has a settings tab where you can apply the following options:
 

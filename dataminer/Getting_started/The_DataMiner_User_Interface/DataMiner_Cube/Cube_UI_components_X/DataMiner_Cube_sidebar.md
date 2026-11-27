@@ -1,5 +1,6 @@
 ---
 uid: DataMiner_Cube_sidebar
+description: "Explore the DataMiner Cube sidebar, including the Surveyor, Activity, Apps, and Workspace panes and their available actions."
 ---
 
 # DataMiner Cube sidebar
@@ -146,7 +147,7 @@ In the Surveyor right-click menu, the following options are available, depending
 | Actions > Apply service template | View | Allows you to [apply a service template](xref:Applying_service_templates) to the right-clicked view. |
 | Actions > Upgrade to service | View without child views | Allows you to transform the right-clicked view into a service. The child elements in the view will become child elements of the new service. |
 | Actions > Analyze | Element, service, view | Allows you to [analyze the alarms](xref:Using_Correlation_analyzers) for the right-clicked item in order to create a correlation rule based on that analysis. |
-| Actions > Add element/service to dashboard | Element, service | Allows you to add the right-clicked item to a legacy dashboard. However, note that the [legacy dashboards module](xref:dashboards) is being retired, and it is by default disabled from DataMiner 10.4.0/10.4.1 onwards. |
+| Actions > Add element/service to dashboard | Element, service | Allows you to add the right-clicked item to a dashboard in the [legacy Dashboards module](xref:dashboards). This is no longer available from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 47135+47136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1, the legacy Dashboards module is already disabled by default, but it can still be enabled if necessary using the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).<!-- RN 37786 --> |
 | Properties | Element, service, view | Opens the item’s *Properties* window. |
 | Drag and drop editing | Any | Enables the [drag-and-drop view editing mode](xref:Managing_views#editing-a-view). |
 

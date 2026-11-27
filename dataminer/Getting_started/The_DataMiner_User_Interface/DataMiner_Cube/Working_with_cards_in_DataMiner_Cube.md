@@ -1,5 +1,6 @@
 ---
 uid: Working_with_cards_in_DataMiner_Cube
+description: "Learn how to work with cards in DataMiner Cube to navigate and interact with items in your DataMiner System."
 ---
 
 # Working with cards in DataMiner Cube
@@ -88,10 +89,10 @@ The pane consists of a tree view with several fixed nodes:
 
 - **REPORTS**: Displays graphical reports of the alarm distribution, alarm events, alarm states, and alarms on a timeline.
 
-- **DASHBOARDS**: Displays the legacy *Dashboards* module.
+- **DASHBOARDS**: Deprecated. Displays the [legacy Dashboards module](xref:dashboards).
 
   > [!NOTE]
-  > The legacy Dashboards module is by default disabled from DataMiner 10.4.0/10.4.1 onwards.<!-- RN 37786 --> If you want to keep using this module, you need to enable it with the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards). Prior to this, starting from DataMiner 10.2.0/10.1.12, the legacy Dashboards module can optionally be disabled with this soft-launch option.
+  > This page is no longer available from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 47135+47136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1, the legacy Dashboards module is already disabled by default, but it can still be enabled if necessary using the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).<!-- RN 37786 -->
 
 - **NOTES**: Allows users to add short notes to DataMiner items:
 

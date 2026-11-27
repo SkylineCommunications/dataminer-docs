@@ -1,5 +1,6 @@
 ---
 uid: Service_Cards
+description: "Explore service cards in the Monitoring app, including visual pages, child elements and services, alarms, notes, and direct navigation URLs."
 ---
 
 # Service cards
@@ -14,7 +15,10 @@ The following pages are available:
 
 - *Alarms*: Displays the active alarms for the service.
 
-- *Reports*: Displays the DataMiner reports related to the service.
+- *Reports*: Deprecated. Displays reports related to the service in the [legacy Reporter module](xref:reporter).
+
+  > [!NOTE]
+  > This page is no longer available from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 47135+47136 --> Prior to this, starting from DataMiner 10.4.0/10.4.1, the legacy Reports module is already disabled by default, but it can still be enabled if necessary using the [*LegacyReportsAndDashboards* soft-launch option](xref:Overview_of_Soft_Launch_Options#legacyreportsanddashboards).<!-- RN 37786 -->
 
 - *Notes*: Allows you to add and view notes for the service.
 
