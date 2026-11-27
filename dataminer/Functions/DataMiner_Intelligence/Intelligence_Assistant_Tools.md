@@ -39,3 +39,5 @@ From this page, you can:
 
 > [!NOTE]
 > The [Modules > System configuration > Tools > Admin tools](xref:DataMiner_user_permissions#modules--system-configuration--tools--admin-tools) user permission is not required to view existing tools, but it is required to create or edit tools.
+
+For source-controlled or deployment-automated artifacts, start with [Getting started with Intelligence artifacts](xref:Creating_Intelligence_artifacts). Then see [Authoring tools](xref:Adding_tools_to_an_intelligence_agent), [Authoring skills](xref:Authoring_Intelligence_skills), or [Authoring specialized agents](xref:Authoring_Intelligence_specialized_agents), depending on the artifact you want to create.

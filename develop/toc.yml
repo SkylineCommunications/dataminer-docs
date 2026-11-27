@@ -1172,19 +1172,43 @@ items:
         topicUid: GQI_Extensions_Discrete_Values
       - name: Logging
         topicUid: GQI_Extensions_Logging
-  - name: Document Intelligence
-    topicUid: DocumentIntelligence
+  - name: DataMiner Intelligence
+    topicUid: DataMinerIntelligence
     items:
-      - name: API reference
+      - name: Intelligence artifacts
         items:
-          - name: Document
-            topicUid: DocIntel_Document
-          - name: DocumentIntelligenceError
-            topicUid: DocIntel_DocumentIntelligenceError
-          - name: DocumentIntelligenceError.Reason
-            topicUid: DocIntel_DocumentIntelligenceError_Reason
-          - name: DocumentIntelligenceHelper
-            topicUid: DocIntel_DocumentIntelligenceHelper
+          - name: Getting started
+            topicUid: Creating_Intelligence_artifacts
+          - name: Authoring skills
+            topicUid: Authoring_Intelligence_skills
+          - name: Authoring specialized agents
+            topicUid: Authoring_Intelligence_specialized_agents
+          - name: Authoring tools
+            topicUid: Adding_tools_to_an_intelligence_agent
+          - name: Schema reference
+            topicUid: Intelligence_artifact_schemas
+            items:
+              - name: Schema 1.0
+                topicUid: Intelligence_artifact_schema_1_0
+              - name: Schema 1.1
+                topicUid: Intelligence_artifact_schema_1_1
+              - name: Schema 1.2
+                topicUid: Intelligence_artifact_schema_1_2
+              - name: Schema 2.0
+                topicUid: Intelligence_artifact_schema_2_0
+      - name: Document Intelligence
+        topicUid: DocumentIntelligence
+        items:
+          - name: API reference
+            items:
+              - name: Document
+                topicUid: DocIntel_Document
+              - name: DocumentIntelligenceError
+                topicUid: DocIntel_DocumentIntelligenceError
+              - name: DocumentIntelligenceError.Reason
+                topicUid: DocIntel_DocumentIntelligenceError_Reason
+              - name: DocumentIntelligenceHelper
+                topicUid: DocIntel_DocumentIntelligenceHelper
   - name: User-defined APIs
     topicUid: DMI_User-DefinedAPIs
     items:
