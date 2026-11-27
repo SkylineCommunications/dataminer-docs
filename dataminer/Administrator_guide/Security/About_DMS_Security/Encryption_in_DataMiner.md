@@ -52,7 +52,7 @@ Here we can distinguish several communication flows:
 
 Starting from DataMiner 10.5.10/10.6.0, Cube uses gRPC over HTTPS by default to communicate with DataMiner.
 
-Prior to this, Cube will communicate with the DataMiner backend over .NET Remoting by default. This is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to configure DataMiner so [gRPC is used instead of .NET Remoting](xref:DataMiner_hardening_guide#secure-cube-server-communication).
+Prior to DataMiner 10.5.10/10.6.0, Cube communicates with the DataMiner backend over .NET Remoting by default. In versions from 10.5.10/10.6.0 up to but not including 10.7.0/10.7.1, .NET Remoting can also be configured manually. This communication is encrypted using the Rijndael (256-bit key, CBC mode) algorithm. The encryption key is negotiated over a 2048-bit RSA-secured communication channel. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47004 -->, .NET Remoting is no longer available and gRPC is always used.
 
 From DataMiner 10.5.0 [CU12]/10.6.0/10.6.3 onwards<!--RN 44547-->, when Cube connects to a DMA that is [connected to dataminer.services](xref:Connecting_your_DataMiner_System_to_the_cloud) (i.e., a DMA of which the hostname ends with `.dataminer.services`), gRPC is always used, even if a different connection type has been specified in the Cube settings.
 
@@ -64,7 +64,7 @@ By default, the DataMiner web apps (Dashboards, Monitoring, etc.) are served ove
 
 Starting from DataMiner 10.5.10/10.6.0, DataMiner Systems consisting of multiple DataMiner nodes use gRPC over HTTPS for the inter-node communication.
 
-Older versions of DataMiner use a .NET Remoting channel by default for the inter-node communication. This channel is encrypted using the Rijndael algorithm (256-bit key, CBC mode). The encryption key is negotiated over a 2048-bit RSA-secured communication channel. It is also possible to [configure DataMiner to use gRPC instead of .Net Remoting](xref:DataMiner_hardening_guide#grpc).
+Versions from before 10.5.10/10.6.0 use a .NET Remoting channel by default for inter-node communication. Versions from 10.5.10/10.6.0 up to but not including 10.7.0/10.7.1 can still be configured to use .NET Remoting. This channel is encrypted using the Rijndael algorithm (256-bit key, CBC mode). The encryption key is negotiated over a 2048-bit RSA-secured communication channel. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47004 -->, gRPC is always used because .NET Remoting is no longer available.
 
 ### Data acquisition
 

@@ -7,7 +7,7 @@ description: "Review DMA-client and inter-DMA communication, and learn about the
 
 ## DMA-client communication
 
-From DataMiner 10.5.10/10.6.0 onwards, Cube uses gRPC by default to communicate with DataMiner. Prior to this, .NET Remoting is used by default, but gRPC can be enabled manually.
+From DataMiner 10.5.10/10.6.0 onwards, Cube uses gRPC by default to communicate with DataMiner. Prior to this, .NET Remoting is used by default, but gRPC can be enabled manually. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47004 -->, only gRPC is available.
 
 > [!TIP]
 >
@@ -16,12 +16,14 @@ From DataMiner 10.5.10/10.6.0 onwards, Cube uses gRPC by default to communicate 
 
 ## Inter-DMA communication
 
-From DataMiner 10.5.10/10.6.0 onwards, gRPC is used by default for communication between DataMiner Agents. Prior to this, .NET Remoting is used by default, but gRPC can be enabled manually.
+From DataMiner 10.5.10/10.6.0 onwards, gRPC is used by default for communication between DataMiner Agents. Prior to this, .NET Remoting is used by default prior to 10.5.10/10.6.0, or it can be enabled manually. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47004 -->, only gRPC is available.
 
 > [!TIP]
 > For details on when which type of communication is enabled and on how you can harden security, refer to [Secure server-server communication](xref:DataMiner_hardening_guide#secure-server-server-communication).
 
 ## gRPC vs. .NET Remoting
+
+Prior to DataMiner 10.7.0/10.7.1<!--RN 47004-->, both gRPC and .NET Remoting are available as communication methods. In later versions, only gRPC is available.
 
 Aside from the security differences, for which you can find details in the [DataMiner hardening guide](xref:DataMiner_hardening_guide#dataminer-agent-hardening), these are the main differences between gRPC and .NET Remoting:
 

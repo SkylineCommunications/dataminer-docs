@@ -89,6 +89,7 @@ The following features currently have the "End of Life" status. They are no long
 
 | Item | Details |
 |------|---------|
+| .NET Remoting | End of Life as of DataMiner 10.7.0/10.7.1<!-- RN 47004 -->. To improve security, use gRPC instead. For details, see [DataMiner Agent hardening](xref:DataMiner_hardening_guide#dataminer-agent-hardening). |
 | Annotations | Annotations should no longer be used. From DataMiner 10.6.x onwards, this feature is no longer available. |
 | Child bookings | End of Life as of DataMiner 10.5.x. Child bookings have been retired, as the same functionality is supported with contributing bookings |
 | Jobs app | End of Life as of DataMiner 10.5.x. |
@@ -100,11 +101,6 @@ The following features currently have the "End of Life" status. They are no long
 | Web Services API v0 | From DataMiner 10.1.5 onwards, version 0 of the DataMiner Web Services API is disabled. Users will be required to port any reliant applications to use Web Services API v1. |
 | Linking data to *Select* query operator | From DataMiner 10.4.0/10.4.1 onwards, it is no longer possible to link the [Select](xref:GQI_Select) query operator to data. |
 | XML storage of SRM resources and profiles | From DataMiner 10.4.0/10.4.1 onwards, SRM resources and profiles must be stored in the indexing database instead of in XML. |
-
-<!-- 
-When 10.7.0.x is released, add the following item:
-| .NET Remoting | To improve security, gRPC must be used instead of .NET Remoting. For details, see [DataMiner Agent hardening](xref:DataMiner_hardening_guide#dataminer-agent-hardening). |
--->
 
 ## Third-party software support lifecycle
 

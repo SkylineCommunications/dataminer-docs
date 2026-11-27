@@ -18,7 +18,7 @@ To change the connection settings on the login page:
 
    <!-- - *gRPC*: Only available for Skyline users. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443. -->
 
-   - *Remoting*: DataMiner will communicate using .NET Remoting.
+   - *Remoting*: Prior to DataMiner 10.7.0/10.7.1<!-- RN 47004 -->, DataMiner will communicate using .NET Remoting.
 
      - The default port used for Remoting is port 8004.
 
@@ -28,7 +28,7 @@ To change the connection settings on the login page:
 
    - **Destination port**: Select this option to specify a custom destination port number. If you specify “-1”, the port will be detected automatically.
 
-   - **Polling interval**: The frequency at which the client application should poll the DMA, in milliseconds. If you want to use remoting and there are firewalls in your network or NAT is used, make sure this option is selected, to ensure that polling is used instead of eventing. For Web Services, this option is enabled by default.
+   - **Polling interval**: The frequency at which the client application should poll the DMA, in milliseconds. On DataMiner versions prior to 10.7.0/10.7.1, if you want to use remoting and there are firewalls in your network or NAT is used, make sure this option is selected, to ensure that polling is used instead of eventing. For Web Services, this option is enabled by default.
 
    - **Use data compression** (Remoting only): Determines whether data are compressed or not. By default, this option is selected, in order to reduce network traffic.
 

@@ -137,7 +137,7 @@ Verify the following items:
 
 ## Workaround
 
-It is possible to keep using .NET Remoting as the default communication type by applying the [EnableDotNetRemoting.dmupgrade](https://community.dataminer.services/download/enabledotnetremoting-dmupgrade/) package.
+For upgrades to DataMiner versions prior to 10.7.0/10.7.1, it is possible to keep using .NET Remoting as the default communication type by applying the [EnableDotNetRemoting.dmupgrade](https://community.dataminer.services/download/enabledotnetremoting-dmupgrade/) package. This workaround cannot be used to upgrade to 10.7.0/10.7.1 or later<!-- RN 47004 --> because .NET Remoting is no longer available from these versions onwards.
 
 This upgrade package will set `<SLNet><EnableDotNetRemoting>` to true in *MaintenanceSettings.xml* on all Agents in the cluster.
 
@@ -146,7 +146,7 @@ This does not trigger a restart and can immediately be followed by a full upgrad
 > [!IMPORTANT]
 >
 > - If you decide to keep using .NET Remoting as the communication type between DataMiner Agents, and you add a new Agent to the cluster at some point, that Agent must also first be configured with EnableDotNetRemoting set to true.
-> - Keep in mind that .NET Remoting will eventually be removed in a future version, and at that point the upgrade will be blocked again.
+> - .NET Remoting is no longer available from DataMiner 10.7.0/10.7.1 onwards<!--RN 47004-->, so an upgrade to these versions or later will be blocked if .NET Remoting is still explicitly enabled.
 
 ## Issue description
 
