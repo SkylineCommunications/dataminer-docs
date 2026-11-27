@@ -1,12 +1,11 @@
 ---
 uid: FAQs_General
-description: "Browse general DataMiner FAQs on GDPR, system requirements, capacity, integrations, clustering, user access, bandwidth, roadmap, and language options."
+description: "Browse general DataMiner FAQs on system requirements, capacity, integrations, clustering, user access, bandwidth, roadmap, and language options."
 ---
 
 # General questions
 
 - [What is Skyline's mission and vision?](xref:FAQ_MissionVision)
-- [Does DataMiner process personal data in a GDPR-compliant manner?](xref:FAQ_GDPR)
 - [Does Skyline offer an escrow service?](xref:FAQ_Escrow)
 - [What are the principal advantages of DataMiner?](xref:FAQ_Principal_advantages)
 - [What do you mean with multivendor technology?](xref:FAQ_Multivendor_technology)

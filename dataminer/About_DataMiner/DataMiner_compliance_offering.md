@@ -33,6 +33,3 @@ The NIS2 directive of the European Parliament of December 2022 aims to expand an
 
 Similarly, we are also working on compliance with the more recent European Cyber Resilience Act (CRA) regulation, which imposes cybersecurity requirements for all connected products put on the EU market. This legal framework was introduced in November 2024. We are currently working on reviewing our policies and implementing policy changes.
 
-## GDPR compliance
-
-See [Does DataMiner process personal data in a GDPR-compliant manner?](xref:FAQ_GDPR)
