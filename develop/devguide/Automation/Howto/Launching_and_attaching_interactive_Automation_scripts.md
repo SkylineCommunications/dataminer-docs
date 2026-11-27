@@ -147,3 +147,7 @@ If you want to run a script as if launched by a specific user, so no extra scrip
   
   connection.SendSingleResponseMessage(executeScriptMessage);
   ```
+
+## Tracking the progress of a script
+
+To receive notifications when a script you started via SLNet progresses or finishes, add the `PROGRESS` option to the `ExecuteScriptMessage`. See [Tracking the progress of automation scripts](xref:Tracking_the_progress_of_automation_scripts).

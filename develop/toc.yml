@@ -961,6 +961,8 @@ items:
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
       - name: Launching and attaching interactive automation scripts
         topicUid: Launching_and_attaching_interactive_Automation_scripts
+      - name: Tracking the progress of automation scripts
+        topicUid: Tracking_the_progress_of_automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
       - name: Using credentials in an automation script
