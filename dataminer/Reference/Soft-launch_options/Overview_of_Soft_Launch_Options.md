@@ -15,7 +15,7 @@ For most soft-launch options, you can configure `C:\Skyline DataMiner\SoftLaunch
 
 Alternatively, install the [SLC-AS-SoftlaunchOptions package](https://catalog.dataminer.services/details/2ec1f7c0-25d8-4aeb-8e9f-8956904f9320) and run the *SLC-AS-SoftlaunchOptionsInteractive* automation script without parameters in DataMiner Cube. The interactive editor lets you compare settings across the cluster and set or remove an option across the cluster without editing each Agent's file. It also shows whether the update succeeded on each target Agent.
 
-The package requires DataMiner 10.4.0.0 (build 14003) or later, DataMiner Cube, and permission to execute automation scripts. Deployment from the Catalog also requires permission to install app packages on a cloud-connected DataMiner System. Installing the package does not change any soft-launch settings.
+The package requires DataMiner Cube, and permission to execute automation scripts. Deployment from the Catalog also requires permission to install app packages on a cloud-connected DataMiner System. Installing the package does not change any soft-launch settings.
 
 Changes typically require a DataMiner restart on each affected Agent before they take effect. The interactive editor does not restart Agents. Some options also require an IIS restart.
 
