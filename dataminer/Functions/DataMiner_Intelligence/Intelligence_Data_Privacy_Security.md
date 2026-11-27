@@ -9,9 +9,9 @@ This page explains how access to DataMiner Intelligence is controlled and how it
 
 ## AI infrastructure and data residency
 
-The DataMiner Intelligence agent framework uses models hosted on **Microsoft Azure** and is currently limited to Azure OpenAI Services, though other models will also be supported in later releases. The models are hosted and consumed in Azure and not directly from OpenAI or other model providers. The services used by the agent framework provide the following data privacy guarantees:
+The DataMiner Intelligence agent framework uses models hosted on **Microsoft Azure**. It supports models from multiple model providers that are available on Azure: currently OpenAI models through Azure OpenAI and Mistral models (e.g., Mistral-Large-3) through Microsoft Foundry. Support for Anthropic models is planned. You can select the model in DataMiner Assistant. Regardless of the provider, the models are hosted and consumed in Azure and not directly from OpenAI, Mistral AI, or other model providers. The services used by the agent framework provide the following data privacy guarantees:
 
-- Azure OpenAI and other model services used operate under Microsoft's enterprise security and compliance framework, separate from OpenAI's or other model providers' consumer service compliance frameworks.
+- The Azure model services used (Azure OpenAI and Microsoft Foundry) operate under Microsoft's enterprise security and compliance framework, separate from the consumer services and compliance frameworks of OpenAI, Mistral AI, or other model providers.
 - Models are deployed in specific Azure regions to ensure data **remains within a defined geographical zone**. Data does not leave the region in which it is processed.
 
   > [!NOTE]
@@ -78,7 +78,7 @@ This approach ensures that your proprietary system information, business logic, 
 
 ## Compliance and standards
 
-The DataMiner Intelligence agent framework uses the Azure OpenAI Service with the following security and privacy controls:
+The DataMiner Intelligence agent framework uses Azure-hosted model services (Azure OpenAI and Microsoft Foundry) with the following security and privacy controls:
 
 - Data handling follows GDPR compliance principles where applicable.
 - Azure infrastructure is certified to ISO 27001, SOC 2, and other major compliance frameworks.
