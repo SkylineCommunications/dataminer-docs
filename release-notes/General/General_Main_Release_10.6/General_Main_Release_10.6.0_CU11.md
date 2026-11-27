@@ -39,6 +39,14 @@ Before you upgrade to this DataMiner version:
 
 ### Fixes
 
+#### BrokerGateway: Applying a manual configuration could time out [ID 46939]
+
+<!-- MR 10.7.0 [CU0] / 10.6.0 [CU11] - FR 10.7.2 -->
+
+On large clusters, applying a manual BrokerGateway configuration using `applymanualconfig` could time out because too many `ForceRemoveNode` calls were sent. Each call notified all known nodes that the calling node should be removed.
+
+From now on, only added, removed, or inconsistent nodes will call `ForceRemoveNode`. These actions will also be logged.
+
 #### SLGlobal: Process crash when stopping an asynchronous notification queue [ID 47131]
 
 <!-- MR 10.6.0 [CU11] - FR 10.7.2 -->

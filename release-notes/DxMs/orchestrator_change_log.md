@@ -5,6 +5,12 @@ description: "Release notes for the DataMiner Orchestrator DxM, including versio
 
 # Orchestrator change log
 
+#### 26 November 2026 - Fix - Orchestrator 1.15.4 - Service could fail to start after an upgrade [ID 47243]
+
+After an upgrade, the DataMiner Orchestrator service could fail to start because a service deletion workaround intended for Windows Server 2016 was also executed on other Windows Server versions.
+
+The installer now runs this workaround only on Windows Server 2016.
+
 #### 22 May 2026 - Enhancement - Orchestrator 1.10.0 - Upgrade to .NET 10
 
 Orchestrator has been upgraded to .NET 10. **Make sure .NET 10 is installed** before you upgrade to this version.
