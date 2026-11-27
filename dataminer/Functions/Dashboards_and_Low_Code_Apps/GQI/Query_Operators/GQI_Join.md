@@ -1,5 +1,6 @@
 ---
 uid: GQI_Join
+description: "Learn how to combine two GQI queries with the Join operator, define matching conditions, select result columns, and choose a join strategy."
 ---
 
 # Join
@@ -51,6 +52,13 @@ To define a join condition, select a column from the left query and a column fro
 
 > [!NOTE]
 > Depending on the [join strategy](#join-strategies), the join condition will either compare the raw cell values or the display values.
+
+## Joined columns
+
+After a *Join*, columns from both queries are available to subsequent operators.
+
+> [!NOTE]
+> Prior to DataMiner 10.6.0 [CU11]/10.7.2<!-- RN 46791 -->, columns from the right query are only available to operators after the join if they are included in that query's result.
 
 ## Join strategies
 
