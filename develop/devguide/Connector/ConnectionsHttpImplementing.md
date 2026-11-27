@@ -214,7 +214,7 @@ The following example gives an overview of how to capture the different parts of
 </Response>
 ```
 
-Using the statusCode attribute, you can specify the ID of the parameter in which the status line (e.g., "HTTP/1.1 200 OK") should be put.
+Using the [statusCode](xref:Protocol.HTTP.Session.Connection.Response-statusCode) attribute, you can specify the ID of the parameter in which the status line (e.g., "HTTP/1.1 200 OK") should be put.
 
 #### Status codes and retries
 

@@ -9,7 +9,7 @@ uid: DocIntel_DocumentIntelligenceHelper
 - Namespace: `Skyline.DataMiner.Net.Apps.DocumentIntelligence`
 - Assembly: `SLNetTypes.dll`
 
-Provides helper methods to interact with the Document Intelligence feature of the [DataMiner Assistant DxM](xref:Intelligence_Assistant_DxM).
+Provides helper methods to interact with the Document Intelligence feature of the [DataMiner Assistant module](xref:DataMinerCoreModules#assistant).
 
 Available from DataMiner 10.6.0/10.6.1 onwards.<!-- RN 44016 -->
 
@@ -43,7 +43,7 @@ A `string` containing the analysis result produced by the LLM based on the uploa
 
 ### TraceData GetTraceDataLastCall()
 
-Returns the `TraceData` from the most recent `AnalyzeDocuments` call. Use `HasSucceeded()` to check whether the call succeeded, and `GetErrorDataOfType<`[DocumentIntelligenceError](xref:DocIntel_DocumentIntelligenceError)`>()` to retrieve detailed error information.
+Returns the `TraceData` from the most recent `AnalyzeDocuments` call. Use [HasSucceeded()](xref:Skyline.DataMiner.Net.TraceData.HasSucceeded) to check whether the call succeeded, and `GetErrorDataOfType<`[DocumentIntelligenceError](xref:DocIntel_DocumentIntelligenceError)`>()` to retrieve detailed error information.
 
 #### Returns
 
@@ -57,6 +57,7 @@ var traceData = docIntelHelper.GetTraceDataLastCall();
 if (!traceData.HasSucceeded())
 {
     var errors = traceData.GetErrorDataOfType<DocumentIntelligenceError>();
+
     // Handle errors
 }
 ```

@@ -7,11 +7,11 @@ uid: NT_GET_LICENSES
 Retrieves license information.
 
 ```csharp
-string[] licenses = (string[]) protocol.NotifyDataMiner(154, null, null);
+string[] licenses = (string[])protocol.NotifyDataMiner(154, null, null);
 
 foreach (string item in licenses)
 {
-   ////...
+   // ...
 }
 ```
 

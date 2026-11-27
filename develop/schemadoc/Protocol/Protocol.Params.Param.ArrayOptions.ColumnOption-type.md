@@ -129,7 +129,7 @@ With this column type, you can extend the options attribute with the value "dele
 Example:
 
 ```xml
-<ColumnOption idx="0" pid="100" type="state" value="" options=";delete"/>
+<ColumnOption idx="0" pid="100" type="state" options=";delete"/>
 ```
 
 > [!NOTE]
@@ -138,21 +138,16 @@ Example:
 > To ensure this does not happen, you can add an additional state column. This will prevent the retrieved column data from being cleared on every WMI polling update.
 >
 >   ```xml
->   <Param id="1000" trending="false">
->     <Name>networkInterfaces</Name>
->     <Description>Network Interfaces</Description>
->     <Type id="56;57;58;59;60;61;62">array</Type>
->     <ArrayOptions index="0">
->        <ColumnOption idx="7" pid="63" type="retrieved" options="" />
->        <ColumnOption idx="8" pid="64" type="state" options=";delete" />
->     </ArrayOptions>
->     <Interprete>
->        <RawType>other</RawType>
->        <Type>double</Type>
->        <LengthType>next param</LengthType>
->     </Interprete>
->     ...
-> </Param>
+>   <Param id="1000">
+>      <Name>NetworkInterfaces</Name>
+>      <Description>Network Interfaces</Description>
+>      <Type id="56;57;58;59;60;61;62">array</Type>
+>      <ArrayOptions index="0">
+>         <ColumnOption idx="7" pid="63" type="retrieved" options="" />
+>         <ColumnOption idx="8" pid="64" type="state" options=";delete" />
+>      </ArrayOptions>
+>      ...
+>   </Param>
 >   ```
 
 ### viewTableKey
@@ -166,7 +161,7 @@ This allows the retrieval of the correct data from a direct view table if the ta
 Example:
 
 ```xml
-<ArrayOptions index="1" displayColumn="1" partial="true" options=";volatile;view=1500,remoteId;
+<ArrayOptions index="1" partial="true" options=";volatile;view=1500,remoteId;
 directView=5361;filterChange=19901-1501,19902-1502,19903-1503,19904-1504,19905-1505">
    <ColumnOption idx="0" pid="19901" type="retrieved" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>
    <ColumnOption idx="1" pid="19906" type="viewTableKey" options=";disableHeaderSum;disableHistogram;disableHeatmap"/>

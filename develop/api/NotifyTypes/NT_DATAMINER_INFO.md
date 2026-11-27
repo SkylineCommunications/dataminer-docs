@@ -7,10 +7,10 @@ uid: NT_DATAMINER_INFO
 Gets DataMiner information.
 
 ```csharp
-int dmaID = (int) protocol.NotifyDataMiner(107 /*NT_DATAMINER_INFO*/ , 31 /*DI_ID*/ , null);
-string dmaName = (string)protocol.NotifyDataMiner(107 /*NT_DATAMINER_INFO*/ , 9 /*DI_ID*/ , null);
+int dmaID = (int)protocol.NotifyDataMiner(107 /*NT_DATAMINER_INFO*/, 31 /*DI_ID*/, null);
+string dmaName = (string)protocol.NotifyDataMiner(107 /*NT_DATAMINER_INFO*/, 9 /*DI_ID*/, null);
 
-object[] result = (object[]) protocol.NotifyDataMiner(107 /*NT_DATAMINER_INFO*/ , 26 /*DI_GENERAL_INFORMATION */ , null);
+object[] result = (object[])protocol.NotifyDataMiner(107 /*NT_DATAMINER_INFO*/, 26 /*DI_GENERAL_INFORMATION*/, null);
 ```
 
 ## Parameters

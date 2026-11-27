@@ -26,7 +26,7 @@ object[] systemContactInfo = new object[] { oid, value, snmpType };
 
 object[] oidInfo = new object[] { systemContactInfo };
 
-object[] result = (object[])protocol.NotifyProtocol(292/*NT_SNMP_SET*/, elementInfo, oidInfo);
+object[] result = (object[])protocol.NotifyProtocol(292 /*NT_SNMP_SET*/, elementInfo, oidInfo);
 ```
 
 ## Parameters

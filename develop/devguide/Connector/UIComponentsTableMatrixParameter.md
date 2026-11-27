@@ -28,7 +28,7 @@ In addition to the mappings, matrix options can also be configured, in the *Para
 Example:
 
 ```xml
-<Param id="3" trending="false">
+<Param id="3">
    <Name>DummyMatrixParam</Name>
    <Type>Matrix</Type>
    <Display>

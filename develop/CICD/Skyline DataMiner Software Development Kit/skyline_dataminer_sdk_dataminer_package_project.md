@@ -34,7 +34,7 @@ You can also add new projects by using the dotnet-cli. For the sake of stability
     dotnet sln add MyUserDefinedApiFromGithub
 ```
 
-Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the .dmapp created by this project. You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed. See [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) for more information.
+Every *Skyline.DataMiner.SDK* project within the solution, except other DataMiner package projects, will by default be included within the .dmapp created by this project. This also applies to [web application projects](xref:skyline_dataminer_sdk_web_application_project) (.esproj). You can customize this behavior using the *PackageContent/ProjectReferences.xml* file. This allows you to add filters to include or exclude projects as needed. See [ProjectReferences.xml](xref:skyline_dataminer_sdk_dataminer_package_project_project_references) for more information.
 
 ### Existing automation script files
 

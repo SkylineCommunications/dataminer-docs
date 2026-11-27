@@ -12,9 +12,9 @@ To define a table, create a parameter of type [array](xref:Protocol.Params.Param
 Example:
 
 ```xml
-<Param id="1000" trending="false">
-  <Name>Table</Name>
-  <Description>Table Description</Description>
+<Param id="1000">
+  <Name>Items</Name>
+  <Description>Items</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
     <ColumnOption idx="0" pid="1001" type="retrieved" options=""/>
@@ -33,8 +33,8 @@ For each table column, an additional parameter is defined which is referred to v
 
 ```xml
 <Param id="1001" trending="false">
-  <Name>Column1</Name>
-  <Description>Column 1 Description</Description>
+  <Name>Items_Column1</Name>
+  <Description>Column 1 (Items)</Description>
   <Type>read</Type>
   <Interprete>
     <RawType>other</RawType>
@@ -49,8 +49,8 @@ For each table column, an additional parameter is defined which is referred to v
   </Measurement>
 </Param>
 <Param id="1002" trending="false">
-  <Name>Column2</Name>
-  <Description>Column 2 Description</Description>
+  <Name>Items_Column2</Name>
+  <Description>Column 2 (Items)</Description>
   <Type>read</Type>
   <Interprete>
     <RawType>numeric text</RawType>
@@ -64,9 +64,9 @@ For each table column, an additional parameter is defined which is referred to v
     <Type>number</Type>
   </Measurement>
 </Param>
-<Param id="1003" trending="false">
-  <Name>Column3</Name>
-  <Description>Column 3 Description</Description>
+<Param id="1003">
+  <Name>Items_Column3</Name>
+  <Description>Column 3 (Items)</Description>
   <Type>write</Type>
   <Interprete>
     <RawType>numeric text</RawType>
@@ -94,7 +94,7 @@ For each table column, an additional parameter is defined which is referred to v
 The table parameter has an ArrayOptions tag that refers to the column parameters and defines the order of the columns through the [idx](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-idx) attribute.
 
 > [!NOTE]
-> The idx attribute defines the order in which the columns are stored. The order in which the columns are displayed can be different (this is defined in the options attribute of the Type tag in the Measurements tag).
+> The [idx](xref:Protocol.Params.Param.ArrayOptions.ColumnOption-idx) attribute defines the order in which the columns are stored. The order in which the columns are displayed can be different (this is defined in the options attribute of the Type tag in the Measurements tag).
 
 ```xml
   <Measurement>
@@ -109,8 +109,8 @@ In order to create a writable column, create an additional parameter of type "wr
 
 ```xml
 <Param id="1102" setter="true">
-  <Name>Column2</Name>
-  <Description>Column 2 Description</Description>
+  <Name>Items_Column2</Name>
+  <Description>Column 2 (Items)</Description>
   <Type>write</Type>
   <Display>
     <RTDisplay>true</RTDisplay>

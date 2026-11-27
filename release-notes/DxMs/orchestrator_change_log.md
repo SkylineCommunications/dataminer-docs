@@ -1,5 +1,6 @@
 ---
 uid: orchestrator_change_log
+description: "Release notes for the DataMiner Orchestrator DxM, including version history, enhancements, and fixes for deployment and upgrade workflows."
 ---
 
 # Orchestrator change log

@@ -32,10 +32,10 @@ However, the problem is that *person*, *LocationInfo*, or *Street* could be null
 Verify every member before accessing it:
 
 ```csharp
-if(person != null 
-&& person.LocationInfo != null 
-&& person.LocationInfo.Street != null 
-&& person.LocationInfo.Street.StartsWith("Test"))
+if (person != null
+    && person.LocationInfo != null
+    && person.LocationInfo.Street != null
+    && person.LocationInfo.Street.StartsWith("Test"))
 ```
 
 The downside of this is that when the depth of items to check is too large, SonarQube will complain that there are too many conditional operators used in the expression. It will also affect the complexity calculation of the code.

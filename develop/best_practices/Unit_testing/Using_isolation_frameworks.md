@@ -15,12 +15,12 @@ Consider, for example, the following method:
 ```csharp
 public string Rewrite(SLProtocol protocol, string path)
 {
-    if(path == null)
+    if (path == null)
     {
         throw new ArgumentNullException(nameof(path));
     }
 
-    if(String.IsNullOrWhiteSpace(path))
+    if (String.IsNullOrWhiteSpace(path))
     {
         throw new ArgumentException("Path is empty or white space.", nameof(path));
     }
@@ -35,7 +35,7 @@ public string Rewrite(SLProtocol protocol, string path)
         if (part == "Generic")
         {
             abbreviatedPath[i] = "SLCGeneric";
-            protocol.Log("QA" + protocol.QActionID + "|Rewrite|Path '" + path + "' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.", LogType.Error, LogLevel.NoLogging);
+            protocol.Log($"QA{protocol.QActionID}|Rewrite|Path '{path}' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.", LogType.Error, LogLevel.NoLogging);
             continue;
         }
 
@@ -76,8 +76,10 @@ public void Rewrite_PathWithItemsToAbbreviate_ReturnsAbbreviatedPath()
     string path = @"Visios\Customers\Skyline\Protocols\Test";
     string expected = @"V\C\Skyline\P\Test";
     var fakeSlProtocol = new Mock<SLProtocol>();
+
     // Act
     string result = pathRewriter.Rewrite(fakeSlProtocol.Object, path);
+
     // Assert
     Assert.AreEqual(expected, result);
 }
@@ -97,8 +99,10 @@ public void AbbreviatePath_PathContainingGeneric_CallsLogMethod()
     PathRewriter pathRewriter = new PathRewriter();
     string path = @"Visios\Customers\Generic";
     var slProtocolMock = new Mock<SLProtocol>();
+
     // Act
     pathRewriter.Rewrite(slProtocolMock.Object, path);
+
     // Assert
     slProtocolMock.Verify(p => p.Log(It.IsAny<string>(), It.IsAny<LogType>(), It.IsAny<LogLevel>()));
 }
@@ -116,8 +120,10 @@ public void AbbreviatePath_PathContainingGeneric_CallsLogMethod()
     var slProtocolMock = new Mock<SLProtocol>();
     slProtocolMock.Setup(p => p.QActionID).Returns(10);
     string expectedMessage = $"QA10|Rewrite|Path '{path}' must not contain 'Generic'. Auto-adjusting to 'SLCGeneric'.";
+
     // Act
     pathRewriter.Rewrite(slProtocolMock.Object, path);
+
     // Assert
     slProtocolMock.Verify(p => p.Log(expectedMessage, It.IsAny<LogType>(), It.IsAny<LogLevel>()));
 }

@@ -20,7 +20,7 @@ If you want a script to show the UI when user interaction is required:
   - *Auto* (default): Automatic detection is used.
 
     > [!NOTE]
-    > The `Interactivity` element is supported from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 --> Older versions always use automatic detection.
+    > The [Interactivity](xref:DMSScript.Interactivity) element is supported from DataMiner 10.5.9/10.6.0 onwards.<!-- RN 42954 --> Older versions always use automatic detection.
 
 - If you rely on automatic detection:
 
@@ -93,6 +93,7 @@ A QAction that was triggered by a user clicking on a button parameter will know 
 
 ```csharp
 string id = protocol.UserCookie;
+
 // Formats may vary, e.g.:
 // C57D3BEFAD4F445B9BC37B9FAFB84ADB
 // 39D49F3E377C4B6D94AF5F4731C8052D:NO_INFORMATION
@@ -109,6 +110,7 @@ From an SLNet connection:
 
 ```csharp
 Guid id = protocol.GetUserConnection().ConnectionID;
+
 // example: 448BB4B8-4E55-4CB7-BCC3-848923BD19DA
 // Note: protocol.SLNet and Engine.SLNetRaw cookies are process-associated, not user-associated.
 ```
@@ -142,6 +144,10 @@ If you want to run a script as if launched by a specific user, so no extra scrip
           $"USER:{userCookie}",
       }),
   };
-
+  
   connection.SendSingleResponseMessage(executeScriptMessage);
   ```
+
+## Tracking the progress of a script
+
+To receive notifications when a script you started via SLNet progresses or finishes, add the `PROGRESS` option to the `ExecuteScriptMessage`. See [Tracking the progress of automation scripts](xref:Tracking_the_progress_of_automation_scripts).

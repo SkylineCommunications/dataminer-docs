@@ -141,13 +141,13 @@ By calling [Connect](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.Gnmi
 
 ```csharp
 var client = new GnmiClient((uint)protocol.DataMinerID, (uint)protocol.ElementID, protocol.ElementName, config, logger);
-client.Connect()
+client.Connect();
 ```
 
 In case you want to get notified when the connection state changes, you can register on the [ConnectionStateChanged](xref:Skyline.DataMiner.DataSources.OpenConfig.Gnmi.Api.GnmiClient.ConnectionStateChanged) event.
 
 ```csharp
-client.ConnectionStateChanged += OnConnectionStateChanged
+client.ConnectionStateChanged += OnConnectionStateChanged;
 
 private void OnConnectionStateChanged(object sender, EventArgs e)
 {
@@ -202,7 +202,7 @@ For more info on the `Capabilities` RPC, see [About OpenConfig: Capabilities](xr
 var capabilities = client.Capabilities();
 
 protocol.Log($"The gNMI version is: {capabilities.GNMIVersion}");
-foreach(var model in capabilities.SupportedModels)
+foreach (var model in capabilities.SupportedModels)
 {
     protocol.Log($"Model name is {model.Name}");
     protocol.Log($"Model organization is {model.Organization}");
@@ -417,6 +417,7 @@ public static object ConvertEpochTimeUtcTicksToOleAutomationTime(DataMinerConnec
         double convertedDate = Epoch.AddSeconds(secondsSinceEpoch).ToOADate();
         return convertedDate;
     }
+
     return "Not Available";
 }
 ```
@@ -492,7 +493,6 @@ public static object CreateDisplayKey(DataMinerConnectorTriggerValueArgs trigger
 
     return $"{pk}/{description}";
 }
-
 ```
 
 #### Adding a state column

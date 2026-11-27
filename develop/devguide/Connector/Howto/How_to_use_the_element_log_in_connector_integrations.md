@@ -107,7 +107,8 @@ public static void Run(SLProtocol protocol)
     }
     catch (Exception ex)
     {
-        string logLine = string.Format("QA{0}|{1}|Run|Exception thrown:{2}", protocol.QActionID, protocol.GetTriggerParameter(), Environment.NewLine + ex);
+        string logLine = $"QA{protocol.QActionID}|{protocol.GetTriggerParameter()}|Run|Exception thrown:{Environment.NewLine}" +
+            $"{ex}";
         protocol.Log(logLine, LogType.Error, LogLevel.NoLogging);
     }
 }
@@ -134,10 +135,9 @@ For example:
 ```csharp
 public static void WriteDebugLog(this SLProtocol protocol, bool debugMode, string message)
 {
-    if(debugMode)
+    if (debugMode)
     {
-        protocol.Log(
-        string.Format("QA{0}|{1}", protocol.QActionID, message), LogType.DebugInfo, LogLevel.NoLogging);
+        protocol.Log($"QA{protocol.QActionID}|{message}", LogType.DebugInfo, LogLevel.NoLogging);
     }
 }
 ```
@@ -154,7 +154,7 @@ Where Parameter.debugmode is a read parameter that can be changed via a write pa
 
 ```xml
 <Param id="10" trending="true">
-    <Name>debugMode</Name>
+    <Name>DebugMode</Name>
     <Description>Debug Mode</Description>
     <Type>read</Type>
     <Information>
@@ -190,7 +190,7 @@ Where Parameter.debugmode is a read parameter that can be changed via a write pa
     </Measurement>
 </Param>
 <Param id="60" setter="true">
-    <Name>debugMode</Name>
+    <Name>DebugMode</Name>
     <Description>Debug Mode</Description>
     <Type>write</Type>
     <Interprete>

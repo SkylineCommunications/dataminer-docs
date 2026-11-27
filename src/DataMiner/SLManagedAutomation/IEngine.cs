@@ -534,16 +534,16 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <code>
 		/// string allowedGroups = "grpA;grpB";
-		/// bool ok = engine.FindInteractiveClient("Hello world", 100 , allowedGroups, AutomationScriptAttachOptions.None);
+		/// bool ok = engine.FindInteractiveClient("Hello world", 100, allowedGroups, AutomationScriptAttachOptions.None);
 		/// if (!ok)
 		/// {
-		///		engine.GenerateInformation("Could not attach");
+		///     engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
-		///		engine.ShowProgress("A message");
-		///		engine.ShowUI("Another message", true);
+		///     engine.GenerateInformation($"Attached! As {engine.UserDisplayName}");
+		///     engine.ShowProgress("A message");
+		///     engine.ShowUI("Another message", true);
 		/// }
 		/// </code>
 		/// </example>
@@ -570,16 +570,16 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <code>
 		/// string allowedGroups = "grpA;grpB";
-		/// bool ok = engine.FindInteractiveClient("Hello world", 100 , allowedGroups, AutomationScriptAttachOptions.None);
+		/// bool ok = engine.FindInteractiveClient("Hello world", 100, allowedGroups, AutomationScriptAttachOptions.None);
 		/// if (!ok)
 		/// {
-		///		engine.GenerateInformation("Could not attach");
+		///     engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
-		///		engine.ShowProgress("A message");
-		///		engine.ShowUI("Another message", true);
+		///     engine.GenerateInformation($"Attached! As {engine.UserDisplayName}");
+		///     engine.ShowProgress("A message");
+		///     engine.ShowUI("Another message", true);
 		/// }
 		/// </code>
 		/// </example>
@@ -605,17 +605,17 @@ namespace Skyline.DataMiner.Automation
 		/// <example>
 		/// <code>
 		/// string allowedGroups = "grpA;grpB";
-		/// bool ok = engine.FindInteractiveClient("Hello world", 100 , allowedGroups, AutomationScriptAttachOptions.None);
+		/// bool ok = engine.FindInteractiveClient("Hello world", 100, allowedGroups, AutomationScriptAttachOptions.None);
 		/// 
-		/// if(!ok)
+		/// if (!ok)
 		/// {
-		///		engine.GenerateInformation("Could not attach");
+		///     engine.GenerateInformation("Could not attach");
 		/// }
 		/// else
 		/// {
-		///		engine.GenerateInformation("Attached! As " + engine.UserDisplayName);
-		///		engine.ShowProgress("A message");
-		///		engine.ShowUI("Another message", true);
+		///     engine.GenerateInformation($"Attached! As {engine.UserDisplayName}");
+		///     engine.ShowProgress("A message");
+		///     engine.ShowUI("Another message", true);
 		/// }
 		/// </code>
 		/// </example>

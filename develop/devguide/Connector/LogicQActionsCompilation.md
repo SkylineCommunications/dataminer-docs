@@ -33,7 +33,7 @@ A QAction can make use of the functionality defined in an external DLL. In order
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll">
 ```
 
-It is also possible to use [ProtocolName] and [ProtocolVersion] placeholders in the `dllImport` attribute. With these placeholders, you can avoid having to update the references every time the protocol name or version is updated.
+It is also possible to use [ProtocolName] and [ProtocolVersion] placeholders in the [dllImport](xref:Protocol.QActions.QAction-dllImport) attribute. With these placeholders, you can avoid having to update the references every time the protocol name or version is updated.
 
 ```xml
 <QAction id="6" name="Process Response" encoding="csharp" triggers="6" dllImport="System.xml.dll;[ProtocolName].[ProtocolVersion].QAction.1.dll">
@@ -57,18 +57,20 @@ namespace Skyline.Protocol.Model
 {
     public class Probe
     {
-        public string Name { get; set; }
-        public int State { get; set; }
-        public double Capacity { get; set; }
-    
         public Probe(string name, int state, double capacity)
         {
-            this.Name = name;
-            this.State = state;
-            this.Capacity = capacity;
+            Name = name;
+            State = state;
+            Capacity = capacity;
         }
-    
-        ////...
+
+        public string Name { get; set; }
+
+        public int State { get; set; }
+
+        public double Capacity { get; set; }
+
+        // ...
     }
 }
 ]]>
@@ -83,12 +85,12 @@ using Skyline.Protocol.Model;
 
 public static class QAction
 {
-  public static void Run(SLProtocol protocol)
-  {
-     Probe probe = new Probe("Probe 1", 0, 1000);
+    public static void Run(SLProtocol protocol)
+    {
+        Probe probe = new Probe("Probe 1", 0, 1000);
 
-      ////...
-  }
+        // ...
+    }
 }
 ]]>
 </QAction>
@@ -119,8 +121,8 @@ DataMiner compiles QActions with the following preprocessor directives:
   ```csharp
   #if DBInfo
   string databaseType = protocol.GetLocalDatabaseType();
-  protocol.Log("Local DB type is: " + databaseType);
+  protocol.Log($"QA{protocol.QActionID}|Run|Local DB type is: {databaseType}", LogType.Information, LogLevel.NoLogging);
   #else
-  protocol.Log("This version cannot check local DB.");
+  protocol.Log($"QA{protocol.QActionID}|Run|This version cannot check local DB.", LogType.Information, LogLevel.NoLogging);
   #endif
   ```

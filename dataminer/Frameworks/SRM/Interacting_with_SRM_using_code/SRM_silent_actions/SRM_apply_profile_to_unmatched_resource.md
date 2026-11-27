@@ -1,5 +1,6 @@
 ---
 uid: SRM_apply_profile_to_unmatched_resource
+description: "Find out how you can silently apply a profile to an unmapped resource or a resource that is not part of a booking."
 ---
 
 # Silently applying a profile to an unmapped resource or resource not part of a booking
@@ -33,6 +34,7 @@ The following method allows you to apply both the configuration and state profil
 ```csharp
 // Select the unmapped resource, assigned to the booking, by its ID
 var unmappedResource = srmBookingConfig.GetUnmappedResource(unmappedResourceId);
+
 // Apply the values of the START State Profile Instance.
 // If either is unavailable, apply the value available in the Profile Instance.
 unmappedResource.ApplyCombinedProfile("START", "APPLY");
@@ -44,6 +46,7 @@ The extension method *Skyline.DataMiner.Core.SRM.Extensions.Resources.ResourceEx
 
 ```csharp
 using Skyline.DataMiner.Core.SRM.Extensions.Resources;
+
 // ...
 // Select the unmapped resource, assigned to the booking, by its ID
 var orchestrationHelper = resource.GetOrchestrationHelper(

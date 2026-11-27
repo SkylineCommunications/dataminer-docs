@@ -12,37 +12,37 @@ To implement a logger table, perform the following steps:
    Note that once the database option is used, all columns of the table are saved in the database, so it is not required to use the save option explicitly.
 
    ```xml
-   <Param id="5200" trending="false">
-      <Name>TrapsLogger</Name>
-      <Description>Traps Logger</Description>
+   <Param id="5200">
+      <Name>LoggedTraps</Name>
+      <Description>Logged Traps</Description>
       <Type>array</Type>
       <ArrayOptions index="0" options="database">
          <ColumnOption idx="0" pid="5201" type="retrieved" />
          <ColumnOption idx="1" pid="5202" type="retrieved" />
-        ...
+         ...
       </ArrayOptions>
-     ...
+      ...
    </Param>
    ```
 
    In case the logger table persists in Cassandra, also provide a [Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag. If the [Param.Database.CQLOptions.Clustering](xref:Protocol.Params.Param.Database.CQLOptions.Clustering) tag is used, the primary key (i.e., index) set in the ArrayOptions tag will be replaced by the primary key defined in the Clustering tag.
 
    ```xml
-   <Param id="5200" trending="false">
-      <Name>TrapsLogger</Name>
-      <Description>Traps Logger</Description>
+   <Param id="5200">
+      <Name>LoggedTraps</Name>
+      <Description>Logged Traps</Description>
       <Type>array</Type>
       <ArrayOptions index="0" options="database">
          <ColumnOption idx="0" pid="5201" type="retrieved" />
          <ColumnOption idx="1" pid="5202" type="retrieved" />
-        ...
+         ...
       </ArrayOptions>
       <Database>
          <CQLOptions>
             <Clustering>25;2;0</Clustering>
          </CQLOptions>
       </Database>
-     ...
+      ...
    </Param>
    ```
 
@@ -59,7 +59,7 @@ To implement a logger table, perform the following steps:
    ```xml
    <Param id="5204" trending="false">
       <Name>sip</Name>
-      <Description>Source IP (Traps Logger)</Description>
+      <Description>Source IP (Logged Traps)</Description>
       <Information>
          <Subtext>The Source IP of the trap.</Subtext>
       </Information>
@@ -133,7 +133,7 @@ To implement a logger table, perform the following steps:
    ```xml
    <Param id="5202" trending="false">
       <Name>ts</Name>
-      <Description>Database Timestamp (Traps Logger)</Description>
+      <Description>Database Timestamp (Logged Traps)</Description>
       <Information>
          <Subtext>This is the principal timestamp used in the database.</Subtext>
       </Information>
@@ -174,7 +174,7 @@ To implement a logger table, perform the following steps:
 
      ```xml
      <Param id="1003">
-       ...
+        ...
         <Database>
            <ColumnDefinition>VARCHAR(200)</ColumnDefinition>
            <Partition partitionsToKeep="2">hour</Partition>
@@ -244,7 +244,7 @@ In order to prevent indices from rolling over in the indexing database, it is po
 
 > [!NOTE]
 >
-> - The partitionsToKeep attribute value is ignored when Partition is set to "infinite".
+> - The [partitionsToKeep](xref:Protocol.Params.Param.Database.Partition-partitionsToKeep) attribute value is ignored when Partition is set to "infinite".
 > - The column does not need to be a datetime column. Any column type is supported.
 > - The value "infinite" only works on tables with IndexingOptions@enabled = true (i.e., logger tables stored in the indexing database).
 

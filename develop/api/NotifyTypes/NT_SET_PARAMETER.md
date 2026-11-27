@@ -6,6 +6,9 @@ uid: NT_SET_PARAMETER
 
 Sets a parameter.
 
+> [!NOTE]
+> To set parameters on the local element, we recommend using [SLProtocol.SetParameter](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameter(System.Int32,System.Object)), [SLProtocol.SetParameters](xref:Skyline.DataMiner.Scripting.SLProtocol.SetParameters(System.Int32[],System.Object[])), or [SetParameters(IDictionary&lt;int, object&gt;)](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetParameters*) / [SetCell(int, string, int, object)](xref:Skyline.DataMiner.Utils.Protocol.Extension.ProtocolExtension.SetCell*) from the [Skyline.DataMiner.Utils.Protocol.Extension](https://www.nuget.org/packages/Skyline.DataMiner.Utils.Protocol.Extension) NuGet package (`using Skyline.DataMiner.Utils.Protocol.Extension;`).
+
 ```csharp
 uint dmaID = 346;
 uint elementID = 801;
@@ -35,9 +38,9 @@ protocol.NotifyDataMiner(50 /*NT_SET_PARAMETER*/, ids, value);
   ```csharp
   string primaryKey = "Row 1";
   int cellValue = 20;
-
+  
   object[] parameterDetails = new object[] { primaryKey, cellValue };
-
+  
   protocol.NotifyDataMiner(50, ids, parameterDetails);
   ```
 

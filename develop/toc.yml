@@ -293,14 +293,14 @@ items:
           topicUid: UIComponentsTableForeignKeys
         - name: Relations
           topicUid: UIComponentsTableRelations
+        - name: Custom table context menu
+          topicUid: UIComponentsCustomTableContextMenu
         - name: Setting row text color
           topicUid: UIComponentsTableSettingRowTextColor
         - name: Configuring buttons to open DataMiner objects from table cells
           topicUid: UIComponentsTableRowButtons
         - name: Exercise
           topicUid: UIComponentsTableExercise
-      - name: Custom table context menu
-        topicUid: UIComponentsCustomTableContextMenu
       - name: Matrix
         items:
           - name: Standard matrix
@@ -961,6 +961,8 @@ items:
         topicUid: Creating_a_cypress_test_for_an_interactive_automation_script
       - name: Launching and attaching interactive automation scripts
         topicUid: Launching_and_attaching_interactive_Automation_scripts
+      - name: Tracking the progress of automation scripts
+        topicUid: Tracking_the_progress_of_automation_scripts
       - name: Implementing the OnRequestScriptInfo entry point
         topicUid: Implementing_OnRequestScriptInfo_Entry_Point
       - name: Using credentials in an automation script
@@ -6889,6 +6891,8 @@ items:
           topicUid: skyline_dataminer_sdk_dataminer_package_project_catalog_references
         - name: ProjectReferences.xml
           topicUid: skyline_dataminer_sdk_dataminer_package_project_project_references
+    - name: DataMiner Web Application Project
+      topicUid: skyline_dataminer_sdk_web_application_project
     - name: Visual Studio 2022 solution filter (*.slnf) files
       topicUid: skyline_dataminer_sdk_solution_filter_files
     - name: Frequently asked questions
@@ -6931,6 +6935,8 @@ items:
         topicUid: github_reusable_workflows_connector_master_workflow
       - name: Update Catalog Details
         topicUid: github_reusable_workflows_update_catalog_details
+      - name: OKF Source Sync Review Workflow
+        topicUid: github_reusable_workflows_okf_source_sync_review_workflow
     - name: Tutorials
       items:
       - name: For any item

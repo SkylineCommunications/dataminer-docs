@@ -9,9 +9,7 @@ Creates an element on the DMA executing this method call.
 ```csharp
 uint viewID = 200;
 string[] elementDetails = new string[] { elementName, elementConfiguration };
-object[] extraInfo = new object[2];
-extraInfo[0] = null;
-extraInfo[1] = new uint[]{ viewID };
+object[] extraInfo = new object[] { null, new uint[] { viewID } };
 
 protocol.NotifyDataMiner(200 /*NT_ADD_NEW_ELEMENT*/, elementDetails, extraInfo);
 ```

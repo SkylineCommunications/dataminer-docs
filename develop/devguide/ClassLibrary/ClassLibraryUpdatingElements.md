@@ -24,7 +24,7 @@ if (element.Properties["CustomProperty"].IsWritable)
 }
 else
 {
-   // "My Property" is a read-only property.
+    // "My Property" is a read-only property.
 }
 
 element.Update(); // Apply the changes.

@@ -17,7 +17,7 @@ By default, the icon in the tree items will be chosen according to this priority
 1. The `<Icon ref="...">` defined on the table parameter (referencing an icon in `C:\Skyline DataMiner\Protocols\Icons.xml`).
 1. A default icon if no `<Icon>` is defined on the table parameter.
 
-By specifying a column in OverrideIconColumns (under the TreeControl tag), you can apply a custom icon based on a cell value in that row. The column must be a parameter of type “discreet” and all discrete values must have an iconRef attribute referring to an icon. If the iconRef attribute is empty or invalid, or the value is “Not Initialized”, a default icon will be displayed.
+By specifying a column in OverrideIconColumns (under the TreeControl tag), you can apply a custom icon based on a cell value in that row. The column must be a parameter of type “discreet” and all discrete values must have an [iconRef](xref:Protocol.Params.Param.Measurement.Discreets.Discreet-iconRef) attribute referring to an icon. If the iconRef attribute is empty or invalid, or the value is “Not Initialized”, a default icon will be displayed.
 
 ```xml
 <Discreets>
@@ -112,13 +112,13 @@ By specifying a column in OverrideIconColumns (under the TreeControl tag), you c
 |![VSAT](~/develop/images/VSAT.png)|VSAT|VSAT.|
 
 ```xml
-<Param id="1000" trending="false">
-  <Name>PIDTable</Name>
-  <Description>PID Table</Description>
+<Param id="1000">
+  <Name>PIDs</Name>
+  <Description>PIDs</Description>
   <Type>array</Type>
   <ArrayOptions index="0">
-    <ColumnOption idx="0" pid="1001" type="custom" options=";"/>
-    <ColumnOption idx="1" pid="1002" type="custom" options=";"/>
+    <ColumnOption idx="0" pid="1001" type="retrieved" options=";"/>
+    <ColumnOption idx="1" pid="1002" type="retrieved" options=";"/>
   </ArrayOptions>
   <Display>
     <RTDisplay>true</RTDisplay>

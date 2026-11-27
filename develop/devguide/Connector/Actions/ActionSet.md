@@ -55,8 +55,8 @@ Example on group
   <Name>Sets</Name>
   <Description>Sets</Description>
   <Content>
-     <Param>2006</Param>
-     <Param>2007</Param>
+    <Param>2006</Param>
+    <Param>2007</Param>
   </Content>
 </Group>
 ```

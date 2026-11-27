@@ -8,8 +8,11 @@ In order to improve readability, consider the following layout guidelines:
 
 - Allman bracing style should be used, e.g., the curly brace associated with a control statement must be placed on the next line and must be indented to the same level as the control statement. Statements within the braces are indented to the next level ([SA1500](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1500), [SA1501](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1501), [SA1502](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1502)).
 
-    ```txt
-    if (slKeysToDelete.Count > 0) { protocol.DeleteRow(16000, slKeysToDelete.ToArray()); }
+    ```csharp
+    if (slKeysToDelete.Count > 0)
+    {
+        protocol.DeleteRow(16000, slKeysToDelete.ToArray());
+    }
     ```
 
 - In general, curly braces should never be considered optional ([SA1503](https://github.com/Visual-Stylecop/Visual-StyleCop/wiki/SA1503)). For statements where curly braces are optional, these may only be omitted if the statement is written on a single line.

@@ -39,7 +39,7 @@ The parameter:
 
 ```xml
 <Param id="100" trending="true" save="true">
-    <Name>selectedConfiguration</Name>
+    <Name>SelectedConfiguration</Name>
     <Description>Configuration</Description>
     <Type>read</Type>
     <Information>

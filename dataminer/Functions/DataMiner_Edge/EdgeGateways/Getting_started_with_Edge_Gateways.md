@@ -6,6 +6,9 @@ description: Learn how to install the EdgeManager DxM and configure secure Edge 
 
 # Getting started with Edge Gateways
 
+> [!IMPORTANT]
+> Support for the zrok architecture will be discontinued in 2027. Gateway mode will also be provided by Edge Nodes.
+
 ## EdgeManager DxM installation
 
 Before you configure an Edge Gateway, [install the EdgeManager DxM](xref:Installing_EdgeManager_DxM).

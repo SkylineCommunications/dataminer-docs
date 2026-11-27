@@ -37,6 +37,9 @@ The following limitations apply:
 
 ## Architecture
 
+> [!IMPORTANT]
+> Support for the zrok architecture will be discontinued in 2027. Gateway mode will also be provided by Edge Nodes.
+
 Edge Gateways use [zrok](https://zrok.io/), a secure, open-source platform that allows private sharing of data sources. zrok is built on top of [OpenZiti](https://openziti.io/), an open-source zero-trust networking platform by [NetFoundry](https://netfoundry.io/).
 
 The image below shows two data sources, A and B, that have been exposed and are polled by a DaaS system. Each data source has its own dedicated tunnel. Data source C is not exposed and is therefore not visible externally.

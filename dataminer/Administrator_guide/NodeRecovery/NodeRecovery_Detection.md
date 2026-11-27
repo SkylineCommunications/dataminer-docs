@@ -19,6 +19,12 @@ At present, DataMiner Node Recovery can detect **full server outages**, where ma
 
 In its current version, NodeRecovery will **not** detect scenarios where a server is still running but the DataMiner software is not running, blocked, or unable to start up.
 
+## Manual shutdowns and unexpected outages
+
+When Node Recovery detects a clean shutdown request, such as a manual restart of Windows or the NodeRecovery Windows service, it assumes that the node will return shortly. Observing nodes then mark the node as *Unknown* in their local view and wait for its first heartbeat after the restart. If no heartbeat is received within the configured [FirstHeartbeatThresholdMilliseconds](xref:NodeRecovery_Settings#outage-settings), they mark the node as *Outage*.
+
+In contrast, an unexpected NodeRecovery process or system crash or a node disappearing without a clean shutdown notification is detected through missing heartbeats. A node that was *Healthy* is marked as *Outage* in the local view when [OutageThresholdMilliseconds](xref:NodeRecovery_Settings#outage-settings) is exceeded. Depending on the configured thresholds, an outage following a clean shutdown can therefore be detected much later than an unexpected outage.
+
 ## Local vs. global detection
 
 ### Local detection

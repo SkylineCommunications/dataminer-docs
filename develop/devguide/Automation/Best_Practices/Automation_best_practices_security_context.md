@@ -11,7 +11,12 @@ Using the user's context ensures that the operation is subject to that user's pe
 
 ## DataMinerSystem class library
 
-When you access DataMiner through the DataMinerSystem class library, `engine.GetDms()` uses the System account. To perform operations in the security context of the user running the script, get the DMS connection by calling `engine.GetUserConnection().GetDms()`.
+When you access DataMiner through the DataMinerSystem class library, `engine.GetDms()` uses the System account. To perform operations in the security context of the user running the script, get the DMS connection by calling `engine.GetDmsAsUser()` (available from version 1.2.1.3 of `Skyline.DataMiner.Core.DataMinerSystem.Automation` onwards).
+
+If you are using a version prior to 1.2.1.3, we recommend upgrading the NuGet package. If upgrading is not possible, you can still obtain an `IDms` object in the user context by calling `engine.GetUserConnection().GetDms()`.
+
+> [!NOTE]
+> Only `DMSMessage` requests are handled in the user context. Other flows, such as subscriptions (Monitors), are not executed in the user context.
 
 ## Automation API
 
@@ -21,7 +26,7 @@ The Automation API also uses the System account for operations such as setting a
 
 When sending a direct SLNet message, the method you use determines the security context:
 
-- `engine.SendSLNetSingleResponseMessage` uses the user account.
+- [engine.SendSLNetSingleResponseMessage](xref:Skyline.DataMiner.Automation.Engine.SendSLNetSingleResponseMessage(Skyline.DataMiner.Net.Messages.DMSMessage)) uses the user account.
 - `engine.GetUserConnection().HandleSingleResponseMessage` uses the user account.
 - `Engine.SLNetRaw.HandleMessage` uses the System account.
 
@@ -29,7 +34,7 @@ When sending a direct SLNet message, the method you use determines the security 
 
 The following example applies a parameter set through different API paths and labels the security context used by each path. It assumes that the IDs and helper methods shown, including `RunPath` and `CreateSetParameterMessage`, are defined elsewhere in the script.
 
-```cs
+```csharp
 // 1. DataMinerSystem class library
 
 // System account
@@ -40,8 +45,16 @@ RunPath(engine, "DataMinerSystem class library - System user", delegate
     element.GetStandaloneParameter<double?>(ParameterId).SetValue(1);
 });
 
-// User account
+// User account (v1.2.1.3 and later)
 RunPath(engine, "DataMinerSystem class library - Running script user", delegate
+{
+    IDms dms = engine.GetDmsAsUser();
+    IDmsElement element = dms.GetElement(new DmsElementId(DataMinerId, ElementId));
+    element.GetStandaloneParameter<double?>(ParameterId).SetValue(2);
+});
+
+// User account (prior to v1.2.1.3)
+RunPath(engine, "DataMinerSystem class library - Running script user (legacy)", delegate
 {
     IDms dms = engine.GetUserConnection().GetDms();
     IDmsElement element = dms.GetElement(new DmsElementId(DataMinerId, ElementId));

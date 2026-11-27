@@ -17,7 +17,7 @@ In case the element does not need to poll a device to find out which devices to 
 
 ```xml
 <Type advanced="serial:modules">serial</Type>
-   <PortSettings name="Modules" visibleInUi="false">
+<PortSettings name="Modules" visibleInUi="false">
    <IPport>
       <DefaultValue>65535</DefaultValue>
       <Value>*</Value>
@@ -34,14 +34,14 @@ In addition, the protocol must define a parameter that will be used to change th
 
 ```xml
 <Param id="39999" trending="false" save="true">
-  <Name>Dynamic Polling IP Conn1</Name>
-  <Description>Connection 1 Dynamic Polling IP</Description>
-  <Type options="dynamic ip 1">read</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-  </Interprete>
+   <Name>DynamicPollingIP_Connection1</Name>
+   <Description>Connection 1 Dynamic Polling IP</Description>
+   <Type options="dynamic ip 1">read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```
 
@@ -63,23 +63,23 @@ Two parameters can be used for this buffer. A parameter to hold all sets that ne
 ```xml
 <Param id="40000">
    <Name>SetBuffer</Name>
-   <Description>SetBuffer</Description>
+   <Description>Set Buffer</Description>
    <Type>read</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-  </Interprete>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 <Param id="40001">
    <Name>ExecuteBuffer</Name>
-   <Description>ExecuteBuffer</Description>
+   <Description>Execute Buffer</Description>
    <Type>read</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-  </Interprete>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```
 
@@ -93,7 +93,7 @@ A timer executes a group, which contains two actions:
    <Time>60000</Time>
    <Interval>75</Interval>
    <Content>
-     <!--start of module information retrieval-->
+      <!--start of module information retrieval-->
       <Group>39000</Group>
    </Content>
 </Timer>
@@ -156,12 +156,12 @@ Optionally, an additional check could be done on the type of device (in case dif
 
 ```csharp
 // Set dynamic polling IP.
-protocol.SetParameter(39999, ip + ":" + portnr);
+protocol.SetParameter(39999, $"{ip}:{portnr}");
 
 // Trigger group to get data.
 if (type.Contains("type1"))
 {
-    if (timerl)
+    if (timer1)
     {
         protocol.CheckTrigger(39103);
     }
@@ -176,7 +176,7 @@ if (type.Contains("type1"))
 }
 else if (type.Contains("type2"))
 {
-    if (timerl)
+    if (timer1)
     {
         protocol.CheckTrigger(39104);
     }
@@ -220,7 +220,7 @@ Note the connection="1" in the group and options="connection:1" in the pair to i
    <Description>HD0902 parameters Group 24h</Description>
    <Content>
       <Pair>30000</Pair>
-     ...
+      ...
    </Content>
 </Group>
 <Pair id="30000" options="connection:1">
@@ -303,14 +303,14 @@ A second QAction triggers on a change of the buffer parameter. If the buffer is 
 
 ```xml
 <Param id="40000">
-  <Name>setBuffer</Name>
-  <Description>setBuffer</Description>
-  <Type>read</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-  </Interprete>
+   <Name>SetBuffer</Name>
+   <Description>Set Buffer</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```
 
@@ -318,13 +318,13 @@ The previous QAction also triggers on a change of the execute buffer parameter. 
 
 ```xml
 <Param id="40001">
-  <Name>ExecuteBuffer</Name>
-  <Description>ExecuteBuffer</Description>
-  <Type>read</Type>
-  <Interprete>
-     <RawType>other</RawType>
-     <LengthType>next param</LengthType>
-     <Type>string</Type>
-  </Interprete>
+   <Name>ExecuteBuffer</Name>
+   <Description>Execute Buffer</Description>
+   <Type>read</Type>
+   <Interprete>
+      <RawType>other</RawType>
+      <LengthType>next param</LengthType>
+      <Type>string</Type>
+   </Interprete>
 </Param>
 ```

@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_service_states
+description: "Find out how to configure service states to map booking stages, define allowed transitions, and link LSO scripts."
 ---
 
 # Service Orchestration: service states configuration

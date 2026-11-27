@@ -7,6 +7,31 @@ uid: Skyline_DataMiner_Core_DataMinerSystem_Range_1.2
 > [!NOTE]
 > Range 1.2.x.x is supported as from **DataMiner 10.4.0**.
 
+### 1.2.1.4
+
+#### New feature - Creating views in bulk with IDms.CreateViews [ID 47064]
+
+The DataMinerSystem library now provides the `IDms.CreateViews()` method to create one or more views in a single call. Each `ExtendedViewConfiguration` specifies the view name and parent view ID, and can optionally specify which elements and services to add to the view.
+
+The method skips views whose names already exist and returns only the IDs of newly created views. The returned IDs may not be in the same order as the configurations. Use `ViewExists()` or `GetView()` with the view name to check for a specific view.
+
+The existing `IDms.CreateView()` method has been marked obsolete because it can return an invalid ID when a view with the same name already exists. Use `CreateViews()` instead, even when creating a single view.
+
+#### Fix - IDms.ServiceExists could throw an exception for a missing service [ID 47085]
+
+When you called `IDms.ServiceExists()` with the name or ID of a service that did not exist, the method could throw an exception. Both overloads now return `false` in this case.
+
+### 1.2.1.3
+
+#### New feature - GetDmsAsUser method added for automation scripts [ID 46916]
+
+The DataMinerSystem Automation library now provides a new `GetDmsAsUser()` extension method on `Engine` and `IEngine`. It returns an object implementing `IDms` and executes `DMSMessage` requests in the security context of the user running the automation script.
+
+`GetDmsAsUser()` is now the recommended way to get a DMS object in automation scripts. `GetDms()` executes actions with System account permissions, so only use it when system permissions are explicitly required.
+
+> [!NOTE]
+> Only `DMSMessage` requests are handled in the user context. Other flows, such as subscriptions (monitors), are not executed in the user context.
+
 ### 1.2.1.2
 
 #### Fix - New scheduler tasks defaulted to zero repetitions instead of unlimited repetitions [ID 46858]

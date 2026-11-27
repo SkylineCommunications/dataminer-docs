@@ -8,6 +8,7 @@ namespace Skyline.DataMiner.Scripting
 	/// </summary>
 	/// <remarks>
 	/// <para>Prior to DataMiner 10.1.1 (RN 27995), these methods are all defined as extension methods on the SLProtocol interface. However, from DataMiner 10.1.1 onwards, the <see cref="SLProtocol"/> interface itself has been extended with these methods, which should be used instead of the static methods defined in this class.</para>
+	/// <para>For additional extension methods on <see cref="SLProtocol"/> (such as <c>GetColumns</c>, <c>GetColumn</c>, <c>GetCell</c>, <c>SetCell</c>, <c>SetColumns</c>, <c>DeleteRows</c>, and <c>RunAction</c>), use the <c>Skyline.DataMiner.Utils.Protocol.Extension</c> NuGet package.</para>
 	/// </remarks>
 	public class NotifyProtocol
 	{

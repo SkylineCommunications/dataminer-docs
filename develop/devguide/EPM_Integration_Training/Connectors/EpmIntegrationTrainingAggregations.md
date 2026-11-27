@@ -47,7 +47,7 @@ The flow of the receiver of the merge request is as follows:
 
    ```xml
    <Param id="19003">
-       <Name>mergeNetworkNumberEndpoints</Name>
+       <Name>MergeNetworkNumberEndpoints</Name>
        <Description>Merge Network Number Endpoints</Description>
        <Type>write</Type>
        <Interprete>

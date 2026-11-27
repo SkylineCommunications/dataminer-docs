@@ -1,27 +1,19 @@
 ---
 uid: Cube_Feature_Release_10.6.12
-description: "Release notes for DataMiner Cube Feature Release 10.6.12, with new features, enhancements, and fixes planned for this preview release."
+description: "Release notes for DataMiner Cube Feature Release 10.6.12, with new features, enhancements, and fixes planned for this release."
 ---
 
-# DataMiner Cube Feature Release 10.6.12 - Preview
-
-> [!IMPORTANT]
-> We are still working on this release. Some release notes may still be modified or moved to a later release. Check back soon for updates!
+# DataMiner Cube Feature Release 10.6.12
 
 This Feature Release of the DataMiner Cube client application contains the same new features, enhancements, and fixes as DataMiner Cube Main Release 10.6.0 [CU9].
+
+> [!NOTE]
+> For known issues with this version, refer to [Known issues](xref:Known_issues).
 
 > [!TIP]
 >
 > - For release notes related to the general DataMiner release, see [General Feature Release 10.6.12](xref:General_Feature_Release_10.6.12).
 > - For release notes related to the DataMiner web applications, see [DataMiner web apps Feature Release 10.6.12](xref:Web_apps_Feature_Release_10.6.12).
-
-## Highlights
-
-*No highlights have been selected yet.*
-
-## New features
-
-*No new features have been added yet.*
 
 ## Changes
 
@@ -43,6 +35,8 @@ From now on, changes to measurement point selections will immediately be pushed 
 <!-- MR 10.5.0 [CU21] / 10.6.0 [CU9] - FR 10.6.12 -->
 
 When a user changed the configuration of a Spectrum component in shared mode, up to now, the changes were not immediately reflected in other clients. From now on, the user can right-click the *x clients* button and select *Push changes to other users*. Other users will then receive a banner where they can apply or ignore the changes. Closing the Spectrum card also triggers the banner.
+
+![Banner shown when another uses pushes changes to the spectrum analyzer](~/release-notes/images/Sharing_spectrum_session.png)
 
 The *Spectrum card behavior upon last session preset modification in shared mode* setting, under *Settings* > *Card*, will control how other clients handle pushed changes:
 

@@ -1,5 +1,6 @@
 ---
 uid: SRM_logging_config
+description: "Find out how to configure SRM logging on a network share, set log levels and cleanup options, and add custom log records from Profile-Load and LSO scripts."
 ---
 
 # Configuring SRM logging
@@ -67,15 +68,15 @@ From within a Profile-Load Script, you can add custom records to the action logs
 Example:
 
 ```csharp
-helper.LogFailure("An issue occurred"); 
-   // generate a log record with ‘Normal’ severity
+// Generate a log record with 'Normal' severity
+helper.LogFailure("An issue occurred");
 
+// Generate a log record with 'Critical' severity
 helper.LogSuccess("Configuration was successful");
-   // generate a log record with ‘Critical severity
 
+// Generate a log record with a custom severity
+// Namespace Skyline.DataMiner.Library.Solutions.SRM.Logging.Orchestration is needed, or Skyline.DataMiner.Core.SRM.Logging.Orchestration from version 2.0.1 of the SRM feature release onwards.
 helper.Log("Report a warning", LogEntryType.Warning);
-   // generate a log record with a custom severity
-   // Namespace Skyline.DataMiner.Library.Solutions.SRM.Logging.Orchestration is needed, or Skyline.DataMiner.Core.SRM.Logging.Orchestration from version 2.0.1 of the SRM feature release onwards.
 ```
 
 ### Adding custom log records from an LSO script

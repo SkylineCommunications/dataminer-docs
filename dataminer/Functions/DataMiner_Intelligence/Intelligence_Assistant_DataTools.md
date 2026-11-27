@@ -1,13 +1,13 @@
 ---
-uid: Intelligence_Assistant_DataTools
-description: "Learn about native and custom data tools in DataMiner Assistant, which allow the Assistant to independently discover and query data sources."
+uid: Intelligence_DataTools
+description: "Learn how native and custom data tools allow DataMiner Intelligence agents to discover and query data sources in your DataMiner System."
 ---
 
 # Data tools
 
-The Assistant is able to independently discover and query data sources through data tools. Each data tool exposes a specific data source, together with a description, its input parameters, and its output columns, so that an agent can determine when and how to use it.
+DataMiner Intelligence agents use data tools to discover and query data sources. Each tool exposes a specific data source along with its description, input parameters, and output columns so that an agent can determine when and how to use it.
 
 Data tools fall into two categories:
 
-- **[Native data tools](xref:Intelligence_Assistant_native_data_tools)**: Data tools that are available by default after installing the DataMiner Assistant, without any additional configuration.
-- **[Custom data tools](xref:Intelligence_Assistant_custom_data_tools)**: New data tools that you define yourself for a specific data source.
+- **[Native data tools](xref:Intelligence_native_data_tools)**: Built-in [DataMiner Intelligence](xref:DataMiner_Intelligence) data tools that require no additional configuration.
+- **[Custom data tools](xref:Intelligence_custom_data_tools)**: New data tools that you define yourself for a specific data source.

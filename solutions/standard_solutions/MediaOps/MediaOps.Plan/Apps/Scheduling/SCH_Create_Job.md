@@ -1,6 +1,6 @@
 ---
 uid: SCH_Create_Job
-description: Create a job in the Scheduling app in one of three ways — from scratch, starting from a predefined workflow, or by selecting a resource.
+description: "Create a job in the Scheduling app in one of three ways — from scratch, starting from a predefined workflow, or by selecting a resource."
 ---
 
 # Creating a job
@@ -18,6 +18,8 @@ There are three main ways to manually create a new job through the Scheduling ap
    !['New' button in the Scheduling app](~/solutions/images/Scheduling_Create_Job.png)
 
 1. Specify the name and optionally a description for the job.
+
+1. If multiple job types are available in the Categories app, make sure the appropriate job type is selected in the corresponding box.<!-- RN 46112 -->
 
 1. Customize the start and end time if necessary.
 
@@ -43,12 +45,16 @@ There are three main ways to manually create a new job through the Scheduling ap
 
    > [!NOTE]
    > When you have added the resources, it is best to click *Save as Tentative* as soon as possible. Saving the job in the [tentative state](xref:MO_S_Job_States) will ensure that the selected resources are reserved and cannot be used by other nodes or jobs.
+   >
+   > It is also possible to confirm a job that has no resource nodes. Such node-less jobs can move freely through the *Draft*, *Tentative*, and *Confirmed* states without requiring any resources to be present.<!-- RN 46064 -->
 
 ## Creating a job using a predefined workflow
 
 To create a job starting from a workflow that has been predefined in the [Workflow Designer](xref:MO_Workflow_Designer) app, follow the same procedure as detailed above, but select the desired workflow before you click *Create Job* in the *Create job* pop-up window.
 
 ![Selecting a predefined workflow to create a job](~/solutions/images/Scheduling_Create_Job_from_Workflow.png)
+
+If the selected workflow defines a job type, that job type is automatically assigned to the new job. You can override it by selecting a different job type in the *Job Type* dropdown.<!-- RN 46347 -->
 
 > [!NOTE]
 > Only workflows that have been marked as *Complete* in the Workflow Designer will be available for selection in the Scheduling app.
@@ -66,5 +72,8 @@ Creating a job directly based on one specific resource can be useful when you wa
 1. Configure the same settings as [mentioned above](#creating-a-completely-new-job) and click *Create Job*.
 
    The job will be created in the [tentative state](xref:MO_S_Job_States), so that the resource is immediately reserved.
+
+   > [!NOTE]
+   > When creating a job from the *Resource View* page, selecting a predefined workflow is not supported. If you want to use a workflow to create a job, create the job from the *Job View* page instead.<!-- RN 46293 -->
 
 1. If necessary, click the pencil icon on the job to edit it and add more resources. See [Editing a job](xref:SCH_Edit_Job).

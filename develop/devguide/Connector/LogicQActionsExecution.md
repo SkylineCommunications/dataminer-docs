@@ -29,12 +29,13 @@ You can trigger on a row change by using the [row](xref:Protocol.QActions.QActio
 <QAction id="..." encoding="..." triggers="1052" row="true">
 ```
 
-In the example above, the triggers attribute is set to the parameter ID of the write parameter for a column in the table. This means the QAction will be triggered by any change made to this write parameter for every row.
+In the example above, the [triggers](xref:Protocol.QActions.QAction-triggers) attribute is set to the parameter ID of the write parameter for a column in the table. This means the QAction will be triggered by any change made to this write parameter for every row.
 
 > [!NOTE]
 >
-> - In recent DataMiner versions, you can use a read column parameter as a trigger on a QAction with row=true option. In legacy versions prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible.<!-- RN 15040 & 15531 -->
+> - In recent DataMiner versions, you can use a read column parameter as a trigger on a QAction with `row="true"`. In legacy versions prior to DataMiner 9.5.1, triggering a QAction on a change of a particular read column is not possible.<!-- RN 15040 & 15531 -->
 > - For SNMP tables, it is also possible to provide the ID of a table parameter. In this case, the QAction will trigger every time a row has been updated.
+> - A QAction with `row="true"` cannot be used with single parameters.
 
 In a QAction, the following methods are available to retrieve information about the row that triggered the execution of the QAction:
 

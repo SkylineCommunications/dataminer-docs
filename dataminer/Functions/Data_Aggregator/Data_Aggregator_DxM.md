@@ -1,5 +1,6 @@
 ---
 uid: Data_Aggregator_DxM
+description: "Learn how Data Aggregator runs scheduled GQI queries across DataMiner Systems and exports the combined results."
 ---
 
 # Data Aggregator
@@ -13,6 +14,4 @@ The Data Aggregator module is available as a DxM ([DataMiner Extension Module](x
 - [Configuring GQI queries](xref:Data_Aggregator_queries)
 
 > [!IMPORTANT]
->
-> - As no authentication is required to use Data Aggregator (including its REST API and WebSocket interface), in principle anyone could access it. To restrict access, use a firewall.
-> - When enabling the GQI DxM on the Data Aggregator, and if your prior installation included configured GQI queries, a one-time migration process using a [Data Aggregator Migrator](xref:Data_Aggregator_Migrators#enabling-gqi-dxm) is necessary.
+> As no authentication is required to use Data Aggregator (including its REST API and WebSocket interface), in principle anyone could access it. To restrict access, use a firewall.

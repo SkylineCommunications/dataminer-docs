@@ -80,15 +80,16 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 
 ### DataAPI
 
-Enables Data API functionality and scripted connectors. This displays the Data Sources module in DataMiner Cube.
+Enables Data API functionality and scripted connectors.
+
+When used together with the latest version of the [DataAggregator](xref:Data_Aggregator_DxM) and [DataAPI](xref:DataMinerExtensionModules#dataapi) DxMs, this displays the [Data Sources](xref:Data_Sources) module in DataMiner Cube.
+
+When used together with the [EdgeManager DxM](xref:Installing_EdgeManager_DxM) and DataAPI DxM, it allows the deployment of [Edge Nodes](xref:About_Edge_Nodes).
 
 This option is enabled by default when DataMiner is deployed in the cloud ([DaaS](xref:Creating_a_DMS_in_the_cloud)).
 
 - **Minimum version**: 10.4.2/10.4.0<!-- RN 36588/38307/38234 -->
 - **Estimated release version**: To be determined
-
-> [!NOTE]
-> The latest version of the DataAggregator DxM and DataAPI DxM also have to be installed for this feature to work.
 
 ### Diagnostics
 
@@ -135,6 +136,17 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 - **Minimum version**: 10.0.12
 - **Release version**: 10.4.0 [CU10]/10.5.0 [CU0]/10.5.1 ([RN 41436](xref:Cube_Feature_Release_10.5.1#data-display-in-dataminer-cube-now-supports-dynamic-units-by-default-id-41436))
 
+### EndOfSupport.SLHelperGQI
+
+Enables GQI via SLHelper, which is disabled by default from DataMiner 10.7.0/10.7.1 onwards.<!-- RN 46927 -->
+
+If your system still uses GQI via SLHelper, enable this option before upgrading from a version older than 10.7.0/10.7.1. Otherwise, the [End of Support for SLHelper GQI](xref:EndOfSupport_SLHelperGQI) prerequisite blocks the upgrade when it detects recent GQI activity.<!-- RN 46957 -->
+
+> [!CAUTION]
+> GQI via SLHelper has reached [End of Support](xref:Software_support_life_cycles) and will be removed in a future DataMiner version. Only use this option to ease the transition to the [GQI DxM](xref:GQI_DxM).
+
+- **Minimum version**: 10.7.0/10.7.1
+
 ### Functions
 
 This option enabled the Virtual Functions module in Cube. The module and related objects are **End of life** and should no longer be used.
@@ -167,6 +179,7 @@ This option is enabled by default when DataMiner is deployed in the cloud ([DaaS
 Enables or disables the legacy Annotations module.
 
 - **Minimum version**: 10.1.10/10.2.0
+- **No longer available as of**: 10.6.0/10.6.1<!-- RN 44183 -->
 
 > [!NOTE]
 > The legacy Annotations module is disabled by default as from DataMiner versions 10.4.0/10.4.1 ([RN 37786](xref:General_Feature_Release_10.4.1#legacy-reports-dashboards-and-annotations-modules-are-now-end-of-life-and-will-be-disabled-by-default-id-37786)). If you want to keep on using this legacy module, before upgrading or uploading a 10.4.x upgrade package, set this soft-launch option to *true* (see [Activating SoftLaunch Options](xref:Activating_Soft_Launch_Options)), then run `C:\Skyline DataMiner\Tools\ConfigureIIS.bat` as Administrator, and restart the DataMiner Agent. However, note that using Annotations is no longer possible from DataMiner 10.6.0/10.6.1 onwards.
@@ -179,6 +192,7 @@ Enables or disables the legacy Annotations module.
 Enables or disables the legacy [Reports](xref:reporter) and [Dashboards](xref:dashboards) modules.
 
 - **Minimum version**: 10.1.10/10.2.0
+- **No longer available as of**: 10.7.0/10.7.1<!-- RN 47136 -->
 
 > [!IMPORTANT]
 > From DataMiner 10.7.0/10.7.1 onwards, these modules are **End of Life** and can no longer be enabled.<!-- RN 47135+47136 --> For upgrade requirements, see [Verify No Legacy Reports Dashboards](xref:Verify_No_Legacy_Reports_Dashboards).

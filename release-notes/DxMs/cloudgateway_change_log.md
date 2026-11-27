@@ -1,5 +1,6 @@
 ---
 uid: cloudgateway_change_log
+description: "Release notes for the DataMiner Cloud Gateway DxM, covering new features, enhancements, and fixes for cloud connectivity."
 ---
 
 # Cloud Gateway change log
@@ -18,11 +19,11 @@ After downgrading CloudGateway, the application could be installed without being
 
 #### 28 October 2026 - Fix - CloudGateway 4.0.3 - DataMiner Assistant for Microsoft 365 endpoint fixes
 
-Several issues with the communication between the CloudGateway and Assistant DxM have been fixed. Errors during Assistant DxM startup are no longer cached, and all sessions are now properly disposed of and recreated on reset.
+Several issues with the communication between the CloudGateway and Assistant modules have been fixed. Errors during Assistant startup are no longer cached, and all sessions are now properly disposed of and recreated on reset.
 
 #### 5 October 2026 - Fix - CloudGateway 4.0.0 - DataMiner Assistant for Microsoft 365 unable to communicate with CloudGateway
 
-Because of communication issues between the CloudGateway and the Assistant DxM included in DataMiner Web 10.6.10, the Microsoft 365 version of DataMiner Assistant could no longer be used. This issue has now been resolved.
+Because of communication issues between the CloudGateway and the Assistant modules included in DataMiner Web 10.6.10, the Microsoft 365 version of DataMiner Assistant could no longer be used. This issue has now been resolved.
 
 As a consequence of this fix, the Microsoft 365 version of DataMiner Assistant is now no longer supported on software versions prior to DataMiner Web 10.6.10 and CloudGateway 4.0.0.0.
 

@@ -26,8 +26,10 @@ public class CalculatorTests
     {
         // Arrange
         Calculator myCalculator = new Calculator();
+
         // Act
         var result = myCalculator.Multiply(multiplicand, multiplier);
+
         // Assert
         Assert.AreEqual(product, result);
     }
@@ -56,11 +58,11 @@ private static IEnumerable<object[]> TestData
     {
         return new[]
         {
-            new object[] {0, 10, 0},
-            new object[] {10, 0, 0},
-            new object[] {1, 10, 10},
-            new object[] {10, 1, 10},
-            new object[] {2, 4, 8}
+            new object[] { 0, 10, 0 },
+            new object[] { 10, 0, 0 },
+            new object[] { 1, 10, 10 },
+            new object[] { 10, 1, 10 },
+            new object[] { 2, 4, 8 }
         };
     }
 }
@@ -75,8 +77,10 @@ public void MultiplyTest(int multiplicand, int multiplier, int product)
 {
     // Arrange
     Calculator myCalculator = new Calculator();
+
     // Act
     var result = myCalculator.Multiply(multiplicand, multiplier);
+
     // Assert
     Assert.AreEqual(product, result);
 }
@@ -112,6 +116,7 @@ public void MultiplyTest()
     int multiplicand = Convert.ToInt32(TestContext.DataRow["Multiplicand"]);
     int multiplier = Convert.ToInt32(TestContext.DataRow["Multiplier"]);
     int product = Convert.ToInt32(TestContext.DataRow["Product"]);
+
     // Act
     var result = myCalculator.Multiply(multiplicand, multiplier);
     Assert.AreEqual(product, result,
@@ -161,11 +166,13 @@ Also note that the test method implementation also references a *TestContext* pr
 public class CalculatorTests
 {
     private TestContext testContextInstance;
+
     public TestContext TestContext
     {
         get { return testContextInstance; }
         set { testContextInstance = value; }
     }
+
     ...
 }
 ```
@@ -193,12 +200,14 @@ public class MyDataSourceAttribute : Attribute, ITestDataSource
         yield return new object[] { 10, 1, 10 };
         yield return new object[] { 2, 4, 8 };
     }
+
     public string GetDisplayName(MethodInfo methodInfo, object[] data)
     {
         if (data != null)
         {
-            return String.Format(CultureInfo.CurrentCulture, "{0} - multiplicand: {1}, multiplier: {2}", methodInfo.Name, data[0], data[1]);
+            return $"{methodInfo.Name} - multiplicand: {data[0]}, multiplier: {data[1]}";
         }
+
         return null;
     }
 }
@@ -213,8 +222,10 @@ public void MultiplyTest(int multiplicand, int multiplier, int product)
 {
     // Arrange
     Calculator myCalculator = new Calculator();
+
     // Act
     var result = myCalculator.Multiply(multiplicand, multiplier);
+
     // Assert
     Assert.AreEqual(product, result);
 }

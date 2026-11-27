@@ -19,7 +19,7 @@ Existing trend data is no longer accessible.
 
 | Full ID | Error message                     | Description                                                                                                                      |
 |---------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------|
-| 2.15.1  | DisplayColumnChangedToNaming      | DisplayColumn attribute with column idx '{columnIdx}' on table '{tableId}' was changed into naming options: '{namingValue}'.     |
+| 2.15.1  | DisplayColumnChangedToNaming      | [DisplayColumn](xref:Protocol.Params.Param.ArrayOptions-displayColumn) attribute with column idx '{columnIdx}' on table '{tableId}' was changed into naming options: '{namingValue}'.     |
 | 2.15.2  | DisplayColumnChangeToNamingFormat | DisplayColumn attribute with column idx '{columnIdx}' on table '{tableId}' was changed into NamingFormat: '{namingFormatValue}'. |
 
 A request to replace *displayColumn* with naming to make the protocol Cassandra-compliant is usually approved.

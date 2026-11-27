@@ -6,6 +6,9 @@ uid: NT_GET_ROW
 
 Retrieves a row from a table.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(215, ...)` directly, we recommend using [SLProtocol.GetRow](xref:Skyline.DataMiner.Scripting.SLProtocol.GetRow(System.Int32,System.String)).
+
 ## Parameters
 
 Retrieving a row from the **local element**:

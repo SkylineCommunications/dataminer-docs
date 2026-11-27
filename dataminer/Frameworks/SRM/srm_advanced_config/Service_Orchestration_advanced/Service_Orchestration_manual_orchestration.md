@@ -1,5 +1,6 @@
 ---
 uid: Service_Orchestration_manual_orchestration
+description: "Find out how to configure manual orchestration to force service state transitions and apply relevant profiles using custom scripts."
 ---
 
 # Service Orchestration: Manual orchestration

@@ -9,7 +9,7 @@ To make sure your on-premises databases remain in good shape and do not get clut
 
 Keep the following best practices in mind:
 
-- Avoid *Engine.GenerateInformation* for tracing. While it is very informative to see the progress of a script that is running, if you have a script that runs a lot, this quickly becomes overhead.
+- Avoid [Engine.GenerateInformation](xref:Skyline.DataMiner.Automation.Engine.GenerateInformation(System.String)) for tracing. While it is very informative to see the progress of a script that is running, if you have a script that runs a lot, this quickly becomes overhead.
 
   Instead, use *engine.Log* for tracing. This way, instead of generating information events, you will add lines in the Automation log file. If for some reason, you want convert these log lines to information events for a short amount of time, consider using preprocessor directives, or make a wrapper that allows you to quickly switch between information events and log lines.
 

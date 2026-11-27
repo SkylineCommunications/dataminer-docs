@@ -1,6 +1,6 @@
 ---
 uid: Cube_Feature_Release_10.7.1
-description: "Release notes for DataMiner Cube Feature Release 10.7.1, with new features, enhancements, and fixes planned for this preview release."
+description: "Release notes for DataMiner Cube Feature Release 10.7.1, with new features, enhancements, and fixes planned for this release."
 ---
 
 # DataMiner Cube Feature Release 10.7.1 - Preview
@@ -25,17 +25,48 @@ This Feature Release of the DataMiner Cube client application contains the same 
 
 <!-- MR 10.6.0 [CU10]/10.7.0 [CU0] - FR 10.7.1 -->
 
-DataMiner Cube now displays the following permissions under *General* in the user group permissions configuration when the connected DataMiner Agent supports them:
+DataMiner Cube now displays the following permissions in the user group permissions configuration when the connected DataMiner Agent supports them:
 
-- *Intelligence Usage*: Grants access to all features related to DataMiner Intelligence.
-- *Intelligence App*: Grants access to the Intelligence app.
+- *General > DataMiner Intelligence > Access*: Grants access to DataMiner Intelligence features.
+- *General > DataMiner Intelligence > Assistant app*: Grants access to the Assistant app, if the *Access* permission mentioned above is also granted.
 
 Both permissions are enabled by the limited administrator and full administrator presets. They are hidden when the connected DataMiner Agent does not support them.
 
 > [!NOTE]
-> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.8.0/10.7.1 or higher. See [Security: New 'Intelligence Usage' user permission [ID 46765]](xref:General_Feature_Release_10.7.1#security-new-intelligence-usage-user-permission-id-46765) and [Security: New 'Intelligence App' user permission [ID 46817]](xref:General_Feature_Release_10.7.1#security-new-intelligence-app-user-permission-id-46817).
+> These permissions will only be displayed when connected to a DataMiner Agent running DataMiner version 10.7.0/10.7.1 or higher. See [Introducing DataMiner Intelligence [ID 46765] [ID 46817] [ID 47196]](xref:General_Feature_Release_10.7.1#introducing-dataminer-intelligence-id-46765-id-46817-id-47196).
+
+### Alarm Console: Configurable default columns [ID 46958]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+You can now save a default column configuration for Alarm Console tabs and reuse it across tabs.
+
+To manage default columns, right-click a column header and select *Add/remove column > Default columns*. The following options are available:
+
+- *Use current columns as the new default*: Saves the visible columns, their order, widths, and alignment.
+- *Apply default column set to this list*: Applies the saved configuration to the current tab.
+
+New alarm tabs will automatically use your saved defaults, including tabs added through general or card-specific *Settings*. Existing tabs will retain their configuration unless you explicitly apply the defaults.
+
+*Information* and *Suggestion* tabs will retain their standard columns and will not display the *Default columns* menu.
 
 ## Changes
+
+### Breaking changes
+
+#### Service & Resource Management: Legacy reservation support removed for DataMiner 10.6.0 and later [ID 46936]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When DataMiner Cube connects to a DataMiner Agent running version 10.6.0 or later, legacy reservations will no longer be available in the following components:
+
+- The Resource Manager booking view and timeline/scheduler.
+- Dynamic lists.
+- *Reservation* shapes in Visual Overview.
+
+Legacy reservation support remains available when Cube connects to a DataMiner Agent running a version earlier than 10.6.0. Resources and `ReservationInstance` objects are not affected by this change.
+
+See also: [Service & Resource Management: Support for legacy reservations removed [ID 46931]](xref:General_Feature_Release_10.7.1#service--resource-management-support-for-legacy-reservations-removed-id-46931)
 
 ### Enhancements
 
@@ -53,7 +84,66 @@ From now on, DataMiner Cube will handle elements used in element connections as 
 > [!NOTE]
 > If you change element connections while System Center is open, close and reopen System Center to update the migration list. Closing and reopening only the element migration window will not refresh this information.
 
+#### System Center: Orchestrator-based upgrades selected by default [ID 46980]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+DataMiner Cube will now select the Orchestrator-based upgrade flow by default when the connected Orchestrator supports it.
+
+Existing upgrade-flow preferences will be migrated once to the new default, including preferences previously set to use the SLNet-based flow. After migration, your saved preference will be preserved.
+
+If the server does not support Orchestrator-based upgrades or the system is ineligible, for example because it contains DataMiner Probes, Cube will use the existing SLNet-based flow without overwriting your saved preference.
+
+If Cube cannot retrieve the Orchestrator upgrade feature flag, it will display a warning and block upgrade actions while the Orchestrator-based flow is selected. You can switch to the SLNet-based flow to continue upgrading. If Orchestrator availability changes while the upgrade window is open, close and reopen the window to refresh its status.
+
+#### Security enhancements [ID 46985]
+
+<!-- 46985: MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+A number of security enhancements have been made.
+
+#### Element wizard: Improved selection of local Edge Nodes [ID 47043]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+On a single-agent system with only one Edge Node, if that node is local, DataMiner Cube will now treat it as part of the DataMiner Agent. The element wizard will select it implicitly and hide the Edge Node selector.
+
+When multiple targets are available, the local node will be identified as "(DMA)" and remain selectable. On systems with multiple DataMiner Agents, the selector will remain available even if there is only one Edge Node.
+
+If no Edge Nodes are available, Cube will display a clear message. If an existing element's saved target is unavailable, Cube will not automatically move the element to another target. You must explicitly select a target instead.
+
+Identifying a local Edge Node relies on the server-provided `IsLocal` flag. If the connected DataMiner Agent does not provide this flag, all Edge Nodes will be listed with their own names and the selector will remain visible. On a single-agent system, an Edge Node will no longer be pre-selected for a new element based on the DataMiner Agent name.
+
+> [!IMPORTANT]
+> At present, the Edge Nodes feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi)soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+#### System Center: Improved rolling upgrade options [ID 47110]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When the Orchestrator-based upgrade flow is selected, the rolling upgrade options will now always be shown when available. You no longer need to expand a panel to view them.
+
+If the configured inter-batch script is found, its name will be displayed as a link under *Configured upgrade script*. Selecting the link will open the script in Automation. If no script is configured or the configured script cannot be found, a link to documentation explaining how to provide an inter-batch script will be displayed instead.
+
+Retrieving the configured script name requires Orchestrator DxM 1.15.0 or higher.
+
+#### System Center: Orchestrator-based upgrades unavailable over cloud relay [ID 47133]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you connect to DataMiner through On.DataMiner.Services, Cube will no longer activate the Orchestrator-based upgrade flow, even if your saved preference enables it. Upgrades in these sessions will use the SLNet-based flow. Upgrade-flow eligibility for other connections remains unchanged.
+
+In addition, links in the upgrade window will now be disabled when their section is disabled.
+
 ### Fixes
+
+#### Visual Overview: Parameter shapes would stop updating after a remote DMA restart or Failover switch [ID 46800]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When a Visual Overview shape displayed a parameter value from an element hosted on a DataMiner Agent other than the one DataMiner Cube was connected to, the shape would stop updating after the hosting Agent was restarted or performed a Failover switch. Closing and reopening the card was the only way to make the value update again.
+
+From now on, the shape will subscribe to the parameter again after the hosting Agent comes back online, so the displayed value will continue to update.
 
 #### State icons: Subscription exceptions would be logged on the DMA when the state icons feature was disabled [ID 46862]
 
@@ -97,3 +187,63 @@ When you uploaded an element document to a subfolder in DataMiner Cube, the foll
 - If the destination file already existed in the subfolder, either as a complete document or as a partial file from an aborted upload, the uploaded data would be appended to that file instead of replacing it, resulting in a corrupt document.
 
 From now on, uploading an element document to a subfolder will no longer delete a document with the same file name in the root documents folder, and overwriting an existing document will replace its contents correctly.
+
+#### Automation: No warning when a script import failed because of invalid XML [ID 46970]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you imported an automation script containing invalid XML, the import would fail without displaying a warning. The failure would only be recorded in the Cube logging.
+
+Cube will now display a warning informing you that the import failed and that you should check the Cube logging.
+
+#### Trending: Older trend data would not load after panning [ID 46994]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you panned a trend graph to an older time range, the corresponding trend data would not be loaded until you zoomed the graph.
+
+#### Trending: Incorrect diagonal lines in minimum and maximum curves [ID 47020]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When you viewed a longer period, such as the last month, in a trend graph with *Show most detailed data* enabled, the minimum and maximum curves could contain incorrect diagonal lines.
+
+These curves will now be drawn correctly.
+
+#### System Center: Edge module could become unavailable on supported servers [ID 47058]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When obsolete Edge lifecycle messages were removed from a DataMiner server, the Edge module could become unavailable in Cube's System Center even though the server still supported it. The compatibility check relied on one of these obsolete messages.
+
+Cube will now use an updated compatibility check that does not rely on the obsolete lifecycle message. The existing connection and DataAPI soft-launch checks remain unchanged.
+
+> [!IMPORTANT]
+> At present, the Edge Nodes feature is only available in preview, if the [DataAPI](xref:Overview_of_Soft_Launch_Options#dataapi)soft-launch option is enabled. For more information, see [Soft-launch options](xref:SoftLaunchOptions).
+
+#### Element deletion could fail without a warning [ID 47081]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+When deleting an element failed on the DataMiner Agent, the element would remain in place, but DataMiner Cube would not display a warning.
+
+Cube will now display a warning indicating that the element could not be deleted and that you should check the logging for more details. The failure details will be logged.
+
+#### Data Display: Saved table layouts could override updated connector defaults [ID 47091]
+
+<!-- MR 10.6.0 [CU10] / 10.7.0 [CU0] - FR 10.7.1 -->
+
+After a connector update, saved table layouts could prevent tables in DataMiner Cube from reflecting changes to default column widths, visibility, and positions.
+
+Cube will now distinguish your explicit layout changes from automatic adjustments. After a connector update:
+
+- Columns you have resized, hidden, or moved will retain your settings.
+- Unchanged columns will follow the updated connector defaults.
+- New columns will appear in the expected order.
+
+The *Reset* option will now be available when the table differs from its defaults, and resetting will immediately update the table.
+
+When you switch to another table, Cube will also stop receiving updates from the previous table. This prevents the previous table from being kept in memory unnecessarily or sending updates to the wrong table.
+
+> [!NOTE]
+> If your table layout was saved by an older version of Cube, you may need to reset it once to see all the updated connector defaults.

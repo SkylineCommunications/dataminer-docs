@@ -42,19 +42,19 @@ To retrieve the alarm of a row, the destination needs to be linked to a row. For
 Table 2000 is defined as follows:
 
 ```xml
-<Param id="2000" trending="false">
-   <Name>Service Overview</Name>
-   <Description>Service Overview</Description>
+<Param id="2000">
+   <Name>Services</Name>
+   <Description>Services</Description>
    <Type>array</Type>
    <ArrayOptions index="0" options="">
       <NamingFormat>,2002</NamingFormat>
-      <ColumnOption idx="0" pid="2001" type="retrieved" value="" options=""/><!--  Primary Key-->
-      <ColumnOption idx="1" pid="2002" type="retrieved" value="" options=";save"/><!--  Display Key-->
+      <ColumnOption idx="0" pid="2001" type="retrieved" options=""/><!--  Primary Key-->
+      <ColumnOption idx="1" pid="2002" type="retrieved" options=";save"/><!--  Display Key-->
       <ColumnOption idx="2" pid="2003" type="retrieved" options=";save"/><!--  Remote element ID -->
       <ColumnOption idx="3" pid="2004" type="retrieved" options=""/><!--  Alarm level -->
       <ColumnOption idx="4" pid="2005" type="retrieved" options=""/>
    </ArrayOptions>
-  ...
+   ...
 </Param>
 ```
 

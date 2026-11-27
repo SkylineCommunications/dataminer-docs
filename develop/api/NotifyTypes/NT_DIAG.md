@@ -9,7 +9,7 @@ Obtains additional information about a DMA or DMS.
 ```csharp
 string command = "QACTIONMETRICS_ELEMENT_346:125";
 
-string[] result = (string[]) protocol.NotifyDataMiner (226 /*NT_DIAG*/ , command, null);
+string[] result = (string[])protocol.NotifyDataMiner(226 /*NT_DIAG*/, command, null);
 ```
 
 ## Parameters

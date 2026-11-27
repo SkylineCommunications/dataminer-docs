@@ -1,5 +1,6 @@
 ---
 uid: SRM_custom_booking_blocks
+description: "Find out how to customize the blocks representing bookings on the timeline so that they will show custom information instead of just the booking name."
 ---
 
 # Customizing the booking blocks on the timeline

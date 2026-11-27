@@ -23,7 +23,7 @@ In order to capture traps in a protocol, define a parameter that will capture th
 ```xml
 <Param id="21">
    <Name>TrapReceiver</Name>
-   <Description>TrapReceiver</Description>
+   <Description>Trap Receiver</Description>
    <Type>dummy</Type>
    <Display>
       <RTDisplay>false</RTDisplay>
@@ -39,13 +39,13 @@ The OID of the traps that should be captured is specified in the TrapOID tag. Th
 
 By default, only traps received from the polling IP address of the main connection of an element will be captured. Using the ipid attribute, you can refer to a parameter containing the IP addresses from which traps should be captured.
 
-The checkBindings attribute allows you to prevent traps from being processed further unless the specified binding checks succeed. The following example specifies that binding 2 of the trap must contain *display* and binding 3 must match the value of parameter 102 (which can also contain wildcards). Only if both conditions are met, DataMiner will process the trap.
+The [checkBindings](xref:Protocol.Params.Param.SNMP.TrapOID-checkBindings) attribute allows you to prevent traps from being processed further unless the specified binding checks succeed. The following example specifies that binding 2 of the trap must contain *display* and binding 3 must match the value of parameter 102 (which can also contain wildcards). Only if both conditions are met, DataMiner will process the trap.
 
 ```xml
 checkBindings="2=*display*|3=id:102"
 ```
 
-The setBindings attribute allows you to set a specified parameter with the value of a specified binding. The following example states that parameter with ID 250 should be set with the value of the first binding.
+The [setBindings](xref:Protocol.Params.Param.SNMP.TrapOID-setBindings) attribute allows you to set a specified parameter with the value of a specified binding. The following example states that parameter with ID 250 should be set with the value of the first binding.
 
 ```xml
 setBindings="1,250"
@@ -83,7 +83,7 @@ DataMiner Protocol Markup Language:
 
 ## Generating alarms upon receiving traps
 
-It is possible to specify that alarms should be generated when a trap is received. This is done using the mapAlarm attribute.
+It is possible to specify that alarms should be generated when a trap is received. This is done using the [mapAlarm](xref:Protocol.Params.Param.SNMP.TrapOID-mapAlarm) attribute.
 
 > [!NOTE]
 >
@@ -113,21 +113,21 @@ In case this behavior is not desired, the use of a group ID (negative number) be
       <Enabled>true</Enabled>
       <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received '[1]' [2]' '[3]'|Link:2,3" type="wildcard">1.3.6.1.4.1.31961.0.1.*</TrapOID>
    </SNMP>
-  ...
+   ...
 </Param>
 <Param id="2">
    <SNMP>
       <Enabled>true</Enabled>
       <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received2 '[1]' [2]' '[3]'|Link:2,3" type="wildcard">1.3.6.1.4.1.31961.0.2.*</TrapOID>
    </SNMP>
-  ...
+   ...
 </Param>
 <Param id="3">
    <SNMP>
       <Enabled>true</Enabled>
       <TrapOID mapAlarm="TRUE|Severity:1:Critical,1;Normal,2|Value:Trap Received2 '[1]' [2]' '[3]'|Link:-1,2,3" type="wildcard">1.3.6.1.4.1.31961.0.3.*</TrapOID>
    </SNMP>
-  ...
+   ...
 </Param>
 ```
 
@@ -136,9 +136,9 @@ In case the mapAlarm attribute is too limited, it is possible to use the TrapMap
 When a trap is received, all TrapMappings are checked top down until a bindingMatch is found. The parameter does not need to be activated in the alarm template.
 
 ```xml
-<Param id="10" trending="false">
-   <Name>TrapMapping Trap Receiver</Name>
-   <Description>TrapMapping Trap Receiver</Description>
+<Param id="10">
+   <Name>TrapMappingTrapReceiver</Name>
+   <Description>Trap Mapping Trap Receiver</Description>
    <Type>dummy</Type>
    <Display>
       <RTDisplay>true</RTDisplay>
@@ -148,7 +148,7 @@ When a trap is received, all TrapMappings are checked top down until a bindingMa
    </Alarm>
    <SNMP>
       <Enabled>true</Enabled>
-      <TrapOID  mapAlarm="TRUE|Link:3,4,5" type="wildcard" checkBindings="1=id:2">1.3.6.1.4.1.31961.0.10.*</TrapOID>
+      <TrapOID mapAlarm="TRUE|Link:3,4,5" type="wildcard" checkBindings="1=id:2">1.3.6.1.4.1.31961.0.10.*</TrapOID>
       <TrapMappings>
          <TrapMapping bindingMatch="1:5" severity="Normal"></TrapMapping>
          <TrapMapping bindingMatch="3:TS Sync Loss" severity="Critical" value="[4]:[3]:[5]"></TrapMapping>
@@ -168,9 +168,9 @@ The user can choose the traps for which alarms have to be generated. Also, the s
 In the following example, the severity is user-definable. The severity attribute links to a discrete value. This discrete value will be visible in the alarm template allowing the user to select the severity.
 
 ```xml
-<Param id="20" trending="false">
-   <Name>TrapMapping Custom Trap Receiver</Name>
-   <Description>TrapMapping Custom Trap Receiver</Description>
+<Param id="20">
+   <Name>TrapMappingCustomTrapReceiver</Name>
+   <Description>Trap Mapping Custom Trap Receiver</Description>
    <Type>dummy</Type>
    <Display>
       <RTDisplay>true</RTDisplay>
@@ -224,16 +224,16 @@ It is possible that a QAction is required to process an incoming trap. When the 
 
 ```xml
 <Param id="1">
-  <Name>Trap Receiver</Name>
-  <Description>Trap Received</Description>
-  <Type>read</Type>
-  <Interprete>
-     <Type>string</Type>
-  </Interprete>
-  <SNMP>
-     <Enabled>true</Enabled>
-     <TrapOID setBindings="allBindingInfo" type="wildcard" ipid="100">...</TrapOID>
-  </SNMP>
+   <Name>TrapReceiver</Name>
+   <Description>Trap Received</Description>
+   <Type>read</Type>
+   <Interprete>
+      <Type>string</Type>
+   </Interprete>
+   <SNMP>
+      <Enabled>true</Enabled>
+      <TrapOID setBindings="allBindingInfo" type="wildcard" ipid="100">...</TrapOID>
+   </SNMP>
 </Param>
 ```
 
@@ -242,10 +242,11 @@ The QAction triggers on the trap receiver parameter and the trap information is 
 ```csharp
 public class QAction
 {
-   public static void Run(SLProtocol protocol, object trapInfo)
-  {
-      // ...
-  }
+    public static void Run(SLProtocol protocol, object trapInfo)
+    {
+        // ...
+    }
+}
 ```
 
 trapInfo (object[]):

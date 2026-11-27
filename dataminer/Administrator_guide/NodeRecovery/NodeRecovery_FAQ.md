@@ -13,6 +13,12 @@ Yes. See [Maintenance mode](xref:NodeRecovery_States#maintenance-mode) for more 
 
 Not yet. Node Recovery's [outage detection](xref:NodeRecovery_Detection) currently only supports outages where machines cannot reach each other over the network. These scenarios include power or network cuts, but do not cover scenarios where the server is still running but DataMiner is unable to start or is no longer running correctly.
 
+## How does Node Recovery handle manual shutdowns compared to crashes?
+
+When Node Recovery detects a clean shutdown request, such as a manual restart of Windows or the NodeRecovery Windows service, it assumes the node will return shortly. Observing nodes mark it as *Unknown* in their local view and wait for a heartbeat until `FirstHeartbeatThresholdMilliseconds` is exceeded. In contrast, an unexpected NodeRecovery process or system crash or a node disappearing without a clean shutdown notification is detected using `OutageThresholdMilliseconds` for a previously healthy node. Depending on the configured thresholds, this means an outage after a clean shutdown can be detected much later.
+
+For more information, see [Manual shutdowns and unexpected outages](xref:NodeRecovery_Detection#manual-shutdowns-and-unexpected-outages).
+
 ## How does NodeRecovery deal with network splits?
 
 Only the part of the cluster that has more than half of the total nodes will be able to detect outages using the global detection mechanism. See [Network splits](xref:NodeRecovery_Detection#network-splits) for more information.

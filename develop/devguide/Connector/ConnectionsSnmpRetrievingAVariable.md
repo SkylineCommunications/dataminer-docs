@@ -11,7 +11,7 @@ First, a parameter must be defined in the protocol that will hold the received v
 
 ```xml
 <Param id="1" trending="false">
-   <Name>sysUptime</Name>
+   <Name>SysUptime</Name>
    <Description>System Uptime</Description>
    <Information>
       <Subtext>Displays the time since the network management portion of the system was last re-initialized.</Subtext>
@@ -60,12 +60,12 @@ Finally, a timer is defined which has the defined group as its content. This tim
 
 ```xml
 <Timer id="1">
-  <Name>Fast timer</Name>
-  <Time>10000</Time>
-  <Interval>75</Interval>
-  <Content>
-     <Group>1</Group>
-  </Content>
+   <Name>Fast timer</Name>
+   <Time>10000</Time>
+   <Interval>75</Interval>
+   <Content>
+      <Group>1</Group>
+   </Content>
 </Timer>
 ```
 

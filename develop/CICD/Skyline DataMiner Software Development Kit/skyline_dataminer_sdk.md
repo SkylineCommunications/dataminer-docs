@@ -21,6 +21,7 @@ The Skyline DataMiner SDK currently supports the following project types:
 - **DataMiner Automation Script Project**
 - **DataMiner Test Package Project**
 - **DataMiner User-Defined API Project**
+- [**DataMiner Web Application Project**](xref:skyline_dataminer_sdk_web_application_project)
 
 ## Getting started
 

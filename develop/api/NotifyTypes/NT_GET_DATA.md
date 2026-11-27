@@ -6,6 +6,9 @@ uid: NT_GET_DATA
 
 Gets the raw data of the specified item.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(60, ...)` directly, we recommend using [SLProtocol.GetData](xref:Skyline.DataMiner.Scripting.SLProtocol.GetData*) or [SLProtocol.IsEmpty](xref:Skyline.DataMiner.Scripting.SLProtocol.IsEmpty*).
+
 ```csharp
 string itemType = "parameter";
 int itemID = 110;
@@ -18,11 +21,11 @@ if (data != null)
 
     Array.Copy(dataBytes, bytes, bytes.Length);
 
-    ////...
+    // ...
 }
 else
 {
-    ////...
+    // ...
 }
 ```
 

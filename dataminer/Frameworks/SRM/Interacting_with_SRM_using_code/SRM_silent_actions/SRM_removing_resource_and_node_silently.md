@@ -1,5 +1,6 @@
 ---
 uid: SRM_removing_resource_and_node_silently
+description: "Find out how you can silently remove a resource and node from an SRM booking and reuse or create a matching service definition."
 ---
 
 # Silently removing a resource and node from a booking and potentially creating a new service definition

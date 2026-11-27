@@ -6,6 +6,9 @@ uid: NT_GET_KEY_POSITION
 
 Gets the (1-based) internal position of the row.
 
+> [!NOTE]
+> Rather than calling `NotifyProtocol(163, ...)` directly on the local element, we recommend using [SLProtocol.GetKeyPosition](xref:Skyline.DataMiner.Scripting.SLProtocol.GetKeyPosition(System.Int32,System.String)).
+
 ## Parameters
 
 Retrieving the key position of a table of the **local element**:
@@ -14,7 +17,7 @@ Retrieving the key position of a table of the **local element**:
 int tableID = 1000;
 string primaryKey = "Row 4";
 
-int keyPosition = Convert.ToInt32(protocol.NotifyProtocol(163 /*NT_GET_KEY_POSITION*/ , tableID, primaryKey));
+int keyPosition = Convert.ToInt32(protocol.NotifyProtocol(163 /*NT_GET_KEY_POSITION*/, tableID, primaryKey));
 ```
 
 - parameterID (int): ID of the table parameter.
@@ -26,9 +29,9 @@ Retrieving the key position of a table of a **remote element**:
 uint dmaID = 364;
 uint elementID = 100;
 uint parameterID = 1000;
-uint[] ids = new uint[] { dmaID; elementID, parameterID };
+uint[] ids = new uint[] { dmaID, elementID, parameterID };
 
-int keyPosition = Convert.ToInt32(protocol.NotifyProtocol(163 /*NT_GET_KEY_POSITION*/ , ids, primaryKey));
+int keyPosition = Convert.ToInt32(protocol.NotifyProtocol(163 /*NT_GET_KEY_POSITION*/, ids, primaryKey));
 ```
 
 - ids (int[]):

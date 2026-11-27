@@ -22,7 +22,7 @@ Which approach should be used to retrieve data from the SLProtocol process depen
 
    See [Via SLProtocol(Ext) interface](xref:LogicQActionsSLProtocolInteraction#via-slprotocolext-interface).
 
-Note that the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API authority defines its methods as blocking, except for `NotifyDataMinerQueued`. Each call can therefore add an inter-process communication boundary between SLScripting and SLProtocol. The generated [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface provides protocol-specific names and table helpers; it does not change the ownership or blocking behavior of the underlying SLProtocol API.
+Note that the [SLProtocol](xref:Skyline.DataMiner.Scripting.SLProtocol) API authority defines its methods as blocking, except for [NotifyDataMinerQueued](xref:Skyline.DataMiner.Scripting.SLProtocol.NotifyDataMinerQueued(System.Int32,System.Object,System.Object)). Each call can therefore add an inter-process communication boundary between SLScripting and SLProtocol. The generated [SLProtocolExt](xref:Skyline.DataMiner.Scripting.SLProtocolExt) interface provides protocol-specific names and table helpers; it does not change the ownership or blocking behavior of the underlying SLProtocol API.
 
 ## Via inputParameters attribute
 
@@ -52,7 +52,7 @@ public static class QAction
     /// <param name="timespan">Timespan in which the errors occurred.</param>
     public static void Run(SLProtocol protocol, object errors, object timespan)
     {
-        //// ...
+        // ...
     }
 }
 ]]>
@@ -75,7 +75,7 @@ public static class QAction
     public static void Run(SLProtocol protocol)
     {
         string errors = Convert.ToString(protocol.GetInputParameter(0));
-        //// ...
+        // ...
     }
 }
 ]]>
@@ -115,7 +115,7 @@ The example above could be improved by using the `GetParameters` method to obtai
 ```csharp
 public static void Run(SLProtocol protocol)
 {
-   object[] parameters = (object[]) protocol.GetParameters(new uint[] { 10, 12 });
+   object[] parameters = (object[])protocol.GetParameters(new uint[] { 10, 12 });
 
    string errors = Convert.ToString(parameters[0]);
    int timespan = Convert.ToInt32(parameters[1]);

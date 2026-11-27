@@ -182,18 +182,18 @@ From now on, SLAnalytics will pause the creation of new synchronization tasks fo
 
 A number of enhancements have been done with regard to the communication between resource managers across DataMiner Agents. This will especially enhance performance when starting multiple bookings on non-master DMAs.
 
-#### DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]
+#### DataMiner upgrade: DataMiner Assistant module will now be included in the DataMiner web upgrade packages [ID 44291]
 
 <!-- MR 10.6.0 [CU7] - FR 10.6.2 -->
 
-In order to upgrade the DataMiner Assistant DxM, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
+In order to upgrade the DataMiner Assistant module, up to now, you had to install a full DataMiner server upgrade package (main release or feature release).
 
-From now on, the DataMiner Assistant DxM will be included in the DataMiner web upgrade packages instead.
+From now on, the DataMiner Assistant module will be included in the DataMiner web upgrade packages instead.
 
-See also: [DataMiner upgrade: DataMiner Assistant DxM will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-dxm-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
+See also: [DataMiner upgrade: DataMiner Assistant module will now be included in the DataMiner web upgrade packages [ID 44291]](xref:Web_apps_Feature_Release_10.6.2#dataminer-upgrade-dataminer-assistant-module-will-now-be-included-in-the-dataminer-web-upgrade-packages-id-44291)
 
 > [!NOTE]
-> The DataMiner Assistant DxM will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
+> The DataMiner Assistant module will only be upgraded when an older version is found on the DataMiner Agent. If no older version is found, it will not be installed.
 
 #### SLSNMPManager: Enhanced performance of the SNMP++ library [ID 44372]
 
@@ -232,7 +232,7 @@ A `Cassandra.InvalidQuery` exception with message "No keyspace has been specifie
 
 #### Problem when generating a default MessageBrokerConfig.json file [ID 44155]
 
-<!-- MR 10.5.0 [CU11] - FR 10.6.2 -->
+<!-- MR 10.5.0 [CU11] / 10.6.0 [CU4] - FR 10.6.2 -->
 
 When neither an *SLCloud.xml* file nor a *MessageBrokerConfig.json* file could not be found on a DataMiner Agent, up to now, any process using MessageBroker would fail to generate a default *MessageBrokerConfig.json* file. As a result, it would not be possible to connect to NATS.
 

@@ -43,7 +43,7 @@ In order to render a column chart, set the `type` attribute of the `ParametersVi
 
 ![DataMiner Cube Pie Chart UI Component](~/develop/images/uipiechart.png)
 
-In the example above, the parameter with ID 99 is a column parameter. In case of column parameters, the `tableIndex` attribute can be used to filter which rows should be included in the chart. The `tableIndex` attribute specifies the primary key of a specific row or a wildcard (`*`) can be used to include all matching rows (similar as filtering an alarm template).
+In the example above, the parameter with ID 99 is a column parameter. In case of column parameters, the [tableIndex](xref:Protocol.Params.Param.Display.ParametersView.Parameters.Parameter-tableIndex) attribute can be used to filter which rows should be included in the chart. The `tableIndex` attribute specifies the primary key of a specific row or a wildcard (`*`) can be used to include all matching rows (similar as filtering an alarm template).
 
 > [!NOTE]
 > The referenced parameter does not need to be a column parameter. Standalone parameters can be used as well. In this case the table index is not used.
