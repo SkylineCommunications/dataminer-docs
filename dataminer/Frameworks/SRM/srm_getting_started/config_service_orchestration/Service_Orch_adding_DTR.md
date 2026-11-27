@@ -1,5 +1,6 @@
 ---
 uid: Service_Orch_adding_DTR
+description: "Configure Data Transfer Rules (DTR) to transfer profile instance information between virtual functions within the same service definition."
 ---
 
 # Adding DTR (optional)
