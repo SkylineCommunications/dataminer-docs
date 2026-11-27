@@ -1,5 +1,6 @@
 ---
 uid: Automatic_alarm_grouping
+description: "Enable automatic alarm grouping in DataMiner to organize related alarms in the Alarm Console and configure grouping settings in System Center."
 ---
 
 # Automatic alarm grouping
