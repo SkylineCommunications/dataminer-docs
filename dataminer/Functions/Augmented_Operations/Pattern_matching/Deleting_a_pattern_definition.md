@@ -1,5 +1,6 @@
 ---
 uid: Deleting_a_pattern_definition
+description: "Delete a pattern definition in DataMiner using the tag button and delete icon, which also removes all associated pattern matches."
 ---
 
 # Deleting a pattern definition

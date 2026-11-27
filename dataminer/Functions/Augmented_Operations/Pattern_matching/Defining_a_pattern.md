@@ -1,5 +1,6 @@
 ---
 uid: Defining_a_pattern
+description: "Define a pattern in DataMiner trend graphs using default or custom options, enable background detection, and apply it across elements or table rows."
 ---
 
 # Defining a pattern
