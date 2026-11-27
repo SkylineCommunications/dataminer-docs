@@ -6,6 +6,8 @@ uid: MaintenanceSettings.SLNet.EnableDotNetRemoting
 
 When set to "false", disables .NET Remoting. Default: false.
 
+This setting applies only to DataMiner versions prior to 10.7.0/10.7.1<!-- RN 47004 -->. From these versions onwards, .NET Remoting is no longer available.
+
 ## Content Type
 
 boolean

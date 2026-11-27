@@ -19,7 +19,7 @@ Before you can use any of the SLNetClientTest tool functions, you must first con
    |------------------------|----------------|
    | Autodetect             | Connects to the local machine or a remote machine using a method that will be detected automatically. |
    | gRPC                   | Supported from DataMiner 10.3.0/10.3.2 onwards. Connects to the local machine or a remote machine via the APIGateway service using the GRPCWeb protocol. When you choose this option, you can specify a custom port (default: `443`) and a custom endpoint (default: `/APIGateway`). |
-   | .NET Remoting (legacy) | Connects to the local machine or a remote machine using .NET Remoting. When you choose this option, you can specify a custom port (default: `8004`). |
+   | .NET Remoting (legacy) | Connects to the local machine or a remote machine using .NET Remoting (in DataMiner versions prior to 10.7.0/10.7.1<!--RN 47004-->). When you choose this option, you can specify a custom port (default: `8004`). |
    | IPC (only local)       | Connects to the local machine using IPC. |
 
 1. In the *Authentication* section, specify the necessary options, and then click *Connect*:

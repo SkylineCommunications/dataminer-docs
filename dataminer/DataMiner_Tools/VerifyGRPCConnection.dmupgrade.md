@@ -21,4 +21,4 @@ Note:
 
 - When you run the package, information will be displayed in the upgrade progress window. If you want to consult this information after the window is closed, it is available in the progress.log file in the folder `C:\Skyline DataMiner\Upgrades\Packages\VerifyGRPCConnection.dmupgrade-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx`.
 
-- While this is not recommended, it is possible to force a DMA to upgrade by keeping .NET Remoting enabled. To do so, run the *EnableDotNetRemoting.dmupgrade* package, which can be downloaded from [DataMiner Dojo](https://community.dataminer.services/download/enabledotnetremoting-dmupgrade/).
+- In DataMiner versions prior to 10.7.0/10.7.1<!-- RN 47004 -->, it is possible, though not recommended, to force a DMA to upgrade by keeping .NET Remoting enabled. To do so, run the *EnableDotNetRemoting.dmupgrade* package, which can be downloaded from [DataMiner Dojo](https://community.dataminer.services/download/enabledotnetremoting-dmupgrade/). This workaround cannot be used to upgrade to 10.7.0/10.7.1 or later.

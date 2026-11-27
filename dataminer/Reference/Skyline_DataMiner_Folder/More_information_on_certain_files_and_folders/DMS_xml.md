@@ -40,7 +40,9 @@ Redirects must be added in *DMS.xml* for each DMA. Failover Agents also need a r
 
 From DataMiner 10.5.0 [CU21]/10.6.0 [CU9]/10.6.12 onwards<!-- RN 46687 -->, BrokerGateway takes *DMS.xml* redirects into account for HTTPS communication, allowing the required API calls to work in manually configured setups. NATS communication does not take these redirects into account.
 
-For example, from DataMiner 10.3.0/10.3.2 onwards <!-- RN 34983 -->, this subtag can be used to make the DMAs in a DMS communicate with each other over **gRPC** instead of .NET Remoting. This uses the standard HTTPS port 443 by default. In a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, this would require the following configuration.
+For example, from DataMiner 10.3.0/10.3.2 onwards <!-- RN 34983 -->, this subtag can be used to make the DMAs in a DMS communicate with each other over **gRPC** instead of .NET Remoting. This uses the standard HTTPS port 443 by default. From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47004 -->, .NET Remoting is no longer available, so gRPC is always used.
+
+In a cluster with two DMAs, with IPs 10.4.2.92 and 10.4.2.93, the gRPC configuration below can be used.
 
 - On the DMA with IP 10.4.2.92:
 
@@ -71,7 +73,7 @@ For example, from DataMiner 10.3.0/10.3.2 onwards <!-- RN 34983 -->, this subtag
 > [!NOTE]
 >
 > - The passwords in the *pwd* attribute are encrypted and replaced with an encryption token when they are first read out by DataMiner.
-> - You can also disable .NET Remoting for inter-DMA communication in *MaintenanceSettings.xml* instead. See [Disabling .NET Remoting](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
+> - In DataMiner versions prior to 10.7.0/10.7.1<!--RN 47004-->, you can also disable .NET Remoting for inter-DMA communication in *MaintenanceSettings.xml* instead. See [Disabling .NET Remoting](xref:Configuration_of_DataMiner_processes#disabling-net-remoting).
 
 > [!TIP]
 > See also: [DataMiner hardening guide](xref:DataMiner_hardening_guide)

@@ -29,9 +29,9 @@ To customize how Cube connects to a DMA for a specific computer:
 
    - *Auto*: DataMiner will automatically select the connection settings.
 
-   - *gRPC*: Used by default from DataMiner 10.5.10/10.6.0 onwards.<!-- RN 43506 --> DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443
+   - *gRPC*: Used by default from DataMiner 10.5.10/10.6.0 onwards.<!-- RN 43506 --> From DataMiner 10.7.0/10.7.1 onwards<!-- RN 47004 -->, this is the only available connection type. DataMiner will communicate using HTTPS via the API Gateway, using gRPC GZIP compression. By default, this requires the use of the standard HTTPS port 443.
 
-   - *Remoting*: DataMiner will communicate using .NET Remoting.
+   - *Remoting*: DataMiner will communicate using .NET Remoting. Only available in versions prior to DataMiner 10.7.0/10.7.1<!--RN 47004-->.
 
      - This option is used by default prior to DataMiner 10.5.10/10.6.0.
 
@@ -43,7 +43,7 @@ To customize how Cube connects to a DMA for a specific computer:
 
    - **Destination port**: Select this option to specify a custom destination port number. If you specify "-1", the port will be detected automatically.
 
-   - **Polling interval**: The frequency at which the client application should poll the DMA, in milliseconds. If you want to use remoting and there are firewalls in your network or NAT is used, make sure this option is selected, to ensure that polling is used instead of eventing. For Web Services, this option is enabled by default.
+   - **Polling interval**: The frequency at which the client application should poll the DMA, in milliseconds. Prior to DataMiner 10.7.0/10.7.1, if you want to use remoting and there are firewalls in your network or NAT is used, make sure this option is selected, to ensure that polling is used instead of eventing. For Web Services, this option is enabled by default.
 
    - **Use data compression** (Remoting only): Determines whether data are compressed or not. By default, this option is selected, in order to reduce network traffic.
 
@@ -57,7 +57,7 @@ To customize how Cube connects to a DMA for a specific computer:
 
 ### .NET Remoting with or without eventing
 
-If .NET Remoting is used, by default clients connecting to a DataMiner Agent will use eventing.
+If .NET Remoting is used (available in versions prior to DataMiner 10.7.0/10.7.1<!--RN 47004-->), by default clients connecting to a DataMiner Agent will use eventing.
 
 - **.NET Remoting with eventing**: When a client uses .NET Remoting with eventing, the DataMiner Agent will send server-initiated notifications to the client. When a client application such as DataMiner Cube connects to a DataMiner Agent, it will open a random port on the client to which the DMA will send its notifications. This method offers the best performance, but is not firewall-friendly.
 

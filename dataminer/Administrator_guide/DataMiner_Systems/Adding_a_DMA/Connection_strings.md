@@ -18,7 +18,7 @@ However, in certain specific cases, the SLNet-to-SLNet connection cannot be esta
 
 Typically, this is used in the following cases:
 
-- When you want to use a non-default communication type. For example, when you want to use gRPC but still keep .NET remoting enabled (supported from DataMiner 10.3.0/10.3.2 onwards<!-- RN 34983 -->).
+- In DataMiner versions prior to 10.7.0/10.7.1<!-- RN 47004 -->, when you want to use a non-default communication type. For example, when you want to use gRPC but still keep .NET Remoting enabled (supported from DataMiner 10.3.0/10.3.2 onwards<!-- RN 34983 -->).
 
   > [!NOTE]
   > Configuring connection strings for gRPC allows the system to still use .NET remoting outside of the configured connection. If the former is not necessary, instead of configuring connection strings for gRPC, consider [disabling .NET remoting in *MaintenanceSettings.xml*](xref:Configuration_of_DataMiner_processes#disabling-net-remoting) to make your DataMiner server fully rely on gRPC. See [Secure server-server communication — gRPC](xref:DataMiner_hardening_guide#grpc)
@@ -65,7 +65,7 @@ The table headers in the table below match the elements/attributes you should sp
 
 | <div style="width:250px">Purpose of the connection string</div> | Redirect to | Via |  User | Password |
 |--|--|--|--|--|
-| To use gRPC but still keep .NET remoting enabled. | 148.0.10.68 | `http://148.0.10.68/APIGateway` | / | / |
+| In versions prior to 10.7.0/10.7.1<!--RN 47004-->: To use gRPC but still keep .NET Remoting enabled. | 148.0.10.68 | `http://148.0.10.68/APIGateway` | / | / |
 | To specify the credentials of a Windows user with Administrator privileges to work around authentication issues | `148.0.10.68` or `*` for all DMAs simultaneously | / | Username of local user with admin rights | Password of that local user |
 
 #### Legacy use cases
@@ -74,5 +74,5 @@ The legacy use cases below are only to be used as a reference for existing setup
 
 | <div style="width:250px">Purpose of the connection string</div> | Redirect to | Via |  User | Password |
 |--|--|--|--|--|
-| To ensure nodes listen on non-standard port. Only applicable for .NET remoting connections. | 148.0.10.68 | In the following syntax, replace the custom port with the one you set up: `http://148.0.10.68:8004/SLNetService` | / | / |
+| In versions prior to 10.7.0/10.7.1: To ensure nodes listen on a non-standard port. Only applicable for .NET Remoting connections. | 148.0.10.68 | In the following syntax, replace the custom port with the one you set up: `http://148.0.10.68:8004/SLNetService` | / | / |
 | To reach DMAs that cannot be reached directly on their primary IP address.<br>**Not recommended** (see [When should you use connection strings?](#when-should-you-use-connection-strings)) | 148.0.10.68 | IP address of proxy/NAT/etc. via HTTP, e.g., `http://172.10.10.56`|/|/|
