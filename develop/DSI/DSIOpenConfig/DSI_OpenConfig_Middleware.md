@@ -1,6 +1,7 @@
 ---
 uid: DSI_OpenConfig_Middleware
 ---
+
 # OpenConfig Middleware
 
 ## Purpose

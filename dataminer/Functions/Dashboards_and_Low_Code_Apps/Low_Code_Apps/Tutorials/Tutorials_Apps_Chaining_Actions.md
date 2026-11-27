@@ -1,6 +1,7 @@
 ---
 uid: Tutorial_Apps_Chaining_Actions
 ---
+
 # Chaining actions
 
 This tutorial explains how you can chain actions in a low-code app, so that one action happens after another.

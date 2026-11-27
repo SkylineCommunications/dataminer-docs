@@ -1,6 +1,7 @@
 ---
 uid: Tutorial_Apps_Edit_Existing_App
 ---
+
 # Editing an existing app
 
 This tutorial shows how to edit an existing app.
